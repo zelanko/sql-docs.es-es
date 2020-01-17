@@ -1,6 +1,7 @@
 ---
-title: Preguntas más frecuentes para administradores de replicación | Microsoft Docs
-ms.custom: ''
+title: Preguntas más frecuentes para administradores de replicación
+description: Lista de las preguntas más frecuentes relacionadas con los administradores de replicación para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041199"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322040"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Preguntas más frecuentes para administradores de replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "72041199"
   
 -   La opción de sincronización web para replicación de mezcla. Para más información, consulte [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md).  
   
- Todos los tipos de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden replicar datos a través de VPN, pero tenga en cuenta la sincronización web si está utilizando replicación de mezcla.  
+ Todos los tipos de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden replicar datos a través de VPN, pero tenga en cuenta la sincronización web si está utilizando replicación de combinación.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>¿Se reanuda la replicación si se quita una conexión?  
  Sí. El procesamiento de replicación se reanuda en el punto en el que se dejó cuando se quitó la conexión. Si está utilizando la replicación de mezcla a través de una red que no es confiable, considere la posibilidad de utilizar registros lógicos, con lo que se asegurará de que los cambios se procesen como una unidad. Para más información, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  

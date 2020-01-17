@@ -1,6 +1,7 @@
 ---
-title: Actualización de instancias de la réplica del grupo de disponibilidad Always On | Microsoft Docs
-ms.custom: ''
+title: Actualización de réplicas de un grupo de disponibilidad
+dsecription: Describes how to upgrade replicas that are participating in an Always On availability group.
+ms.custom: seo-lt-2019
 ms.date: 01/10/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70910785"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822190"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ Tenga en cuenta las siguientes instrucciones al realizar actualizaciones de serv
 ## <a name="rolling-upgrade-process"></a>Proceso de actualización gradual  
  En la práctica, el proceso exacto depende de factores como la topología de implementación de los AG y del modo de confirmación de cada réplica. Pero, en un escenario más sencillo, una actualización gradual es un proceso de varias fases que en su forma más sencilla implica los pasos siguientes:  
   
- ![Escenario de actualización de AG en HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Escenario de actualización de AG en HADR")  
+ ![Actualización de un AG en un escenario de HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Actualización de un AG en un escenario de HADR")  
   
 1.  Quitar la conmutación por error automática en todas las réplicas de confirmación sincrónica  
   
@@ -100,7 +101,7 @@ Tenga en cuenta las siguientes instrucciones al realizar actualizaciones de serv
 ## <a name="ag-with-one-remote-secondary-replica"></a>AG con una réplica secundaria remota  
  Si ha implementado un AG para la recuperación de desastres, puede que tenga que conmutar por error el AG en una réplica secundaria de confirmación asincrónica. Tal configuración se muestra en la ilustración siguiente:  
   
- ![Escenario de actualización de AG en DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Escenario de actualización de AG en DR")  
+ ![Actualización de un AG en un escenario de DR](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "Actualización de un AG en un escenario de DR")  
   
  En esta situación, debe conmutar por error el AG en la réplica secundaria de confirmación asincrónica durante la actualización gradual. Para impedir la pérdida de datos, cambie el modo de confirmación a sincrónica y espere a que la réplica secundaria se sincronice antes de realizar la conmutación por error en el AG. Por lo tanto, el proceso de actualización puede ser similar al siguiente:  
   
@@ -127,7 +128,7 @@ Tenga en cuenta las siguientes instrucciones al realizar actualizaciones de serv
 ## <a name="ag-with-failover-cluster-instance-nodes"></a>AG con nodos de instancia de clúster de conmutación por error  
  Si un AG contiene nodos de instancia de clúster de conmutación por error (FCI), debe actualizar los nodos inactivos antes de actualizar los nodos activos. En la ilustración siguiente se muestra un escenario de AG común con FCI para la confirmación asincrónica y una alta disponibilidad local entre los FCI para la recuperación de desastres remota y la secuencia de actualización.  
   
- ![Actualización de AG con FCI](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Actualización de AG con FCI")  
+ ![Actualización de un AG con FCI](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "Actualización de un AG con FCI")  
   
 1.  Actualizar REMOTE2  
   

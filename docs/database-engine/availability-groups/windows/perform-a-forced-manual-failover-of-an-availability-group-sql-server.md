@@ -1,7 +1,7 @@
 ---
-title: Ejecución de una conmutación por error manual forzada de un grupo de disponibilidad
+title: Ejecución de una conmutación por error de un grupo de disponibilidad forzada manualmente
 description: En este tema se describe cómo realizar una conmutación por error manual forzada de un grupo de disponibilidad Always On (con posible pérdida de datos) mediante Transact-SQL (T-SQL), PowerShell o SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 167070809d552a40d57761b533fc7954fec76dc1
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: 8ff0280b7a3a071a87feb029e6e906eaeace8a2d
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388360"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822530"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Realización de una conmutación por error manual forzada de un grupo de disponibilidad Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -253,7 +253,7 @@ ms.locfileid: "68388360"
   
  El centro de datos principal se apaga inesperadamente. Sus tres réplicas de disponibilidad se ponen sin conexión y sus bases de datos dejan de estar disponibles. En la ilustración siguiente se muestra el impacto de este error en la topología original del grupo de disponibilidad.  
   
- ![Topología después de un error del centro de datos principal](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-catastrophy.gif "Topología después de un error del centro de datos principal")  
+ ![Topología después del error del centro de datos principal](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-catastrophy.gif "Topología después del error del centro de datos principal")  
   
  El administrador de la base de datos (DBA) determina que la mejor respuesta posible es forzar la conmutación por error del grupo de disponibilidad a una de las réplicas secundarias de confirmación asincrónica. En este ejemplo se muestran los pasos típicos implicados cuando se fuerza la conmutación por error del grupo de disponibilidad a una réplica remota y, a la larga, devuelve el grupo de disponibilidad a su topología original.  
   
@@ -266,7 +266,7 @@ ms.locfileid: "68388360"
 ###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  En la ilustración siguiente se muestra la serie de acciones realizadas en el centro de datos remoto en respuesta a un error catastrófico en el centro de datos principal.  
   
- ![Pasos para responder al error del centro de datos principal](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Steps for responding to failure of main data center")  
+ ![Pasos para responder al error del centro de datos principal](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Pasos para responder al error del centro de datos principal")  
   
  Los pasos de esta ilustración indican los pasos siguientes:  
   

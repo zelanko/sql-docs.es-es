@@ -1,6 +1,7 @@
 ---
-title: Visor de conflictos de replicación de Microsoft (Replicación de mezcla) | Microsoft Docs
-ms.custom: ''
+title: Visor de conflictos de replicación (combinación)
+description: Describe el visor de conflictos de replicación utilizado para la replicación de combinación en SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dc4df167c1bc8cf68edf062b294022247041f0b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0707cfc193d4d3e1e11ecb724d2012aee2d315c4
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025808"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321962"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visor de conflictos de replicación de Microsoft (Replicación de mezcla)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "68025808"
  **Publicación**  
  Elija una publicación que contenga tablas con conflictos.  
   
- **Tabla**  
+ **Table**  
  Elija una tabla que contenga conflictos.  
   
  **Definir filtro**  
@@ -62,7 +63,7 @@ ms.locfileid: "68025808"
  **No seleccionar nada**  
  Haga clic para anular la selección de todos los conflictos mostrados en la cuadrícula.  
   
- **Quitar**  
+ **Remove**  
  Haga clic en esta opción para quitar los conflictos seleccionados del visor y los metadatos asociados de las tablas del sistema de replicación. Es equivalente a hacer clic en el botón Enviar ganador (sin realizar cambios en los datos) para cada conflicto seleccionado.  
   
  **Mostrar todas las columnas**  

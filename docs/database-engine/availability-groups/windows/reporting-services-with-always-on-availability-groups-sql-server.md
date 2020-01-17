@@ -1,6 +1,7 @@
 ---
-title: Reporting Services con Grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Reporting Services con grupos de disponibilidad
+description: Obtenga información sobre cómo configurar Reporting Services (SSRS) con grupos de disponibilidad AlwaysOn.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09a19680d9fff6a8d907dd17f3399ff632cba19b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252120"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243619"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con Grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68252120"
  Para obtener información general sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea las [preguntas más frecuentes sobre Always On en SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
 
 ##  <a name="bkmk_requirements"></a> Requisitos para usar Reporting Services y Grupos de disponibilidad AlwaysOn  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y Power BI Report Server usa .NET Framework 4.0 y admite las propiedades de cadena de conexión de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para su uso con orígenes de datos.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y Power BI Report Server usan .NET Framework 4.0 y admiten las propiedades de cadena de conexión de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para su uso con orígenes de datos.  
   
  Para usar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 y anteriores, deberá descargar e instalar una revisión para .NET 3.5 SP1. La revisión agrega compatibilidad con las características de SQL Client para AG y con las propiedades de cadenas de conexión **ApplicationIntent** y **MultiSubnetFailover**. Si la revisión no se instala en cada equipo que hospeda un servidor de informes, los usuarios que intenten obtener la vista previa de los informes verán un mensaje de error similar al siguiente y el mensaje de error se escribirá en el registro de seguimiento del servidor de informes:  
   
@@ -70,7 +71,7 @@ ms.locfileid: "68252120"
   
 -   **Modo de SharePoint:** use las páginas de configuración de SharePoint dentro de las bibliotecas de documentos para los informes que ya se han publicado en un servidor SharePoint.  
   
--   **Diseño de infomes:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new repots. Vea la sección "Diseño de informes" en este tema o en la información adicional.  
+-   **Diseño de informes**: [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] cuando se crean informes nuevos. Vea la sección "Diseño de informes" en este tema o en la información adicional.  
   
  **Recursos adicionales:**  
   
@@ -93,7 +94,7 @@ ms.locfileid: "68252120"
 ##  <a name="bkmk_reportdesign"></a> Diseñador de informes y grupos de disponibilidad  
  Al diseñar los informes en [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] o un proyecto de informe en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], un usuario puede configurar una cadena de conexión del origen de datos de informe para que contenga las nuevas propiedades de conexión proporcionadas por [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. La compatibilidad con las nuevas propiedades de conexión depende de si un usuario obtiene la vista previa del informe.  
   
--   **Vista previa local:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] y [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] use the .Net framework 4.0 y support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
+-   **Vista previa local**: [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] y [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] usan .NET Framework 4.0 y admiten [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 -   **Vista previa en modo servidor o remoto:** si tras publicar informes en el servidor de informes o usar la vista previa en [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], ve un error similar al siguiente, es una indicación de que está obteniendo la vista previa de los informes con el servidor de informes y la revisión .Net Framework 3.5 SP1 para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no se ha instalado en el servidor de informes.  
   

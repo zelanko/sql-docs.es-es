@@ -1,6 +1,7 @@
 ---
-title: Generar automáticamente filtros de combinación entre artículos de mezcla | Microsoft Docs
-ms.custom: ''
+title: Generación automática de filtros de combinación (combinación)
+description: Describe el procedimiento para generar automáticamente un conjunto de filtros de combinación en la página "Filtrar filas de tabla" del "Asistente para nueva publicación" para una publicación de combinación en SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b3d21e2dcecf965e82ea5a88a51d6eb64ebfb88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8bc0ae6764d96b03088cb05eb72dc5ab4f3a0d6
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907977"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321297"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>Generar automáticamente filtros de combinación entre artículos de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,6 +83,6 @@ ms.locfileid: "67907977"
   
 ## <a name="see-also"></a>Consulte también  
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

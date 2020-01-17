@@ -1,6 +1,7 @@
 ---
-title: Usar el Asistente para grupo de disponibilidad de conmutación por error (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Conmutación por error de un grupo de disponibilidad
+description: En este tema se describe cómo realizar una conmutación por error manual forzada de un grupo de disponibilidad AlwaysOn (con posible pérdida de datos) mediante Transact-SQL (T-SQL), PowerShell o SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3c4f93fcfb153c2e65f27fc85890382c2e93ae8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013524"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821947"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para grupo de disponibilidad de conmutación por error (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +106,7 @@ ms.locfileid: "68013524"
  **Estado de quórum**  
  Para el tipo de clúster WSFC, muestra uno de los siguientes estados de cuórum de la réplica de disponibilidad:  
   
-   |Valor|Descripción|  
+   |Value|Descripción|  
    |-----------|-----------------|  
    |**Quórum normal**|El clúster se ha iniciado con quórum normal.|  
    |**Quórum forzado**|El clúster se ha iniciado con quórum forzado.|  
@@ -127,7 +128,7 @@ ms.locfileid: "68013524"
  **Modo de disponibilidad**  
  Muestra el modo de disponibilidad de la instancia del servidor, que será uno de los siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Confirmación sincrónica**|En modo de confirmación sincrónica, antes de la confirmación de transacciones, una réplica principal de confirmación sincrónica espera a que una réplica secundaria de confirmación sincrónica notifique que ha terminado de proteger el registro. El modo de confirmación sincrónica asegura que, una vez que una base de datos secundaria se sincroniza con la base de datos principal, las transacciones confirmadas queden totalmente protegidas.|  
 |**Confirmación asincrónica**|En modo de confirmación asincrónica, la réplica principal confirma las transacciones sin esperar la notificación de que una réplica secundaria de confirmación asincrónica ha protegido el registro. El modo de confirmación asincrónica minimiza la latencia de las transacciones en las bases de datos secundarias pero permite que se retrasen detrás de las bases de datos principales, haciendo posible alguna pérdida de datos.|  
@@ -137,17 +138,17 @@ ms.locfileid: "68013524"
  **Modo de conmutación por error**  
  Muestra el modo de conmutación por error de la instancia del servidor, que será uno de los siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Automática**|Una réplica secundaria que está configurada para la conmutación automática por error también admite la conmutación por error manual planeada, siempre que la réplica secundaria esté sincronizada con la réplica principal.|  
+|**Automático**|Una réplica secundaria que está configurada para la conmutación automática por error también admite la conmutación por error manual planeada, siempre que la réplica secundaria esté sincronizada con la réplica principal.|  
 |**Manual**|Existen dos tipos de conmutación por error manual: planeada (sin pérdida de datos) y forzada (con posible pérdida de datos). Para una réplica secundaria determinada, solo se admite una de ellas, dependiendo del modo de disponibilidad y, para el modo de confirmación sincrónica, el estado de sincronización de la réplica secundaria. Para determinar qué forma de conmutación por error manual admite actualmente una réplica secundaria determinada, vea la columna **Preparación para la conmutación por error** de esta cuadrícula.|  
   
- Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
+ Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Preparación para la conmutación por error**  
  Muestra la preparación para la conmutación por error de la réplica secundaria, una de las siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**No se produce pérdida de datos**|Esta réplica secundaria actualmente admite la conmutación por error planeada. Este valor solo aparece cuando una réplica secundaria en modo de confirmación sincrónica está sincronizada con la réplica principal.|  
 |**Pérdida de datos, Advertencias(** _#_ **)**|Esta réplica secundaria admite actualmente conmutación por error forzada (con posible pérdida de datos). Este valor tiene lugar siempre que la réplica secundaria no esté sincronizada con la réplica principal. Haga clic en el vínculo de advertencias de la pérdida de datos para obtener información sobre la posible pérdida de datos.|  
@@ -181,7 +182,7 @@ ms.locfileid: "68013524"
  **Conectado como**  
  Muestra la cuenta que está conectada a la instancia de servidor, una vez que se ha establecido la conexión. Si esta columna muestra "**Sin conectar**" para una instancia de servidor determinada, deberá hacer clic en el botón **Conectar** .  
   
- **Conectar**  
+ **Conexión**  
  Haga clic aquí si esta instancia de servidor se ejecuta en una cuenta diferente a las de otras instancias de servidor a las que necesite conectarse.  
   
  **Cancelar**  

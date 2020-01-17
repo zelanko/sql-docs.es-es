@@ -1,6 +1,7 @@
 ---
-title: Movimiento de una base de datos protegida por TDE a otra instancia de SQL Server | Microsoft Docs
-ms.custom: ''
+title: Traslado de una base de datos protegida TDE a otra de SQL Server
+description: Describe cómo proteger una base de datos mediante el uso del cifrado de datos transparente (TDE) y luego mover la base de datos a otra instancia de SQL Server mediante SQL Server Management Studio (SSMS) o Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: vanto
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: 991af6f353fb4862bd66426e7fdeed2664f3d101
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594315"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558517"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En este tema se describe cómo proteger una base de datos mediante el uso del cifrado de datos transparente (TDE) y, a continuación, mover la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. El cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. DEK es una clave simétrica protegida mediante un certificado almacenado en la base de datos maestra ( **master** ) del servidor o una clave asimétrica protegida por un módulo EKM.   
+  En este tema se describe cómo proteger una base de datos mediante el uso del cifrado de datos transparente (TDE) y, a continuación, mover la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE realiza el cifrado y descifrado de E/S en tiempo real de los archivos de datos y de registro. El cifrado usa una clave de cifrado de base de datos (DEK), que se almacena en el registro de arranque de la base de datos de disponibilidad durante la recuperación. DEK es una clave simétrica protegida mediante un certificado almacenado en la base de datos maestra ( **master** ) del servidor o una clave asimétrica protegida por un módulo EKM.   
    
 ##  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -121,7 +122,7 @@ En los siguientes procedimientos se muestra cómo debe crear una base de datos p
     GO  
     ```  
   
- Para obtener más información, vea:  
+ Para más información, consulte:  
   
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
@@ -148,7 +149,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
      **Bases de datos que se van a separar**  
      Enumera las bases de datos que se van a separar.  
   
-     **Database Name**  
+     **Nombre de la base de datos**  
      Muestra el nombre de la base de datos que se va a separar.  
   
      **Quitar conexiones**  
@@ -166,7 +167,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
      **Estado**  
      Muestra uno de los siguientes estados: **Listo** o **No está listo**.  
   
-     **de mensaje**  
+     **Mensaje**  
      En la columna **Mensaje** puede aparecer información sobre la base de datos, tal y como se indica a continuación:  
   
     -   Cuando una base de datos está implicada en una replicación, el **Estado** es **No está listo** y la columna **Mensaje** muestra **Base de datos replicada**.  
@@ -175,7 +176,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
   
      Para obtener más información acerca de un mensaje, haga clic en el texto con hipervínculo para abrir el Monitor de actividad.  
   
-2.  Haga clic en **Aceptar**.  
+2.  Haga clic en **OK**.  
   
 3.  Con el Explorador de Windows, mueva o copie los archivos de la base de datos desde el servidor de origen a la misma ubicación en el servidor de destino.  
   
@@ -202,7 +203,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
      **Ubicación del archivo MDF**  
      Muestra la ruta de acceso y el nombre del archivo MDF seleccionado.  
   
-     **Database Name**  
+     **Nombre de la base de datos**  
      Muestra el nombre de la base de datos.  
   
      **Adjuntar como**  
@@ -223,13 +224,13 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
     |Círculo con dos cuadrantes negros (a la izquierda y la derecha) y dos cuadrantes blancos (en la parte superior e inferior)|Detenido|La operación de adjuntar no ha finalizado correctamente porque el usuario la ha detenido.|  
     |Círculo con una flecha curvada que apunta hacia la izquierda|Revertido|La operación de adjuntar se ha ejecutado correctamente, pero se ha revertido debido a un error al adjuntar otro objeto.|  
   
-     **de mensaje**  
+     **Mensaje**  
      Muestra un mensaje en blanco o un hipervínculo que indica "Archivo no encontrado".  
   
-     **Agregar**  
+     **Add (Agregar)**  
      Busca los archivos de base de datos principales necesarios. Si el usuario selecciona un archivo .mdf, la información pertinente se llena automáticamente en los respectivos campos de la cuadrícula **Bases de datos que se van a adjuntar** .  
   
-     **Quitar**  
+     **Remove**  
      Quita el archivo seleccionado de la cuadrícula **Bases de datos que se van a adjuntar** .  
   
      **"** _<database_name>_ **" detalles de la base de datos**  
@@ -247,7 +248,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
      **Ruta de acceso del archivo actual**  
      Muestra la ruta de acceso del archivo de base de datos seleccionado. La ruta de acceso puede modificarse manualmente.  
   
-     **de mensaje**  
+     **Mensaje**  
      Muestra un mensaje en blanco o un hipervínculo que indica "**Archivo no encontrado**".  
   
 ###  <a name="TsqlMove"></a> Usar Transact-SQL  
@@ -291,7 +292,7 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
     GO  
     ```  
   
- Para obtener más información, vea:  
+ Para más información, consulte:  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
@@ -303,6 +304,6 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
   
 ## <a name="see-also"></a>Consulte también  
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Cifrado de datos transparente con Base de datos SQL de Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
+ [Cifrado de datos transparente con Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   

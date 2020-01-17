@@ -1,6 +1,5 @@
 ---
-title: Requisitos y limitaciones de las colecciones de esquemas XML en el servidor | Microsoft Docs
-ms.custom: ''
+title: Requisitos y limitaciones (colecciones de esquemas XML) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -24,12 +23,13 @@ helpviewer_keywords:
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6514ea6acdb2fee96604656ae8f9179570eab35a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fe65ba7995dc21b4bb5f5889c8667e9c8dfb6c10
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093193"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257623"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisitos y limitaciones de las colecciones de esquemas XML en el servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,15 +65,15 @@ ms.locfileid: "68093193"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Explica las formas canónicas y las restricciones de patrón.|  
+|[Formas canónicas y restricciones de patrón](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Explica las formas canónicas y las restricciones de patrón.|  
 |[Componentes comodín y validación del contenido](../../relational-databases/xml/wildcard-components-and-content-validation.md)|Describe las limitaciones de utilizar caracteres comodín, validación lax y elementos de tipo anyType con colecciones de esquemas XML.|  
 |[Elemento &#60;xsd:redefine&#62;](../../relational-databases/xml/the-xsd-redefine-element.md)|Explica la limitación de usar el elemento \<xsd:redefine> y describe una solución alternativa.|  
-|[The xs:QName Type](../../relational-databases/xml/the-xs-qname-type.md)|Describe la limitación relacionada con el tipo xs:QName.|  
+|[Tipo xs:QName](../../relational-databases/xml/the-xs-qname-type.md)|Describe la limitación relacionada con el tipo xs:QName.|  
 |[Valores de las declaraciones de &#60;xsd:simpleType&#62;](../../relational-databases/xml/values-for-xsd-simpletype-declarations.md)|Describe las restricciones que se aplican a las declaraciones del tipo \<xsd:simpleType>.|  
-|[Enumeration Facets](../../relational-databases/xml/enumeration-facets.md)|Describe la limitación relacionada con las facetas de enumeración.|  
-|[Mixed Type and Simple Content](../../relational-databases/xml/mixed-type-and-simple-content.md)|Describe la limitación que se produce al restringir un tipo mixto a un contenido simple.|  
+|[Facetas de enumeración](../../relational-databases/xml/enumeration-facets.md)|Describe la limitación relacionada con las facetas de enumeración.|  
+|[Tipo mixto y contenido simple](../../relational-databases/xml/mixed-type-and-simple-content.md)|Describe la limitación que se produce al restringir un tipo mixto a un contenido simple.|  
 |[Las condiciones de memoria insuficiente y las grandes colecciones de esquemas XML](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|Proporciona soluciones para la condición de falta de memoria que se produce en ocasiones con colecciones de esquemas de gran tamaño.|  
-|[Finalización de los modelos de contenido no determinista](../../relational-databases/xml/non-deterministic-content-models.md)|Describe las limitaciones relacionadas con los modelos de contenido no deterministas.|  
+|[Modelos de contenido no determinista](../../relational-databases/xml/non-deterministic-content-models.md)|Describe las limitaciones relacionadas con los modelos de contenido no deterministas.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   

@@ -1,7 +1,7 @@
 ---
-title: Errores posibles de medios durante copia de seguridad y restauración (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/15/2017
+title: 'Errores de medios: copia de seguridad y restauración | Microsoft Docs'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 79bfbeec5a22dd387b97977d12b95a0e232125aa
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a94825fe0af3820ab7f39ca25a104242e21bda8c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908868"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258650"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Errores posibles de medios durante copia de seguridad y restauración (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "72908868"
   
  Si una operación BACKUP continúa después de encontrar errores, la operación realiza los siguientes pasos:  
   
-1.  Indica en el conjunto de copia de seguridad de los medios de copia de seguridad que hay errores y realiza el seguimiento de la página en la tabla **suspect_pages** de la base de datos **msdb**. Para obtener más información, vea [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md).  
+1.  Indica en el conjunto de copia de seguridad de los medios de copia de seguridad que hay errores y realiza el seguimiento de la página en la tabla **suspect_pages** de la base de datos **msdb** . Para obtener más información, vea [suspect_pages &#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md).  
   
 2.  Registra el error en el registro de errores de SQL Server.  
   

@@ -1,7 +1,7 @@
 ---
-title: Configuración de un agente de escucha para un grupo de disponibilidad
+title: Configuración del agente de escucha del grupo de disponibilidad
 description: 'Se describen los pasos que debe seguir al configurar un agente de escucha para un grupo de disponibilidad Always On con PowerShell o SQL Server Management Studio. '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f97f9814192077dfbe8d361c34b3cf7424f19920
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 918619afd0b07c6d7b8e5d3ccef526da5f4d8fad
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264688"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822123"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configuración de un agente de escucha para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,13 +129,13 @@ ms.locfileid: "68264688"
  **Dirección IP**  
  Muestra la dirección IP de una subred determinada.  Para una subred determinada, la dirección IP es una dirección IPv4 o una dirección IPv6.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic en Agregar para agregar una dirección IP estática a una subred seleccionada o a otra subred para este agente de escucha. Se abrirá el cuadro de diálogo de **Agregar dirección IP** . Para obtener más información, vea el tema de ayuda [Agregar dirección IP &#40;cuadro de diálogo - SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/add-ip-address-dialog-box-sql-server-management-studio.md).  
   
- **Quitar**  
+ **Remove**  
  Haga clic para quitar la subred seleccionada de este agente de escucha.  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Haga clic para crear el agente de escucha del grupo de disponibilidad especificado.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
@@ -200,12 +200,12 @@ ms.locfileid: "68264688"
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de PowerShell de SQL Server](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## <a name="troubleshooting"></a>Solucionar problemas  
+## <a name="troubleshooting"></a>Solución de problemas  
   
 ###  <a name="ADQuotas"></a> No se ha podido crear un agente de escucha del grupo de disponibilidad por las cuotas de Active Directory  
- La creación de un nuevo agente de escucha del grupo de disponibilidad puede producir un error en la creación porque se ha alcanzado una cuota de Active Directory para la cuenta de equipo del nodo de clúster que participa.  Para obtener más información, vea los siguientes artículos:  
+ La creación de un nuevo agente de escucha del grupo de disponibilidad puede producir un error en la creación porque se ha alcanzado una cuota de Active Directory para la cuenta de equipo del nodo de clúster que participa.  Para más información, consulte los siguientes artículos.  
   
 -   [Cómo solucionar problemas de la cuenta del Servicio de Cluster Server cuando modifica objetos de equipo](https://support.microsoft.com/kb/307532)  
   

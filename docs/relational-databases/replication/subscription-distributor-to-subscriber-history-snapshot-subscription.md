@@ -1,6 +1,7 @@
 ---
-title: Suscripción, Historial de Distribuidor a suscriptor (suscripción de instantánea) | Microsoft Docs
-ms.custom: ''
+title: Historial de distribuidor a suscriptor (Instantánea)
+description: Describe la pestaña "Historial de distribuidor a suscriptor" del Monitor de replicación para una publicación de instantáneas en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3fdf09887875407cc98127c3afdaa96d97402fcb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 460ab1ee21fd09c423316e7f4893dd6875d43130
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768331"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321689"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Suscripción, Historial de Distribuidor a suscriptor (suscripción de instantánea)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68768331"
 ## <a name="options"></a>Opciones  
  Seleccione las sesiones del Agente de distribución que desee ver en el menú **Ver** y, a continuación, seleccione una sesión concreta en la cuadrícula etiquetada como **Sesiones del Agente de distribución**. En la cuadrícula con la etiqueta **Acciones en la sesión seleccionada**se muestra información detallada de la sesión. Si la sesión seleccionada finalizó con un error, también se muestra el área de texto con la etiqueta **Detalles del error o mensaje de la sesión seleccionada** .  
   
- **Ver**  
+ **Vista**  
  Seleccione las sesiones del Agente de distribución que desee ver.  
   
  **Estado**  
@@ -35,7 +36,7 @@ ms.locfileid: "68768331"
   
 -   Error  
   
--   Completado  
+-   Completed  
   
 -   Intentando de nuevo  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68768331"
  **Hora de finalización**  
  Muestra la hora de finalización de la sesión. Si no se ha detenido el agente, el campo se mostrará vacío.  
   
- **Duración**  
+ **Duration**  
  Cantidad de tiempo que se ha ejecutado el Agente de distribución en esta sesión. El tiempo representa el tiempo transcurrido si el agente se encuentra en ejecución, y el tiempo total de la sesión si la sesión del agente ha finalizado.  
   
  **Mensaje de error**  

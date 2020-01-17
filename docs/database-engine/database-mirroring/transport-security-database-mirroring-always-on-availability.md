@@ -1,6 +1,7 @@
 ---
-title: Seguridad de transporte - Creación de reflejo de la base de datos - Grupos de disponibilidad AlwaysOn | Microsoft Docs
-ms.custom: ''
+title: 'Seguridad de transporte: Grupos de disponibilidad y creación de reflejo de base de datos'
+description: Obtenga información sobre cómo proteger el transporte de mensajes intercambiados entre las bases de datos que participan en un grupo de disponibilidad AlwaysOn o una sesión de creación de reflejo de la base de datos hospedada en SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f360f60727e91407c1993c18d9548dbefd46a388
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047980"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252749"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Seguridad de transporte - Creación de reflejo de la base de datos - Grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68047980"
 ### <a name="certificates"></a>Certificados  
  En ciertas situaciones, como cuando las instancias de servidor no están en dominios de confianza o cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como servicio local, la autenticación de Windows no está disponible. En estos casos, en lugar de credenciales de usuario, se requieren certificados para autenticar solicitudes de conexión. El extremo de creación de reflejo de cada instancia de servidor debe configurarse con su propio certificado creado localmente.  
   
- El método de cifrado se establece al crear el certificado. Para obtener más información, vea [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Administre con cuidado los certificados que utilice.  
+ El método de cifrado se establece al crear el certificado. Para obtener más información, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md). Administre con cuidado los certificados que utilice.  
   
  Una instancia de servidor utiliza la clave privada de su propio certificado para establecer su identidad al establecer una conexión. La instancia de servidor que recibe la solicitud de conexión utiliza la clave pública del certificado del remitente para autenticar la identidad de éste. Por ejemplo, considere dos instancias del servidor, Server_A y Server_B. Server_A utiliza su clave privada para cifrar el encabezado de conexión antes de enviar una solicitud de conexión a Server_B. Server_B utiliza la clave pública del certificado de Server_A para descifrar el encabezado de conexión. Si el encabezado descifrado es correcto, Servidor_B sabe que el encabezado fue cifrado por Servidor_A y la conexión se autentica. Si el encabezado descifrado es incorrecto, Servidor_B sabe que la solicitud de conexión no es auténtica y rechaza la conexión.  
   
@@ -73,7 +74,7 @@ ms.locfileid: "68047980"
   
 |Valor ALGORITHM|Descripción|  
 |---------------------|-----------------|  
-|RC4|Especifica que el extremo debe usar el algoritmo RC4. Ésta es la opción predeterminada.<br /><br /> <strong>\*\* Advertencia \*\*</strong> El algoritmo RC4 está en desuso. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.|  
+|RC4|Especifica que el extremo debe usar el algoritmo RC4. Este es el valor predeterminado.<br /><br /> <strong>\*\* Advertencia \*\*</strong> El algoritmo RC4 está en desuso. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.|  
 |AES|Especifica que el extremo debe usar el algoritmo AES.|  
 |AES RC4|Especifica que los dos extremos negociarán un algoritmo de cifrado con este extremo, dando preferencia al algoritmo AES.|  
 |RC4 AES|Especifica que los dos extremos negociarán un algoritmo de cifrado con este extremo, dando preferencia al algoritmo RC4.|  

@@ -1,6 +1,7 @@
 ---
-title: Inicializar una suscripción transaccional desde una copia de seguridad | Microsoft Docs
-ms.custom: ''
+title: Inicialización de una suscripción desde una copia de seguridad (transaccional)
+description: Obtenga información sobre cómo usar procedimientos almacenados de replicación para inicializar una publicación transaccional a partir de una copia de seguridad en SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a0282d1b9f2aa63e89d5246d37210a2b088ad35
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7d2da79cc46ac546099e492af3b6d5f4f726a2a2
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710300"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320482"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Inicializar una suscripción transaccional desde una copia de seguridad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,6 +73,6 @@ ms.locfileid: "71710300"
   
 ## <a name="see-also"></a>Consulte también  
  [Copiar bases de datos con Copias de seguridad y restauración](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
- [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+ [Copia de seguridad y restauración de bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

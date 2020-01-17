@@ -1,6 +1,6 @@
 ---
-title: Servidores vinculados
-ms.date: 05/29/2019
+title: Servidores vinculados (motor de base de datos) | Microsoft Docs
+ms.date: 10/14/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,12 +19,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ed882119c2589dbec4209523e5bc66b896316ec8
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74094777"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165344"
 ---
 # <a name="linked-servers-database-engine"></a>Servidores vinculados (motor de base de datos)
 
@@ -64,16 +64,19 @@ El proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!IN
 ## <a name="linked-server-details"></a>Detalles de servidores vinculados  
  En la siguiente ilustración se muestran los conceptos básicos de una configuración con servidores vinculados.  
   
- ![Nivel de cliente, nivel de servidor y nivel de servidor de base de datos](../../relational-databases/linked-servers/media/lsvr.gif "Nivel de cliente, nivel de servidor y nivel de servidor de base de datos")  
+ ![Nivel de cliente, nivel de servidor y nivel de servidor de base de datos](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
   
 Normalmente, los servidores vinculados se utilizan para tratar consultas distribuidas. Cuando una aplicación cliente ejecuta una consulta distribuida mediante un servidor vinculado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analiza el comando y envía solicitudes a OLE DB. La solicitud de conjuntos de filas se puede realizar como una consulta al proveedor o abriendo una tabla base del proveedor.  
-  
+
 > [!NOTE]
 > Para que un origen de datos devuelva información mediante un servidor vinculado, el proveedor OLE DB (DLL) para ese origen de datos debe encontrarse en el mismo servidor que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-> [!IMPORTANT] 
-> Cuando se utiliza un proveedor OLE DB, la cuenta con la que se ejecuta el servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de lectura y ejecución para el directorio y todos los subdirectorios en los que esté instalado el proveedor. Esto incluye los proveedores publicados por Microsoft y cualquier proveedor externo. 
-  
+ 
+> [!IMPORTANT]
+> Cuando se utiliza un proveedor OLE DB, la cuenta con la que se ejecuta el servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de lectura y ejecución para el directorio y todos los subdirectorios en los que esté instalado el proveedor. Esto incluye los proveedores publicados por Microsoft y cualquier proveedor externo.
+
+> [!NOTE]
+> Los servidores vinculados admiten la autenticación de paso a través de Active Directory cuando se usa la delegación completa. A partir de SQL Server 2017 CU17, también se admite la autenticación de paso a través con delegación restringida, pero no se admite la [delegación restringida basada en recursos](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview).
+
 ## <a name="managing-providers"></a>Administrar proveedores  
 Existe un conjunto de opciones para controlar cómo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carga y utiliza proveedores OLE DB que se hayan especificado en el registro.  
   

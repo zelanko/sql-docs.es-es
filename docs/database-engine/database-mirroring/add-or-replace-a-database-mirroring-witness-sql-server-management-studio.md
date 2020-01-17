@@ -1,6 +1,7 @@
 ---
-title: Agregar o reemplazar un testigo de creación de reflejo de la base de datos (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Adición o reemplazo de un testigo del reflejo (SSMS)
+description: Obtenga información sobre cómo agregar o reemplazar un testigo de creación de reflejo de la base de datos mediante SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 74bbb2b7b066d106aa82f36669de6b4704537e72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61e7be7b4e1f61f243d896d5073ae469bebe6940
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947957"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247503"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Agregar o reemplazar un testigo de creación de reflejo de la base de datos (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +42,15 @@ ms.locfileid: "67947957"
   
 6.  En el cuadro de diálogo **Incluir servidor testigo** , haga clic en **Sí**y, después, en **Siguiente**.  
   
-7.  En el cuadro de diálogo **Elegir los servidores para configurar** , se marcará automáticamente la casilla **Instancia del servidor testigo** . Haga clic en **Siguiente**.  
+7.  En el cuadro de diálogo **Elegir los servidores para configurar** , se marcará automáticamente la casilla **Instancia del servidor testigo** . Haga clic en **Next**.  
   
-8.  En el cuadro de diálogo **Instancia del servidor principal** , conserve las opciones existentes de puerto y extremos. Haga clic en **Siguiente**.  
+8.  En el cuadro de diálogo **Instancia del servidor principal** , conserve las opciones existentes de puerto y extremos. Haga clic en **Next**.  
   
 9. En el cuadro de diálogo **Instancia del servidor testigo** , haga clic en **Conectar**.  
   
 10. En el cuadro de diálogo **Conectar al servidor** , especifique la instancia del servidor testigo en el campo **Nombre del servidor** y use la Autenticación de Windows (opción predeterminada). Haga clic en **Conectar**.  
   
-11. Una vez que se haya establecido una conexión, en el cuadro de diálogo **Instancia del servidor testigo** se mostrará el puerto de escucha y el extremo de la creación de reflejo de la base de datos de la instancia del servidor testigo. Haga clic en **Siguiente**.  
+11. Una vez que se haya establecido una conexión, en el cuadro de diálogo **Instancia del servidor testigo** se mostrará el puerto de escucha y el extremo de la creación de reflejo de la base de datos de la instancia del servidor testigo. Haga clic en **Next**.  
   
 12. El cuadro de diálogo **Cuentas de servicio** contiene campos para las cuentas de servicio de dominio de las instancias del servidor reflejado, principal y testigo.  
   
@@ -57,11 +58,11 @@ ms.locfileid: "67947957"
   
     -   Si la instancia del servidor testigo usa una cuenta de servicio diferente de las de los asociados, llene los campos **Principal**, **Reflejado**y **Testigo** con el nombre de la cuenta:  
   
-         *DOMAINNAME* **\\** *username*  
+         *DOMAINNAME* **\\** *nombre de usuario*  
   
          El nombre de dominio debe estar en mayúsculas.  
   
-     Haga clic en **Siguiente**.  
+     Haga clic en **Next**.  
   
 13. Si lo desea, en la pantalla de resumen **Finalización del asistente** , compruebe la configuración del testigo y haga clic en **Finalizar**.  
   

@@ -1,6 +1,7 @@
 ---
-title: Establecer una sesión de creación de reflejo de la base de datos - Autenticación de Windows | Microsoft Docs
-ms.custom: ''
+title: Configuración de la creación de reflejos de la base de datos (autenticación de Windows)
+description: Obtenga información sobre cómo configurar una sesión de creación de reflejos de la base de datos mediante la autenticación de Windows con SQL Server Management Studio.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6e778d9c02e9cc0a877ef0804b1e95772e5f51cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f59dc7745f63b208b1a2a55361913a6eb290e08e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997898"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253583"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Establecer una sesión de creación de reflejo de la base de datos - Autenticación de Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se usa [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
   
  Para establecer una sesión de creación de reflejo de la base de datos y modificar las propiedades de la creación de reflejo de la base de datos de una base de datos, utilice la página **Creación de reflejo** del cuadro de diálogo de **Propiedades de la base de datos** . Antes de utilizar la página **Creación de reflejo** para configurar la creación de reflejo de la base de datos, asegúrese de que se hayan cumplido los siguientes requisitos:  
   
@@ -34,7 +35,7 @@ ms.locfileid: "67997898"
   
 -   Debe existir la base de datos reflejada y estar vigente.  
   
-     Crear una base de datos reflejada requiere una copia de seguridad reciente de la base de datos principal (mediante WITH NORECOVERY) en la instancia del servidor reflejado. También se necesita realizar una o más copias de seguridad del registro después de la copia de seguridad completa, y restaurarlos en secuencia en la base de datos reflejada (mediante WITH NORECOVERY). Para obtener más información, vea [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
+     Crear una base de datos reflejada requiere una copia de seguridad reciente de la base de datos principal (mediante WITH NORECOVERY) en la instancia del servidor reflejado. También se necesita realizar una o más copias de seguridad del registro después de la copia de seguridad completa, y restaurarlos en secuencia en la base de datos reflejada (mediante WITH NORECOVERY). Para obtener más información, vea [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 -   Si las instancias del servidor se ejecutan con distintas cuentas de usuario de dominio, cada una requiere un inicio de sesión en la base de datos **master** de las demás. Si el inicio de sesión no existe, deberá crearlo antes de configurar la creación de reflejo. Para obtener más información, vea [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   

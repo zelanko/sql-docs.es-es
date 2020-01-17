@@ -1,6 +1,7 @@
 ---
-title: Ver conflictos de datos para publicaciones transaccionales (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 'Consulta de conflictos de datos (transaccional): SSMS'
+description: Consulta de conflictos de datos para publicaciones transaccionales mediante SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c00bfe0043aa4732f2352a604e872c01f0898f80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b385de9eee9fd1073c2161d0db57fd0287f959c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115075"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321872"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Ver conflictos de datos para publicaciones transaccionales (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "68115075"
 6.  Cierre el Visor de conflictos de replicación.  
   
 ## <a name="see-also"></a>Consulte también  
- [Replicación transaccional punto a punto](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Queued Updating Conflict Detection and Resolution](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

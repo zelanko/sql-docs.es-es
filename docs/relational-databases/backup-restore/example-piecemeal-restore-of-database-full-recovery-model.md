@@ -1,7 +1,7 @@
 ---
-title: 'Ejemplo: Restauración por etapas de la base de datos (modelo de recuperación completa) | Microsoft Docs'
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Restauración por etapas: modelo de recuperación completa'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67cfffa63fd56f7d514ff749f37f4f0f33610388
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 83ddabdc1e67036ca191d6f4c9e6013037b21738
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278746"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243673"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>Ejemplo: Restauración por etapas de la base de datos (modelo de recuperación completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

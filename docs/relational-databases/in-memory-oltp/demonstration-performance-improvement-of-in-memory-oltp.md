@@ -1,6 +1,6 @@
 ---
-title: 'Demostración: Demostración: mejora de rendimiento de OLTP en memoria | Microsoft Docs'
-ms.custom: ''
+title: Mejora de rendimiento de OLTP en memoria
+ms.custom: seo-dt-2019
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cec13fc9bcfe30aa34f46afb23c7f8755f0c477
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069642"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412730"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demostración: Mejora de rendimiento de OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Para una demostración más completa de las posibles mejoras de rendimiento de O
  En las siguientes subsecciones se describe cada paso.  
   
 ### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>Paso 1a: requisito previo si se usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Los pasos de la primera subsección solo se aplican si se está ejecutando en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero no si se está ejecutando en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Realice lo siguiente:  
+ Los pasos de la primera subsección solo se aplican si se está ejecutando en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero no si se está ejecutando en [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Haga lo siguiente:  
   
 1.  Use SQL Server Management Studio (SSMS.exe) para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cualquier herramienta similar a SSMS.exe también está bien.  
   
@@ -59,7 +59,7 @@ go
 ```  
   
 ### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>Paso 1b: requisito previo si se usa [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
- Esta subsección es válida solo si se está usando [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Realice lo siguiente:  
+ Esta subsección es válida solo si se está usando [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Haga lo siguiente:  
   
 1.  Decida qué base de datos de prueba existente usará para el ejemplo de código.  
   
@@ -68,7 +68,7 @@ go
  Si desea obtener instrucciones para usar el portal de Azure para esto, consulte [Get Started with Azure SQL Database (Introducción a Base de datos SQL de Azure)](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
 ### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Paso 2: crear tablas optimizadas para memoria y un NCSProc  
- En este paso se crean tablas optimizadas para memoria y un procedimiento almacenado compilado de forma nativa (NCSProc). Realice lo siguiente:  
+ En este paso se crean tablas optimizadas para memoria y un procedimiento almacenado compilado de forma nativa (NCSProc). Haga lo siguiente:  
   
 1.  Use SSMS.exe para conectarse a la nueva base de datos.  
   
@@ -118,7 +118,7 @@ go
 ```  
   
 ### <a name="step-3-run-the-code"></a>Paso 3: ejecutar el código  
- Ahora se pueden ejecutar las consultas que mostrarán el rendimiento de las tablas optimizadas para memoria. Realice lo siguiente:  
+ Ahora se pueden ejecutar las consultas que mostrarán el rendimiento de las tablas optimizadas para memoria. Haga lo siguiente:  
   
 1.  Use SSMS.exe para ejecutar el siguiente T-SQL en la base de datos.  
   

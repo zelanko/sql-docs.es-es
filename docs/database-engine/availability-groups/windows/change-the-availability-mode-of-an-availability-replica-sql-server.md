@@ -1,7 +1,7 @@
 ---
-title: Cambio del modo de disponibilidad de una réplica dentro de un grupo de disponibilidad
+title: Cambio del modo de disponibilidad de una réplica para un grupo de disponibilidad
 description: Una descripción de cómo cambiar el modo de disponibilidad de una réplica de disponibilidad dentro de un grupo de disponibilidad Always On mediante Transact-SQL (T-SQL), PowerShell o SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c17beebfd689e5e768450d92353b87f8fcfa1ae2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1a3b5d1dfdf3a5e8556058cee750a4e2e08476a
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988590"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822445"
 ---
-# <a name="change-the-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>Cambio del modo de disponibilidad de una réplica dentro de un grupo de disponibilidad Always On
+# <a name="change-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>Cambio del modo de disponibilidad de una réplica dentro de un grupo de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo cambiar el modo de disponibilidad de una réplica de disponibilidad de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] por medio de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell. El modo de disponibilidad es una propiedad de réplica que controla si la réplica se confirma asincrónica o sincrónicamente. El*modo confirmación asincrónica* maximiza el rendimiento a costa de la alta disponibilidad y solo admite la conmutación por error manual forzada (con posible pérdida de datos), que suele denominarse *conmutación por error forzada*. El*modo confirmación sincrónica* da prioridad a la alta disponibilidad sobre el rendimiento y, una vez sincronizada la réplica secundaria, admite la conmutación por error manual y, opcionalmente, la conmutación automática por error.  
     

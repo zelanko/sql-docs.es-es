@@ -1,5 +1,5 @@
 ---
-title: Características de SQL Server no admitidas para OLTP en memoria | Microsoft Docs
+title: 'Características no admitidas: OLTP en memoria'
 ms.custom: ''
 ms.date: 05/29/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 720b10e5f4cd7c7ba5676f9dddc2f64e632d64cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7427f7ccc70db68d1403cc1a92c7d7dafef82f5c
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912132"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412505"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Características de SQL Server no admitidas para OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Las características siguientes de [!INCLUDE[ssNoVersion](../../includes/ssnover
 Con algunas excepciones, las transacciones entre bases de datos no se admiten. En la tabla siguiente se describen qué casos se admiten y las restricciones correspondientes. (Vea también [Consultas entre bases de datos](../../relational-databases/in-memory-oltp/cross-database-queries.md)).  
 
 
-|Bases de datos|Permitido|Descripción|  
+|Bases de datos|Permitida|Descripción|  
 |---------------|-------------|-----------------|  
 | Bases de datos de usuario, **modelo** y **msdb**. | No | En la mayoría de los casos, las consultas y transacciones entre bases de datos *no* se admiten.<br /><br />Una consulta no puede acceder a otras bases de datos si usa una tabla optimizada para memoria o un procedimiento almacenado compilado de forma nativa. Esta restricción se aplica tanto a transacciones como a consultas.<br /><br />Las excepciones son las bases de datos del sistema **tempdb** y **master**. Aquí, la base de datos **master** está disponible para acceso de solo lectura. |
 | Base de datos de **recursos**, **tempdb** | Sí | En una transacción que toca los objetos OLTP en memoria, las bases de datos de **recursos** y **tempdb** del sistema se pueden usar sin una restricción agregada.

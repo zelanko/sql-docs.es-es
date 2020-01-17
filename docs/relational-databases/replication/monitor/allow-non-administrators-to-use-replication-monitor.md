@@ -1,6 +1,7 @@
 ---
-title: Permitir el uso del Monitor de replicación a los usuarios que no son administradores | Microsoft Docs
-ms.custom: ''
+title: Permiso para usar el Monitor de replicación a los usuarios que no son administradores
+description: Obtenga información sobre cómo otorgar acceso al Monitor de replicación en SQL Server Management Studio (SSMS) a los usuarios que no son administradores.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c5cd21759b7a59a639dbecea1b3e65109d3d4ff2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: ee5905259958b1b396b1b9c2726ca3a74b24a7d6
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908141"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320629"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>Permitir el uso del Monitor de replicación a los usuarios que no son administradores
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

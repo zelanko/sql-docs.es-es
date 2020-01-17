@@ -1,6 +1,7 @@
 ---
-title: Creación y almacenamiento de claves maestras de columna para Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: Creación y almacenamiento de claves maestras de columna para Always Encrypted
+description: Obtenga información sobre cómo seleccionar un almacén de claves y crear claves maestras de columna para SQL Server Always Encrypted.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
@@ -11,12 +12,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 63be7df50b6dd590d0ec90346d27f6601e15cf45
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594439"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557844"
 ---
 # <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Creación y almacenamiento de claves maestras de columna para Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,9 +98,9 @@ Para conceder al usuario el permiso de *lectura* para un certificado almacenado 
 4.  En el cuadro de diálogo **Agregar un complemento independiente** , haga clic en **Certificados**y, después, en **Agregar**.
 5.  En el cuadro de diálogo del complemento **Certificados** , haga clic en **Cuenta de equipo**y, después, en **Finalizar**.
 6.  En el cuadro de diálogo **Agregar un complemento independiente** , haga clic en **Cerrar**.
-7.  En el cuadro de diálogo **Agregar o quitar complemento**, haga clic en **Aceptar**.
+7.  En el cuadro de diálogo **Agregar o quitar complemento** , haga clic en **Aceptar**.
 8.  En el complemento **Certificados**, busque el certificado en la carpeta **Certificados > Personal**, haga clic con el botón derecho en el certificado, seleccione **Todas las tareas** y, después, haga clic en **Administrar claves privadas**.
-9.  En el cuadro de diálogo **Seguridad**, agregue el permiso de lectura para una cuenta de usuario si fuera necesario.
+9.  En el cuadro de diálogo **Seguridad** , agregue el permiso de lectura para una cuenta de usuario si fuera necesario.
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Crear claves maestras de columna en el Almacén de claves de Azure
 
@@ -186,7 +187,7 @@ $cngAlgorithm = New-Object System.Security.Cryptography.CngAlgorithm($cngAlgorit
 $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyName, $cngKeyParams)
 ```
 
-#### <a name="using-sql-server-management-studio"></a>Usar SQL Server Management Studio
+#### <a name="using-sql-server-management-studio"></a>Uso de SQL Server Management Studio
 
 Consulte [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
@@ -220,7 +221,7 @@ Consulte [Aprovisionamiento de claves de Always Encrypted mediante SQL Server 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Hacer que las claves CNG estén disponibles para aplicaciones y usuarios
 Consulte la documentación de HSM y CSP sobre cómo configurar CSP en una máquina y cómo conceder acceso a los usuarios y las aplicaciones a HSM.
  
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 - [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
 - [Aprovisionamiento de claves de Always Encrypted mediante PowerShell](configure-always-encrypted-keys-using-powershell.md)
   

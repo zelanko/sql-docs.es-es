@@ -11,24 +11,24 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 47726a76f853b8728369a2b406de1fdc8456facd
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 5af707d0d07ce754b57eb18048c52db5921693ee
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961943"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165587"
 ---
 # <a name="overview-and-usage-scenarios"></a>Información general y escenarios de uso
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 OLTP en memoria es la tecnología principal disponible en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] para optimizar el rendimiento de escenarios de datos transitorios, carga de datos, ingesta de datos y procesamiento de transacciones. En este artículo se incluye información general sobre dicha tecnología y se describen escenarios de uso de OLTP en memoria. Use esta información para determinar si OLTP en memoria es adecuado para la aplicación. El artículo concluye con un ejemplo que muestra objetos de OLTP en memoria, hace referencia a una demostración de rendimiento y a recursos que puede usar para los pasos siguientes.
 
-Este artículo trata sobre la tecnología de OLTP en memoria en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La siguiente entrada de blog contiene una explicación exhaustiva sobre el rendimiento y los beneficios de usar los recursos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]: 
-- [OLTP en memoria en Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
+Este artículo trata sobre la tecnología de OLTP en memoria en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La siguiente entrada de blog contiene una explicación exhaustiva sobre el rendimiento y los beneficios de usar los recursos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]: [OLTP en memoria en Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 
 ## <a name="in-memory-oltp-overview"></a>Información general de OLTP en memoria
 
-OLTP en memoria puede proporcionar excelentes ganancias de rendimiento para las cargas de trabajo adecuadas. Un cliente, bwin, logró [alcanzar 1,2 millones de solicitudes por segundo](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) con una sola máquina con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] en la que ejecutaba OLTP en memoria. Otro cliente, Quorum, logró duplicar su carga de trabajo a la vez que [disminuía en un 70 % su uso de recursos](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database) mediante el uso de OLTP en memoria en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. A pesar de que los clientes han visto un aumento de rendimiento de hasta 30 veces en algunos casos, el que usted obtendrá depende de la carga de trabajo.
+OLTP en memoria puede proporcionar excelentes ganancias de rendimiento para las cargas de trabajo adecuadas. Un cliente, BWIN, logró [alcanzar 1,2 millones de solicitudes por segundo](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) con una sola máquina con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] en la que ejecutaba OLTP en memoria. Otro cliente, Quorum, logró duplicar su carga de trabajo a la vez que [disminuía en un 70 % su uso de recursos](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database) mediante el uso de OLTP en memoria en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. A pesar de que los clientes han visto un aumento de rendimiento de hasta 30 veces en algunos casos, el que usted obtendrá depende de la carga de trabajo.
 
 ¿De dónde proviene esta ganancia de rendimiento? Básicamente, OLTP en memoria mejora el rendimiento del procesamiento de transacciones al hacer que la ejecución de las transacciones y el acceso a los datos sea más eficaz y al quitar la contención de bloqueo y bloqueo temporal entre transacciones que se ejecutan de manera simultánea: no es rápido porque se haga en memoria, sino que es rápido porque está optimizado en torno a los datos que están en memoria. Los algoritmos de procesamiento, acceso y almacenamiento de datos se rediseñaron desde el principio para aprovechar las mejoras más recientes en los cálculos de alta simultaneidad y en memoria.
 
@@ -60,7 +60,8 @@ Los escenarios de carga de trabajo comunes son: comercialización de instrumento
 Use las tablas optimizadas para memoria para sus tablas de transacciones principales, es decir, las tablas con las transacciones con rendimiento más crítico. Use los procedimientos almacenados compilados de manera nativa para optimizar la ejecución de la lógica asociada con la transacción comercial. Cuanta más lógica pueda insertar en los procedimientos almacenados de la base de datos, más ventajas obtendrá gracias a OLTP en memoria.
 
 Para empezar a trabajar en una aplicación existente:
-1. Use el [informe de análisis de rendimiento de transacciones](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) para identificar los objetos que desea migrar. 
+
+1. Use el [informe de análisis de rendimiento de transacciones](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) para identificar los objetos que desea migrar.
 2. Use los asesores de [optimización para memoria](memory-optimization-advisor.md) y [compilación nativa](native-compilation-advisor.md) para ayudar en la migración.
 
 #### <a name="customer-case-studies"></a>Casos prácticos de clientes
@@ -68,14 +69,14 @@ Para empezar a trabajar en una aplicación existente:
 - CMC Markets aprovecha OLTP en memoria en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para lograr una latencia baja coherente: [Dado que un segundo es demasiado tiempo para esperar, esta empresa de servicios financieros está actualizando su software comercial ahora.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
 - Derivco aprovecha OLTP en memoria en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para admitir un mayor rendimiento y controlar los picos en la carga de trabajo: [Cuando una empresa de juegos en línea no desea arriesgar su futuro, su apuesta es [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
-
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>Ingesta de datos, incluida IoT (Internet de las cosas)
 
 OLTP en memoria es excelente en la ingesta de grandes volúmenes de datos desde distintos orígenes al mismo tiempo. Además, la ingesta de datos en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suele ser beneficiosa en comparación con otros destinos, porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite ejecutar las consultas de datos rápido y, además, le permite obtener información en tiempo real.
 
-Patrones comunes de aplicación: 
--  Ingerir eventos y lecturas de sensores y permitir las notificaciones, además del análisis del historial. 
--  La administración de actualizaciones por lotes, incluso desde varios orígenes, mientras se minimiza el impacto en la carga de trabajo de lectura simultánea.
+Patrones comunes de aplicación:
+
+- Ingerir eventos y lecturas de sensores y permitir las notificaciones, además del análisis del historial.
+- La administración de actualizaciones por lotes, incluso desde varios orígenes, mientras se minimiza el impacto en la carga de trabajo de lectura simultánea.
 
 #### <a name="implementation-considerations"></a>Consideraciones de implementación
 
@@ -84,11 +85,11 @@ Use una tabla optimizada para memoria para la ingesta de datos. Si la ingesta co
 - Use un trabajo para descargar por lote de manera regular los datos en una tabla basada en discos con un [índice de almacén de columnas en clúster](../indexes/columnstore-indexes-overview.md), a través de un trabajo que hace `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`; o bien,
 - Use una [tabla temporal optimizada para memoria](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) para administrar los datos históricos; en este modo, los datos históricos residen en el disco y es el sistema el que administra el movimiento de los datos.
 
-El repositorio de ejemplos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene una aplicación de cuadrícula inteligente que usa una tabla temporal optimizada para memoria, un tipo de tabla optimizada para memoria y un procedimiento almacenado compilado de manera nativa para acelerar la ingesta de datos, mientras que se administra el espacio de almacenamiento de OLTP en memoria de los datos del sensor: 
+El repositorio de ejemplos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene una aplicación de cuadrícula inteligente que usa una tabla temporal optimizada para memoria, un tipo de tabla optimizada para memoria y un procedimiento almacenado compilado de manera nativa para acelerar la ingesta de datos, mientras que se administra el espacio de almacenamiento de OLTP en memoria de los datos del sensor:
 
- - [smart-grid-release](https://github.com/Microsoft/sql-server-samples/releases/tag/iot-smart-grid-v1.0) 
- - [smart-grid-source-code](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/iot-smart-grid)
- 
+- [smart-grid-release](https://github.com/Microsoft/sql-server-samples/releases/tag/iot-smart-grid-v1.0)
+- [smart-grid-source-code](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/iot-smart-grid)
+
 #### <a name="customer-case-studies"></a>Casos prácticos de clientes
 
 - [Quorum duplica la carga de trabajo de la base de datos clave mientras disminuye el uso en 70 % con el uso de OLTP en memoria en Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
@@ -105,9 +106,7 @@ El estado de sesión de ASP.NET es un caso de uso muy exitoso de OLTP en memoria
 
 Puede usar tablas no duraderas optimizadas para memoria como un almacén de clave-valor simple mediante el almacenamiento de un BLOB en una columna varbinary(max). De manera alternativa, puede implementar una memoria caché semiestructurada con [compatibilidad de JSON](https://azure.microsoft.com/blog/json-support-is-generally-available-in-azure-sql-database/) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Por último, puede crear una caché completamente relacional a través de tablas no duraderas con un esquema completamente relacional, incluidas diversas restricciones y tipos de datos.
 
-Comience con un estado de sesión de ASP.NET optimizado para memoria usando los scripts publicados en GitHub para reemplazar los objetos creados por el proveedor de estado de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrado:
-
-- [aspnet-session-state](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/aspnet-session-state)
+Comience con un estado de sesión de ASP.NET optimizado para memoria usando los scripts publicados en GitHub para reemplazar los objetos creados por el proveedor de estado de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrado: [aspnet-session-state](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/aspnet-session-state).
 
 #### <a name="customer-case-studies"></a>Casos prácticos de clientes
 
@@ -122,7 +121,7 @@ Las tablas no duraderas y las variables de tabla con optimización para memoria 
 
 #### <a name="implementation-considerations"></a>Consideraciones de implementación
 
-Para comenzar, consulte: [Mejora del rendimiento de la tabla temporal y de variable de tabla mediante optimización de memoria.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
+Para empezar, consulte: [Mejora del rendimiento de la tabla temporal y de variable de tabla mediante optimización de memoria.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 
 #### <a name="customer-case-studies"></a>Casos prácticos de clientes
 
@@ -218,17 +217,16 @@ EXECUTE dbo.usp_ingest_table1 @table1=@table1
 SELECT c1, c2 from dbo.table1
 SELECT c1, c2 from dbo.temp_table1
 GO
-```   
+```
 
-## <a name="resources-to-learn-more"></a>Recursos para obtener más información:
+## <a name="resources-to-learn-more"></a>Recursos para obtener más información
 
-[Tecnologías de OLTP en memoria para acelerar el rendimiento de T-SQL](https://msdn.microsoft.com/library/mt694156.aspx)   
-Puede encontrar una demostración de rendimiento con OLTP en memoria en [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0) .  
-[Vídeo de 17 minutos que explica OLTP en memoria y exhibe una demostración](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
-[Script para habilitar OLTP en memoria y establecer las opciones recomendadas](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)   
-[Documentación principal de OLTP en memoria](in-memory-oltp-in-memory-optimization.md)   
-[Beneficios del uso de los recursos y el rendimiento de OLTP en memoria en Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)  
-[Mejora del rendimiento de la tabla temporal y de variable de tabla mediante optimización de memoria](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
-[Optimización del rendimiento mediante las tecnologías en memoria de SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
-[Tablas temporales con control de versiones del sistema con tablas con optimización para memoria](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[OLTP en memoria y los patrones de carga de trabajo comunes y consideraciones para la migración](https://msdn.microsoft.com/library/dn673538.aspx). 
+- [Tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL](https://msdn.microsoft.com/library/mt694156.aspx)
+- Puede encontrar una demostración de rendimiento con OLTP en memoria en: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+- [Vídeo de 17 minutos que explica OLTP en memoria y exhibe una demostración](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)
+- [Script para habilitar OLTP en memoria y establecer las opciones recomendadas](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
+- [Documentación principal de OLTP en memoria](in-memory-oltp-in-memory-optimization.md)
+- [Beneficios del uso de los recursos y el rendimiento de OLTP en memoria en Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
+- [Mejora del rendimiento de la tabla temporal y de variable de tabla mediante optimización de memoria](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
+- [Optimización del rendimiento mediante las tecnologías en memoria de SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
+- [Tablas temporales con control de versiones del sistema con tablas con optimización para memoria](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)

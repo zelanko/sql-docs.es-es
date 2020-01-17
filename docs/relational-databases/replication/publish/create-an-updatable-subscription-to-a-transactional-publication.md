@@ -1,6 +1,7 @@
 ---
-title: Creación de una suscripción actualizable en una publicación transaccional | Microsoft Docs
-ms.custom: ''
+title: Creación de una suscripción actualizable (transaccional)
+description: Obtenga información sobre cómo crear una suscripción actualizable a una publicación transaccional para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99e605f1ed2a924f504f118dd6d0865fda3229e0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908585"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321257"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Crear una suscripción actualizable en una publicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -200,7 +201,7 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
 1. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)para comprobar que la publicación admite suscripciones de actualización en cola. 
 
     * Si el valor de allow_queued_tran en el conjunto de resultados es 1, la publicación admite suscripciones de actualización inmediata.
-    * Si el valor de allow_queued_tran en el conjunto de resultados es 0, la publicación se debe volver a crear con suscripciones de actualización en cola habilitadas. Para más información, vea Cómo: Habilitar suscripciones actualizables para publicaciones transaccionales (programación de la replicación con Transact-SQL).
+    * Si el valor de allow_queued_tran en el conjunto de resultados es 0, la publicación se debe volver a crear con suscripciones de actualización en cola habilitadas. Para más información, vea: Cómo: Habilitar suscripciones actualizables para publicaciones transaccionales (programación de la replicación con Transact-SQL).
 
 2. En el publicador, ejecute [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)para comprobar que la publicación admite suscripciones de inserción. 
 

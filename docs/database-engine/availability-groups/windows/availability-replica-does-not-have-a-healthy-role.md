@@ -1,7 +1,7 @@
 ---
-title: La réplica de disponibilidad no tiene un rol en buen estado para un grupo de disponibilidad
-description: Identifique las posibles causas de por qué una réplica no tiene un rol en buen estado dentro de un grupo de disponibilidad Always On.
-ms.custom: seodec18
+title: Rol incorrecto de una réplica para un grupo de disponibilidad
+description: Identifique las posibles causas de por qué una réplica de disponibilidad no tiene un rol en buen estado dentro de un grupo de disponibilidad AlwaysOn.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9454b48f17af904db87e0000b07651c1bc454362
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91b73682ffd7d626592193c5b729896ec3d593a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991378"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241773"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>La réplica de disponibilidad no tiene un rol en buen estado para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +30,8 @@ ms.locfileid: "67991378"
 |-|-|  
 |**Nombre de directiva**|Estado del rol de réplica de disponibilidad|  
 |**Problema**|La réplica de disponibilidad no tiene un rol en buen estado.|  
-|**Categoría**|**Crítico**|  
-|**Faceta**|Réplica de disponibilidad|  
+|**Categoría**|**Critical)** (Crítico)|  
+|**Faceta**|réplica de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
  Esta directiva comprueba el estado del rol de la réplica de disponibilidad. La directiva está en mal estado cuando el rol de la réplica de disponibilidad no es principal ni secundario. De lo contrario, la directiva está en un estado correcto.  
@@ -39,10 +39,10 @@ ms.locfileid: "67991378"
 > [!NOTE]  
 >  En esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [La réplica de disponibilidad no tiene un rol en buen estado](https://go.microsoft.com/fwlink/p/?LinkId=220856) en TechNet Wiki.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  El rol de esta réplica de disponibilidad está en mal estado. La réplica no tiene el rol principal o secundario.  
   
-## <a name="possible-solution-informationstilltocome"></a>Solución posible: Information_still_to_come  
+## <a name="possible-solution-information_still_to_come"></a>Solución posible: Information_still_to_come  
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

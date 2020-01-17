@@ -1,6 +1,7 @@
 ---
-title: Solucionar problemas relativos a una operación de agregar archivos con error (Grupos de disponibilidad AlwaysOn) | Microsoft Docs
-ms.custom: ''
+title: Errores de operación de adición de archivos de grupo de disponibilidad
+decription: Possible resolutions for failing to add a file to an availability group.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 07561af07d0a682b4fa99076cc774e0c3fbb2590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1655992526096035eb109821d8950980921951ad
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013813"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251225"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-always-on-availability-groups"></a>Solucionar problemas relativos a una operación de agregar archivos con error (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68013813"
 > [!NOTE]  
 >  Se recomienda que, si es posible, la ruta de acceso de archivo (incluida la letra de unidad) de una base de datos secundaria determinada sea idéntica a la de la base de datos principal correspondiente.  
   
-## <a name="problem-resolution"></a>Resolución del problema  
+## <a name="problem-resolution"></a>Resolución de problemas  
  Para resolver este problema, el propietario debe completar los siguientes pasos:  
   
 1.  Quitar la base de datos secundaria del grupo de disponibilidad. Para obtener más información, vea [Quitar una base de datos secundaria de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-database-from-an-availability-group-sql-server.md).  

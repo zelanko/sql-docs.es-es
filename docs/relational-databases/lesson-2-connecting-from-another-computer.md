@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 8389d11868108725a676e9196861c7302241a407
+ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909710"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546550"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conexión desde otro equipo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ Si tiene previsto conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] desde ot
     > Como el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es un complemento del programa [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console y no un programa independiente, el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no aparece como aplicación en las versiones más recientes de Windows. El nombre de archivo contiene un número que representa el número de versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para abrir el Administrador de configuración desde el comando Ejecutar, estas son las rutas de acceso a las últimas cuatro versiones si Windows está instalado en la unidad C:.  
   
     |||  
-    |-|-|  
-    |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|  
+    |-|-|
+    |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
+    |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  
     |[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|  
-    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
-    |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
+    |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
   
-2.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**y, después, haga clic en **Protocolos de** _<InstanceName>_ .  
+2.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server** y, después, haga clic en **Protocolos de** _<InstanceName>_ .  
   
     La instancia predeterminada (una instancia sin nombre) aparece como **MSSQLSERVER**. Si ha instalado una instancia con nombre, el nombre proporcionado aparece en la lista. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] se instala como **SQLEXPRESS**, a menos que se haya cambiado el nombre durante la instalación.  
   
@@ -102,13 +102,13 @@ Después de configurar [!INCLUDE[ssDE](../includes/ssde-md.md)] para utilizar un
   
 3.  En el cuadro de diálogo **Tipo de regla** , seleccione **Puerto**y, a continuación, haga clic en **Siguiente**.  
   
-4.  En el cuadro de diálogo **Protocolo y puertos** , seleccione **TCP**. Seleccione **Puertos locales específicos**y, a continuación, escriba el número de puerto de la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Use 1433 para la instancia predeterminada. Escriba **49172** si está configurando una instancia con nombre y ha configurado un puerto fijo en la tarea anterior. Haga clic en **Siguiente**.  
+4.  En el cuadro de diálogo **Protocolo y puertos** , seleccione **TCP**. Seleccione **Puertos locales específicos**y, a continuación, escriba el número de puerto de la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Use 1433 para la instancia predeterminada. Escriba **49172** si está configurando una instancia con nombre y ha configurado un puerto fijo en la tarea anterior. Haga clic en **Next**.  
   
 5.  En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.  
   
 6.  En el cuadro de diálogo **Perfil** , seleccione los perfiles que describan el entorno de conexión del equipo cuando desee conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)]y, a continuación, haga clic en **Siguiente**.  
   
-7.  En el cuadro de diálogo **Nombre** , escriba un nombre y una descripción para esta regla. Después, haga clic en **Finalizar**.  
+7.  En el cuadro de diálogo **Nombre**, escriba el nombre y la descripción de esta regla y haga clic en **Finalizar**.  
   
 Para obtener más información sobre cómo configurar el firewall con instrucciones incluidas para [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)], consulte [Configurar Firewall de Windows para el acceso al motor de base de datos](../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). Para obtener más información sobre la configuración predeterminada de Firewall de Windows y una descripción de los puertos TCP que afectan al motor de base de datos, Analysis Services, Reporting Services e Integration Services, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
@@ -126,7 +126,7 @@ Cuando el servicio Explorador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-
 3.  En el cuadro **Nombre del servidor** , escriba **tcp:** para especificar el protocolo, seguido del nombre del equipo, una coma y el número de puerto. Para conectarse a la instancia predeterminada, el puerto 1433 está implícito y se puede omitir, por lo que deberá escribir **tcp:** _<nombre_equipo>_ . En nuestro ejemplo de una instancia con nombre, escriba **tcp:** _<nombre_equipo>_ **,49172**.  
   
     > [!NOTE]  
-    > Si omite **tcp:** en el cuadro **Nombre del servidor**, el cliente probará todos los protocolos habilitados en el orden especificado en la configuración del cliente.  
+    > Si omite **tcp:** en el cuadro **Nombre del servidor** , el cliente probará todos los protocolos habilitados en el orden especificado en la configuración del cliente.  
   
 4.  En el cuadro **Autenticación** , confirme **Autenticación de Windows**y luego haga clic en **Conectar**.  
   

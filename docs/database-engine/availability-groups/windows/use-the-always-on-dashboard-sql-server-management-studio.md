@@ -1,6 +1,7 @@
 ---
-title: Uso del panel de grupo de disponibilidad Always On (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Uso del panel de grupo de disponibilidad en SSMS
+description: Describe cómo usar el panel de grupo de disponibilidad de AlwaysOn para supervisar el estado del grupo de disponibilidad en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 08/09/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 802fcd6ad0bead99a56f3bd5f8c71639a42a0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2083d5f8602c28028da90cf4ecd1ed809115c7f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013532"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822676"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Uso del panel de grupo de disponibilidad Always On (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ ms.locfileid: "68013532"
   
 -   **Manual**. Indica que ninguna réplica está en modo de conmutación por error automática.  
   
- **Problemas**  
+ **Issues**  
  Haga clic en el vínculo **Problemas** para abrir documentación de solución de problemas relativa a un problema determinado. Para obtener una lista con todos los problemas relativos a directivas de AlwaysOn, vea [Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
@@ -136,7 +137,7 @@ El panel **Réplica de disponibilidad** muestra las columnas siguientes:
   
 -   **NULL**. Estado desconocido. Este valor aparece cuando la instancia del servidor local no puede comunicarse con el clúster de conmutación por error de WSFC (es decir, el nodo local no forma parte del quórum de WSFC).  
   
- **Problemas**  
+ **Issues**  
  Muestra el nombre del problema. Este valor se muestra de forma predeterminada. Para obtener una lista con todos los problemas relativos a directivas de AlwaysOn, vea [Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Modo de disponibilidad**  
@@ -167,10 +168,10 @@ El panel **Réplica de disponibilidad** muestra las columnas siguientes:
  Indica el estado operativo actual de la réplica secundaria. Este valor está oculto de forma predeterminada. Los valores posibles son:  
   
  **0**. Conmutación por error pendiente    
- **1**. Pendiente    
+ **1**. Pending    
  **2**. En línea    
  **3**. Sin conexión   
- **4**. Error    
+ **4**. Con error    
  **5**. No se pudo establecer quórum  
   
  **NULL**. La réplica no es local  
@@ -194,7 +195,7 @@ El panel **Réplica de disponibilidad** muestra las columnas siguientes:
 -   **Bases de datos de disponibilidad** 
 -   **Synchronization state**  
 -   **Preparación para la conmutación por error**   
--   **Problemas**  
+-   **Issues**  
   
  El panel que muestra que muestra la información agrupada tiene las siguientes columnas:  
   
@@ -237,13 +238,13 @@ El panel **Réplica de disponibilidad** muestra las columnas siguientes:
     > [!CAUTION]  
     >  Cuando una base de datos está en estado INITIALIZING, la acción de forzar una conmutación por error a la réplica secundaria dejará siempre esa base de datos en un estado en el que no se podrá iniciar.  
   
- **Failover Readiness**  
+ **Preparación para la conmutación por error**  
  Indica qué réplica de disponibilidad puede ser objeto de conmutación por error con o sin pérdida potencial de datos. Esta columna se muestra de forma predeterminada. Los valores posibles son:  
   
 -   **Pérdida de datos**   
 -   **No se produce pérdida de datos**  
   
- **Problemas**  
+ **Issues**  
  Muestra el nombre del problema. Esta columna se muestra de forma predeterminada. Los valores posibles son:  
   
 -   **Advertencias**. Haga clic para mostrar los umbrales y problemas de advertencias.   
@@ -251,7 +252,7 @@ El panel **Réplica de disponibilidad** muestra las columnas siguientes:
   
  Para obtener una lista con todos los problemas relativos a directivas de AlwaysOn, vea [Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
- **Suspendida**  
+ **Suspendido**  
  Indica si la base de datos está **Suspendida** o se ha **Reanudado**. Este valor está oculto de forma predeterminada.  
   
  **Motivo de suspensión**  
@@ -338,6 +339,6 @@ Para obtener más información, vea [Informes de latencia del grupo de disponibi
   
 ## <a name="see-also"></a>Consulte también  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
- [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
+ [Herramientas para supervisar grupos de disponibilidad Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   

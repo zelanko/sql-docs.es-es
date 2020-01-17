@@ -1,8 +1,7 @@
 ---
-title: Uso de la propagación automática para inicializar una réplica secundaria para un grupo de disponibilidad
-description: Use la propagación automática para inicializar réplicas secundarias como parte de un grupo de disponibilidad Always On con SQL 2016 y versiones posteriores.
-services: data-lake-analytics
-ms.custom: seodec18
+title: Propagación automática de réplicas secundarias
+description: Obtenga información sobre cómo la propagación automática puede inicializar réplicas secundarias como parte de un grupo de disponibilidad AlwaysOn con SQL 2016 y versiones posteriores.
+ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53e1651766e653c2444a9e454756017d552ce323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934925"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254104"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Uso de la propagación automática para inicializar una réplica secundaria para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -248,7 +247,7 @@ En la siguiente tabla se enumeran los eventos extendidos relacionados con la pro
 |hadr_automatic_seeding_failure|Se produce cuando se realiza una operación de propagación automática incorrectamente.|
 |hadr_automatic_seeding_timeout|Se produce cuando se agota el tiempo de espera de una operación de propagación automática.|
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 

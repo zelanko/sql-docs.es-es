@@ -1,6 +1,7 @@
 ---
-title: Realización de una actualización ficticia de un artículo de mezcla (programación de la replicación con Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Actualización ficticia del artículo de combinación (procedimientos almacenados de replicación)
+description: Use los procedimientos almacenados de replicación de Transact-SQL para realizar una actualización ficticia de un artículo de combinación usado en la replicación de combinación.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f339210-4d85-4843-bd94-e86f7100d3ef
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9696e02e91a28420ce66e21226e322ea7845ab4d
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 05c3a91d647819126261f0637e0de24d0ce3e4fd
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710333"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322042"
 ---
 # <a name="perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming"></a>Realizar una actualización ficticia de un artículo de mezcla (programación de la replicación con Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
-title: Diferencias entre los modos de disponibilidad para un grupo de disponibilidad
+title: Modos de disponibilidad para un grupo de disponibilidad
 description: Una descripción de los diferentes modos de disponibilidad para un grupo de disponibilidad Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8764ffb829f684b996d22c6ea604fad970a1a30f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df39ac4151bb5860db970d423edcbe7064178a08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934845"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241779"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Diferencias entre los modos de disponibilidad para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,5 @@
 ---
-title: 'Ejemplo: Solicitud de esquemas como resultados con las opciones XMLDATA y XMLSCHEMA | Microsoft Docs'
-ms.custom: ''
+title: Solicitud de esquemas como resultados con las opciones XMLDATA y XMLSCHEMA | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,14 +12,15 @@ helpviewer_keywords:
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 231458e7c49fbffebb5568a9dcb1c3663b8f0c3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: a11e6a91c1fea9a0eb7b20124e0de8565540caf5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006797"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243782"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Ejemplo: Solicitud de esquemas como resultados con las opciones XMLDATA y XMLSCHEMA
+# <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>Solicitud de esquemas como resultados con las opciones XMLDATA y XMLSCHEMA
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Esta consulta devuelve el esquema XML-DATA que describe la estructura del documento.  
   

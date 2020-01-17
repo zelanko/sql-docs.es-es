@@ -1,6 +1,7 @@
 ---
-title: Ver y resolver conflictos de datos para publicaciones de mezcla | Microsoft Docs
-ms.custom: ''
+title: Visualización y resolución de conflictos de datos (combinación)
+description: Obtenga información sobre cómo ver y solucionar conflictos de datos para publicaciones de combinación para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db445d9c80c6a6e2552160dcff721c06d5c107e6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 79dc4b26ee543aa99b9fc90e29f7bb6c7d571555
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907788"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321892"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Resolución de conflictos para la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "72907788"
   
 ## <a name="resolve-conflicts"></a>Resolución de conflictos  
   
-1.  Conéctese al publicador (o al suscriptor, si procede) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y expanda el nodo de servidor.  
+1.  Conéctese al publicador (o al suscriptor, si procede) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y expanda el nodo de servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
@@ -87,9 +88,9 @@ Cuando se resuelve un conflicto en la replicación de mezcla, los datos de la fi
   
      En la tabla siguiente se describen los valores de estas columnas en función del valor especificado para `@conflict_logging`.  
   
-    |Valor @conflict_logging|centralized_conflicts|decentralized_conflicts|  
+    |Valor de @conflict_logging|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
-    |**publicador**|1|0|  
+    |**publisher**|1|0|  
     |**suscriptor**|0|1|  
     |**ambos**|1|1|  
   

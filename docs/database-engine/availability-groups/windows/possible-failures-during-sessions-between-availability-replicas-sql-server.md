@@ -1,7 +1,7 @@
 ---
-title: Determinación de la posible causa de los errores de conectividad entre réplicas de disponibilidad
+title: Causas de los errores de conectividad entre réplicas de disponibilidad
 description: En este tema se describen las posibles razones de un error de conexión entre las réplicas que participan en un grupo de disponibilidad Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8fe226c5d419d7214fe20968525ec64ce44bbee6
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 501ec8bc3e7ad039e3864ce8a9a1767c6961848c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874532"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235653"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>"Determinación de la posible causa de los errores de conectividad entre réplicas de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

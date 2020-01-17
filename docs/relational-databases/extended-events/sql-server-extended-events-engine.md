@@ -1,6 +1,5 @@
 ---
-title: Motor de SQL Server Extended Events | Microsoft Docs
-ms.custom: ''
+title: Motor de SQL Server Extended Events
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +12,12 @@ ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: febe2e0e7964d550f0b154188281f3c7bd3f2281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeaa1cbae803e3f4eedef3231f9ab9bbbe31deba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009400"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242964"
 ---
 # <a name="sql-server-extended-events-engine"></a>Motor de SQL Server Extended Events
 
@@ -40,7 +39,7 @@ ms.locfileid: "68009400"
   
  ![Arquitectura de eventos extendidos detallada](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Arquitectura de eventos extendidos detallada")  
   
- Observe lo siguiente:  
+ Tenga en cuenta lo siguiente:  
   
 -   Cada proceso de Windows puede tener uno o más módulos (**proceso Win32**, **módulo Win32**). También se les conoce como módulos *binarios* o *ejecutables*.  
   

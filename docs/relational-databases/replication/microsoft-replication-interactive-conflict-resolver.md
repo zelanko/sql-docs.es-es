@@ -1,6 +1,7 @@
 ---
-title: Solucionador interactivo de conflictos de replicación de Microsoft | Microsoft Docs
-ms.custom: ''
+title: Solucionador de conflictos interactivo (combinación)
+describes: Describes the Interactive Conflict Resolver that can be used for merge subscriptions that are synchronized using the Windows Synchronization Manager.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e92f4720807ee45f254674730c76ad65696e1570
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5eca59b2277eefc351b63013dbc614eac9ed0b65
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767681"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321952"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Solucionador interactivo de conflictos de replicación de Microsoft
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,13 +29,13 @@ ms.locfileid: "68767681"
 >  Los conflictos que implican registros lógicos no se muestran en el Solucionador interactivo. Para ver información acerca de estos conflictos, utilice procedimientos almacenados de replicación. Para obtener más información, vea [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   
 ## <a name="options"></a>Opciones  
- **Nombre de columna**  
+ **Nombre de la columna**  
  Nombre de todas las columnas de la tabla. Una o varias columnas pueden tener datos en conflicto. Independientemente de las columnas que tengan conflictos, toda la fila ganadora sobrescribirá toda la fila perdedora.  
   
  **Resolución sugerida**  
  La resolución sugerida proporcionada por el solucionador de conflictos del artículo.  
   
- **publicador**  
+ **Publicador**  
  Valor de datos en el publicador.  
   
  **Suscriptor**  

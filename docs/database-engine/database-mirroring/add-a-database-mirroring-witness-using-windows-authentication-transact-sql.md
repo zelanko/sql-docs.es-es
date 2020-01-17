@@ -1,6 +1,7 @@
 ---
-title: Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Configuración de un testigo
+description: 'Describe cómo configurar un testigo de creación de reflejo de la base de datos con autenticación de Windows mediante Transact-SQL. '
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: df8fe05e66c50b6bdee8e6bdfd792a2b481d1e02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4616e2c10657e1af8db9c706c518fdf690618303
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945651"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822301"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "67945651"
 > [!IMPORTANT]  
 >  Se recomienda configurar la creación de reflejo de la base de datos durante los periodos de poca actividad, dado que este proceso puede afectar al rendimiento.  
   
-### <a name="to-establish-a-witness"></a>Para establecer un testigo  
+## <a name="establish-a-witness"></a>Establecimiento de un testigo  
   
 1.  En la instancia de servidor testigo, asegúrese de que existe un extremo para la creación de reflejo de la base de datos. Independientemente del número de sesiones de creación de reflejo que deban admitirse, la instancia del servidor solo debe tener un extremo de creación de reflejo de la base de datos. Si tiene previsto usar esta instancia de servidor exclusivamente como testigo en las sesiones de creación de reflejo de la base de datos, asigne el rol de testigo al punto de conexión (ROLE **=** WITNESS). Si lo que quiere es utilizar la instancia de servidor como asociado en una o más sesiones de creación de reflejo de la base de datos, asigne el rol del extremo a ALL.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "67945651"
   
      Si el asociado carece de un punto de conexión, vea [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
-2.  Si las instancias de asociados se ejecutan en cuentas de usuario de distintos dominios, cree un inicio de sesión para las diferentes cuentas de la base de datos maestra de cada instancia. Para obtener más información, vea [Allow Network Access to a Database Mirroring Endpoint Using Windows Authentication &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
+2.  Si las instancias de asociados se ejecutan en cuentas de usuario de distintos dominios, cree un inicio de sesión para las diferentes cuentas de la base de datos maestra de cada instancia. Para obtener más información, vea [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md).  
   
 3.  Conéctese al servidor principal y emita la siguiente instrucción:  
   

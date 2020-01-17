@@ -1,6 +1,7 @@
 ---
-title: Supervisión y aplicación de las prácticas recomendadas usando la administración basada en directivas | Microsoft Docs
-ms.custom: ''
+title: Procedimientos recomendados para la supervisión y aplicación mediante la administración basada en directivas
+description: La administración basada en directivas proporciona un conjunto de archivos de directivas que puede importar como directivas de procedimientos recomendados y, después, evaluar las directivas con un conjunto de destinos que incluye instancias, objetos, bases de datos u objetos de base de datos.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d261f84f23131ab9bce11081e1c9d6d1c8dda8d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54fdfe36da0d590fa2225ab7cc99af640727b000
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087094"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557704"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +68,7 @@ ms.locfileid: "68087094"
 |Error por superación de tiempo de espera de E/S en sistema de registro de eventos de Windows|[Tiempo de espera de entrada y salida del sistema de almacenamiento](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Error del sistema del registro de eventos de Windows|[Errores del sistema inesperados](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con facetas de administración basada en directivas](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   

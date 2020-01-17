@@ -1,6 +1,7 @@
 ---
-title: Creación de una suscripción para un suscriptor que no sea de SQL Server | Microsoft Docs
-ms.custom: ''
+title: Creación de una suscripción para un suscriptor que no sea de SQL
+description: Describe cómo crear una suscripción para un suscriptor que no sea de SQL Server en SQL Server mediante SQL Server Management Studio (SSMS) o Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3f37431c1d8359eface4a5ad374ed8ba6717708a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b64985281c98d15399e7cd561a05746e0634f057
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710432"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322027"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Crear una suscripción para un suscriptor que no sea de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +127,7 @@ ms.locfileid: "71710432"
   
     -   Seleccione **Inmediatamente** en la lista desplegable de la columna **Inicializar cuando** para que el Agente de distribución transfiera los archivos de instantáneas al suscriptor una vez que el asistente haya finalizado. Seleccione **En la primera sincronización** para que el agente transfiera los archivos la próxima vez que esté programado para ejecutarse.  
   
-12. En la página **Acciones del asistente** , incluya de forma opcional la suscripción. Para obtener más información, consulte [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
+12. En la página **Acciones del asistente** , incluya de forma opcional la suscripción. Para más información, consulte [Scripting Replication](../../relational-databases/replication/scripting-replication.md).  
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>Para conservar las tablas en el suscriptor  
   

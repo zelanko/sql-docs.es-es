@@ -1,8 +1,7 @@
 ---
-title: Conjuntos de medios, familias de medios y conjuntos de copias de seguridad (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2016
-ms.prod: sql
+title: Conjuntos de medios, familias de medios y conjuntos de copias de seguridad
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod_service: backup-restore
 ms.reviewer: ''
 ms.technology: backup-restore
@@ -23,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13ae1c4ae17bca661289d044217f63c4bebb9a9c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155579"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258681"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de medios, familias de medios y conjuntos de copias de seguridad (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **En este tema se presenta la terminología básica de medios de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y está pensada para lectores noveles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** 
   
@@ -52,11 +52,11 @@ ms.locfileid: "70155579"
 ##  <a name="OvMediaSetsFamiliesBackupSets"></a> Información general de los conjuntos de medios, las familias de medios y los conjuntos de copias de seguridad  
  Las copias de seguridad de uno o varios medios de copia de seguridad constituyen un conjunto de medios. Un *conjunto de medios* es una colección ordenada de *medios de copia de seguridad*, cintas o archivos de disco, o blobs de Azure en la que se han escrito una o más operaciones de copia de seguridad mediante un tipo y número fijos de dispositivos de copia de seguridad. Un conjunto de medios dado usa unidades de cinta, unidades de disco o blobs de Azure, pero no una combinación de dos o más. 
  
-**Ejemplo:** los dispositivos de copia de seguridad asociados con un conjunto de medios pueden ser tres unidades de cinta denominadas `\\.\TAPE0`, `\\.\TAPE1` y `\\.\TAPE2`. Este conjunto de medios está formado solamente por cintas, empezando con un mínimo de tres (una por unidad). El tipo y número de los dispositivos de copia de seguridad se establece cuando se crea un conjunto de medios y ya no se pueden cambiar. Sin embargo, si es necesario, entre las operaciones de las copias de seguridad y restauración un dispositivo determinado puede sustituirse por un dispositivo del mismo tipo.  
+**Ejemplo**: los dispositivos de copia de seguridad asociados con un conjunto de medios pueden ser tres unidades de cinta denominadas `\\.\TAPE0`, `\\.\TAPE1` y `\\.\TAPE2`. Este conjunto de medios está formado solamente por cintas, empezando con un mínimo de tres (una por unidad). El tipo y número de los dispositivos de copia de seguridad se establece cuando se crea un conjunto de medios y ya no se pueden cambiar. Sin embargo, si es necesario, entre las operaciones de las copias de seguridad y restauración un dispositivo determinado puede sustituirse por un dispositivo del mismo tipo.  
   
  Un conjunto de medios se crea en el medio de copia de seguridad durante una operación de copia de seguridad al dar formato a un medio de copia de seguridad. Para obtener más información, vea [Crear un conjunto de medios](#CreatingMediaSet), más adelante en este tema. Después de dar formato, cada archivo o cinta contiene un encabezado de medios para el conjunto de medios y está listo para recibir el contenido de la copia de seguridad. Con el encabezado adecuado, la operación de copia de seguridad empieza a realizar la copia de seguridad de los datos especificados en los medios de copia de seguridad en todos los dispositivos de copia de seguridad especificados para la operación.  
   
-> **NOTA:** Los conjuntos de medios pueden reflejarse como medida de protección ante posibles daños en el volumen de medios (una cinta o un archivo de disco). Para obtener más información, vea [Mirrored Backup Media Sets &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
+> **NOTA:** Los conjuntos de medios pueden reflejarse como medida de protección ante posibles daños en el volumen de medios (una cinta o un archivo de disco). Para obtener más información, vea [Conjuntos de medios de copia de seguridad reflejados &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  
   
  En un mismo conjunto de medios no pueden almacenarse copias de seguridad comprimidas y sin comprimir al mismo tiempo. Cualquier edición de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores puede leer copias de seguridad comprimidas. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
 
@@ -137,7 +137,7 @@ WITH
   
  Si la segunda operación de copia de seguridad es correcta, se escribe un segundo conjunto de copia de seguridad en el conjunto de medios distribuyendo el contenido de la copia de seguridad de la siguiente manera:  
   
- ![El segundo conjunto de copia de seguridad se distribuye entre 3 cintas del conjunto de medios](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "El segundo conjunto de copia de seguridad se distribuye entre 3 cintas del conjunto de medios")  
+ ![Distribución del segundo conjunto de copia de seguridad entre 3 cintas del conjunto de medios](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "Distribución del segundo conjunto de copia de seguridad entre 3 cintas del conjunto de medios")  
   
  Al restaurar las copias de seguridad, puede usar la opción FILE para especificar las copias de seguridad que desea usar. En el siguiente ejemplo se muestra el uso de la cláusula FILE **=** _backup_set_file_number_ al restaurar una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguida de una copia de seguridad diferencial de la base de datos en el mismo conjunto de medios. El conjunto de medios utiliza tres cintas de copia de seguridad, que se encuentran en las unidades de cinta `\\.\tape0`, `tape1`y `tape2`.  
   
@@ -293,7 +293,7 @@ Agregarlo, que es el comportamiento predeterminado de la copia de seguridad (BAC
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Errores posibles de medios durante copia de seguridad y restauración &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
  [Historial de copias de seguridad e información de encabezados &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   

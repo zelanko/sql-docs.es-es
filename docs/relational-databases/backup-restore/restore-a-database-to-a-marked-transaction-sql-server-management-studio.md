@@ -1,7 +1,7 @@
 ---
-title: Restaurar una base de datos en una transacción marcada (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Restauración de bases de datos en una transacción marcada (SSMS)
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 8f0ea144-1819-4832-905f-e5d0f49b066b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 066ca4d751e6d5d33f69bf284f5a35fb3aaa27e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e71815c79e626a1cebb60c7d5d50fda1cce132d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937586"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245084"
 ---
-# <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurar una base de datos en una transacción marcada (SQL Server Management Studio)
+# <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restauración de bases de datos en una transacción marcada (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cuando una base de datos se encuentra en estado de restauración, puede usar el cuadro de diálogo **Restaurar registro de transacciones** para restaurar la base de datos a una transacción marcada en las copias de seguridad de registros disponibles.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67937586"
   
 ### <a name="to-restore-a-marked-transaction"></a>Para restaurar una transacción marcada  
   
-1.  Tras conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
+1.  Después de conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
 2.  Expanda **Bases de datos**y, en función de la base de datos, seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "67937586"
   
      En la tabla siguiente se muestran los encabezados de columna de la cuadrícula y se describen sus valores.  
   
-    |Encabezado|Valor|  
+    |Encabezado|Value|  
     |------------|-----------|  
     |\<blank>|Muestra una casilla para seleccionar la marca.|  
     |**Marca de transacción**|Nombre de la transacción marcada especificada por el usuario cuando se confirmó la transacción.|  
@@ -58,6 +58,6 @@ ms.locfileid: "67937586"
   
 ## <a name="see-also"></a>Consulte también  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
- [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
+ [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
   

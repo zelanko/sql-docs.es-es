@@ -1,7 +1,7 @@
 ---
-title: Administración basada en directivas de problemas operativos con grupos de disponibilidad
+title: 'Administración basada en directivas: Grupos de disponibilidad'
 description: El modelo de estados de Grupos de disponibilidad Always On evalúa un conjunto de directivas predefinidas de administración basada en directivas (PBM). Puede usarlas para ver el estado de un grupo de disponibilidad y sus réplicas de disponibilidad y bases de datos en SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edb59eacc43d0563c8cd00372d27155f4100703f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac339e638377778065f158b4cbd20280d5d4bb65
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991555"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244060"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Administración basada en directivas de problemas operativos con grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67991555"
  Directivas predefinidas AlwaysOn  
  Un conjunto de directivas integradas que permiten que un administrador de base de datos pueda comprobar un grupo de disponibilidad, así como sus réplicas y bases de datos de disponibilidad, para probar el cumplimiento de los estados definidos por las directivas de AlwaysOn.  
   
- [Grupos de disponibilidad AlwaysOn](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [Grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
  Una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa en el nivel de empresa a la creación de reflejo de la base de datos.  
   
  grupo de disponibilidad  
@@ -116,6 +116,6 @@ ms.locfileid: "67991555"
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Administración de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
- [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
+ [Herramientas para supervisar grupos de disponibilidad Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   

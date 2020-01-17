@@ -1,7 +1,7 @@
 ---
-title: 'Adición de una réplica a un grupo de disponibilidad mediante el Asistente en SSMS: SQL Server'
+title: Adición de una réplica en un grupo de disponibilidad (SSMS)
 ms.description: Add a replica to an Always On availability group using the wizard found in SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a89678fd2964e528ed09a38184fc295e0c955d98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013563"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244979"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>Agregue una réplica al grupo de disponibilidad Always On mediante el Asistente de grupo de disponibilidad de SQL Server Management Studio.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "68013563"
   
 5.  En la página **Especificar réplicas** , especifique y configure una o varias réplicas secundarias nuevas para el grupo de disponibilidad. Esta página contiene tres pestañas: En la siguiente tabla se presentan estas pestañas. Para más información, vea [Página Especificar réplicas &#40;Asistente para nuevo grupo de disponibilidad: Asistente para agregar réplica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
-    |Pestaña|Descripción breve|  
+    |Pestaña|Breve descripción|  
     |---------|-----------------------|  
     |**Réplicas**|Utilice esta pestaña para especificar cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará una nueva réplica secundaria.|  
     |**Extremos**|Utilice esta pestaña para comprobar el extremo de creación de reflejo de la base de datos existente, si existe, para cada nueva réplica secundaria. Si este extremo no está en una instancia de servidor cuyas cuentas de servicio utilizan la autenticación de Windows, el asistente intentará crear el extremo automáticamente.<br /><br /> <br /><br /> Nota: Si cualquier instancia de servidor se ejecuta bajo una cuenta de usuario que no es de dominio, se debe realizar un cambio manual en la instancia de servidor antes de continuar con el asistente. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.|  
@@ -82,7 +82,7 @@ ms.locfileid: "68013563"
   
 6.  Si las réplicas seleccionadas contienen bases de datos que tienen una clave maestra de base de datos, escriba las contraseñas para las claves maestras de base de datos en la columna **Contraseña**. La columna **Estado** indica **Se requiere contraseña** para bases de datos que tienen una clave maestra de base de datos. **Siguiente** está atenuado hasta que se escriba la contraseña correcta en la columna **Contraseña**. Después de escribir las contraseñas, haga clic en **Actualizar**. Si ha especificado la contraseña correctamente, la columna Estado indica **Password entered** (Contraseña escrita), y **Siguiente** pasará a estar disponible.  
   
-7.  En la página **Seleccionar sincronización de datos iniciales** , elija cómo desea que las nuevas bases de datos secundarias se creen y se unan al grupo de disponibilidad. Elija una de las opciones siguientes:  
+7.  En la página **Seleccionar sincronización de datos iniciales** , elija cómo desea que las nuevas bases de datos secundarias se creen y se unan al grupo de disponibilidad. Elija una de las siguientes opciones:  
   
     -   **Completa**  
   

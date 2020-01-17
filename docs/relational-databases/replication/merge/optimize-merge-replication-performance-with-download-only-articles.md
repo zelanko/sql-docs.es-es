@@ -1,6 +1,7 @@
 ---
-title: Optimización el rendimiento de la replicación de mezcla con artículos de solo descarga | Microsoft Docs
-ms.custom: ''
+title: Optimización del rendimiento de los artículos de solo descarga (combinación)
+description: Describe cómo optimizar el rendimiento de los artículos de solo descarga usados por la replicación de combinación.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7875347d1bc002f32721c00ac1ad470b5ec75281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b2e5ba71eab133751b9ae58d912b933b6821178d
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018724"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321461"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

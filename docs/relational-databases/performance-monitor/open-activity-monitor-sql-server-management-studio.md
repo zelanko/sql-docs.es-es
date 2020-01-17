@@ -1,6 +1,7 @@
 ---
-title: Apertura del Monitor de actividad (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Apertura del Monitor de actividad (SSMS)
+description: Procedimiento para abrir el Monitor de actividad en SQL Server Management Studio (SSMS).
+ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9d7bccf89e8f2043413838e9f55fd8bd4e74dc5f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 0af1ae6d145836a313df8ba6e77f965aa17e0e9a
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907227"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165528"
 ---
-# <a name="open-activity-monitor-sql-server-management-studio"></a>Abrir el Monitor de actividad (SQL Server Management Studio)
+# <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>Apertura del Monitor de actividad en SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
    
  El Monitor de actividad ejecuta consultas en la instancia supervisada para obtener información de sus paneles de información. Cuando el intervalo de actualización se establece en menos de 10 segundos, el tiempo utilizado para ejecutar estas consultas puede afectar al rendimiento del servidor  
@@ -36,7 +37,7 @@ ms.locfileid: "72907227"
   
 ## <a name="open-activity-monitor"></a>Abrir el Monitor de actividad  
 
-### <a name="keyboard-shortcut"></a>Método abreviado de teclado  
+### <a name="keyboard-shortcut"></a>Métodos abreviados de teclado  
  - Presione **CTRL+ALT+A** para abrir el Monitor de actividad en cualquier momento.
 
  >**Sugerencia** Mantenga el puntero del mouse sobre cualquier icono en SSMS para saber qué es y qué método abreviado de teclado lo activa.
@@ -56,7 +57,7 @@ Complete el cuadro de diálogo **Conectar con el servidor** si todavía no está
   
 3.  En la lista desplegable **Al inicio** , seleccione **Abrir el Explorador de objetos y el Monitor de actividad**.  
 
-4.  Haga clic en **Aceptar**.
+4.  Haga clic en **OK**.
 
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   

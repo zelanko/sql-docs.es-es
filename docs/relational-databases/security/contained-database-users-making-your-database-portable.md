@@ -1,6 +1,7 @@
 ---
-title: 'Usuarios de base de datos independiente: hacer que la base de datos sea portátil | Microsoft Docs'
-ms.custom: ''
+title: Acceso de usuario contenido a las bases de datos independientes
+description: Obtenga información sobre cómo configurar el acceso de usuario contenido para bases de datos independientes y conozca las diferencias entre un modelo de usuario o inicio de sesión tradicional.
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f568d57f84397f0ebc4b636c4911cc51b197ebf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 028ab6917a8d41a2231e94253ff353910e65b865
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116738"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557900"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Usuarios de base de datos independiente: hacer que la base de datos sea portátil
 
@@ -40,7 +41,7 @@ ms.locfileid: "68116738"
 
  En el modelo de usuario de base de datos independiente, el inicio de sesión en la base de datos maestra no está presente. En su lugar, el proceso de autenticación se produce en la base de datos de usuario y el usuario de base de datos de la base de datos de usuario no tiene asociado ningún inicio de sesión en la base de datos maestra. El modelo de usuario de base de datos independiente admite tanto la autenticación de Windows como la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y se puede usar tanto en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Para conectarse como un usuario de base de datos independiente, la cadena de conexión siempre debe contener un parámetro para la base de datos de usuario de modo que la [!INCLUDE[ssDE](../../includes/ssde-md.md)] sepa qué base de datos es responsable de la administración del proceso de autenticación. La actividad del usuario de base de datos independiente se limita a la autenticación de base de datos, por lo que al conectarse como un usuario de base de datos independiente, la cuenta de usuario de base de datos debe crearse independientemente en cada base de datos que el usuario necesitará. Para cambiar las bases de datos, los usuarios de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] deben crear una nueva conexión. Los usuarios de base de datos independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden cambiar bases de datos si hay un usuario idéntico en otra base de datos.  
   
-**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] admiten las identidades de Azure Active Directory como usuarios de base de datos independiente. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] admite usuarios de base de datos independientes que usan autenticación de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , pero [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] no. Para más información, consulte [Conexión a Base de datos SQL mediante autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Al utilizar la autenticación de Active Directory de Azure, las conexiones de SSMS se pueden realizar mediante autenticación universal de Active Directory.  Los administradores pueden configurar la autenticación universal para requerir Multi-Factor Authentication, que comprueba la identidad mediante una llamada de teléfono, un mensaje de texto, una tarjeta inteligente con pin o una notificación de aplicación móvil. Para más información, consulte [Compatibilidad de SSMS con Azure AD MFA con SQL Database y SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+**Azure:** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] admiten las identidades de Azure Active Directory como usuarios de base de datos independiente. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] admite usuarios de base de datos independientes que usan autenticación de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , pero [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] no. Para más información, consulte [Usar la autenticación de Azure Active Directory para autenticación con SQL](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Al utilizar la autenticación de Active Directory de Azure, las conexiones de SSMS se pueden realizar mediante autenticación universal de Active Directory.  Los administradores pueden configurar la autenticación universal para requerir Multi-Factor Authentication, que comprueba la identidad mediante una llamada de teléfono, un mensaje de texto, una tarjeta inteligente con pin o una notificación de aplicación móvil. Para obtener más información, consulte [Compatibilidad de SSMS con Azure AD MFA con SQL Database y SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
  Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], dado que el nombre de la base de datos siempre se requiere en la cadena de conexión, no se necesitan cambios en la cadena de conexión cuando se cambia desde el modelo tradicional al modelo de usuario de base de datos independiente. Para las conexiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el nombre de la base de datos debe agregarse a la cadena de conexión si no está ya presente.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68116738"
   
  Para obtener más información sobre las reglas de firewall de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , vea los temas siguientes:  
   
-- [Firewall de la base de datos SQL de Azure](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
+- [Firewall de Azure SQL Database](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
 - [Cómo: Configurar los valores del firewall (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
 - [sp_set_firewall_rule &#40;Base de datos SQL de Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule &#40;Base de datos SQL de Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
@@ -74,9 +75,9 @@ ms.locfileid: "68116738"
 |-----------------------|-----------------------------------|  
 |Para cambiar la contraseña, en el contexto de la base de datos maestra:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|Para cambiar la contraseña, en el contexto de la base de datos de usuario:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
-- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los usuarios de la base de datos independiente deben estar habilitados para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [contained database authentication Server Configuration Option](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
+- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los usuarios de la base de datos independiente deben estar habilitados para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, consulte la [opción de configuración del servidor de autenticación de base de datos independiente](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
 - Los usuarios de base de datos independiente y los inicios de sesión con nombres no superpuestos pueden coexistir en las aplicaciones.  
 - Si hay un inicio de sesión en la base de datos maestra con el nombre **name1** y crea un usuario de base de datos independiente denominado **name1**, cuando se proporcione un nombre de base de datos en la cadena de conexión, el contexto del usuario de base de datos tendrá prioridad sobre el contexto de inicio de sesión al conectarse a la base de datos. Es decir, los usuarios de base de datos independiente tienen prioridad sobre los inicios de sesión con el mismo nombre.  
 - En [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , el nombre de un usuario de base de datos independiente no puede ser el mismo que el nombre de la cuenta de administrador del servidor.  
@@ -89,5 +90,5 @@ ms.locfileid: "68116738"
  [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)   
  [Prácticas recomendadas de seguridad con bases de datos independientes](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Conexión a Base de datos SQL mediante autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
+ [Conexión a SQL Database mediante autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
   

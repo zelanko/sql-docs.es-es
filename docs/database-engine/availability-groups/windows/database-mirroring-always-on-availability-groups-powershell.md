@@ -1,7 +1,7 @@
 ---
-title: Creación de un punto de conexión de creación de reflejo de la base de datos para un grupo de disponibilidad con PowerShell
+title: 'Powershell: Punto de conexión de creación de reflejo de la base de datos de un grupo de disponibilidad'
 description: Se describe cómo crear un punto de conexión de creación de reflejo de la base de datos para un grupo de disponibilidad Always On con PowerShell.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4d4672d582242347240a0202a430f03f7ebd91b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8cc91d628c365d4f9092ca24a8b4df06f17adf2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968311"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252898"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>Creación de un punto de conexión de creación de reflejo de la base de datos para un grupo de disponibilidad con PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

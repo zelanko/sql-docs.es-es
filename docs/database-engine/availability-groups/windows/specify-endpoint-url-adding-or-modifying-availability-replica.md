@@ -1,6 +1,7 @@
 ---
-title: Especificar la dirección URL del punto de conexión - Agregar o modificar una réplica de disponibilidad | Microsoft Docs
-ms.custom: ''
+title: Especificación de la dirección URL de una réplica de disponibilidad
+description: Obtenga información sobre cómo especificar la dirección URL del punto de conexión al agregar o modificar una réplica dentro de un grupo de disponibilidad AlwaysOn en SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 724309ed2b66ee75eb8f223ebd300a2ae941cd2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014011"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251287"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Especificar la dirección URL del punto de conexión - Agregar o modificar una réplica de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68014011"
   
  TCP<strong>://</strong> *\<dirección del sistema>* <strong>:</strong> *\<puerto>*  
   
- donde  
+ , donde  
   
 -   *\<dirección del sistema>* es una cadena que identifica de forma inequívoca el equipo de destino. Generalmente, la dirección del servidor es un nombre del sistema (si los sistemas están en el mismo dominio), un nombre de dominio completo o una dirección IP:  
   
@@ -97,7 +98,7 @@ ms.locfileid: "68014011"
   
  Para formar el nombre de dominio completo, concatene los valores de *<host_name>* y *<Primary_Dns_Suffix>* de la siguiente manera:  
   
- _&lt;nombre_host&gt;_ **.** _<sufijo_DNS_primario>_  
+ _<host_name>_ **.** _<sufijo_DNS_primario>_  
   
  Por ejemplo, la configuración IP  
   

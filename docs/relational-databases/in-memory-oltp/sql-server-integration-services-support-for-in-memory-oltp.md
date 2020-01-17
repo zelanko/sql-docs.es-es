@@ -1,6 +1,6 @@
 ---
-title: Compatibilidad de SQL Server Integration Services con OLTP en memoria | Microsoft Docs
-ms.custom: ''
+title: Compatibilidad de SSIS con OLTP en memoria
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9dfaedb283f7b1dd6af08405f5229c994b8987a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdd1d71df1b23b57ab9e55ac16dc6744b21aee9d
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111692"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412590"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>Compatibilidad de SQL Server Integration Services con OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

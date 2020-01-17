@@ -1,6 +1,7 @@
 ---
-title: Calcular la interrupción del servicio durante la conmutación de roles (creación de reflejo de la base de datos) | Microsoft Docs
-ms.custom: ''
+title: Cálculo de la interrupción del servicio durante la conmutación por error del reflejo
+description: Calcule la interrupción del servicio cuando se conmute por error un reflejo de la base de datos del rol principal al secundario.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: a0301a6cdfd1381e3fdc6baa8189cc8fbf4739a1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874178"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253567"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Calcular la interrupción del servicio durante la conmutación de roles (creación de reflejo de la base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

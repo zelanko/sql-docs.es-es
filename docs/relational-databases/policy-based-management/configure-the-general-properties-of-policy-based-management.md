@@ -1,6 +1,7 @@
 ---
-title: Configuración de las propiedades generales de la administración basada en directivas | Microsoft Docs
-ms.custom: ''
+title: Configuración de las propiedades generales de la administración basada en directivas
+description: Obtenga información sobre cómo configurar las propiedades para la administración basada en directivas mediante SQL Server Management Studio (SSMS) o Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1ac7dc65e839d875419673dbf8022fcb0f513a9d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c2d431fd1b04f046fb00f131a1a77a146570b50f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907409"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558160"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>Configurar las propiedades generales de la administración basada en directivas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

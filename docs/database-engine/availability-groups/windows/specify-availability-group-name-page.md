@@ -1,7 +1,7 @@
 ---
-title: 'Página Especificar opciones de grupo de disponibilidad (Asistente para nuevo grupo de disponibilidad): SQL Server | Microsoft Docs'
+title: 'Asistente para grupos de disponibilidad: Especificación de las opciones de grupo de disponibilidad'
 ms.description: Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da34edca55f4f21c3323e621eecf2aa6983cbf79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63995b32f91419ef59184251299b5238d553905a
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014018"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822577"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Página Especificar opciones de grupo de disponibilidad para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68014018"
 
  **Tipo de clúster** Después, especifique el tipo de clúster. Los tipos de clúster posibles dependen de la versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y del sistema operativo. Elija una de las opciones de la siguiente lista:
 
-   * **Clústeres de conmutación por error de Windows Server**
+   * **Agrupación en clústeres de conmutación por error de Windows Server**
    
       Use esta opción cuando el grupo de disponibilidad se hospede en instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que pertenecen a un clúster de conmutación por error de Windows Server para alta disponibilidad y recuperación ante desastres. Esto es válido en todas las versiones compatibles de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
 

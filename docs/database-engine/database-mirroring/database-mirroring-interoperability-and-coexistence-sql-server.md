@@ -1,6 +1,7 @@
 ---
-title: 'Creación de reflejo de la base de datos: interoperabilidad y coexistencia (SQL Server) | Microsoft Docs'
-ms.custom: ''
+title: 'Creación de reflejo de la base de datos: Interoperabilidad y coexistencia'
+description: Obtenga información sobre la interoperabilidad y la coexistencia de la creación de reflejo de la base de datos y otras características de SQL Server, como los catálogos de texto completo, las instantáneas de bases de datos, el trasvase de registros, la replicación y las instancias de clúster de conmutación por error.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d116624ddea37922e401244c3c669db0a81aa03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 045aa94292a4633b8d61e95491d603e0d9897d0d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006417"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254158"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Creación de reflejo de la base de datos: interoperabilidad y coexistencia (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

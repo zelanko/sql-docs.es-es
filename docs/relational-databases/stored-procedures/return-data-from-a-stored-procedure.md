@@ -13,20 +13,20 @@ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 013efa03767302144e7c54967b6aee8b9230d661
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f9ee8851ce00c429ba277dd6e0be3286284f548
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136661"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74307984"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Devolver datos de un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Existen tres formas de devolver datos de un procedimiento a un programa de llamada: conjuntos de resultados, parámetros de salida y códigos de retorno. En este tema se proporciona información sobre los tres enfoques.  
   
-  ## <a name="returning-data-using-result-sets"></a>Devolución de datos con conjuntos de resultados
- Si incluye una instrucción SELECT en el cuerpo de un procedimiento almacenado (pero que no sea SELECT ... INTO ni INSERT ... SELECT), las filas especificadas en la instrucción SELECT se enviarán directamente al cliente.  En el caso de conjuntos de resultados grandes, la ejecución del procedimiento almacenado no continuará a la siguiente instrucción hasta que el conjunto de resultados se haya enviado completamente al cliente.  En cuanto a los conjuntos de resultados pequeños, los resultados se pondrán en cola para su devolución al cliente y la ejecución continuará.  Si se ejecutan varias instrucciones SELECT durante la ejecución del procedimiento almacenado, se enviarán varios conjuntos de resultados al cliente.  Este comportamiento también se aplica a los lotes de TSQL anidados, los procedimientos almacenados anidados y los lotes de TSQL de nivel superior.
+## <a name="returning-data-using-result-sets"></a>Devolución de datos con conjuntos de resultados
+Si incluye una instrucción SELECT en el cuerpo de un procedimiento almacenado (pero que no sea SELECT ... INTO ni INSERT ... SELECT), las filas especificadas en la instrucción SELECT se enviarán directamente al cliente.  En el caso de conjuntos de resultados grandes, la ejecución del procedimiento almacenado no continuará a la siguiente instrucción hasta que el conjunto de resultados se haya enviado completamente al cliente.  En cuanto a los conjuntos de resultados pequeños, los resultados se pondrán en cola para su devolución al cliente y la ejecución continuará.  Si se ejecutan varias instrucciones SELECT durante la ejecución del procedimiento almacenado, se enviarán varios conjuntos de resultados al cliente.  Este comportamiento también se aplica a los lotes de TSQL anidados, los procedimientos almacenados anidados y los lotes de TSQL de nivel superior.
  
  
  ### <a name="examples-of-returning-data-using-a-result-set"></a>Ejemplos de devolución de datos con un conjunto de resultados 

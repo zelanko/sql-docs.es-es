@@ -1,5 +1,5 @@
 ---
-title: Copia de seguridad administrada de SQL Server en Microsoft Azure | Microsoft Docs
+title: Copia de seguridad administrada de SQL Server en Microsoft Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8fb8654f89b11b848028e3b35dd971d80cfd4138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49016b1b4ff391c1b1f533a2bf716f39a40b4dbe
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041364"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245431"
 ---
-# <a name="sql-server-managed-backup-to-microsoft-azure"></a>Copia de seguridad administrada de SQL Server en Microsoft Azure
+# <a name="sql-server-managed-backup-to-microsoft-azure"></a>Copia de seguridad administrada en Microsoft Azure para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] administra y automatiza las copias de seguridad de SQL Server en el servicio Almacenamiento de blobs de Microsoft Azure. Puede dejar que SQL Server determine la programación copia de seguridad según la carga de trabajo de transacciones de la base de datos. Como alternativa, puede usar las opciones avanzadas para definir una programación. La configuración de retención determina durante cuánto tiempo se almacenan las copias de seguridad en Almacenamiento de blobs de Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] admite la restauración a un momento dado para el período de retención especificado.  
   
- A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], los procedimientos y el comportamiento subyacente de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ha cambiado. Para obtener más información, consulte [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
+ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], los procedimientos y el comportamiento subyacente de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ha cambiado. Para obtener más información, consulte [Migración de la configuración de copia de seguridad administrada de SQL Server 2014 a SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md).  
   
 > [!TIP]  
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se recomienda para las instancias de SQL Server que se ejecutan en máquinas virtuales de Microsoft Azure.  
@@ -35,17 +35,17 @@ ms.locfileid: "68041364"
  También puede cifrar las copias de seguridad para obtener seguridad adicional y configurar una programación personalizada con el fin de controlar cuándo se realizan las copias de seguridad. Para obtener más información sobre las ventajas de usar el servicio de almacenamiento de blobs de Microsoft Azure para las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="Prereqs"></a> Requisitos previos  
- Almacenamiento de Microsoft Azure se usa [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para almacenar los archivos de copia de seguridad. Se deben cumplir los siguientes requisitos previos:  
+ Almacenamiento de Microsoft Azure se usa [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para almacenar los archivos de copia de seguridad. Se necesitan los siguientes requisitos previos:  
   
 |Requisito previo|Descripción|  
 |------------------|-----------------|  
 |**Cuenta de Microsoft Azure**|Puede comenzar a trabajar con Azure con un [prueba gratuita](https://azure.microsoft.com/pricing/free-trial/) antes de explorar [opciones de compra](https://azure.microsoft.com/pricing/purchase-options/).|  
-|**Cuenta de Almacenamiento de Azure**|Las copias de seguridad se almacenan en el servicio Almacenamiento de blobs de Microsoft Azure asociado con una cuenta de Almacenamiento de Azure. Para obtener instrucciones paso a paso sobre cómo crear una cuenta de almacenamiento, vea [Acerca de las cuentas de almacenamiento de Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
+|**Cuenta de Azure Storage**|Las copias de seguridad se almacenan en el servicio Almacenamiento de blobs de Microsoft Azure asociado con una cuenta de Almacenamiento de Azure. Para obtener instrucciones paso a paso sobre cómo crear una cuenta de almacenamiento, vea [Acerca de las cuentas de almacenamiento de Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
 |**Contenedor de blobs**|Los blobs se organizan en contenedores. Hay que especificar el contenedor de destino para los archivos de copia de seguridad. Puede crear un contenedor en el [Portal de administración de Microsoft Azure](https://manage.windowsazure.com/), o bien usar el comando **New-AzureStorageContainer** de [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).|  
 |**Firma de acceso compartido (SAS)**|El acceso al contenedor de destino se controla mediante una firma de acceso compartido (SAS). Para más información, vea [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Puede crear un token SAS en el código o con el comando de PowerShell **New-AzureStorageContainerSASToken** . Para ver un script de PowerShell que simplifica este proceso, vea [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)(Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido (SAS) en Almacenamiento de Azure con PowerShell). El token SAS se puede almacenar en una **credencial SQL** para emplearla con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**Agente SQL Server**|El Agente SQL Server debe estar en ejecución para que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] funcione. Considere la posibilidad de establecer la opción de inicio automático.|  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>Componentes  
  Transact-SQL es la interfaz principal para interactuar con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Los procedimientos almacenados del sistema se utilizan para habilitar, configurar y supervisar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Las funciones del sistema se utilizan para recuperar la configuración, los valores de parámetros y la información del archivo de copia de seguridad existentes. Los eventos extendidos se utilizan para exponer los errores y advertencias. Los mecanismos de alerta se habilitan mediante los trabajos del Agente SQL y la administración basada en directivas de SQL Server. La siguiente es una lista de los objetos y una descripción de su funcionalidad en relación con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  Los cmdlets de PowerShell también están disponibles para configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. SQL Server Management Studio permite restaurar las copias de seguridad creadas por [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mediante la tarea **Restaurar base de datos**  
@@ -109,7 +109,7 @@ ms.locfileid: "68041364"
  Si se programan más de 10 copias de seguridad completas simultáneas de la base de datos, se emitirá una advertencia a través del canal de depuración de Eventos extendidos. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mantiene entonces una cola de prioridad para las bases de datos restantes que requieren una copia de seguridad hasta que se programen y completen todas.  
 
 > [!NOTE]
-> Los servidores proxy no admiten copias de seguridad administradas en SQL Server.
+> Los servidores proxy no admiten copias de seguridad administradas en SQL Server.
 >
   
 ##  <a name="support_limits"></a> Compatibilidad  
@@ -128,9 +128,9 @@ ms.locfileid: "68041364"
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] puede tener algunas limitaciones cuando se configura con otras tecnologías que admiten la copia de seguridad, la alta disponibilidad o la recuperación de desastres.  
   
 ## <a name="see-also"></a>Consulte también  
-- [Habilitar la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
-- [Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
-- [Deshabilitar la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
+- [Habilitación de la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
+- [Configuración de las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
+- [Deshabilitación de la copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)
 - [Realizar copias de seguridad y restaurar bases de datos del sistema](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
 - [Copias de seguridad y restauración de bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
   

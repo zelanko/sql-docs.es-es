@@ -1,7 +1,7 @@
 ---
-title: Descarga de cargas de trabajo de solo lectura a la réplica secundaria de un grupo de disponibilidad
+title: Descarga de carga de trabajo a una réplica secundaria de un grupo de disponibilidad
 description: Obtenga información sobre la descarga de consultas e informes de solo lectura a una réplica secundaria de un grupo de disponibilidad Always On en SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/06/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9608383d132dbb670d8a852101dd074d4f285a79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991659"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822404"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Descarga de cargas de trabajo de solo lectura a la réplica secundaria de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "67991659"
   
 -   Las cargas de trabajo de solo lectura para tablas basadas en disco usan las versiones de fila para quitar la contención de bloqueo en las bases de datos secundarias. Todas las consultas que se ejecutan en las bases de datos secundarias se asignan automáticamente al nivel de transacción de aislamiento de instantánea, incluso cuando se establecen otros niveles de aislamiento de transacción de forma explícita. Asimismo, se pasan por alto todas las sugerencias de bloqueo. Esto elimina la contención de lectura y escritura.  
   
--   Las cargas de trabajo de solo lectura para tablas duraderas con optimización para memoria tienen acceso a los datos exactamente de la misma forma que en la base de datos principal, con el uso de procedimientos almacenados nativos o interoperabilidad de SQL con las mismas limitaciones del nivel de aislamiento de transacción (vea [Niveles de aislamiento del motor de base de datos](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)). La carga de trabajo de informes o las consultas de solo lectura que se ejecutan en la réplica principal se pueden ejecutar en la réplica secundaria sin necesidad de hacer ningún cambio. De forma similar, las cargas de trabajo de informes o las consultas de solo lectura que se ejecutan en una réplica secundaria se pueden ejecutar en la réplica principal sin necesidad de hacer ningún cambio.  Al igual que ocurre con las tablas basadas en disco, todas las consultas que se ejecutan en las bases de datos secundarias se asignan automáticamente al nivel de transacción de aislamiento de instantánea, incluso cuando se establecen otros niveles de aislamiento de transacción de forma explícita.  
+-   Las cargas de trabajo de solo lectura para tablas duraderas optimizadas para memoria tienen acceso a los datos exactamente de la misma forma que en la base de datos principal, con el uso de procedimientos almacenados nativos o interoperabilidad de SQL con las mismas limitaciones del nivel de aislamiento de transacción (vea [Niveles de aislamiento del motor de base de datos](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)). La carga de trabajo de informes o las consultas de solo lectura que se ejecutan en la réplica principal se pueden ejecutar en la réplica secundaria sin necesidad de hacer ningún cambio. De forma similar, las cargas de trabajo de informes o las consultas de solo lectura que se ejecutan en una réplica secundaria se pueden ejecutar en la réplica principal sin necesidad de hacer ningún cambio.  Al igual que ocurre con las tablas basadas en disco, todas las consultas que se ejecutan en las bases de datos secundarias se asignan automáticamente al nivel de transacción de aislamiento de instantánea, incluso cuando se establecen otros niveles de aislamiento de transacción de forma explícita.  
   
--   Las operaciones DML se permiten en variables de tabla tanto para los tipos de tabla basadas en disco como para los tipos de tabla con optimización para memoria en la réplica secundaria.  
+-   Las operaciones DML se permiten en variables de tabla tanto para los tipos de tabla basadas en disco como para los tipos de tabla optimizada para memoria en la réplica secundaria.  
   
 ##  <a name="bkmk_Prerequisites"></a> Requisitos previos del grupo de disponibilidad  
   
@@ -90,9 +90,9 @@ ms.locfileid: "67991659"
 -   Tan pronto como se habilita una réplica legible para lectura, puede comenzar a aceptar conexiones a sus bases de datos secundarias. Sin embargo, si hay transacciones activas en una base de datos principal, las versiones de fila no estarán del todo disponibles en la base de datos secundaria correspondiente. Las transacciones activas que existían en la réplica principal cuando se configuró la réplica secundaria deben confirmarse o revertirse. Hasta que el proceso finalice, la asignación del nivel de aislamiento de transacción en la base de datos secundaria estará incompleta y las consultas se bloquearán temporalmente.  
   
     > [!WARNING]  
-    >  La ejecución de transacciones largas afecta al número de filas con control de versiones que se conservan, tanto en tablas basadas en disco como en tablas con optimización para memoria.  
+    >  La ejecución de transacciones largas afecta al número de filas con control de versiones que se conservan, tanto en tablas basadas en disco como en tablas optimizadas para memoria.  
   
--   En las bases de datos secundarias con tablas con optimización para memoria, pese a que siempre se generan versiones de filas para las tablas con optimización para memoria, las consultas se bloquean hasta que se completan todas las transacciones activas que había en la réplica principal cuando se habilitó la réplica secundaria para lectura. De esta forma se garantiza que las tablas basadas en disco y las tablas con optimización para memoria estén disponibles para la carga de trabajo de informes y para las consultas de solo lectura al mismo tiempo.  
+-   En las bases de datos secundarias con tablas con optimización para memoria, pese a que siempre se generan versiones de filas para las tablas con optimización para memoria, las consultas se bloquean hasta que se completan todas las transacciones activas que había en la réplica principal cuando se habilitó la réplica secundaria para lectura. De esta forma se garantiza que las tablas basadas en disco y las tablas optimizadas para memoria estén disponibles para la carga de trabajo de informes y para las consultas de solo lectura al mismo tiempo.  
   
 -   El seguimiento de cambios y la captura de datos modificados no se admiten en las bases de datos secundarias que pertenecen a una réplica secundaria legible:  
   
@@ -118,7 +118,7 @@ ms.locfileid: "67991659"
   
 -   [Repercusión de la carga de trabajo de solo lectura](#ReadOnlyWorkloadImpact)  
   
--   [Indización](#bkmk_Indexing)  
+-   [Indexación](#bkmk_Indexing)  
   
 -   [Estadísticas de las bases de datos de acceso de solo lectura](#Read-OnlyStats)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "67991659"
  Esto significa que hay latencia, normalmente solo se trata de unos segundos, entre las réplicas principales y secundarias. No obstante, en casos excepcionales, por ejemplo, si los problemas de red reducen el rendimiento, la latencia puede ser importante. La latencia aumenta cuando se producen cuellos de botella de E/S y cuando se suspende el movimiento de los datos. Para supervisar el movimiento de datos suspendido, puede usar el [panel AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) o la vista de administración dinámica [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latencia de datos en bases de datos con tablas optimizadas para memoria  
- En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] existían consideraciones especiales en torno a la latencia de datos en las secundarias activas: vea [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundarias activas: réplicas secundarias legibles](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , no existe ninguna consideración especial en torno a la latencia de datos para tablas optimizadas para memoria. La latencia de datos esperada para tablas con optimización para memoria es comparable a la latencia para tablas basadas en disco.  
+ En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] existían consideraciones especiales en torno a la latencia de datos en las secundarias activas: vea [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundarias activas: réplicas secundarias legibles](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , no existe ninguna consideración especial en torno a la latencia de datos para tablas optimizadas para memoria. La latencia de datos esperada para tablas optimizadas para memoria es comparable a la latencia para tablas basadas en disco.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> Repercusión de la carga de trabajo de solo lectura  
  Al configurar una réplica secundaria para el acceso de solo lectura, las cargas de trabajo de solo lectura en las bases de datos secundarias utilizan los recursos del sistema, como la CPU y E/S (para tablas basadas en disco) de los subprocesos REDO, especialmente si las cargas de trabajo de solo lectura en tablas basadas en disco realizan un uso intensivo de E/S. No hay ningún impacto en la E/S cuando se tiene acceso a tablas con optimización para memoria porque todas las filas residen en memoria.  
@@ -183,10 +183,10 @@ ms.locfileid: "67991659"
   
 -   Debido a que las estadísticas temporales se almacenan en **tempdb**, el reinicio del servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provoca que desaparezcan todas las estadísticas temporales.  
   
--   El sufijo _readonly_database_statistic está reservado para las estadísticas que genera [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este sufijo no se puede usar al crear estadísticas en una base de datos principal. Para obtener más información, vea [Statistics](../../../relational-databases/statistics/statistics.md).  
+-   El sufijo _readonly_database_statistic está reservado para las estadísticas que genera [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este sufijo no se puede usar al crear estadísticas en una base de datos principal. Para más información, consulte [Estadísticas](../../../relational-databases/statistics/statistics.md).  
   
 ##  <a name="bkmk_AccessInMemTables"></a> Obtener acceso a tablas optimizadas para memoria en una réplica secundaria  
- Los niveles de aislamiento de transacción que se pueden usar con tablas con optimización para memoria en una réplica secundaria son los mismos que en la réplica principal. Se recomienda establecer el nivel de aislamiento de nivel de sesión en READ COMMITTED y establecer la opción de nivel de base de datos MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT en ON. Por ejemplo:  
+ Los niveles de aislamiento de transacción que se pueden usar con tablas optimizadas para memoria en una réplica secundaria son los mismos que en la réplica principal. Se recomienda establecer el nivel de aislamiento de nivel de sesión en READ COMMITTED y establecer la opción de nivel de base de datos MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT en ON. Por ejemplo:  
   
 ```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
@@ -242,6 +242,6 @@ GO
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [Estadísticas](../../../relational-databases/statistics/statistics.md)  
+ [estadísticas](../../../relational-databases/statistics/statistics.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: Definición de una relación de registros lógicos entre artículos de tabla de mezcla | Microsoft Docs
-ms.custom: ''
+title: Definición de una relación de registros lógicos entre artículos de tabla de combinación
+description: Obtenga información sobre cómo definir la relación de registros lógicos entre las tablas relacionadas utilizadas para los artículos de replicación de combinación.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74d9d0bec559dbc618e5487fea647461bc967db3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8df94f31b6a036677f5d62ae60ffb4cf53a082be
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846613"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321239"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definir una relación de registros lógicos entre artículos de tabla de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "70846613"
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Si agrega, modifica o elimina un registro lógico una vez inicializadas las suscripciones a la publicación, deberá generar una instantánea nueva y reinicializar todas las suscripciones después de realizar el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
+-   Si agrega, modifica o elimina un registro lógico una vez inicializadas las suscripciones a la publicación, deberá generar una instantánea nueva y reinicializar todas las suscripciones después de realizar el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Cambiar las propiedades de la publicación y de los artículos](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
 ##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Defina registros lógicos en el cuadro de diálogo **Agregar combinación**, que está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
@@ -105,7 +106,7 @@ ms.locfileid: "70846613"
   
     -   Para usar la resolución y detección de conflictos estándar en el nivel de filas o columnas, especifique un valor de **false** para **\@logical_record_level_conflict_detection** y **\@logical_record_level_conflict_resolution**, que es el valor predeterminado.  
   
-3.  Repita el paso 2 para cada artículo que comprenderá el registro lógico. Debe usar la misma opción de detección y resolución de conflictos para cada artículo del registro lógico. Para más información, consulte [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
+3.  Repita el paso 2 para cada artículo que comprenderá el registro lógico. Debe usar la misma opción de detección y resolución de conflictos para cada artículo del registro lógico. Para más información, consulte [Detectar y solucionar conflictos en registros lógicos](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
 4.  En la base de datos de publicación del publicador, ejecute [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Especifique **\@publication**, el nombre de un artículo en la relación para **\@article**, el nombre del segundo artículo para **\@join_articlename**, un nombre para la relación para **\@filtername**, una cláusula que defina la relación entre los dos artículos para **\@join_filterclause**, el tipo de combinación para **\@join_unique_key** y uno de los valores siguientes para **\@filter_type**:  
   
@@ -150,7 +151,7 @@ ms.locfileid: "70846613"
   
  [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../relational-databases/replication/codesnippet/tsql/define-a-logical-record-_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
   
 > [!NOTE]  
 >  La replicación de mezcla le permite especificar que se realice un seguimiento de los conflictos y se resuelvan en el nivel de registro lógico, pero dichas opciones no se pueden establecer usando RMO.  

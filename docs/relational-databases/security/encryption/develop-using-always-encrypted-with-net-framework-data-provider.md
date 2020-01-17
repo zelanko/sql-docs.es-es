@@ -1,6 +1,7 @@
 ---
-title: Uso de Always Encrypted con el proveedor de datos .NET Framework para SQL Server | Microsoft Docs
-ms.custom: ''
+title: Always Encrypted con el proveedor de datos .NET Framework
+description: Obtenga información sobre cómo desarrollar aplicaciones .NET con la característica Always Encrypted para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database
@@ -11,12 +12,12 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07351f5fe839f8304e56b5a94818c93255149fa5
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 3c442568ad7764ba0f9031a02a8080499555d26f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594458"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558086"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Uso de Always Encrypted con el proveedor de datos .NET Framework para SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +74,7 @@ Para configurar la aplicación:
 2. Actualice la configuración de la aplicación (por ejemplo, en web.config o app.config) para definir la asignación relativa a un tipo de enclave con el que su instancia de [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] se ha configurado. Para más detalles, consulte [Configuración del tipo de enclave como opción de configuración del servidor Always Encrypted](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md). [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] admite enclaves de VBS y Servicio de protección de host como atestación. Por lo tanto, debe asignar el tipo de enclave de VBS a la clase Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider del paquete NuGet. 
 3. Habilite los cálculos de enclave para una conexión de la aplicación a la base de datos estableciendo la palabra clave de dirección URL de atestación de enclave de la cadena de conexión en un punto de conexión de atestación. El valor de la palabra clave debe establecerse en el punto de conexión de atestación del servidor HGS, que se configura en el entorno. 
 
-Para seguir un tutorial paso a paso, consulte [Tutorial: Desarrollo de una aplicación de .NET Framework mediante Always Encrypted con enclaves seguros](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+Para seguir un tutorial paso a paso, consulte [Tutorial: Desarrollo de una aplicación de .NET Framework mediante Always Encrypted con enclaves seguros](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recuperar y modificar los datos de las columnas cifradas
 
@@ -108,7 +109,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 
 ### <a name="inserting-data-example"></a>Ejemplo de inserción de datos
 
-En este ejemplo se inserta una fila en la tabla Patients. Observe lo siguiente:
+En este ejemplo se inserta una fila en la tabla Patients. Tenga en cuenta lo siguiente:
 - No existe nada específico al cifrado en el código de ejemplo. El proveedor de datos .NET Framework para SQL Server detecta y cifra automáticamente los parámetros *paramSSN* y *paramBirthdate* que tienen como destino las columnas cifradas. Esto hace que el cifrado se realice de manera transparente en la aplicación. 
 - Los valores que se insertan en las columnas de bases de datos, incluidas las columnas cifradas, se pasan como objetos [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) . Si bien el uso de **SqlParameter** es opcional al enviar valores a las columnas no cifradas (aunque es altamente recomendable porque ayuda a evitar la inyección de código SQL), es necesario para los valores que tienen como destino las columnas cifradas. Si los valores que se han insertado en las columnas SSN o BirthDate se pasan como literales incrustados en la instrucción de consulta, la consulta producirá un error porque el proveedor de datos .NET Framework para SQL Server no podrá determinar los valores de las columnas cifradas de destino, por lo que no los cifrará. Como resultado, el servidor los rechazará considerándolos incompatibles con las columnas cifradas.
 - El tipo de datos del parámetro que tiene como destino la columna SSN se establece como una cadena ANSI (no Unicode), que se asigna al tipo de datos char o varchar de SQL Server. Si el tipo del parámetro se ha establecido como una cadena Unicode (cadena) que se asigna a nchar o nvarchar, la consulta producirá un error, ya que Always Encrypted no admite conversiones de valores cifrados nchar o nvarchar a valores cifrados char o varchar. Vea [Asignar tipos de datos de SQL Server](/dotnet/framework/data/adonet/sql-server-data-type-mappings) para obtener información sobre las asignaciones de tipos de datos.
@@ -160,7 +161,7 @@ using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
 
 ### <a name="retrieving-plaintext-data-example"></a>Ejemplo de la recuperación de datos de texto sin formato
 
-En el siguiente ejemplo se muestra el filtrado de datos basándose en valores cifrados, así como la recuperación de datos de texto sin formato de las columnas cifradas. Observe lo siguiente:
+En el siguiente ejemplo se muestra el filtrado de datos basándose en valores cifrados, así como la recuperación de datos de texto sin formato de las columnas cifradas. Tenga en cuenta lo siguiente:
 - El valor que se ha usado en la cláusula WHERE para filtrar en la columna SSN necesita pasarse mediante SqlParameter, de forma que el proveedor de datos .NET Framework para SQL Server pueda cifrarlo de manera transparente antes de enviarlo a la base de datos.
 - Todos los valores impresos por el programa estarán en texto sin formato, ya que el proveedor de datos .NET Framework para SQL Server descifrará los datos que se han recuperado de las columnas SSN y BirthDate de manera transparente.
 
@@ -198,7 +199,7 @@ using (SqlConnection connection = new SqlConnection(strbldr.ConnectionString))
 
 Si Always Encrypted no está habilitado, una consulta todavía puede recuperar datos de las columnas cifradas, siempre y cuando la consulta no tenga parámetros que tengan como destino las columnas cifradas.
 
-En el ejemplo siguiente se ilustra la recuperación de datos binarios de las columnas cifradas. Observe lo siguiente:
+En el ejemplo siguiente se ilustra la recuperación de datos binarios de las columnas cifradas. Tenga en cuenta lo siguiente:
 
 - Como Always Encrypted no está habilitado en la cadena de conexión, la consulta devolverá valores cifrados de SSN y BirthDate como matrices de bytes (el programa convierte los valores en cadenas).
 - Una consulta que recupera datos de columnas cifradas con Always Encrypted deshabilitado puede tener parámetros, siempre y cuando ninguno de ellos tenga como destino una columna cifrada. La consulta anterior filtra por LastName, que no está cifrado en la base de datos. Si la consulta ha filtrado por SSN o BirthDate, esta producirá un error.
@@ -303,7 +304,7 @@ El proveedor de datos .NET Framework para SQL Server incluye los siguientes prov
 No necesita realizar ningún cambio de código en la aplicación para usar estos proveedores pero tenga en cuenta lo siguiente:
 
 - Usted (o su DBA) necesita asegurarse de que el nombre de proveedor, configurado en los metadatos de clave maestra de columna, sea correcto y que la ruta de acceso de la clave maestra de columna cumpla con un formato de ruta de acceso de la clave que sea válido para un proveedor determinado. Se recomienda que configure las claves mediante herramientas como SQL Server Management Studio, que genera automáticamente las rutas de acceso a la clave y los nombres de proveedor válidos al emitir la instrucción [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md) (Transact-SQL). Para más información, consulte [Configurar Always Encrypted con SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) y [Configurar Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
-- Asegúrese de que la aplicación pueda acceder a la clave del almacén de claves. Esto puede suponer conceder a la aplicación el acceso a la clave o al almacén de claves, dependiendo de este, o realizar cualquier otro paso de configuración específico del almacén de claves. Por ejemplo, para tener acceso a un almacén de claves que implemente CNG o CAPI (por ejemplo, un módulo de seguridad de hardware), necesita asegurarse de que esté instalada una biblioteca que implemente CNG o CAP para el almacén en su equipo de la aplicación. Para obtener más información, consulte [Creación y almacenamiento de claves maestras de columna para Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+- Asegúrese de que la aplicación pueda acceder a la clave del almacén de claves. Esto puede suponer conceder a la aplicación el acceso a la clave o al almacén de claves, dependiendo de este, o realizar cualquier otro paso de configuración específico del almacén de claves. Por ejemplo, para tener acceso a un almacén de claves que implemente CNG o CAPI (por ejemplo, un módulo de seguridad de hardware), necesita asegurarse de que esté instalada una biblioteca que implemente CNG o CAP para el almacén en su equipo de la aplicación. Para más información, vea [Creación y almacenamiento de claves maestras de columna para Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ### <a name="using-azure-key-vault-provider"></a>Usar el proveedor de Azure Key Vault
 
@@ -522,7 +523,7 @@ SqlConnection.ColumnEncryptionTrustedMasterKeyPaths.Add(serverName, trustedKeyPa
 
 ## <a name="copying-encrypted-data-using-sqlbulkcopy"></a>Copiar datos cifrados con SqlBulkCopy
 
-Con SqlBulkCopy, puede copiar datos que ya están cifrados y almacenados en una tabla a otra, sin descifrarlos. Para realizar esto:
+Con SqlBulkCopy, puede copiar datos que ya están cifrados y almacenados en una tabla a otra, sin descifrarlos. Para ello:
 
 - Asegúrese de que la configuración de cifrado de la tabla de destino es idéntica a la configuración de la tabla de origen. En particular, ambas tablas debe tener las mismas columnas cifradas y estas deben cifrarse mediante los mismos tipos de cifrado y las mismas claves de cifrado. Nota: Si alguna de las columnas de destino se cifra de una manera diferente a la de su columna de origen correspondiente, no podrá descifrar los datos de la tabla de destino después de la operación de copia. Los datos estarán dañados.
 - Configure ambas conexiones de base de datos, a la tabla de origen y a la tabla de destino, sin tener habilitado Always Encrypted. 

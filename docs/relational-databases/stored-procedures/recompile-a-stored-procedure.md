@@ -1,7 +1,7 @@
 ---
 title: Nueva compilación de un procedimiento almacenado | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/28/2019
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 115516dec13c971d774d0848cf39f847f6db0d6c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2a701e31e53b1d540c3fd586f10f34543895dfde
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909011"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564792"
 ---
 # <a name="recompile-a-stored-procedure"></a>Volver a compilar un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,76 +60,59 @@ ms.locfileid: "72909011"
   
  Si se usa esta opción en una instrucción EXECUTE, se necesitan permisos EXECUTE para el procedimiento. No se necesitan permisos en la propia instrucción EXECUTE, pero sí se necesitan permisos de ejecución en el procedimiento al que se hace referencia en la instrucción EXECUTE. Para obtener más información, vea [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
- Sugerencia de consulta **RECOMPILE**  
+ Sugerencia de consulta**RECOMPILE**  
  Esta característica se emplea cuando se crea el procedimiento y la sugerencia se incluye en las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] del procedimiento. Por tanto, necesita el permiso CREATE PROCEDURE en la base de datos y el permiso ALTER en el esquema en el que se va a crear el procedimiento.  
   
  Ejecutar el procedimiento almacenado del sistema**sp_recompile**  
  Necesita el permiso ALTER en el procedimiento especificado.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Para volver a compilar un procedimiento almacenado usando la opción WITH RECOMPILE  
-  
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  En la barra Estándar, haga clic en **Nueva consulta**.  
-  
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se crea la definición del procedimiento.  
 
-```  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
-    DROP PROCEDURE dbo.uspProductByVendor;  
-GO  
-CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
-WITH RECOMPILE  
-AS  
-    SET NOCOUNT ON;  
-    SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
-    FROM Purchasing.Vendor AS v   
-    JOIN Purchasing.ProductVendor AS pv   
-      ON v.BusinessEntityID = pv.BusinessEntityID   
-    JOIN Production.Product AS p   
-      ON pv.ProductID = p.ProductID  
-    WHERE v.Name LIKE @Name;  
+1. Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-```  
+1. En la barra Estándar, haga clic en **Nueva consulta**.  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Para volver a compilar un procedimiento almacenado usando la opción WITH RECOMPILE  
+1. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se crea la definición del procedimiento.  
+
+   ```sql
+   USE AdventureWorks2012;  
+   GO  
+   IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL   
+       DROP PROCEDURE dbo.uspProductByVendor;  
+   GO  
+   CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'  
+   WITH RECOMPILE  
+   AS  
+       SET NOCOUNT ON;  
+       SELECT v.Name AS 'Vendor name', p.Name AS 'Product name'  
+       FROM Purchasing.Vendor AS v   
+       JOIN Purchasing.ProductVendor AS pv   
+         ON v.BusinessEntityID = pv.BusinessEntityID   
+       JOIN Production.Product AS p   
+         ON pv.ProductID = p.ProductID  
+       WHERE v.Name LIKE @Name;  
+   ```  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Para volver a compilar un procedimiento almacenado usando la opción WITH RECOMPILE   
   
-2.  En la barra Estándar, haga clic en **Nueva consulta**.  
-  
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se crea un procedimiento simple que devuelve todos los empleados (nombre y apellidos), sus puestos y los nombres de sus departamentos a partir de una vista.  
-  
-     Después, copie y pegue el segundo ejemplo de código en la ventana de consulta y, a continuación, haga clic en **Ejecutar**. Esto ejecutará el procedimiento y volverá a compilar el plan de consulta del procedimiento.  
-  
-```sql  
-USE AdventureWorks2012;  
-GO  
-EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
-GO  
-  
-```  
-  
-#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>Para volver a compilar un procedimiento almacenado mediante sp_recompile  
-  
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  En la barra Estándar, haga clic en **Nueva consulta**.  
-  
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se crea un procedimiento simple que devuelve todos los empleados (nombre y apellidos), sus puestos y los nombres de sus departamentos a partir de una vista.  
-  
-     Después, copie y pegue el ejemplo siguiente en la ventana de consulta y, a continuación, haga clic en **Ejecutar**. Esto no ejecuta el procedimiento, sino que lo marca para que se vuelva a compilar de forma que su plan de consulta se actualice la próxima vez que se ejecute el procedimiento.  
+Seleccione **Nueva consulta**. Luego, copie y pegue el ejemplo de código siguiente en la ventana de consulta y haga clic en **Ejecutar**. Esto ejecutará el procedimiento y volverá a compilar el plan de consulta del procedimiento.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
-GO  
+EXECUTE HumanResources.uspProductByVendor WITH RECOMPILE;  
+GO
+```  
   
+### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>Para volver a compilar un procedimiento almacenado mediante sp_recompile  
+
+Seleccione **Nueva consulta**. Luego, copie y pegue el ejemplo siguiente en la ventana de consulta y haga clic en **Ejecutar**. Esto no ejecuta el procedimiento, sino que lo marca para que se vuelva a compilar de forma que su plan de consulta se actualice la próxima vez que se ejecute el procedimiento.  
+
+```sql  
+USE AdventureWorks2012;  
+GO  
+EXEC sp_recompile N'dbo.uspProductByVendor';   
+GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  

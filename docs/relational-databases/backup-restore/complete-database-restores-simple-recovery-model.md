@@ -1,7 +1,7 @@
 ---
-title: Restauraciones de base de datos completas (modelo de recuperación simple) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Restauración de bases de datos: modelo de recuperación simple'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: bb6b9d703d98eae5858cc37d865d81455c03f4f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92e485372bca104ae7c34405f711ced3a6a60a44
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081382"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242577"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Restauraciones de base de datos completas (modelo de recuperación simple)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68081382"
 ##  <a name="Overview"></a> Información general de la restauración de la base de datos en el modelo de recuperación simple  
  Una restauración completa de base de datos con el modelo de recuperación simple implica una o dos instrucciones [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , en función de si desea restaurar una copia de seguridad diferencial de la base de datos. Si solo usa copias de seguridad completas de la base de datos, restaure solo la copia de seguridad más reciente, como se muestra en la siguiente ilustración.  
   
- ![Restaurar solamente una copia de seguridad completa de la base de datos](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "Restaurar solamente una copia de seguridad completa de la base de datos")  
+ ![Restauración exclusiva de una copia de seguridad completa de la base de datos](../../relational-databases/backup-restore/media/bnrr-rmsimple1-fulldbbu.gif "Restauración exclusiva de una copia de seguridad completa de la base de datos")  
   
  Si también usa una copia de seguridad diferencial de la base de datos, restaure la copia de seguridad completa más reciente de la base de datos sin recuperar la base de datos y, a continuación, restaure la copia de seguridad diferencial más reciente de la base de datos y recupere la base de datos. En la siguiente ilustración se muestra este proceso.  
   

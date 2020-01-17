@@ -1,6 +1,7 @@
 ---
-title: Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad | Microsoft Docs
-ms.custom: ''
+title: Directivas para ver el estado del grupo de disponibilidad
+description: Use las directivas de AlwaysOn o PowerShell para determinar el estado operativo de un grupo de disponibilidad AlwaysOn.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a25f06a464fe8ba44347b4f1f117cbde64ceab76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13f43e5f66ca7700e9dd4732e9cf45ee1921548d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013637"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244744"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "68013637"
   
 1.  Establezca el valor predeterminado (**cd**) en una instancia del servidor que hospede una de las réplicas de disponibilidad. Para ver información acerca de todas las réplicas de disponibilidad en un grupo de disponibilidad, use la instancia del servidor que hospeda la réplica principal.  
   
-2.  Use los cmdlets siguientes:  
+2.  Use los siguientes cmdlets:  
   
      **Test-SqlAvailabilityGroup**  
      Evalúa el estado de un grupo de disponibilidad mediante la evaluación de las directivas de administración basada en directivas (PBM) de SQL Server. Debe tener permisos CONNECT, VIEW SERVER STATE, y VIEW ANY DEFINITION para ejecutar este cmdlet.  
@@ -90,7 +91,7 @@ ms.locfileid: "68013637"
     |**AllowUserPolicies**|Ejecuta las directivas de usuario que se encuentran en las categorías de directiva de AlwaysOn.|  
     |**InputObject**|Una colección de objetos que representan grupos de disponibilidad, réplicas de disponibilidad o estados de bases de datos de disponibilidad (dependiendo del cmdlet que esté utilizando). El cmdlet calculará el estado de los objetos especificados.|  
     |**NoRefresh**|Cuando se establece este parámetro, el cmdlet no actualizará manualmente los objetos especificados por el parámetro **-Path** o **-InputObject** .|  
-    |**Ruta de acceso**|La ruta de acceso al grupo de disponibilidad, una o varias réplicas de disponibilidad o el estado del clúster de réplica de la base de datos de disponibilidad (dependiendo del cmdlet que esté utilizando). Se trata de un parámetro opcional. Si no se especifica, el valor del valor predeterminado de este parámetro es la ubicación de trabajo actual.|  
+    |**Path**|La ruta de acceso al grupo de disponibilidad, una o varias réplicas de disponibilidad o el estado del clúster de réplica de la base de datos de disponibilidad (dependiendo del cmdlet que esté utilizando). Se trata de un parámetro opcional. Si no se especifica, el valor del valor predeterminado de este parámetro es la ubicación de trabajo actual.|  
     |**ShowPolicyDetails**|Muestra el resultado de cada evaluación de directiva realizada por este cmdlet. El cmdlet envía un objeto por evaluación de la directiva, y este objeto tiene campos que describen los resultados de la evaluación (si la directiva se ha superado o no, el nombre y la categoría de la directiva, etc.).|  
   
      Por ejemplo, el siguiente comando **Test-SqlAvailabilityGroup** especifica el parámetro **-ShowPolicyDetails** para mostrar el resultado de cada evaluación de directiva realizada por este cmdlet en cada directiva de administración basada en directivas (PBM) que se ejecutó en el grupo de disponibilidad `MyAg`.  

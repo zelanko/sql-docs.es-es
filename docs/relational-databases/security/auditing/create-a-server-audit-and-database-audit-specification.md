@@ -1,6 +1,7 @@
 ---
-title: Creación de una especificación de auditoría de servidor y de auditoría de base de datos | Microsoft Docs
-ms.custom: ''
+title: Creación de una especificación de auditoría de servidor y de auditoría de base de datos
+description: Obtenga información sobre cómo crear una auditoría de SQL Server y una especificación de auditoría de base de datos mediante SQL Server Management Studio o Transact-SQL (T-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06ccedc97905180f75369d89fc7bc1ca49175c59
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903868"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557880"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Crear una especificación de auditoría de servidor y de auditoría de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ ms.locfileid: "72903868"
      **Nombre**  
      El nombre de la especificación de auditoría de base de datos. Se genera automáticamente al crear una nueva especificación de auditoría de servidor, pero se puede modificar.  
   
-     **Auditar**  
+     **Auditoría**  
      Nombre de un objeto de auditoría de servidor existente. Escriba el nombre de la auditoría o selecciónelo en la lista.  
   
      **Tipo de acción de auditoría**  
@@ -134,7 +135,7 @@ ms.locfileid: "72903868"
   
 2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo se crea una especificación de auditoría de base de datos denominada `Audit_Pay_Tables` que audita las instrucciones SELECT e INSERT por el usuario `dbo`, para la tabla `HumanResources.EmployeePayHistory` basándose en la auditoría de servidor definida anteriormente.  
+3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo se crea una especificación de auditoría de base de datos denominada `Audit_Pay_Tables` que audita las instrucciones SELECT e INSERT por el usuario `dbo` , para la tabla `HumanResources.EmployeePayHistory` basándose en la auditoría de servidor definida anteriormente.  
   
     ```  
     USE AdventureWorks2012 ;   

@@ -1,6 +1,7 @@
 ---
-title: Información de publicación, Advertencias (Publicación de combinación, SQL Server 2005 y posteriores) | Microsoft Docs
-ms.custom: ''
+title: Advertencias (información de publicación de combinación)
+description: Describe la pestaña "Advertencias" de la página de información de publicación de replicación de combinación en SQL Server Management Studio en SQL Server 2005 y versiones posteriores.
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fd25636ed1451f51430e889051bef18c8ce1570b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 41e709bcbc533c3cf7ff294dd2b07a6c638a0c52
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120285"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321355"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Información de publicación, Advertencias (Publicación de combinación, SQL Server 2005 y posterior)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +54,19 @@ ms.locfileid: "68120285"
  Además de mostrar una advertencia en el Monitor de replicación, llegar a un umbral también puede desencadenar una alerta. Para definir alertas, haga clic en **Configurar alertas** y proporcione información en el cuadro de diálogo **Configurar alertas de replicación** .  
   
 ## <a name="options"></a>Opciones  
- **Habilitado**  
+ **Enabled**  
  Seleccione esta opción si desea habilitar una advertencia y especificar un umbral asociado.  
   
  **Alerta**  
  Seleccione esta opción para habilitar el valor de alerta para una advertencia determinada de replicación.  
   
- **Advertencia**  
+ **Warning (ADVERTENCIA)**  
  Descripción de la advertencia asociada al umbral.  
   
  **Umbral**  
  Permite especificar un valor para el umbral.  
   
- **Configurar alertas**  
+ **Configuración de alertas**  
  Seleccione una fila en la cuadrícula **Advertencias** y haga clic en **Configurar alertas** para abrir el cuadro de diálogo **Configurar alertas de replicación** . El cuadro de diálogo permite definir una alerta que se asociará al umbral y la advertencia seleccionados.  
   
  **Descartar cambios**  
@@ -74,7 +75,7 @@ ms.locfileid: "68120285"
 > [!NOTE]  
 >  Hacer clic en **Descartar cambios** no afecta a las alertas definidas en el cuadro de diálogo **Configurar alertas de replicación** .  
   
- **Guardar cambios**  
+ **Save Changes**  
  Haga clic para guardar los cambios realizados en las advertencias y los umbrales.  
   
 ## <a name="see-also"></a>Consulte también  

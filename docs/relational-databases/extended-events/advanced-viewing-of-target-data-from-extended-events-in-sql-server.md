@@ -1,6 +1,5 @@
 ---
-title: Visualización avanzada de datos de destino de eventos extendidos en SQL Server | Microsoft Docs
-ms.custom: ''
+title: Visualización avanzada de datos de destino de eventos extendidos
 ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,13 +9,14 @@ ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0070948697c7aaed76330da233bdf3739f5b3e3a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f5bf55c020e773e8d724a3c84bcee4dd78307a4f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909414"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255761"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)
 
@@ -91,7 +91,7 @@ Existen varias maneras de incorporar datos de destino del archivo event_file a l
 
 
 - Cada vez que se inicia la sesión de eventos, el sistema inserta un número entero grande al nuevo nombre de archivo para que ese nombre de archivo sea único y diferente de la ocasión anterior en que se inició la sesión.
-  - *Ejemplo:* Checkpoint_Begins_ES_0_131103935140400000.xel
+  - *Ejemplo*: Checkpoint_Begins_ES_0_131103935140400000.xel
 
 
 - El contenido de un .XEL no es texto sin formato que puede verse con Notepad.exe.
@@ -318,7 +318,7 @@ El evento **query_post_execution_showplan** permite ver el plan de consulta real
 
 ![Plan de consulta con la lista de propiedades de un nodo](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [XELite: biblioteca multiplataforma para leer XEvents de archivos XEL o secuencias en directo de SQL](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/); publicada en mayo de 2019.
 

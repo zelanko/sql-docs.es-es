@@ -1,6 +1,7 @@
 ---
-title: 'Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos (reflejo de base de datos) | Microsoft Docs'
-ms.custom: ''
+title: Cómo un testigo afecta a la disponibilidad de la base de datos
+description: Describe cómo la creación de reflejo de la base de datos afecta a la disponibilidad de quórum y base de datos.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -21,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 554108909607d7d1cdabb10bb075a9d77b5e7b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bbf98cbd0fc863c8e6ceaf7eeb5a0e9192055c4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025411"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822683"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos (reflejo de base de datos).
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Cuórum: Cómo un testigo afecta a la disponibilidad de la base de datos (reflejo de base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Siempre que se establece un testigo para una sesión de creación de reflejo de la base de datos, es necesario disponer de *quórum* . Quórum es una relación que existe cuando dos o más instancias de servidor en una sesión de creación de reflejo de la base de datos están conectadas entre sí. Normalmente, el quórum implica a tres instancias de servidor interconectadas. Cuando se establece un testigo, se requiere quórum para que la base de datos esté disponible. El quórum se ha diseñado para sesiones en modo de alta seguridad con conmutación automática por error y garantiza que una base de datos pertenezca a un solo asociado cada vez.  
   
@@ -105,7 +106,7 @@ ms.locfileid: "68025411"
 ## <a name="see-also"></a>Consulte también  
  [Modos de funcionamiento de la creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)   
+ [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Posibles errores durante la creación de reflejo de la base de datos](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Estados de creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   

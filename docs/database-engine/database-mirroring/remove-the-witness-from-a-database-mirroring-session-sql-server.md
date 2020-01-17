@@ -1,6 +1,7 @@
 ---
-title: Quitar el testigo de una sesión de creación de reflejo de la base de datos (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Eliminación del testigo de creación de reflejo de la base de datos
+description: Describe cómo quitar un testigo de una sesión de creación de reflejo de la base de datos con SQL Server Management Studio (SSMS) o Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 75a0363d376a16a19fa0c4a07dd0ed2ad0e71fd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d4ecd428d8d9d76ff4e9a543321d461b3983708
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025273"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822521"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Quitar el testigo de una sesión de creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +90,7 @@ ms.locfileid: "68025273"
 -   Si la seguridad de las transacciones está configurada en OFF, el funcionamiento de la sesión es asincrónico (en modo de alto rendimiento) sin requerir quórum. Siempre que la seguridad de las transacciones se desactive, recomendamos desactivar también el testigo.  
   
 > [!TIP]  
->  La configuración de seguridad de las transacciones de la base de datos está registrada en cada asociado de la vista de catálogo [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) en las columnas **mirroring_safety_level** y **mirroring_safety_level_desc** .  
+>  La configuración de seguridad de las transacciones de la base de datos está registrada en cada asociado de la vista de catálogo [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) en las columnas **mirroring_safety_level** y **mirroring_safety_level_desc**.  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   

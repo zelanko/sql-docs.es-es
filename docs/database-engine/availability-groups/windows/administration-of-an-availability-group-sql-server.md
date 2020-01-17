@@ -1,7 +1,7 @@
 ---
-title: Referencia para la administración de un grupo de disponibilidad
-description: Una página de referencia con vínculos a los aspectos básicos de la administración de un grupo de disponibilidad Always On, como la modificación de propiedades, la adición o eliminación de réplicas y bases de datos, la conmutación por error, la configuración del agente de escucha, etc.
-ms.custom: seodec18
+title: Administración de un grupo de disponibilidad (índice de contenido)
+description: Índice de referencia con vínculos a artículos que describen los aspectos básicos de la administración de un grupo de disponibilidad AlwaysOn, como la modificación de propiedades, la adición o eliminación de réplicas y bases de datos, la conmutación por error, la configuración del agente de escucha, etc.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b25b7ae6396c32e3b3698c57010b9d043adb97c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 515ca03f795901327b59871b1f6d78ef81a17d92
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014854"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241978"
 ---
 # <a name="administration-of-an-availability-group"></a>Administración de un grupo de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "68014854"
   
 ## <a name="monitor-an-availability-group"></a>Supervisión de un grupo de disponibilidad
   
--   [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
+-   [Herramientas para supervisar grupos de disponibilidad Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
  ## <a name="support-migrating-availability-groups-to-a-new-wsfc-cluster-cross-cluster-migration"></a>Compatibilidad con la migración de grupos de disponibilidad a un nuevo clúster de WSFC (migración entre clústeres)
   
@@ -130,6 +130,6 @@ ms.locfileid: "68014854"
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [Grupos de disponibilidad Always On: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [Información general sobre instrucciones Transact-SQL para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
- [Información general de los cmdlets de PowerShell para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [Información general de los cmdlets de PowerShell para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
    

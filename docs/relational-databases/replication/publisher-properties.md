@@ -1,6 +1,7 @@
 ---
-title: Cuadro de diálogo Propiedades del publicador de Replicación de SQL Server | Microsoft Docs
-ms.custom: ''
+title: Propiedades del publicador, cuadro de diálogo (SSMS)
+description: Describe el cuadro de diálogo "Propiedades del publicador" para una publicación específica en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,12 +17,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f157f541cae6fed5613f95df8d883044f8e09ff5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 12c7a8482561e6ab608501158a05a275763ab74a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908303"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320742"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>Cuadro de diálogo Propiedades del publicador de Replicación de SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ En este tema se describen las distintas opciones del cuadro de diálogo Propieda
 1.  Deshabilite la publicación en el publicador. Para obtener más información, vea [Deshabilitar la publicación y distribución](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 2.  Vuelva a configurar la publicación y la distribución. Para obtener más información, consulte [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
 
-## <a name="distributor"></a>Distribuidor 
+## <a name="distributor"></a>Distribuidor. 
 El cuadro de diálogo **Propiedades del publicador** le permitirá ver y modificar las propiedades asociadas a la relación entre el publicador y el distribuidor.  
   
 ### <a name="options"></a>Opciones  
@@ -61,7 +62,7 @@ El cuadro de diálogo **Propiedades del publicador** le permitirá ver y modific
  **Transaccional**  
  Active esta casilla para permitir que los usuarios que tengan el rol fijo de base de datos **db_owner** creen publicaciones de instantáneas o publicaciones transaccionales en la base de datos. 
   
- **Mezcla**  
+ **Combinar**  
  Active esta casilla para permitir que los usuarios que tengan el rol fijo de base de datos **db_owner** creen publicaciones de combinación en la base de datos.  
   
 
@@ -72,12 +73,12 @@ El cuadro de diálogo **Propiedades del publicador** le permitirá ver y modific
  **Suscriptores**  
  La cuadrícula de propiedades de **Suscriptores** muestra los suscriptores que están habilitados para recibir datos de las publicaciones de este publicador. Haga clic en el botón de propiedades ( **...** ) que se encuentra junto a un suscriptor para ver y establecer propiedades adicionales.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic en **Agregar** para agregar un suscriptor, y luego haga clic en **Agregar suscriptor de SQL Server** o en **Agregar suscriptor que no sea de SQL Server**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Crear una publicación](../../relational-databases/replication/publish/create-a-publication.md)   
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md) (Creación de una publicación)   
 
 
   

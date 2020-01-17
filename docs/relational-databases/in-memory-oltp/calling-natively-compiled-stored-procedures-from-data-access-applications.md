@@ -1,6 +1,6 @@
 ---
-title: Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos | Microsoft Docs
-ms.custom: ''
+title: 'Procedimientos almacenados compilados de forma nativa: aplicaciones de acceso a datos'
+ms.custom: seo-dt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c05ef1b9807e6786e73c2e772703463adf6818c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abc9aa1f61d241f3fe24196ad9d8ad4244b951f2
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951087"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412770"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos
 
@@ -48,7 +48,7 @@ Este tema describe instrucciones para llamar a procedimientos almacenados compil
 
 Las siguientes recomendaciones se aplican a las llamadas a procedimientos almacenados compilados de forma nativa con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.
 
-*Llamada una vez:* La forma más eficaz de llamar a un procedimiento almacenado es emitir una llamada RPC directa con **SQLExecDirect** y cláusulas ODBC CALL. No use la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]**EXECUTE**. Si un procedimiento almacenado se llama más de una vez, la ejecución preparada es más eficaz.
+*Llamada una vez:* La forma más eficaz de llamar a un procedimiento almacenado es emitir una llamada RPC directa con **SQLExecDirect** y cláusulas ODBC CALL. No use la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE**. Si un procedimiento almacenado se llama más de una vez, la ejecución preparada es más eficaz.
 
 *Llamada muchas veces:* La forma más eficaz de llamar a un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] más de una vez es a través de llamadas a procedimientos RPC preparadas. Las llamadas a RPC preparadas se realizan como se indica a continuación con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client:
 

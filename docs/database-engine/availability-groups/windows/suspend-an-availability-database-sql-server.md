@@ -1,6 +1,7 @@
 ---
-title: Suspender una base de datos de disponibilidad (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Suspensión de una base de datos de disponibilidad
+description: Obtenga información sobre cómo suspender el movimiento de datos de una base de datos en un grupo de disponibilidad AlwaysOn mediante SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) o PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3be8b96e35dda7d5a1037543d750b2ccd020e64
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517963"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251275"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Suspender una base de datos de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

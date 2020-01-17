@@ -1,6 +1,7 @@
 ---
-title: Conectar clientes a una sesión de creación de reflejo de la base de datos (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Conexión de clientes a un reflejo de la base de datos
+description: Configure los clientes para que se conecten a un reflejo de la base de datos mediante Native Client o el proveedor de .NET Framework para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f9916aba4640deab8dcb8764934ddd3d917256e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67952007"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258881"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a una sesión de creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "67952007"
   
  En la siguiente ilustración se muestra una conexión del cliente con el asociado inicial, **Partner_A**, para una base de datos reflejada denominada **Db_1**. En la ilustración se muestra un caso en el que el nombre del asociado inicial proporcionado por el cliente identifica correctamente el servidor principal actual, **Partner_A**. El intento de conexión inicial se realiza correctamente y el proveedor de acceso a datos almacena el nombre del servidor reflejado ( **Partner_B**) como nombre del asociado de conmutación por error en la memoria caché local. Finalmente, el cliente se conecta a la copia principal de la base de datos **Db_1** .  
   
- ![Conexión de cliente si el asociado inicial es una entidad de seguridad](../../database-engine/database-mirroring/media/dbm-initial-connection.gif "Conexión de cliente si el asociado inicial es una entidad de seguridad")  
+ ![Conexión de cliente si el asociado inicial es una entidad principal](../../database-engine/database-mirroring/media/dbm-initial-connection.gif "Conexión de cliente si el asociado inicial es una entidad principal")  
   
  El intento de conexión inicial puede no tener éxito, por ejemplo, debido a un error de red o una instancia del servidor inactiva. Puesto que el asociado inicial no está disponible, para que el proveedor de acceso a datos intente conectarse al asociado de conmutación por error, el cliente deberá haber proporcionado el nombre del asociado de conmutación por error en la cadena de conexión.  
   
@@ -91,7 +92,7 @@ Network=dbnmpntw;
   
  `Server=Partner_A;`  
   
- o Administrador de configuración de  
+ or  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -168,13 +169,13 @@ Server=123.34.45.56,4724;
   
  El tiempo de reintento se calcula mediante la siguiente fórmula:  
   
- _TiempoDeReintento_ **=** _TiempoDeReintentoAnterior_ **+(** 0,08 **&#42;** _TiempoDeEsperaDeInicioDeSesión_ **)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;** _LoginTimeout_ **)**  
   
  Donde *PreviousRetryTime* es inicialmente 0.  
   
  Por ejemplo, si se usa el tiempo de espera predeterminado de 15 segundos, *LoginTimeout* *= 15*. En este caso, los tiempos de reintento en los primeros tres ciclos son los siguientes:  
   
-|Redondear|Cálculo de*RetryTime*|Tiempo de reintento por intento|  
+|Round|Cálculo de*RetryTime*|Tiempo de reintento por intento|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 segundos|  
 |2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 segundos|  
@@ -183,7 +184,7 @@ Server=123.34.45.56,4724;
   
  En la siguiente ilustración se muestran los tiempos de reintento para intentos de conexión sucesivos, cada uno de los cuales se agota.  
   
- ![Número máximo de intervalos entre reintentos en un tiempo de espera de inicio de sesión de 15 segundos](../../database-engine/database-mirroring/media/dbm-retry-algorithm.gif "Número máximo de intervalos entre reintentos en un tiempo de espera de inicio de sesión de 15 segundos")  
+ ![Número máximo de intervalos entre reintentos para un tiempo de espera de inicio de sesión de 15 segundos](../../database-engine/database-mirroring/media/dbm-retry-algorithm.gif "Número máximo de intervalos entre reintentos para un tiempo de espera de inicio de sesión de 15 segundos")  
   
  Para el periodo de espera de inicio de sesión predeterminado, el tiempo máximo asignado para los primeros tres ciclos de intentos de conexión es de 14,4 segundos. Si cada intento utilizase todo el tiempo que tiene asignado, solo quedarían 0,6 segundos antes de que el periodo de inicio de sesión se agotara. En este caso, el cuarto ciclo se acortaría y solo se permitiría un intento final rápido para conectarse mediante el nombre del asociado inicial. No obstante, un intento de conexión puede generar un error en menos tiempo que el tiempo de reintento asignado, especialmente en los ciclos posteriores. Por ejemplo, la recepción de un error de red puede causar que un intento termine antes de que el tiempo de reintento expire. Si los primeros intentos no se realizan correctamente debido a errores de red, habría tiempo disponible adicional para el cuarto ciclo y, probablemente, para ciclos adicionales.  
   
@@ -241,7 +242,7 @@ Server=123.34.45.56,4724;
 |Configuración|Servidor principal|Servidor reflejado|Comportamiento al intentar conectarse especificando Partner_A y Partner_B|  
 |-------------------|----------------------|-------------------|------------------------------------------------------------------------------|  
 |Configuración de creación de reflejo original.|Partner_A|Partner_B|Se almacena Partner_A en la caché como nombre del asociado inicial. El cliente se conecta correctamente a Partner_A. El cliente descarga el nombre del servidor reflejado, Partner B, y lo almacena en caché, sin tener en cuenta el nombre del asociado de conmutación por error proporcionado por el cliente.|  
-|Partner_A sufre un error de hardware y se produce la conmutación por error (se desconectan los clientes).|Partner_B|none|Partner_A sigue almacenado en caché como nombre del asociado inicial, pero el nombre del asociado de conmutación por error proporcionado por el cliente, Partner_B, permite al cliente conectarse al servidor principal actual.|  
+|Partner_A sufre un error de hardware y se produce la conmutación por error (se desconectan los clientes).|Partner_B|None|Partner_A sigue almacenado en caché como nombre del asociado inicial, pero el nombre del asociado de conmutación por error proporcionado por el cliente, Partner_B, permite al cliente conectarse al servidor principal actual.|  
 |El administrador de la base de datos detiene la creación del reflejo (se desconectan los clientes), sustituye Partner_A por Partner_C y reinicia la creación del reflejo.|Partner_B|Partner_C|El cliente intenta conectarse a Partner_A y surge un error. A continuación, lo intenta con Partner_B (el servidor principal actual) y se conecta correctamente. El proveedor de acceso a datos descarga el nombre del servidor reflejado actual, Partner_C, y lo almacena en caché como nombre del asociado de conmutación por error actual.|  
 |El servicio se conmuta manualmente a Partner_C (se desconectan los clientes).|Partner_C|Partner_B|El cliente trata de conectarse primero a Partner_A y, después, a Partner_B. Los dos nombres producen un error y, finalmente, se agota el tiempo de espera de la solicitud y se produce un error.|  
   

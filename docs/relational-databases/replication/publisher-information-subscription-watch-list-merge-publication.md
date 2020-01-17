@@ -1,6 +1,7 @@
 ---
-title: Información de publicador, Lista de supervisión de suscripciones (Publicación de combinación) | Microsoft Docs
-ms.custom: ''
+title: 'Lista de supervisión de suscripciones (combinación: SSMS)'
+description: Describe la pestaña "Lista de supervisión" dentro del Monitor de replicación en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0f6caf3862d42d4245e4b2657448b2d5beb22667
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 39c036c354716118fc4df791084f9838c6af5fea
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710791"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320644"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>Información de publicador, Lista de supervisión de suscripciones (Publicación de combinación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,10 +103,10 @@ ms.locfileid: "71710791"
  **Última sincronización**  
  Hora en que se ejecutó el Agente de mezcla por última vez. Durante esta sincronización se pueden procesar o no procesar los cambios. Si la sincronización está en curso, se muestra un valor de porcentaje de finalización.  
   
- **Duración**  
+ **Duration**  
  Tiempo durante el que se ha estado ejecutando el Agente de mezcla en la última sincronización. El tiempo representa el tiempo transcurrido si el Agente de mezcla se está sincronizando actualmente y el tiempo total si el Agente de mezcla se ha sincronizado con anterioridad.  
   
- **Conexión**  
+ **Connection**  
  Tipo de conexión entre el suscriptor y el publicador. Los valores posibles son **LAN**, **Acceso telefónico**e **Internet**. Si la suscripción utiliza sincronización web, se muestra el valor **Internet** .  
   
 ## <a name="see-also"></a>Consulte también  

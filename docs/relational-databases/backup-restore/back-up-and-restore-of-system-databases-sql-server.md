@@ -1,7 +1,7 @@
 ---
-title: Realizar copias de seguridad y restaurar bases de datos del sistema (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 'Copia de seguridad y restauración: bases de datos del sistema'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,14 +16,15 @@ helpviewer_keywords:
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d0998a357a115622a0c8703bd4b200cc06f86685
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45bfedfe24493221570ccc1bc07202f0b4ed8b1c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941026"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247465"
 ---
-# <a name="back-up-and-restore-of-system-databases-sql-server"></a>Realizar copias de seguridad y restaurar bases de datos del sistema (SQL Server)
+# <a name="backuprestoresystemdatabases-sql-server"></a>Copia de seguridad y restauración: bases de datos del sistema (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene un conjunto de bases de datos de nivel de sistema,*bases de datos del sistema*, esenciales para el funcionamiento de una instancia del servidor. Varias de las bases de datos del sistema requieren que se hagan copias de seguridad tras cualquier actualización de importancia. Las bases de datos del sistema de las que siempre debe realizar copias de seguridad son **msdb**, **maestra**y **model**. Si alguna base de datos utiliza la replicación en la instancia de servidor, existe la base de datos del sistema **distribution** de la que también debe hacer una copia de seguridad. La copia de seguridad de estas bases de datos del sistema le permite restaurar y recuperar el sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el caso de producirse un error del sistema, por ejemplo una pérdida del disco duro.  
@@ -37,7 +38,7 @@ ms.locfileid: "67941026"
 |[msdb](../../relational-databases/databases/msdb-database.md)|La base de datos usada por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para programar alertas y trabajos y para registrar operadores. **msdb** también contiene tablas de historial y tablas de historial de copias de seguridad y restauración.|Sí|Simple (valor predeterminado)|Realice copias de seguridad de la base de datos **msdb** cuando se actualice.|  
 |[Resource](../../relational-databases/databases/resource-database.md) (RDB)|Base de datos de solo lectura que contiene copias de todos los objetos del sistema que se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|No|-|La base de datos **Resource** se encuentra en el archivo mssqlsystemresource.mdf, que solo contiene código. Por lo tanto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede hacer una copia de seguridad de la base de datos **Resource** .<br /><br /> Nota: Puede realizar una copia de seguridad basada en archivos o basada en disco del archivo mssqlsystemresource.mdf si lo trata como si fuese binario (.exe), en lugar de un archivo de base de datos. No obstante, no puede utilizar la restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en las copias de seguridad. La restauración de una copia de seguridad de mssqlsystemresource.mdf solo se puede hacer de forma manual y hay que tener cuidado de no sobrescribir la base de datos **Resource** actual con una versión obsoleta o potencialmente insegura.|  
 |[tempdb](../../relational-databases/databases/tempdb-database.md)|Área de trabajo que contiene conjuntos de resultados temporales o intermedios. Esta base de datos se vuelve a crear cada vez que se inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se cierra la instancia de servidor, los datos de la base de datos **tempdb** se eliminan de manera permanente.|No|Simple|No se pueden realizar copias de seguridad de la base de datos del sistema **tempdb** .|  
-|[Configurar distribución](../../relational-databases/replication/configure-distribution.md)|Base de datos que solo existe si el servidor está configurado como un distribuidor de replicación. En esta base de datos se almacenan metadatos y datos del historial de todos los tipos de replicación y transacciones de replicación transaccional.|Sí|Simple|Para obtener más información sobre cuándo realizar copias de seguridad de la base de datos **distribution**, vea [Hacer copias de seguridad y restaurar bases de datos replicadas](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).|  
+|[Configurar distribución](../../relational-databases/replication/configure-distribution.md)|Base de datos que solo existe si el servidor está configurado como un distribuidor de replicación. En esta base de datos se almacenan metadatos y datos del historial de todos los tipos de replicación y transacciones de replicación transaccional.|Sí|Simple|Para obtener más información sobre cuándo realizar copias de seguridad de la base de datos **distribution** , vea [Hacer copias de seguridad y restaurar bases de datos replicadas](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).|  
   
  *Para obtener más información sobre el modelo de recuperación actual del modelo, vea [Ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) o [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   

@@ -1,6 +1,6 @@
 ---
-title: Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor | Microsoft Docs
-ms.custom: ''
+title: Enlace una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor
+ms.custom: seo-dt-2019
 ms.date: 08/29/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a0a0eec6d8a700fe35df358b35ce756dc700a2f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951142"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412762"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ GO
   
 2.  Use `ALTER RESURCE GOVERNOR` para reconfigurar el regulador de recursos con los nuevos valores.  
   
- **Código muestra**  
+ **Código de ejemplo**  
   
 ```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
@@ -170,8 +170,8 @@ GO
 |Memoria asignada de destino|Porcentaje disponible para tablas en memoria|  
 |-----------------------------|---------------------------------------------|  
 |<= 8 GB|70%|  
-|<= 16 GB|75%|  
-|<= 32 GB|80%|  
+|<= 16 GB|75 %|  
+|<= 32 GB|80 %|  
 |\<= 96 GB|85%|  
 |>96 GB|90%|  
   
@@ -211,7 +211,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
- [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [Grupo de recursos de servidor del regulador de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Crear un grupo de recursos de servidor](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Cambiar la configuración del grupo de recursos de servidor](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [Eliminar un grupo de recursos de servidor](../../relational-databases/resource-governor/delete-a-resource-pool.md)  

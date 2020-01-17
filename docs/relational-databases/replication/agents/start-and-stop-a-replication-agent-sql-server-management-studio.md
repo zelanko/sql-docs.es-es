@@ -1,6 +1,7 @@
 ---
-title: Iniciar y detener un agente de replicación (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Inicio o detención de un agente de replicación (SSMS)
+description: Obtenga información sobre cómo iniciar y detener un agente de replicación en SQL Server Management Studio y el Monitor de replicación.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,16 +15,16 @@ ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 339da4b5d9112aa10aa52e12c8a39f6a2adaa30b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 70f876d9152e836e12ad0c28e640362b23197190
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770700"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321639"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Iniciar y detener un agente de replicación (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Puede iniciar y detener agentes desde las carpetas **Trabajos** y **Replicación** de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from Replicación Monitor. Inicie y detenga los siguientes agentes y trabajos:  
+  Puede iniciar y detener agentes desde las carpetas **Trabajos** y **Replicación** de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y desde el Monitor de replicación. Inicie y detenga los siguientes agentes y trabajos:  
   
 -   El Agente de instantáneas, utilizado por todas las publicaciones.  
   
@@ -68,8 +69,8 @@ ms.locfileid: "68770700"
 3.  Haga clic con el botón secundario en un agente y, a continuación, haga clic en **Iniciar agente** o **Detener agente**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication.md)   
+ [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  (Supervisar la replicación)  
  [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Información general sobre los agentes de replicación](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

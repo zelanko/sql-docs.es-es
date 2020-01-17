@@ -1,6 +1,7 @@
 ---
-title: Creación de reflejo de la base de datos - Establecer la sesión - Autenticación de Windows | Microsoft Docs
-ms.custom: ''
+title: Configuración de la creación de reflejo de la base de datos
+description: Pasos para configurar una relación de creación de reflejo de la base de datos entre una entidad de seguridad y un reflejo mediante la autenticación de Windows.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db81b9dc854a5b753db2b59da35ffcec6d719dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbdf7d05c25aad00e084c15929cce857cb6614d3
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006438"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822291"
 ---
-# <a name="database-mirroring---establish-session---windows-authentication"></a>Creación de reflejo de la base de datos - Establecer la sesión - Autenticación de Windows
+# <a name="configure-database-mirroring"></a>Configuración de la creación de reflejo de la base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se usa [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
   
  Una vez preparada la base de datos reflejada (vea [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)), puede establecer una sesión de creación de reflejo de la base de datos. Las instancias de servidor principal, reflejado y testigo deben ser instancias de servidor independientes y se deben encontrar en sistemas host distintos.  
   

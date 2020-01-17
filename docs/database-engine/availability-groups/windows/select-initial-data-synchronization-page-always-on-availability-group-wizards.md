@@ -1,6 +1,7 @@
 ---
-title: Página Seleccionar sincronización de datos iniciales (asistentes para grupos de disponibilidad Always On) | Microsoft Docs
-ms.custom: ''
+title: Página Seleccionar sincronización de datos iniciales (asistente para grupos de disponibilidad)
+description: Descripción de la página "Seleccionar sincronización de datos iniciales" del Asistente para grupo de disponibilidad AlwaysOn en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9521577c4fd6fac3f683ca69fabd6226944a6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014179"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235341"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Página Seleccionar sincronización de datos iniciales (asistentes para grupos de disponibilidad Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

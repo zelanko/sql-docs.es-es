@@ -1,6 +1,7 @@
 ---
-title: Comprobación de la existencia de problemas de reintento de lectura en el subsistema de entrada y salida del disco | Microsoft Docs
-ms.custom: ''
+title: 'Comprobación de los problemas de reintento de lectura en el subsistema de E/S de disco: administración basada en directivas'
+description: Esta regla comprueba el registro de eventos en busca del mensaje de error 825 de SQL Server, que indica que SQL Server no pudo leer los datos del disco en el primer intento.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cedf4097-5b73-4964-9935-74a101847019
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1540314e6dfe9370cd11b7638e003b5e230c32d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f894452dd056cf0e613100a5d1a7ee2d5e9ae0c
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109940"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558203"
 ---
 # <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>Comprobación de la existencia de problemas de reintento de lectura en el subsistema de entrada y salida del disco
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

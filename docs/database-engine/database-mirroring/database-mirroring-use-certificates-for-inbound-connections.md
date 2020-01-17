@@ -1,6 +1,7 @@
 ---
-title: 'Creación de reflejo de base de datos: usar certificados para las conexiones entrantes | Microsoft Docs'
-ms.custom: ''
+title: Uso de certificados para la conexión entrante
+description: Describe los pasos necesarios para configurar instancias del servidor que utilicen certificados para autenticar conexiones entrantes para la creación de reflejo de la base de datos.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 274260c382eea20a3adb2fc61c1bde27e02469a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 145c182323d3de702ce1e7d4bfcc4e966c5928c2
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997908"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822269"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>Creación de reflejo de base de datos: usar certificados para las conexiones entrantes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "67997908"
   
  En el siguiente procedimiento se describen estos pasos detalladamente. Para cada paso, el procedimiento proporciona un ejemplo para configurar una instancia del servidor en un sistema denominado HOST_A. En la sección Ejemplo anexa se muestran los mismos pasos para otra instancia del servidor en un sistema denominado HOST_B.  
   
-### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-hosta"></a>Para configurar instancias del servidor para conexiones entrantes de creación de reflejo (en HOST_A)  
+### <a name="to-configure-server-instances-for-inbound-mirroring-connections-on-host_a"></a>Para configurar instancias del servidor para conexiones entrantes de creación de reflejo (en HOST_A)  
   
 1.  Cree un inicio de sesión para el otro sistema.  
   

@@ -1,7 +1,7 @@
 ---
-title: Ver o cambiar el modelo de recuperación de una base de datos (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 05/10/2019
+title: Establecimiento del modelo de recuperación de la base de datos
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbf6d7f547c0030512a00a46a335a32cfe95f994
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908809"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254052"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Ver o cambiar el modelo de recuperación de una base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72908809"
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 
--   [Haga una copia de seguridad del registro de transacciones](back-up-a-transaction-log-sql-server.md) **antes de** cambiar del [modelo de recuperación completa o del modelo de recuperación optimizado para cargas masivas de registros](recovery-models-sql-server.md).  
+-   [Haga copia de seguridad del registro de transacciones](back-up-a-transaction-log-sql-server.md) **antes** de cambiar del [modelo de recuperación completa o del de recuperación optimizado para cargas masivas de registros](recovery-models-sql-server.md).  
   
 -   La recuperación a un momento dado no es posible con el modelo optimizado para cargas masivas de registros. Si ejecuta transacciones bajo el modelo de recuperación optimizado para cargas masivas de registros que requieran una restauración del registro de transacciones, dichas transacciones podrían quedar expuestas a la pérdida de datos. Para aumentar la capacidad de recuperación de datos en un escenario de recuperación ante desastres, cambie al modelo de recuperación optimizado para cargas masivas de registros solo en las siguientes condiciones:  
   
@@ -91,7 +91,7 @@ GO
   
 #### <a name="to-change-the-recovery-model"></a>Para cambiar el modelo de recuperación  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -136,7 +136,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [Crear un trabajo](../../ssms/agent/create-a-job.md)  
   
--   [Deshabilitar o habilitar un trabajo](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   

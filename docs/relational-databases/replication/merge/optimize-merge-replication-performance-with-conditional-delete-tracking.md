@@ -1,6 +1,7 @@
 ---
-title: Optimizar el rendimiento de la replicación de mezcla con seguimiento condicional de eliminaciones | Microsoft Docs
-ms.custom: ''
+title: Optimización del rendimiento con seguimiento condicional de eliminaciones (combinación)
+description: Obtenga información sobre cómo optimizar el rendimiento de la replicación de combinación usando el seguimiento condicional de eliminaciones para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3466c0ec73f78ef6e67d86f4be48e8c7b8bfe943
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 972a1e200a2025261c6a9fb6e0ffd80f0dc4f219
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018756"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321512"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Optimizar el rendimiento de la replicación de mezcla con seguimiento condicional de eliminaciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

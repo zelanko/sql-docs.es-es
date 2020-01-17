@@ -1,6 +1,6 @@
 ---
-title: Construcciones Transact-SQL no admitidas por OLTP en memoria | Microsoft Docs
-ms.custom: ''
+title: T-SQL no admitidas por OLTP en memoria
+ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e39f991982fbde13259039e8794218819f366b89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e1052544d1243dea4e6c3da377de2dbbe36d5af
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081833"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412486"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,14 +51,14 @@ ms.locfileid: "68081833"
   
 |Tipo|Nombre|Solución|  
 |----------|----------|----------------|  
-|Característica|ON|Las tablas con optimización para memoria no se pueden colocar en un grupo de archivos ni en un esquema de partición. Quite la cláusula ON de la instrucción **CREATE TABLE** .<br /><br /> Todas las tablas optimizadas para memoria se asignan al grupo de archivos optimizados para memoria.|  
+|Característica|ACTIVAR|Las tablas con optimización para memoria no se pueden colocar en un grupo de archivos ni en un esquema de partición. Quite la cláusula ON de la instrucción **CREATE TABLE** .<br /><br /> Todas las tablas optimizadas para memoria se asignan al grupo de archivos optimizados para memoria.|  
 |Tipo de datos|*Nombre del tipo de datos*|No se admite el tipo de datos indicado. Reemplace el tipo por uno de los tipos de datos admitidos. Para obtener más información, vea [Tipos de datos admitidos para OLTP en memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
 |Característica|Columnas calculadas|**Se aplica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] y [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Las tablas optimizadas para memoria no admiten columnas calculadas. Quite las columnas calculadas de la instrucción **CREATE TABLE** .<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] admiten columnas calculadas en las tablas e índices optimizados para memoria.|  
 |Característica|Replicación|La replicación no es compatible con las tablas optimizadas para memoria.|  
 |Característica|FILESTREAM|Las columnas de las tablas optimizadas para memoria no admiten el almacenamiento FILESTREAM. Quite la palabra clave **FILESTREAM** de la definición de columna.|  
 |Característica|SPARSE|Las columnas de las tablas optimizadas para memoria no se pueden definir como columnas SPARSE. Quite la palabra clave **SPARSE** de la definición de columna.|  
 |Característica|ROWGUIDCOL|Las columnas de las tablas optimizadas para memoria no admiten la opción ROWGUIDCOL. Quite la palabra clave **ROWGUIDCOL** de la definición de columna.|  
-|Característica|FOREIGN KEY|**Se aplica a:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>En tablas optimizadas para memoria, las restricciones FOREIGN KEY solo se admiten para claves externas que hacen referencia a las claves principales de otras tablas optimizadas para memoria. Quite la restricción de la definición de tabla si la clave externa hace referencia a una restricción única.<br/><br/>En [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)], no se admiten las restricciones FOREIGN KEY en las tablas optimizadas para memoria.|  
+|Característica|FOREIGN KEY|**Se aplica a:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>En tablas optimizadas para memoria, las restricciones FOREIGN KEY solo se admiten para claves externas que hacen referencia a las claves principales de otras tablas optimizadas para memoria. Quite la restricción de la definición de tabla si la clave externa hace referencia a una restricción única.<br/><br/>En [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)], no se admiten las restricciones FOREIGN KEY en las tablas optimizadas para memoria.|  
 |Característica|índice clúster|Especifique un índice no clúster. Si se trata de un índice de clave principal, no se olvide de especificar **PRIMARY KEY NONCLUSTERED**.|  
 |Característica|DDL dentro de transacciones|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no se pueden crear ni quitar en el contexto de una transacción de usuario. No inicie ninguna transacción y asegúrese de que el parámetro de sesión IMPLICIT_TRANSACTIONS está establecido en OFF antes de ejecutar la instrucción CREATE o DROP.|  
 |Característica|DDL, desencadenadores|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no se pueden crear ni quitar si existe un desencadenador de base de datos o de servidor para la operación DDL. Quite los desencadenadores de servidor y de base de datos de CREATE/DROP TABLE y CREATE/DROP PROCEDURE.|  
@@ -109,8 +109,8 @@ ms.locfileid: "68081833"
 |Característica|COMPUTE|No se admite la cláusula **COMPUTE** . Quítela de la consulta.|  
 |Característica|SELECT INTO|La cláusula **INTO** no se puede usar con la instrucción **SELECT** . Vuelva a escribir la consulta como **INSERT INTO** _Table_ **SELECT**.|  
 |Característica|Lista de columnas insertadas incompleta|En general, en las instrucciones INSERT, deben especificarse valores para todas las columnas de la tabla.<br /><br /> Sin embargo, se admiten las restricciones DEFAULT y las columnas IDENTITY(1,1) en tablas optimizadas para memoria. Estas columnas pueden omitirse de la lista de columnas INSERT. En el caso de columnas IDENTITY, la omisión es obligatoria.|  
-|Característica|*Función*|Los procedimientos almacenados compilados de forma nativa no admiten algunas funciones integradas. Quite la función rechazada del procedimiento almacenado. Para obtener más información sobre las funciones integradas admitidas, vea<br />[Características admitidas en los módulos T-SQL compilados de forma nativa](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)o<br />[Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
-|Característica|CASE|**Se aplica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] y SQL Server a partir de [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Las expresiones **CASE** no se admiten en las consultas en procedimientos almacenados compilados de forma nativa. Cree consultas diferentes para mayúsculas y minúsculas. Para obtener más información, vea [Implementación de una expresión CASE de un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] admiten las expresiones CASE.|  
+|Característica|*Function*|Los procedimientos almacenados compilados de forma nativa no admiten algunas funciones integradas. Quite la función rechazada del procedimiento almacenado. Para obtener más información sobre las funciones integradas admitidas, vea<br />[Características admitidas en los módulos T-SQL compilados de forma nativa](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)o<br />[Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Característica|CASE|**Se aplica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] y SQL Server a partir de [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Las expresiones **CASE** no se admiten en las consultas en procedimientos almacenados compilados de forma nativa. Cree consultas diferentes para mayúsculas y minúsculas. Para obtener más información, vea [Implementación de una expresión CASE de un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] admiten las expresiones CASE.|  
 |Característica|INSERT EXECUTE|Quite la referencia.|  
 |Característica|Ejecute|Solo se admite para ejecutar procedimientos almacenados de forma nativa y funciones definidas por el usuario.|  
 |Característica|agregados definidos por el usuario|En los procedimientos almacenados compilados de forma nativa no se pueden usar funciones de agregado definidas por el usuario. Quite la referencia a la función del procedimiento.|  
@@ -126,26 +126,26 @@ ms.locfileid: "68081833"
 |Característica|Ejecución de la conexión de administrador dedicada|Los procedimientos almacenados compilados de forma nativa no se pueden ejecutar desde la conexión de administrador dedicada (DAC). En su lugar, use una conexión normal.|  
 |Operación|punto de retorno|Los procedimientos almacenados compilados de forma nativa no se pueden invocar desde transacciones que tienen un punto de retorno activo. Quite el punto retorno de la transacción.|  
 |Operación|ALTER AUTHORIZATION|No es posible cambiar el propietario de una tabla optimizada para memoria o de un procedimiento almacenado compilado de forma nativa existente. Para cambiar el propietario, quite y vuelva a crear la tabla o el procedimiento.|  
-|Operador|OPENROWSET|No se admite este operador. Quite **OPENROWSET** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|OPENQUERY|No se admite este operador. Quite **OPENQUERY** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|OPENDATASOURCE|No se admite este operador. Quite **OPENDATASOURCE** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|OPENXML|No se admite este operador. Quite **OPENXML** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|CONTAINSTABLE|No se admite este operador. Quite **CONTAINSTABLE** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|FREETEXTTABLE|No se admite este operador. Quite **FREETEXTTABLE** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|OPENROWSET|No se admite este operador. Quite **OPENROWSET** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|OPENQUERY|No se admite este operador. Quite **OPENQUERY** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|OPENDATASOURCE|No se admite este operador. Quite **OPENDATASOURCE** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|OPENXML|No se admite este operador. Quite **OPENXML** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|CONTAINSTABLE|No se admite este operador. Quite **CONTAINSTABLE** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|FREETEXTTABLE|No se admite este operador. Quite **FREETEXTTABLE** del procedimiento almacenado compilado de forma nativa.|  
 |Característica|Funciones con valores de tabla|En los procedimientos almacenados compilados de forma nativa no se puede hacer referencia a funciones con valores de tabla. Una solución posible para esta restricción es agregar la lógica de las funciones con valores de tabla al cuerpo del procedimiento.|  
-|Operador|CHANGETABLE|No se admite este operador. Quite **CHANGETABLE** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|GOTO|No se admite este operador. Use otras construcciones de procedimiento, como WHILE.|  
-|Operador|OFFSET|No se admite este operador. Quite **OFFSET** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|INTERSECT|No se admite este operador. Quite **INTERSECT** del procedimiento almacenado compilado de forma nativa. En algunos casos se puede usar INNER JOIN para obtener el mismo resultado.|  
-|Operador|EXCEPT|No se admite este operador. Quite **EXCEPT** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|APPLY|**Se aplica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] y SQL Server a partir de [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>No se admite este operador. Quite **APPLY** del procedimiento almacenado compilado de forma nativa.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] admiten el operador APPLY en los módulos compilados de forma nativa.|  
-|Operador|PIVOT|No se admite este operador. Quite **PIVOT** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|UNPIVOT|No se admite este operador. Quite **UNPIVOT** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|CONTAINS|No se admite este operador. Quite **CONTAINS** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|FREETEXT|No se admite este operador. Quite **FREETEXT** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|TSEQUAL|No se admite este operador. Quite **TSEQUAL** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|LIKE|No se admite este operador. Quite **LIKE** del procedimiento almacenado compilado de forma nativa.|  
-|Operador|NEXT VALUE FOR|En los procedimientos almacenados compilados de forma nativa no se puede hacer referencia a secuencias. Obtenga el valor usando [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado y, a continuación, páselo al procedimiento almacenado compilado de forma nativa. Para obtener más información, vea [Implementar IDENTITY en una tabla con optimización para memoria](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md).|  
+|Operator|CHANGETABLE|No se admite este operador. Quite **CHANGETABLE** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|GOTO|No se admite este operador. Use otras construcciones de procedimiento, como WHILE.|  
+|Operator|OFFSET|No se admite este operador. Quite **OFFSET** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|INTERSECT|No se admite este operador. Quite **INTERSECT** del procedimiento almacenado compilado de forma nativa. En algunos casos se puede usar INNER JOIN para obtener el mismo resultado.|  
+|Operator|EXCEPT|No se admite este operador. Quite **EXCEPT** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|APPLY|**Se aplica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] y SQL Server a partir de [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>No se admite este operador. Quite **APPLY** del procedimiento almacenado compilado de forma nativa.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] admiten el operador APPLY en los módulos compilados de forma nativa.|  
+|Operator|PIVOT|No se admite este operador. Quite **PIVOT** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|UNPIVOT|No se admite este operador. Quite **UNPIVOT** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|CONTAINS|No se admite este operador. Quite **CONTAINS** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|FREETEXT|No se admite este operador. Quite **FREETEXT** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|TSEQUAL|No se admite este operador. Quite **TSEQUAL** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|LIKE|No se admite este operador. Quite **LIKE** del procedimiento almacenado compilado de forma nativa.|  
+|Operator|NEXT VALUE FOR|En los procedimientos almacenados compilados de forma nativa no se puede hacer referencia a secuencias. Obtenga el valor usando [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado y, a continuación, páselo al procedimiento almacenado compilado de forma nativa. Para obtener más información, vea [Implementar IDENTITY en una tabla con optimización para memoria](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md).|  
 |Opción SET|*Opción*|En los procedimientos almacenados compilados de forma nativa no se pueden cambiar las opciones SET. Algunas opciones se pueden establecer con la instrucción BEGIN ATOMIC. Para obtener más información, vea la sección sobre bloques atomic en [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Operando|TABLESAMPLE|No se admite este operador. Quite **TABLESAMPLE** del procedimiento almacenado compilado de forma nativa.|  
 |Opción|RECOMPILE|Los procedimientos almacenados compilados de forma nativa se compilan en el momento de su creación. Quite **RECOMPILE** de la definición de procedimiento.<br /><br /> Si ejecuta sp_recompile en un procedimiento almacenado compilado de forma nativa, hará que se vuelva a compilar en la siguiente ejecución.|  
@@ -159,7 +159,7 @@ ms.locfileid: "68081833"
 |Opción|WITH TIES|**Se aplica a:** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] y [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Esta opción no se admite con cláusulas **TOP** . Quite **WITH TIES** de la consulta del procedimiento almacenado compilado de forma nativa.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] admiten las expresiones **TOP WITH TIES**.|  
 |Aggregate, función|*Función de agregado*|No se admiten todas las funciones de agregado. Para obtener más información sobre las funciones agregadas admitidas en los módulos T-SQL compilados de forma nativa, vea [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md) (Características admitidas en los módulos T-SQL compilados de forma nativa).|  
 |Función de categoría|*Función de categoría*|Los procedimientos almacenados compilados de forma nativa no admiten funciones de categoría. Quítelas de la definición de procedimiento.|  
-|Función|*Función*|Esta función no se admite. Para obtener más información sobre las funciones admitidas en los módulos T-SQL compilados de forma nativa, vea [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md) (Características admitidas en los módulos T-SQL compilados de forma nativa).|  
+|Función|*Function*|Esta función no se admite. Para obtener más información sobre las funciones admitidas en los módulos T-SQL compilados de forma nativa, vea [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md) (Características admitidas en los módulos T-SQL compilados de forma nativa).|  
 |.|*Instrucción*|Esta instrucción no se admite. Para obtener más información sobre las funciones admitidas en los módulos T-SQL compilados de forma nativa, vea [Supported Features for Natively Compiled T-SQL Modules](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md) (Características admitidas en los módulos T-SQL compilados de forma nativa).|  
 |Característica|MIN y MAX utilizados con las cadenas de caracteres y binarias|En los procedimientos almacenados compilados de forma nativa no se pueden usar las funciones de agregado **MIN** y **MAX** con valores de cadenas de caracteres y binarias.|  
 |Característica|GROUP BY ALL|En los procedimientos almacenados compilados de forma nativa, ALL no se puede utilizar con cláusulas GROUP BY. Quite ALL de la cláusula GROUP BY.|  

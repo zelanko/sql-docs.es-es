@@ -1,6 +1,5 @@
 ---
-title: Sesiones de SQL Server Extended Events | Microsoft Docs
-ms.custom: ''
+title: SQL Server Extended Events Sessions
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ea63b8d8b417f829bda722297d0c69a0b5c5fef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0352441798ddffc96b057876768f66f0c9d4a10a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009331"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242911"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 
@@ -42,9 +41,9 @@ ms.locfileid: "68009331"
 |Etiqueta de la ilustración|Instrucción DDL|Descripción|  
 |------------------------|-------------------|-----------------|  
 |Crear|CREATE EVENT SESSION|El proceso de host crea un objeto de sesión que contiene los metadatos proporcionados por CREATE EVENT SESSION. El proceso de host valida la definición de la sesión, valida el nivel del permiso de usuario y almacena los metadatos en la base de datos maestra. En este punto la sesión no está activa.|  
-|Alter|ALTER EVENT SESSION, STATE=START|El proceso de host inicia la sesión. El proceso de host lee los metadatos almacenados, valida la definición de la sesión, comprueba el nivel del permiso de usuario y crea la sesión. Se cargan los objetos de sesión, como eventos y destinos, y el control de eventos está activo.|  
-|Alter|ALTER EVENT SESSION, STATE=STOP|El proceso de host detiene la sesión activa pero conserva los metadatos.|  
-|Drop|DROP EVENT SESSION|Dependiendo de que la sesión esté activa o no, Drop (DROP SESSION) eliminará los metadatos y cerrará la sesión activa, o eliminará los metadatos de la sesión.|  
+|Modificar|ALTER EVENT SESSION, STATE=START|El proceso de host inicia la sesión. El proceso de host lee los metadatos almacenados, valida la definición de la sesión, comprueba el nivel del permiso de usuario y crea la sesión. Se cargan los objetos de sesión, como eventos y destinos, y el control de eventos está activo.|  
+|Modificar|ALTER EVENT SESSION, STATE=STOP|El proceso de host detiene la sesión activa pero conserva los metadatos.|  
+|Anular|DROP EVENT SESSION|Dependiendo de que la sesión esté activa o no, Drop (DROP SESSION) eliminará los metadatos y cerrará la sesión activa, o eliminará los metadatos de la sesión.|  
   
 > [!NOTE]  
 >  ALTER EVENT SESSION y DROP EVENT SESSION se pueden aplicar a los metadatos, o a una sesión activa y los metadatos.  

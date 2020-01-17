@@ -32,12 +32,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2ca8bd62bc1f05e655875c528efa8ea32b20ff5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b846628a77f6e11f864679d51fd62fc783fb2c7b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948428"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258291"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT: GROUP BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ Cláusula de la instrucción SELECT que divide el resultado de la consulta en gr
   
 ## <a name="syntax"></a>Sintaxis  
 
- ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ```  
 -- Syntax for SQL Server and Azure SQL Database   
@@ -85,7 +85,7 @@ GROUP BY
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure SQL Data Warehouse 
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -93,8 +93,18 @@ GROUP BY {
     | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
+```
+
 ```  
+-- Syntax for Parallel Data Warehouse  
   
+GROUP BY {
+      column-name [ WITH (DISTRIBUTED_AGG) ]  
+    | column-expression
+} [ ,...n ]
+
+```  
+    
 ## <a name="arguments"></a>Argumentos 
  
 ### <a name="column-expression"></a>*column-expression*  
@@ -144,12 +154,12 @@ INSERT INTO sales VALUES (N'United States', N'Montana', 100);
 ```
 La tabla de ventas contiene estas filas:
 
-| País | Region | Sales |
+| Country | Region | Sales |
 |---------|--------|-------|
-| Canada | Alberta | 100 |
-| Canada | Columbia Británica | 200 |
-| Canada | Columbia Británica | 300 |
-| United States | Montana | 100 |
+| Canadá | Alberta | 100 |
+| Canadá | Columbia Británica | 200 |
+| Canadá | Columbia Británica | 300 |
+| Estados Unidos | Montana | 100 |
 
 La siguiente consulta agrupa el país y la región y devuelve la suma de agregados de cada combinación de valores.  
  
@@ -160,17 +170,17 @@ GROUP BY Country, Region;
 ```
 El resultado de la consulta tiene tres filas, ya que hay tres combinaciones de valores para el país y la región. El valor de las ventas totales para Canadá y Columbia Británica es la suma de dos filas. 
 
-| País | Region | Ventas totales |
+| Country | Region | Ventas totales |
 |---------|--------|-------|
-| Canada | Alberta | 100 |
-| Canada | Columbia Británica | 500 |
-| United States | Montana | 100 |
+| Canadá | Alberta | 100 |
+| Canadá | Columbia Británica | 500 |
+| Estados Unidos | Montana | 100 |
 
 ### <a name="group-by-rollup"></a>GROUP BY ROLLUP
 
 Crea un grupo para cada combinación de expresiones de columna. Además, "acumula" los resultados en subtotales y totales generales. Para ello, mueve de derecha a izquierda reduciendo el número de expresiones de columna para las que crea grupos y agregaciones. 
 
-El orden de las columnas influye en la salida de ROLLUP y también puede afectar al número de filas del conjunto de resultados.  
+El orden de las columnas afecta a la salida de ROLLUP y puede afectar al número de filas del conjunto de resultados.  
 
 Por ejemplo, `GROUP BY ROLLUP (col1, col2, col3, col4)` crea grupos para cada combinación de expresiones de columna en las listas siguientes.  
 
@@ -190,13 +200,13 @@ GROUP BY ROLLUP (Country, Region);
 
 El resultado de la consulta tiene las mismas agregaciones que la operación GROUP BY simple sin ROLLUP. Además, crea subtotales para cada valor de país. Por último, proporciona un total general para todas las filas. El resultado tiene el aspecto siguiente:
 
-| País | Region | Ventas totales |
+| Country | Region | Ventas totales |
 | :------ | :----- | ---------: |
-| Canada | Alberta | 100 |
-| Canada | Columbia Británica | 500 |
-| Canada | NULL | 600 |
-| United States | Montana | 100 |
-| United States | NULL | 100 |
+| Canadá | Alberta | 100 |
+| Canadá | Columbia Británica | 500 |
+| Canadá | NULL | 600 |
+| Estados Unidos | Montana | 100 |
+| Estados Unidos | NULL | 100 |
 | NULL | NULL | 700 |
 
 ### <a name="group-by-cube--"></a>GROUP BY CUBE ( )  
@@ -213,17 +223,17 @@ GROUP BY CUBE (Country, Region);
 
 El resultado de la consulta tiene grupos para valores únicos de (Country, Region), (NULL, Region), (Country, NULL) y (NULL, NULL). El resultado tiene el aspecto siguiente:
 
-| País | Region | Ventas totales |
+| Country | Region | Ventas totales |
 |---------|--------|-------|
-| Canada | Alberta | 100 |
+| Canadá | Alberta | 100 |
 | NULL | Alberta | 100 |
-| Canada | Columbia Británica | 500 |
+| Canadá | Columbia Británica | 500 |
 | NULL | Columbia Británica | 500 |
-| United States | Montana | 100 |
+| Estados Unidos | Montana | 100 |
 | NULL | Montana | 100 |
 | NULL | NULL | 700
-| Canada | NULL | 600 |
-| United States | NULL | 100 |
+| Canadá | NULL | 600 |
+| Estados Unidos | NULL | 100 |
    
  ### <a name="group-by-grouping-sets--"></a>GROUP BY GROUPING SETS ( )  
  
@@ -266,7 +276,7 @@ GROUP BY GROUPING SETS ( Country, () );
 
 Se aplica a: SQL Server y Azure SQL Database
 
-NOTA: Esta sintaxis se proporciona únicamente por motivos de compatibilidad con versiones anteriores. Se quitará en una versión futura. Evite usar esta sintaxis en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la usan.
+NOTA:  Esta sintaxis se proporciona únicamente por motivos de compatibilidad con versiones anteriores. Se quitará en una versión futura. Evite usar esta sintaxis en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la usan.
 
 Especifica que se incluyen todos los grupos en los resultados independientemente de que cumplan los criterios de búsqueda en la cláusula WHERE. Los grupos que no cumplen los criterios de búsqueda tienen el valor NULL para la agregación. 
 
@@ -274,12 +284,12 @@ GROUP BY ALL:
 - No se admite en consultas que tienen acceso a tablas remotas si también hay una cláusula WHERE en la consulta.
 - Generará un error en las columnas que tengan el atributo FILESTREAM.
   
-### <a name="with-distributedagg"></a>WITH (DISTRIBUTED_AGG)
+### <a name="with-distributed_agg"></a>WITH (DISTRIBUTED_AGG)
 Se aplica a: Azure SQL Data Warehouse y Almacenamiento de datos paralelos
 
 La sugerencia de consulta DISTRIBUTED_AGG obliga al sistema de procesamiento paralelo masivo (MPP) a redistribuir una tabla en una columna específica antes de realizar una agregación. Solo una columna de la cláusula GROUP BY puede tener una sugerencia de consulta DISTRIBUTED_AGG. Una vez finalizada la consulta, se quita la tabla redistribuida. La tabla original no se cambia.  
 
-NOTA: La sugerencia de consulta DISTRIBUTED_AGG se proporciona para ofrecer compatibilidad con versiones anteriores de Almacenamiento de datos paralelos y no mejorará el rendimiento de la mayoría de las consultas. De forma predeterminada, MPP redistribuye los datos según sea necesario para mejorar el rendimiento de las agregaciones. 
+NOTA:  La sugerencia de consulta DISTRIBUTED_AGG se proporciona para ofrecer compatibilidad con versiones anteriores de Almacenamiento de datos paralelos y no mejorará el rendimiento de la mayoría de las consultas. De forma predeterminada, MPP redistribuye los datos según sea necesario para mejorar el rendimiento de las agregaciones. 
   
 ## <a name="general-remarks"></a>Notas generales
 
@@ -344,16 +354,16 @@ La cláusula GROUP BY admite todas las características GROUP BY incluidas en el
 |Característica|SQL Server Integration Services|Nivel de compatibilidad 100 o superior con SQL Server|SQL Server 2008 o posterior con el nivel de compatibilidad 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Agregados DISTINCT|No se admite en WITH CUBE ni en WITH ROLLUP.|Se admite en WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE o ROLLUP.|Igual que el nivel de compatibilidad 100.|  
-|Función definida por el usuario con un nombre CUBE o ROLLUP en la cláusula GROUP BY|Se admite la función definida por el usuario **dbo.cube(** _arg1_ **,** _...argN_ **)** o **dbo.rollup(** _arg1_ **,** ..._argN_ **)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|No se admite la función definida por el usuario **dbo.cube (** _arg1_ **,** ...argN **)** o **dbo.rollup(** arg1 **,** _...argN_ **)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Se devuelve un mensaje de error que indica lo siguiente: "Sintaxis incorrecta cerca de la palabra clave "cube"&#124;"rollup"."<br /><br /> Para evitar este problema, reemplace `dbo.cube` por `[dbo].[cube]` o `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> Se admite el siguiente ejemplo: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Se admite la función definida por el usuario **dbo.cube (** _arg1_ **,** _...argN_) o **dbo.rollup(** _arg1_ **,** _...argN_ **)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
-|GROUPING SETS|No compatible|Admitida|Admitida|  
-|CUBE|No compatible|Admitida|No compatible|  
-|ROLLUP|No compatible|Admitida|No compatible|  
-|Total general, como GROUP BY ()|No compatible|Admitida|Admitida|  
-|GROUPING_ID, función|No compatible|Admitida|Admitida|  
-|GROUPING, función|Admitida|Admitida|Admitida|  
-|WITH CUBE|Admitida|Admitida|Admitida|  
-|WITH ROLLUP|Admitida|Admitida|Admitida|  
-|Eliminación de grupos duplicados de WITH CUBE o WITH ROLLUP|Admitida|Admitida|Admitida| 
+|Función definida por el usuario con un nombre CUBE o ROLLUP en la cláusula GROUP BY|Se admite la función definida por el usuario **dbo.cube(**_arg1_**,**_...argN_**)** o **dbo.rollup(**_arg1_**,**..._argN_**)** en la cláusula GROUP BY.<br /><br /> Por ejemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|No se admite la función definida por el usuario **dbo.cube (**_arg1_**,**...argN **)** o **dbo.rollup(** arg1 **,**_...argN_**)** en la cláusula GROUP BY.<br /><br /> Por ejemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Se devuelve un mensaje de error que indica lo siguiente: "Sintaxis incorrecta cerca de la palabra clave "cube"&#124;"rollup"."<br /><br /> Para evitar este problema, reemplace `dbo.cube` por `[dbo].[cube]` o `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> Se admite el siguiente ejemplo: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Se admite la función definida por el usuario **dbo.cube (**_arg1_**,**_...argN_) o **dbo.rollup(**_arg1_**,**_...argN_**)** en la cláusula GROUP BY.<br /><br /> Por ejemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUPING SETS|No compatible|Compatible|Compatible|  
+|CUBE|No compatible|Compatible|No compatible|  
+|ROLLUP|No compatible|Compatible|No compatible|  
+|Total general, como GROUP BY ()|No compatible|Compatible|Compatible|  
+|GROUPING_ID, función|No compatible|Compatible|Compatible|  
+|GROUPING, función|Compatible|Compatible|Compatible|  
+|WITH CUBE|Compatible|Compatible|Compatible|  
+|WITH ROLLUP|Compatible|Compatible|Compatible|  
+|Eliminación de grupos duplicados de WITH CUBE o WITH ROLLUP|Compatible|Compatible|Compatible| 
  
   
 ## <a name="examples"></a>Ejemplos  
@@ -415,7 +425,7 @@ SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales
 GROUP BY OrderDateKey ORDER BY OrderDateKey;  
 ```  
   
-### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. Uso básico de la sugerencia DISTRIBUTED_AGG  
+### <a name="f-basic-use-of-the-distributed_agg-hint"></a>F. Uso básico de la sugerencia DISTRIBUTED_AGG  
  En este ejemplo se usa la sugerencia de consulta DISTRIBUTED_AGG para forzar a que el dispositivo ordene la tabla en la columna `CustomerKey` antes de realizar la agregación.  
   
 ```sql  

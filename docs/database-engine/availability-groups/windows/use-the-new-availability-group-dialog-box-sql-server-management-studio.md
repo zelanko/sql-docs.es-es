@@ -1,6 +1,7 @@
 ---
-title: Usar el cuadro de diálogo Nuevo grupo de disponibilidad (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Nuevo grupo de disponibilidad en SSMS
+description: Este artículo contiene información sobre cómo usar el cuadro de diálogo "Nuevo grupo de disponibilidad" de SQL Server Management Studio para configurar un grupo de disponibilidad AlwaysOn.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 556a0442a64caa5bcbcab98933650da93b4e410b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013475"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821956"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Usar el cuadro de diálogo Nuevo grupo de disponibilidad (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

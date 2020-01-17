@@ -1,6 +1,7 @@
 ---
-title: Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente | Microsoft Docs
-ms.custom: ''
+title: Optimización de los filtros con parámetros con particiones precalculadas (combinación)
+description: Obtenga información sobre cómo usar las particiones precalculadas para optimizar el rendimiento de los filtros con parámetros para las publicaciones de combinación.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d4c2062662e07e35366d5bdccbf544d893568ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ab9ed7c6c404f9e8f57dd658f20e9e5b8f0d34f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018688"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321472"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtros con parámetros: optimizar para las particiones precalculadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68018688"
   
  Cuando un suscriptor se sincroniza con un publicador, el publicador debe evaluar los filtros del suscriptor para determinar qué filas pertenecen a la partición, o conjunto de datos, de ese suscriptor. Este proceso de determinar la pertenencia a particiones de los cambios en el publicador para cada suscriptor que recibe un conjunto de datos filtrados se denomina *evaluación de particiones*. Sin las particiones precalculadas, la evaluación de particiones debe realizarse para cada cambio efectuado en una columna filtrada del publicador desde la última vez que se ejecutó el Agente de mezcla para un suscriptor concreto, y este proceso tiene que repetirse para cada suscriptor que se sincroniza con el publicador.  
   
- No obstante, si el publicador y el suscriptor se están ejecutando en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior y utiliza particiones precalculadas, la pertenencia a particiones de todos los cambios efectuados en el publicador se calcula previamente y se mantiene en el momento en que se realizan los cambios. Como resultado, cuando un suscriptor se sincroniza con el publicador, puede empezar a descargar inmediatamente los cambios relativos a su partición sin tener que pasar por el proceso de evaluación de particiones. Esto puede producir importantes mejoras de rendimiento cuando una publicación tiene un número elevado de cambios, suscriptores o artículos.  
+ Sin embargo, si el publicador y el suscriptor se están ejecutando en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior y utiliza particiones precalculadas, la pertenencia a particiones de todos los cambios efectuados en el publicador se calcula previamente y se mantiene en el momento en que se realizan los cambios. Como resultado, cuando un suscriptor se sincroniza con el publicador, puede empezar a descargar inmediatamente los cambios relativos a su partición sin tener que pasar por el proceso de evaluación de particiones. Esto puede producir importantes mejoras de rendimiento cuando una publicación tiene un número elevado de cambios, suscriptores o artículos.  
   
  Además de utilizar particiones precalculadas, genere instantáneas previamente o permita a los suscriptores que soliciten la generación y aplicación de instantáneas la primera vez que se sincronizan. Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   

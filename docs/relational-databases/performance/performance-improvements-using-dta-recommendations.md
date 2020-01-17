@@ -1,6 +1,6 @@
 ---
-title: Mejoras de rendimiento con las recomendaciones de DTA | Microsoft Docs
-ms.custom: ''
+title: Mejoras de rendimiento recomendadas por DTA
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 700deff13eba1ce6320a49f997c20a9b40769eee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48614ea63ab56974e3eafb55b0f43dd83436ec85
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915201"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164921"
 ---
-# <a name="performance-improvements-using-dta-recommendations"></a>Mejoras de rendimiento con las recomendaciones de DTA
+# <a name="performance-improvements-using-database-engine-tuning-advisor-dta-recommendations"></a>Mejoras de rendimiento mediante las recomendaciones del Asistente para la optimización de motor de base de datos (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
@@ -56,7 +56,7 @@ En resumen, en los ejemplos anteriores se muestra la capacidad de DTA para aprov
 
 [Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
 
-[Guía de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md)
+[Descripción de los índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md)
 
 [Índices de almacén de columnas para el almacenamiento de datos](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)
 

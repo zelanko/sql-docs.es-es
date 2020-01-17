@@ -1,6 +1,7 @@
 ---
-title: Visor de conflictos de replicación de Microsoft (Replicación transaccional) | Microsoft Docs
-ms.custom: ''
+title: Visor de conflictos de replicación (punto a punto)
+description: Obtenga información sobre el visor de conflictos de replicación y cómo usarlo para ver los conflictos surgidos en la replicación transaccional punto a punto y la replicación transaccional con suscripciones de actualización en cola al actualizar las suscripciones.
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,14 +14,14 @@ ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 61d78e20a51d3a2c28af9cb19a845248d73b5a28
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 39be2638f1d85e610e5898f9a4c33c7129764424
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770581"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321530"
 ---
-# <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visor de conflictos de replicación de Microsoft (Replicación transaccional)
+# <a name="replication-conflict-viewer-transactional-replication"></a>Visor de conflictos de replicación de Microsoft (replicación transaccional)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   El Visor de conflictos de replicación permite ver los conflictos surgidos durante la sincronización de la replicación transaccional punto a punto y la replicación transaccional con suscripciones de actualización en cola. Para obtener más información, vea [Ver conflictos de datos para publicaciones transaccionales &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
@@ -38,7 +39,7 @@ ms.locfileid: "68770581"
  **Publicación**  
  Elija una publicación que contenga tablas con conflictos.  
   
- **Tabla**  
+ **Table**  
  Elija una tabla que contenga conflictos.  
   
  **Definir filtro**  
@@ -53,7 +54,7 @@ ms.locfileid: "68770581"
  **No seleccionar nada**  
  Haga clic para anular la selección de todos los conflictos mostrados en la cuadrícula.  
   
- **Quitar**  
+ **Remove**  
  Haga clic en esta opción para quitar los conflictos seleccionados del visor y los metadatos asociados de las tablas del sistema de replicación.  
   
  **Mostrar todas las columnas**  

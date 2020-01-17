@@ -1,6 +1,7 @@
 ---
-title: Opciones de validación de suscripciones (Suscripciones de mezcla) | Microsoft Docs
-ms.custom: ''
+title: Opciones de validación de suscripciones (combinación)
+description: Describe el cuadro de diálogo "Opciones de validación de suscripciones" en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e3c49cf0da50879d533fc78dff60253e753ec87b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2b21aaec23bfadee55217b7de411aec31c4bf9ab
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769441"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322188"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>Opciones de validación de suscripciones (Suscripciones de mezcla)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

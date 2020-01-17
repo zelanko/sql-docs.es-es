@@ -1,6 +1,5 @@
 ---
-title: Usar la sesión system_health | Microsoft Docs
-ms.custom: ''
+title: Usar la sesión system_health
 ms.date: 11/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,21 +15,21 @@ ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 262860781ba99abf8c4f6de783cd477db0e15d81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab31461888588ee54f1715f5e98ddb0f3b9aa23b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009351"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246143"
 ---
-# <a name="use-the-systemhealth-session"></a>Usar la sesión system_health
+# <a name="use-the-system_health-session"></a>Usar la sesión system_health
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 La sesión system_health es una sesión de eventos extendidos que se incluye de forma predeterminada con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta sesión se inicia automáticamente cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se inicia, y se ejecuta sin ningún efecto de rendimiento notable. La sesión recopila datos del sistema que se pueden utilizar para ayudar a solucionar problemas de rendimiento en el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
 
 > [!IMPORTANT]
-> Se recomienda no detener, alterar ni eliminar la sesión de estado del sistema.  
+> Se recomienda no detener, alterar ni eliminar la sesión de estado del sistema. Es posible que una actualización futura del producto sobrescriba cualquier cambio realizado en la configuración de sesión de system_health.
   
 La sesión recopila información como la que se indica a continuación:  
   
@@ -82,7 +81,7 @@ WHERE xe.name = 'system_health'
   
 Para ver los datos de sesión del archivo de eventos, use la interfaz de usuario Eventos extendidos disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información, vea [Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
   
-## <a name="restoring-the-systemhealth-session"></a>Restaurar la sesión system_health  
+## <a name="restoring-the-system_health-session"></a>Restaurar la sesión system_health  
 Si elimina la sesión system_health, puede restaurarla si ejecuta el archivo **u_tables.sql** en el Editor de consultas. Este archivo se encuentra en la siguiente carpeta, donde **C:** representa la unidad en la que se han instalado los archivos de programa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y **MSSQL1x** la versión principal de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
  `C:\Program Files\Microsoft SQL Server\MSSQL1x.\<*instanceid*>\MSSQL\Install`  

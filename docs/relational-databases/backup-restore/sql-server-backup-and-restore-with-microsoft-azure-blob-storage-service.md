@@ -1,7 +1,7 @@
 ---
-title: Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure | Microsoft Docs
-ms.custom: ''
-ms.date: 03/25/2019
+title: Copia de seguridad y restauración con Azure Blob Storage
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 169e437c141d379401b7a3294f0ae852d756374f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041372"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251132"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage.
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  ![Copia de seguridad en un gráfico de blobs de Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Copia de seguridad en un gráfico de blobs de Azure")  
+  ![Copia de seguridad en el gráfico de blob de Azure](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Copia de seguridad en el gráfico de blob de Azure")  
   
  En este tema se describen las copias de seguridad y la restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir del [servicio de Almacenamiento de blobs de Microsoft Azure](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/). También se proporciona un resumen de las ventajas de usar el servicio BLOB de Microsoft Azure para almacenar copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  SQL Server permite almacenar las copias de seguridad del servicio de Almacenamiento de blobs de Microsoft Azure de las maneras siguientes:  
   
--   **Administrar las copias de seguridad de Microsoft Azure:** con los mismos métodos usados para hacer una copia de seguridad en disco y cinta, ahora puede realizar la copia de seguridad en el almacenamiento de Microsoft Azure mediante la especificación de la dirección URL como destino de copia de seguridad. Puede utilizar esta característica para realizar la copia de seguridad manualmente o para configurar su propia estrategia de copia de seguridad como haría para un almacenamiento local u otras opciones fuera de las instalaciones. Esta característica también se conoce como **Copia de seguridad en URL de SQL Server**. Para obtener más información, vea [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Esta característica está disponible en SQL Server 2012 SP1 CU2 o posterior. Esta característica se ha mejorado en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para proporcionar un mayor rendimiento y funcionalidad mediante el uso de blobs en bloques, firmas de acceso compartido y la creación de bandas.  
+-   **Administrar las copias de seguridad de Microsoft Azure:** con los mismos métodos usados para hacer una copia de seguridad en disco y cinta, ahora puede realizar la copia de seguridad en el almacenamiento de Microsoft Azure mediante la especificación de la dirección URL como destino de copia de seguridad. Puede utilizar esta característica para realizar la copia de seguridad manualmente o para configurar su propia estrategia de copia de seguridad como haría para un almacenamiento local u otras opciones fuera de las instalaciones. Esta característica también se conoce como **Copia de seguridad en URL de SQL Server**. Para más información, consulte [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md). Esta característica está disponible en SQL Server 2012 SP1 CU2 o posterior. Esta característica se ha mejorado en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] para proporcionar un mayor rendimiento y funcionalidad mediante el uso de blobs en bloques, firmas de acceso compartido y la creación de bandas.  
   
     > [!NOTE]  
     >  En las versiones de SQL Server anteriores a SQL Server 2012 SP1 CU2, puede usar el complemento de la herramienta de Microsoft Azure Copia de seguridad de SQL Server para crear rápida y fácilmente copias de seguridad del Almacenamiento de Microsoft Azure. Para obtener más información, vea [centro de descarga](https://go.microsoft.com/fwlink/?LinkID=324399).  
@@ -63,7 +63,7 @@ ms.locfileid: "68041372"
   
 ## <a name="see-also"></a>Consulte también  
 
-[Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
+[Procedimientos recomendados y solución de problemas de Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 
 [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 

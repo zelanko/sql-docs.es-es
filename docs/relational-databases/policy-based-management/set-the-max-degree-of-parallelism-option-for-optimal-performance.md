@@ -1,6 +1,7 @@
 ---
-title: Establecer la opción Grado máximo de paralelismo para lograr un rendimiento óptimo | Microsoft Docs
-ms.custom: ''
+title: Grado máximo de paralelismo y administración basada en directivas
+description: Describe cómo configurar una directiva para comprobar el valor de grado máximo de paralelismo para la administración basada en directivas para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec908006-67ae-4674-9a61-25ea741d6197
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 00123da615c420fa3d58daae9a287ce3c13b8329
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: c5f261998588fa15074a25c606a0aa50f742f04a
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316663"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557834"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>Establecer la opción Grado máximo de paralelismo para lograr un rendimiento óptimo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

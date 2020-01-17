@@ -1,6 +1,7 @@
 ---
-title: Cuadro de diálogo Crear nueva condición o Abrir condición, página General | Microsoft Docs
-ms.custom: ''
+title: "\"Página General\" del cuadro de diálogo \"Crear nueva condición\" o \"Abrir condición\""
+description: Describe la "Página General" del cuadro de diálogo "Crear nueva condición" o "Abrir condición" para la administración basada en directivas en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 793d49d46e3a26164437fd6db542a7db0704e1cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c16d813af595e3698379026e219440ba0007db12
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137909"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558146"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Cuadro de diálogo Crear nueva condición o Abrir condición, página General
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "68137909"
  **Operador**  
  Seleccione un operador de comparación para esta expresión. Los operadores son: =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN. No todos los operadores están disponibles para algunas propiedades.  
   
- **Value**  
+ **Valor**  
  Configuración del valor para esta expresión. Los valores permitidos dependen de la faceta. Los valores pueden ser TRUE/FALSE, de tipo cadena o de tipo numérico. Los valores de cadena se deben incluir entre comillas sencillas, por ejemplo: **'AdventureWorks'** . No todos los operadores están disponibles para algunas propiedades.  
   
 ## <a name="group-clauses"></a>Agrupar cláusulas  

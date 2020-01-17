@@ -1,6 +1,7 @@
 ---
-title: Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo | Microsoft Docs
-ms.custom: ''
+title: Configuración de alertas para las métricas de rendimiento de creación de reflejo de la base de datos
+description: 'Instrucciones para configurar umbrales de advertencia y alertas para las métricas de rendimiento utilizadas por la creación de reflejo de la base de datos. '
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e1ff85e22911cf632ef2a2f6bea9fda85f9ece4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad44ae43a33a132fc2b5170a8ff4d3e6b3572ded
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050601"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74820903"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +31,6 @@ ms.locfileid: "68050601"
   
  Después de establecer la supervisión de una base de datos reflejada, un administrador del sistema puede configurar los umbrales de advertencia de algunas métricas de rendimiento clave. Además, el administrador puede configurar alertas para estos y otros eventos de la creación de reflejo de la base de datos.  
   
- **En este tema:**  
-  
--   [Métricas de rendimiento y umbrales de advertencia](#PerfMetricsAndWarningThresholds)  
-  
--   [Configurar y administrar umbrales de advertencia](#SetUpManageWarningThresholds)  
-  
--   [Usar alertas para una base de datos reflejada](#UseAlerts)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
   
 ##  <a name="PerfMetricsAndWarningThresholds"></a> Métricas de rendimiento y umbrales de advertencia  
  En la siguiente tabla se presenta una lista de las métricas de rendimiento para las que se pueden configurar advertencias, se describe el umbral de advertencia correspondiente y se muestra la etiqueta correspondiente del Monitor de creación de reflejo de la base de datos.  
@@ -47,8 +39,8 @@ ms.locfileid: "68050601"
 |------------------------|-----------------------|--------------------------------------|  
 |Registro sin enviar|Especifica cuántos kilobytes (KB) de registro sin enviar generan una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir la pérdida de datos potencial en términos de KB y resulta especialmente importante en el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|**Advierte si el registro sin enviar supera el valor de umbral**|  
 |Registro sin restaurar|Especifica cuántos KB de registro sin restaurar generan una advertencia en la instancia del servidor reflejado. Esta advertencia ayuda a medir el tiempo de conmutación por error. El*tiempo de la conmutación por error* se compone principalmente del tiempo que el servidor reflejado anterior necesita para poner al día los registros pendientes en su cola rehecha, más un breve tiempo adicional.<br /><br /> Nota: En una conmutación automática por error, el tiempo para que el sistema detecte el error es independiente del tiempo de conmutación por error.<br /><br /> Para obtener más información, vea [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|**Advertir si el registro sin restaurar sobrepasa el umbral**|  
-|Transacción no enviada más antigua|Especifica el número de minutos de transacciones que se pueden acumular en la cola de envío antes de que se genere una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir la pérdida de datos potencial en términos de tiempo y resulta especialmente importante en el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|**Advierte si la antigüedad de la transacción sin enviar más antigua supera el valor de umbral**|  
-|Sobrecarga de confirmación del servidor reflejado|Especifica el número de milisegundos de retardo medio por transacción que se tolera antes de que se genere una advertencia en el servidor principal. Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día. Este valor solo es relevante en el modo de alta seguridad.|**Advierte si la sobrecarga de confirmación del servidor reflejado supera el valor de umbral**|  
+|Transacción no enviada más antigua|Especifica el número de minutos de transacciones que se pueden acumular en la cola de envío antes de que se genere una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir la pérdida de datos potencial en términos de tiempo y resulta especialmente importante en el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|**Advertir si la transacción sin enviar más antigua sobrepasa el umbral**|  
+|Sobrecarga de confirmación del servidor reflejado|Especifica el número de milisegundos de retardo medio por transacción que se tolera antes de que se genere una advertencia en el servidor principal. Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día. Este valor solo es relevante en el modo de alta seguridad.|**Advertir si la sobrecarga de confirmación del servidor reflejado sobrepasa el umbral**|  
   
  En una base de datos reflejada, un administrador del sistema puede especificar un umbral para cualquier de estas métricas de rendimiento. Para obtener más información, vea [Configurar y administrar umbrales de advertencia](#SetUpManageWarningThresholds)más adelante en este tema.  
   
@@ -76,7 +68,7 @@ ms.locfileid: "68050601"
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Eventos de umbral de rendimiento enviados al Registro de eventos de Windows  
  Si se define un umbral de advertencia para una métrica de rendimiento, cuando se actualiza la tabla de estado, el último valor se evalúa con el umbral. Si se ha alcanzado el umbral, el procedimiento de actualización, **sp_dbmmonitorupdate**, genera un evento informativo (un *evento de umbral de rendimiento*) para la métrica y escribe el evento en el Registro de eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. En la siguiente tabla se presenta una lista de los Id. de eventos de los eventos de umbral de rendimiento.  
   
-|Métrica de rendimiento|Identificador del evento|  
+|Métrica de rendimiento|Id. de evento|  
 |------------------------|--------------|  
 |Registro sin enviar|32042|  
 |Registro sin restaurar|32043|  

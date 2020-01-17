@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
 author: VanMSFT
 ms.author: vanto
-ms.reviewer: aliceku
-ms.openlocfilehash: af336d2946dbb0b96d3ebdc64c14ce9e1eb6012e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.reviewer: jaszymas
+ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127207"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246127"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Prácticas recomendadas de seguridad con bases de datos independientes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68127207"
   Las bases de datos independientes tienen algunas amenazas únicas que los administradores de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] deben comprender y mitigar. La mayoría de ellas están relacionadas con el proceso de autenticación de **USER WITH PASSWORD** , que traslada el límite de autenticación del nivel de [!INCLUDE[ssDE](../../includes/ssde-md.md)] al de base de datos.  
   
 ## <a name="threats-related-to-users"></a>Amenazas relacionadas con usuarios  
- Los usuarios de una base de datos independiente que dispongan del permiso **ALTER ANY USER** , como los miembros de los roles fijos de base de datos **db_owner** y **db_securityadmin** , pueden conceder acceso a la base de datos sin el conocimiento ni el permiso del administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La concesión de acceso a usuarios en una base de datos independiente incrementa el área expuesta al ataque potencial en toda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los administradores deben comprender esta delegación de control de acceso y ser sumamente cuidadosos cuando conceden el permiso **ALTER ANY USER** a los usuarios de base de datos independiente. Todos los propietarios de bases de datos tienen el permiso **ALTER ANY USER** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben auditar periódicamente a los usuarios de una base de datos independiente.  
+ Los usuarios de una base de datos independiente que dispongan del permiso **ALTER ANY USER**, como los miembros de los roles fijos de base de datos **db_owner** y **db_accessadmin**, pueden conceder acceso a la base de datos sin el conocimiento ni el permiso del administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La concesión de acceso a usuarios en una base de datos independiente incrementa el área expuesta al ataque potencial en toda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los administradores deben comprender esta delegación de control de acceso y ser sumamente cuidadosos cuando conceden el permiso **ALTER ANY USER** a los usuarios de base de datos independiente. Todos los propietarios de bases de datos tienen el permiso **ALTER ANY USER** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben auditar periódicamente a los usuarios de una base de datos independiente.  
   
 ### <a name="accessing-other-databases-using-the-guest-account"></a>Acceder a otras bases de datos mediante la cuenta Invitado  
  Los propietarios y los usuarios de bases de datos con el permiso **ALTER ANY USER** pueden crear usuarios de bases de datos independientes. Después de conectarse a una base de datos independiente en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario de base de datos independiente puede obtener acceso a otras bases de datos en [!INCLUDE[ssDE](../../includes/ssde-md.md)], si en estas bases de datos se ha habilitado la cuenta **Invitado** .  
@@ -65,7 +65,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 -   Cuando estén presentes bases de datos independientes, los usuarios de base de datos que no sean bases de datos independientes deben conectarse al [!INCLUDE[ssDE](../../includes/ssde-md.md)] sin usar ningún catálogo inicial ni especificar el nombre de una base de datos dependiente como el catálogo inicial. De esta forma, se evita la conexión a la base de datos independiente bajo un control menos directo por parte de los administradores de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ### <a name="increasing-access-by-changing-the-containment-status-of-a-database"></a>Incrementar el acceso cambiando el estado de contención de una base de datos  
- Los inicios de sesión con el permiso **ALTER ANY DATABASE** , como los miembros del rol fijo de servidor **dbcreator** , y los usuarios de una base de datos dependiente con el permiso **CONTROL DATABASE** , como los miembros del rol fijo de base de datos **db_owner** , pueden cambiar la configuración de contención de una base de datos. Si la configuración de contención de una base de datos se cambia de **NONE** a **PARTIAL** o **FULL**, se puede conceder acceso de usuario mediante la creación de usuarios de bases de datos independientes con contraseñas. De esta forma, se podría proporcionar acceso sin el conocimiento ni el consentimiento de los administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para evitar que las bases de datos sean independientes, establezca el valor de la opción **autenticación de la base de datos independiente** de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en 0. Para evitar que se conecten los usuarios de bases de datos independientes con contraseñas en las bases de datos independientes seleccionadas, use desencadenadores de inicio de sesión para cancelar los intentos de inicios de sesión de los usuarios de bases de datos independientes con contraseñas.  
+ Los inicios de sesión con el permiso **ALTER ANY DATABASE** , como los miembros del rol fijo de servidor **dbcreator** , y los usuarios de una base de datos dependiente con el permiso **CONTROL DATABASE** , como los miembros del rol fijo de base de datos **db_owner** , pueden cambiar la configuración de contención de una base de datos. Si la configuración de contención de una base de datos se cambia de **NONE** a **PARTIAL** o **FULL**, se puede conceder acceso de usuario mediante la creación de usuarios de bases de datos independientes con contraseñas. De esta forma, se podría proporcionar acceso sin el conocimiento ni el consentimiento de los administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para evitar que las bases de datos sean independientes, establezca el valor de la opción **autenticación de la base de datos independiente** de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en 0. Para evitar que se conecten los usuarios de bases de datos independientes con contraseñas en las bases de datos independientes seleccionadas, use desencadenadores de inicio de sesión para cancelar los intentos de inicios de sesión de los usuarios de bases de datos independientes con contraseñas.  
   
 ### <a name="attaching-a-contained-database"></a>Adjuntar una base de datos independiente  
  Si se adjunta una base de datos independiente, un administrador podría dar acceso a usuarios no deseados a la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Un administrador al que le preocupe este riesgo puede poner en línea la base de datos en el modo **RESTRICTED_USER** , que evita la autenticación de usuarios de bases de datos independientes con contraseñas. Solo las entidades de seguridad autorizadas mediante inicios de sesión podrán acceder a [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -84,7 +84,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="escaping-a-contained-database"></a>Establecer secuencias de escape en una base de datos independiente  
  Si una base de datos es independiente parcialmente, los administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben auditar periódicamente las capacidades de los usuarios y de los módulos de bases de datos independientes.  
   
-## <a name="denial-of-service-through-autoclose"></a>Denegación de servicio mediante AUTO_CLOSE  
+## <a name="denial-of-service-through-auto_close"></a>Denegación de servicio mediante AUTO_CLOSE  
  No configure bases de datos independientes para que se cierren automáticamente. Si se cierra la base de datos, su apertura para autenticar un usuario consume recursos adicionales y podría contribuir a un ataque de denegación de servicio.  
   
 ## <a name="see-also"></a>Consulte también  

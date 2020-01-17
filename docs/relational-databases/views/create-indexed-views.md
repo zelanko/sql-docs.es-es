@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9db1b4b1e08bae56a65a45d6c096f701f4172203
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c1b80a81aa6c05727b0711e68219d5c0aa32cb9
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68123510"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325517"
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
 
@@ -58,15 +58,15 @@ Para asegurar el correcto mantenimiento de las vistas y la generación de result
 - Se realiza una operación de inserción, actualización o eliminación en cualquier tabla que participa en la vista indizada. Este requisito incluye operaciones como copia masiva, replicación y consultas distribuidas.
 - El optimizador de consultas utiliza la vista indizada para producir el plan de consulta.
 
-|Opciones SET|Valor requerido|Valor de servidor predeterminado|Valor predeterminado<br /><br /> Valor de OLE DB y ODBC|Valor predeterminado<br /><br /> predeterminado|
+|Opciones de Set|Valor requerido|Valor de servidor predeterminado|Valor predeterminado<br /><br /> Valor de OLE DB y ODBC|Valor predeterminado<br /><br /> predeterminado|
 |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|
-|ANSI_NULLS|ON|ON|ON|OFF|
-|ANSI_PADDING|ON|ON|ON|OFF|
-|ANSI_WARNINGS<sup>1</sup>|ON|ON|ON|OFF|
-|ARITHABORT|ON|ON|OFF|OFF|
-|CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|
-|NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
-|QUOTED_IDENTIFIER|ON|ON|ON|OFF|
+|ANSI_NULLS|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|
+|ANSI_PADDING|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|
+|ANSI_WARNINGS<sup>1</sup>|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|
+|ARITHABORT|ACTIVAR|ACTIVAR|Apagado|Apagado|
+|CONCAT_NULL_YIELDS_NULL|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|
+|NUMERIC_ROUNDABORT|Apagado|Apagado|Apagado|Apagado|
+|QUOTED_IDENTIFIER|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 
 <sup>1</sup> Si se establece `ANSI_WARNINGS` en ON, `ARITHABORT` se establece implícitamente en ON.
@@ -97,7 +97,7 @@ Además de las opciones SET y los requisitos de funciones deterministas, se debe
 - Las funciones de Common Language Runtime (CLR) pueden aparecer en la lista de selección de la vista, pero no pueden formar parte de la definición de la clave de índice clúster. Las funciones CLR no pueden aparecer en la cláusula WHERE de la vista ni en la cláusula ON de una operación JOIN en la vista.
 - Los métodos y las funciones CLR de tipos definidos por el usuario CLR utilizados en la definición de la vista deben establecer las propiedades según se indica en la tabla siguiente.
 
-   |Propiedad|Nota|
+   |Propiedad|Nota:|
    |--------------|----------|
    |DETERMINISTIC = TRUE|Debe declararse de forma explícita como un atributo del método de Microsoft .NET Framework.|
    |PRECISE = TRUE|Debe declararse de forma explícita como un atributo del método de .NET Framework.|

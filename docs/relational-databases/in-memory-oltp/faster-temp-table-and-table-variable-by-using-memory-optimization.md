@@ -1,6 +1,6 @@
 ---
-title: Tabla temporal y variable de tabla más rápidas con optimización para memoria | Microsoft Docs
-ms.custom: ''
+title: Optimización para memoria para obtener una tabla temporal y variables de tabla más rápidas
+ms.custom: seo-dt-2019
 ms.date: 06/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713253"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412678"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabla temporal y variable de tabla más rápidas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "71713253"
   
 Si usa tablas temporales, variables de tabla o parámetros con valores de tabla, tenga en cuenta sus conversiones para aprovechar las tablas optimizadas para memoria y las variables de tabla para mejorar el rendimiento. Los cambios de código normalmente son mínimos.  
   
-En este artículo se explica:  
+En este artículo se describe:  
   
 - Escenarios que argumentan en favor de la conversión a en memoria.  
 - Pasos técnicos necesarios para implementar las conversiones a en memoria.  
@@ -48,11 +48,11 @@ Una variable de tabla optimizada para memoria:
 
   
   
-#### <a name="object-types"></a>Tipos de objetos  
+#### <a name="object-types"></a>Tipos de objeto  
   
 OLTP en memoria proporciona los siguientes objetos que se pueden usar para la optimización de memoria de las tablas temporales y las variables de tabla:  
   
-- Tablas con optimización para memoria  
+- Tablas optimizadas para memoria  
   - Durability = SCHEMA_ONLY  
 - Variables de tabla con optimización para memoria  
   - Se debe declarar en dos pasos (en lugar de en línea):  
@@ -124,7 +124,7 @@ CREATE TABLE #tempSessionC
   
   
   
-En primer lugar, cree la siguiente función con valores de tabla para filtrar en **@@spid** . Todas las tablas SCHEMA_ONLY que convierta desde tablas temporales de sesión podrán usar la función.  
+En primer lugar, cree la siguiente función con valores de tabla para filtrar en **\@\@spid**. Todas las tablas SCHEMA_ONLY que convierta desde tablas temporales de sesión podrán usar la función.  
   
   
   
@@ -426,7 +426,7 @@ En variables de tabla más grandes, los índices no agrupados usan más memoria 
   
 Si se accede a la variable de tabla optimizada para memoria solo con un valor de clave exacto por acceso, un índice de hash puede ser una opción mejor que un índice no agrupado. Pero si no puede calcular el valor BUCKET_COUNT adecuado, un índice NONCLUSTERED es una buena segunda opción.  
   
-## <a name="h-see-also"></a>H. Vea también  
+## <a name="h-see-also"></a>H. Consulte también  
   
 - [Tablas optimizadas para memoria.](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 

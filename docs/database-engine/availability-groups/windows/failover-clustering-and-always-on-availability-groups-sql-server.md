@@ -1,7 +1,7 @@
 ---
-title: Combinación de una instancia del clúster de conmutación por error con grupos de disponibilidad
+title: Instancia del clúster de conmutación por error con grupos de disponibilidad
 description: Mejore la alta disponibilidad y la capacidad de recuperación ante desastres mediante la combinación de las características de una instancia de clúster de conmutación por error de SQL Server y un grupo de disponibilidad Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3a1e9f29db3c9aec7dc86520c502cc3fdbea7a86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62b5f1d23608ce6337befa1e4888ad2cda543dc9
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988393"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822252"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)
 
@@ -63,10 +63,10 @@ ms.locfileid: "67988393"
 |-|-------------------------|-------------------------------------------|  
 |**Usa WSFC**|Sí|Sí|  
 |**Nivel de protección**|Instancia|Base de datos|  
-|**Tipo de almacenamiento**|Compartidos|No compartidos<br /><br /> Mientras que las réplicas de un grupo de disponibilidad no comparten almacenamiento, una réplica hospedada por una FCI usa una solución de almacenamiento compartido de acuerdo con esa FCI. La solución de almacenamiento es compartida solo por los nodos en la FCI y no entre las réplicas del grupo de disponibilidad.|  
+|**Tipo de almacenamiento**|Compartido|No compartidos<br /><br /> Mientras que las réplicas de un grupo de disponibilidad no comparten almacenamiento, una réplica hospedada por una FCI usa una solución de almacenamiento compartido de acuerdo con esa FCI. La solución de almacenamiento es compartida solo por los nodos en la FCI y no entre las réplicas del grupo de disponibilidad.|  
 |**Soluciones de almacenamiento**|Se adjuntan directamente, SAN, puntos de montaje, SMB|Depende del tipo de nodo|  
 |**Secundarios legibles**|No*|Sí|  
-|**Opciones aplicables de la directiva de conmutación por error**|Quórum de WSFC<br /><br /> Específico de FCI<br /><br /> Configuración de grupo de disponibilidad**|Quórum de WSFC<br /><br /> Configuración de grupo de disponibilidad|  
+|**Opciones aplicables de la directiva de conmutación por error**|Quórum de WSFC<br /><br /> Específico de FCI<br /><br /> Configuración de grupo de disponibilidad**|Quórum de WSFC<br /><br /> Configuración de grupos de disponibilidad|  
 |**Recursos conmutados por error**|Servidor, instancia y base de datos|Solo base de datos|  
   
  *Mientras que las réplicas secundarias sincrónicas de un grupo de disponibilidad se ejecutan siempre en las instancias respectivas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , los nodos secundarios de una FCI no han iniciado realmente las instancias respectivas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, por lo tanto, no son legibles. En una FCI, un nodo secundario inicia la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando la propiedad del grupo de recursos se le transfiere durante una conmutación por error de FCI. Sin embargo, en el nodo de FCI activo, cuando una base de datos hospedada por FCI pertenece a un grupo de disponibilidad, si la réplica de disponibilidad local se ejecuta como réplica secundaria legible, la base de datos es legible.  

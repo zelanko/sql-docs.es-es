@@ -1,7 +1,7 @@
 ---
 title: Compatibilidad con la intercalación y Unicode | Microsoft Docs
 ms.custom: ''
-ms.date: 09/18/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982821"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901942"
 ---
 # <a name="collation-and-unicode-support"></a>Compatibilidad con la intercalación y Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -463,7 +463,7 @@ Si almacena datos de caracteres que reflejan varios idiomas [!INCLUDE[ssNoVersio
 > [!NOTE]
 > Para los tipos de datos Unicode, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] puede representar hasta 65 535 caracteres mediante UCS-2, o el intervalo completo de Unicode (1 114 111 caracteres) si se usan caracteres adicionales. Para más información sobre cómo habilitar caracteres adicionales, vea [Caracteres adicionales](#Supplementary_Characters).
 
-Como alternativa, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si se usa una intercalación compatible con UTF-8 (\_UTF8), los tipos de datos anteriores que no son Unicode (**char** y **varchar**) se convierten en tipos de datos Unicode (UTF-8). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] no cambia el comportamiento de los tipos de datos Unicode (UTF-16) que existieran antes (**nchar**, **nvarchar** y **ntext**). Para más información, vea [Diferencias de almacenamiento entre UTF-8 y UTF-16](#storage_differences).
+Como alternativa, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si se usa una intercalación compatible con UTF-8 (\_UTF8), los tipos de datos anteriores que no son Unicode (**char** y **varchar**) se convierten en tipos de datos Unicode con la codificación UTF-8. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] no cambia el comportamiento de los tipos de datos Unicode que existieran antes (**nchar**, **nvarchar** y **ntext**), que seguirán usando la codificación UCS-2 o UTF-16. Para más información, vea [Diferencias de almacenamiento entre UTF-8 y UTF-16](#storage_differences).
 
 ### <a name="unicode-considerations"></a>Consideraciones de Unicode
 Hay limitaciones significativas asociadas a los tipos de datos no Unicode. Esto se debe a que un equipo que no es Unicode está limitado a usar una única página de códigos. Es posible que experimente una ganancia de rendimiento al usar Unicode, ya que requiere menos conversiones de páginas de códigos. Las intercalaciones Unicode se deben seleccionar de forma individual en el nivel de expresión, base de datos o columna porque no se admiten en el nivel de servidor.    
@@ -502,7 +502,7 @@ En muchos casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inter
     
 En la tabla siguiente se proporciona información sobre cómo usar datos multilingües con varias combinaciones de servidores Unicode y no Unicode:    
     
-|Servidor|Cliente|Beneficios o limitaciones|    
+|Server|Remoto|Beneficios o limitaciones|    
 |------------|------------|-----------------------------|    
 |Unicode|Unicode|Dado que los datos Unicode se usan en todo el sistema, este escenario proporciona el máximo rendimiento y protección frente a daños de los datos recuperados. Se trata de la situación con Objetos de datos ActiveX (ADO), OLE DB y ODBC versión 3.7 o posterior.|    
 |Unicode|No Unicode|En este escenario y especialmente con las conexiones entre un servidor que ejecuta un sistema operativo más reciente y un cliente que ejecuta una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o bien un sistema operativo anterior, puede haber limitaciones o producirse errores al mover los datos a un equipo cliente. Los datos Unicode del servidor intentan asignarse a una página de códigos correspondiente en el cliente no Unicode para convertir los datos.|    
@@ -610,7 +610,7 @@ En la tabla siguiente se describen los bytes de almacenamiento de la codificaci�
 > [!TIP]   
 > Es habitual pensar que en [CHAR(*n*) y VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), o en [NCHAR(*n*) y NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), la *n* define el número de caracteres. Esto se debe a que en el ejemplo de una columna CHAR(10), se pueden almacenar 10 caracteres ASCII en el intervalo 0-127 mediante una intercalación como **Latin1_General_100_CI_AI**, porque cada carácter de este intervalo solo usa 1 byte.
 >    
-> Pero en [CHAR(*n*) y VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), *n* define el tamaño de la cadena en *bytes* (0-8.000), mientras que en [NCHAR(*n*) y NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) *n* define el tamaño de la cadena en *pares de bytes* (0-4.000). *n* nunca define números de caracteres que se pueden almacenar.
+> Pero en [CHAR(*n*) y VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), *n* define el tamaño de la cadena en *bytes* (0-8.000), mientras que en [NCHAR(*n*) y NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)*n* define el tamaño de la cadena en *pares de bytes* (0-4.000). *n* nunca define números de caracteres que se pueden almacenar.
 
 Como acaba de ver, elegir la codificación Unicode y el tipo de datos adecuado puede proporcionar ahorros significativos de almacenamiento o aumentar la superficie de memoria, según el juego de caracteres en uso. Por ejemplo, al usar una intercalación Latina habilitada para UTF-8, como **Latin1_General_100_CI_AI_SC_UTF8**, una columna `CHAR(10)` almacena 10 bytes y puede contener 10 caracteres ASCII en el intervalo 0-127. Pero solo puede contener 5 caracteres en el intervalo 128-2047 y 3 caracteres en el intervalo 2048-65535. Por comparación, como una columna `NCHAR(10)` almacena 10 pares de bytes (20 bytes), puede contener 10 caracteres en el intervalo 0-65535.  
 
@@ -622,12 +622,23 @@ Antes de decidir si usar la codificación UTF-8 o UTF-16 para una base de datos 
 
 Para otras consideraciones, consulte [Escribir instrucciones Transact-SQL internacionales](../../relational-databases/collations/write-international-transact-sql-statements.md).
 
+### <a name="converting"></a> Conversión a UTF-8
+Dado que en [CHAR(*n*) y VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), o en [NCHAR(*n*) y NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), *n* define el tamaño de almacenamiento en bytes y no el número de caracteres permitidos, es importante determinar el tamaño del tipo de datos al que realizar la conversión para evitar que los datos se trunquen. 
+
+Por ejemplo, considere una columna definida como **NVARCHAR(100)** que almacena 180 bytes de caracteres japoneses. En este ejemplo, los datos de la columna están codificados actualmente mediante UCS-2 o UTF-16, que utiliza 2 bytes por carácter. Para evitar el truncamiento de datos no basta con convertir el tipo de columna en **VARCHAR(200)** , ya que el nuevo tipo de datos solo puede almacenar 200 bytes, pero los caracteres japoneses requieren 3 bytes cuando están codificados en UTF-8. Por lo que, para evitar la pérdida de datos a través del truncamiento de datos, la columna debe definirse como **VARCHAR(270)** .
+
+Por lo tanto, es necesario saber de antemano cuál es el tamaño de bytes previsto para la definición de columna antes de convertir los datos existentes a UTF-8, y ajustar el nuevo tamaño del tipo de datos como corresponda. Consulte el script de [!INCLUDE[tsql](../../includes/tsql-md.md)] o el bloc de notas de SQL en el [GitHub de ejemplos de datos](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/unicode), que usan la función [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) y la instrucción [COLLATE](../../t-sql/statements/collations.md) para determinar los requisitos de longitud de datos correctos para las operaciones de conversión UTF-8 en una base de datos existente.
+
+Para cambiar la intercalación de columna y el tipo de datos en una tabla existente, use uno de los métodos descritos en [Establecer o cambiar la intercalación de columnas](../../relational-databases/collations/set-or-change-the-column-collation.md).
+
+Para cambiar la intercalación de bases de datos y permitir que los nuevos objetos hereden la intercalación de las bases de datos de forma predeterminada, o para cambiar la intercalación del servidor y permitir que las bases de datos nuevas hereden la intercalación del sistema de forma predeterminada, consulte la sección [Tareas relacionadas](#Related_Tasks) de este artículo. 
+
 ##  <a name="Related_Tasks"></a> Related tasks    
     
 |Tarea|Tema|    
 |----------|-----------|    
-|Se describe cómo establecer o cambiar la intercalación de la instancia de SQL Server.|[Configurar o cambiar la intercalación del servidor](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
-|Se describe cómo establecer o cambiar la intercalación de una base de datos de usuario.|[Establecer o cambiar la intercalación de base de datos](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
+|Describe cómo establecer o cambiar la intercalación de la instancia de SQL Server. Fíjese que, al cambiar la intercalación de servidor, no se cambia la de las bases de datos existentes.|[Configurar o cambiar la intercalación del servidor](../../relational-databases/collations/set-or-change-the-server-collation.md)|    
+|Describe cómo establecer o cambiar la intercalación de una base de datos de usuario. Fíjese que, al cambiar la intercalación de una base de datos, no se cambia la de las columnas de tabla existentes.|[Establecer o cambiar la intercalación de base de datos](../../relational-databases/collations/set-or-change-the-database-collation.md)|    
 |Se describe cómo establecer o cambiar la intercalación de una columna de la base de datos.|[Establecer o cambiar la intercalación de columnas](../../relational-databases/collations/set-or-change-the-column-collation.md)|    
 |Se describe cómo devolver información de intercalación en el nivel de servidor, base de datos o columna.|[Ver información de intercalación](../../relational-databases/collations/view-collation-information.md)|    
 |Se describe cómo escribir instrucciones Transact-SQL que sean más portátiles de un idioma a otro, o bien que admitan varios idiomas más fácilmente.|[Escribir instrucciones Transact-SQL internacionales](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
@@ -646,9 +657,9 @@ Para más información, vea el contenido relacionado siguiente:
 * [Nombre de intercalación de Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)  
 * [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928) (Presentación de la compatibilidad de UTF-8 con SQL Server)       
     
-## <a name="see-also"></a>Vea también    
+## <a name="see-also"></a>Consulte también    
 [Intercalaciones de bases de datos independientes](../../relational-databases/databases/contained-database-collations.md)     
 [Elegir un idioma al crear un índice de texto completo](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
-[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
-    
+[sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
+[Juegos de caracteres de un solo byte y de varios bytes](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
  

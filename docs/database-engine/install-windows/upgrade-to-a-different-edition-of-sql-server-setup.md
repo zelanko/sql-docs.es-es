@@ -1,7 +1,7 @@
 ---
-title: Actualizar a una edición diferente de SQL Server 2016 (programa de instalación) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/24/2017
+title: Actualización a otra edición
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +10,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2e224e5949fd3f166789e72f7f70d8ca44392179
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 996d0f90a76760c4c02a7a3d2bbf08f8c7ba6981
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934678"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258792"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Actualizar a una edición diferente de SQL Server (programa de instalación)
 
@@ -73,7 +73,7 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
   
  Además de los pasos anteriores, puede que tenga que realizar lo siguiente si ha efectuado la actualización a partir de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]:  
   
--   Los usuarios que estaban aprovisionados en [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] siguen estándolo después de la actualización. En concreto, el grupo BUILTIN\Users sigue estando aprovisionado. Deshabilite, quite o vuelva a aprovisionar estas cuentas según sea necesario. Para obtener más información, vea [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Los usuarios que estaban aprovisionados en [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] siguen estándolo después de la actualización. En concreto, el grupo BUILTIN\Users sigue estando aprovisionado. Deshabilite, quite o vuelva a aprovisionar estas cuentas según sea necesario. Para obtener más información, consulte [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 -   Los tamaños y el modo de recuperación de las bases de datos del sistema tempdb y model permanecen inalterados después de la actualización. Vuelva a configurar estos valores según sea necesario. Para obtener más información, vea [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   

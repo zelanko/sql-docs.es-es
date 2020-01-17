@@ -1,6 +1,7 @@
 ---
-title: Implementar un controlador de lógica de negocios para un artículo de mezcla | Microsoft Docs
-ms.custom: ''
+title: Configuración de un controlador de lógica de negocios para un artículo de combinación
+description: Use la programación de la replicación o Replication Management Objects para configurar un controlador de lógica de negocios para la sincronización de la replicación de combinación.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17a7c0e27dbb6cb80cb0069a2ea76036654280e3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846684"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322152"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementar un controlador de lógica de negocios para un artículo de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "70846684"
   
 2.  Agregue referencias al proyecto para los siguientes espacios de nombres.  
   
-    |Referencia de ensamblado|Ubicación|  
+    |Referencia de ensamblado|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (instalación predeterminada)|  
     |<xref:System.Data>|GAC (componente de .NET Framework)|  
@@ -132,7 +133,7 @@ ms.locfileid: "70846684"
   
 2.  Agregue referencias al proyecto para los siguientes espacios de nombres.  
   
-    |Referencia de ensamblado|Ubicación|  
+    |Referencia de ensamblado|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (instalación predeterminada)|  
     |<xref:System.Data>|GAC (componente de .NET Framework)|  
@@ -171,11 +172,11 @@ ms.locfileid: "70846684"
   
 1.  Cree una conexión al distribuidor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1.  
   
 3.  Llame a <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> y compruebe el objeto <xref:System.Collections.ArrayList> devuelto para asegurarse de que el ensamblado aún no se ha registrado como un controlador de lógica de negocios.  
   
-4.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> . Especifique las propiedades siguientes:  
+4.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler>. Especifique las propiedades siguientes:  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> - nombre del ensamblado .NET. Si el ensamblado no está implementado en el mismo directorio que el ejecutable del Agente de mezcla, en el mismo directorio que la aplicación que inicia de forma sincrónica dicho agente o en la GAC, debe incluir la ruta de acceso completa con el nombre del ensamblado. Debe incluir la ruta de acceso completa con el nombre del ensamblado al usar un controlador de lógica de negocios con la sincronización web.  
   
@@ -193,7 +194,7 @@ ms.locfileid: "70846684"
   
 1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeArticle> . Establezca las siguientes propiedades:  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeArticle>. Establezca las siguientes propiedades:  
   
     -   El nombre del artículo para <xref:Microsoft.SqlServer.Replication.Article.Name%2A>.  
   
@@ -209,7 +210,7 @@ ms.locfileid: "70846684"
   
 1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeArticle> .  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeArticle>.  
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>y <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> .  
   
@@ -241,7 +242,7 @@ ms.locfileid: "70846684"
 ## <a name="see-also"></a>Consulte también  
  [Implementar un solucionador de conflictos personalizado para un artículo de mezcla](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Depurar un controlador de lógica de negocios &#40;programación de la replicación&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
- [Prácticas recomendadas de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md)   
- [Conceptos de Replication Management Objects (RMO)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
+ [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [Replication Management Objects Concepts (Conceptos de Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
   
   

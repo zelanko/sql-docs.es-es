@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: 971848a9feddd9cff64bafb5cadf36ab8bdc01e3
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586776"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325497"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guía de arquitectura de páginas y extensiones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ En la siguiente tabla se muestran los tipos de página utilizados en los archivo
 
 |Tipo de página | Contenido |
 |-------|-------|
-|Data |Filas de datos con todos los datos, excepto los datos de text, ntext, image, nvarchar(max), varchar(max), varbinary(max) y xml, cuando el texto de la fila está configurado en ON. |
+|data |Filas de datos con todos los datos, excepto los datos de text, ntext, image, nvarchar(max), varchar(max), varbinary(max) y xml, cuando el texto de la fila está configurado en ON. |
 |Índice |Entradas de índice. |
 |Texto o imagen |Tipos de datos de objetos grandes: (datos de text, ntext, image, nvarchar(max), varchar(max), varbinary(max) y xml) <br> Columnas de longitud variable cuando la fila de datos supera los 8 KB: (varchar, nvarchar, varbinary y sql_variant) |
 |Mapa de asignación global, Mapa de asignación global compartido |Información acerca de si se han asignado las extensiones. |
@@ -54,7 +54,7 @@ En la siguiente tabla se muestran los tipos de página utilizados en los archivo
 > [!NOTE]
 > Los archivos de registro no contienen páginas, contienen series de registros.
 
-Las filas de datos se colocan en las páginas una a continuación de otra, empezando inmediatamente después del encabezado. Al final de la página, comienza una tabla de desplazamiento de fila y cada una de esas tablas contiene una entrada para cada fila de la página. Cada entrada registra la distancia del primer byte de la fila desde el inicio de la página. Las entradas de la tabla de desplazamiento de fila están en orden inverso a la secuencia de las filas de la página.
+Las filas de datos se colocan en las páginas una a continuación de otra, empezando inmediatamente después del encabezado. Al final de la página, comienza una tabla de desplazamiento de fila y cada una de esas tablas contiene una entrada para cada fila de la página. Cada entrada de desplazamiento de fila registra la distancia del primer byte de la fila desde el inicio de la página. Por lo tanto, la función de la tabla de desplazamiento de filas es ayudar a SQL Server buscar filas en una página muy rápidamente. Las entradas de la tabla de desplazamiento de fila están en orden inverso a la secuencia de las filas de la página.
 
 ![page_architecture](../relational-databases/media/page-architecture.gif)
 
@@ -68,7 +68,7 @@ Esto se realiza cuando una operación de inserción o actualización aumenta el 
 
 ##### <a name="row-overflow-considerations"></a>Consideraciones acerca del desbordamiento de fila 
 
-Al combinar las columnas varchar, nvarchar, varbinary, sql_variant o de tipo definido por el usuario CLR que superen los 8060 bytes por fila, tenga en cuenta lo siguiente: 
+Como se mencionó anteriormente, una fila no puede residir en varias páginas y puede desbordarse si el tamaño combinado de los campos de tipo de datos de longitud variable supera el límite de 8060 bytes. Para ilustrar esto, se puede crear una tabla con dos columnas: una varchar(7000) y otra varchar(2000). De forma individual, ninguna de las columnas excede los 8060 bytes, pero si se combinan sí que podrían hacerlo, si se rellena todo el ancho de cada columna. SQL Server puede trasladar dinámicamente la columna de longitud variable varchar (7000) a las páginas de la unidad de asignación ROW_OVERFLOW_DATA. Al combinar las columnas varchar, nvarchar, varbinary, sql_variant o de tipo definido por el usuario CLR que superen los 8060 bytes por fila, tenga en cuenta lo siguiente:
 -  El movimiento de registros grandes a otra página tiene lugar de forma dinámica a medida que la longitud de los registros aumenta en función de las operaciones de actualización. Las operaciones de actualización que reducen la longitud de los registros pueden hacer que los registros se vuelvan a colocar en la página original de la unidad de asignación IN_ROW_DATA. El hecho de consultar y realizar otras operaciones de selección, como puedan ser ordenaciones o combinaciones en registros grandes que contengan datos de desbordamiento de fila, ralentiza el tiempo de procesamiento, ya que estos registros se procesan sincrónicamente en lugar de asincrónicamente.   
    Por lo tanto, al diseñar una tabla con varias columnas varchar, nvarchar, varbinary, sql_variant o de tipo definido por el usuario CLR, tenga en cuenta el porcentaje de filas que tienen posibilidades de desbordarse y la frecuencia con la que se consultarán estos datos de desbordamiento. Si es muy probable que se realicen consultas con frecuencia en muchas filas de los datos de desbordamiento de fila, considere la posibilidad de normalizar la tabla para que algunas columnas se muevan a otra tabla. Más adelante, puede realizar la consulta en una operación JOIN asincrónica. 
 -  La longitud de las columnas individuales debe estar comprendida en el límite de 8000 bytes para las columnas varchar, nvarchar, varbinary, sql_variant y de tipo definido por el usuario CLR. Solo la combinación de sus longitudes puede superar el límite de fila de 8.060 bytes de una tabla.
@@ -136,7 +136,7 @@ Las páginas **Espacio disponible en páginas (PFS)** registran el estado de asi
 
 Una vez que se ha asignado una extensión a un objeto, el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utiliza las páginas PFS para registrar las páginas de la extensión que están asignadas o libres. Esta información se utiliza cuando el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tiene que asignar una nueva página. La cantidad de espacio libre de una página solo se mantiene en páginas de texto e imagen y de montón. Se utiliza cuando el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] tiene que buscar una página con espacio libre disponible para almacenar una fila recién insertada. Los índices no necesitan que se haga un seguimiento del espacio libre en páginas, porque el punto en el que se inserta una nueva fila se establece mediante los valores de clave del índice.
 
-La página PFS es la primera que sigue a la página de encabezado de archivo en un archivo de datos (con el identificador de página 1). Después aparece una página GAM (con el identificador de página 2), seguida de una página SGAM (identificador de página 3). Hay una nueva página PFS aproximadamente 8000 páginas después de la primera página PFS, y páginas PFS adicionales en intervalos posteriores de 8000 páginas. Hay otra página GAM a unas 64 000 extensiones después de la primera página GAM en la página 2, otra página SGAM a unas 64 000 extensiones de la primera página SGAM en la página 3, y otra página GAM y páginas SGAM a intervalos posteriores de 64 000 extensiones. En la siguiente ilustración se muestra la secuencia de páginas que usa [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] para asignar y administrar extensiones.
+En el archivo de datos se agrega una nueva página PFS, GAM o SGAM para cada intervalo adicional del que se realiza el seguimiento. Por tanto, hay una nueva página PFS 8088 páginas después de la primera página PFS, y páginas PFS adicionales en intervalos posteriores de 8088 páginas. Como ejemplo, el id. de página 1 es una página PFS, el id. de página 8088 es una página PFS, el id. de página 16176 es una página PFS, etc. Hay una nueva página GAM de 64 000 extensiones después de la primera página GAM, y realiza un seguimiento de las 64 000 extensiones que la siguen; la secuencia continúa en intervalos de 64 000 extensiones. Del mismo modo, hay una nueva página de SGAM 64 000 extensiones después de la primera página SGAM y páginas SGAM adicionales en intervalos de 64 000 extensiones posteriores. En la siguiente ilustración se muestra la secuencia de páginas que usa [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] para asignar y administrar extensiones.
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
@@ -172,7 +172,7 @@ Si [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] necesita insertar 
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] solo asigna una nueva extensión a una unidad de asignación cuando no puede encontrar rápidamente una página en una extensión existente con espacio suficiente para almacenar la fila que se va a insertar. 
 
-<a name="ProportionalFill"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asigna las extensiones entre las que están disponibles en el grupo de archivos siguiendo un **algoritmo de asignación de relleno proporcional**. Si en el mismo grupo de archivos con dos archivos, uno de ellos tiene el doble de espacio disponible que el otro, se asignarán dos páginas del archivo con más espacio disponible por cada página asignada del otro archivo. Esto significa que los archivos de un grupo de archivos tienen un porcentaje de espacio utilizado similar. 
+<a name="ProportionalFill"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asigna las extensiones entre las que están disponibles en el grupo de archivos siguiendo un **algoritmo de asignación de relleno proporcional**. Si en el mismo grupo de archivos con dos archivos, uno de ellos tiene el doble de espacio disponible que el otro, se asignarán dos páginas del archivo con más espacio disponible por cada página asignada del otro archivo. Esto significa que los archivos de un grupo de archivos tienen un porcentaje de espacio utilizado similar. 
 
 ## <a name="tracking-modified-extents"></a>Realizar un seguimiento de las extensiones modificadas 
 

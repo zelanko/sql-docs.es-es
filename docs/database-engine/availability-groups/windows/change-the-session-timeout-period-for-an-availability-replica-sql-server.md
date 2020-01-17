@@ -1,7 +1,7 @@
 ---
-title: Cambio del tiempo de espera de la sesión para una réplica en un grupo de disponibilidad
+title: Modificación del tiempo de espera de la sesión para una réplica de un grupo de disponibilidad
 description: Se describe cómo configurar el tiempo de espera de la sesión de una réplica en un grupo de disponibilidad Always On.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0c75e9264187ed6a351c162276253ff58be45a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dd31433b94cb32cb68c9ff9d1eaa7e2f08ab324
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991308"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822430"
 ---
-# <a name="change-the-session-timeout-period-for-a-replica-within-an-always-on-availability-group"></a>Cambio del tiempo de espera de la sesión para una réplica en un grupo de disponibilidad Always On
+# <a name="modify-the-session-timeout-period-for-an-availability-group-replica"></a>Modificación del periodo de tiempo de espera de la sesión para una réplica de un grupo de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo configurar el período de tiempo de espera de la sesión de una réplica de disponibilidad de AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. El período de tiempo de espera de la sesión es una propiedad de réplica que controla el número de segundos (en segundos) que una réplica de disponibilidad espera una respuesta de ping de una réplica conectada antes de determinar que la conexión ha sufrido un error. De forma predeterminada, una réplica espera 10 segundos la respuesta de un ping. Esta propiedad de réplica solamente se aplica a la conexión entre una réplica secundaria dada y la réplica principal del grupo de disponibilidad. Para obtener más información sobre el período de tiempo de espera de sesión, vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
    

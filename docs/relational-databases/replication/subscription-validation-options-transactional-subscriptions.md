@@ -1,6 +1,7 @@
 ---
-title: Opciones de validación de suscripciones (suscripciones transaccionales) | Microsoft Docs
-ms.custom: ''
+title: Opciones de validación de suscripciones, cuadro de diálogo (transaccional)
+description: Describe el cuadro de diálogo "Opciones de validación de suscripciones" para la replicación transaccional en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4a9654dec3af7a1ca2c937049b3b746dbf301c1d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2cf652d154c3e26fecc05c4313c119e6350de330
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769391"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322172"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>Opciones de validación de suscripciones (suscripciones transaccionales)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

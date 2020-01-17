@@ -1,7 +1,7 @@
 ---
-title: Descarga de copias de seguridad admitidas en las réplicas secundarias de un grupo de disponibilidad
-description: Obtenga información sobre los diferentes tipos de copia de seguridad admitidos para la descarga de las copias de seguridad en una réplica secundaria de un grupo de disponibilidad Always On.
-ms.custom: seodec18
+title: Descarga de copias de seguridad a una réplica secundaria de un grupo de disponibilidad
+description: Obtenga información sobre los diferentes tipos de copia de seguridad admitidos para la descarga de copias de seguridad en una réplica secundaria de un grupo de disponibilidad AlwaysOn.
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 19118cde56109895213a733127b202c49feb23c1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807428"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822412"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Descarga de copias de seguridad admitidas en las réplicas secundarias de un grupo de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Las funciones secundarias activas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluyen compatibilidad para realizar operaciones de copia de seguridad en las réplicas secundarias. Las operaciones de copia de seguridad pueden provocar una demanda significativa de E/S y CPU (con la compresión de copia de seguridad). La descarga de las copias de seguridad en una réplica secundaria sincronizada o en proceso de sincronización permite utilizar los recursos de la instancia del servidor que hospeda la réplica principal para las cargas de trabajo de nivel 1.  
+  Las funciones secundarias activas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluyen compatibilidad para realizar copias de seguridad en las réplicas secundarias. Las operaciones de copia de seguridad pueden provocar una demanda significativa de E/S y CPU (con la compresión de copia de seguridad). La descarga de las copias de seguridad en una réplica secundaria sincronizada o en proceso de sincronización permite utilizar los recursos de la instancia del servidor que hospeda la réplica principal para las cargas de trabajo de nivel 1.  
 
 > [!NOTE]  
 >  Las instrucciones RESTORE no se permiten en las bases de datos principales o secundarias de un grupo de disponibilidad.  
@@ -36,7 +36,7 @@ ms.locfileid: "72807428"
  
 ##  <a name="SupportedBuTypes"></a> Tipos de copia de seguridad admitidos en réplicas secundarias  
   
--   **BACKUP DATABASE** solo admite copias de seguridad completas de solo copia de bases de datos, archivos o grupos de archivos cuando se ejecuta en réplicas secundarias. Tenga en cuenta que las copias de seguridad de solo copia no afectan a la cadena de registros ni borran el mapa de bits diferencial.  
+-   **BACKUP DATABASE** solo admite copias de seguridad completas de solo copia de bases de datos, archivos o grupos de archivos cuando se ejecuta en réplicas secundarias. Las copias de seguridad de solo copia no afectan a la cadena de registros ni borran el mapa de bits diferencial.  
   
 -   Las copias de seguridad diferenciales no se admiten en las réplicas secundarias.
 

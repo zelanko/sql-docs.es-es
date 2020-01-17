@@ -1,5 +1,6 @@
 ---
-title: Página Resultados (asistentes para grupos de disponibilidad Always On) | Microsoft Docs
+title: Página Resultados (asistentes para grupos de disponibilidad Always On)
+description: Describe las opciones de la página "Resultados" del Asistente para grupo de disponibilidad de AlwaysOn en la GUI de SQL Server Management Studio.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1d3a91ba05d58c2741d49c96bf108263caf899cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014240"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235447"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>Página Resultados (asistentes para grupos de disponibilidad Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "68014240"
 |Resultado|Descripción|  
 |------------|-----------------|  
 |**Error**|Indica que se produjo un error en el paso de la validación. Haga clic en el vínculo para ver el mensaje de error.|  
-|**Correcto**|Indica que el paso de la validación se completó correctamente.|  
+|**Success**|Indica que el paso de la validación se completó correctamente.|  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   

@@ -1,6 +1,7 @@
 ---
-title: Preparar una base de datos reflejada para la creación de reflejo (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Preparación de una base de datos para la creación de reflejo
+description: Obtenga información sobre cómo preparar una base de datos de SQL Server para la creación de reflejo de la base de datos.
+ms.custom: seo-lt-2019
 ms.date: 11/10/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 33c9db8ae95807f0b95141945bddaef8560608b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009957"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255982"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparar una base de datos reflejada para la creación de reflejo (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +98,7 @@ ms.locfileid: "68009957"
 ##  <a name="PrepareToRestartMirroring"></a> Para preparar una base de datos reflejada existente para reiniciar la creación de reflejo  
  Si la creación de reflejo se ha eliminado y la base de datos reflejada sigue en el estado de recuperación (RECOVERING), se puede reiniciar la creación de reflejo.  
   
-1.  Realice al menos una copia de seguridad de registros de la base de datos principal. Para más información, consulte [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+1.  Realice al menos una copia de seguridad de registros de la base de datos principal. Para obtener más información, vea [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)).  
   
 2.  En la base de datos reflejada, use RESTORE WITH NORECOVERY para restaurar todas las copias de seguridad de registros que se realizaron en la base de datos principal desde que se quitó la creación de reflejo. Para más información, consulte [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md).  
   
@@ -117,7 +118,7 @@ ms.locfileid: "68009957"
   
 3.  Normalmente, necesita realizar al menos una copia de seguridad de registros de la base de datos principal. Sin embargo, puede que no se necesite una copia de seguridad de registros si la base de datos se ha creado recientemente y no se ha hecho todavía ninguna copia de seguridad de registros o si el modelo de recuperación ha cambiado recientemente de SIMPLE a FULL.  
   
-    -   [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+    -   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
 4.  A menos que las copias de seguridad estén en una unidad de red que sea accesible desde ambos sistemas, copie las copias de seguridad de la base de datos y de registros al sistema que hospedará la instancia de servidor reflejado.  
   
@@ -130,7 +131,7 @@ ms.locfileid: "68009957"
   
     -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE &#40;argumentos, Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+    -   [RESTORE &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 7.  Con RESTORE WITH NORECOVERY, aplique la copia de seguridad o las copias de seguridad de registros pendientes en la base de datos reflejada.  
   

@@ -1,6 +1,7 @@
 ---
-title: Algunas réplicas de disponibilidad están desconectadas | Microsoft Docs
-ms.custom: ''
+title: Algunas réplicas de disponibilidad están desconectadas
+description: Posibles causas y soluciones para cuando la réplica del grupo de disponibilidad está desconectada para un grupo de disponibilidad AlwaysOn de SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aea808be-6f0f-40c2-9aa2-a2a435ec6443
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d9bac7bdcc3961b3f6996be91062bea5382e11ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b90caaa83f17eb532db0747c62f473ba77f7ebdb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014109"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242602"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>Algunas réplicas de disponibilidad están desconectadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68014109"
 |-|-|  
 |**Nombre de directiva**|Estado de conexión de las réplicas de disponibilidad|  
 |**Problema**|Algunas réplicas de disponibilidad están desconectadas.|  
-|**Categoría**|**Advertencia**|  
+|**Categoría**|**Warning (ADVERTENCIA)**|  
 |**Faceta**|grupo de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
@@ -38,7 +39,7 @@ ms.locfileid: "68014109"
 > [!NOTE]  
 >  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Algunas réplicas de disponibilidad están desconectadas](https://go.microsoft.com/fwlink/p/?LinkId=220855) en TechNet Wiki.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  En este grupo de disponibilidad, al menos una réplica secundaria no está conectada con la réplica principal. El estado de conexión es DISCONNECTED.  
   
 ## <a name="possible-solution"></a>Solución posible  

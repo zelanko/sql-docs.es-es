@@ -1,6 +1,7 @@
 ---
-title: Ver las propiedades de una réplica de disponibilidad (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Consulta de las propiedades de una réplica de disponibilidad
+description: Instrucciones para ver las propiedades de una réplica de un grupo de disponibilidad con SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) o SQL PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f569074893a5894c0823f1a1af7864bacceb9eda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bcebebf2f426aec660b77699461bdce110f628c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013371"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821759"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>Ver las propiedades de una réplica de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

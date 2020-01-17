@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6babf3d10d6f391d3002e7094d7b8fe6b32b261b
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056027"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401584"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Ejemplos de importación y exportación de documentos XML en bloque (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Notas  
+#### <a name="remarks"></a>Observaciones  
  Si usa SINGLE_BLOB en este caso, puede evitar una discrepancia entre la codificación del documento XML (especificada por la declaración de codificación XML) y la página de códigos de cadena establecida implícitamente por el servidor.  
   
  Si utiliza tipos de datos NCLOB o CLOB y se produce un conflicto de página de códigos o de codificación, deberá realizar una de las siguientes acciones:  
@@ -253,7 +253,7 @@ GO
  [&#91;Principio&#93;](#top)  
   
 ## <a name="bulk_export_xml_data"></a> Exportar de forma masiva datos XML  
- En el ejemplo siguiente se utiliza `bcp` para realizar la exportación masiva de datos XML a partir de la tabla creada en el ejemplo anterior con el mismo archivo de formato XML. En el siguiente comando `bcp` , `<server_name>` y `<instance_name>` representan los marcadores de posición que deben ser reemplazados con los valores adecuados:  
+ En el ejemplo siguiente se utiliza [bcp](../../tools/bcp-utility.md) para realizar la exportación masiva de datos XML a partir de la tabla creada en el ejemplo anterior con el mismo archivo de formato XML. En el siguiente comando `bcp` , `<server_name>` y `<instance_name>` representan los marcadores de posición que deben ser reemplazados con los valores adecuados:  
   
 ```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  

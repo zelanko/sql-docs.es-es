@@ -1,6 +1,7 @@
 ---
-title: Quitar un agente de escucha del grupo de disponibilidad (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Eliminación de un agente de escucha del grupo de disponibilidad
+description: Describe los pasos para quitar un agente de escucha del grupo de disponibilidad AlwaysOn con SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) o SQL PowerShell.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1490e7b5165cb3d977747d1b47b1f364f4975f97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e298dd5dbdea6ee3895a35f3485c8df69574ba8d
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014318"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822652"
 ---
-# <a name="remove-an-availability-group-listener-sql-server"></a>Quitar un agente de escucha del grupo de disponibilidad (SQL Server)
+# <a name="remove-an-availability-group-listener-sql-server"></a>Eliminación de un agente de escucha del grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo se quita un agente de escucha de un grupo de disponibilidad AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

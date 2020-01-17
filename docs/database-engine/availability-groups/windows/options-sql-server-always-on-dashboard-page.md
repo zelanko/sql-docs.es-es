@@ -1,6 +1,6 @@
 ---
-title: Opciones (SQL Server AlwaysOn, página del panel) | Microsoft Docs
-description: Descripción de la página "Opciones" del panel Always On de SQL Server.
+title: Panel del grupo de disponibilidad en SSMS
+description: Descripción de la página "Opciones" del panel AlwaysOn de SQL Server en SQL Server Management Studio.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 887ed12836ca3581e40c6c6831906def6c0d0e5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae4c5aae76c41b642d445e92844efa2ddf36fdcc
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014642"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822543"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>Opciones (SQL Server AlwaysOn, página del panel)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

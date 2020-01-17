@@ -1,6 +1,7 @@
 ---
-title: Agregar y quitar publicadores del Monitor de replicación | Microsoft Docs
-ms.custom: ''
+title: Adición y eliminación de publicadores del Monitor de replicación (SSMS)
+description: Obtenga información sobre cómo agregar y quitar publicadores del Monitor de replicación en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,16 +14,16 @@ ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 28d0a979e6cf4d76dd338f139f5c48887aed988e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d46f710bfae73527f414017108954bf4e9129f8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770687"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320775"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Agregar y quitar publicadores del Monitor de replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  El servidor desde el que inicia el Monitor de replicación se agrega automáticamente al monitor si es un publicador. Se pueden agregar más publicadores mediante el cuadro de diálogo **Agregar publicador** . Una vez agregado un publicador, se muestra en un grupo en el panel izquierdo del monitor. El grupo **Mis publicadores** se incluye de manera predeterminada, pero puede crear grupos nuevos para administrar una o más topologías de replicación. Para obtener información sobre cómo iniciar el Monitor de replicación, consulte [Iniciar el Monitor de replicación](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+  El servidor desde el que inicia el Monitor de replicación se agrega automáticamente al monitor si es un publicador. Se pueden agregar más publicadores mediante el cuadro de diálogo **Agregar publicador** . Una vez agregado un publicador, se muestra en un grupo en el panel izquierdo del monitor. El grupo **Mis publicadores** se incluye de manera predeterminada, pero puede crear grupos nuevos para administrar una o más topologías de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 ### <a name="to-add-a-sql-server-publisher"></a>Para agregar un publicador de SQL Server  
   
@@ -48,7 +49,7 @@ ms.locfileid: "68770687"
   
 2.  En el cuadro de diálogo **Agregar publicador** , haga clic en **Agregar**y, a continuación, en **Agregar publicador de Oracle**.  
   
-3.  En el cuadro de diálogo **Conectar al servidor** , escriba el nombre del distribuidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asociado con el publicador de Oracle y seleccione el tipo de autenticación. Si selecciona **Autenticación de SQL Server**, escriba un inicio de sesión y una contraseña. El Monitor de replicación guarda las credenciales que especifique para usarlas cuando se conecte con este servidor en el futuro. La cuenta de Windows o el inicio de sesión de SQL Server especificados han de ser miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **replmonitor** en la base de datos de distribución.  
+3.  En el cuadro de diálogo **Conectar al servidor**, escriba el nombre del distribuidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asociado con el publicador de Oracle y seleccione el tipo de autenticación. Si selecciona **Autenticación de SQL Server**, escriba un inicio de sesión y una contraseña. El Monitor de replicación guarda las credenciales que especifique para usarlas cuando se conecte con este servidor en el futuro. La cuenta de Windows o el inicio de sesión de SQL Server especificados han de ser miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **replmonitor** en la base de datos de distribución.  
   
 4.  Haga clic en **Conectar**.  
   

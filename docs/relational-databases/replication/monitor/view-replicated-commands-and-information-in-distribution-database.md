@@ -1,6 +1,7 @@
 ---
-title: Ver comandos replicados e información en una base de datos de distribución | Microsoft Docs
-ms.custom: ''
+title: Consulta de los comandos replicados e información en una base de datos de distribución
+description: Obtenga información sobre cómo ver comandos replicados y otra información relacionada con la replicación en la base de datos de distribución para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,12 +19,12 @@ ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 16883d60e9c112141afa0a390555b06524bcf14c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 5ef4e316e27ddd77ee126549e21fc3e5efb988cd
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711002"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322225"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>Ver comandos replicados e información en una base de datos de distribución
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

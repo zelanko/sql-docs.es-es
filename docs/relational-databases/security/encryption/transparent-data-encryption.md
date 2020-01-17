@@ -14,30 +14,30 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef9e0378d3a7ca0b5749788471b4ef97832d179d
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: 498fe2391cd3e8109aed3f6e1e02436234ffe6f7
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670595"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957332"
 ---
 # <a name="transparent-data-encryption-tde"></a>Cifrado de datos transparente (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  El *Cifrado de datos transparente* (TDE) cifra los archivos de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] y [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)], lo que se conoce como cifrado de datos en reposo. Puede tomar varias precauciones para proteger la base de datos, como diseñar un sistema seguro, cifrar los datos confidenciales e instalar un firewall alrededor de los servidores de bases de datos. Sin embargo, si se diera el caso de un robo de medios físicos (como unidades de disco o cintas de copia de seguridad), un usuario malintencionado solo tendría que restaurar o adjuntar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  
+  El*Cifrado de datos transparente* (TDE) cifra los archivos de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]y [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] , lo que se conoce como cifrado de datos en reposo. Puede tomar varias precauciones para ayudar a proteger la base de datos, como diseñar un sistema seguro, cifrar los recursos confidenciales e instalar un firewall alrededor de los servidores de base de datos. Pero en un escenario en que se roban medios físicos (como unidades o cintas de copias de seguridad), un tercero malintencionado puede restaurar o asociar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  
   
- TDE realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. El cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. La DEK es una clave simétrica protegida utilizando un certificado almacenado en la base de datos maestra del servidor o una clave asimétrica protegida por un módulo EKM. TDE protege los datos "en reposo", es decir, los archivos de datos y de registro. Ofrece la posibilidad de cumplir muchas leyes, normativas y directrices establecidas en diversos sectores. También permite a los desarrolladores de software cifrar los datos mediante algoritmos de cifrado AES y 3DES sin cambiar las aplicaciones existentes.  
+ TDE realiza el cifrado y descifrado de E/S en tiempo real de los archivos de datos y de registro. El cifrado usa una clave de cifrado de base de datos (DEK), que se almacena en el registro de arranque de la base de datos de disponibilidad durante la recuperación. La DEK es una clave simétrica protegida utilizando un certificado almacenado en la base de datos maestra del servidor o una clave asimétrica protegida por un módulo EKM. TDE protege los datos "en reposo", es decir, los archivos de datos y de registro. Ofrece la posibilidad de cumplir muchas leyes, normativas y directrices establecidas en diversos sectores. También permite a los desarrolladores de software cifrar los datos mediante algoritmos de cifrado AES y 3DES sin cambiar las aplicaciones existentes.  
   
 > [!IMPORTANT]
 >  TDE no proporciona cifrado para los canales de comunicaciones. Para obtener más información sobre cómo cifrar datos en los canales de comunicación, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 > 
 >  **Temas relacionados:**  
 > 
->  -   [Cifrado de datos transparente con Base de datos SQL de Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
+>  -   [Cifrado de datos transparente con Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
 > -   [Introducción al cifrado de datos transparente (TDE) en SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
 > -   [Mover una base de datos protegida por TDE a otra instancia de SQL Server](../../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md)  
 > -   [Habilitar TDE en SQL Server con EKM](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)   
@@ -62,7 +62,7 @@ ms.locfileid: "68670595"
   
  En la siguiente ilustración se muestra la arquitectura del cifrado TDE. Solo los elementos de nivel de base de datos (las partes de ALTER DATABASE y la clave de cifrado de base de datos son configurables por el usuario cuando se usa TDE en [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]).  
   
- ![Muestra la jerarquía que se describe en el tema.](../../../relational-databases/security/encryption/media/tde-architecture.png "Muestra la jerarquía que se describe en el tema.")  
+ ![Muestra la jerarquía descrita en el tema.](../../../relational-databases/security/encryption/media/tde-architecture.png "Muestra la jerarquía descrita en el tema.")  
   
 ## <a name="using-transparent-data-encryption"></a>Utilizar el cifrado de datos transparente  
  Para usar TDE, siga estos pasos.  
@@ -110,7 +110,7 @@ GO
   
  En la tabla siguiente se proporcionan vínculos y explicaciones de los comandos y funciones de TDE.  
   
-|Comando o función|Finalidad|  
+|Comando o función|Propósito|  
 |-------------------------|-------------|  
 |[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-database-encryption-key-transact-sql.md)|Crea una clave que se utiliza para cifrar una base de datos.|  
 |[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Cambia la clave que se utiliza para cifrar una base de datos.|  
@@ -120,7 +120,7 @@ GO
 ## <a name="catalog-views-and-dynamic-management-views"></a>Vistas de catálogo y vistas de administración dinámica  
  En la tabla siguiente se muestran las vistas de catálogo y las vistas de administración dinámica de TDE.  
   
-|Vista de catálogo o vista de administración dinámica|Finalidad|  
+|Vista de catálogo o vista de administración dinámica|Propósito|  
 |---------------------------------------------|-------------|  
 |[sys.databases &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Vista de catálogo que muestra información sobre las bases de datos.|  
 |[sys.certificates &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Vista de catálogo que muestra los certificados de una base de datos.|  
@@ -146,7 +146,7 @@ GO
 > [!TIP]  
 > Para supervisar los cambios en el estado TDE de una base de datos, use SQL Server Audit o SQL Database Auditing. Para SQL Server, se realiza un seguimiento de TDE en el grupo de acción de auditoría DATABASE_CHANGE_GROUP que se encuentra en [Grupos de acciones y acciones de SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Restricciones  
  No están permitidas las operaciones siguientes durante el cifrado inicial de la base de datos, el cambio clave o el descifrado de una base de datos:  
   
 -   Quitar un archivo de un grupo de archivos de la base de datos.  
@@ -258,7 +258,7 @@ Para mostrar el estado actual del análisis de cifrado, `encryption_scan_state` 
  [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Cifrado de datos transparente con Base de datos SQL de Azure](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
+ [Cifrado de datos transparente con Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
  [Introducción al cifrado de datos transparente (TDE) en SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-encryption-tde-tsql/)  
  [Cifrado de SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)  
  [SQL Server y claves de cifrado de base de datos &#40;motor de base de datos&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  

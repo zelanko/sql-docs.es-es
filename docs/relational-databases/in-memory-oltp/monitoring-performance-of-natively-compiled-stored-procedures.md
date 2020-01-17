@@ -1,6 +1,6 @@
 ---
-title: Supervisión del rendimiento de los procedimientos almacenados compilados de forma nativa | Microsoft Docs
-ms.custom: ''
+title: Supervisión del rendimiento de los procedimientos almacenados compilados de forma nativa
+ms.custom: seo-dt-2019
 ms.date: 04/03/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40284a083492fad2c41f044fce39e0444c85230c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e16276b7b514d921261ea9b53af13162d0aa3b8b
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101449"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412620"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa
 
@@ -47,7 +47,7 @@ Las estadísticas de ejecución se reflejan en las vistas del sistema [sys.dm_ex
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : habilite o deshabilite la recopilación de estadísticas en los procedimientos almacenados compilados de forma nativa a nivel de procedimiento usando la opción de [configuración con ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_PROCEDURE_EXECUTION_STATISTICS`. La siguiente instrucción habilita la recopilación de estadísticas de ejecución a nivel de procedimiento de todos los módulos de T-SQL compilados de forma nativa en la base de datos actual:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : habilite o deshabilite la recopilación de estadísticas en los procedimientos almacenados compilados de forma nativa a nivel de procedimiento usando la opción de [configuración con ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_PROCEDURE_EXECUTION_STATISTICS`. La siguiente instrucción habilita la recopilación de estadísticas de ejecución a nivel de procedimiento de todos los módulos de T-SQL compilados de forma nativa en la base de datos actual:
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION
@@ -61,7 +61,7 @@ ALTER DATABASE
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : habilite o deshabilite la recopilación de estadísticas en los procedimientos almacenados compilados de forma nativa a nivel de instrucción usando la opción de [configuración con ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `XTP_QUERY_EXECUTION_STATISTICS`. La siguiente instrucción habilita la recopilación de estadísticas de ejecución a nivel de consulta de todos los módulos de T-SQL compilados de forma nativa en la base de datos actual:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : habilite o deshabilite la recopilación de estadísticas en los procedimientos almacenados compilados de forma nativa a nivel de instrucción usando la opción de [configuración con ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)`XTP_QUERY_EXECUTION_STATISTICS`. La siguiente instrucción habilita la recopilación de estadísticas de ejecución a nivel de consulta de todos los módulos de T-SQL compilados de forma nativa en la base de datos actual:
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION

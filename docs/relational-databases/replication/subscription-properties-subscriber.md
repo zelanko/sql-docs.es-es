@@ -1,6 +1,7 @@
 ---
-title: Cuadro de diálogo Propiedades de la suscripción de Replicación de SQL Server | Microsoft Docs
-ms.custom: ''
+title: Propiedades de suscripción, cuadro de diálogo
+description: Describe el cuadro de diálogo "Propiedades de la suscripción" en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: fab938acf112a047ed6aeb089093f815a4861a0c
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769461"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321532"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Cuadro de diálogo Propiedades de la suscripción de Replicación de SQL Server 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,7 +122,7 @@ El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite 
  Si ha seleccionado un tipo de suscripción de servidor en el Asistente para nueva suscripción, el suscriptor recibe la prioridad que se usa durante la resolución de conflictos.  
   
  **Solucionar conflictos de manera interactiva**  
- Establece si se va a utilizar la interfaz de usuario Solucionador interactivo para solucionar conflictos durante la sincronización de mezcla. Requiere un valor de **Habilitado** en **Utilizar el Administrador de sincronización de Windows**. Para más información, consulte [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Establece si se va a utilizar la interfaz de usuario Solucionador interactivo para solucionar conflictos durante la sincronización de mezcla. Requiere un valor de **Habilitado** en **Utilizar el Administrador de sincronización de Windows**. Para obtener más información, consulte [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Sincronización web**  
  **Usar sincronización web** determina si se va a establecer la conexión con un servidor de Internet Information Services (IIS) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para sincronizar la suscripción. Esta opción solo está disponible si la sincronización web está habilitada en la publicación. Para más información, consulte [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md).  

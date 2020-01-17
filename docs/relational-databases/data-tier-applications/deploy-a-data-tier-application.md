@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: db961211295a83b61478f0849feb1cd6b3fa6c7c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907889"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190115"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implementar una aplicación de capa de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "72907889"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>Implementación del mismo paquete DAC varias veces 
  El mismo paquete DAC se puede implementar varias veces en una instancia única de [!INCLUDE[ssDE](../../includes/ssde-md.md)], sin embargo las implementaciones se deben ejecutar de una en una. El nombre de instancia de DAC que se especificó para cada implementación debe ser único en la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Si implementa una DAC en una instancia del Motor de base de datos, la DAC implementada se incorpora a la **utilidad de SQL Server** la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicaciones de capa de datos implementadas** details page.  
+ Si implementa una DAC en una instancia del Motor de base de datos, la DAC implementada se incorpora a la **utilidad de SQL Server** la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Explorador de la utilidad** y se notificará en la página de detalles **Aplicaciones de capa de datos implementadas**.  
   
 ###  <a name="database-options-and-settings"></a>Opciones y configuración de bases de datos  
  De forma predeterminada, la base de datos que se cree durante la implementación incorporará toda la configuración predeterminada de la instrucción CREATE DATABASE, excepto en lo siguiente:  
@@ -145,6 +145,10 @@ Más información sobre algunas de las páginas del asistente:
 
 En el siguiente ejemplo se implementa la DAC denominada MyApplication en una instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)], mediante una definición de DAC de un paquete de MyApplication.dacpac.  
   
+## <a name="powershell-examples"></a>Ejemplos de PowerShell  
+
+En el siguiente ejemplo se implementa la DAC denominada MyApplication en una instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)], mediante una definición de DAC de un paquete de MyApplication.dacpac.  
+
 ```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  

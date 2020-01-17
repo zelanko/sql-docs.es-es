@@ -1,6 +1,7 @@
 ---
-title: Especificar una dirección de red de servidor (creación de reflejo de la base de datos) | Microsoft Docs
-ms.custom: ''
+title: Especificación de una dirección de red de servidor (creación de reflejo de la base de datos)
+description: Especifique la dirección de red de servidor para un punto de conexión de creación de reflejo de la base de datos.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1db02ef90af9e014e3481961daf08a1ce10a54c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fbb4df1ef746c885bb2bec9d4fe815bef8a693d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048082"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252763"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Especificar una dirección de red de servidor (creación de reflejo de la base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68048082"
   
  TCP<strong>://</strong> *\<dirección del sistema>* <strong>:</strong> *\<puerto>*  
   
- donde  
+ , donde  
   
 -   *\<dirección del sistema>* es una cadena que identifica de forma inequívoca el equipo de destino. Generalmente, la dirección del servidor es un nombre del sistema (si los sistemas están en el mismo dominio), un nombre de dominio completo o una dirección IP:  
   
@@ -108,7 +109,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  Para formar el nombre de dominio completo, concatene los valores de *<host_name>* y *<Primary_Dns_Suffix>* de la siguiente manera:  
   
- _&lt;nombre_host&gt;_ **.** _<sufijo_DNS_primario>_  
+ _<host_name>_ **.** _<sufijo_DNS_primario>_  
   
  Por ejemplo, la configuración IP  
   

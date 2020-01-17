@@ -1,6 +1,7 @@
 ---
-title: Información del publicador, Lista de supervisión de suscripciones (Instantánea) | Microsoft Docs
-ms.custom: ''
+title: 'Lista de supervisión de suscripciones (Monitor de replicación: instantánea)'
+description: Describe la pestaña "Lista de supervisión de suscripciones" del Monitor de replicación para una publicación de instantáneas en SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bc62259db10a92350aeb24f51b38072339b34921
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 45fec0f9c4d2c5ab7520c2ddfb2a921b771acfcb
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769718"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320517"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot"></a>Información del publicador, Lista de supervisión de suscripciones (Instantánea)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

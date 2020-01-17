@@ -1,6 +1,6 @@
 ---
-title: Características admitidas en los módulos T-SQL compilados de forma nativa | Microsoft Docs
-ms.custom: ''
+title: Características para los módulos T-SQL compilados de forma nativa
+ms.custom: seo-dt-2019
 ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1cf5b6242f5c76abf8dca638a2596eb2cae9641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 472a654a0bee8b386c6573c8ab1ed8fdb0b4cf8d
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025084"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412518"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Características admitidas en los módulos T-SQL compilados de forma nativa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Se admiten las siguientes construcciones de consulta:
 
 Expresión CASE: CASE se puede utilizar en cualquier instrucción o cláusula que permite una expresión válida.
    - **Se aplica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-    A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], ahora se admiten las instrucciones CASE para módulos T-SQL compilados de forma nativa.
+    A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] se admiten las instrucciones CASE para módulos T-SQL compilados de forma nativa.
 
 Cláusula SELECT:  
 
@@ -58,7 +58,7 @@ Cláusula SELECT:
 
 -   Subconsultas escalares
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten las subconsultas escalares en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] se admiten las subconsultas escalares en módulos compilados de forma nativa.
 
 -   TOP*  
 
@@ -82,11 +82,11 @@ Cláusula FROM:
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN y INNER JOIN.
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten las operaciones JOIN en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] se admiten las operaciones JOIN en módulos compilados de forma nativa.
 
 -   Subconsultas `[AS] table_alias`. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten las subconsultas en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] se admiten las subconsultas en módulos compilados de forma nativa.
 
 Cláusula WHERE:  
 
@@ -95,7 +95,7 @@ Cláusula WHERE:
 -   AND, BETWEEN  
 -   OR, NOT, IN, EXISTS
     - **Se aplica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
-      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], ahora se admiten los operadores ON, NOT, IN y EXISTS en módulos compilados de forma nativa.
+      A partir de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] se admiten los operadores ON, NOT, IN y EXISTS en módulos compilados de forma nativa.
 
 
 Cláusula[GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) :

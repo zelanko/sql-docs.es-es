@@ -1,6 +1,7 @@
 ---
-title: Sincronizar una suscripción mediante el Administrador de sincronización de Windows | Microsoft Docs
-ms.custom: ''
+title: Sincronización de una suscripción (Administrador de sincronización de Windows)
+description: Obtenga información sobre cómo sincronizar una suscripción mediante el Administrador de sincronización de Windows.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 81899227c470ece81f01338e4e873e2f40cd015c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bcdf5cee07666509722a591410431b00f82dc27b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768300"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321469"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Sincronizar una suscripción mediante el Administrador de sincronización de Windows
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "68768300"
   
     -   **Información del servidor web** (para suscripciones de mezcla en suscriptores que ejecuten SQL Server 2005 o posterior)  
   
-    -   **Otro**  
+    -   **Otros**  
   
      Se recomienda utilizar la autenticación de Windows para todas las conexiones. Para obtener información sobre los permisos que requieren el Agente de distribución y el Agente de mezcla, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -119,6 +120,6 @@ ms.locfileid: "68768300"
 >  Las ediciones se aplican solamente si son parte de la fila que se ha seleccionado para la resolución. Por ejemplo, si realiza ediciones en **Publicador**, y, a continuación, hace clic en **Aceptar suscriptor**, se descartan las ediciones.  
   
 ## <a name="see-also"></a>Consulte también  
- [Resolución interactiva de conflictos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   
   

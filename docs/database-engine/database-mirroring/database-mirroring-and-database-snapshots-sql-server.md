@@ -1,5 +1,6 @@
 ---
-title: Reflejo e instantáneas de base de datos (SQL Server) | Microsoft Docs
+title: Creación de reflejo e instantáneas de base de datos
+description: Obtenga información sobre la interoperabilidad del uso de instantáneas de base de datos con la creación de reflejo de la base de datos.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 637cc13f10869fffbd50638169aad983c8b51951
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a184bdf227b412ea5464c86058d33903fa7d8d7a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951926"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258812"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Reflejo e instantáneas de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

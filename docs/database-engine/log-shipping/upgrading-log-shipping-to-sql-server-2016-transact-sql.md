@@ -1,6 +1,7 @@
 ---
-title: Actualización del trasvase de registros a SQL Server 2016 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Actualización del trasvase de registros a SQL Server 2016 y versiones posteriores
+description: Conozca el orden adecuado para conservar la solución de recuperación ante desastres de trasvase de registros al actualizar a SQL Server 2016 y versiones posteriores desde una versión anterior.
+ms.custom: seo-lt-2019
 ms.date: 02/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8608d91495ca255a0205247a557687ad32ac46df
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: c3ebe7da68b057e9f84d2b83572a337ede278401
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227136"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258569"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Actualización del trasvase de registros a SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,5 @@
 ---
-title: Instrucciones SELECT y JOIN en vistas del sistema para eventos extendidos en SQL Server | Microsoft Docs
-ms.custom: ''
+title: Instrucciones SELECT y JOIN en vistas del sistema para eventos extendidos
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,20 +9,21 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903456"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242900"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Instrucciones SELECT y JOIN en vistas del sistema para eventos extendidos en SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-En este artículo se explican los dos conjuntos de vistas del sistema relacionadas con eventos extendidos en Microsoft SQL Server y en el servicio en la nube de Base de datos SQL de Azure. En este artículo se describe lo siguiente:
+En este artículo se explican los dos conjuntos de vistas del sistema que guardan relación con los eventos extendidos en SQL Server y Azure SQL Database. En este artículo se describe lo siguiente:
 
 - Cómo combinar varias vistas del sistema.
 - Cómo seleccionar determinada información de las vistas del sistema.
@@ -55,7 +55,7 @@ Hay dos conjuntos de vistas del sistema para eventos extendidos:
 
 - Almacenan información sobre la *actividad actual* de las sesiones de eventos en ejecución, pero tienen poca información sobre la definición de las sesiones.
     - Aunque todas las sesiones de eventos estén detenidas, el uso de una instrucción SELECT en la vista *sys.dm_xe_packages* devuelve filas, ya que al iniciarse el servidor se cargan varios paquetes en la memoria activa.
-    - Por la misma razón, *sys.dm_xe_objects* *sys.dm_xe_object_columns* would also still return rows.
+    - Por la misma razón, *sys.dm_xe_objects* *sys.dm_xe_object_columns* seguirían devolviendo filas.
 
 
 - El prefijo del nombre de las DMV de eventos extendidos es el siguiente:
@@ -345,7 +345,7 @@ ORDER BY
 ```
 
 
-#### <a name="output"></a>Salida
+#### <a name="output"></a>Output
 
 
 A continuación se muestra la salida real de la ejecución de la anterior instrucción SELECT JOIN UNION. Los nombres y los valores del parámetro de salida se asignan a lo que es visible en la anterior instrucción CREATE EVENT SESSION.
@@ -419,7 +419,7 @@ SELECT  --C.1
 ```
 
 
-#### <a name="output"></a>Salida
+#### <a name="output"></a>Output
 
 Esta es una lista de los paquetes.
 
@@ -477,7 +477,7 @@ SELECT  --C.2
 ```
 
 
-#### <a name="output"></a>Salida
+#### <a name="output"></a>Output
 
 Este es el número de objetos por tipo de objeto. Hay aproximadamente 1915 objetos.
 
@@ -532,7 +532,7 @@ SELECT  --C.3
 ```
 
 
-#### <a name="output"></a>Salida
+#### <a name="output"></a>Output
 
 Para despertar su curiosidad, a continuación se recoge un muestreo arbitrario de los objetos devueltos por la anterior instrucción SELECT.
 
@@ -605,7 +605,7 @@ SELECT  -- C.4
 ```
 
 
-#### <a name="output"></a>Salida
+#### <a name="output"></a>Output
 
 La anterior instrucción SELECT, WHERE `o.name = 'lock_deadlock'`devolvió las filas siguientes:
 
@@ -644,7 +644,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* y campos de evento
+### <a name="c5-sysdm_xe_map_values-and-event-fields"></a>C.5 *sys.dm_xe_map_values* y campos de evento
 
 
 La siguiente instrucción SELECT incluye una instrucción JOIN en la vista denominada *sys.dm_xe_map_values*, que es más complicada.
@@ -693,7 +693,7 @@ SELECT  --C.5
 ```
 
 
-#### <a name="output"></a>Salida
+#### <a name="output"></a>Output
 
 <a name="resource_type_dmv_actual_row"></a>
 
@@ -765,7 +765,7 @@ SELECT  --C.6
 ```
 
 
-#### <a name="output"></a>Salida
+#### <a name="output"></a>Output
 
 Las filas de parámetros siguientes son un subconjunto de los devueltos por la instrucción SELECT anterior, en SQL Server 2016.
 
@@ -786,7 +786,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 Instrucción SELECT de DMV para convertir la columna target_data a XML
+### <a name="c7-dmv-select-casting-target_data-column-to-xml"></a>C.7 Instrucción SELECT de DMV para convertir la columna target_data a XML
 
 
 Esta instrucción SELECT de DMV devuelve filas de datos del destino de la sesión de eventos activa. Los datos se convierten a XML, lo que permite hacer clic en las celdas devueltas para mostrarlas fácilmente en SSMS.
@@ -854,7 +854,7 @@ Cuando se hace clic en la celda XML-Cast, aparece la siguiente pantalla con sang
 
 <a name="section_C_8_select_function_disk"></a>
 
-### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 Seleccionar una función para recuperar datos de event_file de una unidad de disco
+### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>C.8 Seleccionar una función para recuperar datos de event_file de una unidad de disco
 
 
 Supongamos que la sesión de eventos recopiló algunos datos y después se detuvo. Si la sesión estaba definida para usar el destino event_file, puede recuperar los datos mediante una llamada a la función *sys.fn_xe_target_read_file*.

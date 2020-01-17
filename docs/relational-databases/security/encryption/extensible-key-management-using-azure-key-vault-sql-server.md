@@ -1,6 +1,7 @@
 ---
-title: Administración extensible de claves con Azure Key Vault (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Administración extensible de claves con Azure Key Vault
+description: Use el conector de SQL Server para la administración extensible de claves con Azure Key Vault para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 07/22/2016
 ms.prod: sql
 ms.reviewer: vanto
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - Key Management with key vault
 - SQL Server Connector, about
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: dafd18b302ecc988270128ddb616e5a1764fb69e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: df42a2d0f7dea2e32df61670aff88374a6fcff54
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049835"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558078"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Administración extensible de claves con Azure Key Vault (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "68049835"
   
  En la siguiente imagen se resume el flujo de procesos de EKM usando el almacén de claves. (Los números de pasos del proceso de la imagen no se ofrecen con el fin de que coincidan con los números de los pasos de configuración que siguen a la imagen).  
   
- ![Administración extensible de claves de SQL mediante Azure Key Vault](../../../relational-databases/security/encryption/media/ekm-using-azure-key-vault.png "Administración extensible de claves de SQL mediante Azure Key Vault")  
+ ![EKM de SQL Server con Azure Key Vault](../../../relational-databases/security/encryption/media/ekm-using-azure-key-vault.png "EKM de SQL Server con Azure Key Vault")  
 
 > [!NOTE]  
 >  Las versiones 1.0.0.440 y anteriores se han reemplazado y ya no se admiten en entornos de producción. Actualice a la versión 1.0.1.0 o posterior visitando el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) y con las instrucciones de la sección "Actualización del conector de SQL Server" de la página [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).

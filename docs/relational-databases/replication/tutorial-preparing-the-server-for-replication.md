@@ -1,6 +1,7 @@
 ---
-title: 'Tutorial: Preparación de SQL Server para la replicación (publicador, distribuidor, suscriptor) | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Preparación para la replicación'
+description: En este tutorial, aprenderá a preparar el publicador, el distribuidor y el suscriptor para la replicación mediante la creación de cuentas de Windows, la preparación de la carpeta de instantáneas y la configuración de la distribución.
+ms.custom: seo-lt-2019
 ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: beb0c68b86521ce9a5b3463e8c959970297519fe
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653820"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320452"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutorial: Preparación de SQL Server para la replicación (publicador, distribuidor, suscriptor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +62,10 @@ Para completar este tutorial, necesita tener SQL Server, SQL Server Management S
 ## <a name="create-windows-accounts-for-replication"></a>Creación de cuentas de Windows para replicación
 En esta sección, crea cuentas de Windows para ejecutar agentes de replicación. Va a crear distintas cuentas de Windows en el servidor local para los siguientes agentes:  
   
-|Agente|Ubicación|Nombre de cuenta|  
+|Agente|Location|Nombre de cuenta|  
 |---------|------------|----------------|  
-|Agente de instantáneas|publicador|<*nombreDeEquipo*>\repl_snapshot|  
-|Agente de registro del LOG|publicador|<*nombreDeEquipo*>\repl_logreader|  
+|Agente de instantáneas|Publicador|<*nombreDeEquipo*>\repl_snapshot|  
+|Agente de registro del LOG|Publicador|<*nombreDeEquipo*>\repl_logreader|  
 |Agente de distribución|Publicador y suscriptor|<*nombreDeEquipo*>\repl_distribution|  
 |Agente de mezcla|Publicador y suscriptor|<*nombreDeEquipo*>\repl_merge|  
   
@@ -116,9 +117,9 @@ En esta sección va a configurar la carpeta de instantáneas que se utiliza para
   
 3. Haga clic con el botón derecho en esta carpeta y seleccione **Propiedades**.  
   
-   A. En la pestaña **Compartir** del cuadro de diálogo **Propiedades de repldata**, seleccione **Uso compartido avanzado**.  
+   a. En la pestaña **Compartir** del cuadro de diálogo **Propiedades de repldata**, seleccione **Uso compartido avanzado**.  
   
-   B. En el cuadro de diálogo **Uso compartido avanzado**, seleccione **Compartir esta carpeta** y, después, seleccione **Permisos**.  
+   b. En el cuadro de diálogo **Uso compartido avanzado**, seleccione **Compartir esta carpeta** y, después, seleccione **Permisos**.  
 
    ![Selecciones para compartir la carpeta repldata](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
@@ -188,7 +189,7 @@ En este tutorial no se contempla la configuración de un publicador con un distr
 
    ![Opción para que el servidor actúe como su propio distribuidor](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
-4. Si el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, en la página[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Inicio del Agente**, seleccione **Sí[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y configure el servicio del Agente**  para que se inicie automáticamente. Seleccione **Siguiente**.  
+4. Si el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, en la página[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Inicio del Agente**, seleccione **Sí[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y configure el servicio del Agente**  para que se inicie automáticamente. Seleccione **Next** (Siguiente).  
 
      
 5. Escriba la ruta de acceso \\\\<*Nombre_De_Equipo_Publicador*> **\repldata** en el cuadro de texto **Carpeta de instantáneas** y, después, seleccione **Siguiente**. Esta ruta de acceso debe coincidir con lo que vimos anteriormente en **Ruta de acceso a la red** de la carpeta de propiedades de repldata después de configurar las propiedades del recurso compartido. 
@@ -235,7 +236,7 @@ Si su instancia de SQL Server Management Studio se ejecuta con derechos administ
    ![Vista de las cuatro cuentas en el Explorador de objetos](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
    
   
-Para obtener más información, vea:
+Para más información, consulte:
 - [Configuración de la distribución](../../relational-databases/replication/configure-distribution.md) 
 - [Modelo de seguridad del Agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md)  
 

@@ -1,6 +1,7 @@
 ---
-title: 'Tutorial: Configuración de la replicación entre dos servidores conectados completamente (transaccional) | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Configuración de replicación transaccional'
+description: En este tutorial se explica cómo configurar la replicación transaccional entre dos servidores de SQL Server conectados completamente.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 603846718e4e21c7af8ee81d94210d12242c35c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907705"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321932"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configuración de la replicación entre dos servidores conectados completamente (transaccional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +80,7 @@ En esta sección, se crea una publicación transaccional mediante [!INCLUDE[ssMa
 
    ![Página "Tipo de publicación" con el tipo de publicación seleccionado](media/tutorial-replicating-data-between-continuously-connected-servers/tranrepl.png)
   
-5. En la página **Artículos**, expanda el nodo **Tablas** y seleccione la casilla **Producto**. Después, expanda **Producto** y desactive las casillas junto a **ListPrice** y **StandardCost**. Seleccione **Siguiente**.  
+5. En la página **Artículos**, expanda el nodo **Tablas** y seleccione la casilla **Producto**. Después, expanda **Producto** y desactive las casillas junto a **ListPrice** y **StandardCost**. Seleccione **Next** (Siguiente).  
 
    ![Página "Artículos" con artículos seleccionados para publicar](media/tutorial-replicating-data-between-continuously-connected-servers/replarticles.png)
   
@@ -93,7 +94,7 @@ En esta sección, se crea una publicación transaccional mediante [!INCLUDE[ssMa
   
    ![Página "Filtrar flujos de tabla" y el cuadro de diálogo "Agregar filtro"](media/tutorial-replicating-data-between-continuously-connected-servers/filter.png)
   
-8. Seleccione **Aceptar**y luego seleccione **Siguiente**.  
+8. Seleccione **Aceptar** y después **Siguiente**.  
   
 9. Active la casilla **Crear una instantánea inmediatamente y mantenerla disponible para inicializar suscripciones** y seleccione **Siguiente**:  
 
@@ -144,8 +145,8 @@ Si ve un error aquí, vea [Troubleshooting Snapshot Agent errors](troubleshoot-t
   
 2. En la carpeta **Publicaciones locales**, haga clic con el botón derecho en **AdvWorksProductTrans** y luego seleccione **Propiedades**.  Aparece el cuadro de diálogo **Propiedades de la publicación**.    
   
-   A. Seleccione la página **Lista de acceso a la publicación** y seleccione **Agregar**.  
-   B. En el cuadro de diálogo **Agregar acceso de publicación**, seleccione <*Nombre_De_Equipo_Publicador>* > **\repl_distribution** y seleccione **Aceptar**.
+   a. Seleccione la página **Lista de acceso a la publicación** y seleccione **Agregar**.  
+   b. En el cuadro de diálogo **Agregar acceso de publicación**, seleccione <*Nombre_De_Equipo_Publicador>* > **\repl_distribution** y seleccione **Aceptar**.
    
    ![Selecciones para agregar un inicio de sesión a la lista de acceso a la publicación (PAL).](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -155,7 +156,7 @@ Para más información, vea [Conceptos de la programación de replicación](../.
 ## <a name="create-a-subscription-to-the-transactional-publication"></a>Creación de una suscripción a la publicación transaccional
 En esta sección se agrega un suscriptor a la publicación que creada anteriormente. Este tutorial usa un suscriptor remoto (NODE2\SQL2016), pero también puede agregar una suscripción localmente en el publicador. 
 
-### <a name="create-the-subscription"></a>Crear la suscripción  
+### <a name="create-the-subscription"></a>Creación de la suscripción  
   
 1. Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo del servidor y luego la carpeta **Replicación**.  
   
@@ -191,9 +192,9 @@ En esta sección se agrega un suscriptor a la publicación que creada anteriorme
   
 1. Conéctese al suscriptor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión** y, después, seleccione **Nuevo inicio de sesión**.     
   
-   A. En la página **General**, en **Nombre de inicio de sesión**, seleccione **Buscar** y agregue el inicio de sesión para <*Nombre_De_Equipo_Suscriptor>* > **\repl_distribution**.
+   a. En la página **General**, en **Nombre de inicio de sesión**, seleccione **Buscar** y agregue el inicio de sesión para <*Nombre_De_Equipo_Suscriptor>* > **\repl_distribution**.
 
-   B. En la página **Asignaciones de usuario**, otorgue el inicio de sesión al miembro **db_owner** para la base de datos **ProductReplica**. 
+   b. En la página **Asignaciones de usuario**, otorgue el inicio de sesión al miembro **db_owner** para la base de datos **ProductReplica**. 
 
    ![Selecciones para configurar el inicio de sesión en el suscriptor](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
 
@@ -209,7 +210,7 @@ En esta sección se agrega un suscriptor a la publicación que creada anteriorme
    ![Selecciones para abrir el cuadro de diálogo "Ver estado de sincronización"](media/tutorial-replicating-data-between-continuously-connected-servers/viewsyncstatus.png)
 3. Si la suscripción no está visible en **AdvWorksProductTrans**, presione F5 para actualizar la lista.  
   
-Para obtener más información, vea:  
+Para más información, consulte:  
 - [Inicializar una suscripción con una instantánea](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [Crear una suscripción de inserción](../../relational-databases/replication/create-a-push-subscription.md)  
 - [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)  
@@ -223,14 +224,14 @@ En esta sección se emplean testigos de seguimiento para comprobar que los cambi
 
 2. Expanda un grupo de publicador en el panel izquierdo, expanda la instancia del publicador y, después, seleccione la publicación **AdvWorksProductTrans**.  
   
-   A. Seleccione la pestaña **Testigos de seguimiento**.  
-   B. Seleccione **Insertar seguimiento**.    
+   a. Seleccione la pestaña **Testigos de seguimiento**.  
+   b. Seleccione **Insertar seguimiento**.    
    c. Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**, **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto especificado.
 
    ![Información para el testigo de seguimiento](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
 
-Para obtener más información, vea: 
+Para más información, consulte: 
 - [Medir la latencia y validar las conexiones de la replicación transaccional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 - [Buscar errores con los agentes de replicación transaccional](troubleshoot-tran-repl-errors.md)
 

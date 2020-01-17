@@ -1,6 +1,7 @@
 ---
-title: Usar el Asistente para agregar réplica de Azure (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Configuración de una máquina virtual de Azure como una réplica secundaria en un grupo de disponibilidad
+description: Use el Asistente para agregar réplica de Azure para que le ayude a crear una nueva VM de Azure en una TI híbrida y a configurarla como una réplica secundaria para un grupo de disponibilidad AlwaysON nuevo o existente.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,14 +12,14 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ed09ad0f6325ab2ed8ee1d89d7c36f19584a3475
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 2eb45257f2641b1e4e9f94865784f8910ebf27fd
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176206"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822661"
 ---
-# <a name="use-the-add-azure-replica-wizard-sql-server"></a>Usar el Asistente para agregar réplica de Azure (SQL Server)
+# <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>Configuración de una máquina virtual de Azure como una réplica secundaria en un grupo de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use el Asistente para agregar réplica de Azure para que le ayude a crear una nueva VM de Azure en una TI híbrida y a configurarla como una réplica secundaria para un grupo de disponibilidad AlwaysON nuevo o existente.  
   
@@ -62,13 +63,13 @@ ms.locfileid: "70176206"
   
 4.  Especifique los valores de configuración para la máquina virtual de Azure que hospedará la nueva réplica secundaria:  
   
-     imagen  
+     Imagen  
      Nombre de la imagen de SQL Server que se va a usar para la máquina virtual de Azure  
   
      Tamaño de VM  
      Tamaño de la máquina virtual de Azure  
   
-     Nombre de VM  
+     Nombre de la máquina virtual  
      Nombre DNS de la máquina virtual de Azure  
   
      Nombre de usuario de VM  
@@ -77,16 +78,16 @@ ms.locfileid: "70176206"
      Contraseña del administrador de la máquina virtual (y confirmar contraseña)  
      Contraseña del administrador predeterminado para la máquina virtual de Azure  
   
-     Red virtual  
+     Virtual Network  
      Red virtual en la que estará la máquina virtual de Azure  
   
      Subred de la red virtual  
      Subred de la red virtual en la que estará la máquina virtual de Azure  
   
-     Dominio  
+     Domain  
      Dominio de Active Directory (AD) para combinar la máquina virtual de Azure  
   
-     Nombre de usuario del dominio  
+     Nombre de usuario de dominio  
      Nombre de usuario de AD que se usa para combinar la máquina virtual de Azure con el dominio  
   
      Contraseña  

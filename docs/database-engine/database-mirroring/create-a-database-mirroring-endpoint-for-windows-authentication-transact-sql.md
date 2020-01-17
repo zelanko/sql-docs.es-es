@@ -1,6 +1,7 @@
 ---
-title: Crear un punto de conexión de reflejo de la base de datos para la autenticación de Windows (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Creación de un punto de conexión de creación de reflejo de la base de datos (Transact-SQL)
+description: Use Transact-SQL para crear un extremo de reflejo de base de datos con la autenticación de Windows.
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2fbe4c5188bc728b8b8b58872ca805e1460c3a04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11b3c1d06c74f8d5c19aa95ba8de20fbce67d3dd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951998"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259043"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Crear un extremo de reflejo de la base de datos para la autenticación de Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +91,7 @@ ms.locfileid: "67951998"
   
      )  
   
-     donde  
+     , donde  
   
     -   *\<nombreDePuntoDeConexión>* es un nombre exclusivo del punto de conexión de creación de reflejo de la base de datos de la instancia del servidor.  
   
@@ -111,7 +112,7 @@ ms.locfileid: "67951998"
   
     -   ENCRYPTION se establece en REQUIRED de forma predeterminada. Esto significa que todas las conexiones con este punto final deben usar cifrado. No obstante, puede deshabilitar el cifrado o hacer que sea opcional en un extremo. Las alternativas son las siguientes:  
   
-        |Valor|Definición|  
+        |Value|Definición|  
         |-----------|----------------|  
         |DISABLED|Especifica que los datos enviados a través de una conexión no están cifrados.|  
         |SUPPORTED|Especifica que los datos están cifrados solo si el extremo opuesto especifica SUPPORTED o REQUIRED.|  

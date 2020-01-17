@@ -1,6 +1,7 @@
 ---
-title: Estrategias para hacer copias de seguridad y restaurar la replicación de mezcla | Microsoft Docs
-ms.custom: ''
+title: Estrategias para copias de seguridad y restauración (combinación)
+description: Estrategias para copias de seguridad y restauración de los datos usados en la replicación de combinación.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a965da708880fc3411dbdd33e372e197afc9dff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 448688a54a245cadffa4c0c916d146e7c3e7e115
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948752"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321992"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Estrategias para hacer copias de seguridad y restaurar la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "67948752"
   
 -   Las bases de datos del sistema **maestra** y **msdb** en el publicador, el distribuidor y todos los suscriptores. La copia de seguridad de cada una de estas bases de datos debe realizarse al mismo tiempo que la de las otras y la base de datos de replicación correspondiente. Por ejemplo, cree la copia de seguridad de las bases de datos **master** y **msdb** en el publicador al mismo tiempo que crea la copia de seguridad de la base de datos de publicaciones. Al restaurar la base de datos de publicaciones, asegúrese de que las bases de datos **master** y **msdb** sean coherentes con la base de datos de publicaciones en términos de configuración general y configuración de la replicación.  
   
- Si realiza regularmente copias de seguridad de registros, éstas deben capturar todos los cambios relacionados con la replicación. Si no se realizan copias de seguridad de registros, debe realizarse una copia de seguridad siempre que se cambie un valor importante en la replicación. Para más información, vea [Acciones comunes que requieren una copia de seguridad actualizada](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md).  
+ Si realiza regularmente copias de seguridad de registros, éstas deben capturar todos los cambios relacionados con la replicación. Si no se realizan copias de seguridad de registros, debe realizarse una copia de seguridad siempre que se cambie un valor importante en la replicación. Para más información, vea [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md).  
   
  Elija uno de los siguientes métodos para crear copias de seguridad y restaurar la base de datos de publicaciones; después, siga las recomendaciones para la base de datos de distribución y las bases de datos de suscripciones.  
   
@@ -60,7 +61,7 @@ ms.locfileid: "67948752"
 > [!IMPORTANT]  
 >  La sincronización de una base de datos de publicaciones con una base de datos de suscripciones puede dar como resultado la restauración de las tablas publicadas hasta un momento más reciente que el de las otras tablas no publicadas restauradas de la copia de seguridad.  
   
- Si se sincroniza con un suscriptor que esté ejecutando una versión de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la suscripción no podrá ser anónima; deberá ser una suscripción de cliente o de servidor (denominadas suscripciones locales y globales en versiones anteriores).  
+ Si se sincroniza con un suscriptor que ejecute una versión de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la suscripción no puede ser anónima, sino que debe ser una suscripción de cliente o de servidor (llamadas suscripciones locales y suscripciones globales en versiones anteriores).  
   
  Para sincronizar una suscripción de inserción, vea [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) y [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
@@ -71,7 +72,7 @@ ms.locfileid: "67948752"
   
  Para reinicializar una suscripción, vea [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md).  
   
- Para crear y aplicar una instantánea, vea [Crear y aplicar la instantánea inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) y [Crear una instantánea para una publicación de mezcla con filtros con parámetros](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Para crear y aplicar una instantánea, vea [Create y Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) y [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>Realizar copias de seguridad y restaurar la base de datos de distribución  
  Con la replicación de mezcla, se deben crear periódicamente copias de seguridad de la base de datos de distribución, que se pueden restaurar sin ningún tipo de consideraciones especiales, siempre que la copia de seguridad utilizada no sea más antigua que el menor período de retención de todas las publicaciones que utilizan el distribuidor. Por ejemplo, si hay tres publicaciones con períodos de retención de 10, 20 y 30 días respectivamente, la copia de seguridad que deberá utilizarse para restaurar la base de datos no debe tener más de 10 días. La base de datos de distribución tiene un rol limitado en la replicación de mezcla: no almacena ningún dato utilizado en el seguimiento de cambios y no almacena temporalmente los cambios de la replicación de mezcla que se enviarán a las bases de datos de suscripciones (como ocurre con la replicación transaccional).  
@@ -87,7 +88,7 @@ ms.locfileid: "67948752"
   
  Para establecer el período de retención de publicación, vea [Set the Expiration Period for Subscriptions](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md) (Establecer el período de expiración para las suscripciones).  
   
- Para sincronizar una suscripción de inserción, vea [Sincronizar una suscripción de inserción](../../../relational-databases/replication/synchronize-a-push-subscription.md) y [Sincronizar una suscripción de extracción](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
+ Para sincronizar una suscripción de inserción, vea [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) y [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Realizar copias de seguridad y restaurar una base de datos de republicaciones  
  Cuando una base de datos se suscribe a datos de un publicador y, a su vez, publica esos mismos datos en otras bases de datos de suscripciones se denomina base de datos de republicaciones. Al restaurar una base de datos de republicaciones, siga las directrices descritas en las secciones "Realizar copias de seguridad y restaurar la base de datos de publicaciones" y "Realizar copias de seguridad y restaurar la base de datos de suscripciones" de este tema.  

@@ -1,6 +1,7 @@
 ---
-title: Ver y modificar parámetros del símbolo del sistema de los agentes de replicación | Microsoft Docs
-ms.custom: ''
+title: Consulta y modificación de los parámetros del símbolo del sistema del agente
+description: Obtenga información sobre cómo ver y modificar los parámetros del símbolo del sistema usados por los diferentes agentes de replicación en SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 38d86590da144386077b170433c52dcd1cc18d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c72c58b0a23f8215d303addfbb2ec9fb65c4489
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085907"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321642"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Ver y modificar parámetros del símbolo del sistema de los agentes de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,21 +27,21 @@ ms.locfileid: "68085907"
 > [!NOTE]  
 >  Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo.  
   
- Aunque los parámetros se pueden modificar directamente, es más habitual modificarlos mediante un perfil de agente. Para más información, consulte [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
+ Aunque los parámetros se pueden modificar directamente, es más habitual modificarlos mediante un perfil de agente. Para obtener más información, consulte [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
  Si tiene acceso a trabajos de agente en la carpeta **Trabajos** , utilice la siguiente tabla para determinar el nombre del trabajo del agente y los parámetros disponibles para cada agente.  
   
 |Agente|Nombre del trabajo|Para obtener una lista de parámetros, vea…|  
 |-----------|--------------|------------------------------------|  
-|Agente de instantáneas|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<entero>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
-|Agente de replicación para una partición de publicación de combinación|**Dyn_\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
-|Agente de registro del LOG|**\<Publicador>-\<baseDeDatosDePublicación>-\<entero>**|[Agente de registro del LOG de replicación](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
-|Agente de mezcla para suscripciones de extracción|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<baseDeDatosDeSuscripción>-\<entero>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|Agente de mezcla para suscripciones de inserción|**\<Publicador>-\<baseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<entero>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|Agente de instantáneas|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<entero>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|Agente de replicación para una partición de publicación de combinación|**Dyn_\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|Agente de registro del LOG|**\<publicador>-\<baseDeDatosDePublicación>-\<entero>**|[Agente de registro del LOG de replicación](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
+|Agente de mezcla para suscripciones de extracción|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<baseDeDatosDeSuscripciones>-\<entero>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|Agente de mezcla para suscripciones de inserción|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
 |Agente de distribución para suscripciones de inserción|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Agente de distribución para suscripciones de extracción|**\<Publicador>-\<BaseDeDatosDePublicación>-\<Publicación>-\<Suscriptor>-\<BaseDeDatosDeSuscripción>-\<GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Agente de lectura de cola|**[\<Distribuidor>].\<entero>**|[Agente de lectura de cola de replicación](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
+|Agente de lectura de cola|**[\<distribuidor>].\<entero>**|[Agente de lectura de cola de replicación](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
  \*Para suscripciones de inserción a publicaciones de Oracle, es **\<Publicador>-\<Publicador**> en lugar de **\<Publicador>-\<baseDeDatosDePublicación>**  
   
@@ -56,7 +57,7 @@ ms.locfileid: "68085907"
   
 2.  Expanda la carpeta **Agente SQL Server** y a continuación la carpeta **Trabajos** .  
   
-3.  Haga clic con el botón secundario en un trabajo y, a continuación, haga clic en **Propiedades**.  
+3.  Haga clic con el botón derecho en un trabajo y, a continuación, haga clic en **Propiedades**.  
   
 4.  En la página **Pasos** del cuadro de diálogo **Propiedades del trabajo: \<Trabajo>** , seleccione el paso **Ejecutar agente** y luego haga clic en **Editar**.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "68085907"
   
 3.  Haga clic con el botón secundario en una suscripción y, a continuación, haga clic en **Ver detalles**.  
   
-4.  En la ventana **Suscripción <NombreDeSuscripción>** , haga clic en **Acción** y, después, haga clic en **Propiedades del trabajo del \<NombreDeAgente>** .  
+4.  En la ventana **Suscripción <nombreDeSuscripción>** , haga clic en **Acción** y, después, haga clic en **Propiedades del trabajo del \<nombreDeAgente>** .  
   
 5.  En la página **Pasos** del cuadro de diálogo **Propiedades del trabajo: \<Trabajo>** , seleccione el paso **Ejecutar agente** y luego haga clic en **Editar**.  
   
@@ -97,6 +98,6 @@ ms.locfileid: "68085907"
 ## <a name="see-also"></a>Consulte también  
  [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Información general sobre los agentes de replicación](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

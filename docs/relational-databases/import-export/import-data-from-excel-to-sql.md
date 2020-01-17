@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77572a417836683e10ba3c7736fe4cdd0db4e129
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708142"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245270"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importación de datos de Excel a SQL Server o Azure SQL Database
 
@@ -56,8 +56,8 @@ Importe datos directamente desde archivos de Excel siguiendo las páginas del As
 4. Seleccione **Tareas**.
 5. Haga clic en una de las opciones siguientes.
 
-  - **Importar datos**
-  - **Exportar datos**
+  - **Import Data**
+  - **Export Data**
 
     ![Iniciar el asistente desde SSMS](../../integration-services/import-export-data/media/start-wizard-ssms.jpg)
 
@@ -251,7 +251,7 @@ Como se ha descrito anteriormente en la sección [Requisitos previos](#prereq), 
 
 Para obtener más información sobre el Asistente para copia, vea los temas siguientes:
 
-- [Asistente para copia de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
+- [Asistente para copia de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 - [Tutorial: crear una canalización con la actividad de copia mediante el Asistente para copia de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## <a name="adf"></a> Azure Data Factory
@@ -264,7 +264,7 @@ Para obtener más información sobre el uso de estos orígenes y receptores de D
 
 - [Sistema de archivos](https://docs.microsoft.com/azure/data-factory/data-factory-onprem-file-system-connector)
 - [SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-sqlserver-connector)
-- [Azure SQL Database](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
+- [Azure SQL Database](https://docs.microsoft.com/azure/data-factory/data-factory-azure-sql-connector)
 
 Para empezar a obtener información sobre cómo copiar los datos con Azure Data Factory, vea los temas siguientes:
 
@@ -275,7 +275,7 @@ Para empezar a obtener información sobre cómo copiar los datos con Azure Data 
 
 ### <a name="microsoftaceoledb120-has-not-been-registered"></a>Microsoft.ACE.OLEDB.12.0" no se ha registrado
 
-Este error se debe a que el proveedor OLEDB no está instalado. Instálelo desde [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=13255). Asegúrese de instalar la versión de 64 bits si tanto Windows como SQL Server son de 64 bits.
+Este error se debe a que el proveedor OLEDB no está instalado. Instálelo desde [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). Asegúrese de instalar la versión de 64 bits si tanto Windows como SQL Server son de 64 bits.
 
 El error completo es:
 
@@ -284,7 +284,7 @@ Msg 7403, Level 16, State 1, Line 3
 The OLE DB provider "Microsoft.ACE.OLEDB.12.0" has not been registered.
 ```
 
-## <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>No se puede crear una instancia del proveedor OLE DB "Microsoft.ACE.OLEDB.12.0" para el servidor vinculado "(NULL)"
+### <a name="cannot-create-an-instance-of-ole-db-provider-microsoftaceoledb120-for-linked-server-null"></a>No se puede crear una instancia del proveedor OLE DB "Microsoft.ACE.OLEDB.12.0" para el servidor vinculado "(NULL)"
 
 Esto indica que la arquitectura OLEDB de Microsoft no se ha configurado correctamente. Ejecute el siguiente código Transact-SQL para resolver este error:
 

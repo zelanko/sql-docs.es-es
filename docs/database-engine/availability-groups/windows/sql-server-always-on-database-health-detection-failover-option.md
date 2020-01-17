@@ -1,6 +1,7 @@
 ---
-title: Opción de conmutación por error de detección del estado de la base de datos | Microsoft Docs
-ms.custom: ''
+title: Detección del estado del nivel de la base de datos
+description: Obtenga información sobre la característica de detección de estado de nivel de base de datos disponible para grupos de disponibilidad AlwaysOn de SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 01/19/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 357d99a61f226162433f7d5fb1bbdfd41990cc8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013961"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251265"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +96,7 @@ select name, db_failover from sys.availability_groups
 
 Ejemplo de resultado de esta DMV:
 
-|NAME  |  db_failover|
+|name  |  db_failover|
 |---------|---------|
 | Contoso-ag | 1  |
 
@@ -125,7 +126,7 @@ Por ejemplo, este extracto del registro de errores pone de manifiesto que una es
 >
 >2016-04-25 12:20:21.21 spid75      The state of the local availability replica in availability group 'ag' has changed from 'PRIMARY_NORMAL' to 'RESOLVING_NORMAL'.  The state changed because the availability group is going offline.  The replica is going offline because the associated availability group has been deleted, or the user has taken the associated availability group offline in Windows Server Failover Clustering (WSFC) management console, or the availability group is failing over to another SQL Server instance.  For more information, see the SQL Server error log, Windows Server Failover Clustering (WSFC) management console, or WSFC log.
 
-### <a name="extended-event-sqlserveravailabilityreplicadatabasefaultreporting"></a>Evento extendido sqlserver.availability_replica_database_fault_reporting
+### <a name="extended-event-sqlserveravailability_replica_database_fault_reporting"></a>Evento extendido sqlserver.availability_replica_database_fault_reporting
 
 Desde SQL Server 2016, existe un nuevo evento extendido definido que se desencadena a través de la detección del estado del nivel de la base de datos.  El nombre del evento es **sqlserver.availability_replica_database_fault_reporting**.
 
@@ -166,7 +167,7 @@ Explicación de los campos:
 
 En esta salida de ejemplo, fault_type (tipo de error 2: apagado) refleja que se ha producido un evento crítico en el grupo de disponibilidad Contoso-ag, en la réplica llamada SQLSERVER-1, a causa del nombre de base de datos AutoHa-Sample2.
 
-|Campo  | Valor|
+|Campo  | Value|
 |---------|---------|
 |availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
 |availability_group_name | Contoso-ag|

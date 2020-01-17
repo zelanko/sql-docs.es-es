@@ -13,19 +13,19 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c5e7595b421627266c7f08ca76588f481a19554f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082931"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257659"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Crear y administrar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 En este tema se describe cómo crear, rellenar y administrar índices de texto completo en SQL Server.
   
 ## <a name="prerequisite---create-a-full-text-catalog"></a>Requisito previo: crear un catálogo de texto completo
-Antes de poder crear un índice de texto completo, necesita tener un catálogo de texto completo. El catálogo es un contenedor virtual de uno o más índices de texto completo. Para obtener más información, vea [Creación y administración de catálogos de texto completo](../../relational-databases/search/create-and-manage-full-text-catalogs.md).
+Antes de poder crear un índice de texto completo, necesita tener un catálogo de texto completo. El catálogo es un contenedor virtual de uno o más índices de texto completo. Para obtener más información, vea [Create and Manage Full-Text Catalogs](../../relational-databases/search/create-and-manage-full-text-catalogs.md) (Crear y administrar catálogos de texto completo).
   
 ##  <a name="tasks"></a> Crear, modificar o quitar un índice de texto completo  
 ### <a name="create-a-full-text-index"></a>Crear un índice de texto completo  
@@ -46,7 +46,7 @@ El proceso para crear y mantener un índice de texto completo se denomina *relle
 -   Rellenado basado en el seguimiento de cambios
 -   Rellenado incremental basado en una marca de tiempo
 
-Para obtener más información, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).
+Para obtener más información, vea [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md) (Rellenar índices de texto completo).
 
 ##  <a name="view"></a> Ver las propiedades de un índice de texto completo
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Ver las propiedades de un índice de texto completo con Transact-SQL
@@ -74,7 +74,7 @@ Para obtener más información, vea [Rellenar índices de texto completo](../../
   
     |Página|Descripción|  
     |----------|-----------------|  
-    |**General**|Muestra las propiedades básicas de un índice de texto completo. Entre estas propiedades se incluyen varias propiedades modificables y varias propiedades invariables, como el nombre de base de datos, el nombre de tabla y el nombre de columna de clave de texto completo. Las propiedades modificables son:<br /><br /> **Lista de palabras irrelevantes de índice de texto completo**<br /><br /> **Indexación de texto completo habilitada**<br /><br /> **Seguimiento de los cambios**<br /><br /> **Lista de propiedades de búsqueda**|  
+    |**General**|Muestra las propiedades básicas de un índice de texto completo. Entre estas propiedades se incluyen varias propiedades modificables y varias propiedades invariables, como el nombre de base de datos, el nombre de tabla y el nombre de columna de clave de texto completo. Las propiedades modificables son:<br /><br /> **Lista de palabras irrelevantes de índice de texto completo**<br /><br /> **Indexación de texto completo habilitada**<br /><br /> **Seguimiento de cambios**<br /><br /> **Lista de propiedades de búsqueda**|  
     |**Columnas**|Muestra las columnas de tabla que están disponibles para la indización de texto completo. La columna o columnas seleccionadas son de índices de texto completo. Puede seleccionar tantas columnas disponibles como desee incluir en el índice de texto completo. Para obtener más información, vea [Populate Full-Text Indexes](populate-full-text-indexes.md) (Rellenar índices de texto completo).|
     |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md) (Rellenar índices de texto completo).<br /><br /> Nota: Después de salir del cuadro de diálogo **Propiedades del índice de texto completo**, cualquier programación que se cree se asocia a un trabajo del Agente SQL Server (Iniciar rellenado incremental de tablas en *database_name*.*table_name*).|  
   
@@ -179,11 +179,11 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 Para crear un índice de texto completo en una columna **varbinary(max)** , el motor de búsqueda de texto completo necesita tener acceso a las extensiones de archivo de los documentos en la columna **varbinary(max)** . Esta información debe almacenarse en una columna de la tabla, denominada columna de tipo, que debe estar asociada a la columna **varbinary(max)** en el índice de texto completo. Al indizar un documento, el motor de búsqueda de texto completo usa la extensión de archivo de la columna de tipo para identificar qué filtro usar.  
    
 ### <a name="index-xml-data"></a>Indexar Datos xml  
- Una columna del tipo de datos **xml** solo almacena los documentos y fragmentos XML, y solo se usa el filtro XML para los documentos. Por consiguiente, una columna de tipo es innecesaria. En las columnas **xml** , el índice de texto completo indexa el contenido de los elementos XML, pero omite el formato XML. Los valores de los atributos se incluyen en el índice de texto completo a menos que sean valores numéricos. Las etiquetas de elemento se utilizan como límites de token. Se admiten fragmentos y documentos con formato XML o HTML correcto que contengan varios idiomas.  
+ Una columna del tipo de datos **xml** solo almacena los documentos y fragmentos XML, y solo se usa el filtro XML para los documentos. Por consiguiente, una columna de tipo es innecesaria. En las columnas **xml** , el índice de texto completo indexa el contenido de los elementos XML, pero omite el formato XML. Los valores de los atributos se incluyen en el índice de texto completo a menos que sean valores numéricos. Las etiquetas de elemento se usan como límites de token. Se admiten fragmentos y documentos con formato XML o HTML correcto que contengan varios idiomas.  
   
  Para obtener más información sobre cómo indexar y consultar en una columna **xml**, vea [Usar la búsqueda de texto completo con columnas XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
   
-##  <a name="disable"></a> Deshabilitar o volver a habilitar tull indización de texto para una tabla   
+##  <a name="disable"></a> Deshabilitación o rehabilitación de la indización de texto completo para una tabla   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], todas las bases de datos creadas por el usuario están habilitadas para texto completo de forma predeterminada. Además, una tabla individual se habilitará automáticamente para la indización de texto completo en cuanto se cree un índice de texto completo en la misma y se agregue una columna al índice. Una tabla se deshabilitará automáticamente para la indización de texto completo cuando se quite la última columna de su índice de texto completo.  
   
  En una tabla que tiene un índice de texto completo, se puede deshabilitar o volver a habilitar manualmente una tabla para la indización de texto completo utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

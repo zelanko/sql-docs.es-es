@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
+ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096935"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74866085"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ El resto de tipos de expresiones no pueden doblarse. En concreto, los siguientes
 - Expresiones cuyos resultados dependan de las opciones de configuración del servidor.
 
 #### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>Ejemplos de expresiones constantes que pueden doblarse y que no pueden doblarse
-Estudie la siguiente consulta:
+Considere la siguiente consulta:
 
 ```sql
 SELECT *
@@ -483,7 +483,7 @@ Algunos cambios en una base de datos puede hacer que un plan de ejecución resul
 
 La mayoría de las recompilaciones se necesitan para comprobar si las instrucciones son correctas o para obtener planes de ejecución de consultas potencialmente más rápidos.
 
-En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, siempre que una instrucción de un lote provoca una recompilación, se vuelve a compilar todo el lote, independientemente de si se ha enviado por medio de un procedimiento almacenado, un desencadenador, un lote ad hoc o una instrucción preparada. A partir de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], solo se vuelve a compilar la instrucción del lote que provoca la recompilación. Debido a esta diferencia, los recuentos de recompilaciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 y de versiones posteriores no son comparables. Además, existen otros tipos de compilaciones en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] y en versiones posteriores, gracias al conjunto de características ampliado.
+En las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anteriores a la 2005, siempre que una instrucción de un lote provoca una recompilación, se vuelve a compilar todo el lote, independientemente de si se ha enviado por medio de un procedimiento almacenado, un desencadenador, un lote ad hoc o una instrucción preparada. A partir de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], solo se vuelve a compilar la instrucción del lote que desencadena la recompilación. Además, existen otros tipos de compilaciones en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] y en versiones posteriores, gracias al conjunto de características ampliado.
 
 La recompilación de instrucciones beneficia al rendimiento ya que, en la mayoría de los casos, un pequeño número de instrucciones provocan recompilaciones con sus penalizaciones asociadas, en lo que respecta a los bloqueos y el tiempo de la CPU. Estas penalizaciones se evitan para otras instrucciones del lote que no es necesario volver a compilar.
 
@@ -507,7 +507,7 @@ La columna `recompile_cause` del xEvent `sql_statement_recompile` contiene un c�
 > La columna *EventSubClass* de `SP:Recompile` y `SQL:StmtRecompile` contiene un código de número entero que indica la razón de la recompilación. Los códigos se describen [aquí](../relational-databases/event-classes/sql-stmtrecompile-event-class.md).
 
 > [!NOTE]
-> Si la opción de base de datos `AUTO_UPDATE_STATISTICS` se establece en `ON`, las consultas se vuelven a compilar cuando su destino son tablas o vistas indexadas cuyas estadísticas se han actualizado o cuyas cardinalidades han cambiado mucho desde la última ejecución. Este comportamiento se aplica a tablas estándar definidas por el usuario, a tablas temporales y a tablas insertadas y eliminadas creadas por desencadenadores DML. Si el rendimiento de la consulta se ve afectado por un número excesivo de recompilaciones, considere la posibilidad de cambiar esta opción a `OFF`. Cuando la opción de base de datos `AUTO_UPDATE_STATISTICS` está establecida en `OFF`, no se producen recompilaciones basadas en estadísticas o cambios en la cardinalidad, a excepción de las tablas insertadas y eliminadas que se crean mediante los desencadenadores DML `INSTEAD OF`. Como estas tablas se crean en tempdb, la recompilación de las consultas a las que tienen acceso depende de la configuración de `AUTO_UPDATE_STATISTICS` en tempdb. Tenga en cuenta que en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, las consultas se siguen recompilando en función de los cambios de cardinalidad de las tablas insertadas y eliminadas del desencadenador DML, incluso cuando esta opción está establecida en `OFF`.
+> Si la opción de base de datos `AUTO_UPDATE_STATISTICS` se establece en `ON`, las consultas se vuelven a compilar cuando su destino son tablas o vistas indexadas cuyas estadísticas se han actualizado o cuyas cardinalidades han cambiado mucho desde la última ejecución. Este comportamiento se aplica a tablas estándar definidas por el usuario, a tablas temporales y a tablas insertadas y eliminadas creadas por desencadenadores DML. Si el rendimiento de la consulta se ve afectado por un número excesivo de recompilaciones, considere la posibilidad de cambiar esta opción a `OFF`. Cuando la opción de base de datos `AUTO_UPDATE_STATISTICS` está establecida en `OFF`, no se producen recompilaciones basadas en estadísticas o cambios en la cardinalidad, a excepción de las tablas insertadas y eliminadas que se crean mediante los desencadenadores DML `INSTEAD OF`. Como estas tablas se crean en tempdb, la recompilación de las consultas a las que tienen acceso depende de la configuración de `AUTO_UPDATE_STATISTICS` en tempdb. Tenga en cuenta que en las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anteriores a la 2005, las consultas se siguen recompilando en función de los cambios de cardinalidad de las tablas insertadas y eliminadas del desencadenador DML, incluso aunque esta opción esté establecida en `OFF`.
 
 ### <a name="PlanReuse"></a> Parámetros y reutilización de un plan de ejecución
 
@@ -585,7 +585,7 @@ En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el uso de parámetros
 > [!WARNING] 
 > La utilización de parámetros o marcadores de parámetros para contener valores que especifican los usuarios finales es más segura que la concatenación de valores en una cadena que después se ejecuta mediante un método de la API de acceso de datos, la instrucción `EXECUTE` o el procedimiento almacenado `sp_executesql` .
 
-Si una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] se ejecuta sin parámetros, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parametriza la instrucción internamente para aumentar las posibilidades de hacerla coincidir con un plan de ejecución existente. Este proceso se denomina parametrización simple. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000, el proceso se denominaba parametrización automática.
+Si una instrucción [!INCLUDE[tsql](../includes/tsql-md.md)] se ejecuta sin parámetros, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] parametriza la instrucción internamente para aumentar las posibilidades de hacerla coincidir con un plan de ejecución existente. Este proceso se denomina parametrización simple. En las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anteriores a la 2005, el proceso se denominaba parametrización automática.
 
 Considere esta instrucción:
 
@@ -917,7 +917,7 @@ Las instrucciones individuales `CREATE TABLE` o `ALTER TABLE` pueden tener varia
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite dos métodos para referenciar orígenes de datos OLE DB heterogéneos en instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)]:
 
 * Nombres de servidores vinculados  
-  Los procedimientos almacenados del sistema `sp_addlinkedserver` y `sp_addlinkedsrvlogin` se utilizan para dar un nombre de servidor a un origen de datos OLE DB. Se puede hacer referencia a los objetos de estos servidores vinculados en instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] mediante nombres que consten de cuatro elementos. Por ejemplo, si un nombre de servidor vinculado de `DeptSQLSrvr` se define en otra instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la instrucción siguiente hace referencia a una tabla de ese servidor: 
+  Los procedimientos almacenados del sistema `sp_addlinkedserver` y `sp_addlinkedsrvlogin` se utilizan para dar un nombre de servidor a un origen de datos OLE DB. Se puede hacer referencia a los objetos de estos servidores vinculados en instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] mediante nombres que consten de cuatro partes. Por ejemplo, si un nombre de servidor vinculado de `DeptSQLSrvr` se define en otra instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la instrucción siguiente hace referencia a una tabla de ese servidor: 
   
   ```sql
   SELECT JobTitle, HireDate 
@@ -927,7 +927,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite dos mét
    El nombre del servidor vinculado también puede especificarse en una instrucción `OPENQUERY` para abrir un conjunto de filas desde un origen de datos OLE DB. Se puede hacer referencia a este conjunto de filas del mismo modo que a una tabla en las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)]. 
 
 * Nombres de conectores ad hoc  
-  Para las referencias poco frecuentes a un origen de datos, las funciones `OPENROWSET` o `OPENDATASOURCE` se especifican con la información necesaria para conectarse a un servidor vinculado. Después, se puede hacer referencia al conjunto de filas del mismo modo que se hace referencia a una tabla en instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)]: 
+  Para las referencias poco frecuentes a un origen de datos, las funciones `OPENROWSET` o `OPENDATASOURCE` se especifican con la información necesaria para conectarse a un servidor vinculado. A continuación, se puede hacer referencia al conjunto de filas del mismo modo que se hace referencia a una tabla en instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)]: 
   
   ```sql
   SELECT *
@@ -983,7 +983,7 @@ La siguiente ilustración es una representación lógica de la operación de bú
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>Visualización de la información del particionamiento en los planes de ejecución de consultas
 
-Los planes de ejecución de consultas en tablas e índices con particiones pueden examinarse mediante las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` (`SET SHOWPLAN_XML` o `SET STATISTICS XML`), o mediante la salida gráfica del plan de ejecución en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio. Por ejemplo, puede ver el plan de ejecución en tiempo de compilación haciendo clic en *Mostrar plan de ejecución estimado* en la barra de herramientas del editor de consultas y el plan en tiempo de ejecución haciendo clic en *Incluir plan de ejecución real*. 
+Los planes de ejecución de consultas en tablas e índices con particiones pueden examinarse mediante las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` (`SET SHOWPLAN_XML` o `SET STATISTICS XML`), o bien mediante la salida gráfica del plan de ejecución en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio. Por ejemplo, puede ver el plan de ejecución en tiempo de compilación haciendo clic en *Mostrar plan de ejecución estimado* en la barra de herramientas del editor de consultas y el plan en tiempo de ejecución haciendo clic en *Incluir plan de ejecución real*. 
 
 Estas herramientas le proporcionarán la siguiente información:
 
@@ -1111,7 +1111,7 @@ He aquí otro ejemplo: supongamos que la tabla tiene cuatro particiones en la co
 |Partición de tabla 3: A >= 20 Y A < 30   |B=50, B=100, B=150 |
 |Partición de tabla 4: A >= 30  |B=50, B=100, B=150 |
 
-### <a name="best-practices"></a>Procedimientos recomendados
+### <a name="best-practices"></a>Prácticas recomendadas
 
 Para mejorar el rendimiento de las consultas que tienen acceso a una cantidad grande de datos de tablas e índices grandes con particiones, recomendamos las siguientes prácticas:
 
@@ -1197,7 +1197,7 @@ GO
  [Referencia de operadores lógicos y físicos del plan de presentación](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [Eventos extendidos](../relational-databases/extended-events/extended-events.md)  
  [Procedimiento recomendado con el Almacén de consultas](../relational-databases/performance/best-practice-with-the-query-store.md)  
- [Estimación de cardinalidad](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [estimación de cardinalidad](../relational-databases/performance/cardinality-estimation-sql-server.md)  
  [Procesamiento de consultas inteligentes](../relational-databases/performance/intelligent-query-processing.md)   
  [Prioridad de los operadores](../t-sql/language-elements/operator-precedence-transact-sql.md)    
  [Planes de ejecución](../relational-databases/performance/execution-plans.md)    

@@ -1,6 +1,7 @@
 ---
-title: Suscribir una base de datos a una categoría de directiva o anular la suscripción | Microsoft Docs
-ms.custom: ''
+title: Suscripción de una base de datos a una categoría de directiva o cancelar la suscripción
+description: Describe cómo suscribirse o cancelar la suscripción de una base de datos a una categoría de directiva para la administración basada en directivas mediante SQL Server Management Studio y Transact-SQL (T-SQL).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d653db8d1fcc6b2344763ed6f3988a33a297fd69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6425834958f88e86726f1ec2137bc6917a889671
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021549"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558240"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Suscribir una base de datos a una categoría de directiva o anular la suscripción
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

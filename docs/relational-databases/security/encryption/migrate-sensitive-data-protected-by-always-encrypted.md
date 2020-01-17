@@ -1,6 +1,7 @@
 ---
-title: Carga masiva de datos cifrados en columnas con Always Encrypted | Microsoft Docs
-ms.custom: ''
+title: Carga masiva de datos cifrados en columnas con Always Encrypted
+description: Obtenga información sobre cómo hacer una carga masiva de datos a columnas que usan Always Encrypted con SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/04/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,12 +14,12 @@ ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 4c76c8896d19bed29bd8e71f6726b05cc0526e91
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594167"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558210"
 ---
 # <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Carga masiva de datos cifrados en columnas con Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ Para cargar datos cifrados sin tener que volver realizar comprobaciones de metad
 ## <a name="data-migration-scenarios"></a>Escenarios de migración de datos  
 En la siguiente tabla se muestra la configuración recomendada adecuada para varios escenarios de migración.  
  
-![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
+![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "|::ref1::|")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>Carga masiva de datos cifrados  
 Utilice el siguiente proceso para cargar datos cifrados.  
@@ -63,7 +64,7 @@ En el siguiente escenario se muestra cómo importar datos de forma incorrecta po
  
 4.  La misma aplicación u otra diferente se conecta a la base de datos por medio de un controlador con Always Encrypted habilitado y **column encryption setting=enabled** en la cadena de conexión, y recupera los datos. La aplicación espera que los datos se descifren de forma transparente. Sin embargo, el controlador no puede descifrar los datos porque los datos son texto cifrado de forma incorrecta.  
 
-## <a name="best-practice"></a>Práctica recomendada  
+## <a name="best-practice"></a>Procedimiento recomendado  
  
 Utilice mediante esta opción cuentas de usuario designadas para cargas de trabajo que vayan a ejecutarse durante un largo periodo.  
  
@@ -71,13 +72,13 @@ En las herramientas o las aplicaciones de copia masiva que se ejecutan en period
  
 No utilice esta opción para desarrollar nuevas aplicaciones. En su lugar, use un controlador de cliente que ofrezca una API para suprimir las comprobaciones de metadatos criptográficos para una sola sesión, como la opción AllowEncryptedValueModifications del proveedor de datos .NET Framework para SQL Server. Para más detalles, consulte [Copiar datos cifrados con SqlBulkCopy](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy). 
 
-## <a name="next-steps"></a>Next Steps
-- [Consulta de columnas mediante Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+## <a name="next-steps"></a>Pasos siguientes
+- [Consulta de columnas mediante Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Consulte también  
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Migración de datos a o desde columnas mediante Always Encrypted con el Asistente para importación y exportación de SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
+- [Migración de datos a o desde columnas mediante Always Encrypted con el Asistente para importación y exportación de SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
 - [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
 - [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
 

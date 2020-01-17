@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: e5dc5cb87bcadda9600768d0840699f683492a54
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 2269c594bd0fff036d4fe5d5d722aa5d78d4ca6d
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594010"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75883996"
 ---
 # <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Panel de instancias administradas de Azure SQL Database para Azure Data Studio (versión preliminar)
 
@@ -97,7 +97,6 @@ Para obtener más información, vea las [Preguntas más frecuentes sobre el cód
 
 Para obtener más información, visite el [proyecto de GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/).
 
-[conduct-code]: http://opensource.microsoft.com/codeofconduct/
-[conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/
+[conduct-code]: https://opensource.microsoft.com/codeofconduct/
+[conduct-FAQ]: https://opensource.microsoft.com/codeofconduct/faq/
 [conduct-email]: mailto:opencode@microsoft.com
-[conduct-md]: https://github.com/PowerShell/vscode-powershell/blob/master/CODE_OF_CONDUCT.md

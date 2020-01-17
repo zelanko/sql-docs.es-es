@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b9e1151d5a757f42420c90519c79c3793cfef16
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: c54ec57756ca2f840ac3f15771143cf697798e9f
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250956"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002070"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configuración de un grupo de disponibilidad Always On distribuido  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Para crear un grupo de disponibilidad distribuido, debe tener dos grupos de disponibilidad, cada uno con su propio agente de escucha. Después, combine estos grupos de disponibilidad en un grupo de disponibilidad distribuido. En los pasos siguientes se proporciona un ejemplo básico de Transact-SQL. Este ejemplo no cubre todos los detalles relativos a cómo crear grupos de disponibilidad y agentes de escucha, sino que se centra en resaltar los requisitos clave.
+Para crear un grupo de disponibilidad distribuido, debe crear dos grupos de disponibilidad, cada uno con su propio cliente de escucha. Después, combine estos grupos de disponibilidad en un grupo de disponibilidad distribuido. En los pasos siguientes se proporciona un ejemplo básico de Transact-SQL. Este ejemplo no cubre todos los detalles relativos a cómo crear grupos de disponibilidad y agentes de escucha, sino que se centra en resaltar los requisitos clave.
 
 Para ver una introducción técnica de los grupos de disponibilidad distribuidos, vea [Distributed availability groups](distributed-availability-groups.md) (Grupos de disponibilidad distribuidos).
 

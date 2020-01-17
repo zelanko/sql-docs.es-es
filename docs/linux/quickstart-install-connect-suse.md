@@ -1,6 +1,5 @@
 ---
-title: Introducción a SQL Server en SUSE Linux Enterprise Server
-titleSuffix: SQL Server
+title: 'SUSE: Instalación de SQL Server en Linux'
 description: En esta guía de inicio rápido se explica cómo instalar SQL Server 2017 o SQL Server 2019 en SUSE Linux Enterprise Server y, después, crear y consultar una base de datos con sqlcmd.
 author: VanMSFT
 ms.author: vanto
@@ -9,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 143ec74ea2941c25c23a41396dc9cdc40d445715
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 811438987106a5eb73a914e5d7bbceb139cd5c37
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594534"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558641"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Inicio rápido: Instalación de SQL Server y creación de una base de datos en SUSE Linux Enterprise Server
 
@@ -62,12 +61,12 @@ Si anteriormente ha instalado una versión CTP o RC de SQL Server, primero debe
 > [!NOTE]
 > En este momento, no se admite como destino de instalación el [subsistema de Windows para Linux](https://msdn.microsoft.com/commandline/wsl/about) para Windows 10.
 
-Para conocer otros requisitos del sistema, consulte [Requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
+Para conocer otros requisitos del sistema, vea [Requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>Instalación de SQL Server
+## <a id="install"></a>Instalar SQL Server
 
 Para configurar SQL Server en SLES, ejecute los siguientes comandos en un terminal para instalar el paquete **mssql-server**:
 
@@ -90,7 +89,7 @@ Para configurar SQL Server en SLES, ejecute los siguientes comandos en un termi
    sudo zypper --gpg-auto-import-keys refresh 
    ```
    
-3. Ejecute los comandos siguientes para instalar SQL Server:
+3. Ejecute los comandos siguientes para instalar SQL Server:
 
    ```bash
    sudo zypper install -y mssql-server
@@ -108,7 +107,7 @@ Para configurar SQL Server en SLES, ejecute los siguientes comandos en un termi
    > [!NOTE]
    > Asegúrese de especificar una contraseña segura para la cuenta del administrador del sistema (longitud mínima de 8 caracteres, incluidas mayúsculas y minúsculas, dígitos en base 10 o símbolos no alfanuméricos).
 
-5. Una vez finalizada la configuración, compruebe que el servicio se está ejecutando:
+5. Cuando finalice la configuración, compruebe que el servicio se esté ejecutando:
 
    ```bash
    systemctl status mssql-server
@@ -126,7 +125,7 @@ En este momento, SQL Server se está ejecutando en el equipo SLES y está listo
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>Instalación de SQL Server
+## <a id="install"></a>Instalar SQL Server
 
 Para configurar SQL Server en SLES, ejecute los siguientes comandos en un terminal para instalar el paquete **mssql-server**:
 
@@ -142,7 +141,7 @@ Para configurar SQL Server en SLES, ejecute los siguientes comandos en un termi
    sudo zypper --gpg-auto-import-keys refresh 
    ```
    
-3. Ejecute los comandos siguientes para instalar SQL Server:
+3. Ejecute los comandos siguientes para instalar SQL Server:
 
    ```bash
    sudo zypper install -y mssql-server
@@ -157,7 +156,7 @@ Para configurar SQL Server en SLES, ejecute los siguientes comandos en un termi
    > [!NOTE]
    > Asegúrese de especificar una contraseña segura para la cuenta del administrador del sistema (longitud mínima de 8 caracteres, incluidas mayúsculas y minúsculas, dígitos en base 10 o símbolos no alfanuméricos).
 
-5. Una vez finalizada la configuración, compruebe que el servicio se está ejecutando:
+5. Cuando finalice la configuración, compruebe que el servicio se esté ejecutando:
 
    ```bash
    systemctl status mssql-server
@@ -176,7 +175,7 @@ En este momento, SQL Server 2019 se ejecuta en la máquina SLES y está listo 
 
 ## <a id="tools"></a>Instalar las herramientas de línea de comandos de SQL Server
 
-Para crear una base de datos, necesita conectarse con una herramienta que pueda ejecutar instrucciones Transact-SQL en SQL Server. En los pasos siguientes se instalan las herramientas de línea de comandos de SQL Server [sqlcmd](../tools/sqlcmd-utility.md) y [bcp](../tools/bcp-utility.md).
+Para crear una base de datos, necesita conectarse con una herramienta que pueda ejecutar instrucciones Transact-SQL en SQL Server. En los pasos siguientes, se instalan las herramientas de línea de comandos de SQL Server [sqlcmd](../tools/sqlcmd-utility.md) y [bcp](../tools/bcp-utility.md).
 
 1. Agregue el repositorio de Microsoft SQL Server en Zypper.
 

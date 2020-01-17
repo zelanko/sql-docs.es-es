@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/11/2018
+ms.date: 11/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d4a36b287554332589f11a352233eaffe972ac06
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a3ff2605e0c872bd5e544d618c88dc179e3c3b43
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981732"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564798"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Es un tipo de datos especial usado para almacenar un conjunto de resultados y pr
 
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -63,9 +63,9 @@ Es el mismo subconjunto de información que se utiliza para definir una tabla en
 Para saber más sobre la sintaxis, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md), [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) y [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 *collation_definition*  
-Es la intercalación de la columna que consta de una configuración regional de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows y un estilo de comparación, una configuración regional de Windows y la notación binaria o una intercalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no se especifica *collation_definition*, la columna hereda la intercalación de la base de datos actual. Si la columna se ha definido como un tipo definido por el usuario CLR (Common Language Runtime), la columna hereda la intercalación del tipo definido por el usuario.
+Es la intercalación de la columna que consta de una configuración regional de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows y un estilo de comparación, una configuración regional de Windows y la notación binaria o una intercalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no se especifica *collation_definition*, la columna hereda la intercalación de la base de datos actual. Si la columna se ha definido como un tipo definido por el usuario CLR (Common Language Runtime), la columna hereda la intercalación del tipo definido por el usuario.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Haga referencia a las variables **table** por el nombre en una cláusula FROM del lote, como se muestra en el ejemplo siguiente:
   
 ```sql
@@ -100,6 +100,10 @@ Las variables **table** no tienen estadísticas de distribución. No desencadena
 Las variables **table** no se admiten en el modelo de razonamiento basado en costos del optimizador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por lo tanto, no se deben usar cuando se requieren elecciones basadas en el costo para lograr un plan de consultas eficaz. Se prefieren las tablas temporales cuando se requieren opciones basadas en costos. Este plan incluye normalmente consultas con uniones, decisiones de paralelismo y opciones de selección de índice.
   
 Las consultas que modifican variables **table** no generan planes de ejecución de consultas en paralelo. El rendimiento puede verse afectado cuando se modifican variables **table** muy grandes o variables **table** en consultas complejas. Considere la posibilidad de usar tablas temporales en situaciones donde se modifican las variables **table**. Para obtener más información, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Las consultas que leen variables **table** sin modificarlas pueden generarse en paralelo.
+
+> [!IMPORTANT]
+> El nivel de compatibilidad de la base de datos 150 mejora el rendimiento de las variables de tabla con la introducción de la **compilación diferida de variables de tabla**.  Para obtener más información, consulte [Compilación diferida de variables de tabla](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).
+>
   
 En las variables **table** no se pueden crear índices de forma explícita; en estas variables **table** tampoco se conserva ninguna estadística. A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], se introdujo una sintaxis nueva que le permite crear determinado tipos de índice alineados con la definición de tabla.  Con esta nueva sintaxis, puede crear índices en las variables de **tabla** como parte de la definición de tabla. En determinados casos, el rendimiento puede mejorar si en su lugar se utilizan tablas temporales, las que proporcionan estadísticas y compatibilidad total del índice. Para más información sobre la creación de índices alineados y las tablas temporales, consulte[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
 
@@ -110,61 +114,6 @@ No se permite la operación de asignación entre variables **table**.
 Como las variables **table** tienen ámbito limitado y no son parte de la base de datos persistente, las operaciones de reversión de transacciones no les afectan.
   
 Las variables table no se pueden modificar una vez creadas.
-
-## <a name="table-variable-deferred-compilation"></a>Compilación diferida de variables de tabla
-La **compilación diferida de variables de tabla** mejora la calidad del plan y el rendimiento general de las consultas que hacen referencia a las variables de tabla. Durante la optimización y la compilación del plan inicial, esta característica propagará las estimaciones de cardinalidad que se basan en los recuentos de filas de variables de tabla reales. Esta información exacta de recuento de filas se usará para optimizar las operaciones del plan de bajada.
-
-> [!NOTE]
-> La compilación diferida de variables de tabla es una característica en versión preliminar pública en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
-
-Con la compilación aplazada variable de tabla, la compilación de una instrucción que hace referencia a una variable de tabla se aplaza hasta que la primera ejecución real de la instrucción. Este comportamiento de compilación diferida es idéntico al comportamiento de las tablas temporales. Este cambio se traduce en el uso de la cardinalidad real en lugar de la estimación de una fila original. 
-
-Para habilitar la versión preliminar pública de la compilación diferida de variables de tabla, habilite el nivel 150 de compatibilidad de la base de datos a la que se conecta cuando ejecuta la consulta.
-
-La compilación diferida de variables de tabla **no** cambia ninguna otra característica de las variables de tabla. Por ejemplo, esta característica no agrega estadísticas de columna a las variables de tabla.
-
-La compilación diferida de variables de tabla **no aumenta la frecuencia de recompilación**. En su lugar, se desplaza a donde se produce la compilación inicial. El plan en caché resultante se genera en función del recuento de filas de variables de tabla de la compilación diferida. Este plan se reutiliza en consultas sucesivas, y hasta que se expulsa o se vuelve a compilar. 
-
-El recuento de filas de variables de tabla que se usa para la compilación inicial del plan representa un valor típico que podría ser diferente de una estimación del recuento de filas fijo. Si es diferente, las operaciones de bajada saldrán beneficiadas. Si el recuento de filas de variables de tabla varía considerablemente entre ejecuciones, es posible que esta característica no mejore el rendimiento.
-
-### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>Deshabilitación de la compilación diferida de variables de tabla sin cambiar el nivel de compatibilidad
-Deshabilite la compilación diferida de variables de tabla en el ámbito de base de datos o de instrucción mientras se mantiene el nivel 150 o posterior de compatibilidad de base de datos. Para deshabilitar la compilación diferida de variables de tabla para todas las ejecuciones de consultas que se originan en la base de datos, ejecute el siguiente ejemplo en el contexto de la base de datos aplicable:
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
-```
-
-Para volver a habilitar la compilación diferida de variables de tabla para todas las ejecuciones de consultas que se originan en la base de datos, ejecute el siguiente ejemplo en el contexto de la base de datos aplicable:
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
-```
-
-También puede deshabilitar la compilación diferida de variables de tabla para una consulta específica mediante la designación de DISABLE_DEFERRED_COMPILATION_TV como una sugerencia de consulta USE HINT.  Por ejemplo:
-
-```sql
-DECLARE @LINEITEMS TABLE 
-    (L_OrderKey INT NOT NULL,
-     L_Quantity INT NOT NULL
-    );
-
-INSERT @LINEITEMS
-SELECT L_OrderKey, L_Quantity
-FROM dbo.lineitem
-WHERE L_Quantity = 5;
-
-SELECT  O_OrderKey,
-    O_CustKey,
-    O_OrderStatus,
-    L_QUANTITY
-FROM    
-    ORDERS,
-    @LINEITEMS
-WHERE   O_ORDERKEY  =   L_ORDERKEY
-    AND O_OrderStatus = 'O'
-OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
-```
-
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -229,7 +178,7 @@ Para invocar la función, ejecute esta consulta.
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
 [Funciones definidas por el usuario](../../relational-databases/user-defined-functions/user-defined-functions.md)  

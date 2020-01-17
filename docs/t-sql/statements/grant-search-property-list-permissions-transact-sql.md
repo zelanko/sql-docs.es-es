@@ -1,6 +1,8 @@
 ---
-title: GRANT (permisos de lista de propiedades de búsqueda de Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permisos de lista de propiedades de búsqueda GRANT
+description: Conceda permisos en una lista de propiedades de búsqueda.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,12 +20,12 @@ ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bc646f9cbee6a8f7c646398fbcfa4302278f00c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76d96e9342ca66f4133b8993b2409960e6091301
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050803"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246153"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>Conceder permisos de lista de propiedades de búsqueda (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -95,7 +97,7 @@ GRANT permission [ ,...n ] ON
   
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="search-property-list-permissions"></a>Permisos de lista de propiedades de búsqueda  
  Una lista de propiedades de búsqueda es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. Los permisos más limitados y específicos que se pueden conceder en una lista de propiedades de búsqueda se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  

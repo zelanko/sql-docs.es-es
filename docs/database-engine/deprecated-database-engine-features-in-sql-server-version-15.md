@@ -1,11 +1,11 @@
 ---
-title: Características en desuso del motor de base de datos | Microsoft Docs
-description: Características en desuso del motor de base de datos de SQL Server 2019
-ms.date: 11/13/2019
+title: Características en desuso del motor de base de datos | Microsoft Docs
+titleSuffix: SQL Server 2019
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.custom: ''
 ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-ver15'
-ms.openlocfilehash: 756465e53e4109f34593b553cc914e0d243f9720
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: c90f78d9aa7773dc4462c732a8181c3340d797f8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095243"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252732"
 ---
 # <a name="deprecated-database-engine-features-in-includesssqlv15-mdincludessssqlv15-mdmd"></a>Características en desuso del motor de base de datos de [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
 [!INCLUDE[tsql-appliesto-sssver15-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]

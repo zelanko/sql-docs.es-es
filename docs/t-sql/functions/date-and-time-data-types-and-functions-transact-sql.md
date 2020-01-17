@@ -1,6 +1,8 @@
 ---
-title: Tipos de datos y funciones de fecha y hora (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Tipos de datos y funciones de fecha y hora
+description: Vínculos a los artículos sobre tipos de datos y funciones de fecha y hora.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -21,12 +23,12 @@ ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a478288ef82764c5dc6d044132fb66dc7e3f9bf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a7beec472b0f4b70662c364081641b6ea91be507
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982955"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256089"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Tipos de datos y funciones de fecha y hora (Transact-SQL)
 
@@ -145,7 +147,7 @@ En las tablas siguientes se enumeran las funciones de fecha y hora de [!INCLUDE[
 |[Funciones escalares de ODBC &#40;Transact-SQL&#41;](../../t-sql/functions/odbc-scalar-functions-transact-sql.md)|Proporciona información sobre funciones escalares de ODBC que se pueden usar en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esto incluye las funciones de fecha y hora ODBC.|  
 |[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)|Proporciona la conversión de zona horaria.|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones](../../t-sql/functions/functions.md)  
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   

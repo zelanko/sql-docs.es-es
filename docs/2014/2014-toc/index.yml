@@ -1,0 +1,174 @@
+### YamlMime:Landing
+title: Documentación de SQL Server 2014
+summary: Microsoft SQL Server 2014 local es una base de datos relacional.
+metadata:
+  title: Temas de SQL Server 2014
+  description: Elija el área de SQL Server 2014 que le interese.
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MightyPen
+  ms.author: genemi
+  ms.date: 11/25/2019
+  ms.openlocfilehash: 68632f82835836b9097e8547683b069771143e2d
+  ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 12/19/2019
+  ms.locfileid: "75224399"
+landingContent:
+- title: Artículos especiales
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Novedades de SQL Server 2014
+      url: ../sql-server/what-s-new-in-sql-server-2016.md?view=sql-server-2014
+    - text: Versiones anteriores 2012-2005
+      url: /sql/toc/previous-versions-sql-server?view=sql-server-ver15
+    - text: Última versión de SQL Server
+      url: /sql/sql-server/index?view=sql-server-ver15
+    - text: Datos unificados en la última versión de SQL
+      url: https://www.microsoft.com/sql-server/
+- title: Desarrollo de back-end
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Información general del motor
+      url: ../database-engine/sql-server-database-engine-overview.md?view=sql-server-2014
+    - text: CREATE DATABASE
+      url: /sql/t-sql/statements/create-database-transact-sql?view=sql-server-2016
+    - text: CREATE TABLE
+      url: /sql/t-sql/statements/create-table-transact-sql?view=sql-server-2016
+    - text: Claves principales y externas
+      url: /sql/t-sql/statements/alter-table-transact-sql?view=sql-server-2016
+    - text: CREATE INDEX
+      url: /sql/t-sql/statements/create-index-transact-sql?view=sql-server-2016
+    - text: Bases de datos de ejemplo
+      url: /sql/samples/sql-samples-where-are?view=sql-server-2016
+  - linkListType: reference
+    links:
+    - text: Libros sin conexión de T-SQL en SQL 2014
+      url: /sql/sql-server/sql-server-help-installation?view=sql-server-20165#use-help-viewer-v1x
+    - text: INSERT para datos
+      url: /sql/t-sql/statements/insert-transact-sql?view=sql-server-2016
+    - text: SELECT - JOIN - GROUP BY
+      url: /sql/t-sql/queries/select-transact-sql?view=sql-server-2016
+    - text: CREATE VIEW
+      url: /sql/t-sql/statements/create-view-transact-sql?view=sql-server-2016
+    - text: Procedimientos almacenados
+      url: ../relational-databases/stored-procedures/stored-procedures-database-engine.md?view=sql-server-2014
+- title: Desarrollo de back-end avanzado
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: FROM - JOIN
+      url: /sql/t-sql/queries/from-transact-sql?view=sql-server-2016
+    - text: OPENJSON
+      url: /sql/t-sql/functions/openjson-transact-sql?view=sql-server-2016
+    - text: FOR XML
+      url: ../relational-databases/xml/xml-data-sql-server.md?view=sql-server-2014
+  - linkListType: architecture
+    links:
+    - text: Integración CLR de .NET
+      url: ../relational-databases/clr-integration/common-language-runtime-integration-overview.md?view=sql-server-2014
+    - text: Tablas e índices con particiones
+      url: ../relational-databases/partitions/partitioned-tables-and-indexes.md?view=sql-server-2014
+    - text: OLTP en memoria
+      url: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md?view=sql-server-2014
+    - text: Compilación nativa de procedimientos almacenados
+      url: ../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md?view=sql-server-2014
+    - text: Índices de almacén de columnas
+      url: ../relational-databases/indexes/columnstore-indexes-described.md?view=sql-server-2014
+    - text: Azure Blob Storage con SQL Server
+      url: /sql/relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016?view=sql-server-2016
+- title: Administración
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Instalación de SQL Server
+      url: ../database-engine/install-windows/install-sql-server.md?view=sql-server-2014
+  - linkListType: overview
+    links:
+    - text: Recuperación y continuidad
+      url: ../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md?view=sql-server-2014
+    - text: Seguridad
+      url: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md?view=sql-server-2014
+    - text: Administrador de configuración
+      url: ../tools/configuration-manager/sql-server-configuration-manager-help.md?view=sql-server-2014
+    - text: Configuración para todo el servidor sp_configure
+      url: ../relational-databases/databases/database-properties-options-page.md?view=sql-server-2014
+    - text: Opciones de inicio de base de datos
+      url: ../database-engine/configure-windows/database-engine-service-startup-options.md?view=sql-server-2014
+  - linkListType: architecture
+    links:
+    - text: Replicación
+      url: ../relational-databases/replication/sql-server-replication.md?view=sql-server-2014
+    - text: Supervisión y optimización del rendimiento
+      url: ../relational-databases/performance/monitor-and-tune-for-performance.md?view=sql-server-2014
+    - text: Asistente para la optimización de motor de base de datos (DTA)
+      url: ../relational-databases/performance/database-engine-tuning-advisor.md?view=sql-server-2014
+    - text: SQL Server Profiler
+      url: ../tools/sql-server-profiler/sql-server-profiler.md?view=sql-server-2014
+- title: Administración de datos
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Importación y exportación de datos en bloque
+      url: ../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md?view=sql-server-2014
+    - text: Programa de copia masiva (BCP. exe)
+      url: ../tools/bcp-utility.md?view=sql-server-2014
+    - text: Compresión de datos
+      url: ../relational-databases/data-compression/data-compression.md?view=sql-server-2014
+  - linkListType: architecture
+    links:
+    - text: Data Quality Service (DQS)
+      url: ../data-quality-services/data-quality-services.md?view=sql-server-2014
+    - text: Master Data Services (MDS)
+      url: ../master-data-services/master-data-services.md?view=sql-server-2014
+- title: Desarrollo de front-end
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Conectar a SQL Server
+      url: ../relational-databases/lesson-1-connecting-to-the-database-engine.md?view=sql-server-2014
+    - text: Conexión mediante lenguajes de programación
+      url: /sql/connect/?view=sql-server-2016
+  - linkListType: overview
+    links:
+    - text: Objetos de administración de SQL Server (SMO)
+      url: ../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md?view=sql-server-2014
+- title: Servicios de cliente
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Analysis Services (SSAS)
+      url: ../analysis-services/analysis-services.md?view=sql-server-2014
+    - text: Integration Services (SSIS)
+      url: https://docs.microsoft.com/sql/integration-services/sql-server-integration-services?view=sql-server-2014
+    - text: Reporting Services (SSRS)
+      url: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md?view=sql-server-2014
+- title: Otros productos de base de datos
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server en Linux
+      url: /sql/linux/?view=sql-server-2016
+    - text: Base de datos única de Azure SQL Database
+      url: https://docs.microsoft.com/azure/sql-database/
+    - text: Instancia administrada de Azure SQL Database
+      url: https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance
+    - text: SQL Server en una máquina virtual (VM)
+      url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/
+    - text: SQL Data Warehouse
+      url: https://docs.microsoft.com/azure/sql-data-warehouse/
+    - text: Azure Synapse Analytics (anteriormente APS-PDW)
+      url: /sql/analytics-platform-system/?view=aps-pdw-2016-au7
+- title: Otros productos de base de datos
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Base de datos de PostgreSQL
+      url: https://docs.microsoft.com/azure/postgresql/
+    - text: Base de datos de MySQL
+      url: https://docs.microsoft.com/azure/mysql/
+    - text: 'NoSQL: Azure Cosmos DB'
+      url: https://docs.microsoft.com/azure/cosmos-db/

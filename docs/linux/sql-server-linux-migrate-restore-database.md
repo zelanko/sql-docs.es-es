@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: f5eebdbedb548c28db6a83038a6f6b84c5bad336
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 148b887497cf9411aad72936a201805000c717ec
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68025934"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558568"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migración de una base de datos SQL Server de Windows a Linux mediante Copia de seguridad y restauración
 
@@ -41,7 +41,7 @@ Debe disponer de lo siguiente para poder completar este tutorial:
   * Una base de datos de destino para migrar.
 
 * Un equipo Linux con lo siguiente instalado:
-  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md) o [Ubuntu](quickstart-install-connect-ubuntu.md)) con herramientas de línea de comandos.
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md) o [Ubuntu](quickstart-install-connect-ubuntu.md)) con herramientas de línea de comandos
 
 ## <a name="create-a-backup-on-windows"></a>Creación de una copia de seguridad en Windows
 
@@ -221,7 +221,7 @@ Para restaurar la copia de seguridad de base de datos, puede usar el comando **R
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial ha aprendido a realizar una copia de seguridad de una base de datos en Windows y a moverla a un servidor de Linux con SQL Server. Ha aprendido los siguientes procedimientos:
+En este tutorial ha aprendido a realizar una copia de seguridad de una base de datos en Windows y a moverla a un servidor de Linux con SQL Server. Ha aprendido a:
 > [!div class="checklist"]
 > * Uso de SSMS y Transact-SQL para crear un archivo de copia de seguridad en Windows
 > * Instalación de un shell de Bash en Windows

@@ -1,22 +1,22 @@
 ---
-title: 'Inicio rápido: Copias de seguridad y restauración de bases de datos de SQL Server en el entorno local'
+title: 'Inicio rápido: Copia de seguridad y restauración de una base de datos'
 titleSuffix: SQL Server
-description: En este inicio rápido se muestra cómo ejecutar SQL Server en Linux en la nube que elija.
+description: En este inicio rápido se muestra cómo realizar una copia de seguridad de una base de datos SQL Server local y restaurarla.
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 05/25/2019
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: ''
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: dedadc89cd10da6f00ac768c3e15e151d0028e23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97993d621de9b10d930feb2fc54f53bc83f00293
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033621"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258641"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>Inicio rápido: Copias de seguridad y restauración de bases de datos de SQL Server en el entorno local
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ Para un procedimiento más detallado, vea [Crear una copia de seguridad completa
 ## <a name="prerequisites"></a>Prerequisites
 Para completar este inicio rápido, necesitará lo siguiente: 
 
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 ## <a name="create-a-test-database"></a>Creación de una base de datos de prueba 
@@ -114,7 +114,7 @@ FROM DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Ba
 GO
 ```
 
-### <a name="clean-up-resources"></a>Limpiar recursos
+### <a name="clean-up-resources"></a>Limpieza de recursos
 Ejecute el siguiente comando de Transact-SQL para quitar la base de datos que creó, además de su historial de copia de seguridad en la base de datos MSDB:
 
 ```sql

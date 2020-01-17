@@ -1,6 +1,7 @@
 ---
-title: 'Solución de problemas: el grupo de disponibilidad superó el RPO (SQL Server) | Microsoft Docs'
-ms.custom: ag-guide
+title: El grupo de disponibilidad superó el RPO
+description: Problemas comunes y soluciones para cuando el grupo de disponibilidad de AlwaysOn supera el objetivo de punto de recuperación (RPO)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef5ec5b9bd72fbda8c5a57547c1e1b74f9538a6a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013738"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822182"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solución de problemas: El grupo de disponibilidad superó el RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **Disco físico: todos los contadores**  
   
--   **Disco físico: Promedio de de segundos de disco/transferencia**  
+-   **Disco físico: Prom. de segundos de disco/transferencia**  
   
 -   **SQL Server: bases de datos > tiempo de espera de vaciado de registro**  
   

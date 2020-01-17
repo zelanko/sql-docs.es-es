@@ -1,7 +1,7 @@
 ---
-title: Funcionalidad del motor de base de datos no incluida en SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 11/13/2019
+title: Funcionalidad del motor de base de datos no incluida | Microsoft Docs
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -35,12 +35,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cafdaecf454d3726538f3f297d05566f6cb5b4a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: db10b57b5eda73cb2bb2105f4f99fb6e5cbed733
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095219"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258120"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Funcionalidad del motor de base de datos no incluida en SQL Server
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Para obtener las opciones de configuración actuales, vea [ALTER DATABASE SCOPED
 
 - [Funcionalidad del motor de base de datos no incluida en SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
-### <a name="see-also"></a>Vea también
+### <a name="see-also"></a>Consulte también
 
 - [Características en desuso del motor de base de datos de SQL Server 2019](deprecated-database-engine-features-in-sql-server-version-15.md)
 - [Características en desuso del motor de base de datos de SQL Server 2017](deprecated-database-engine-features-in-sql-server-2017.md)

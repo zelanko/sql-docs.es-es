@@ -1,20 +1,20 @@
 ---
-title: Implementación de un contenedor de SQL Server en Kubernetes con Azure Kubernetes Service (AKS)
+title: Implementación de un contenedor de SQL Server con Azure Kubernetes Service (AKS)
 description: En este tutorial se explica cómo implementar una solución de alta disponibilidad de SQL Server con Kubernetes en Azure Kubernetes Service.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: fbf13520696d75ec851949e4b4b0e56272881779
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 91607fd8a7bc7b3b104de6d0ba3e6ce97cab8137
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653704"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558357"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implementación de un contenedor de SQL Server en Kubernetes con Azure Kubernetes Service (AKS)
 
@@ -250,7 +250,7 @@ En este paso, cree un manifiesto para describir el contenedor basado en la image
 
    ![Captura de pantalla del comando get pod](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
 
-   En la imagen anterior, el pod tiene un estado de `Running`. Este estado indica que el contenedor está listo. Esto puede tardar varios minutos.
+   En la imagen anterior, el pod tiene un estado de `Running`. Este estado indica que el contenedor está listo. Esto podría tardar varios minutos.
 
    >[!NOTE]
    >Una vez creada la implementación, pueden pasar unos minutos hasta que el pod se pueda ver. El retraso se debe a que el clúster extrae la imagen [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) del centro de Docker. Una vez que se extrae la imagen por primera vez, las implementaciones posteriores pueden ser más rápidas si la implementación se realiza en un nodo que ya tiene la imagen almacenada en la memoria caché. 

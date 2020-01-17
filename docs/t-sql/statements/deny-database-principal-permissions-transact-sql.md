@@ -1,6 +1,8 @@
 ---
-title: DENY (permisos de entidad de seguridad de base de datos de Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permisos de entidad de seguridad de base de datos DENY
+description: Deniega permisos a un usuario de base de datos, un rol de base de datos o un rol de aplicación.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fddca390aa40d36b126cf113c6b8f56bd42f1131
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: a3e9cb1d12dd65b813ae7cc6139a1d48925ab05f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982522"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244580"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (permisos de entidad de seguridad de base de datos de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.locfileid: "73982522"
   Deniega los permisos concedidos para un usuario de base de datos, un rol de base de datos o un rol de aplicación en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -112,7 +114,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="database-user-permissions"></a>Permisos de usuario de base de datos  
  Un usuario de base de datos es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden denegar en un usuario de base de datos se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  

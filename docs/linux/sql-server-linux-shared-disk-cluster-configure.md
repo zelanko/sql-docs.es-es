@@ -1,6 +1,7 @@
 ---
-title: 'Configuración de la instancia de clúster de conmutación por error: SQL Server en Linux (RHEL)'
-description: ''
+title: 'Configuración de FCI: SQL Server en Linux (RHEL)'
+description: Aprenda a configurar una instancia de clúster de conmutación por error (FCI) en Red Hat Enterprise Linux (RHEL) para SQL Server.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 83c25db6f0915aae9cf210d2b749df970da40590
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032298"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558330"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configuración de la instancia de clúster de conmutación por error: SQL Server en Linux (RHEL)
 
@@ -25,9 +26,9 @@ Una instancia de clúster de conmutación por error de disco compartido de dos n
 > [!div class="checklist"]
 > * Configuración de Linux
 > * Instalación y configuración de SQL Server
-> * Configuración del archivo de hosts
+> * Configuración del archivo hosts
 > * Configuración del almacenamiento compartido y movimiento de los archivos de base de datos
-> * Instalación y configuración de Pacemaker en cada nodo del clúster
+> * Instalación y configuración de Pacemaker en todos los nodos del clúster
 > * Configuración de la instancia de clúster de conmutación por error
 
 En este artículo se explica cómo crear una instancia de clúster de conmutación por error (FCI) de disco compartido de dos nodos para SQL Server. El artículo incluye instrucciones y ejemplos de scripts para Red Hat Enterprise Linux (RHEL). Las distribuciones de Ubuntu son similares a RHEL, por lo que los ejemplos de script también funcionarán en Ubuntu. 
@@ -46,7 +47,7 @@ El primer paso es configurar el sistema operativo en los nodos del clúster. En 
 
 ## <a name="install-and-configure-sql-server"></a>Instalación y configuración de SQL Server
 
-1. Instale y configure SQL Server en ambos nodos.  Para obtener instrucciones detalladas, vea [Instalación de SQL Server en Linux](sql-server-linux-setup.md).
+1. Instale y configure SQL Server en ambos nodos.  Para obtener instrucciones detalladas, vea [Instalación de SQL Server en Linux](sql-server-linux-setup.md).
 1. Para configurarlos, designe un nodo como principal y el otro como secundario. Use estos términos durante esta guía.  
 1. En el nodo secundario, detenga y deshabilite SQL Server.
     En el siguiente ejemplo se detiene y se deshabilita SQL Server: 
@@ -56,7 +57,7 @@ El primer paso es configurar el sistema operativo en los nodos del clúster. En 
     ```
 
     > [!NOTE] 
-    > En el momento de la instalación, se genera una clave maestra del servidor para la instancia de SQL Server y se coloca en `var/opt/mssql/secrets/machine-key`. En Linux, SQL Server siempre se ejecuta como una cuenta local denominada mssql. Dado que se trata de una cuenta local, su identidad no se comparte entre los nodos. Por lo tanto, debe copiar la clave de cifrado del nodo principal a cada nodo secundario para que cada cuenta local de mssq pueda acceder a ella para descifrar la clave maestra del servidor. 
+    > En el momento de la instalación, se genera una clave maestra del servidor para la instancia de SQL Server y se coloca en `var/opt/mssql/secrets/machine-key`. En Linux, SQL Server siempre se ejecuta como una cuenta local denominada mssql. Dado que se trata de una cuenta local, su identidad no se comparte entre los nodos. Por lo tanto, debe copiar la clave de cifrado del nodo principal en cada nodo secundario para que cada cuenta local de mssql pueda acceder a ella y así descifrar la clave maestra del servidor. 
 
 1.  En el nodo principal, cree un inicio de sesión de SQL Server para Pacemaker y conceda el permiso de inicio de sesión para ejecutar `sp_server_diagnostics`. Pacemaker usa esta cuenta para comprobar qué nodo ejecuta SQL Server. 
 
@@ -77,7 +78,7 @@ El primer paso es configurar el sistema operativo en los nodos del clúster. En 
 
 1. En el nodo principal, detenga y deshabilite SQL Server. 
 
-## <a name="configure-the-hosts-file"></a>Configuración del archivo de hosts
+## <a name="configure-the-hosts-file"></a>Configuración del archivo hosts
 
 En cada nodo de clúster, configure el archivo de hosts. El archivo de hosts debe incluir la dirección IP y el nombre de cada nodo de clúster.
 
@@ -109,11 +110,11 @@ Debe proporcionar almacenamiento al que puedan acceder ambos nodos. Puede usar i
 - [Configurar la instancia de clúster de conmutación por error - NFS - SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 - [Configurar la instancia de clúster de conmutación por error - SMB - SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Instalación y configuración de Pacemaker en cada nodo del clúster
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Instalación y configuración de Pacemaker en todos los nodos del clúster
 
 1. En ambos nodos del clúster, cree un archivo para almacenar el nombre de usuario de SQL Server y la contraseña para el inicio de sesión de Pacemaker. 
 
-    El comando siguiente crea y rellena este archivo:
+    Con el siguiente comando se crea y rellena este archivo:
 
     ```bash
     sudo touch /var/opt/mssql/secrets/passwd
@@ -132,7 +133,7 @@ Debe proporcionar almacenamiento al que puedan acceder ambos nodos. Puede usar i
 
    > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, deberán abrirse los puertos siguientes para que Pacemaker pueda comunicarse con otros nodos del clúster.
    >
-   > * TCP: puertos 2224, 3121 y 21064
+   > * TCP: puertos 2224, 3121, 21064
    > * UDP: puerto 5405
 
 1. Instale paquetes de Pacemaker en cada nodo.
@@ -285,9 +286,9 @@ En este tutorial, ha completado las tareas siguientes.
 > [!div class="checklist"]
 > * Configuración de Linux
 > * Instalación y configuración de SQL Server
-> * Configuración del archivo de hosts
+> * Configuración del archivo hosts
 > * Configuración del almacenamiento compartido y movimiento de los archivos de base de datos
-> * Instalación y configuración de Pacemaker en cada nodo del clúster
+> * Instalación y configuración de Pacemaker en todos los nodos del clúster
 > * Configuración de la instancia de clúster de conmutación por error
 
 ## <a name="next-steps"></a>Pasos siguientes

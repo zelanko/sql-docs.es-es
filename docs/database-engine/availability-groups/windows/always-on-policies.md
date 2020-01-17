@@ -1,7 +1,7 @@
 ---
-title: Evaluación del estado del grupo de disponibilidad mediante directivas de grupo
+title: Uso de directivas de grupo para el estado del grupo de disponibilidad
 description: Obtenga información sobre cómo ver las directivas del sistema de grupos que se usan en el panel Always On para proporcionar información sobre el estado del grupo de disponibilidad.
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fadf5ccccf60114bc6068cfe4a79dc70bca3ecc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6a48450322a8552720a119ea325ed720669fe5a8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935005"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245651"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>Evaluación del estado del grupo de disponibilidad Always On mediante directivas de grupo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

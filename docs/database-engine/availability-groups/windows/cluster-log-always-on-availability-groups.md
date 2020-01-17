@@ -1,7 +1,7 @@
 ---
-title: Generación y análisis de CLUSTER.LOG para un grupo de disponibilidad
+title: Generación y análisis de CLUSTER.LOG para grupos de disponibilidad
 description: 'Se describe cómo generar y analizar el registro de clúster para un grupo de disponibilidad Always On. '
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240754"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244384"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Generación y análisis de CLUSTER.LOG para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,11 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 3.  En el panel de detalles, haga clic con el botón derecho en el recurso del grupo de disponibilidad y haga clic en **Propiedades**.  
   
-4.  Haga clic en la pestaña **Propiedades** .  
+4.  Haga clic en la pestaña **Propiedades**.  
   
 5.  Modifique la propiedad **VerboseLogging**. De forma predeterminada, **VerboseLogging** se establece en `0`, lo cual notifica la información, las advertencias y los errores. **VerboseLogging** se establece en un valor entre `0` y `2`.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 7.  Vuelva a hacer clic con el botón derecho en el recurso del grupo de disponibilidad y haga clic en **Dejar este recurso sin conexión**.  
   

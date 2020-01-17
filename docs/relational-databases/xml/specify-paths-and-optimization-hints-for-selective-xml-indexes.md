@@ -1,6 +1,5 @@
 ---
-title: Especificar rutas de acceso y sugerencias de optimización para índices XML selectivos | Microsoft Docs
-ms.custom: ''
+title: Sugerencias de optimización y rutas para índices XML selectivos | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,12 +9,13 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: acea8d44048de35ecbc3214712f699217838e60d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e4ffb1cc9a2b63047c6ade58d82001a2e0ebea4c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72905238"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257616"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar rutas de acceso y sugerencias de optimización para índices XML selectivos
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  Es obligatorio especificar un tipo para las rutas de acceso que devuelven tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use el mismo tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usaría en el método value().  
   
- Estudie la siguiente consulta:  
+ Considere la siguiente consulta:  
   
 ```sql  
 SELECT T.record,  
@@ -274,7 +274,7 @@ FOR
 ### <a name="examples"></a>Ejemplos  
  A continuación se muestran algunos ejemplos adicionales de cómo seleccionar los nodos correctos para indizar para diferentes tipos XQuery.  
   
- **Ejemplo 1**  
+ **Ejemplo 1**  
   
  Esta es una expresión XQuery simple que usa el método exist():  
   
@@ -305,7 +305,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
 |**/a/b/c/d/e**|Se aplica un predicado sobre el nodo `e`.|  
 |**/a/b/c/d/e/f**|El valor del nodo `f` se evalúa dentro del predicado.|  
   
- **Ejemplo 3**  
+ **Ejemplo 3**  
   
  Esta es una consulta más compleja con una cláusula value():  
   
@@ -355,7 +355,7 @@ WHERE T.xmldata.exist('
 ### <a name="benefits-of-optimization-hints"></a>Ventajas de las sugerencias de optimización  
  En la tabla siguiente se identifican las sugerencias de optimización que admiten un almacenamiento o un rendimiento más eficiente.  
   
-|Sugerencia de optimización|Almacenamiento más eficiente|Rendimiento mejorado|  
+|Sugerencia de optimización|Almacenamiento más eficiente|rendimiento mejorado.|  
 |-----------------------|----------------------------|--------------------------|  
 |**node()**|Sí|No|  
 |**SINGLETON**|No|Sí|  

@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44c8739327d84999456302bf2a21fd6858658d4c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 1cb9ca9739ca6f50a2424d9d68ee66263edf08f3
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71293996"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542302"
 ---
 # <a name="script-task"></a>Tarea Script
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  La tarea Script proporciona código para realizar funciones que no están disponibles en las tareas integradas ni en las transformaciones proporcionadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La tarea Script también puede combinar funciones en un script, en lugar de usar múltiples tareas y transformaciones. La tarea Script sirve para trabajos que se deben realizar una sola vez en un paquete (o una vez por objeto enumerado), en lugar de una vez por fila de datos.  
+  La tarea Script proporciona código para realizar funciones que no están disponibles en las tareas integradas ni en las transformaciones proporcionadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La tarea Script también puede combinar funciones en un script, en lugar de usar múltiples tareas y transformaciones. La tarea Script sirve para trabajos que se deben realizar una sola vez en un paquete (o una vez por objeto enumerado), en lugar de una vez por fila de datos.  
   
  Puede usar la tarea Script para los siguientes fines:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "71293996"
   
  VSTA proporciona todas las características estándar del entorno [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , como el editor de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] con códigos de color, IntelliSense y el **Explorador de objetos**. VSTA también utiliza el mismo depurador que usan otras herramientas de desarrollo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Los puntos de interrupción del script funcionan a la perfección con los puntos de interrupción de las tareas y los contenedores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . VSTA es compatible con los lenguajes de programación [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
- Para ejecutar un script, debe tener VSTA instalado en el equipo en que se ejecute el paquete. Al ejecutar el paquete, la tarea carga el motor de script y ejecuta el script. Puede tener acceso a ensamblados .NET externos en scripts; para ello, debe agregar referencias a dichos ensamblados en el proyecto.  
+ Para ejecutar un script, debe tener VSTA instalado en el equipo en que se ejecute el paquete. Al ejecutar el paquete, la tarea carga el motor de script y ejecuta el script. Puede tener acceso a ensamblados .NET externos en scripts; para ello, debe agregar referencias a dichos ensamblados en el proyecto. Actualmente no se admiten las referencias de ensamblado de .NET Core ni de .NET Standard.  
   
 > [!NOTE]  
 >  A diferencia de las versiones anteriores en las que podía indicar si se precompilaban los scripts, todos los scripts se precompilan en [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] y versiones posteriores. Al precompilar el script, no se carga el motor del lenguaje en tiempo de ejecución, por lo que el paquete se ejecuta con mayor rapidez. Sin embargo, los archivos binarios precompilados utilizan una cantidad considerable de espacio en disco.  
@@ -146,6 +146,6 @@ ms.locfileid: "71293996"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico, [How to send email with delivery notification in C# (Enviar correo con notificación de entrega en C#)](https://go.microsoft.com/fwlink/?LinkId=237625), en shareourideas.com  
+-   Artículo técnico [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Enviar un mensaje de correo electrónico con una notificación de entrega en C#) en shareourideas.com  
   
   

@@ -7,12 +7,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8edcbf91c827ea2afafa0830aad5a26423102f17
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: b16c753b5640baacadc9a13b75ebb7a9d48a74fe
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594548"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822144"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Notas de la versión de SQL Server 2019 en Linux
 
@@ -37,20 +37,20 @@ Las siguientes notas de la versión se aplican a la versión de SQL Server 201
 
 ## <a name="tools"></a>Herramientas
 
-La mayoría de las herramientas cliente existentes que tienen SQL Server como destino pueden dirigirse sin problemas a SQL Server en ejecución en Linux. Algunas herramientas pueden tener un requisito de versión específico para funcionar bien con Linux. Para obtener una lista completa de las herramientas de SQL Server, vea [Herramientas y utilidades de SQL para SQL Server](../tools/overview-sql-tools.md).
+La mayoría de las herramientas cliente existentes que tienen SQL Server como destino pueden dirigirse sin problemas a SQL Server en ejecución en Linux. Algunas herramientas pueden tener un requisito de versión específica para funcionar correctamente con Linux. Para obtener una lista completa de las herramientas de SQL Server, vea [Herramientas y utilidades de SQL para SQL Server](../tools/overview-sql-tools.md).
 
 ## <a name="release-history"></a>Historial de versiones
 
 En la tabla siguiente se muestra el historial de las versiones de SQL Server 2019.
 
-| Versión                   | Versión       | Fecha de la versión |
+| Release                   | Versión       | Fecha de la versión |
 |---------------------------|---------------|--------------|
 | [GA](#ga)                 | 15.0.2000.5  | 2019-11-04    |
 | [Versión candidata para lanzamiento](#rc)  | 15.0.1900.25  | 2019-08-21   |
 
 ## <a id="cuinstall"></a> Procedimiento para instalar las actualizaciones
 
-Si ha configurado el repositorio de actualizaciones acumulativas (mssql-server-2019), obtendrá la actualización acumulativa más reciente de paquetes de SQL Server al realizar nuevas instalaciones. Si necesita imágenes de contenedor de Docker, consulte las imágenes oficiales de [Microsoft SQL Server en Linux para el motor de Docker](https://hub.docker.com/r/microsoft/mssql-server/). Para obtener más información sobre la configuración del repositorio, consulte [Configurar repositorios de SQL Server en Linux](sql-server-linux-change-repo.md).
+Si ha configurado el repositorio de actualizaciones acumulativas (mssql-server-2019), obtendrá la actualización acumulativa más reciente de paquetes de SQL Server al realizar nuevas instalaciones. Si necesita imágenes de contenedor de Docker, consulte las imágenes oficiales de [Microsoft SQL Server en Linux para el motor de Docker](https://hub.docker.com/r/microsoft/mssql-server/). Para obtener más información sobre la configuración del repositorio, vea [Configuración de repositorios para SQL Server en Linux](sql-server-linux-change-repo.md).
 
 Si va a actualizar paquetes de SQL Server existentes, ejecute el comando de actualización adecuado para cada paquete a fin de obtener la CU más reciente. Para obtener instrucciones de actualización específicas para cada paquete, vea las siguientes guías de instalación:
 
@@ -71,8 +71,8 @@ En el caso de las instalaciones de paquetes manuales o sin conexión, puede desc
 
 | Paquete | Versión del paquete | Descargas |
 |-----|-----|-----|
-| Paquete RPM de Red Hat | 15.0.2000.5-5 | [Paquete RPM del motor](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[Paquete RPM de alta disponibilidad](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de la búsqueda de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de extensibilidad](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de extensibilidad de Java](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
-| Paquete RPM de SLES | 15.0.2000.5-5 | [Paquete RPM del motor mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[Paquete RPM de alta disponibilidad](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de la búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de extensibilidad](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de extensibilidad de Java](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de PolyBase](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
+| Paquete RPM de Red Hat | 15.0.2000.5-5 | [Paquete RPM del motor](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[Paquete RPM de alta disponibilidad](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[Paquete RPM de búsqueda de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de extensibilidad](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de extensibilidad de Java](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
+| Paquete RPM de SLES | 15.0.2000.5-5 | [Paquete RPM del motor mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-15.0.2000.5-5.x86_64.rpm)</br>[Paquete RPM de alta disponibilidad](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-ha-15.0.2000.5-5.x86_64.rpm)</br>[Paquete RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-fts-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de extensibilidad](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de extensibilidad de Java](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-extensibility-java-15.0.2000.5-5.x86_64.rpm)</br>[Paquete de RPM de PolyBase](https://packages.microsoft.com/sles/12/mssql-server-2019/mssql-server-polybase-15.0.2000.5-5.x86_64.rpm)|
 | Paquete de Debian para Ubuntu 16.04 | 15.0.2000.5-5 | [Paquete de Debian del motor](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server/mssql-server_15.0.2000.5-5_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.2000.5-5_amd64.deb)</br>[Paquete de Debian de la búsqueda de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.2000.5-5_amd64.deb)</br>[Paquete de Debian de extensibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.2000.5-5_amd64.deb)</br>[Paquete de Debian de extensibilidad de Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.2000.5-5_amd64.deb)</br>[Paquete de RPM de PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.2000.5-5_amd64.deb)|
 
 ## <a id="rc"></a> Versión candidata para lanzamiento (agosto de 2019)
@@ -85,15 +85,15 @@ En el caso de las instalaciones de paquetes manuales o sin conexión, puede desc
 
 | Paquete | Versión del paquete | Descargas |
 |-----|-----|-----|
-| Paquete RPM de Red Hat | 15.0.1900.25-1 | [Paquete RPM del motor](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[Paquete RPM de alta disponibilidad](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de la búsqueda de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de extensibilidad](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de extensibilidad de Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
-| Paquete RPM de SLES | 15.0.1900.25-1 | [Paquete RPM del motor mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[Paquete RPM de alta disponibilidad](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de la búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de extensibilidad](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de extensibilidad de Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
+| Paquete RPM de Red Hat | 15.0.1900.25-1 | [Paquete RPM del motor](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[Paquete RPM de alta disponibilidad](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[Paquete RPM de búsqueda de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de extensibilidad](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de extensibilidad de Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
+| Paquete RPM de SLES | 15.0.1900.25-1 | [Paquete RPM del motor mssql-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1900.25-1.x86_64.rpm)</br>[Paquete RPM de alta disponibilidad](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1900.25-1.x86_64.rpm)</br>[Paquete RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de extensibilidad](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de extensibilidad de Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1900.25-1.x86_64.rpm)</br>[Paquete de RPM de PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1900.25-1.x86_64.rpm)|
 | Paquete de Debian para Ubuntu 16.04 | 15.0.1900.25-1 | [Paquete de Debian del motor](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1900.25-1_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1900.25-1_amd64.deb)</br>[Paquete de Debian de la búsqueda de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1900.25-1_amd64.deb)</br>[Paquete de Debian de extensibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1900.25-1_amd64.deb)</br>[Paquete de Debian de extensibilidad de Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1900.25-1_amd64.deb)</br>[Paquete de RPM de PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1900.25-1_amd64.deb)|
 
 ## <a name="known-issues"></a>Problemas conocidos
 
 En las secciones siguientes, se describen problemas conocidos con la versión de disponibilidad general de SQL Server 2019 (15.x) en Linux.
 
-#### <a name="general"></a>General
+### <a name="general"></a>General
 
 - La longitud del nombre de host donde se instale [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ha de tener 15 caracteres o menos. 
 
@@ -105,7 +105,7 @@ En las secciones siguientes, se describen problemas conocidos con la versión de
 
 - Solo se admiten las instalaciones de instancia única.
 
-    - **Solución:** si tiene más de una instancia en un host específico, puede usar máquinas virtuales o contenedores de Docker. 
+    - **Solución:** Si quiere tener más de una instancia en un host específico, considere la posibilidad de usar máquinas virtuales o contenedores de Docker. 
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager no puede conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux.
 
@@ -113,7 +113,11 @@ En las secciones siguientes, se describen problemas conocidos con la versión de
 
     - **Solución:** Cambie el idioma del inicio de sesión de **sa** con la instrucción **ALTER LOGIN**.
 
-#### <a name="databases"></a>Bases de datos
+- El proveedor OLEDB registra la advertencia `Failed to verify the Authenticode signature of 'C:\binn\msoledbsql.dll'. Signature verification of SQL Server DLLs will be skipped. Genuine copies of SQL Server are signed. Failure to verify the Authenticode signature might indicate that this is not an authentic release of SQL Server. Install a genuine copy of SQL Server or contact customer support.`.
+
+   - **Solución:** No se requiere ninguna acción. El proveedor OLEDB se firma con SHA256. El motor de base de datos de SQL Server no valida correctamente el archivo .dll firmado.
+
+### <a name="databases"></a>Bases de datos
 
 - La base de datos maestra no se puede mover con la utilidad mssql-conf. Otras bases de datos del sistema se pueden mover con la utilidad mssql-conf.
 
@@ -143,7 +147,7 @@ En las secciones siguientes, se describen problemas conocidos con la versión de
 
 - El permiso de usuario **ADMINISTER BULK OPERATIONS** no se admite en Linux en este momento.
 
-#### <a name="networking"></a>Redes
+### <a name="networking"></a>Redes
 
 Las características relacionadas con conexiones TCP salientes del proceso sqlservr, como servidores vinculados o grupos de disponibilidad, puede que no funcionen si se cumplen las condiciones siguientes:
 
@@ -170,7 +174,7 @@ Si usa recursos compartidos remotos de **NFS (Network File System)** en producci
 - Busque solo los directorios **/var/opt/mssql** en el montaje NFS. Otros archivos, como los archivos binarios del sistema de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], no se admiten.
 - Asegúrese de que los clientes de NFS usen la opción “nolock” al montar el recurso compartido remoto.
 
-#### <a name="localization"></a>Localización
+### <a name="localization"></a>Localización
 
 - Si usa una configuración regional distinta del inglés (en_us) durante la configuración, tendrá que usar la codificación UTF-8 en el terminal o en la sesión de Bash. Si usa la codificación ASCII, puede que se muestre un error parecido al siguiente:
 
@@ -190,7 +194,7 @@ Si usa recursos compartidos remotos de **NFS (Network File System)** en producci
 
 - No todos los filtros están disponibles en esta versión, incluidos los filtros para documentos de Office. Para obtener una lista de los filtros admitidos, vea [Instalar la búsqueda de texto completo de SQL Server en Linux](sql-server-linux-setup-full-text-search.md#filters).
 
-#### <a id="ssis"></a> SQL Server Integration Services (SSIS)
+### <a id="ssis"></a> SQL Server Integration Services (SSIS)
 
 - El paquete **mssql-server-is** no se admite en SUSE en esta versión. Se admite actualmente en Ubuntu y en Red Hat Enterprise Linux (RHEL).
 
@@ -211,10 +215,10 @@ Para obtener una lista de los componentes de SSIS integrados que no se admiten a
 
 Para obtener más información sobre SSIS en Linux, vea los artículos siguientes:
 -   [Entrada de blog donde se anuncia la compatibilidad de SSIS para Linux](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/).
--   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
--   [Extraer, transformar y cargar datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
+-   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
+-   [Extracción, transformación y carga de datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
 
-#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
+### <a id="ssms"></a> SQL Server Management Studio (SSMS)
 
 Las siguientes limitaciones solo se aplican a [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] en Windows conectado a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux.
 
@@ -237,4 +241,4 @@ Para empezar, vea las siguientes guías de inicio rápido:
 - [Aprovisionar una máquina virtual de SQL en Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Ejecución y conexión: nube](quickstart-install-connect-clouds.md)
 
-Para obtener respuestas a las preguntas más frecuentes, vea las [Preguntas más frecuentes sobre SQL Server en Linux](sql-server-linux-faq.md).
+Para obtener respuesta a las preguntas más frecuentes, vea [Preguntas más frecuentes sobre SQL Server en Linux](sql-server-linux-faq.md).

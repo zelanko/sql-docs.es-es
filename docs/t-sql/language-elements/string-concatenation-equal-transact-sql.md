@@ -1,6 +1,8 @@
 ---
-title: += (Asignación de concatenación de cadenas) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: '\+ = Concatenación de cadenas'
+description: Concatene dos cadenas y establezca como valor de la cadena el resultado de la operación.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/07/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,12 +19,12 @@ ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 631fcc8728975d12370d517fb785b7cb832e6758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd21fb221076470d0c39194ea4c38d96af0f1056
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121664"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257056"
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+= (Asignación de concatenación de cadenas) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +47,7 @@ expression += expression
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve el tipo de datos que se define para la variable.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  SET @v1 += "expresión" equivale a SET @v1 = @v1 + ("expresión"). Asimismo, SET @v1 = @v2 + @v3 + @v4 equivale a SET @v1 = (@v2 + @v3) + @v4.  
   
  El operador += no se puede utilizar sin una variable. Por ejemplo, el código siguiente provocará un error:  

@@ -1,8 +1,8 @@
 ---
-title: Empleo de widgets de información en Azure Data Studio para supervisar servidores y bases de datos
+title: Uso de widgets de información para supervisar servidores y bases de datos
 titleSuffix: Azure Data Studio
 description: Obtenga información sobre los widgets de información en Azure Data Studio.
-ms.custom: seodec18, sqlfreshmay19
+ms.custom: seodec18, sqlfreshmay19, seo-lt-2019
 ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -10,12 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4edf4003d40da35dcd54b3938e0f318ef8b9440a
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959524"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957059"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Administración de servidores y bases de datos con widgets de información en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -27,14 +27,12 @@ Puede compilar espectaculares paneles de administración de servidores y bases d
 
 ![Panel de base de datos](media/insight-widgets/database-dashboard.png)
 
-
 Para lanzarse y comenzar a crear distintos tipos de widgets de información, vea los siguientes tutoriales:
 
 - [Compilación de un widget de información personalizada](tutorial-build-custom-insight-sql-server.md)
 - *Habilitación de widgets de información integrados*
   - [Habilitación de la información de supervisión de rendimiento](tutorial-qds-sql-server.md)
   - [Habilitación de la información de uso de espacio de tabla](tutorial-table-space-sql-server.md)
-
 
 ## <a name="sql-queries"></a>Consultas SQL
 

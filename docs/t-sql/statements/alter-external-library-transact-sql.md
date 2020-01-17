@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 13c306c1fbd83b2fde5783daeba4201cf5d862d9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9da237047e7b42b83cc8aa039d6bd04aaca9549a
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532853"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191072"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -169,14 +169,14 @@ Esta opción es útil si se dispone del permiso requerido para modificar una bib
 En su lugar, se puede pasar el contenido del paquete como una variable en formato binario.
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-**PLATFORM = WINDOWS**
+**platform = WINDOWS**
 
 Especifica la plataforma para el contenido de la biblioteca. Este valor es obligatorio al modificar una biblioteca para agregar una plataforma diferente.
 En SQL Server 2017, Windows es la única plataforma admitida.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-**PLATFORM**
+**platform**
 
 Especifica la plataforma para el contenido de la biblioteca. Este valor es obligatorio al modificar una biblioteca para agregar una plataforma diferente. 
 En SQL Server 2019, Windows y Linux son las únicas plataformas admitidas.
@@ -200,7 +200,7 @@ Especifica el lenguaje del paquete. R es compatible con Azure SQL Database.
 Especifica el lenguaje del paquete. El valor puede ser **R**, **Python** o el nombre de un lenguaje externo (consulte [CREAR LENGUAJE EXTERNO](create-external-language-transact-sql.md)).
 ::: moniker-end
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 Para el lenguaje R, los paquetes deben estar preparados en forma de archivos de almacenamiento comprimidos con la extensión .ZIP para Windows. En SQL Server 2017, Windows es la única plataforma admitida.  
@@ -264,7 +264,7 @@ Para el lenguaje Python en SQL Server 2019, el ejemplo también funciona si se
 > [!NOTE]
 > En este ejemplo de código solo se muestra la sintaxis; el valor binario de `CONTENT =` se ha truncado para mejorar la lectura y no se puede crear una biblioteca funcional. El contenido real de la variable binaria sería mucho más largo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  

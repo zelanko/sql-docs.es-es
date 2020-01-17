@@ -1,7 +1,7 @@
 ---
 title: STDistance (tipo de datos geography) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d739e9a6320781725f3cc498c9bc68e8ade8d684
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45f0b6f9524c4877c669bfec8c5ab7bcfec198bb
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042288"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200507"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,16 +43,17 @@ ms.locfileid: "68042288"
  *other_geography*  
  Es otra instancia de **geography** a partir de la que medir la distancia entre la instancia en la que se invoca a STDistance(). Si *other_geography* está vacío, STDistance() devuelve null.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Tipo de valor devuelto de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Notas  
- STDistance() siempre devuelve null si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geography**.  
+## <a name="remarks"></a>Observaciones  
+ El resultado se expresa en la unidad de medida definida por el [identificador de referencia espacial &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) de datos espaciales.
+STDistance() siempre devuelve *null* si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geography**.  
   
 > [!NOTE]  
->  Los métodos del tipo de datos **geography** que calculan un área o distancia tendrán resultados diferentes en función del SRID de la instancia usada en el método.   Para más información sobre los SRID, vea [Identificadores de referencia espacial &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  Los métodos del tipo de datos **geography** que calculan un área o distancia tendrán resultados diferentes en función del SRID de la instancia usada en el método. Para más información sobre los SRID, vea [Identificadores de referencia espacial &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se busca la distancia entre dos instancias de **geography**.  

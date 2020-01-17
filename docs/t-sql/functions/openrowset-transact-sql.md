@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2c74dff8b6e2f64c49f4092eb2c2f892f6c02c55
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d50c8c83ebba970a847c5a2db70ca0268637d3e8
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711078"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542284"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -96,7 +96,7 @@ OPENROWSET
 BULK Usa el proveedor de conjuntos de filas BULK para que OPENROWSET lea datos de un archivo. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OPENROWSET puede leer datos de un archivo sin necesidad de cargarlos en una tabla de destino. Esto le permite utilizar OPENROWSET con una instrucción SELECT simple.
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 Los argumentos de la opción BULK le permiten elegir dónde empezar y acabar la lectura de datos, cómo abordar los errores y cómo interpretar los datos. Por ejemplo, puede especificar que el archivo de datos se lea como un conjunto de filas de una sola fila y una sola columna de tipo **varbinary**, **varchar** o **nvarchar**. El comportamiento predeterminado se describe en las descripciones de los argumentos que se muestran a continuación.
 
@@ -112,7 +112,7 @@ Para más información sobre cómo preparar datos para importaciones masivas, ve
 A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file puede estar en Azure Blob Storage. Para ver ejemplos, vea [Ejemplos de acceso masivo a datos en Azure Blob Storage](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 \<bulk_options> Especifica uno o más argumentos para la opción BULK.
 
@@ -198,7 +198,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, form
 FIELDQUOTE **=** "comillas_de_campo" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Especifica un carácter que se usará como carácter de comillas en el archivo CSV. Si no se especifica, se usará el carácter de comillas (") como carácter de comillas, según define la norma [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 `OPENROWSET` se puede usar para tener acceso a datos remotos desde orígenes de datos de OLE DB solo cuando la opción de Registro **DisallowAdhocAccess** está establecida explícitamente en 0 para el proveedor especificado y la opción de configuración avanzada Ad Hoc Distributed Queries está habilitada. Cuando no se establecen estas opciones, el comportamiento predeterminado no permite el acceso ad hoc.
 
@@ -283,7 +283,7 @@ SELECT CustomerID, CompanyName
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>C. Usar OPENROWSET y otra tabla en INNER JOIN
 
@@ -304,7 +304,7 @@ FROM Northwind.dbo.Customers AS c
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no admite la lectura de archivos de Windows.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. Usar OPENROWSET para insertar de forma masiva datos de archivo en una columna varbinary(max)
 
@@ -325,7 +325,7 @@ GO
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. Usar el proveedor OPENROWSET BULK con un archivo de formato para recuperar filas de un archivo de texto
 
@@ -354,7 +354,7 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. Especificar un archivo de formato y una página de códigos
 
@@ -379,7 +379,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 > [!IMPORTANT]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no admite la lectura de archivos de Windows.
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. Tener acceso a los datos de un archivo CSV sin un archivo de formato
 
@@ -401,7 +401,7 @@ from openrowset
 > [!IMPORTANT]
 >
 > - El controlador ODBC debe ser de 64 bits. Abra la pestaña **Controladores** de la aplicación [Orígenes de datos OBDC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) en Windows para comprobar esta condición. Hay una versión `Microsoft Text Driver (*.txt, *.csv)` de 32 bits que no funcionará con una versión de 64 bits de sqlservr.exe.
-> - Azure SQL Database no admite la lectura de archivos de Windows.
+> - Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. Tener acceso a los datos de un archivo almacenado en Azure Blob Storage
 
@@ -419,7 +419,7 @@ Para ver ejemplos completos de `OPENROWSET`, incluido cómo configurar la creden
 
 ### <a name="j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage"></a>J. Importación en una tabla desde un archivo almacenado en Azure Blob Storage
 
-En el ejemplo siguiente se muestra cómo usar el comando OPENROWSET para cargar datos desde un archivo csv en una ubicación de Azure Blob Storage en la que se ha creado una clave SAS. La ubicación de Azure Blob Storage está configurada como un origen de datos externo. Esto requiere una credencial con ámbito de base de datos mediante una firma de acceso compartido que se cifra con una clave maestra en la base de datos de usuario.
+En el ejemplo siguiente se muestra cómo usar el comando OPENROWSET para cargar datos desde un archivo csv en una ubicación de Azure Blob Storage en la que se ha creado una clave SAS. La ubicación de Azure Blob Storage está configurada como origen de datos externo. Esto requiere credenciales con ámbito de base de datos mediante una firma de acceso compartido que se cifra con una clave maestra en la base de datos de usuario.
 
 ```sql
 --> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -451,7 +451,7 @@ SELECT * FROM OPENROWSET(
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="additional-examples"></a>Otros ejemplos
 
@@ -474,7 +474,6 @@ Para obtener más ejemplos del uso de `INSERT...SELECT * FROM OPENROWSET(BULK...
 - [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
 - [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)
 - [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)
-- [Funciones de conjunto de filas &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)
 - [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
 - [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)
 - [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)

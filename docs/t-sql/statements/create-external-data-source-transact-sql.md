@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91711ce160dcb653d9e05e8b0a445214a247d337
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ec1bd01ae5f92efbbbe08ebee3da3484ce387e29
+ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981883"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681786"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 |                               |                                                              |                                                              |                                                              |      |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| **\* _SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| **_\* SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
@@ -138,7 +138,7 @@ Instrucciones y notas adicionales cuando se crea una credencial:
   - Disponer de al menos permiso de lectura en el archivo que se debe cargar (por ejemplo `srt=o&sp=r`)
   - Usar un período de caducidad válido (todas las fechas se encuentran en hora UTC).
 
-Para obtener un ejemplo del uso de `CREDENTIAL` con `SHARED ACCESS SIGNATURE` y `TYPE` = `BLOB_STORAGE`, vea [Creación de un origen de datos externo para ejecutar operaciones masivas y recuperar datos desde Azure Blob Storage en SQL Database](#f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
+Para obtener un ejemplo del uso de `CREDENTIAL` con `SHARED ACCESS SIGNATURE` y `TYPE` = `BLOB_STORAGE`, vea [Creación de un origen de datos externo para ejecutar operaciones masivas y recuperar datos desde Azure Blob Storage en SQL Database](#g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage).
 
 Para crear una credencial con ámbito de base de datos, vea [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
 
@@ -311,12 +311,36 @@ WITH
 ;
 ```
 
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-2019"></a>F. Creación de un origen de datos externo para hacer referencia a una instancia con nombre de SQL Server a través de la conectividad de PolyBase (SQL 2019)
+
+Para crear un origen de datos externo que haga referencia a una instancia con nombre de SQL Server, puede usar CONNECTION_OPTIONS para especificar el nombre de la instancia. En el ejemplo siguiente, WINSQL2019 es el nombre de host y SQL2019 es el nombre de la instancia.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019',
+  CONNECTION_OPTIONS = 'Server=%s\SQL2019',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+Como alternativa, puede usar un puerto para conectarse a una instancia de SQL Server.
+
+```sql
+CREATE EXTERNAL DATA SOURCE SQLServerInstance2
+WITH ( 
+  LOCATION = 'sqlserver://WINSQL2019:58137',
+  CREDENTIAL = SQLServerCredentials
+);
+
+```
+
 ## <a name="examples-bulk-operations"></a>Ejemplos: Operaciones masivas
 
 > [!NOTE]
 > No coloque un **/** final, nombre de archivo o parámetros de firma de acceso compartido al final de la URL de `LOCATION` al configurar un origen de datos externo para las operaciones masivas.
 
-### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Creación de un origen de datos externo para operaciones masivas de recuperación de datos desde Azure Blob Storage
+### <a name="g-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>G. Creación de un origen de datos externo para operaciones masivas de recuperación de datos desde Azure Blob Storage
 
 **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Use el origen de datos siguiente para las operaciones masivas con [BULK INSERT][bulk_insert] o [OPENROWSET][openrowset]. La credencial debe establecer `SHARED ACCESS SIGNATURE` como identidad, no debe tener al inicio `?` en el token de SAS, debe tener al menos permiso de lectura en el archivo que se debe cargar (por ejemplo `srt=o&sp=r`), y el período de expiración debe ser válido (todas las fechas se expresan en hora UTC). Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)][sas_token].
@@ -384,7 +408,7 @@ Para ver este ejemplo en uso, vea [BULK INSERT][bulk_insert_example].
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>Introducción: Base de datos SQL de Azure
+## <a name="overview-azure-sql-database"></a>Introducción: Azure SQL Database
 
 Crea un origen de datos externo para consultas elásticas. Los orígenes de datos externos se usan para establecer la conectividad y admiten estos casos de uso principales:
 
@@ -419,8 +443,8 @@ Proporciona el protocolo de conectividad y la ruta de acceso al origen de datos 
 | Origen de datos externo   | Prefijo de ubicación | Ruta de acceso de ubicación                                         |
 | ---------------------- | --------------- | ----------------------------------------------------- |
 | Operaciones masivas        | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
-| Consulta elástica (partición)  | No requerido    | `<shard_map_server_name>.database.windows.net`        |
-| Consulta elástica (remota) | No requerido    | `<remote_server_name>.database.windows.net`           |
+| Consulta elástica (partición)  | No se requiere    | `<shard_map_server_name>.database.windows.net`        |
+| Consulta elástica (remota) | No se requiere    | `<remote_server_name>.database.windows.net`           |
 
 Ruta de acceso de ubicación:
 
@@ -468,13 +492,13 @@ Configure este argumento cuando `TYPE` se haya establecido en `RDBMS` o `SHARD_M
 | RDBMS             | El nombre de la base de datos remota en el servidor que se proporciona mediante `LOCATION` |
 | SHARD_MAP_MANAGER | Nombre de la base de datos que funciona como administrador del mapa de particiones      |
 
-Para obtener un ejemplo en el que se muestra cómo crear un origen de datos externo donde `TYPE` = `RDBMS` vea [Creación de un origen de datos externo de RDBMS](#b-create-an-rdbms-external-data-source).
+Para obtener un ejemplo en el que se muestra cómo crear un origen de datos externo donde `TYPE` = `RDBMS`, consulte [Creación de un origen de datos externo de RDBMS](#b-create-an-rdbms-external-data-source).
 
 ### <a name="shard_map_name--shard_map_name"></a>SHARD_MAP_NAME = *shard_map_name*
 
 Se usa cuando el `TYPE` argumento está establecido en `SHARD_MAP_MANAGER` únicamente para establecer el nombre del mapa de particiones.
 
-Para obtener un ejemplo en el que se muestra cómo crear un origen de datos externo donde `TYPE` = `SHARD_MAP_MANAGER` vea [Creación de un origen de datos externo de administrador de mapas de partición](#a-create-a-shard-map-manager-external-data-source).
+Para ver un ejemplo en el que se muestra cómo crear un origen de datos externo donde `TYPE` = `SHARD_MAP_MANAGER`, consulte [Creación de un origen de datos externo de administrador de mapas de partición](#a-create-a-shard-map-manager-external-data-source).
 
 ## <a name="permissions"></a>Permisos
 
@@ -611,7 +635,7 @@ Para ver este ejemplo en uso, vea [BULK INSERT][bulk_insert_example].
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>Introducción: Almacenamiento de datos SQL de Azure
+## <a name="overview-azure-sql-data-warehouse"></a>Introducción: Azure SQL Data Warehouse
 
 Crea un origen de datos externo para PolyBase. Los orígenes de datos externos se usan para establecer la conectividad y admiten el siguiente caso de uso principal: Virtualización y carga de datos mediante [PolyBase][intro_pb]
 
@@ -653,7 +677,7 @@ Ruta de acceso de ubicación:
 
 Instrucciones y notas adicionales cuando se establece la ubicación:
 
-- La opción predeterminada es usar la habilitación de conexiones SSL seguras al aprovisionar Azure Data Lake Storage Gen 2. Si está habilitada, debe usar `abfss` al seleccionar una conexión SSL segura. Tenga en cuenta que `abfss` funciona también con conexiones SSL no seguras. 
+- La opción predeterminada consiste en usar `enable secure SSL connections` al aprovisionar Azure Data Lake Storage Gen 2. Si está habilitada, debe usar `abfss` al seleccionar una conexión SSL segura. Tenga en cuenta que `abfss` funciona también con conexiones SSL no seguras. 
 - El motor de SQL Data Warehouse no comprueba la existencia del origen de datos externo cuando se crea el objeto. Para la validación, crea una tabla externa utilizando el origen de datos externo.
 - Para garantizar una semántica de consulta coherente, use el mismo origen de datos externo para todas las tablas cuando realice consultas a Hadoop.
 - `wasb` es el protocolo predeterminado para Azure Blob Storage. `wasbs` es opcional pero recomendado, ya que se enviarán los datos mediante una conexión SSL segura.

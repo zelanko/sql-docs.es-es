@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: ae6e3b08b3a29afb9282d28f33ec9406ab418b2c
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68419599"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721930"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>Tipos de valores devueltos
 **varbinary**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `COLUMNS_UPDATED` comprueba las acciones UPDATE o INSERT realizadas en varias columnas. Para comprobar los intentos UPDATE o INSERT realizados en una columna, use [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
   
 `COLUMNS_UPDATED` devuelve uno o más bytes que se ordenan de izquierda a derecha. El bit situado más a la derecha de cada byte es el menos significativo. El primer bit por la derecha del byte situado más a la izquierda representa la primera columna de la tabla, el siguiente bit a la izquierda representa la segunda columna, y así sucesivamente. `COLUMNS_UPDATED` devuelve varios bytes si la tabla en que se ha creado el desencadenador contiene más de ocho columnas, siendo el menos significativo el primero por la izquierda. `COLUMNS_UPDATED` devuelve TRUE en todas las columnas de las acciones INSERT porque en las columnas se insertaron valores explícitos o implícitos (NULL).
@@ -116,7 +116,7 @@ AFTER UPDATE AS
 /* Check whether columns 2, 3 or 4 have been updated. If any or all  
 columns 2, 3 or 4 have been changed, create an audit record.
 The bitmask is: power(2, (2-1)) + power(2, (3-1)) + power(2, (4-1)) = 14.
-This bitmask translates into base_10 as: 1 + 4 + 9 = 14.
+This bitmask translates into base_10 as: 2 + 4 + 8 = 14.
 To test whether all columns 2, 3, and 4 are updated, use = 14 instead of > 0  
 (below). */
   
@@ -206,7 +206,7 @@ UPDATE Person.Person
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Operadores bit a bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
 [UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)

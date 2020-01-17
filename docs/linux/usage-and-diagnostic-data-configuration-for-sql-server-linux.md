@@ -1,20 +1,21 @@
 ---
 title: Configuración de la recopilación de datos de uso y diagnóstico para SQL Server en Linux
 description: Se explica cómo se recopilan y se configuran los datos de diagnóstico y uso de los clientes de SQL Server en Linux.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: effc3ad0b693752eedc0f5dc478d17fbfdd5b35e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531289"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558573"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Configuración de la recopilación de datos de uso y diagnóstico para SQL Server en Linux
+# <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>Configuración de la recopilación de datos de uso y diagnóstico para SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -26,7 +27,7 @@ En concreto, Microsoft no envía ninguno de los tipos de información siguientes
 
 - Valores de dentro de las tablas de usuario
 - Credenciales de inicio de sesión u otra información de autenticación
-- Información de identificación personal (PII)
+- Información de identificación personal
 
 SQL Server 2017 siempre recopila y envía información sobre la experiencia de instalación del proceso de configuración para que podamos encontrar y corregir con rapidez cualquier problema de instalación que experimente el cliente. SQL Server 2017 se puede configurar para que no envíe información (en cada instancia de servidor) a Microsoft mediante **mssql-conf**. mssql-conf es un script de configuración que se instala con SQL Server 2017 para Red Hat Enterprise Linux, SUSE Linux Enterprise Server y Ubuntu.
 

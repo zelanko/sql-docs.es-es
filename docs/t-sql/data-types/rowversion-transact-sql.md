@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b08c5653243bce5852bab54bee267a43cc3b16e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000584"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245299"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Es un tipo de datos que expone números binarios únicos generados automáticamente en una base de datos. **rowversion** se suele usar como mecanismo para marcar la versión de las filas de la tabla. El tamaño de almacenamiento es de 8 bytes. El tipo de datos **rowversion** es simplemente un número que se incrementa y no conserva una fecha o una hora. Para registrar una fecha o una hora, use un tipo de datos **datetime2**.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Cada base de datos tiene un contador que se incrementa por cada operación de inserción o actualización que se lleva a cabo en una tabla que contiene una columna **rowversion** en la base de datos. Este contador es la versión de fila (rowversion) de la base de datos. Realiza un seguimiento de una hora relativa de una base de datos, no una hora real que pueda asociarse con un reloj. Una tabla solo puede tener una columna **rowversion**. Cada vez que se modifica o inserta una fila con una columna **rowversion**, el valor rowversion de la base de datos incrementado se inserta en la columna **rowversion**. Esta propiedad hace que una columna **rowversion** sea un mal candidato para claves, especialmente claves principales. Cualquier actualización de la fila hace que cambie el valor rowversion, con lo que cambia el valor de la clave. Si la columna está en una clave principal, el valor de la clave principal antigua deja de ser válido, así como las claves externas que hacen referencia al valor antiguo. Si se hace referencia a la tabla en un cursor dinámico, todas las actualizaciones cambian la posición de las filas en el cursor. Si la columna es una clave de índice, todas las actualizaciones de la fila de datos también generan actualizaciones del índice.  El valor de **rowversion** se incrementa con cualquier instrucción de actualización, incluso si ningún valor de fila cambia. Por ejemplo, si un valor de columna es 5 y una instrucción de actualización establece el valor en 5, esta acción se considera una actualización, aun cuando no hay cambio alguno, y **rowversion** aumenta.
   
 **timestamp** es el sinónimo del tipo de datos **rowversion** y está sujeto al comportamiento de los sinónimos de tipos de datos. En las instrucciones DDL, use **rowversion** en lugar de **timestamp** siempre que sea posible. Para más información, vea [Sinónimos de tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
@@ -65,7 +65,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
   
 Una columna **rowversion** que no admite valores NULL equivale semánticamente a una columna **binary(8)** . Una columna **rowversion** que admite valores NULL equivale semánticamente a una columna **varbinary(8)** .
   
-Puede usar la columna **rowversion** de una fila para saber fácilmente si se ha ejecutado una instrucción de actualización en esa fila desde la última vez que se leyó. Si se ha ejecutado una instrucción de actualización en la fila, el valor rowversion se actualiza. Si no se ha ejecutado una instrucción de actualización en la fila, el valor rowversion es el mismo que el de la lectura anterior. Para devolver el valor rowversion actual de una base de datos, use [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
+Puede usar la columna **rowversion** de una fila para saber fácilmente si se ha ejecutado una instrucción de actualización en la fila desde la última vez que se ha leído. Si se ejecuta una instrucción de actualización en la fila, el valor rowversion se actualiza. Si no se ejecuta ninguna instrucción de actualización en la fila, el valor rowversion es el mismo que el de la lectura anterior. Para devolver el valor rowversion actual de una base de datos, use [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
   
 Puede agregar una columna **rowversion** a una tabla para ayudar a mantener la integridad de la base de datos cuando varios usuarios actualizan filas al mismo tiempo. También puede que desee conocer cuántas filas y qué filas se actualizaron sin volver a consultar la tabla.
   
@@ -128,7 +128,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

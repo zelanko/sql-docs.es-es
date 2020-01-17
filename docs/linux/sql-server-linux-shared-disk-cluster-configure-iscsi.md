@@ -1,6 +1,7 @@
 ---
-title: 'Configuración de iSCSI de almacenamiento de la instancia de clúster de conmutación por error: SQL Server en Linux'
-description: ''
+title: 'Configuración del almacenamiento de FCI de iSCSI: SQL Server en Linux'
+description: Obtenga información sobre cómo configurar una instancia de clúster de conmutación por error (FCI) mediante iSCSI para SQL Server en Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032405"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558595"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configuración de una instancia de clúster de conmutación por error: iSCSI: SQL Server en Linux
 
@@ -297,7 +298,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
     chown mssql <FolderName>
     ```
 
-    \<FolderName> es el nombre de la carpeta que se ha creado. A continuación, se muestra un ejemplo.
+    \<FolderName> es el nombre de la carpeta que se ha creado. A continuación se muestra un ejemplo.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -309,7 +310,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
     chown mssql <FolderName>
     ```
 
-    \<FolderName> es el nombre de la carpeta que se ha creado. A continuación, se muestra un ejemplo.
+    \<FolderName> es el nombre de la carpeta que se ha creado. A continuación se muestra un ejemplo.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
@@ -351,7 +352,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker> es la lista de grupos de volúmenes de la salida del paso 20 que la FCI no usará. Coloque cada uno entre comillas y sepárelos con una coma. A continuación, se muestra un ejemplo.
+    \<ListOfVGsNotUsedByPacemaker> es la lista de grupos de volúmenes de la salida del paso 20 que la FCI no usará. Coloque cada uno entre comillas y sepárelos con una coma. A continuación se muestra un ejemplo.
 
     ![55-ListOfVGs][11]
  
@@ -392,8 +393,8 @@ Ya puede configurar la FCI.
 
 |Distribución |Tema 
 |----- |-----
-|**Red Hat Enterprise Linux con complemento de alta disponibilidad** |[Configurar](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Operar](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-|**SUSE Linux Enterprise Server con complemento de alta disponibilidad** |[Configurar](sql-server-linux-shared-disk-cluster-sles-configure.md)
+|**Red Hat Enterprise Linux con complemento de alta disponibilidad** |[Configuración](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Operaciones](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+|**SUSE Linux Enterprise Server con complemento de alta disponibilidad** |[Configuración](sql-server-linux-shared-disk-cluster-sles-configure.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

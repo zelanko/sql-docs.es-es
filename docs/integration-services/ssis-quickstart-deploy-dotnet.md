@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b943d8e169b589f45c612dccc710e174759ca0ca
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 43820f44e789330ed437c104e385090a8179a2b3
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295648"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947127"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Implementar un proyecto de SSIS con código C# en una aplicación .NET
 
@@ -28,7 +28,7 @@ Para crear una aplicación de C#, puede usar Visual Studio, Visual Studio Code u
 
 Antes de empezar, asegúrese de tener instalado Visual Studio o Visual Studio Code. Descargue la edición gratuita de Visual Studio Community Edition o Visual Studio Code desde [Descargas de Visual Studio](https://www.visualstudio.com/downloads/).
 
-Un servidor Azure SQL Database escucha en el puerto 1433. Si está intentando conectarse a un servidor de Azure SQL Database desde un firewall corporativo, este puerto debe estar abierto en el firewall corporativo para poder conectarse correctamente.
+Un servidor de Azure SQL Database escucha en el puerto 1433. Si está intentando conectarse a un servidor de Azure SQL Database desde un firewall corporativo, este puerto debe estar abierto en el firewall corporativo para poder conectarse correctamente.
 
 ## <a name="supported-platforms"></a>Plataformas compatibles
 
@@ -36,7 +36,7 @@ Puede usar la información que aparece en este inicio rápido para implementar u
 
 -   SQL Server en Windows.
 
--   Azure SQL Database. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+-   Azure SQL Database. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 No puede usar la información que aparece en este inicio rápido para implementar un paquete de SSIS en SQL Server en Linux. Para más información sobre cómo ejecutar paquetes en Linux, vea [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md) (Extraer, transformar y cargar datos en Linux con SSIS).
 
@@ -44,12 +44,16 @@ No puede usar la información que aparece en este inicio rápido para implementa
 
 Para implementar el proyecto en Azure SQL Database, debe obtener la información de conexión necesaria para conectarse a la base de datos del catálogo de SSIS (SSISDB). Necesita el nombre completo y la información de inicio de sesión del servidor en los procedimientos siguientes.
 
-1. Inicie sesión en el [Portal de Azure](https://portal.azure.com/).
+1. Inicie sesión en [Azure Portal](https://portal.azure.com/).
 2. Seleccione **Bases de datos SQL** en el menú izquierdo y, después, seleccione la base de datos SSISDB en la página **Bases de datos SQL**. 
 3. En la página **Introducción** de la base de datos, compruebe el nombre completo del servidor. Mantenga el puntero del ratón sobre el nombre del servidor para ver la opción **Haga clic para copiar**. 
 4. Si olvida la información de inicio de sesión del servidor de Azure SQL Database, navegue a la página del servidor de SQL Database para ver el nombre del administrador del servidor. Si es necesario, puede restablecer la contraseña.
 5. Haga clic en **Mostrar las cadenas de conexión de la base de datos**.
 6. Revise la cadena de conexión **ADO.NET** completa. De manera opcional, el código puede usar una clase `SqlConnectionStringBuilder` para volver a crear esta cadena de conexión con los valores de parámetros individuales que proporcione.
+
+## <a name="supported-authentication-method"></a>Método de autenticación compatible
+
+Consulte [Métodos de autenticación para la implementación](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="create-a-new-visual-studio-project"></a>Crear un nuevo proyecto de Visual Studio
 
@@ -122,7 +126,7 @@ namespace deploy_ssis_project
 }
 ```
 
-## <a name="run-the-code"></a>Ejecutar el código
+## <a name="run-the-code"></a>Ejecución del código
 
 1. Presione **F5** para ejecutar la aplicación.
 2. En SSMS, compruebe que se ha implementado el proyecto.
@@ -130,11 +134,11 @@ namespace deploy_ssis_project
 ## <a name="next-steps"></a>Pasos siguientes
 - Tenga en cuenta otras formas de implementar un paquete.
     - [Implementar un paquete SSIS con SSMS](./ssis-quickstart-deploy-ssms.md)
-    - [Implementar un paquete SSIS con Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
+    - [Deploy an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md) [Implementar un paquete SSIS con Transact-SQL (SSMS)]
     - [Deploy an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md) [Implementar un paquete SSIS con Transact-SQL (VSCode)]
     - [Deploy an SSIS package from the command prompt](./ssis-quickstart-deploy-cmdline.md) (Implementar un paquete SSIS desde el símbolo del sistema)
     - [Deploy an SSIS package with PowerShell](ssis-quickstart-deploy-powershell.md) (Implementar un paquete SSIS con PowerShell)
-- Ejecutar un paquete implementado. Para ejecutar un paquete, puede elegir entre varias herramientas y lenguajes. Para obtener más información, vea los artículos siguientes:
+- Ejecute un paquete implementado. Para ejecutar un paquete, puede elegir entre varias herramientas y lenguajes. Para más información, consulte los siguientes artículos:
     - [Ejecutar un paquete SSIS con SSMS](./ssis-quickstart-run-ssms.md)
     - [Run an SSIS package with Transact-SQL (SSMS) (Ejecutar un paquete SSIS con Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
     - [Ejecutar un paquete SSIS con Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)

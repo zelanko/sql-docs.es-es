@@ -1,6 +1,7 @@
 ---
-title: Configuración de opciones de SQL Server con variables de entorno
+title: Configuración de variables de entorno para SQL Server en Linux
 description: En este artículo se describe cómo usar variables de entorno para configurar opciones específicas de SQL Server 2017 en Linux.
+ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 11f8926ede3c4bcd1f0350be79add16c5ae52249
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f768a79512059025ebd6dfe6a6f339175b6149f3
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531324"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558378"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configuración de opciones de SQL Server con variables de entorno en Linux
 
@@ -47,8 +48,8 @@ Puede usar diversas variables de entorno para configurar SQL Server 2019 en Lin
 |-----|-----|
 | **ACCEPT_EULA** | Establezca la variable **ACCEPT_EULA** en cualquier valor para confirmar que acepta el [Contrato de licencia de usuario final](https://go.microsoft.com/fwlink/?LinkId=746388). Configuración requerida para la imagen de SQL Server. |
 | **MSSQL_SA_PASSWORD** | Configure la contraseña de usuario SA. |
-| **MSSQL_PID** | Establezca la edición de SQL Server o la clave de producto. Los valores posibles incluyen: </br></br>**Evaluation**</br>**Desarrollador**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Clave de producto**</br></br>Si especifica una clave de producto, debe tener el formato #####-#####-#####-#####-#####, donde "#" es un número o una letra.|
-| **MSSQL_LCID** | Establece el identificador de idioma que se va a usar para SQL Server. Por ejemplo, 1036 es francés. |
+| **MSSQL_PID** | Establezca la edición de SQL Server o la clave de producto. Los valores posibles son: </br></br>**Evaluación**</br>**Developer**</br>**Express**</br>**Web**</br>**Estándar**</br>**Enterprise**</br>**Clave de producto**</br></br>Si especifica una clave de producto, debe tener el formato #####-#####-#####-#####-#####, donde "#" es un número o una letra.|
+| **MSSQL_LCID** | Establece el identificador de idioma que se usará para SQL Server. Por ejemplo, 1036 es francés. |
 | **MSSQL_COLLATION** | Establece la intercalación predeterminada para SQL Server. Esto reemplaza la asignación predeterminada de identificador de idioma (LCID) por la intercalación. |
 | **MSSQL_MEMORY_LIMIT_MB** | Establece la cantidad máxima de memoria (en MB) que puede usar SQL Server. De forma predeterminada, es el 80 % de la memoria física total. |
 | **MSSQL_TCP_PORT** | Configure el puerto TCP en el que escucha SQL Server (valor predeterminado: 1433). |
@@ -58,7 +59,7 @@ Puede usar diversas variables de entorno para configurar SQL Server 2019 en Lin
 | **MSSQL_LOG_DIR** | Cambie el directorio en el que se crean los archivos de registro (.ldf) de la base de datos de SQL Server. |
 | **MSSQL_DUMP_DIR** | Cambie el directorio en el que SQL Server depositará de forma predeterminada los volcados de memoria y otros archivos de solución de problemas. |
 | **MSSQL_ENABLE_HADR** | Habilite el grupo de disponibilidad. Por ejemplo, "1" significa que está habilitado y "0", deshabilitado. |
-| **MSSQL_AGENT_ENABLED** | Habilite el Agente SQL Server. Por ejemplo, "true" significa que está habilitado y "false", deshabilitado. De forma predeterminada, el agente está deshabilitado.  |
+| **MSSQL_AGENT_ENABLED** | Habilite el Agente SQL Server. Por ejemplo, "true" significa que está habilitado y "false", deshabilitado. De forma predeterminada, el agente está deshabilitado.  |
 | **MSSQL_MASTER_DATA_FILE** | Establece la ubicación del archivo de datos de la base de datos maestra. Debe denominarse **master.mdf** hasta la primera ejecución de SQL Server. |
 | **MSSQL_MASTER_LOG_FILE** | Establece la ubicación del archivo de registro de la base de datos maestra. Debe denominarse **mastlog.ldf** hasta la primera ejecución de SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Establece la ubicación de los archivos del registro de errores. |
@@ -71,8 +72,8 @@ Puede usar diversas variables de entorno para configurar SQL Server 2019 en Lin
 |-----|-----|
 | **ACCEPT_EULA** | Establezca la variable **ACCEPT_EULA** en cualquier valor para confirmar que acepta el [Contrato de licencia de usuario final](https://go.microsoft.com/fwlink/?LinkId=746388). Configuración requerida para la imagen de SQL Server. |
 | **MSSQL_SA_PASSWORD** | Configure la contraseña de usuario SA. |
-| **MSSQL_PID** | Establezca la edición de SQL Server o la clave de producto. Los valores posibles incluyen: </br></br>**Evaluation**</br>**Desarrollador**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Clave de producto**</br></br>Si especifica una clave de producto, debe tener el formato #####-#####-#####-#####-#####, donde "#" es un número o una letra.|
-| **MSSQL_LCID** | Establece el identificador de idioma que se va a usar para SQL Server. Por ejemplo, 1036 es francés. |
+| **MSSQL_PID** | Establezca la edición de SQL Server o la clave de producto. Los valores posibles son: </br></br>**Evaluación**</br>**Developer**</br>**Express**</br>**Web**</br>**Estándar**</br>**Enterprise**</br>**Clave de producto**</br></br>Si especifica una clave de producto, debe tener el formato #####-#####-#####-#####-#####, donde "#" es un número o una letra.|
+| **MSSQL_LCID** | Establece el identificador de idioma que se usará para SQL Server. Por ejemplo, 1036 es francés. |
 | **MSSQL_COLLATION** | Establece la intercalación predeterminada para SQL Server. Esto reemplaza la asignación predeterminada de identificador de idioma (LCID) por la intercalación. |
 | **MSSQL_MEMORY_LIMIT_MB** | Establece la cantidad máxima de memoria (en MB) que puede usar SQL Server. De forma predeterminada, es el 80 % de la memoria física total. |
 | **MSSQL_TCP_PORT** | Configure el puerto TCP en el que escucha SQL Server (valor predeterminado: 1433). |
@@ -82,7 +83,7 @@ Puede usar diversas variables de entorno para configurar SQL Server 2019 en Lin
 | **MSSQL_LOG_DIR** | Cambie el directorio en el que se crean los archivos de registro (.ldf) de la base de datos de SQL Server. |
 | **MSSQL_DUMP_DIR** | Cambie el directorio en el que SQL Server depositará de forma predeterminada los volcados de memoria y otros archivos de solución de problemas. |
 | **MSSQL_ENABLE_HADR** | Habilite el grupo de disponibilidad. Por ejemplo, "1" significa que está habilitado y "0", deshabilitado. |
-| **MSSQL_AGENT_ENABLED** | Habilite el Agente SQL Server. Por ejemplo, "true" significa que está habilitado y "false", deshabilitado. De forma predeterminada, el agente está deshabilitado.  |
+| **MSSQL_AGENT_ENABLED** | Habilite el Agente SQL Server. Por ejemplo, "true" significa que está habilitado y "false", deshabilitado. De forma predeterminada, el agente está deshabilitado.  |
 | **MSSQL_MASTER_DATA_FILE** | Establece la ubicación del archivo de datos de la base de datos maestra. Debe denominarse **master.mdf** hasta la primera ejecución de SQL Server. |
 | **MSSQL_MASTER_LOG_FILE** | Establece la ubicación del archivo de registro de la base de datos maestra. Debe denominarse **mastlog.ldf** hasta la primera ejecución de SQL Server. |
 | **MSSQL_ERROR_LOG_FILE** | Establece la ubicación de los archivos del registro de errores. |

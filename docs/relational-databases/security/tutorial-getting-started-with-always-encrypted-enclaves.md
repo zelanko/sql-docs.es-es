@@ -1,6 +1,7 @@
 ---
-title: 'Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS | Microsoft Docs'
-ms.custom: ''
+title: 'Tutorial: Always Encrypted con enclaves seguros con SSMS'
+description: En este tutorial aprenderá a crear un entono básico de Always Encrypted con enclaves seguros, a cifrar los datos en contexto y a emitir consultas enriquecidas en columnas cifradas mediante SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,14 +13,14 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5912e7cca2ceeba1fe0db95743b4d29e1154a86
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592345"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557537"
 ---
-# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS
+# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Always Encrypted con enclaves seguros con SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 En este tutorial se explica cómo empezar a trabajar con los [enclaves seguros de Always Encrypted](encryption/always-encrypted-enclaves.md). En él encontrará:
@@ -186,7 +187,7 @@ En este paso, deberá habilitar la funcionalidad de Always Encrypted usando encl
 
     La consulta debe devolver el resultado siguiente:  
 
-    | NAME                           | value | value_in_use |
+    | name                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
     | tipo de enclave de cifrado de columnas | 1     | 1              |
 
@@ -339,9 +340,9 @@ Ahora puede ejecutar consultas completas sobre columnas cifradas. Se realizará 
 
 3. Pruebe de nuevo la misma consulta en la instancia de SSMS que no tienen habilitado Always Encrypted y observe el error que se produce.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Pasos siguientes
 Después de completar este tutorial, puede ir a uno de los siguientes tutoriales:
-- [Tutorial: Desarrollo de una aplicación de .NET Framework mediante Always Encrypted con enclaves seguros](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
+- [Tutorial: Desarrollo de una aplicación de .NET Framework mediante Always Encrypted con enclaves seguros](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [Tutorial: Creación y uso de índices en columnas basadas en enclave mediante cifrado aleatorio](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
 ## <a name="see-also"></a>Consulte también

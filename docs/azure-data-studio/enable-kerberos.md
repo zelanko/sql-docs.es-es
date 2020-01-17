@@ -2,20 +2,20 @@
 title: Empleo de autenticación de Active Directory (Kerberos)
 titleSuffix: Azure Data Studio
 description: Aprenda a habilitar Kerberos para usar autenticación de Active Directory para Azure Data Studio
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
-ms.openlocfilehash: 5c8fae6bf1333742b40e9c8aae4ee575736058cd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959665"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957069"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Conexión de [!INCLUDE[name-sos](../includes/name-sos-short.md)] a SQL Server mediante autenticación de Windows: Kerberos 
 
@@ -26,7 +26,7 @@ Para usar autenticación integrada (autenticación de Windows) en MacOS o Linux,
 ## <a name="prerequisites"></a>Prerequisites
 
 - Acceso a un equipo unido a dominio de Windows para consultar el controlador de dominio de Kerberos.
-- SQL Server debe configurarse para permitir la autenticación Kerberos. En el caso del controlador de cliente que se ejecuta en Unix, la autenticación integrada solo se admite con Kerberos. Puede encontrar más información sobre cómo configurar SQL Server para autenticar mediante Kerberos [aquí](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server). Debe haber SPN registrados para cada instancia de SQL Server a la que se esté intentando conectar. [Aquí](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats) se ofrecen detalles sobre el formato de los SPN de SQL Server
+- SQL Server debe configurarse para permitir la autenticación Kerberos. En el caso del controlador de cliente que se ejecuta en Unix, la autenticación integrada solo se admite con Kerberos. Para más información, vea [Uso de la autenticación integrada de Kerberos para conectar con SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). Debe haber SPN registrados para cada instancia de SQL Server a la que se esté intentando conectar. Para más información, vea [Registro de un nombre de entidad de servicio](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats).
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Comprobación de si SQL Server tiene configuración de Kerberos

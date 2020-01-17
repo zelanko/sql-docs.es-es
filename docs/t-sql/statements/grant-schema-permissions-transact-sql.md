@@ -18,12 +18,12 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37da86b825ee68be83d0aa653005a1ea12db5ed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 56e1f566b5ac6addfab3811c8430ce9c19e61636
+ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050811"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74762660"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT (permisos de esquema de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ AS *granting_principal*
 -   usuario de base de datos asignado a una clave asimétrica  
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!IMPORTANT]  
 >  En algunos casos, una combinación de los permisos ALTER y REFERENCE podría permitir al receptor ver datos o ejecutar funciones no autorizadas. Por ejemplo: Un usuario con el permiso ALTER en una tabla y el permiso REFERENCE en una función puede crear una columna calculada sobre una función y hacer que se ejecute. En este caso, el usuario también debe disponer del permiso SELECT en la columna calculada.  
@@ -106,9 +106,7 @@ AS *granting_principal*
   
  El usuario U1 tiene permiso CREATE SYNONYM en la base de datos y permiso SELECT en el esquema S1. Por tanto, el usuario U1 puede crear un sinónimo en el esquema S1 para el objeto T1 denegado y después tener acceso a dicho objeto mediante el sinónimo.  
   
- El usuario U1 tiene permiso CREATE VIEW en la base de datos y permiso SELECT en el esquema S1. Por tanto, el usuario U1 puede crear una vista en el esquema S1 para consultar datos del objeto T1 denegado y después tener acceso a dicho objeto mediante la vista.  
-  
- Para obtener más información, vea el artículo número 914847 de la Microsoft Knowledge Base.  
+ El usuario U1 tiene permiso CREATE VIEW en la base de datos y permiso SELECT en el esquema S1. Por tanto, el usuario U1 puede crear una vista en el esquema S1 para consultar datos del objeto T1 denegado y después tener acceso a dicho objeto mediante la vista.
   
 ## <a name="permissions"></a>Permisos  
  El otorgante del permiso (o la entidad de seguridad especificada con la opción AS) debe tener el permiso con GRANT OPTION, o un permiso superior que implique el permiso que se va a conceder.  

@@ -1,6 +1,8 @@
 ---
-title: DENY (permisos de colección de esquemas XML de Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permisos de colección de esquemas XML DENY
+description: Deniegue permisos en una colección de esquemas XML.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 811c9532486b8f9c9a910254185de69096be9c8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3996a89355ba9a3346c9751f011db24ae6757fb9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984340"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244543"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY (permisos de colección de esquemas XML de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +95,7 @@ DENY permission  [ ,...n ] ON
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Encontrará información sobre las colecciones de esquemas XML en la vista de catálogo [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  Una colección de esquemas XML es un elemento protegible de nivel de esquema que contiene el esquema que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden denegar en una colección de esquemas XML se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  

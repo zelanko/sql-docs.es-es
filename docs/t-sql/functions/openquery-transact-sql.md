@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1276b80c4a668173f5a0b7055e789ab3f521dd9e
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 5c2f1a1b1060ff2ce659ed87db9fabb5c6c5346a
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313737"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542269"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ OPENQUERY ( linked_server ,'query' )
  *linked_server*  
  Es un identificador que representa el nombre del servidor vinculado.  
   
- **'** *query* **'**  
+ **"** *consulta* **"**  
  Es la cadena de consulta que se ejecuta en el servidor vinculado. La longitud máxima de la cadena es de 8 KB.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  OPENQUERY no acepta variables para sus argumentos.  
   
  No se puede utilizar OPENQUERY para ejecutar procedimientos almacenados extendidos en un servidor vinculado. Sin embargo, se puede ejecutar un procedimiento almacenado extendido en un servidor vinculado mediante un nombre de cuatro partes. Por ejemplo:  
@@ -101,7 +101,6 @@ SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Rowset Functions &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   

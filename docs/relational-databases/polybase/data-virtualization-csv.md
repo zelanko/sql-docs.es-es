@@ -1,20 +1,21 @@
 ---
-title: Virtualización de datos externos en SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: 'Virtualización de datos externos: valores separados por comas (CSV)'
 description: En esta página se detallan los pasos para usar al Asistente para crear tablas externas para un archivo CSV
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a8ce50e4e359c8ce8dc2b0015300f9a7afb88d1
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: b1bb5f2e807731e1020729e045c017b6f1524ae1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710607"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256168"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Uso del Asistente para tablas externas con archivos CSV
 
@@ -22,7 +23,7 @@ SQL Server 2019 también permite virtualizar los datos desde un archivo CSV en H
 
 ## <a name="prerequisite"></a>Requisito previo
 
-A partir de CTP 2.4, el grupo de datos y los orígenes de datos externos del grupo de almacenamiento ya no se crean de forma predeterminada en el clúster de macrodatos. Antes de usar el asistente, cree el origen de datos externo predeterminado **SqlStoragePool** en la base de datos de destino con la siguiente consulta Transact-SQL. Primero asegúrese de cambiar el contexto de la consulta a la base de datos de destino.
+Los orígenes de datos externos Grupo de datos y Grupo de almacenamiento ya no se crean de forma predeterminada en el clúster de macrodatos. Antes de usar el asistente, cree el origen de datos externo predeterminado **SqlStoragePool** en la base de datos de destino con la siguiente consulta Transact-SQL. Primero asegúrese de cambiar el contexto de la consulta a la base de datos de destino.
 
 ```sql
 -- Create default data sources for SQL Big Data Cluster

@@ -1,7 +1,7 @@
 ---
 title: CREATE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 12/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,24 +26,24 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b851fcc4a06567ce013b8bc0d062ccf15587d806
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: e7cf36879a08f50095a158311179b9ae303d4ebc
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982715"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901875"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Crea un tipo de datos de alias o un tipo definido por el usuario en la base de datos actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La implementación de un tipo de datos de alias se basa en un tipo nativo del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un tipo definido por el usuario se implementa a través de una clase de un ensamblado de Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Para enlazar un tipo definido por el usuario a su implementación, el ensamblado CLR que contiene la implementación del tipo debe registrarse primero en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por medio de [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
+  Crea un tipo de datos de alias o un tipo definido por el usuario en la base de datos actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La implementación de un tipo de datos de alias se basa en un tipo nativo del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un tipo definido por el usuario se implementa a través de una clase de un ensamblado de Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Para enlazar un tipo definido por el usuario a su implementación, el ensamblado CLR que contiene la implementación del tipo debe registrarse primero en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por medio de [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
   
  De manera predeterminada, la posibilidad de ejecutar código de CLR está desactivada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se pueden crear, modificar y quitar objetos de base de datos que hagan referencia a módulos de código administrado, pero estas referencias no se ejecutarán en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a menos que se habilite la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) por medio de [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
  
 > [!NOTE]  
 >  En este tema se describe la integración de CLR de .NET Framework en SQL Server. La integración de CLR no se aplica a Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -179,10 +179,10 @@ column_name <data_type>
 |-|-|-|-|  
 |**bigint**|**binary(** *n* **)**|**bit**|**char(** *n* **)**|  
 |**date**|**datetime**|**datetime2**|**datetimeoffset**|  
-|**decimal**|**float**|**imagen**|**int**|  
+|**decimal**|**float**|**image**|**int**|  
 |**money**|**nchar(** *n* **)**|**ntext**|**numeric**|  
 |**nvarchar(** *n* &#124; **max)**|**real**|**smalldatetime**|**smallint**|  
-|**smallmoney**|**sql_variant**|**texto**|**time**|  
+|**smallmoney**|**sql_variant**|**text**|**time**|  
 |**tinyint**|**uniqueidentifier**|**varbinary(** *n* &#124; **max)**|**varchar(** *n* &#124; **max)**|  
   
  *base_type* también puede ser cualquier sinónimo de tipo de datos que esté asignado a uno de estos tipos de datos del sistema.  
@@ -190,7 +190,7 @@ column_name <data_type>
  *precisión*  
  Para **decimal** o **numeric**, es un entero no negativo que indica el número máximo de dígitos decimales que se pueden almacenar en total, tanto a la derecha como a la izquierda del separador decimal. Para más información, vea [decimal y numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- *escala*  
+ *scale*  
  Para **decimal** o **numeric**, es un entero no negativo que indica el número máximo de dígitos decimales que se pueden almacenar a la derecha del separador decimal, y debe ser menor o igual que el valor de precisión. Para más información, vea [decimal y numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  **NULL** | NOT NULL  
@@ -251,7 +251,7 @@ Especifica que se creará un índice en la tabla. Puede tratarse de un índice a
   
  Indica que se ha creado un índice HASH. Los índices hash solo se admiten en las tablas optimizadas para memoria.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La clase del ensamblado a la que se hace referencia en *assembly_name*, junto con sus métodos, debe cumplir todos los requisitos para implementar un tipo definido por el usuario en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información sobre estos requisitos, vea [CLR User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (Tipos definidos por el usuario CLR).  
   
  Existen algunas consideraciones adicionales, entre las que se pueden citar las siguientes:  
@@ -289,7 +289,7 @@ Especifica que se creará un índice en la tabla. Puede tratarse de un índice a
 ### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>A. Crear un tipo de alias basado en el tipo de datos varchar  
  En el ejemplo siguiente se crea un tipo de alias basado en el tipo de datos `varchar` suministrado por el sistema.  
   
-```  
+```sql  
 CREATE TYPE SSN  
 FROM varchar(11) NOT NULL ;  
 ```  
@@ -299,7 +299,7 @@ FROM varchar(11) NOT NULL ;
   
 **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
-```  
+```sql  
 CREATE ASSEMBLY utf8string  
 AUTHORIZATION [dbi]   
 FROM 0x4D... ;  
@@ -312,7 +312,7 @@ GO
 ### <a name="c-creating-a-user-defined-table-type"></a>C. Crear un tipo de tabla definido por el usuario  
  En el siguiente ejemplo se crea un tipo de tabla definido por el usuario con dos columnas. Para más información sobre cómo crear y usar parámetros con valores de tabla, vea[Usar parámetros con valores de tabla &#40;motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
-```  
+```sql  
 CREATE TYPE LocationTableType AS TABLE   
     ( LocationName VARCHAR(50)  
     , CostRate INT );  
@@ -341,6 +341,7 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-type-transact-sql.md)   
- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
-  
+ [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    
+ [Tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     
+ [Trabajar con tipos definidos por el usuario en SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
   

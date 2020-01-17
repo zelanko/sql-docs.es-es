@@ -1,7 +1,7 @@
 ---
 title: Panel de rendimiento | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2019
+ms.date: 12/14/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -14,17 +14,17 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 1d3a404aecf987be2fa0c2638fa3abb8c6f3ea0c
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: b2c743d23ae9c9ee730c3c1daa8d41709e44fd6f
+ms.sourcegitcommit: 68751257feec99109edf88a5b89c0ec2ee72276f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041170"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75728566"
 ---
 # <a name="performance-dashboard"></a>Panel de rendimiento
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-En la versión 17.2 de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y versiones posteriores se incluye el panel de rendimiento. Este panel se ha diseñado para proporcionar de forma visual información rápida sobre el estado de rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] y [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]). 
+En la versión 17.2 de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y versiones posteriores se incluye el panel de rendimiento. Este panel se ha diseñado para proporcionar información rápida de forma visual sobre el estado de rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) e Instancia administrada de [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. 
 
 El panel de rendimiento ayuda a identificar rápidamente si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] están experimentando un cuello de botella de rendimiento. Y si se encuentra un cuello de botella, captura fácilmente datos de diagnóstico adicionales que pueden ser necesarios para resolver el problema. Algunos problemas comunes de rendimiento que el panel de rendimiento puede ayudar a identificar son los siguientes:
 -  Cuellos de botella de la CPU (y las consultas que consumen más CPU)
@@ -46,7 +46,7 @@ El panel de rendimiento se divide en las siguientes secciones y subinformes:
    -  Esperas
    -  Bloqueos temporales
    -  Estadísticas de E/S
-   -  Consultas que consumen muchos recursos
+   -  Consultas costosas
 - Información variada
   -  Seguimientos activos
   -  Sesiones de xEvent activas
@@ -60,32 +60,32 @@ El panel de rendimiento se divide en las siguientes secciones y subinformes:
   
 Para ver el panel de rendimiento, haga clic con el botón derecho en el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el Explorador de objetos y seleccione **Informes**, **Informes estándar** y **Panel de rendimiento**.  
   
-![Panel de rendimiento en el menú](../../relational-databases/performance/media/perf_dashboard_ssms.png "Performance Dashboard in menu")  
+![Panel de rendimiento en el menú](../../relational-databases/performance/media/perf_dashboard_ssms.png "Panel de rendimiento en el menú")  
   
 El panel de rendimiento aparecerá como una nueva pestaña. A continuación se muestra un ejemplo de un cuello de botella de CPU claramente presente:  
   
-![Pantalla principal del panel de rendimiento](../../relational-databases/performance/media/perf_dashboard.png "Performance Dashboard main screen")  
+![Pantalla principal del panel de rendimiento](../../relational-databases/performance/media/perf_dashboard.png "Pantalla principal del panel de rendimiento")  
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 En el informe **Índices que faltan** se muestran los índices que es posible que falten, identificados por el optimizador de consultas durante la compilación de la consulta. Pero estas recomendaciones no deben tomarse al pie de la letra. Microsoft recomienda que se evalúen para la creación los índices con una puntuación mayor que 100 000, ya que tienen la mejora anticipada más alta para las consultas de usuario. 
 
 > [!TIP]
 > Evalúe siempre si una nueva sugerencia de índice es comparable a un índice existente en la misma tabla, donde se pueden lograr los mismos resultados prácticos simplemente mediante el cambio de un índice existente en lugar de crear uno. Por ejemplo, dado un nuevo índice sugerido en las columnas C1, C2 y C3, evalúe primero si hay un índice existente en las columnas C1 y C2. Si lo hay, puede ser preferible simplemente agregar la columna C3 al índice existente (y conservar el orden de las columnas ya existentes) para evitar la creación de uno nuevo.
 > Para más información, vea la [Guía de diseño y de arquitectura de índices](../../relational-databases/sql-server-index-design-guide.md).
 
-En el informe **Esperas** se filtran todas las esperas inactivas y en suspensión. Para más información sobre las esperas, vea [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) y [Optimización del rendimiento de SQL Server 2005 mediante esperas y colas](http://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc).
+En el informe **Esperas** se filtran todas las esperas inactivas y en suspensión. Para más información sobre las esperas, vea [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) y [Optimización del rendimiento de SQL Server 2005 mediante esperas y colas](https://download.microsoft.com/download/4/7/a/47a548b9-249e-484c-abd7-29f31282b04d/performance_tuning_waits_queues.doc).
 
 Los informes **Consultas que consumen muchos recursos** se restablecen cuando se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque se borran los datos de las DMV subyacentes. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede encontrar información detallada sobre las consultas que consumen muchos recursos en el Almacén de consultas. 
 
 > [!NOTE]
-> El panel de rendimiento se publicó inicialmente como una descarga independiente para [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) y después se actualizó para [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
+> El panel de rendimiento se publicó inicialmente como una descarga independiente para [SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) y después se actualizó para [SQL Server 2012](https://www.microsoft.com/download/details.aspx?id=29063).
 
 ## <a name="permissions"></a>Permisos  
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requiere los permisos `VIEW SERVER STATE` y `ALTER TRACE`. En [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.
 
 ## <a name="see-also"></a>Consulte también  
- [Supervisar y optimizar el rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
+ [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Herramientas de supervisión y optimización del rendimiento](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Abrir el Monitor de actividad &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     
  [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md)     
- [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [Supervisar el rendimiento mediante el Almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     

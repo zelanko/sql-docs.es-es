@@ -1,6 +1,6 @@
 ---
-title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD  (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2ab2a5ff60abbd098cb93d5c85cd75527f49805
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 669c6274301c09f260badfb354c8add67ae86791
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729877"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401633"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
@@ -25,7 +25,7 @@ ms.locfileid: "73729877"
 
 Muestra el número de cambios incrementales en las tablas base que se mantienen para las vistas materializadas en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. La proporción de sobrecarga se calcula como TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
 
-![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,7 +42,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 *materialized_view_name*   
 Es el nombre de la vista materializada.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Para mantener las vistas materializadas actualizadas con cambios en los datos de las tablas base, el motor de almacenamiento de datos agrega filas de seguimiento a cada vista afectada para reflejar los cambios. La selección a partir de una vista materializada incluye el análisis del índice de almacén de columnas agrupado de la vista y la aplicación de cualquier cambio incremental.  Las filas de seguimiento (TOTAL_ROWS-BASE_VIEW_ROWS) no se eliminarán hasta que los usuarios vuelvan a generar la vista materializada.  
 
@@ -139,13 +139,13 @@ ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
 go
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 ```
-Salida
+Output
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
 |--------|--------|--------|--------|  
 |587149137|2|2 |1,00000000000000000 |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Optimización del rendimiento con vista materializada](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   

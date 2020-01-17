@@ -1,6 +1,8 @@
 ---
-title: REVOKE (permisos de entidad de seguridad de base de datos de Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permisos de entidad de seguridad de base de datos REVOKE
+description: Revoque permisos a un usuario de base de datos, un rol de base de datos o un rol de aplicación.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fe8146758dd8d8571ee86c67c757bb61897f419d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982906"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243341"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE (permisos de entidad de seguridad de base de datos de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Revoca permisos concedidos o denegados para un usuario de base de datos, un rol de base de datos o un rol de aplicación.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -98,29 +100,29 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Especifica un rol de aplicación.  
   
  *Database_user_mapped_to_Windows_User*  
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Especifica un usuario de base de datos asignado a un usuario de Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Especifica un usuario de base de datos asignado a un grupo de Windows.  
   
  *Database_user_mapped_to_certificate*  
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Especifica un usuario de base de datos asignado a un certificado.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Especifica un usuario de base de datos asignado a una clave asimétrica.  
   
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="database-user-permissions"></a>Permisos de usuario de base de datos  
  Un usuario de base de datos es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden revocar en un usuario de base de datos se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
@@ -168,7 +170,7 @@ GO
 ```  
   
 ### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>B. Revocar el permiso VIEW DEFINITION para un rol desde un usuario para el que se concedió WITH GRANT OPTION  
- En el siguiente ejemplo se revoca el permiso `VIEW DEFINITION` para el rol [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de`SammamishParking` del usuario de base de datos `JinghaoLiu`. Se especifica la opción `CASCADE` porque al usuario `JinghaoLiu` se le concedió el permiso `VIEW DEFINITION` `WITH GRANT OPTION`.  
+ En el siguiente ejemplo se revoca el permiso `VIEW DEFINITION` para el rol [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de`SammamishParking` del usuario de base de datos `JinghaoLiu`. Se especifica la opción `CASCADE` porque al usuario `JinghaoLiu` se le concedió el permiso `VIEW DEFINITION``WITH GRANT OPTION`.  
   
 ```  
 USE AdventureWorks2012;  

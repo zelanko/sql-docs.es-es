@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 18401bda78dcf50e4060f053fed604d0dc1bf9be
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 74168c8cd846f48fdaa87568b85c124ff755489a
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531340"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721580"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configuración de imágenes de contenedor de SQL Server en Docker
 
@@ -35,7 +35,12 @@ Esta imagen se compone de SQL Server, que se ejecuta en un sistema Linux basado 
 > En este artículo, nos centraremos específicamente en el uso de la imagen mssql-server-linux. No trataremos la imagen de Windows, pero puede obtener más información sobre ella en la [página mssql-server-windows de Docker Hub](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 > [!IMPORTANT]
-> Antes de elegir la ejecución de un contenedor de SQL Server para casos de uso de producción, revise la [directiva de compatibilidad de contenedores de SQL Server](https://support.microsoft.com/en-us/help/4047326/support-policy-for-microsoft-sql-server) para garantizar que se ejecuta una configuración compatible.
+> Antes de elegir la ejecución de un contenedor de SQL Server para casos de uso de producción, revise la [directiva de compatibilidad de contenedores de SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) para garantizar que se ejecuta una configuración compatible.
+
+En este vídeo de 6 minutos se muestra una introducción a la ejecución de SQL Server en contenedores:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2019-in-Containers/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="pull-and-run-the-container-image"></a>Extraer y ejecutar la imagen de contenedor
 
@@ -257,7 +262,10 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 Esta técnica también le permite compartir y ver los archivos en el host fuera de Docker.
 
 > [!IMPORTANT]
-> En este momento no se admite la asignación de volumen de host para Docker en Mac con la imagen de SQL Server en Linux. En su lugar, use contenedores de volúmenes de datos. Esta restricción es específica del directorio `/var/opt/mssql`. La lectura desde un directorio montado funciona correctamente. Por ejemplo, puede montar un directorio host mediante -v en Mac y restaurar una copia de seguridad desde un archivo .bak que resida en el host.
+> La asignación de volúmenes de host para **Docker en Windows** no admite actualmente la asignación del directorio completo de `/var/opt/mssql`. Pero puede asignar un subdirectorio, como `/var/opt/mssql/data`, a su equipo host.
+
+> [!IMPORTANT]
+> En este momento no se admite la asignación de volumen de host para **Docker en Mac** con la imagen de SQL Server en Linux. En su lugar, use contenedores de volúmenes de datos. Esta restricción es específica del directorio `/var/opt/mssql`. La lectura desde un directorio montado funciona correctamente. Por ejemplo, puede montar un directorio host mediante -v en Mac y restaurar una copia de seguridad desde un archivo .bak que resida en el host.
 
 ### <a name="use-data-volume-containers"></a>Uso de contenedores de volúmenes de datos
 
@@ -336,7 +344,7 @@ Para copiar un archivo del contenedor, use el siguiente comando:
 docker cp <Container ID>:<Container path> <host path>
 ```
 
-**Ejemplo:**
+**Ejemplo**:
 
 ```bash
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
@@ -354,7 +362,7 @@ Para copiar un archivo en el contenedor, use el siguiente comando:
 docker cp <Host path> <Container ID>:<Container path>
 ```
 
-**Ejemplo:**
+**Ejemplo**:
 
 ```bash
 docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
@@ -615,7 +623,7 @@ Ejecute uno de los comandos siguientes si SQL Server no tiene acceso a los archi
 Conceda al grupo raíz permisos a los directorios siguientes para que el contenedor de SQL Server no raíz tenga acceso a los archivos de base de datos.
 
 ```bash
-chgroup -R 0 <database file dir>
+chgrp -R 0 <database file dir>
 chmod -R g=u <database file dir>
 ```
 

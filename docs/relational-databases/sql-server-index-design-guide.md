@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 663e4bca1dc607cbdf4b19849701bea24461b600
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cf6e85cef8d95e2b1bb167d482f36ec540196f6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081539"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255930"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guía de diseño y de arquitectura de índices de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ En esta guía se tratan los siguientes tipos de índices:
 -   Clúster
 -   No agrupado
 -   Único
--   Filtrado
+-   Filtered
 -   columnstore
 -   Hash
 -   Índice no agrupado optimizado para memoria
@@ -53,7 +53,9 @@ Para obtener información sobre los índices espaciales, vea [Información gener
 Para obtener más información sobre los índices de texto completo, vea [Rellenar índices de texto completo](../relational-databases/search/populate-full-text-indexes.md).
   
 ##  <a name="Basics"></a> Conceptos básicos del diseño de índices  
- Un índice es una estructura en disco o en memoria asociada con una tabla o vista que acelera la recuperación de filas de la tabla o vista. Un índice contiene claves generadas a partir de una o varias columnas de la tabla o la vista. En el caso de los índices en disco, dichas claves están almacenadas en una estructura (árbol B) que permite que SQL Server busque de forma rápida y eficiente la fila o las filas asociadas a los valores de cada clave.  
+ Piense en un libro corriente: al final del libro hay un índice en el que puede localizar rápidamente la información del libro. El índice es una lista ordenada de palabras clave y, junto a cada palabra clave, hay un conjunto de números de página que redirigen a las páginas en las que aparece cada palabra clave. Un índice de SQL Server es parecido: es una lista ordenada de valores y para cada valor hay punteros a las [páginas](../relational-databases/pages-and-extents-architecture-guide.md) de datos en las que se encuentran estos valores. El propio índice se almacena en páginas, lo que conforma las páginas de índice de SQL Server. En un libro corriente, si el índice abarca varias páginas y tiene que buscar punteros a todas las páginas que contienen, por ejemplo, la palabra "SQL", tendría que pasar las páginas hasta encontrar la página de índice que contiene la palabra clave "SQL". Desde allí, seguiría los punteros a todas las páginas del libro.  Esto se podría optimizar aún más si al principio del índice se crea una sola página que contiene una lista alfabética de dónde se puede encontrar cada letra. Por ejemplo: "De la A a la D -  página 121", "De la E a la G - página 122", y así sucesivamente. Esta página adicional eliminaría el paso de tener que pasar las páginas por el índice para encontrar la posición de inicio. Esta página no existe en los libros corrientes, pero sí en un índice de SQL Server. Esta página se denomina "página raíz" del índice. La página raíz es la página inicial de la estructura de árbol que se usa en un índice de SQL Server. Siguiendo la analogía del árbol, las páginas finales que contienen punteros a los datos reales se conocen como "páginas hoja" del árbol. 
+
+ Un índice de SQL Server es una estructura en disco o en memoria asociada con una tabla o vista que acelera la recuperación de filas de la tabla o vista. Un índice contiene claves generadas a partir de una o varias columnas de la tabla o la vista. En el caso de los índices en disco, dichas claves están almacenadas en una estructura de árbol (árbol B) que permite que SQL Server busque de forma rápida y eficiente la fila o las filas asociadas a los valores de cada clave.  
 
  Los índices almacenan los datos organizados de forma lógica como una tabla con filas y columnas, y físicamente almacenados en un formato de datos por fila llamado *almacén de filas* <sup>1</sup>, o bien en un formato de datos por columna llamado *[almacén de columnas](#columnstore_index)* .  
     
@@ -79,7 +81,7 @@ Para obtener más información sobre los índices de texto completo, vea [Rellen
 4.  Determinar qué opciones de índice podrían mejorar el rendimiento al crear o mantener el índice. Por ejemplo, la creación de un índice agrupado en una tabla grande se beneficiaría de la opción de índice `ONLINE`. La opción ONLINE permite que la actividad simultánea en los datos subyacentes continúe mientras el índice se crea o regenera. Para obtener más información, consulte [Establecer opciones de índice](../relational-databases/indexes/set-index-options.md).  
   
 5.  Determinar la ubicación de almacenamiento óptima para el índice. Un índice no clúster se puede almacenar en el mismo grupo de archivos que la tabla subyacente o en un grupo distinto. La ubicación de almacenamiento de índices puede mejorar el rendimiento de las consultas aumentando el rendimiento de las operaciones de E/S en disco. Por ejemplo, el almacenamiento de un índice no clúster en un grupo de archivos que se encuentra en un disco distinto que el del grupo de archivos de la tabla puede mejorar el rendimiento, ya que se pueden leer varios discos al mismo tiempo.  
-     O bien, los índices clúster y no clúster pueden utilizar un esquema de particiones en varios grupos de archivos. Las particiones facilitan la administración de índices y tablas grandes al permitir el acceso y la administración de subconjuntos de datos rápidamente y con eficacia, mientras se mantiene la integridad de la colección global. Para obtener más información, consulte [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Al considerar la posibilidad de utilizar particiones, determine si el índice debe alinearse; es decir, si las particiones se crean esencialmente del mismo modo que la tabla o de forma independiente.   
+     O bien, los índices clúster y no clúster pueden utilizar un esquema de particiones en varios grupos de archivos. Las particiones facilitan la administración de índices y tablas grandes al permitir el acceso y la administración de subconjuntos de datos rápidamente y con eficacia, mientras se mantiene la integridad de la colección global. Para obtener más información, vea [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md). Al considerar la posibilidad de utilizar particiones, determine si el índice debe alinearse; es decir, si las particiones se crean esencialmente del mismo modo que la tabla o de forma independiente.   
 
 ##  <a name="General_Design"></a> Directrices generales para diseñar índices  
  Los administradores de bases de datos más experimentados pueden diseñar un buen conjunto de índices, pero esta tarea es muy compleja, consume mucho tiempo y está sujeta a errores, incluso con cargas de trabajo y bases de datos con un grado de complejidad no excesivo. La comprensión de las características de la base de datos, las consultas y las columnas de datos facilita el diseño de los índices.  
@@ -374,7 +376,7 @@ En la siguiente ilustración se muestra la estructura de un índice no clúster 
   
 -   Pueden ser tipos de datos que no están permitidos como columnas de clave de índice.  
   
--   El [!INCLUDE[ssDE](../includes/ssde-md.md)] no las tiene en cuenta cuando calcula el número de columnas de clave de índice o el tamaño de clave de índice.  
+-   El [!INCLUDE[ssDE](../includes/ssde-md.md)] no las tiene en cuenta cuando calcula el número de columnas de clave de índice o el tamaño de las claves de índice.  
   
  Un índice con columnas sin clave incluidas puede mejorar significativamente el rendimiento de una consulta cuando todas las columnas de la consulta se incluyen como columnas de clave o columnas sin clave. Las mejoras en el rendimiento se consiguen porque el optimizador de consultas puede localizar todos los valores de las columnas del índice, sin tener acceso a los datos de la tabla o del índice clúster, lo que da como resultado menos operaciones de E/S de disco.  
   
@@ -384,7 +386,7 @@ En la siguiente ilustración se muestra la estructura de un índice no clúster 
  Las columnas de clave se almacenan en todos los niveles del índice, mientras que las columnas sin clave solo se almacenan en el nivel hoja.  
   
 ##### <a name="using-included-columns-to-avoid-size-limits"></a>Usar columnas incluidas para evitar límites de tamaño  
- Puede incluir columnas sin clave en un índice no clúster para evitar que supere las limitaciones actuales de tamaño del índice de un máximo de 16 columnas de clave y un tamaño máximo de las claves de índice de 900 bytes. El [!INCLUDE[ssDE](../includes/ssde-md.md)] no tiene en cuenta las columnas sin clave al calcular el número de columnas de clave de índice o el tamaño de clave de índice.   
+ Puede incluir columnas sin clave en un índice no clúster para evitar que supere las limitaciones actuales de tamaño del índice de un máximo de 16 columnas de clave y un tamaño máximo de las claves de índice de 900 bytes. El [!INCLUDE[ssDE](../includes/ssde-md.md)] no tiene en cuenta las columnas sin clave al calcular el número de columnas de clave de índice o el tamaño de las claves de índice.   
  Por ejemplo, suponga que desea indizar las siguientes columnas de la tabla `Document` :  
  *  `Title nvarchar(50)`  
  *  `Revision nchar(5)`  
@@ -646,7 +648,7 @@ Si conoce estos conceptos básicos, le resultará más fácil entender otros art
 #### <a name="data-storage-uses-columnstore-and-rowstore-compression"></a>El almacén de datos emplea la compresión de almacén de columnas y de filas
 Al tratar los índices de almacén de columnas, se usan los términos *almacén de filas* y *almacén de columnas* para hacer hincapié en el formato del almacenamiento de datos. Los índices de almacén de columnas utilizan estos dos tipos de almacenamiento.
 
- ![Clustered Columnstore Index](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")
+ ![Índice de almacén de columnas agrupado](../relational-databases/indexes/media/sql-server-pdw-columnstore-physicalstorage.gif "Índice de almacén de columnas agrupado")
 
 - Un **almacén de columnas** son datos organizados lógicamente como una tabla con filas y columnas, y almacenados físicamente en un formato de columnas.
   
@@ -673,7 +675,7 @@ El almacén delta se compone de uno o varios grupos de filas denominados **grupo
 
 Cada columna tiene algunos de sus valores en cada grupo de filas. Estos valores se denominan **segmentos de columna**. Cada grupo de filas contiene un segmento de cada columna de la tabla. Cada columna tiene un segmento de columna en cada grupo de filas.
 
-![Column segment](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment") 
+![Segmento de columna](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "|::ref2::|") 
  
 Cuando el índice de almacén de columnas comprime un grupo de filas, lo hace con cada segmento de columna de manera independiente. Para descomprimir una columna entera, el índice de almacén de columnas solo debe descomprimir un segmento de columna de cada grupo de filas.   
 
@@ -853,7 +855,7 @@ Los páginas de índice de un árbol BW se amplían en función de las necesidad
 
 Se aplica una operación de división en dos pasos atómicos. En la imagen que hay a continuación, pongamos que una página hoja fuerza una división porque se está insertando una clave con valor 5, y que hay una página no hoja que apunta al final de la página de nivel hoja (valor de clave 4).
 
-![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "División de páginas")
+![hekaton_tables_23f](../relational-databases/in-memory-oltp/media/HKNCI_Split.gif "Dividir páginas")
 
 **Paso 1:** Asigne dos nuevas páginas P1 y P2, y divida las filas de la página P1 anterior en estas nuevas páginas, incluida la fila que se acaba de insertar. Se usa un nuevo espacio en la tabla de asignación de páginas para almacenar la dirección física de la página P2. Ninguna operación simultánea puede acceder todavía a estas páginas, P1 y P2. Además, se establece el puntero lógico de P1 a P2. Después, en un paso atómico, se actualiza la tabla de asignación de páginas para cambiar el puntero de la anterior P1 a la nueva P1. 
 
@@ -866,7 +868,7 @@ Cuando se elimina una fila de una página, se agrega un registro delta para la e
 
 En la imagen siguiente, pongamos que una operación `DELETE` elimina el valor de clave 10. 
 
-![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Combinación de páginas")
+![hekaton_tables_23g](../relational-databases/in-memory-oltp/media/HKNCI_Merge.gif "Combinar páginas")
 
 **Paso 1:** Se crea una página delta que representa el valor de clave 10 (triángulo azul), y el puntero correspondiente de la página que no es hoja Pp1 se establece en la nueva página delta. Además, se crea una página delta de combinación (triángulo verde) y se vincula para que apunte a la página delta. En este punto, ninguna transacción simultánea puede ver las dos páginas (delta y delta de combinación). En un paso atómico, el puntero a la página de nivel hoja P1 de la tabla de asignación de páginas se actualiza para que apunte a la página delta de combinación. Después de este paso, la entrada del valor de clave 10 en Pp1 apuntará a la página delta de combinación. 
 
@@ -891,7 +893,7 @@ Al consultar una tabla optimizada para memoria con predicados de desigualdad, el
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [Reorganizar y volver a generar índices](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [Mejorar el rendimiento con vistas indizadas de SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[Tablas e índices con particiones](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Creación de una clave principal](../relational-databases/tables/create-primary-keys.md)    
 [Índices de tablas con optimización para memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [Introducción a los índices de almacén de columnas](../relational-databases/indexes/columnstore-indexes-overview.md)  

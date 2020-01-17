@@ -1,7 +1,8 @@
 ---
-title: 'Tutorial: Creación y uso de índices en columnas habilitadas para el enclave que usan cifrado aleatorio | Microsoft Docs'
-ms.custom: ''
-ms.date: 10/15/2019
+title: Índices en columnas habilitadas para enclave con cifrado aleatorio (Tutorial)
+description: En este tutorial se describe cómo crear y usar índices en columnas habilitadas para enclave mediante el cifrado aleatorio admitido en Always Encrypted con enclaves seguros para SQL Server.
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae44a28c5a4c426ffe225d8d80a545f6722c4c1
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 636b304d99ee244ef7a367fb8a474ebe8df312a0
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592324"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557778"
 ---
 # <a name="tutorial-create-and-use-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Tutorial: Creación y uso de índices en columnas habilitadas para enclave que usan cifrado aleatorio
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -33,7 +34,7 @@ Este tutorial es la continuación del [Tutorial: Introducción a Always Encrypte
 
 ## <a name="step-1-enable-accelerated-database-recovery-adr-in-your-database"></a>Paso 1: Habilitación de la recuperación de base de datos acelerada (ADR) en la base de datos
 
-Microsoft recomienda encarecidamente habilitar ADR en la base de datos antes de crear el primer índice en una columna habilitada para enclave que usa cifrado aleatorio. Vea la sección [Recuperación de la base de datos](./encryption/always-encrypted-enclaves.md##database-recovery) del tutorial [Always Encrypted con enclaves seguros](./encryption/always-encrypted-enclaves.md).
+Microsoft recomienda encarecidamente habilitar ADR en la base de datos antes de crear el primer índice en una columna habilitada para enclave que usa cifrado aleatorio. Vea la sección [Recuperación de la base de datos](./encryption/always-encrypted-enclaves.md#database-recovery) del tutorial [Always Encrypted con enclaves seguros](./encryption/always-encrypted-enclaves.md).
 
 1. Cierre todas las instancias SSMS que usó en el tutorial anterior. Las conexiones abiertas de base de datos se cerrarán, lo que es necesario para habilitar ADR.
 1. Abra una nueva instancia de SSMS y conéctese a la instancia de SQL Server como sysadmin **sin** Always Encrypted habilitado para la conexión de base de datos.
@@ -174,5 +175,5 @@ En este paso, creará un índice en una columna cifrada, que simula ser dos usua
 ## <a name="next-steps"></a>Pasos siguientes
 - [Tutorial: Desarrollo de una aplicación de .NET Framework mediante Always Encrypted con enclaves seguros](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 - [Creación y uso de índices en columnas mediante Always Encrypted con enclaves seguros](encryption/always-encrypted-enclaves-create-use-indexes.md)

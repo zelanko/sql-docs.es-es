@@ -10,23 +10,22 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 10/15/2019
-ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545054"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241747"
 ---
 # <a name="what-is-azure-data-studio"></a>¿Qué es Azure Data Studio?
 
 Azure Data Studio es una herramienta de base de datos multiplataforma para profesionales de datos que usan la familia de las plataformas de datos locales y en la nube de Microsoft en Windows, macOS y Linux.
 
-Azure Data Studio, que anteriormente se había publicado con el nombre de versión preliminar SQL Operations Studio, ofrece una experiencia de editor moderna con IntelliSense, fragmentos de código, integración del control de código fuente y un terminal integrado. Se ha diseñado con el usuario de la plataforma de datos en mente, con gráficos integrados de conjuntos de resultados de consultas y paneles personalizables.
+Azure Data Studio ofrece una experiencia de editor moderna con IntelliSense, fragmentos de código, integración del control de código fuente y un terminal integrado. Se ha diseñado para usuarios de plataformas de datos, con gráficos integrados de conjuntos de resultados de consultas y paneles personalizables.
 
 El código fuente de Azure Data Studio y sus proveedores de datos está disponible en GitHub en un CLUF de código fuente que proporciona derechos para modificar y usar el software, pero no para redistribuirlo ni hospedarlo en un servicio en la nube. Para obtener más información, vea [Preguntas más frecuentes de Azure Data Studio](faq.md).
 
 **[Descargar e instalar [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
-
 
 ## <a name="sql-code-editor-with-intellisense"></a>Editor de código SQL con IntelliSense
 
@@ -37,7 +36,6 @@ El código fuente de Azure Data Studio y sus proveedores de datos está disponib
 Los fragmentos de código SQL generan la sintaxis SQL adecuada para crear bases de datos, tablas, vistas, procedimientos almacenados, usuarios, inicios de sesión, roles, etc., y para actualizar los objetos de base de datos existentes. Use fragmentos de código inteligentes para crear rápidamente copias de la base de datos con fines de desarrollo o prueba, y para generar y ejecutar scripts CREATE e INSERT.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] también proporciona una funcionalidad para crear fragmentos de código SQL personalizados. Para obtener más información, vea [Crear y usar fragmentos de código](code-snippets.md).
-
 
 ## <a name="customizable-server-and-database-dashboards"></a>Paneles de servidor y base de datos personalizables
 
@@ -61,6 +59,7 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 ## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>Comparación de características con SQL Server Management Studio (SSMS)
 
 **Use Azure Data Studio si:**
+
 - Necesita ejecutarlo en macOS o Linux.
 - Se está conectando a un clúster de macrodatos de SQL Server 2019.
 - Dedica la mayor parte del tiempo a editar o ejecutar consultas.
@@ -68,9 +67,9 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 - Puede ejecutar la mayoría de las tareas administrativas mediante el terminal integrado con sqlcmd o PowerShell.
 - Tiene una necesidad mínima de las experiencias del asistente.
 - No necesita realizar una configuración administrativa profunda.
-- Quiero 
 
 **Use SQL Server Management Studio si:**
+
 - Dedica la mayor parte del tiempo a las tareas de administración de bases de datos.
 - Realiza una configuración administrativa profunda.
 - Administra la seguridad, incluida la administración de usuarios, la evaluación de vulnerabilidades y la configuración de características de seguridad.
@@ -100,7 +99,6 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 |Importación o exportación de DACPAC||Sí|
 |Propiedades de objeto||Sí|
 |Diseñador de tablas||Sí|
-
 
 ### <a name="query-editor"></a>Editor de consultas
 
@@ -146,18 +144,18 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 |Importación de archivos planos|Vista previa|Sí|
 |Agente SQL|Vista previa|Sí|
 |SQL Profiler|Vista previa|Sí|
-|AlwaysOn||Sí|
+|Always On||Sí|
 |Always Encrypted||Sí|
 |Asistente para copiar datos||Sí|
 |Asistente para la optimización de datos||Sí|
 |Visor de registros de errores||Sí|
 |Planes de mantenimiento||Sí|
 |Consulta multiservidor||Sí|
-|Administración basada en directivas||Sí|
+|administración basada en directivas||Sí|
 |PolyBase||Sí|
 |Almacén de consultas||Sí|
 |Servidores registrados||Sí|
-|REPLICATION||Sí|
+|Replicación||Sí|
 |Administración de seguridad||Sí|
 |Service Broker||Sí|
 |SQL Mail||Sí|

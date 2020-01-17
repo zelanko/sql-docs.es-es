@@ -1,6 +1,7 @@
 ---
-title: Always Encrypted con enclaves seguros | Microsoft Docs
-ms.custom: ''
+title: Always Encrypted con enclaves seguros
+description: Obtenga información sobre la característica Always Encrypted con enclaves seguros para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7d04dcc5aeeafcdc78dcc6dd401afc476fbf6555
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594041"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558055"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclaves seguros
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -86,13 +87,13 @@ Para más información sobre los tipos de cifrado, consulte [Criptografía de Al
 
 En la tabla siguiente se resume la funcionalidad disponible para las columnas cifradas, en función de si las columnas usan claves de cifrado de columna habilitadas para el enclave y un tipo de cifrado.
 
-| **Operación**| **La columna NO está habilitada para el enclave** |**La columna NO está habilitada para el enclave**| **La columna está habilitada para el enclave**  |**La columna está habilitada para el enclave** |
+| **operación**| **La columna NO está habilitada para el enclave** |**La columna NO está habilitada para el enclave**| **La columna está habilitada para el enclave**  |**La columna está habilitada para el enclave** |
 |:---|:---|:---|:---|:---|
 | | **Cifrado aleatorio**  | **Cifrado determinista**     | **Cifrado aleatorio**      | **Cifrado determinista**     |
-| **Cifrado en contexto** | No admitida  | No admitida   | Admitida         | Admitida    |
-| **Comparación de igualdad**   | No admitida | Admitida fuera del enclave | Admitida (dentro del enclave) | Admitida fuera del enclave |
-| **Operadores de comparación más allá de la igualdad** | No admitida  | No admitida   | Admitida      | No admitida     |
-| **LIKE**    | No admitida      | No admitida    | Admitida     | No admitida    |
+| **Cifrado en contexto** | No compatible  | No compatible   | Compatible         | Compatible    |
+| **Comparación de igualdad**   | No compatible | Admitida fuera del enclave | Admitida (dentro del enclave) | Admitida fuera del enclave |
+| **Operadores de comparación más allá de la igualdad** | No compatible  | No compatible   | Compatible      | No compatible     |
+| **LIKE**    | No compatible      | No compatible    | Compatible     | No compatible    |
 
 El cifrado en contexto incluye compatibilidad con estas operaciones dentro del enclave:
 
@@ -115,7 +116,7 @@ Puede crear índices no agrupados en columnas habilitadas para enclave mediante 
 
 Sigue sin ser posible la creación de índices en columnas que usan cifrado aleatorio y no están habilitadas para el enclave.
 
-Para obtener más información, vea [Creación y uso de índices en columnas de Always Encrypted con enclaves seguros](always-encrypted-enclaves-create-use-indexes.md). Para obtener información general, no específica de Always Encrypted, acerca de cómo funciona la indexación en SQL Server, consulte [Índices agrupados y no agrupados descritos](../../indexes/clustered-and-nonclustered-indexes-described.md).
+Para más información, vea [Creación y uso de índices en columnas de Always Encrypted con enclaves seguros](always-encrypted-enclaves-create-use-indexes.md). Para obtener información general, no específica de Always Encrypted, acerca de cómo funciona la indexación en SQL Server, consulte [Índices agrupados y no agrupados descritos](../../indexes/clustered-and-nonclustered-indexes-described.md).
 
 #### <a name="database-recovery"></a>Recuperación de la bases de datos
 
@@ -130,7 +131,7 @@ Con el [proceso de recuperación de base de datos tradicional](https://docs.micr
 
 Un índice en una columna que usa cifrado determinista se ordena según el texto cifrado (no texto sin cifrar), sin importar si la columna está o no habilitada para enclave.
 
-## <a name="security-considerations"></a>Consideraciones de seguridad
+## <a name="security-considerations"></a>Consideraciones sobre la seguridad
 
 Se aplican las siguientes consideraciones de seguridad a Always Encrypted con enclaves seguros.
 
@@ -148,7 +149,7 @@ Si la base de datos contiene índices en columnas habilitadas para enclave media
 
 Cuando se migra la base de datos mediante un archivo bacpac, debe asegurarse de quitar todos los índices de las columnas habilitadas para enclave con cifrado aleatorio antes de crear el archivo bacpac.
 
-## <a name="known-limitations"></a>Restricciones conocidas
+## <a name="known-limitations"></a>Limitaciones conocidas
 Always Encrypted con enclaves seguros aborda algunas de las limitaciones de Always Encrypted al permitir las siguientes operaciones:
 
 - Operaciones criptográficas en contexto.
@@ -180,7 +181,7 @@ Las siguientes limitaciones son específicas de Always Encrypted con enclaves se
 - [Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Configuración y uso de Always Encrypted con enclaves seguros](configure-always-encrypted-enclaves.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 - [Administración de claves para Always Encrypted con enclaves seguros](always-encrypted-enclaves-manage-keys.md)
 - [Configuración del cifrado de columna en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md)
 - [Consulta de columnas mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-query-columns.md)

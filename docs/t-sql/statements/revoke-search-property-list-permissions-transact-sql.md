@@ -1,6 +1,8 @@
 ---
-title: REVOCAR permisos de la lista de propiedades de búsqueda (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permisos de lista de propiedades de búsqueda REVOKE
+description: Revoca los permisos en una lista de propiedades de búsqueda.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f9b69ec02d8f436ccaacf8f9fc75fbb01b429316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 84d15026a188bd24522195d22e70707a8803fda8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914266"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255805"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>REVOCAR permisos de la lista de propiedades de búsqueda (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="search-property-list-permissions"></a>Permisos de lista de propiedades de búsqueda  
  Una lista de propiedades de búsqueda es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. Los permisos más limitados y específicos que se pueden revocar en una lista de propiedades de búsqueda se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  

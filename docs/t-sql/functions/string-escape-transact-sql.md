@@ -18,18 +18,18 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: d845257313466caa21976feaf69598e404a03962
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e9b189d6b06aaf3b85815ed6d889756d466bff8
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906866"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325507"
 ---
-# <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
+# <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Aplica caracteres de escape a caracteres especiales en textos y devuelve texto con caracteres de escape. **STRING_ESCAPE** es una función determinista.  
+Aplica caracteres de escape a caracteres especiales en textos y devuelve texto con caracteres de escape. **STRING_ESCAPE** es una función determinista, introducida en SQL Server 2016. 
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,13 +41,13 @@ STRING_ESCAPE( text , type )
   
 ## <a name="arguments"></a>Argumentos
 
- *texto*  
- Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) **nvarchar** que representa el objeto que se debe escapar.  
+ *text*  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md)**nvarchar** que representa el objeto que se debe escapar.  
   
- *Tipo*  
+ *type*  
  Reglas de escape que se aplicarán. Actualmente el valor admitido es `'json'`.  
   
-## <a name="return-types"></a>Tipos devueltos
+## <a name="return-types"></a>Tipos de valor devuelto
 
  Texto **nvarchar(max)** con caracteres especiales y de control de escape. Actualmente **STRING_ESCAPE** solo puede aplicar caracteres de escape a los caracteres especiales de JSON que se muestran en las tablas siguientes.  
   
@@ -58,7 +58,7 @@ STRING_ESCAPE( text , type )
 |Barra oblicua (/)|\\/|  
 |Retroceso|\b|  
 |Avance de página|\f|  
-|Nueva línea|\n|  
+|Línea nueva|\n|  
 |Retorno de carro|\r|  
 |Tabulación horizontal|\t|  
   
@@ -69,7 +69,7 @@ STRING_ESCAPE( text , type )
 |…|…|  
 |CHAR(31)|\u001f|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="examples"></a>Ejemplos  
   

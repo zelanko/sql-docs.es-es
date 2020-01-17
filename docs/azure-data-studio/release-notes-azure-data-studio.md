@@ -9,17 +9,55 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 11/04/2019
-ms.openlocfilehash: 16e2a7568bb88dbf36576cf5a6d64a1b268621fa
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.date: 12/26/2019
+ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
+ms.sourcegitcommit: 3c65b43ba5a00585be7840df300d9183dc6fb606
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532526"
+ms.lasthandoff: 12/28/2019
+ms.locfileid: "75521735"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión de Azure Data Studio
 
 **[Descargue e instale la versión más reciente](download.md)** .
+
+## <a name="december-2019-hotfix"></a>Diciembre de 2019 (revisión)
+
+26 de diciembre de 2019 &nbsp; / &nbsp; versión: 1.14.1
+
+&nbsp;
+
+| Change | Detalles |
+| :----- | :------ |
+| Corrección del error #8747 Error de expansión de OE | [#8747](https://github.com/microsoft/azuredatastudio/issues/8747)  |
+| &nbsp; | &nbsp; |
+
+## <a name="december-2019"></a>Diciembre de 2019
+
+19 de diciembre de 2019 &nbsp; / &nbsp; versión: 1.14.0 
+
+&nbsp;
+
+| Change | Detalles |
+| :----- | :------ |
+| Se ha cambiado la lista desplegable de vincular a la conexión de Notebooks para que solo se muestre la conexión activa actualmente. | [#8129](https://github.com/microsoft/azuredatastudio/issues/8129) |
+| Se ha agregado la configuración bigdatacluster.ignoreSslVerification para permitir omitir los errores de comprobación de SSL al conectarse a un BDC. | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
+| Se permite cambiar el tipo de idioma predeterminado para los editores de consultas sin conexión. | [#8419](https://github.com/microsoft/azuredatastudio/pull/8419) |
+| Estado de disponibilidad general para Clúster de macrodatos y Características de SQL 2019. | [#8269](https://github.com/microsoft/azuredatastudio/issues/8269) |
+| Problemas y errores resueltos | Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/44?closed=1). |
+| &nbsp; | &nbsp; |
+
+
+## <a name="november-2019-hotfix"></a>Noviembre de 2019 (revisión)
+
+15 de noviembre de 2019 &nbsp; / &nbsp; Versión: 1.13.1
+
+&nbsp;
+
+| Change | Detalles |
+| :----- | :------ |
+| Se corregido el error n.º 8210 que indica que los resultados de copiar y pegar están desordenados. |  |
+| &nbsp; | &nbsp; |
 
 ## <a name="november-2019"></a>Noviembre de 2019
 
@@ -27,12 +65,12 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
-| Nueva compatibilidad con SQL Server 2019 | &bull; &nbsp; Implementación de un clúster de macrodatos de SQL Server 2019 con el Asistente para implementar el BDC <br/>&bull; &nbsp; Administración del mantenimiento del clúster con el panel del controlador <br/>&bull; &nbsp; Administración de las listas de control de acceso de HDFS mediante el cuadro de diálogo ACL de seguridad <br/> &bull; &nbsp; Adición de montajes mediante el cuadro de diálogo Niveles de HDFS <br/> &bull; &nbsp; Solución de problemas con el libro de Jupyter integrado y la guía de SQL Server 2019 <br/> &bull; &nbsp; Cambio de nombre a extensión de SQL vNext y extensión de virtualización de datos <br/> &bull; &nbsp; Adición de compatibilidad con Teradata y Mongo en el Asistente para tablas externas|
-| Nuevas características de los cuadernos | &bull; &nbsp; Anuncio de cuadernos de PowerShell &bull; &nbsp; Anuncio de celdas de código contraíble <br/>&bull; &nbsp; Mejoras de rendimiento en los cuadernos <br/> &bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22) puede ver la lista completa de mejoras. |
+| Nueva compatibilidad con SQL Server 2019 | &bull; &nbsp; Implementación de un clúster de macrodatos de SQL Server 2019 con el asistente de implementación de BDC <br/>&bull; &nbsp; Administración del mantenimiento del clúster con el panel del controlador <br/>&bull; &nbsp; Administración de las listas de control de acceso de HDFS mediante el cuadro de diálogo ACL de seguridad <br/> &bull; &nbsp; Adición de montajes mediante el cuadro de diálogo Niveles de HDFS <br/> &bull; &nbsp; Solución de problemas con el libro de Jupyter integrado y la guía de SQL Server 2019 <br/> &bull; &nbsp; Se ha cambiado el nombre a extensión de SQL vNext y extensión de virtualización de datos <br/> &bull; &nbsp; Se ha agregado compatibilidad con Teradata y Mongo en el Asistente para tablas externas|
+| Nuevas características de los cuadernos | &bull; &nbsp; Anuncio de los cuadernos de PowerShell <br/> &bull; &nbsp; Anuncio de las celdas de código contraíble <br/>&bull; &nbsp; Mejoras de rendimiento en Notebooks <br/> &bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22November+2019+Release%22+is%3Aclosed+label%3A%22Area+-+Notebooks%22) puede ver la lista completa de las mejoras. |
 | Anuncio de libros de Jupyter  | Los libros de Jupyter son una colección de cuadernos y archivos Markdown organizados en una tabla de contenidos. |
-| Nuevo Asistente para la implementación de SQL Server  | Ahora incluye compatibilidad con la implementación de: <br/> &bull; &nbsp; SQL Server 2019 en Windows <br/> &bull; &nbsp; SQL Server 2017 en Windows <br/> &bull; &nbsp; SQL Server 2019 en Docker <br/> &bull; &nbsp; SQL Server 2017 en Docker |
+| Nuevo Asistente para la implementación de SQL Server  | Ahora incluye compatibilidad con la implementación de: <br/> &bull; &nbsp; SQL Server 2019 en Windows <br/> &bull; &nbsp; SQL Server 2017 en Windows <br/> &bull; &nbsp; SQL Server 2019 en Docker <br/> &bull; &nbsp; SQL Server 2017 en Docker |
 | Anuncio de la disponibilidad general de la extensión Comparación de esquemas| &bull; &nbsp; Modo SQLCMD <br/> &bull; &nbsp; Compatibilidad de localización <br/> &bull; &nbsp; Correcciones de accesibilidad <br/> &bull; &nbsp; Errores de seguridad  |
 | Anuncio de la disponibilidad general de la extensión Dacpac de SQL Server| <br/> &bull; &nbsp; Compatibilidad de localización <br/> &bull; &nbsp; Correcciones de accesibilidad <br/> &bull; &nbsp; Errores de seguridad |
 | Anuncio de la extensión IntelliCode de Visual Studio | IntelliCode de Visual Studio ahora admite SQL, lo que permite sugerencias más inteligentes de palabras clave reservadas. |
@@ -45,7 +83,7 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Deshabilitación del inicio automático de EH en el modo de inspección |  |
 | &nbsp; | &nbsp; |
@@ -56,7 +94,7 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Se corrigió el problema de las comillas y las barras diagonales inversas en Notebooks como caracteres de escape correctos. |  |
 | &nbsp; | &nbsp; |
@@ -67,7 +105,7 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Publicación de la extensión del historial de consultas | La extensión Historial de SQL guarda todas las consultas pasadas ejecutadas en una sesión de Azure Data Studio y las muestra en orden de ejecución. Los usuarios pueden ver, abrir, ejecutar y eliminar la consulta, pausar el historial de consultas o eliminar todas las entradas del historial de consultas. |
 | Nuevos resultados de Copiar y pegar | Se han agregado otras maneras de copiar y pegar los resultados desde la cuadrícula de resultados. |
@@ -85,11 +123,11 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Habilitación del modo SQLCMD | Ahora el Editor de consultas admite la alternancia del modo SQLCMD para escribir y modificar consultas como scripts SQLCMD |
-| Extensión de la comunidad: Query Editor Boost | Query Editor Boost es una extensión de código abierto centrada en mejorar el editor de consultas de Azure Data Studio para los usuarios que escriben consultas con frecuencia. &bull; &nbsp; Guardado de la consulta actual como un fragmento de código <br/>&bull; &nbsp; Intercambio de bases de datos mediante Ctrl+U <br/> &bull; &nbsp; Nueva consulta a partir de una plantilla <br/> &bull; &nbsp; [Aquí](https://github.com/dzsquared/query-editor-boost) puede ver la lista completa de mejoras. |
-| Mejoras de Notebook | &bull; &nbsp; Mejoras de rendimiento para admitir archivos de Bloc de notas más grandes <br/> &bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed) puede ver la lista completa de mejoras. |
+| Extensión de la comunidad: Query Editor Boost | Query Editor Boost es una extensión de código abierto centrada en mejorar el editor de consultas de Azure Data Studio para los usuarios que escriben consultas con frecuencia. &bull; &nbsp; Guardado de la consulta actual como un fragmento de código <br/>&bull; &nbsp; Intercambio de bases de datos mediante Ctrl+U <br/> &bull; &nbsp; Nueva consulta a partir de una plantilla <br/> &bull; &nbsp; [Aquí](https://github.com/dzsquared/query-editor-boost) puede ver la lista completa de las mejoras. |
+| Mejoras de Notebook | &bull; &nbsp; Mejoras de rendimiento para admitir archivos de cuaderno más grandes <br/> &bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed) puede ver la lista completa de las mejoras. |
 | Combinación de la versión de agosto de Visual Studio Code 1.38 | [Aquí](https://code.visualstudio.com/updates/v1_38) encontrará las mejoras más recientes. |
 | Problemas y errores resueltos | Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
 | &nbsp; | &nbsp; |
@@ -105,11 +143,11 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Publicación de la extensión SandDance 1.3.1 | &bull; &nbsp; Detección inteligente de gráficos <br/>&bull; &nbsp; Visualizaciones 3D <br/> &bull; &nbsp; Filtrado de datos |
-| Mejoras de Notebook | &bull; &nbsp; Se agregó celda de texto o código en línea. <br/>&bull; &nbsp; Se agregó la posibilidad de hacer clic con el botón derecho en la cuadrícula de resultados de SQL para guardar el resultado como CSV, JSON, etc. <br/> &bull; &nbsp; Mejora en el rendimiento de carga de Notebook para cargar JSON más rápido. <br/> &bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) puede ver la lista completa de mejoras. |
-| Compatibilidad con SQL Server 2019 |  Esta versión incluye compatibilidad con otras características del clúster de macrodatos de SQL Server 2019: <br/> &bull; &nbsp; Se redujo el tiempo necesario para cargar la información de tabla y columna en la página de asignación de objetos. <br/> &bull; &nbsp; Se corrigió un error al cargar las credenciales con ámbito de base de datos existentes en la página de detalles de la conexión. <br/> &bull; &nbsp; Se aumentó el tamaño de ejemplo predeterminado que se usa para el análisis de PROSE. | 
+| Mejoras de Notebook | &bull; &nbsp; Adición de celda de texto o código en línea <br/>&bull; &nbsp; Adición de la posibilidad de hacer clic con el botón derecho en la cuadrícula de resultados de SQL para guardar el resultado como CSV, JSON, etc. <br/> &bull; &nbsp; Mejora en el rendimiento de carga de cuadernos para acelerar la carga de JSON <br/> &bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) puede ver la lista completa de las mejoras. |
+| Compatibilidad con SQL Server 2019 |  Esta versión incluye compatibilidad con otras características del clúster de macrodatos de SQL Server 2019: <br/> &bull; &nbsp; Se ha reducido el tiempo necesario para cargar la información de tabla y columna en la página de asignación de objetos. <br/> &bull; &nbsp; Se ha corregido un error al cargar las credenciales con ámbito de base de datos existentes en la página de detalles de la conexión. <br/> &bull; &nbsp; Se ha aumentado el tamaño de ejemplo predeterminado que se usa para el análisis de PROSE. | 
 | La extensión dacpac ahora es compatible con AAD | 
 | Combinación de la versión de julio de Visual Studio Code 1.37 | [Aquí](https://code.visualstudio.com/updates/v1_37) encontrará las mejoras más recientes. |
 | Problemas y errores resueltos | Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
@@ -121,14 +159,14 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Publicación de la extensión SentryOne Plan Explorer | Nuestro apreciado partner de Microsoft, SentryOne, publicará su [extensión SentryOne Plan Explorer para Azure Data Studio](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio). <br> Se trata de una extensión gratuita que proporciona diagramas de plan mejorados para las consultas que se ejecutan en Azure Data Studio, con algoritmos de diseño optimizados y codificación de colores intuitiva que ayudan a identificar rápidamente los operadores más caros que afectan al rendimiento de las consultas. Para obtener más información sobre la extensión, consulte [aquí](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio) la publicación del blog de SentryOne. |
-| Nuevas características que se incorporarán a Comparación de esquemas | &bull; &nbsp; Compatibilidad con archivos de Comparación de esquemas (.SCMP). <br/>&bull; &nbsp; Compatibilidad con cancelación de Comparación de esquemas. <br/>&bull; &nbsp; Puede ver los cambios completos [aquí](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+).|
-| Mejoras de Notebook | &bull; &nbsp; Compatibilidad con Plotly Python. <br/>&bull; &nbsp; Apertura de Notebook desde el explorador. <br/> &bull; &nbsp; Cuadro de diálogo Administración de paquetes de Python. <br/> &bull; &nbsp; Mejoras de rendimiento y de Markdown. <br/> &bull; &nbsp; Actualización de los métodos abreviados de teclado. <br/>  &bull; &nbsp; Puede encontrar las correcciones de errores y las características secundarias [aquí](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+). |
-| Compatibilidad con SQL Server 2019 |  Esta versión incluye compatibilidad con otras características del clúster de macrodatos de SQL Server 2019: <br/> &bull; &nbsp; Tabla de puntos de conexión de servicio en el panel de administración que enumera todos los servicios clave del clúster. <br/> &bull; &nbsp; El cuaderno Estado del clúster muestra cómo puede consultar el estado del clúster en todos los servicios y pods, y ofrece soluciones a los posibles problemas.| 
+| Nuevas características que se incorporarán a Comparación de esquemas | &bull; &nbsp; Compatibilidad con archivos de Comparación de esquemas (.SCMP) <br/>&bull; &nbsp; Compatibilidad con cancelación de Comparación de esquemas <br/>&bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+) puede ver los cambios completos.|
+| Mejoras de Notebook | &bull; &nbsp; Compatibilidad con Plotly Python <br/>&bull; &nbsp; Apertura de Notebook desde el explorador <br/> &bull; &nbsp; Cuadro de diálogo Administración de paquetes de Python <br/> &bull; &nbsp; Mejoras de rendimiento y de Markdown <br/> &bull; &nbsp; Actualización de los métodos abreviados de teclado <br/>  &bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+) puede encontrar las correcciones de errores y las características secundarias. |
+| Compatibilidad con SQL Server 2019 |  Esta versión incluye compatibilidad con otras características del clúster de macrodatos de SQL Server 2019: <br/> &bull; &nbsp; Tabla de puntos de conexión de servicio en el panel de administración en la que se enumeran todos los servicios clave del clúster. <br/> &bull; &nbsp; El cuaderno Estado del clúster muestra cómo puede consultar el estado del clúster en todos los servicios y pods, y ofrece soluciones a los posibles problemas.| 
 | Paquetes de idioma actualizados disponibles| Ahora hay 10 paquetes de idioma disponibles en el Marketplace de Administrador de extensiones. Tan solo hay que buscar el idioma específico con el Marketplace de extensiones e instalarlo. Una vez instalado el idioma seleccionado, Azure Data Studio le pedirá que reinicie con el nuevo idioma. |
-| Actualización de SQL Server Profiler | La extensión Perfil de SQL Server se ha actualizado para incluir nuevas características, entre las que se incluyen: <br/> &bull; &nbsp; Filtrado por nombre de base de datos. <br/> &bull; &nbsp; Compatibilidad con copiar y pegar. <br/> &bull; &nbsp; Filtro Guardar/Cargar. <br/>[Aquí](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+) encontrará una lista completa de las mejoras de la extensión SQL Server Profiler.  |
+| Actualización de SQL Server Profiler | La extensión Perfil de SQL Server se ha actualizado para incluir nuevas características, entre las que se incluyen: <br/> &bull; &nbsp; Filtrado por nombre de base de datos <br/> &bull; &nbsp; Compatibilidad con copiar y pegar <br/> &bull; &nbsp; Filtro Guardar/Cargar <br/>[Aquí](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+) encontrará una lista completa de las mejoras de la extensión SQL Server Profiler.  |
 | Combinación de versión de mayo de Visual Studio Code 1.35 | [Aquí](https://code.visualstudio.com/updates/v1_35) encontrará las mejoras más recientes. |
 | Problemas y errores resueltos | En las versiones anteriores de Azure Data Studio, si se seleccionaba una base de datos de usuario al conectarse desde el cuadro de diálogo de conexión, la entrada resultante del Explorador de objetos estaba enfocada por completo a esa única base de datos. A partir de esta versión, ese comportamiento se está cambiando para que las propiedades de nivel de servidor también se muestren en el Explorador de objetos. <br/> Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
 | &nbsp; | &nbsp; |
@@ -140,15 +178,15 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Publicación de la extensión Servidores de administración central (CMS) de SQL Server | La extensión Servidores de administración central almacena una lista de instancias de SQL Server que se organizan en uno o varios grupos de este tipo de servidores. Los usuarios pueden conectarse a sus propios servidores CMS existentes y administrarlos, por ejemplo, para agregar y quitar servidores. [Aquí](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) puede obtener más información. |
 | Publicación de las extensiones de la herramienta de administración de bases de datos para Windows | Esta extensión inicia dos de las experiencias más usadas en SQL Server Management Studio desde Azure Data Studio. Los usuarios pueden hacer clic con el botón derecho en una gran variedad de objetos diferentes (como bases de datos, tablas, columnas, vistas, etc.) y seleccionar Propiedades para ver el cuadro de diálogo de propiedades de SSMS correspondiente ese objeto. Además, los usuarios pueden hacer clic con el botón derecho en una base de datos y seleccionar Generar scripts para iniciar el ya conocido asistente de generación de scripts de SSMS. 
-| Mejoras en la Comparación de esquemas | &bull; &nbsp; Se han agregado opciones de exclusión e inclusión. <br/>&bull; &nbsp; Generar script abre el script tras generarlo. <br/>&bull; &nbsp; Se han quitado las barras de desplazamiento doble.  <br/>&bull; &nbsp; Mejoras de formato y diseño. <br/>&bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed) puede ver los cambios completos.|
+| Mejoras en la Comparación de esquemas | &bull; &nbsp; Adición de opciones de exclusión e inclusión <br/>&bull; &nbsp; Generar script abre el script tras generarlo <br/>&bull; &nbsp; Eliminación de las barras de desplazamiento dobles  <br/>&bull; &nbsp; Mejoras de formato y diseño <br/>&bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed) puede ver los cambios completos.|
 | Sección Mensajes movida a su propia pestaña | Cuando los usuarios ejecutaban consultas SQL, los resultados y los mensajes se encontraban en paneles apilados. Ahora se encuentran en pestañas independientes en un panel como en SSMS. |
-| Mejoras de SQL Notebook | &bull; &nbsp; Los usuarios ahora pueden optar por usar sus propias instalaciones de Python 3 o Anaconda en los cuadernos. <br/>&bull; &nbsp; Varias correcciones de estabilidad y ajuste. <br/> &bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22) puede ver la lista completa de mejoras.|
+| Mejoras en SQL Notebook | &bull; &nbsp; Ahora los usuarios pueden optar por usar sus propias instalaciones de Python 3 o Anaconda en los cuadernos. <br/>&bull; &nbsp; Varias correcciones de estabilidad y ajuste <br/> &bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22) puede ver la lista completa de las mejoras.|
 | Combinación de la versión de abril de Visual Studio Code 1.34 | [Aquí](https://code.visualstudio.com/updates/v1_34) encontrará las mejoras más recientes. |
-| Problemas y errores resueltos. | Consulte [Errores y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
+| Problemas y errores resueltos | Consulte [Errores y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conocidos
@@ -169,26 +207,26 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Publicación de la extensión Comparación de esquemas | Comparación de esquemas es una característica ya conocida en SQL Server Data Tools (SSDT), y su caso de uso principal es comparar y visualizar las diferencias entre las bases de datos y archivos .dacpac, y ejecutar acciones para que sean iguales. |
 | Vista de tareas movida a la ventana de salida | Los usuarios ahora pueden ver el estado de las tareas de larga duración (como copia de seguridad, restauración y comparación de esquemas) de la vista de tareas en la ventana de salida.
-| Página de bienvenida agregada | &bull; &nbsp; Vínculos a acciones comunes como Nueva consulta, Nuevo archivo, Nuevo bloc de notas. <br/>&bull; &nbsp; Vínculos a documentación y GitHub. |
-| Mejoras en SQL Notebook | &bull; &nbsp; Mejoras en la representación de Markdown, incluida una mayor compatibilidad con notas y tablas. <br/>&bull; &nbsp; Mejoras de facilidad de uso en la barra de herramientas. <br/>&bull; &nbsp; Los vínculos de Markdown para cuadernos de confianza ya no requieren Cmd/Ctrl + clic y se puede hacer clic en ellos directamente. <br/>&bull; &nbsp; Mejoras en la limpieza de procesos de Jupyter después de cerrar cuadernos y reducción de errores al iniciar varios cuadernos simultáneamente. <br/>&bull; &nbsp; Mejoras en las conexiones de cuadernos de SQL para evitar errores al ejecutar 2 cuadernos en la misma base de datos. <br/>&bull; &nbsp; Mejoras en el desplazamiento automático de cuadernos a la celda que se está ejecutando actualmente al hacer clic en el botón Ejecutar celdas de la barra de herramientas. <br/>&bull; &nbsp; Mejoras generales en estabilidad y rendimiento. |
-| Problemas y errores resueltos. | Consulte [Errores y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1). |
+| Página de bienvenida agregada | &bull; &nbsp; Vínculos a acciones comunes como Nueva consulta, Nuevo archivo, Nuevo cuaderno <br/>&bull; &nbsp; Vínculos a documentación y GitHub |
+| Mejoras en SQL Notebook | &bull; &nbsp; Mejoras en la representación de Markdown, incluida una mayor compatibilidad con notas y tablas <br/>&bull; &nbsp; Mejoras de facilidad de uso en la barra de herramientas <br/>&bull; &nbsp; Los vínculos de Markdown para cuadernos de confianza ya no requieren Cmd/Ctrl + clic y se puede hacer clic en ellos directamente. <br/>&bull; &nbsp; Mejoras en la limpieza de procesos de Jupyter después de cerrar cuadernos y reducción de errores al iniciar varios cuadernos simultáneamente <br/>&bull; &nbsp; Mejoras en las conexiones de cuadernos de SQL para evitar errores al ejecutar dos cuadernos en la misma base de datos <br/>&bull; &nbsp; Mejoras en el desplazamiento automático de cuadernos a la celda actualmente en ejecución al hacer clic en el botón Ejecutar celdas de la barra de herramientas <br/>&bull; &nbsp; Mejoras generales en estabilidad y rendimiento |
+| Problemas y errores resueltos | Consulte [Errores y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1). |
 | &nbsp; | &nbsp; |
 
-## <a name="april-2019"></a>April de 2019
+## <a name="april-2019"></a>Abril de 2019
 
 18 de abril de 2019 &nbsp; / &nbsp; versión: 1.6.0 
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Nombre de la pestaña **Servidores** cambiado a **Conexiones** | |
 | Migración de Azure Resource Explorer como viewlet de Azure a Conexiones | Los usuarios ahora pueden ver sus instancias de Azure SQL a través de un viewlet de Azure en la vista Conexiones, y expandir para ver los objetos de cada servidor o base de datos.|
-| Mejoras en SQL Notebook | &bull; &nbsp; Botón agregado en la barra de herramientas para borrar la salida de todas las celdas. <br/>&bull; &nbsp; Botón agregado en la barra de herramientas para ejecutar todas las celdas. <br/>&bull; &nbsp; Nombre fijo de la conexión en lugar del nombre del servidor (si se establece) en la lista desplegable Anexar a. <br/>&bull; &nbsp; Corrección de imágenes en Markdown que no se representaban al usar rutas de acceso de imagen relativas. <br/>&bull; &nbsp; Funcionalidad mejorada en las cuadrículas de cuadernos con la adición de un cambio de tamaño de columna automático mediante doble clic, y mejora de la compatibilidad con la rueda del mouse. <br/>&bull; &nbsp; Mejoras en el control de errores y la resistencia de instalación de Python al instalar Python a través de cuadernos. <br/>&bull; &nbsp; Mejoras en la funcionalidad "seleccionar todo" al seleccionar las celdas del cuaderno. <br/>&bull; &nbsp; Mejoras en las conexiones de cuadernos para evitar cerrar un cuaderno y afectar a la conexión del explorador de objetos. <br/>&bull; &nbsp; Experiencia de cuadernos mejorada para mostrar un mensaje al usuario cuando el cuaderno está desconectado y necesita una conexión para ejecutar las celdas.<br/>&bull; &nbsp; Compatibilidad mejorada con cuadernos no guardados para rehidratar en ADS cuando se inicia de nuevo ADS. |
+| Mejoras en SQL Notebook | &bull; &nbsp; Botón agregado a la barra de herramientas para borrar la salida de todas las celdas <br/>&bull; &nbsp; Botón agregado a la barra de herramientas para ejecutar todas las celdas <br/>&bull; &nbsp; Nombre fijo de la conexión en lugar del nombre del servidor (si se establece) en la lista desplegable Anexar a <br/>&bull; &nbsp; Corrección de imágenes en Markdown que no se representaban al usar rutas de acceso de imagen relativas <br/>&bull; &nbsp; Funcionalidad mejorada en las cuadrículas de cuadernos con la adición de un cambio de tamaño de columna automático mediante doble clic, y mejora de la compatibilidad con la rueda del mouse <br/>&bull; &nbsp; Mejoras en el control de errores y la resistencia de instalación de Python al instalar Python a través de cuadernos <br/>&bull; &nbsp; Mejoras en la funcionalidad "Seleccionar todo" al seleccionar celdas de cuaderno <br/>&bull; &nbsp; Mejoras en las conexiones de cuadernos para evitar cerrar un cuaderno y afectar a la conexión del explorador de objetos <br/>&bull; &nbsp; Experiencia de cuadernos mejorada para mostrar un mensaje al usuario cuando el cuaderno está desconectado y necesita una conexión para ejecutar las celdas<br/>&bull; &nbsp; Compatibilidad mejorada con cuadernos no guardados para rehidratar en ADS cuando se inicia de nuevo ADS |
 | Problemas y errores resueltos | Consulte [Errores y problemas en GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -198,9 +236,9 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
-| Corrección de algunos problemas detectados en 1.5.1 | Consulte [Publicación de revisión de marzo en GitHub](https://github.com/Microsoft/azuredatastudio/milestone/28).<br/> <br/>&bull; &nbsp; Se corrigió un problema por el que el usuario no podía cerrar un cuaderno abierto desde la tarea "Abrir un bloc de notas" en el panel. <br/>&bull; &nbsp; Se corrigió un problema en el que el JSON del Notebook tenía un signo } adicional después de guardar. <br/>&bull; &nbsp; Se corrigió un problema por el que las cuadrículas de cuaderno no respondían a los cambios de tema. <br/>&bull; &nbsp; Se corrigió un problema en el que se mostraba la ruta completa del cuaderno en el encabezado de pestaña. Ahora solo se muestra el nombre de archivo. |
+| Corrección de algunos problemas detectados en 1.5.1 | Consulte [Publicación de revisión de marzo en GitHub](https://github.com/Microsoft/azuredatastudio/milestone/28).<br/> <br/>&bull; &nbsp; Se ha corregido un problema por el que el usuario no podía cerrar un cuaderno abierto desde la tarea "Abrir cuaderno" en el panel. <br/>&bull; &nbsp; Se ha corregido un problema por el que el código JSON del Notebook tenía un signo } adicional después de guardar. <br/>&bull; &nbsp; Se ha corregido un problema por el que las cuadrículas de cuaderno no respondían a los cambios de tema. <br/>&bull; &nbsp; Se ha corregido un problema por el que se mostraba la ruta de acceso completa del cuaderno en el encabezado de pestaña. Ahora solo se muestra el nombre de archivo. |
 | &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>Marzo de 2019
@@ -209,10 +247,10 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
-| [Extensión PostgreSQL para Azure Data Studio](postgres-extension.md) agregada | Características admitidas: <br/>&bull; &nbsp; Cuadro de diálogo de conexión <br/>&bull; &nbsp; Explorador de objetos <br/>&bull; &nbsp; Editor de consultas <br/>&bull; &nbsp; Gráficos <br/>&bull; &nbsp; Paneles <br/>&bull; &nbsp; Fragmentos de código <br/>&bull; &nbsp; Editar datos <br/>&bull; &nbsp; Cuadernos |
-| Cuadernos de SQL agregados | Se ha agregado compatibilidad con el kernel de SQL al visor de Notebook integrado: <br/>&bull; &nbsp; Admite T-SQL <br/>&bull; &nbsp; Admite T-SQL |
+| [Extensión PostgreSQL para Azure Data Studio](postgres-extension.md) agregada | Características admitidas: <br/>&bull; &nbsp; Cuadro de diálogo de conexión <br/>&bull; &nbsp; Explorador de objetos <br/>&bull; &nbsp; Editor de consultas <br/>&bull; &nbsp; Gráficos <br/>&bull; &nbsp; Paneles <br/>&bull; &nbsp; Fragmentos de código <br/>&bull; &nbsp; Editar datos <br/>&bull; &nbsp; Notebooks |
+| Cuadernos de SQL agregados | Se ha agregado compatibilidad con el kernel de SQL al visor de Notebook integrado: <br/>&bull; &nbsp; Admite T-SQL <br/>&bull; &nbsp; Admite PGSQL |
 | Extensión de PowerShell agregada  | Ofrece la experiencia de la [extensión de PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) de VS Code.  |
 | Extensión dacpac de SQL Server agregada  | Quita el asistente para aplicación de capa de datos de la extensión de importación de SQL Server y la agrega a una nueva extensión.  |
 | Extensión de Community QueryPlan.show agregada | Integra compatibilidad para visualizar planes de consulta.  |
@@ -240,9 +278,9 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
-| Paquete de extensión **Admin Pack PARA SQL Server** agregado. | Esto facilita la instalación de extensiones relacionadas con la administración de SQL Server. Esto incluye:<br/>&bull; &nbsp; [Agente SQL Server](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [Importación de SQL Server](sql-server-import-extension.md?view=sql-server-2017) |
+| Paquete de extensión **Admin Pack PARA SQL Server** agregado. | Esto facilita la instalación de extensiones relacionadas con la administración de SQL Server. Esto incluye:<br/>&bull; &nbsp; [Agente SQL Server](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [Importación de SQL Server](sql-server-import-extension.md?view=sql-server-2017) |
 | Se ha agregado compatibilidad con eventos extendidos de filtrado en la extensión de Profiler. | &nbsp; |
 | Se ha agregado la característica Guardar como XML que puede guardar los resultados de T-SQL como XML. | &nbsp; |
 | Se han agregado mejoras en el Asistente para importar aplicaciones de capa de datos. | &bull; &nbsp; Se ha agregado el botón Generar script.<br/>&bull; &nbsp; Se ha agregado la vista para proporcionar advertencias de posibles pérdidas de datos durante la implementación. |
@@ -257,7 +295,7 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Corrección de algunos problemas detectados en 1.3.8. | Consulte [Publicación de revisión de enero en GitHub](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).<br/><br/>Para obtener información detallada, vea:<br/>&bull; &nbsp; [Registro de cambios en GitHub](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md).<br/>&bull; &nbsp; [Versiones en GitHub](https://github.com/Microsoft/azuredatastudio/releases). |
 | &nbsp; | &nbsp; |
@@ -268,7 +306,7 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Se ha agregado un nuevo instalador de usuario para Windows. | A diferencia del instalador de sistema existente, el nuevo instalador de usuario no requiere privilegios de administrador. Esto también permite una experiencia de actualización más sencilla para los usuarios que no son administradores. |
 | Se ha agregado compatibilidad con la autenticación de Azure Active Directory. | &nbsp; |
@@ -287,7 +325,7 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Actualización de la extensión de SQL Server 2019, versión preliminar. | Consulte [Extensión de virtualización de datos](data-virtualization-extension.md?view=sql-server-ver15). |
 | Introducción de la extensión Paste the Plan (Pegado del plan). | &nbsp; |
@@ -314,7 +352,7 @@ ms.locfileid: "73532526"
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Introducción de Azure Resource Explorer para examinar las bases de datos de Azure SQL. | &nbsp; |
 | Mejora de la solidez de la conexión del Explorador de objetos y del Editor de consultas. | &nbsp; |
@@ -340,7 +378,7 @@ Versión de disponibilidad general de Azure Data Studio (anteriormente SQL Opera
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Mejoras en el rendimiento de la cuadrícula de resultados de la consulta y la experiencia del usuario para un gran número de conjuntos de resultados. | &nbsp; |
 | El código fuente de Visual Studio Code se actualiza de la versión 1.23 a la versión 1.26.1 con diseño de cuadrícula y mejora del editor de configuración (versión preliminar). | &nbsp; |
@@ -352,7 +390,7 @@ Versión de disponibilidad general de Azure Data Studio (anteriormente SQL Opera
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Compatibilidad con características en vista previa de SQL Server 2019, incluido el [clúster de macrodatos](../big-data-cluster/big-data-cluster-overview.md) | Conéctese a la puerta de enlace HDFS/Spark incluida con la versión preliminar de SQL Server 2019.<br/><br/>Examine HDFS, cargue y guarde archivos, e inicie acciones prácticas como analizar en Notebook para archivos CSV.<br/><br/>Envíe trabajos de Spark desde el panel o haga clic con el botón derecho en una conexión de HDFS/Spark en el Explorador de objetos. |
 | Azure Data Studio Notebooks | Cree o abra cuadernos con un visor de Notebook integrado. En esta versión, el visor de Notebook solo admite la conexión a kernels locales y al clúster de macrodatos de SQL Server 2019.<br/><br/>Use las bibliotecas del acelerador de código PROSE en Notebook para obtener información sobre el formato de archivo y los tipos de datos para la preparación rápida de los datos. |
@@ -377,7 +415,7 @@ _0.32.8 contiene correcciones para un par de regresiones encontradas en 0.32.7 (
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Anuncio de la extensión de importación de SQL Server | &nbsp; |
 | Administración de sesiones de SQL Server Profiler | &nbsp; |
@@ -410,7 +448,7 @@ _0.32.8 contiene correcciones para un par de regresiones encontradas en 0.32.7 (
 - Corrección del [problema #1850](https://github.com/Microsoft/azuredatastudio/issues/1850): Al escribir N'', se completa automáticamente a N'''.
 - Corrección del [problema #1985](https://github.com/Microsoft/azuredatastudio/issues/1985): Desfase de1 columna al copiar desde la cuadrícula de resultados de la consulta.
 - Corrección del [problema #1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998): Adición de la versión de VS Code al cuadro de diálogo Acerca de.
-- Corrección del [problema #2042](https://github.com/Microsoft/azuredatastudio/pull/2042): : Botón habilitado para importar consultas de archivos SQL.
+- Corrección del [problema #2042](https://github.com/Microsoft/azuredatastudio/pull/2042): Agente: Botón habilitado para importar consultas de archivos SQL.
 - Corrección del [problema #2091](https://github.com/Microsoft/azuredatastudio/issues/2091): No se puede usar el método abreviado CTRL + C para copiar desde el panel de resultados.
 - Corrección del [problema #2099](https://github.com/Microsoft/azuredatastudio/pull/2099): Se han agregado más opciones de saveAsCsv.
 - Corrección del [problema #2107](https://github.com/Microsoft/azuredatastudio/issues/2107): Actualización del icono de los documentos del Panel y de Profiler.
@@ -434,7 +472,7 @@ La *versión preliminar pública* de julio se centra en los siguientes elementos
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Mejoras en la [Extensión Agente SQL Server para SQL Operations Studio](sql-server-agent-extension.md). | Se ha agregado la vista de alertas, operadores, proxies e iconos en el panel izquierdo.<br/><br/>Se han agregado los cuadros de diálogo Nuevo trabajo, Nuevo paso de trabajo, Nueva alerta y Nuevo operador.<br/><br/>Se ha agregado Eliminar trabajo, Eliminar alerta y Eliminar operador (clic con el botón derecho).<br/><br/>Se ha agregado la visualización de ejecuciones anteriores.<br/><br/>Se han agregado filtros para cada nombre de columna. |
 | Mejoras en la [extensión SQL Server Profiler para SQL Operations Studio](sql-server-profiler-extension.md). | Se han agregado 5 plantillas predeterminadas para ver Eventos extendidos.<br/><br/>Se ha agregado el nombre de conexión de Servidor/Base de datos.<br/><br/>Se ha agregado compatibilidad para instancias de Azure SQL Database.<br/><br/>Se ha agregado una sugerencia para salir de Profiler cuando se cierra la pestaña y Profiler todavía se está ejecutando. |
@@ -466,7 +504,7 @@ La *versión preliminar pública* de julio se centra en los siguientes elementos
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Publicación inicial de la extensión **SQL Server Profiler para SQL Operations Studio, _versión preliminar_** . | &nbsp; |
 | La nueva extensión **SQL Data Warehouse** incluye sofisticados widgets de panel personalizables que exponen información al almacenamiento de datos. | Esto desbloquea escenarios clave en torno a la administración y el ajuste del almacenamiento de datos para asegurarse de que está optimizado para un rendimiento coherente. |
@@ -495,7 +533,7 @@ La *versión preliminar pública de mayo* se centra en la estabilización y la c
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Presentación de la extensión Búsqueda de SQL de Redgate disponible en el administrador de extensiones. | &nbsp; |
 | Localización de la comunidad disponible para 10 idiomas. | Alemán, español, francés, italiano, japonés, coreano, portugués, ruso, chino simplificado y chino tradicional. |
@@ -523,10 +561,10 @@ La *versión preliminar pública de abril* contiene correcciones de errores y me
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Mejoras en la extensión de la versión preliminar del Agente SQL: | &nbsp; |
-| &nbsp; &nbsp; &nbsp; Compatibilidad mejorada con archivos. | &bull; &nbsp; Archivos grandes.<br/>&bull; &nbsp; Archivos protegidos para guardar los protegidos por el administrador.<br/>&bull; &nbsp; Almacenamiento de \>256M en SQL Operations Studio. |
+| &nbsp; &nbsp; &nbsp; Compatibilidad mejorada con archivos. | &bull; &nbsp; Archivos grandes.<br/>&bull; &nbsp; Archivos protegidos para guardar los protegidos por el administrador.<br/>&bull; &nbsp; Almacenamiento de \>256M archivos en SQL Operations Studio. |
 | &nbsp; &nbsp; &nbsp; División de terminal integrado. | Trabajo simultáneo con varios terminales abiertos. |
 | &nbsp; &nbsp; &nbsp; Mayor velocidad de instalación y tiempo de inicio. | Se ha reducido la huella del número de archivos en disco dejada por la instalación. |
 | &nbsp; | &nbsp; |
@@ -556,7 +594,7 @@ Un aspecto destacado de la versión preliminar pública de abril es la actualiza
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | [Nueva interfaz de usuario de notificaciones](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui). | Administre y revise fácilmente las notificaciones de SQL Operations Studio. |
 | [División de terminal integrado](https://code.visualstudio.com/updates/v1_21#_split-terminals). | Trabajo simultáneo con varios terminales abiertos. |
@@ -585,7 +623,7 @@ La *versión preliminar pública de marzo* continúa solucionando los principale
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Mejora del modelo de extensibilidad de paneles para admitir los paneles de configuración y la información con pestañas. | El administrador de extensiones permite la adquisición simple de extensiones.<br/><br/>Extensiones de panel para sp\_whoisactive de [whoisactive.com](http://www.whoisactive.com).<br/><br/>Para obtener más detalles, vea [Ampliación de la funcionalidad de SQL Operations Studio](extensions.md). |
 | Agregue otras [API de extensibilidad para la administración de conexiones y del explorador de objetos](https://github.com/Microsoft/azuredatastudio/wiki/Extensibility-API). | &nbsp; |
@@ -600,7 +638,7 @@ La *versión preliminar pública de febrero* incluye algunas sugerencias de cara
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Introducción de la instalación de actualización automática, que proporciona una notificación cuando hay una nueva versión disponible para descargar. | &nbsp; |
 | El campo **Base de datos** del cuadro de diálogo de conexión es ahora una lista desplegable rellenada dinámicamente que contiene una lista de bases de datos que se han rellenado desde el servidor especificado. | &nbsp; |
@@ -630,7 +668,7 @@ La *versión preliminar pública de enero* incluye algunas sugerencias de caract
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | Las conexiones de servidor guardadas están disponibles en el cuadro de diálogo de conexión. | &nbsp; |
 | Habilitar la salida rápida. La salida rápida está desactivada de forma predeterminada; para habilitarla, vea [Salida rápida](settings.md#hot-exit). | &nbsp; |
@@ -650,7 +688,7 @@ La *versión preliminar pública de diciembre* incluye varias correcciones de er
 
 &nbsp;
 
-| Cambiar | Detalles |
+| Change | Detalles |
 | :----- | :------ |
 | El cuadro de diálogo Crear regla de firewall ahora está disponible para ayudarle a conectarse a Azure SQL Database y Azure SQL Data Warehouse. | &nbsp; |
 | Se ha agregado el programa de instalación de Windows y los paquetes de instalación de Linux DEB y RPM. | &nbsp; |
@@ -668,13 +706,13 @@ La *versión preliminar pública de diciembre* incluye varias correcciones de er
 
 - Versión inicial de [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Pasos siguientes
 
 Para empezar, vea una de las siguientes guías de inicio rápido:
 
 - [Conectar y consultar SQL Server](quickstart-sql-server.md)
 - [Conectar y consultar Azure SQL Database](quickstart-sql-database.md)
-- [Conectar y consultar Azure SQL Data Warehouse](quickstart-sql-dw.md)
+- [Conectar y consultar almacenamiento de datos de Azure](quickstart-sql-dw.md)
 
 Contribuya a [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 

@@ -1,22 +1,24 @@
 ---
-title: Configuración de la replicación de SQL Server de recursos compartidos de carpetas de instantáneas en Linux
-description: En este artículo, se describe cómo configurar una replicación de SQL Server de recursos compartidos de carpetas de instantáneas en Linux.
+title: Configuración de la carpeta de instantáneas de replicación (puertos no predeterminados)
+titleSuffix: SQL Server on Linux
+description: Obtenga información sobre cómo configurar los recursos compartidos de la carpeta de instantáneas con puertos no predeterminados para la replicación de SQL Server en Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikeray
+ms.author: mikerayW
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6959b2073871f70fb33823b50419c208a23df2dd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: cb715e2a0a056c18352361b58ce8ffd67e3da78e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68093184"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558600"
 ---
-# <a name="configure-replication-with-non-default-ports"></a>Configurar la replicación con puertos no predeterminados
+# <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>Configuración de la replicación con puertos no predeterminados (SQL Server en Linux)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

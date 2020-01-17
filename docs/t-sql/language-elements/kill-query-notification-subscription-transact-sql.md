@@ -1,6 +1,8 @@
 ---
-title: KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: KILL QUERY NOTIFICATION SUBSCRIPTION
+description: Quite las suscripciones de notificación de consulta de una instancia. Esta instrucción puede quitar una suscripción específica o todas las suscripciones.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 07/27/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -20,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f70759864eaf2c91a0b5bf2bf59461bec09937b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3d44551ead01d3a51cd52501460fbc390b18a438
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122302"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251058"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +51,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
  *subscription_id*  
  Quita la suscripción con el identificador de suscripción *subscription_id*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La instrucción KILL QUERY NOTIFICATION SUBSCRIPTION quita las suscripciones de notificación de consulta sin generar ningún mensaje de notificación.  
   
  *subscription_id*es el identificador de la suscripción, como se muestra en la vista de administración dinámica [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  

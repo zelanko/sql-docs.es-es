@@ -1,6 +1,7 @@
 ---
-title: Configuración del clúster compartido de Red Hat Enterprise Linux para SQL Server
-description: Implemente la alta disponibilidad al configurar el clúster de disco compartido de Red Hat Enterprise Linux para SQL Server.
+title: Configuración de FCI de RHEL para SQL Server en Linux
+description: Obtenga información sobre cómo configurar una instancia de clúster de conmutación por error (FCI) de disco compartido de Red Hat Enterprise Linux (RHEL) para SQL Server en Linux con alta disponibilidad.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 3ff0c862e93cd3b552b29c4eec8ab91931c809c7
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75252241"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656632"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configuración del clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
+# <a name="configure-rhel-failover-cluster-instance-fci-cluster-for-sql-server"></a>Configuración del clúster de instancia de clúster de conmutación por error (FCI) de RHEL para SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En esta guía se proporcionan instrucciones para crear un clúster de disco compartido de dos nodos para SQL Server en Red Hat Enterprise Linux. La capa de agrupación en clústeres se basa en el [complemento de alta disponibilidad](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) de Red Hat Enterprise Linux (RHEL) sobre [Pacemaker](https://clusterlabs.org/). La instancia de SQL Server está activa en un nodo o en el otro.
+En esta guía se proporcionan instrucciones para crear un clúster e conmutación por error de disco compartido de dos nodos para SQL Server en Red Hat Enterprise Linux. La capa de agrupación en clústeres se basa en el [complemento de alta disponibilidad](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) de Red Hat Enterprise Linux (RHEL) sobre [Pacemaker](https://clusterlabs.org/). La instancia de SQL Server está activa en un nodo o en el otro.
 
 > [!NOTE] 
 > El acceso al complemento de alta disponibilidad y la documentación de Red Hat exige una suscripción. 
@@ -202,7 +203,7 @@ Para obtener más información sobre el uso de NFS, consulte los siguientes recu
 
 * [Servidores NFS y firewalls | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Montaje de un volumen NFS | Guía de administradores de red de Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [Configuración del servidor NFS | Portal del cliente de Red Hat](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [Configuración del servidor NFS | Portal del cliente de Red Hat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montaje del directorio de archivos de base de datos para que apunte al almacenamiento compartido
 

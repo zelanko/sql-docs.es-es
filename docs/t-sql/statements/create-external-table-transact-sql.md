@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7db5211191f714b977c8d103328fdb48882df6a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 362111a7e0bf74c9732ea79582fdee34019f7536
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057656"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656642"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -109,7 +109,7 @@ En este ejemplo, si LOCATION='/webdata/', una consulta de PolyBase devolverá fi
 
 Para cambiar el valor predeterminado y leer únicamente de la carpeta raíz, establezca el atributo \<polybase.recursive.traversal> en False en el archivo de configuración core-site.xml. Este archivo se encuentra en `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por ejemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
-DATA_SOURCE = *nombre_del_origen_de_datos_externo* Especifica el nombre del origen de datos externo que contiene la ubicación de los datos externos. Esta ubicación es Hadoop o Azure Blob Storage. Para crear un origen de datos externo, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+DATA_SOURCE = *nombre_del_origen_de_datos_externo* Especifica el nombre del origen de datos externo que contiene la ubicación de los datos externos. Esta ubicación es un sistema de archivos de Hadoop (HDFS), un contenedor de blobs de Azure Storage o Azure Data Lake Store. Para crear un origen de datos externo, use[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 FILE_FORMAT = *nombre_formato_de_archivo_externo* Especifica el nombre del objeto de formato de archivo externo que almacena el tipo de archivo y el método de compresión de los datos externos. Para crear un formato de archivo externo, use [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
@@ -147,10 +147,8 @@ En este ejemplo se muestra cómo interactúan entre sí las tres opciones REJECT
 - PolyBase intenta recuperar las 100 primeras filas; 25 no se importan y 75 sí.
 - El porcentaje de las filas con errores se calcula en un 25 %, que es menor que el valor de rechazo de 30 %. Por tanto, PolyBase seguirá recuperando datos del origen de datos externo.
 - PolyBase intenta cargar las siguientes 100 filas; esta vez, 25 lo hacen y 75 no.
-- El porcentaje de filas con errores se recalcula en un 50 %. El porcentaje de filas con errores ha superado el valor de rechazo de 30 %.
+- El porcentaje de filas con errores se recalcula en un 50 %. El porcentaje de filas con errores supera pues el valor de rechazo de 30 %.
 - Se produce un error en la consulta de PolyBase con un 50 % de filas rechazadas después de intentar devolver las 200 primeras filas. Tenga en cuenta que se han devuelto filas coincidentes antes de que la consulta de PolyBase detecte que se ha superado el umbral de rechazo.
-
-DATA_SOURCE Un origen de datos externo, como los datos almacenados en un sistema de archivos de Hadoop, Azure Blob Storage o un [administrador de mapas de particiones](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).
 
 SCHEMA_NAME La cláusula SCHEMA_NAME ofrece la posibilidad de asignar la definición de tabla externa a una tabla de otro esquema en la base de datos remota. Use esta cláusula para eliminar la ambigüedad entre los esquemas existentes en las bases de datos local y remota.
 
@@ -206,7 +204,7 @@ Construcciones y operaciones no admitidas:
 
 Limitaciones de las consultas:
 
-PolyBase puede usar un máximo de 33.000 archivos por carpeta cuando se ejecutan 32 consultas simultáneas de PolyBase. Esta cifra máxima engloba los archivos y las subcarpetas de cada carpeta de HDFS. Si el grado de simultaneidad es inferior a 32, un usuario puede ejecutar consultas de PolyBase en carpetas de HDFS que contengan más de 33 000 archivos. Se recomienda tener unas rutas de acceso de archivos externos cortas y no usar más de 30.000 archivos por carpeta de HDFS. Si hay referencias a demasiados archivos, podría producirse una excepción de memoria insuficiente de Máquina virtual Java (JVM).
+PolyBase puede consumir un máximo de 33 000 archivos por carpeta cuando se ejecutan 32 consultas simultáneas de PolyBase. Esta cifra máxima engloba los archivos y las subcarpetas de cada carpeta de HDFS. Si el grado de simultaneidad es inferior a 32, un usuario puede ejecutar consultas de PolyBase en carpetas de HDFS que contengan más de 33 000 archivos. Se recomienda tener unas rutas de acceso de archivos externos cortas y no usar más de 30.000 archivos por carpeta de HDFS. Si hay referencias a demasiados archivos, podría producirse una excepción de memoria insuficiente de Máquina virtual Java (JVM).
 
 Limitaciones de ancho de tabla:
 
@@ -367,8 +365,8 @@ WITH
 (
   DATA_SOURCE = MyExtSrc,
   SCHEMA_NAME = 'sys',
-  OBJECT_NAME = 'dm_exec_requests',  
-  DISTRIBUTION=  
+  OBJECT_NAME = 'dm_exec_requests',
+  DISTRIBUTION=ROUND_ROBIN
 );
 ```
 
@@ -578,7 +576,7 @@ WITH
 
 &nbsp;
 
-## <a name="overview-azure-sql-database"></a>Introducción: Base de datos SQL de Azure
+## <a name="overview-azure-sql-database"></a>Introducción: Azure SQL Database
 
 En Azure SQL Database, crea una tabla externa para [consultas elásticas (en versión preliminar)](/azure/sql-database/sql-database-elastic-query-overview/).
 
@@ -621,30 +619,21 @@ Las definiciones de columna, incluidos los tipos de datos y el número de column
 
 Sharded external table options
 
-Especifica el origen de datos externo (un origen de datos no SQL Server) y un método de distribución para las [consultas de Elastic Database](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
+Especifica el origen de datos externo (un origen de datos no SQL Server) y un método de distribución para la [consulta elástica](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).
 
-DATA_SOURCE Un origen de datos externo, como los datos almacenados en un sistema de archivos de Hadoop, Azure Blob Storage o un [administrador de mapas de particiones](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).
+DATA_SOURCE La cláusula DATA_SOURCE define el origen de datos externo (un mapa de particiones) que se usa para la tabla externa. Para obtener un ejemplo, vea [Creación de tablas externas](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
-SCHEMA_NAME La cláusula SCHEMA_NAME ofrece la posibilidad de asignar la definición de tabla externa a una tabla de otro esquema en la base de datos remota. Use esta cláusula para eliminar la ambigüedad entre los esquemas existentes en las bases de datos local y remota.
+SCHEMA_NAME y OBJECT_NAME Las cláusulas SCHEMA_NAME y OBJECT_NAME asignan la definición de tabla externa a una tabla en otro esquema. Si se omite, se considera que el esquema del objeto remoto es "dbo" y que su nombre es idéntico al nombre de la tabla externa que se está definiendo. Esto es útil si el nombre de la tabla remota ya existe en la base de datos donde desea crear la tabla externa. Por ejemplo, quiere definir una tabla externa para obtener una vista agregada de las vistas de catálogo o DMV en la capa de datos con escala horizontal. Puesto que las vistas de catálogo y DMV ya existen localmente, no se pueden usar sus nombres para la definición de la tabla externa. En su lugar, use otro nombre y el nombre de la vista de catálogo o la DMV en las cláusulas SCHEMA_NAME u OBJECT_NAME. Para obtener un ejemplo, vea [Creación de tablas externas](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning#13-create-external-tables).
 
-OBJECT_NAME La cláusula OBJECT_NAME ofrece la posibilidad de asignar la definición de tabla externa a una tabla con otro nombre en la base de datos remota. Use esta cláusula para eliminar la ambigüedad entre los nombres de objeto que hay en las bases de datos local y remota.
+DISTRIBUTION La cláusula DISTRIBUTION especifica la distribución de datos que se usa en esta tabla. El procesador de consultas usa la información proporcionada en la cláusula DISTRIBUTION para crear los planes de consulta más eficaces.
 
-DISTRIBUTION es opcional. Este argumento solo es obligatorio para bases de datos de tipo SHARD_MAP_MANAGER. Este argumento controla si una tabla se trata como una tabla con particiones o una tabla replicada. Con las tablas **SHARDED** (*nombre de columna*), los datos de las distintas tablas no se superponen. **REPLICATED** especifica que las tablas tienen los mismos datos en cada partición. **ROUND_ROBIN** indica que se usa un método específico de la aplicación para distribuir los datos.
+- SHARDED significa que los datos se han particionado horizontalmente en la base de datos. La clave de creación de particiones para la distribución de datos es el parámetro <sharding_column_name>.
+- REPLICATED significa que copias idénticas de la tabla están presentes en cada base de datos. Es responsabilidad suya asegurarse de que las réplicas son idénticas en las bases de datos.
+- ROUND_ROBIN significa que la tabla tiene particiones horizontales mediante un método de distribución que depende de la aplicación.
 
 ## <a name="permissions"></a>Permisos
 
-Requiere estos permisos de usuario:
-
-- **CREATE TABLE**
-- **ALTER ANY SCHEMA**
-- **ALTER ANY EXTERNAL DATA SOURCE**
-- **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
-
-Tenga en cuenta que el inicio de sesión que crea el origen de datos externo debe tener permiso para leer y escribir en el origen de datos externo, ubicado en Hadoop o Azure Blob Storage.
-
-> [!IMPORTANT]
-> El permiso ALTER ANY EXTERNAL DATA SOURCE concede a cualquier entidad de seguridad la capacidad de crear y modificar cualquier objeto de origen de datos externo y, por tanto, también permite acceder a todas las credenciales con ámbito de base de datos de la base de datos. Debe considerarse como un permiso con muchos privilegios, por lo que solo debe concederse a las entidades de seguridad de confianza del sistema.
+Los usuarios con acceso a la tabla externa obtienen automáticamente acceso a las tablas remotas subyacentes con la credencial proporcionada en la definición del origen de datos externo. Evite la elevación no deseada de privilegios a través de la credencial del origen de datos externo. Use GRANT o REVOKE para una tabla externa como si fuera una tabla normal. Una vez que defina el origen de datos externo y las tablas externas, puede usar el T-SQL completo en las tablas externas.
 
 ## <a name="error-handling"></a>Tratamiento de errores
 
@@ -674,7 +663,7 @@ Construcciones y operaciones no admitidas:
 - Restricción DEFAULT en columnas de tabla externa
 - Operaciones de lenguaje de manipulación de datos (DML) delete, insert y update
 
-Solo los predicados literales definidos en una consulta se pueden insertar en el origen de datos externo. Esto es diferente de los servidores vinculados y el acceso donde se pueden usar los predicados que se determinan durante la ejecución de la consulta, es decir, cuando se usan en conjunto con un bucle anidado en un plan de consulta. Con frecuencia, la tabla externa completa se copia localmente y, después, se produce la unión.    
+Solo los predicados literales definidos en una consulta se pueden insertar en el origen de datos externo. Esto es diferente de los servidores vinculados y el acceso donde se pueden usar los predicados que se determinan durante la ejecución de la consulta, es decir, cuando se usan en conjunto con un bucle anidado en un plan de consulta. Con frecuencia, la tabla externa completa se copia localmente y, después, se produce la unión.
 
 ```sql
   \\ Assuming External.Orders is an external table and Customer is a local table. 
@@ -690,7 +679,7 @@ Solo los predicados literales definidos en una consulta se pueden insertar en el
 
 El uso de tablas externas evita el uso de paralelismo en el plan de consulta.
 
-Las tablas externas se implementan como una consulta remota y, como tal, el número estimado de filas devueltas es generalmente 1000; hay otras reglas basadas en el tipo de predicado que se usan para filtrar la tabla externa. Son estimaciones basadas en reglas en lugar de estimaciones basadas en los datos reales de la tabla externa. El optimizador no tiene acceso al origen de datos remoto para obtener una estimación más precisa.
+Las tablas externas se implementan como una consulta remota y, como tal, el número estimado de filas devueltas es generalmente 1000; hay otras reglas basadas en el tipo de predicado que se usan para filtrar la tabla externa. Son estimaciones basadas en reglas en lugar de estimaciones basadas en los datos reales de la tabla externa. El optimizador no accede al origen de datos remoto para obtener una estimación más precisa.
 
 ## <a name="locking"></a>Bloqueo
 
@@ -711,7 +700,9 @@ WITH
 
 ## <a name="see-also"></a>Consulte también
 
-[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)
+- [Información general sobre las consultas elásticas de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-overview)
+- [Informes de bases de datos escaladas horizontalmente en la nube](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-horizontal-partitioning)
+- [Introducción a las consultas entre bases de datos (particiones verticales)](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-query-getting-started-vertical)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -723,7 +714,7 @@ WITH
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>Introducción: Almacenamiento de datos SQL de Azure
+## <a name="overview-azure-sql-data-warehouse"></a>Introducción: Azure SQL Data Warehouse
 
 En Azure SQL Data Warehouse, use una tabla externa para:
 
@@ -782,7 +773,7 @@ En este ejemplo, si LOCATION='/webdata/', una consulta de PolyBase devolverá fi
 
 Para cambiar el valor predeterminado y leer únicamente de la carpeta raíz, establezca el atributo \<polybase.recursive.traversal> en False en el archivo de configuración core-site.xml. Este archivo se encuentra en `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por ejemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
-DATA_SOURCE = *nombre_del_origen_de_datos_externo* Especifica el nombre del origen de datos externo que contiene la ubicación de los datos externos. Esta ubicación se encuentra en Azure Data Lake. Para crear un origen de datos externo, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+DATA_SOURCE = *nombre_del_origen_de_datos_externo* Especifica el nombre del origen de datos externo que contiene la ubicación de los datos externos. Esta ubicación se encuentra en Azure Data Lake. Para crear un origen de datos externo, use[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 FILE_FORMAT = *nombre_formato_de_archivo_externo* Especifica el nombre del objeto de formato de archivo externo que almacena el tipo de archivo y el método de compresión de los datos externos. Para crear un formato de archivo externo, use [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
@@ -820,7 +811,7 @@ En este ejemplo se muestra cómo interactúan entre sí las tres opciones REJECT
 - PolyBase intenta recuperar las 100 primeras filas; 25 no se importan y 75 sí.
 - El porcentaje de las filas con errores se calcula en un 25 %, que es menor que el valor de rechazo de 30 %. Por tanto, PolyBase seguirá recuperando datos del origen de datos externo.
 - PolyBase intenta cargar las siguientes 100 filas; esta vez, 25 lo hacen y 75 no.
-- El porcentaje de filas con errores se recalcula en un 50 %. El porcentaje de filas con errores ha superado el valor de rechazo de 30 %.
+- El porcentaje de filas con errores se recalcula en un 50 %. El porcentaje de filas con errores supera pues el valor de rechazo de 30 %.
 - Se produce un error en la consulta de PolyBase con un 50 % de filas rechazadas después de intentar devolver las 200 primeras filas. Tenga en cuenta que se han devuelto filas coincidentes antes de que la consulta de PolyBase detecte que se ha superado el umbral de rechazo.
 
 REJECTED_ROW_LOCATION = *Ubicación del directorio*
@@ -878,7 +869,7 @@ Construcciones y operaciones no admitidas:
 
 Limitaciones de las consultas:
 
-PolyBase puede usar un máximo de 33.000 archivos por carpeta cuando se ejecutan 32 consultas simultáneas de PolyBase. Esta cifra máxima engloba los archivos y las subcarpetas de cada carpeta de HDFS. Si el grado de simultaneidad es inferior a 32, un usuario puede ejecutar consultas de PolyBase en carpetas de HDFS que contengan más de 33 000 archivos. Se recomienda tener unas rutas de acceso de archivos externos cortas y no usar más de 30.000 archivos por carpeta de HDFS. Si hay referencias a demasiados archivos, podría producirse una excepción de memoria insuficiente de Máquina virtual Java (JVM).
+PolyBase puede consumir un máximo de 33 000 archivos por carpeta cuando se ejecutan 32 consultas simultáneas de PolyBase. Esta cifra máxima engloba los archivos y las subcarpetas de cada carpeta de HDFS. Si el grado de simultaneidad es inferior a 32, un usuario puede ejecutar consultas de PolyBase en carpetas de HDFS que contengan más de 33 000 archivos. Se recomienda tener unas rutas de acceso de archivos externos cortas y no usar más de 30.000 archivos por carpeta de HDFS. Si hay referencias a demasiados archivos, podría producirse una excepción de memoria insuficiente de Máquina virtual Java (JVM).
 
 Limitaciones de ancho de tabla:
 
@@ -1007,7 +998,7 @@ En este ejemplo, si LOCATION='/webdata/', una consulta de PolyBase devolverá fi
 
 Para cambiar el valor predeterminado y leer únicamente de la carpeta raíz, establezca el atributo \<polybase.recursive.traversal> en False en el archivo de configuración core-site.xml. Este archivo se encuentra en `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Por ejemplo, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
-DATA_SOURCE = *nombre_del_origen_de_datos_externo* Especifica el nombre del origen de datos externo que contiene la ubicación de los datos externos. Esta ubicación es Hadoop o Azure Blob Storage. Para crear un origen de datos externo, use [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+DATA_SOURCE = *nombre_del_origen_de_datos_externo* Especifica el nombre del origen de datos externo que contiene la ubicación de los datos externos. Esta ubicación es Hadoop o Azure Blob Storage. Para crear un origen de datos externo, use[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
 FILE_FORMAT = *nombre_formato_de_archivo_externo* Especifica el nombre del objeto de formato de archivo externo que almacena el tipo de archivo y el método de compresión de los datos externos. Para crear un formato de archivo externo, use [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md).
 
@@ -1045,7 +1036,7 @@ En este ejemplo se muestra cómo interactúan entre sí las tres opciones REJECT
 - PolyBase intenta recuperar las 100 primeras filas; 25 no se importan y 75 sí.
 - El porcentaje de las filas con errores se calcula en un 25 %, que es menor que el valor de rechazo de 30 %. Por tanto, PolyBase seguirá recuperando datos del origen de datos externo.
 - PolyBase intenta cargar las siguientes 100 filas; esta vez, 25 lo hacen y 75 no.
-- El porcentaje de filas con errores se recalcula en un 50 %. El porcentaje de filas con errores ha superado el valor de rechazo de 30 %.
+- El porcentaje de filas con errores se recalcula en un 50 %. El porcentaje de filas con errores supera pues el valor de rechazo de 30 %.
 - Se produce un error en la consulta de PolyBase con un 50 % de filas rechazadas después de intentar devolver las 200 primeras filas. Tenga en cuenta que se han devuelto filas coincidentes antes de que la consulta de PolyBase detecte que se ha superado el umbral de rechazo.
 
 ## <a name="permissions"></a>Permisos
@@ -1096,7 +1087,7 @@ Construcciones y operaciones no admitidas:
 
 Limitaciones de las consultas:
 
-PolyBase puede usar un máximo de 33.000 archivos por carpeta cuando se ejecutan 32 consultas simultáneas de PolyBase. Esta cifra máxima engloba los archivos y las subcarpetas de cada carpeta de HDFS. Si el grado de simultaneidad es inferior a 32, un usuario puede ejecutar consultas de PolyBase en carpetas de HDFS que contengan más de 33 000 archivos. Se recomienda tener unas rutas de acceso de archivos externos cortas y no usar más de 30.000 archivos por carpeta de HDFS. Si hay referencias a demasiados archivos, podría producirse una excepción de memoria insuficiente de Máquina virtual Java (JVM).
+PolyBase puede consumir un máximo de 33 000 archivos por carpeta cuando se ejecutan 32 consultas simultáneas de PolyBase. Esta cifra máxima engloba los archivos y las subcarpetas de cada carpeta de HDFS. Si el grado de simultaneidad es inferior a 32, un usuario puede ejecutar consultas de PolyBase en carpetas de HDFS que contengan más de 33 000 archivos. Se recomienda tener unas rutas de acceso de archivos externos cortas y no usar más de 30.000 archivos por carpeta de HDFS. Si hay referencias a demasiados archivos, podría producirse una excepción de memoria insuficiente de Máquina virtual Java (JVM).
 
 Limitaciones de ancho de tabla:
 

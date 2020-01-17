@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 903ff234d0e29f6f9c8f6d1acb5c5ce658c59338
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 938a6d8ba779d1cef37b5fab767e609d00b4f022
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71285705"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74308006"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de SQL Server (Asistente para importación y exportación de SQL Server)
 
@@ -34,7 +34,8 @@ Después de seleccionar el **proveedor de datos de .NET Framework para SQL Serve
 
 |Información requerida|Propiedad de Proveedor de datos de .NET Framework para SQL Server|
 |---|---|
-|Nombre del servidor|**Origen de datos**|
+|Authentication|**NotSpecified** predeterminado como "seguridad integrada" o seleccione otro modo de autenticación. No se admite la autenticación interactiva de Active Directory. |
+|Nombre de servidor|**Data Source** (Origen de datos)|
 |Información de autenticación (inicio de sesión)|**Seguridad integrada**; o bien **Id. de usuario** y **Contraseña**<br/>Si quiere ver una lista desplegable de las bases de datos en el servidor, primero debe proporcionar información de inicio de sesión válida.|
 |Nombre de la base de datos|**Catálogo original**|
 
@@ -45,7 +46,7 @@ Después de seleccionar el **proveedor de datos de .NET Framework para SQL Serve
 > [!NOTE]
 > Las opciones de conexión de este proveedor de datos son las mismas sin importar que SQL Server sea el origen o el destino. Es decir, las opciones que ve son las mismas en las páginas **Elegir un origen de datos** y **Elegir un destino** del asistente.
 
-**Origen de datos**  
+**Data Source** (Origen de datos)  
  Escriba el nombre o la dirección IP del servidor de origen o destino, o bien seleccione un servidor de la lista desplegable.  
  
  Para especificar un puerto TCP no estándar, escriba una coma después del nombre del servidor o la dirección IP y, a continuación, escriba el número de puerto.
@@ -124,7 +125,7 @@ Esta es la pantalla que verá después de escribir la cadena de conexión.
 ## <a name="other-data-providers-and-more-info"></a>Otros proveedores de datos y más información
 Para obtener más información sobre cómo conectarse a SQL Server con un proveedor de datos que no aparezca en esta lista, consulte [SQL Server connection strings (Cadenas de conexión de SQL Server)](https://www.connectionstrings.com/sql-server/). En este sitio de terceros también encontrará más información sobre los proveedores de datos y los parámetros de conexión que se describen en esta página.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) (Selección de un origen de datos)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md) (Selección de un destino)
 

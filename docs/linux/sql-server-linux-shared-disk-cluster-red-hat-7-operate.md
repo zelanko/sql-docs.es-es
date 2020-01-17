@@ -1,6 +1,7 @@
 ---
-title: Uso del clúster compartido de Red Hat Enterprise Linux para SQL Server
-description: Implemente la alta disponibilidad al configurar el clúster de disco compartido de Red Hat Enterprise Linux para SQL Server.
+title: Funcionamiento de la FCI de RHEL para SQL Server en Linux
+description: Obtenga información sobre cómo usar una instancia de clúster de conmutación por error (FCI) de disco compartido de Red Hat Enterprise Linux (RHEL) para SQL Server de alta disponibilidad, como la conmutación por error manual de la FCI y agregar o quitar nodos del clúster.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032245"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558530"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Uso del clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
+# <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Funcionamiento de la instancia de clúster de conmutación por error (FCI) de RHEL para SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -143,7 +144,7 @@ Vea los registros del agente de recursos en `/var/log/cluster/corosync.log`.
    > [!NOTE]
    > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, deberán abrirse los puertos siguientes para que Pacemaker pueda comunicarse con otros nodos del clúster.
    >
-   > * TCP: puertos 2224, 3121 y 21064
+   > * TCP: puertos 2224, 3121, 21064
    > * UDP: puerto 5405
 
 1. Instale paquetes de Pacemaker en el nuevo nodo.

@@ -31,19 +31,19 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 7ff1197307cebb563fbb8cc173b0edbf1ef6aa76
+ms.sourcegitcommit: af078c0cdb42ac385d24496249e9b3609428f013
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816820"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74550216"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Determina si una cadena de caracteres específica coincide con un patrón especificado. Un patrón puede contener caracteres normales y caracteres comodín. Durante la operación de búsqueda de coincidencias de patrón, los caracteres normales deben coincidir exactamente con los caracteres especificados en la cadena de caracteres. Sin embargo, los caracteres comodín pueden coincidir con fragmentos arbitrarios de la cadena. El uso de caracteres comodín hace que el operador LIKE sea más flexible que los operadores de comparación de cadenas = y !=. Si alguno de los argumentos no es del tipo de datos de cadena de caracteres, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lo convierte al tipo de datos de cadena de caracteres, si es posible.  
   
- ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -82,7 +82,7 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>Valor del resultado  
  LIKE devuelve TRUE si *match_expression* coincide con el valor *pattern* especificado.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando se realizan comparaciones de cadenas con LIKE, todos los caracteres de la cadena patrón son significativos, Los caracteres significativos incluyen los espacios iniciales o finales. Si una comparación de una consulta debe devolver todas las filas con una cadena LIKE 'abc ' (abc seguido de un espacio), no se devolverán las filas en las que el valor de esa columna sea abc (sin espacio al final). Sin embargo, no se tienen en cuenta los espacios en blanco finales de la expresión con la que se compara el patrón. Si la comparación de una consulta debe devolver todas las filas con la cadena LIKE 'abc' (abc sin espacio), se devolverán todas las filas que empiecen por abc y tengan cero o más espacios al final.  
   
  Una comparación de cadenas con un patrón que contenga datos de tipo **char** y **varchar** puede no pasar una comparación LIKE debido a la forma en que se han almacenado los datos para cada tipo de datos. En el siguiente ejemplo se pasa una variable local **char** a un procedimiento almacenado y luego se usa la coincidencia de patrones para encontrar todos los empleados cuyos apellidos empiecen por un juego de caracteres especificado.  
@@ -128,10 +128,10 @@ David          Barber               Snohomish
 (2 row(s) affected)  
 ```
 
-## <a name="pattern-matching-by-using-like"></a>Coincidencias de patrón con LIKE  
- LIKE admite operaciones de coincidencia de patrones ASCII y Unicode. Cuando todos los argumentos (*match_expression*, *pattern* y *escape_character*, si están presentes) son tipos de datos de caracteres ASCII, se realiza la coincidencia de patrones ASCII. Si alguno de los argumentos es del tipo de datos Unicode, todos los argumentos se convierten a Unicode y se realiza la coincidencia de patrones de Unicode. Cuando se usan datos Unicode (tipos de datos **nchar** o **nvarchar**) con LIKE, los espacios en blanco al final son significativos; pero para los datos que no son Unicode, no lo son. El uso que se hace de LIKE con Unicode es compatible con el estándar ISO. El uso que se hace de LIKE con ASCII es compatible con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="pattern-matching-by-using-like"></a>Operación de búsqueda de coincidencias de patrón con LIKE  
+ LIKE admite operaciones de búsqueda de coincidencias de patrón ASCII y Unicode. Cuando todos los argumentos (*match_expression*, *pattern* y *escape_character*, si están presentes) son tipos de datos de caracteres ASCII, se realiza la coincidencia de patrones ASCII. Si alguno de los argumentos es del tipo de datos Unicode, todos los argumentos se convierten a Unicode y se realiza la operación de búsqueda de coincidencias de patrón Unicode. Cuando se usan datos Unicode (tipos de datos **nchar** o **nvarchar**) con LIKE, los espacios en blanco al final son significativos; pero para los datos que no son Unicode, no lo son. El uso que se hace de LIKE con Unicode es compatible con el estándar ISO. El uso que se hace de LIKE con ASCII es compatible con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- A continuación se ofrece una serie de ejemplos donde se muestran las diferencias entre las filas devueltas tras la coincidencia de patrones con LIKE para ASCII y Unicode.  
+ A continuación se ofrece una serie de ejemplos donde se muestran las diferencias entre las filas devueltas tras la operación de búsqueda de coincidencias de patrón con LIKE para ASCII y Unicode.  
   
 ```sql  
 -- ASCII pattern matching with char column  
@@ -182,7 +182,7 @@ GO
   
 |Símbolo|Significado|  
 |------------|-------------|  
-|LIKE ‘5[%]’|5 %|  
+|LIKE ‘5[%]’|5 %|  
 |LIKE ‘[_]n’|_n|  
 |LIKE ‘[a-cdf]’|a, b, c, d o f|  
 |LIKE ‘[-acdf]’|-, a, c, d o f|  
@@ -216,8 +216,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
  FirstName             LastName             Phone
  -----------------     -------------------  ------------
  Ruben                 Alonso               415-555-124  
@@ -232,10 +232,10 @@ GO
  Gabrielle              Russell             415-555-0197  
  Dalton                 Simmons             415-555-0115  
  (11 row(s) affected)  
- ``` 
- 
-### B. Using NOT LIKE with the % wildcard character  
- The following example finds all telephone numbers in the `PersonPhone` table that have area codes other than `415`.  
+```
+
+### <a name="b-using-not-like-with-the--wildcard-character"></a>B. Utilizar NOT LIKE con el carácter comodín %  
+ En el siguiente ejemplo se buscan todos los números de teléfono de la tabla `PersonPhone` cuyos códigos de área no sean `415`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -250,8 +250,8 @@ GO
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
- 
- ```
+
+```
 FirstName              LastName            Phone
 ---------------------- -------------------- -------------------
 Gail                  Alexander            1 (11) 500 555-0120  
@@ -263,10 +263,10 @@ Gail                  Moore                155-555-0169
 Gail                  Russell              334-555-0170  
 Gail                  Westover             305-555-0100  
 (8 row(s) affected)  
-```  
+```
 
-### C. Using the ESCAPE clause  
- The following example uses the `ESCAPE` clause and the escape character to find the exact character string `10-15%` in column `c1` of the `mytbl2` table.  
+### <a name="c-using-the-escape-clause"></a>C. Uso de la cláusula ESCAPE  
+ En el ejemplo siguiente se utiliza la cláusula `ESCAPE` y el carácter de escape para buscar exactamente la cadena de caracteres `10-15%` en la columna `c1` de la tabla `mytbl2`.  
   
 ```sql
 USE tempdb;  

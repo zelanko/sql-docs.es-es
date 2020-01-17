@@ -1,6 +1,6 @@
 ---
-title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs
-ms.custom: ''
+title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
+ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -10,12 +10,12 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbebdf4b35b10e584c023e0d34eb8a652d15c1cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117315"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401701"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "68117315"
   
  Para configurar el servidor remoto, vea "Copia de la tabla remota" en la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,7 +60,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
  La cadena de conexión es una lista delimitada por puntos y coma de pares de clave y valor. En las palabras clave no se distingue entre mayúsculas y minúsculas. Se omiten los espacios entre los pares de clave y valor. Pero los valores pueden distinguir entre mayúsculas y minúsculas según el origen de datos.  
   
- *Origen de datos*  
+ *Data Source* (Origen de datos)  
  Parámetro que especifica el nombre o la dirección IP, y el número de puerto TCP, del servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP remoto.  
   
  *hostname* o *IP_address*  
@@ -143,7 +143,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>B. Consultar la DMV sys.dm_pdw_dms_workers para obtener el estado de copia de tabla remota  
+### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>B. Consultar la DMV sys.dm_pdw_dms_workers para obtener el estado de copia de tabla remota  
  Esta consulta muestra cómo ver el estado de copia de una copia de tabla remota.  
   
 ```  
@@ -152,7 +152,7 @@ WHERE type = 'PARALLEL_COPY_READER';
 ```  
   
 ### <a name="c-using-a-query-join-hint-with-create-remote-table"></a>C. Usar una sugerencia de combinación de consulta con CREATE REMOTE TABLE  
- Esta consulta muestra la sintaxis básica para usar una sugerencia de combinación de consulta con CREATE REMOTE TABLE. Una vez enviada la consulta al nodo de control, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que se ejecuta en los nodos de proceso, se aplica la estrategia de combinación hash al generar el plan de consulta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre las sugerencias de combinación y cómo usar la cláusula OPTION, vea [OPTION &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
+ Esta consulta muestra la sintaxis básica para usar una sugerencia de combinación de consulta con CREATE REMOTE TABLE. Una vez enviada la consulta al nodo de control, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que se ejecuta en los nodos de proceso, se aplica la estrategia de combinación hash al generar el plan de consulta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información sobre las sugerencias de combinación y cómo usar la cláusula OPTION, vea [OPTION &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ```  
 USE ssawPDW;  

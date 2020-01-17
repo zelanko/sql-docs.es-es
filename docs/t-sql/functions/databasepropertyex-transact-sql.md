@@ -20,19 +20,19 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 033756cb65cc217e6c9d915715f5740596694147
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982172"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75256101"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Para una base de datos especificada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta función devuelve la configuración actual de la opción o propiedad de base de datos especificada.
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,8 +55,8 @@ Una expresión que especifica el nombre de la propiedad de base de datos que se 
 |Propiedad|Descripción|Valor devuelto|  
 |---|---|---|
 |Intercalación|Nombre de intercalación predeterminado para la base de datos.|Nombre de intercalación<br /><br /> NULL: La base de datos no se ha iniciado.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
-|ComparisonStyle|El estilo de comparación de Windows de la intercalación. Use los siguientes valores de estilo para generar un mapa de bits para el valor ComparisonStyle terminado:<br /><br /> Omitir mayúsculas y minúsculas: 1<br /><br /> Omitir acento: 2<br /><br /> Omitir Kana: 65536<br /><br /> Omitir ancho: 131072<br /><br /> <br /><br /> Por ejemplo, el valor predeterminado 196609 es el resultado de combinar las opciones de omitir mayúsculas y minúsculas, omitir Kana y omitir ancho.|Devuelve el estilo de comparación.<br /><br /> Devuelve 0 para todas las intercalaciones binarias.<br /><br /> Tipo de datos base: **int**|  
-|Edición|El nivel de servicio o edición de la base de datos.|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Uso general<br /><br /> Crucial para la empresa<br /><br /> Básico<br /><br /> Estándar<br /><br /> Premium<br /><br /> System (de la base de datos maestra)<br /><br /> NULL: La base de datos no se ha iniciado.<br /><br /> Tipo de datos base: **nvarchar**(64)|  
+|ComparisonStyle|El estilo de comparación de Windows de la intercalación. Use los siguientes valores de estilo para generar un mapa de bits para el valor ComparisonStyle terminado:<br /><br /> Omitir mayúsculas y minúsculas: 1<br /><br /> Omitir acento: 2<br /><br /> Omitir Kana: 65536<br /><br /> Omitir ancho: 131 072<br /><br /> <br /><br /> Por ejemplo, el valor predeterminado 196609 es el resultado de combinar las opciones de omitir mayúsculas y minúsculas, omitir Kana y omitir ancho.|Devuelve el estilo de comparación.<br /><br /> Devuelve 0 para todas las intercalaciones binarias.<br /><br /> Tipo de datos base: **int**|  
+|Edición|El nivel de servicio o edición de la base de datos.|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Uso general<br /><br /> Crítico para la empresa<br /><br /> Básica<br /><br /> Estándar<br /><br /> Premium<br /><br /> System (de la base de datos maestra)<br /><br /> NULL: La base de datos no se ha iniciado.<br /><br /> Tipo de datos base: **nvarchar**(64)|  
 |IsAnsiNullDefault|La base de datos sigue las reglas ISO para permitir los valores NULL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
 |IsAnsiNullsEnabled|Todas las comparaciones con un valor NULL tienen un resultado desconocido.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
 |IsAnsiPaddingEnabled|Las cadenas se rellenan a la misma longitud antes de comparar o insertar.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
@@ -89,10 +89,10 @@ Una expresión que especifica el nombre de la propiedad de base de datos que se 
 |LCID|El identificador de configuración regional (LCID) de Windows para la intercalación.|Valor de LCID (en formato decimal).<br /><br /> Tipo de datos base: **int**|  
 |MaxSizeInBytes|Tamaño máximo de la base de datos (en bytes).|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: La base de datos no se ha iniciado.<br /><br /> Tipo de base de datos: **bigint**|  
 |Recuperación|Modelo de recuperación de base de datos|FULL: Modelo de recuperación completa<br /><br /> BULK_LOGGED: Modelo optimizado para cargas masivas de registros<br /><br /> SIMPLE: Modelo de recuperación simple<br /><br /> Tipo de datos base: **nvarchar(128)**|  
-|ServiceObjective|Describe el nivel de rendimiento de la base de datos en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|Uno de los siguientes:<br /><br /> NULL = La base de datos no se ha iniciado<br /><br /> Compartido (para las ediciones Web o Business)<br /><br /> Básico<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> Sistema (para la base de datos maestra)<br /><br /> Tipo de datos base: **nvarchar(32)**|  
+|ServiceObjective|Describe el nivel de rendimiento de la base de datos en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] o [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|Uno de los siguientes:<br /><br /> NULL = La base de datos no se ha iniciado<br /><br /> Compartido (para las ediciones Web o Business)<br /><br /> Básica<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> Sistema (para la base de datos maestra)<br /><br /> Tipo de datos base: **nvarchar(32)**|  
 |ServiceObjectiveId|El identificador del objetivo del servicio en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|**uniqueidentifier** que identifica el objetivo del servicio.|  
 |SQLSortOrder|Id. de orden de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatible con versiones anteriores de SQL Server.|0: La base de datos usa intercalación de Windows<br /><br /> >0: Identificador de criterio de ordenación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> NULL: Entrada no válida o la base de datos no se ha iniciado<br /><br /> Tipo de datos base: **tinyint**|  
-|Estado|Estado de la base de datos.|ONLINE: La base de datos está disponible para consultas.<br /><br /> **Nota:** El estado ONLINE se puede devolver mientras se abre la base de datos y aún no se ha recuperado. Para saber cuándo puede aceptar conexiones una base de datos, consulte la propiedad Collation de **DATABASEPROPERTYEX**. La base de datos puede aceptar conexiones cuando la intercalación de base de datos devuelve un valor distinto de NULL. En el caso de las bases de datos Always On, consulte las columnas database_state o database_state_desc de `sys.dm_hadr_database_replica_states`.<br /><br /> OFFLINE: La base de datos está explícitamente sin conexión.<br /><br /> RESTORING: Se ha iniciado la restauración de la base de datos.<br /><br /> RECOVERING: Se ha iniciado la recuperación de la base de datos, que aún no está lista para consultas.<br /><br /> SUSPECT: La base de datos no se ha recuperado.<br /><br /> EMERGENCY: La base de datos está en un estado de emergencia de solo lectura. El acceso se restringe a los miembros del rol sysadmin<br /><br /> Tipo de datos base: **nvarchar(128)**|  
+|Status|Estado de la base de datos.|ONLINE: La base de datos está disponible para consultas.<br /><br /> **Nota:** La función puede devolver el estado ONLINE mientras se abre la base de datos y aún no se haya recuperado. Para saber si una base de datos ONLINE puede aceptar conexiones, consulte la propiedad Collation de **DATABASEPROPERTYEX**. La base de datos ONLINE puede aceptar conexiones cuando la intercalación de base de datos devuelve un valor distinto de NULL. En el caso de las bases de datos Always On, consulte las columnas database_state o database_state_desc de `sys.dm_hadr_database_replica_states`.<br /><br /> OFFLINE: La base de datos está explícitamente sin conexión.<br /><br /> RESTORING: Se ha iniciado la restauración de la base de datos.<br /><br /> RECOVERING: Se ha iniciado la recuperación de la base de datos, que aún no está lista para consultas.<br /><br /> SUSPECT: La base de datos no se ha recuperado.<br /><br /> EMERGENCY: La base de datos está en un estado de emergencia de solo lectura. El acceso se restringe a los miembros del rol sysadmin<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |Updateability|Indica si los datos se pueden modificar.|READ_ONLY: La base de datos admite lecturas de datos, pero no modificaciones de datos.<br /><br /> READ_WRITE: La base de datos admite lecturas y modificaciones de datos.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |UserAccess|Indica qué usuarios pueden tener acceso a la base de datos.|SINGLE_USER: Solo un usuario db_owner, dbcreator o sysadmin a la vez<br /><br /> RESTRICTED_USER: Solo miembros de los roles db_owner, dbcreator o sysadmin<br /><br /> MULTI_USER: Todos los usuarios<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |Versión|Número interno de versión del código de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el que se creó la base de datos. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|Número de versión: La base de datos está abierta.<br /><br /> NULL: La base de datos no se ha iniciado.<br /><br /> Tipo de datos base: **int**| 
@@ -110,7 +110,7 @@ Devuelve NULL si se produce un error o si el autor de la llamada no tiene permis
   
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como `OBJECT_ID`, podrían devolver NULL si el usuario no tiene permisos en el objeto. Vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md) para obtener más información.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `DATABASEPROPERTYEX` devuelve un único valor de propiedad cada vez. Para ver varios valores de propiedad, use la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
   
 ## <a name="examples"></a>Ejemplos  
@@ -148,7 +148,7 @@ Collation                     Edition        ServiceObjective  MaxSizeInBytes
 SQL_Latin1_General_CP1_CI_AS  DataWarehouse  DW1000            5368709120  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [Estados de base de datos](../../relational-databases/databases/database-states.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  

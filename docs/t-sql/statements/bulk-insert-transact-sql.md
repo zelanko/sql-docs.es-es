@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c48c045b65b554533a8824ec0ea967ed8fae884
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 6b6534e887f890700b69a11b4515d4cf1af4d86a
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72252012"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249850"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -100,7 +100,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data_file puede estar en Azure Blob Storage. En ese caso, deberá especificar la opción **data_source_name**. Para obtener un ejemplo, vea [Importación de datos desde un archivo en Azure Blob Storage](#f-importing-data-from-a-file-in-azure-blob-storage).
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 **"** _data_source_name_ **"** 
 **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 y Azure SQL Database.
@@ -157,7 +157,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], `error_file_
 "errorfile_data_source_name" **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blob Storage del archivo de error que contendrá los errores encontrados durante la importación. El origen de datos externo se debe crear con la opción `TYPE = BLOB_STORAGE` que se ha incluido en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Para más información, vea [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
-FIRSTROW **=** _primera_fila_ Especifica el número de la primera fila que se va a cargar. El valor predeterminado es la primera fila del archivo de datos especificado. FIRSTROW está en base 1.
+FIRSTROW **=** _first_row_ Especifica el número de la primera fila que se va a cargar. El valor predeterminado es la primera fila del archivo de datos especificado. FIRSTROW está en base 1.
 
 > [!NOTE]
 > El atributo FIRSTROW no está pensado para saltar los encabezados de columna. La instrucción BULK INSERT no permite omitir los encabezados. Al omitir filas, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] solo analiza los terminadores de campo y no valida los datos en los campos de las filas omitidas.
@@ -175,11 +175,11 @@ Si quiere saber más sobre cómo mantener valores de identidad, vea [Mantener va
 
 KEEPNULLS Especifica que las columnas vacías deben conservar un valor NULL durante la operación de importación en bloque, en lugar de tener valores predeterminados para las columnas insertadas. Para obtener más información, vea [Mantener valores NULL o usar valores predeterminados durante la importación en bloque &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).
 
-KILOBYTES_PER_BATCH **=** _kilobytes_por_lote_ Especifica el número aproximado de kilobytes (KB) de datos por lote como *kilobytes_por_lote*. De forma predeterminada, el valor de KILOBYTES_PER_BATCH es desconocido. Para obtener información acerca de consideraciones de rendimiento, vea la sección "Comentarios" más adelante en este tema.
+KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_ Especifica el número aproximado de kilobytes (KB) de datos por lote como *kilobytes_per_batch*. De forma predeterminada, el valor de KILOBYTES_PER_BATCH es desconocido. Para obtener información acerca de consideraciones de rendimiento, vea la sección "Comentarios" más adelante en este tema.
 
-LASTROW **=** _last_row_ Especifica el número de la última fila que va a cargarse. El valor predeterminado es 0, que indica la última fila del archivo de datos especificado.
+LASTROW **=** _last_row_ Especifica el número de la última fila que se va a cargar. El valor predeterminado es 0, que indica la última fila del archivo de datos especificado.
 
-MAXERRORS **=** _número_máximo_de_errores_ Especifica el número máximo de errores de sintaxis permitidos en los datos antes de cancelar la operación de importación en bloque. Cada fila que no se puede importar con la operación de importación masiva se omite y se considera un error. Si no se especifica *max_errors*, el valor predeterminado es 10.
+MAXERRORS **=** _max_errors_ Especifica el número máximo de errores de sintaxis permitidos en los datos antes de cancelar la operación de importación en bloque. Cada fila que no se puede importar con la operación de importación masiva se omite y se considera un error. Si no se especifica *max_errors*, el valor predeterminado es 10.
 
 > [!NOTE]
 > La opción MAX_ERRORS no se aplica a comprobaciones de restricciones ni para convertir tipos de datos **money** y **bigint**.
@@ -188,7 +188,7 @@ ORDER ( { *columna* [ ASC | DESC ] } [ **,** ... *n* ] ) Especifica cómo se ord
 
 *n* Es un marcador de posición que indica que se pueden especificar varias columnas.
 
-ROWS_PER_BATCH **=** _filas_por_lote_ Indica el número aproximado de filas de datos del archivo de datos.
+ROWS_PER_BATCH **=** _rows_per_batch_ Indica el número aproximado de filas de datos del archivo de datos.
 
 De forma predeterminada, todos los datos del archivo de datos se envían al servidor en una sola transacción y el optimizador de consultas desconoce el número de filas del lote. Si especifica ROWS_PER_BATCH (con el valor > 0) el servidor utiliza este valor para optimizar la operación de importación masiva. El valor especificado para ROWS_PER_BATCH debe ser aproximadamente el mismo que el número real de filas. Para obtener información acerca de consideraciones de rendimiento, vea la sección "Comentarios" más adelante en este tema.
 
@@ -231,11 +231,11 @@ BULK INSERT aplica una estricta validación y comprobación de los datos leídos
 - Las representaciones nativas de los tipos de datos **float** o **real** son válidas.
 - Los datos Unicode tienen una longitud de bytes uniforme.
 
-## <a name="data-types"></a>Tipos de datos
+## <a name="data-types"></a>Tipo de datos
 
 ### <a name="string-to-decimal-data-type-conversions"></a>Conversiones de tipos de datos de cadena a decimal
 
-Las conversiones de tipos de datos de cadena a decimal usadas en BULK INSERT siguen las mismas reglas que la función [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)], que rechaza las cadenas que representan valores numéricos con notación científica. Por lo tanto, BULK INSERT trata esas cadenas como valores no válidos y genera errores de conversión.
+Las conversiones de tipos de datos de cadena a decimal usadas en BULK INSERT siguen las mismas reglas que la función [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)], que rechaza las cadenas que representan valores numéricos con notación científica. Por lo tanto, BULK INSERT trata esas cadenas como valores no válidos y genera errores de conversión.
 
 Para solucionar este comportamiento, use un archivo de formato para la importación masiva de datos de tipo **float** con notación científica en una columna con valores decimales. En el archivo de formato, describa explícitamente la columna como de datos **real** o **float**. Para más información sobre estos tipos de datos, vea [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).
 
@@ -278,7 +278,7 @@ FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows pero puede leer desde Azure Blob Storage.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>Tipos de datos para importar o exportar masivamente documentos SQLXML
 
@@ -369,7 +369,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="b-using-the-fire_triggers-argument"></a>B. Usar el argumento FIRE_TRIGGERS
 
@@ -387,7 +387,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. Usar el salto de línea como terminador de fila
 
@@ -405,7 +405,7 @@ EXEC(@bulk_cmd);
 > Debido al modo en que Microsoft Windows trata los archivos de texto, **(\n** se reemplaza automáticamente por **\r\n)** .
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="d-specifying-a-code-page"></a>D. Especificar una página de códigos
 
@@ -422,7 +422,7 @@ WITH
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. Importar datos desde un archivo CSV
 
@@ -439,11 +439,11 @@ WITH (FORMAT = 'CSV'
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Importar datos desde un archivo en Azure Blog Storage
 
-En el ejemplo siguiente se muestra cómo cargar datos desde un archivo csv en una ubicación de Azure Blob Storage en la que se ha creado una clave SAS. La ubicación de Azure Blob Storage está configurada como un origen de datos externo. Esto requiere credenciales con ámbito de base de datos mediante una firma de acceso compartido que se cifra con una clave maestra en la base de datos de usuario.
+En el ejemplo siguiente se muestra cómo cargar datos desde un archivo csv en una ubicación de Azure Blob Storage en la que se ha creado una clave SAS. La ubicación de Azure Blob Storage está configurada como origen de datos externo. Esto requiere credenciales con ámbito de base de datos mediante una firma de acceso compartido que se cifra con una clave maestra en la base de datos de usuario.
 
 ```sql
 --> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -470,7 +470,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database no admite la lectura de archivos de Windows.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importar datos desde un archivo en Azure Blob Storage y especificar un archivo de error
 

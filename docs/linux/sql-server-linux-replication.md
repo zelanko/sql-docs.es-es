@@ -4,31 +4,31 @@ description: En este artículo se describe la replicación de SQL Server en Linu
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 10/17/2018
+ms.date: 12/09/2019
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b049866d9752485cb1b9eb609404a3bd86f28a41
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
+ms.openlocfilehash: f0e1acd5af76f5b0b075879fc1c5122713caed55
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68065194"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002046"
 ---
 # <a name="sql-server-replication-on-linux"></a>Replicación de SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] presenta Replicación de SQL Server para instancias de SQL Server en Linux.
+[!INCLUDE[SQL Server 2017](../includes/sssqlv14-md.md)] ([CU18](https://support.microsoft.com/help/4527377)) y versiones posteriores admiten Replicación de SQL Server para instancias de SQL Server en Linux.
 
 Configure la replicación en Linux con [procedimientos almacenados de replicación](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md) de SQL Server Management Studio (SSMS).
 
 Una instancia de SQL Server puede participar en cualquier rol de replicación:
 
-* publicador
-* Distribuidor
+* Publicador
+* Distribuidor.
 * Suscriptor
 
 Un esquema de replicación puede mezclar y hacer coincidir plataformas de sistema operativo. Por ejemplo, un esquema de replicación puede incluir una instancia de SQL Server en Linux para el publicador y el distribuidor, y los suscriptores incluir instancias de SQL Server en Windows y Linux.
@@ -36,19 +36,16 @@ Un esquema de replicación puede mezclar y hacer coincidir plataformas de sistem
 Las instancias de SQL Server en Linux pueden participar en cualquier tipo de replicación.
 
 * Transaccional
-* Mezcla
-* Snapshot
+* Instantánea
 
-Para obtener información detallada sobre la replicación, vea la [documentación sobre replicación de SQL Server](../relational-databases/replication/sql-server-replication.md).
+Para obtener más información sobre la replicación, vea la [documentación sobre Replicación de SQL Server](../relational-databases/replication/sql-server-replication.md).
 
 ## <a name="supported-features"></a>Características admitidas
 
-En [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] se admiten las características de replicación siguientes:
+Se admiten las características de replicación siguientes:
 
 * Replicación de instantáneas
 * Replicación transaccional
-* Replicación de mezcla
-* Replicación punto a punto
 * Replicación con puertos no predeterminados <!--Add link to explanation-->
 * Replicación con autenticación de AD
 * Configuraciones de replicación en Windows y Linux
@@ -56,9 +53,10 @@ En [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] se admiten las caract
 
 ## <a name="limitations"></a>Limitaciones
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] no admite las siguientes características:
+No se admiten las siguientes características:
 
-* Suscriptores de actualización inmediata
+* Replicación de mezcla
+* Replicación punto a punto
 * Publicación de Oracle
 
 ## <a name="next-steps"></a>Pasos siguientes

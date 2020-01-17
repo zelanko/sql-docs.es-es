@@ -1,9 +1,8 @@
 ---
 title: DELETE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/10/2017
+ms.date: 12/30/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -26,19 +25,20 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
+ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983237"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548276"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Quita una o varias filas de una tabla o vista de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -82,7 +82,8 @@ DELETE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DELETE FROM [database_name . [ schema ] . | schema. ] table_name    
+DELETE 
+    [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
     [ WHERE <search_condition> ]   
     [ OPTION ( <query_options> [ ,...n ]  ) ]  
 [; ]  
@@ -119,7 +120,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  En este ámbito, se puede utilizar una variable de tabla como origen de tabla de una instrucción DELETE.  
   
- La vista a la que hace referencia *table_or_view_name* debe poderse actualizar y debe hacer referencia exactamente a una tabla base de la cláusula FROM de la definición de vista. Para obtener más información sobre las vistas actualizables, vea [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+ La vista a la que hace referencia *table_or_view_name* debe poderse actualizar y debe hacer referencia exactamente a una tabla base de la cláusula FROM de la definición de vista. Para más información sobre las vistas actualizables, vea [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
  **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
@@ -166,7 +167,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  Palabras clave que indican que se utilizan sugerencias del optimizador para personalizar el procesamiento de la instrucción por parte del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para obtener más información, vea [Sugerencias de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  Para eliminar todas las filas de una tabla, use TRUNCATE TABLE. TRUNCATE TABLE es más rápido que DELETE y utiliza menos recursos de los registros de transacciones y de sistema. TRUNCATE TABLE tiene restricciones; por ejemplo, la tabla no puede participar en la replicación. Para obtener más información, vea [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md).  
   
  Use la función @@ROWCOUNT para devolver el número de filas eliminadas a la aplicación cliente. Para más información, vea [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
@@ -218,7 +219,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
 ## <a name="examples"></a>Ejemplos  
   
-|Categoría|Elementos de sintaxis ofrecidos|  
+|Category|Elementos de sintaxis ofrecidos|  
 |--------------|------------------------------|  
 |[Sintaxis básica](#BasicSyntax)|Delete|  
 |[Limitar las filas eliminadas](#LimitRows)|WHERE • FROM • cursor •|  
@@ -258,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. Usar un cursor para determinar la fila que se va a eliminar  
- En el ejemplo siguiente se elimina una fila única de la tabla `EmployeePayHistory` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] mediante un cursor denominado `my_cursor`. La operación de eliminación solo afecta a la única fila que se captura actualmente del cursor.  
+ En el ejemplo siguiente se elimina una fila única de la tabla `EmployeePayHistory` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] mediante un cursor denominado `complex_cursor`. La operación de eliminación solo afecta a la única fila que se captura actualmente del cursor.  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -340,7 +341,7 @@ GO
 **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Eliminar datos de una tabla remota usando un servidor vinculado  
- En el ejemplo siguiente se eliminan filas de una tabla remota. En el ejemplo primero se crea un vínculo al origen de datos remoto mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). El nombre del servidor vinculado, `MyLinkServer`, se especifica después como parte del nombre de objeto de cuatro partes con el formato *server.catalog.schema.object*.  
+ En el ejemplo siguiente se eliminan filas de una tabla remota. En el ejemplo primero se crea un vínculo al origen de datos remoto mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). El nombre del servidor vinculado, `MyLinkServer`, se especifica después como parte del nombre de objeto de cuatro partes con el formato*server.catalog.schema.object*.  
   
 ```sql
 USE master;  
@@ -366,7 +367,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. Eliminar datos de una tabla remota con la función OPENQUERY  
- En el ejemplo siguiente se eliminan filas de una tabla remota especificando la función de conjunto de filas [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) . En este ejemplo se usa el nombre del servidor vinculado creado en el ejemplo anterior.  
+ En el ejemplo siguiente se eliminan filas de una tabla remota especificando la función de conjunto de filas [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). En este ejemplo se usa el nombre del servidor vinculado creado en el ejemplo anterior.  
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -456,7 +457,7 @@ OPTION ( LABEL = N'label1' );
   
 ```  
   
-### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Usar una etiqueta y una sugerencia de consulta con la instrucción DELETE  
+### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>Hora Usar una etiqueta y una sugerencia de consulta con la instrucción DELETE  
  Esta consulta muestra la sintaxis básica para usar una sugerencia de combinación de consulta con la instrucción DELETE. Para más información sobre las sugerencias de combinación y cómo usar la cláusula OPTION, consulte [Cláusula OPTION (Transact-SQL)](../queries/option-clause-transact-sql.md).
   
 ```sql
@@ -470,6 +471,16 @@ WHERE ProductKey IN (
     WHERE T2.EnglishProductSubcategoryName = 'Road Bikes' )  
 OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;  
 ```  
+
+### <a name="o-delete-using-a-where-clause"></a>O. Eliminación con una cláusula WHERE
+
+Esta consulta muestra cómo realizar una eliminación con una cláusula WHERE y no con una cláusula FROM.
+
+```sql
+DELETE tableA WHERE EXISTS (
+SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
+)
+```
   
 ## <a name="see-also"></a>Consulte también  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
-title: Referencia para la supervisión y solución de problemas de grupos de disponibilidad Always On
-description: Esta guía sirve como página de referencia para empezar a trabajar en la supervisión y en la solución de algunos de los problemas comunes de los grupos de disponibilidad Always On.
-ms.custom: ag-guide, seodec18
+title: Guía de supervisión y solución de problemas de grupos de disponibilidad
+description: Índice de contenido para ayudarle a empezar en la supervisión y la solución de algunos de los problemas comunes de los grupos de disponibilidad AlwaysOn.
+ms.custom: seo-lt-2019
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94430d6b32567f7f185f1a515f8391d4ee01b3a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991567"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822046"
 ---
-# <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Guía de solución de problemas y supervisión de grupos de disponibilidad Always On
+# <a name="monitor-and-troubleshoot-availability-groups"></a>Supervisión y solución de problemas de grupos de disponibilidad
  Esta guía le ayudará a empezar a trabajar en la supervisión de grupos de disponibilidad Always On y en la solución de problemas de algunos de los problemas comunes en los grupos de disponibilidad. Proporciona contenido original, así como una página de aterrizaje con información útil que está publicada en otra parte. Aunque esta guía no puede analizar completamente todos los problemas que pueden producirse en todo el área de grupos de disponibilidad, puede orientarle en la dirección correcta en el análisis de la causa principal de los problemas y en su resolución. 
  
  Dado que los grupos de disponibilidad son una tecnología integrada, muchos problemas pueden ser síntomas de otros problemas del sistema de base de datos. Algunos problemas se deben a valores de configuración de un grupo de disponibilidad, como la suspensión de una base de datos de disponibilidad. Otros problemas pueden estar relacionados con otros aspectos de SQL Server, como la configuración, las implementaciones de los archivos de base de datos y los problemas de rendimiento sistémico no relacionados con la disponibilidad de SQL Server. Todavía pueden existir otros problemas fuera de SQL Server, como problemas de la E/S de red, TCP/IP, Active Directory y clústeres de conmutación por error de Windows Server (WSFC). A menudo, los problemas que surgen en un grupo de disponibilidad, una réplica o una base de datos requieren que ejecute la solución de problemas en varias tecnologías para identificar la causa principal.  
@@ -63,7 +63,7 @@ ms.locfileid: "67991567"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md) (Supervisar el rendimiento de los grupos de disponibilidad Always On)|Describe el proceso de sincronización de datos para los grupos de disponibilidad, puertas de control de flujo y métricas útiles al supervisar un grupo de disponibilidad; y también muestra cómo recopilar métricas de RTO y RPO.|  
-|[Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Proporciona información sobre herramientas para supervisar un grupo de disponibilidad.|  
+|[Herramientas para supervisar grupos de disponibilidad Always On &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Proporciona información sobre herramientas para supervisar un grupo de disponibilidad.|  
 |[The Always On health model, part 1: Health model architecture](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx) (El modelo de estado de Always On, parte 1: arquitectura del modelo de estado)|Proporciona información general sobre el modelo de estado de Always On.|  
 |[The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (El modelo de estado de Always On, parte 2: extensión del modelo de estado)|Muestra cómo personalizar el modelo de mantenimiento de Always On y personalizar el panel de Always On para mostrar información adicional.|  
 |[Monitoring Always On health with PowerShell, part 1: Basic cmdlet overview](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx) (Supervisión del mantenimiento de Always On con PowerShell, parte 1: información general sobre cmdlets básicos)|Proporciona una introducción básica a los cmdlets de PowerShell en Always On que puede usarse para supervisar el mantenimiento de un grupo de disponibilidad.|  

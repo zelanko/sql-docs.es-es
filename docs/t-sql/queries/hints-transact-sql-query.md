@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: c86ace5f903befc27e9348201332274e84877299
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982282"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002340"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,8 @@ Sugerencias de consulta especifica que en toda la consulta se deben utilizar las
   | EXPAND VIEWS   
   | FAST number_rows   
   | FORCE ORDER   
-  | { FORCE | DISABLE } EXTERNALPUSHDOWN  
+  | { FORCE | DISABLE } EXTERNALPUSHDOWN
+  | { FORCE | DISABLE } SCALEOUTEXECUTION
   | IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
   | KEEP PLAN   
   | KEEPFIXED PLAN  
@@ -168,7 +169,9 @@ Especifica que el orden de combinación que indica la sintaxis de la consulta se
   
 { FORCE | DISABLE } EXTERNALPUSHDOWN  
 Fuerza o deshabilita la aplicación del cálculo de expresiones válidas en Hadoop. Solo se aplica a las consultas que usan PolyBase. No se aplicará a Azure Storage.  
-  
+
+{FORCE | DISABLE} SCALEOUTEXECUTION Fuerce o deshabilite la ejecución de escalado horizontal de consultas de PolyBase que usan tablas externas en Clústeres de macrodatos de SQL Server 2019. Esta sugerencia solo se respetará con una consulta que use la instancia maestra de un clúster de macrodatos de SQL. El escalado horizontal se producirá en todo el grupo de procesos del clúster de macrodatos. 
+
 KEEP PLAN  
 Fuerza al optimizador de consultas a aumentar el umbral estimado para volver a compilar una consulta. El umbral estimado para volver a compilar inicia una nueva compilación automática para la consulta cuando se ha realizado el número estimado de cambios de columnas indexados en una tabla mediante la ejecución de una de las siguientes instrucciones:
 
@@ -275,7 +278,7 @@ Se admiten los siguientes nombres de sugerencia:
    Deshabilita los comentarios de concesión de memoria en modo por lotes. Para obtener más información, vea [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).     
    **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * "DISABLE_DEFERRED_COMPILATION_TV"    
-  Deshabilita la compilación diferida de variables de tabla. Para obtener más información, consulte [Compilación diferida de variables de tabla](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).     
+  Deshabilita la compilación diferida de variables de tabla. Para obtener más información, consulte [Compilación diferida de variables de tabla](../../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation).     
   **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  "DISABLE_INTERLEAVED_EXECUTION_TVF"      
    Deshabilita la ejecución intercalada de las funciones con valores de tabla de múltiples instrucciones. Para más información, consulte [Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).     
@@ -285,7 +288,7 @@ Se admiten los siguientes nombres de sugerencia:
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
    Hace que SQL Server genere un plan que no usa las modificaciones del objetivo de fila con las consultas que contienen estas palabras clave: 
    
-   * ARRIBA
+   * TOP
    * OPTION (FAST N)
    * IN
    * EXISTS
@@ -357,7 +360,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
 > [!CAUTION] 
 > Al especificar FORCESEEK con parámetros se limita el número de planes que el optimizador puede considerar en comparación con cuando se especifica FORCESEEK sin parámetros. Esto puede producir un error "No se puede generar el plan" en más casos. En una versión futura, las modificaciones internas realizadas en el optimizador pueden permitir que se consideren más planes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  No se pueden especificar sugerencias de consulta en una instrucción INSERT, excepto cuando se usa una cláusula SELECT en la instrucción.  
   
  Solo se pueden especificar sugerencias de consulta en la consulta de nivel superior, no en las subconsultas. Cuando se especifica una sugerencia de tabla como una sugerencia de consulta, la sugerencia puede especificarse en la consulta de nivel superior o en una subconsulta. Sin embargo, el valor especificado para _exposed\_object\_name_ en la cláusula TABLE HINT debe coincidir exactamente con el nombre expuesto en la consulta o subconsulta.  

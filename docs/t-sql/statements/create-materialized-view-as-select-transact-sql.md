@@ -37,22 +37,22 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 709a0060d948b4c2979c858a0d51bd9740eb0e28
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e8acc3ef73c51ccbbf195f9d18dc5f12d661931f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729849"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226744"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-En este artículo se explica la instrucción CREATE MATERIALIZED VIEW AS SELECT de T-SQL en Azure SQL Data Warehouse para soluciones en desarrollo. En el artículo se proporcionan también ejemplos de código.
+En este artículo se explica la instrucción CREATE MATERIALIZED VIEW AS SELECT de T-SQL en Azure SQL Data Warehouse para soluciones en desarrollo. En el artículo también se proporcionan ejemplos de código.
 
-Una vista materializada conserva los datos devueltos por la consulta de la definición de la vista y se actualiza automáticamente a medida que cambian los datos en las tablas subyacentes.   Mejora el rendimiento de las consultas complejas (normalmente, las consultas con combinaciones y agregaciones) al tiempo que ofrece operaciones de mantenimiento sencillo.   Con su función de correspondencia automática del plan de ejecución, no es necesario que se haga referencia a una vista materializada en la consulta para que el optimizador tenga en cuenta la vista con fines de sustitución.  Gracias a ello, los ingenieros de datos pueden implementar vistas materializadas como un mecanismo para mejorar el tiempo de respuesta de las consultas, sin necesidad de cambiarlas.  
+Una vista materializada conserva los datos que ha devuelto la consulta de visualización de definición y se actualiza automáticamente a medida que cambian los datos en las tablas subyacentes.   Mejora el rendimiento de las consultas complejas (por lo general, consultas con combinaciones y agregaciones), a la vez que ofrece operaciones de mantenimiento simples.   Con su función de correspondencia automática del plan de ejecución, no es necesario que se haga referencia a una vista materializada en la consulta para que el optimizador tenga en cuenta la vista con fines de sustitución.  Gracias a ello, los ingenieros de datos pueden implementar vistas materializadas como un mecanismo para mejorar el tiempo de respuesta de las consultas, sin necesidad de cambiarlas.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -88,7 +88,7 @@ Solo se admiten distribuciones HASH y ROUND_ROBIN.
 *select_statement*   
 La lista SELECT de la definición de la vista materializada debe cumplir al menos uno de estos dos criterios:
 - La lista SELECT contiene una función de agregado.
-- Se usa GROUP BY en la definición de la vista materializada y todas las columnas de GROUP BY se incluyen en la lista SELECT.  
+- Se usa GROUP BY en la definición de la vista materializada y todas las columnas de GROUP BY se incluyen en la lista SELECT.  En la cláusula GROUP BY se pueden usar hasta 32 columnas.
 
 Las funciones de agregado son necesarias en la lista SELECT de la definición de la vista materializada.  Entre las agregaciones admitidas figuran MAX, MIN, AVG, COUNT, COUNT_BIG, SUM, VAR, STDEV.
 
@@ -106,7 +106,7 @@ Cuando se usan los agregados MIN/MAX en la lista SELECT de la definición de la 
 
 - La vista materializada se deshabilitará cuando tenga lugar una operación UPDATE o DELETE en las tablas base de referencia.  Esta restricción no se aplica a las operaciones INSERT.  Para volver a habilitar la vista materializada, ejecute ALTER MATERIALIZED INDEX con REBUILD.
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Una vista materializada en Azure Data Warehouse es muy similar a una vista indizada de SQL Server.  Comparte casi las mismas restricciones que la vista indizada (consulte [Crear vistas indizadas](/sql/relational-databases/views/create-indexed-views) para obtener más información), salvo que una vista materializada admite las funciones de agregado.   Existen consideraciones adicionales para una vista materializada.  
  
@@ -140,7 +140,7 @@ Para averiguar si una instrucción SQL puede beneficiarse de una nueva vista mat
 
 Se necesita el permiso CREATE VIEW en la base de datos y el permiso ALTER en el esquema en que se crea la vista. 
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Optimización del rendimiento con vista materializada](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      

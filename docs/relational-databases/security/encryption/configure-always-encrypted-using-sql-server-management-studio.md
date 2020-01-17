@@ -1,6 +1,7 @@
 ---
-title: Configurar Always Encrypted con SQL Server Management Studio | Microsoft Docs
-ms.custom: ''
+title: Configure Always Encrypted using SSMS (Configurar Always Encrypted con SSMS)
+description: Describe tareas para configurar y administrar bases de datos de Always Encrypted con SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.reviewer: vanto
@@ -12,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ff7ef354fdf3118f68c22bf2ad927070bf8e4b6
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 7c033cf8200103fe6198661f7ed0e3e2a6c3966a
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594420"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557874"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configure Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,17 +33,17 @@ SSMS no admite la separación de roles entre los administradores de la base de d
 
 ## <a name="always-encrypted-tasks-using-ssms"></a>Tareas de Always Encrypted mediante SSMS
 
-- [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
-- [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
-- [Configuración del cifrado de columna mediante el asistente para Always Encrypted](always-encrypted-wizard.md)
-- [Configuración del cifrado de columna mediante Always Encrypted con un paquete DAC](configure-always-encrypted-using-dacpac.md)
-- [Consulta de columnas mediante Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Rotación de claves de Always Encrypted mediante SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
+- [Configuración del cifrado de columna mediante el asistente para Always Encrypted](always-encrypted-wizard.md)
+- [Configuración del cifrado de columnas mediante Always Encrypted con un paquete DAC](configure-always-encrypted-using-dacpac.md)
+- [Consulta de columnas mediante Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Exportación e importación de bases de datos con Always Encrypted](always-encrypted-migrate-using-bacpac.md)
 - [Copia de seguridad y restauración de bases de datos con Always Encrypted](always-encrypted-migrate-using-backup-restore.md)
-- [Migración de datos a o desde columnas mediante Always Encrypted con el Asistente para importación y exportación de SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
+- [Migración de datos a o desde columnas mediante Always Encrypted con el Asistente para importación y exportación de SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
 
 ## <a name="see-also"></a>Consulte también
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Información general de administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+- [Información general sobre la administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Configurar Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-- [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)
+- [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)

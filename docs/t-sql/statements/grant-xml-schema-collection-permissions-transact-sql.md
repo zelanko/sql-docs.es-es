@@ -1,6 +1,8 @@
 ---
-title: GRANT (permisos de colección de esquemas XML de Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permisos de colección de esquemas XML GRANT
+description: Concede permisos para una colección de esquemas XML.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5dbd2c35b360d3b3e1e9f6dabe7d011c20795bc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a5d79f02237a380a9431e8269875d93a79bd9d04
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071189"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243346"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT (permisos de colección de esquemas XML de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +60,7 @@ GRANT permission  [ ,...n ] ON
  Especifica un permiso que se puede conceder para una colección de esquemas XML. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
  ON XML SCHEMA COLLECTION :: [ *schema_name*. ] *XML_schema_collection_name*  
- Especifica la colección de esquemas XML en la que se va a conceder el permiso. Se requiere el calificador de ámbito (::). Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se requiere el calificador de ámbito de esquema (.).  
+ Especifica la colección de esquemas XML en la que se va a conceder el permiso. Se requiere el calificador de ámbito (::). Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema (.).  
   
  \<database_principal> especifica la entidad de seguridad a la que se concede el permiso.  
   
@@ -91,7 +93,7 @@ GRANT permission  [ ,...n ] ON
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Encontrará información sobre las colecciones de esquemas XML en la vista de catálogo [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  Una colección de esquemas XML es un elemento protegible de nivel de esquema que contiene el esquema que es su entidad primaria en la jerarquía de permisos. La mayoría de los permisos limitados y específicos que se pueden conceder para una colección de esquemas XML se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  

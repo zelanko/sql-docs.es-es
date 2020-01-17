@@ -1,6 +1,7 @@
 ---
-title: Configurar la base de datos de distribución de SQL Server en un grupo de disponibilidad | Microsoft Docs
-ms.custom: ''
+title: Configuración de la base de datos de distribución en un grupo de disponibilidad
+description: Configure la base de datos de distribución para la replicación de SQL Server con un grupo de disponibilidad AlwaysOn.
+ms.custom: seo-lt-2019
 ms.date: 01/16/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13a883d71262a044555fe3d0a59a945461de426e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d5f721d589354d5e7f4ec970bf0ea086895df129
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908476"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320010"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar la base de datos de distribución de replicación en un grupo de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,7 @@
 ---
-title: Configuración de grupos de disponibilidad e instancias de clúster de conmutación por error AlwaysOn de varias subredes en Linux
-description: ''
+title: Configuración de un grupo de disponibilidad de varias subredes y FCI (Linux)
+description: Obtenga información sobre cómo configurar grupos de disponibilidad AlwaysOn e instancias de clúster de conmutación por error (FCI) de varias subredes para SQL Server en Linux.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +9,12 @@ ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2fc848c30af32e5ff2a81ebadf4378b75ff5a521
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: f35f1916107e8ede0e7bf7cc3df483a0c33f3355
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077589"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558617"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configuración de grupos de disponibilidad e instancias de clúster de conmutación por error AlwaysOn de varias subredes
 

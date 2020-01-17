@@ -1,6 +1,8 @@
 ---
-title: REVOKE (permisos de entidad de seguridad de servidor de Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Permisos de entidad de seguridad de servidor REVOKE
+description: Revoque permisos en un inicio de sesión de SQL Server.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -19,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2ee75a4b200850e8762814ddd30dab8c1e60bdb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 21cb290cb91ca74227db7a3cd16501ddd882ae48
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914236"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255791"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE (permisos de entidad de seguridad de servidor de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +60,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  Especifica un permiso que se puede revocar en un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
  LOGIN **::** *SQL_Server_login*  
- Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se va a revocar el permiso. Se necesita el calificador de ámbito ( **::** ).  
+ Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se va a revocar el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  SERVER ROLE **::** *server_role*  
  Especifica el rol de servidor para el que se revoca el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
@@ -95,7 +97,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  AS *SQL_Server_login*  
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que la entidad de seguridad que ejecuta esta consulta deriva su derecho para revocar el permiso.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los roles de servidor y los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son protegibles en el nivel de servidor. La mayoría de permisos limitados y específicos que se pueden revocar para un rol de servidor o un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se muestran en la siguiente tabla, junto con los permisos más generales que los incluyen por implicación.  
   
 |Permiso de rol de servidor o de inicio de sesión de SQL Server|Permiso de rol de servidor o inicio de sesión implícito de SQL Server|Implícito en el permiso de servidor|  
@@ -113,7 +115,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. Revocar el permiso IMPERSONATE en un inicio de sesión  
- En el siguiente ejemplo se revoca el permiso `IMPERSONATE` para el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` desde un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creado desde el usuario de Windows `AdvWorks\YoonM`.  
+ En el siguiente ejemplo se revoca el permiso `IMPERSONATE` para el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof` desde un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creado desde el usuario de Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  

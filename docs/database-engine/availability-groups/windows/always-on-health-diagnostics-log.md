@@ -1,7 +1,7 @@
 ---
-title: Registros de diagnóstico de mantenimiento de la DLL del recurso de SQL Server para grupos de disponibilidad
+title: Registros de diagnóstico de mantenimiento de la DLL para grupos de disponibilidad
 description: Se describe cómo la DLL del recurso de SQL Server supervisa el estado del grupo de disponibilidad Always On.
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a4ff7c777add4fa2228fb6525d24f172533a609
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aa9d269333e5c39f12b82d739575652efdd6c2c4
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014712"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822071"
 ---
 # <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>Registros de diagnóstico de mantenimiento de la DLL del recurso de SQL Server para grupos de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

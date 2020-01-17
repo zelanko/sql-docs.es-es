@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119204"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191086"
 ---
 # <a name="select-examples-transact-sql"></a>Ejemplos de SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "74119204"
 ## <a name="e-using-correlated-subqueries"></a>E. Usar subconsultas correlacionadas
 Una subconsulta correlacionada es una consulta que depende de la consulta externa para obtener sus valores. Se ejecuta varias veces, una vez por cada fila que la consulta externa pueda seleccionar.
 
- En el siguiente ejemplo se muestran consultas que son semánticamente equivalentes y se demuestra la diferencia entre la utilización de la palabra clave `EXISTS` y la palabra clave `IN`. Ambos son ejemplos de subconsultas válidas que recuperan una instancia de cada nombre de producto cuyo modelo es un jersey de manga larga con logotipo y cuyos números de `ProductModelID` coinciden en las tablas `Product` y `ProductModel`.  
+En el primer ejemplo se muestran consultas que son semánticamente equivalentes para demostrar la diferencia entre el uso de la palabra clave `EXISTS` y la palabra clave `IN`. Ambos son ejemplos de subconsultas válidas que recuperan una instancia de cada nombre de producto cuyo modelo es un jersey de manga larga con logotipo y cuyos números de `ProductModelID` coinciden en las tablas `Product` y `ProductModel`.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
@@ -158,11 +158,11 @@ GO
   
  [!code-sql[Select#SelectExamples23](../../t-sql/queries/codesnippet/tsql/select-examples-transact_21.sql)]  
   
- Si desea asegurarse de que hay al menos mil quinientos elementos para los cálculos de cada producto, use `HAVING COUNT(*) > 1500` para eliminar los productos que devuelven totales inferiores a `1500` elementos vendidos. La consulta sería la siguiente:  
+ Si desea asegurarse de que hay al menos mil quinientos elementos para los cálculos de cada producto, use `HAVING COUNT(*) > 1500` para eliminar los productos que devuelven totales inferiores a `1500` elementos vendidos. La consulta tiene este aspecto:  
   
  [!code-sql[Select#SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
   
-## <a name="n-using-the-index-optimizer-hint"></a>N. Usar la sugerencia del optimizador INDEX  
+## <a name="n-using-the-index-optimizer-hint"></a>Hora Usar la sugerencia del optimizador INDEX  
  En el ejemplo siguiente se muestran dos formas de usar la sugerencia del optimizador `INDEX`. En el primer ejemplo se muestra cómo obligar al optimizador a que use un índice no clúster para recuperar filas de una tabla, mientras que en el segundo ejemplo se obliga a realizar un recorrido de tabla mediante un índice igual a 0.  
   
  [!code-sql[Select#SelectExamples45](../../t-sql/queries/codesnippet/tsql/select-examples-transact_23.sql)]  

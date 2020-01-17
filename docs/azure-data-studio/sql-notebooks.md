@@ -1,21 +1,21 @@
 ---
-title: Uso de cuadernos SQL en Azure Data Studio
+title: Procedimiento para usar cuadernos SQL
 titleSuffix: Azure Data Studio
 description: Procedimiento para usar cuadernos SQL en Azure Data Studio
-ms.custom: seodec18
-ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; sstein
+ms.reviewer: achatter; alayu; maghan; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9af2e04a3973eddfcd714c7968c35e544302aba9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18
+ms.date: 06/28/2019
+ms.openlocfilehash: df1e49af0378b6af4a3d82b5a5ec2a4293be5e35
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959261"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957089"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Uso de cuadernos en Azure Data Studio
 
@@ -29,22 +29,22 @@ En Azure Data Studio, también puede presionar F1 y hacer clic en **Nueva conexi
 
 ![image1](media/sql-notebooks/connection-info.png)
 
-## <a name="launch-notebooks"></a>Iniciar Notebooks
+## <a name="launch-notebooks"></a>Inicio de los cuadernos
 
 Hay varias maneras de iniciar un nuevo cuaderno.
 
-1. Vaya al **menú Archivo** en Azure Data Studio y haga clic en **New Notebook** (Nuevo cuaderno).
+1. Vaya al **menú Archivo** en Azure Data Studio y haga clic en **Nuevo cuaderno**.
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-3. Haga clic con el botón derecho en la conexión **SQL Server** e inicie **New Notebook** (Nuevo cuaderno). 
+3. Haga clic con el botón derecho en la conexión **SQL Server** e inicie **Nuevo cuaderno**. 
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-4. Abra la paleta de comandos (**Ctrl + Mayús + P**) y escriba **Nuevo cuaderno**. Se abre un nuevo archivo denominado `Notebook-1.ipynb`.
+4. Abra la paleta de comandos (**Ctrl + Mayús + P**) y, luego, escriba **Nuevo cuaderno**. Se abre un nuevo archivo denominado `Notebook-1.ipynb`.
 
-## <a name="supported-kernels-and-attach-to-context"></a>Kernels admitidos y asociar al contexto
+## <a name="supported-kernels-and-attach-to-context"></a>Kernels admitidos y asociación al contexto
 
-La instalación de Notebook en Azure Data Studio es compatible de forma nativa con el kernel de SQL. Si es desarrollador de SQL y quiere usar cuadernos, este sería el kernel elegido. 
+La instalación de Notebooks en Azure Data Studio es compatible de forma nativa con el kernel de SQL. Si es desarrollador de SQL y quiere usar Notebooks, este sería el kernel elegido. 
 
 El kernel de SQL también se puede usar para conectarse a instancias de servidor de PostgreSQL. Si es un desarrollador de PostgreSQL y quiere conectarse al servidor de PostgreSQL, descargue la [**extensión de PostgreSQL**](postgres-extension.md) en el marketplace de extensiones de Azure Data Studio.
 
@@ -56,7 +56,7 @@ En las celdas de código del cuaderno, de forma similar al editor de consultas, 
 
 Haga clic en **Ejecutar** para ejecutar cada celda.
 
-Kernel de SQL para conectar a instancia de SQL Server
+Kernel de SQL para conectar a la instancia de SQL Server
 
 ![image7](media/sql-notebooks/intellisense-code-cell.png)
 
@@ -64,7 +64,7 @@ Resultados de la consulta
 
 ![image19](media/sql-notebooks/sql-cell-results.png)
 
-Kernel de SQL para conectar a instancia de servidor de PostgreSQL 
+Kernel de SQL para conectar a la instancia de servidor de PostgreSQL 
 
 ![image18](media/sql-notebooks/pgsql-code-cell.png)
 
@@ -72,9 +72,9 @@ Resultados de la consulta
 
 ![image20](media/sql-notebooks/pgsql-cell-results.png)
 
-### <a name="configure-python-for-notebooks"></a>Configurar Python para Notebooks
+### <a name="configure-python-for-notebooks"></a>Configuración de Python para Notebooks
 
-Al seleccionar cualquiera de los otros kernels distintos de SQL en la lista desplegable de kernels, se le pide que **configure Python para Notebooks**. Las dependencias de Notebook se instalan en una ubicación especificada, pero puede decidir si quiere establecer la ubicación de instalación. Esta instalación puede tardar algún tiempo y se recomienda no cerrar la aplicación hasta que se complete la instalación. Una vez finalizada la instalación, puede empezar a escribir código en el lenguaje admitido.
+Al seleccionar cualquiera de los otros kernels distintos de SQL en la lista desplegable de kernels, se le pide que **configure Python para Notebooks**. Las dependencias de Notebooks se instalan en una ubicación especificada, pero puede decidir si quiere establecer la ubicación de instalación. Esta instalación puede tardar algún tiempo y se recomienda no cerrar la aplicación hasta que se complete la instalación. Una vez finalizada la instalación, puede empezar a escribir código en el lenguaje admitido.
 
 ![image21](media/sql-notebooks/configure-python.png)
 
@@ -115,9 +115,9 @@ Al hacer clic fuera de la celda de texto, se muestra el texto de Markdown.
 
 El valor predeterminado de los cuadernos abiertos en Azure Data Studio es **De confianza**.
 
-Si abre un cuaderno desde algún otro origen, se abre en modo **No de confianza** y luego se puede convertir a **De confianza**.
+Si abre un cuaderno desde algún otro origen, se abre en modo **No de confianza** y, luego, se puede convertir a **De confianza**.
 
-### <a name="save"></a>Guardar 
+### <a name="save"></a>Save 
 
 Para guardar el cuaderno, presione **Ctrl + S** o haga clic en los comandos **Guardar archivo**, **Guardar archivo como...** y **Guardar todo** desde el menú archivo y los comandos **Archivo: Guardar** especificados en la paleta de comandos.
 
@@ -137,7 +137,7 @@ Elija `Spark|Scala Kernel` y el tipo de celda en el código siguiente.
 
 ![image13](media/sql-notebooks/spark-scala.png)
 
-También puede ver las "opciones de celda" al hacer clic en el icono de opciones que aparece bajo –
+También puede ver las "Opciones de celda" al hacer clic en el icono de opciones que aparece bajo:
 
 ![image14](media/sql-notebooks/scala-cell-options.png)
 
@@ -149,11 +149,11 @@ Elija Spark | R en la lista desplegable de los kernels. En la celda, escriba o p
 
 ### <a name="local-python-kernel"></a>Kernel local de Python
 
-Elija el kernel local de Python y el tipo de celda en -
+Elija el kernel local de Python y el tipo de celda en:
 
 ![image16](media/sql-notebooks/local-python.png)
 
-## <a name="manage-packages"></a>Administrar paquetes
+## <a name="manage-packages"></a>Administración de paquetes
 Uno de los aspectos que se han optimizado para el desarrollo local de Python es la capacidad de instalar paquetes que los clientes necesitan para sus escenarios. De forma predeterminada, se incluyen los paquetes comunes como `pandas`, `numpy`, etc., pero si espera un paquete que no está incluido, escriba el código siguiente en la celda del cuaderno: 
 
 ```python

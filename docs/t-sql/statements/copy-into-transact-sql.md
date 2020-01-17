@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (versión preliminar)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Use la instrucción COPY en Azure SQL Data Warehouse para la carga desde cuentas de almacenamiento externo.
-ms.date: 11/07/2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 24cfced04b8d2d0366d2058c81bcedfd9b00d2f9
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 4cdfba4070e8788687c453435b4a6d525aeb44fe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74055141"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321840"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (versión preliminar)
 
@@ -32,7 +32,7 @@ ms.locfileid: "74055141"
 En este artículo se explica cómo usar la instrucción COPY en Azure SQL Data Warehouse para la carga desde cuentas de almacenamiento externo. La instrucción COPY proporciona la máxima flexibilidad para la ingesta de datos de alto rendimiento en SQL Data Warehouse.
 
 > [!NOTE]  
-> La instrucción COPY se encuentra actualmente en versión preliminar pública.
+> Actualmente, la instrucción COPY está en versión preliminar pública.
 
 ## <a name="syntax"></a>Sintaxis  
 
@@ -65,7 +65,7 @@ WITH
 Es opcional si el esquema predeterminado para el usuario que realiza la operación es el esquema de la tabla especificada. Si no se especifica *schema* y el esquema predeterminado del usuario que realiza la operación COPY es diferente de la tabla especificada, COPY se cancelará y se devolverá un mensaje de error.  
 
 *table_name*  
-Es el nombre de la tabla en la que se van a copiar (COPY) los datos. La tabla de destino puede ser una tabla temporal o una tabla permanente.
+Es el nombre de la tabla en la que se van a copiar (COPY) los datos. La tabla de destino puede ser una tabla temporal o permanente, y ya debe existir en la base de datos. 
 
 *(column_list)*  
 Es una lista opcional de una o varias columnas que se usa para asignar campos de datos de origen a las columnas de la tabla de destino para cargar datos. *column_list* debe ir entre paréntesis y delimitada con comas. La lista de columnas tiene el formato siguiente:
@@ -131,7 +131,7 @@ Solo se pueden especificar varias ubicaciones de archivos desde el mismo contene
 Al autenticarse mediante AAD o en una cuenta de almacenamiento pública, no es necesario especificar CREDENTIAL. 
 
 - Autenticación con firmas de acceso compartido (SAS) *IDENTITY: Una constante con un valor de "firma de acceso compartido"* 
-  *SECRET: La* [*firma de acceso compartido*](/azure/storage/common/storage-sas-overview) * proporciona acceso delegado a los recursos de la cuenta de almacenamiento.*
+  *SECRET: la* [*firma de acceso compartido*](/azure/storage/common/storage-sas-overview) *ofrece acceso delegado a recursos en la cuenta de almacenamiento.*
   Permisos mínimos necesarios: READ y LIST
 
 - Autenticación con [*entidades de servicio*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -164,7 +164,7 @@ Si ERRORFILE tiene la ruta de acceso completa de la cuenta de almacenamiento def
   
 - Autenticación con firmas de acceso compartido (SAS)
   - *IDENTITY: Una constante con un valor de "firma de acceso compartido"*
-  - *SECRET: La*  [*firma de acceso compartido*](/azure/storage/common/storage-sas-overview)  *proporciona acceso delegado a los recursos de la cuenta de almacenamiento.*
+  - *SECRET: la* [*firma de acceso compartido*](/azure/storage/common/storage-sas-overview) *ofrece acceso delegado a recursos en la cuenta de almacenamiento.*
   - Permisos mínimos necesarios: READ, LIST, WRITE, CREATE, DELETE
   
 - Autenticación con [*entidades de servicio*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
@@ -214,13 +214,13 @@ El comando COPY detecta automáticamente el tipo de compresión en base a la ext
 > Los caracteres FIELDQUOTE se escapan en columnas de cadena en las que existe la presencia de un doble FIELDQUOTE (delimitador). 
 
 *FIELDTERMINATOR = 'field_terminator'*</br>
-*FIELDTERMINATOR* solo se aplica a CSV. Especifica el terminador de campo que se usará en el archivo CSV. El terminador de campo puede ser de varios caracteres. El terminador de campo predeterminado es una coma (,).
+*FIELDTERMINATOR* solo se aplica a CSV. Especifica el terminador de campo que se usará en el archivo CSV. El terminador de campo se puede especificar mediante notación hexadecimal. El terminador de campo puede ser de varios caracteres. El terminador de campo predeterminado es una coma (,).
 Para obtener más información, vea [Especificar terminadores de campo y de fila (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
 
 ROW TERMINATOR = 'row_terminator'</br>
-*ROW TERMINATOR* solo se aplica a CSV. Especifica el terminador de fila que se usará en el archivo CSV. El terminador de fila puede ser de varios caracteres. De forma predeterminada, el terminador de fila es \r\n. 
+*ROW TERMINATOR* solo se aplica a CSV. Especifica el terminador de fila que se usará en el archivo CSV. El terminador de fila se puede especificar mediante notación hexadecimal. El terminador de fila puede ser de varios caracteres. De forma predeterminada, el terminador de fila es \r\n. 
 
-El comando COPY antepone el carácter \r al especificar \n (nueva línea), lo cual genera \r\n. Para especificar solo el carácter \n, use el valor hexadecimal (0x0A). Al especificar los terminadores de fila de varios caracteres en formato hexadecimal, no especifique 0x entre cada carácter.
+El comando COPY antepone el carácter \r al especificar \n (nueva línea), lo cual genera \r\n. Para especificar solo el carácter \n, use la notación hexadecimal (0x0A). Al especificar los terminadores de fila de varios caracteres en formato hexadecimal, no especifique 0x entre cada carácter.
 
 Revise la siguiente [documentación](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) para obtener instrucciones adicionales sobre cómo especificar terminadores de fila.
 
@@ -259,7 +259,7 @@ Se requieren los permisos INSERT y ADMINISTER BULK OPERATIONS. En Azure SQL Data
 El ejemplo siguiente es la forma más sencilla del comando COPY, que carga datos desde una cuenta de almacenamiento pública. En este ejemplo, los valores predeterminados de la instrucción COPY coinciden con el formato del archivo CSV del elemento de línea.
 
 ```sql
-COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv’
+COPY INTO dbo.[lineitem] FROM 'https://unsecureaccount.blob.core.windows.net/customerdatasets/folder1/lineitem.csv'
 ```
 
 Los valores predeterminados del comando COPY son:
@@ -306,7 +306,7 @@ WITH (
     DATEFORMAT = 'ymd',
     MAXERRORS = 10,
     ERRORFILE = '/errorsfolder/',--path starting from the storage container
-    IDENTITY_INSERT = ‘ON’
+    IDENTITY_INSERT = 'ON'
 )
 ```
 
@@ -358,6 +358,46 @@ WITH (
 )
 ```
 
-## <a name="see-also"></a>Vea también  
+## <a name="faq"></a>Preguntas más frecuentes
+
+### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>¿Cuál es el rendimiento del comando COPY en comparación con PolyBase?
+El comando COPY tendrá un mejor rendimiento en el momento en el que la característica esté disponible con carácter general. Para obtener el mejor rendimiento de carga durante la versión preliminar pública, considere la posibilidad de dividir la entrada en varios archivos al cargar CSV. Actualmente, el rendimiento de COPY es equivalente al de PolyBase al usar INSERT SELECT. 
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>¿Cuál es el procedimiento para dividir archivos a la hora de cargar archivos CSV con el comando COPY?
+Las instrucciones sobre el número de archivos se describen en la tabla siguiente. Una vez alcanzado el número recomendado de archivos, obtendrá un mejor rendimiento cuanto mayor tamaño tengan estos. Cuando el comando COPY esté disponible con carácter general, no tendrá que dividir los archivos no comprimidos. 
+
+| **DWU** | **Número de archivos** |
+| :-----: | :--------: |
+|   100   |     60     |
+|   200   |     60     |
+|   300   |     60     |
+|   400   |     60     |
+|   500   |     60     |
+|  1,000  |    120     |
+|  1500  |    180     |
+|  2\.000  |    240     |
+|  2500  |    300     |
+|  3000  |    360     |
+|  5\.000  |    600     |
+|  6,000  |    720     |
+|  7500  |    900     |
+| 10 000  |    1200    |
+| 15,000  |    1800    |
+| 30,000  |    3600    |
+
+
+### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>¿Cuál es el procedimiento para dividir archivos a la hora de cargar archivos ORC o Parquet con el comando COPY?
+No es necesario dividir los archivos ORC o Parquet porque el comando COPY lo hará de forma automática. Para obtener el mejor rendimiento, los archivos Parquet y ORC de la cuenta de almacenamiento de Azure deben tener un tamaño de 256 MB o más. 
+
+### <a name="when-will-the-copy-command-be-generally-available"></a>¿Cuándo estará disponible el comando COPY con carácter general?
+El comando COPY estará disponible con carácter general a principios del siguiente año natural (2020). 
+
+### <a name="are-there-any-known-issues-with-the-copy-command"></a>¿Hay algún problema conocido con el comando COPY?
+
+- La compatibilidad con LOB como (n)varchar(max) no está disponible en la instrucción COPY. Estará disponible a comienzos del próximo año.
+
+Envíe cualquier comentario o problema a la lista de distribución sqldwcopypreview@service.microsoft.com.
+
+## <a name="see-also"></a>Consulte también  
 
  [Información general sobre la carga con SQL Data Warehouse](/azure/sql-data-warehouse/design-elt-data-loading)

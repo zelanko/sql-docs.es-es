@@ -1,7 +1,7 @@
 ---
-title: Introducción a los contenedores de Linux de SQL Server en Docker
-titleSuffix: SQL Server
+title: 'Docker: Instalación de contenedores para SQL Server en Linux'
 description: En este inicio rápido se muestra cómo usar Docker para ejecutar las imágenes de contenedor de SQL Server 2017 y 2019. A continuación, deberá crear una base de datos y realizar consultas en esta con sqlcmd.
+ms.custom: seo-lt-2019
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
@@ -9,17 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sqlfreshmay19
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 29a7905f70446f79d27e9766488e536ccd1c0c91
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 40c1573fb16bbf6d7cdbb98a168dcda064b59087
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531378"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558685"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Inicio rápido: Ejecución de imágenes de contenedor de SQL Server con Docker
 
@@ -386,7 +385,7 @@ En los pasos siguientes se crea una base de datos denominada `TestDB`.
    GO
    ```
 
-### <a name="insert-data"></a>Inserción de datos
+### <a name="insert-data"></a>Insertar datos
 
 Luego cree una tabla, `Inventory`, e inserte dos filas nuevas.
 

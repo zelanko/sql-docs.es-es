@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305280"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75224514"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Unión de SQL Server en un host de Linux a un dominio de Active Directory
 
@@ -178,7 +178,7 @@ Siga los pasos siguientes para unir un host de SQL Server a un dominio de Active
 
    SQL Server usa SSSD y NSS para asignar cuentas de usuario y grupos a identificadores de seguridad (SID). SSSD se debe configurar y ejecutar para que SQL Server cree inicios de sesión de AD correctamente. Normalmente, **realmd** lo hace automáticamente como parte de la unión al dominio, pero en algunos casos se debe hacer por separado.
 
-   Para obtener más información, vea la [configuración manual de SSSD](https://access.redhat.com/articles/3023951) y la [configuración de NSS para funcionar con SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Para obtener más información, vea la [configuración manual de SSSD](https://access.redhat.com/articles/3023951) y la [configuración de NSS para funcionar con SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. Compruebe que ahora puede recopilar información sobre un usuario del dominio y que puede adquirir un vale Kerberos como ese usuario. En el ejemplo siguiente se usan los comandos **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) y [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) para eso.
 
@@ -210,7 +210,7 @@ Puede usar utilidades de terceros como [PBIS](https://www.beyondtrust.com/), [VA
 SQL Server no usa el código ni la biblioteca del integrador de terceros para las consultas relacionadas con AD. SQL Server siempre consulta AD mediante llamadas a la biblioteca openldap directamente en esta configuración. Los integradores de terceros solo se usan para unir el host de Linux al dominio de AD; SQL Server no tiene ninguna comunicación directa con estas utilidades.
 
 > [!IMPORTANT]
-> Vea las recomendaciones sobre el uso de la opción de configuración **mssql-conf** `network.disablesssd` en la sección **Opciones de configuración adicionales** del artículo [Usar la autenticación de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md#additionalconfig).
+> Vea las recomendaciones sobre el uso de la opción de configuración **mssql-conf** `network.disablesssd` en la sección **Opciones de configuración adicionales** del artículo [Uso de la autenticación de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md#additionalconfig).
 
 Compruebe que **/etc/krb5.conf** se ha configurado correctamente. En el caso de la mayoría de los proveedores de Active Directory ajenos, esta configuración se realiza automáticamente. No obstante, busque los siguientes valores en **/etc/krb5.conf** para evitar problemas futuros:
 

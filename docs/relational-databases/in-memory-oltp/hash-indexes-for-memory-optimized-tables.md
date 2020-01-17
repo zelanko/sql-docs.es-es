@@ -1,6 +1,6 @@
 ---
-title: Solución de problemas de índices de hash para tablas optimizadas para memoria | Microsoft Docs
-ms.custom: ''
+title: 'Solución de problemas de índices de hash: tablas optimizadas para memoria'
+ms.custom: seo-dt-2019
 ms.date: 12/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +11,12 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16e3ab81700ca9fed1870a6a98d0aab704b2c1db
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 6216e8e008bff92ce502aa6dda8025c5ef63f0ba
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909277"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412659"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Solución de problemas de índices de hash para tablas optimizadas para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,8 +113,8 @@ El siguiente bloque de código de T-SQL constituye un sencillo método de compro
   
 1. Crea una tabla optimizada para memoria que tiene algunos índices hash.  
 2. Rellena la tabla con miles de filas.  
-    A. Se usa un operador de módulo para configurar la tasa de valores duplicados en la columna StatusCode.  
-    B. El bucle inserta 262,144 filas aproximadamente en un minuto.  
+    a. Se usa un operador de módulo para configurar la tasa de valores duplicados en la columna StatusCode.  
+    b. El bucle inserta 262,144 filas aproximadamente en un minuto.  
 3. PRINT imprime un mensaje pidiéndole que ejecute la instrucción SELECT anterior en **sys.dm_db_xtp_hash_index_stats**.  
 
 ```sql
@@ -181,9 +181,9 @@ Los resultados de nuestra instrucción `SELECT` se muestran después del código
   
 | IndexName | total_bucket_count | empty_bucket_count | EmptyBucketPercent |  
 | :-------- | -----------------: | -----------------: | -----------------: |  
-| ix_OrderSequence | 32768 | 13 | 0 |  
+| ix_OrderSequence | 32 768 | 13 | 0 |  
 | ix_StatusCode | 8 | 4 | 50 |  
-| PK_SalesOrd_B14003... | 262144 | 96525 | 36 |  
+| PK_SalesOrd_B14003... | 262 144 | 96525 | 36 |  
   
 - Luego tenemos los resultados de *longitud de la cadena*.  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 28c2bbd60b5a1565e2920968e40bb1dc4e75db22
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531200"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721830"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restauración de una base de datos de SQL Server en un contenedor de Docker para Linux
 
@@ -82,10 +82,10 @@ En este tutorial se muestra cómo mover y restaurar un archivo de copia de segur
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
-   Este comando crea un contenedor de SQL Server 2017 con la edición Developer (valor predeterminado). El puerto **1433** de SQL Server se expone en el host como puerto **1401**. El parámetro `-v sql1data:/var/opt/mssql` opcional crea un contenedor de volúmenes de datos denominado **sql1ddata**. Se usa para almacenar los datos creados por SQL Server.
+   Este comando crea un contenedor de SQL Server 2017 con la edición Developer (valor predeterminado). El puerto **1433** de SQL Server se expone en el host como puerto **1401**. El parámetro `-v sql1data:/var/opt/mssql` opcional crea un contenedor de volúmenes de datos denominado **sql1ddata**. Se usa para almacenar los datos creados por SQL Server.
 
-   > [!NOTE]
-   > El proceso para ejecutar ediciones de producción de SQL Server en contenedores es ligeramente diferente. Para obtener más información, vea [Run production container image](sql-server-linux-configure-docker.md#production) (Ejecutar imágenes de contenedor de producción). Si usa los mismos nombres y puertos de contenedor, el resto de este tutorial funciona con los contenedores de producción.
+   > [!IMPORTANT]
+   > En este ejemplo se usa un contenedor de volúmenes de datos dentro de Docker. Si en su lugar decide asignar un directorio host, tenga en cuenta que existen limitaciones para este enfoque en Docker para Mac y Windows. Para obtener más información, consulte [Configuración de imágenes de contenedor de SQL Server en Docker](sql-server-linux-configure-docker.md#persist).
 
 1. Para ver los contenedores de Docker, use el comando `docker ps`.
 
@@ -525,13 +525,13 @@ Además de realizar copias de seguridad de las bases de datos para proteger los 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-En este tutorial ha aprendido a realizar una copia de seguridad de una base de datos en Windows y a moverla a un servidor de Linux con SQL Server 2017. Ha aprendido lo siguiente:
+En este tutorial ha aprendido a realizar una copia de seguridad de una base de datos en Windows y a moverla a un servidor de Linux con SQL Server 2017. Ha aprendido a:
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-En este tutorial ha aprendido a realizar una copia de seguridad de una base de datos en Windows y a moverla a un servidor de Linux con SQL Server 2019. Ha aprendido lo siguiente:
+En este tutorial ha aprendido a realizar una copia de seguridad de una base de datos en Windows y a moverla a un servidor de Linux con SQL Server 2019. Ha aprendido a:
 
 ::: moniker-end
 
@@ -542,7 +542,7 @@ En este tutorial ha aprendido a realizar una copia de seguridad de una base de d
 > * Crear y extraer archivos de copia de seguridad desde un contenedor.
 > * Usar contenedores de volúmenes de datos en Docker para almacenar datos de SQL Server.
 
-A continuación revise otros escenarios de configuración y solución de problemas de Docker:
+Después, revise otros escenarios de configuración y solución de problemas de Docker:
 
 > [!div class="nextstepaction"]
 >[Guía de configuración de SQL Server 2017 en Docker](sql-server-linux-configure-docker.md)

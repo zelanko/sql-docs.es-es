@@ -1,6 +1,8 @@
 ---
-title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ALTER DATABASE SCOPED CONFIGURATION
+description: Permite varios valores de configuración de base de datos en el nivel de base de datos individual.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a503851bf6e5bac2556560fc9bfd3f120e808aa3
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240694"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258130"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -52,7 +54,7 @@ Esta instrucción permite varios valores de configuración de base de datos en e
 - Habilitar o deshabilitar la recopilación del último plan de ejecución real en [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Especifique el número de minutos que está en pausa una operación de índice reanudable antes de que el motor de SQL Server la anule automáticamente.
 
-![Icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -128,9 +130,9 @@ Para establecer esta opción en el nivel de instancia, vea [Establecer la opció
 > En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], la configuración de nivel de servicio **Grado máximo de paralelismo** siempre se establece en 0. MAXDOP se puede configurar para cada base de datos tal y como se describe en el artículo actual. Para obtener recomendaciones sobre la configuración óptima de MAXDOP, vea la sección [Recursos adicionales](#additional-resources).
 
 > [!TIP]
-> Para realizar esta acción en el nivel de consulta, use la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.    
-> Para lograr esto en el nivel de servidor, use la [opción de configuración del servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **Grado máximo de paralelismo (MAXDOP)** .     
-> Para lograr esto en el nivel de carga de trabajo, use la [opción de configuración del grupo de cargas de trabajo de Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.    
+> Para llevar a cabo esta acción en el nivel de consulta, use la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.    
+> Para llevar a cabo esta acción en el nivel de servidor, use la [opción de configuración del servidor](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) **Grado máximo de paralelismo (MAXDOP)** .     
+> Para llevar a cabo esta acción en el nivel de carga de trabajo, use la [opción de configuración del grupo de cargas de trabajo de Resource Governor](../../t-sql/statements/create-workload-group-transact-sql.md) **MAX_DOP**.    
 
 PRIMARY
 
@@ -141,7 +143,7 @@ LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 Permite establecer el modelo de estimación de la cardinalidad del optimizador de consultas en SQL Server 2012 y versiones anteriores, independientemente del nivel de compatibilidad de la base de datos. El valor predeterminado es **OFF**, que establece el modelo de estimación de la cardinalidad del optimizador de consultas en función del nivel de compatibilidad de la base de datos. El establecimiento de LEGACY_CARDINALITY_ESTIMATION en **ON** equivale a habilitar la [marca de seguimiento 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Para realizar esta acción en el nivel de consulta, agregue la [sugerencia de consulta](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
+> Para llevar a cabo esta acción en el nivel de consulta, agregue la [sugerencia de consulta](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
 > A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, para realizar esta acción en el nivel de consulta, agregue la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT** en lugar de usar la marca de seguimiento.
 
 PRIMARY
@@ -153,7 +155,7 @@ PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
 Habilita o deshabilita el [examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). El valor predeterminado es ON. Establecer PARAMETER_SNIFFING en OFF equivale a habilitar la [marca de seguimiento 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Para realizar esta acción en el nivel de consulta, vea la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN**.
+> Para llevar a cabo esta acción en el nivel de consulta, vea la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md) **OPTIMIZE FOR UNKNOWN**.
 > A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, para realizar esta acción en el nivel de consulta, también está disponible la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**.
 
 PRIMARY
@@ -165,7 +167,7 @@ Este valor solo es válido en las bases de datos secundarias mientras la base de
 Habilita o deshabilita las revisiones de optimización de consulta independientemente del nivel de compatibilidad de la base de datos. El valor predeterminado es **OFF**, que deshabilita las revisiones de optimización de consulta que se publicaron después de que se introdujo el máximo nivel de compatibilidad disponible para una versión específica (posterior a RTM). Establecer este valor en **ON** es equivalente a habilitar la [marca de seguimiento 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
-> Para realizar esta acción en el nivel de consulta, agregue la [sugerencia de consulta](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
+> Para llevar a cabo esta acción en el nivel de consulta, agregue la [sugerencia de consulta](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
 > A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, para realizar esta acción en el nivel de consulta, agregue la [sugerencia de consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint) USE HINT en lugar de usar la marca de seguimiento.
 
 PRIMARY
@@ -221,7 +223,7 @@ Permite habilitar o deshabilitar la inserción UDF escalar de T-SQL del ámbito 
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**SE APLICA A**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (la característica está en versión preliminar pública)
+**SE APLICA A**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (característica en versión preliminar pública)
 
 Le permite seleccionar opciones que hacen que el motor eleve automáticamente las operaciones admitidas a ONLINE. El valor predeterminado es OFF, que significa que las operaciones no se elevarán a ONLINE a menos que se especifique en la instrucción. [Sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) refleja el valor actual de ELEVATE_ONLINE. Estas opciones solo se aplicarán a las operaciones que son compatibles con ONLINE.
 
@@ -315,7 +317,7 @@ Habilita un mecanismo optimizado para forzar el plan de consulta, aplicable a to
 
 GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
-**SE APLICA A**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (la característica está en versión preliminar pública)
+**SE APLICA A**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (característica en versión preliminar pública)
 
 Permite la configuración de la funcionalidad para colocar automáticamente las [tablas temporales globales](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). El valor predeterminado es ON, lo que significa que las tablas temporales globales se quitan automáticamente cuando no están en uso en ninguna sesión. Cuando se establece en OFF, las tablas temporales globales deben quitarse explícitamente mediante una instrucción DROP TABLE o se quitarán automáticamente al reiniciar el servidor.
 
@@ -354,7 +356,7 @@ Permite habilitar o deshabilitar la recopilación de las estadísticas del últi
 
 PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
-**SE APLICA A**: solo de Azure SQL Database
+**SE APLICA A**: solo Azure SQL Database
 
 La opción `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` determina cuánto tiempo (en minutos) está en pausa el índice reanudable antes de que el motor lo anule automáticamente.
 
@@ -574,7 +576,7 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 ### <a name="legacy_cardinality_estimation-resources"></a>Recursos de LEGACY_CARDINALITY_ESTIMATION
 
 - [Estimación de cardinalidad (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [Optimizar los planes de consulta con el estimador de cardinalidad de SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)
+- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parameter_sniffing-resources"></a>Recursos de PARAMETER_SNIFFING
 
@@ -596,7 +598,7 @@ SET PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = 60
 
 ## <a name="more-information"></a>Más información   
  [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
- [Recomendaciones y directrices para la opción de configuración "Grado máximo de paralelismo" en SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
+ [Recomendaciones y directrices para la opción de configuración "grado máximo de paralelismo" en SQL Server](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
  [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
  [Vistas de catálogo de archivos y bases de datos (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
  [Opciones de configuración del servidor](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    

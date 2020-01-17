@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c6385fc578bfa1f9d688e9819690e72a3090ce4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982847"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249728"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -69,7 +69,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 ||||
 |---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|**_\* SQL Server \*_** &nbsp;|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -190,7 +190,7 @@ Al restaurar una copia de seguridad creada por BACKUP DATABASE (una *copia de se
 > [!NOTE]
 > Solo se puede realizar una copia de seguridad completa de la base de datos **maestra**.
 
-LOG
+REGISTRO
 
 Especifica que solo se realizará la copia de seguridad del registro de transacciones. Se realiza la copia de seguridad del registro desde la última copia de seguridad del registro ejecutada correctamente hasta el final actual del registro. Para poder crear la primera copia de seguridad de registros, debe crear una copia de seguridad completa.
 
@@ -347,7 +347,7 @@ DESCRIPTION **=** { **'** _text_ **'**  |  **@** _text\_variable_ } Especifica e
 
 NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ } Especifica el nombre del conjunto de copia de seguridad. Los nombres pueden tener un máximo de 128 caracteres. Si no se especifica NAME, está en blanco.
 
-{ EXPIREDATE **='** _date_ **'** | RETAINDAYS **=** _days_ } Especifica cuándo se puede sobrescribir el conjunto de copia de seguridad para esta copia de seguridad. Si se usan las dos opciones, RETAINDAYS tiene precedencia sobre EXPIREDATE.
+{ EXPIREDATE **="** _date_ **"** | RETAINDAYS **=** _days_ } Especifica cuándo se puede sobrescribir el conjunto de copia de seguridad para esta copia de seguridad. Si se usan las dos opciones, RETAINDAYS tiene precedencia sobre EXPIREDATE.
 
 Si no se especifica ninguna opción, la fecha de expiración se determina con el valor de configuración **mediaretention**. Para obtener más información, vea [Opciones de configuración de servidor](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
 
@@ -400,14 +400,14 @@ Para obtener más información, vea [Conjuntos de medios, familias de medios y c
 > [!NOTE]
 > Para más información sobre las interacciones entre { **NOINIT** | INIT } y { **NOSKIP** | SKIP }, vea "Comentarios" más adelante en este tema.
 
-NOSKIP Indica a la instrucción BACKUP que compruebe la fecha de expiración de todos los conjuntos de copia de seguridad de los medios antes de permitir que se sobrescriban. Éste es el comportamiento predeterminado.
+NOSKIP Indica a la instrucción BACKUP que compruebe la fecha de expiración de todos los conjuntos de copia de seguridad de los medios antes de permitir que se sobrescriban. Este es el comportamiento predeterminado.
 
 SKIP Deshabilita la comprobación de la expiración y el nombre del conjunto de copia de seguridad que suele realizar la instrucción BACKUP para impedir que se sobrescriban los conjuntos de copia de seguridad. Para obtener más información acerca de las interacciones entre { INIT | NOINIT } y { NOSKIP | SKIP }, vea "Comentarios", más adelante en este tema.
 Para ver las fechas de expiración de los conjuntos de copias de seguridad, consulte la columna **expiration_date** de la tabla del historial de [backupset](../../relational-databases/system-tables/backupset-transact-sql.md).
 
 { **NOFORMAT** | FORMAT } Especifica si debe escribirse el encabezado de medios en los volúmenes usados en esta operación de copia de seguridad, con lo que se sobrescribirán los conjuntos de copias de seguridad y el encabezado de medios existentes.
 
-NOFORMAT Especifica que la operación de copia de seguridad conservará los conjuntos de copias de seguridad y el encabezado de medios existentes en los volúmenes de medios usados en esta operación de copia de seguridad. Éste es el comportamiento predeterminado.
+NOFORMAT Especifica que la operación de copia de seguridad conservará los conjuntos de copias de seguridad y el encabezado de medios existentes en los volúmenes de medios usados en esta operación de copia de seguridad. Este es el comportamiento predeterminado.
 
 FORMAT Especifica que se debe crear un conjunto de medios nuevo. FORMAT hace que la operación de copia de seguridad escriba un nuevo encabezado de medios en todos los volúmenes de medios usados en la operación de copia de seguridad. El contenido existente del volumen no será válido porque se sobrescribirán los conjuntos de copias de seguridad y el encabezado de medios existentes.
 
@@ -416,7 +416,7 @@ FORMAT Especifica que se debe crear un conjunto de medios nuevo. FORMAT hace que
 
 La especificación de FORMAT implica `SKIP` y no es necesario especificar `SKIP` de forma explícita.
 
-MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Especifica la descripción de texto de forma libre, con un máximo de 255 caracteres, del conjunto de medios.
+MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Especifica la descripción de texto de forma libre, con un máximo de 255 caracteres, del conjunto de medios.
 
 MEDIANAME **=** { *media_name* |  **@** _media\_name\_variable_ } Especifica el nombre del medio para el conjunto completo de medios de copia de seguridad. El nombre del medio no puede tener más de 128 caracteres y, si se especifica `MEDIANAME`, debe coincidir con el nombre de medio especificado que ya existe en los volúmenes de copia de seguridad. Si no se especifica o se especifica la opción SKIP, no se realiza la comprobación del nombre del medio.
 
@@ -451,7 +451,7 @@ Estas opciones permiten determinar si se habilitarán las sumas de comprobación
 
 { **NO_CHECKSUM** | CHECKSUM } Controla si las sumas de comprobación de copia de seguridad están habilitadas.
 
-NO_CHECKSUM Deshabilita de forma explícita la generación de sumas de comprobación de copia de seguridad (y la validación de sumas de comprobación de página). Éste es el comportamiento predeterminado.
+NO_CHECKSUM Deshabilita de forma explícita la generación de sumas de comprobación de copia de seguridad (y la validación de sumas de comprobación de página). Este es el comportamiento predeterminado.
 
 CHECKSUM Especifica que la operación de copia de seguridad comprueba en cada página si hay suma de comprobación y página rasgada (si está habilitada y disponible) y generará una suma de comprobación para toda la copia de seguridad.
 
@@ -461,7 +461,7 @@ Para más información, vea [Errores posibles de medios durante copia de segurid
 
 { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR } Controla si una operación de copia de seguridad se detiene o continúa después de encontrar un error en la suma de comprobación de página.
 
-STOP_ON_ERROR Indica a BACKUP que dé error si no se comprueba una suma de comprobación de página. Éste es el comportamiento predeterminado.
+STOP_ON_ERROR Indica a BACKUP que dé error si no se comprueba una suma de comprobación de página. Este es el comportamiento predeterminado.
 
 CONTINUE_AFTER_ERROR Indica a BACKUP que continúe a pesar de la detección de errores como sumas de comprobación no válidas o páginas rasgadas.
 
@@ -682,7 +682,7 @@ En esta tabla se describen las interacciones entre las opciones { **NOINIT** | I
 
 BACKUP admite la opción `RESTART` para proporcionar compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pero RESTART no tiene ningún efecto.
 
-## <a name="general-remarks"></a>Notas generales
+## <a name="general-remarks"></a>Observaciones generales
 
 Se pueden anexar copias de seguridad de la base de datos o de registros a cualquier dispositivo de disco o cinta, lo que permite mantener la base de datos y sus registros de transacciones en la misma ubicación física.
 
@@ -690,7 +690,7 @@ La instrucción BACKUP no se permite en una transacción explícita o implícita
 
 Se pueden realizar operaciones de copia de seguridad entre plataformas, incluso entre diferentes tipos de procesador, siempre que el sistema operativo admita la intercalación de la base de datos.
 
-Cuando se usa la compresión de copia de seguridad con bases de datos con [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) habilitado que tienen un único archivo de datos, se recomienda usar un valor de `MAXTRANSFERSIZE` **mayor que 65536 (64 KB)** .
+Cuando se usa la compresión de copia de seguridad con bases de datos con [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) habilitado que tienen un único archivo de datos, se recomienda usar un valor de `MAXTRANSFERSIZE`**mayor que 65536 (64 KB)** .
 Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], esto habilita un algoritmo de compresión optimizada para bases de datos con cifrado TDE que, en primer lugar, descifra una página, la comprime y, luego, la vuelve a cifrar. Si usa `MAXTRANSFERSIZE = 65536` (64 KB), la compresión de copia de seguridad en bases de datos con cifrado TDE comprime directamente las páginas cifradas, con lo cual existe la posibilidad de no lograr una buena razón de compresión. Para más información, vea [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) (Compresión de copia de seguridad en bases de datos con TDE habilitado).
 
 > [!NOTE]
@@ -739,7 +739,7 @@ Los problemas de propiedad y permisos del archivo físico del dispositivo de cop
 
 ## <a name="examples"></a> Ejemplos
 
-Esta sección contiene los siguientes ejemplos:
+En esta sección se incluyen los ejemplos siguientes:
 
 - A. [Realizar una copia de seguridad completa de la base de datos](#backing_up_db)
 - B. [Realizar una copia de seguridad de la base de datos y el registro](#backing_up_db_and_log)
@@ -1029,7 +1029,7 @@ DESCRIPTION **=** { **'** _text_ **'**  |  **@** _text\_variable_ } Especifica e
 
 NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ } Especifica el nombre del conjunto de copia de seguridad. Los nombres pueden tener un máximo de 128 caracteres. Si no se especifica NAME, está en blanco.
 
-MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Especifica la descripción de texto de forma libre, con un máximo de 255 caracteres, del conjunto de medios.
+MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Especifica la descripción de texto de forma libre, con un máximo de 255 caracteres, del conjunto de medios.
 
 MEDIANAME **=** { *media_name* |  **@** _media\_name\_variable_ } Especifica el nombre del medio para el conjunto completo de medios de copia de seguridad. El nombre del medio no puede tener más de 128 caracteres y, si se especifica `MEDIANAME`, debe coincidir con el nombre de medio especificado que ya existe en los volúmenes de copia de seguridad. Si no se especifica o se especifica la opción SKIP, no se realiza la comprobación del nombre del medio.
 
@@ -1055,7 +1055,7 @@ Estas opciones permiten determinar si se habilitarán las sumas de comprobación
 
 { **NO_CHECKSUM** | CHECKSUM } Controla si las sumas de comprobación de copia de seguridad están habilitadas.
 
-NO_CHECKSUM Deshabilita de forma explícita la generación de sumas de comprobación de copia de seguridad (y la validación de sumas de comprobación de página). Éste es el comportamiento predeterminado.
+NO_CHECKSUM Deshabilita de forma explícita la generación de sumas de comprobación de copia de seguridad (y la validación de sumas de comprobación de página). Este es el comportamiento predeterminado.
 
 CHECKSUM Especifica que la operación de copia de seguridad comprueba en cada página si hay suma de comprobación y página rasgada (si está habilitada y disponible) y generará una suma de comprobación para toda la copia de seguridad.
 
@@ -1065,7 +1065,7 @@ Para más información, vea [Errores posibles de medios durante copia de segurid
 
 { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR } Controla si una operación de copia de seguridad se detiene o continúa después de encontrar un error en la suma de comprobación de página.
 
-STOP_ON_ERROR Indica a BACKUP que dé error si no se comprueba una suma de comprobación de página. Éste es el comportamiento predeterminado.
+STOP_ON_ERROR Indica a BACKUP que dé error si no se comprueba una suma de comprobación de página. Este es el comportamiento predeterminado.
 
 CONTINUE_AFTER_ERROR Indica a BACKUP que continúe a pesar de la detección de errores como sumas de comprobación no válidas o páginas rasgadas.
 
@@ -1260,7 +1260,7 @@ Las copias de seguridad de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] no se a
 
 **Administrar las credenciales de red**
 
-El acceso de red al directorio de copia de seguridad se basa en la seguridad del uso compartido de archivos de Windows estándar. Antes de realizar una copia de seguridad, debe crear o designar una cuenta de Windows que se usó para la autenticación de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] en el directorio de copia de seguridad. Esta cuenta de Windows debe tener permiso para obtener acceso, crear y escribir en el directorio de copia de seguridad.
+El acceso de red al directorio de copia de seguridad se basa en la seguridad del uso compartido de archivos del sistema operativo estándar. Antes de realizar una copia de seguridad, debe crear o designar una cuenta de Windows que se usó para la autenticación de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] en el directorio de copia de seguridad. Esta cuenta de Windows debe tener permiso para obtener acceso, crear y escribir en el directorio de copia de seguridad.
 
 > [!IMPORTANT]
 > Para reducir los riesgos de seguridad con los datos, se recomienda designar una cuenta de Windows exclusivamente para realizar las operaciones de copia de seguridad y restauración. Permita que esta cuenta tenga permisos para la ubicación de la copia de seguridad y ningún otro lugar más.

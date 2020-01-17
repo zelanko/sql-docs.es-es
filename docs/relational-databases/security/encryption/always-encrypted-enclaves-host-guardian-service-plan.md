@@ -1,5 +1,6 @@
 ---
-title: Planificación de la atestación del Servicio de protección de host | Microsoft Docs
+title: Planificación de la atestación del Servicio de protección de host
+description: Planee la atestación del Servicio de protección de host para Always Encrypted con enclaves seguros de SQL Server.
 ms.custom: ''
 ms.date: 10/12/2019
 ms.prod: sql
@@ -9,18 +10,18 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 439dd1e7cafd6d0766668188660aaedaffca8ca3
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595640"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317952"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planificación de la atestación del Servicio de protección de host
 
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-Cuando use [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md), querrá asegurarse de que la aplicación cliente se comunica con un enclave de confianza dentro del proceso de [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. En el caso de un enclave de seguridad basada en virtualización (VBS), esto incluye comprobar que el código incluido en el enclave es válido y que el equipo que hospeda [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] es de confianza. La atestación remota logra este objetivo mediante la introducción de un tercero que puede validar la identidad (y, opcionalmente, la configuración) del equipo con [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Antes de que [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] pueda usar un enclave para ejecutar una consulta, debe proporcionar información al servicio de atestación sobre su entorno operativo para obtener un certificado de mantenimiento. Este certificado de mantenimiento se envía al cliente, que puede comprobar de forma independiente su autenticidad con el servicio de atestación. Una vez que el cliente confía en el certificado de mantenimiento, sabe que está hablando con un enclave de VBS de confianza y emitirá la consulta que usará dicho enclave.
+Cuando use [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md), asegúrese de que la aplicación cliente se comunica con un enclave de confianza dentro del proceso de [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. En el caso de un enclave de seguridad basado en virtualización (VBS), este requisito incluye comprobar que el código incluido en el enclave es válido y que el equipo en el que se hospeda [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] es de confianza. La atestación remota logra este objetivo mediante la introducción de un tercero que puede validar la identidad (y, opcionalmente, la configuración) del equipo con [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Antes de que [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] pueda usar un enclave para ejecutar una consulta, debe proporcionar información al servicio de atestación sobre su entorno operativo para obtener un certificado de mantenimiento. Este certificado de mantenimiento se envía al cliente, que puede comprobar de forma independiente su autenticidad con el servicio de atestación. Una vez que el cliente confía en el certificado de mantenimiento, sabe que está hablando con un enclave de VBS de confianza y emitirá la consulta que usará dicho enclave.
 
 El rol de Servicio de protección de host (HGS) en Windows Server 2019 proporciona capacidades de atestación remota para Always Encrypted con enclaves de VBS.
 Este artículo es una guía sobre las decisiones y los requisitos previos a la implementación a fin de usar Always Encrypted con los enclaves de VBS y la atestación de HGS.
@@ -36,7 +37,7 @@ Si los mismos administradores tienen acceso al HGS y a un equipo con [!INCLUDE [
 
 La configuración de HGS creará automáticamente un nuevo dominio de Active Directory para los servidores HGS, los recursos de clúster de conmutación por error y las cuentas de administrador.
 
-No es necesario que el equipo que ejecuta [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] esté unido a un dominio, pero, si es así, debe ser un dominio diferente del que usa el servidor HGS.
+No es necesario que el equipo que ejecuta [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] esté en un dominio, pero si lo está, debe ser un dominio diferente del que usa el servidor HGS.
 
 ### <a name="high-availability"></a>Alta disponibilidad
 
@@ -47,7 +48,9 @@ No es necesario el almacenamiento compartido entre los nodos de HGS. Una copia d
 
 ### <a name="network-connectivity"></a>Conectividad de red
 
-Tanto el cliente SQL como [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] deberán ser capaces de comunicarse con HGS a través de HTTP. Opcionalmente, puede configurar HGS con un certificado de TLS para admitir conexiones HTTPS cifradas.
+Tanto el cliente SQL como [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] deben ser capaces de comunicarse con HGS a través de HTTP.
+Configure HGS con un certificado TLS para cifrar todas las comunicaciones entre el cliente SQL y HGS, así como entre SQL Server y HGS.
+Esta configuración ayuda a protegerse de ataques de tipo "Man in the middle" y garantiza que se comunica con el servidor HGS correcto.
 
 Los servidores HGS requieren conectividad entre cada nodo del clúster para asegurarse de que la base de datos del servicio de atestación permanezca sincronizada. Es un procedimiento recomendado del clúster de conmutación por error para conectar los nodos de HGS en una red para la comunicación del clúster y usar una red independiente para que otros clientes se comuniquen con HGS.
 
@@ -61,6 +64,12 @@ HGS admite dos modos de atestación para su uso con [!INCLUDE [ssnoversion-md](.
 | TPM | La atestación del Módulo de plataforma segura (TPM) proporciona la mayor garantía sobre la identidad y la integridad del equipo que realiza la atestación con HGS. Requiere que los equipos que ejecutan [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] tengan instalada la versión 2.0 de TPM. Cada chip TPM contiene una identidad única e inmutable (clave de aprobación) que se puede usar para identificar un equipo determinado. Los TPM también miden el proceso de arranque del equipo y almacenan los valores hash de las medidas que afectan a la seguridad en los registros de configuración de la plataforma (PCR) que se pueden leer, pero que el sistema operativo no puede modificar. Estas medidas se utilizan durante la atestación para proporcionar una prueba criptográfica de que un equipo está en la configuración de seguridad que dice estar. |
 | Clave de host | La atestación de clave de host es una forma más sencilla de atestación que solo comprueba la identidad de un equipo mediante un par de claves asimétricas. La clave privada se almacena en el equipo que ejecuta [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] y la clave pública se proporciona a HGS. No se mide la configuración de seguridad del equipo y no es necesario un chip TPM 2.0 en el equipo que ejecuta [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Es importante proteger la clave privada instalada en el equipo con [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], ya que cualquier persona que obtenga esta clave puede suplantar a un equipo legítimo con [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] y al enclave de VBS que se ejecuta dentro de [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. |
 
+En general, se proponen las recomendaciones siguientes:
+
+- Para los **servidores de producción físicos**, se recomienda usar la atestación de TPM debido a las garantías adicionales que proporciona.
+- Para los **servidores de producción virtuales**, se recomienda la atestación de clave de host porque la mayoría de las máquinas virtuales no tienen TPM virtuales ni arranque seguro. Si va a usar una máquina virtual con seguridad mejorada, como un [máquina virtual blindada local](https://aka.ms/shieldedvms), puede usar el modo TPM. En todas las implementaciones virtualizadas, el proceso de atestación solo analiza el entorno de la máquina virtual, no la plataforma de virtualización subyacente.
+- Para **escenarios de desarrollo y pruebas**, se recomienda la atestación de clave de host porque es más fácil de configurar.
+
 ### <a name="trust-model"></a>Modelo de confianza
 
 En el modelo de confianza del enclave de VBS, las consultas y los datos cifrados se evalúan en un enclave basado en software para protegerlo del sistema operativo del host.
@@ -69,7 +78,7 @@ Para que un cliente tenga la confianza de que se está comunicando con una insta
 Las medidas de TPM que se capturan durante el proceso de arranque incluyen la clave de identidad única de la instancia de VBS, lo que garantiza que el certificado de mantenimiento solo sea válido en ese equipo exacto.
 Además, cuando un TPM está disponible en un equipo que ejecuta VBS, el TPM protege la parte privada de la clave de identidad de VBS, lo que impide que alguien intente suplantar a esa instancia de VBS.
 
-El arranque seguro debe contar con la atestación de TPM para garantizar que UEFI cargó un cargador de arranque legítimo firmado por Microsoft y que ningún rootkit o bootkit haya interceptado el proceso de arranque del hipervisor.
+El arranque seguro es obligatorio con la atestación de TPM para garantizar que UEFI ha cargado un cargador de arranque legítimo firmado por Microsoft y que ningún rootkit haya interceptado el proceso de arranque del hipervisor.
 Además, se requiere un dispositivo IOMMU de forma predeterminada para asegurarse de que los dispositivos de hardware con acceso directo a memoria no puedan inspeccionar o modificar la memoria del enclave.
 
 Todas estas protecciones suponen que el equipo que ejecuta [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] es una máquina física.
@@ -95,7 +104,7 @@ Los equipos que ejecutan el rol del Servicio de protección de host deben cumpli
 | Sistema operativo | Windows Server 2019, edición Standard o Datacenter |
 | CPU | 2 núcleos (mín), 4 núcleos (recomendado) |
 | RAM | 8 GB (mín) |
-| NIC | 2 NIC recomendadas (1 para el tráfico de clúster, 1 para el servicio de HGS) |
+| NIC | Dos NIC con direcciones IP estáticas recomendadas (una para el tráfico de clúster, una para el servicio de HGS) |
 
 HGS es un rol enlazado a la CPU debido al número de acciones que requieren cifrado y descifrado.
 El uso de procesadores modernos con capacidades de aceleración criptográfica mejorará el rendimiento de HGS.
@@ -110,15 +119,15 @@ Los equipos que ejecutan [!INCLUDE [ssnoversion-md](../../../includes/ssnoversio
 Estos requisitos incluyen:
 
 - [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] o posterior
-- Windows 10 Enterprise versión 1809 o posterior; Windows Server 2019 Datacenter Edition. Otras ediciones de Windows 10 y Windows Server no admiten la atestación con HGS.
-- Compatibilidad con la CPU para tecnologías de virtualización:
-  - Intel VT-x con tablas de páginas extendidas.
-  - AMD-V con indización de virtualización rápida.
-  - Si está ejecutando [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] en una máquina virtual, el hipervisor y la CPU física deben ofrecer funciones de virtualización anidadas. Consulte la sección del [modelo de confianza](#trust-model) para obtener información sobre las garantías al ejecutar enclaves de VBS en una máquina virtual.
+- Windows 10 Enterprise, versión 1809 o posteriores; Windows Server 2019 Datacenter Edition. Otras ediciones de Windows 10 y Windows Server no admiten la atestación con HGS.
+- Compatibilidad de CPU con tecnologías de virtualización:
+  - Intel VT-x con tablas de página extendida.
+  - AMD-V con indexación de virtualización rápida.
+  - Si va a ejecutar [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] en una máquina virtual, el hipervisor y la CPU física deben ofrecer funciones de virtualización anidadas. Consulte la sección del [modelo de confianza](#trust-model) para obtener información sobre las garantías al ejecutar enclaves de VBS en una máquina virtual.
     - En Hyper-V 2016 o versiones posteriores, [habilite las extensiones de virtualización anidada en el procesador de máquina virtual](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
-    - En Azure, seleccione un tamaño de máquina virtual que admita la virtualización anidada. Esto incluye todas las máquinas virtuales de la serie v3, por ejemplo, Dv3 y Ev3. Consulte [Creación de una máquina virtual de Azure compatible con el anidamiento](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
-    - En VMWare vSphere 6.7 o posterior, habilite la compatibilidad con seguridad basada en la virtualización en la máquina virtual, tal como se describe en la [documentación de VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
-    - Otros hipervisores y nubes públicas pueden admitir funciones de virtualización anidada que permiten Always Encrypted con enclaves de VBS también. Consulte la documentación de la solución de virtualización para obtener instrucciones de compatibilidad y configuración.
+    - En Azure, seleccione un tamaño de máquina virtual que admita la virtualización anidada. Todas las máquinas virtuales de la serie v3 admiten la virtualización anidada, por ejemplo, Dv3 y Ev3. Consulte [Creación de una máquina virtual de Azure compatible con el anidamiento](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+    - En VMWare vSphere 6.7 o posterior, habilite la compatibilidad con la seguridad basada en virtualización en la máquina virtual, como se describe en la [documentación de VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+    - Es posible que otros hipervisores y nubes públicas admitan funciones de virtualización anidada que también permitan Always Encrypted con enclaves de VBS. Consulte la documentación de la solución de virtualización para obtener instrucciones relativas a la compatibilidad y configuración.
 - Si tiene previsto usar la atestación de TPM, necesitará un chip TPM 2.0 rev 1.16 listo para su uso en el servidor. En este momento, la atestación de HGS no funciona con los chips TPM 2.0 rev 1.38. Además, el TPM debe tener un certificado de clave de aprobación válido.
 
 ## <a name="devtest-environment-considerations"></a>Consideraciones sobre el entorno de desarrollo y pruebas
@@ -128,8 +137,8 @@ Si usa Always Encrypted con enclaves de VBS en un entorno de desarrollo o de pru
 - Implemente solo un nodo de HGS. Aunque HGS instala un clúster de conmutación por error, no es necesario agregar nodos adicionales si la alta disponibilidad no es un problema.
 - Use el modo de clave de host en lugar del modo TPM para obtener una experiencia de instalación más sencilla.
 - Virtualice HGS y/o [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] para guardar recursos físicos.
-- Ejecute SSMS u otras herramientas para configurar Always Encrypted con enclaves seguros en el mismo equipo que [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Esto dejará las claves maestras de columna en el mismo equipo que [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], por lo que no se debe hacer en un entorno de producción.
+- Ejecute SSMS u otras herramientas para configurar Always Encrypted con enclaves seguros en el mismo equipo que [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Esto conserva las claves maestras de columna en el mismo equipo que [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], por lo que no se debe hacer en un entorno de producción.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Implementación del Servicio de protección de host para [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md)

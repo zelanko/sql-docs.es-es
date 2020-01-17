@@ -25,12 +25,12 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24d03b268abe381e8a1ad3308f630626f5a3d455
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 6052e7eb0e759b7821ac8d7ad6b213fef188be06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278343"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255817"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ Una expresión que se puede resolver en uno de los tipos de datos siguientes:
 
 Para *date*, `DATENAME` aceptará una expresión de columna, una expresión, un literal de cadena o una variable definida por el usuario. Para evitar problemas de ambigüedad, use años de cuatro dígitos. Vea [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) para obtener información sobre los años de dos dígitos.
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
 **nvarchar**
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -122,7 +122,7 @@ DECLARE @t time = '12:10:30.123';
 SELECT DATENAME(year, @t);  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 
 Use `DATENAME` en las cláusulas siguientes:
 
@@ -156,7 +156,7 @@ En este ejemplo se devuelven las partes de fecha para la fecha especificada. Sus
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
+|**TZoffset, tz**|+05:10|  
 |**ISO_WEEK, ISOWK, ISOWW**|44|  
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -184,10 +184,10 @@ SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');
 |**millisecond, ms**|123|  
 |**microsecond, mcs**|123456|  
 |**nanosecond, ns**|123456700|  
-|**TZoffset, tz**|310|  
+|**TZoffset, tz**|+05:10|  
 |**ISO_WEEK, ISOWK, ISOWW**|44|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

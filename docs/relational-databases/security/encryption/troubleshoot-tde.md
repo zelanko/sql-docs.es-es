@@ -1,29 +1,30 @@
 ---
-title: Errores comunes en el cifrado de datos transparente con claves administradas por el cliente en Azure Key Vault | Microsoft Docs
-description: Solucione los problemas en el cifrado de datos transparente (TDE) con la configuración de Azure Key Vault.
+title: Errores comunes con las claves administradas por el cliente en Azure Key Vault
+description: Solucione errores comunes con el cifrado de datos transparente (TDE) y claves administradas por el cliente en Azure Key Vault.
+ms.custom: seo-lt-2019
 helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
 - tde troubleshooting
-author: aliceku
+author: jaszymas
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
 ms.date: 11/06/2019
-ms.author: aliceku
+ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727765"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558473"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errores comunes en el cifrado de datos transparente con claves administradas por el cliente en Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-En este artículo se describe cómo identificar y resolver los problemas de acceso a la clave de Azure Key Vault que causaron que una base de datos configurada para utilizar el cifrado de datos transparente (TDE) de [ con claves administradas por el cliente en Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) dejara de estar accesible.
+En este artículo se describe cómo identificar y resolver los problemas de acceso a la clave de Azure Key Vault que causaron que una base de datos configurada para utilizar el cifrado de datos transparente (TDE) de [ con claves administradas por el cliente en Azure Key Vault](/azure/sql-database/transparent-data-encryption-byok-azure-sql) dejara de estar accesible.
 
 ## <a name="introduction"></a>Introducción
 Cuando TDE está configurado para usar una clave administrada por el cliente en Azure Key Vault, es necesario el acceso continuo a este protector de TDE para que la base de datos esté en línea.  Si el servidor lógico de SQL pierde el acceso al protector de TDE administrado por el cliente en Azure Key Vault, una base de datos empezará a denegar todas las conexiones con su correspondiente mensaje de error y cambiará su estado a *Inaccesible* en Azure Portal.
@@ -78,12 +79,12 @@ Use el comando o el cmdlet siguiente para configurar una identidad de Azure AD 
 
 - CLI de Azure: [az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) con la opción `--assign_identity`.
 
-En Azure Portal, vaya al almacén de claves y, luego, a **Directivas de acceso**. Complete estos pasos: 
+En Azure Portal, vaya al almacén de claves y, luego, a **Directivas de acceso**. Siga estos pasos: 
 
  1. Use el botón **Agregar nuevo** para agregar la AppId del servidor que creó en el paso anterior. 
  1. Asigne los permisos de clave siguientes: obtención, encapsulado y desencapsulado. 
 
-Para más información, consulte [Asignar una entidad de Azure AD al servidor](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
+Para más información, consulte [Asignar una entidad de Azure AD al servidor](/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure#assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
 > Si la instancia de SQL Server lógica se movió a un suscriptor nuevo después de la configuración inicial de TDE con Key Vault, repita el paso para configurar la identidad de Azure AD y crear una nueva AppId. Luego, agregue la AppId al almacén de claves y asigne los permisos correctos a la clave. 
@@ -229,7 +230,7 @@ Descripción: Se ha iniciado la restauración del acceso a la base de datos a la
 
 EventName: MakeDatabaseAccessible 
 
-Estado: Error 
+Estado: Con error 
 
 Descripción: Se ha producido un error al restaurar el acceso de la base de datos a la clave del almacén de claves de Azure. 
 

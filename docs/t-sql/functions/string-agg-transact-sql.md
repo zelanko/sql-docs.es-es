@@ -16,17 +16,19 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: f7dd020c0ec7f68dbd589b6e07026adfab86c890
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632127"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75720827"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-Concatena los valores de expresiones de cadena y coloca valores de separador entre ellos. El separador no se agrega al final de la cadena.
+Concatena los valores de expresiones de cadena y coloca valores de separador entre ellos. El separador no se agrega al final de la cadena. 
+
+Introducido en SQL Server 2017.
  
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,7 +59,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
  
   Lista de [expresiones](../../t-sql/language-elements/expressions-transact-sql.md) no constantes que se pueden usar para ordenar los resultados. Solo se permite un parámetro `order_by_expression` por consulta. El criterio de ordenación predeterminado es ascendente.   
   
-## <a name="return-types"></a>Tipos devueltos
+## <a name="return-types"></a>Tipos de valor devuelto
 
 El tipo de valor devuelto depende del primer argumento (expression). Si el argumento de entrada es de tipo string (`NVARCHAR`, `VARCHAR`), el tipo del resultado será igual que el tipo de la entrada. En la siguiente tabla se enumeran las conversiones automáticas:  
 
@@ -69,7 +71,7 @@ El tipo de valor devuelto depende del primer argumento (expression). Si el argum
 |VARCHAR(1...8000) |VARCHAR(8000) |
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2 |NVARCHAR(4000) |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 `STRING_AGG` es una función de agregado que toma todas las expresiones de las filas y las concatena en una sola cadena. Los valores de la expresión se convierten implícitamente a tipos string y, después, se concatenan. La conversión implícita de cadenas sigue las reglas existentes para las conversiones de tipos de datos. Para más información sobre las conversiones de tipo de datos, vea [CAST y CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
@@ -188,7 +190,7 @@ GROUP BY town;
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |Los Ángeles |hazem0@adventure-works.com;sam1@adventure-works.com |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  

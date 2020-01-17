@@ -1,7 +1,8 @@
 ---
-title: Configurar un clúster de Ubuntu para un grupo de disponibilidad de SQL Server
-titleSuffix: SQL Server
-description: Información sobre cómo crear clústeres de un grupo de disponibilidad para Ubuntu
+title: Configurar un clúster de Ubuntu para un grupo de disponibilidad
+titleSuffix: SQL Server on Linux
+description: Aprenda a crear un clúster de tres nodos en Ubuntu y a agregar al clúster un recurso de grupo de disponibilidad creado anteriormente.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 85391418d74ac81b0857e705c1dc250add1143b4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8dd55f8cb9546c7ec91632d40d2eb6b46ffd4d90
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027311"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558493"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar un clúster de Ubuntu y un recurso de grupo de disponibilidad
 
@@ -42,8 +43,10 @@ Los pasos necesarios para crear un grupo de disponibilidad en servidores con Lin
 
    >[!IMPORTANT]
    >Para alcanzar una alta disponibilidad, los entornos de producción necesitan un agente de barrera (por ejemplo, STONITH). En los ejemplos de esta documentación, no se usan agentes de barrera. Los ejemplos solo se proporcionan con fines de prueba y validación. 
-   
+   >
    >Un clúster de Linux usa barreras para devolver el clúster a un estado conocido. La forma de configurar las barreras depende de la distribución y del entorno. En este momento, las barreras no están disponibles en algunos entornos de nube. Para obtener más información, vea [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440) (Directivas de soporte técnico para clústeres de alta disponibilidad de RHEL: plataformas de virtualización).
+   >
+   >Las barreras se suelen implementar en el sistema operativo y dependen del entorno. Busque instrucciones sobre las barreras en la documentación del distribuidor del sistema operativo.
 
 5.  [Agregue el grupo de disponibilidad como un recurso en el clúster](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource). 
 
@@ -143,20 +146,20 @@ sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->Solo deshabilite STONITH con fines de prueba. Si tiene previsto usar Pacemaker en un entorno de producción, necesita planear una implementación de STONITH basada en su entorno y mantenerla habilitada. Tenga en cuenta que en este momento no hay agentes de barrera para los entornos de nube (incluido Azure) ni para Hyper-V. En consecuencia, el proveedor del clúster no admite la ejecución de clústeres de producción en estos entornos. 
+>Solo deshabilite STONITH con fines de prueba. Si tiene previsto usar Pacemaker en un entorno de producción, necesita planear una implementación de STONITH basada en su entorno y mantenerla habilitada. Póngase en contacto con el proveedor del sistema operativo para obtener información sobre los agentes de barrera de cualquier distribución específica. 
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>Establecer la propiedad del clúster cluster-recheck-interval
 
-`cluster-recheck-interval` indica el intervalo de sondeo en el que el clúster comprueba los cambios en los parámetros de recursos, las restricciones u otras opciones del clúster. Si una réplica deja de funcionar, el clúster intenta reiniciarla en un intervalo que depende de los valores `failure-timeout` y `cluster-recheck-interval`. Por ejemplo, si `failure-timeout` se establece en 60 segundos y `cluster-recheck-interval` se establece en 120 segundos, el reinicio se intenta en un intervalo entre 60 y 120 segundos. Se recomienda establecer el valor de failure-timeout en 60 segundos y el de cluster-recheck-interval en un valor superior a 60 segundos. No se recomienda establecer cluster-recheck-interval en un valor menor.
+`cluster-recheck-interval` indica el intervalo de sondeo por el que el clúster comprueba los cambios en los parámetros de recursos, las restricciones u otras opciones del clúster. Si una réplica se interrumpe, el clúster intenta reiniciarla en un intervalo que depende de los valores `failure-timeout` y `cluster-recheck-interval`. Por ejemplo, si `failure-timeout` se establece en 60 segundos y `cluster-recheck-interval` se establece en 120 segundos, el reinicio se intenta en un intervalo mayor de 60 segundos pero menor de 120 segundos. Se recomienda establecer el valor de failure-timeout en 60 segundos y el de cluster-recheck-interval en un valor superior a 60 segundos. No se recomienda establecer cluster-recheck-interval en un valor menor.
 
-Para actualizar el valor de la propiedad en `2 minutes`, ejecute:
+Para actualizar el valor de la propiedad a `2 minutes`, ejecute:
 
 ```bash
 sudo pcs property set cluster-recheck-interval=2min
 ```
 
 > [!IMPORTANT] 
-> Si ya dispone de un recurso de grupo de disponibilidad administrado por un clúster de Pacemaker, tenga en cuenta que todas las distribuciones que usan el paquete más reciente de Pacemaker (1.1.18 -11.el7) introducen un cambio de comportamiento para el valor de clúster start-failure-is-fatal cuando su valor es false. Este cambio afecta al flujo de trabajo de la conmutación por error. Si una réplica principal deja de funcionar, se espera que el clúster conmute por error a una de las réplicas secundarias disponibles. En su lugar, los usuarios observarán que el clúster sigue intentando iniciar la réplica principal que ha experimentado el error. Si esa réplica principal no vuelve a activarse (por ejemplo, debido a un corte de luz permanente), el clúster nunca conmutará por error a otra réplica secundaria disponible. Debido a este cambio, la recomendación de configurar start-failure-is-fatal ya no es válida y es necesario revertir a su valor predeterminado de `true`. Además, el recurso AG debe actualizarse para incluir la propiedad `failover-timeout`. 
+> Si ya dispone de un recurso de grupo de disponibilidad administrado por un clúster de Pacemaker, tenga en cuenta que todas las distribuciones que usan el paquete más reciente de Pacemaker (1.1.18 -11.el7) introducen un cambio de comportamiento para el valor de clúster start-failure-is-fatal cuando su valor es false. Este cambio afecta al flujo de trabajo de conmutación por error. Si una réplica principal deja de funcionar, se espera que el clúster conmute por error a una de las réplicas secundarias disponibles. En su lugar, los usuarios observan que el clúster sigue intentando iniciar la réplica principal que ha experimentado el error. Si esa réplica principal no vuelve a activarse (debido a un corte de luz permanente), el clúster nunca conmuta por error a otra réplica secundaria disponible. Debido a este cambio, la recomendación de configurar start-failure-is-fatal ya no es válida y es necesario revertir a su valor predeterminado de `true`. Además, el recurso de grupo de disponibilidad debe actualizarse para incluir la propiedad `failover-timeout`. 
 >
 >Para actualizar el valor de la propiedad a `true`, ejecute:
 >
@@ -193,7 +196,7 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeou
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
-## <a name="create-virtual-ip-resource"></a>Crear un recurso de IP virtual
+## <a name="create-virtual-ip-resource"></a>Creación de un recurso de dirección IP virtual
 
 Para crear el recurso de dirección IP virtual, ejecute el comando siguiente en un nodo. Use una dirección IP estática disponible de la red. Antes de ejecutar el script, reemplace los valores entre `< ... >` por una dirección IP válida.
 
@@ -205,7 +208,7 @@ No hay ningún nombre de servidor virtual equivalente en Pacemaker. Para usar un
 
 ## <a name="add-colocation-constraint"></a>Agregar una restricción de ubicación
 
-Casi todas las decisiones tomadas en un clúster de Pacemaker, como, por ejemplo, elegir dónde se debe ejecutar un recurso, se realizan mediante la comparación de puntuaciones. Las puntuaciones se calculan por recurso, y el administrador del recurso de clúster elige el nodo con la puntuación más alta para un recurso determinado. (Si un nodo tiene una puntuación negativa para un recurso, el recurso no se puede ejecutar en ese nodo). Tenga precaución al configurar las decisiones del clúster. Las restricciones tienen una puntuación. Si una restricción tiene una puntuación inferior a INFINITY (infinito), solo es una recomendación. Una puntuación de INFINITY quiere decir que es obligatoria. Para garantizar que los recursos de réplica principal y dirección IP virtual se ejecuten en el mismo host, defina una restricción de ubicación con una puntuación de INFINITY. Para agregar la restricción de ubicación, ejecute el comando siguiente en un nodo. 
+Casi todas las decisiones de un clúster de Pacemaker, por ejemplo elegir dónde se debe ejecutar un recurso, se toman mediante la comparación de puntuaciones. Las puntuaciones se calculan por recurso, y el administrador del recurso de clúster elige el nodo con la puntuación más alta para un recurso determinado. (Si un nodo tiene una puntuación negativa para un recurso, el recurso no se puede ejecutar en ese nodo). Tenga precaución al configurar las decisiones del clúster. Las restricciones tienen una puntuación. Si una restricción tiene una puntuación inferior a INFINITY (infinito), solo es una recomendación. Una puntuación de INFINITY quiere decir que es obligatoria. Para garantizar que los recursos de réplica principal y dirección IP virtual se ejecuten en el mismo host, defina una restricción de ubicación con una puntuación de INFINITY. Para agregar la restricción de ubicación, ejecute el comando siguiente en un nodo. 
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
@@ -213,7 +216,7 @@ sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc
 
 ## <a name="add-ordering-constraint"></a>Agregar una restricción de ordenación
 
-La restricción de ubicación tiene implícita una restricción de ordenación. Así, la restricción mueve el recurso de IP virtual antes de mover el recurso de grupo de disponibilidad. La secuencia de eventos predeterminada es la siguiente:
+La restricción de ubicación tiene una restricción de orden implícita. Mueve el recurso de dirección IP virtual antes de mover el recurso de grupo de disponibilidad. La secuencia de eventos predeterminada es la siguiente:
 
 1. El usuario envía `pcs resource move` a la réplica principal del grupo de disponibilidad desde el nodo1 al nodo2.
 1. El recurso de IP virtual se detiene en el nodo1.
@@ -227,7 +230,7 @@ La restricción de ubicación tiene implícita una restricción de ordenación. 
 
 Para evitar que la dirección IP apunte temporalmente al nodo con la réplica secundaria previa a la conmutación por error, agregue una restricción de ordenación. 
 
-Para agregar una restricción de ordenación, ejecute el siguiente comando en un nodo:
+Para agregar una restricción de orden, ejecute el siguiente comando en un nodo:
 
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip

@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5af707d0d07ce754b57eb18048c52db5921693ee
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 0b6fdfbbdd70ad0abf95c3860c2349cc55b5e12b
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74165587"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831854"
 ---
 # <a name="overview-and-usage-scenarios"></a>Información general y escenarios de uso
 
@@ -32,7 +32,7 @@ OLTP en memoria puede proporcionar excelentes ganancias de rendimiento para las 
 
 ¿De dónde proviene esta ganancia de rendimiento? Básicamente, OLTP en memoria mejora el rendimiento del procesamiento de transacciones al hacer que la ejecución de las transacciones y el acceso a los datos sea más eficaz y al quitar la contención de bloqueo y bloqueo temporal entre transacciones que se ejecutan de manera simultánea: no es rápido porque se haga en memoria, sino que es rápido porque está optimizado en torno a los datos que están en memoria. Los algoritmos de procesamiento, acceso y almacenamiento de datos se rediseñaron desde el principio para aprovechar las mejoras más recientes en los cálculos de alta simultaneidad y en memoria.
 
-Ahora, solo porque los datos residen en memoria, no significa que los pierda si se produce un error. De manera predeterminada, todas las transacciones son completamente duraderas, lo que significa que tiene las mismas garantías de durabilidad que obtiene para cualquier otra tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: como parte de la confirmación de transacciones, todos los cambios se escriben en el registro de transacciones en el disco. Si se produce algún error en cualquier momento después de la confirmación de la transacción, los datos se mantienen cuando la base de datos vuelve a estar en línea. Además, OLTP en memoria funciona con todas las características de alta disponibilidad y recuperación ante desastres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como AlwaysOn, copia de seguridad/restauración, etc.
+Ahora, solo porque los datos residen en memoria, no significa que los pierda si se produce un error. De manera predeterminada, todas las transacciones son completamente duraderas, lo que significa que tiene las mismas garantías de durabilidad que para cualquier otra tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: como parte de la confirmación de transacciones, todos los cambios se escriben en el registro de transacciones en el disco. Si se produce algún error en cualquier momento después de la confirmación de la transacción, los datos se mantienen cuando la base de datos vuelve a estar en línea. Además, OLTP en memoria funciona con todas las características de alta disponibilidad y recuperación ante desastres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como AlwaysOn, copia de seguridad/restauración, etc.
 
 Para usar OLTP en memoria en la base de datos, debe usar uno o varios de los siguientes tipos de objetos:
 

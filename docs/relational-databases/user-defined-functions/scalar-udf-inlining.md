@@ -2,7 +2,7 @@
 title: Inserción de UDF escalares en bases de datos de Microsoft SQL | Microsoft Docs
 description: Característica Inserción de UDF escalar para mejorar el rendimiento de las consultas que llaman a UDF escalares en SQL Server (a partir de SQL Server 2019) y Azure SQL Database.
 ms.custom: ''
-ms.date: 09/13/2019
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73926049"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831777"
 ---
 # <a name="scalar-udf-inlining"></a>Inserción de UDF escalares
 
@@ -40,7 +40,7 @@ Las UDF escalares suelen tener un rendimiento deficiente debido a las razones si
 
 - **Ejecución interpretada:** las UDF se evalúan como un lote de instrucciones, y se ejecutan instrucción por instrucción. Se compila cada instrucción y el plan compilado se almacena en caché. Aunque esta estrategia de almacenamiento en caché ahorra algo de tiempo porque evita las recompilaciones, cada instrucción se ejecuta de forma aislada. No se realizan optimizaciones entre instrucciones.
 
-- **Ejecución en serie:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite el paralelismo entre consultas en las consultas que invocan las UDF. 
+- La **ejecución en serie** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite el paralelismo entre consultas en las consultas que invocan las UDF. 
 
 ## <a name="automatic-inlining-of-scalar-udfs"></a>Inserción automática de UDF escalares
 El objetivo de la característica Inserción de UDF escalar es mejorar el rendimiento de las consultas que llaman a UDF escalares de T-SQL, donde la ejecución de la UDF es el principal cuello de botella.
@@ -154,6 +154,7 @@ Según la complejidad de la lógica de la UDF, es posible que el plan de consult
 - La UDF no hace referencia a tipos definidos por el usuario.
 - No se agrega ninguna firma a la UDF.
 - La UDF no es una función de partición.
+- La UDF no contiene referencias a expresiones de tabla comunes (CTE).
 
 <sup>1</sup> `SELECT` con acumulación o agregación de variables (por ejemplo, `SELECT @val += col1 FROM table1`) no se admite para la inserción.
 

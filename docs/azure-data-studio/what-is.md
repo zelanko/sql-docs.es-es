@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 10/15/2019
-ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.date: 01/15/2020
+ms.openlocfilehash: 943ff8fdcf2eadd428d1ec6ceb5d15fe34ad9291
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241747"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952411"
 ---
 # <a name="what-is-azure-data-studio"></a>¿Qué es Azure Data Studio?
 
@@ -33,7 +33,7 @@ El código fuente de Azure Data Studio y sus proveedores de datos está disponib
 
 ## <a name="smart-sql-code-snippets"></a>Fragmentos de código SQL inteligentes
 
-Los fragmentos de código SQL generan la sintaxis SQL adecuada para crear bases de datos, tablas, vistas, procedimientos almacenados, usuarios, inicios de sesión, roles, etc., y para actualizar los objetos de base de datos existentes. Use fragmentos de código inteligentes para crear rápidamente copias de la base de datos con fines de desarrollo o prueba, y para generar y ejecutar scripts CREATE e INSERT.
+Los fragmentos de código SQL generan la sintaxis SQL adecuada para crear bases de datos, tablas, vistas, procedimientos almacenados, usuarios, inicios de sesión y roles, así como para actualizar los objetos de base de datos existentes. Use fragmentos de código inteligentes para crear rápidamente copias de la base de datos con fines de desarrollo o prueba, y para generar y ejecutar scripts CREATE e INSERT.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] también proporciona una funcionalidad para crear fragmentos de código SQL personalizados. Para obtener más información, vea [Crear y usar fragmentos de código](code-snippets.md).
 
@@ -96,7 +96,7 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 |Modo oscuro|Sí||
 |Azure Resource Explorer|Vista previa||
 |Asistente para generar scripts||Sí|
-|Importación o exportación de DACPAC||Sí|
+|Importación y exportación de DACPAC||Sí|
 |Propiedades de objeto||Sí|
 |Diseñador de tablas||Sí|
 
@@ -119,7 +119,7 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 |Cuaderno|Sí||
 |Guardar consulta como fragmento de código|Sí||
 
-### <a name="operating-system-support"></a>Sistemas operativos admitidos
+### <a name="operating-system-support"></a>Compatibilidad con sistema operativo
 
 |Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
@@ -131,9 +131,9 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 
 |Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Asistente para crear tablas externas|Vista previa||
-|Integración de HDFS|Vista previa||
-|Cuaderno|Vista previa||
+|Asistente para crear tablas externas|Sí||
+|Integración de HDFS|Sí||
+|Cuaderno|Sí||
 
 ### <a name="database-administration"></a>Administración de bases de datos
 
@@ -147,7 +147,7 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 |Always On||Sí|
 |Always Encrypted||Sí|
 |Asistente para copiar datos||Sí|
-|Asistente para la optimización de datos||Sí|
+|Database Engine Tuning Advisor||Sí|
 |Visor de registros de errores||Sí|
 |Planes de mantenimiento||Sí|
 |Consulta multiservidor||Sí|

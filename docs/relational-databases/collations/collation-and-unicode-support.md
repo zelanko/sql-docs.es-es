@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 862147cfb7620999bf3e56a90fae0e90fbb1be45
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74901942"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831815"
 ---
 # <a name="collation-and-unicode-support"></a>Compatibilidad con la intercalación y Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -478,16 +478,12 @@ Al mover los datos de un servidor a un cliente, los controladores de cliente ant
 Para usar las intercalaciones UTF- 8 disponibles en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] a fin de mejorar la búsqueda y la ordenación de algunos caracteres Unicode (solo en las intercalaciones de Windows), debe seleccionar las intercalaciones compatibles con la codificación UTF-8 (\_UTF8).
  
 -   La marca UTF8 se puede aplicar a:    
-    -   Intercalaciones de la versión 90 
-        > [!NOTE]
-        > Solo en esta versión ya hay intercalaciones que reconocen los caracteres complementarios (\_SC) o distinguen entre selector de variación (\_VSS).
-    -   Intercalaciones de la versión 100    
-    -   Intercalaciones de la versión 140   
+    -   Intercalaciones lingüísticas que ya son compatibles con caracteres adicionales (\_SC) o reconocimiento de la distinción de selector de variación (\_VSS)
     -   Intercalación binaria BIN2<sup>1</sup>
     
 -   La marca UTF8 no se puede aplicar a:    
-    -   Intercalaciones de la versión 90 que no son compatibles con caracteres adicionales (\_SC) o la distinción de selector de variación (\_VSS)    
-    -   Intercalaciones binarias BIN o BIN2<sup>2</sup>    
+    -   Intercalaciones lingüísticas que no son compatibles con caracteres adicionales (\_SC) o reconocimiento de la distinción de selector de variación (\_VSS)
+    -   Intercalaciones binarias BIN o BIN2<sup>2</sup>
     -   Intercalaciones SQL\_*  
     
 <sup>1</sup> A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 reemplazó la intercalación **UTF8_BIN2** por **Latin1_General_100_BIN2_UTF8**.        
@@ -528,8 +524,6 @@ Si utiliza caracteres adicionales:
 -   Los caracteres adicionales se pueden utilizar en las operaciones de ordenación y comparación en las versiones de intercalación 90 o mayores.    
 -   Todas las intercalaciones de la versión 100 admiten la ordenación lingüística con caracteres adicionales.    
 -   Los caracteres adicionales no son compatibles con metadatos, como en los nombres de objetos de base de datos.    
--   Las bases de datos en las que se usan intercalaciones con caracteres adicionales (\_SC), no se pueden habilitar para la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El motivo es que algunas de las tablas y procedimientos almacenados del sistema que se crean para la replicación usan el tipo de datos **ntext** heredado, que no admite caracteres adicionales.  
-
 -   La marca SC se puede aplicar a:    
     -   Intercalaciones de la versión 90    
     -   Intercalaciones de la versión 100    

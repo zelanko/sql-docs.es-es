@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c54ec57756ca2f840ac3f15771143cf697798e9f
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75002070"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952485"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configuración de un grupo de disponibilidad Always On distribuido  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -180,7 +180,8 @@ GO
 >  **LISTENER_URL** especifica el agente de escucha de cada grupo de disponibilidad, con el punto de conexión de creación de reflejo de la base de datos del grupo de disponibilidad. En este ejemplo, es el puerto `5022` (no el puerto `60173` usado para crear el agente de escucha). Si usa un equilibrador de carga, por ejemplo, en Azure, [agregue una regla de equilibrio de carga para el puerto del grupo de disponibilidad distribuido](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Agregue la regla al puerto de escucha, además del puerto de la instancia de SQL Server. 
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>Cancelación de la propagación automática al reenviador
-Si es necesario cancelar la inicialización del reenviador antes de que se sincronicen los dos grupos de disponibilidad, modifique el grupo de disponibilidad distribuido estableciendo el parámetro SEEDING_MODE del reenviador en MANUAL y cancele inmediatamente la propagación. Ejecute el comando en el principal global: 
+
+Si, por cualquier motivo, es necesario cancelar la inicialización del reenviador _antes_ de que se sincronicen los dos grupos de disponibilidad, modifique el grupo de disponibilidad distribuido estableciendo el parámetro SEEDING_MODE del reenviador en MANUAL y cancele inmediatamente la propagación. Ejecute el comando en el principal global: 
 
 ```sql
 -- Cancel automatic seeding.  Connect to global primary but specify DAG AG2

@@ -10,12 +10,12 @@ ms.author: alayu
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: a218c2afa89c8798c46b305e80e677693509e7ab
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7398d918a027b28513b3f12a5101628cf1158e49
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810804"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884053"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Inicio rápido: Conectarse y consultar SQL Server con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -39,15 +39,15 @@ Si no tiene acceso a SQL Server, seleccione su plataforma en uno de los vínculo
 
 2. La primera vez que se ejecuta [!INCLUDE[name-sos](../includes/name-sos-short.md)], debe abrirse la **página principal**. Si no ve la **página principal**, seleccione **Ayuda** > **Página principal**. Seleccione **Nueva conexión** para abrir el panel **Conexión**:
 
-   ![Icono Nueva conexión](media/quickstart-sql-server/new-connection-icon.png)
+   ![Icono de Nueva conexión](media/quickstart-sql-server/new-connection-icon.png)
 
 3. En este artículo se usa el *inicio de sesión de SQL*, pero se admite la *autenticación de Windows*. Rellene los campos como se indica a continuación:
 
-- **Nombre del servidor**: escriba el nombre del servidor aquí. Por ejemplo, “localhost”.
-- **Tipo de autenticación:** Inicio de sesión de SQL
+- **Nombre del servidor:** escriba aquí el nombre del servidor. Por ejemplo, “localhost”.
+- **Tipo de autenticación:** Inicio de sesión SQL
 - **Nombre de usuario:** El nombre de usuario para SQL Server
 - **Contraseña:** Contraseña para SQL Server
-- **Nombre de la base de datos:** deje este campo en blanco
+- **Nombre de base de datos:** \<Default\>
 - **Grupo del servidor:** \<Default\>
 
    ![Pantalla Nueva conexión](media/quickstart-sql-server/new-connection-screen.png)
@@ -81,16 +81,16 @@ Una vez hecha la consulta, aparecerá la nueva **TutorialDB** en la lista de bas
 
 ## <a name="create-a-table"></a>Creación de una tabla
 
-Aun así, el editor de consultas se conecta a la base de datos maestra (*master*), pero lo que se pretende aquí es crear una tabla en la base de datos *TutorialDB*.
+El editor de consultas aún está conectado a la base de datos *maestra*, pero lo que queremos es crear una tabla en la base de datos *TutorialDB*.
 
 1. Cambie el contexto de conexión a **TutorialDB**:
 
-   ![Cambio de contexto](media/quickstart-sql-server/change-context.png)
+   ![Cambiar el contexto](media/quickstart-sql-server/change-context.png)
 
 2. Pegue el siguiente fragmento de código en la ventana de consulta y haga clic en **Ejecutar**:
 
    > [!NOTE]
-   > Puede anexar esto también, o bien puede sobrescribir la consulta anterior en el editor. Tenga en cuenta que al hacer clic en **Ejecutar** solo se ejecuta la consulta seleccionada. Si no se selecciona nada, al hacer clic en **Ejecutar** se ejecutan todas las consultas en el editor.
+   > Puede anexar esto también, o bien puede sobrescribir la consulta anterior en el editor. Al hacer clic en **Ejecutar**, solo se ejecuta la consulta seleccionada. Si hay ninguna opción seleccionada, al hacer clic en **Ejecutar**, se ejecutarán todas las consultas en el editor.
 
  ```sql
  -- Create a new table called 'Customers' in schema 'dbo'
@@ -136,7 +136,7 @@ Una vez hecha la consulta, aparecerá la tabla nueva **Customers** (Clientes) en
  SELECT * FROM dbo.Customers;
  ```
 
-   ![Selección de resultados](media/quickstart-sql-server/select-results.png)
+   ![Seleccionar los resultados](media/quickstart-sql-server/select-results.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

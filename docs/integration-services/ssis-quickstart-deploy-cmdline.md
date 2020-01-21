@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 182dcae5867cd05d508357160aecb5c46d1d5e82
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 8fd6ed8e0831c6dc0699ddd1efa13ba1d46a3633
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281775"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947167"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Implementar un proyecto de SSIS desde el símbolo del sistema con ISDeploymentWizard.exe
 
@@ -28,7 +28,7 @@ Para obtener más información sobre el asistente para la implementación de Int
 
 La validación que de describe en este artículo para la implementación en Azure SQL Database requiere SQL Server Data Tools (SSDT), versión 17.4 o posterior. Para obtener la versión más reciente de SSDT, consulte [Descargar SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-Un servidor Azure SQL Database escucha en el puerto 1433. Si está intentando conectarse a un servidor de Azure SQL Database desde un firewall corporativo, este puerto debe estar abierto en el firewall corporativo para poder conectarse correctamente.
+Un servidor de Azure SQL Database escucha en el puerto 1433. Si está intentando conectarse a un servidor de Azure SQL Database desde un firewall corporativo, este puerto debe estar abierto en el firewall corporativo para poder conectarse correctamente.
 
 ## <a name="supported-platforms"></a>Plataformas compatibles
 
@@ -36,7 +36,7 @@ Puede usar la información que aparece en este inicio rápido para implementar u
 
 -   SQL Server en Windows.
 
--   Azure SQL Database. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+-   Azure SQL Database. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 No puede usar la información que aparece en este inicio rápido para implementar un paquete de SSIS en SQL Server en Linux. Para más información sobre cómo ejecutar paquetes en Linux, vea [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md) (Extraer, transformar y cargar datos en Linux con SSIS).
 
@@ -44,23 +44,21 @@ No puede usar la información que aparece en este inicio rápido para implementa
 
 Para implementar el proyecto en Azure SQL Database, debe obtener la información de conexión necesaria para conectarse a la base de datos del catálogo de SSIS (SSISDB). Necesita el nombre completo y la información de inicio de sesión del servidor en los procedimientos siguientes.
 
-1. Inicie sesión en el [Portal de Azure](https://portal.azure.com/).
+1. Inicie sesión en [Azure Portal](https://portal.azure.com/).
 2. Seleccione **Bases de datos SQL** en el menú izquierdo y, después, seleccione la base de datos SSISDB en la página **Bases de datos SQL**. 
 3. En la página **Introducción** de la base de datos, compruebe el nombre completo del servidor. Mantenga el puntero del ratón sobre el nombre del servidor para ver la opción **Haga clic para copiar**. 
 4. Si olvida la información de inicio de sesión del servidor de Azure SQL Database, navegue a la página del servidor de SQL Database para ver el nombre del administrador del servidor. Si es necesario, puede restablecer la contraseña.
 
-## <a name="wizard_auth"></a> Métodos de autenticación en el Asistente para implementación
+## <a name="supported-authentication-method"></a>Método de autenticación compatible
 
-Si va a efectuar una implementación en un servidor de SQL Server con el Asistente para implementación, deberá usar la autenticación de Windows, puesto que no se puede usar la autenticación de SQL Server.
-
-Si va a efectuar una implementación en un servidor de Azure SQL Database, deberá usar la autenticación de SQL Server o de Azure Active Directory, puesto que no se puede usar la autenticación de Windows.
+Consulte [Métodos de autenticación para la implementación](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Iniciar el Asistente para implementación de Integration Services
 1. Abra una ventana de símbolo del sistema.
 
 2. Ejecute `ISDeploymentWizard.exe`. Se abre el Asistente para implementación de Integration Services.
 
-    Si la carpeta que contiene `ISDeploymentWizard.exe` no está en la variable de entorno `path`, es posible que deba usar el comando `cd` para cambiar al directorio de la misma. En SQL Server 2017, esta carpeta está normalmente en `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
+    Si la carpeta que contiene `ISDeploymentWizard.exe` no está en la variable de entorno `path`, es posible que deba usar el comando `cd` para cambiar al directorio de esta. En SQL Server 2017, esta carpeta está normalmente en `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn`.
 
 ## <a name="deploy-a-project-with-the-wizard"></a>Implementar un proyecto con el asistente
 1. En la página **Introducción** del asistente, revise la introducción. Haga clic en **Siguiente** para abrir la página **Seleccionar origen**.
@@ -72,7 +70,7 @@ Si va a efectuar una implementación en un servidor de Azure SQL Database, deber
   
 3.  En la página **Seleccionar destino**, seleccione el destino del proyecto.
     -   Escriba el nombre completo del servidor. Si el servidor de destino es un servidor de Azure SQL Database, el nombre tendrá el formato `<server_name>.database.windows.net`.
-    -   Proporcione la información de autenticación y, después, seleccione **Conectar**. Vea [Métodos de autenticación en el Asistente para implementación](#wizard_auth) en este artículo.
+    -   Proporcione la información de autenticación y, después, seleccione **Conectar**. Consulte [Métodos de autenticación en la implementación](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment) en este artículo.
     -   A continuación, haga clic en **Examinar** para seleccionar la carpeta de destino de SSISDB.
     -   Después, seleccione **Siguiente** para abrir la página **Revisión** (el botón **Siguiente** solo se habilitará después de que haya seleccionado **Conectar**).
 
@@ -90,11 +88,11 @@ Si va a efectuar una implementación en un servidor de Azure SQL Database, deber
 ## <a name="next-steps"></a>Pasos siguientes
 - Tenga en cuenta otras formas de implementar un paquete.
     - [Implementar un paquete SSIS con SSMS](./ssis-quickstart-deploy-ssms.md)
-    - [Implementar un paquete SSIS con Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md)
-    - [Deploy an SSIS package with Transact-SQL (VS Code) (Implementar un paquete SSIS con Transact-SQL [VS Code])](ssis-quickstart-deploy-tsql-vscode.md)
-    - [Deploy an SSIS package with PowerShell (Implementar un paquete SSIS con PowerShell)](ssis-quickstart-deploy-powershell.md)
+    - [Deploy an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md) [Implementar un paquete SSIS con Transact-SQL (SSMS)]
+    - [Deploy an SSIS package with Transact-SQL (VS Code)](ssis-quickstart-deploy-tsql-vscode.md) [Implementar un paquete SSIS con Transact-SQL (VSCode)]
+    - [Deploy an SSIS package with PowerShell](ssis-quickstart-deploy-powershell.md) (Implementar un paquete SSIS con PowerShell)
     - [Deploy an SSIS package with C#](./ssis-quickstart-deploy-dotnet.md) (Implementar un paquete SSIS con C#) 
-- Ejecute un paquete implementado. Para ejecutar un paquete, puede elegir entre varias herramientas y lenguajes. Para obtener más información, vea los artículos siguientes:
+- Ejecute un paquete implementado. Para ejecutar un paquete, puede elegir entre varias herramientas y lenguajes. Para más información, consulte los siguientes artículos:
     - [Ejecutar un paquete SSIS con SSMS](./ssis-quickstart-run-ssms.md)
     - [Run an SSIS package with Transact-SQL (SSMS) (Ejecutar un paquete SSIS con Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
     - [Ejecutar un paquete SSIS con Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)

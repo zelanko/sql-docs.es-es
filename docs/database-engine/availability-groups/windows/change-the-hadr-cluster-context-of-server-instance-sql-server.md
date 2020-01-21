@@ -1,7 +1,7 @@
 ---
-title: Cambio del clúster que administra los metadatos para las réplicas de un grupo de disponibilidad
+title: 'Cambio de metadatos: migración de grupos de disponibilidad entre clústeres'
 description: Cuando se realiza una migración entre clústeres, para cambiar el clúster que administra los metadatos para las réplicas de disponibilidad dentro de un grupo de disponibilidad Always On, cambie el contexto de clúster HADR de una instancia de SQL Server.
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a83f693905eb5a8b963875ea0e23e46d4e3eb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c54c26c93d065f5b9d0beb741d9a7024ff8a2199
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988568"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241808"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Cambio del clúster que administra los metadatos para las réplicas de un grupo de disponibilidad Always On
 

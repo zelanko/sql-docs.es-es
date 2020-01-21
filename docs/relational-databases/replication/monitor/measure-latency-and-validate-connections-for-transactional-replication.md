@@ -1,6 +1,7 @@
 ---
-title: Medición de la latencia y validación de las conexiones de la replicación transaccional | Microsoft Docs
-ms.custom: ''
+title: Medición de la latencia y validación de las conexiones (transaccional)
+description: Aprenda a medir la latencia y a validar las conexiones de una publicación de transacción en SQL Server mediante el Monitor de replicación de SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) o Replication Management Objects (RMO).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: eef53dd48e960ac15e68e28e0be7265a8f25ba74
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 355840dee0c7ff327968457a54f55730665d5afe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711023"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321862"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir la latencia y validar las conexiones de la replicación transaccional
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,15 +58,15 @@ ms.locfileid: "71711023"
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Los testigos de seguimiento también pueden ser útiles al detener el sistema, lo que implica detener todas las actividades y comprobar que todos los nodos han recibido todos los cambios pendientes. Para más información, vea [Poner en modo inactivo una topología de replicación &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- Para usar testigos de seguimiento, debe utilizar ciertas versiones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ Para usar testigos de seguimiento, debe utilizar determinadas versiones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   El distribuidor debe ser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior.  
   
 -   El publicador debe ser de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior, o un publicador de Oracle.  
   
--   Para las suscripciones de inserción, las estadísticas del token de seguimiento se obtienen del publicador, distribuidor y suscriptores, si el suscriptor es de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 o posterior.  
+-   En el caso de las suscripciones de inserción, las estadísticas del token de seguimiento se obtienen del publicador, del distribuidor y de los suscriptores, si el suscriptor es [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 o posterior.  
   
--   Para las suscripciones de extracción, las estadísticas del token de seguimiento se obtienen solo de los suscriptores, si el suscriptor es de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior. Si el suscriptor es de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], las estadísticas se obtienen solo del publicador y el distribuidor.  
+-   Para las suscripciones de extracción, las estadísticas del token de seguimiento se obtienen solo de los suscriptores, si el suscriptor es de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior. Si el suscriptor es [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 o [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], las estadísticas se obtienen solo del publicador y del distribuidor.  
   
  También hay que tener en cuenta otros problemas y restricciones:  
   
@@ -140,7 +141,7 @@ ms.locfileid: "71711023"
   
 1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPublication> .  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPublication>.  
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> para la publicación y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
@@ -152,7 +153,7 @@ ms.locfileid: "71711023"
   
 1.  Cree una conexión al distribuidor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>y <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> , y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   
@@ -166,7 +167,7 @@ ms.locfileid: "71711023"
   
 1.  Cree una conexión al distribuidor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.PublicationMonitor> .  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.PublicationMonitor>.  
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>y <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> , y la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.  
   

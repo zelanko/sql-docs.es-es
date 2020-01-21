@@ -1,6 +1,7 @@
 ---
-title: 'Solucionador de problemas: Búsqueda de errores con la replicación transaccional de SQL Server | Microsoft Docs'
-ms.custom: ''
+title: Detección de errores con replicación transaccional
+description: Describe cómo localizar e identificar errores con la replicación transaccional, así como la metodología de solución de problemas para abordar problemas con la replicación.
+ms.custom: seo-lt-2019
 ms.date: 04/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: c8b363be7cd8f160cb7317e6a90d109cc1ad3ccb
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907290"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321944"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Solucionador de problemas: Búsqueda de errores con la replicación transaccional de SQL Server 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ En cualquier paso de este proceso se pueden producir errores. La búsqueda de es
 2. ¿Qué agente está experimentando un error?
 1. ¿Cuándo fue la última vez que la replicación funcionó correctamente? ¿Qué ha cambiado desde entonces?  
 
-### <a name="steps-to-take"></a>Pasos para seguir
+### <a name="steps-to-take"></a>Pasos a seguir
 1. Use el Monitor de replicación para identificar en qué punto de la replicación se encuentra el error (en qué agente):
    - Si los errores se producen en la sección **Publicador a distribuidor**, el problema está relacionado con el Agente de registro del LOG. 
    - Si los errores se producen en la sección **Distribuidor a publicador**, el problema está relacionado con el Agente de distribución.  
@@ -56,17 +57,17 @@ El Agente de instantáneas genera la instantánea y la escribe en la carpeta de 
 
 1. Vea el estado del Agente de instantáneas:
 
-    A. En el Explorador de objetos, expanda el nodo **Publicación local** bajo **Replicación**.
+    a. En el Explorador de objetos, expanda el nodo **Publicación local** bajo **Replicación**.
 
-    B. Haga clic con el botón derecho en la publicación **AdvWorksProductTrans** > **Ver estado del Agente de instantáneas**. 
+    b. Haga clic con el botón derecho en la publicación **AdvWorksProductTrans** > **Ver estado del Agente de instantáneas**. 
 
     ![Comando "Ver estado del Agente de instantáneas" en el menú contextual](media/troubleshooting-tran-repl-errors/view-snapshot-agent-status.png)
 
 1. Si se notifica un error en el estado del Agente de instantáneas, puede encontrar más detalles en el historial de trabajos del Agente de instantáneas:
 
-    A. Expanda **Agente SQL Server** en el Explorador de objetos y abra el Monitor de actividad de trabajo. 
+    a. Expanda **Agente SQL Server** en el Explorador de objetos y abra el Monitor de actividad de trabajo. 
 
-    B. Ordene por **Categoría** e identifique el Agente de instantáneas por la categoría **REPL-Instantánea**.
+    b. Ordene por **Categoría** e identifique el Agente de instantáneas por la categoría **REPL-Instantánea**.
 
     c. Haga clic con el botón derecho en el Agente de instantáneas y después seleccione **Ver historial**. 
 
@@ -114,9 +115,9 @@ El Agente de registro del LOG se conecta a la base de datos del publicador y exa
 
 6. Normalmente, el error se produce cuando el propietario de la base de datos del publicador no se ha establecido correctamente. Esto puede ocurrir cuando se restaura una base de datos. Para comprobarlo:
 
-    A. Expanda **Bases de datos** en el Explorador de objetos.
+    a. Expanda **Bases de datos** en el Explorador de objetos.
 
-    B. Haga clic con el botón derecho en **AdventureWorks2012** > **Propiedades**. 
+    b. Haga clic con el botón derecho en **AdventureWorks2012** > **Propiedades**. 
 
     c. Compruebe la existencia de un propietario en la página **Archivos**. Si este cuadro está en blanco, esta es la causa probable del problema. 
 
@@ -133,9 +134,9 @@ El Agente de registro del LOG se conecta a la base de datos del publicador y exa
 
 8. Es posible que tenga que reiniciar el Agente de registro del LOG:
 
-    A. Expanda el nodo **Agente SQL Server** en el Explorador de objetos y abra el Monitor de actividad de trabajo.
+    a. Expanda el nodo **Agente SQL Server** en el Explorador de objetos y abra el Monitor de actividad de trabajo.
 
-    B. Ordene por **Categoría** e identifique el Agente de registro del LOG por la categoría **REPL-Lector del registro**. 
+    b. Ordene por **Categoría** e identifique el Agente de registro del LOG por la categoría **REPL-Lector del registro**. 
 
     c. Haga clic con el botón derecho en el trabajo del **Agente de registro del LOG** y seleccione **Iniciar trabajo en el paso**. 
 
@@ -163,9 +164,9 @@ El Agente de distribución busca los datos en la base de datos de distribución 
 
 3. El error indica que el Agente de distribución está volviendo a intentarlo. Para buscar más información, compruebe el historial de trabajos del Agente de distribución: 
 
-    A. Expanda **Agente SQL Server** en el Explorador de objetos > **Monitor de actividad de trabajo**. 
+    a. Expanda **Agente SQL Server** en el Explorador de objetos > **Monitor de actividad de trabajo**. 
     
-    B. Ordene los trabajos por **Categoría**. 
+    b. Ordene los trabajos por **Categoría**. 
 
     c. Identifique el Agente de distribución por la categoría **REPL-Distribución**. Haga clic con el botón derecho en el agente y seleccione **Ver historial**.
 
@@ -180,9 +181,9 @@ El Agente de distribución busca los datos en la base de datos de distribución 
 
 6. Este error indica que la contraseña usada por el Agente de distribución es incorrecta. Para resolverlo:
 
-    A. Expanda el nodo **Replicación** en el Explorador de objetos.
+    a. Expanda el nodo **Replicación** en el Explorador de objetos.
     
-    B. Haga clic con el botón derecho en la suscripción > **Propiedades**.
+    b. Haga clic con el botón derecho en la suscripción > **Propiedades**.
     
     c. Haga clic en el botón de puntos suspensivos (...) situado junto a **Cuenta de proceso del agente** y modifique la contraseña.
 
@@ -227,7 +228,7 @@ Puede usar el registro detallado para ver información más detallada sobre los 
 
     ![Selecciones para abrir las propiedades del agente](media/troubleshooting-tran-repl-errors/log-agent-properties.png)
 
-1. Seleccione la página **Pasos** y, después, resalte el paso **Ejecutar agente**. Haga clic en **Editar**. 
+1. Seleccione la página **Pasos** y, después, resalte el paso **Ejecutar agente**. Seleccione **Editar**. 
 
     ![Selecciones para editar el paso "Ejecutar agente"](media/troubleshooting-tran-repl-errors/edit-steps.png)
 
@@ -257,7 +258,7 @@ Puede usar el registro detallado para ver información más detallada sobre los 
 Para obtener más información, vea [Cómo habilitar a los agentes de duplicación para el registro de archivos de salida en SQL Server](https://support.microsoft.com/help/312292/how-to-enable-replication-agents-for-logging-to-output-files-in-sql-se). 
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 <br>[Replicación transaccional](../../relational-databases/replication/transactional/transactional-replication.md)
 <br>[Tutoriales de replicación](../../relational-databases/replication/replication-tutorials.md)
 <br>[Blog de ReplTalk](https://blogs.msdn.microsoft.com/repltalk)

@@ -1,6 +1,7 @@
 ---
-title: Ver el estado de la suscripción y la publicación en el Monitor de replicación | Microsoft Docs
-ms.custom: ''
+title: Visualización del estado de publicación y suscripción (Monitor de replicación)
+description: Aprenda a visualizar el estado de publicación y suscripción mediante el Monitor de replicación de SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -22,16 +23,16 @@ ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 51dafccba54e66ff9f6ed9d7fd6c7e4159c8ef19
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: bc233524eed394001b0b3fb087d7273c8ead8009
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770539"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322281"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Ver el estado de la suscripción y la publicación en el Monitor de replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  En el Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se muestra información de estado de las publicaciones y suscripciones:  
+  El Monitor de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muestra información de publicaciones y suscripciones:  
   
 -   El estado de una publicación está determinado por el estado de prioridad más alto de sus suscripciones. Por ejemplo, si una suscripción a una publicación tiene un error y otra tiene un problema de rendimiento se muestra un estado de error para la publicación.  
   
@@ -64,12 +65,12 @@ ms.locfileid: "68770539"
 ## <a name="publication-status-values"></a>Valores del estado de la publicación  
  En la siguiente tabla se muestran los valores de estado de la publicación y sus iconos correspondientes en orden de prioridad.  
   
-|Estado|Icono|  
+|Status|Icono|  
 |------------|----------|  
 |Error|![Icono de la interfaz de usuario: error](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icono de la interfaz de usuario: error")|  
 |Rendimiento crítico|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Reintentando comando con errores|![Icono de la interfaz de usuario: reintento del agente de replicación](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icono de la interfaz de usuario: reintento del agente de replicación")|  
-|Aceptar|none|  
+|Aceptar|None|  
   
 ## <a name="subscription-status-values"></a>Valores de estado de la suscripción  
  En las siguientes tablas se muestran los valores de estado de la suscripción y sus iconos correspondientes en orden de prioridad. Es posible que una suscripción tenga dos estados simultáneamente, por ejemplo **Con expiración en breve/Expirada** y **Reintentando comando con errores**, en cuyo caso se muestra el estado de prioridad más alta.  
@@ -78,19 +79,19 @@ ms.locfileid: "68770539"
   
 ### <a name="transactional-subscriptions"></a>Suscripciones transaccionales  
   
-|Estado|Icono|  
+|Status|Icono|  
 |------------|----------|  
 |Error|![Icono de la interfaz de usuario: error](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icono de la interfaz de usuario: error")|  
 |Rendimiento crítico|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Con expiración en breve/Expirada|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Suscripción no inicializada|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Reintentando comando con errores|![Icono de la interfaz de usuario: reintento del agente de replicación](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icono de la interfaz de usuario: reintento del agente de replicación")|  
-|No está en ejecución|![Icono de la interfaz de usuario: agente de replicación detenido](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icono de la interfaz de usuario: agente de replicación detenido")|  
-|En ejecución|![Icono de la interfaz de usuario: agente de replicación en ejecución](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icono de la interfaz de usuario: agente de replicación en ejecución")|  
+|No está en ejecución|![Icono de la interfaz de usuario: detención del agente de replicación](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icono de la interfaz de usuario: detención del agente de replicación")|  
+|En ejecución|![Icono de la interfaz de usuario: ejecución del agente de replicación](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icono de la interfaz de usuario: ejecución del agente de replicación")|  
   
 ### <a name="merge-subscriptions"></a>Suscripciones de mezcla  
   
-|Estado|Icono|  
+|Status|Icono|  
 |------------|----------|  
 |Error|![Icono de la interfaz de usuario: error](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icono de la interfaz de usuario: error")|  
 |Rendimiento crítico|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
@@ -98,19 +99,19 @@ ms.locfileid: "68770539"
 |Con expiración en breve/Expirada|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Suscripción no inicializada|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Reintentando comando con errores|![Icono de la interfaz de usuario: reintento del agente de replicación](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icono de la interfaz de usuario: reintento del agente de replicación")|  
-|Sincronizando|![Icono de la interfaz de usuario: agente de replicación en ejecución](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icono de la interfaz de usuario: agente de replicación en ejecución")|  
-|No se están sincronizando|![Icono de la interfaz de usuario: agente de replicación detenido](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icono de la interfaz de usuario: agente de replicación detenido")|  
+|Sincronizando|![Icono de la interfaz de usuario: ejecución del agente de replicación](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icono de la interfaz de usuario: ejecución del agente de replicación")|  
+|No se están sincronizando|![Icono de la interfaz de usuario: detención del agente de replicación](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icono de la interfaz de usuario: detención del agente de replicación")|  
   
 ### <a name="snapshot-subscriptions"></a>Suscripciones de instantáneas  
   
-|Estado|Icono|  
+|Status|Icono|  
 |------------|----------|  
 |Error|![Icono de la interfaz de usuario: error](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "Icono de la interfaz de usuario: error")|  
-|Con expiración en breve/Expirado|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
+|Con expiración en breve/Expirada|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Suscripción no inicializada|![Icono de la interfaz de usuario: advertencia](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|  
 |Reintentando comando con errores|![Icono de la interfaz de usuario: reintento del agente de replicación](../../../relational-databases/replication/monitor/media/repl-icon-retry.gif "Icono de la interfaz de usuario: reintento del agente de replicación")|  
-|Sincronizando|![Icono de la interfaz de usuario: agente de replicación en ejecución](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icono de la interfaz de usuario: agente de replicación en ejecución")|  
-|No se están sincronizando|![Icono de la interfaz de usuario: agente de replicación detenido](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icono de la interfaz de usuario: agente de replicación detenido")|  
+|Sincronizando|![Icono de la interfaz de usuario: ejecución del agente de replicación](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icono de la interfaz de usuario: ejecución del agente de replicación")|  
+|No se están sincronizando|![Icono de la interfaz de usuario: detención del agente de replicación](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icono de la interfaz de usuario: detención del agente de replicación")|  
   
 ## <a name="see-also"></a>Consulte también  
  [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication.md)  

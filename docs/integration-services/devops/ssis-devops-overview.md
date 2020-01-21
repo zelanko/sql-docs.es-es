@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11ed5aa2ddcd675d201fc86abf595055828d7621
-ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
+ms.openlocfilehash: 4cf79aade8e74277ef7b5cbaa6e1bd3ae612e94b
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681776"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924919"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Herramientas de DevOps para SQL Server Integration Services (versión preliminar)
 
@@ -133,11 +133,18 @@ En estos momentos, la tarea de implementación de SSIS no admite los siguientes 
 
 ## <a name="release-notes"></a>Notas de la versión
 
+### <a name="version-012-preview"></a>Versión preliminar 0.1.2
+
+Fecha de lanzamiento: 13 de enero de 2020
+
+- Se ha agregado información más detallada sobre las excepciones en el registro de tareas de implementación de SSIS cuando el tipo de destino es SSISDB.
+- Se ha corregido la ruta de destino de ejemplo en el texto de ayuda de la ruta de destino de la propiedad de la tarea de implementación de SSIS.
+
 ### <a name="version-011-preview"></a>Versión 0.1.1 (versión preliminar)
 
 Fecha de lanzamiento: 6 de enero de 2020
 
-- Se ha agregado una restricción del requisito de versión mínima del agente. Actualmente, la versión mínima del agente de este producto es 2.144.0.
+- Se ha agregado una restricción de requisito de versión mínima del agente. Actualmente, la versión mínima del agente de este producto es 2.144.0.
 - Se han corregido algunos textos de visualización incorrectos para la tarea de implementación de SSIS.
 - Se han modificado algunos mensajes de error.
 

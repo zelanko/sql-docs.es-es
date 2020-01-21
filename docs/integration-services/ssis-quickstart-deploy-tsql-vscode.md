@@ -8,12 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc11ccdee25331ad4d3758e4ebdff2da9e420900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: befa64e6c79a1f1e4fe0604014dbb7c583bf830e
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281545"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947177"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Implementar un proyecto de SSIS desde Visual Studio Code con Transact-SQL
 
@@ -27,7 +27,7 @@ Visual Studio Code es un editor de código para Windows, macOS y Linux que admit
 ## <a name="prerequisites"></a>Prerequisites
 
 Antes de empezar, asegúrese de haber instalado la versión más reciente de Visual Studio Code y cargado la extensión `mssql`. Para descargar estas herramientas, consulte las páginas siguientes:
--   [Descargar Visual Studio Code](https://code.visualstudio.com/Download)
+-   [Descarga de Visual Studio Code](https://code.visualstudio.com/Download)
 -   [Extensión mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="supported-platforms"></a>Plataformas compatibles
@@ -50,6 +50,10 @@ Para habilitar los comandos `mssql` y T-SQL IntelliSense, ajuste el modo de leng
  
 3. En el menú desplegable **Seleccionar modo de lenguaje** que aparece, seleccione o escriba **SQL** y, a continuación, presione **ENTRAR** para establecer el modo de lenguaje en SQL. 
 
+## <a name="supported-authentication-method"></a>Método de autenticación compatible
+
+Consulte [Métodos de autenticación para la implementación](ssis-quickstart-deploy-ssms.md#authentication-methods-for-deployment).
+
 ## <a name="connect-to-the-ssis-catalog-database"></a>Conectar con la base de datos del catálogo de SSIS
 
 Use Visual Studio Code para establecer una conexión con el catálogo de SSIS.
@@ -66,13 +70,13 @@ Use Visual Studio Code para establecer una conexión con el catálogo de SSIS.
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nombre del servidor** | Nombre completo del servidor |  |
    | **Nombre de la base de datos** | **SSISDB** | Nombre de la base de datos a la que se va a conectar. |
-   | **Autenticación** | Inicio de sesión de SQL | |
-   | **User name** | Cuenta de administrador del servidor | Esta es la cuenta que especificó cuando creó el servidor. |
-   | **Contraseña (inicio de sesión de SQL)** | Contraseña de la cuenta de administrador del servidor | Esta es la contraseña que especificó cuando creó el servidor. |
+   | **Autenticación** | Inicio de sesión SQL | |
+   | **Nombre de usuario** | La cuenta de administrador del servidor | Esta es la cuenta que especificó cuando creó el servidor. |
+   | **Contraseña (Inicio de sesión de SQL)** | La contraseña de la cuenta de administrador del servidor | Esta es la contraseña que especificó cuando creó el servidor. |
    | **¿Desea guardar la contraseña?** | Sí o no | Si no quiere escribir la contraseña cada vez, seleccione Sí. |
    | **Enter a name for this profile** (Escriba un nombre para el perfil) | Nombre de perfil, como **mySSISServer** | Un nombre de perfil guardado acelera la conexión en inicios de sesión posteriores. | 
 
-5. Presione la tecla **ESC** para cerrar el mensaje de información que le indica que el perfil está creado y conectado.
+5. Presione la tecla **ESC** para cerrar el mensaje de información que indica que el perfil se ha creado y conectado.
 
 6. Compruebe la conexión en la barra de estado.
 
@@ -100,10 +104,10 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
 - Tenga en cuenta otras formas de implementar un paquete.
     - [Implementar un paquete SSIS con SSMS](./ssis-quickstart-deploy-ssms.md)
     - [Deploy an SSIS package with Transact-SQL (SSMS)](./ssis-quickstart-deploy-tsql-ssms.md) [Implementar un paquete SSIS con Transact-SQL (SSMS)]
-    - [Deploy an SSIS package from the command prompt](./ssis-quickstart-deploy-cmdline.md) (Ejecutar un paquete SSIS desde el símbolo del sistema)
+    - [Deploy an SSIS package from the command prompt](./ssis-quickstart-deploy-cmdline.md) (Implementar un paquete SSIS desde el símbolo del sistema)
     - [Deploy an SSIS package with PowerShell](ssis-quickstart-deploy-powershell.md) (Implementar un paquete SSIS con PowerShell)
     - [Deploy an SSIS package with C#](./ssis-quickstart-deploy-dotnet.md) (Implementar un paquete SSIS con C#) 
-- Ejecute un paquete implementado. Para ejecutar un paquete, puede elegir entre varias herramientas y lenguajes. Para obtener más información, vea los artículos siguientes:
+- Ejecute un paquete implementado. Para ejecutar un paquete, puede elegir entre varias herramientas y lenguajes. Para más información, consulte los siguientes artículos:
     - [Ejecutar un paquete SSIS con SSMS](./ssis-quickstart-run-ssms.md)
     - [Run an SSIS package with Transact-SQL (SSMS) (Ejecutar un paquete SSIS con Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
     - [Ejecutar un paquete SSIS con Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)

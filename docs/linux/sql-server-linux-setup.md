@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: a6cd31b1f67d37f1316db9db5d4356bbb5e31d3b
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 57041b528186bde743abfeec293e696b0155d0e1
+ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593668"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75884017"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guía de instalación de SQL Server en Linux
 
@@ -36,7 +36,7 @@ Para otros escenarios de implementación, consulte:
 > - [Inicio rápido de Ubuntu](quickstart-install-connect-ubuntu.md)
 > - [Inicio rápido de Docker](quickstart-install-connect-docker.md)
 
-Para obtener respuesta a las preguntas más frecuentes, vea [Preguntas más frecuentes sobre SQL Server en Linux](../linux/sql-server-linux-faq.md).
+Para obtener respuesta a las preguntas más frecuentes, vea [Preguntas más frecuentes sobre SQL Server en Linux](../linux/sql-server-linux-faq.md).
 
 ## <a id="supportedplatforms"></a> Plataformas compatibles
 
@@ -59,7 +59,7 @@ SQL Server se admite en Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise 
 
 | Plataforma | Versiones admitidas | Obtener
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Obtener RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [Obtener RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2, SP3 y SP4 | [Obtener SLES v12](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Obtener Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Motor de Docker** | 1.8+ | [Obtener Docker](https://www.docker.com/get-started)
@@ -84,11 +84,11 @@ SQL Server presenta los siguientes requisitos del sistema para Linux:
 | **Núcleos de procesador** | 2 núcleos |
 | **Tipo de procesador** | Solo compatible con x64 |
 
-Si usa recursos compartidos remotos de **Network File System (NFS)** en producción, tenga en cuenta los siguientes requisitos de compatibilidad:
+Si usa recursos compartidos remotos de **NFS (Network File System)** en producción, tenga en cuenta los siguientes requisitos de compatibilidad:
 
 - Use la versión de NFS **4.2 o posteriores**. Las versiones anteriores de NFS no admiten las características necesarias (como fallocate y la creación de archivos dispersos) que son comunes en los sistemas de archivos modernos.
-- Busque solo los directorios **/var/opt/mssql** en el montaje de NFS. No se admiten otros archivos, como binarios del sistema de SQL Server.
-- Asegúrese de que los clientes de NFS usen la opción 'nolock' al montar el recurso compartido remoto.
+- Busque solo los directorios **/var/opt/mssql** en el montaje NFS. No se admiten otros archivos, como binarios del sistema de SQL Server.
+- Asegúrese de que los clientes de NFS usen la opción “nolock” al montar el recurso compartido remoto.
 
 ## <a id="repositories"></a> Configuración de los repositorios de origen
 
@@ -244,4 +244,4 @@ Tras la instalación, también puede instalar o habilitar características opcio
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
 > [!TIP]
-> Para obtener respuesta a las preguntas más frecuentes, vea [Preguntas más frecuentes sobre SQL Server en Linux](sql-server-linux-faq.md).
+> Para obtener respuesta a las preguntas más frecuentes, vea [Preguntas más frecuentes sobre SQL Server en Linux](sql-server-linux-faq.md).

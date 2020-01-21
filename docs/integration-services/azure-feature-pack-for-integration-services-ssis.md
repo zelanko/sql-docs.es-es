@@ -1,7 +1,7 @@
 ---
 title: Azure Feature Pack para Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/17/2019
+ms.date: 12/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e6531e05a3f800bbd4c1563c53c4b4d18eb0eea
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 563f984ed5aa401ae67572ad0f915698286f0aa4
+ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659587"
+ms.lasthandoff: 12/23/2019
+ms.locfileid: "75329957"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack para Integration Services (SSIS)
 
@@ -27,7 +27,7 @@ ms.locfileid: "73659587"
 
 Feature Pack de SQL Server Integration Services (SSIS) para Azure es una extensión que proporciona los componentes que se muestran en esta página para que SSIS se conecte a los servicios de Azure, para transferir datos entre Azure y orígenes de datos locales, y para procesar los datos almacenados en Azure.
 
-[![Descargar Feature Pack de SSIS para Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **Descargar**
+[![Descarga de Feature Pack de SIS para Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **Descargar**
 
 - Para SQL Server 2019 - [Feature Pack de Microsoft SQL Server 2019 Integration Services para Azure](https://www.microsoft.com/download/details.aspx?id=100430)
 - Para SQL Server 2017 - [Feature Pack de Microsoft SQL Server 2017 Integration Services para Azure](https://www.microsoft.com/download/details.aspx?id=54798)
@@ -48,9 +48,9 @@ En las páginas de descarga también se incluye información sobre los requisito
 
     -   [Administrador de conexiones de Azure Resource Manager](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
     
-    -   [Administrador de conexiones de almacenamiento de Azure](../integration-services/connection-manager/azure-storage-connection-manager.md)
+    -   [Administrador de conexiones de Azure Storage](../integration-services/connection-manager/azure-storage-connection-manager.md)
 
-    -   [Administrador de conexiones de suscripciones de Azure](../integration-services/connection-manager/azure-subscription-connection-manager.md)
+    -   [Administrador de conexiones de suscripción de Azure](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
 -   Tareas
 
@@ -66,7 +66,7 @@ En las páginas de descarga también se incluye información sobre los requisito
 
     -   [Tarea de eliminación de clúster de HDInsight de Azure](../integration-services/control-flow/azure-hdinsight-delete-cluster-task.md)
     
-    -   [Tarea de Hive de HDInsight de Azure](../integration-services/control-flow/azure-hdinsight-hive-task.md)
+    -   [Tarea de Hive de Azure HDInsight](../integration-services/control-flow/azure-hdinsight-hive-task.md)
 
     -   [Tarea de Pig de Azure HDInsight](../integration-services/control-flow/azure-hdinsight-pig-task.md)
 
@@ -100,8 +100,8 @@ Para usar TLS 1.2, agregue un valor `REG_DWORD` denominado `SchUseStrongCrypto` 
 
 ## <a name="dependency-on-java"></a>Dependencia en Java
 
-Java es necesario para usar formatos de archivo ORC/Parquet con conectores de Azure Data Lake Store/archivos planos.  
-La arquitectura (32 o 64 bits) de la compilación de Java debe coincidir con la del runtime de SSIS que se va a usar.
+Java es necesario para usar formatos de archivo ORC/Parquet con conectores de Azure Data Lake Store/archivos flexibles.  
+La arquitectura (32 o 64 bits) de la compilación de Java debe coincidir con la del entorno de ejecución de SSIS que se va a usar.
 Se han probado las siguientes compilaciones de Java.
 
 - [OpenJDK 8u192 de Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
@@ -119,6 +119,13 @@ Se han probado las siguientes compilaciones de Java.
 7. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Nueva variable del sistema**.
 8. Seleccione **Aceptar** para cerrar el cuadro de diálogo **Variables de entorno**.
 9. Seleccione **Aceptar** para cerrar el cuadro de diálogo **Propiedades del sistema**.
+
+> [!TIP]
+> Si usa el formato de Parquet y recibe un error que dice que se ha producido un error al invocar Java, con el mensaje: **java.lang.OutOfMemoryError:Java heap space**, puede agregar una variable de entorno *`_JAVA_OPTIONS`* para ajustar el tamaño mínimo y máximo del montón de JVM.
+>
+>![montón de jvm](media/azure-feature-pack-jvm-heap-size.png)
+>
+> Ejemplo: establecimiento de la variable *`_JAVA_OPTIONS`* con el valor *`-Xms256m -Xmx16g`* . La marca Xms especifica el grupo de asignación de memoria inicial para una Máquina virtual Java (JVM), mientras que Xmx especifica el grupo de asignación de memoria máxima. Esto significa que JVM se iniciará con la cantidad de memoria *`Xms`* y podrá utilizar como máximo *`Xmx`* . Los valores predeterminados son 64 MB como mínimo y 1 G como máximo.
 
 ### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Configuración de OpenJDK de Zulú en Azure-SSIS Integration Runtime
 
@@ -139,6 +146,13 @@ Como punto de entrada, `main.cmd` desencadena la ejecución del script `install_
 ~~~
 powershell.exe -file install_openjdk.ps1
 ~~~
+
+> [!TIP]
+> Si usa el formato de Parquet y recibe un error que dice que se ha producido un error al invocar Java, con el mensaje: **java.lang.OutOfMemoryError:Java heap space**, puede agregar un comando en *`main.cmd`* para ajustar el tamaño mínimo y máximo del montón de JVM. Ejemplo:
+> ~~~
+> setx /M _JAVA_OPTIONS "-Xms256m -Xmx16g"
+> ~~~
+> La marca Xms especifica el grupo de asignación de memoria inicial para una Máquina virtual Java (JVM), mientras que Xmx especifica el grupo de asignación de memoria máxima. Esto significa que JVM se iniciará con la cantidad de memoria *`Xms`* y podrá utilizar como máximo *`Xmx`* . Los valores predeterminados son 64 MB como mínimo y 1 G como máximo.
 
 **install_openjdk.ps1**
 

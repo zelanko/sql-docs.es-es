@@ -46,19 +46,19 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1afd61f86bf6b7f7f93fdbcade77fd3118ff7781
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: 35ce03a8619eada5480d0cd656f20946bb11a11c
+ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517927"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75924965"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Modifica un índice existente de una tabla o una vista (almacén de filas, almacén de columnas o XML) mediante su deshabilitación, regeneración o reorganización, o mediante el establecimiento de sus opciones.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -306,7 +306,7 @@ COMPRESS_ALL_ROW_GROUPS ofrece una manera de forzar a los grupos de filas delta 
 
 Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
 
-SET **(** \<set_index option> [ **,** ... *n*] **)**  
+SET **(** \<establecer_opción_de_índice> [ **,** ... *n*] **)**  
  Especifica las opciones del índice sin volver a generar ni organizar el índice. No es posible especificar SET para un índice deshabilitado.  
   
 PAD_INDEX = { ON | OFF }  
@@ -315,7 +315,7 @@ PAD_INDEX = { ON | OFF }
 
  Especifica el relleno del índice. El valor predeterminado es OFF.  
   
- ON  
+ ACTIVAR  
  El porcentaje de espacio disponible especificado por FILLFACTOR se aplica a páginas de nivel intermedio del índice. Si no se especifica FILLFACTOR al mismo tiempo que PAD_INDEX se establece en ON, se usa el valor de factor de relleno almacenado en [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
  No se especifica OFF ni *fillfactor*.  
@@ -342,10 +342,10 @@ FILLFACTOR = *fillfactor*
   
  Especifica si los resultados de ordenación se almacenan en **tempdb**. El valor predeterminado es desactivado, excepto para la Hiperescala de Azure SQL Database. Para todas las operaciones de recompilación de índices en Hiperescala, SORT_IN_TEMPDB está siempre activado, independientemente de la opción especificada, a menos que se use la recompilación de índices reanudables.  
   
- ON  
+ ACTIVAR  
  Los resultados de ordenación intermedios utilizados para generar el índice se almacenan en **tempdb**. Si **tempdb** se encuentra en un conjunto de discos distinto al de la base de datos de usuario, se puede reducir el tiempo necesario para crear un índice. Sin embargo, esto aumenta la cantidad de espacio en disco utilizado durante la generación del índice.  
   
- OFF  
+ Apagado  
  Los resultados de orden intermedios se almacenan en la misma base de datos que el índice.  
   
  Si no se necesita una operación de ordenación o si la ordenación se puede realizar en la memoria, se omite la opción SORT_IN_TEMPDB.  
@@ -355,10 +355,10 @@ FILLFACTOR = *fillfactor*
  IGNORE_DUP_KEY **=** { ON | OFF }  
  Especifica la respuesta de error cuando una operación de inserción intenta insertar valores de clave duplicados en un índice único. La opción IGNORE_DUP_KEY se aplica solamente a operaciones de inserción realizadas tras crear o volver a generar el índice. El valor predeterminado es OFF.  
   
- ON  
+ ACTIVAR  
  Se producirá un mensaje de advertencia cuando se inserten valores de clave duplicados en un índice único. Solo las filas que infrinjan la restricción de unicidad darán error.  
   
- OFF  
+ Apagado  
  Se producirá un mensaje de error cuando se inserten valores de clave duplicados en un índice único. Toda la operación INSERT se revertirá.  
   
  IGNORE_DUP_KEY no se puede establecer en ON para los índices creados en una vista, los índices que no sean únicos, los índices XML, los índices espaciales y los índices filtrados.  
@@ -370,10 +370,10 @@ FILLFACTOR = *fillfactor*
  STATISTICS_NORECOMPUTE **=** { ON | OFF }  
  Especifica si se vuelven a calcular las estadísticas de distribución. El valor predeterminado es OFF.  
   
- ON  
+ ACTIVAR  
  Las estadísticas obsoletas no se vuelven a calcular automáticamente.  
   
- OFF  
+ Apagado  
  Se habilita la actualización automática de las estadísticas.  
   
  Para restaurar la actualización automática de estadísticas, establezca STATISTICS_NORECOMPUTE en OFF o ejecute UPDATE STATISTICS sin la cláusula NORECOMPUTE.  
@@ -405,10 +405,10 @@ Cuando se establece en **ON**, se crean estadísticas por cada partición. Cuand
 > [!IMPORTANT]
 > Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Ediciones y características admitidas de SQL Server 2017[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) y [Ediciones y características admitidas de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
- ON  
+ ACTIVAR  
  Los bloqueos de tabla de larga duración no se mantienen durante la operación de indización. Durante la fase principal de la operación de índice, solo se mantiene un bloqueo preventivo en la tabla de origen. De esta forma, las consultas o actualizaciones realizadas en la tabla y los índices subyacentes pueden continuar. Al principio de la operación, se mantiene un bloqueo compartido (S) sobre el objeto de origen durante un breve período. Al final de la operación, durante un breve período, se adquiere un bloqueo S sobre el origen si se está creando un índice no clúster; o se adquiere un bloqueo SCH-M (modificación del esquema) cuando se crea o se quita un índice clúster en línea o cuando se regenera un índice clúster o no clúster. ONLINE no se puede establecer en ON cuando se crea un índice en una tabla temporal local.  
   
- OFF  
+ Apagado  
  Los bloqueos de tabla se aplican durante la operación de índice. Una operación de índice sin conexión que crea, vuelve a generar o quita un índice clúster, un índice espacial o un índice XML, o vuelve a generar o quita un índice no clúster, adquiere un bloqueo de modificación del esquema (Sch-M) en la tabla. Esto evita que todos los usuarios tengan acceso a la tabla subyacente durante la operación. Una operación de índice sin conexión que crea un índice no clúster adquiere un bloqueo compartido (S) en la tabla. Esto evita que se realicen actualizaciones en la tabla subyacente, pero permite la realización de operaciones de lectura, como instrucciones SELECT.  
   
 Para más información, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
@@ -433,7 +433,7 @@ RESUMABLE **=** { ON | **OFF**}
 
  OFF: la operación de índice no se puede reanudar.
 
-MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
+MAX_DURATION **=** *time* [**MINUTES**] se usa con **RESUMABLE = ON** (requiere **ONLINE = ON**).
 
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
@@ -451,10 +451,10 @@ ALLOW_ROW_LOCKS **=** { **ON** | OFF }
   
  Especifica si se permiten los bloqueos de fila. El valor predeterminado es ON.  
   
- ON  
+ ACTIVAR  
  Los bloqueos de fila se admiten al obtener acceso al índice. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina cuándo se usan los bloqueos de fila.  
   
- OFF  
+ Apagado  
  No se usan los bloqueos de fila.  
   
 ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
@@ -463,10 +463,10 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
  Especifica si se permiten bloqueos de página. El valor predeterminado es ON.  
   
- ON  
+ ACTIVAR  
  Se permiten bloqueos de página cuando se tiene acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina el momento en que se usan los bloqueos de página.  
   
- OFF  
+ Apagado  
  No se utilizan bloqueos de página.  
   
 > [!NOTE]
@@ -474,7 +474,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
 
  OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Especifica si se deben optimizar la contención de inserción de la última página. El valor predeterminado es OFF. Consulte la sección [Claves secuenciales](./create-index-transact-sql.md#sequential-keys) de la página CREATE INDEX para obtener más información.
 
@@ -568,13 +568,13 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  ONLINE **=** { ON  | **OFF** } \<as applies to single_partition_rebuild_index_option>  
  Especifica si un índice o una partición de índice de una tabla subyacente se puede regenerar en línea o sin conexión. Si **REBUILD** se realiza en línea (**ON**), los datos de esta tabla están disponibles para las consultas y la modificación de datos durante la operación de índice.  El valor predeterminado es **OFF**.  
   
- ON  
+ ACTIVAR  
  Los bloqueos de tabla de larga duración no se mantienen durante la operación de indización. Durante la fase principal de la operación de índice, solo se mantiene un bloqueo preventivo en la tabla de origen. Se necesita un bloqueo S en la tabla al inicio de la regeneración del índice y un bloqueo Sch-M en la tabla al final de la regeneración del índice en línea. Aunque ambos bloqueos son bloqueos de metadatos cortos, especialmente el bloqueo Sch-M debe esperar a que todas las transacciones de bloqueo se completen. Durante el tiempo de espera, bloqueo Sch-M bloquea las demás transacciones que esperen a este bloqueo al tener acceso a la misma tabla.  
   
 > [!NOTE]
 >  La regeneración de índice en línea puede establecer las opciones *low_priority_lock_wait* que se describen más adelante en esta sección.  
   
- OFF  
+ Apagado  
  Los bloqueos de tabla se aplican durante la operación de índice. Esto evita que todos los usuarios tengan acceso a la tabla subyacente durante la operación.  
   
  WAIT_AT_LOW_PRIORITY solo se usa con **ONLINE=ON**.  
@@ -632,7 +632,7 @@ ABORT
 
 Anular una operación de índice que está ejecutándose o en pausa y que se había declarado como reanudable. Tendrá que ejecutar explícitamente un comando **ABORT** para terminar una operación de regeneración de índice reanudable. La ejecución de una operación de índice reanudable no termina cuando esta da error o se pone en pausa, sino que la operación se queda en un estado de pausa indefinido.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 No es posible utilizar ALTER INDEX para volver a crear particiones en un índice o moverlo a un grupo de archivos distinto. No se puede usar esta instrucción para modificar la definición de índice; por ejemplo, para agregar o eliminar columnas o cambiar su orden. Utilice CREATE INDEX con la cláusula DROP_EXISTING para realizar estas operaciones.  
   
 Cuando no se especifica una opción de forma explícita, se aplica el valor actual. Por ejemplo, si no se especifica un valor FILLFACTOR en la cláusula REBUILD, se utilizará el valor de factor de relleno almacenado en el catálogo del sistema durante el proceso de regeneración. Para ver la configuración de las opciones de índice actuales, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
@@ -763,7 +763,7 @@ Las restricciones siguientes se aplican a los índices con particiones:
   
 -  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] no usa opciones de grupo de archivos ni secuencia de archivos.  
 -  Los índices de almacén de columnas no están disponibles en versiones anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. 
--  Las operaciones de índice reanudables están disponibles con [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]   
+-  Las operaciones de índice reanudables están disponibles con [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
 ## <a name="basic-syntax-example"></a>Ejemplo de sintaxis básica:   
   

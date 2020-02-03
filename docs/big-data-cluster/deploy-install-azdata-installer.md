@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b2e87cf96d6237521caeaae55802d2d72769603
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594337"
 ---
 # <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-with-windows-installer"></a>Instalación de `azdata` para administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con Windows Installer
@@ -24,7 +24,7 @@ En este artículo se describe cómo instalar `azdata` para clústeres de macroda
 
 >Para Linux (Ubuntu), consulte cómo [instalar `azdata` con el instalador](./deploy-install-azdata-linux-package.md).
 
-En este momento, no hay ningún administrador de paquetes para instalar `azdata` en otros sistemas operativos o distribuciones. Para estas plataformas, consulte cómo [instalar `azdata` sin el administrador de paquetes](./deploy-install-azdata.md).
+En este momento no hay ningún administrador de paquetes para instalar `azdata` en otros sistemas operativos o distribuciones. Para estas plataformas, consulte cómo [instalar `azdata` sin el administrador de paquetes](./deploy-install-azdata.md).
 
 ## <a name="install-azdata-with-the-microsoft-windows-installer"></a>Instalación de `azdata` con Microsoft Windows Installer
 

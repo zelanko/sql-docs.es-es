@@ -1,6 +1,6 @@
 ---
-title: Agregar fragmentos de código de Transact-SQL| Microsoft Docs
-ms.custom: ''
+title: Agregar fragmentos de código de Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 255fb72bea9ac6d967a69576804c2d70748f22d0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6f2878a93f241235bb725cd40afd169f4c7d31aa
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256870"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246474"
 ---
 # <a name="add-transact-sql-snippets"></a>Agregar fragmentos de código de Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68256870"
   
 2.  Seleccione el menú **Herramientas** y haga clic en **Administrador de fragmentos de código**.  
   
-3.  Haga clic en el botón **Agregar** .  
+3.  Haga clic en el botón **Agregar**.  
   
 4.  Navegue a la carpeta que contiene los fragmentos de código y haga clic en el botón **Seleccionar carpeta** .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68256870"
   
 2.  Seleccione el menú **Herramientas** y haga clic en **Administrador de fragmentos de código**.  
   
-3.  Haga clic en el botón **Importar** .  
+3.  Haga clic en el botón **Import** (Importar).  
   
 4.  Navegue a la carpeta que contiene el fragmento de código, haga clic en el archivo .snippet y haga clic en el botón **Abrir** .  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68256870"
   
 3.  Seleccione el menú **Herramientas** y haga clic en **Administrador de fragmentos de código**.  
   
-4.  Haga clic en el botón **Importar** .  
+4.  Haga clic en el botón **Import** (Importar).  
   
 5.  Navegue a la carpeta que contiene el archivo TryCatch.snippet, haga clic en el citado archivo y haga clic en el botón **Abrir** . No debe haber un fragmento de código TryCatch en la carpeta **Mis fragmentos de código** .  
   

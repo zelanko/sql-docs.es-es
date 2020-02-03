@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1df57079acd79fc5370d0f2f198dc2d624d6983
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658833"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Tipos de datos compatibles con Java y SQL Server
@@ -28,7 +28,7 @@ Actualmente se admiten los siguientes tipos de datos de SQL y de Java para los c
 | bit      | boolean | | |
 | Tinyint      | short      | | |
 | Smallint | short      | | |
-| int | INT      | | |
+| Int | int      | | |
 | Real | FLOAT      | | |
 | Bigint | long      | | |
 | FLOAT | double      | | |
@@ -42,13 +42,13 @@ Actualmente se admiten los siguientes tipos de datos de SQL y de Java para los c
 | char(n) | String | Solo se admiten cadenas UTF8 | |
 | varchar(n) | String | Solo se admiten cadenas UTF8 | |
 | ntext | String | Solo se admiten cadenas UTF8 | |
-| Date | java.sql.date  | | |
+| date | java.sql.date  | | |
 | NUMERIC | java.math.BigDecimal  | | |
 | Decimal | java.math.BigDecimal  | | |
 | money | java.math.BigDecimal  | | |
 | SMALLMONEY | java.math.BigDecimal  | | |
 | smalldatetime | java.sql.timestamp  | | |
-| DATETIME | java.sql.timestamp  | | |
+| datetime | java.sql.timestamp  | | |
 | datetime2 | java.sql.timestamp  | | |
 
 

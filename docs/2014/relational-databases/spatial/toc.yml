@@ -11,7 +11,7 @@
       href: circularstring.md
     - name: CompoundCurve
       href: compoundcurve.md
-    - name: Polígono
+    - name: Polygon
       href: polygon.md
     - name: CurvePolygon
       href: curvepolygon.md
@@ -19,9 +19,9 @@
       href: multipoint.md
     - name: MultiLineString
       href: multilinestring.md
-    - name: MultiPolígono
+    - name: MultiPolygon
       href: multipolygon.md
-    - name: Colección Geometry
+    - name: GeometryCollection
       href: geometrycollection.md
     - name: Identificadores de referencia espacial (SRID)
       href: spatial-reference-identifiers-srids.md

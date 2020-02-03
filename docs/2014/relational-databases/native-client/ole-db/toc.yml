@@ -28,7 +28,7 @@
       href: ../../native-client-ole-db-data-source-objects/session-properties-sql-server-native-client-ole-db-provider.md
     - name: Objetos de origen de datos persistentes
       href: ../../native-client-ole-db-data-source-objects/persisted-data-source-objects.md
-- name: Comandos
+- name: 'Comandos:'
   href: ../../native-client-ole-db-commands/commands.md
   items:
     - name: Sintaxis de comandos
@@ -170,7 +170,7 @@
   href: large-clr-user-defined-types-ole-db.md
 - name: Compatibilidad con FILESTREAM (OLE DB)
   href: filestream-support-ole-db.md
-- name: Transactions
+- name: Transacciones
   href: ../../native-client-ole-db-transactions/transactions.md
   items:
     - name: Compatibilidad con transacciones locales
@@ -179,7 +179,7 @@
       href: ../../native-client-ole-db-transactions/supporting-distributed-transactions.md
     - name: Niveles de aislamiento (OLE DB)
       href: ../../native-client-ole-db-transactions/isolation-levels-ole-db.md
-- name: Errores
+- name: Errors
   href: ../../native-client-ole-db-errors/errors.md
   items:
     - name: Códigos de retorno

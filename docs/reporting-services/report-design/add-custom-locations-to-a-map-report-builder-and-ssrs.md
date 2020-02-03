@@ -11,10 +11,10 @@ ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a30767791e18e0ba3162e8fd8f15df2f1c3dde6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582012"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>Agregar ubicaciones personalizadas a un mapa (Generador de informes y SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "65582012"
 > [!NOTE]  
 >  Al invalidar las propiedades de presentación de capa para el punto incrustado, las modificaciones que realice no son reversibles.  
   
- Para más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
+ Para obtener más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

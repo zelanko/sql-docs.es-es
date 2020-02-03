@@ -22,9 +22,9 @@
     - name: Implementar una extensión de procesamiento de datos
       href: data-processing/deploying-a-data-processing-extension.md
       items:
-        - name: 'Procedimientos: Implementar una extensión de procesamiento de datos en un servidor de informes'
+        - name: Cómo implementar una extensión de procesamiento de datos en un servidor de informes
           href: data-processing/deploying-a-data-processing-extension-to-a-report-server.md
-        - name: 'Procedimientos: Implementar una extensión de procesamiento de datos en el Diseñador de informes'
+        - name: Cómo implementar una extensión de procesamiento de datos en el Diseñador de informes
           href: data-processing/deploying-a-data-processing-extension-to-report-designer.md
     - name: Depurar el código de extensión de procesamiento de datos
       href: data-processing/debugging-data-processing-extension-code.md

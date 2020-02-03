@@ -296,7 +296,7 @@
           href: tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md
         - name: Incluir una tabla en un script
           href: tutorials/lesson-2-6-script-a-table.md
-    - name: 'Lección 3: Uso de plantillas, soluciones y proyectos de script'
+    - name: 'Lección 3: Trabajar con plantillas, soluciones, proyectos de script'
       href: tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md
       items:
         - name: Crear scripts mediante plantillas

@@ -16,10 +16,10 @@ ms.assetid: 67ed9447-7b10-4c87-98e7-f4c2e2470b3a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98f35916270d7cb7026e994cb11d564d70739c7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954552"
 ---
 # <a name="first-method-sqlserverresultset"></a>Método first (SQLServerResultSet)
@@ -40,7 +40,7 @@ public boolean first()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método first especifica este método first en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  

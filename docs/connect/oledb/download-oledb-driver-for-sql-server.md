@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc0ee4de32be9cf146b4e185d5e973972dbc0fd2
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72381844"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Descarga del controlador Microsoft OLE DB para SQL Server
@@ -24,7 +24,7 @@ La siguiente versión del controlador de Microsoft OLE DB para SQL Server está 
 
 - [Controlador Microsoft OLE DB 18.3.0 para SQL Server](https://go.microsoft.com/fwlink/?linkid=871294)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Notas de la versión del Controlador Microsoft OLE DB para SQL Server](release-notes-for-oledb-driver-for-sql-server.md)  
 [Requisitos del sistema del controlador OLE DB para SQL Server](system-requirements-for-oledb-driver-for-sql-server.md)  

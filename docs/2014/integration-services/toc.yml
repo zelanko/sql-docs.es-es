@@ -154,7 +154,7 @@
       href: integration-services-ssis-package-and-project-parameters.md
     - name: Parameterize Dialog Box
       href: parameterize-dialog-box.md
-    - name: Create Parameters
+    - name: Creación de parámetros
       href: create-parameters.md
     - name: Establecer valores de parámetro después de la implementación del proyecto
       href: set-parameter-values-after-the-project-is-deployed.md
@@ -224,114 +224,114 @@
       href: extending-packages-scripting/extending-packages-with-scripting.md
 - name: Tutoriales de Integration Services
   href: integration-services-tutorials.md
-- name: 'Tutorial de SSIS: Creación de un paquete ETL sencillo'
+- name: 'Tutorial de SSIS: Crear un paquete ETL sencillo'
   href: ssis-how-to-create-an-etl-package.md
   items:
-    - name: 'Lección 1: Creación del proyecto y el paquete básico'
+    - name: 'Lección 1: Crear el proyecto y el paquete básico'
       href: lesson-1-create-a-project-and-basic-package-with-ssis.md
       items:
-        - name: 'Paso 1: Creación de un proyecto de Integration Services'
+        - name: 'Paso 1: Crear un nuevo proyecto de Integration Services'
           href: lesson-1-1-creating-a-new-integration-services-project.md
-        - name: 'Paso 2: Adición y configuración de un administrador de conexiones de archivos planos'
+        - name: 'Paso 2: agregar y configurar un administrador de conexiones de archivos planos'
           href: lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md
-        - name: 'Paso 3: Adición y configuración de un administrador de conexiones OLE DB'
+        - name: 'Paso 3: agregar y configurar un administrador de conexiones OLE DB'
           href: lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md
-        - name: 'Paso 4: Adición de una tarea Flujo de datos al paquete'
+        - name: 'Paso 4: agregar una tarea de flujo de datos al paquete'
           href: lesson-1-4-adding-a-data-flow-task-to-the-package.md
-        - name: 'Paso 5: Adición y configuración del origen de archivo plano'
+        - name: 'Paso 5: Agregar y configurar el origen de archivo plano'
           href: lesson-1-5-adding-and-configuring-the-flat-file-source.md
-        - name: 'Paso 6: Adición y configuración de transformaciones de búsqueda'
+        - name: 'Paso 6: Agregar y configurar transformaciones de búsqueda'
           href: lesson-1-6-adding-and-configuring-the-lookup-transformations.md
-        - name: 'Paso 7: Adición y configuración del destino de OLE DB'
+        - name: 'Paso 7: agregar y configurar el destino de OLE DB'
           href: lesson-1-7-adding-and-configuring-the-ole-db-destination.md
         - name: 'Paso 8: Facilitar la comprensión del paquete de la lección 1'
           href: lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
-        - name: 'Paso 9: Prueba del paquete del tutorial de la lección 1'
+        - name: 'Paso 9: Probar el paquete del tutorial de la lección 1'
           href: lesson-1-9-testing-the-lesson-1-tutorial-package.md
-    - name: 'Lección 2: Adición de bucles'
+    - name: 'Lección 2: Agregar bucles'
       href: lesson-2-adding-looping-with-ssis.md
       items:
-        - name: 'Paso 1: Copia del paquete de la lección 1'
+        - name: 'Paso 1: copiar el paquete de la lección 1'
           href: lesson-2-1-copying-the-lesson-1-package.md
-        - name: 'Paso 2: Adición y configuración del contenedor de bucles Foreach'
+        - name: 'Paso 2: agregar y configurar el contenedor de bucles Foreach'
           href: lesson-2-2-adding-and-configuring-the-foreach-loop-container.md
-        - name: 'Paso 3: Modificación del Administrador de conexiones de archivos planos'
+        - name: 'Paso 3: Modificar el Administrador de conexiones de archivos planos'
           href: lesson-2-3-modifying-the-flat-file-connection-manager.md
-        - name: 'Paso 4: Prueba del paquete del tutorial de la lección 2'
+        - name: 'Paso 4: Probar el paquete del tutorial de la lección 2'
           href: lesson-2-4-testing-the-lesson-2-tutorial-package.md
-    - name: 'Lección 3: Adición de registro'
+    - name: 'Lección 3: Agregar registro'
       href: lesson-3-add-logging-with-ssis.md
       items:
-        - name: 'Paso 1: Copia del paquete de la lección 2'
+        - name: 'Paso 1: Copiar el paquete de la Lección 2'
           href: lesson-3-1-copying-the-lesson-2-package.md
-        - name: 'Paso 2: Adición y configuración de registro'
+        - name: 'Paso 2: Agregar y configurar el registro'
           href: lesson-3-2-adding-and-configuring-logging.md
-        - name: 'Paso 3: Prueba del paquete del tutorial de la lección 3'
+        - name: 'Paso 3: Probar el paquete del tutorial de la lección 3'
           href: lesson-3-3-testing-the-lesson-3-tutorial-package.md
-    - name: 'Lección 4: Adición de redirección de flujo de errores'
+    - name: 'Lección 4: Agregar redirección de flujo de errores'
       href: lesson-4-add-error-flow-redirection-with-ssis.md
       items:
-        - name: 'Paso 1: Copia del paquete de la lección 3'
+        - name: 'Paso 1: copiar el paquete de la lección 3'
           href: lesson-4-1-copying-the-lesson-3-package.md
-        - name: 'Paso 2: Creación de un archivo dañado'
+        - name: 'Paso 2: Crear un archivo dañado'
           href: lesson-4-2-creating-a-corrupted-file.md
-        - name: 'Paso 3: Adición de redirección de flujo de errores'
+        - name: 'Paso 3: Agregar redirección de flujo de errores'
           href: lesson-4-3-adding-error-flow-redirection.md
-        - name: 'Paso 4: Adición de un destino de archivo plano'
+        - name: 'Paso 4: Agregar un destino de archivo plano'
           href: lesson-4-4-adding-a-flat-file-destination.md
-        - name: 'Paso 5: Prueba del paquete del tutorial de la lección 4'
+        - name: 'Paso 5: Probar el paquete del tutorial de la lección 4'
           href: lesson-4-5-testing-the-lesson-4-tutorial-package.md
-    - name: 'Lección 5: Adición de configuraciones de paquete para el modelo de implementación de paquetes'
+    - name: 'Lección 5: Agregar configuraciones de paquete para el modelo de implementación de paquetes'
       href: lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
       items:
-        - name: 'Paso 1: Copia del paquete de la lección 4'
+        - name: 'Paso 1: Copiar el paquete de la lección 4'
           href: lesson-5-1-copying-the-lesson-4-package.md
-        - name: 'Paso 2: Habilitación y configuración de configuraciones de paquete'
+        - name: 'Paso 2: Habilitar y configurar las configuraciones de paquetes'
           href: lesson-5-2-enabling-and-configuring-package-configurations.md
-        - name: 'Paso 3: Modificación del valor de configuración de la propiedad Directory'
+        - name: 'Paso 3: Modificar el valor de configuración de la propiedad Directory'
           href: lesson-5-3-modifying-the-directory-property-configuration-value.md
-        - name: 'Paso 4: Prueba del paquete del tutorial de la lección 5'
+        - name: 'Paso 4: Probar el paquete del tutorial de la lección 5'
           href: lesson-5-4-testing-the-lesson-5-tutorial-package.md
-    - name: 'Lección 6: Uso de parámetros con el modelo de implementación de proyectos'
+    - name: 'Lección 6: usar parámetros con el modelo de implementación de proyectos'
       href: lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
       items:
-        - name: 'Paso 1: Copia del paquete de la lección 5'
+        - name: 'Paso 1: copiar el paquete de la lección 5'
           href: lesson-6-1-copying-the-lesson-5-package.md
-        - name: 'Paso 2: Convertir el proyecto al modelo de implementación del proyectos'
+        - name: 'Paso 2: Convertir el proyecto al modelo de implementación de proyectos'
           href: lesson-6-2-converting-the-project-to-the-project-deployment-model.md
-        - name: 'Paso 3: Prueba del paquete de la lección 6'
+        - name: 'Paso 3: Probar el paquete de la lección 6'
           href: lesson-6-3-testing-the-lesson-6-package.md
-        - name: 'Paso 4: Implementación del paquete de la lección 6'
+        - name: 'Paso 4: implementar el paquete de la lección 6'
           href: lesson-6-4-deploying-the-lesson-6-package.md
-- name: 'Tutorial de SSIS: Implementación de paquetes'
+- name: 'Tutorial de SSIS: Implementar paquetes'
   href: deploy-packages-with-ssis.md
   items:
     - name: 'Lección 1: Preparar la creación del paquete de implementación'
       href: lesson-1-preparing-to-create-the-deployment-bundle.md
       items:
-        - name: 'Paso 1: Creación de las carpetas de trabajo y las variables de entorno'
+        - name: 'Paso 1: crear carpetas de trabajo y variables de entorno'
           href: lesson-1-1-creating-working-folders-and-environment-variables.md
-        - name: 'Paso 2: Creación del proyecto de implementación'
+        - name: 'Paso 2: crear el proyecto de implementación'
           href: lesson-1-2-creating-the-deployment-project.md
-        - name: 'Paso 3: Adición de paquetes y otros archivos'
+        - name: 'Paso 3: agregar paquetes y otros archivos'
           href: lesson-1-3-adding-packages-and-other-files.md
-        - name: 'Paso 4: Adición de configuraciones de paquete'
+        - name: 'Paso 4: Agregar configuraciones de paquetes'
           href: lesson-1-4-adding-package-configurations.md
-        - name: 'Paso 5: Prueba de los paquetes actualizados'
+        - name: 'Paso 5: Probar los paquetes actualizados'
           href: lesson-1-5-testing-the-updated-packages.md
-    - name: 'Lección 2: Creación del paquete de implementación'
+    - name: 'Lección 2: Crear el paquete de implementación'
       href: lesson-2-create-the-deployment-bundle-in-ssis.md
       items:
-        - name: 'Paso 1: Compilación de la utilidad de implementación'
+        - name: 'Paso 1: generar la utilidad de implementación'
           href: lesson-2-1-building-the-deployment-utility.md
-        - name: 'Paso 2: Comprobación del paquete de implementación'
+        - name: 'Paso 2: Comprobar el paquete de implementación'
           href: lesson-2-2-verifying-the-deployment-bundle.md
-    - name: 'Lección 3: Instalación de paquetes'
+    - name: 'Lección 3: Instalar paquetes'
       href: lesson-3-install-ssis-package.md
       items:
-        - name: 'Paso 1: Copia del paquete de implementación'
+        - name: 'Paso 1: Copiar el paquete de implementación'
           href: lesson-3-1-copying-the-deployment-bundle.md
-        - name: 'Paso 2: Ejecución del Asistente para la instalación de paquetes'
+        - name: 'Paso 2: ejecutar el Asistente para la instalación de paquetes'
           href: lesson-3-2-running-the-package-installation-wizard.md
-        - name: 'Paso 3: Prueba de los paquetes implementados'
+        - name: 'Paso 3: Probar los paquetes implementados'
           href: lesson-3-3-testing-the-deployed-packages.md

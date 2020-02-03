@@ -11,7 +11,7 @@
       href: administration/best-practices-for-replication-administration.md
     - name: Preguntas más frecuentes
       href: administration/frequently-asked-questions-for-replication-administrators.md
-- name: Guías de procedimientos
+- name: Guías paso a paso
   items:
     - name: Administrar
       items:
@@ -54,13 +54,13 @@
               href: agents/start-and-stop-a-replication-agent-sql-server-management-studio.md
             - name: Parámetros del símbolo del sistema
               href: agents/view-and-modify-replication-agent-command-prompt-parameters.md
-    - name: Monitor
+    - name: Supervisión
       href: monitoring-replication.md
       items:
         - name: Monitor de replicación
           href: monitor/overview-of-the-replication-monitor-interface.md
           items:
-            - name: Administrar permisos
+            - name: Administración de permisos
               href: monitor/allow-non-administrators-to-use-replication-monitor.md
             - name: Adición o eliminación de publicadores
               href: monitor/add-and-remove-publishers-from-replication-monitor.md
@@ -76,7 +76,7 @@
               href: monitor/set-thresholds-and-warnings-in-replication-monitor.md
             - name: Almacenamiento en caché y actualización
               href: monitor/caching-refresh-and-replication-monitor-performance.md
-            - name: Vista del estado
+            - name: Ver estado
               href: monitor/view-publication-and-subscription-status-in-replication-monitor.md
             - name: Vista de información y realización de tareas
               href: monitor/view-information-and-perform-tasks-replication-monitor.md
@@ -97,7 +97,7 @@
           href: publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md
         - name: Columnas cifradas
           href: security/replicate-data-in-encrypted-columns-sql-server-management-studio.md
-    - name: Configurar la replicación
+    - name: Configuración de la replicación
       items:
         - name: Configuración de distribución
           href: configure-distribution.md
@@ -128,7 +128,7 @@
               href: publish/set-the-expiration-period-for-subscriptions.md
             - name: Especificación de opciones del esquema
               href: publish/specify-schema-options.md
-            - name: Replicar cambios de esquema
+            - name: Replicación de cambios de esquema
               href: publish/replicate-schema-changes.md
             - name: Administración de columnas de identidad
               href: publish/manage-identity-columns.md
@@ -213,9 +213,9 @@
           href: administration/enhance-transactional-replication-performance.md
     - name: Seguridad
       items:
-        - name: Distribuidor
+        - name: Distribuidor.
           href: security/secure-the-distributor.md
-        - name: publicador
+        - name: Publicador
           href: security/secure-the-publisher.md
         - name: Suscriptor
           href: security/secure-the-subscriber.md
@@ -342,7 +342,7 @@
               href: merge/join-filters.md
             - name: Filtros de fila con parámetros
               href: merge/parameterized-filters-parameterized-row-filters.md
-        - name: replicación transaccional
+        - name: Replicación transaccional
           href: transactional/transactional-replication.md
           items:
             - name: Opciones de artículos
@@ -432,7 +432,7 @@
                   href: non-sql/backup-and-restore-for-oracle-publishers.md
                 - name: Objetos creados
                   href: non-sql/objects-created-on-the-oracle-publisher.md
-                - name: Solucionar problemas
+                - name: Solución de problemas
                   href: non-sql/troubleshooting-oracle-publishers.md
         - name: Suscriptores que no son de SQL
           href: non-sql/non-sql-server-subscribers.md
@@ -489,7 +489,7 @@
             - name: Información del publicador
               href: publisher-information-publications.md
               items:
-                - name: replicación transaccional
+                - name: Replicación transaccional
                   items:
                     - name: Lista de supervisión de suscripciones
                       href: publisher-information-subscription-watch-list-transactional.md
@@ -534,7 +534,7 @@
         - name: Configure Distribution Wizard
           href: configure-distribution-wizard.md
           items:
-            - name: Distribuidor
+            - name: Distribuidor.
               href: distributor.md
             - name: Carpeta de instantáneas
               href: snapshot-folder.md
@@ -614,7 +614,7 @@
           items:
             - name: Replicación de mezcla
               href: microsoft-replication-conflict-viewer-merge-replication.md
-            - name: replicación transaccional
+            - name: Replicación transaccional
               href: microsoft-replication-conflict-viewer-transactional-replication.md
             - name: Solucionador interactivo de conflictos de replicación de Microsoft
               href: microsoft-replication-interactive-conflict-resolver.md

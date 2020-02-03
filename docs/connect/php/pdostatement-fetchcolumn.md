@@ -11,10 +11,10 @@ ms.assetid: 6ebf385c-ddb0-4c53-9dc6-7df0d3740b04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4021a6a5c550ea9674c0bf699462eece1d9c2f9b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993036"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
@@ -35,7 +35,7 @@ $*column_number*: un valor entero opcional que indica el número de columna de b
 ## <a name="return-value"></a>Valor devuelto  
 Una columna o  el valor False si no hay más filas.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 En la versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], se agregó compatibilidad con PDO.  
   
 ## <a name="example"></a>Ejemplo  

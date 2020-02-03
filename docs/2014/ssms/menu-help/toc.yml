@@ -23,7 +23,7 @@
   items:
     - name: Opciones (Entorno - Página General)
       href: options-environment-general-page.md
-    - name: 'Opciones (Entorno: página Fuentes y colores)'
+    - name: 'Opciones (entorno: página Fuentes y colores)'
       href: options-environment-fonts-and-colors-page.md
     - name: Options (Environment/Keyboard Page)
       href: options-environment-keyboard-page.md

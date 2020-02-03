@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9a13b2a72e66d069d0a3161bab4af8ce4d430157
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570706"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migración del modo nativo al modo de SharePoint (SSRS)
@@ -37,11 +37,11 @@ ms.locfileid: "65570706"
   
     -   El script de rss de ejemplo de CodePlex, [Script Reporting Services RS.exe que migra contenido de un servidor de informes a otro](https://azuresql.codeplex.com/releases/view/115207).  
   
-    -   [Secuencias de comandos y PowerShell con Reporting Services](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)  
+    -   [Scripting y PowerShell con Reporting Services](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)  
   
  En la tabla siguiente se resumen los objetos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que puede migrar mediante scripts:  
   
-|Objeto|Se puede incluir en scripts|Comentarios|  
+|Object|Se puede incluir en scripts|Comentarios|  
 |------------|---------------------|--------------|  
 |Informes|Sí|Tras la migración, vuelva a escribir las contraseñas para los orígenes de datos.|  
 |Orígenes de datos|Sí|Tras la migración, vuelva a vincular los informes con los orígenes de datos.|  
@@ -49,7 +49,7 @@ ms.locfileid: "65570706"
 |Conjuntos de datos|Sí||  
 |Elementos de informe||Tras la migración, compruebe o actualice la ruta de acceso a los elementos de informe.|  
 |Programaciones|Sí|Vea el método ListSchedules en [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md).|  
-|Suscripciones|Sí|Vea el método List Subscriptions en [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) y el método <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> .|  
+|Suscripciones|sí|Vea el método List Subscriptions en [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) y el método <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> .|  
 |Instantáneas|||
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

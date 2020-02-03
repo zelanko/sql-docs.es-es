@@ -1,6 +1,6 @@
 ---
-title: Ventana Resultados espaciales | Microsoft Docs
-ms.custom: ''
+title: Ventana Resultados espaciales
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -10,12 +10,12 @@ ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20cc4b1c97e7153fc93d810fba18742a0bb2e24b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 523cd3ffd5b72c08106e7d128e74138001619fdb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267719"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253614"
 ---
 # <a name="spatial-results-window"></a>Ventana Resultados espaciales
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68267719"
  Esta opción no está disponible si solo se devuelven instancias de punto en una consulta.  
   
  **Seleccionar proyección**  
- Muestre los datos geográficos en una de las cuatro proyecciones: Equirectangular, Mercator, Robinson o Bonne.  
+ Muestre los datos de geografía en una de estas cuatro proyecciones: Equirectangular, Mercator, Robinson o Bonne.  
   
  Esta opción no está disponible para los datos de geometría.  
   

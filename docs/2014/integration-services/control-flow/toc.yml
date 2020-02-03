@@ -185,7 +185,7 @@
           href: select-a-package.md
     - name: 'Notificar al operador, tarea'
       href: notify-operator-task.md
-    - name: Tarea Volver a generar índice
+    - name: 'Volver a generar índice, tarea'
       href: rebuild-index-task.md
     - name: Tarea Reorganizar índice
       href: reorganize-index-task.md

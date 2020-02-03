@@ -1,6 +1,6 @@
 ---
-title: Conectar con Almacenamiento de Microsoft Azure | Microsoft Docs
-ms.custom: ''
+title: Conectar con Almacenamiento de Microsoft Azure
+ms.custom: seo-lt-2019
 ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f4b05cc0ebd3c3d230b5f42bb46b74885e8e1e6
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: eb943430136a1406ea18b9c387c98fbec6fd27cf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155682"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245021"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Conectar con Almacenamiento de Microsoft Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,12 +27,12 @@ Use el cuadro de diálogo **Conexión de Azure Storage** para especificar una cu
 ## <a name="options"></a>Opciones  
 Especifique la siguiente información sobre su cuenta de Azure y, a continuación, haga clic en **Siguiente** para continuar.  
   
-1.  **Cuenta de almacenamiento** : especifique el nombre de la cuenta de almacenamiento.
+1.  **Cuenta de almacenamiento**: especifique el nombre de la cuenta de almacenamiento.
 
    >[!NOTE]
    > Solo se puede conectar a [Cuentas de almacenamiento de uso general](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services). La conexión a otros tipos de cuentas de almacenamiento puede dar lugar a un error similar al siguiente:
    >
-   >  El valor para uno de los encabezados HTTP no tiene el formato correcto. (Microsoft.SqlServer.StorageClient).
+   >  El valor de uno de los encabezados HTTP no tiene el formato correcto. (Microsoft.SqlServer.StorageClient).
    >
    >  El servidor remoto devolvió un error: (400) Solicitud incorrecta. (Sistema)
 

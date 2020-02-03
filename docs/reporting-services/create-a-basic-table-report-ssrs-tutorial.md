@@ -13,10 +13,10 @@ ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af41da75d553794019f1d01c8b8f5bb6aba80622
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65103314"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Crear un informe de tabla básico (Tutorial de SSRS)
@@ -61,6 +61,6 @@ También debe disponer de permisos de solo lectura para recuperar datos de la ba
 
 [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Tutoriales de Reporting Services](reporting-services-tutorials-ssrs.md) ¿Más preguntas? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

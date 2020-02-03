@@ -9,10 +9,10 @@ ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59de5d316bcef9fb2842d26ef2e7a1154270f5cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63129625"
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>Diseñar un informe para dispositivos móviles de Reporting Services para una tableta o teléfono
@@ -37,7 +37,7 @@ Ahora que ya ha [creado un informe para dispositivos móviles de Reporting Servi
   
    ![SSMRP_PhonePreview](../../reporting-services/mobile-reports/media/ssmrp-phonepreview.png)  
   
-### <a name="see-also"></a>Vea también  
+### <a name="see-also"></a>Consulte también  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Creación y publicación de informes móviles con el Publicador de informes de SQL Server Mobile)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   

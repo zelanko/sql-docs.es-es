@@ -17,13 +17,13 @@ ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 861e686d4a64b1030224b8ec35551fade4188ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992830"
 ---
-# <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
+# <a name="sqlsrv_client_info"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Devuelve información sobre la pila de conexión y cliente.  
@@ -43,7 +43,7 @@ Se devuelve una matriz asociativa con las claves descritas en la tabla siguiente
   
 **Para PHP (versiones 3.2 y 3.1 de SQL Server)** :  
   
-|Key|Descripción|  
+|Clave|Descripción|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|Versión de ODBC (xx.yy)|  
@@ -52,7 +52,7 @@ Se devuelve una matriz asociativa con las claves descritas en la tabla siguiente
   
 **Para PHP (versiones 3.0 y 2.0 de SQL Server)** :  
   
-|Key|Descripción|  
+|Clave|Descripción|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10.DLL (versión 2.0 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)])|  
 |DriverODBCVer|Versión de ODBC (xx.yy)|  

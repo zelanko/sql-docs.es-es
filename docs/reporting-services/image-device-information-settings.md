@@ -12,16 +12,16 @@ ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 295784ba9f2c14ce0f73f9639ec6ed129e447e76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65503079"
 ---
 # <a name="image-device-information-settings"></a>Configuración de la información del dispositivo de imagen
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato IMAGE.  
   
-|Configuración|Valor|  
+|Configuración|Value|  
 |-------------|-----------|  
 |**Columnas**|Número de columnas que se van a establecer para el informe. Este valor invalida la configuración original del informe.|  
 |**ColumnSpacing**|Espacio entre las columnas que se va a establecer para el informe. Este valor invalida la configuración original del informe.|  

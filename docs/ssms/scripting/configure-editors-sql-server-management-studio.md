@@ -1,6 +1,6 @@
 ---
-title: Configurar editores (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Configurar editores (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfc2f81c95b25397da77aa046ba80edeecaaa7a7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2c70980653cd23241d0021d85a507e55573cf43b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256460"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253963"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurar editores (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68256460"
 |----------------------|-----------|  
 |Describe cómo se especifica que un editor debe abrirse haciendo doble clic en un archivo con la extensión especificada en el Explorador de Windows.|[Asociar extensiones de archivo a un editor de código](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)|  
 |Describe cómo se personalizan las fuentes para mejorar la legibilidad del código y del texto.|[Cambiar el color, el tamaño y el estilo de la fuente](../../relational-databases/scripting/change-font-color-size-and-style.md)|  
-|Describe cómo se consultan las propiedades.|[Utilizar la ventana Propiedades en Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)|  
+|Describe cómo se consultan las propiedades.|[Usar la ventana Propiedades en Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)|  
 |Ubicación de las páginas de Ayuda F1 de los cuadros de diálogo de opciones de editores.|[Páginas de Opciones de consulta (Ayuda F1)](https://msdn.microsoft.com/library/fad98caa-8a29-4b88-8464-f60a5c4fc00e)|  
   
   

@@ -17,7 +17,7 @@
               tocHref: /sql/database-engine/
               topicHref: /sql/database-engine/sql-server-database-engine-overview
               items:
-                - name: Configurar
+                - name: Configuración
                   tocHref: /sql/database-engine/configure-windows/
                   topicHref: /sql/database-engine/configure-windows/configure-database-engine-instances-sql-server
                 - name: Intercalaciones
@@ -45,7 +45,7 @@
                 - name: Seguimiento de SQL
                   tocHref: /sql/relational-databases/sql-trace/
                   topicHref: /sql/relational-databases/sql-trace/sql-trace
-                - name: Profiler
+                - name: Generador de perfiles
                   tocHref: /sql/tools/sql-server-profiler/
                   topicHref: /sql/tools/sql-server-profiler/sql-server-profiler
                 - name: Seguimiento de cambios
@@ -177,7 +177,7 @@
                 - name: Flujo de control
                   tocHref: /sql/integration-services/control-flow/
                   topicHref: /sql/integration-services/control-flow/control-flow
-                - name: Flujo de datos
+                - name: Data Flow
                   tocHref: /sql/integration-services/data-flow/
                   topicHref: /sql/integration-services/data-flow/data-flow
                   items:
@@ -190,7 +190,7 @@
                 - name: Importar y exportar datos
                   tocHref: /sql/integration-services/import-export-data/
                   topicHref: /sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard
-                - name: Solucionar problemas
+                - name: Solución de problemas
                   tocHref: /sql/integration-services/troubleshooting/
                   topicHref: /sql/integration-services/troubleshooting/troubleshooting-tools-for-package-development
                 - name: Connection Manager
@@ -199,16 +199,16 @@
                 - name: Expresiones
                   tocHref: /sql/integration-services/expressions/
                   topicHref: /sql/integration-services/expressions/integration-services-ssis-expressions
-                - name: ssNoVersion
+                - name: Servicio
                   tocHref: /sql/integration-services/service/
                   topicHref: /sql/integration-services/service/integration-services-service-ssis-service
                 - name: Servidor y catálogo
                   tocHref: /sql/integration-services/catalog/
                   topicHref: /sql/integration-services/catalog/integration-services-ssis-server-and-catalog
-                - name: .
+                - name: Paquetes
                   tocHref: /sql/integration-services/packages/
                   topicHref: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
-                - name: Monitor
+                - name: Supervisión
                   tocHref: /sql/integration-services/performance/
                   topicHref: /sql/integration-services/performance/monitor-running-packages-and-other-operations
                 - name: Seguridad
@@ -245,7 +245,7 @@
                 - name: Procedimientos almacenados y OLE
                   tocHref: /sql/relational-databases/stored-procedures/
                   topicHref: /sql/relational-databases/stored-procedures/stored-procedures-database-engine
-                - name: Buscar
+                - name: Search
                   tocHref: /sql/relational-databases/search/
                   topicHref: /sql/relational-databases/search/full-text-search
                 - name: Funciones definidas por el usuario
@@ -300,10 +300,10 @@
                     - name: Errores y eventos
                       tocHref: /sql/relational-databases/replication/errors-events/
                       topicHref: /sql/relational-databases/replication/errors-events/errors-events-replication
-                    - name: Mezcla
+                    - name: Merge
                       tocHref: /sql/relational-databases/replication/merge/
                       topicHref: /sql/relational-databases/replication/merge/merge-replication
-                    - name: Monitor
+                    - name: Supervisión
                       tocHref: /sql/relational-databases/replication/monitor/
                       topicHref: /sql/relational-databases/replication/monitoring-replication
                     - name: Ajeno a SQL
@@ -369,7 +369,7 @@
                 - name: Referencia del proveedor WMI
                   tocHref: /sql/reporting-services/wmi-provider-library-reference/
                   topicHref: /sql/reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs
-                - name: Solucionar problemas
+                - name: Solución de problemas
                   tocHref: /sql/reporting-services/troubleshooting/
                   topicHref: /sql/reporting-services/troubleshooting/errors-and-events-reference-reporting-services
                 - name: Integración de aplicaciones
@@ -416,13 +416,13 @@
                     - name: Propiedades
                       tocHref: /sql/analysis-services/scripting/properties/
                       topicHref: /sql/analysis-services/scripting/properties/properties-assl
-                    - name: Tipos de datos
+                    - name: Tipo de datos
                       tocHref: /sql/analysis-services/scripting/data-type/
                       topicHref: /sql/analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl
                 - name: XMLA
                   tocHref: /sql/analysis-services/xmla/
                   topicHref: /sql/analysis-services/xmla/xml-for-analysis-xmla-reference
-            - name: Instalar SQL Server
+            - name: Instalación de SQL Server
               tocHref: /sql/database-engine/install-windows/
               topicHref: /sql/database-engine/install-windows/installation-for-sql-server
             - name: Tutorial de T-SQL

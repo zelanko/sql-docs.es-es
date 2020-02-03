@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: be1cc04f4ee684fd2c97dd638038c6ce79d666fd
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844583"
 ---
 # <a name="extended-events-for-stretch-database"></a>Extended Events for Stretch Database (Eventos extendidos de Stretch Database)
@@ -81,5 +81,5 @@ stretch_table_validation_error|Informa de la finalización de la validación par
 stretch_unprovision_table_start|Informa del inicio de la anulación del aprovisionamiento de la tabla de ajuste  
   
 ## <a name="see-also"></a>Consulte también  
-[Administrar y solucionar problemas de Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+[Administración y solución de problemas de Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
 

@@ -11,10 +11,10 @@ ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93bad991b56928db0d7b872b13904385d79ae788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014840"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Actualización de datos (controladores de Microsoft para PHP para SQL Server)
@@ -34,8 +34,8 @@ Los pasos para utilizar los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md
   
 |Tema|Descripción|  
 |---------|---------------|  
-|[Cómo realizar consultas con parámetros](../../connect/php/how-to-perform-parameterized-queries.md)|Describe cómo realizar consultas con parámetros.|  
-|[Cómo enviar datos como una secuencia](../../connect/php/how-to-send-data-as-a-stream.md)|Describe cómo transmitir datos al servidor.|  
+|[Realización de consultas con parámetros](../../connect/php/how-to-perform-parameterized-queries.md)|Describe cómo realizar consultas con parámetros.|  
+|[Envío de datos como una secuencia](../../connect/php/how-to-send-data-as-a-stream.md)|Describe cómo transmitir datos al servidor.|  
 |[Realización de transacciones](../../connect/php/how-to-perform-transactions.md)|Describe cómo utilizar las funciones de **sqlsrv** para realizar transacciones.|  
   
 ## <a name="see-also"></a>Consulte también  

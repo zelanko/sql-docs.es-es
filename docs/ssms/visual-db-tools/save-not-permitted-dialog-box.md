@@ -1,10 +1,9 @@
 ---
-title: Cuadro de diálogo Guardar (no se permite) | Microsoft Docs
-ms.custom: ''
+title: Guardar (no se permite), (cuadro de diálogo)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84cfbc428c617126c3e895b4dafc65c816b386e0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 9dde13a71dac042d8bf5c351cb4f9655f322acd8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266893"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255123"
 ---
 # <a name="save-not-permitted-dialog-box"></a>Guardar (no se permite), (cuadro de diálogo)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

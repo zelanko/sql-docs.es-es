@@ -1,6 +1,6 @@
 - name: Tutoriales de SQL Server 2014
   href: tutorials-for-sql-server-2014.md
-- name: 'Tutorial: Escritura de instrucciones Transact-SQL +'
+- name: 'Tutorial: Escribir instrucciones Transact-SQL +'
   href: ../t-sql/tutorial-writing-transact-sql-statements.md
 - name: Tutoriales de minería de datos
   href: ../analysis-services/data-mining-tutorials-analysis-services.md
@@ -8,7 +8,7 @@
     - name: Tutorial básico de minería de datos
       href: basic-data-mining-tutorial.md
       items:
-        - name: 'Lección 1: Preparación de la base de datos de Analysis Services'
+        - name: 'Lección 1: Preparar la base de datos de Analysis Services'
           href: lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md
           items:
             - name: Crear un proyecto de Analysis Services
@@ -17,7 +17,7 @@
               href: creating-a-data-source-basic-data-mining-tutorial.md
             - name: Crear una vista del origen de datos
               href: creating-a-data-source-view-basic-data-mining-tutorial.md
-        - name: 'Lección 2: Compilación de una estructura de distribución de correo directo'
+        - name: 'Lección 2: Generar una estructura de distribución de correo directo'
           href: lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md
           items:
             - name: Crear una estructura del modelo de minería de datos de distribución de correo directo
@@ -26,14 +26,14 @@
               href: specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md
             - name: Especificar un conjunto de datos de pruebas para la estructura
               href: specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md
-        - name: 'Lección 3: Adición y procesamiento de modelos'
+        - name: 'Lección 3: Agregar y procesar los modelos'
           href: lesson-3-adding-and-processing-models.md
           items:
             - name: Agregar modelos nuevos a la estructura de correo de destino
               href: adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md
             - name: Procesar los modelos de la estructura de distribución de correo directo
               href: processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md
-        - name: 'Lección 4: Exploración de los modelos de correo directo'
+        - name: 'Lección 4: Explorar los modelos de correo directo'
           href: lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md
           items:
             - name: Explorar el modelo de árbol de decisión
@@ -42,14 +42,14 @@
               href: exploring-the-clustering-model-basic-data-mining-tutorial.md
             - name: Explorar el modelo Bayes naive
               href: exploring-the-naive-bayes-model-basic-data-mining-tutorial.md
-        - name: 'Lección 5: Prueba de los modelos'
+        - name: 'Lección 5: Probar los modelos'
           href: lesson-5-testing-models-basic-data-mining-tutorial.md
           items:
             - name: Probar la exactitud con gráficos de mejora respecto al modelo predictivo
               href: testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md
             - name: Probar un modelo filtrado
               href: testing-a-filtered-model-basic-data-mining-tutorial.md
-        - name: 'Lección 6: Creación y uso de predicciones'
+        - name: 'Lección 6: Crear y trabajar con predicciones'
           href: lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md
           items:
             - name: Crear predicciones
@@ -59,12 +59,12 @@
     - name: Tutorial intermedio de minería de datos
       href: intermediate-data-mining-tutorial-analysis-services-data-mining.md
       items:
-        - name: 'Lección 1: Creación de la solución de minería de datos intermedia'
+        - name: 'Lección 1: Crear la solución de minería de datos intermedia'
           href: lesson-1-create-solution-intermediate-data-mining-tutorial.md
           items:
             - name: Crear una solución y un origen de datos
               href: creating-a-solution-and-data-source-intermediate-data-mining-tutorial.md
-        - name: 'Lección 2: Creación de un escenario de pronóstico'
+        - name: 'Lección 2: generar un escenario de pronóstico'
           href: lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md
           items:
             - name: Agregar una vista del origen de datos para las previsiones
@@ -90,7 +90,7 @@
                   href: time-series-predictions-replacement-data-intermediate-data-mining.md
             - name: Comparar las predicciones de los modelos de predicción
               href: comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md
-        - name: 'Lección 3: Creación de un escenario de cesta de la compra'
+        - name: 'Lección 3: Generar un escenario de cesta de la compra'
           href: lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md
           items:
             - name: Agregar una vista del origen de datos con tablas anidadas
@@ -105,7 +105,7 @@
               href: filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md
             - name: Predecir asociaciones
               href: predicting-associations-intermediate-data-mining-tutorial.md
-        - name: 'Lección 4: Creación de un escenario de agrupación en clústeres de secuencia'
+        - name: 'Lección 4: Generar un escenario de agrupación en clústeres de secuencia'
           href: lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md
           items:
             - name: Crear una estructura del modelo de minería de datos de agrupación en clústeres de secuencia
@@ -118,7 +118,7 @@
               href: creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md
             - name: Crear predicciones en un modelo de agrupación en clústeres de secuencia
               href: create-predictions-on-model-intermediate-data-mining-tutorial.md
-        - name: 'Lección 5: Creación de modelos de red neuronal y de regresión logística'
+        - name: 'Lección 5: Generar modelos de red neuronal y de regresión logística'
           href: lesson-5-build-models-intermediate-data-mining-tutorial.md
           items:
             - name: Agregar una vista del origen de datos para datos del centro de llamadas
@@ -131,45 +131,45 @@
               href: add-logistic-regression-model-to-call-center-intermediate-data-mining.md
             - name: Crear predicciones para los modelos de centro de llamadas (Tutorial intermedio de minería de datos)
               href: create-predictions-call-center-models-intermediate-data-mining-tutorial.md
-    - name: 'Creación y consulta de modelos de minería de datos con DMX: Tutoriales'
+    - name: 'Crear y consultar modelos de minería de datos con DMX: tutoriales'
       href: create-query-data-mining-models-dmx-tutorials.md
       items:
         - name: Tutorial DMX de Bike Buyer
           href: bike-buyer-dmx-tutorial.md
           items:
-            - name: 'Lección 1: Creación de la estructura de minería de datos de Bike Buyer'
+            - name: 'Lección 1: Crear la estructura de minería de datos de Bike Buyer'
               href: lesson-1-creating-the-bike-buyer-mining-structure.md
-            - name: 'Lección 2: Adición de modelos de minería de datos a la estructura de minería de datos de Bike Buyer'
+            - name: 'Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de Bike Buyer'
               href: lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md
-            - name: 'Lección 3: Procesamiento de la estructura de minería de datos de Bike Buyer'
+            - name: 'Lección 3: Procesar la estructura de minería de datos de Bike Buyer'
               href: lesson-3-processing-the-bike-buyer-mining-structure.md
-            - name: 'Lección 4: Examen de los modelos de minería de datos de Bike Buyer'
+            - name: 'Lección 4: Examinar los modelos de minería de datos de Bike Buyer'
               href: lesson-4-browsing-the-bike-buyer-mining-models.md
-            - name: 'Lección 5: Ejecución de consultas de predicción'
+            - name: 'Lección 5: Ejecutar consultas de predicción'
               href: lesson-5-executing-prediction-queries.md
         - name: Tutorial DMX de Market Basket
           href: market-basket-dmx-tutorial.md
           items:
-            - name: 'Lección 1: Creación de la estructura de minería de la cesta de la compra'
+            - name: 'Lección 1: Crear la estructura de minería de la cesta de la compra'
               href: lesson-1-creating-the-market-basket-mining-structure.md
-            - name: 'Lección 2: Adición de modelos de minería a la estructura de minería cesta de la compra'
+            - name: 'Lección 2: Agregar modelos de minería a la estructura de minería cesta de la compra'
               href: lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md
-            - name: 'Lección 3: Procesar la estructura de minería de datos Market Basket'
+            - name: 'Lección 3: Procesar la estructura de minería de datos de la cesta de la compra'
               href: lesson-3-processing-the-market-basket-mining-structure.md
-            - name: 'Lección 4: Ejecución de predicciones de cesta de la compra'
+            - name: 'Lección 4: Ejecutar predicciones de cesta de la compra'
               href: lesson-4-executing-market-basket-predictions.md
         - name: Tutorial DMX de predicción de series temporales
           href: time-series-prediction-dmx-tutorial.md
           items:
-            - name: 'Lección 1: Creación de un modelo de minería de datos de serie temporal y una estructura de minería de datos'
+            - name: 'Lección 1: Crear un modelo de minería de datos de serie temporal y una estructura de minería de datos'
               href: lesson-1-creating-a-time-series-mining-model-and-mining-structure.md
-            - name: 'Lección 2: Adición de modelos de minería de datos a la estructura de minería de datos de serie temporal'
+            - name: 'Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de serie temporal'
               href: lesson-2-adding-mining-models-to-the-time-series-mining-structure.md
-            - name: 'Lección 3: Procesamiento de la estructura de serie temporal y los modelos'
+            - name: 'Lección 3: Procesar la estructura de serie temporal y los modelos'
               href: lesson-3-processing-the-time-series-structure-and-models.md
-            - name: 'Lección 4: Creación de predicciones de serie temporal con DMX'
+            - name: 'Lección 4: Crear predicciones de serie temporal con DMX'
               href: lesson-4-creating-time-series-predictions-using-dmx.md
-            - name: 'Lección 5: Extensión del modelo de serie temporal'
+            - name: 'Lección 5: Extender el modelo de serie temporal'
               href: lesson-5-extending-the-time-series-model.md
 - name: Tutoriales de Reporting Services
   href: ../reporting-services/reporting-services-tutorials-ssrs.md
@@ -177,73 +177,73 @@
     - name: Crear un informe de tabla básico (Tutorial de SSRS)
       href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
       items:
-        - name: 'Lección 1: Creación de un proyecto de servidor de informes'
+        - name: 'Lección 1: Crear un proyecto de servidor de informes'
           href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
-        - name: 'Lección 2: Especificación de información de conexión'
+        - name: 'Lección 2: Especificar información de conexión'
           href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-        - name: 'Lección 3: Definición de un conjunto de datos para el informe de tabla'
+        - name: 'Lección 3: Definir un conjunto de datos para el informe de tabla'
           href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-        - name: 'Lección 4: Incorporación de una tabla al informe'
+        - name: 'Lección 4: Agregar una tabla al informe'
           href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-        - name: 'Lección 5: Aplicación de formato a un informe'
+        - name: 'Lesson 5: Formatting a Report'
           href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-        - name: 'Lección 6: Adición de grupos y totales'
+        - name: 'Lesson 6: Adding Grouping and Totals'
           href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
     - name: Crear una suscripción controlada por datos (Tutorial de SSRS)
       href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
       items:
-        - name: 'Lección 1: Creación de una base de datos de suscriptor de ejemplo'
+        - name: 'Lección 1: Crear una base de datos de suscriptor de ejemplo'
           href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-        - name: 'Lección 2: Modificación de las propiedades del origen de datos de informe'
+        - name: 'Lesson 2: Modifying the Report Data Source Properties'
           href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-        - name: 'Lección 3: Definir una suscripción controlada por datos'
+        - name: 'Lesson 3: Defining a Data-Driven Subscription'
           href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
     - name: Crear un informe detallado (RDLC) con parámetros mediante ReportViewer (Tutorial de SSRS)
       href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
       items:
-        - name: 'Lección 1: Creación de un sitio web'
+        - name: 'Lección 1: Crear un sitio Web nuevo'
           href: ../reporting-services/lesson-1-create-a-new-web-site.md
-        - name: 'Lección 2: Definición de una conexión de datos y una tabla de datos para el informe primario'
+        - name: 'Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario'
           href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
-        - name: 'Lección 3: Diseño del informe primario usando el Asistente para informes'
+        - name: 'Lección 3: Diseñar el informe primario usando el Asistente para informes'
           href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
-        - name: 'Lección 4: Definición de una conexión de datos y una tabla de datos para el informe secundario'
+        - name: 'Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario'
           href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
-        - name: 'Lección 5: Diseño del informe secundario usando el Asistente para informes'
+        - name: 'Lección 5: Diseñar el informe secundario usando el Asistente para informes'
           href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
-        - name: 'Lección 6: Adición de un control ReportViewer a la aplicación'
+        - name: 'Lección 6: agregar un control ReportViewer a la aplicación'
           href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
-        - name: 'Lección 7: Incorporación de una acción de obtención de detalles en el informe primario'
+        - name: 'Lección 7: Agregar una acción de obtención de detalles en el informe primario'
           href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
-        - name: 'Lección 8: Creación de un filtro de datos'
+        - name: 'Lección 8: Crear un filtro de datos'
           href: ../reporting-services/lesson-8-create-a-data-filter.md
-        - name: 'Lección 9: Generación y ejecución de la aplicación'
+        - name: 'Lesson 9: Build and Run the Application'
           href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: 'Obtener acceso al servicio web del servidor de informes mediante Visual Basic o Visual C# (Tutorial de SSRS)'
       href: access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md
       items:
-        - name: 'Lección 1: Creación del proyecto cliente del servicio web'
+        - name: 'Lección 1: crear el proyecto cliente del servicio web'
           href: lesson-1-creating-the-web-service-client-project.md
-        - name: 'Lección 2: Adición de una referencia web'
+        - name: 'Lección 2: agregar una referencia web'
           href: lesson-2-adding-a-web-reference.md
-        - name: 'Lección 3: Acceso al servicio web'
+        - name: 'Lección 3: obtener acceso al servicio web'
           href: lesson-3-accessing-the-web-service.md
-        - name: 'Lección 4: Ejecución de la aplicación (VB/VC#)'
+        - name: 'Lección 4: ejecutar la aplicación (VB/VC#)'
           href: lesson-4-running-the-application-vb-vcsharp.md
     - name: Actualizar informes con clases generadas a partir del esquema RDL (Tutorial de SSRS)
       href: updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md
       items:
-        - name: 'Lección 1: Creación del proyecto de Visual Studio Esquema RDL'
+        - name: 'Lección 1: Crear el proyecto de Visual Studio de la aplicación Esquema RDL'
           href: lesson-1-create-the-rdl-schema-visual-studio-project.md
-        - name: 'Lección 2: Generación de clases a partir del esquema RDL con la herramienta xsd'
+        - name: 'Lección 2: Generar clases a partir del esquema RDL con la herramienta xsd'
           href: lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md
-        - name: 'Lección 3: Carga de una definición de informe desde el servidor de informes'
+        - name: 'Lección 3: Cargar una definición de informe desde el servidor de informes'
           href: lesson-3-load-a-report-definition-from-the-report-server.md
-        - name: 'Lección 4: Actualización de la definición del informe mediante programación'
+        - name: 'Lección 4: Actualizar la definición del informe mediante programación'
           href: lesson-4-update-the-report-definition-programmatically.md
-        - name: 'Lección 5: Publicación de la definición de informe en el servidor de informes'
+        - name: 'Lección 5: Publicar la definición de informe en el servidor de informes'
           href: lesson-5-publish-the-report-definition-to-the-report-server.md
-        - name: 'Lección 6: Ejecución de la aplicación Esquema RDL (VB/C#)'
+        - name: 'Lección 6: Ejecutar la aplicación del esquema RDL (VB/C#)'
           href: lesson-6-run-the-rdl-schema-application-vb-csharp.md
     - name: Tutoriales (Generador de informes)
       href: ../reporting-services/report-builder-tutorials.md
@@ -252,29 +252,29 @@
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
         - name: Maneras alternativas de obtener una conexión de datos (Generador de informes)
           href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: 'Tutorial: Creación de un informe de tabla básico'
+        - name: 'Tutorial: Crear un informe de tabla básico'
           href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
-        - name: 'Tutorial: Creación de un informe de matriz'
+        - name: 'Tutorial: Crear un informe de matriz'
           href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
-        - name: 'Tutorial: Creación de un informe de forma libre'
+        - name: 'Tutorial: Crear un informe de forma libre'
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: 'Tutorial: Aplicación de formato a un texto (Generador de informes)'
+        - name: 'Tutorial: Dar formato a texto (Generador de informes)'
           href: ../reporting-services/tutorial-format-text-report-builder.md
-        - name: 'Tutorial: Incorporación de un gráfico de columnas a un informe (Generador de informes)'
+        - name: 'Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)'
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
-        - name: 'Tutorial: Incorporación de un gráfico circular a un informe (Generador de informes)'
+        - name: 'Tutorial: Agregar un gráfico circular a un informe (Generador de informes)'
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: 'Tutorial: Incorporación de un gráfico de barras a un informe (Generador de informes)'
+        - name: 'Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)'
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
-        - name: 'Tutorial: Adición de un minigráfico a un informe (Generador de informes)'
+        - name: 'Tutorial: Agregar un minigráfico a un informe (Generador de informes)'
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: 'Tutorial: Incorporación de un KPI a un informe'
+        - name: 'Tutorial: Agregar un KPI a un informe'
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: 'Tutorial: Informe de asignaciones'
+        - name: 'Tutorial: informe de asignaciones'
           href: ../reporting-services/tutorial-map-report-report-builder.md
-        - name: 'Tutorial: Adición de un parámetro al informe (Generador de informes)'
+        - name: 'Tutorial: Agregar un parámetro a un informe (Generador de informes)'
           href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
-        - name: 'Tutorial: Creación de informes principales y de obtención de detalles'
+        - name: 'Tutorial: Crear informes principales y de obtención de detalles'
           href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
         - name: 'Tutorial: Introducción a las expresiones'
           href: ../reporting-services/tutorial-introducing-expressions.md
@@ -284,116 +284,116 @@
     - name: 'Administración de información empresarial mediante SSIS, MDS y DQS [Tutorial]'
       href: 'enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md'
       items:
-        - name: 'Lección 1: Creación de la base de conocimiento de DQS Proveedores'
+        - name: 'Lección 1: crear la base de conocimiento de DQS Proveedores'
           href: lesson-1-creating-the-suppliers-dqs-knowledge-base.md
           items:
-            - name: 'Tarea 1: Creación de una base de conocimiento y dominios'
+            - name: 'TArea 1: crear una base de conocimiento y dominios'
               href: task-1-creating-a-knowledge-base-and-domains.md
-            - name: 'Tarea 2: Adición manual de valores de dominio'
+            - name: 'Tarea 2: agregar valores de dominio manualmente'
               href: task-2-adding-domain-values-manually.md
-            - name: 'Tarea 3: Importación de valores de dominio desde un archivo de Excel'
+            - name: 'Tarea 3: importar valores de dominio desde un archivo de Excel'
               href: task-3-importing-domain-values-from-an-excel-file.md
-            - name: 'Tarea 4: Configuración de reglas de dominio'
+            - name: 'Tarea 4: configurar reglas de dominio'
               href: task-4-setting-domain-rules.md
-            - name: 'Tarea 5: Configuración de relaciones basadas en términos'
+            - name: 'Tarea 5: configurar relaciones basadas en términos'
               href: task-5-setting-term-based-relationships.md
-            - name: 'Tarea 6: Definición de sinónimos'
+            - name: 'Tarea 6: establecer sinónimos'
               href: task-6-setting-synonyms.md
-            - name: 'Tarea 7: Creación de un dominio compuesto'
+            - name: 'Tarea 7: crear una regla de dominio compuesto'
               href: task-7-creating-a-composite-domain.md
-            - name: 'Tarea 8: Creación de una regla de dominio compuesto'
+            - name: 'Tarea 8: crear una regla de dominio compuesto'
               href: task-8-creating-a-composite-domain-rule.md
-            - name: 'Tarea 9: Configuración de un servicio de datos de referencia'
+            - name: 'Tarea 9: configurar un servicio de datos de referencia'
               href: task-9-configuring-a-reference-data-service.md
-            - name: 'Tarea 10: Configuración de un dominio compuesto para usar un servicio de datos de referencia'
+            - name: 'Tarea 10: configurar un dominio compuesto para que use un servicio de datos de referencia'
               href: task-10-configuring-composite-domain-to-use-reference-data-service.md
-            - name: 'Tarea 11: Publicación de la base de conocimiento'
+            - name: 'Tarea 11: publicar la base de conocimiento'
               href: task-11-publishing-the-knowledge-base.md
-            - name: 'Tarea 12: Detección de conocimiento'
+            - name: 'Tarea 12: detectar conocimiento (detección de conocimiento)'
               href: task-12-discovering-knowledge-knowledge-discovery.md
-        - name: 'Lección 2: Limpieza de datos de proveedor con la base de conocimiento Proveedores'
+        - name: 'Lección 2: limpiar datos de proveedor con la base de conocimiento Proveedores'
           href: lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md
           items:
-            - name: 'Tarea 1: Creación de un proyecto de calidad de datos'
+            - name: 'Tarea 1: crear un proyecto de calidad de datos'
               href: task-1-creating-a-data-quality-project.md
-            - name: 'Tarea 2: Asignación de columnas de Excel a dominios de DQS'
+            - name: 'Tarea 2: asignar columnas de Excel a dominios de DQS'
               href: task-2-mapping-excel-columns-to-dqs-domains.md
-            - name: 'Tarea 3: Limpieza de datos en la base de conocimiento Proveedores'
+            - name: 'Tarea 3: limpiar datos con la base de conocimiento Proveedores'
               href: task-3-cleansing-data-against-the-suppliers-knowledge-base.md
-            - name: 'Tarea 4: Administración y visualización de los resultados'
+            - name: 'Tarea 4: Administrar y ver los resultados'
               href: task-4-manaing-and-viewing-results.md
-            - name: 'Tarea 5: Exportación de los resultados de la limpieza a un archivo de Excel'
+            - name: 'Tarea 5: exportar los resultados de la limpieza a un archivo de Excel'
               href: task-5-exporting-cleansing-results-to-an-excel-file.md
-            - name: 'Tarea 6: Importación de valores del proyecto Limpiar lista de proveedores'
+            - name: 'Tarea 6: importar valores del proyecto Limpiar lista de proveedores'
               href: task-6-importing-values-from-the-cleanse-supplier-list-project.md
-        - name: 'Lección 3: Búsqueda de datos coincidentes para quitar duplicados de lista de proveedores'
+        - name: 'Lección 3: buscar datos coincidentes para quitar duplicados de lista de proveedores'
           href: lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md
           items:
-            - name: 'Tarea 1: Definición de una directiva de coincidencia'
+            - name: 'Tarea 1: definir una directiva de coincidencia'
               href: task-1-defining-a-matching-policy.md
-            - name: 'Tarea 2: Prueba y publicación de la directiva de coincidencia'
+            - name: 'Tarea 2: probar y publicar la directiva de coincidencia'
               href: task-2-testing-and-publishing-the-matching-policy.md
-            - name: 'Tarea 3: Creación y ejecución de un proyecto de calidad de datos para buscar coincidencias'
+            - name: 'Tarea 3: crear y ejecutar un proyecto de calidad de datos para buscar coincidencias'
               href: task-3-creating-and-running-a-data-quality-project-for-matching.md
-            - name: 'Tarea 4: Exportación de los resultados de la actividad de coincidencia a un archivo de Excel'
+            - name: 'Tarea 4: exportar los resultados de la actividad de coincidencia a un archivo de Excel'
               href: task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md
-        - name: 'Lección 4: Almacenamiento de datos de proveedor en MDS'
+        - name: 'Lección 4: almacenar datos de proveedor en MDS'
           href: lesson-4-storing-supplier-data-in-mds.md
           items:
-            - name: 'Tarea 1: Creación del modelo Proveedores mediante Master Data Manager'
+            - name: 'TArea 1: crear el modelo Proveedores mediante Master Data Manager'
               href: task-1-creating-suppliers-model-using-master-data-manager.md
-            - name: 'Tarea 2: Carga de datos de proveedor en MDS con el complemento MDS para Excel'
+            - name: 'Tarea 2: cargar datos de proveedor en MDS con el complemento MDS para Excel'
               href: task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md
-            - name: 'Tarea 3: Comprobación de los datos en Master Data Manager'
+            - name: 'Tarea 3: comprobar los datos en Master Data Manager'
               href: task-3-verifying-the-data-in-master-data-manager.md
-            - name: 'Tarea 4 (opcional): Combinación, búsqueda de coincidencias y publicación de un conjunto de datos nuevo'
+            - name: 'Tarea 4 (opcional): combinar, buscar coincidencias y publicar un conjunto de datos nuevo'
               href: task-4-optional-combining-matching-and-publishing-new-set-of-data.md
-            - name: 'Tarea 5: Creación de un atributo basado en dominio desde Excel'
+            - name: 'Tarea 5: crear un atributo basado en dominio desde Excel'
               href: task-5-creating-a-domain-based-attribute-from-excel.md
-            - name: 'Tarea 6: Comprobación de que el atributo basado en dominio se crea mediante Master Data Manager'
+            - name: 'Tarea 6: comprobar que se crea el atributo basado en dominio mediante Master Data Manager'
               href: task-6-verify-domain-based-attribute-master-data-manager.md
-            - name: 'Tarea 7: Visualización de las actualizaciones realizadas con Master Data Manager en Excel'
+            - name: 'Tarea 7: ver las actualizaciones realizadas con Master Data Manager en Excel'
               href: task-7-viewing-updates-made-using-master-data-manager-in-excel.md
-            - name: 'Tarea 8: Adición de un nuevo valor para la entidad Estado en Excel'
+            - name: 'Tarea 8: agregar un nuevo valor para la entidad Estado en Excel'
               href: task-8-adding-a-new-value-for-state-entity-in-excel.md
-            - name: 'Tarea 9: Creación de una jerarquía derivada mediante Master Data Manager'
+            - name: 'Tarea 9: crear una jerarquía derivada mediante Master Data Manager'
               href: task-9-creating-a-derived-hierarchy-using-master-data-manager.md
-        - name: 'Lección 5: Automatización de la limpieza y la búsqueda de coincidencias con SSIS'
+        - name: 'Lección 5: automatizar la limpieza y la búsqueda de coincidencias con SSIS'
           href: lesson-5-automating-the-cleansing-and-matching-using-ssis.md
           items:
-            - name: 'Tarea 1 (requisito previo): Eliminación de datos de proveedor en MDS'
+            - name: 'Tarea 1 (requisito previo): quitar datos de proveedor en MDS'
               href: task-1-prerequisite-removing-supplier-data-in-mds.md
-            - name: 'Tarea 2 (opcional): Creación de una vista de suscripciones de MDS con Master Data Manager'
+            - name: 'Tarea 2 (opcional): crear una vista de suscripciones de MDS con Master Data Manager'
               href: task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md
-            - name: 'Tarea 3 (opcional): Revisión de las vistas de suscripciones'
+            - name: 'Tarea 3 (opcional): revisar las vistas de suscripciones'
               href: task-3-optional-reviewing-the-subscription-views.md
-            - name: 'Tarea 4: Creación de un proyecto de SSIS con SQL Server Data Tools'
+            - name: 'Tarea 4: crear un proyecto de SSIS con SQL Server Data Tools'
               href: task-4-creating-an-ssis-project-using-sql-server-data-tools.md
-            - name: 'Tarea 5: Adición de una tarea Flujo de datos'
+            - name: 'Tarea 5: agregar una tarea Flujo de datos'
               href: task-5-adding-data-flow-task.md
-            - name: 'Tarea 6: Adición del origen de Excel al flujo de datos'
+            - name: 'Tarea 6: agregar el origen de Excel al flujo de datos'
               href: task-6-adding-excel-source-to-the-data-flow.md
-            - name: 'Tarea 7: Adición de la transformación Limpieza de DQS al flujo de datos'
+            - name: 'Tarea 7: agregar la transformación Limpieza de DQS al flujo de datos'
               href: task-7-adding-dqs-cleansing-transform-to-the-data-flow.md
-            - name: 'Tarea 8: Adición de la transformación División condicional para dividir el resultado de la limpieza'
+            - name: 'Tarea 8: agregar la transformación División condicional para dividir el resultado de la limpieza'
               href: task-8-adding-conditional-split-transform-to-split-cleansing-output.md
-            - name: 'Tarea 9: Adición de la transformación Unión de todo para combinar los registros correctos y corregidos'
+            - name: 'Tarea 9: agregar la transformación Unión de todo para combinar los registros correctos y corregidos'
               href: task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md
-            - name: 'Tarea 10: Adición de la transformación Agrupación aproximada para identificar duplicados'
+            - name: 'Tarea 10: agregar la transformación Agrupación aproximada para identificar duplicados'
               href: task-10-adding-fuzzy-group-transform-to-identify-duplicates.md
-            - name: 'Tarea 11: Adición de la transformación División condicional para filtrar duplicados'
+            - name: 'Tarea 11: agregar la transformación División condicional para filtrar duplicados'
               href: task-11-adding-conditional-split-transform-to-filter-duplicates.md
-            - name: 'Tarea 12: Adición de la transformación Columna derivada para agregar las columnas necesarias en MDS'
+            - name: 'Tarea 12: agregar la transformación Columna derivada para agregar las columnas necesarias en MDS'
               href: task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md
-            - name: 'Tarea 13: Adición del destino de OLE DB para escribir datos en la tabla de ensayo de MDS'
+            - name: 'Tarea 13: agregar el destino de OLE DB para escribir datos en la tabla de ensayo de MDS'
               href: task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md
-            - name: 'Tarea 14: Adición de la tarea Ejecutar SQL al flujo de control para ejecutar el procedimiento almacenado de MDS'
+            - name: 'Tarea 14: agregar la tarea Ejecutar SQL al flujo de control para ejecutar el procedimiento almacenado de MDS'
               href: task-14-add-execute-to-control-flow-run-mds-stored-procedure.md
-            - name: 'Tarea 15: Compilación y ejecución del proyecto de SSIS'
+            - name: 'Tarea 15: compilar y ejecutar el proyecto de SSIS'
               href: task-15-building-and-running-the-ssis-project.md
-            - name: 'Tarea 16: Comprobación con Master Data Manager'
+            - name: 'Tarea 16: comprobar con Master Data Manager'
               href: task-16-verifying-with-master-data-manager.md
-            - name: 'Tarea 17: Revisión del proyecto de limpieza de DQS creado por el paquete SSIS'
+            - name: 'Tarea 17: revisar el proyecto de limpieza de DQS creado por el paquete SSIS'
               href: task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md
         - name: Conclusión
           href: conclusion.md

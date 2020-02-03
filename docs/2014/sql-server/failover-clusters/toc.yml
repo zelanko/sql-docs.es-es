@@ -9,7 +9,7 @@
       items:
         - name: Antes de la instalación
           href: install/before-installing-failover-clustering.md
-        - name: Installation
+        - name: Instalación
           href: install/sql-server-failover-cluster-installation.md
         - name: Crear un clúster
           href: install/create-a-new-sql-server-failover-cluster-setup.md

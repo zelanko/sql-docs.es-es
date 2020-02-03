@@ -148,9 +148,9 @@
 - name: Administrar columnas de texto e imagen
   href: ../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md
   items:
-    - name: Texto delimitado frente a texto sin delimitar y columnas de imagen
+    - name: Texto delimitado y sin delimitar y columnas de imagen
       href: ../../native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
-    - name: Modificaciones registradas frente a modificaciones no registradas
+    - name: Modificaciones registradas frente a no registradas
       href: ../../native-client-odbc-text-image-columns/logged-vs-unlogged-modifications.md
     - name: 'Datos en ejecución y columnas de tipo text, ntext o image'
       href: ../../native-client-odbc-text-image-columns/data-at-execution-and-text-ntext-or-image-columns.md
@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: Llamar a SQLColumns sobre una tabla con columnas dispersas
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: 'Procedimientos: Inserción de filas en la columna Geography (ODBC)'
+    - name: Insertar filas en la columna Geography (ODBC)
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: Obtener la autenticación mutua de Kerberos
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

@@ -76,7 +76,7 @@
 - name: Modelos
   href: models-master-data-services.md
   items:
-    - name: Crear un modelo
+    - name: Creación de un modelo
       href: create-a-model-master-data-services.md
     - name: Cambiar el nombre de un modelo
       href: change-a-model-name-master-data-services.md
@@ -146,7 +146,7 @@
       href: staging-process-errors-master-data-services.md
     - name: Estados de importación
       href: import-statuses-master-data-services.md
-- name: Miembros
+- name: Members
   href: members-master-data-services.md
   items:
     - name: Crear un miembro hoja
@@ -194,7 +194,7 @@
       href: business-rule-conditions-master-data-services.md
     - name: Acciones de reglas de negocios
       href: business-rule-actions-master-data-services.md
-- name: Seguimiento de los cambios
+- name: Seguimiento de cambios
   href: change-tracking-master-data-services.md
   items:
     - name: Agregar atributos a un grupo de seguimiento de cambios
@@ -204,14 +204,14 @@
 - name: Notificaciones
   href: notifications-master-data-services.md
   items:
-    - name: Configurar notificaciones por correo electrónico
+    - name: Configuración de notificaciones de correo electrónico
       href: configure-email-notifications-master-data-services.md
-- name: Transactions
+- name: Transacciones
   href: transactions-master-data-services.md
   items:
     - name: Invertir una transacción
       href: reverse-a-transaction-master-data-services.md
-- name: Anotaciones
+- name: anotaciones
   href: annotations-master-data-services.md
   items:
     - name: Anotar una transacción
@@ -310,7 +310,7 @@
       href: edit-a-model-deployment-package.md
 - name: Seguridad
   href: security-master-data-services.md
-- name: Administradores de
+- name: Administradores
   href: administrators-master-data-services.md
   items:
     - name: Crear un administrador de modelo

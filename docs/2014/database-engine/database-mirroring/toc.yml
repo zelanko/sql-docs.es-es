@@ -93,7 +93,7 @@
       items:
         - name: Supervisar la creación de reflejo de la base de datos
           href: monitoring-database-mirroring-sql-server.md
-        - name: 'Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos'
+        - name: 'Quórum: cómo un testigo afecta a la disponibilidad de la base de datos'
           href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
         - name: Conmutación de roles durante una sesión de creación de reflejo de la base de datos
           href: role-switching-during-a-database-mirroring-session-sql-server.md
@@ -105,7 +105,7 @@
           href: ../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md
     - name: Seguridad
       items:
-        - name: Extremos
+        - name: Puntos de conexión
           href: the-database-mirroring-endpoint-sql-server.md
         - name: Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn
           href: transport-security-database-mirroring-always-on-availability.md

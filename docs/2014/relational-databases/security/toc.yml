@@ -25,7 +25,7 @@
           href: authentication-access/create-a-server-role.md
         - name: Creación de un rol de aplicación
           href: authentication-access/create-an-application-role.md
-        - name: Creación de credenciales
+        - name: Crear una credencial
           href: authentication-access/create-a-credential.md
     - name: Cifrado
       items:
@@ -78,7 +78,7 @@
           href: sql-server-certificates-and-asymmetric-keys.md
     - name: Acceso mediante autenticación
       items:
-        - name: Entidades de seguridad
+        - name: Principals
           href: authentication-access/principals-database-engine.md
         - name: Roles de nivel de servidor
           href: authentication-access/server-level-roles.md

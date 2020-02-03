@@ -21,7 +21,7 @@
       href: ../enable-package-logging-in-sql-server-data-tools.md
     - name: Habilitar el registro para la ejecución de paquetes en el servidor SSIS
       href: ../enable-logging-for-package-execution-on-the-ssis-server.md
-- name: Performance Counters
+- name: Contadores de rendimiento
   href: performance-counters.md
   items:
     - name: Agregar un registro para los contadores de rendimiento del flujo de datos

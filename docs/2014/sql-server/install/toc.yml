@@ -27,17 +27,17 @@
 - name: Temas de procedimiento del Asesor de actualizaciones
   href: upgrade-advisor-how-to-topics.md
   items:
-    - name: 'Procedimientos: Instalar el Asesor de actualizaciones'
+    - name: Instalar el Asesor de actualizaciones
       href: how-to-install-upgrade-advisor.md
-    - name: 'Procedimientos: Iniciar el Asesor de actualizaciones'
+    - name: Cómo iniciar el Asesor de actualizaciones
       href: how-to-launch-upgrade-advisor.md
-    - name: 'Procedimientos: Ejecutar el Asistente para análisis del Asesor de actualizaciones'
+    - name: Cómo ejecutar el Asistente para análisis del Asesor de actualizaciones
       href: how-to-run-the-upgrade-advisor-analysis-wizard.md
-    - name: 'Procedimientos: Ver un informe del Asesor de actualizaciones'
+    - name: Cómo ver un informe del Asesor de actualizaciones
       href: how-to-view-an-upgrade-advisor-report.md
-    - name: 'Procedimientos: Filtrar informes'
+    - name: Cómo filtrar informes
       href: how-to-filter-reports.md
-    - name: 'Procedimientos: Export Reports'
+    - name: Cómo exportar informes
       href: how-to-export-reports.md
 - name: Referencia de la interfaz de usuario
   href: upgrade-advisor-user-interface-reference.md
@@ -335,7 +335,7 @@
       href: failover-cluster-report.md
     - name: Revisión de características
       href: feature-review.md
-    - name: Reglas de instalación
+    - name: Installation Rules
       href: installation-rules.md
     - name: Reglas de características
       href: feature-rules.md
@@ -349,7 +349,7 @@
       href: full-text-search-upgrade-options.md
     - name: Completar - Instalación
       href: complete-installation.md
-    - name: Requisitos previos de la instalación
+    - name: Requisitos previos de instalación
       href: installation-prerequisites.md
     - name: Progreso de la instalación
       href: installation-progress.md
@@ -424,15 +424,15 @@
   items:
     - name: Instalar actualizaciones desde el símbolo del sistema
       href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
-    - name: 'Procedimientos: Validar una instalación correcta de una actualización de SQL Server'
+    - name: Validar una instalación correcta de una actualización de SQL Server
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: Información general sobre la instalación de servicios de SQL Server
       href: overview-of-sql-server-servicing-installation.md
-    - name: información general
+    - name: Bienvenido
       href: welcome.md
     - name: Términos de licencia
       href: license-terms.md
-    - name: Seleccionar características
+    - name: Selección de características
       href: select-features.md
     - name: Comprobar archivos en uso
       href: check-files-in-use.md

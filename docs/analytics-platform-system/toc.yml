@@ -82,7 +82,7 @@
     - name: Permisos de PDW
       href: ../analytics-platform-system/pdw-permissions.md
       items:
-        - name: Conceder permisos
+        - name: Concesión de permisos
           href: ../analytics-platform-system/grant-permissions.md
     - name: Mensajes de error
       href: ../analytics-platform-system/error-messages.md

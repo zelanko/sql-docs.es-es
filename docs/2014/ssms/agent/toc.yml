@@ -47,7 +47,7 @@
         - name: Crear trabajos
           href: create-jobs.md
           items:
-            - name: Crear un trabajo
+            - name: Creación de un trabajo
               href: create-a-job.md
             - name: Give Others Ownership of a Job
               href: give-others-ownership-of-a-job.md
@@ -103,7 +103,7 @@
         - name: Ejecutar trabajos
           href: run-jobs.md
           items:
-            - name: Start a Job
+            - name: Iniciar un trabajo
               href: start-a-job.md
             - name: Stop a Job
               href: stop-a-job.md
@@ -146,7 +146,7 @@
     - name: Supervisar y responder a eventos
       href: monitor-and-respond-to-events.md
       items:
-        - name: Trabajos
+        - name: Alertas
           href: alerts.md
           items:
             - name: Create a WMI Event Alert
@@ -267,11 +267,11 @@
       href: job-properties-new-job-targets-page.md
     - name: Propiedades de las categorías de trabajo y Nueva categoría de trabajo
       href: job-categories-properties-new-job-category.md
-    - name: 'Categorías de trabajos: Administrar categorías de trabajos'
+    - name: 'Categorías de trabajo: Administrar categorías de trabajo'
       href: job-categories-manage-job-categories.md
     - name: 'Propiedades de paso de trabajo: Nuevo paso de trabajo (página General)'
       href: job-step-properties-new-job-step-general-page.md
-    - name: 'Propiedades de paso de trabajo: Nuevo paso de trabajo (página Avanzado)'
+    - name: 'Propiedades de paso de trabajo: Nuevo paso de trabajo (página Opciones avanzadas)'
       href: job-step-properties-new-job-step-advanced-page.md
     - name: Elegir programación para trabajo
       href: pick-schedule-for-job.md
@@ -289,7 +289,7 @@
       href: alert-properties-new-alert-general-page.md
     - name: Propiedades de alerta/Nueva alerta (página Respuesta)
       href: alert-properties-new-alert-response-page.md
-    - name: 'Propiedades de la alerta: Nueva alerta (página Opciones)'
+    - name: 'Propiedades de alerta: Nueva alerta (página Opciones)'
       href: alert-properties-new-alert-options-page.md
     - name: Propiedades de alerta (página Historial)
       href: alert-properties-history-page.md

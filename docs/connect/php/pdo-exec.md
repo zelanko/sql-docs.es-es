@@ -11,10 +11,10 @@ ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ac158f9005f66e49082b6be288c35f96b527f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993268"
 ---
 # <a name="pdoexec"></a>PDO::exec
@@ -35,7 +35,7 @@ int PDO::exec ($statement)
 ## <a name="return-value"></a>Valor devuelto  
 Un valor entero que notifica el número de filas afectadas.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Si *$statement* contiene varias instrucciones SQL, solo se notifica el recuento de filas afectadas de la última instrucción.  
   
 PDO::exec no devuelve los resultados de una instrucción SELECT.  

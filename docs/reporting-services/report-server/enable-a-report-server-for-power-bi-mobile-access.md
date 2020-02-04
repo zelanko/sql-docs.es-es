@@ -9,10 +9,10 @@ ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d14c8e092a030c88dbc4d0b5d4375bb56a8eb82c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63308181"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Habilitar un servidor de informes para el acceso mediante móvil a Power BI
@@ -47,11 +47,11 @@ Se recomienda revisar la configuración del firewall para asegurarse de que todo
   
 Para obtener más información sobre cómo configurar Firewall de Windows, consulte [Configurar un firewall para el acceso al servidor de informes](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
   
-[Configurar la autenticación básica en el servidor de informes](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+[Configuración de la autenticación básica en el servidor de informes](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
 [Configuración de conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
-[Configurar un firewall para el acceso al servidor de informes](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
+[Configurar un firewall para el acceso del Servidor de informes](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
   
   

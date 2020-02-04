@@ -1,5 +1,6 @@
 ---
 title: Depurador de Transact-SQL
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -9,15 +10,15 @@ ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 11/04/2019
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6677e6ddebdbf613f3b4ee5c3c2eb02de2cba98a
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 8e705be1cda43f0645b53f74f3f658a5bc8c2f2c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097926"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253001"
 ---
 # <a name="transact-sql-debugger"></a>Depurador de Transact-SQL
 
@@ -72,6 +73,6 @@ Siempre que el depurador detenga la ejecución de una instrucción [!INCLUDE[tsq
 |Describe cómo utilizar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] para recorrer el código.|[Avanzar paso a paso por el código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |Describe cómo utilizar el depurador para ver los datos de [!INCLUDE[tsql](../../includes/tsql-md.md)] , como los parámetros y las variables, así como la información del sistema.|[Ver información del depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Editores de consultas y texto &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)

@@ -12,10 +12,10 @@ ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bdff469a4a96fb7fe5111c619ad1895bcc200c25
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72173835"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "72173835"
 |&#124; (barra vertical)|Separa los elementos de sintaxis. Solo se puede elegir uno de los elementos.|  
 |`[ ]` (corchetes)|Elementos opcionales de sintaxis. No escriba los corchetes.|  
 |**{ }** (llaves)|Delimita los parámetros de los elementos de sintaxis.|  
-|[ **,** …*n*]|Indica que el elemento anterior puede repetirse *n* veces. Cada repetición se separa de la siguiente con una coma.|  
+|[ **,** …*n*]|Indica que el elemento anterior puede repetirse *n* veces. Los elementos se separan por comas.|  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,7 +64,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En la tabla siguiente se resumen los términos de ruta de acceso de elemento. Los ejemplos de la tabla hacen referencia al documento XML de ejemplo Customers.xml, que se incluye en la sección Ejemplos de este tema.  
   
 > [!NOTE]  
@@ -74,12 +74,12 @@ XMLLocalName :: =
 |----------|----------------|  
 |Ruta de acceso de elemento|Define la secuencia de nodos que deben recorrerse en el documento XML para recuperar los datos de campo de un conjunto de datos con un origen de datos XML.|  
 |**ElementNode**|Nodo XML en el documento XML. Los nodos se designan mediante etiquetas y existen en una relación jerárquica con otros nodos. Por ejemplo, \<Customers> es el nodo de elemento raíz. \<Customer> es un subelemento de \<Customers>.|  
-|**XMLName**|Nombre del nodo. Por ejemplo, el nombre del nodo Customers es Customers. **XMLName** puede incluir delante un identificador de espacio de nombres para asignar un nombre único a cada nodo.|  
-|**Codificación**|Indica que **Value** para este elemento es XML codificado y debe descodificarse e incluirse como un subelemento de este elemento.|  
+|**XMLName**|El nombre del nodo. Por ejemplo, el nombre del nodo Customers es Customers. **XMLName** puede incluir delante un identificador de espacio de nombres para asignar un nombre único a cada nodo.|  
+|**Encoding**|Indica que **Value** para este elemento es XML codificado y debe descodificarse e incluirse como un subelemento de este elemento.|  
 |**FieldList**|Define el conjunto de elementos y atributos que se van a utilizar para recuperar datos.<br /><br /> Si no se especifica, se usan como campos todos los atributos y subelementos. Si se especifica la lista de campos vacíos ( **{}** ), no se usará ningún campo de este nodo.<br /><br /> **FieldList** no puede contener a la vez **Value** y **Element** o **ElementNode**.|  
 |**Campo**|Especifica los datos que se recuperan como campo de conjunto de datos.|  
 |**Atributo**|Un par nombre-valor en el **ElementNode**. Por ejemplo, en el nodo de elemento \<Customer ID="1"> **,** ID **es un atributo y \@ID(Integer)** devuelve "1" como un tipo de entero en el campo de datos **ID** correspondiente.|  
-|**Value**|El valor del elemento. **Value** solo se puede usar en el último **ElementNode** de la ruta de acceso del elemento. Por ejemplo, ya que \<Return> es un nodo hoja, si se incluye al final de una ruta de acceso de elemento, el valor de **Return {@}** será **Chair**.|  
+|**Valor**|El valor del elemento. **Value** solo se puede usar en el último **ElementNode** de la ruta de acceso del elemento. Por ejemplo, ya que \<Return> es un nodo hoja, si se incluye al final de una ruta de acceso de elemento, el valor de **Return {@}** será **Chair**.|  
 |**Element**|Valor del subelemento con nombre. Por ejemplo, Customers {}/Customer {}/LastName recupera valores únicamente para el elemento LastName.|  
 |**Tipo**|Tipo de datos opcional que se usa para el campo creado a partir de este elemento.|  
 |**NamespacePrefix**|**NamespacePrefix** se define en el elemento XML Query. Si no existe ningún elemento XML Query, se pasan por alto los espacios de nombres del elemento XML **ElementPath** . Si hay un elemento XML Query, el elemento XML **ElementPath** tiene un atributo **IgnoreNamespaces**opcional. Si IgnoreNamespaces es **true**, se omitirán los espacios de nombres de **ElementPath** del XML y el documento. Para más información, vea [Sintaxis de consulta XML para los datos de informe XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  
@@ -92,16 +92,16 @@ XMLLocalName :: =
   
  **Ejemplo 1**: *Vacío*  
   
-|Pedido de|Qty|Id.|FirstName|LastName|Customer.ID|xmlns|  
+|Pedido de|Cantidad|id|Nombre|Apellidos|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
 |Chair|6|1|Bobby|Moore|11|https\://www.adventure-works.com|  
-|Table|1|2|Bobby|Moore|11|https\://www.adventure-works.com|  
+|Tabla|1|2|Bobby|Moore|11|https\://www.adventure-works.com|  
 |Sofa|2|8|Crystal|Hu|20|https\://www.adventure-works.com|  
 |EndTables|2|15|Wyatt|Diaz|33|https\://www.adventure-works.com|  
   
  **Ejemplo 2**: `Customers {}/Customer`  
   
-|FirstName|LastName|Id.|  
+|Nombre|Apellidos|id|  
 |---------------|--------------|--------|  
 |Bobby|Moore|11|  
 |Crystal|Hu|20|  
@@ -109,7 +109,7 @@ XMLLocalName :: =
   
  **Ejemplo 3**: `Customers {}/Customer {}/LastName`  
   
-|LastName|  
+|Apellidos|  
 |--------------|  
 |Moore|  
 |Hu|  
@@ -117,16 +117,16 @@ XMLLocalName :: =
   
  **Ejemplo 4**: `Customers {}/Customer {}/Orders/Order {@,@Qty}`  
   
-|Pedido de|Qty|  
+|Pedido de|Cantidad|  
 |-----------|---------|  
 |Chair|6|  
-|Table|1|  
+|Tabla|1|  
 |Sofa|2|  
 |EndTables|2|  
   
  **Ejemplo 5**: `Customers {}/Customer/Orders/Order{ @ID(Integer)}`  
   
-|Order.ID|FirstName|LastName|Id.|  
+|Order.ID|Nombre|Apellidos|id|  
 |--------------|---------------|--------------|--------|  
 |1|Bobby|Moore|11|  
 |2|Bobby|Moore|11|  

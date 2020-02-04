@@ -1,10 +1,7 @@
 ---
-title: Registrar servidores | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Registrar servidores
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -18,16 +15,22 @@ helpviewer_keywords:
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 34452ed824b8aa5bec4efcc9a926718481614e09
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manageR: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: d5b3993fb1c350e4aa89159ca8dd8135546b178b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266212"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256271"
 ---
 # <a name="register-servers"></a>Registrar servidores
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Registrar un servidor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permite almacenar la información de conexión del servidor para futuras conexiones. Hay tres formas de registrar un servidor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+
+Registrar un servidor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permite almacenar la información de conexión del servidor para futuras conexiones. Hay tres formas de registrar un servidor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 1.  Las instancias locales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se registran automáticamente durante el primer inicio de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] después de su instalación.  
   
@@ -63,7 +66,7 @@ ms.locfileid: "68266212"
 ## <a name="related-tasks"></a>Related Tasks  
  Use los temas siguientes para empezar a trabajar con servidores registrados:  
   
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |---------------------|---------------|  
 |Registrar instancias de servidores locales|[Registrar un servidor conectado &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/register-a-connected-server-sql-server-management-studio.md)|  
 |Registrar un servidor|[Crear un servidor registrado &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)|  

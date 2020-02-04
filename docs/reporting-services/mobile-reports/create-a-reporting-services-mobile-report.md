@@ -9,10 +9,10 @@ ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63316459"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Creación de un informe móvil de Reporting Services
@@ -64,7 +64,7 @@ La primera vez que crea un informe móvil, puede instalar el Publicador de infor
   
    Para guardarlo en un servidor, necesita tener acceso a un servidor de informes de SQL Server Reporting Services.  
      
-   ### <a name="see-also"></a>Vea también  
+   ### <a name="see-also"></a>Consulte también  
      
 -   [Create and publish mobile reports with SQL Server Mobile Report Publisher (Creación y publicación de informes móviles con el Publicador de informes de SQL Server Mobile)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -   [Diseñar un informe de Reporting Services móvil para tableta o teléfono](../../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md)  

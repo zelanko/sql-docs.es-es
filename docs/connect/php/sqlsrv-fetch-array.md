@@ -18,13 +18,13 @@ ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015034"
 ---
-# <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
+# <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Recupera la siguiente fila de datos como una matriz indizada numéricamente, una matriz asociativa o ambas.  
@@ -41,7 +41,7 @@ sqlsrv_fetch_array( resource $stmt[, int $fetchType [, row[, ]offset]])
   
 *$fetchType* [OPCIONAL]: constante predefinida. Este parámetro puede tomar uno de los valores que se muestran en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |---------|---------------|  
 |SQLSRV_FETCH_NUMERIC|La siguiente fila de datos se devuelve como una matriz numérica.|  
 |SQLSRV_FETCH_ASSOC|La siguiente fila de datos se devuelve como una matriz asociativa. Las claves de matriz son los nombres de columna del conjunto de resultados.|  
@@ -65,7 +65,7 @@ Si se recupera una fila de datos, se devuelve una **matriz** . Si no hay más fi
   
 En función del valor del parámetro *$fetchType* , la **matriz** que se devuelve puede ser una **matriz**indizada numéricamente, una **matriz**asociativa o ambas. De forma predeterminada, se devuelve una **matriz** con claves numérica y asociativas. El tipo de datos de un valor de la matriz devuelta será el tipo de datos PHP predeterminados. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Si se devuelve una columna sin nombre, la clave del elemento de la matriz asociativa será una cadena vacía (""). Por ejemplo, observe esta instrucción de Transact-SQL que inserta un valor en una tabla de base de datos y recupera la clave principal generada por el servidor:  
   
 ```

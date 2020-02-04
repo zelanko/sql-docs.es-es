@@ -1,11 +1,7 @@
 ---
-title: 'Procedimientos: Crear objetos de base de datos usando el Diseñador de tablas | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Creación de objetos de base de datos usando el Diseñador de tablas
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.scriptpanel
@@ -13,14 +9,19 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897176"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241503"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>Procedimientos: Creación de objetos de base de datos usando el Diseñador de tablas
+# <a name="how-to-create-database-objects-using-table-designer"></a>Cómo: Crear objetos de base de datos usando el Diseñador de tablas
+
 El nuevo nodo **SQL Server** del **Explorador de objetos de SQL Server** no solo es muy similar a SSMS visualmente, sino que puede crear nuevos objetos usando menús contextuales que funcionan de manera similar a sus homólogos de SSMS.  
   
 Por ejemplo, puede crear una base de datos nueva bajo el nodo **Bases de datos**. Del mismo modo, puede seleccionar una base de datos específica y crear o editar definiciones de tabla y sus objetos de programación relacionados sobre la marcha usando el nuevo Diseñador de tablas. Desde el Diseñador de tablas, puede cambiar a un panel de scripts que le permite editar directamente el script que define esta tabla.  
@@ -56,24 +57,24 @@ Por ejemplo, puede crear una base de datos nueva bajo el nodo **Bases de datos**
 5.  Agregue otra columna nueva. Escriba **Address** en el campo **Nombre**, **nvarchar (MAX)** en **Tipo de datos** y desactive el campo **Permitir valores NULL**.  
   
     > [!WARNING]  
-    > Cuando esté editando objetos de una base de datos conectada, no los guarde en la unidad local. Para guardar los cambios hechos en la base de datos correctamente, siga los pasos indicados en el siguiente procedimiento [Cómo: Actualizar una base de datos conectada con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+    > Cuando esté editando objetos de una base de datos conectada, no los guarde en la unidad local. Para guardar los cambios a la base de datos correctamente, siga los pasos indicados en el siguiente procedimiento [Cómo: Actualizar una base de datos conectada con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 6.  Repita los pasos anteriores para crear otra tabla denominada **Customer**. Esta vez, agregue las siguientes columnas a la tabla Customer usando la cuadrícula de columnas. No olvide modificar el script para que el nombre de la tabla sea `[dbo].[Customer]`.  
   
     |Nombre|Tipo de datos|**Permitir valores NULL**|  
     |--------|-------------|-------------------|  
-    |Identificador|INT|unchecked|  
-    |Nombre|nvarchar (128)|unchecked|  
+    |Identificador|int|Desactivado|  
+    |Nombre|nvarchar (128)|Desactivado|  
   
 7.  Cree una tabla más denominada **Products**. Agregue las siguientes columnas a la tabla Products usando la cuadrícula de columnas. No olvide modificar el script para que el nombre de la tabla sea `[dbo].[Products]`.  
   
     |Nombre|Tipo de datos|**Permitir valores NULL**|  
     |--------|-------------|-------------------|  
-    |Identificador|INT|unchecked|  
-    |Nombre|nvarchar (128)|unchecked|  
-    |ShelfLife|INT|activado|  
-    |SupplierId|INT|activado|  
-    |CustomerId|INT|activado|  
+    |Identificador|int|Desactivado|  
+    |Nombre|nvarchar (128)|Desactivado|  
+    |ShelfLife|int|Activado|  
+    |SupplierId|int|Activado|  
+    |CustomerId|int|Activado|  
   
 ### <a name="to-create-a-new-check-constraint-using-the-table-designer"></a>Para crear una nueva restricción CHECK usando el Diseñador de tablas  
   

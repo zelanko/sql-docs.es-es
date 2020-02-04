@@ -11,10 +11,10 @@ ms.assetid: f9ebb203-2013-4feb-94f5-494b7f098f9a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 82e005a4e81dd08643613f0c90dafbd9124dd3bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970877"
 ---
 # <a name="sqlserverparametermetadata-members"></a>Miembros SQLServerParameterMetaData
@@ -25,7 +25,7 @@ ms.locfileid: "67970877"
 ## <a name="constructors"></a>Constructores  
  Ninguno.  
   
-## <a name="fields"></a>Campos  
+## <a name="fields"></a>Fields  
  Ninguno.  
   
 ## <a name="inherited-fields"></a>Campos heredados  

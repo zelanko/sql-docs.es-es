@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: afc90985fc7c0c6d7a04cb575ee9e93a4b7b4c51
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727747"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Supervisar la ejecución de scripts de R y Python mediante informes personalizados en SQL Server Management Studio
@@ -72,7 +72,7 @@ El repositorio de [informes personalizados de SSMS en GitHub](https://github.com
 | Configurar una instancia | Configure Machine Learning Services. |
 | Estadísticas de ejecución | Estadísticas de ejecución de Machine Learning Services. Por ejemplo, puede obtener el número total de ejecuciones de scripts externos y el número de ejecuciones paralelas. |
 | Eventos extendidos | Eventos extendidos que están disponibles para obtener más información sobre la ejecución de scripts externos. |
-| . | Lista de los paquetes de R o Python instalados en la instancia de SQL Server y sus propiedades, como la versión y el nombre. |
+| Paquetes | Lista de los paquetes de R o Python instalados en la instancia de SQL Server y sus propiedades, como la versión y el nombre. |
 | Resource Usage | Vista de la CPU, la memoria, el consumo de E/S de SQL Server y la ejecución de scripts externos. También puede ver la configuración de la memoria para grupos de recursos externos. |
 
 ## <a name="next-steps"></a>Pasos siguientes

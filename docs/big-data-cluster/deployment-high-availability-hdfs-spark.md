@@ -5,22 +5,22 @@ description: Obtenga información sobre cómo implementar clústeres de macrodat
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fc93fbeb3cf02b205cadba92b6d528701ec53cbe
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 25a6b733eed0611b43fb1f17ad0fe8a0cc1d690a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706336"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75720864"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>Implementación del nodo de nombre de HDFS y de los servicios de Spark compartidos en una configuración de alta disponibilidad
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Además de implementar la instancia maestra de SQL Server en una configuración de alta disponibilidad usando grupos de disponibilidad, se pueden implementar otros servicios críticos en el clúster de macrodatos para garantizar un mayor nivel de confiabilidad. Puede configurar `HDFS name node` y los servicios de Spark compartidos agrupados en `SparkHead` con una réplica adicional. En este caso, `Zookeeper` también se implementa en el clúster de macrodatos en el servidor como coordinador de clústeres y almacén de metadatos de los siguientes servicios: 
+Además de implementar la instancia maestra de SQL Server en una configuración de alta disponibilidad usando grupos de disponibilidad, se pueden implementar otros servicios críticos en el clúster de macrodatos para garantizar un mayor nivel de confiabilidad. Puede configurar `HDFS name node` y los servicios de Spark compartidos agrupados en `sparkhead` con una réplica adicional. En este caso, `Zookeeper` también se implementa en el clúster de macrodatos en el servidor como coordinador de clústeres y almacén de metadatos de los siguientes servicios: 
 
 - Nodo de nombre de HDFS
 - Livy Resource Manager y Yarn Resource Manager 
@@ -46,7 +46,7 @@ En la siguiente imagen se muestra una implementación de HA de HDFS en un clús
 
 :::image type="content" source="media/deployment-high-availability-hdfs-spark/hdfs-ha.png" alt-text="hdfs-ha-bdc":::
 
-## <a name="deploy"></a>Implementar
+## <a name="deploy"></a>Implementación
 
 Si el nodo de nombre o el encabezado de Spark están configurados con dos réplicas, también debe configurar el recurso de Zookeeper con tres réplicas. En una configuración de alta disponibilidad del nodo de nombre de HDFS, dos pod hospedan las dos réplicas. Los pods son `nmnode-0` y `nmnode-1`. Esta configuración es activa-pasiva: solo uno de los nodos de nombre está activo, mientras que el otro está en espera y se activa como resultado de un evento de conmutación por error. 
 

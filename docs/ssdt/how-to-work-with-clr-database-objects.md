@@ -1,25 +1,26 @@
 ---
-title: 'Procedimientos: Trabajar con objetos de base de datos CLR | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Trabajo con objetos de base de datos CLR
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.allowsqlclrdebugging
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a8ea668f0672a40e8af6fbb81bbce469652eeb54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: f8aa504554cc973e5babbfe3c8512f59932fa147
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119888"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226730"
 ---
-# <a name="how-to-work-with-clr-database-objects"></a>Procedimientos: Trabajo con objetos de base de datos CLR
+# <a name="how-to-work-with-clr-database-objects"></a>Cómo: Trabajar con objetos de base de datos CLR
+
 Además del lenguaje de programación Transact\-SQL, puede usar los lenguajes .NET Framework para crear objetos de base de datos que recuperen y actualicen los datos. Los objetos de base de datos que se escriben en código administrado se denominan objetos de base de datos de Common Language Runtime (CLR) de SQL Server. Para ver una explicación de las ventajas de usar objetos de base de datos CLR hospedados en SQL Server y de cómo elegir entre Transact\-SQL y CLR, consulte [Ventajas de la integración CLR](../relational-databases/clr-integration/clr-integration-overview.md) y [Ventajas de utilizar código administrado para crear objetos de base de datos](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
   
 Para crear un objeto de base de datos CLR con SQL Server Data Tools, cree un proyecto de base de datos y, después, agréguele un objeto de base de datos CLR. A diferencia de lo que ocurre en versiones anteriores de Visual Studio, no es necesario crear un proyecto CLR diferente y agregarle una referencia desde el proyecto de base de datos. Al compilar y publicar el proyecto de base de datos, se publican automáticamente los objetos CLR del proyecto al mismo tiempo. Después de publicar estos objetos CLR, se les puede llamar y se pueden ejecutar como cualquier otro objeto de base de datos.  

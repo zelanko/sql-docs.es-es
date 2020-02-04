@@ -16,10 +16,10 @@ ms.assetid: 8f3adf5b-874e-4cf2-b4ef-672dda42d77a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e78dbb981938e9af2fbe894919368da17347941a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955583"
 ---
 # <a name="close-method-sqlserverresultset"></a>Método close (SQLServerResultSet)
@@ -37,7 +37,7 @@ public void close()
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método close especifica este método close en la interfaz java.sql.ResultSet.  
   
  Un objeto SQLServerResultSet se cierra automáticamente por el objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) que lo generó cuando ese objeto SQLServerStatement se cierra, se vuelve a utilizar o se utiliza para recuperar el siguiente resultado en un flujo de varios resultados. También se cierra un objeto SQLServerResultSet automáticamente cuando se recopila como elemento no utilizado.  

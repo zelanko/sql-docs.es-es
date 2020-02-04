@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531940"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>Administración de clústeres de macrodatos en el panel del controlador de SQL Server
@@ -22,7 +22,7 @@ ms.locfileid: "73531940"
 
 Además de **azdata** y el cuaderno de estado del clúster, hay otra manera de ver el estado de un clúster de macrodatos de SQL Server. Ahora puede agregar un controlador de clúster de macrodatos de SQL Server mediante el viewlet **Conexiones**. Esto le permite disponer de un panel para ver el estado del clúster.
 
-![panel](media/manage-with-controller-dashboard/controller-dashboard.png)
+![dashboard](media/manage-with-controller-dashboard/controller-dashboard.png)
 ## <a name="prerequisites"></a>Prerequisites
 
 Los siguientes requisitos previos son indispensables para iniciar el cuaderno:
@@ -78,6 +78,6 @@ Además de lo anterior, el clúster de macrodatos de SQL Server 2019 también r
 
 1. Si ve un componente con un estado incorrecto, haga clic en **Solucionar problemas** en la barra de herramientas para iniciar una instancia de Jupyter Notebook que contiene un cuaderno para ayudar a diagnosticar el problema.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Pasos siguientes
 
 Para obtener más información sobre el controlador, vea la [documentación del controlador](concept-controller.md).

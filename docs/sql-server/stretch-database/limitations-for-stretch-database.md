@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843794"
 ---
 # <a name="limitations-for-stretch-database"></a>Limitaciones de Stretch Database
@@ -43,7 +43,7 @@ Las tablas habilitadas para Stretch tienen las siguientes limitaciones.
   
 -   Los filtros de los índices de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se propagan a la tabla remota.  
   
-##  <a name="Limitations"></a> Limitaciones que actualmente evitan habilitar Stretch para una tabla  
+##  <a name="Limitations"></a> Limitaciones que actualmente evitan que habilite Stretch en una tabla  
    
  Los siguientes aspectos actualmente evitan habilitar Stretch para una tabla.  
   
@@ -54,12 +54,12 @@ Las tablas habilitadas para Stretch tienen las siguientes limitaciones.
   
 -   Tablas que se replican o que usan activamente el seguimiento de cambios o la captura de datos modificados  
   
--   Tablas con optimización para memoria  
+-   Tablas optimizadas para memoria  
   
 ### <a name="data-types"></a>Tipos de datos  
 -   text, ntext e image  
   
--   TIMESTAMP  
+-   timestamp  
   
 -   sql_variant  
   
@@ -88,7 +88,7 @@ Las tablas habilitadas para Stretch tienen las siguientes limitaciones.
   
 ## <a name="see-also"></a>Consulte también  
  [Identificar bases de datos y tablas para Stretch Database al ejecutar el Asesor de Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
- [Habilitación de Stretch Database para una base de datos](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [Enable Stretch Database for a table (Habilitar Stretch Database para una tabla)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+ [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [Habilitación de Stretch Database para una tabla](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

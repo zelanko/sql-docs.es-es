@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: f7a64289bd3f1e1bd8fce71d21e5e1604e5bf4b4
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68262886"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>Extensiones para SQL Server Reporting Services (SSRS)
@@ -66,7 +66,7 @@ Algunas extensiones también pueden realizar las siguientes tareas:
   
 - **Extensión de representación en XML** La extensión de representación en XML representa informes en archivos XML. Otros programas pueden almacenar o leer estos archivos XML. También se puede utilizar una transformación XSLT para convertir el informe en otro esquema XML y poder utilizarlo con otra aplicación. El lenguaje XML que genera la extensión de representación en XML tiene la codificación UTF-8. Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
-- **Extensión de representación en imágenes** La extensión de representación en imágenes representa informes en mapas de bits o metarchivos. Esta extensión puede representar los informes en los formatos siguientes: BMP, EMF, GIF, JPEG, PNG, TIFF y WMF. De forma predeterminada, la imagen se representa en formato TIFF, que se puede mostrar en el visor de imágenes predeterminado del sistema operativo (por ejemplo, Visor de imágenes y fax de Windows). Desde el visor, puede enviar la imagen a una impresora. Al usar la extensión de representación en imágenes para representar informes se asegura de que el informe tenga la misma apariencia en todos los clientes. (Si un usuario ve un informe en HTML, su apariencia puede variar dependiendo de la versión del explorador de la que disponga el usuario, la configuración del explorador y las fuentes disponibles). La extensión de representación de imágenes representa el informe en el servidor, de forma que todos los usuarios vean la misma imagen. Puesto que el informe se representa en el servidor, todas las fuentes utilizadas en el informe tienen que estar instaladas en el servidor. Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).  
+- **Extensión de representación en imágenes** La extensión de representación en imágenes representa informes en mapas de bits o metarchivos. Esta extensión puede representar los informes en los formatos siguientes: BMP, EMF, GIF, JPEG, PNG, TIFF y WMF. De forma predeterminada, la imagen se representa en formato TIFF, que se puede mostrar en el visor de imágenes predeterminado del sistema operativo (por ejemplo, Visor de imágenes y fax de Windows). Desde el visor, puede enviar la imagen a una impresora. Al usar la extensión de representación en imágenes para representar informes se asegura de que el informe tenga la misma apariencia en todos los clientes. Si un usuario ve un informe en HTML, su apariencia puede variar dependiendo de la versión del explorador de la que disponga el usuario, la configuración del explorador y las fuentes disponibles. La extensión de representación de imágenes representa el informe en el servidor, de forma que todos los usuarios vean la misma imagen. Puesto que el informe se representa en el servidor, todas las fuentes utilizadas en el informe tienen que estar instaladas en el servidor. Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).  
   
 - **Extensión de representación en PDF** La extensión de representación en PDF representa informes en archivos PDF que pueden abrirse y visualizarse con Adobe Acrobat 6.0 o posterior. Para obtener más información, vea [Exportar a un archivo PDF &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).  
   

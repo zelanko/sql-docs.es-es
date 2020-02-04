@@ -11,10 +11,10 @@ ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d673cf36e3b9ed4d3012e49c620aed8c8e34eb94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970634"
 ---
 # <a name="sqlserverresource-members"></a>Miembros de SQLServerResource
@@ -28,7 +28,7 @@ ms.locfileid: "67970634"
 |----------|-----------------|  
 |[SQLServerResource ()](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|Inicializa una instancia nueva de la clase [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md). Este constructor es únicamente para uso interno.|  
   
-## <a name="fields"></a>Campos  
+## <a name="fields"></a>Fields  
  Ninguno.  
   
 ## <a name="inherited-fields"></a>Campos heredados  

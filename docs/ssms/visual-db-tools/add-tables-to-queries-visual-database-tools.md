@@ -1,10 +1,7 @@
 ---
-title: Agregar tablas a las consultas (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Agregar tablas a consultas
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +11,19 @@ helpviewer_keywords:
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3be181b428645226cf6e3d675fbab06b9bf4ca11
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 3f333e275441f211457e14800cae14d19bd83b2a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263711"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245370"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Agregar tablas a las consultas (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Cuando crea una consulta, recupera datos de una tabla u otros objetos con estructura de tabla (vistas y determinadas funciones definidas por el usuario). Para trabajar con cualquiera de estos objetos en la consulta, deberá agregarlos al **panel Diagrama**.  
   

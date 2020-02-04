@@ -9,10 +9,10 @@ ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581213"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportar a un archivo CSV (Generador de informes y SSRS)
@@ -55,7 +55,7 @@ ms.locfileid: "65581213"
   
 -   Línea  
   
--   imagen  
+-   Imagen  
   
 -   Rectángulo  
   
@@ -68,16 +68,16 @@ ms.locfileid: "65581213"
 |Elemento|Comportamiento de la representación|  
 |----------|------------------------|  
 |Cuadro de texto|Representa el contenido del cuadro de texto. En el modo predeterminado, se da formato a los elementos según las propiedades de formato de los mismos. En modo compatible, la configuración de la información del dispositivo puede cambiar el formato. Para obtener más información sobre los modos de representación de CSV, vea la sección correspondiente a continuación.|  
-|Table|Realiza la representación mediante la expansión de la tabla y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila. No se admiten informes detallados.|  
-|Matriz|Realiza la representación mediante la expansión de la matriz y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila.|  
-|Lista|Representa un registro para cada instancia o fila de detalle de la lista.|  
+|Tabla|Realiza la representación mediante la expansión de la tabla y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila. No se admiten informes detallados.|  
+|Matrix|Realiza la representación mediante la expansión de la matriz y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila.|  
+|List|Representa un registro para cada instancia o fila de detalle de la lista.|  
 |Subinforme|El elemento primario se repite en todas las instancias del contenido.|  
 |Gráfico|Se representa mediante la creación de una fila para cada valor de gráfico y etiquetas de miembro. Las etiquetas de las series y las categorías de las jerarquías se quitan y se incluyen en la fila de un valor de gráfico.|  
 |Barra de datos|Se representa como un gráfico. Normalmente, una barra de datos no incluye jerarquías ni etiquetas.|  
 |Minigráfico|Se representa como un gráfico. Normalmente, un minigráfico no incluye jerarquías ni etiquetas.|  
-|Medidor|Se representa como un único registro con los valores máximo y mínimo de la escala lineal, los valores inicial y final del intervalo, y el valor del puntero.|  
+|Indicador|Se representa como un único registro con los valores máximo y mínimo de la escala lineal, los valores inicial y final del intervalo, y el valor del puntero.|  
 |Indicador|Se representa como un único registro con el nombre del estado activo, los estados disponibles y el valor de los datos.|  
-|Mapa|Se representa como una fila con las etiquetas y los valores para cada miembro de mapa de una capa de mapa.<br /><br /> Si el mapa tiene varias capas, los valores de las filas varía, en función de si las capas de mapa usan las mismas regiones de datos de mapa u otras diferentes. Si varias capas de mapa utilizan la misma región de datos, las filas contienen datos de todas.|  
+|Map|Se representa como una fila con las etiquetas y los valores para cada miembro de mapa de una capa de mapa.<br /><br /> Si el mapa tiene varias capas, los valores de las filas varía, en función de si las capas de mapa usan las mismas regiones de datos de mapa u otras diferentes. Si varias capas de mapa utilizan la misma región de datos, las filas contienen datos de todas.|  
   
 ### <a name="hierarchical-and-grouped-data"></a>Datos jerárquicos y agrupados  
  Para que los datos jerárquicos y los datos agrupados puedan representarse en el formato CSV, es necesario quitar la información de estructura jerárquica.  
@@ -92,7 +92,7 @@ ms.locfileid: "65581213"
   
 -   Las regiones de datos del mismo nivel son regiones de datos o grupos dinámicos que comparten una región de datos común o un antecesor dinámico. Los datos del mismo nivel se identifican creando una bifurcación del árbol sin información de estructura jerárquica.  
   
- Para obtener más información, consulte [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
+ Para más información, vea [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
   
 ##  <a name="RenderingModes"></a> Modos de representador  
@@ -107,7 +107,7 @@ ms.locfileid: "65581213"
   
 -   Las regiones de datos anidadas se representan diagonalmente en el mismo bloque de datos.  
   
-#### <a name="formatting"></a>Formato  
+#### <a name="formatting"></a>Aplicación de formato  
  Los valores numéricos se representan en su estado con formato. Excel puede reconocer valores numéricos con formato, como moneda, porcentaje y fecha, y puede dar formato a las celdas de forma adecuada al importar el archivo CSV.  
   
 ### <a name="compliant-mode"></a>Modo compatible  
@@ -116,7 +116,7 @@ ms.locfileid: "65581213"
 #### <a name="data-regions"></a>Regiones de datos  
  Solo la primera fila del archivo contiene los encabezados de columna y cada fila tiene el mismo número de columnas.  
   
-#### <a name="formatting"></a>Formato  
+#### <a name="formatting"></a>Aplicación de formato  
  Se quita el formato a los valores.  
   
 ##  <a name="Interactivity"></a> Interactividad  

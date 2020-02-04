@@ -9,10 +9,10 @@ ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1038958e969a04531cf790a9254816b24d3b5646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580696"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Funcionalidad interactiva para diferentes extensiones de representación de informes

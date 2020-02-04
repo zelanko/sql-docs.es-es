@@ -1,10 +1,9 @@
 ---
-title: Índice de texto completo (cuadro de diálogo, Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Índice de texto completo
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 926e3d42d21e24d9a3e76d10966e3d90381ca843
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3056ebfc960b26dd3035f1aefd1932151bad207a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254612"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247261"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Índice de texto completo (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ Este cuadro de diálogo permite crear un índice de texto completo para realizar
 **Índice de texto completo seleccionado**  
 Muestra los índices de texto completo existentes. Seleccione un índice para mostrar sus propiedades en la cuadrícula situada a la derecha. Si la lista está vacía, no se han definido relaciones de texto completo para la tabla.  
   
-**Agregar**  
+**Add (Agregar)**  
 Crea un nuevo índice de texto completo.  
   
 **Eliminar**  
@@ -88,7 +89,7 @@ Muestra la fecha y la hora en que se inició el rastreo actual o el más recient
 Muestra la fecha y la hora en que se va a iniciar el siguiente rastreo.  
   
 **Tipo de rastreo actual o último**  
-Muestra el número de errores del rastreo actual o del más reciente: Completo, Incremental, Actualización o Autopropagación.  
+Muestra el tipo al que pertenece el rastreo actual o el más reciente: Completo, Incremental, Actualización o Autopropagación.  
   
 **Nombre de índice único**  
 Muestra una lista con todos los nombres de las columnas de esta base de datos que tienen índices únicos de una sola columna. Estas columnas se pueden utilizar para crear un índice de texto completo.  

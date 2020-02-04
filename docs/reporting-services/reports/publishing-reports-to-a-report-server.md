@@ -22,10 +22,10 @@ ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2a2628bc5d098c32fc63d4a80bcf4c7b403a82a0
-ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72359408"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publicar informes en un servidor de informes
@@ -44,8 +44,8 @@ El permiso se determina a través de la seguridad basada en roles que define el 
  ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png) 
   
  Para más información, vea:
- + [Páginas de propiedades del proyecto (cuadro de diálogo)](../../reporting-services/tools/project-property-pages-dialog-box.md)
- + [Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)
+ + [Cuadro Páginas de propiedades del proyecto](../../reporting-services/tools/project-property-pages-dialog-box.md)
+ + [Implementación y compatibilidad de versiones en SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)
  + [Configurar propiedades de implementación para proyectos de Reporting Services en SSDT](../../reporting-services/tools/set-deployment-properties-reporting-services.md)
   
 ## <a name="to-publish-all-reports-in-a-project"></a>Para publicar todos los informes de un proyecto  
@@ -69,6 +69,6 @@ En el Explorador de soluciones, haga clic con el botón derecho en el informe y,
 ## <a name="see-also"></a>Consulte también  
  [Páginas de propiedades del proyecto (cuadro de diálogo)](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Actualizar informes](../../reporting-services/install-windows/upgrade-reports.md)  
+ [Actualización de informes](../../reporting-services/install-windows/upgrade-reports.md)  
   
   

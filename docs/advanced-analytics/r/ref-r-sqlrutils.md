@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715030"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (biblioteca de R en SQL Server)
@@ -104,7 +104,7 @@ El objeto del procedimiento almacenado no suele tener datos o valores asociados,
 > [!NOTE]
 > La función *executeStoredProcedure* requiere un proveedor ODBC 3.8, como ODBC Driver 13 for SQL Server.  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Cómo crear un procedimiento almacenado mediante sqlrutils](how-to-create-a-stored-procedure-using-sqlrutils.md)
 

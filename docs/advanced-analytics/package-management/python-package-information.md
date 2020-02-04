@@ -10,10 +10,10 @@ author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1aa12da4a138ea8f292fa8b64db00456d3c35fe3
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70000448"
 ---
 # <a name="get-python-package-information"></a>Obtención de información de paquetes de Python
@@ -57,7 +57,7 @@ Para obtener más información sobre la variable `sys.path` y cómo se usa para 
 
 Los siguientes paquetes de Python se instalan con SQL Server Machine Learning Services al seleccionar la característica de Python durante la instalación.
 
-| . | Versión |  Descripción |
+| Paquetes | Versión |  Descripción |
 | ---------|---------|--------------|
 | [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | Se usa para los contextos de procesos remotos, streaming, ejecución en paralelo de funciones rx para la importación y transformación de datos, modelado, visualización y análisis. |
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | Agrega algoritmos de aprendizaje automático en Python. |
@@ -130,6 +130,6 @@ print(sys.version)
 ## <a name="next-steps"></a>Pasos siguientes
 
 + [Instalación de paquetes de Python adicionales](../python/install-additional-python-packages-on-sql-server.md)
-+ [Obtención de información de los paquetes de R](r-package-information.md)
++ [Obtención de información de paquetes de R](r-package-information.md)
 + [Instalación de paquetes de R adicionales](../r/install-additional-r-packages-on-sql-server.md)
 + [Tutoriales de R y Python](../tutorials/machine-learning-services-tutorials.md)

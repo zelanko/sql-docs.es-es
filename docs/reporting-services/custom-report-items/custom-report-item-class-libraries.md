@@ -12,10 +12,10 @@ ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63194101"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliotecas de clases de elemento de informe personalizado
@@ -40,7 +40,7 @@ ms.locfileid: "63194101"
 |**CustomProperties**|Una colección de propiedades personalizadas para el elemento de informe personalizado.|  
 |**Height**|El alto del control de elemento de informe personalizado.|  
 |**Width**|El ancho del control de elemento de informe personalizado.|  
-|**Informe**|Un contenedor para las propiedades del nivel de informe, como la lista de conjuntos de datos en el informe.|  
+|**Report**|Un contenedor para las propiedades del nivel de informe, como la lista de conjuntos de datos en el informe.|  
 |**AltReportItem**|El objeto de elemento de informe alternativo que se utilizará cuando no se admita el control en tiempo de ejecución del elemento de informe personalizado.|  
 |**Estilo**|Las propiedades de estilo del elemento de informe personalizado.|  
 |**Adornment**|Una ventana de elementos gráficos utilizada para la edición interactiva del control.|  

@@ -9,10 +9,10 @@ ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63061166"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Obtener datos de conjuntos de datos compartidos en informes móviles de Reporting Services
@@ -57,7 +57,7 @@ Si ya ha establecido una conexión a un servidor de informes, al seleccionar **A
      
 2. Agregue una nueva conexión de servidor, o bien edite o quite conexiones existentes.  
   
-### <a name="see-also"></a>Vea también  
+### <a name="see-also"></a>Consulte también  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Creación y publicación de informes móviles con el Publicador de informes de SQL Server Mobile)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 -  [Portal web (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
 -  Ver [informes móviles y KPI de SQL Server en la aplicación de iPad](https://pbiwebprod-docs.azurewebsites.net/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI para iOS)  

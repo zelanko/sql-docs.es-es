@@ -1,6 +1,6 @@
 ---
-title: Panel Detalles del Explorador de objetos| Microsoft Docs
-ms.custom: ''
+title: Panel de detalles del Explorador de objetos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b51309850e4e36083dbbf5fa228746dac18968ef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fea000eb9b428c58fa01afdd9724b7b4418789cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264081"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257152"
 ---
 # <a name="object-explorer-details-pane"></a>Panel de detalles del Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,11 +43,11 @@ Detalles del explorador de objetos incluye una barra de herramientas que contien
 |--------|----------|  
 |**Atrás**|Se desplaza a los elementos anteriores mostrados en Detalles del Explorador de objetos. Vuelve a ejecutar una búsqueda cuando la presentación previa es el resultado de una operación de búsqueda.|  
 |**Adelante**|Se desplaza a la siguiente pantalla después de seleccionar una operación **Atrás** .|  
-|**Subir**|Se desplaza al objeto o carpeta principal.|  
+|**Up** (Arriba)|Se desplaza al objeto o carpeta principal.|  
 |**Sincronizar**|Establece el foco del Explorador de objetos en el objeto seleccionado en Detalles del Explorador de objetos.|  
 |**Filter**|Cuando está disponible, muestra un subconjunto de objetos que se puede configurar.|  
 |**Actualizar**|Actualiza la presentación en Detalles del Explorador de objetos.|  
-|**Buscar**|Proporciona un área donde escribir un término de búsqueda para algunos objetos de la base de datos.|  
+|**Búsqueda**|Proporciona un área donde escribir un término de búsqueda para algunos objetos de la base de datos.|  
   
 ### <a name="column-header-selections"></a>Selecciones de encabezados de columnas  
 Las columnas de Detalles del Explorador de objetos se pueden seleccionar. Puede hacer clic con el botón secundario en cualquier encabezado de columna y buscar los elementos que desea mostrar. Sus selecciones se mantendrán en los distintos objetos por los que navegue. Las selecciones de cada usuario se mantienen al salir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y reiniciarlo.  
@@ -55,10 +55,10 @@ Las columnas de Detalles del Explorador de objetos se pueden seleccionar. Puede 
 > [!CAUTION]  
 > Si se muestran todas las columnas de algunos tipos de objetos, como las bases de datos, se puede reducir ligeramente la velocidad de representación de conjuntos de objetos grandes.  
   
-### <a name="sorting"></a>Ordenar  
+### <a name="sorting"></a>Ordenación  
 Al hacer clic una vez en el encabezado de una columna, se ordenará por esa columna. Si vuelve a hacer clic en la misma columna, se clasifica en orden inverso por esa columna. Las selecciones de ordenación se mantienen para cada usuario en los objetos y las carpetas, así como al reiniciar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
-### <a name="filtering"></a>Filtrar  
+### <a name="filtering"></a>Filtros  
 Algunas listas de objetos que se muestran en Detalles del Explorador de objetos se pueden filtrar mediante el icono **Filtro** de la barra de herramientas de Detalles del Explorador de objetos. El icono se habilitará cuando sea posible la operación de filtrado.  
   
 ### <a name="details-pane"></a>Panel de detalles  
@@ -88,7 +88,7 @@ Detalles del Explorador de objetos admite la selección de varios objetos. Por e
 ## <a name="sql-server-object-search"></a>Buscar objetos de SQL Server  
 Caracteres comodín  
   
--   Se admiten los caracteres comodín estándar. Por ejemplo, si se busca **dm_os%counters** , se devuelve tanto dm_os_memory_cache_counters como dm_os_performance_counters. Para más información, vea: [Cómo: Buscar mediante caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Se admiten los caracteres comodín estándar. Por ejemplo, si se busca **dm_os%counters** , se devuelve tanto dm_os_memory_cache_counters como dm_os_performance_counters. Para más información, consulte [Buscar texto con caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Ámbito de búsqueda  
   

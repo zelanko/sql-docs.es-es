@@ -11,10 +11,10 @@ ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1fcfe999a7cfaf41cc4b6b9fad437ea14dfe2613
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575554"
 ---
 # <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Error de Reporting Services
@@ -23,9 +23,9 @@ ms.locfileid: "65575554"
   
 |||  
 |-|-|  
-|Nombre del producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Identificador del evento|rrRenderingError|  
-|Origen del evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources.Strings|  
+|Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Id. de evento|rrRenderingError|  
+|Origen de eventos|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources.Strings|  
 |Componente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texto del mensaje|Error durante la representación del informe. (rrRenderingError) %1|  
   

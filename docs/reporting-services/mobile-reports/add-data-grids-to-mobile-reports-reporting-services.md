@@ -9,10 +9,10 @@ ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63280462"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Agregar cuadrículas de datos a informes para dispositivos móviles | Reporting Services
@@ -76,7 +76,7 @@ Cuando se agrega una columna de gráfico a una cuadrícula de datos, hay que agr
    * **Búsqueda de destino** es el campo de la tabla de datos de **Datos de referencia para visualizaciones de gráficos**. Los datos del gráfico de cada fila se combinarán en esos dos campos.   
    * **Chart data field** (Campo de datos del gráfico) determina la métrica de la tabla de datos **Datos de referencia para visualizaciones de gráficos** que se usará como valor del eje y o como serie en el gráfico de cada fila.  
 
-## <a name="see-also"></a>Vea también 
+## <a name="see-also"></a>Consulte también 
 * [Mapas de informes móviles de Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Navegadores en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualizaciones de informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

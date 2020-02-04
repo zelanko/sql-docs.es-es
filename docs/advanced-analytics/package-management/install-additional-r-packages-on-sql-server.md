@@ -3,19 +3,19 @@ title: Instalación de paquetes de R adicionales
 description: Aprenda a usar sqlmlutils para instalar nuevos paquetes de R en una instancia de SQL Server Machine Learning Services o SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 827e83a0d1b363d3b91477b9ae85fec156ee4fc9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727495"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479432"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Instalación de nuevos paquetes de R con sqlmlutils
 
@@ -30,16 +30,16 @@ En este artículo se describe cómo usar las funciones del paquete de [**sqlmlut
 
 - Instale [R](https://www.r-project.org) y [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) en el equipo cliente que usa para conectarse a SQL Server. Puede usar cualquier IDE de R para ejecutar scripts, pero en este artículo se da por supuesto que es RStudio.
 
-- Instale [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) en el equipo cliente que usa para conectarse a SQL Server. Puede usar otras herramientas de consulta o administración de bases de datos, pero en este artículo se da por supuesto que emplea Azure Data Studio o SSMS.
+- Instale [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) en el equipo cliente que usa para conectarse a SQL Server. Puede usar otras herramientas de consulta o administración de bases de datos, pero en este artículo se da por supuesto que emplea Azure Data Studio o SSMS.
 
 ### <a name="other-considerations"></a>Otras consideraciones
 
 - El script de R que se ejecuta en SQL Server solo puede usar los paquetes instalados en la biblioteca de instancia predeterminada. SQL Server no puede cargar paquetes de bibliotecas externas, aunque la biblioteca esté en el mismo equipo. Esto incluye las bibliotecas de R instaladas con otros productos de Microsoft.
 
-- En un entorno de SQL Server protegido, probablemente le interese evitar lo siguiente:
+- En un entorno de SQL Server protegido, probablemente le interese evitar lo siguiente:
   - Paquetes que requieren acceso a la red
   - Paquetes que requieren acceso con privilegios elevados al sistema de archivos
-  - Paquetes que se usan para el desarrollo web u otras tareas que no obtienen ningún beneficio al ejecutarse en SQL Server
+  - Paquetes que se usan para el desarrollo web u otras tareas que no obtienen ningún beneficio al ejecutarse en SQL Server
 
 ## <a name="install-sqlmlutils-on-the-client-computer"></a>Instalación de sqlmlutils en el equipo cliente
 
@@ -51,7 +51,7 @@ El paquete de **sqlmlutils** depende del paquete de **RODBCext** y **RODBCext** 
 
 Si el equipo cliente tiene acceso a Internet, puede descargar e instalar **sqlmlutils** y sus paquetes dependientes en línea.
 
-1. Descargue el archivo ZIP **sqlmlutils** más reciente desde https://github.com/Microsoft/sqlmlutils/tree/master/R/dist en el equipo cliente. No descomprima el archivo.
+1. Descargue el archivo .zip **sqlmlutils** más reciente desde https://github.com/Microsoft/sqlmlutils/tree/master/R/dist en el equipo cliente. No descomprima el archivo.
 
 1. Abra un **símbolo del sistema** y ejecute el comando siguiente para instalar los paquetes **sqlmlutils** y **RODBCext**. Sustituya la ruta de acceso completa del archivo ZIP **sqlmlutils** que ha descargado (en este ejemplo, se da por supuesto que el archivo descargado se encuentra en la carpeta Documentos). El paquete de **RODBCext** se encuentra en línea y está instalado.
 
@@ -129,7 +129,7 @@ Si el equipo cliente que usa para conectarse a SQL Server tiene acceso a Interne
 
 1. En el equipo cliente, abra RStudio y cree un nuevo archivo de **script de R**.
 
-1. Use el siguiente script de R para instalar el paquete de **glue** mediante **sqlmlutils**. Sustituya su propia información de conexión a la base de datos de SQL Server (si no usa la autenticación de Windows, agregue los parámetros `uid` y `pwd`).
+1. Use el siguiente script de R para instalar el paquete de **glue** mediante **sqlmlutils**. Sustituya su propia información de conexión de base de datos de SQL Server (si no usa la autenticación de Windows, agregue los parámetros `uid` y `pwd`).
 
    ```R
    library(sqlmlutils)
@@ -192,7 +192,7 @@ En el equipo cliente:
 
 1. Abra RStudio y cree un nuevo archivo de **script de R**.
 
-1. Use el siguiente script de R para instalar el paquete de **glue** mediante **sqlmlutils**. Sustituya su propia información de conexión a la base de datos de SQL Server (si no usa la autenticación de Windows, agregue los parámetros `uid` y `pwd`).
+1. Use el siguiente script de R para instalar el paquete de **glue** mediante **sqlmlutils**. Sustituya su propia información de conexión de base de datos de SQL Server (si no usa la autenticación de Windows, agregue los parámetros `uid` y `pwd`).
 
    ```R
    library(sqlmlutils)
@@ -229,7 +229,7 @@ Una vez instalado el paquete de **glue**, puede usarlo en un script de R en SQL 
          ';
    ```
 
-    **Resultado**
+    **Resultados**
 
     ```text
     My name is Fred and my birthday is Sunday, June 14, 2020.

@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 07/16/2019
-ms.openlocfilehash: cd8f8e05e9be4bcd7a48c5e2fb800c2ebbc9e308
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
-ms.translationtype: MTE75
+ms.date: 12/11/2019
+ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329274"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244402"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar un servidor de informes en un clúster con equilibrio de carga de red
 
@@ -56,21 +56,21 @@ Para ejecutar una implementación escalada en un clúster NLB, debe configurar l
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-1. Genere una clave de validación y una clave de descifrado utilizando la funcionalidad de generación automática que proporciona [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Al final, debe tener una única entrada <`MachineKey`> que puede pegar en el archivo Web.config para cada instancia del servidor de informes de la implementación de escala horizontal.  
+1. Genere una clave de validación y una clave de descifrado utilizando la funcionalidad de generación automática que proporciona [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Al final, debe tener una única entrada <`machineKey`> que puede pegar en el archivo Web.config para cada instancia del servidor de informes de la implementación de escala horizontal.  
   
     En el ejemplo siguiente se ilustra el valor que se debe obtener. No copie el ejemplo en sus archivos de configuración; los valores de las claves no son válidos.  
   
     ```xml
-    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
+    <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Abra el archivo Web.config para el servidor de informes y, en la sección <`system.web`>, pegue el elemento <`MachineKey`> que ha generado. De forma predeterminada, el archivo Web.config del Administrador de informes se encuentra en \Archivos de programa\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Abra el archivo Web.config para el servidor de informes y, en la sección <`system.web`>, pegue el elemento <`machineKey`> que ha generado. De forma predeterminada, el archivo Web.config del Administrador de informes se encuentra en \Archivos de programa\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
 3. Guarde el archivo.  
   
 4. Repita el paso anterior en cada servidor de informes de la implementación escalada.  
   
-5. Compruebe que todos los archivos Web.Config de las carpetas \Reporting Services\Reportserver contienen elementos <`MachineKey`> idénticos en la sección <`system.web`>.  
+5. Compruebe que todos los archivos Web.Config de las carpetas \Reporting Services\Reportserver contienen elementos <`machineKey`> idénticos en la sección <`system.web`>.  
 
 ::: moniker-end
 
@@ -145,4 +145,4 @@ Para ejecutar una implementación escalada en un clúster NLB, debe configurar l
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)
+ [Administración de un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

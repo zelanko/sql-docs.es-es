@@ -1,11 +1,7 @@
 ---
-title: 'Procedimientos: Comparar y sincronizar los datos de dos bases de datos | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Comparación y sincronización de los datos de dos bases de datos
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.connection.datasources.f1
@@ -14,14 +10,19 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0d7654d02cfc35b0dfbaa82b100b9a82a8edacb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929473"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241579"
 ---
-# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procedimientos: Comparación y sincronización de los datos de dos bases de datos
+# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Cómo: Comparar y sincronizar los datos de dos bases de datos
+
 Puede comparar los datos contenidos en dos bases de datos. Las bases de datos que se comparan se conocen como el *origen* y el *destino*.  
   
 > [!NOTE]  
@@ -38,7 +39,7 @@ Una vez finalizada la comparación, puede realizar otras acciones:
 Para más información, consulte [Comparar y sincronizar datos de una o más tablas con datos de una base de datos de referencia](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 > [!NOTE]  
-> También puede comparar el *esquema* de dos bases de datos o de dos versiones de la misma base de datos. Para más información, vea: [Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
+> También puede comparar el *esquema* de dos bases de datos o de dos versiones de la misma base de datos. Para más información, consulte [Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
 ## <a name="CompareDatabaseData"></a>Comparar datos de bases de datos  
   
@@ -61,7 +62,7 @@ Para más información, consulte [Comparar y sincronizar datos de una o más tab
   
 4.  Si más de una clave está presente, puede utilizar la columna de **Clave de comparación** para especificar la clave en la que se basará la comparación de los datos. Por ejemplo, puede especificar si desea basar la comparación en la columna de clave principal o en otra columna de clave (identificable de forma única).  
   
-5.  Haga clic en **Finalizar**.  
+5.  Haga clic en **Finalizar**  
   
     La comparación comienza.  
   

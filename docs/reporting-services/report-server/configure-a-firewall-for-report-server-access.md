@@ -12,10 +12,10 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bbcd96e24d0819cc8403a669c7333bb92d396e05
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593747"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurar un firewall para el acceso al servidor de informes
@@ -46,25 +46,25 @@ ms.locfileid: "73593747"
   
 5.  Haga clic en **Puerto** en la sección **Regla de entrada.**  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 7.  En la página **Protocolos y puertos** , haga clic en **TCP**.  
   
 8.  Seleccione **Puertos locales específicos** y escriba un valor de **80**.  
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
 10. En la página **Acción** , haga clic en **Permitir la conexión**.  
   
-11. Haga clic en **Siguiente**.  
+11. Haga clic en **Next**.  
   
 12. En la página **Perfil** , haga clic en las opciones adecuadas para su entorno.  
   
-13. Haga clic en **Siguiente**.  
+13. Haga clic en **Next**.  
   
 14. En la página **Nombre** , escriba un nombre de**ReportServer (TCP en el puerto 80)** .  
   
-15. Haga clic en **Finalizar**.  
+15. Haga clic en **Finalizar**  
   
 16. Reinicie el equipo.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "73593747"
   
  También puede comprobar que el puerto se abre correctamente iniciando el portal web en un equipo diferente. Para más información, consulte [El portal web de un servidor de informes](../../reporting-services/web-portal-ssrs-native-mode.md).
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   

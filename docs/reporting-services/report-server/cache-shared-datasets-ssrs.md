@@ -9,10 +9,10 @@ ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 097955ece70dfa411c12d1ee5d69af0de14831e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175599"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Almacenar en caché conjuntos de datos compartidos (SSRS)
@@ -93,7 +93,7 @@ ms.locfileid: "66175599"
   
  Las actualizaciones de los planes de actualización de memoria caché para los conjuntos de datos compartidos no afectan a los informes que ya se estén procesando. La actualización de un plan de actualización de caché solo afecta a las versiones futuras de los informes que hagan referencia al conjunto de datos compartido.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
   
  [Administración de conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md)  
   

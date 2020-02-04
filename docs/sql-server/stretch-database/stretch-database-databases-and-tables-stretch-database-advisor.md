@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843750"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Identificar bases de datos y tablas para Stretch Database con Data Migration Assistant
@@ -45,7 +45,7 @@ ms.locfileid: "73843750"
 
 7.  Seleccione **Start Assessment** (Iniciar evaluación).
 
-## <a name="review-the-results"></a>Consultar los resultados  
+## <a name="review-the-results"></a>Revisión del resultado  
   
 1.  Cuando termine el análisis, en la página **Revisar resultados** (paso 3), seleccione la opción **Recomendaciones de características** y luego la pestaña **Almacenamiento**.
 
@@ -66,6 +66,6 @@ Con el lanzamiento de Data Migration Assistant, que reemplaza a Upgrade Advisor 
 ## <a name="see-also"></a>Consulte también  
  [Limitaciones del área expuesta y problemas de bloqueo de Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
  [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
- [Enable Stretch Database for a table (Habilitar Stretch Database para una tabla)](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
+ [Habilitación de Stretch Database para una tabla](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   

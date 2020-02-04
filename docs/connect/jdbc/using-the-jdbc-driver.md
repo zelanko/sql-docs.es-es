@@ -11,10 +11,10 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025772"
 ---
 # <a name="using-the-jdbc-driver"></a>Empleo del controlador JDBC
@@ -231,6 +231,6 @@ Cuando se llama al método getConnection de la clase DriverManager, se busca un 
 
 Para obtener más información sobre cómo conectar con orígenes de datos y usar una dirección URL de conexión, vea [Creación de la dirección URL de conexión](../../connect/jdbc/building-the-connection-url.md) y [Establecimiento de las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -11,10 +11,10 @@ ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140461"
 ---
 # <a name="report-server-http-log"></a>Registro HTTP del servidor de informes
@@ -58,7 +58,7 @@ ms.locfileid: "67140461"
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Este valor es opcional. El valor predeterminado es ReportServerServiceHTTP_. Puede especificar un valor diferente si desea utilizar una convención de nomenclatura de archivos diferente (por ejemplo, para incluir el nombre de servidor si guarda los archivos de registro en una ubicación central).|Sí|  
 |HTTPTraceSwitches|Este valor es opcional. Si lo especifica, puede configurar los campos utilizados en el archivo de registro con un formato separado por comas.|No|  
-|date|Fecha en que se produjo la actividad.|No|  
+|Date|Fecha en que se produjo la actividad.|No|  
 |Time|Hora en que se produjo la actividad.|No|  
 |ClientIp|Dirección IP del cliente que tiene acceso al servidor de informes.|Sí|  
 |UserName|Nombre del usuario que tuvo acceso al servidor de informes.|No|  
@@ -67,7 +67,7 @@ ms.locfileid: "67140461"
 |Método|Acción o método SOAP llamado desde el cliente.|Sí|  
 |UriStem|Recurso al que se obtuvo acceso.|Sí|  
 |UriQuery|Consulta utilizada para tener acceso al recurso.|No|  
-|ProtocolStatus|Código de estado HTTP.|Sí|  
+|ProtocolStatus|El código de estado HTTP.|Sí|  
 |BytesReceived|Número de bytes recibidos por el servidor.|No|  
 |TimeTaken|Tiempo transcurrido (en milisegundos) desde que el HTTP.SYS instantáneo devuelve los datos de la solicitud hasta que el servidor finaliza el último envío, excluido el tiempo de transmisión por la red.|No|  
 |ProtocolVersion|Versión de protocolo utilizada por el cliente.|No|  
@@ -76,7 +76,7 @@ ms.locfileid: "67140461"
 |CookieSent|Contenido de la cookie enviada por el servidor.|No|  
 |Referrer|Sitio anterior visitado por el cliente.|No|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md)   
  [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 493abba0e4396b6f12670dd3214d19e4767c4d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580018"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurar Reporting Services para usar un nombre alternativo del asunto
@@ -117,7 +117,7 @@ Para utilizar el SAN, el certificado SSL debe estar registrado en el servidor, f
   
 10. En la página **Estado del servidor de informes** del Administrador de configuración de Reporting Services, haga clic en **Detener** y, a continuación, haga clic en **Iniciar** para reiniciar el servidor de informes.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [Archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Administrador de configuración de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

@@ -1,25 +1,26 @@
 ---
-title: 'Procedimientos: Visualizar diferencias de datos | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Consulta de las diferencias de los datos
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datacompare.f1
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec641fc027bae18a09e81d5cf14eee1bd8ab3ee3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 5c9e80f6289ff3313a3eeb7cec0601fb2c651aa2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930341"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226751"
 ---
-# <a name="how-to-view-data-differences"></a>Procedimientos: Consulta de las diferencias de los datos
+# <a name="how-to-view-data-differences"></a>Cómo: Ver diferencias de datos
+
 Después de comparar los datos de dos bases de datos, verá cada uno de los *objetos de base de datos* comparado y su estado. También puede ver los resultados de los registros dentro de cada objeto, agrupados por estado.  
   
 Una vez haya visto las diferencias, puede actualizar el *destino* para que coincida con el *origen* de algunos o todos los objetos o registros que son diferentes, faltan o son nuevos.  

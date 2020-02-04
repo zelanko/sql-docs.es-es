@@ -9,10 +9,10 @@ ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d01f9f1bef4d13cbce3f3e736cbef2f838c680ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63061823"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Creación de un informe móvil en pestañas con obtención de detalles
@@ -97,7 +97,7 @@ En esta sección, se establece cada medidor (excepto el medidor Sales) como obte
 
    ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
 
-### <a name="see-also"></a>Vea también
+### <a name="see-also"></a>Consulte también
     
 * [Incorporación de parámetros a un informe móvil](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [Incorporación de obtención de detalles de un informe móvil a otros informes móviles o direcciones URL](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)

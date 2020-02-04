@@ -1,24 +1,25 @@
 ---
-title: 'Procedimientos: Clonar una base de datos existente | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Clon de una base de datos existente
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d32b782c8508952a85f0a9a22b55d32dab096d6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017619"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241588"
 ---
-# <a name="how-to-clone-an-existing-database"></a>Procedimientos: Clon de una base de datos existente
-Esta tarea usa algunos de los pasos que ha aprendido en procedimientos anteriores para crear una nueva base de datos y transportar datos existentes. Además, utiliza los pasos que se describen en [Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) para sincronizar el esquema de una base de datos de origen y de un proyecto.  
+# <a name="how-to-clone-an-existing-database"></a>Cómo: Clonar una base de datos existente
+
+Esta tarea usa algunos de los pasos que ha aprendido en procedimientos anteriores para crear una nueva base de datos y transportar datos existentes. Además, utiliza los pasos descritos en [Uso de Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) para sincronizar el esquema de una base de datos de origen y de un proyecto.  
   
 Mediante estos pasos, puede crear fácilmente una base de datos de desarrollo o de prueba a partir de una base de datos de producción con un esquema y datos idénticos. Después, puede seguir desarrollando la base de datos de prueba en un modo conectado o puede crear un proyecto de base de datos para su desarrollo y pruebas sin conexión, todo ello sin interrumpir el funcionamiento de la base de datos de producción.  
   
@@ -33,7 +34,7 @@ Mediante estos pasos, puede crear fácilmente una base de datos de desarrollo o 
   
 3.  Cambie el nombre de la nueva base de datos a **TradeDev**.  
   
-4.  Haga clic con el botón derecho en la base de datos **Trade** en el **Explorador de objetos de SQL Server** y seleccione **Comparación de esquemas**. Siga los pasos que se describen en [Cómo: Uso de Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md), eligiendo la base de datos **Trade** original como origen y la nueva base de datos **TradeDev** como destino. Esto actualizará **TradeDev** con el esquema de **Trade**.  
+4.  Haga clic con el botón derecho en la base de datos **Trade** en el **Explorador de objetos de SQL Server** y seleccione **Comparación de esquemas**. Siga los pasos del tema [Uso de Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md), eligiendo la base de datos **Trade** original como origen y la nueva base de datos **TradeDev** como destino. Esto actualizará **TradeDev** con el esquema de **Trade**.  
   
 ### <a name="to-replicate-data"></a>Para replicar datos  
   

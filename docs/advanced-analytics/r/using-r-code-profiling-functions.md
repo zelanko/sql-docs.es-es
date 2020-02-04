@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e03ae1a8c4cdab87f46f63da6271886b4518b5e3
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715013"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>Uso de funciones de generación de perfiles de código de R para mejorar el rendimiento
@@ -61,7 +61,7 @@ help("Sys.time")
 
 La documentación de Microsoft R Open, que se instala de manera predeterminada, incluye un manual sobre el desarrollo de extensiones para el lenguaje R que analiza minuciosamente la [generación de perfiles y la depuración](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging). Puede encontrar la misma documentación en su equipo en C:\Archivos de programa\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\doc\manual.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 + [Paquete utils de R](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
 + ["Advanced R" por Hadley Wickham](http://adv-r.had.co.nz)

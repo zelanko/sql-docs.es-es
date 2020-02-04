@@ -11,10 +11,10 @@ ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bf9345d7f707c1cebc086b9c3ff8a1d69997854c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576798"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Agregar un informe nuevo o existente a un proyecto de informe (SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "65576798"
   
 1.  En el Explorador de soluciones, haga clic con el botón derecho en la carpeta Informes y, después, haga clic en **Agregar nuevo informe**. Se abrirá el cuadro de diálogo **Asistente para informes** .  
   
-     Los pasos del asistente le guiarán a lo largo del proceso de creación de un origen de datos, creación de un conjunto de datos con una consulta, definición de grupos, especificación de un diseño y creación del informe. Entre estos pasos se incluyen los siguientes:  
+     Los pasos del asistente le guiarán a lo largo del proceso de creación de un origen de datos, creación de un conjunto de datos con una consulta, definición de grupos, especificación de un diseño y creación del informe. Entre los pasos se incluyen:  
   
     -   **Seleccionar un origen de datos.** El primer paso para crear un informe es definir un origen de datos. El Asistente para informes muestra una lista de todos los orígenes de datos compartidos del proyecto de informe y, además, una opción para crear un nuevo origen de datos.  
   

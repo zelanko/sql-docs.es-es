@@ -19,10 +19,10 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578444"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos
@@ -113,7 +113,7 @@ ms.locfileid: "65578444"
 ##  <a name="Legends"></a> Descripción de las leyendas y sus elementos  
  Las reglas que se especifican para cada capa crean automáticamente los elementos de leyenda. Las opciones de regla controlan cuántos elementos se crean y en qué leyenda aparecen. De forma predeterminada, todos los elementos de todas las reglas se agregan a la primera leyenda. Para retirar los elementos de la primera leyenda, cree tantas leyendas adicionales como sean necesarias y, para cada regla, especifique la leyenda que se utilizará para mostrar los elementos que sean resultado de la regla. Para ocultar los elementos en función de una regla, especifique un nombre de leyenda en blanco.  
   
- Para controlar dónde aparece una leyenda, utilice el cuadro de diálogo Propiedades de la leyenda a fin de especificar una posición en relación a la ventanilla del mapa. Para más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Para controlar dónde aparece una leyenda, utilice el cuadro de diálogo Propiedades de la leyenda a fin de especificar una posición en relación a la ventanilla del mapa. Para obtener más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
  Las leyendas se expanden automáticamente para mostrar el título o el texto. Para dar formato al texto de los elementos de leyenda, use palabras clave y formatos personalizados de leyenda de mapa. Para más información, consulte [Cambiar el formato del contenido de una leyenda](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems).  
   

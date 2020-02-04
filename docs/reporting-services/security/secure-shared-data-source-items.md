@@ -13,10 +13,10 @@ ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: daf21bcf8bff9886db5b640531380c628abfb198
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570578"
 ---
 # <a name="secure-shared-data-source-items"></a>Proteger elementos de orígenes de datos compartidos
@@ -34,7 +34,7 @@ ms.locfileid: "65570578"
 |Seleccione esta tarea|Para conceder a los usuarios permiso para|  
 |----------------------|---------------------------------|  
 |Ver orígenes de datos|Ver el origen de datos compartido en la jerarquía de carpetas. Sin esta tarea, el elemento no está visible para los usuarios y no pueden saber que el origen de datos está disponible.|  
-|Administrar orígenes de datos|Ver propiedades que especifican el nombre, la descripción y la información de conexión. Esta tarea también se utiliza para mostrar un origen de datos compartido en la jerarquía de carpetas. Si elige esta tarea, puede omitir la tarea "Ver orígenes de datos".|  
+|Administración de orígenes de datos|Ver propiedades que especifican el nombre, la descripción y la información de conexión. Esta tarea también se utiliza para mostrar un origen de datos compartido en la jerarquía de carpetas. Si elige esta tarea, puede omitir la tarea "Ver orígenes de datos".|  
 |Establecer la seguridad de elementos individuales|Crear y modificar asignaciones de roles que controlen el acceso al origen de datos compartido. Esta tarea debe utilizarse con las tareas "Ver orígenes de datos" o "Administrar orígenes de datos". De lo contrario, no surte efecto porque el usuario no puede seleccionar el elemento.|  
   
 ## <a name="see-also"></a>Consulte también  

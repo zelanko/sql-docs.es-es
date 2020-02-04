@@ -1,10 +1,7 @@
 ---
-title: Sintaxis de Transact-SQL compatible con IntelliSense | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+title: Sintaxis de Transact-SQL compatible con IntelliSense
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -14,13 +11,16 @@ helpviewer_keywords:
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63e8ba6c7770679ca487d945e4823f70425413ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5acada236056a5691ceebe81d0372f1fa06543f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253254"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252981"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxis de Transact-SQL compatible con IntelliSense
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68253254"
 |FROM|ORDER BY|  
 |HAVING|UNION|  
 |FOR|GROUP BY|  
-|ARRIBA|OPTION (sugerencia)|  
+|TOP|OPTION (sugerencia)|  
   
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>Instrucciones Transact-SQL adicionales compatibles  
  El Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] también proporciona compatibilidad con IntelliSense para las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se muestran en la tabla siguiente.  

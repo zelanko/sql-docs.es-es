@@ -22,10 +22,10 @@ ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 217b1ea42ae7af0aef2ece4c6c345b2fac7be89e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576336"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Encabezados y pies de página (Generador de informes y SSRS)
@@ -60,7 +60,7 @@ ms.locfileid: "65576336"
 |&TotalPages|Sí|No|  
 |Aggregate, función|Sí. Por ejemplo,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Sí. Por ejemplo,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Colección de campos para los elementos de la página|Indirectamente. Por ejemplo,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Sí. Por ejemplo,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|Imagen enlazada a datos|Indirectamente. Por ejemplo, `=ReportItems!TXT_Photo.Value`|Sí. Por ejemplo,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|Imagen enlazada a datos|Indirectamente. Por ejemplo: `=ReportItems!TXT_Photo.Value`|Sí. Por ejemplo,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  Las secciones siguientes de este tema muestran expresiones listas para usar que generan datos variables usados habitualmente en los encabezados y pies de página. También hay una sección en la que se explica la forma en que la extensión de representación en Excel procesa encabezados y pies de página. Para obtener más información sobre las expresiones, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   

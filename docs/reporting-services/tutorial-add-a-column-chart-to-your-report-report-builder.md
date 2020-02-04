@@ -9,10 +9,10 @@ ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041397"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)
@@ -85,22 +85,22 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
   
 8.  (Opcional) Haga clic en el botón Ejecutar ( **!** ) para ver los datos en los que se basará su gráfico.  
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
 ## <a name="ChartType"></a>2. Elegir el tipo de gráfico  
 Puede elegir entre varios tipos de gráfico predefinidos y luego modificar el gráfico después de completar el asistente.  
   
 ### <a name="to-add-a-column-chart"></a>Para agregar un gráfico de columnas  
   
-1.  En la página **Elegir un tipo de gráfico** , el gráfico de columnas es el tipo de gráfico predeterminado. Haga clic en **Siguiente**.  
+1.  En la página **Elegir un tipo de gráfico** , el gráfico de columnas es el tipo de gráfico predeterminado. Haga clic en **Next**.  
   
 2.  En la página **Organizar campos del gráfico** , arrastre el campo SalesDate hasta **Categorías**. Categorías se muestra en el eje horizontal.  
   
 3.  Arrastre el campo Sales hasta **Valores**. El cuadro **Valores** muestra Sum(Sales), porque la suma del valor total de ventas se agrega para cada fecha. Valores se muestra en el eje vertical.  
   
-4.  Haga clic en **Siguiente**.  
+4.  Haga clic en **Next**.  
  
-6.  Haga clic en **Finalizar**.  
+6.  Haga clic en **Finalizar**  
   
     El gráfico se agrega a la superficie de diseño. Tenga en cuenta que el nuevo gráfico de columnas solo muestra los datos de representación. La leyenda dice Fecha de ventas A, Fecha de ventas B, etc., solo para dar una idea del aspecto que tendrá el informe. 
     
@@ -135,7 +135,7 @@ La fecha se mostrará en el formato de fecha que haya seleccionado. El gráfico 
   
 Puede personalizar la presentación de las etiquetas girándolas y especificando el intervalo.  
   
-## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Girar las etiquetas del eje en el eje horizontal  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Girar las etiquetas de eje en el eje horizontal  
   
 1.  Cambie a la vista de diseño del informe.  
   
@@ -225,7 +225,7 @@ Observe que solo se muestran algunas de las etiquetas del eje x. En esta secció
 
 3. En el panel Propiedades, establezca LabelInterval en 1.
 
-    ![generador-informes-gráfico-columnas-establecer-intervalo-etiquetas](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
+    ![report-builder-column-chart-set-label-interval](../reporting-services/media/report-builder-column-chart-set-label-interval.png)
 
     El gráfico tiene el mismo aspecto en la vista Diseño. 
     
@@ -295,9 +295,9 @@ El gráfico muestra una línea que muestra la media móvil del total de ventas p
   
 3.  En **Nombre**, escriba **Gráfico de columnas de pedidos de ventas**.  
   
-4.  Haga clic en **Guardar**.  
+4.  Haga clic en **Save**(Guardar).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 Ha completado correctamente el tutorial Agregar un gráfico de columnas al informe. Para obtener más información sobre los gráficos, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte también  

@@ -11,10 +11,10 @@ ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9846867cfc6bd50568440c5c66711457754af50c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993283"
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
@@ -32,7 +32,7 @@ mixed PDO::errorCode();
 ## <a name="return-value"></a>Valor devuelto  
 PDO::errorCode devuelve un valor de SQLSTATE de cinco caracteres como una cadena o Null si no hay ninguna operación en el identificador de la base de datos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 El valor de PDO::errorCode del controlador PDO_SQLSRV devuelve advertencias sobre algunas operaciones correctas. Por ejemplo, en una conexión correcta, PDO::errorCode devuelve "01000", que indica SQL_SUCCESS_WITH_INFO.  
   
 PDO::errorCode solo recupera los códigos de error de las operaciones realizadas directamente en la conexión de base de datos. Si crea una instancia de PDOStatement a través de PDO::prepare o PDO::query y se genera un error en el objeto de instrucción, PDO::errorCode no recupera ese error. Debe llamar a PDOStatement::errorCode para devolver el código de error de una operación realizada en un objeto de instrucción concreto.  

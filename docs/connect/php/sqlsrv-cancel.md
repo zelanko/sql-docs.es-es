@@ -17,13 +17,13 @@ ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f109a264d394a47164966e602b264f0fcd337e12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935845"
 ---
-# <a name="sqlsrvcancel"></a>sqlsrv_cancel
+# <a name="sqlsrv_cancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cancela una instrucción. Esto significa que se descarta cualquier resultado pendiente de la instrucción. Después de llamar a esta función, se puede volver a ejecutar la instrucción si se ha preparado con [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md). No resulta necesario llamar a esta función si se han consumido todos los resultados asociados con la instrucción.  
@@ -42,7 +42,7 @@ sqlsrv_cancel( resource $stmt)
 Se devuelve un valor booleano **True** si la operación se realiza correctamente. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="example"></a>Ejemplo  
-En el siguiente ejemplo se ejecuta una consulta en la base de datos de [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) y, después, se usan y cuentan los resultados hasta que la variable *$salesTotal* alcanza una cantidad especificada. Luego se descartan los resultados restantes de la consulta. En el ejemplo se da por hecho que SQL Server y la base de datos de AdventureWorks están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el siguiente ejemplo se ejecuta una consulta en la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) y luego se usan y cuentan los resultados hasta que la variable *$salesTotal* alcanza una cantidad especificada. Luego se descartan los resultados restantes de la consulta. En el ejemplo se da por hecho que SQL Server y la base de datos de AdventureWorks están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  

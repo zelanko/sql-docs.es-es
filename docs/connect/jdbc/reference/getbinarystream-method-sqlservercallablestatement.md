@@ -16,10 +16,10 @@ ms.assetid: b0d2cff1-1ab0-44c2-9824-70106fc43370
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d4f3b9010f8a2a4ba932ff774e6fe305b3767de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953647"
 ---
 # <a name="getbinarystream-method-sqlservercallablestatement"></a>Método getBinaryStream (SQLServerCallableStatement)

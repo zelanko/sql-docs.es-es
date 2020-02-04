@@ -11,10 +11,10 @@ ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028891"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Informes móviles de SQL Server: tutorial completo
@@ -22,7 +22,7 @@ Recorra la creación de informes móviles para cualquier tamaño de pantalla con
 
 Cree informes móviles en una superficie de diseño con cuadrícula ajustable de filas y columnas y elementos flexibles de informes móviles. Conéctese a una variedad de orígenes de datos locales o cargue libros de Excel para crear informes móviles. A continuación, guarde los informes en un portal web de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] y véalos en un explorador o en las aplicaciones móviles de Power BI.  
   
-Este artículo le guiará para que pueda:   
+Este artículo le enseñará a:   
   
 - Crear un conjunto de datos y un origen de datos compartidos en el portal web de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , con la base de datos de AdventureWorks como un origen de datos de ejemplo.  
 - Crear un informe móvil de Reporting Services en el [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
@@ -44,7 +44,7 @@ Para poder continuar, necesita estos productos:
   
 ## <a name="create-a-shared-data-source"></a>Crear un origen de datos compartido  
   
-Puede crear un origen de datos compartido para los informes móviles desde cualquiera de los orígenes de datos compatibles con Reporting Services. Consulte una [lista de orígenes de los datos admitidos](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+Puede crear un origen de datos compartido para los informes móviles desde cualquiera de los orígenes de datos compatibles con Reporting Services. Vea la [lista de orígenes de datos admitidos](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. En el portal web de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , haga clic en **Nuevo** > **Origen de datos**.  
   
@@ -65,7 +65,7 @@ Lea más información sobre los [orígenes de datos compartidos en Reporting Ser
    
 ## <a name="shared-dataset">Creación de un conjunto de datos compartido</a>  
   
-Use una herramienta de cliente de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] existente, como Diseñador de informes en [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para crear el conjunto de datos compartido.  Este tutorial usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instalar el Generador de informes](../install-windows/install-report-builder.md)o ábralo desde el portal web. Creará tres conjuntos de datos, uno para: el valor del KPI, la tendencia del KPI y otro con más campos para el informe móvil de Reporting Services.     
+Use una herramienta de cliente de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] existente, como Diseñador de informes en [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para crear el conjunto de datos compartido.  Este tutorial usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instale el Generador de informes](../install-windows/install-report-builder.md) o ábralo desde el portal web. Creará tres conjuntos de datos, uno para: el valor del KPI, la tendencia del KPI y otro con más campos para el informe móvil de Reporting Services.     
   
 1. En el portal web de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , haga clic en **Nuevo** > **Informe paginado** para iniciar [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   
@@ -117,7 +117,7 @@ Puede crear KPI directamente en el portal web de [!INCLUDE[PRODUCT_NAME](../../i
 
    ![reporting-services-kpi-pick-aggregation](../../reporting-services/mobile-reports/media/reporting-services-kpi-pick-aggregation.png)
 
-6. Haga clic en **Aceptar**.
+6. Haga clic en **OK**.
 
 7. En la casilla **Conjunto de tendencias** , haga clic en **Tendencia de conjunto de datos**.  
   
@@ -165,7 +165,7 @@ Cuando se abra [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)
   
    ![PBI_SSMRP_TreeMapDataProps](../../reporting-services/mobile-reports/media/pbi-ssmrp-treemapdataprops.png)  
   
-6. Haga clic en la pestaña **Diseño** .  
+6. Haga clic en la pestaña **Diseño**.  
   
 7. Haga clic en el engranaje Opciones ![PBI_SSMRP_Cog](../../reporting-services/mobile-reports/media/pbi-ssmrp-cog.png) que se encuentra en la esquina superior derecha del gráfico de rectángulos para ver el menú que contiene.   
   
@@ -301,7 +301,7 @@ Pulse la pestaña **KPI** o **Informes móviles** .
   
 Los KPI y los informes móviles se muestran en las mismas carpetas en las que están en el portal web de Reporting Services.   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  
 -  Visualización [de informes y KPI locales del servidor de informes en la aplicaciones móviles de Power BI](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) para dispositivos iOS y Android
 -  Visualización [de informes móviles y KPI de Reporting Services (SSRS) en la aplicación móvil de Power BI para Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    

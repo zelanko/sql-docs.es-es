@@ -9,10 +9,10 @@ ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 333c75f3ca10d1ed6ecd738a3dc76a32a53305c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579584"
 ---
 # <a name="report-builder-functions---lookup-function"></a>Funciones del Generador de informes: función Lookup
@@ -41,10 +41,10 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  *conjunto de datos*  
  Una constante que especifica el nombre de un conjunto de datos del informe. Por ejemplo, "Productos".  
   
-## <a name="return"></a>Devolución  
+## <a name="return"></a>Valor devuelto  
  Devuelve **Variant**o **Nothing** si no hay ninguna coincidencia.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Use **Lookup** para recuperar el valor del conjunto de datos especificado correspondiente a un par nombre/valor donde hay una relación de uno a uno. Por ejemplo, para un campo de identificador en una tabla, puede usar **Lookup** para recuperar el campo Name correspondiente de un conjunto de datos que no está enlazado a la región de datos.  
   
  **Lookup** realiza las operaciones siguientes:  
@@ -59,7 +59,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
  Para recuperar varios valores para un único nombre o campo de clave donde hay una relación de uno a varios, use la [función LookupSet &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md). Para llamar a **Lookup** para un conjunto de valores, use la [función Multilookup &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
- Se aplican las siguientes restricciones:  
+ Se aplican las restricciones que se indican a continuación:  
   
 -   Se evalúa**Lookup** después de aplicar todas las expresiones de filtro.  
   

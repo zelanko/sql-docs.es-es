@@ -11,10 +11,10 @@ ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 16f083c08a9d82a019ae98a8f9a71d7e596394da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582179"
 ---
 # <a name="new-user-role-management-studio"></a>Nuevo rol de usuario (Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "65582179"
  **Descripción**  
  Escriba una descripción que explique cómo usar el rol y que especifique el rol que admite.  
   
- **Tarea**  
+ **Task**  
  Seleccione las tareas que se pueden realizar mediante este rol. No puede crear nuevas tareas ni modificar las tareas existentes que admite [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Solo las tareas de nivel de elemento pueden utilizarse en una definición de roles de nivel de elemento.  
   
  **Descripción de la tarea**  

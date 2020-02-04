@@ -12,10 +12,10 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65619693"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Registro de ejecución del servidor de informes y la vista ExecutionLog3
@@ -59,7 +59,7 @@ ms.locfileid: "65619693"
   
 4.  Seleccione **Habilitar el registro de la ejecución** en la sección **Registro** .  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
  **Para habilitar el registro detallado:**  
   
@@ -106,23 +106,23 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  La siguiente tabla describe los datos que se capturan en el registro de ejecución de informes  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |InstanceName|Nombre de la instancia de servidor de informes que procesó la solicitud. Si el entorno tiene más de un servidor de informes, puede analizar la distribución de InstanceName para supervisar y determinar si el equilibrador de carga de red distribuye las solicitudes entre los servidores de informes como se esperaba.|  
 |ItemPath|Ruta de acceso donde se almacena un informe o un elemento de informe.|  
 |UserName|Identificador del usuario.|  
 |ExecutionID|Identificador interno asociado a una solicitud. Las solicitudes en las mismas sesiones de usuario comparten el mismo identificador de ejecución.|  
-|RequestType|Valores posibles:<br /><br /> Interactiva<br /><br /> Suscripción<br /><br /> <br /><br /> El análisis de los datos de registro filtrados por RequestType=Subscription y ordenados por TimeStart pueden revelar los periodos de mucho uso de suscripciones y puede indicar la conveniencia de modificar algunas de las suscripciones de informe a un momento diferente.|  
+|RequestType|Valores posibles:<br /><br /> Interactive<br /><br /> Subscription<br /><br /> <br /><br /> El análisis de los datos de registro filtrados por RequestType=Subscription y ordenados por TimeStart pueden revelar los periodos de mucho uso de suscripciones y puede indicar la conveniencia de modificar algunas de las suscripciones de informe a un momento diferente.|  
 |Formato|Formato de representación.|  
 |Parámetros|Valores de parámetros utilizados para la ejecución de un informe.|  
-|ItemAction|Valores posibles:<br /><br /> Render<br /><br /> Sort<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
+|ItemAction|Valores posibles:<br /><br /> Representación<br /><br /> Sort<br /><br /> BookMarkNavigation<br /><br /> DocumentNavigation<br /><br /> GetDocumentMap<br /><br /> Findstring<br /><br /> Execute<br /><br /> RenderEdit|  
 |TimeStart|Horas de inicio y detención que indican la duración del procesamiento de un informe.|  
 |TimeEnd||  
 |TimeDataRetrieval|Número de milisegundos empleados en recuperar los datos.|  
 |TimeProcessing|Número de milisegundos empleados en procesar el informe.|  
 |TimeRendering|Número de milisegundos empleados en representar el informe.|  
-|Source|Origen de la ejecución del informe. Valores posibles:<br /><br /> Activo<br /><br /> Caché: hace referencia a una ejecución almacenada en caché, por ejemplo, las consultas de conjunto de datos no se ejecutan de forma dinámica.<br /><br /> Snapshot<br /><br /> Historial<br /><br /> AdHoc: hace referencia a un informe detallado basado en un modelo de informe generado de forma dinámica, o bien a un informe del Generador de informes del cual se puede obtener una vista previa en un cliente mediante el uso de un servidor de informes para el procesamiento y la representación.<br /><br /> Sesión: hace referencia a una solicitud de seguimiento en una sesión que ya se ha establecido.  Por ejemplo, la solicitud inicial es ver la página 1 y la solicitud de seguimiento es exportar a Excel con el estado actual de la sesión.<br /><br /> Rdce: hace referencia a una extensión de personalización de definición de informe. Las extensiones personalizadas de RDCE pueden personalizar dinámicamente una definición de informe antes de que se pase al motor de procesamiento en el momento de la ejecución de informes.|  
-|Estado|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
+|Source|Origen de la ejecución del informe. Valores posibles:<br /><br /> En vivo<br /><br /> Caché: hace referencia a una ejecución almacenada en caché, por ejemplo, las consultas de conjunto de datos no se ejecutan de forma dinámica.<br /><br /> Instantánea<br /><br /> Historial<br /><br /> AdHoc: hace referencia a un informe detallado basado en un modelo de informe generado de forma dinámica, o bien a un informe del Generador de informes del cual se puede obtener una vista previa en un cliente mediante el uso de un servidor de informes para el procesamiento y la representación.<br /><br /> Sesión: hace referencia a una solicitud de seguimiento en una sesión que ya se ha establecido.  Por ejemplo, la solicitud inicial es ver la página 1 y la solicitud de seguimiento es exportar a Excel con el estado actual de la sesión.<br /><br /> Rdce: hace referencia a una extensión de personalización de definición de informe. Las extensiones personalizadas de RDCE pueden personalizar dinámicamente una definición de informe antes de que se pase al motor de procesamiento en el momento de la ejecución de informes.|  
+|Status|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
 |AdditionalInfo|Un contenedor de propiedades XML que incluye información adicional sobre la ejecución. El contenido puede ser diferente para cada fila.|  
@@ -317,7 +317,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  La siguiente tabla describe los datos que se capturan en el registro de ejecución de informes  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|------------------------------------------------------------|  
 |InstanceName|Nombre de la instancia de servidor de informes que procesó la solicitud.|  
 |ReportPath|La estructura de ruta de acceso al informe. Un informe guardado en la carpeta raíz como "test" tiene un ReportPath de '"/test".<br /><br /> Un informe denominado "test" guardado en la carpeta "samples" tendrá un ReportPath de "/Samples/test/".|  
@@ -333,7 +333,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeProcessing||  
 |TimeRendering||  
 |Source|Origen de la ejecución del informe (1=Activo, 2=Caché, 3=Instantánea, 4=Historial).|  
-|Estado|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
+|Status|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
 |AdditionalInfo|Un contenedor de propiedades XML que incluye información adicional sobre la ejecución.|  
@@ -349,7 +349,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  La siguiente tabla describe los datos que se capturan en el registro de ejecución de informes  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |InstanceName|Nombre de la instancia de servidor de informes que procesó la solicitud.|  
 |ReportID|Identificador del informe.|  
@@ -363,7 +363,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeProcessing||  
 |TimeRendering||  
 |Source|Origen de la ejecución del informe. Valores posibles: (1=Activo, 2=Caché, 3=Instantánea, 4=Historial, 5=Adhoc, 6=Sesión, 7=RDCE).|  
-|Estado|Valores posibles: rsSuccess, rsProcessingAborted o un código de error. Si aparecen varios errores, solo se registra el primero.|  
+|Status|Valores posibles: rsSuccess, rsProcessingAborted o un código de error. Si aparecen varios errores, solo se registra el primero.|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
   

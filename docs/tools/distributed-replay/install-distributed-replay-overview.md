@@ -1,7 +1,6 @@
 ---
-title: Distributed Replay de instalación-información general | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Instalar Distributed Replay
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,16 +8,20 @@ ms.topic: conceptual
 ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 72fde1ec93e60195f92c2ee167e5c5c9e3a8d6c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: e5d1605d9f44cf5e28cd6e49b6a234de44f5c5f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039049"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74992128"
 ---
 # <a name="install-distributed-replay---overview"></a>Install Distributed Replay - Overview
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Utilice los siguientes temas para instalar la característica Distributed Replay.  
+
+Utilice los siguientes temas para instalar la característica Distributed Replay.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

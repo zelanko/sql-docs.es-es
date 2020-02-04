@@ -1,27 +1,28 @@
 ---
-title: Establecer opciones globales de seguimiento (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Establecer opciones globales de seguimiento
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9605f5e12b1dcc206d50e958d8c1787750e98941
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: c66bb6a8a2f894cb80fd17c9fce24a0d98d027f2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104181"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307942"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>Establecer opciones globales de seguimiento (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En este tema se describe cómo establecer las opciones que se aplican a todos los seguimientos creados con una instancia determinada del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+
+En este tema se describe cómo establecer las opciones que se aplican a todos los seguimientos creados con una instancia determinada del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-set-global-trace-options"></a>Para establecer opciones globales de seguimiento  
   
@@ -45,7 +46,7 @@ ms.locfileid: "68104181"
   
     -   **Número predeterminado de subprocesos de reproducción** controla el número de subprocesos de procesador que se van a utilizar durante la reproducción. Un número elevado de subprocesos permite completar la reproducción con más rapidez, pero degrada el rendimiento del servidor durante la reproducción. El valor recomendado es **4**. En la siguiente tabla se enumeran las opciones disponibles:  
   
-        |Valor|Descripción|  
+        |Value|Descripción|  
         |-----------|-----------------|  
         |**2**|Valor mínimo. Utilice dos subprocesos para la reproducción.|  
         |**4**|Valor predeterminado.|  
@@ -53,7 +54,7 @@ ms.locfileid: "68104181"
   
     -   **Intervalo de espera del monitor de mantenimiento predeterminado (s)** establece el tiempo máximo (en segundos) durante el cual un subproceso de reproducción puede bloquear otro proceso. En la siguiente tabla se describen los valores.  
   
-        |Valor|Descripción|  
+        |Value|Descripción|  
         |-----------|-----------------|  
         |**0**|Valor mínimo. El valor **0** indica que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] nunca detendrá un proceso de bloqueo.|  
         |**3600**|Valor predeterminado. Permite los procesos de bloqueo inferiores a **3.600** segundos, o una hora.|  
@@ -61,7 +62,7 @@ ms.locfileid: "68104181"
   
     -   **Intervalo de sondeo del monitor de mantenimiento predeterminado (s)** establece la frecuencia de sondeo de subprocesos de reproducción para bloquear procesos. En la siguiente tabla se describen los valores.  
   
-        |Valor|Descripción|  
+        |Value|Descripción|  
         |-----------|-----------------|  
         |**1**|Valor mínimo. El valor **1** indica que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sondeará los procesos de bloqueo una vez por segundo.|  
         |**60**|Valor predeterminado. Sondea los procesos de bloqueo una vez por minuto.|  

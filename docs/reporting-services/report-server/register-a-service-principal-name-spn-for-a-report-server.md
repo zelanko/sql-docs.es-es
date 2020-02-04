@@ -9,10 +9,10 @@ ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500233"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrar un nombre principal de servicio (SPN) para un servidor de informes
@@ -21,7 +21,7 @@ ms.locfileid: "66500233"
 ## <a name="about-spns"></a>Acerca de los nombres principales de servicio  
  Un SPN es un identificador único para un servicio en una red que utiliza la autenticación Kerberos. Está compuesto de una clase de servicio, un nombre de host y, en ocasiones, un puerto. Los SPN de HTTP no requieren un puerto. En una red que utiliza la autenticación Kerberos, un SPN para el servidor se debe registrar en una cuenta de equipo integrada (como NetworkService o LocalSystem) o en una cuenta de usuario. Los SPN se registran automáticamente para las cuentas integradas. Sin embargo, al ejecutar un servicio en una cuenta de usuario de dominio, debe registrar manualmente el SPN para la cuenta que desea utilizar.  
   
- Para crear un SPN, puede emplear la utilidad de línea de comandos **SetSPN** . Para obtener más información, vea:  
+ Para crear un SPN, puede emplear la utilidad de línea de comandos **SetSPN** . Para obtener más información, vea lo siguiente:  
   
 -   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
   

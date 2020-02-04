@@ -18,13 +18,13 @@ ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36c0ae99e38da83e3d534423b8a09ba9e198ce3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992742"
 ---
-# <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
+# <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Recupera la fila siguiente de datos como un objeto PHP.  
@@ -66,7 +66,7 @@ Un objeto PHP con propiedades que se corresponden con los nombres de campo del c
   
 El tipo de datos de un valor en el objeto devuelto será el tipo de datos PHP predeterminado. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Si se especifica un nombre de clase con el parámetro opcional *$className* , se crea una instancia en un objeto de este tipo de clase. Si la clase tiene propiedades cuyos nombres coinciden con los nombres de campo del conjunto de resultados, los valores correspondientes del conjunto de resultados se aplican a las propiedades. Si un nombre de campo del conjunto de resultados no coincide con una propiedad de clase, se agrega una propiedad con el nombre de campo del conjunto de resultados al objeto y el valor del conjunto de resultados se aplica a la propiedad.  
   
 Las reglas siguientes se aplican cuando se especifica una clase con el parámetro *$className* :  
@@ -89,7 +89,7 @@ Si los resultados que devuelve esta consulta se recuperan con **sqlsrv_fetch_obj
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>Ejemplo  
-En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como un objeto PHP. En el ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
+En el siguiente ejemplo se recupera cada fila de un conjunto de resultados como un objeto PHP. En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
 ```  
 <?php  

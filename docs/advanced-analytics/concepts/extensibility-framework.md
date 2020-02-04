@@ -11,10 +11,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727692"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitectura de extensibilidad en SQL Server Machine Learning Services 
@@ -90,7 +90,7 @@ En efecto, BxlServer es un complemento de un entorno de ejecución de lenguajes 
 BxlServer usa SQL Satellite para las tareas siguientes:
 
 + Leer datos de entrada
-+ Escribir datos de salida
++ Escritura de datos de salida
 + Obtener argumentos de entrada
 + Escribir argumentos de salida
 + Control de errores

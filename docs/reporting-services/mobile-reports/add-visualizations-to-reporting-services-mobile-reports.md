@@ -9,10 +9,10 @@ ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63316595"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Agregar visualizaciones a informes móviles de Reporting Services
@@ -187,9 +187,9 @@ Los gráficos de cascada son una buena opción en estos casos:
    Los meses con pérdidas, como febrero, junio y julio, se muestran en rojo. 
    Los meses con ganancias, como septiembre, octubre y noviembre, se muestran en verde. 
 
-## <a name="see-also"></a>Vea también 
+## <a name="see-also"></a>Consulte también 
 * [Mapas de informes móviles de Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
-* [Navigators in Reporting Services mobile reports (Navegadores en informes para dispositivos móviles de Reporting Services)](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
+* [Navegadores en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Agregar cuadrículas de datos a informes móviles | Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
 * [Medidores en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
   

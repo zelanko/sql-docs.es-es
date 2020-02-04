@@ -9,10 +9,10 @@ ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cbfbc1b1d26f53e5ee8d3e04fc506048d76b3d28
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593670"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Crear un mapa del documento (Generador de informes y SSRS)
@@ -64,7 +64,7 @@ Un mapa del documento proporciona un conjunto de vínculos de navegación a los 
   
 2.  En el panel Grupos de filas, haga clic con el botón derecho en el grupo y, después, haga clic en **Editar grupo**. Se abre la página **General** del cuadro de diálogo **Propiedades de grupo de Tablix** .  
   
-3.  Haga clic en **Avanzado**.  
+3.  Haga clic en **Avanzadas**.  
   
 4.  En el cuadro de lista **Mapa del documento** , escriba o seleccione una expresión que coincida con la expresión de grupo.  
   

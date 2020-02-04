@@ -13,10 +13,10 @@ ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f3d51afd8a27786be3c66bfdf935ad8b2e328d36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580923"
 ---
 # <a name="windows-application-log"></a>Registro de aplicación Windows
@@ -39,7 +39,7 @@ ms.locfileid: "65580923"
   
 |Tipo de evento|Descripción|  
 |----------------|-----------------|  
-|Información|Evento que describe una operación correcta (por ejemplo, cuándo se inicia el servicio del servidor de informes).|  
+|Information|Evento que describe una operación correcta (por ejemplo, cuándo se inicia el servicio del servidor de informes).|  
 |Advertencia|Evento que indica un problema potencial (por ejemplo, poco espacio en disco).|  
 |Error|Evento que describe un problema considerable (por ejemplo, no se inició el servicio).|  
 |Auditoría de aciertos|Evento de seguridad que describe un inicio de sesión correcto.|  

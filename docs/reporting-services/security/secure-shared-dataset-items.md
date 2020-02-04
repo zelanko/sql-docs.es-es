@@ -9,10 +9,10 @@ ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a51e261d06933a30bf1c59adffa6963c9826f360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570680"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteger los elementos de un conjunto de datos compartido
@@ -40,7 +40,7 @@ ms.locfileid: "65570680"
 |Seleccione esta tarea|Para conceder a los usuarios permiso para|Roles predeterminados que incluyen la tarea|  
 |----------------------|---------------------------------|-----------------------------------------|  
 |Ver informes|Ver el elemento del conjunto de datos compartido en la jerarquía de carpetas. Sin esta tarea, el elemento no está visible para los usuarios y podrían no saber que el conjunto de datos está disponible.|Browser<br /><br /> Administrador de contenido<br /><br /> Generador de informes<br /><br /> Mis informes|  
-|Administrar informes|Ver propiedades que especifican el nombre, la descripción y la información de conexión. Esta tarea también se utiliza para mostrar un elemento de conjunto de datos compartido en la jerarquía de carpetas. Si elige esta tarea, puede omitir la tarea "Ver informes".|Administrador de contenido<br /><br /> publicador<br /><br /> Mis informes|  
+|Administrar informes|Ver propiedades que especifican el nombre, la descripción y la información de conexión. Esta tarea también se utiliza para mostrar un elemento de conjunto de datos compartido en la jerarquía de carpetas. Si elige esta tarea, puede omitir la tarea "Ver informes".|Administrador de contenido<br /><br /> Publicador<br /><br /> Mis informes|  
 |Usar informes|Ver la definición del conjunto de datos compartido.|Administrador de contenido<br /><br /> Generador de informes|  
 |Establecer la seguridad de elementos individuales|Crear y modificar asignaciones de roles que controlen el acceso al conjunto de datos compartido. Esta tarea debe utilizarse con las tareas "Ver informes" o "Administrar informes". De lo contrario, no surte efecto porque el usuario no puede seleccionar el elemento.|Administrador de contenido|  
   

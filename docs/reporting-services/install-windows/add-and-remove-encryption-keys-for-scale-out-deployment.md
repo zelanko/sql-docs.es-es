@@ -15,17 +15,17 @@ ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 13c3415a59205e02c70773f73b2696f4e079f119
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593858"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>Agregar y quitar claves de cifrado para implementaciones escaladas
   Puede ejecutar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en un modelo de implementación escalada; para ello, configure varios servidores de informes para que utilicen una base de datos del servidor de informes compartida. La pertenencia a una implementación escalada se basa en si el servidor de informes almacena una clave de cifrado en la base de datos del servidor de informes. Se puede controlar la pertenencia a una implementación escalada agregando y quitando claves de cifrado para instancias de servidor de informes específicas. Si va a quitar nodos de la implementación, puede hacerlo en cualquier orden. Si va a agregar nodos, debe incluir cualquier nueva instancia de servidor de informes que forme parte de la implementación.  
   
 ## <a name="using-the-reporting-services-configuration-tool-to-configure-scale-out-deployment"></a>Usar la herramienta de configuración de Reporting Services para configurar una implementación escalada  
- La manera más sencilla de configurar una implementación escalada es utilizar la herramienta de configuración de Reporting Services. Para obtener más información e instrucciones paso a paso, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+ La manera más sencilla de configurar una implementación escalada es utilizar la herramienta de configuración de Reporting Services. Para más información e instrucciones paso a paso, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="using-rskeymgmt-to-configure-scale-out-deployment"></a>Usar Rskeymgmt para configurar una implementación escalada  
  Emplee la utilidad **rskeymgmt** para inicializar una instancia de servidor de informes de forma que utilice una base de datos de servidor de informes compartida. Para agregar un servidor de informes a una implementación escalada, es necesario inicializar el servidor de informes. La inicialización requiere permisos de administrador. Debe disponer de credenciales de administrador del equipo remoto que hospeda el servidor de informes que va a combinar en la implementación.  
@@ -34,7 +34,7 @@ ms.locfileid: "73593858"
   
 1.  Ejecute **rskeymgmt.exe** localmente en el equipo que hospeda un servidor de informes que ya pertenece a la implementación escalada del servidor de informes.  
   
-2.  Use el argumento **-j** para unir un servidor de informes a la base de datos del servidor de informes. Use los argumentos **-m** y **-n** para especificar la instancia de servidor de informes remota que quiere agregar a la implementación. Use los argumentos **-u** y **-v** para especificar una cuenta de administrador en el equipo remoto. Si va a crear una implementación escalada utilizando varias instancias de servidor de informes en el mismo equipo, la sintaxis cambiará ligeramente. Para obtener más información sobre la sintaxis que debe usar, vea [rskeymgmt (utilidad) &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
+2.  Use el argumento **-j** para unir un servidor de informes a la base de datos del servidor de informes. Use los argumentos **-m** y **-n** para especificar la instancia de servidor de informes remota que quiere agregar a la implementación. Use los argumentos **-u** y **-v** para especificar una cuenta de administrador en el equipo remoto. Si va a crear una implementación escalada utilizando varias instancias de servidor de informes en el mismo equipo, la sintaxis cambiará ligeramente. Para más información sobre la sintaxis que debe usar, vea [rskeymgmt (utilidad) &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md).  
   
      El siguiente ejemplo muestra los argumentos que debe especificar si va a incluir un servidor de informes remoto en una implementación escalada (si tiene permisos de administrador en el equipo remoto, puede omitir las credenciales):  
   

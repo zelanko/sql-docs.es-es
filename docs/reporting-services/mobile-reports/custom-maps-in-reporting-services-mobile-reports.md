@@ -11,10 +11,10 @@ ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 17975defea6029e4077acbe45fd3f8b0d7495267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62759644"
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Mapas personalizados en informes para dispositivos móviles de Reporting Services
@@ -48,8 +48,8 @@ La creación y edición de archivos de formas constituyen un proceso complejo qu
   
 Muchos archivos de formas existentes se pueden descargar desde la web, en sitios como Diva-GIS: [https://www.diva-gis.org/Data](https://www.diva-gis.org/Data).  
 
-## <a name="see-also"></a>Vea también  
-- [Mapas de informes de Reporting Services móviles](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
+## <a name="see-also"></a>Consulte también  
+- [Mapas de informes móviles de Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (Creación y publicación de informes móviles con el Publicador de informes de SQL Server Mobile)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
   
   

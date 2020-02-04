@@ -9,10 +9,10 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d748e302606370152fc0c87ac47c350e11f39e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574836"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Agregar un filtro (Generador de informes y SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "65574836"
   
  Para agregar un filtro, debe especificar una o varias ecuaciones de filtro. Una ecuación de filtro se compone de una expresión que identifica los datos que se van a filtrar, un operador y el valor con el que se va a llevar a cabo la comparación. Los tipos de datos de los datos filtrados y el valor deben coincidir. No está permitido el filtrado por valores agregados para un conjunto de datos o una región de datos.  
   
- Para filtrar los puntos de datos de un gráfico, puede establecer un filtro en un grupo de categorías o en un grupo de series. De manera predeterminada, el gráfico usa la función integrada Sum para agregar valores que pertenecen al mismo grupo en un punto de datos individual de la serie. Si cambia la función de agregado de una serie, deberá cambiar la función de agregado en la expresión de filtro.  
+ Para filtrar los puntos de datos de un gráfico, puede establecer un filtro en un grupo de categorías o en un grupo de series. De manera predeterminada, el gráfico usa la función integrada SUM para agregar valores que pertenecen al mismo grupo en un punto de datos individual de la serie. Si cambia la función de agregado de una serie, deberá cambiar la función de agregado en la expresión de filtro.  
   
  Para más información sobre cómo filtrar conjuntos de datos insertados y compartidos, vea [Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   

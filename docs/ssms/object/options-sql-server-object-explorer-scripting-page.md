@@ -1,6 +1,6 @@
 ---
-title: Opciones (Explorador de objetos de SQL Server - página Script) | Microsoft Docs
-ms.custom: ''
+title: Opciones (Explorador de objetos de SQL Server - página Script)
+ms.custom: seo-lt-2019
 ms.date: 08/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0f2d5a92fb3359f1c6d63d9ca1dee0f265a8aee1
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 0991ab88cb37ab2f4decb67194ae78ed62d2c13d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844528"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251082"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Opciones (Explorador de objetos de SQL Server - página Script)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ Use esta página para establecer las opciones de scripting que se aplican a los 
   
 -   Esta página también establece los valores predeterminados de las opciones de scripting del **Asistente para generar scripts de SQL Server**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Los comandos **Editar** y **Modificar** pueden generar resultados distintos a los del comando **Script <object> como** para el mismo valor de opción. Los comandos **Editar** y **Modificar** están diseñados para modificar objetos en la base de datos actual durante una sesión del Editor de consultas. El comando **Script<object> como** está diseñado para generar un script que se pueda usar posteriormente para crear objetos.  
   
 ## <a name="options"></a>Opciones  
@@ -152,6 +152,6 @@ Incluye nombres de restricción generados por el sistema para aplicar la integri
 **Script para versión de servidor**  
 Los scripts generados se dirigirán a la versión especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las características nuevas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no se pueden incluir en scripts para versiones anteriores. Algunos scripts creados para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no pueden ejecutarse en servidores que ejecutan una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o en una base de datos con un [valor de nivel de compatibilidad de base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)anterior.  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Generar scripts (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
   

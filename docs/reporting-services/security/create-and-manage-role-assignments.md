@@ -15,10 +15,10 @@ ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 863904e2d82fc97045305dd2430241a91e333f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65619596"
 ---
 # <a name="create-and-manage-role-assignments"></a>Crear y administrar asignaciones de roles
@@ -31,7 +31,7 @@ El ámbito de las asignaciones de roles es el *nivel de elemento* o el *nivel de
 
 - Las asignaciones de roles del sistema proporcionan a usuarios seleccionados la capacidad de realizar tareas que afectan en conjunto al sitio del servidor de informes. Estas tareas incluyen:
   - Crear programaciones compartidas
-  - Administrar trabajos
+  - Administración de trabajos
   - Procesar informes
   - Configurar propiedades
 

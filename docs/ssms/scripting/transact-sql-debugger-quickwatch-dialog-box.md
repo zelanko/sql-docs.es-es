@@ -1,5 +1,6 @@
 ---
 title: Cuadro de diálogo Inspección rápida
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -11,15 +12,15 @@ ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 03/14/2017
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af12ca6fb0b8eb0b4461d95e75e8c1a3c62ed77e
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 9cfd48c59a928481be28d03d970fb399ea10b720
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119249"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253025"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Depurador de Transact-SQL: cuadro de diálogo Inspección rápida
 
@@ -47,7 +48,7 @@ Utilice el cuadro de diálogo **Inspección rápida** para ver rápidamente el t
   
     -   Expresiones generadas mediante la aplicación de operadores a una o más variables, parámetros o funciones del sistema, como @IntegerCounter + 1 o FirstName + LastName.  
   
-    -   Instrucciones de Transact-SQL que devuelven un valor único, como: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+    -   Instrucciones Transact-SQL que devuelven un valor único, como SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
 2.  Haga clic en **Actualizar**.  
   
@@ -69,7 +70,7 @@ Utilice el cuadro de diálogo **Inspección rápida** para ver rápidamente el t
  **Nombre**  
  Expresión [!INCLUDE[tsql](../../includes/tsql-md.md)] que se va a observar.  
   
- **Value**  
+ **Valor**  
  Muestra el valor que está asignado actualmente a la expresión. Se muestra un espacio en blanco cuando la expresión no tiene ningún valor en este momento.  
   
  Si la longitud de una expresión es mayor que el ancho de la columna **Valor** , una información sobre herramientas muestra el valor completo al mover el puntero sobre la celda **Valor** para esa expresión.  

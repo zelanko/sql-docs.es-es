@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71952741"
 ---
 # <a name="install-sql-server-reporting-services"></a>Instalar SQL Server Reporting Services
@@ -33,7 +33,7 @@ Descargue [SQL Server 2017 Reporting Services](https://www.microsoft.com/downlo
 > [!NOTE]
 > ¿Busca Power BI Report Server? Vea [Instalar Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
 
-## <a name="before-you-begin"></a>Antes de comenzar
+## <a name="before-you-begin"></a>Antes de empezar
 
 Antes de instalar Reporting Services, lea los [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
@@ -97,7 +97,7 @@ Las reservas de direcciones URL están compuestas de un prefijo, un nombre de ho
 |----------|-----------------|
 |Prefijo|El prefijo predeterminado es HTTP. Si ha instalado anteriormente un certificado de Capa de sockets seguros (SSL), el programa de instalación intenta crear reservas de direcciones URL que usen el prefijo HTTPS.|
 |Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes acepta cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelva en el equipo, incluidos `https://<computername>/reportserver`, `https://localhost/reportserver` o `https://<IPAddress>/reportserver.`.|
-|Puerto|El puerto predeterminado es 80. Si usa cualquier puerto distinto del 80, tiene que agregarlo explícitamente a la dirección URL cuando abra el portal web en una ventana del explorador.|
+|Port|El puerto predeterminado es 80. Si usa cualquier puerto distinto del 80, tiene que agregarlo explícitamente a la dirección URL cuando abra el portal web en una ventana del explorador.|
 |Directorio virtual|De forma predeterminada, los directorios virtuales se crean en el formato de ReportServer para el servicio web del servidor de informes y de Reports para el portal web. Para el servicio web del servidor de informes, el nombre del directorio virtual predeterminado es **reportserver**. Para el portal web, el directorio virtual predeterminado es **reports**.|
 
 Un ejemplo de cadena de dirección URL completa podría ser el siguiente:

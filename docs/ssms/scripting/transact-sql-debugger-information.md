@@ -1,10 +1,8 @@
 ---
-title: Información del depurador de Transact-SQL | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Ver información del depurador de Transact-SQL
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -16,20 +14,28 @@ helpviewer_keywords:
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6329776bd998a8d90cbadd577132a500020515b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82f5caaa772ab21ce5e36165fcc46665c99a4ea5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253556"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253039"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL Debugger - Information (Depurador de Transact-SQL: Información)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Siempre que el depurador detenga la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede usar las distintas ventanas del depurador para ver el estado de la ejecución actual.  
-  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Siempre que el depurador detenga la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede usar las distintas ventanas del depurador para ver el estado de la ejecución actual. 
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
 ## <a name="debugger-windows"></a>Ventanas del depurador  
- En el modo de depurador, éste abre dos ventanas en la parte inferior de la ventana principal de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . El depurador muestra toda su información en estas dos ventanas. Cada una de ellas tiene pestañas que puede seleccionar para controlar el conjunto de información que se muestra en la ventana. La ventana izquierda del depurador contiene las pestañas **Variables locales**, **Inspección1**, **Inspección2**, **Inspección3**e **Inspección4** . La ventana derecha del depurador contiene las pestañas **Pila de llamadas**, **Subprocesos**, **Puntos de interrupción**, **Ventana de comandos**y **Salida** .  
+
+En el modo de depurador, éste abre dos ventanas en la parte inferior de la ventana principal de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . El depurador muestra toda su información en estas dos ventanas. Cada una de ellas tiene pestañas que puede seleccionar para controlar el conjunto de información que se muestra en la ventana. La ventana izquierda del depurador contiene las pestañas **Variables locales**, **Inspección1**, **Inspección2**, **Inspección3**e **Inspección4** . La ventana derecha del depurador contiene las pestañas **Pila de llamadas**, **Subprocesos**, **Puntos de interrupción**, **Ventana de comandos**y **Salida** .  
   
 > [!NOTE]  
 >  Las descripciones anteriores se aplican a las ubicaciones predeterminadas de las ventanas del depurador. Puede arrastrar una pestaña para moverla de una ventana a otra. O bien, puede desacoplar una pestaña para crear una nueva ventana que puede colocar donde prefiera.  
@@ -41,11 +47,11 @@ ms.locfileid: "68253556"
 -   En la barra de herramientas **Depuración** , haga clic en **Puntos de interrupción**y, a continuación, seleccione la ventana que desee.  
   
 ## <a name="transact-sql-expressions"></a>Expresiones de Transact-SQL  
- Las expresiones son cláusulas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúan en un único valor escalar, como las variables o los parámetros. La ventana izquierda del depurador puede mostrar los valores de datos asignados actualmente a expresiones en un máximo de cinco pestañas o ventanas: **Variables locales, Inspección1**, **Inspección2**, **Inspección3** e **Inspección4**.  
+ Las expresiones son cláusulas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúan en un único valor escalar, como las variables o los parámetros. La ventana izquierda del depurador puede mostrar los valores de datos asignados actualmente a expresiones en un máximo de cinco pestañas o ventanas: **Variables locales, Inspección1**, **Inspección2**, **Inspección3**e **Inspección4**.  
   
  La ventana **Variables locales** muestra información sobre las variables locales del ámbito actual del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El conjunto de expresiones que se muestran en **esta ventana** cambia a medida que el depurador se ejecuta en las distintas partes del código.  
   
- Las expresiones de **QuickWatch** y las cuatro ventanas de **Inspección** no se limitan únicamente a enumerar identificador de una variable. Puede especificar una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúa como un valor único, por ejemplo,  agregar un número a una variable, o una instrucción SELECT que se evalúa como un valor único. Los ejemplos incluyen:  
+ Las expresiones de **QuickWatch** y las cuatro ventanas de **Inspección** no se limitan únicamente a enumerar identificador de una variable. Puede especificar una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúa como un valor único, por ejemplo,  agregar un número a una variable, o una instrucción SELECT que se evalúa como un valor único. Algunos ejemplos son:  
   
 -   El nombre de una variable, como @IntegerCounter.  
   

@@ -9,10 +9,10 @@ ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 786f7391d87799a0822f357e449db21fea0d0f09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68221251"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>Trabajar con suscripciones (portal web)
@@ -50,7 +50,7 @@ Para crear una suscripción controlada por datos, es necesario saber cómo escri
   
 Esta opción está disponible para los usuarios con permisos avanzados. Si se usa la seguridad predeterminada, no se pueden utilizar suscripciones controladas por datos en los informes situados en la carpeta Mis informes.  
   
-### <a name="destination"></a>Destino  
+### <a name="destination"></a>Destination  
 Seleccione la extensión de entrega que se va a utilizar para distribuir el informe.   
   
 La disponibilidad de una extensión de entrega depende de si está instalada y configurada en el servidor de informes. El correo electrónico del Servidor de informes es la extensión de entrega predeterminada, pero debe configurarla primero para poder utilizarla. No es necesario configurar la entrega al recurso compartido de archivos, pero se debe definir una carpeta compartida para poder utilizarla.  

@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707443"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services
@@ -24,7 +24,7 @@ ms.locfileid: "73707443"
 Se han agregado funciones de aprendizaje automático a SQL Server en cada versión a medida que se continúa la expansión, ampliación y profundización de la integración entre la plataforma de datos, el análisis avanzado y la ciencia de datos. 
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-## <a name="new-in-sql-server-2019"></a>Novedades de SQL Server 2019
+## <a name="new-in-sql-server-2019"></a>Novedades de SQL Server 2019
 
 En esta versión se agregan las características principales solicitadas para las operaciones de aprendizaje automático de Python y R en SQL Server. Para obtener más información sobre todas las características de esta versión, consulte [Novedades de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) y [Notas de la versión de SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
 
@@ -98,7 +98,7 @@ Además, se ha publicado **SQL Server 2016 R Server (independiente)** como una 
 
 Para obtener todos los anuncios de características, vea [Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
-| Versión |Actualización de características |
+| Release |Actualización de características |
 |---------|----------------|
 | Adiciones de CU | La [**puntuación en tiempo real**](real-time-scoring.md) se basa en bibliotecas nativas de C++ para leer un modelo almacenado en un formato binario optimizado y, después, generar predicciones sin tener que llamar al tiempo de ejecución de R. Esto hace que las operaciones de puntuación sean mucho más rápidas. Con la puntuación en tiempo real, puede ejecutar un procedimiento almacenado o realizar una puntuación en tiempo real desde código de R. La puntuación en tiempo real también está disponible para SQL Server 2016, si la instancia se actualiza a la versión más reciente de [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
 | Versión inicial | [**Integración de R para el análisis en base de datos**](r/sql-server-r-services.md). <br/><br/> Paquetes de R para llamar a funciones de R en T-SQL y viceversa. Las funciones de RevoScaleR proporcionan análisis de R a escala mediante la fragmentación de datos en partes de componente, la coordinación y la administración del procesamiento distribuido, y la agregación de resultados. En SQL Server 2016 R Services (en base de datos), el motor de RevoScaleR se integra con una instancia del motor de base de datos, donde se agrupan los datos y los análisis en el mismo contexto de procesamiento. <br/><br/>Integración de T-SQL y R a través de [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Puede llamar a cualquier código de R mediante este procedimiento almacenado. Esta infraestructura segura permite la implementación de nivel empresarial de modelos y scripts de Rn, a los que se puede llamar desde una aplicación mediante un procedimiento almacenado simple. Se consiguen mejoras de rendimiento adicionales mediante el streaming de datos desde SQL a procesos de R y la paralelización de anillos de MPI. <br/><br/>Puede usar la función [PREDICT](../t-sql/queries/predict-transact-sql.md) de T-SQL para realizar la [puntuación nativa](sql-native-scoring.md) en un modelo previamente entrenado que se haya guardado antes en el formato binario requerido.|

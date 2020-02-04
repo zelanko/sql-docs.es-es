@@ -1,23 +1,24 @@
 ---
-title: Permisos necesarios para SQL Server Data Tools | Microsoft Docs
-ms.custom:
-- SSDT
+title: Permisos necesarios
+ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4199109ef0492a23206233c82b6051b88564cc26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110765"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256990"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Permisos necesarios para SQL Server Data Tools
+
 Para poder realizar una acción en una base de datos en Visual Studio, debe iniciar sesión con una cuenta que tenga determinados permisos para esa base de datos. Los permisos específicos que necesita varían en función de la acción que desee realizar. En las siguientes secciones se describe cada una de las acciones que puede querer realizar y el permiso específico que necesita para realizarla.  
   
 -   [Permisos para crear o implementar una base de datos](#DatabaseCreationAndDeploymentPermissions)  
@@ -62,8 +63,8 @@ Para ejecutar pruebas unitarias en una base de datos, debe disponer de los sigui
 |Ejecutar una acción de prueba|Debe usar la conexión de base de datos del contexto de ejecución. Para obtener más información, consulte [Información general acerca de las cadenas de conexión y los permisos](../ssdt/overview-of-connection-strings-and-permissions.md).|  
 |Ejecutar una acción anterior o posterior a la prueba|Debe usar la conexión de base de datos del contexto con privilegios. Esta conexión de base de datos puede tener más permisos que la conexión del contexto de ejecución.|  
 |Ejecutar los scripts TestInitialize y TestCleanup|Debe usar la conexión de base de datos del contexto con privilegios.|  
-|Implementar cambios en una base de datos antes de ejecutar las pruebas|Debe usar la conexión de base de datos del contexto con privilegios. Para más información, vea: [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
-|Generar datos antes de ejecutar las pruebas|Debe usar la conexión de base de datos del contexto con privilegios. Para más información, vea: [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Implementar cambios en una base de datos antes de ejecutar las pruebas|Debe usar la conexión de base de datos del contexto con privilegios. Para obtener más información, consulte [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Generar datos antes de ejecutar las pruebas|Debe usar la conexión de base de datos del contexto con privilegios. Para obtener más información, consulte [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
   
 ## <a name="DataGenerationPermissions"></a>Permisos para generar datos  
 Debe tener los permisos **INSERT** y **SELECT** en los objetos de la base de datos de destino para generar datos de prueba con el Generador de datos. Si depura los datos antes de generarlos, debe tener también el permiso **DELETE** en los objetos de la base de datos de destino. Para restablecer la columna **IDENTITY** en una tabla, debe ser el propietario de la tabla o un miembro del rol db_owner o db_ddladmin.  

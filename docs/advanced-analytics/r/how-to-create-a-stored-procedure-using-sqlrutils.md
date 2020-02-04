@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727472"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Crear un procedimiento almacenado mediante sqlrutils
@@ -43,7 +43,7 @@ Los objetos de dentro de la trama de datos, así como todos los demás parámetr
 
 Si un tipo de entrada no es uno de los tipos anteriores, tiene que serializarse y pasarse a la función como *raw*. En este caso, la función también debe incluir código para deserializar la entrada.
 
-### <a name="outputs"></a>Resultados
+### <a name="outputs"></a>Salidas
 
 La función puede generar uno de los siguientes:
 
@@ -51,7 +51,7 @@ La función puede generar uno de los siguientes:
 - Una lista con nombre que contenga como máximo una trama de datos. Todos los miembros de la lista deben usar uno de los tipos de datos admitidos.
 - Un valor NULL si la función no devuelve ningún resultado
 
-## <a name="step-2-generate-required-objects"></a>Paso 2. Generación de los objetos necesarios
+## <a name="step-2-generate-required-objects"></a>Paso 2. Generación de los objetos necesarios
 
 Una vez que el código de R se ha limpiado y se puede llamar como una sola función, usará las funciones del paquete **sqlrutils** para preparar las entradas y salidas en un formulario que se pueda pasar al constructor que crea realmente el procedimiento almacenado.
 
@@ -66,7 +66,7 @@ Si la función toma entradas, para cada una, llame a las siguientes funciones:
 
 Cuando realice una llamada de función, se creará un objeto de R que posteriormente pasará como argumento a `StoredProcedure` para crear el procedimiento almacenado completo.
 
-### <a name="outputs"></a>Resultados
+### <a name="outputs"></a>Salidas
 
 **sqlrutils** proporciona varias funciones para convertir objetos de R, como listas, a trama de datos requerido por SQL Server.
 Si la función genera una trama de datos directamente, sin ajustar primero en una lista, puede omitir este paso.
@@ -79,11 +79,11 @@ Al convertir una lista u obtener un elemento determinado de una lista, elija ent
 
 Cuando realice una llamada de función, se creará un objeto de R que posteriormente pasará como argumento a `StoredProcedure` para crear el procedimiento almacenado completo.
 
-## <a name="step-3-generate-the-stored-procedure"></a>Paso 3. Generación del procedimiento almacenado
+## <a name="step-3-generate-the-stored-procedure"></a>Paso 3. Generación del procedimiento almacenado
 
 Cuando todos los parámetros de entrada y salida estén listos, realice una llamada al constructor de `StoredProcedure`.
 
-**Usage**
+**Uso**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

@@ -9,10 +9,10 @@ ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2aaa9b5b26b94bb6eb25b4091e0503591b2dcdba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581871"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Permitir que un cuadro de texto aumente o se reduzca (Generador de informes y SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "65581871"
   
 1.  Haga clic con el botón derecho en el cuadro y, después, haga clic en **Propiedades de cuadro de texto**.  
   
-2.  Haga clic en la pestaña **General** .  
+2.  Haga clic en la pestaña **General**.  
   
     -   Para permitir que el cuadro de texto se expanda verticalmente en función de su contenido, seleccione **Permitir aumentar el alto**.  
   

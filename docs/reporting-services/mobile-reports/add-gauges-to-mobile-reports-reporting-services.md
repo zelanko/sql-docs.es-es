@@ -9,10 +9,10 @@ ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63280562"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Agregar medidores a informes para dispositivos móviles | Reporting Services
@@ -81,10 +81,10 @@ Otra propiedad del elemento de medidor que no es de datos y una compartida por m
 
 Determina el formato de los números que aparecen en el medidor (por ejemplo, moneda, porcentaje, hora o general). El formato de número se establece en cada elemento del informe para dispositivos móviles.
   
-### <a name="see-also"></a>Vea también 
+### <a name="see-also"></a>Consulte también 
 
 * [Creación y publicación de informes móviles con el Publicador de informes móviles de SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
-* [Mapas en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+* [Mapas de informes móviles de Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Navegadores en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualizaciones de informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
-* [Cuadrículas de datos en informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 
+* [Agregar cuadrículas de datos a informes móviles | Reporting Services](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 

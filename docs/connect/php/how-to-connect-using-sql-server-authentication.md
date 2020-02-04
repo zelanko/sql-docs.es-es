@@ -13,10 +13,10 @@ ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7d894b48fc6ec82450c42599f13725f0cd8ee1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993550"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>Cómo conectarse mediante la autenticación de SQL Server
@@ -140,7 +140,7 @@ En este ejemplo se usa el controlador PDO_SQLSRV para demostrar cómo conectarse
 
 [Creación de un inicio de sesión de SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Cómo crear un usuario de base de datos](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Creación de un usuario de base de datos](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Administrar usuarios, roles e inicios de sesión](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

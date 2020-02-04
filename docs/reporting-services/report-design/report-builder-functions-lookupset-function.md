@@ -9,10 +9,10 @@ ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9b4de3e21a214a9894f93b8aa2fcd8fd8c6328eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577410"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Funciones del Generador de informes: función LookupSet
@@ -41,10 +41,10 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  *conjunto de datos*  
  Una constante que especifica el nombre de un conjunto de datos del informe. Por ejemplo, "ContactInformation".  
   
-## <a name="return"></a>Devolución  
+## <a name="return"></a>Valor devuelto  
  Devuelve **VariantArray**o **Nothing** si no hay ninguna coincidencia.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Use **LookupSet** para recuperar un conjunto de valores del conjunto de datos especificado correspondiente a un par nombre-valor donde hay una relación de uno a varios. Por ejemplo, para un identificador de cliente en una tabla, puede usar **LookupSet** para recuperar todos los números de teléfono asociados a ese cliente de un conjunto de datos que no está enlazado a la región de datos.  
   
  **LookupSet** realiza las operaciones siguientes:  
@@ -59,7 +59,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Para recuperar un único valor de un conjunto de datos con pares nombre-valor para un nombre especificado donde hay una relación de uno a uno, use la [función Lookup &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md). Para llamar a **Lookup** para un conjunto de valores, use la [función Multilookup &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md).  
   
- Se aplican las siguientes restricciones:  
+ Se aplican las restricciones que se indican a continuación:  
   
 -   Se evalúa**LookupSet** después de aplicar todas las expresiones de filtro.  
   

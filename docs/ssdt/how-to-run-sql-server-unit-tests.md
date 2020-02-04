@@ -1,23 +1,24 @@
 ---
-title: 'Procedimientos: Ejecutar pruebas unitarias de SQL Server | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Ejecución de pruebas unitarias de SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d17120b0c13ab1910d4636a376963f5ec74813eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 3ee95885dc1696fd7fba80342dc8c582a79056cc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035021"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244282"
 ---
-# <a name="how-to-run-sql-server-unit-tests"></a>Procedimientos: Ejecución de pruebas unitarias de SQL Server
+# <a name="how-to-run-sql-server-unit-tests"></a>Cómo: Ejecutar pruebas unitarias de SQL Server
+
 Puede ejecutar una prueba unitaria de SQL Server de varias maneras, por ejemplo mediante varias ventanas y la ventana del símbolo del sistema.  
   
 > [!NOTE]  
@@ -33,7 +34,7 @@ Las maneras disponibles dependen del software que haya instalado, como se descri
   
 2.  En la ventana **Vista de pruebas**, haga clic en la prueba o pruebas que desea ejecutar. Mediante la tecla CTRL o la tecla MAYÚS, puede especificar bloques discontinuos o continuos de pruebas.  
   
-3.  Realice una de las acciones siguientes:  
+3.  Realice cualquiera de las siguientes acciones:  
   
     -   Haga clic con el botón secundario en la superficie de la ventana **Vista de pruebas** y haga clic en **Ejecutar selección**.  
   
@@ -57,7 +58,7 @@ Este paso ejecuta todas las pruebas de la serie de pruebas actual. En cuanto se 
   
 ## <a name="see-also"></a>Consulte también  
 [Ejecutar pruebas unitarias de SQL Server](../ssdt/running-sql-server-unit-tests.md)  
-[Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
+[Cómo: Ejecutar pruebas automatizadas desde Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
 [Ejecutar pruebas automatizadas desde la línea de comandos (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  
 [Probar la aplicación (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182409.aspx)  
   

@@ -11,10 +11,10 @@ ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b83188359489759f50b2929de769721d627c15d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67992900"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Recuperación de datos como una secuencia con el controlador SQLSRV
@@ -45,8 +45,8 @@ En los pasos siguientes se resume cómo recuperar datos como una secuencia:
 |Tema|Descripción|  
 |---------|---------------|  
 |[Tipos de datos con compatibilidad con secuencias con el controlador SQLSRV](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|Muestra los tipos de datos de SQL Server que se pueden recuperar como secuencias.|  
-|[Cómo recuperar datos de caracteres como una secuencia utilizando el controlador SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Muestra cómo recuperar datos de caracteres como una secuencia.|  
-|[Cómo recuperar datos binarios como una secuencia mediante el controlador SQLSRV](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Muestra cómo recuperar datos binarios como una secuencia.|  
+|[Recuperación de datos de caracteres como una secuencia utilizando el controlador SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Muestra cómo recuperar datos de caracteres como una secuencia.|  
+|[Recuperación de datos binarios como una secuencia mediante el controlador SQLSRV](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Muestra cómo recuperar datos binarios como una secuencia.|  
   
 ## <a name="see-also"></a>Consulte también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)

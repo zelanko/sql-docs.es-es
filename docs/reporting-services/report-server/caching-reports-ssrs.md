@@ -21,10 +21,10 @@ ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ba54a5c29245a178fb1b50139d64f1e05bfd92f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66175585"
 ---
 # <a name="caching-reports-ssrs"></a>Informes almacenados en caché (SSRS)
@@ -67,7 +67,7 @@ ms.locfileid: "66175585"
   
  Si un informe no puede representarse desde una instancia en caché por cualquier motivo (por ejemplo, si los valores de los parámetros que especifica un usuario son distintos de los que se utilizan para generar el informe en caché), el servidor de informes vuelve a ejecutar el informe.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Conceptos de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   

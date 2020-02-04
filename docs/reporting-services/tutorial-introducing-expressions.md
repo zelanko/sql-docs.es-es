@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63295608"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
@@ -56,7 +56,7 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
     > [!NOTE]  
     > El origen de datos que elija no es importante mientras tenga los permisos adecuados. No está recibiendo datos del origen de datos. Para obtener más información, consulte [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página **Diseñar una consulta** , haga clic en **Editar como texto**.  
   
@@ -93,7 +93,7 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
-11. Haga clic en **Siguiente**.  
+11. Haga clic en **Next**.  
   
 12. En la página **Organizar campos** , arrastre los campos siguientes, en el orden especificado, desde la lista **Campos disponibles** a la lista **Valores** .  
   
@@ -114,13 +114,13 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
     
     ![report-builder-expression-not-sum](../reporting-services/media/report-builder-expression-not-sum.png)
   
-15. Haga clic en **Siguiente**.  
+15. Haga clic en **Next**.  
   
 16. En la página **Elegir el diseño** , mantenga la configuración predeterminada y haga clic en **Siguiente**.  
 
     ![report-builder-expression-tutorial-choose-layout](../reporting-services/media/report-builder-expression-tutorial-choose-layout.png)
   
-17. Haga clic en **Finalizar**.  
+17. Haga clic en **Finalizar**  
   
 ## <a name="UpdateNames"></a>2. Actualizar nombres predeterminados del origen de datos y el conjunto de datos  
   

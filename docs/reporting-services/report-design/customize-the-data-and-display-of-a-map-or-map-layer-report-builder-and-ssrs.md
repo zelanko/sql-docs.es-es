@@ -22,10 +22,10 @@ ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 96f1fd480d0260c24bf534dec80eef2e4ff6fda2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572334"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar los datos y la presentación de un mapa o una capa de mapa (Generador de informes y SSRS)
@@ -132,7 +132,7 @@ ms.locfileid: "65572334"
   
 -   Acciones de obtención de detalles.  
   
--   Opciones de presentación.  
+-   Opciones de visualización.  
   
  Las opciones de presentación de los elementos de mapa siguen un orden de prioridad basado en la capa, el elemento de mapa, las reglas de los elementos de mapa y las opciones de invalidación de los elementos de mapa incrustados.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "65572334"
   
 -   Opciones de puntos, líneas o polígonos de cada capa. Se aplican tanto si los elementos de mapa se recuperan dinámicamente al procesar el informe como si están incrustados en la definición de informe. Por ejemplo, especifique un color de relleno para todos los elementos de una capa.  
   
--   Reglas. Puede establecer reglas para controlar el color, el tamaño, el ancho o el tipo de marcador de todos los elementos de mapa de una capa. Las reglas que puede establecer dependen del tipo de elemento de mapa.  
+-   Las reglas. Puede establecer reglas para controlar el color, el tamaño, el ancho o el tipo de marcador de todos los elementos de mapa de una capa. Las reglas que puede establecer dependen del tipo de elemento de mapa.  
   
     -   Reglas de color. Se aplican a los marcadores para los puntos, líneas y polígonos, y a los marcadores para los puntos centrales de los polígonos.  
   

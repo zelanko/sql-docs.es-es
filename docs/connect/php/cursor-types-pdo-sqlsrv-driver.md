@@ -11,20 +11,20 @@ ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c62c2a35123e77f5366dd5348fd51b3c50c85605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993686"
 ---
-# <a name="cursor-types-pdosqlsrv-driver"></a>Tipos de cursor (controlador PDO_SQLSRV)
+# <a name="cursor-types-pdo_sqlsrv-driver"></a>Tipos de cursor (controlador PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 El controlador PDO_SQLSRV le permite crear conjuntos de resultados desplazables con uno de varios cursores.
 
 Para obtener información sobre cómo especificar un cursor con el controlador PDO_SQLSRV y acceder a ejemplos de código, vea [PDO::prepare](../../connect/php/pdo-prepare.md).
 
-## <a name="pdosqlsrv-and-server-side-cursors"></a>PDO_SQLSRV y cursores de servidor
+## <a name="pdo_sqlsrv-and-server-side-cursors"></a>PDO_SQLSRV y cursores de servidor
 Antes de la versión 3.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], el controlador PDO_SQLSRV permite crear un conjunto de resultados con un cursor estático o de solo avance en el lado servidor. A partir de la versión 3.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], los conjunto de claves y los cursores dinámicos también están disponibles.
 
 Puede indicar el tipo de cursor de servidor mediante [PDO::prepare](../../connect/php/pdo-prepare.md) para seleccionar uno de los siguientes tipos de cursor:
@@ -41,7 +41,7 @@ Puede solicitar un cursor dinámico, estático o controlado por conjunto de clav
 
 -   `PDO::SQLSRV_CURSOR_KEYSET`
 
-## <a name="pdosqlsrv-and-client-side-cursors"></a>PDO_SQLSRV y cursores de cliente
+## <a name="pdo_sqlsrv-and-client-side-cursors"></a>PDO_SQLSRV y cursores de cliente
 Se agregaron los cursores del lado cliente en la versión 3.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], y permiten almacenar en caché un conjunto de resultados completo en memoria. Una ventaja es que el recuento de filas está disponible después de ejecutar una consulta.
 
 Los cursores del lado cliente deben usarse para conjuntos de resultados de tamaño pequeño a mediano. Los conjuntos de resultados grandes deben utilizar cursores de servidor.

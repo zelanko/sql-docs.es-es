@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 556d60a4c7f2cc8003f6b9a29fa20dad8c5b72ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68091811"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Configuración de la recopilación de datos de uso y diagnóstico para herramientas de SQL Server (CEIP)
@@ -130,7 +130,7 @@ Valor = (DWORD)
   
      Para activar el CEIP, haga clic en **Sí, deseo participar**.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
  **Uso de una directiva basada en el Registro o una directiva de grupo**  
   

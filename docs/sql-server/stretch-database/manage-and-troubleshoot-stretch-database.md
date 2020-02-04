@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844610"
 ---
-# <a name="manage-and-troubleshoot-stretch-database"></a>Administrar y solucionar problemas de Stretch Database
+# <a name="manage-and-troubleshoot-stretch-database"></a>Administración y solución de problemas de Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
@@ -42,7 +42,7 @@ GO
 ## <a name="manage-data-migration"></a>Administrar la migración de datos  
   
 ### <a name="check-the-filter-function-applied-to-a-table"></a>Comprobar la función de filtro aplicada a una tabla  
- Abra la vista de catálogo **sys.remote_data_archive_tables** y compruebe el valor de la columna **filter_predicate** para identificar la función que usa Stretch Database para seleccionar las filas que se van a migrar. Si el valor es nulo, toda la tabla será apta para la migración. Para obtener más información, vea [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) y [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md) (Seleccionar las filas que se van a migrar mediante una función de filtro).  
+ Abra la vista de catálogo **sys.remote_data_archive_tables** y compruebe el valor de la columna **filter_predicate** para identificar la función que usa Stretch Database para seleccionar las filas que se van a migrar. Si el valor es null, la tabla completa es elegible para la migración. Para obtener más información, vea [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md) y [Select rows to migrate by using a filter function](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md) (Seleccionar las filas que se van a migrar mediante una función de filtro).  
   
 ###  <a name="Migration"></a> Comprobar el estado de la migración de datos  
  Seleccione **Tareas | Stretch | Monitor** en una base de datos de SQL Server Management Studio para supervisar la migración de datos en el monitor de Stretch Database. Para obtener más información, vea [Supervisión y solución de problemas de migración de datos &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
@@ -84,8 +84,8 @@ Si ha eliminado por error las columnas de la tabla remota, ejecute **sp_rda_reco
  
 ## <a name="manage-performance-and-costs"></a>Administrar el rendimiento y los costos  
   
-### <a name="troubleshoot-query-performance"></a>Solucionar problemas del rendimiento de las consultas  
-  Se espera que las consultas que incluyen tablas habilitadas para Stretch se realicen más lentamente que antes de que las tablas se habilitaran para Stretch. Si el rendimiento de las consultas se degrada considerablemente, compruebe si se debe a alguno de estos posibles problemas.  
+### <a name="troubleshoot-query-performance"></a>Solución de problemas del rendimiento de las consultas  
+  Se espera que las consultas que incluyen tablas habilitadas para Stretch se realicen más lentamente que antes de que las tablas se habilitaran para Stretch. Si se reduce significativamente el rendimiento de las consultas, vea los siguientes problemas posibles.  
   
 -   ¿Se encuentra el servidor de Azure en una región geográfica diferente de la de SQL Server? Configure el servidor de Azure para que se encuentre en la misma región geográfica que SQL Server para reducir la latencia de red.  
   
@@ -103,7 +103,7 @@ Si ha eliminado por error las columnas de la tabla remota, ejecute **sp_rda_reco
  ### <a name="change-the-scope-of-queries-for-all-queries-by-all-users"></a>Cambiar el ámbito de todas las consultas efectuadas por todos los usuarios  
  Para cambiar el ámbito de todas las consultas efectuadas por todos los usuarios, ejecute el procedimiento almacenado **sys.sp_rda_set_query_mode**. Puede reducir el ámbito para consultar únicamente los datos locales, deshabilitar todas las consultas o restaurar la configuración predeterminada. Para obtener más información, vea [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md).  
    
- ### <a name="queryHints"></a>Cambiar el ámbito de una sola consulta efectuada por un administrador  
+ ### <a name="queryHints"></a>Modificación del ámbito de las consultas de una única consulta que lleva a cabo un administrador  
  Para cambiar el ámbito de una sola consulta efectuada por un miembro del rol db_owner, agregue la sugerencia de consulta **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *valor* )** a la instrucción SELECT. La sugerencia de consulta REMOTE_DATA_ARCHIVE_OVERRIDE puede tener los siguientes valores:  
  -   **LOCAL_ONLY**. Solo se consultan los datos locales.  
    
@@ -120,7 +120,7 @@ SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = 
 GO
 ```  
    
- ## <a name="adminHints"></a>Efectuar actualizaciones y eliminaciones administrativas  
+ ## <a name="adminHints"></a>Realización de eliminaciones y actualizaciones administrativas  
  De forma predeterminada, no se pueden actualizar o eliminar de una tabla habilitada para Stretch filas que son aptas para la migración ni filas que ya se han migrado. Cuando tiene que solucionar un problema, un miembro del rol db_owner puede ejecutar una operación UPDATE o DELETE si agrega la sugerencia de consulta **WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = *valor* )** a la instrucción. La sugerencia de consulta REMOTE_DATA_ARCHIVE_OVERRIDE puede tener los siguientes valores:  
  -   **LOCAL_ONLY**. Solo se actualizan o eliminan los datos locales.  
    

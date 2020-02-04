@@ -1,10 +1,9 @@
 ---
-title: Crear consultas de eliminación (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Crear consultas de eliminación
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,14 @@ helpviewer_keywords:
 ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5cada1c122cf9716a306e7a30bb539f51a24ad6a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: cb40fee1f7176c9d1fe64e22cda220513f88d58e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267469"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254373"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>Crear consultas de eliminación (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

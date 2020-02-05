@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b20a628a24e36da854dd567c8f72c89c7169e361
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084103"
 ---
 # <a name="control-transaction-durability"></a>Controlar la durabilidad de las transacciones
@@ -134,7 +134,7 @@ AS BEGIN ATOMIC WITH
 END    
 ```    
     
-### <a name="table-1-durability-in-atomic-blocks"></a>Tabla 1: Durabilidad en bloques ATOMIC    
+### <a name="table-1-durability-in-atomic-blocks"></a>Tabla 1: durabilidad de bloques ATOMIC    
     
 |Opción de durabilidad de bloque ATOMIC|Ninguna transacción existente|Transacción en proceso (totalmente durable o durable diferida)|    
 |------------------------------------|-----------------------------|---------------------------------------------------------|    

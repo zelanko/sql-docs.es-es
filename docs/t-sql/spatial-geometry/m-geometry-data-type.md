@@ -18,10 +18,10 @@ ms.assetid: 443ae2ea-739b-41ef-96cc-ac5dfd65e10b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e23b5332ca419637749ce029a5698257a6fb835d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101213"
 ---
 # <a name="m-geometry-data-type"></a>M (tipo de datos geometry)
@@ -38,12 +38,12 @@ ms.locfileid: "68101213"
   
 ## <a name="arguments"></a>Argumentos  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si la instancia de **geometry** no es de tipo **Point**, se asignará el valor null a esta propiedad, así como a cualquier instancia de **Point** para la que no se establezca dicha propiedad.  
   
  Esta propiedad es de solo lectura.  

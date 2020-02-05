@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd632c012e6859da004e105d2311c9c21d3dec02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902703"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
@@ -170,7 +170,7 @@ PolyBase solo usa el formato de fecha personalizado para importar los datos. No 
   
 -   DateTimeOffset: 'aaaa-MM-dd HH:mm:ss'  
   
--   Hora: "HH:mm:ss"  
+-   Time: 'HH:mm:ss'  
   
 Los **formatos de fecha de ejemplo** se encuentran en la tabla siguiente:
   
@@ -188,17 +188,17 @@ Notas sobre la tabla:
 |DateTime|DATE_FORMAT = 'aaaa-MM-dd hh:mm:ss.ffftt'|Además de año, mes y día, este formato de fecha incluye 00-12 horas, 00-59 minutos, 00-59 segundos, 3 dígitos para los milisegundos y a.m. o p.m. |  
 |SmallDateTime|DATE_FORMAT =  'aaaa-MM-dd HH:mm'|Además de año, mes y día, este formato de fecha incluye 00-23 horas, 00-59 minutos.|  
 |SmallDateTime|DATE_FORMAT =  'aaaa-MM-dd hh:mmtt'|Además de año, mes y día, este formato de fecha incluye 00-11 horas, 00-59 minutos, sin segundos y a.m. o p.m.|  
-|date|DATE_FORMAT =  'aaaa-MM-dd'|Año, mes y día. No se incluye ningún elemento de hora.|  
-|date|DATE_FORMAT = 'aaaa-MMM-dd'|Año, mes y día. Cuando se especifica el mes con tres emes, el valor de entrada es una de las cadenas siguientes: ene, feb, mar, abr, may, jun, jul, ago, sep, oct, nov o dic.|  
-|datetime2|DATE_FORMAT = 'aaaa-MM-dd HH:mm:ss.fffffff'|Además de año, mes y día, este formato de fecha incluye 00-23 horas, 00-59 minutos, 00-59 segundos y 7 dígitos para los milisegundos.|  
-|datetime2|DATE_FORMAT = 'aaaa-MM-dd hh:mm:ss.ffffffftt'|Además de año, mes y día, este formato de fecha incluye 00-11 horas, 00-59 minutos, 00-59 segundos, 7 dígitos para los milisegundos y a.m. o p.m.|  
+|Date|DATE_FORMAT =  'aaaa-MM-dd'|Año, mes y día. No se incluye ningún elemento de hora.|  
+|Date|DATE_FORMAT = 'aaaa-MMM-dd'|Año, mes y día. Cuando se especifica el mes con tres emes, el valor de entrada es una de las cadenas siguientes: ene, feb, mar, abr, may, jun, jul, ago, sep, oct, nov o dic.|  
+|DateTime2|DATE_FORMAT = 'aaaa-MM-dd HH:mm:ss.fffffff'|Además de año, mes y día, este formato de fecha incluye 00-23 horas, 00-59 minutos, 00-59 segundos y 7 dígitos para los milisegundos.|  
+|DateTime2|DATE_FORMAT = 'aaaa-MM-dd hh:mm:ss.ffffffftt'|Además de año, mes y día, este formato de fecha incluye 00-11 horas, 00-59 minutos, 00-59 segundos, 7 dígitos para los milisegundos y a.m. o p.m.|  
 |DateTimeOffset|DATE_FORMAT = 'aaaa-MM-dd HH:mm:ss.fffffff zzz'|Además de año, mes y día, este formato de fecha incluye 00-23 horas, 00-59 minutos, 00-59 segundos y 7 dígitos para los milisegundos, además del desfase de zona horaria incluido en el archivo de entrada como `{+&#124;-}HH:ss`. Por ejemplo, puesto que la hora de Los Ángeles sin horario de verano aplicado es 8 horas por delante de la hora UTC, un valor de -08:00 en el archivo de entrada especifica la zona horaria de Los Ángeles.|  
 |DateTimeOffset|DATE_FORMAT = 'aaaa-MM-dd hh:mm:ss.ffffffftt zzz'|Además de año, mes y día, este formato de fecha incluye 00-11 horas, 00-59 minutos, 00-59 segundos, 7 dígitos para los milisegundos, (a.m. o p.m.) y el desfase de zona horaria. Vea la descripción de la fila anterior.|  
 |Time|DATE_FORMAT = 'HH:mm:ss'|No hay ningún valor de fecha, solo 00-23 horas, 00-59 minutos y 00-59 segundos.|  
   
  Todos los formatos de fecha admitidos:
   
-|DATETIME|smalldatetime|Date|datetime2|datetimeoffset|  
+|datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
 |[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
 |[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  

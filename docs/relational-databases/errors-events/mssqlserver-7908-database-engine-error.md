@@ -12,25 +12,25 @@ ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 72cab4cc129690b5e544a979f0b18892454dfcef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951425"
 ---
-# <a name="mssqlserver7908"></a>MSSQLSERVER_7908
+# <a name="mssqlserver_7908"></a>MSSQLSERVER_7908
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7908|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7908|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|Texto del mensaje|Error de tabla: el archivo "FILE" de la partición con id. PN_ID no es un archivo de FileStream válido.|  
+|Texto del mensaje|Error de tabla: el archivo "FILE" de la partición con Id. PN_ID no es un archivo de FileStream válido.|  
   
 ## <a name="explanation"></a>Explicación  
 El nombre de un archivo de Filestream en un directorio de columna es un ROWGUID. Si el nombre de un archivo en un directorio de columna no puede convertirse en un ROWGUID, el archivo no será válido.  

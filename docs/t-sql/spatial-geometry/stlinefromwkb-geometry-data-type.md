@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fe1d58d14e6cb4e3ee5c8136cc8e71fb504fe3c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894874"
 ---
 # <a name="stlinefromwkb-geometry-data-type"></a>STLineFromWKB (tipo de datos geometry)
@@ -44,14 +44,14 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
  *SRID*  
  Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryLineString** que se va a devolver.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
- Tipo de OGC: **LineString**  
+ Tipo OGC: **LineString**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  

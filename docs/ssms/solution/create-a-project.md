@@ -1,5 +1,5 @@
 ---
-title: Crear un proyecto | Microsoft Docs
+title: Crear un proyecto
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 35d326a7820cb8c002dd08b7176f8dc4e30f4c80
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 2ad58a10987050bcd89e17e2a3dbef4fd39586d1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264813"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251932"
 ---
 # <a name="create-a-project"></a>Crear un proyecto
 
@@ -32,7 +32,7 @@ Puede crear uno o varios proyectos nuevos en una solución existente.
   
 3.  En el cuadro de diálogo  **Nuevo proyecto** , haga clic en un tipo de proyecto.  
   
-    **Plantillas**  
+    **Templates** (Plantillas [C++])  
     En el cuadro **Plantillas** , seleccione una plantilla. Aparecerá una breve descripción de la plantilla del proyecto seleccionado debajo del cuadro **Plantillas** .  
   
     **Nombre**  
@@ -74,7 +74,7 @@ Puede crear uno o varios proyectos nuevos en una solución existente.
     **Ubicación**  
     Escriba la ubicación donde desea crear el proyecto o elija una en la lista.  
   
-    **Examinar**  
+    **Browse**  
     Muestra el cuadro de diálogo **Ubicación del proyecto** , que le permite navegar a un nuevo directorio en el que guardar el proyecto.  
   
     **Solución**  
@@ -91,9 +91,9 @@ Puede crear uno o varios proyectos nuevos en una solución existente.
     **Agregar al control de código fuente**  
     Cuando esta casilla está seleccionada, la aplicación de control de código fuente se abre al hacer clic en **Aceptar**. Complete la información que necesite la aplicación de control de código fuente para continuar. Para utilizar esta opción, deberá tener una aplicación cliente de control de código fuente instalada.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
-Puede establecer un nombre para el proyecto de script, aunque [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] establece los nombres de las carpetas y no se pueden modificar. Puede configurar la unidad y la especificación de la ruta de acceso de los conjuntos comunes de carpetas mediante el cuadro de diálogo **Agregar nuevo proyecto** . Haga clic con el botón derecho en el icono de soluciones del **Explorador de soluciones**y, a continuación, haga clic en **Agregar**. La ubicación predeterminada para las carpetas de proyecto de script es la siguiente: C:\Documents and Settings\\*NombreDeUsuario*\Mis documentos\SQL Server Management Studio\Projects\\.  
+Puede establecer un nombre para el proyecto de script, aunque [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] establece los nombres de las carpetas y no se pueden modificar. Puede configurar la unidad y la especificación de la ruta de acceso de los conjuntos comunes de carpetas mediante el cuadro de diálogo **Agregar nuevo proyecto** . Haga clic con el botón derecho en el icono de soluciones del **Explorador de soluciones**y, a continuación, haga clic en **Agregar**. La ubicación predeterminada de las carpetas de los proyectos de script es: C:\Documents and Settings\\*NombreDeUsuario*\Mis documentos\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a>Consulte también
 

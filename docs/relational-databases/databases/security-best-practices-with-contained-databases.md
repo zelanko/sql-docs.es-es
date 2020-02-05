@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: jaszymas
 ms.openlocfilehash: 4d7b428534462779abeb72c65b05f551bfd4b0eb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246127"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Prácticas recomendadas de seguridad con bases de datos independientes
@@ -65,7 +65,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 -   Cuando estén presentes bases de datos independientes, los usuarios de base de datos que no sean bases de datos independientes deben conectarse al [!INCLUDE[ssDE](../../includes/ssde-md.md)] sin usar ningún catálogo inicial ni especificar el nombre de una base de datos dependiente como el catálogo inicial. De esta forma, se evita la conexión a la base de datos independiente bajo un control menos directo por parte de los administradores de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ### <a name="increasing-access-by-changing-the-containment-status-of-a-database"></a>Incrementar el acceso cambiando el estado de contención de una base de datos  
- Los inicios de sesión con el permiso **ALTER ANY DATABASE** , como los miembros del rol fijo de servidor **dbcreator** , y los usuarios de una base de datos dependiente con el permiso **CONTROL DATABASE** , como los miembros del rol fijo de base de datos **db_owner** , pueden cambiar la configuración de contención de una base de datos. Si la configuración de contención de una base de datos se cambia de **NONE** a **PARTIAL** o **FULL**, se puede conceder acceso de usuario mediante la creación de usuarios de bases de datos independientes con contraseñas. De esta forma, se podría proporcionar acceso sin el conocimiento ni el consentimiento de los administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para evitar que las bases de datos sean independientes, establezca el valor de la opción **autenticación de la base de datos independiente** de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en 0. Para evitar que se conecten los usuarios de bases de datos independientes con contraseñas en las bases de datos independientes seleccionadas, use desencadenadores de inicio de sesión para cancelar los intentos de inicios de sesión de los usuarios de bases de datos independientes con contraseñas.  
+ Los inicios de sesión con el permiso **ALTER ANY DATABASE** , como los miembros del rol fijo de servidor **dbcreator** , y los usuarios de una base de datos dependiente con el permiso **CONTROL DATABASE** , como los miembros del rol fijo de base de datos **db_owner** , pueden cambiar la configuración de contención de una base de datos. Si la configuración de contención de una base de datos se cambia de **NONE** a **PARTIAL** o **FULL**, se puede conceder acceso de usuario mediante la creación de usuarios de bases de datos independientes con contraseñas. De esta forma, se podría proporcionar acceso sin el conocimiento ni el consentimiento de los administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para evitar que las bases de datos sean independientes, establezca el valor de la opción [!INCLUDE[ssDE](../../includes/ssde-md.md)]autenticación de la base de datos independiente**de** en 0. Para evitar que se conecten los usuarios de bases de datos independientes con contraseñas en las bases de datos independientes seleccionadas, use desencadenadores de inicio de sesión para cancelar los intentos de inicios de sesión de los usuarios de bases de datos independientes con contraseñas.  
   
 ### <a name="attaching-a-contained-database"></a>Adjuntar una base de datos independiente  
  Si se adjunta una base de datos independiente, un administrador podría dar acceso a usuarios no deseados a la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Un administrador al que le preocupe este riesgo puede poner en línea la base de datos en el modo **RESTRICTED_USER** , que evita la autenticación de usuarios de bases de datos independientes con contraseñas. Solo las entidades de seguridad autorizadas mediante inicios de sesión podrán acceder a [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

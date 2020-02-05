@@ -23,13 +23,13 @@ ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 02bfcaecc3038da1404287d7b016dfbc779a1fcf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008900"
 ---
-# <a name="set-querygovernorcostlimit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
+# <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Invalida el valor de **query governor cost limit** de la configuración para la conexión actual.  
@@ -49,7 +49,7 @@ SET QUERY_GOVERNOR_COST_LIMIT value
   
  El término "costo de consultas" hace referencia al tiempo estimado, en segundos, necesario para completar una consulta con una configuración de hardware específica.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  SET QUERY_GOVERNOR_COST_LIMIT solo se aplica a la conexión actual y solo está activo durante la conexión. Use la opción [Establecer la opción de configuración del servidor Límite de costo de regulador de consultas](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) de **sp_configure** para cambiar el valor de límite de costo del regulador de consultas aplicado a todo el servidor. Para más información sobre cómo configurar esta opción, vea [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) y [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
  La opción SET QUERY_GOVERNOR_COST_LIMIT se establece en tiempo de ejecución, no en tiempo de análisis.  

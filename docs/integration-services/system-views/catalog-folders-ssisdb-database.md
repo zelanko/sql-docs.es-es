@@ -11,10 +11,10 @@ ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 14930bfd90b242f30a8b3f265f6ed3b367bd07f9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296536"
 ---
 # <a name="catalogfolders-ssisdb-database"></a>catalog.folders (base de datos de SSISDB)
@@ -26,16 +26,16 @@ ms.locfileid: "71296536"
 
   Muestra las carpetas del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |id|**bigint**|Identificador único de la carpeta.|  
-|NAME|**sysname(nvarchar(128)**|Nombre de la carpeta, que es único dentro del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|  
+|name|**sysname(nvarchar(128)**|Nombre de la carpeta, que es único dentro del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|  
 |description|**nvarchar(1024)**|Descripción de la carpeta.|  
 |created_by_sid|**varbinary(85)**|Identificador de seguridad único (SID) del usuario que creó la carpeta.|  
 |created_by_name|**nvarchar(128)**|Nombre del usuario que creó la carpeta.|  
 |created_time|**datetimeoffset(7)**|Fecha y hora en que se creó la carpeta.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta vista muestra una fila para cada carpeta en el catálogo.  
   
 ## <a name="permissions"></a>Permisos  

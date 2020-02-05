@@ -16,10 +16,10 @@ ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35a118575be4ac15cb44588f1773ea1bb4fbc257
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006190"
 ---
 # <a name="detach-a-database"></a>Separar una base de datos
@@ -63,7 +63,7 @@ ms.locfileid: "68006190"
      **Bases de datos que se van a separar**  
      Enumera las bases de datos que se van a separar.  
   
-     **Database Name**  
+     **Nombre de la base de datos**  
      Muestra el nombre de la base de datos que se va a separar.  
   
      **Quitar conexiones**  
@@ -79,21 +79,21 @@ ms.locfileid: "68006190"
      De forma predeterminada, la operación de separación conserva los catálogos de texto completo asociados a la base de datos. Para quitarlos, desactive la casilla **Mantener catálogos de texto completo** . Esta opción solo aparece cuando se está actualizando una base de datos desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **Estado**  
-     Muestra uno de los siguientes estados: **Listo** o **No está listo**.  
+     Se muestra uno de los siguientes estados: **Listo** o **No está listo**.  
   
-     **de mensaje**  
+     **Mensaje**  
      En la columna **Mensaje** puede aparecer información sobre la base de datos, tal y como se indica a continuación:  
   
     -   Cuando una base de datos está implicada en una replicación, el **Estado** es **No está listo** y la columna **Mensaje** muestra **Base de datos replicada**.  
   
-    -   Cuando una base de datos tiene una o varias conexiones activas, el valor de **Estado** es **No está listo** y en la columna **Mensaje** se muestra _<número_de_conexiones_activas>_ **Conexiones activas** (por ejemplo: **1 conexión activa**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
+    -   Cuando una base de datos tiene una o varias conexiones activas, el valor de **Estado** es **No está listo** y en la columna **Mensaje** se muestra _<número_de_conexiones_activas>_ **Conexiones activas** (por ejemplo, **1 conexiones activas**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
   
      Para obtener más información acerca de un mensaje, haga clic en el texto con hipervínculo para abrir el Monitor de actividad.  
   
 4.  Cuando esté listo para separar la base de datos, haga clic en **Aceptar**.  
   
 > [!NOTE]  
->  La base de datos recién separada permanecerá visible en el nodo **Bases de datos** del Explorador de objetos hasta que se actualice la vista. Puede actualizar la vista en cualquier momento: haga clic en el panel del Explorador de objetos y en la barra de menús seleccione **Ver** y, a continuación, **Actualizar**.  
+>  La base de datos recién separada permanecerá visible en el nodo **Bases de datos** del Explorador de objetos hasta que se actualice la vista. Puede actualizar la vista en cualquier momento haciendo clic en el panel del Explorador de objetos y seleccionando a continuación **Ver** y por último **Actualizar**de la barra de menús.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

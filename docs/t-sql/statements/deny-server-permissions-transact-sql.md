@@ -18,10 +18,10 @@ ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: de59423c368bc966fab3958fbeb4b04888f4e2a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114782"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY (permisos de servidor de Transact-SQL)
@@ -66,7 +66,7 @@ DENY permission [ ,...n ]
   
  AS \<grantor_principal>  
  Especifica la entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.
-Use la cláusula AS de la entidad de seguridad para indicar que la entidad de seguridad registrada como el denegador del permiso debe ser una entidad de seguridad distinta de la persona que ejecuta la instrucción. Por ejemplo, suponga que el usuario María tiene el principal_id 12 y el usuario Raúl tiene el principal_id 15. María ejecuta `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Ahora bien, la tabla sys.database_permissions indicará que grantor_principal_id de la instrucción DENY fue 15 (Raul), aunque la instrucción realmente la ejecutó el usuario 13 (María).
+Use la cláusula AS de la entidad de seguridad para indicar que la entidad de seguridad registrada como el denegador del permiso debe ser una entidad de seguridad distinta de la persona que ejecuta la instrucción. Por ejemplo, suponga que la usuaria María tiene el principal_id 12 y el usuario Raúl tiene el principal_id 15. María ejecuta `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Ahora bien, la tabla sys.database_permissions indicará que grantor_principal_id de la instrucción DENY fue 15 (Raul), aunque la instrucción realmente la ejecutó el usuario 13 (María).
   
 El uso de AS en esta instrucción no implica la capacidad de suplantar a otro usuario.    
   
@@ -88,7 +88,7 @@ El uso de AS en esta instrucción no implica la capacidad de suplantar a otro us
  *server_role*  
  Especifica un rol de servidor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los permisos del ámbito del servidor solamente pueden denegarse si la base de datos actual es maestra.  
   
  Puede ver información acerca de los permisos del servidor en la vista de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), mientras que la información acerca de las entidades de seguridad de servidor puede verse en la vista de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Encontrará información sobre la pertenencia de roles de servidor en la vista de catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
@@ -132,7 +132,7 @@ El uso de AS en esta instrucción no implica la capacidad de suplantar a otro us
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los tres permisos de servidor siguientes se agregaron en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Permiso **CONNECT ANY DATABASE**  
@@ -150,7 +150,7 @@ El uso de AS en esta instrucción no implica la capacidad de suplantar a otro us
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>A. Denegar el permiso CONNECT SQL para un inicio de sesión de SQL Server y las entidades de seguridad para las que el inicio de sesión ha vuelto a concederlo  
- En el siguiente ejemplo se deniega el permiso `CONNECT SQL` al inicio de sesión `Annika` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a las entidades de seguridad a las que ha concedido el permiso.  
+ En el siguiente ejemplo se deniega el permiso `CONNECT SQL` al inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `Annika` y a las entidades de seguridad a las que ha concedido el permiso.  
   
 ```  
 USE master;  

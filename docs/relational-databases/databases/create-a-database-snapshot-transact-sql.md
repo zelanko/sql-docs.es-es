@@ -13,10 +13,10 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 652ef86f26f92068465668cadeccf8e193db1f90
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71708287"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Crear una instantánea de base de datos (Transact-SQL)
@@ -45,13 +45,13 @@ ms.locfileid: "71708287"
 ##  <a name="Recommendations"></a> Recomendaciones  
  En esta sección se describen los procedimientos recomendados siguientes:  
   
--   [Procedimiento recomendado: Asignar nombres a instantáneas de base de datos](#Naming)  
+-   [Procedimiento recomendado: asignar nombres a las instantáneas de base de datos](#Naming)  
   
--   [Procedimiento recomendado: Limitar el número de instantáneas de base de datos](#Limiting_Number)  
+-   [Procedimiento recomendado: limitar el número de instantáneas de base de datos](#Limiting_Number)  
   
--   [Procedimiento recomendado: Conexiones de cliente con una instantánea de base de datos](#Client_Connections)  
+-   [Procedimiento recomendado: conexiones de clientes con una instantánea de base de datos](#Client_Connections)  
   
-####  <a name="Naming"></a> Procedimiento recomendado: Asignar nombres a instantáneas de base de datos  
+####  <a name="Naming"></a> Procedimiento recomendado: asignar nombres a las instantáneas de base de datos  
  Antes de crear instantáneas, es importante pensar cómo asignarles un nombre. Cada instantánea de base de datos necesita un nombre de base de datos único. Para facilitar la administración, el nombre de una instantánea puede incorporar información que identifique la base de datos, por ejemplo:  
   
 -   Nombre de la base de datos de origen.  
@@ -76,13 +76,13 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-#### <a name="Limiting_Number"></a> Procedimiento recomendado: Limitar el número de instantáneas de base de datos  
+#### <a name="Limiting_Number"></a> Procedimiento recomendado: limitar el número de instantáneas de base de datos  
  La creación de una serie de instantáneas a lo largo del tiempo permite capturar instantáneas secuenciales de la base de datos de origen. Cada instantánea se conserva hasta que se quite de manera explícita. Las instantáneas siguen creciendo a medida que se actualizan las páginas originales, por lo que seguramente querrá ahorrar espacio en el disco eliminando una instantánea más antigua después de crear una nueva instantánea.  
   
 
 **Nota:** Para volver a una instantánea de base de datos, debe eliminar cualquier otra instantánea de esa base de datos.  
   
-####  <a name="Client_Connections"></a> Procedimiento recomendado: Conexiones de cliente con una instantánea de base de datos  
+####  <a name="Client_Connections"></a> Procedimiento recomendado: conexiones de clientes con una instantánea de base de datos  
  Para usar una instantánea de base de datos, los clientes deben saber dónde encontrarla. Los usuarios pueden leer de una instantánea de base de datos mientras se crea o elimina otra. Sin embargo, si sustituye una nueva instantánea por otra ya existente, debe redirigir a los clientes a la nueva instantánea. Los usuarios pueden conectarse manualmente a una instantánea de base de datos mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Sin embargo, para admitir un entorno de producción, debe crear una solución programática que dirija de un modo transparente a los clientes de escritura de informes a la instantánea de base de datos más reciente de la base de datos.  
   
 
@@ -101,7 +101,7 @@ AdventureWorks_snapshot_evening
 
      CREATE DATABASE *nombre_de_instantánea_de_base_de_datos*  
   
-     ON  
+     ACTIVAR  
   
      (  
   
@@ -125,7 +125,7 @@ AdventureWorks_snapshot_evening
 > [!NOTE]  
 >  La extensión `.ss` que se usa en los ejemplos es arbitraria.  
   
- Esta sección contiene los siguientes ejemplos:  
+ En esta sección se incluyen los ejemplos siguientes:  
   
 -   A. [Crear una instantánea de la base datos AdventureWorks](#Creating_on_AW)  
   
@@ -175,7 +175,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
+ [Instantáneas de bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
 

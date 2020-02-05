@@ -15,10 +15,10 @@ ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f4fd01821e8f432d39905fb0bca974c155a151af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066132"
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate (tipo de datos geometry)
@@ -37,13 +37,13 @@ UnionAggregate ( geometry_operand )
  *geometry_operand*  
  Es una columna de tabla de tipo **geometry** que contiene el conjunto de objetos **geometry** en el que se va a realizar una operación de unión.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
 ## <a name="exceptions"></a>Excepciones  
  Produce una excepción `FormatException` cuando hay valores de entrada no válidos. Vea [STIsValid &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método devuelve **null** cuando la entrada está vacía o esta tiene unos SRID diferentes. Vea [Identificadores de referencia espacial &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
   
  El método omite las entradas **null**.  

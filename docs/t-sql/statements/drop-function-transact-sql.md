@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2b318f7be6b403cb540305eb492cf99a776efc9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044226"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
@@ -65,7 +65,7 @@ DROP FUNCTION [ schema_name. ] function_name
  *function_name*  
  Es el nombre de la función definida por el usuario que se va a quitar. Especificar el nombre del esquema es opcional. No se pueden especificar el nombre del servidor ni el nombre de la base de datos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  DROP FUNCTION no funcionará correctamente si existen vistas o funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] en la base de datos que hacen referencia a esta función y que fueron creadas con SCHEMABINDING; tampoco funcionará si existen columnas calculadas o restricciones CHECK o DEFAULT que hacen referencia a la función.  
   
  DROP FUNCTION no funcionará correctamente si existen columnas calculadas que hacen referencia a esta función y que han sido indizadas.  

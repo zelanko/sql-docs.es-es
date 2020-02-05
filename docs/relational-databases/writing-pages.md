@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9eea6c5cbc995cd73a9f799124772d2be396a9f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095481"
 ---
 # <a name="writing-pages"></a>Escribir páginas
@@ -50,7 +50,7 @@ Una página desfasada se escribe en el disco de una de estas tres maneras:
 * Escritura ///diligente///   
  El proceso de escritura ///diligente/// escribe páginas diferidas de datos asociadas a operaciones sin registro, como BULK INSERT y SELECT INTO. Este proceso permite que la creación y escritura de nuevas páginas tengan lugar en paralelo. Es decir, la operación de llamada no tiene que esperar hasta que termine toda la operación antes de escribir las páginas en el disco.
 
-* Punto de comprobación   
+* Punto de control   
  El proceso de punto de comprobación examina periódicamente la caché del búfer en busca de búferes con páginas de una base de datos especificada y escribe todas las páginas desfasadas en el disco. Los puntos de comprobación permiten ahorrar tiempo en una recuperación posterior al crear un punto en el que se garantiza que todas las páginas desfasadas se hayan escrito en el disco. El usuario puede solicitar una operación de punto de comprobación mediante el comando CHECKPOINT o [!INCLUDE[ssDE](../includes/ssde-md.md)] puede generar puntos de comprobación automáticos que se basen en la cantidad de espacio de registro utilizado y el tiempo transcurrido desde el último punto de comprobación. Además, se genera un punto de comprobación cuando se producen determinadas actividades. Por ejemplo, cuando se agrega o quita un archivo de datos o de registro de una base de datos, o cuando se detiene la instancia de SQL Server. Para más información, consulte [Puntos de comprobación y la parte activa del registro](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
 
 Los procesos de escritura diferida, escritura ///diligente/// y punto de comprobación no esperan a que se complete la operación de E/S. Siempre usan la operación de E/S asincrónica (o superpuesta) y continúan con otros trabajos; posteriormente, comprueban que la operación de E/S sea correcta. De este modo, SQL Server maximiza los recursos de la CPU y de E/S para las tareas apropiadas.

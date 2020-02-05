@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2ce69487c1550314dc7cfe3641333728fd07155e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117557"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
@@ -53,10 +53,10 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
  *time_zone*  
  Es una cadena de caracteres en formato [+|-]TZH:TZM o un entero con signo (de minutos) que representa el ajuste de zona horaria y se supone que reconoce y está ajustado para el horario de verano.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **datetimeoffset** con la precisión fraccionaria del argumento *DATETIMEOFFSET*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Use SWITCHOFFSET para seleccionar un valor **datetimeoffset** en el ajuste de zona horaria que sea diferente del que se almacenó originalmente. SWITCHOFFSET no actualiza el valor *time_zone* almacenado.  
   
  SWITCHOFFSET se puede usar para actualizar una columna **datetimeoffset**.  

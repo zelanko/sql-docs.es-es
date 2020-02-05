@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb5211a2d45ef1a5495d1df57143190f1d5f6419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927379"
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
@@ -44,7 +44,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>Argumentos  
  *boolean_expression*  
- Es cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida que devuelve un valor booleano: **TRUE**, **FALSE** o **UNKNOWN**.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida que devuelve un valor booleano: **TRUE**, **FALSE** o **UNKNOWN**.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  **Boolean**  
@@ -52,14 +52,14 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>Valor del resultado  
  Devuelve TRUE cuando ambas expresiones son TRUE.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En la siguiente tabla se muestran los resultados de la comparación de los valores TRUE y FALSE mediante el operador AND.  
   
-||TRUE|FALSE|UNKNOWN|  
+||TRUE|FALSE|DESCONOCIDO|  
 |------|----------|-----------|-------------|  
-|**TRUE**|TRUE|FALSE|UNKNOWN|  
+|**TRUE**|TRUE|FALSE|DESCONOCIDO|  
 |**FALSE**|FALSE|FALSE|FALSE|  
-|**UNKNOWN**|UNKNOWN|FALSE|UNKNOWN|  
+|**UNKNOWN**|DESCONOCIDO|FALSE|DESCONOCIDO|  
   
 ## <a name="examples"></a>Ejemplos  
   

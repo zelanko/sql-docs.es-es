@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 208babd394592d48feaf257d14329db89d11f767
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68092622"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
@@ -44,10 +44,10 @@ REVERSE ( string_expression )
  *string_expression*  
  *string_expression* es una [expression](../../t-sql/language-elements/expressions-transact-sql.md) de tipo de datos binario o de cadena. *string_expression* puede ser una constante, una variable o una columna de datos binarios o de caracteres.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **varchar** o **nvarchar**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  *string_expression* debe ser de un tipo de datos que se pueda convertir implícitamente a **varchar**. De lo contrario, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para convertir *string_expression* explícitamente.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres adicionales (pares suplentes)  

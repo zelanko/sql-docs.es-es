@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f844874da3ba4c7a644331f521293e1c0f94fed5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940242"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary y varbinary (Transact-SQL)
@@ -38,12 +38,12 @@ Tipos de datos binarios de longitud fija o variable.
   
 **varbinary** [ (_n_ | **max**) ] Datos binarios de longitud variable. _n_ puede ser un valor de 1 a 8000. **max** indica que el tamaño máximo de almacenamiento es de 2^31-1 bytes. El tamaño de almacenamiento es la longitud real de los datos especificados + 2 bytes. Los datos especificados pueden tener una longitud de 0 bytes. El sinónimo de ANSI SQL para **varbinary** es **binary varying**.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Cuando no se especifica _n_ en una instrucción de definición de datos o de declaración de variables, la longitud predeterminada es 1. Cuando no se especifica _n_ con la función CAST, la longitud predeterminada es 30.
 
 | Tipo de datos | Usar cuando... |
 | --- | --- |
-| **binario** | los tamaños de las entradas de datos de columna sean coherentes.|
+| **binary** | los tamaños de las entradas de datos de columna sean coherentes.|
 | **varbinary** | los tamaños de las entradas de datos de columna varíen considerablemente.|
 | **varbinary(max)** | las entradas de datos de columna superen los 8000 bytes.|
 
@@ -55,11 +55,11 @@ Al convertir datos de un tipo de datos de cadena a un tipo de datos **binary** o
 * **varchar**
 * **nchar**
 * **nvarchar**
-* **binario**
+* **binary**
 * **varbinary**
-* **texto**
+* **text**
 * **ntext**
-* **imagen**
+* **image**
 
 Cuando se convierten a **binary** o **varbinary** otros tipos de datos, los datos se rellenan o se truncan por la izquierda. El relleno se realiza con ceros hexadecimales.
   
@@ -94,7 +94,7 @@ El resultado final es `57921` y no `123457`.
 > [!NOTE]  
 >  No se garantiza que las conversiones entre cualquier tipo de datos y los tipos de datos **binary** sean las mismas entre diferentes versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Conversiones de tipos de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

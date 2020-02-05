@@ -15,10 +15,10 @@ ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 22101d8ec2f24eeb1a93708adf52b2b24060ce28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987142"
 ---
 # <a name="view-plan-guide-properties"></a>Ver propiedades de la guía de plan
@@ -80,10 +80,10 @@ ms.locfileid: "67987142"
      **Tipo de ámbito**  
      Muestra el tipo de entidad en la que aparece la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Así se especifica el contexto para hacer coincidir la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] con la guía de plan. Los valores posibles son **OBJECT**, **SQL**y **TEMPLATE**.  
   
-     **Estamento**  
+     **Instrucción**  
      Muestra la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] frente a la que se aplicará la guía de plan.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

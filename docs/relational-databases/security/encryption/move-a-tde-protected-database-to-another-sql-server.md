@@ -14,10 +14,10 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 21918147a6efdc750ecb56eb44c457fea9d962ac
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558517"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
@@ -165,14 +165,14 @@ En los siguientes procedimientos se muestra cómo debe mover una base de datos p
      De forma predeterminada, la operación de separación conserva los catálogos de texto completo asociados a la base de datos. Para quitarlos, desactive la casilla **Mantener catálogos de texto completo** . Esta opción solo aparece cuando se está actualizando una base de datos desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **Estado**  
-     Muestra uno de los siguientes estados: **Listo** o **No está listo**.  
+     Se muestra uno de los siguientes estados: **Listo** o **No está listo**.  
   
      **Mensaje**  
      En la columna **Mensaje** puede aparecer información sobre la base de datos, tal y como se indica a continuación:  
   
     -   Cuando una base de datos está implicada en una replicación, el **Estado** es **No está listo** y la columna **Mensaje** muestra **Base de datos replicada**.  
   
-    -   Cuando una base de datos tiene una o varias conexiones activas, el valor de **Estado** es **No está listo** y en la columna **Mensaje** se muestra _\<número\_de\_conexiones\_activas\>_ **Conexiones activas** (por ejemplo: **1 conexión activa**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
+    -   Cuando una base de datos tiene una o varias conexiones activas, el valor de **Estado** es **No está listo** y en la columna **Mensaje** se muestra _\<número\_de\_conexiones\_activas\>_ **Conexiones activas** (por ejemplo, **1 conexión activa**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
   
      Para obtener más información acerca de un mensaje, haga clic en el texto con hipervínculo para abrir el Monitor de actividad.  
   

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e319c3875adc616d6a855b7fdca0ff24ff880522
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982508"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982508"
 
   Devuelve información acerca de los objetos de ámbito de esquema de la base de datos actual. Para obtener una lista de los objetos de ámbito de esquema, vea [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). Esta función no se puede utilizar para objetos que no pertenezcan al ámbito de esquema, como notificaciones de eventos y desencadenadores DDL (lenguaje de definición de datos).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -106,59 +106,59 @@ OBJECTPROPERTY ( id , property )
 |IsRule|Cualquier objeto en el ámbito de esquema|Regla enlazada.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsScalarFunction|Función|Función escalar.<br /><br /> 1 = Función escalar<br /><br /> 0 = Función no escalar|  
 |IsSchemaBound|Función, vista|Función o vista enlazada al esquema creada mediante SCHEMABINDING.<br /><br /> 1 = Enlazada al esquema<br /><br /> 0 = No enlazada al esquema.|  
-|IsSystemTable|Table|Tabla del sistema.<br /><br /> 1 = True<br /><br /> 0 = False| 
-|IsSystemVerified|Objeto|SQL Server puede comprobar las propiedades de determinismo y precisión del objeto.<br /><br /> 1 = True<br /><br /> 0 = False| 
-|IsTable|Table|Tabla.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsSystemTable|Tabla|Tabla del sistema.<br /><br /> 1 = True<br /><br /> 0 = False| 
+|IsSystemVerified|Object|SQL Server puede comprobar las propiedades de determinismo y precisión del objeto.<br /><br /> 1 = True<br /><br /> 0 = False| 
+|IsTable|Tabla|Tabla.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsTableFunction|Función|Función con valores de tabla.<br /><br /> 1 = Función con valores de tabla<br /><br /> 0 = Función con valores no de tabla.|  
 |IsTrigger|Cualquier objeto en el ámbito de esquema|Desencadenador.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|Cualquier objeto en el ámbito de esquema|Restricción UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsUserTable|Table|Tabla definida por el usuario.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|IsUserTable|Tabla|Tabla definida por el usuario.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|Ver|Vista.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|Cualquier objeto en el ámbito de esquema|Propietario del objeto.<br /><br /> **Nota:**  El propietario del esquema no es necesariamente el propietario del objeto. Por ejemplo, los objetos secundarios (aquellos en los que *parent_object_id* no es NULL) siempre devolverán el mismo identificador de propietario que el primario.<br /><br /> Distinto de NULL = Identificador de usuario de base de datos que corresponde al propietario del objeto.|  
+|OwnerId|Cualquier objeto en el ámbito de esquema|Propietario del objeto.<br /><br /> **Nota:** El propietario del esquema no es necesariamente el propietario del objeto. Por ejemplo, los objetos secundarios (aquellos en los que *parent_object_id* no es NULL) siempre devolverán el mismo identificador de propietario que el primario.<br /><br /> Distinto de NULL = Identificador de usuario de base de datos que corresponde al propietario del objeto.|  
 |SchemaId|Cualquier objeto en el ámbito de esquema| Id. de esquema del esquema al que pertenece el objeto.| 
-|TableDeleteTrigger|Table|La tabla tiene un desencadenador DELETE.<br /><br /> >1 = Identificador del primer desencadenador con el tipo especificado.|  
-|TableDeleteTriggerCount|Table|La tabla tiene el número especificado de desencadenadores DELETE.<br /><br /> >0 = Número de desencadenadores DELETE.|  
-|TableFullTextMergeStatus|Table|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Indica si una tabla que tiene un índice de texto completo se está combinando actualmente.<br /><br /> 0 = La tabla no tiene un índice de texto completo o el índice de texto completo no se está combinando.<br /><br /> 1 = El índice de texto completo se está combinando.|  
-|TableFullTextBackgroundUpdateIndexOn|Table|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> La tabla tiene habilitada la opción de actualización de índices de texto completo en segundo plano (seguimiento de cambios automáticos).<br /><br /> 1 = TRUE<br /><br /> 0 = False|  
-|TableFulltextCatalogId|Table|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Identificador del catálogo de texto completo en el que residen los datos de índice de texto completo para la tabla.<br /><br /> Distinto de cero = Identificador del catálogo de texto completo, asociado al índice único que identifica las filas en una tabla indizada de texto completo.<br /><br /> 0 = La tabla no tiene un índice de texto completo.|  
-|TableFulltextChangeTrackingOn|Table|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> La tabla tiene habilitado el seguimiento de cambios de texto completo.<br /><br /> 1 = TRUE<br /><br /> 0 = False|  
-|TableFulltextDocsProcessed|Table|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Número de filas procesadas desde el comienzo de la indización de texto completo. En una tabla que se indiza para búsquedas en texto completo, todas las columnas de una fila se consideran como parte de un documento que se va a indizar.<br /><br /> 0 = No se ha completado ningún rastreo activo ni ninguna indización de texto completo.<br /><br /> > 0 = Uno de los siguientes (A o B): A) El número de documentos procesados por operaciones de inserción o actualización desde el inicio del rellenado de seguimiento de cambios completo, incremental o manual. B) El número de filas procesadas por operaciones de inserción o actualización desde que se habilitó el seguimiento de cambios con el rellenado del índice de actualización en segundo plano, la modificación del esquema de índice de texto completo, la regeneración del catálogo de texto completo o el reinicio de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], etc.<br /><br /> NULL = La tabla no tiene un índice de texto completo.<br /><br /> Esta propiedad no supervisa ni cuenta las filas eliminadas.|  
-|TableFulltextFailCount|Table|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Número de filas no indizadas por Búsqueda de texto completo.<br /><br /> 0 = El rellenado se ha completado.<br /><br /> > 0 = Uno de los siguientes (A o B): A) El número de documentos que no se han indexado desde el inicio del llenado de seguimiento de cambios de actualización completo, incremental o manual. B) En el seguimiento de cambios con actualización de índices en segundo plano, el número de filas no indizadas desde el comienzo del rellenado o desde su reinicio. Esto puede deberse a un cambio del esquema, a la regeneración del catálogo, al reinicio del servidor, etc.<br /><br /> NULL = La tabla no tiene un índice de texto completo.|  
-|TableFulltextItemCount|Table|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Número de filas para las que se crearon índices de texto completo correctamente.|  
-|TableFulltextKeyColumn|Table|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Identificador de la columna asociada al índice de columna único que participa en la definición de índice de texto completo.<br /><br /> 0 = La tabla no tiene un índice de texto completo.|  
-|TableFulltextPendingChanges|Table|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Número de entradas de seguimiento de cambios pendientes de procesamiento.<br /><br /> 0 = El seguimiento de cambios no está habilitado.<br /><br /> NULL = La tabla no tiene un índice de texto completo.|  
-|TableFulltextPopulateStatus|Table|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> 0 = Inactiva<br /><br /> 1 = Rellenado completo en curso.<br /><br /> 2 = Rellenado incremental en curso.<br /><br /> 3 = Propagación de cambios de seguimiento en curso.<br /><br /> 4 = Actualización de índices en segundo plano en curso, como el seguimiento de cambios automáticos.<br /><br /> 5 = Indización de texto completo acelerada o pausada.|  
-|TableHasActiveFulltextIndex|Table|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> La tabla tiene un índice de texto completo activo.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasCheckCnst|Table|La tabla tiene una restricción CHECK.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasClustIndex|Table|La tabla tiene un índice clúster.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasDefaultCnst|Table|La tabla tiene una restricción DEFAULT.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasDeleteTrigger|Table|La tabla tiene un desencadenador DELETE.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasForeignKey|Table|La tabla tiene una restricción FOREIGN KEY.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasForeignRef|Table|Una restricción FOREIGN KEY hace referencia a la tabla.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasIdentity|Table|La tabla tiene una columna de identidad.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasIndex|Table|La tabla tiene un índice de cualquier tipo.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasInsertTrigger|Table|El objeto tiene un desencadenador INSERT.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasNonclustIndex|Table|La tabla tiene un índice no clúster.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasPrimaryKey|Table|La tabla tiene una clave principal.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasRowGuidCol|Table|La tabla tiene un parámetro ROWGUIDCOL para una columna **uniqueidentifier**.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasTextImage|Table|La tabla tiene una columna **text**, **ntext** o **image**.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasTimestamp|Table|La tabla tiene una columna **timestamp**.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasUniqueCnst|Table|La tabla tiene una restricción UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasUpdateTrigger|Table|El objeto tiene un desencadenador UPDATE.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableHasVarDecimalStorageFormat|Table|La tabla está habilitada para el formato de almacenamiento **vardecimal**.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableInsertTrigger|Table|La tabla tiene un desencadenador INSERT.<br /><br /> >1 = Identificador del primer desencadenador con el tipo especificado.|  
-|TableInsertTriggerCount|Table|La tabla tiene el número especificado de desencadenadores INSERT.<br /><br /> >0 = Número de desencadenadores INSERT.|  
-|TableIsFake|Table|La tabla no es real. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] la materializa internamente a petición.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableIsLockedOnBulkLoad|Table|La tabla está bloqueada debido a una operación con **bcp** o BULK INSERT.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|TableIsMemoryOptimized|Table|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> La tabla tiene optimización para memoria<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Tipo de datos base: **int**<br /><br /> Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
-|TableIsPinned|Table|La tabla se ancla para que se mantenga en la memoria caché de datos.<br /><br /> 0 = False<br /><br /> Esta característica no se admite en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ni en versiones posteriores.|  
-|TableTextInRowLimit|Table|Número máximo de bytes permitidos para text in row.<br /><br /> 0 si no se ha establecido la opción text in row.|  
-|TableUpdateTrigger|Table|La tabla tiene un desencadenador UPDATE.<br /><br /> > 1 = Identificador del primer desencadenador con el tipo especificado.|  
-|TableUpdateTriggerCount|Table|La tabla tiene el número especificado de desencadenadores UPDATE.<br /><br /> > 0 = Número de desencadenadores UPDATE.|  
-|TableHasColumnSet|Table|La tabla tiene un conjunto de columnas.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> Para obtener más información, vea [Usar conjuntos de columnas](../../relational-databases/tables/use-column-sets.md).|  
-|TableTemporalType|Table|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> Especifica el tipo de tabla.<br /><br /> 0 = tabla no temporal<br /><br /> 1 = tabla de historial para la tabla con control de versiones del sistema<br /><br /> 2 = tabla temporal con control de versiones del sistema|  
+|TableDeleteTrigger|Tabla|La tabla tiene un desencadenador DELETE.<br /><br /> >1 = Identificador del primer desencadenador con el tipo especificado.|  
+|TableDeleteTriggerCount|Tabla|La tabla tiene el número especificado de desencadenadores DELETE.<br /><br /> >0 = Número de desencadenadores DELETE.|  
+|TableFullTextMergeStatus|Tabla|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Indica si una tabla que tiene un índice de texto completo se está combinando actualmente.<br /><br /> 0 = La tabla no tiene un índice de texto completo o el índice de texto completo no se está combinando.<br /><br /> 1 = El índice de texto completo se está combinando.|  
+|TableFullTextBackgroundUpdateIndexOn|Tabla|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> La tabla tiene habilitada la opción de actualización de índices de texto completo en segundo plano (seguimiento de cambios automáticos).<br /><br /> 1 = TRUE<br /><br /> 0 = False|  
+|TableFulltextCatalogId|Tabla|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Identificador del catálogo de texto completo en el que residen los datos de índice de texto completo para la tabla.<br /><br /> Distinto de cero = Identificador del catálogo de texto completo, asociado al índice único que identifica las filas en una tabla indizada de texto completo.<br /><br /> 0 = La tabla no tiene un índice de texto completo.|  
+|TableFulltextChangeTrackingOn|Tabla|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> La tabla tiene habilitado el seguimiento de cambios de texto completo.<br /><br /> 1 = TRUE<br /><br /> 0 = False|  
+|TableFulltextDocsProcessed|Tabla|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Número de filas procesadas desde el comienzo de la indización de texto completo. En una tabla que se indiza para búsquedas en texto completo, todas las columnas de una fila se consideran como parte de un documento que se va a indizar.<br /><br /> 0 = No se ha completado ningún rastreo activo ni ninguna indización de texto completo.<br /><br /> > 0 = Uno de los siguientes (A o B): A) El número de documentos procesados por operaciones de inserción o actualización desde el inicio del rellenado de seguimiento de cambios completo, incremental o manual. B) El número de filas procesadas por operaciones de inserción o actualización desde que se habilitó el seguimiento de cambios con el rellenado del índice de actualización en segundo plano, la modificación del esquema de índice de texto completo, la regeneración del catálogo de texto completo o el reinicio de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], etc.<br /><br /> NULL = La tabla no tiene un índice de texto completo.<br /><br /> Esta propiedad no supervisa ni cuenta las filas eliminadas.|  
+|TableFulltextFailCount|Tabla|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Número de filas no indizadas por Búsqueda de texto completo.<br /><br /> 0 = El rellenado se ha completado.<br /><br /> > 0 = Uno de los siguientes (A o B): A) El número de documentos que no se han indizado desde el inicio del llenado de seguimiento de cambios de actualización completa, incremental o manual. B) En el seguimiento de cambios con actualización de índices en segundo plano, el número de filas no indizadas desde el comienzo del rellenado o desde su reinicio. Esto puede deberse a un cambio del esquema, a la regeneración del catálogo, al reinicio del servidor, etc.<br /><br /> NULL = La tabla no tiene un índice de texto completo.|  
+|TableFulltextItemCount|Tabla|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Número de filas para las que se crearon índices de texto completo correctamente.|  
+|TableFulltextKeyColumn|Tabla|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Identificador de la columna asociada al índice de columna único que participa en la definición de índice de texto completo.<br /><br /> 0 = La tabla no tiene un índice de texto completo.|  
+|TableFulltextPendingChanges|Tabla|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> Número de entradas de seguimiento de cambios pendientes de procesamiento.<br /><br /> 0 = El seguimiento de cambios no está habilitado.<br /><br /> NULL = La tabla no tiene un índice de texto completo.|  
+|TableFulltextPopulateStatus|Tabla|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> 0 = Inactiva<br /><br /> 1 = Rellenado completo en curso.<br /><br /> 2 = Rellenado incremental en curso.<br /><br /> 3 = Propagación de cambios de seguimiento en curso.<br /><br /> 4 = Actualización de índices en segundo plano en curso, como el seguimiento de cambios automáticos.<br /><br /> 5 = Indización de texto completo acelerada o pausada.|  
+|TableHasActiveFulltextIndex|Tabla|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> La tabla tiene un índice de texto completo activo.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasCheckCnst|Tabla|La tabla tiene una restricción CHECK.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasClustIndex|Tabla|La tabla tiene un índice clúster.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasDefaultCnst|Tabla|La tabla tiene una restricción DEFAULT.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasDeleteTrigger|Tabla|La tabla tiene un desencadenador DELETE.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasForeignKey|Tabla|La tabla tiene una restricción FOREIGN KEY.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasForeignRef|Tabla|Una restricción FOREIGN KEY hace referencia a la tabla.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasIdentity|Tabla|La tabla tiene una columna de identidad.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasIndex|Tabla|La tabla tiene un índice de cualquier tipo.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasInsertTrigger|Tabla|El objeto tiene un desencadenador INSERT.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasNonclustIndex|Tabla|La tabla tiene un índice no clúster.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasPrimaryKey|Tabla|La tabla tiene una clave principal.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasRowGuidCol|Tabla|La tabla tiene un parámetro ROWGUIDCOL para una columna **uniqueidentifier**.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasTextImage|Tabla|La tabla tiene una columna **text**, **ntext** o **image**.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasTimestamp|Tabla|La tabla tiene una columna **timestamp**.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasUniqueCnst|Tabla|La tabla tiene una restricción UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasUpdateTrigger|Tabla|El objeto tiene un desencadenador UPDATE.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableHasVarDecimalStorageFormat|Tabla|La tabla está habilitada para el formato de almacenamiento **vardecimal**.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableInsertTrigger|Tabla|La tabla tiene un desencadenador INSERT.<br /><br /> >1 = Identificador del primer desencadenador con el tipo especificado.|  
+|TableInsertTriggerCount|Tabla|La tabla tiene el número especificado de desencadenadores INSERT.<br /><br /> >0 = Número de desencadenadores INSERT.|  
+|TableIsFake|Tabla|La tabla no es real. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] la materializa internamente a petición.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableIsLockedOnBulkLoad|Tabla|La tabla está bloqueada debido a una operación con **bcp** o BULK INSERT.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|TableIsMemoryOptimized|Tabla|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> La tabla tiene optimización para memoria<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Tipo de datos base: **int**<br /><br /> Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
+|TableIsPinned|Tabla|La tabla se ancla para que se mantenga en la memoria caché de datos.<br /><br /> 0 = False<br /><br /> Esta característica no se admite en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ni en versiones posteriores.|  
+|TableTextInRowLimit|Tabla|Número máximo de bytes permitidos para text in row.<br /><br /> 0 si no se ha establecido la opción text in row.|  
+|TableUpdateTrigger|Tabla|La tabla tiene un desencadenador UPDATE.<br /><br /> > 1 = Identificador del primer desencadenador con el tipo especificado.|  
+|TableUpdateTriggerCount|Tabla|La tabla tiene el número especificado de desencadenadores UPDATE.<br /><br /> > 0 = Número de desencadenadores UPDATE.|  
+|TableHasColumnSet|Tabla|La tabla tiene un conjunto de columnas.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> Para obtener más información, vea [Usar conjuntos de columnas](../../relational-databases/tables/use-column-sets.md).|  
+|TableTemporalType|Tabla|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> Especifica el tipo de tabla.<br /><br /> 0 = tabla no temporal<br /><br /> 1 = tabla de historial para la tabla con control de versiones del sistema<br /><br /> 2 = tabla temporal con control de versiones del sistema|  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
 ## <a name="exceptions"></a>Excepciones  
@@ -166,7 +166,7 @@ OBJECTPROPERTY ( id , property )
   
  Un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como OBJECTPROPERTY, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El [!INCLUDE[ssDE](../../includes/ssde-md.md)] da por hecho que *object_id* se encuentra en el contexto de la base de datos actual. Una consulta que hace referencia a un parámetro *object_id* de otra base de datos devuelve NULL o resultados incorrectos. Por ejemplo, en la siguiente consulta, el contexto de base de datos es la base de datos maestra. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] intentará devolver el valor de propiedad correspondiente al *object_id* especificado en esa base de datos, en lugar de la base de datos especificada en la consulta. La consulta devuelve resultados incorrectos porque la vista `vEmployee` no se encuentra en la base de datos maestra.  
   
 ```  
@@ -217,7 +217,7 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C. Búsqueda de las tablas que pertenecen a un esquema específico  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C. Buscar las tablas que pertenecen a un esquema específico  
  En el siguiente ejemplo se devuelven todas las tablas del esquema dbo.  
   
 ```  

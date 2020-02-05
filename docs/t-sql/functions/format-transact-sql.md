@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: fd44673ce62d74349e83b09b020c9e20ab6957de
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155798"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
@@ -49,18 +49,18 @@ FORMAT ( value, format [, culture ] )
   
  El argumento *format* debe contener una cadena de formato de .NET Framework válida, ya sea como una cadena de formato estándar (por ejemplo, "C" o "D") o como un modelo de caracteres personalizados para los valores de fecha y numéricos (por ejemplo, "DD de MMMM, aaaa (dddd)"). No se admite el formato compuesto. Para obtener una explicación completa de estos modelos de formato, vea la documentación de .NET Framework sobre el formato de cadena en general, los formatos de fecha y hora personalizados, y los formatos de número personalizados. Un buen punto de partida es el tema "[Formatting Types](https://go.microsoft.com/fwlink/?LinkId=211776)" (Tipos de formato).  
   
- *culture*  
+ *referencia cultural*  
  Argumento opcional de tipo **nvarchar** que especifica una referencia cultural.  
   
  Si no se proporciona el argumento *culture*, se usará el idioma de la sesión actual. Este idioma se establece implícitamente, o explícitamente mediante la instrucción SET LANGUAGE. *culture* acepta como argumento cualquier referencia cultural compatible con .NET Framework; no se limita a los idiomas admitidos explícitamente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el argumento *culture* no es válido, FORMAT desencadena un error.  
   
-## <a name="return-types"></a>Tipos devueltos
+## <a name="return-types"></a>Tipos de valor devuelto
 
  **nvarchar** o null  
   
  La longitud del valor devuelto viene determinada por *format*.  
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
  FORMAT devuelve NULL para los errores distintos de *culture* que no son *válidos*. Por ejemplo, se devuelve NULL si el valor especificado en *format* no es válido.  
 
@@ -74,21 +74,21 @@ FORMAT ( value, format [, culture ] )
   
  En esta tabla se muestran los tipos de datos aceptables para el argumento *value*, junto con sus tipos equivalentes de asignación de .NET Framework.  
   
-|Categoría|Tipo|Tipo de .NET|  
+|Category|Tipo|Tipo de .NET|  
 |--------------|----------|---------------|  
-|Numérico|BIGINT|Int64|  
-|Numérico|INT|Int32|  
-|Numérico|SMALLINT|Int16|  
-|Numérico|TINYINT|Byte|  
-|Numérico|Decimal|SqlDecimal|  
-|Numérico|NUMERIC|SqlDecimal|  
-|Numérico|FLOAT|Doble|  
-|Numérico|REAL|Único|  
-|Numérico|SMALLMONEY|Decimal|  
-|Numérico|money|Decimal|  
-|Fecha y hora|Date|DateTime|  
-|Fecha y hora|time|Timespan|  
-|Fecha y hora|DATETIME|DateTime|  
+|Numeric|bigint|Int64|  
+|Numeric|int|Int32|  
+|Numeric|SMALLINT|Int16|  
+|Numeric|TINYINT|Byte|  
+|Numeric|Decimal|SqlDecimal|  
+|Numeric|NUMERIC|SqlDecimal|  
+|Numeric|FLOAT|Double|  
+|Numeric|real|Single|  
+|Numeric|SMALLMONEY|Decimal|  
+|Numeric|money|Decimal|  
+|Fecha y hora|date|DateTime|  
+|Fecha y hora|time|TimeSpan|  
+|Fecha y hora|datetime|DateTime|  
 |Fecha y hora|smalldatetime|DateTime|  
 |Fecha y hora|datetime2|DateTime|  
 |Fecha y hora|datetimeoffset|DateTimeOffset|  

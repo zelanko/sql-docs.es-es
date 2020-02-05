@@ -21,10 +21,10 @@ ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2372b07e45e952003f18270995b52eb0f7338c64
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982025"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "73982025"
   
 -   Establece la cantidad máxima de operaciones de E/S por volumen de disco.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -98,7 +98,7 @@ ALTER RESOURCE GOVERNOR
   
  Establece la cantidad máxima de operaciones de E/S en cola por volumen de disco. Estas operaciones de E/S pueden ser lecturas o escrituras de cualquier tamaño.  El valor máximo de MAX_OUTSTANDING_IO_PER_VOLUME es 100. No es un porcentaje. Este valor está diseñado para optimizar la gobernanza de recursos de E/S según las características de E/S de un volumen de disco. Se recomienda experimentar con distintos valores y plantearse el uso de una herramienta de calibración como IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) o SQLIO (en desuso) para identificar el valor máximo del subsistema de almacenamiento. Este valor proporciona una comprobación de seguridad de nivel de sistema que permite a SQL Server cumplir el mínimo de IOPS para los grupos de recursos aunque otros grupos tengan el valor de MAX_IOPS_PER_VOLUME establecido en ilimitado. Para obtener más información sobre MAX_IOPS_PER_VOLUME, vea [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVENOR RECONFIGURE y ALTER RESOURCE GOVERNOR RESET STATISTICS no se pueden usar en una transacción de usuario.  
   
  El parámetro RECONFIGURE forma parte de la sintaxis de Resource Governor y no debe confundirse con [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), que es una instrucción DDL independiente.  

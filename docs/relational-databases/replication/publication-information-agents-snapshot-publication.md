@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9dd77881ddcc235966333c95e4a5a18180926f8c
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6a99255f0e9e87236773a0ca7a9e9c4b44cfcf1c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321882"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286673"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Información de publicación, Agentes (Publicación de instantánea)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "75321882"
 ## <a name="options"></a>Opciones  
  Para obtener información más detallada y las tareas relacionadas con el Agente de instantáneas, haga clic con el botón secundario en la fila del agente y, a continuación, haga clic en una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
   
--   **Ordenar**: ordene por una o más columnas en el cuadro de diálogo **Ordenar columnas**.  
+-   **Ordenar**: ordene en una o más columnas en el cuadro de diálogo **Ordenar columnas** .  
   
--   **Elegir columnas para mostrar**: seleccione las columnas que se van a mostrar y el orden en el que lo harán en el cuadro de diálogo **Elegir columnas**.  
+-   **Elegir columnas para mostrar**: seleccione las columnas que se mostrarán y el orden en el que se mostrarán en el cuadro de diálogo **Elegir columnas** .  
   
--   **Filtro**: filtre las filas de la cuadrícula en función de los valores de columna del cuadro de diálogo **Configuración del filtro**.  
+-   **Filtro**: filtre filas en la cuadrícula basándose en los valores de columna en el cuadro de diálogo **Configuración del filtro** .  
   
 -   **Borrar filtro**: borre cualquier configuración de filtro para la cuadrícula.  
   

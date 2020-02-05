@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c8e23b3f5f291d120a099cae7f3e3e057db8da95
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595790"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>Migración de datos a o desde columnas mediante Always Encrypted con el Asistente para importación y exportación de SQL Server 
@@ -60,7 +60,7 @@ Puede usar cualquier proveedor de datos para una conexión si no necesita que el
 
 Los siguientes proveedores de datos del Asistente para importación y exportación de SQL Server admiten Always Encrypted.
 
-- Proveedor de datos de .NET Framework para SQL Server
+- Proveedor de datos .NET Framework para SQL Server
   - Asegúrese de que la máquina en la que se ejecuta el asistente use .NET Framework 4.6.1 o posterior.
   - Si desea habilitar Always Encrypted para una conexión, establezca `Column Encryption Setting` en `Enabled` en las propiedades de conexión. Para deshabilitar Always Encrypted, establezca `Column Encryption Setting` en `Disabled`. Para obtener más información, vea [Conectarse a SQL Server con el Proveedor de datos de .NET Framework para SQL Server](../../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md#connect-to-sql-server-with-the-net-framework-data-provider-for-sql-server) y [Habilitar Always Encrypted para consultas de la aplicación](develop-using-always-encrypted-with-net-framework-data-provider.md#enabling-always-encrypted-for-application-queries).
 - Proveedor de datos .NET Framework para ODBC.
@@ -79,7 +79,7 @@ También necesita tener acceso a las claves maestras de columna configuradas par
 - **Proveedor de servicios criptográficos (CAPI)** : el permiso y las credenciales necesarios; se le podrían solicitar al usar una clave o un almacén de claves, en función del almacén y de la configuración del proveedor de servicios criptográficos (CSP).
 Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Pasos siguientes
 - [Consulta de columnas mediante Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)
 
@@ -87,4 +87,4 @@ Para obtener más información, vea [Create and Store Column Master Keys (Always
 - [Always Encrypted](always-encrypted-database-engine.md)
 - [Exportación e importación de bases de datos con Always Encrypted](always-encrypted-migrate-using-bacpac.md)
 - [Copia de seguridad y restauración de bases de datos con Always Encrypted](always-encrypted-migrate-using-backup-restore.md)
-- [Carga masiva de datos cifrados a columnas mediante Always Encrypted](migrate-sensitive-data-protected-by-always-encrypted.md)
+- [Carga masiva de datos cifrados a columnas mediante Always Encrypted](migrate-sensitive-data-protected-by-always-encrypted.md)

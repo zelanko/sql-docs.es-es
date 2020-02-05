@@ -19,10 +19,10 @@ ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a1cf7a4bb37abd60f7067381ba4da6a2d44328ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946987"
 ---
 # <a name="considerations-for-using-test-servers"></a>Consideraciones acerca del uso de servidores de prueba
@@ -56,7 +56,7 @@ ms.locfileid: "67946987"
   
 -   Tras la optimización, el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe quitar todos los metadatos que creó en el servidor de prueba durante el proceso de optimización. Esto incluye la base de datos de shell. Si está realizando una serie de sesiones de optimización con los mismos servidores de producción y de prueba, es posible que desee mantener esta base de datos de shell para ahorrar tiempo. En el archivo de entrada XML, especifique el subelemento **RetainShellDB** con los demás subelementos del elemento primario **TuningOptions** . El uso de estas opciones hace que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] mantenga la base de datos de shell. Para obtener más información, vea [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
--   Después de una sesión de optimización correcta en un servidor de producción o de prueba, pueden quedar bases de datos de shell en el servidor de prueba, aunque no se haya especificado la opción **RetainShellDB**. Estas bases de datos de shell no deseadas pueden interferir con las sesiones de optimización posteriores y se deben quitar antes de ejecutar otra sesión de optimización del servidor de prueba o de producción. Además, si una sesión de optimización se cierra de forma inesperada, las bases de datos de shell en el servidor de prueba y los objetos que hay en esas bases de datos se pueden quedar en el servidor de prueba. También debe eliminar estas bases de datos y objetos antes de iniciar una nueva sesión de optimización del servidor de prueba o de producción.  
+-   Después de una sesión de optimización correcta en un servidor de producción o de prueba, pueden quedar bases de datos de shell en el servidor de prueba, aunque no se haya especificado la opción **RetainShellDB** . Estas bases de datos de shell no deseadas pueden interferir con las sesiones de optimización posteriores y se deben quitar antes de ejecutar otra sesión de optimización del servidor de prueba o de producción. Además, si una sesión de optimización se cierra de forma inesperada, las bases de datos de shell en el servidor de prueba y los objetos que hay en esas bases de datos se pueden quedar en el servidor de prueba. También debe eliminar estas bases de datos y objetos antes de iniciar una nueva sesión de optimización del servidor de prueba o de producción.  
   
 ## <a name="issues-related-to-the-tuning-process"></a>Problemas relacionados con el proceso de optimización  
   

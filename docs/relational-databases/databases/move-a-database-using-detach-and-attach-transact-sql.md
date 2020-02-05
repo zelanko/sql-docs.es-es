@@ -18,10 +18,10 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 517814aa9878206fa46c4ce8ea775cda18265ede
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095254"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Traslado de una base de datos mediante Separar y Adjuntar (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "74095254"
     > [!NOTE]  
     >  Si intenta adjuntar la base de datos sin especificar el archivo de registro, la operación de adjuntar buscará el archivo de registro en su ubicación original. Si aún hay una copia del registro en la ubicación original, se adjunta esa copia. Para evitar que se utilice el archivo de registro original, especifique la ruta de acceso del nuevo archivo de registro o elimine la copia original del archivo de registro (después de copiarlo en la nueva ubicación).  
   
-3.  Adjunte los archivos copiados. Para más información, consulte [Attach a Database](../../relational-databases/databases/attach-a-database.md).  
+3.  Adjunte los archivos copiados. Para obtener más información, consulte [Attach a Database](../../relational-databases/databases/attach-a-database.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se crea una copia de la base de datos de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] denominada `MyAdventureWorks`. Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] se ejecutan en una ventana del Editor de consultas que esté conectada a la instancia del servidor a la que se ha adjuntado.  
@@ -58,7 +58,7 @@ ms.locfileid: "74095254"
     GO  
     ```  
   
-2.  Con el método que prefiera, copie los archivos de base de datos (AdventureWorks208R2_Data.mdf y AdventureWorks208R2_log) en: C:\MySQLServer\AdventureWorks208R2_Data.mdf y C:\MySQLServer\AdventureWorks208R2_Log.ldf, respectivamente.  
+2.  Mediante el método que elija, copie los archivos de la base de datos (AdventureWorks208R2_Data.mdf y AdventureWorks208R2_log) a: C:\MySQLServer\AdventureWorks208R2_Data.mdf y C:\MySQLServer\AdventureWorks208R2_Log.ldf, respectivamente.  
   
     > [!IMPORTANT]  
     >  En el caso de una base de datos de producción, coloque la base de datos y el registro de transacciones en discos independientes.  

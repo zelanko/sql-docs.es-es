@@ -13,10 +13,10 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68049028"
 ---
 # <a name="database-properties-options-page"></a>Propiedades de la base de datos (página Opciones)
@@ -29,7 +29,7 @@ ms.locfileid: "68049028"
  Especifique la intercalación de la base de datos seleccionándola en la lista. Para más información, vea [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Modelo de recuperación**  
- Especifique uno de los modelos siguientes para la recuperación de la base de datos: **Completo**, **Registro masivo** o **Simple**. Para obtener más información sobre los modelos de recuperación, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Especifique uno de los modelos siguientes para la recuperación de la base de datos: **Completa**, **Registro masivo**o **Simple**. Para obtener más información sobre los modelos de recuperación, vea [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Nivel de compatibilidad**  
  Especifique la versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admitida por la base de datos. Para ver los valores posibles, vea [ALTER DATABASE (Transact-SQL) Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) (Nivel de compatibilidad ALTER DATABASE (Transact-SQL)). Cuando se actualiza una base de datos de SQL Server, el nivel de compatibilidad de esa base de datos se conserva (si es posible) o bien se cambia al nivel mínimo compatible con el nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -131,7 +131,7 @@ Cuando se conecta a Azure SQL Database, esta sección tiene opciones para cont
  Especifique el nombre del directorio para los datos de FILESTREAM asociados a la base de datos seleccionada.  
   
  **Acceso sin transacciones de FILESTREAM**  
- Especifique una de las opciones siguientes para el acceso no transaccional a través del sistema de archivos a los datos FILESTREAM almacenados en tablas FileTable: **OFF**, **READ_ONLY** o **FULL**. Si FILESTREAM no está habilitado en el servidor, este valor se establece en OFF y está deshabilitado. Para obtener más información, vea [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Especifique una de las siguientes opciones para el acceso no transaccional a través del sistema de archivos a los datos de FILESTREAM almacenados en tablas FileTable: **OFF**, **READ_ONLY**o **FULL**. Si FILESTREAM no está habilitado en el servidor, este valor se establece en OFF y está deshabilitado. Para obtener más información, vea [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Varios  
 **Permitir el aislamiento de instantánea**  
@@ -221,7 +221,7 @@ Identificador de solo lectura.
  Especifique si la base de datos es de solo lectura. Los valores posibles son **True** o **False**. Con el valor **True**, los usuarios solo pueden leer los datos de la base de datos. Los usuarios no pueden modificar los objetos de datos ni de base de datos, pero la base de datos propiamente dicha se puede eliminar con la instrucción `DROP DATABASE`. La base de datos no puede estar en uso cuando se especifica un nuevo valor para la opción **Base de datos de solo lectura** . La base de datos maestra representa una excepción, y solo el administrador del sistema puede utilizar master mientras está habilitada la opción.  
   
  **Estado de la base de datos**  
- Muestra el estado actual de la base de datos. No se puede editar. Para obtener más información acerca del **Estado de base de datos**, vea [Database States](../../relational-databases/databases/database-states.md).  
+ Muestra el estado actual de la base de datos. Esta directiva no es editable Para obtener más información acerca del **Estado de base de datos**, vea [Database States](../../relational-databases/databases/database-states.md).  
 
  **Cifrado habilitado**  
  Cuando es **True**, el cifrado está habilitado para esta base de datos. Se requiere el uso de una Clave de cifrado de base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  

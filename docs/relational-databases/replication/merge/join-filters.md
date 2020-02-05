@@ -16,10 +16,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033246"
 ---
 # <a name="join-filters"></a>filtros de combinación
@@ -44,7 +44,7 @@ ms.locfileid: "68033246"
 LoginID = SUSER_SNAME()  
 ```  
   
- Este filtro asegura que cada suscripción de empleado contenga solamente los datos de la tabla **HumanResources.Employee** que sean relevantes para dicho empleado (que en este caso es una sola fila). Para más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Este filtro asegura que cada suscripción de empleado contenga solamente los datos de la tabla **HumanResources.Employee** que sean relevantes para dicho empleado (que en este caso es una sola fila). Para obtener más información, consulte [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  El siguiente paso es extender este filtro a cada una de las tablas relacionadas, utilizando una sintaxis similar a la que se utiliza para especificar una combinación entre dos tablas. La cláusula de este primer filtro de combinación es:  
   

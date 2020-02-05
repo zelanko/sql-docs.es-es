@@ -17,10 +17,10 @@ ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: baf3fd0a03beb185a43180599352b6f64f8044cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082366"
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>REVOKE (permisos de clave asimétrica de Transact-SQL)
@@ -98,7 +98,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
   
 -   Usuario de la base de datos no asignado a una entidad de seguridad de servidor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una clave asimétrica es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden revocar en una clave asimétrica se muestran a continuación, junto con permisos más generales que los incluyen por implicación.  
   
 |Permiso de clave asimétrica|Implícito en el permiso de clave asimétrica|Implícito en el permiso de base de datos|  

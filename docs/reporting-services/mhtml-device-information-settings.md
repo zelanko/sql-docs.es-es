@@ -12,16 +12,16 @@ ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 996a7f53b5969c9c1d8c39edcd23b62d45a7ff15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65502728"
 ---
 # <a name="mhtml-device-information-settings"></a>Configuración de la información del dispositivo MHTML
   En la tabla siguiente se muestra una lista de la configuración de información de dispositivos para representar los informes en formato de archivo web (MHTML).  
   
-|Configuración|Valor|  
+|Configuración|Value|  
 |-------------|-----------|  
 |**JavaScript**|Indica si JavaScript se admite en el informe representado.|  
 |**OutlookCompat**|Indica si la representación se va a realizar con metadatos adicionales que hacen que el informe tenga una apariencia mejorada en Outlook. El valor predeterminado es **true**.|  

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: e6576d383011a47eb963774f2834a854dec4416e
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70212326"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance para Azure Data Studio, versión preliminar
@@ -52,5 +52,5 @@ Vea [Problemas conocidos](https://microsoft.github.io/SandDance/#known-issues).
 
 Versión inicial de azdata-sanddance
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información, [visite el repositorio de GitHub](https://github.com/Microsoft/SandDance).

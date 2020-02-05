@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 381eb06e646f98b3ec092cbaa4b6431677be559c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906883"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
@@ -51,10 +51,10 @@ STR ( float_expression [ , length [ , decimal ] ] )
  *decimal*  
  Es el número de posiciones a la derecha del separador decimal. *decimal* debe ser inferior o igual a 16. Si el parámetro *decimal* es mayor que 16, el resultado se trunca en dieciséis posiciones a la derecha del separador decimal.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **varchar**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si se especifican, los valores de los parámetros *length* y *decimal* de STR deben ser positivos. El número se redondea a un entero de forma predeterminada o si el parámetro decimal es 0. La longitud especificada debe ser mayor o igual que la parte del número situada delante del separador decimal más el signo del número (si lo hay). Una *float_expression* corta se justifica a la derecha según la longitud especificada y una *float_expression* larga se trunca según el número de decimales especificados. Por ejemplo, STR(12 **,** 10) da como resultado 12. Se justifica a la derecha en el conjunto de resultados. Sin embargo, STR(1223 **,** 2) trunca el conjunto de resultados a **. Las funciones de cadena se pueden anidar.  
   
 > [!NOTE]  

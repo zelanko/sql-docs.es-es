@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906831"
 ---
-# <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
+# <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -53,11 +53,11 @@ STRING_SPLIT ( string , separator )
  *separator*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de carácter único de cualquier tipo de caracteres (por ejemplo, **nvarchar(1)** , **varchar(1)** , **nchar(1)** o **char(1)** ) que se usa como separador para subcadenas concatenadas.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 
 Devuelve una tabla de una sola columna cuyas filas son las subcadenas. El nombre de la columna es **value**. Devuelve **nvarchar** si cualquiera de los argumentos de entrada es **nvarchar** o **nchar**. De lo contrario, devuelve **varchar**. La longitud del tipo de valor devuelto es igual a la longitud del argumento de cadena.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 
 **STRING_SPLIT** introduce una cadena que tiene subcadenas delimitadas y un carácter que se usará como el delimitador o el separador. STRING_SPLIT da como resultado una tabla de una sola columna cuyas filas contienen las subcadenas. El nombre de la columna de resultados es **value**.
 
@@ -121,7 +121,7 @@ FROM Product
 |ProductId|Nombre|value|  
 |---------------|----------|-----------|  
 |1|Guantes|clothing|  
-|1|Guantes|road|  
+|1|Guantes|carreteras|  
 |1|Guantes|touring|  
 |1|Guantes|bike|  
 |2|Auriculares LL|bike|  

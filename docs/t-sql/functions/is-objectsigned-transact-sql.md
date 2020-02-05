@@ -18,10 +18,10 @@ ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 274e6128ba57a92f6f2e1e84e160424571742787
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314610"
 ---
 # <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
@@ -62,7 +62,7 @@ IS_OBJECTSIGNED (
 ## <a name="returned-types"></a>Tipos devueltos  
  **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  IS_OBJECTSIGNED devuelve los siguientes valores.  
   
 |Valor devuelto|Descripción|  

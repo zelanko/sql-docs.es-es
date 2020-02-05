@@ -16,10 +16,10 @@ ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244979"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>Agregue una réplica al grupo de disponibilidad Always On mediante el Asistente de grupo de disponibilidad de SQL Server Management Studio.
@@ -70,9 +70,9 @@ ms.locfileid: "75244979"
   
 3.  Haga clic con el botón derecho en el grupo de disponibilidad al que va a agregar una réplica secundaria y seleccione el comando **Agregar réplica** . Esto inicia el Asistente para agregar una réplica al grupo de disponibilidad.  
   
-4.  En la página **Conectar con réplicas secundarias existentes** , conéctese a cada réplica secundaria del grupo de disponibilidad. Para más información, vea [Conectarse a la página Réplicas secundarias existentes &#40;Asistente para agregar réplica: Asistente para agregar bases de datos&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
+4.  En la página **Conectar con réplicas secundarias existentes** , conéctese a cada réplica secundaria del grupo de disponibilidad. Para obtener más información, vea [Conectarse a la página Réplicas secundarias existentes &#40;Asistente para agregar réplica/Asistente para agregar bases de datos&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md).  
   
-5.  En la página **Especificar réplicas** , especifique y configure una o varias réplicas secundarias nuevas para el grupo de disponibilidad. Esta página contiene tres pestañas: En la siguiente tabla se presentan estas pestañas. Para más información, vea [Página Especificar réplicas &#40;Asistente para nuevo grupo de disponibilidad: Asistente para agregar réplica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
+5.  En la página **Especificar réplicas** , especifique y configure una o varias réplicas secundarias nuevas para el grupo de disponibilidad. Esta página contiene tres pestañas: En la siguiente tabla se presentan estas pestañas. Para obtener más información, vea [Especificar la página de réplicas &#40;Asistente para nuevo grupo de disponibilidad/Asistente para agregar réplica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Pestaña|Breve descripción|  
     |---------|-----------------------|  

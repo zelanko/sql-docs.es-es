@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6567861c2150362e0d5b5cf386512daec6d758f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113721"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
@@ -39,7 +39,7 @@ Define una fecha que se combina con una hora del día con fracciones de segundos
   
 ## <a name="datetime-description"></a>Descripción de datetime  
   
-|Propiedad|Valor|  
+|Propiedad|Value|  
 |---|---|
 |Sintaxis|**datetime**|  
 |Uso|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
@@ -60,7 +60,7 @@ Define una fecha que se combina con una hora del día con fracciones de segundos
 ## <a name="supported-string-literal-formats-for-datetime"></a>Formatos del literales de cadena compatibles para datetime  
 En estas tablas se enumeran los formatos de literales de cadena compatibles para **datetime**. Excepto para ODBC, los literales de cadena de **datetime** están incluidos entre comillas simples ('), por ejemplo 'string_literaL'. Si el entorno no es **us_english**, los literales de cadena deberían estar en el formato N'string_literaL'.
   
-|Numérico|Descripción|  
+|Numeric|Descripción|  
 |---|---|
 |Formatos de fecha:<br /><br /> [0]4/15/[19]96 -- (mda)<br /><br /> [0]4-15-[19]96 -- (mda)<br /><br /> [0]4.15.[19]96 -- (mda)<br /><br /> [0]4/[19]96/15 -- (mad)<br /><br /> 15/[0]4/[19]96 -- (dma)<br /><br /> 15/[19]96/[0]4 -- (dam)<br /><br /> [19]96/15/[0]4 -- (adm)<br /><br /> [19]96/[0]4/15 -- (amd)<br /><br /> Formatos de hora:<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|Puede especificar datos de fecha con un mes en forma de número. Por ejemplo, 5/20/97 representa el veinte de mayo de 1997. Cuando use un formato numérico de fecha, especifique el mes, el día y el año en una cadena con barras diagonales (/), guiones (-) o puntos (.) como separadores. Esta cadena debe aparecer de la forma siguiente:<br /><br /> *número separador número separador número [hora] [hora]*<br /><br /> <br /><br /> Cuando el idioma establecido es **us_english**, el orden predeterminado de la fecha es mdy (mes, día, año). Para cambiar el orden de la fecha, use la instrucción [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> La configuración de SET DATEFORMAT determina cómo se interpretan los valores de fecha. Si el orden no coincide con la configuración, los valores no se interpretan como fechas. Las fechas desordenadas pueden interpretarse como fuera del intervalo o con valores erróneos. Por ejemplo, 12/10/08 se puede interpretar de seis formas distintas, en función de la configuración de DATEFORMAT. Un año en cuatro partes se interpreta como el año.|  
   
@@ -187,7 +187,7 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|Tipo de datos|Salida|  
+|Tipo de datos|Output|  
 |---|---|
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
@@ -196,7 +196,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

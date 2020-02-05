@@ -19,15 +19,15 @@ ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01ac569b82d382850343af0a35b16c676720097c
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 471a69f76a9cb663267e6d1b8c5e8c10614912bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097895"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253791"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ejecutar el depurador de Transact-SQL
 
@@ -83,7 +83,7 @@ Los requisitos para iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-
   
  La siguiente tabla muestra los comandos de menú, los botones de las barras de herramientas y los métodos abreviados de teclado del depurador.  
   
-|Comando del menú Depurar|Comando de método abreviado del editor|Botón de la barra de herramientas|Método abreviado de teclado|Acción|  
+|Comando del menú Depurar|Comando de método abreviado del editor|Botón de la barra de herramientas|Métodos abreviados de teclado|Acción|  
 |------------------------|-----------------------------|--------------------|-----------------------|------------|  
 |**Windows/Puntos de interrupción**|No disponible|**Puntos de interrupción**|CTRL+ALT+B|Mostrar la ventana **Puntos de interrupción** en la que puede ver y administrar los puntos de interrupción.|  
 |**Windows/Inspección/Inspección1**|No disponible|**Puntos de interrupción/Inspección/Inspección1**|CTRL+ALT+W, 1|Mostrar la ventana **Inspección1** .|  
@@ -96,14 +96,14 @@ Los requisitos para iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-
 |**Continuar**|No disponible|**Continuar**|ALT+F5|Ejecutar un proceso hasta el siguiente punto de interrupción. La opción**Continuar** no está activa hasta que coloque el foco en una ventana del Editor de consultas que esté en el modo de depuración.|  
 |**Iniciar depuración**|No disponible|**Iniciar depuración**|ALT+F5|Poner una ventana del Editor de consultas en el modo de depuración y ejecutar hasta el primer punto de interrupción. Si el foco está en la ventana del Editor de consultas que está en el modo de depuración, la opción **Iniciar depuración** se reemplaza por **Continuar**.|  
 |**Interrumpir todos**|No disponible|**Interrumpir todos**|CTRL+ALT+INTERR|El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no usa esta característica.|  
-|**Detener depuración**|No disponible|**Detener depuración**|MAYÚS+F5|Sacar una ventana del Editor de consultas del modo de depuración y volver a ponerla en el modo normal.|  
+|**Detener la depuración**|No disponible|**Detener la depuración**|MAYÚS+F5|Sacar una ventana del Editor de consultas del modo de depuración y volver a ponerla en el modo normal.|  
 |**Desasociar todo**|No disponible|No disponible|No disponible|Detener el modo de depuración, pero se ejecutan las instrucciones restantes en la ventana del Editor de consultas.|  
-|**Paso a paso por instrucciones**|No disponible|**Paso a paso por instrucciones**|F11|Ejecutar la siguiente instrucción y, además, abrir una nueva ventana del Editor de consultas en el modo de depuración si la siguiente instrucción ejecuta un procedimiento almacenado, un desencadenador o una función.|  
-|**Paso a paso por procedimientos**|No disponible|**Paso a paso por procedimientos**|F10|Igual que **Paso a paso por instrucciones**, salvo que no se depuran las funciones, los procedimientos almacenados ni los desencadenadores.|  
-|**Paso a paso para salir**|No disponible|**Paso a paso para salir**|MAYÚS+F11|Ejecutar el resto del código de un desencadenador, función o procedimiento almacenado sin detenciones por puntos de interrupción. Se reanuda el modo de depuración normal cuando el control se devuelva al código que llamó al módulo.|  
+|**Depurar paso a paso por instrucciones**|No disponible|**Depurar paso a paso por instrucciones**|F11|Ejecutar la siguiente instrucción y, además, abrir una nueva ventana del Editor de consultas en el modo de depuración si la siguiente instrucción ejecuta un procedimiento almacenado, un desencadenador o una función.|  
+|**Depurar paso a paso por procedimientos**|No disponible|**Depurar paso a paso por procedimientos**|F10|Igual que **Paso a paso por instrucciones**, salvo que no se depuran las funciones, los procedimientos almacenados ni los desencadenadores.|  
+|**Depurar paso a paso para salir**|No disponible|**Depurar paso a paso para salir**|MAYÚS+F11|Ejecutar el resto del código de un desencadenador, función o procedimiento almacenado sin detenciones por puntos de interrupción. Se reanuda el modo de depuración normal cuando el control se devuelva al código que llamó al módulo.|  
 |No disponible|**Ejecutar hasta el cursor**|No disponible|CTRL+F10|Ejecutar todo el código desde la última ubicación de detención hasta la actual sin detenerse en ningún punto de interrupción.|  
 |**inspección rápida**|**inspección rápida**|No disponible|CTRL+ALT+Q|Mostrar la ventana **Inspección rápida** .|  
-|**Alternar puntos de interrupción**|**Punto de interrupción/Insertar punto de interrupción**|No disponible|F9|Colocar un punto de interrupción en la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] actual o seleccionada.|  
+|**Alternar punto de interrupción**|**Punto de interrupción/Insertar punto de interrupción**|No disponible|F9|Colocar un punto de interrupción en la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] actual o seleccionada.|  
 |No disponible|**Punto de interrupción/Eliminar punto de interrupción**|No disponible|No disponible|Eliminar el punto de interrupción de la línea seleccionada.|  
 |No disponible|**Punto de interrupción/Deshabilitar punto de interrupción**|No disponible|No disponible|Deshabilitar el punto de interrupción en la línea seleccionada. El punto de interrupción permanece en la línea de código, pero no detendrá la ejecución hasta que se rehabilite.|  
 |No disponible|**Punto de interrupción/Habilitar puntos de interrupción**|No disponible|No disponible|Habilitar el punto de interrupción en la línea seleccionada.|  

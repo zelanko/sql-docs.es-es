@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075499"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar las tablas insertadas y eliminadas
@@ -56,7 +56,7 @@ ms.locfileid: "68075499"
   
  Debido a que las restricciones CHECK solo pueden hacer referencia a las columnas en las que se han definido las restricciones de columna o de tabla, cualquier restricción entre tablas, en este caso, reglas de negocios, debe definirse como desencadenadores.  
   
- En este ejemplo se crea un desencadenador DML. El desencadenador comprueba que la solvencia del proveedor es satisfactoria cuando se intenta insertar un nuevo pedido de compra en la tabla `PurchaseOrderHeader` . Para obtener la solvencia de crédito del proveedor correspondiente al pedido de compra recién insertado, la tabla `Vendor` debe hacer referencia a la tabla insertada y estar combinada con ella. Si la solvencia no es satisfactoria, se obtiene un mensaje y no se ejecuta la inserción. Tenga en cuenta que en este ejemplo no se permiten las modificaciones de datos en varias filas. Para más información, consulte [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ En este ejemplo se crea un desencadenador DML. El desencadenador comprueba que la solvencia del proveedor es satisfactoria cuando se intenta insertar un nuevo pedido de compra en la tabla `PurchaseOrderHeader` . Para obtener la solvencia de crédito del proveedor correspondiente al pedido de compra recién insertado, la tabla `Vendor` debe hacer referencia a la tabla insertada y estar combinada con ella. Si la solvencia no es satisfactoria, se obtiene un mensaje y no se ejecuta la inserción. Tenga en cuenta que en este ejemplo no se permiten las modificaciones de datos en varias filas. Para más información, consulte [Crear desencadenadores DML para administrar varias filas de datos](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   

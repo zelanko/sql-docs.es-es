@@ -17,10 +17,10 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f1a2e2122c4d141d8d702d027bf30d65db93f9c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293844"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tarea Transferir objetos de SQL Server
@@ -35,7 +35,7 @@ ms.locfileid: "71293844"
   
  En la tabla siguiente se muestra el tipo de objetos que se pueden copiar.  
   
-|Objeto|  
+|Object|  
 |------------|  
 |Tablas|  
 |Vistas|  
@@ -171,10 +171,10 @@ ms.locfileid: "71293844"
  **ExistingData**  
  Especifique cómo se copiarán los datos al servidor de destino. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Reemplazar**|Se sobrescribirán los datos del servidor de destino.|  
-|**Anexar**|Los datos copiados desde el servidor de origen se anexarán a los datos existentes en el servidor de destino.|  
+|**Sustituya**|Se sobrescribirán los datos del servidor de destino.|  
+|**Append**|Los datos copiados desde el servidor de origen se anexarán a los datos existentes en el servidor de destino.|  
   
 > [!NOTE]  
 >  La opción **ExistingData** solo está disponible cuando **CopyData** se establece en **True**.  

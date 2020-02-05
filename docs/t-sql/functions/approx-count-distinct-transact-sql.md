@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f5a9846ddc19320b3299893929c7ebf11ca0269
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962341"
 ---
 # <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73962341"
 
 Esta función devuelve el número aproximado de valores no nulos únicos de un grupo. 
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,7 +43,7 @@ Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de c
 ## <a name="return-types"></a>Tipos de valores devueltos
  **bigint**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `APPROX_COUNT_DISTINCT( expression )` evalúa una expresión para cada fila de un grupo y devuelve el número aproximado de valores no nulos únicos de un grupo. Esta función está diseñada para proporcionar agregaciones de conjuntos de datos de gran tamaño en los que la capacidad de respuesta resulta más fundamental que la precisión absoluta.  
 
 `APPROX_COUNT_DISTINCT` está diseñado para su uso en escenarios de macrodatos y está optimizado para las condiciones siguientes:
@@ -95,6 +95,6 @@ O                                                                7387803
 P                                                                388036
 ```
     
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md) 

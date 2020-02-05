@@ -18,10 +18,10 @@ ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 81808f6387942bd3ba8aa01f4eeaa5bd93b2dcba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066414"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN (tipo de datos geometry)
@@ -40,14 +40,14 @@ Devuelve un punto especificado de una instancia de **geometry**.
  *expression*  
  Es una expresión **int** entre 1 y el número de puntos de la instancia de **geometry**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
  Tipo Open Geospatial Consortium (OGC): **Point**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si se trata de una instancia de **geometry** creada por el usuario, `STPointN()` devuelve el punto especificado por *expression* considerando los puntos en el orden en el que se especificaron inicialmente.  
   
  Si se trata de una instancia de **geometry** generada por el sistema, `STPointN()` devuelve el punto especificado por *expression* considerando todos los puntos en el orden en que se generarían: primero por geometrías, después por anillos dentro de la geometría (si procede) y, luego, por puntos dentro del anillo. Este orden es determinista.  

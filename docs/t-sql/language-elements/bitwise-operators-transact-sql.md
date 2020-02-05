@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0274f5235b51470d31a4904d5230c5b5ca14ecc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943053"
 ---
 # <a name="bitwise-operators-transact-sql"></a>Operadores bit a bit (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67943053"
   Por ejemplo, el entero 170 se convierte en el binario 1010 1010
 y el entero 75 lo hace en el binario 0100 1011.
 
-|operador|cálculo bit a bit|
+|operator|cálculo bit a bit|
 |---- |---- |
 |y <br> Si los dos bits, en cualquier ubicación, son 1, el resultado es 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 0000 1010 = 10 |
 |O BIEN <br> Si cualquiera de los dos bits, en cualquier ubicación, es 1, el resultado es 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
@@ -52,7 +52,7 @@ Vea los siguientes temas:
   
 |Operando izquierdo|Operando derecho|  
 |------------------|-------------------|  
-|[binario](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** o **tinyint**|  
+|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** o **tinyint**|  
 |[bit](../../t-sql/data-types/bit-transact-sql.md)|**int**, **smallint**, **tinyint** o **bit**|  
 |[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**bigint**, **int**, **smallint**, **tinyint**, **binary** o **varbinary**|  
 |[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** o **varbinary**|  

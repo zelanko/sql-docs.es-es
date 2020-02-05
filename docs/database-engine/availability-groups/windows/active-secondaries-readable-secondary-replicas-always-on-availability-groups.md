@@ -18,10 +18,10 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822404"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Descarga de cargas de trabajo de solo lectura a la réplica secundaria de un grupo de disponibilidad Always On
@@ -130,7 +130,7 @@ ms.locfileid: "74822404"
  Esto significa que hay latencia, normalmente solo se trata de unos segundos, entre las réplicas principales y secundarias. No obstante, en casos excepcionales, por ejemplo, si los problemas de red reducen el rendimiento, la latencia puede ser importante. La latencia aumenta cuando se producen cuellos de botella de E/S y cuando se suspende el movimiento de los datos. Para supervisar el movimiento de datos suspendido, puede usar el [panel AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) o la vista de administración dinámica [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> Latencia de datos en bases de datos con tablas optimizadas para memoria  
- En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] existían consideraciones especiales en torno a la latencia de datos en las secundarias activas: vea [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundarias activas: réplicas secundarias legibles](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , no existe ninguna consideración especial en torno a la latencia de datos para tablas optimizadas para memoria. La latencia de datos esperada para tablas optimizadas para memoria es comparable a la latencia para tablas basadas en disco.  
+ En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] existen consideraciones especiales en torno a la latencia de datos en las secundarias activas (vea [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)). A partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , no existe ninguna consideración especial en torno a la latencia de datos para tablas optimizadas para memoria. La latencia de datos esperada para tablas optimizadas para memoria es comparable a la latencia para tablas basadas en disco.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> Repercusión de la carga de trabajo de solo lectura  
  Al configurar una réplica secundaria para el acceso de solo lectura, las cargas de trabajo de solo lectura en las bases de datos secundarias utilizan los recursos del sistema, como la CPU y E/S (para tablas basadas en disco) de los subprocesos REDO, especialmente si las cargas de trabajo de solo lectura en tablas basadas en disco realizan un uso intensivo de E/S. No hay ningún impacto en la E/S cuando se tiene acceso a tablas con optimización para memoria porque todas las filas residen en memoria.  
@@ -236,7 +236,7 @@ GO
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

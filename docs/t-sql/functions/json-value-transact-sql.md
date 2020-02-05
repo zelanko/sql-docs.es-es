@@ -19,13 +19,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 845c621291331fdf75e257a3f71ec8068df13ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109356"
 ---
-# <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
+# <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -67,7 +67,7 @@ En [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y en [!INCLUDE[ssSDSfu
   
  Si tiene que devolver valores escalares mayores que 4000 caracteres, use **OPENJSON** en lugar de **JSON_VALUE**. Para obtener más información, vea [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).  
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 ### <a name="lax-mode-and-strict-mode"></a>Modo lax y modo strict
 
@@ -92,11 +92,11 @@ SET @jsonInfo=N'{
   
  En la tabla siguiente se compara el comportamiento de **JSON_VALUE** en modo lax y modo strict. Para más información sobre la especificación del modo de ruta de acceso opcional (lax o strict), vea [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Ruta de acceso|Valor devuelto en el modo lax|Valor devuelto en el modo strict|Más información|  
+|Path|Valor devuelto en el modo lax|Valor devuelto en el modo strict|Más información|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|NULL|Error|No es un valor escalar.<br /><br /> Use **JSON_QUERY** en su lugar.|  
-|$.info.type|N'1'|N'1'|N/A|  
-|$.info.address.town|N'Bristol'|N'Bristol'|N/A|  
+|$.info.type|N'1'|N'1'|N/a|  
+|$.info.address.town|N'Bristol'|N'Bristol'|N/a|  
 |$.info."address"|NULL|Error|No es un valor escalar.<br /><br /> Use **JSON_QUERY** en su lugar.|  
 |$.info.tags|NULL|Error|No es un valor escalar.<br /><br /> Use **JSON_QUERY** en su lugar.|  
 |$.info.type[0]|NULL|Error|No es una matriz.|  
@@ -146,7 +146,7 @@ CREATE TABLE dbo.Store
  )
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Datos JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

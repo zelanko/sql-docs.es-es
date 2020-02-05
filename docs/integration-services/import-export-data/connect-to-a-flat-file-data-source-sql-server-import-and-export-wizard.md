@@ -10,10 +10,10 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bef4e8032ad605382b3312cac11840ed959a7571
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296358"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conexión a un origen de datos de archivo plano (Asistente para importación y exportación de SQL Server)
@@ -24,7 +24,7 @@ ms.locfileid: "71296358"
 En este tema se muestra cómo conectarse a un origen de datos de **archivo plano** (archivo de texto) desde la página **Seleccionar un origen de datos** o **Seleccionar un destino** del Asistente para importación y exportación de SQL Server. Para los archivos planos, estas dos páginas del Asistente presentan diferentes conjuntos de opciones, por lo que en este tema se describen el origen y el destino del archivo plano por separado.
 
 ## <a name="an-alternative-for-simple-text-import"></a>Una alternativa para la importación de texto simple
-Si tiene que importar un archivo de texto en SQL Server y no necesita todas las opciones de configuración disponibles en el Asistente para importación y exportación, considere la posibilidad de usar el **Asistente para importación de archivos planos** en SQL Server Management Studio (SSMS). Para obtener más información, vea los artículos siguientes:
+Si tiene que importar un archivo de texto en SQL Server y no necesita todas las opciones de configuración disponibles en el Asistente para importación y exportación, considere la posibilidad de usar el **Asistente para importación de archivos planos** en SQL Server Management Studio (SSMS). Para más información, consulte los siguientes artículos:
 - [What's new in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) (Novedades en SQL Server Management Studio 17.3)
 - [Introducing the new Import Flat File Wizard in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173) (Introducción al nuevo Asistente para importación de archivos planos en SSMS 17.3)
 
@@ -34,10 +34,10 @@ Si tiene que importar un archivo de texto en SQL Server y no necesita todas las 
  
 Página|Recomendación  |Tipo  
 ----|---------|---------
-**General**|Asegúrese de actualizar las opciones de la sección **Formato**.|Se recomienda    
-**Columnas**|Asegúrese de comprobar los delimitadores de columna y fila (para un archivo delimitado) o marcar las columnas (para un archivo de ancho fijo).|Se recomienda
+**General**|Asegúrese de actualizar las opciones de la sección **Formato**.|Recomendado    
+**Columnas**|Asegúrese de comprobar los delimitadores de columna y fila (para un archivo delimitado) o marcar las columnas (para un archivo de ancho fijo).|Recomendado
 **Avanzadas**|Si lo desea, compruebe los tipos de datos y otras propiedades asignadas a las columnas de forma predeterminada.|Opcional
-**Vista previa**|Si lo desea, puede obtener una vista previa de una muestra de los datos con la configuración que especificó.|Opcional
+**Versión preliminar**|Si lo desea, puede obtener una vista previa de una muestra de los datos con la configuración que especificó.|Opcional
 
 ## <a name="general-page-source"></a>Página General (origen)
  En la página **General**, busque y seleccione el archivo, y compruebe la configuración en la sección **Formato**.
@@ -49,7 +49,7 @@ Página|Recomendación  |Tipo
  **Nombre de archivo**  
  Escriba la ruta y el nombre de archivo del archivo plano.  
   
- **Examinar**  
+ **Browse**  
  Busque el archivo plano.  
   
  **Configuración regional**  
@@ -64,7 +64,7 @@ Página|Recomendación  |Tipo
  **Formato**  
  Elija si el archivo utiliza formato delimitado, de ancho fijo o derecho irregular.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Delimitado|Las columnas se separan mediante delimitadores. Puede especificar el delimitador en la página **Columnas**.|  
 |Ancho fijo|Las columnas tienen un ancho fijo.|  
@@ -79,7 +79,7 @@ Página|Recomendación  |Tipo
  **Delimitador de filas de encabezados**  
  Seleccione uno de los delimitadores de filas de encabezados de la lista o escriba el texto delimitador.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La fila de encabezado está delimitada por una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|La fila de encabezado está delimitada por un retorno de carro.|  
@@ -106,7 +106,7 @@ Página|Recomendación  |Tipo
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
@@ -120,7 +120,7 @@ Página|Recomendación  |Tipo
  **Delimitador de columna**  
  Selecciónelo de la lista de delimitadores de columna disponibles o escriba el texto delimitador.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las columnas se delimitan mediante un retorno de carro.|  
@@ -178,7 +178,7 @@ En la página **Columnas**, compruebe la lista de columnas y los delimitadores q
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
@@ -214,12 +214,12 @@ En la captura de pantalla, tenga en cuenta que la columna **id**, que contiene n
 |**DataScale**|Especifique la escala de los datos numéricos. La escala hace referencia al número de posiciones decimales.|
 |**DataType**|Seleccione los tipos de datos disponibles en la lista.<br/>Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|
 |**OutputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, el valor corresponde a un recuento de caracteres. En la tarea Flujo de datos este valor se utiliza para establecer el ancho de la columna de salida para el origen del archivo plano. En el modelo de objetos, el nombre de esta propiedad es MaximumWidth.|  
-|**TextQualified**|Indica si los datos de texto están entre caracteres calificadores de texto como caracteres de comillas.<br /><br /> True: Se califican los datos de texto del archivo plano. False: No se califican los datos de texto del archivo plano.|  
+|**TextQualified**|Indica si los datos de texto están entre caracteres calificadores de texto como caracteres de comillas.<br /><br /> True: se califican los datos de texto del archivo plano. False: no se califican los datos de texto del archivo plano.|  
   
-**Nueva**  
+**Nuevo**  
  Para agregar una columna, haga clic en **Nuevo**. De manera predeterminada, el botón **Nueva** agrega una columna nueva al final de la lista. El botón siempre tiene las siguientes opciones, disponibles en la lista desplegable.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Agregar columna**|Agrega una nueva columna al final de la lista.|  
 |**Insertar delante**|Inserta una nueva columna antes de la columna seleccionada.|  
@@ -272,7 +272,7 @@ Para un destino de archivo plano, solo hay una página de opciones, como se mues
  **Nombre de archivo**  
  Escriba la ruta y el nombre de archivo del archivo plano.  
   
- **Examinar**  
+ **Browse**  
  Busque el archivo plano.  
   
  **Configuración regional**  
@@ -287,7 +287,7 @@ Para un destino de archivo plano, solo hay una página de opciones, como se mues
  **Formato**  
  Elija si el archivo utiliza formato delimitado, de ancho fijo o derecho irregular.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Delimitado|Las columnas se separan mediante delimitadores. Puede especificar el delimitador en la página **Columnas**.|  
 |Ancho fijo|Las columnas tienen un ancho fijo.|  
@@ -299,7 +299,7 @@ Para un destino de archivo plano, solo hay una página de opciones, como se mues
 > [!NOTE] 
 > Tras seleccionar un calificador de texto, no puede volver a elegir la opción **Ninguno**. Escriba **Ninguno** para anular la selección del calificador de texto.  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) (Selección de un origen de datos)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md) (Selección de un destino)
 

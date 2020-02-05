@@ -21,10 +21,10 @@ ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5563c65352713f3557e4c412607d1944f28f3a3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071429"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
@@ -47,16 +47,16 @@ Una expresión de tipo **sysname** que representa el nombre del grupo de archivo
  *property*  
 Una expresión de tipo **varchar(128)** que devuelve el nombre de la propiedad del grupo de archivos. *Property* puede devolver uno de estos valores:  
   
-|Valor|Descripción|Valor devuelto|  
+|Value|Descripción|Valor devuelto|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|El grupo de archivos es de solo lectura.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = entrada no válida.|  
 |**IsUserDefinedFG**|El grupo de archivos es un grupo de archivos definido por el usuario.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = entrada no válida.|  
 |**IsDefault**|El grupo de archivos es el grupo de archivos predeterminado.|1 = TRUE<br /><br /> 0 = False<br /><br /> NULL = entrada no válida.|  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 *filegroup_name* corresponde a la columna **name** de la vista de catálogo **sys.filegroups**.  
   
 ## <a name="examples"></a>Ejemplos  

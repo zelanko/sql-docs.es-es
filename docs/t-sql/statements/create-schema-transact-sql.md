@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117300"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
@@ -87,7 +87,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *deny_statement*  
  Especifica una instrucción DENY que deniega permisos sobre cualquier elemento protegible, excepto el esquema nuevo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]  
 >  Las instrucciones que contienen CREATE SCHEMA AUTHORIZATION pero no especifican ningún nombre solo se admiten por razones de compatibilidad con versiones anteriores. La instrucción no provoca errores, pero no crea esquemas.  
@@ -112,7 +112,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  **Esquema implícito y creación de usuario**  
   
- En algunos casos, un usuario puede usar una base de datos sin necesidad de tener una cuenta de usuario de base de datos (una entidad de seguridad de base de datos en la base de datos). Esto puede ocurrir en las siguientes situaciones:  
+ En algunos casos, un usuario puede usar una base de datos sin necesidad de tener una cuenta de usuario de base de datos (una entidad de seguridad de base de datos en la base de datos). El error puede ocurrir en las siguientes situaciones:  
   
 -   Un inicio de sesión tiene privilegios **CONTROL SERVER**.  
   
@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  Este comportamiento es necesario para permitir a los usuarios basados en grupos de Windows crear y poseer objetos. Sin embargo, puede dar lugar a la creación accidental de esquemas y usuarios. Para evitar crear implícitamente usuarios y esquemas, siempre que sea posible cree explícitamente entidades de seguridad de base de datos y asigne un esquema predeterminado. O establezca explícitamente un esquema existente cuando cree objetos en una base de datos, utilizando nombres de objetos de dos o tres elementos.  
 
 > [!NOTE]
->  La creación implícita de un usuario de Azure Active Directory no es posible en [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Como la creación de un usuario de Azure AD a partir de un proveedor externo conlleva comprobar el estado de los usuarios en AAD, se producirá el error 2760: **El nombre de esquema "\<user_name@domain>" especificado no existe o no tiene permisos para utilizarlo.** Y después el error 2759: **Error en CREATE SCHEMA provocado por los errores anteriores**. Para solucionarlos, cree el usuario de Azure AD de proveedor externo en primer lugar y, después, vuelva a ejecutar la instrucción al crear el objeto.
+>  La creación implícita de un usuario de Azure Active Directory no es posible en [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Crear un usuario de Azure AD de proveedor externo conlleva comprobar el estado de los usuarios en AAD, con lo cual al crearlo se producirá el error 2760, que informa de que **el nombre de esquema especificado "\<user_name@domain>" no existe o no tiene permiso para usarlo**. Y, luego, el error 2759, que indica que se ha producido un **error en CREATE SCHEMA debido a errores anteriores**. Para solucionarlos, cree el usuario de Azure AD de proveedor externo en primer lugar y, después, vuelva a ejecutar la instrucción al crear el objeto.
  
   
 ## <a name="deprecation-notice"></a>Aviso sobre elementos desusados  

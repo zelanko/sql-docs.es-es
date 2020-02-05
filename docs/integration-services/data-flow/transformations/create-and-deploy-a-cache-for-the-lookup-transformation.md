@@ -15,10 +15,10 @@ ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e53569a8680ec3a6414aeeaa83e9322e77568ecf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297974"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Crear e implementar una memoria caché para la transformación Búsqueda
@@ -55,7 +55,7 @@ ms.locfileid: "71297974"
      El sistema crea el archivo al ejecutar el paquete.  
   
     > [!NOTE]  
-    >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../../../integration-services/security/security-overview-integration-services.md#files).  
+    >  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para más información, vea [Acceso a los archivos usados por los paquetes](../../../integration-services/security/security-overview-integration-services.md#files).  
   
 6.  Haga clic en la pestaña **Columnas** e indique qué columnas son las columnas de índice mediante la opción **Posición de índice** .  
   
@@ -95,6 +95,6 @@ ms.locfileid: "71297974"
 5.  Implemente el paquete en el sistema de archivos. Para más información, consulte [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)  
+ [Crear una utilidad de implementación](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   

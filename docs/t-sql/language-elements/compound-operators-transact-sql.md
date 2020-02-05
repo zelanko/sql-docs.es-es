@@ -16,10 +16,10 @@ ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e81ef89165b3af5af0f8c48ca0338086c5c934a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929536"
 ---
 # <a name="compound-operators-transact-sql"></a>Operadores compuestos (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67929536"
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] proporciona los operadores compuestos siguientes:  
   
-|Operador|Más información|Acción|  
+|Operator|Más información|Acción|  
 |--------------|------------------------------|------------|  
 |+=|[+= &#40;Asignación de suma&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|Agrega una cantidad al valor original y establece este en el resultado de la operación.|  
 |-=|[-= &#40;Subtract Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md) (-= [Asignación de resta] [Transact-SQL])|Resta una cantidad del valor original y establece este en el resultado de la operación.|  
@@ -54,7 +54,7 @@ expression operator expression
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve el tipo de datos del argumento con mayor prioridad. Para obtener más información, vea [Prioridad de tipo de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para obtener más información, consulte los temas relacionados con cada operador.  
   
 ## <a name="examples"></a>Ejemplos  

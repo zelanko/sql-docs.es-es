@@ -20,10 +20,10 @@ ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a26896076c0c9ee12eae61a3e324090379b10df2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122127"
 ---
 # <a name="logical-operators-transact-sql"></a>Operadores lógicos (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68122127"
 
   Los operadores lógicos comprueban la veracidad de alguna condición. Al igual que los operadores de comparación, devuelven el tipo de datos **Boolean** con el valor TRUE, FALSE o UNKNOWN.  
   
-|Operador|Significado|  
+|Operator|Significado|  
 |--------------|-------------|  
 |[ALL](../../t-sql/language-elements/all-transact-sql.md)|TRUE si el conjunto completo de comparaciones es TRUE.|  
 |[AND](../../t-sql/language-elements/and-transact-sql.md)|TRUE si ambas expresiones booleanas son TRUE.|  

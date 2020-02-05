@@ -19,10 +19,10 @@ ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5451cddba8a1719e9672c0d10ffe4a62c960d38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114820"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY (permisos de texto completo de Transact-SQL)

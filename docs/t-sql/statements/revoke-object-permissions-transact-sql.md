@@ -18,10 +18,10 @@ ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0e374b0042ec4b46b8c64e71b86d45d1f4cd3062
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140899"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE (permisos de objeto de Transact-SQL)
@@ -62,7 +62,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  ALL  
  Si revoca ALL no se revocan todos los permisos posibles. Revocar ALL es equivalente a revocar todos los permisos [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 aplicables al objeto especificado. El significado de ALL varía de la siguiente forma:  
   
- Permisos de la función escalar: EXECUTE, REFERENCES.  
+ Permisos de función escalar: EXECUTE, REFERENCES.  
   
  Permisos de función con valores de tabla: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Puede ver la información acerca de objetos en varias vistas de catálogo. Para más información, vea [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md) [Vistas de catálogo de objetos &#40;Transact-SQL&#41;].  
   
  Un objeto es un elemento protegible de nivel de esquema que contiene el esquema que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden revocar en un objeto se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  

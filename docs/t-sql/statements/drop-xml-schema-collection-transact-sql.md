@@ -23,10 +23,10 @@ ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2a02ae5bc9572265cc33392a02c596cfcfec0ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072009"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
@@ -50,7 +50,7 @@ Identifica el nombre del esquema relacional. Si no se especifica, se usará el e
 *sql_identifier*  
 Es el nombre de la colección de esquemas XML que se va a quitar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 La eliminación de una colección de esquemas XML es una operación transaccional. Esto significa que, si quita una colección de esquemas XML de una transacción y, después, revierte la transacción, no se quitará la colección de esquemas XML.  
   
 No podrá quitar una colección de esquemas XML cuando esté en uso. Por tanto, la colección que se desea quitar no puede cumplir ninguna de las condiciones siguientes:  

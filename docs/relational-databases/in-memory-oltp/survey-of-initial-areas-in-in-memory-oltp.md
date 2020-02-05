@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca32d98270a6eea4bd918c12c6b45279a05628e5
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412501"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Encuesta de áreas iniciales de OLTP en memoria
@@ -93,12 +93,12 @@ Una secuencia de entradas de blog excelentes explica de manera elegante los índ
 
 1. [Análisis operativos en tiempo real mediante la tecnología In-Memory](https://blogs.technet.microsoft.com/dataplatforminsider/2015/12/09/real-time-operational-analytics-using-in-memory-technology/)
 2. [Análisis operativos en tiempo real: información general del índice de almacén de columnas no agrupado (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-using-nonclustered-columnstore-index/)
-3. [Análisis operativos en tiempo real: ejemplo sencillo de uso de un índice de almacén de columnas no agrupado (NCCI) en SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
-4. [Análisis operativos en tiempo real: operaciones de DML e índice de almacén de columnas no agrupado (NCCI) en SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
-5. [Análisis operativos en tiempo real: índices de almacén de columnas no agrupados y filtrados (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
+3. [Análisis operativos en tiempo real: ejemplo sencillo usando un índice de almacén de columnas no agrupado (NCCI) en SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/29/real-time-operational-analytics-simple-example-using-nonclustered-clustered-columnstore-index-ncci/)
+4. [Análisis operativos en tiempo real: las operaciones DML y el índice de almacén de columnas no agrupado (NCCI) en SQL Server 2016](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/04/real-time-operational-analytics-dml-operations-and-nonclustered-columnstore-index-ncci-in-sql-server-2016/)
+5. [Análisis operativos en tiempo real: índice de almacén de columnas no agrupado filtrado (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)
 6. [Análisis operativos en tiempo real: opción de retraso de compresión del índice de almacén de columnas no agrupado (NCCI)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)
 7. [Análisis operativos en tiempo real: opción de retraso de compresión con NCCI y el rendimiento](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)
-8. [Análisis operativos en tiempo real: índice de almacén de columnas y tablas optimizadas para memoria](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
+8. [Análisis operativos en tiempo real: tablas con optimización para memoria e índice de almacén de columnas](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)
 
 #### <a name="defragment-a-columnstore-index"></a>Desfragmentar un índice de almacén de columnas.
 
@@ -214,7 +214,7 @@ En Azure SQL Database, no es necesario y no se puede crear tal grupo de archivos
 
 El siguiente ejemplo de script T-SQL habilita una base de datos para OLTP en memoria y configura todos los ajustes recomendados. Funciona con SQL Server y Azure SQL Database: [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql).
 
-Tenga en cuenta que no todas las características de SQL Server son compatibles con las bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA. Para obtener más información sobre las limitaciones, vea: [Características de SQL Server no admitidas para OLTP en memoria](unsupported-sql-server-features-for-in-memory-oltp.md)
+Tenga en cuenta que no todas las características de SQL Server son compatibles con las bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA. Para más información sobre las limitaciones, vea [Características de SQL Server no admitidas para OLTP en memoria](unsupported-sql-server-features-for-in-memory-oltp.md).
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
@@ -359,18 +359,18 @@ Las siguientes subsecciones describen brevemente cómo funcionan las caracterís
 ### <a name="how-memory-optimized-tables-perform-faster"></a>¿Cómo funcionan las tablas optimizadas para memoria más rápido?  
   
   
-**Naturaleza doble:** una tabla optimizada para memoria tiene una naturaleza doble: una representación en memoria activa y la otra en el disco duro. Cada transacción se confirma con ambas representaciones de la tabla. Las transacciones funcionan en la representación memoria activa mucho más rápida. Las tablas con optimización para memoria se benefician de la mayor velocidad de la memoria activa en comparación con el disco. Además, la mayor agilidad de la memoria activa hace práctica una estructura de tabla más avanzada que se optimiza para velocidad. La estructura avanzada tampoco tiene páginas, por lo que evita la sobrecarga y la contención de bloqueos temporales y bloqueos por subproceso.  
+**Doble naturaleza:** Una tabla optimizada para memoria tiene una doble naturaleza: una representación en memoria activa y la otra en el disco duro. Cada transacción se confirma con ambas representaciones de la tabla. Las transacciones funcionan en la representación memoria activa mucho más rápida. Las tablas con optimización para memoria se benefician de la mayor velocidad de la memoria activa en comparación con el disco. Además, la mayor agilidad de la memoria activa hace práctica una estructura de tabla más avanzada que se optimiza para velocidad. La estructura avanzada tampoco tiene páginas, por lo que evita la sobrecarga y la contención de bloqueos temporales y bloqueos por subproceso.  
   
   
-**No hay bloqueos:** la tabla optimizada para memoria se basa en un enfoque *optimista* de los objetivos de la competencia de integridad de datos frente a la simultaneidad y el alto rendimiento. Durante la transacción, la tabla no coloca bloqueos en ninguna versión de las filas de datos actualizadas. Esto puede reducir considerablemente la contención en algunos sistemas de gran volumen.  
+**No hay bloqueos:** La tabla optimizada para memoria se basa en un enfoque *optimista* de los objetivos de la competencia de integridad de datos frente a la simultaneidad y el alto rendimiento. Durante la transacción, la tabla no coloca bloqueos en ninguna versión de las filas de datos actualizadas. Esto puede reducir considerablemente la contención en algunos sistemas de gran volumen.  
   
   
-**Versiones de fila:** en lugar de bloqueos, la tabla optimizada para memoria agrega una versión nueva de una fila actualizada en la propia tabla, no en tempdb. La fila original se mantiene hasta que se confirma la transacción. Durante la transacción, otros procesos pueden leer la versión original de la fila.  
+**Versiones de fila:** En lugar de bloqueos, la tabla optimizada para memoria agrega una nueva versión de una fila actualizada en la propia tabla, no en tempdb. La fila original se mantiene hasta que se confirma la transacción. Durante la transacción, otros procesos pueden leer la versión original de la fila.  
   
 - Cuando se crean varias versiones de una fila para una tabla basada en disco, las versiones de fila se almacenan temporalmente en tempdb.  
   
   
-**Menos tareas de registro:** las versiones anterior y posterior de las filas actualizadas se mantienen en la tabla optimizada para memoria. El par de filas proporciona gran parte de la información que tradicionalmente se escribe en el archivo de registro. Esto permite al sistema escribir menos información y con menos frecuencia en el registro. Aún así, la integridad transaccional está garantizada.  
+**Menos tareas de registro:** Las versiones anterior y posterior de las filas actualizadas se mantienen en la tabla optimizada para memoria. El par de filas proporciona gran parte de la información que tradicionalmente se escribe en el archivo de registro. Esto permite al sistema escribir menos información y con menos frecuencia en el registro. Aún así, la integridad transaccional está garantizada.  
   
   
 <a name="how-do-native-procs-perform-faster-35x"></a>  
@@ -396,14 +396,14 @@ En el resto de esta sección se enumeran algunas de las consideraciones principa
 ### <a name="trade-offs-of-memory-optimized-tables"></a>Ventajas e inconvenientes de las tablas optimizadas para memoria  
   
   
-**Calcular la memoria:** debe calcular la cantidad de memoria activa que consumirá la tabla optimizada para memoria. El equipo debe tener la capacidad de memoria suficiente para hospedar una tabla optimizada para memoria. Para obtener detalles, vea:  
+**Calcular la memoria:** Debe calcular la cantidad de memoria activa que consumirá la tabla optimizada para memoria. El equipo debe tener la capacidad de memoria suficiente para hospedar una tabla optimizada para memoria. Para obtener detalles, vea:  
   
 - [Supervisar y solucionar problemas de uso de memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)  
 - [Estimar los requisitos de memoria para las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [Tamaño de tabla y fila de las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**Dividir la tabla grande:** una manera de satisfacer la demanda de grandes cantidades de memoria activa es dividir la tabla grande en partes en memoria que almacenen filas de datos *recientes frecuentes* frente a otras partes en el disco que almacenen filas *heredadas inactivas* (por ejemplo, pedidos de ventas que se han enviado y completado totalmente). Esta división es un proceso manual de diseño e implementación. Consulte:  
+**Dividir la tabla grande:** Una manera de satisfacer la demanda de grandes cantidades de memoria activa es dividir la tabla grande en partes en memoria que almacenen filas de datos *recientes calientes* frente a otras partes en el disco que almacenen filas *heredadas frías* (por ejemplo, pedidos de ventas que se han enviado y completado totalmente). Esta división es un proceso manual de diseño e implementación. Consulte:  
   
 - [Creación de particiones en el nivel de aplicación](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Patrón de aplicación para crear particiones de tablas con optimización para memoria](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
@@ -493,7 +493,7 @@ El siguiente artículo, y los artículos secundarios en la tabla de contenido (T
   
 ## <a name="related-links"></a>Vínculos relacionados  
   
-- Artículo inicial: [In-Memory OLTP (optimización In-Memory)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- Artículo inicial: [OLTP en memoria (optimización en memoria)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
     
 Los artículos siguientes incluyen código para demostrar las mejoras de rendimiento que se pueden lograr con el uso de OLTP en memoria:  
   

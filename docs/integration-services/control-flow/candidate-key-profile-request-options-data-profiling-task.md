@@ -13,10 +13,10 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 09b2eafcd061df5c9f407fc08a9eef0002b1bc23
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294280"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de claves candidatas (tarea de generación de perfiles de datos)
@@ -29,7 +29,7 @@ ms.locfileid: "71294280"
 > [!NOTE]  
 >  Las opciones que se describen en este tema aparecen en la página **Solicitudes de perfil** del **Editor de tareas de generación de perfiles de datos**. Para obtener más información sobre esta página del editor, vea [Editor de tareas de generación de perfiles de datos &#40;página Solicitudes de perfil&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
   
- Para más información sobre cómo usar la tarea de generación de perfiles de datos, vea [Configuración de la Tarea de generación de perfiles de datos](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Para más información sobre cómo usar el Visor de perfil de datos para analizar la salida de la tarea de generación de perfiles de datos, vea [Visor de perfil de datos](../../integration-services/control-flow/data-profile-viewer.md).  
+ Para más información sobre cómo usar la tarea de generación de perfiles de datos, vea [Configuración de la Tarea de generación de perfiles de datos](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Para obtener más información sobre cómo usar el Visor de perfil de datos para analizar la salida de la tarea de generación de perfiles de datos, vea [Visor de perfil de datos](../../integration-services/control-flow/data-profile-viewer.md).  
   
 ## <a name="understanding-the-selection-of-columns-for-the-keycolumns-property"></a>Selección de columnas para la propiedad KeyColumns  
  Cada **Solicitud de perfil de claves candidatas** calcula el nivel de clave de un único candidato a clave que consta de una sola columna o de varias:  
@@ -96,15 +96,15 @@ ms.locfileid: "71294280"
 > [!NOTE]  
 >  Al usar un carácter comodín **(\*)** para **ColumnName**, **CompareOptions** es de solo lectura y se establece en el valor **Default**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Default**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
+|**Valor predeterminado**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
 |**BinarySort**|Ordena y compara los datos según los patrones de bits definidos para cada carácter. El orden binario utiliza la distinción de mayúsculas y minúsculas, y de acentos. El orden binario es también el más rápido.|  
 |**DictionarySort**|Ordena y compara los datos según el orden y las reglas de comparación definidas en los diccionarios del idioma o alfabeto asociado.|  
   
  Si selecciona **DictionarySort**, también puede seleccionar cualquier combinación de las opciones enumeradas en la tabla siguiente. De forma predeterminada, no se selecciona ninguna de estas opciones adicionales.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica si la comparación distingue entre mayúsculas y minúsculas. Si se establece esta opción, la comparación de las cadenas omite la distinción entre mayúsculas y minúsculas. Por ejemplo, "ABC" se interpreta igual que "abc".|  
 |**IgnoreNonSpace**|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "Ã¥" se considera igual que "a".|  
@@ -119,9 +119,9 @@ ms.locfileid: "71294280"
  **ThresholdSetting**  
  Esta propiedad presenta las opciones indicadas en la siguiente tabla. El valor predeterminado de esta propiedad es **Specified**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Ninguno**|No se especificó un umbral. El nivel de la clave se notifica independientemente de su valor.|  
+|**None**|No se especificó un umbral. El nivel de la clave se notifica independientemente de su valor.|  
 |**Specified**|Un umbral se especifica en **KeyStrengthThreshold**. Solo se notifica el nivel de clave si es mayor que el umbral.|  
 |**Exact**|No se especificó un umbral. Solo se notifica el nivel de clave si las columnas seleccionadas son una clave exacta.|  
   

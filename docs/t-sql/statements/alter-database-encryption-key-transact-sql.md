@@ -18,10 +18,10 @@ ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 512cbeba4e3199b8e94e990a0f1611c5ad549568
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065871"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
@@ -72,7 +72,7 @@ ALTER DATABASE ENCRYPTION KEY
  ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
  Especifica el nombre de la clave asimétrica que se usa para cifrar la clave de cifrado de base de datos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El certificado o la clave asimétrica que se usa para cifrar la clave de cifrado de base de datos se debe ubicar en la base de datos maestra del sistema.  
   
  La clave de cifrado de base de datos no tiene que regenerarse cuando se cambia el propietario de la base de datos (dbo).

@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983226"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY (permisos de base de datos de Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73983226"
 
 Deniega permisos en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -58,7 +58,7 @@ DENY <permission> [ ,...n ]
 
 *permission* Especifica un permiso que puede denegarse en una base de datos. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.
 
-ALL Esta opción no deniega todos los permisos posibles. Denegar ALL es equivalente a denegar los permisos siguientes: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE y CREATE VIEW.
+ALL Esta opción no deniega todos los permisos posibles. Denegando ALL está denegando los siguientes permisos: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, y CREATE VIEW.
 
 PRIVILEGES Incluido por compatibilidad con ISO. No cambia el comportamiento de ALL.
 
@@ -85,7 +85,7 @@ Especifica un rol de aplicación.
 
 *Database_user_with_no_login* Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Una base de datos es un elemento protegible que contiene el servidor, que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden denegar en una base de datos se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.
 

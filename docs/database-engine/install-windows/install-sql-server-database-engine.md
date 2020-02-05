@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: e50fd6037b10008029d5373348605d11726b6199
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148039"
 ---
 # <a name="install-sql-server-database-engine"></a>Instalar el motor de base de datos de SQL Server
@@ -75,7 +75,7 @@ Las siguientes características se instalan al seleccionar **Motor de base de da
 >  De forma predeterminada, las bases de datos y el código de ejemplo no se instalan como parte del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para instalar las bases de datos y el código de ejemplo, vea [Ejemplos de Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md). Vea los ejemplos anteriores en [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ediciones y características admitidas de SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Soluciones de alta disponibilidad &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   

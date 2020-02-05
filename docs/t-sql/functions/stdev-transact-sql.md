@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3e939138f92f7a754e99ce8b5b7510b915e8b1b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906935"
 ---
 # <a name="stdev-transact-sql"></a>STDEV (Transact-SQL)
@@ -57,10 +57,10 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**  
  _partition\_by\_clause_ divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. _order\_by\_clause_ determina el orden lógico en el que se realiza la operación. _order\_by\_clause_ es obligatorio. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **float**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si STDEV se utiliza en todos los elementos de una instrucción SELECT, en el cálculo se incluirán todos los valores del conjunto de resultados. STDEV solo puede utilizarse con columnas numéricas. Se omiten los valores NULL.  
   
  STDEV es una función determinista cuando se utiliza sin las cláusulas OVER y ORDER BY. Es no determinista si se especifica con las cláusulas OVER y ORDER BY. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  

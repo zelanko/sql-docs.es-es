@@ -1,5 +1,5 @@
 ---
-title: 'Informe de progreso: Clase de eventos Online Index Operation'
+title: 'Progress Report: Online Index Operation (clase de eventos)'
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c87be1a2a80f9bd2f31077e6b6154720c58193b0
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056119"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Informe de progreso: Clase de eventos Online Index Operation
+# <a name="progress-report-online-index-operation-event-class"></a>Progress Report: Online Index Operation (clase de eventos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  El Informe de progreso: La clase de eventos Online Index Operation indica el progreso de una operación de generación de índice en línea mientras el proceso de generación está en ejecución.  
+  La clase de eventos Progress Report: Online Index Operation indica el progreso de una operación de generación de índice en línea mientras el proceso de generación está en ejecución.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Informe de progreso: Online Index Operation (columnas de datos de la clase de eventos)  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Columnas de datos de la clase de eventos Progress Report: Online Index Operation  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -43,14 +43,14 @@ ms.locfileid: "74056119"
 |IndexID|**int**|Id. del índice del objeto afectado por el evento.|24|Sí|  
 |IsSystem|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
 |LoginName|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con el formato DOMINIO\nombreDeUsuario).|11|Sí|  
-|LoginSid|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede buscar esta información en la vista de catálogo sys.server_principals. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|LoginSid|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede buscar esta información en la vista de catálogo sys.server_principals. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |NTDomainName|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |ObjectID|**int**|Identificador del objeto asignado por el sistema.|22|Sí|  
 |ObjectName|**nvarchar**|Nombre del objeto al que se hace referencia.|34|Sí|  
 |PartitionId|**bigint**|Identificador de la partición que se está generando.|65|Sí|  
 |PartitionNumber|**int**|Número normal de la partición que se está generando.|25|Sí|  
-|ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
+|nombreDeServidor|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|**datetime**|Hora a la que se inició el evento.|14|Sí|  

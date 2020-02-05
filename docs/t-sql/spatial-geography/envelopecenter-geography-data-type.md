@@ -18,10 +18,10 @@ ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: da1c2fd6f1e6732f28f79196b433b8e46a595a85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066435"
 ---
 # <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (tipo de datos geography)
@@ -40,16 +40,16 @@ Este método del tipo de datos **geography** admite instancias de **FullGlobe** 
 EnvelopeCenter( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
 Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Este método devuelve un **point**. Cuando se usa con `EnvelopeAngle()`, `EnvelopeCenter()` devuelve un círculo de límite de una instancia de **geography**.  
   
 > [!NOTE]  
->  `EnvelopeCenter()` devuelve un círculo de límite de una instancia de **geography**, pero no se garantiza que los resultados generen el círculo de límite mínimo. Por el contrario, se garantiza que el método `STEnvelope()` del tipo de datos **geometry** devuelve el cuadro de límite mínimo cuando se aplica a una instancia de **geometry**.  
+>  `EnvelopeCenter()` devuelve un círculo de límite de una instancia de **geography**, pero no se garantiza que los resultados generen el círculo de límite mínimo. Por el contrario, se garantiza que el método **del tipo de datos**geometry`STEnvelope()` devuelve el cuadro de límite mínimo cuando se aplica a una instancia de **geometry**.  
   
 En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, devuelve el centro del círculo que representa el envolvente de esta instancia como **point**. Para todos los objetos grandes como está definido en `EnvelopeAngle()` = 180, `EnvelopeCenter()` devolverá (90,0).  
   

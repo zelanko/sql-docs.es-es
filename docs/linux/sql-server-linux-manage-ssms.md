@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000094"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Empleo de SQL Server Management Studio en Windows para administrar SQL Server en Linux
@@ -63,7 +63,7 @@ Siga los pasos básicos siguientes para conectarse:
    | **Inicio de sesión** | Escriba el nombre de un usuario con acceso a una base de datos en el servidor (por ejemplo, la cuenta de **SA** predeterminada creada durante la instalación). |
    | **Contraseña** | Escriba la contraseña del usuario especificado (para la cuenta de **SA** creada durante la instalación). |
 
-    ![SQL Server Management Studio: Conexión con el servidor de SQL Database](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio: conexión a un servidor de SQL Database](./media/sql-server-linux-manage-ssms/connect.png)
 
 1. Haga clic en **Conectar**.
 
@@ -91,7 +91,7 @@ Después de conectarse al servidor, puede conectarse a una base de datos y ejecu
 
 1. Haga clic en el botón **Ejecutar** para ejecutar la consulta y ver los resultados.
 
-   ![Correcto. Conexión al servidor de SQL Database: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![Correcto. Conexión a servidor de SQL Database: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 Aunque con las consultas de Transact-SQL es posible realizar prácticamente cualquier tarea de administración, SSMS es una herramienta gráfica que facilita la administración de SQL Server. En las secciones siguientes se proporcionan algunos ejemplos del uso de la interfaz gráfica de usuario.
 
@@ -140,7 +140,7 @@ Monitor de actividad muestra paneles que se pueden expandir y contraer con la si
 
 Cuando un panel está expandido, Monitor de actividad consulta información a la instancia. Si el panel está contraído, cualquier actividad de consulta se detiene en ese panel. Se pueden expandir uno o varios paneles al mismo tiempo para ver diferentes tipos de actividad en la instancia.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 - [¿Qué es SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Exportación e importación de una base de datos con SSMS](sql-server-linux-migrate-ssms.md)
 - [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)

@@ -23,10 +23,10 @@ ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3682c9faa66252f4e578fe75b41b010380409fc6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982581"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982581"
 
   Crea un nuevo sinónimo.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -84,7 +84,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  Azure SQL Database admite el formato de nombre de tres partes nombre_basededatos.[nombre_esquema].nombre_objeto cuando nombre_basededatos es la base de datos actual o tempdb y nombre_objeto comienza con #.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  No es necesario que el objeto base exista en el momento de crear el sinónimo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprueba la existencia del objeto base en tiempo de ejecución.  
   
  Se pueden crear sinónimos para los siguientes tipos de objetos:  

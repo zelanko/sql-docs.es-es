@@ -1,5 +1,5 @@
 ---
-title: Configuración de red del servidor | Microsoft Docs
+title: Configuración de red del servidor{1}{2}| Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 826a2b2305354807b6db7bbb167f86d165b98b45
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025612"
 ---
 # <a name="server-network-configuration"></a>Configuración de red del servidor

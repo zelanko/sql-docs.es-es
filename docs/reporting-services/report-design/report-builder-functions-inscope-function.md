@@ -9,10 +9,10 @@ ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8b6891ec497b3100206b812fbc8da7b0463fa4d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579504"
 ---
 # <a name="report-builder-functions---inscope-function"></a>Funciones del Generador de informes: función InScope
@@ -28,13 +28,13 @@ InScope(scope)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ámbito*  
+ *scope*  
  (**Cadena**) Nombre de un conjunto de datos, una región de datos o un grupo que especifica un ámbito.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Devuelve un **Boolean**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La función **InScope** comprueba si el ámbito de la instancia actual de un elemento de informe pertenece al ámbito especificado por el parámetro *scope*.  
   
  *Scope* no puede ser una expresión.  

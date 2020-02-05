@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fc6da38a122f2397c41232cb1a0ec5ad0831cd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098631"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
@@ -41,7 +41,7 @@ TYPEPROPERTY (type , property)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Tipo*  
+ *type*  
  Es el nombre del tipo de datos.  
   
  *property*  
@@ -55,7 +55,7 @@ TYPEPROPERTY (type , property)
 |**Escala**|Escala para el tipo de datos.|El número de decimales del tipo de datos.<br /><br /> NULL = El tipo de datos no es **numeric** o no se encontró.|  
 |**UsesAnsiTrim**|La configuración del relleno ANSI era ON cuando se creó el tipo de datos.|1 = True<br /><br /> 0 = False<br /><br /> NULL = No se encuentra el tipo de datos o no es un tipo de datos de cadena o binario.|  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
 ## <a name="exceptions"></a>Excepciones  

@@ -23,10 +23,10 @@ author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ed31eae6817216a694337ed5bc606dcba52fb89
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844507"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
@@ -37,7 +37,7 @@ Esta función devuelve el número de bytes usados para representar cualquier exp
 > [!NOTE]
 > Para devolver el número de caracteres de una expresión de cadena, utilice la función [LEN](../../t-sql/functions/len-transact-sql.md).
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,12 +52,12 @@ Una [expression](../../t-sql/language-elements/expressions-transact-sql.md) de c
 ## <a name="return-types"></a>Tipos de valores devueltos
 **bigint** si *expression* tiene el tipo de datos **nvarchar(max)** , **varbinary(max)** o **varchar(max)** ; en caso contrario, **int**.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `DATALENGTH` resulta muy útil cuando se usa con tipos de datos que pueden almacenar datos de longitud variable, como:
-- **imagen**
+- **image**
 - **ntext**
 - **nvarchar**
-- **texto**
+- **text**
 - **varbinary**
 - **varchar**
   
@@ -81,7 +81,7 @@ ORDER BY EnglishProductName;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

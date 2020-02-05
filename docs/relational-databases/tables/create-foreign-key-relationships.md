@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a26c03eaef6eecf0cee442d2b5b55f599c58065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123747"
 ---
 # <a name="create-foreign-key-relationships"></a>Crear relaciones de clave externa
@@ -34,7 +34,7 @@ En este artículo se describe cómo crear relaciones de clave externa en [!INCLU
 - Las restricciones FOREIGN KEY pueden hacer referencia a otras columnas de la misma tabla. Esto recibe el nombre de autorreferencia.
 - Una restricción FOREIGN KEY especificada en el nivel de columna solo puede incluir una columna de referencia. Esta columna debe tener el mismo tipo de datos que la columna en la que se define la restricción.
 - Una restricción FOREIGN KEY especificada en el nivel de tabla debe tener el mismo número de columnas de referencia que la lista de columnas de la restricción. El tipo de datos de cada columna de referencia debe ser también el mismo que el de la columna correspondiente de la lista de columnas.
-- El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no tiene un límite predefinido para el número de restricciones FOREIGN KEY que una tabla que hace referencia a otras tablas puede contener, o para el número de restricciones FOREIGN KEY pertenecientes a otras tablas que hacen referencia a una tabla específica. No obstante, el número real de restricciones FOREIGN KEY que se puede utilizar está limitado por la configuración del hardware y por el diseño de la base de datos y de la aplicación. Una tabla puede hacer referencia a otras 253 tablas y columnas como claves externas (referencias de salida) como máximo. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] aumenta el límite para la cantidad de otras tablas y columnas que pueden hacer referencia a las columnas de una sola tabla (referencias de entrada) de 253 a 10 000. (Requiere al menos el nivel de compatibilidad 130). El aumento tiene las siguientes restricciones:
+- El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no tiene un límite predefinido para el número de restricciones FOREIGN KEY que una tabla que hace referencia a otras tablas puede contener, o para el número de restricciones FOREIGN KEY pertenecientes a otras tablas que hacen referencia a una tabla específica. No obstante, el número real de restricciones FOREIGN KEY que se puede utilizar está limitado por la configuración del hardware y por el diseño de la base de datos y de la aplicación. Una tabla puede hacer referencia a otras 253 tablas y columnas como claves externas (referencias de salida) como máximo. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] aumenta el límite para la cantidad de otras tablas y columnas que pueden hacer referencia a las columnas de una sola tabla (referencias de entrada) de 253 a 10 000. (Requiere al menos el nivel de compatibilidad 130). El aumento conlleva las siguientes restricciones:
 
   - Se admiten más de 253 referencias de clave externa para las operaciones DELETE y UPDATE DML. Las operaciones MERGE no se admiten.
   - Una tabla con una referencia de clave externa a sí misma seguirá limitada a 253 referencias de clave externa.
@@ -52,7 +52,7 @@ La creación de una clave externa en una tabla existente requiere el permiso ALT
 
 ## <a name="create-a-foreign-key-relationship-in-table-designer"></a>Crear una relación de clave externa en el Diseñador de tablas
 
-### <a name="using-sql-server-management-studio"></a>Usar SQL Server Management Studio
+### <a name="using-sql-server-management-studio"></a>Uso de SQL Server Management Studio
 
 1. En el Explorador de objetos, haga clic con el botón derecho en la tabla que va a estar en el lado de la clave externa de la relación y, después, haga clic en **Diseño**.
 
@@ -101,7 +101,7 @@ ALTER TABLE Sales.TempSalesReason
       ON UPDATE CASCADE
 ;
 ```
-Para obtener más información, vea:
+Para más información, consulte:
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)

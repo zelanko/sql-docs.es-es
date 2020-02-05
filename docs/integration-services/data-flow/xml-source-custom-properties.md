@@ -11,10 +11,10 @@ ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 52ce0e96ce131b1ea1a69f2ba9f7466850cbf4cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290943"
 ---
 # <a name="xml-source-custom-properties"></a>Propiedades personalizadas del origen XML
@@ -28,7 +28,7 @@ ms.locfileid: "71290943"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|Modo que se usa para tener acceso los datos XML.|  
+|AccessMode|Entero|Modo que se usa para tener acceso los datos XML.|  
 |UseInlineSchema|Boolean|Valor que indica si se usa una definición de esquema insertada dentro del origen XML. El valor predeterminado de esta propiedad es **False**.|  
 |XMLDATA|String|Archivo o variables desde las que recuperar los datos XML.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.|  
 |XMLSchemaDefinition|String|Ruta de acceso y nombre del archivo de definición de esquema (.xsd).<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.|  

@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73637984"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
@@ -88,13 +88,13 @@ Una conexión de datos contiene la información necesaria para conectarse a un o
   
     Se abre la página **Elegir una conexión a un origen de datos** .  
   
-12. Para comprobar que se puede conectar al origen de datos, haga clic en **Prueba de conexión**.  
+12. Para comprobar que se puede conectar al origen de datos, haga clic en **Probar conexión**.  
   
     Aparece el mensaje **Conexión creada correctamente** .  
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Haga clic en **Siguiente**.  
+14. Haga clic en **Next**.  
   
 ## <a name="DMDXQuery"></a>1b. Crear una consulta MDX  
 En un informe puede usar un conjunto de datos compartido que tenga una consulta predefinida o crear un conjunto de datos incrustado para usarlo exclusivamente en ese informe. En este tutorial, creará un conjunto de datos incrustado.  
@@ -163,7 +163,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 6.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar (!)** .  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 ## <a name="DLayout"></a>1c. Organizar los datos en grupos  
 Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
@@ -189,7 +189,7 @@ Al seleccionar los campos por los que desea agrupar los datos, diseñe una matri
   
     Los pasos 4 y 5 especifican los datos que deben aparecer en la matriz.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 ## <a name="DTotals"></a>1d. Agregar subtotales y totales  
 Después de crear grupos, puede agregar filas y darles formato, donde se mostrarán los valores agregados para los campos. Puede decidir también si mostrar todos los datos o permitir que los usuarios expandan y contraigan de forma interactiva los datos agrupados.  
@@ -200,9 +200,9 @@ Después de crear grupos, puede agregar filas y darles formato, donde se mostrar
   
     El panel Vista previa del asistente muestra una matriz con cuatro filas.  
   
-2.  Haga clic en **Siguiente**.  
+2.  Haga clic en **Next**.  
   
-2.  Haga clic en **Finalizar**.  
+2.  Haga clic en **Finalizar**  
   
     La tabla se agrega a la superficie de diseño.  
   
@@ -322,7 +322,7 @@ Puede guardar el informe en una biblioteca de SharePoint, en un servidor de info
     Http://<ServerName>/<Sites>/  
     ```  
   
-4.  Haga clic en **Guardar**.  
+4.  Haga clic en **Save**(Guardar).  
   
     En**Sitios y servidores recientes** se enumeran las bibliotecas del sitio de SharePoint.  
   
@@ -333,7 +333,7 @@ Puede guardar el informe en una biblioteca de SharePoint, en un servidor de info
     > [!NOTE]  
     > Guardará el informe principal en la misma ubicación. Si quiere guardar los informes detallados y principal en sitios o bibliotecas diferentes, debe actualizar la ruta de acceso de la acción **Ir a informe** en el informe principal.  
   
-7.  Haga clic en **Guardar**.  
+7.  Haga clic en **Save**(Guardar).  
   
 ## <a name="MMatrixAndDataset"></a>1. Crear el informe principal desde el Asistente para tabla o matriz  
 En el cuadro de diálogo **Introducción** , cree un informe de matriz usando el **Asistente para tabla o matriz**.  
@@ -385,7 +385,7 @@ Agregará un origen de datos incrustados al informe principal.
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Haga clic en **Siguiente**.  
+14. Haga clic en **Next**.  
   
 ## <a name="MMDXQuery"></a>1b. Crear una consulta MDX  
 Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseñador de consultas para crear filtros, parámetros y miembros calculados, así como el propio conjunto de datos.  
@@ -483,7 +483,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
   
     Revise el conjunto de resultados de la consulta.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 ## <a name="MLayout"></a>1c. Organizar los datos en grupos  
 Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
@@ -513,9 +513,9 @@ Puede mostrar subtotales y totales generales en informes. Los datos del informe 
   
     El panel Vista previa del asistente muestra una matriz con cuatro filas.  Al ejecutar el informe, cada fila se mostrará de la siguiente manera: la primera fila es el grupo de columnas, la segunda fila contiene los encabezados de columna, la tercera fila contiene los datos de la categoría de producto (`[Sum(Net_ QTY)]` y `[Sum(Net_Sales)]`y la fila cuarta contiene los totales.  
   
-2.  Haga clic en **Siguiente**.  
+2.  Haga clic en **Next**.  
   
-3.  Haga clic en **Finalizar**.  
+3.  Haga clic en **Finalizar**  
   
 3.  Haga clic en **Ejecutar**para obtener la vista previa del informe.  
   
@@ -659,7 +659,7 @@ Guarde el informe principal en una biblioteca de SharePoint
     > [!IMPORTANT]  
     > Guarde el informe principal en la misma ubicación donde guardó el informe detallado. Para guardar los informes detallados y principal en sitios o bibliotecas diferentes, confirme que la acción **Ir a informe** del informe principal señala a la ubicación correcta del informe detallado.  
   
-7.  Haga clic en **Guardar**.  
+7.  Haga clic en **Save**(Guardar).  
   
 ## <a name="MRunReports"></a>8. Ejecutar los informes principal y detallado  
 Ejecute el informe principal y, a continuación, haga clic en los valores de la columna de categoría de producto para ejecutar el informe detallado.  

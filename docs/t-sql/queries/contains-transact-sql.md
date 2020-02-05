@@ -35,10 +35,10 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982833"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
@@ -61,7 +61,7 @@ ms.locfileid: "73982833"
   
  Para obtener información sobre las formas de búsqueda de texto completo que se admiten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Consulta con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
  
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -285,7 +285,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  Observe que no se cuenta el término de búsqueda interno, `CC`.  
   
  **MAX**  
- Devuelve todas las filas que contengan los términos especificados sin tener en cuenta la distancia a la que se encuentran. Ésta es la opción predeterminada.  
+ Devuelve todas las filas que contengan los términos especificados sin tener en cuenta la distancia a la que se encuentran. Este es el valor predeterminado.  
   
  \<match_order>  
  Especifica si los términos deben encontrarse en el orden especificado para que los devuelva una consulta de búsqueda. Para especificar \<match_order>, también debe especificar \<maximum_distance>.  
@@ -298,7 +298,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  **FALSE**  
  No tiene en cuenta el orden especificado. Por ejemplo, `NEAR(A,B)` consideraría como coincidencias `A ... B` y `B ... A`.  
   
- Ésta es la opción predeterminada.  
+ Este es el valor predeterminado.  
   
  Por ejemplo, el siguiente término de proximidad busca las palabras "`Monday`", "`Tuesday`" y "`Wednesday`" en el orden especificado, sin tener en cuenta la distancia a la que se encuentren:  
   

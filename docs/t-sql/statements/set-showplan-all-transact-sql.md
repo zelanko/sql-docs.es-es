@@ -27,13 +27,13 @@ ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67941694"
 ---
-# <a name="set-showplanall-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
+# <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Hace que Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ejecute instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. En su lugar, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve información detallada sobre la forma en que se ejecutan las instrucciones y proporciona estimaciones de los recursos que requieren.  
@@ -47,7 +47,7 @@ ms.locfileid: "67941694"
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La opción SET SHOWPLAN_ALL se establece en tiempo de ejecución, no en tiempo de análisis.  
   
  Cuando SET SHOWPLAN_ALL está establecida en ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve información acerca de la ejecución de cada instrucción sin ejecutarla y no se ejecutan las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando esta opción está establecida en ON, se devuelve información sobre todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes hasta que se vuelve a establecer en OFF. Por ejemplo, si se ejecuta una instrucción CREATE TABLE cuando SET SHOWPLAN_ALL es ON y después se ejecuta una instrucción SELECT en la que se especifica la tabla creada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un mensaje de error en el que se indica que la tabla no existe. Por ello, las referencias posteriores que se hagan a la tabla generarán un error. Cuando SET SHOWPLAN_ALL está establecida en OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta las instrucciones sin generar ningún informe.  
@@ -58,7 +58,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  SET SHOWPLAN_ALL devuelve la información como un conjunto de filas en forma de árbol jerárquico que representa los pasos que sigue el procesador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al ejecutar cada instrucción. Cada instrucción reflejada en la salida contiene una fila con el texto de la instrucción, seguida de varias filas con los detalles de los pasos de su ejecución. La tabla muestra las columnas que contiene la salida.  
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |**StmtText**|En las filas que no sean de tipo PLAN_ROW, esta columna contiene el texto de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. En las filas de tipo PLAN_ROW, esta columna contiene una descripción de la operación. Esta columna contiene el operador físico y, opcionalmente, puede contener también el operador lógico. También puede ir seguida de una descripción determinada por el operador físico. Para más información, vea [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md).|  
 |**StmtId**|Número de la instrucción en el lote actual.|  

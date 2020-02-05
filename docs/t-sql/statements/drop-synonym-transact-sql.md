@@ -22,10 +22,10 @@ ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 59c26a7e490edb120d8819d8e2b16158b5b41e76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072127"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM (Transact-SQL)
@@ -54,7 +54,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
  *synonym_name*  
  Es el nombre del sinónimo que se va a quitar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las referencias a sinónimos no están enlazadas al esquema, por lo que un sinónimo se puede quitar cuando se desee. Las referencias a sinónimos quitados solo se encontrarán en tiempo de ejecución.  
   
  Es posible crear, quitar y hacer referencia a sinónimos en SQL dinámico.  

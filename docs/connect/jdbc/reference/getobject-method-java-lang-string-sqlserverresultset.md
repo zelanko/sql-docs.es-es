@@ -16,10 +16,10 @@ ms.assetid: 59a975e8-bea8-42fe-8f34-5f18f2bbd415
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8967eef523332cdb25aa68ee8039373d7b8d209e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981160"
 ---
 # <a name="getobject-method-javalangstring-sqlserverresultset"></a>Método getObject (java.lang.String) (SQLServerResultSet)
@@ -45,7 +45,7 @@ public java.lang.Object getObject(java.lang.String columnName)
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método getObject especifica este método getObject en la interfaz java.sql.ResultSet.  
   
  Este método devolverá el valor de la columna determinada como un objeto de Java. El tipo del objeto de Java será el tipo de objeto de Java predeterminado que corresponde al tipo SQL de la columna, tras la asignación para los tipos integrados que se indica en las especificaciones de JDBC. Si el valor es NULL de SQL, el controlador devuelve un NULL de Java.  

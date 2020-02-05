@@ -1,29 +1,32 @@
 ---
-title: Puntos de interrupción (ventana) | Microsoft Docs
+title: Ventana de puntos de interrupción
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.reviewer: ''
-ms.custom: ''
-ms.date: 11/04/2019
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc5600a7cd9e933046700204a8dac916199832c6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: a80750a9885bd3cd61afd6b6719f5839b5503eac
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73638012"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243368"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Depurador de Transact-SQL: ventana Puntos de interrupción
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 La ventana **Puntos de interrupción** muestra todos los puntos de interrupción que se establecen en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] actual. Para administrar los puntos de interrupción, utilice la barra de herramientas de la ventana **Puntos de interrupción** . Los puntos de interrupción son las ubicaciones del código en las que la ejecución se pausa en modo de depuración para que se puedan ver los datos de depuración.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
 ## <a name="task-list"></a>Lista de tareas
 
@@ -38,7 +41,7 @@ De forma predeterminada, la ventana **Puntos de interrupción** muestra las colu
 **Nombre**  
 Muestra el nombre del punto de interrupción. El depurador proporciona los nombres para los puntos de interrupción. Este nombre incluye el de la ventana Editor de consultas del motor de base de datos que contiene el punto de interrupción y el número de línea del Editor de consultas en el que está establecido.  
 
-**Condición**  
+**Condition**  
 Muestra **(sin condición)** . El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer las condiciones de punto de interrupción.
 
 **Número de llamadas**  
@@ -55,7 +58,7 @@ Muestra **Interrumpir**.
 **Lenguaje**  
 Muestra **Transact-SQL** para [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
-**Función**  
+**Function**  
 Muestra el número de la línea en la que se establece el punto de interrupción.  
 
 **Archivo**  
@@ -64,7 +67,7 @@ Muestra el nombre del archivo de código fuente que contiene el punto de interru
 **Dirección**  
 El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no admite esta característica.  
 
-**Procesar**  
+**Proceso**  
 Muestra **[SQL]** para indicar que se trata de un proceso de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . A continuación aparece el nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en la que se ejecuta el código.
 
 ## <a name="breakpoints-window-toolbar"></a>Barra de herramientas de la ventana Puntos de interrupción

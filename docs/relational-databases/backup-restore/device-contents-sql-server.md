@@ -13,10 +13,10 @@ ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68068489"
 ---
 # <a name="device-contents-sql-server"></a>Contenido del dispositivo (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "68068489"
 -   [Ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 ## <a name="options"></a>Opciones  
- **Multimedia**  
+ **Elementos multimedia**  
  Disco o conjunto de cintas donde se almacena la información de la copia de seguridad.  
   
  **Secuencia del medio**  
@@ -58,7 +58,7 @@ ms.locfileid: "68068489"
 |------------|------------|  
 |**Nombre**|Nombre del conjunto de copia de seguridad.|  
 |**Tipo**|Tipo de copia de seguridad realizada: Completa, Diferencial o Registro de transacciones.|  
-|**Componente**|Componente del que se ha realizado una copia de seguridad: Base de datos, Archivo o en *\<blanco>* (para registros de transacciones).|  
+|**Componente**|Componente del que se realizó una copia de seguridad: Base de datos, Archivo o *\<en blanco>* (para registros de transacciones).|  
 |**Server**|Nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.|  
 |**Base de datos**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  
 |**Posición**|Posición del conjunto de copias de seguridad en el volumen.|  

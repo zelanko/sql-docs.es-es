@@ -1,20 +1,21 @@
 ---
 title: Configurar Azure Kubernetes Service
-titleSuffix: SQL Server big data clusters
+titleSuffix: SQL Server Big Data Clusters
 description: Obtenga información sobre cómo configurar Azure Kubernetes Service (AKS) para las implementaciones del [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016888"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251198"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurar Azure Kubernetes Service para implementaciones de clúster de macrodatos de SQL Server
 
@@ -34,7 +35,7 @@ En este artículo, se describen los pasos para implementar Kubernetes en AKS con
 - [Implementar las herramientas de macrodatos de SQL Server 2019](deploy-big-data-tools.md):
    - **Kubectl**
    - **Azure Data Studio**
-   - **Extensión de SQL Server 2019**
+   - **Extensión de SQL Server 2019**
    - **CLI de Azure**
 
 - Versión mínima 1.13 para el servidor de Kubernetes. Para AKS, necesita usar el parámetro `--kubernetes-version` para especificar una versión distinta de la predeterminada.
@@ -101,7 +102,7 @@ Antes de ejecutar el comando, actualice el script. Reemplace `<Azure data center
 
 Seleccione la versión disponible más reciente para el clúster. Anote el número de versión. Lo usará en el paso siguiente.
 
-## <a name="create-a-kubernetes-cluster"></a>Crear un clúster de Kubernetes
+## <a name="create-a-kubernetes-cluster"></a>Creación de un clúster de Kubernetes
 
 1. Para crear un clúster de Kubernetes en AKS, use el comando [az aks create](https://docs.microsoft.com/cli/azure/aks). En el ejemplo siguiente, se crea un clúster de Kubernetes denominado *kubcluster* con un nodo de agente de Linux del tamaño **Standard_L8s**.
 

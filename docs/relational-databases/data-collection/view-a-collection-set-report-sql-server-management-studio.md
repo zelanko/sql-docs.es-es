@@ -15,10 +15,10 @@ ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dd303efebcf988d07d068f5518dd340b9ae74fbc
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055563"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Ver un informe de conjunto de recopilación (SQL Server Management Studio)
@@ -51,7 +51,7 @@ ms.locfileid: "74055563"
  **Hora de inicio**  
  Escriba una hora inicial para los datos del informe o especifique una haciendo clic en las flechas.  
   
- **Duración**  
+ **Duration**  
  Especifique el intervalo de tiempo que incluir en el informe. El valor predeterminado es de 240 minutos. Los valores posibles entre los que seleccionar son 15 minutos, 60 minutos, 240 minutos (4 horas), 720 minutos (12 horas) y 1440 minutos (24 horas).  
   
 ## <a name="see-also"></a>Consulte también  

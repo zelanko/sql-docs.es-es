@@ -9,10 +9,10 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63043043"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Dar formato a texto (Generador de informes)
@@ -187,7 +187,7 @@ Cree esta tabla para tener un lugar donde colocar los hipervínculos y el texto 
   
 4.  En la página **Elegir el diseño** , desactive la casilla **Expandir o contraer grupos** de modo que pueda ver la tabla entera, y,después, haga clic en **Siguiente**. 
   
-5.  Haga clic en **Finalizar**.  
+5.  Haga clic en **Finalizar**  
   
 6.  Haga clic en **Ejecutar**.  
   
@@ -314,7 +314,7 @@ El informe muestra ahora datos dados con formato y es más fácil de leer.
   
 6.  En la pestaña **General** , bajo **Tipo de marcado**, haga clic en **HTML: interpretar etiquetas HTML como estilos**.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 8.  Haga clic en Ejecutar ( **!** ) para obtener la vista previa del informe.  
   
@@ -339,7 +339,7 @@ En este tutorial, guarde el informe en un servidor de informes. Si no tiene acce
   
 4.  En **Nombre**, reemplace el nombre predeterminado por un nombre de su elección.
 
-5.  Haga clic en **Guardar**.  
+5.  Haga clic en **Save**(Guardar).  
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
@@ -351,9 +351,9 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
   
 3.  En **Nombre**, reemplace el nombre predeterminado por un nombre de su elección. 
   
-4.  Haga clic en **Guardar**.  
+4.  Haga clic en **Save**(Guardar).  
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Pasos siguientes
 
 Existen numerosas formas de dar formato al texto en el Generador de informes. [Tutorial: Crear un informe de forma libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contiene más ejemplos.  
 

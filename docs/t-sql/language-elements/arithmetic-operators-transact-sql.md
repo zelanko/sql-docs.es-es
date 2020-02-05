@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 94d617f0da60b73ecfc7a0dcdd4530a3a36f3ca7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927367"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>Operadores aritméticos (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67927367"
 
 Los operadores aritméticos ejecutan operaciones matemáticas con dos expresiones de uno o varios tipos de datos. Se ejecutan en la categoría de tipos de datos numéricos. Para obtener más información sobre las categorías de tipos de datos, vea [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-|Operador|Significado|  
+|Operator|Significado|  
 |--------------|-------------|  
 |[+ (Sumar)](../../t-sql/language-elements/add-transact-sql.md)|Suma|  
 |[- (Restar)](../../t-sql/language-elements/subtract-transact-sql.md)|Resta|  

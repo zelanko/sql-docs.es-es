@@ -18,10 +18,10 @@ ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114849"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY (permisos de extremo de Transact-SQL)
@@ -75,7 +75,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  AS *SQL_Server_login*  
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los permisos del ámbito del servidor solo pueden denegarse si la base de datos actual es **master**.  
   
  Puede ver la información sobre los extremos en la vista de catálogo [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). La información sobre los permisos del servidor está disponible en la vista de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), mientras que la información sobre las entidades de seguridad de servidor puede verse en la vista de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -96,7 +96,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. Denegar el permiso VIEW DEFINITION en un extremo  
- En el siguiente ejemplo se deniega el permiso `VIEW DEFINITION` para el extremo `Mirror7` al inicio de sesión `ZArifin` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En el siguiente ejemplo se deniega el permiso `VIEW DEFINITION` para el extremo `Mirror7` al inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `ZArifin`.  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. Denegar el permiso TAKE OWNERSHIP con la opción CASCADE  
- En el siguiente ejemplo se deniega el permiso `TAKE OWNERSHIP` para el extremo `Shipping83` al usuario `PKomosinski` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a las entidades de seguridad a las que `PKomosinski` concedió `TAKE OWNERSHIP`.  
+ En el siguiente ejemplo se deniega el permiso `TAKE OWNERSHIP` para el extremo `Shipping83` al usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `PKomosinski` y a las entidades de seguridad a las que `PKomosinski` concedió `TAKE OWNERSHIP`.  
   
 ```  
 USE master;  

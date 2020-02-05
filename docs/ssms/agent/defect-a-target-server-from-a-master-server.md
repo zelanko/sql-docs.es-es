@@ -1,10 +1,9 @@
 ---
-title: Dar de baja un servidor de destino desde un servidor maestro | Microsoft Docs
-ms.custom: ''
+title: Dar de baja un servidor de destino desde un servidor maestro
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 114dbc73c42404d66de34eb0273d47abd561f337
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: e61c18fc2312fc3b04569f6a6d536ce077c4c35e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553035"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252128"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Dar de baja un servidor de destino desde un servidor maestro
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ En este tema se describe cómo dar de baja un servidor de destino de un servidor
   
 ### <a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Permisos  
 Para ejecutar este procedimiento almacenado, un usuario debe ser miembro del rol fijo de servidor **sysadmin** .  
   
 ## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  

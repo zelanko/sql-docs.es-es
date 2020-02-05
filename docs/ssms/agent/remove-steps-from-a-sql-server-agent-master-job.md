@@ -1,22 +1,23 @@
 ---
-title: Quitar los pasos de un trabajo maestro del Agente SQL Server | Microsoft Docs
-ms.custom: ''
+title: Remove Steps from a SQL Server Agent Master Job
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 48cb0a54ed026c958fa63fd4d13e4524b96e931e
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 80ad67f6a180aaab688f38c7504c1f9338f5f4b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552780"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246319"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ No se puede destinar un trabajo principal del Agente [!INCLUDE[ssNoVersion](../.
   
 ### <a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Permisos  
 A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modificar los trabajos de su propiedad. Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  

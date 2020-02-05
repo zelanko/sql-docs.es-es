@@ -16,10 +16,10 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4c4924ee6dd1c053119f7ceaf97cd1dbd4d7e95f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294223"
 ---
 # <a name="data-profile-viewer"></a>Visor de perfil de datos
@@ -114,7 +114,7 @@ ms.locfileid: "71294223"
  **Longitud**  
  Muestra las longitudes de columna encontradas en la columna de perfiles.  
   
- **Count**  
+ **Recuento**  
  Muestra el número de filas en las que el valor de la columna de perfiles tiene la longitud que se muestra en la columna **Longitud** .  
   
  **Porcentaje**  
@@ -148,7 +148,7 @@ ms.locfileid: "71294223"
 #### <a name="profile-type--column-statistics-profile"></a>Tipo de perfil = Perfil de estadísticas de columnas  
   
 ##### <a name="column-statistics-profile---column-pane"></a>Perfil de estadísticas de columnas - panel \<columna>  
- **Mínima**  
+ **Mínimo**  
  Muestra el valor mínimo situado en la columna de perfiles.  
   
  **Máximo**  
@@ -170,10 +170,10 @@ ms.locfileid: "71294223"
  Muestra el número de filas de la tabla o vista.  
   
 ##### <a name="detailed-value-distribution-pane"></a>Panel Distribución de valores detallado  
- **Value**  
+ **Valor**  
  Muestra los distintos valores que se encuentran en la columna de perfiles.  
   
- **Count**  
+ **Recuento**  
  Muestra el número de filas en las que la columna de perfiles tiene el valor que se muestra en la columna **Valor** .  
   
  **Porcentaje**  
@@ -192,7 +192,7 @@ ms.locfileid: "71294223"
  **\<columna1>, \<columna2>, etc.**  
  Muestra los valores duplicados que se encontraron en la columna de perfiles.  
   
- **Count**  
+ **Recuento**  
  Muestra el número de filas en las que la columna especificada tiene el valor que se muestra en la primera columna.  
   
 #### <a name="profile-type--functional-dependency-profile"></a>Tipo de perfil = Perfil de dependencia funcional  
@@ -243,6 +243,6 @@ ms.locfileid: "71294223"
  **\<columna1>, \<columna2>, etc.**  
  Muestra los valores en la columna o columnas del subconjunto que no se encontraban en la columna o columnas del superconjunto.  
   
- **Count**  
+ **Recuento**  
  Muestra el número de filas en las que la columna especificada tiene el valor que se muestra en la primera columna.  
   

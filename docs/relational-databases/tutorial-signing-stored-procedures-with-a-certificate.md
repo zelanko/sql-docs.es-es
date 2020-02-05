@@ -13,10 +13,10 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d6d95dc22b557b24cb2ab3a5b4515a0adfa8c605
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095665"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Tutorial: Firmar procedimientos almacenados con un certificado
@@ -285,7 +285,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
-[Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+[Centro de seguridad para el Motor de base de datos de SQL Server y Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   

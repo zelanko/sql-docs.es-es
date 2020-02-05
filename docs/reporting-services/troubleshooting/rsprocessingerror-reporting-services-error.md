@@ -11,10 +11,10 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573820"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Error de Reporting Services
@@ -23,16 +23,16 @@ ms.locfileid: "65573820"
   
 |||  
 |-|-|  
-|Nombre del producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Identificador del evento|rsProcessingError|  
-|Origen del evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
+|Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Id. de evento|rsProcessingError|  
+|Origen de eventos|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
 |Componente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texto del mensaje|Error al procesar el informe.|  
   
 ## <a name="explanation"></a>Explicación  
  Se encontraron uno o varios errores al publicar, procesar, obtener una vista previa localmente, ver desde el servidor de informes, o crear una suscripción para un informe. Este mensaje de error indica que se ha detectado, como mínimo, un error.  
   
-### <a name="possible-causes"></a>Posibles causas  
+### <a name="possible-causes"></a>Causas posibles  
  Las causas posibles incluyen:  
   
 -   Se ha producido un error de procesamiento en el servidor de informes.  

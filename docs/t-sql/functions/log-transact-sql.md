@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d3cbf58a3a85d84daf5b0f83006a7cdcb24b589
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982258"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982258"
 
   Devuelve el logaritmo natural de la expresión **float** especificada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,17 +55,17 @@ LOG ( float_expression )
  *base*  
  Argumento entero opcional que establece la base del logaritmo.  
   
-**Válido para**  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **float**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  De forma predeterminada, **LOG()** devuelve el logaritmo natural. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], puede cambiar la base del logaritmo por otro valor mediante el parámetro *base* opcional.  
   
  El logaritmo natural es el logaritmo en base **e**, donde **e** es una constante irracional aproximadamente igual a 2,718281828.  
   
- El logaritmo natural del valor exponencial de un número es el propio número: LOG( EXP( *n* ) ) = *n*. Y el valor exponencial del logaritmo natural de un número es el propio número: EXP( LOG( *n* ) ) = *n*.  
+ El logaritmo natural del valor exponencial de un número es el propio número: LOG( EXP( *n* ) ) = *n*. Asimismo, el valor exponencial del logaritmo natural de un número es el propio número: EXP( LOG( *n* ) ) = *n*.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -88,7 +88,7 @@ The LOG of the variable is: 2.30259
 ```  
   
 ### <a name="b-calculating-the-logarithm-of-the-exponent-of-a-number"></a>B. Calcular el logaritmo del exponente de un número  
- En el ejemplo siguiente se calcula el `LOG` del exponente de un número.  
+ En el ejemplo siguiente se calcula el valor de `LOG` del exponente de un número.  
   
 ```  
 SELECT LOG (EXP (10));  

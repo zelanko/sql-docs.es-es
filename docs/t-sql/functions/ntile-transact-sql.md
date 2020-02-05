@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4bd1270c0dde3031054dd4e0aa3e0719a77dfad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914902"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
@@ -46,15 +46,15 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
  Es una expresión de tipo entero positivo que especifica el número de grupos en que se debe dividir cada partición. *integer_expression* puede ser de tipo **int** o **bigint**.  
   
  \<partition_by_clause>  
- Divide el conjunto de resultados generado por la cláusula [FROM](../../t-sql/queries/from-transact-sql.md) en particiones a las que se aplica la función. Para obtener la sintaxis PARTITION BY, vea [OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ Divide el conjunto de resultados generado por la cláusula [FROM](../../t-sql/queries/from-transact-sql.md) en particiones a las que se aplica la función. Para ver la sintaxis de PARTITION BY, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
  \<order_by_clause>  
  Determina el orden en que los valores NTILE se asignan a las filas de una partición. Un entero no puede representar una columna cuando se usa \<order_by_clause> en una función de categoría.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **bigint**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si el número de filas de una partición no se puede dividir por *integer_expression*, producirá grupos de dos tamaños que difieren en un miembro. Los grupos de mayor tamaño preceden a los grupos de menor tamaño en el orden especificado por la cláusula OVER. Por ejemplo, si el número total de filas es 53 y el número de grupos es cinco, los tres primeros grupos tienen 11 filas y los otros dos grupos tienen 10 filas cada uno. Por otra parte, si el número total de filas es divisible por el número de grupos, las filas se distribuyen por igual entre los grupos. Por ejemplo, si el número total de filas es 50 y hay cinco grupos, cada grupo contiene 10 filas.  
   
  NTILE es no determinista. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  

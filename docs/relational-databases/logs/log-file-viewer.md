@@ -13,10 +13,10 @@ ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 7c587edde597b3b1dffeb60675a1c3c5cb886bc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084071"
 ---
 # <a name="log-file-viewer"></a>Visor de archivos de registro
@@ -49,7 +49,7 @@ ms.locfileid: "68084071"
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Describe cómo abrir el visor del archivo de registros dependiendo de la información que se desee ver.|[Abrir el Visor de archivos de registro](../../relational-databases/logs/open-log-file-viewer.md)|  
-|Describe cómo ver los archivos de registro sin conexión a través de servidores registrados y cómo comprobar los permisos de WMI.|[Ver sin conexión archivos de registro](../../relational-databases/logs/view-offline-log-files.md)|  
+|Describe cómo ver los archivos de registro sin conexión a través de servidores registrados y cómo comprobar los permisos de WMI.|[Ver archivos del registro sin conexión](../../relational-databases/logs/view-offline-log-files.md)|  
 |Proporciona la Ayuda F1 del visor del archivo de registro.|[Ayuda F1 del Visor de archivos de registro](../../relational-databases/logs/log-file-viewer-f1-help.md)|  
   
 ## <a name="see-also"></a>Consulte también  

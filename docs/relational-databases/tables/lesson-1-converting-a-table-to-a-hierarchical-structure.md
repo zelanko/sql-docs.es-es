@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Conversión de una tabla en una estructura jerárquica | Microsoft Docs'
+title: 'Lección 1: Conversión de una tabla en una estructura jerárquica | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/22/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 05906db66c2bf4948e91dddafa2cdd54aaf936ec
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907295"
 ---
-# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lección 1: Conversión de una tabla en una estructura jerárquica
+# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lección 1: Convertir una tabla en una estructura jerárquica
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Los clientes que tienen tablas que utilizan autocombinaciones para expresar las relaciones jerárquicas pueden convertir sus tablas en una estructura jerárquica usando esta lección como guía. Es relativamente fácil migrar de esta representación a una que use **hierarchyid**. Después de la migración, los usuarios tendrán una representación jerárquica compacta y fácil de entender, que se puede indizar de varias maneras para conseguir consultas eficaces.  
   
@@ -223,7 +223,7 @@ Esta tarea crea una nueva tabla y la rellena con los datos de la tabla **Employe
     ```  
   
 ## <a name="optimizing-the-neworg-table"></a>Optimizar la tabla NewOrg
-La tabla **NewOrd** que ha creado en la tarea [Rellenar una tabla con los datos jerárquicos existentes](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contiene toda la información del empleado y representa la estructura jerárquica mediante un tipo de datos **hierarchyid**. Esta tarea agrega los nuevos índices que admiten las búsquedas en la columna **hierarchyid** .  
+La tabla **NewOrd** que ha creado en la tarea [Rellenar una tabla con los datos jerárquicos existentes](../../relational-databases/tables/lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contiene toda la información del empleado y representa la estructura jerárquica mediante un tipo de datos **hierarchyid** . Esta tarea agrega los nuevos índices que admiten las búsquedas en la columna **hierarchyid** .  
   
 
 La columna **hierarchyid** (**OrgNode**) es la clave principal de la tabla **NewOrg** . Al crear la tabla, contenía un índice agrupado denominado **PK_NewOrg_OrgNode** para exigir la singularidad de la columna **OrgNode** . Este índice clúster también admite una búsqueda con prioridad a la profundidad de la tabla.  
@@ -272,7 +272,7 @@ La columna **hierarchyid** (**OrgNode**) es la clave principal de la tabla **New
   
     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-    El índice con prioridad a la profundidad: los registros del empleado se almacenan junto a su administrador.  
+    Índice con prioridad a la profundidad: los registros del empleado se almacenan junto a su administrador.  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID
@@ -289,7 +289,7 @@ La columna **hierarchyid** (**OrgNode**) es la clave principal de la tabla **New
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    El índice con prioridad a **EmployeeID**: las filas se almacenan en secuencia de **EmployeeID** .  
+    El índice con prioridad a**EmployeeID**: las filas se almacenan en secuencia de **EmployeeID** .  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

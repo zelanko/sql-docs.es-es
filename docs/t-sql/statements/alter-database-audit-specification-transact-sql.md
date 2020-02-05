@@ -20,10 +20,10 @@ ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c9229f5bec676f28d92b4ea1aba1ad3aeeb4d6c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065891"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
@@ -83,7 +83,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Habilita o deshabilita la recopilación de registros por parte de la auditoría para esta especificación de auditoría. Los cambios de estado de la especificación de auditoría se deben realizar fuera de una transacción de usuario y no puede haber otros cambios en la misma instrucción cuando la transición es de ON a OFF.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las especificaciones de auditoría de base de datos son objetos no protegibles que residen en una base de datos determinada. Para poder realizar cambios en una especificación de auditoría de base de datos, es necesario establecer su estado en OFF. Si se ejecuta ALTER DATABASE AUDIT SPECIFICATION cuando una auditoría está habilitada con opciones distintas de STATE=OFF, aparecerá un mensaje de error. Para obtener más información, consulte [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
 ## <a name="permissions"></a>Permisos  

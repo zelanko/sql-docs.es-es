@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b028b6ab4da678444427682a635f679acce576ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123582"
 ---
 # <a name="execute-user-defined-functions"></a>Ejecutar funciones definidas por el usuario
@@ -26,7 +26,7 @@ ms.locfileid: "68123582"
   Ejecutar una función definida por el usuario mediante Transact-SQL.
   
 
-> **Nota:** Visite [Funciones definidas por el usuario](user-defined-functions.md) y [Create Function (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) para obtener más información sobre las funciones definidas por el usuario. 
+> **Nota:** Visite  [Funciones definidas por el usuario](user-defined-functions.md) y [Create Function (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) para obtener más información acerca de las funciones definidas por el usuario. 
   
  
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  

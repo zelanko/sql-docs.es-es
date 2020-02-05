@@ -25,10 +25,10 @@ ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 3d353a6c11d19f96f590e11aa5ebe48677c3cd84
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211240"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
@@ -61,16 +61,16 @@ Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 En la tabla siguiente se describe la información del conjunto de resultados.
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |---|---|
 |**TraceFlag**|Nombre de la marca de seguimiento.|  
 |**Estado**|Indica si la marca de seguimiento está establecida en ON o en OFF, ya sea globalmente o para la sesión.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |**Global**|Indica si la marca de seguimiento está establecida globalmente.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**Session**|Indica si la marca de seguimiento está establecida para la sesión.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**De sesión**|Indica si la marca de seguimiento está establecida para la sesión.<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS devuelve una columna para el número de la marca de seguimiento y otra para el estado. Esto indica si la marca de seguimiento está establecida en ON (1) o en OFF (0). El encabezado de columna para el número de la marca de seguimiento es **Global Trace Flag** o **Session Trace Flag**, según se esté comprobando el estado de una marca de seguimiento global o de sesión.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], hay dos tipos de marcas de seguimiento: sesión y global. Las marcas de seguimiento de sesión se activan para una conexión y solo están visibles para esa conexión. Las marcas de seguimiento globales se establecen en el nivel del servidor y están visibles para todas las conexiones del servidor.
   
 ## <a name="permissions"></a>Permisos  

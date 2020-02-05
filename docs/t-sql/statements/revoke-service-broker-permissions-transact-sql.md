@@ -22,10 +22,10 @@ ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4ed6e67bbf6f3fcda872650c2d3394d6311802b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914224"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE (permisos de Service Broker de Transact-SQL)
@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   Usuario de la base de datos no asignado a una entidad de seguridad de servidor  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="service-broker-contracts"></a>Contratos de Service Broker  
  Un contrato de [!INCLUDE[ssSB](../../includes/sssb-md.md)] es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. Los permisos más específicos y limitados que se pueden revocar en un contrato de [!INCLUDE[ssSB](../../includes/sssb-md.md)] se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  

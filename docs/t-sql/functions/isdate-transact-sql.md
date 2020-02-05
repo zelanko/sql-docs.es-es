@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1385a80df97bc02af60cb5c151424dc79bd03913
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109453"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
@@ -59,10 +59,10 @@ ISDATE ( expression )
  *expression*  
  Es una cadena de caracteres o una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que se puede convertir en una cadena de caracteres. La expresión debe tener menos de 4.000 caracteres. No se permiten tipos de datos de fecha y hora, excepto datetime y smalldatetime, como argumento para ISDATE.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  ISDATE solo es determinista si se usa con la función [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md), se especifica el parámetro de estilo CONVERT y el estilo no es igual a 0, 100, 9 ni 109.  
   
  El valor devuelto de ISDATE depende de los valores establecidos por [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md), [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) y la [opción de configuración del servidor Idioma predeterminado](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).  

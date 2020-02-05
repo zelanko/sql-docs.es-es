@@ -39,10 +39,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68742843"
 ---
 # <a name="database-level-roles"></a>Roles de nivel de base de datos
@@ -96,7 +96,7 @@ Estos roles de base de datos solo existen en la base de datos maestra virtual. S
 |**loginmanager** | Puede crear y eliminar inicios de sesión en la base de datos maestra virtual.|
 
 > [!NOTE]
-> La entidad de seguridad a nivel de servidor y el administrador de Azure Active Directory (si está configurado) tienen todos los permisos en [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sin la necesidad de ser miembros de ninguno de los roles. Para más información, consulte [Autorización y autenticación de SQL Database: concesión de acceso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/) 
+> La entidad de seguridad a nivel de servidor y el administrador de Azure Active Directory (si está configurado) tienen todos los permisos en [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sin la necesidad de ser miembros de ninguno de los roles. Para más información, consulte [Autorización y autenticación de SQL Database: concesión de acceso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
   
 ## <a name="msdb-roles"></a>Roles de msdb  
  La base de datos msdb contiene los roles con fines especiales que se muestran en la tabla siguiente.  
@@ -135,13 +135,13 @@ Si R Services está instalado, hay roles de base de datos adicionales disponible
 |[sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)|Metadatos|Devuelve información acerca de los miembros de un rol de la base de datos actual.|  
 |[sys.database_role_members &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)|Metadatos|Devuelve una fila por cada miembro de cada rol de base de datos.|  
 |[IS_MEMBER &#40;Transact-SQL&#41;](../../../t-sql/functions/is-member-transact-sql.md)|Metadatos|Indica si el usuario actual es miembro del grupo de Microsoft Windows o del rol de base de datos de SQL Server especificados.|  
-|[CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md)|Comando|Crea un rol de base de datos nuevo en la base de datos actual.|  
-|[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)|Comando|Cambia el nombre o la pertenencia de un rol de base de datos.|  
-|[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Comando|Quita un rol de la base de datos.|  
-|[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Comando|Crea un rol de base de datos nuevo en la base de datos actual.|  
-|[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Comando|Quita un rol de base de datos de la base de datos actual.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Comando|Agrega un usuario de base de datos, un rol de base de datos, un inicio de sesión de Windows o un grupo de Windows a un rol de base de datos en la base de datos actual. Todas las plataformas, salvo [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , deben usar `ALTER ROLE` en su lugar.|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Comando|Quita una cuenta de seguridad de un rol de SQL Server de la base de datos actual. Todas las plataformas, salvo [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , deben usar `ALTER ROLE` en su lugar.|
+|[CREATE ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-role-transact-sql.md)|Get-Help|Crea un rol de base de datos nuevo en la base de datos actual.|  
+|[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)|Get-Help|Cambia el nombre o la pertenencia de un rol de base de datos.|  
+|[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Get-Help|Quita un rol de la base de datos.|  
+|[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Get-Help|Crea un rol de base de datos nuevo en la base de datos actual.|  
+|[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Get-Help|Quita un rol de base de datos de la base de datos actual.|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Get-Help|Agrega un usuario de base de datos, un rol de base de datos, un inicio de sesión de Windows o un grupo de Windows a un rol de base de datos en la base de datos actual. Todas las plataformas, salvo [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , deben usar `ALTER ROLE` en su lugar.|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Get-Help|Quita una cuenta de seguridad de un rol de SQL Server de la base de datos actual. Todas las plataformas, salvo [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , deben usar `ALTER ROLE` en su lugar.|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permisos | Agrega el permiso a un rol.
 |[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permisos | Deniega un permiso a un rol.
 |[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permisos | Quita un permiso concedido o denegado anteriormente.

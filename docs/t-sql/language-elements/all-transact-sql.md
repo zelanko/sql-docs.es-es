@@ -19,10 +19,10 @@ ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: bf40ce38bf96ae4d31c9102290e74d5db2230240
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927385"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "67927385"
 
   Compara un valor escalar con un conjunto de valores de una sola columna.  
   
- ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -57,7 +57,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
 ## <a name="result-value"></a>Valor del resultado  
  Devuelve TRUE cuando la comparación especificada es TRUE para todos los pares (_scalar_expression_ **,** _x_), donde *x* es un valor del conjunto de una sola columna. En caso contrario, devuelve FALSE.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  ALL requiere que *scalar_expression* se compare de forma positiva con cada valor devuelto por la subconsulta. Por ejemplo, si la subconsulta devuelve los valores 2 y 3, *scalar_expression* <= ALL (subconsulta) se evaluaría como TRUE para una *scalar_expression* de 2. Si la subconsulta devuelve los valores 2 y 3, *scalar_expression* = ALL (subconsulta) se evaluaría como FALSE, porque algunos de los valores de la subconsulta (el valor 3) no cumplirían los criterios de la expresión.  
   
  Para instrucciones que requieren que *scalar_expression* se compare de forma positiva con solo un valor devuelto por la subconsulta, vea [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 30977ed0baff058c838403b436a4da497c5ac4c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121988"
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
@@ -51,7 +51,7 @@ ms.locfileid: "68121988"
 ## <a name="result-value"></a>Valor del resultado  
  NOT invierte el valor de cualquier expresión booleana.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El uso de NOT niega una expresión.  
   
  La tabla siguiente muestra el resultado de comparar los valores TRUE y FALSE mediante el operador NOT.  
@@ -60,7 +60,7 @@ ms.locfileid: "68121988"
 |------|---------|  
 |**TRUE**|FALSE|  
 |**FALSE**|TRUE|  
-|**UNKNOWN**|UNKNOWN|  
+|**UNKNOWN**|DESCONOCIDO|  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se buscan todas las bicicletas Silver que no tienen un precio estándar superior a los 400 $.  

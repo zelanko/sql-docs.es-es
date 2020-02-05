@@ -17,10 +17,10 @@ ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a1131a6f7b00f9b8ba4646106de0699a2a9fada8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115009"
 ---
 # <a name="deny-assembly-permissions-transact-sql"></a>DENY (permisos de ensamblado de Transact-SQL)
@@ -90,7 +90,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Un ensamblado es un elemento protegible de base de datos incluido en la base de datos primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden denegar en un ensamblado se muestran a continuación, junto con permisos más generales que los incluyen por implicación.  
   
 |Permiso de ensamblado|Implícito en permiso de ensamblado|Implícito en el permiso de base de datos|  

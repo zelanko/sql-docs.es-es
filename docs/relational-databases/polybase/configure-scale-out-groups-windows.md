@@ -9,10 +9,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906888"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configuración de los grupos de escalado horizontal de PolyBase en Windows
@@ -87,7 +87,7 @@ Una vez completada la instalación, las dos máquinas pueden funcionar como nodo
   
 4. Apague el motor de PolyBase y reinicie el servicio de movimiento de datos de PolyBase.
   
-## <a name="optional-remove-a-compute-node"></a>Opcional: eliminación de un nodo de ejecución.  
+## <a name="optional-remove-a-compute-node"></a>Opcional: eliminación un nodo de ejecución  
   
 1. Conéctese al nodo de ejecución de SQL Server (PQTH4A-CMP02).
   

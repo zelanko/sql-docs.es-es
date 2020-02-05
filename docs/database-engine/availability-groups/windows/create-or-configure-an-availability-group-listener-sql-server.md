@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: 918619afd0b07c6d7b8e5d3ccef526da5f4d8fad
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822123"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configuración de un agente de escucha para un grupo de disponibilidad Always On
@@ -68,8 +68,8 @@ ms.locfileid: "74822123"
   
 |Permisos|Vínculo|  
 |-----------------|----------|  
-|El nombre de objeto de clúster (CNO) del clúster de WSFC que hospeda el grupo de disponibilidad debe tener permiso para **crear objetos de equipo** .<br /><br /> En Active Directory, un CNO de forma predeterminada no tiene permiso para **crear objetos de equipo** explícitamente y puede crear diez objetos de equipo virtual (VCO). Una vez creados los 10 VCO, no podrán crearse otros adicionales. Puede evitar esto si concede el permiso de forma explícita al CNO del clúster de WSFC. Observe que los VCO para los grupos de disponibilidad que ha eliminado no son eliminados de forma automática en Active Directory y se contabilizan para el límite predeterminado de 10 VCO a menos que sean eliminados de forma manual.<br /><br /> Nota: En algunas organizaciones, la directiva de seguridad prohíbe conceder permiso para **crear objetos de equipo** a cuentas de usuario individuales.|*Pasos para configurar la cuenta para el usuario que instala el clúster* en la [Guía paso a paso de clústeres de conmutación por error: configurar cuentas en Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Pasos para preconfigurar la cuenta de nombre de clúster* en la [Guía paso a paso de clústeres de conmutación por error: configurar cuentas en Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|Si su organización necesita que preconfigure la cuenta de equipo para un nombre de red virtual de agente de escucha, deberá pertenecer al grupo **Operador de cuentas** o pedir ayuda a su administrador de dominio.|*Pasos para preconfigurar una cuenta para un servicio o una aplicación en clúster* en la [Guía paso a paso de clústeres de conmutación por error: configurar cuentas en Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
+|El nombre de objeto de clúster (CNO) del clúster de WSFC que hospeda el grupo de disponibilidad debe tener permiso para **crear objetos de equipo** .<br /><br /> En Active Directory, un CNO de forma predeterminada no tiene permiso para **crear objetos de equipo** explícitamente y puede crear diez objetos de equipo virtual (VCO). Una vez creados los 10 VCO, no podrán crearse otros adicionales. Puede evitar esto si concede el permiso de forma explícita al CNO del clúster de WSFC. Observe que los VCO para los grupos de disponibilidad que ha eliminado no son eliminados de forma automática en Active Directory y se contabilizan para el límite predeterminado de 10 VCO a menos que sean eliminados de forma manual.<br /><br /> Nota: En algunas organizaciones, la directiva de seguridad prohíbe conceder permiso para **crear objetos de equipo** a cuentas de usuario individuales.|*Steps for configuring the account for the person who installs the cluster (Pasos para configurar la cuenta para la persona que instala el clúster)* en la [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Guía paso a paso de clúster de conmutación por error: configurar cuentas en Active Directory)](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Steps for prestaging the cluster name account (Pasos para el ensayo previo de la cuenta de nombre de clúster)* en la [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Guía paso a paso de clúster de conmutación por error: configurar cuentas en Active Directory)](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
+|Si su organización necesita que preconfigure la cuenta de equipo para un nombre de red virtual de agente de escucha, deberá pertenecer al grupo **Operador de cuentas** o pedir ayuda a su administrador de dominio.|*Steps for prestaging an account for a clustered service or application (Pasos para el ensayo previo de una cuenta para un servicio o una aplicación en clúster)* en la [Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory (Guía paso a paso de clúster de conmutación por error: configurar cuentas en Active Directory)](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
   
 > [!TIP]  
 >  Generalmente, es más sencillo no ensayar previamente la cuenta del equipo para un nombre de red virtual de agente de escucha. Si puede, deje que la cuenta se cree y configure automáticamente al ejecutar el asistente para alta disponibilidad de WSFC.  
@@ -211,7 +211,7 @@ ms.locfileid: "74822123"
   
 -   [Cuotas de Active Directory](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
-##  <a name="FollowUp"></a> Seguimiento: después de crear un agente de escucha de grupo de disponibilidad  
+##  <a name="FollowUp"></a> Seguimiento: después de crear un agente de escucha del grupo de disponibilidad  
   
 ###  <a name="MultiSubnetFailover"></a> Palabra clave MultiSubnetFailover y características asociadas  
  **MultiSubnetFailover** es una nueva palabra clave de la cadena de conexión que se usa para habilitar la conmutación por error más rápida con los grupos de disponibilidad AlwaysOn y las instancias de clúster de conmutación por error AlwaysOn en SQL Server 2012. Las tres subcaracterísticas siguientes se habilitan cuando se establece `MultiSubnetFailover=True` en la cadena de conexión:  
@@ -228,19 +228,19 @@ ms.locfileid: "74822123"
   
  **MultiSubnetFailover=True no se admite en .NET Framework 3.5 u OLEDB**  
   
- **Problema:** si la instancia del clúster de conmutación por error o el grupo de disponibilidad tiene un nombre de cliente de escucha (denominado nombre de red o punto de acceso cliente en el Administrador de clústeres de WSFC) que depende de varias direcciones IP de subredes diferentes, y usa ADO.NET con .NET Framework 3.5 SP1 o SQL Native Client 11.0 OLEDB, puede que se agote el tiempo de espera de conexión en el 50 % de las solicitudes de conexión de cliente al agente de escucha de grupo de disponibilidad.  
+ **Problema:** si la instancia del clúster de conmutación por error o el grupo de disponibilidad tiene un nombre de escucha (denominado nombre de red o punto de acceso cliente en el Administrador de clústeres de WSFC) que depende de varias direcciones IP de subredes diferentes y usa ADO.NET con .NET Framework 3.5 SP1 o SQL Native Client 11.0 OLEDB, puede que se agote el tiempo de espera de conexión en el 50 % de las solicitudes de conexión de cliente al agente de escucha de grupo de disponibilidad.  
   
- **Soluciones alternativas:** le recomendamos que realice una de las tareas siguientes.  
+ **Soluciones alternativas:** se recomienda el uso de una de las tareas siguientes.  
   
 -   Si no tiene permiso para manipular recursos de clúster, cambie el tiempo de espera de la conexión a 30 segundos (este valor produce un tiempo de espera de TCP de 20 segundos además de un búfer de 10 segundos).  
   
-     **Ventajas**: Si se produce una conmutación por error entre subredes, el tiempo de recuperación del cliente es breve.  
+     **Ventajas**: si se produce una conmutación por error entre subredes, el tiempo de recuperación de cliente es breve.  
   
-     **Inconvenientes**: La mitad de las conexiones cliente tardarán más de 20 segundos  
+     **Inconvenientes**: la mitad de las conexiones de cliente durará más de 20 segundos.  
   
 -   Si tiene permiso para manipular recursos de clúster, el enfoque más recomendado consiste en establecer el nombre de red del agente de escucha del grupo de disponibilidad en `RegisterAllProvidersIP=0`. Para obtener más información, vea "Configuración de RegisterAllProvidersIP" más adelante en esta sección.  
   
-     **Ventajas:** No es necesario aumentar el valor del tiempo de espera de la conexión de cliente.  
+     **Ventajas:** no necesita aumentar el valor de tiempo de espera de la conexión de cliente.  
   
      **Inconvenientes:** si se produce una conmutación por error entre subredes, el tiempo de recuperación del cliente podría ser de 15 minutos o más, según la configuración de **HostRecordTTL** y la de la programación de replicación DNS/AD entre sitios.  
   
@@ -331,7 +331,7 @@ Start-ClusterResource yourListenerName
   
 -   [How to create multiple listeners for same availability group (Cómo crear varios agentes de escucha para el mismo grupo de disponibilidad)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/)  
   
--   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

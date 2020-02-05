@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127319"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Copia masiva de datos con bcp en SQL Server en Linux
@@ -79,7 +79,7 @@ Esto debería mostrar lo siguiente en la ventana del terminal:
 ```
 
 ### <a name="import-data-from-the-source-data-file"></a>Importación de datos desde el archivo de datos de origen
-Copie y pegue los siguientes comandos en la ventana del terminal. Este comando usa `bcp` para conectarse a la instancia local de SQL Server (**localhost**) e importar los datos del archivo de datos (**~/test_data.txt**) en la tabla (**TestEmployees**) de la base de datos (**BcpSampleDB**). Recuerde reemplazar el nombre de usuario y `<your_password>` según sea necesario antes de ejecutar los comandos.
+Copie y pegue los siguientes comandos en la ventana del terminal. Este comando usa `bcp` para conectarse a la instancia local de SQL Server (**localhost**) e importar los datos del archivo de datos ( **~/test_data.txt**) en la tabla (**TestEmployees**) de la base de datos (**BcpSampleDB**). Recuerde reemplazar el nombre de usuario y `<your_password>` según sea necesario antes de ejecutar los comandos.
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','
@@ -134,8 +134,8 @@ Esto debería mostrar lo siguiente en la ventana del terminal:
 3,Tom,Germany
 ```
 
-## <a name="see-also"></a>Vea también
-- [bcp, utilidad](../tools/bcp-utility.md)
+## <a name="see-also"></a>Consulte también
+- [Utilidad bcp](../tools/bcp-utility.md)
 - [Especificación de formatos de datos por razones de compatibilidad mediante bcp](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [Importación en bloque de datos mediante las instrucciones BULK INSERT o OPENROWSET(BULK...)](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 - [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)

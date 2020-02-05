@@ -11,10 +11,10 @@ ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aefbbc8f1b2286eb43378cf0cf5fe92e5741e610
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295328"
 ---
 # <a name="catalogset_environment_variable_property-ssisdb-database"></a>catalog.set_environment_variable_property (base de datos de SSISDB)
@@ -80,7 +80,7 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 -   El usuario no tiene los permisos adecuados.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En esta versión, solo se puede establecer la propiedad `Description`. El valor de la propiedad `Description` no puede superar los 4.000 caracteres.  
   
   

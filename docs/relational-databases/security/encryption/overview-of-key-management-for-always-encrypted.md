@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594107"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Información general de administración de claves de Always Encrypted
@@ -58,7 +58,7 @@ Teniendo en cuenta los roles anteriores, hay dos maneras de realizar tareas de a
 ## <a name="managing-keys-with-role-separation"></a>Administración de claves con separación de roles
 Cuando las claves de Always Encrypted se administran con separación de roles, los roles de administrador de seguridad y DBA están asignados a personas diferentes de una organización. Un proceso de administración de claves con separación de roles garantiza que los DBA no tengan acceso a las claves o a los almacenes de claves que contienen las claves reales y que los administradores de seguridad no tengan acceso a la base de datos que contiene información confidencial. Se recomienda que use la administración de claves con separación de roles si su objetivo es asegurarse de que los DBA de la organización no tengan acceso a información confidencial. 
 
-**Nota:** Los administradores de seguridad generan y usan claves de texto no cifrado, de modo que nunca deben realizar sus tareas en los mismos equipos que hospedan un sistema de base de datos ni en equipos a los que puedan tener acceso los DBA o posibles adversarios. 
+**Nota:** Los administradores de seguridad generan y usan claves de texto no cifrado, de modo que nunca deben realizar sus tareas en equipos que hospeden un sistema de base de datos ni en equipos a los que puedan tener acceso los DBA o posibles adversarios. 
 
 ## <a name="managing-keys-without-role-separation"></a>Administración de claves sin separación de roles
 Cuando las claves de Always Encrypted se administran sin separación de roles, una misma persona puede asumir los roles de administrador de seguridad y DBA, lo que implica que dicha persona debe tener acceso a las claves, los almacenes de claves y los metadatos de clave y debe poder administrarlos. La administración de claves sin separación de roles está recomendada para organizaciones que usen el modelo DevOps, o si la base de datos está hospedada en la nube y el objetivo principal es impedir que los administradores de la nube (pero no los DBA locales) accedan a información confidencial.
@@ -69,11 +69,11 @@ Cuando las claves de Always Encrypted se administran sin separación de roles, u
 
 Las claves de Always Encrypted se pueden administrar mediante [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) y [PowerShell](../../scripting/sql-server-powershell.md):
 
-- **SQL Server Management Studio (SSMS)**: proporciona cuadros de diálogo y asistentes que combinan tareas relacionadas con el acceso al almacén de claves y a la base de datos, por lo que SSMS no admite la separación de roles, pero facilita la configuración de las claves. Para obtener más información sobre la administración de claves con SSMS, vea:
-    - [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
-    - [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
+- **SQL Server Management Studio (SSMS)** : proporciona cuadros de diálogo y asistentes que combinan tareas relacionadas con el acceso al almacén de claves y a la base de datos, por lo que SSMS no admite la separación de roles, pero facilita la configuración de las claves. Para obtener más información sobre la administración de claves con SSMS, vea:
+    - [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+    - [Rotación de claves de Always Encrypted mediante SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
 
-- **SQL Server PowerShell**: incluye cmdlets para administrar las claves de Always Encrypted con y sin separación de roles. Para obtener más información, vea:
+- **SQL Server PowerShell**: incluye cmdlets para administrar las claves de Always Encrypted con y sin separación de roles. Para más información, consulte:
     - [Configuración de claves de Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [Rotación de claves de Always Encrypted con PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
@@ -92,11 +92,11 @@ Para asegurarse de que Always Encrypted impida eficazmente estos ataques, el pro
 - No genere nunca claves maestras de columna ni claves de cifrado de columnas en un equipo que hospede la base de datos. En su lugar, genere las claves en un equipo independiente que sea exclusivo para la administración de claves o en un equipo que hospede las aplicaciones que necesitarán tener acceso a las claves. Esto significa que **nunca debe ejecutar las herramientas usadas para generar las claves en el equipo en el que se hospeda la base de datos**, porque si un atacante accede a un equipo que se usa para aprovisionar o mantener las claves de Always Encrypted podrá obtener las claves, incluso si estas solo aparecen brevemente en la memoria de la herramienta.
 - Para asegurarse de que el proceso de administración de claves no revele accidentalmente las claves maestras de columna o las claves de cifrado de columnas, es fundamental que identifique los posibles adversarios y las amenazas de seguridad antes de definir e implementar un proceso de administración de claves. Por ejemplo, si su objetivo es garantizar que los DBA no tengan acceso a información confidencial, el responsable de generar las claves no puede ser un DBA. Pero un DBA *puede* administrar los metadatos de clave de la base de datos, ya que los metadatos no contienen las claves de texto no cifrado.
 
-## <a name="next-steps"></a>Next Steps
-- [Configuración del cifrado de columna mediante el asistente para Always Encrypted](always-encrypted-wizard.md)
+## <a name="next-steps"></a>Pasos siguientes
+- [Configuración del cifrado de columna mediante el asistente para Always Encrypted](always-encrypted-wizard.md)
 - [Creación y almacenamiento de claves maestras de columna para Always Encrypted](create-and-store-column-master-keys-always-encrypted.md)
-- [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
-- [Aprovisionamiento de claves de Always Encrypted mediante PowerShell](configure-always-encrypted-keys-using-powershell.md)
+- [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Aprovisionamiento de claves de Always Encrypted mediante PowerShell](configure-always-encrypted-keys-using-powershell.md)
 
 ## <a name="see-also"></a>Consulte también
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

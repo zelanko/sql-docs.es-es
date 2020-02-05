@@ -12,10 +12,10 @@ ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db307d221b8c90f478c21ab1605362e7fdf2ffd6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907721"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
@@ -25,15 +25,15 @@ ms.locfileid: "72907721"
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|701|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|701|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|NOSYSMEM|  
 |Texto del mensaje|Memoria de sistema insuficiente para ejecutar esta consulta.|  
   
 ## <a name="explanation"></a>Explicación  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ha podido asignar suficiente memoria para ejecutar la consulta. Esto puede deberse a diversos motivos, incluidos la configuración del sistema operativo, la disponibilidad de memoria física o los límites de memoria de la carga de trabajo actual. En la mayoría de los casos, la transacción errónea no es la causa de este error.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ha podido asignar suficiente memoria para ejecutar la consulta. Esto puede deberse a varios motivos, entre los que se incluye la configuración del sistema operativo, la disponibilidad de la memoria física o los límites de la memoria en la carga de trabajo actual. En la mayoría de los casos, la transacción que no se ha realizado no es la causa de este error.  
   
 Las consultas de diagnóstico, como las instrucciones DBCC, pueden generar un error porque el servidor no tiene suficiente memoria.  
   
@@ -46,7 +46,7 @@ En la siguiente lista se describen los pasos generales que ayudarán a resolver 
   
 1.  Compruebe si otras aplicaciones o servicios están consumiendo memoria en este servidor. Vuelva a configurar las aplicaciones o servicios menos críticos para que consuman menos memoria.  
   
-2.  Empiece a recopilar los contadores del monitor de rendimiento para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Administrador de búfer**, **SQL Server: Administrador de memoria**.  
+2.  Empiece a recopilar los contadores del monitor de rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager**, **SQL Server: Memory Manager**.  
   
 3.  Compruebe los siguientes parámetros de configuración de memoria de SQL Server:  
   

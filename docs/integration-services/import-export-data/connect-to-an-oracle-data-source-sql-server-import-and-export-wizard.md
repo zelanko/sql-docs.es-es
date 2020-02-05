@@ -10,10 +10,10 @@ ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285432"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de Oracle (Asistente para importación y exportación de SQL Server)
@@ -34,7 +34,7 @@ Después de seleccionar el **proveedor de datos de .NET Framework para Oracle** 
 
 |Información requerida|Proveedor de datos de .NET Framework de la propiedad de Oracle|
 |---|---|
-|Nombre del servidor|**Origen de datos**|
+|Nombre de servidor|**Data Source** (Origen de datos)|
 |Información de autenticación (inicio de sesión)|**Id. de usuario** y **contraseña** o **seguridad integrada**|
 
 No tiene que escribir la cadena de conexión en el campo **ConnectionString** de la lista. Después de escribir los valores individuales del nombre del servidor de Oracle (**Origen de datos**) y obtener la información de inicio de sesión, el asistente ensambla la cadena de conexión de las propiedades individuales y sus valores. 
@@ -86,14 +86,14 @@ Ejecute una de las siguientes consultas para obtener el nombre del servidor de O
 
 `SELECT host_name FROM v$instance`
 
-o Administrador de configuración de
+or
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 
 ## <a name="other-data-providers-and-more-info"></a>Otros proveedores de datos y más información
 Para obtener más información sobre cómo conectarse a Oracle con un proveedor de datos que no aparezca en esta lista, consulte [Oracle connection strings (Cadenas de conexión de Oracle)](https://www.connectionstrings.com/oracle/). En este sitio de terceros también encontrará más información sobre los proveedores de datos y los parámetros de conexión que se describen en esta página.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) (Selección de un origen de datos)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md) (Selección de un destino)
 

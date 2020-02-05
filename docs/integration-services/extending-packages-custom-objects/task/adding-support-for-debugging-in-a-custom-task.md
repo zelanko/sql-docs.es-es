@@ -22,10 +22,10 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8f09e1b7bb54e6f694469e406dbf80232569105f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287000"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Agregar compatibilidad con la depuración de una tarea personalizada
@@ -91,7 +91,7 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>Interfaz IDTSSuspend  
- La interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> define los métodos a los que llama el motor de ejecución cuando pone en pausa o reanuda la ejecución de una tarea. La interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> implementa la interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>, y la tarea personalizada invalida normalmente los métodos **Suspend** y **ResumeExecution**. Cuando el motor en tiempo de ejecución recibe un evento **OnBreakpointHit** de una tarea, llama al método **Suspend** de cada tarea en ejecución, notificando a las tareas para que se pongan en pausa. Cuando el cliente reanuda la ejecución, el motor en tiempo de ejecución llama al método **ResumeExecution** de las tareas que están suspendidas.  
+ La interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> define los métodos a los que llama el motor de ejecución cuando pone en pausa o reanuda la ejecución de una tarea. La interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> implementa la interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>, y la tarea personalizada invalida normalmente los métodos **Suspend** y **ResumeExecution**. Cuando el motor en tiempo de ejecución recibe un evento **OnBreakpointHit** de una tarea, llama al método **Suspend** de cada tarea en ejecución, notificando a las tareas para que se pongan en pausa. Cuando el cliente reanuda la ejecución, el motor en tiempo de ejecución llama al método **ResumeExecution** de las tareas que están suspendidas.  
   
  La suspensión y reanudación de la ejecución de la tarea implica poner en pausa y reanudar el subproceso de ejecución de la tarea. En código administrado, para hacer esto se utiliza la clase **ManualResetEvent** en el espacio de nombres **System.Threading** de .NET Framework.  
   

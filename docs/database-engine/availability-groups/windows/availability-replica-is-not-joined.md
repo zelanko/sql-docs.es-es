@@ -15,10 +15,10 @@ ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: da14149b9518a14fa4b7a50072ba35c0b8dcefe2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991368"
 ---
 # <a name="availability-replica-is-not-joined-to-an-always-on-availability-group"></a>La réplica de disponibilidad no se ha unido a un grupo de disponibilidad Always On
@@ -30,8 +30,8 @@ ms.locfileid: "67991368"
 |-|-|  
 |**Nombre de directiva**|Estado de unión de réplica de disponibilidad|  
 |**Problema**|La réplica de disponibilidad no está unida.|  
-|**Categoría**|**Advertencia**|  
-|**Faceta**|Réplica de disponibilidad|  
+|**Categoría**|**Warning (ADVERTENCIA)**|  
+|**Faceta**|réplica de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
  Esta directiva comprueba el estado de unión de la réplica de disponibilidad. La directiva está en mal estado cuando la réplica de disponibilidad se agrega al grupo de disponibilidad, pero no se une correctamente. De lo contrario, la directiva está en un estado correcto.  
@@ -39,7 +39,7 @@ ms.locfileid: "67991368"
 > [!NOTE]  
 >  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [La réplica de disponibilidad no está unida](https://go.microsoft.com/fwlink/p/?LinkId=220859) en TechNet Wiki.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  La réplica secundaria no se ha unido al grupo de disponibilidad. Para que una réplica de disponibilidad se una correctamente al grupo de disponibilidad, el estado de la unión debe ser Instancia independiente unida (1) o Clúster de conmutación por error unido (2).  
   
 ## <a name="possible-solution"></a>Solución posible  

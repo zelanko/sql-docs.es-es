@@ -20,10 +20,10 @@ ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314525"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
@@ -54,7 +54,7 @@ Una variable de tipo
 + **nchar**
 + **nvarchar**
 
-o Administrador de configuración de
+or
 
 + **varchar**
 
@@ -78,10 +78,10 @@ Los datos que se usaron como base para la generación del autenticador. *autenti
 @authenticator  
 Una variable que contiene los datos que se usaron como base para la generación de los autenticadores. *\@authenticator* tiene un tipo de datos **sysname**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **varbinary**, con un tamaño máximo de 8 000 bytes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `DECRYPTBYPASSPHRASE` no requiere permisos para su ejecución. `DECRYPTBYPASSPHRASE` devuelve NULL si se recibe la frase de contraseña o información de autenticador erróneas.  
   
 `DECRYPTBYPASSPHRASE` usa la frase de contraseña para generar una clave de descifrado. Esta clave de descifrado no se conservará.  

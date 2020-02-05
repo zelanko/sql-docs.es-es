@@ -11,10 +11,10 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 77fba513e72982920c399002555e5b96745e8492
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822190"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn
@@ -30,13 +30,13 @@ Antes de empezar, revise la siguiente información importante:
   
 - [Actualizaciones de ediciones y versiones admitidas](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): compruebe que puede actualizar a SQL Server 2016 desde su versión del sistema operativo Windows y la versión de SQL Server. Por ejemplo, no puede actualizar directamente desde una instancia de SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-- [Elegir un método de actualización del motor de base de datos:](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) seleccione el método y los pasos de actualización adecuados en función de la revisión de versiones admitidas y actualizaciones de ediciones, y también teniendo en cuenta otros componentes instalados en el entorno con el fin de actualizar los componentes en el orden correcto.  
+- [Elegir un método de actualización del motor de base de datos](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): seleccione el método y los pasos de actualización adecuados en función de la revisión de versiones admitidas y actualizaciones de ediciones, y también teniendo en cuenta otros componentes instalados en el entorno con el fin de actualizar los componentes en el orden correcto.  
   
-- [Planeación y prueba del plan de actualización del motor de base de datos](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, así como la lista de comprobación previa a la actualización, y desarrolle y pruebe el plan de actualización.  
+- [Planear y probar el plan de actualización del motor de base de datos](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, la lista de comprobación previa a la actualización, y desarrolle y pruebe el plan de actualización.  
   
-- [Requisitos de hardware y software para instalar SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
+- [Requisitos de hardware y software para instalar SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
 
-- [Compruebe si se usa la replicación o captura de datos modificados para las bases de datos del grupo de disponibilidad](#special-steps-for-change-data-capture-or-replication): si alguna de las bases de datos en el grupo de disponibilidad se habilita para la captura de datos modificados (CDC), complete estas [instrucciones](#special-steps-for-change-data-capture-or-replication).
+- [Actualización de instancias de la réplica del grupo de disponibilidad Always On](#special-steps-for-change-data-capture-or-replication): si hay bases de datos en el AG habilitadas para la captura de datos modificados (CDC), complete estas [instrucciones](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
 >No se admiten versiones mezcladas de instancias de SQL Server en el mismo grupo de disponibilidad fuera de una actualización gradual y no deben existir en dicho estado durante períodos de tiempo prolongados, ya que la actualización debe realizarse rápidamente. La otra opción para actualizar SQL Server 2016 y versiones posteriores es mediante el uso de un grupo de disponibilidad distribuido.
@@ -202,7 +202,7 @@ Para realizar una actualización gradual de un grupo de disponibilidad distribui
 
 >[!IMPORTANT]
 >- Compruebe la sincronización entre cada paso. Antes de continuar con el siguiente paso, confirme que las réplicas de confirmación sincrónica estén sincronizadas con el grupo de disponibilidad y que la principal global esté sincronizada con el reenviador del grupo de disponibilidad distribuido. 
->- **Recomendación:** Cada vez que compruebe la sincronización, actualice tanto el nodo de la base de datos como el nodo del grupo de disponibilidad distribuido en SQL Server Management Studio. Una vez que todo esté sincronizado, guarde una captura de pantalla de los estados de las réplicas. De este modo, podrá realizar el seguimiento del paso en el que está, proporcionar pruebas de que todo funcionaba correctamente antes de avanzar al siguiente paso y solucionar problemas, en caso de que haya algún error. 
+>- **Recomendación**: Cada vez que compruebe la sincronización, actualice tanto el nodo de la base de datos como el nodo del grupo de disponibilidad distribuido en SQL Server Management Studio. Una vez que todo esté sincronizado, guarde una captura de pantalla de los estados de las réplicas. De este modo, podrá realizar el seguimiento del paso en el que está, proporcionar pruebas de que todo funcionaba correctamente antes de avanzar al siguiente paso y solucionar problemas, en caso de que haya algún error. 
 
 
 ### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>Ejemplo de diagrama de una actualización gradual de un grupo de disponibilidad distribuido

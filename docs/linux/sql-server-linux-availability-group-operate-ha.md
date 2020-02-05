@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67916040"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Manejo de grupos de disponibilidad Always On en Linux
@@ -76,13 +76,13 @@ Antes de comenzar, realice una copia de seguridad de cada base de datos.
 
    Si el tipo de clúster del grupo de disponibilidad es `NONE`, realice una conmutación por error manual. Realice los pasos siguientes en el orden indicado:
 
-      A. El comando siguiente establece la réplica principal en secundaria. Reemplace `AG1` por el nombre del grupo de disponibilidad. Ejecute el comando de Transact-SQL en la instancia de SQL Server que hospeda la réplica principal.
+      a. El comando siguiente establece la réplica principal en secundaria. Reemplace `AG1` por el nombre del grupo de disponibilidad. Ejecute el comando de Transact-SQL en la instancia de SQL Server que hospeda la réplica principal.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. El comando siguiente establece una réplica secundaria sincrónica en principal. Ejecute el siguiente comando de Transact-SQL en la instancia de destino de SQL Server (la instancia que hospeda la réplica secundaria sincrónica).
+      b. El comando siguiente establece una réplica secundaria sincrónica en principal. Ejecute el siguiente comando de Transact-SQL en la instancia de destino de SQL Server (la instancia que hospeda la réplica secundaria sincrónica).
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
@@ -140,4 +140,4 @@ Para eliminar un grupo de disponibilidad, ejecute [DROP AVAILABILITY GROUP](../t
 
 [Configuración de clústeres de SLES para grupos de disponibilidad de SQL Server](sql-server-linux-availability-group-cluster-sles.md)
 
-[Configuración del clúster de Ubuntu y recursos del grupo de disponibilidad](sql-server-linux-availability-group-cluster-ubuntu.md)
+[Configurar el clúster de Ubuntu para recursos de clúster del grupo de disponibilidad de SQL Server](sql-server-linux-availability-group-cluster-ubuntu.md)

@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f9e0f46e098ec0944577738332a38e08384a2579
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121771"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Operadores de conjuntos: EXCEPT e INTERSECT (Transact-SQL)
@@ -69,7 +69,7 @@ Devuelve todos los valores distintos de la consulta del lado izquierdo del opera
 INTERSECT  
 Devuelve los valores distintos devueltos por las consultas situadas a los lados izquierdo y derecho del operador INTERSECT.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Los tipos de datos de las columnas comparables los devuelven las consultas de los lados izquierdo y derecho de los operadores EXCEPT o INTERSECT. Estos tipos de datos pueden incluir tipos de datos de caracteres con intercalaciones diferentes. Cuando lo hacen, la comparación requerida se ejecuta según las reglas de [prioridad de intercalación](../../t-sql/statements/collation-precedence-transact-sql.md). Si no puede ejecutar esta conversión, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] devuelve un error.  
   
 Cuando se comparan los valores de columna para determinar filas DISTINCT, dos valores NULL se consideran equivalentes.  

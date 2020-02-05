@@ -12,10 +12,10 @@ ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 68829d55be0b080e9b4beb9d7b284e3f57a46581
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305908"
 ---
 # <a name="mssqlserver_10507"></a>MSSQLSERVER_10507
@@ -25,9 +25,9 @@ ms.locfileid: "72305908"
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|10507|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|10507|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|PG_STMT_DOES_NOT_MATCH|  
 |Texto del mensaje|No se puede crear la guía de plan "%.\*ls" porque la instrucción que especifican **\@stmt** y **\@module_or_batch**, o **\@plan_handle** y **\@statement_start_offset**, no coincide con ninguna instrucción del módulo o lote especificado. Modifique los valores para que coincidan con una instrucción del módulo o lote.|  

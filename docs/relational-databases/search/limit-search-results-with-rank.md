@@ -19,10 +19,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132275"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitar los resultados de la búsqueda con RANK
@@ -38,7 +38,7 @@ ms.locfileid: "68132275"
   
 ##  <a name="examples"></a> Ejemplos del uso de RANK para limitar los resultados de la búsqueda  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Ejemplo A: búsqueda de solo las tres primeras coincidencias  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Ejemplo A: buscar solo las tres primeras coincidencias  
  En el ejemplo siguiente se usa CONTAINSTABLE para devolver las tres primeras coincidencias.  
   
 ```  
@@ -69,7 +69,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Ejemplo B: búsqueda de solo las diez primeras coincidencias  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Ejemplo B: buscar las diez primeras coincidencias  
  En el ejemplo siguiente se usa CONTAINSTABLE para devolver la descripción de los 5 productos más destacados, donde la columna `Description` contiene la palabra “aluminum” cerca de la palabra “light” o de la palabra “lightweight”.  
   
 ```  
@@ -142,7 +142,7 @@ GO
 ### <a name="rank-computation-issues"></a>Problemas de cálculo de rango  
  El proceso de cálculo de rango depende de varios factores.  Los separadores de palabras de cada uno de los idiomas acortan el texto de forma distinta. Por ejemplo, un separador de palabras podría separar la cadena "dog-house" en "dog" "house" y otro en "dog-house". Por este motivo, las coincidencias y las categorías variarán en función del idioma especificado, ya que no solo son distintas las palabras sino también la longitud del documento. La diferencia de longitud del documento puede afectar a las categorías de todas las consultas.  
   
- Las estadísticas como **IndexRowCount** pueden variar enormemente. Por ejemplo, si un catálogo tiene 2.000 millones de filas en el índice maestro, un nuevo documento se indizará en un índice intermedio de la memoria y los rangos de dicho documento basados en el número de documentos en el índice almacenado en la memoria podrían desviarse de los rangos de los documentos del índice maestro. Por este motivo, tras realizar un llenado que dé como resultado la indización o reindización de un gran número de filas, se recomienda mezclar los índices en un índice maestro mediante la instrucción ALTER FULLTEXT CATALOG ... REORGANIZE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El motor de búsqueda de texto completo también mezclará automáticamente los índices basándose en parámetros como el número y el tamaño de los índices intermedios.  
+ Las estadísticas como **IndexRowCount** pueden variar enormemente. Por ejemplo, si un catálogo tiene 2.000 millones de filas en el índice maestro, un nuevo documento se indizará en un índice intermedio de la memoria y los rangos de dicho documento basados en el número de documentos en el índice almacenado en la memoria podrían desviarse de los rangos de los documentos del índice maestro. Por este motivo, tras realizar un llenado que dé como resultado la indización o reindización de un gran número de filas, se recomienda mezclar los índices en un índice maestro mediante la instrucción ALTER FULLTEXT CATALOG ... REORGANIZE de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El motor de búsqueda de texto completo también mezclará automáticamente los índices basándose en parámetros como el número y el tamaño de los índices intermedios.  
   
  Los valores de**MaxOccurrence** se normalizan en 1 de 32 intervalos. Esto significa que, por ejemplo, un documento de 50 palabras se trata igual que un documento de 100 palabras. A continuación se muestra la tabla utilizada para la normalización. Como las longitudes de los documentos se encuentran en el intervalo entre los valores de tabla adyacentes 32 y 128, en la práctica se considera que tienen la misma longitud, 128 (32 < **docLength** <= 128).  
   

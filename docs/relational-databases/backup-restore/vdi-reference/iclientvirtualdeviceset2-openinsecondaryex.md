@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: cd89359ecbcc920fe03ed4b2bc7d90fd01592476
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847566"
 ---
 # <a name="iclientvirtualdeviceset2openinsecondaryex-vdi"></a>IClientVirtualDeviceSet2::OpenInSecondaryEx (VDI)
@@ -45,7 +45,7 @@ HRESULT IClientVirtualDeviceSet2::OpenInSecondaryEx (
 | VD_E_PROTOCOL | No se ha abierto el conjunto de dispositivos virtuales o no está listo para aceptar solicitudes abiertas de clientes secundarios. |
 | VD_E_ABORT | La operación se va a anular. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Cuando se usa un modelo de varios procesos, el cliente principal es responsable de detectar la finalización normal y anómala de los clientes secundarios.
 

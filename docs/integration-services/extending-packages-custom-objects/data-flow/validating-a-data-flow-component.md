@@ -22,10 +22,10 @@ ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5ad9f44e88f92242e516001457d15ba1d93ad9ce
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287385"
 ---
 # <a name="validating-a-data-flow-component"></a>Validar un componente de flujo de datos
@@ -112,7 +112,7 @@ End Function
 ```  
   
 ## <a name="reinitializemetadata-method"></a>Método ReinitializeMetaData  
- El Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> siempre que se edita un componente que devuelve <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> desde su método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>. Los componentes deben contener código que detecte y corrija los problemas identificados por el componente durante la validación.  
+ El Diseñador <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> llama al método [!INCLUDE[ssIS](../../../includes/ssis-md.md)] siempre que se edita un componente que devuelve <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> desde su método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>. Los componentes deben contener código que detecte y corrija los problemas identificados por el componente durante la validación.  
   
  En el ejemplo siguiente se muestra un componente que detecta problemas durante la validación y los corrige en el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A>.  
   

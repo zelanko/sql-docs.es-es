@@ -35,10 +35,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981921"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
@@ -48,7 +48,7 @@ Termina un proceso de usuario basado en el identificador de sesión o la unidad 
   
 KILL termina una conexión normal, que detiene internamente las transacciones asociadas al identificador de sesión especificado. A veces, podría estar en uso el Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC). Si MS DTC está en uso, también puede utilizar la instrucción para terminar transacciones distribuidas huérfanas y dudosas.  
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -87,7 +87,7 @@ Use KILL _UOW_ para detener transacciones distribuidas huérfanas. Estas transac
 WITH STATUSONLY  
 Genera un informe de progreso sobre un argumento _session ID_ o _UOW_ especificado que se está revirtiendo a causa de una instrucción KILL anterior. KILL WITH STATUSONLY no termina el argumento _session ID_ o _UOW_ ni lo revierte. El comando solo muestra el progreso actual de la reversión.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 KILL se utiliza normalmente para terminar un proceso que está bloqueando otros procesos importantes mediante bloqueos. KILL también se puede usar para detener un proceso que está ejecutando una consulta que usa los recursos necesarios del sistema. Los procesos del sistema y los procesos que ejecutan un procedimiento almacenado extendido no se pueden terminar.  
   
 Use KILL con cuidado, especialmente cuando se estén ejecutando procesos críticos. No puede eliminar sus propios procesos. Tampoco debe eliminar los siguientes procesos:  

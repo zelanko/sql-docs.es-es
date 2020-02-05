@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532472"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Copia de seguridad y restauración de bases de datos con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -72,8 +72,8 @@ Después de hacer clic en **Copia de seguridad**, desaparecerá el cuadro de di�
 
 5. Escriba **TutorialDB_Restored** en el campo **Base de datos de destino** de la sección **Destino** para restaurar el archivo de copia de seguridad en una nueva base de datos. Después, seleccione **Restaurar**.
 
-   ![restaurar](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![Restauración](./media/tutorial-backup-restore-sql-server/restore.png)
 
 6. Para ver el estado de la operación de restauración, presione **CTRL+T** para abrir el **Historial de tareas**.
 
-   ![restaurar](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![Restauración](./media/tutorial-backup-restore-sql-server/task-history-restore.png)

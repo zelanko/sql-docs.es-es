@@ -26,10 +26,10 @@ ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 46a6f7c08b540b6180326350a6e0aadb933a7ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121814"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
@@ -54,7 +54,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
  @*savepoint_variable*  
  Es el nombre de una variable definida por el usuario que contiene un nombre de punto de retorno válido. La variable debe declararse con un tipo de datos **char**, **varchar**, **nchar** o **nvarchar**. Es posible pasar más de 32 caracteres a la variable, aunque solo se utilizarán los primeros 32.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Un usuario puede establecer un punto de retorno, o marcador, dentro de una transacción. El punto de retorno define una ubicación a la que la transacción puede volver si se cancela parte de la transacción de forma condicional. Si se revierte una transacción hasta un punto de retorno, se debe continuar hasta su finalización con más instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] si es necesario y una instrucción COMMIT TRANSACTION o se debe cancelar completamente al revertir la transacción hasta su inicio. Para cancelar una transacción completa, use el formato ROLLBACK TRANSACTION *transaction_name*. Se deshacen todas las instrucciones o procedimientos de la transacción.  
   
  En una transacción se permiten nombres de puntos de retorno duplicados, pero una instrucción ROLLBACK TRANSACTION que especifique el nombre de un punto de retorno solo revertirá la transacción hasta la instrucción SAVE TRANSACTION más reciente que también utilice ese nombre.  

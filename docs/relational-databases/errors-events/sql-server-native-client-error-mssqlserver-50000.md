@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5a8335493cad5325d8433305a8a5d7968765cc39
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73757541"
 ---
 # <a name="sql-server-native-client-error-mssqlserver_50000"></a>Error de SQL Server Native Client MSSQLSERVER_50000
@@ -28,10 +28,10 @@ ms.locfileid: "73757541"
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
+|Nombre de producto|SQL Server|  
 |Versión del producto|11.0|  
-|Identificador del evento|50000|  
-|Origen del evento|SETUP|  
+|Id. de evento|50000|  
+|Origen de eventos|SETUP|  
 |Componente|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|  
 |Nombre simbólico||  
 |Texto del mensaje|Error de red al intentar leer el archivo '%.*ls'.|  

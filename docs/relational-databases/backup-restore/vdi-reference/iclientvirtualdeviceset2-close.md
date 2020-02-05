@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 5f87b375773b9c81b29b3b5cac11ea97121c45df
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847386"
 ---
 # <a name="iclientvirtualdeviceset2close-vdi"></a>IClientVirtualDeviceSet2::Close (VDI)
@@ -36,7 +36,7 @@ HRESULT IClientVirtualDeviceSet2::Close ();
 | VD_E_PROTOCOL | No se realizó ninguna acción porque el conjunto de dispositivos virtuales no estaba abierto. |
 | VD_E_OPEN | Los dispositivos aún estaban abiertos. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La invocación de Close es una declaración por parte del cliente de que se deben liberar todos los recursos usados por el conjunto de dispositivos virtuales. El cliente debe asegurarse de que toda actividad que implique búferes de datos y dispositivos virtuales haya finalizado antes de invocar Close. Todas las interfaces de dispositivo virtual devueltas por OpenDevice se invalidan con Close.
 

@@ -13,10 +13,10 @@ ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 30b70c57d90f7772368713ac378c809a3dd7c46e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117197"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREAR ÍNDICE XML SELECTIVO (Transact-SQL)
@@ -111,13 +111,13 @@ identifier
  *xml_column_name*  
  Es el nombre de la columna XML que contiene las rutas de acceso que se van a indizar.  
   
- [WITH XMLNAMESPACES **(** \<lista_de_espacios_de _nombres_xml> **)** ] Es la lista de espacios de nombres usados por las rutas de acceso al índice. Para obtener información sobre la sintaxis de la cláusula WITH XMLNAMESPACES, vea [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(** \<lista_de_espacios_de _nombres_xml> **)** ] Es la lista de espacios de nombres usados por las rutas de acceso al índice. Para saber más sobre la sintaxis de la cláusula WITH XMLNAMESPACES, vea [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
  FOR **(** \<lista_de_rutas_de_acceso_de_nodos_promocionados> **)** Es la lista de rutas de acceso que se va a indexar con sugerencias opcionales de optimización. Para obtener información sobre las rutas de acceso y las sugerencias de optimización que se pueden especificar en la instrucción CREATE o ALTER, vea [Especificación de rutas de acceso y sugerencias de optimización para índices XML selectivos](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
  WITH *\<opciones_de_índice>* Para obtener información sobre las opciones de índice, vea [CREATE XML INDEX &#40;índices XML selectivos&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  Cree un índice XML selectivo en lugar de un índice XML normal en la mayoría de los casos para mejorar el rendimiento y lograr un almacenamiento más eficiente. Sin embargo, no se recomienda usar un índice XML selectivo cuando alguna de las condiciones siguientes sea verdadera:  
   
 -   Necesita asignar un gran número de rutas de acceso del nodo.  

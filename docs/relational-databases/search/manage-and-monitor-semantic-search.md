@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c5e5c8256c117ebd3fbb57b5a7c291b539c5a428
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132252"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Administrar y supervisar la búsqueda semántica
@@ -85,7 +85,7 @@ GO
   
  Dado que la indización semántica depende de la indización de texto completo, los índices semánticos solo se rellenan cuando lo hacen los índices de texto completo.  
   
- **Ejemplo: inicio del rellenado completo de los índices de texto completo y semántico**  
+ **Ejemplo: iniciar el rellenado completo de los índices de texto completo y semántico**  
   
  En el siguiente ejemplo se inicia el rellenado completo de los índices de texto completo y los índices semánticos modificando un índice de texto completo existente en la tabla **Production.Document** de la base de datos de ejemplo AdventureWorks2012.  
   
@@ -133,7 +133,7 @@ GO
 2.  **Fase 2**. Después se rellena el índice semántico de similitud de documentos. Este índice depende de los dos índices que se rellenaron en la fase anterior.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> Problema: Los índices semánticos no se rellenan  
+##  <a name="ProblemNotPopulated"></a> Problema: los índices semánticos no se rellenan  
 ### <a name="are-the-associated-full-text-indexes-populated"></a>¿Se rellenan los índices de texto completo asociados?  
  Dado que la indización semántica depende de la indización de texto completo, los índices semánticos solo se rellenan cuando lo hacen los índices de texto completo.  
   

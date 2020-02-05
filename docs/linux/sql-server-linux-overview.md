@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.openlocfilehash: 31904a43dba642c73620a66bcf4abaa066b5ef82
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73531278"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server en Linux
@@ -44,7 +44,7 @@ SQL Server 2019 se ejecuta en Linux. Es el mismo motor de base de datos de SQL 
 
 ## <a name="install"></a>Instalar
 
-Para empezar, instale SQL Server en Linux mediante uno de los siguientes inicios rápidos:
+Para empezar, instale SQL Server en Linux mediante uno de los siguientes inicios rápidos:
 
 - [Instalación en Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Instalación en SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

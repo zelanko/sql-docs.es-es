@@ -14,10 +14,10 @@ ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a181919a40ce2e53c9fef9887f5c7ec6ff93fc5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130848"
 ---
 # <a name="sql-server-plan-cache-object"></a>Plan Cache (objeto de SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68130848"
 |Contadores de Plan Cache de SQL Server|Descripción|  
 |------------------------------------|-----------------|  
 |**Frecuencia de aciertos de caché**|Proporción entre los aciertos de caché y las búsquedas.|  
-|**Base de frecuencia de aciertos de caché**|Exclusivamente para uso interno.| 
+|**Base de frecuencia de aciertos de caché**|Solo para uso interno.| 
 |**Recuentos de objetos de caché**|Número de objetos de caché que hay en la caché.|  
 |**Páginas de caché**|Número de páginas de 8 KB utilizadas por los objetos de caché.|  
 |**Objetos de caché en uso**|Número de objetos de caché que se están utilizando.|  

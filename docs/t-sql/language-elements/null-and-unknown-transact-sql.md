@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3dba918d0993426111a71785223d0fedd0aba0be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091780"
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL y UNKNOWN (Transact-SQL)
@@ -40,17 +40,17 @@ ms.locfileid: "68091780"
   
 |Expresión 1|Expresión 2|Resultado|  
 |---------------|---------------|------------|  
-|TRUE|UNKNOWN|UNKNOWN|  
-|UNKNOWN|UNKNOWN|UNKNOWN|  
-|FALSE|UNKNOWN|FALSE|  
+|TRUE|DESCONOCIDO|DESCONOCIDO|  
+|DESCONOCIDO|DESCONOCIDO|DESCONOCIDO|  
+|FALSE|DESCONOCIDO|FALSE|  
   
  En la tabla siguiente se muestra el resultado de aplicar un operador OR a dos expresiones booleanas donde una devuelve UNKNOWN.  
   
 |Expresión 1|Expresión 2|Resultado|  
 |---------------|---------------|------------|  
-|TRUE|UNKNOWN|TRUE|  
-|UNKNOWN|UNKNOWN|UNKNOWN|  
-|FALSE|UNKNOWN|UNKNOWN|  
+|TRUE|DESCONOCIDO|TRUE|  
+|DESCONOCIDO|DESCONOCIDO|DESCONOCIDO|  
+|FALSE|DESCONOCIDO|DESCONOCIDO|  
   
 ## <a name="see-also"></a>Consulte también  
  [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md)   

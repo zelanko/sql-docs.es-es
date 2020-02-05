@@ -11,10 +11,10 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b380b56611e72bfd6b0c249792843a6a684813b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283326"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lección 3-2: Ejecutar el Asistente para instalar paquetes
@@ -57,7 +57,7 @@ En una lección anterior, modificó los paquetes del tutorial para utilizar conf
     > [!IMPORTANT]  
     > En el valor de las variables de entorno que utilizan las configuraciones se hace referencia a este nombre. El nombre de la carpeta y la referencia deben coincidir o el paquete no se ejecutará.  
   
-12. Haga clic en **Aceptar**.  
+12. Haga clic en **OK**.  
   
 13. En la página Seleccionar la carpeta de instalación, compruebe que el cuadro Carpeta contiene **C:\DeploymentTutorialInstall** y luego haga clic en **Siguiente**.  
   
@@ -69,14 +69,14 @@ En una lección anterior, modificó los paquetes del tutorial para utilizar conf
   
 16. En la lista **Archivo de configuración** , haga clic en **datatransferconfig.dtsconfig**, expanda Propiedad en la columna **Ruta de acceso** del cuadro **Configuraciones** y actualice la columna **Valor** con los siguientes valores:  
   
-    |Propiedad|Valor|Valor actualizado|  
+    |Propiedad|Value|Valor actualizado|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. En la lista **Archivo de configuración** , haga clic en loadxmldataconfig.dtsconfig, expanda Propiedad en la columna **Ruta de acceso** del cuadro **Configuraciones** y actualice la columna **Valor** con los siguientes valores:  
   
-    |Propiedad|Valor|Valor actualizado|  
+    |Propiedad|Value|Valor actualizado|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
@@ -89,7 +89,7 @@ En una lección anterior, modificó los paquetes del tutorial para utilizar conf
   
     -   Error al cargar al menos una de las entradas de configuración en el paquete. Compruebe las entradas de configuración y las advertencias anteriores para ver una descripción de los errores de configuración.  
   
-    -   El archivo de configuración: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig no es válido. Compruebe el nombre del archivo de configuración.  
+    -   El archivo de configuración: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig” no es válido. Compruebe el nombre del archivo de configuración.  
   
     -   Error al cargar al menos una de las entradas de configuración en el paquete. Compruebe las entradas de configuración y las advertencias anteriores para ver una descripción de los errores de configuración.  
   
@@ -103,7 +103,7 @@ En una lección anterior, modificó los paquetes del tutorial para utilizar conf
     > Se crea un archivo de registro temporal para utilizarlo en la validación de paquetes. Este archivo no se usa cuando se ejecuta el paquete.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 3: Prueba de los paquetes implementados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+[Paso 3: Probar los paquetes implementados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="see-also"></a>Consulte también  
 [Servicio Integration Services &#40;servicio SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)  

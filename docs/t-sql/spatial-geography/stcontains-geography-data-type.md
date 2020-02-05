@@ -15,10 +15,10 @@ ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c5947d1793b39a0bf6aba9729b9f4b1ca7305fab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042463"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (tipo de datos geography)
@@ -37,12 +37,12 @@ ms.locfileid: "68042463"
  *other_geography*  
  Es otra instancia de **geography** con la que se compara la instancia en la que se invoca `STContains()`.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Devuelve 1 si la instancia de **geography** que hace la llamada contiene espacialmente a la instancia de **geography** que se pasa al método, y devuelve 0 si no lo hace. Devuelve **null** si el SRID de las dos instancias de **geography** no coincide.  
   
 ## <a name="examples"></a>Ejemplos  

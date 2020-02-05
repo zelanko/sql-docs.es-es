@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 39d90da404fd6bc230a3308c76b48fdc26da2b8f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595820"
 ---
 # <a name="rotate-enclave-enabled-keys"></a>Rotación de claves habilitadas para el enclave
@@ -34,16 +34,16 @@ Los siguientes pasos generales incluyen vínculos a artículos detallados, en fu
     - Para aprovisionar una nueva clave habilitada para el enclave, consulte [Aprovisionar claves habilitadas para el enclave](always-encrypted-enclaves-provision-keys.md).
     - Para aprovisionar una clave que no está habilitada para el enclave, consulte [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md) y [Aprovisionamiento de claves de Always Encrypted con PowerShell](configure-always-encrypted-keys-using-powershell.md).
 2. Reemplace una clave existente por la nueva clave.
-    - Si está rotando una clave de cifrado de columna y tanto la clave de origen como la clave de destino están habilitadas para el enclave, puede ejecutar la rotación (que implica volver a cifrar los datos) en contexto. Consulte [Configuración del cifrado de columna en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md).
+    - Si está rotando una clave de cifrado de columna y tanto la clave de origen como la clave de destino están habilitadas para el enclave, puede ejecutar la rotación (que implica volver a cifrar los datos) en contexto. Vea [Configuración del cifrado de columnas en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md).
     - Si desea ver los pasos detallados para rotar claves, consulte [Rotación de claves de Always Encrypted mediante SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md) y [Rotación de claves de Always Encrypted con de PowerShell](rotate-always-encrypted-keys-using-powershell.md).
 
     
-## <a name="next-steps"></a>Next Steps
-- [Consulta de columnas mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-query-columns.md)
-- [Configuración del cifrado de columna en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md)
-- [Uso de Always Encrypted con enclaves seguros para las columnas cifradas existentes](always-encrypted-enclaves-enable-for-encrypted-columns.md)
+## <a name="next-steps"></a>Pasos siguientes
+- [Consulta de columnas mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-query-columns.md)
+- [Configuración del cifrado de columna en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md)
+- [Uso de Always Encrypted con enclaves seguros para las columnas cifradas existentes](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Desarrollo de aplicaciones mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-client-development.md)  
 
 ## <a name="see-also"></a>Consulte también  
-- [Administración de claves para Always Encrypted con enclaves seguros](always-encrypted-enclaves-manage-keys.md)
+- [Administración de claves para Always Encrypted con enclaves seguros](always-encrypted-enclaves-manage-keys.md)
 

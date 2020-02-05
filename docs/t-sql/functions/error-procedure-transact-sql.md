@@ -25,13 +25,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75e3664517ac0ce66f2a56499286303df81513ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094682"
 ---
-# <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
+# <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Esta función devuelve el nombre del procedimiento almacenado o del desencadenador en el que se produce un error, si ese error ha causado la ejecución de un bloque CATCH de una construcción TRY…CATCH.  
@@ -44,7 +44,7 @@ Esta función devuelve el nombre del procedimiento almacenado o del desencadenad
 ERROR_PROCEDURE ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **nvarchar(128)**  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -54,14 +54,14 @@ Cuando se le llama en un bloque CATCH, `ERROR_PROCEDURE` devuelve el nombre del 
   
 `ERROR_PROCEDURE` devuelve NULL si se llama desde fuera del ámbito de un bloque CATCH.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `ERROR_PROCEDURE` admite llamadas en cualquier lugar del ámbito de un bloque CATCH.  
   
 `ERROR_PROCEDURE` devuelve el nombre del procedimiento almacenado o desencadenador en el que se produce un error, con independencia de cuántas veces se ejecute o de dónde se ejecute dentro del ámbito del bloque `CATCH`. Esto contrasta con funciones como @@ERROR, que solo devuelve un número de error en la instrucción inmediatamente posterior a la que produjo el error.  
    
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
-### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. Utilizar ERROR_PROCEDURE en un bloque CATCH  
+### <a name="a-using-error_procedure-in-a-catch-block"></a>A. Utilizar ERROR_PROCEDURE en un bloque CATCH  
 En este ejemplo se muestra un procedimiento almacenado que genera un error de división por cero. `ERROR_PROCEDURE` devuelve el nombre del procedimiento almacenado en el que se produjo el error.  
   
 ```  
@@ -98,7 +98,7 @@ usp_ExampleProc
 
 ```  
   
-### <a name="b-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilizar ERROR_PROCEDURE en un bloque CATCH con otras herramientas de control de errores  
+### <a name="b-using-error_procedure-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilizar ERROR_PROCEDURE en un bloque CATCH con otras herramientas de control de errores  
 En este ejemplo se muestra un procedimiento almacenado que genera un error de división por cero. Junto con el nombre del procedimiento almacenado en el que se produjo el error, el procedimiento almacenado devuelve información sobre el error.  
   
 ```  

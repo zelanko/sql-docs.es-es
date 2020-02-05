@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2cbb9f2dc30ab02f77fafadf39d8c1c6426de708
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095759"
 ---
 # <a name="include-null-values-in-json---include_null_values-option"></a>Inclusión de valores Null en JSON - Opción INCLUDE_NULL_VALUES
@@ -35,7 +35,7 @@ ms.locfileid: "74095759"
   
  Este es otro ejemplo de una cláusula **FOR JSON** con la opción **INCLUDE_NULL_VALUES** .  
   
- **Consulta**  
+ **Consultar**  
   
 ```sql  
 SELECT name, surname  

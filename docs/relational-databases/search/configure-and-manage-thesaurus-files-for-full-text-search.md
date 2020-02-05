@@ -15,10 +15,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056200"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar y administrar archivos de sinónimos para búsquedas de texto completo
@@ -115,7 +115,7 @@ Un archivo de sinónimos vacío típico contiene el texto XML siguiente:
 </XML>  
 ```
 
-### <a name="expansion"></a> Estructura XML de un conjunto de expansión  
+### <a name="expansion"></a> XML structure of an expansion set  
   
  Cada conjunto de expansión está delimitado por un elemento `<expansion>`. Dentro de este elemento, se especifican una o varias sustituciones en un elemento `<sub>`. En el conjunto de expansión, puede especificar un grupo de sustituciones que sean sinónimas.  
   
@@ -131,7 +131,7 @@ Esta es la apariencia que tendrá la sección del conjunto de expansión en el c
 </expansion>  
 ```  
   
-### <a name="replacement"></a> Estructura XML de un conjunto de reemplazo  
+### <a name="replacement"></a> XML structure of a replacement set  
   
 Cada conjunto de reemplazo está delimitado por un elemento `<replacement>`. Dentro de este elemento, se pueden especificar uno o varios modelos en un elemento `<pat>` y cero o más sustituciones en elementos `<sub>`, una por cada sinónimo. Puede especificar un patrón para que sea reemplazado por un conjunto de sustitución. Los patrones y las sustituciones pueden contener una palabra o una secuencia de palabras. Si no se especifica ninguna sustitución para un modelo, se quita el modelo de la consulta del usuario.  
   
@@ -170,7 +170,7 @@ y
   
 La configuración de signos diacríticos de un diccionario de sinónimos se especifica en un único elemento `<diacritics_sensitive>`. Este elemento contiene un valor entero que controla la distinción de acentos, de la forma siguiente:  
   
-|Configuración de signos diacríticos|Valor|XML|  
+|Configuración de signos diacríticos|Value|XML|  
 |------------------------|-----------|---------|  
 |no distinguen acentos|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
 |distinguen acentos|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  

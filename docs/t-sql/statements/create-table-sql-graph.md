@@ -33,10 +33,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846721"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
@@ -122,7 +122,7 @@ En este documento solo se enumeran los argumentos pertenecientes a SQL Graph. Pa
  ON {esquema_de_partición | grupo_de_archivos | "default"}    
  También se puede especificar en una restricción PRIMARY KEY o UNIQUE. Estas restricciones crean índices. Si se especifica grupo_de_archivos, el índice se almacena en el grupo de archivos con nombre. Si se especifica "default", o bien si ON no se especifica en ninguna parte, el índice se almacena en el mismo grupo de archivos que la tabla. Si la restricción PRIMARY KEY o UNIQUE crea un índice clúster, las páginas de datos de la tabla se almacenan en el mismo grupo de archivos que el índice. Si se especifica CLUSTERED o la restricción crea un índice agrupado, y se especifica un valor esquema_de_partición distinto del valor esquema_de_partición o grupo_de_archivos de la definición de tabla, o viceversa, únicamente se respeta la definición de restricción y se omite el resto.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 No se admite la creación de una tabla temporal como una tabla de nodo o perimetral.  
 
 No se admite la creación de una tabla de nodo o perimetral como una tabla temporal.

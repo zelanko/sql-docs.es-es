@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68823115"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Copia de seguridad y restauración de bases de datos de SQL Server en Linux
@@ -22,7 +22,7 @@ ms.locfileid: "68823115"
 
 Puede realizar copias de seguridad de bases de datos de SQL Server 2017 en Linux con muchas opciones diferentes. En un servidor Linux, puede usar **sqlcmd** para conectarse a SQL Server y realizar copias de seguridad. En Windows, puede conectarse a SQL Server en Linux y realizar copias de seguridad con la interfaz de usuario. La funcionalidad de copia de seguridad es la misma en todas las plataformas. Por ejemplo, puede realizar copias de seguridad de bases de datos localmente, en unidades remotas o en el [servicio de almacenamiento Microsoft Azure Blob](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
-## <a name="backup-a-database"></a>Realización de una copia de seguridad de una base de datos
+## <a name="backup-a-database"></a>Realizar una copia de seguridad de una base de datos
 
 En el ejemplo siguiente, **sqlcmd** se conecta a la instancia local de SQL Server y realiza una copia de seguridad completa de una base de datos de usuario denominada `demodb`.
 
@@ -103,11 +103,11 @@ Los siguientes pasos le guían durante la restauración de una base de datos con
 
 1. Busque el archivo de copia de seguridad de base de datos y haga clic en **Aceptar**. 
 
-1. En **Plan de restauración**, compruebe el archivo de copia de seguridad y la configuración. Haga clic en **Aceptar**. 
+1. En **Plan de restauración**, compruebe el archivo de copia de seguridad y la configuración. Haga clic en **OK**. 
 
 1. SQL Server restaura la base de datos. 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Creación de una copia de seguridad completa de base de datos (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [Realización de una copia de seguridad de un registro de transacciones (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)

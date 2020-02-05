@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495482"
 ---
 # <a name="---comment-transact-sql"></a>-- (Comentarios) (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "68495482"
  *text_of_comment*  
  Cadena de caracteres que contiene el texto del comentario.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Use dos guiones ( **--** ) para comentarios de una línea o anidados. Los comentarios insertados con **--** terminan en una nueva línea, que se especifica con un carácter de retorno de carro (U + 000A), un carácter de avance de línea (U + 000D) o una combinación de ambos. No hay límite de longitud para los comentarios. En la tabla siguiente se enumeran los métodos abreviados de teclado que puede utilizar para acotar un texto como comentario o quitar los comentarios.
   
 |Acción|Estándar|  

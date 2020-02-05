@@ -16,10 +16,10 @@ ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8f9480787ced42ad66602bb34db98d1c2d53bd35
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321982"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Cambiar entre modos de actualización para una suscripción transaccional actualizable
@@ -63,17 +63,17 @@ ms.locfileid: "75321982"
   
 3.  Haga clic con el botón secundario en la suscripción para la que desea establecer el modo de actualización y, a continuación, haga clic en **Establecer método de actualización**.  
   
-4.  En el cuadro de diálogo **Establecer método de actualización - \<suscriptor>: \<baseDatosDeSuscripción>** , seleccione **Actualización inmediata** o **Actualización en cola**.  
+4.  En el cuadro de diálogo **Establecer método de actualización - \<suscriptor>: \<baseBatosDeSuscripción>** , seleccione **Actualización inmediata** o **Actualización en cola**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Para establecer el modo de actualización para una suscripción de extracción  
   
-1.  El cuadro de diálogo **Propiedades de la suscripción - \<Publicador>: \<baseDatosDeSuscripción**, seleccione el valor **Replicar cambios inmediatamente** o **Poner en cola cambios** para la opción **Método de actualización del suscriptor**.  
+1.  En el cuadro de diálogo **Propiedades de suscripción - \<Publicador>: \<baseBatosDeSuscripción>** , seleccione el valor **Replicar cambios inmediatamente** o **Poner en cola cambios** para la opción **Método de actualización del suscriptor**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Para obtener más información acerca de cómo tener acceso al cuadro de diálogo **Propiedades de la suscripción - \<Publicador>: \<BaseDatosPublicación >** , vea [Ver y modificar las propiedades de una suscripción de extracción](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+ Para más información sobre el acceso al cuadro de diálogo **Propiedades de la suscripción: \<publicador>: \<baseDatosPublicación**, vea [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md) (Ver y modificar las propiedades de una suscripción de extracción).  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

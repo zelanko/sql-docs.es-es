@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f887fdf9aaddf49e5dc2c9f79ed43299f572eb13
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 821a45a08316bfdcf17ab57253b46641568aa4f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768140"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285907"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68768140"
   
 -   Use las características de generación de script que se proporcionan en los asistentes de replicación o  
   
--   Columnas en la tabla de origen capturadas[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Para más información, consulte [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para más información, consulte [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
 -   Utilice Replication Management Objects (RMO) para generar mediante programación el script y crear un objeto RMO.  
   

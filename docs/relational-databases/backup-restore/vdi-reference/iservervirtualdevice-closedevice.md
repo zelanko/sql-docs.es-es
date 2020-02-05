@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c73649e2a4301e94f8e68504222cc0122061f25f
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847436"
 ---
 # <a name="iservervirtualdeviceclosedevice-vdi"></a>IServerVirtualDevice::CloseDevice (VDI)
@@ -35,7 +35,7 @@ HRESULT IServerVirtualDevice::CloseDevice ();
 | VD_E_CLOSE | El dispositivo ya está cerrado. |
 | VD_E_ABORT | La interfaz está en el estado Anular. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 CloseDevice no es necesario después de usar SignalAbort para forzar una terminación anómala. Si se invoca CloseDevice después de usar SignalAbort, no se realiza ninguna acción.
 

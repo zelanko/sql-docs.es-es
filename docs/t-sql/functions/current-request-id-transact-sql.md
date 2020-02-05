@@ -18,13 +18,13 @@ ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1880ef3ea67ddac948653054a8d5678787c17dcd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026429"
 ---
-# <a name="currentrequestid-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
+# <a name="current_request_id-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Esta función devuelve el identificador de la solicitud actual en la sesión actual.
@@ -40,10 +40,10 @@ CURRENT_REQUEST_ID()
 ## <a name="return-types"></a>Tipos de valores devueltos
 **smallint**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Para obtener información exacta sobre la sesión actual, utilice @@SPID. Para obtener información exacta sobre la solicitud actual, utilice CURRENT_REQUEST_ID().
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)
   
   

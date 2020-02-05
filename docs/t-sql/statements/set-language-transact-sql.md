@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ac79430a87cccb7b67ce81a3cb6ca9b05d0a04db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928935"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
@@ -48,7 +48,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
  [**N**] **'** _language_ **'**  |  **@** _language\_var_  
  Es el nombre del idioma tal como está almacenado en [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Este argumento puede ser Unicode o DBCS convertido a Unicode. Para especificar un idioma en Unicode, use **N'** _language_ **'** . Si se especifica como variable, esta debe ser **sysname**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La opción SET LANGUAGE se establece en tiempo de ejecución, no en tiempo de análisis.  
   
  SET LANGUAGE establece la opción [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) de forma implícita.  

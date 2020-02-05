@@ -14,10 +14,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
-ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75623237"
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escalado horizontal de PolyBase
@@ -28,7 +28,7 @@ Una instancia de SQL Server independiente con PolyBase puede convertirse en un c
   
 Vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) y [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md).
   
-![grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
+![grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Grupos de escalado horizontal de PolyBase")  
   
 ## <a name="head-node"></a>Nodo principal  
 
@@ -47,7 +47,7 @@ Por ejemplo, supongamos que tiene una tabla externa de SQL Server con 12 partici
 > [!NOTE]
 >  Y es diferente de las lecturas de escalabilidad horizontal a través de Hadoop. 
 
-![grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
+![grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Grupos de escalado horizontal de PolyBase")
   
 ## <a name="distributed-query-processing"></a>Procesamiento de consultas distribuidas  
 

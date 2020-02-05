@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8c35227dd4593d4d682caea51cc69c6b5dffd3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119169"
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
@@ -51,7 +51,7 @@ Expresión entera que especifica un día.
 ## <a name="return-types"></a>Tipos de valores devueltos
 **date**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `DATEFROMPARTS` devuelve un valor **date**, con la parte de fecha establecida en el año, el mes y el día especificados, y la parte de hora establecida en el valor predeterminado. Para los argumentos no válidos, `DATEFROMPARTS` producirá un error. `DATEFROMPARTS` devuelve NULL si al menos uno de los argumentos obligatorios tiene un valor NULL.
   
 Esta función puede controlar la conexión remota a servidores de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores. No puede controlar la comunicación remota a servidores con una versión inferior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
@@ -73,7 +73,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)
   
   

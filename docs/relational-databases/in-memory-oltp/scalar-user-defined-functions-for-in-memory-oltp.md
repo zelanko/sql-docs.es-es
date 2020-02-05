@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f3614b1f9c058405c041aa2b4de27d97caadb8fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111765"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Funciones escalares definidas por el usuario para OLTP en memoria
@@ -91,7 +91,7 @@ END
   
 -   No se pueden quitar ni modificar cuando se hacen referencia a estas mediante una función definida por el usuario o un procedimiento almacenado enlazados al esquema.  
   
-## <a name="showplanxml"></a>SHOWPLAN_XML  
+## <a name="showplan_xml"></a>SHOWPLAN_XML  
  Las funciones escalares definidas por el usuario y compiladas de forma nativa admiten SHOWPLAN_XML. Siguen las especificaciones del esquema general SHOWPLAN_XML, al igual que con los procedimientos almacenados compilados de forma nativa. El elemento base de las funciones definidas por el usuario es `<UDF>`.  
   
  STATISTICS XML no es compatible con las funciones escalares definidas por el usuario y compiladas de forma nativa. Al ejecutar una consulta que hace referencia a la función definida por el usuario, con la opción STATISTICS XML habilitada, se devuelve el contenido XML sin la parte de la función definida por el usuario.  

@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Creación del paquete de implementación en SSIS | Microsoft Docs'
+title: 'Lección 2: Crear el conjunto de implementación en SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23d700f7886b046896397eb1cce4eb21f9c32850
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296010"
 ---
-# <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Lección 2: Creación del paquete de implementación en SSIS
+# <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Lección 2: Crear el paquete de implementación en SSIS
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -28,14 +28,14 @@ En esta lección, creará el paquete de implementación, que es una carpeta que 
   
 También comprobará la lista de archivos del paquete de implementación y examinará el contenido del manifiesto.  
   
-**Tiempo estimado para completar esta lección:** 30 minutos  
+**Tiempo estimado para completar esta lección** : 30 minutos  
   
 ## <a name="lesson-tasks"></a>Tareas de la lección  
 Esta lección contiene las siguientes tareas:  
   
 -   [Paso 1: Generar la utilidad de implementación](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
--   [Paso 2: Comprobación del paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+-   [Paso 2: Comprobar el paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
 [Paso 1: Generar la utilidad de implementación](../integration-services/lesson-2-1-building-the-deployment-utility.md)  

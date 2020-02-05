@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f63cb12399efd7417f9b00695d54b1356f681fb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934461"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar el tamaño de un índice no clúster
@@ -98,7 +98,7 @@ ms.locfileid: "67934461"
   
      ***Variable_Key_Size***  = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
   
-     Los bytes agregados a ***Max_Var_Key_Size*** son para el seguimiento de cada columna de longitud variable. En esta fórmula se supone que todas las columnas de longitud variable están llenas al 100 %. Si prevé que va a usarse un porcentaje inferior del espacio de almacenamiento de columnas de longitud variable, puede ajustar el valor de ***Max_Var_Key_Size*** en función de ese porcentaje para obtener una estimación más precisa del tamaño global de la tabla.  
+     Los bytes agregados a ***Max_Var_Key_Size*** son para el seguimiento de cada columna de longitud variable. En esta fórmula se supone que todas las columnas de longitud variable están llenas al 100 %. Si prevé que se va a usar un porcentaje inferior del espacio de almacenamiento de columnas de longitud variable, puede ajustar el valor de ***Max_Var_Key_Size*** en función de ese porcentaje para obtener una estimación más precisa del tamaño global de la tabla.  
   
      Si no hay columnas de longitud variable, establezca ***Variable_Key_Size*** en 0.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "67934461"
   
      Dado que las filas de índice no abarcan varias páginas, el número de filas de índice por página debe redondearse hacia abajo a la fila completa más cercana. El valor 2 de la fórmula representa la entrada de la fila en la matriz de zonas de la página.  
   
-## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>Paso 2. Calcular el espacio utilizado para almacenar información del índice en el nivel hoja  
+## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>Paso 2. Calcular el espacio utilizado para almacenar información del índice en el nivel hoja  
  Para estimar el espacio necesario para almacenar el nivel hoja del índice, puede utilizar los siguientes pasos. Para completar este paso, necesita los valores del Paso 1.  
   
 1.  Especifique el número de columnas de longitud fija y variable en el nivel hoja y calcule el espacio necesario para su almacenamiento:  
@@ -209,7 +209,7 @@ ms.locfileid: "67934461"
   
      ***Leaf_Space_Used***  = 8192 x ***Num_Leaf_Pages***  
   
-## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>Paso 3. Calcular el espacio utilizado para almacenar información del índice en los niveles no hoja  
+## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>Paso 3. Calcular el espacio utilizado para almacenar información del índice en los niveles no hoja  
  Siga estos pasos para estimar el espacio necesario para almacenar los niveles intermedio y raíz del índice. Para completar este paso, necesita los valores de los pasos 2 y 3.  
   
 1.  Calcule el número de niveles no hoja del índice:  
@@ -239,7 +239,7 @@ ms.locfileid: "67934461"
   
  En este cálculo no se tiene en cuenta lo siguiente:  
   
--   Particiones  
+-   Creación de particiones  
   
      La sobrecarga de espacio de la creación de particiones es mínima, pero resulta difícil de calcular. No es importante incluirla.  
   
@@ -264,7 +264,7 @@ ms.locfileid: "67934461"
  [Crear índices no clúster](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Crear índices clúster](../../relational-databases/indexes/create-clustered-indexes.md)   
  [Calcular el tamaño de una tabla](../../relational-databases/databases/estimate-the-size-of-a-table.md)   
- [Estimar el tamaño de un índice clúster](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)   
+ [Estimar el tamaño de un índice agrupado](../../relational-databases/databases/estimate-the-size-of-a-clustered-index.md)   
  [Estimar el tamaño de un montón](../../relational-databases/databases/estimate-the-size-of-a-heap.md)   
  [Estimar el tamaño de una base de datos](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
   

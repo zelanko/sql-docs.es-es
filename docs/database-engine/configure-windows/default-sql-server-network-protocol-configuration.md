@@ -14,10 +14,10 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011951"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configuración predeterminada de protocolo de red de SQL Server
@@ -33,14 +33,14 @@ En la tabla siguiente se describe la configuración tras la instalación.
 
 |Edición | Nueva instalación e instalación anterior presente | Memoria compartida | TCP/IP | Canalizaciones con nombre|
 | -------- | -- | -- | -- | --  |  
-|Enterprise | Nueva instalación | Habilitado | Habilitado | Deshabilitadas para las conexiones de red.|
-|Estándar | Nueva instalación | Habilitado | Habilitado | Deshabilitadas para las conexiones de red.|
-|Web | Nueva instalación | Habilitado | Habilitado | Deshabilitadas para las conexiones de red.|
-|Desarrollador | Nueva instalación | Habilitado | Deshabilitado | Deshabilitadas para las conexiones de red.|
-|Evaluation | Nueva instalación | Habilitado | Habilitado | Deshabilitadas para las conexiones de red.|
-|SQL Server Express | Nueva instalación | Habilitado | Deshabilitado | Deshabilitadas para las conexiones de red.|
+|Enterprise | Nueva instalación | habilitado | habilitado | Deshabilitadas para las conexiones de red.|
+|Estándar | Nueva instalación | habilitado | habilitado | Deshabilitadas para las conexiones de red.|
+|Web | Nueva instalación | habilitado | habilitado | Deshabilitadas para las conexiones de red.|
+|Desarrollador | Nueva instalación | habilitado | Disabled | Deshabilitadas para las conexiones de red.|
+|Evaluación | Nueva instalación | habilitado | habilitado | Deshabilitadas para las conexiones de red.|
+|SQL Server Express | Nueva instalación | habilitado | Disabled | Deshabilitadas para las conexiones de red.|
 |Todas las ediciones | Hay una instalación anterior presente, pero no se actualiza. | Igual que en una instalación nueva | Igual que en una instalación nueva | Igual que en una instalación nueva|
-|Todas las ediciones | Actualizar | Habilitado | Se conserva la configuración de la instalación anterior. | Se conserva la configuración de la instalación anterior.|
+|Todas las ediciones | Actualizar | habilitado | Se conserva la configuración de la instalación anterior. | Se conserva la configuración de la instalación anterior.|
 
 
 >[!NOTE]
@@ -57,7 +57,7 @@ Consulte los temas siguientes para ver ejemplos de cadenas de conexión:
 
 
 
-## <a name="includessnoversionmdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configuración del explorador
+## <a name="includessnoversion_mdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Configuración del explorador
 
 El servicio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser se puede configurar para que se inicie automáticamente durante la instalación. El inicio automático es la opción predeterminada en las siguientes condiciones:
 

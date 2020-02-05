@@ -10,10 +10,10 @@ ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 17330bafe2655f0569f0828706d5e29ed2af3812
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285352"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Conectarse a Azure Blob Storage (Asistente para importación y exportación de SQL Server)
@@ -41,7 +41,7 @@ En la captura de pantalla siguiente se muestran las opciones para configurar una
  **Usar una cuenta de Azure**  
  Especifique si usa una cuenta en línea.
   
- **Nombre de la cuenta de almacenamiento**  
+ **Nombre de cuenta de almacenamiento**  
  Escriba el nombre de la cuenta de almacenamiento de Azure.  
   
 **Clave de cuenta**  
@@ -65,7 +65,7 @@ Escriba la clave de la cuenta de almacenamiento de Azure.
  **Usar la primera fila como nombres de columna**  
  Especifique si la primera fila de datos contiene nombres de columna.  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) (Selección de un origen de datos)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md) (Selección de un destino)
 

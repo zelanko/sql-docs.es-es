@@ -24,13 +24,13 @@ ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b385caa4146f40a1395c74fa0f26b5be518ff149
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026478"
 ---
-# <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
+# <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Esta función devuelve el tiempo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha pasado en funcionamiento activo desde su último inicio. `@@CPU_BUSY` devuelve un resultado medido en incrementos de tiempo de CPU, o "tics". Este valor es acumulativo para todas las CPU, de modo que puede superar el tiempo transcurrido real. Para convertir a microsegundos, multiplique por [@@TIMETICKS](./timeticks-transact-sql.md).
@@ -49,8 +49,8 @@ Esta función devuelve el tiempo que [!INCLUDE[ssNoVersion](../../includes/ssnov
 ## <a name="return-types"></a>Tipos de valores devueltos
 **integer**
   
-## <a name="remarks"></a>Notas  
-Ejecute [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md) para ver un informe que contenga varias estadísticas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluida la actividad de CPU.
+## <a name="remarks"></a>Observaciones  
+Ejecute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_monitor[ para ver un informe que contenga varias estadísticas de ](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md), incluida la actividad de CPU.
   
 ## <a name="examples"></a>Ejemplos  
 En este ejemplo se devuelve la actividad de CPU de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta la fecha y hora actuales. El ejemplo convierte uno de los valores al tipo de datos `float`. Esto evita problemas de desbordamiento aritmético cuando se calcula un valor en microsegundos.
@@ -68,7 +68,7 @@ CPU microseconds As of
 18406250         2006-12-05 17:00:50.600
 ```
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)  
 [@@IDLE &#40;Transact-SQL&#41;](../../t-sql/functions/idle-transact-sql.md)  
 [@@IO_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)  

@@ -18,10 +18,10 @@ ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 0320cbd20242f19bab7c7990f4bad13458e403e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930144"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (tipo de datos geometry)
@@ -40,12 +40,12 @@ Devuelve 1 si una instancia de **geometry** cruza otra instancia de **geometry**
  *other_geometry*  
  Es otra instancia de **geometry** con la que se compara la instancia en la que se invoca `STCrosses()`.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Dos instancias de **geometry** se cruzan si se cumplen las dos condiciones siguientes:  
   
 -   La intersección de las dos instancias de **geometry** da como resultado una geometría cuyas dimensiones son menores que la dimensión máxima de las instancias de **geometry** de origen.  

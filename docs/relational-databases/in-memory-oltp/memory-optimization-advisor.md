@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050190"
 ---
 # <a name="memory-optimization-advisor"></a>Asesor de optimización de memoria
@@ -91,7 +91,7 @@ ms.locfileid: "68050190"
 > [!WARNING]  
 >  Seleccione esta opción únicamente si entiende el riesgo de pérdida de datos asociado a las tablas no perdurables.  
   
- Para continuar, haga clic en **Siguiente** .  
+ Haga clic en **Siguiente** para continuar.  
   
 ### <a name="review-primary-key-conversion"></a>Revisar la conversión de la clave principal  
  La pantalla siguiente es **Revisar la conversión de la clave principal**. El Asistente de optimización de memoria detectará si hay una o varias claves principales en la tabla y rellenará la lista de columnas basándose en los metadatos de la clave principal. Si no la hay, debe crear una clave principal si desea migrar a una tabla optimizada para memoria perdurable.  

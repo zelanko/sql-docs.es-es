@@ -18,10 +18,10 @@ ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f0bb90a3dd13ffd245c1cac5a9ee1610055aae55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929285"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT  (Transact-SQL)
@@ -39,7 +39,7 @@ DROP SERVER AUDIT audit_name
     [ ; ]  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para poder realizar cambios en una auditoría, es necesario establecer su estado en OFF. Si se ejecuta DROP AUDIT mientras una auditoría está habilitada con opciones distintas de STATE=OFF, aparecerá un mensaje de error de MSG_NEED_AUDIT_DISABLED.  
   
  Una instrucción DROP SERVER AUDIT quita los metadatos para la auditoría, pero no los datos de auditoría recopilados antes de la emisión del comando.  

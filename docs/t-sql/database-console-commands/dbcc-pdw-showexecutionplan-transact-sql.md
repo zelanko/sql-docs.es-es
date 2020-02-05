@@ -13,10 +13,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809842"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
@@ -26,7 +26,7 @@ Muestra el plan de ejecución de [!INCLUDE[ssNoVersion](../../includes/ssnoversi
   
 Una vez que se conozcan los problemas de rendimiento de las consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de SMP que se ejecutan en los nodos de ejecución, hay varias maneras de mejorar el rendimiento. Entre las diversas formas de mejorar el rendimiento de las consultas de los nodos de ejecución se incluye crear estadísticas de varias columnas, crear índices no agrupados o usar sugerencias de consulta.
   
-![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
 Sintaxis de Azure SQL Data Warehouse:
@@ -95,6 +95,6 @@ En función de los resultados de la consulta anterior, use los parámetros sql_s
 DBCC PDW_SHOWEXECUTIONPLAN ( 201001, 375 );  
 ```  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)  
 [DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)

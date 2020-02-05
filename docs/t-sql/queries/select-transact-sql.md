@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948285"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
@@ -100,7 +100,7 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Debido a la complejidad de la instrucción SELECT, se muestran elementos y argumentos detallados de la sintaxis de cada cláusula:  
   
 |||  
@@ -124,7 +124,7 @@ SELECT <select_criteria>
  Los pasos siguientes muestran el orden de procesamiento lógico, u orden de enlaces, de una instrucción SELECT. Este orden determina cuándo los objetos definidos en un paso están disponibles para las cláusulas en pasos posteriores. Por ejemplo, si el procesador de consultas puede enlazar (obtener acceso) a las tablas o las vistas definidas en la cláusula FROM, estos objetos y sus columnas están disponibles para todos los pasos siguientes. Por el contrario, dado que la cláusula SELECT es el paso 8, las cláusulas anteriores no pueden hacer referencia a los alias de columna o columnas derivadas definidas en esa cláusula. Sin embargo, las cláusulas siguientes, tales como la cláusula ORDER BY, sí pueden hacer referencia. La ejecución física real de la instrucción está determinada por el procesador de consultas y el orden puede variar en esta lista.  
   
 1.  FROM  
-2.  ON  
+2.  ACTIVAR  
 3.  JOIN  
 4.  WHERE  
 5.  GROUP BY  
@@ -133,7 +133,7 @@ SELECT <select_criteria>
 8.  SELECT  
 9. DISTINCT  
 10. ORDER BY  
-11. ARRIBA  
+11. TOP  
 
 > [!WARNING]
 > La secuencia anterior suele ser la habitual, pero hay casos poco comunes en los que puede ser distinta.

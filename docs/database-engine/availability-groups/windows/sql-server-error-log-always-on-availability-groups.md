@@ -11,10 +11,10 @@ ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 81d31225838ec029a020af2df25753b26acd2fb1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251251"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>Registro de errores de SQL Server (Grupos de disponibilidad Always On)
@@ -27,7 +27,7 @@ ms.locfileid: "75251251"
 -   Estado de conectividad de bases de datos de disponibilidad entre réplicas principales y secundarias    
 -   Estado de los puntos de conexión de grupos de disponibilidad    
 -   Estado de los agentes de escucha de grupos de disponibilidad    
--   Estado de concesión entre la DLL del recurso de SQL Server (en ejecución en el clúster WSFC) y la instancia de SQL Server (para obtener más información, vea [How It Works: SQL Server Always On lease timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx) [Cómo funciona: tiempo de espera de concesión de Always On de SQL Server]).    
+-   Estado de concesión entre la DLL del recurso de SQL Server (en ejecución en el clúster WSFC) y la instancia de SQL Server (para obtener más información, vea [How It Works: SQL Server Always On lease timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx) (Cómo funciona: tiempo de espera de concesión de Always On de SQL Server)).    
 -   Eventos de error del grupo de disponibilidad  
 
 Los síntomas siguientes deben dar lugar a una revisión del registro de errores de SQL Server:  

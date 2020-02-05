@@ -23,10 +23,10 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072377"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
@@ -52,7 +52,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  Es posible volver a configurar prácticamente cualquier opción de configuración mediante la opción WITH OVERRIDE, pero pueden evitarse algunos errores irrecuperables. Por ejemplo, la opción de configuración **Memoria de servidor mínima** se podría configurar con un valor mayor que el especificado en la opción de configuración **Memoria de servidor máxima**.
       
-## <a name="remarks"></a>Notas    
+## <a name="remarks"></a>Observaciones    
  **sp_configure** no acepta nuevos valores de opciones de configuración que no se encuentren dentro de los intervalos válidos documentados para cada opción de configuración.    
     
  RECONFIGURE no se permite en una transacción implícita o explícita. Al reconfigurar varias opciones al mismo tiempo, si una de las operaciones de reconfiguración genera un error, ninguna de estas operaciones surtirá efecto.    

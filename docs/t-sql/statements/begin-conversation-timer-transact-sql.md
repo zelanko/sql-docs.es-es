@@ -33,10 +33,10 @@ ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 65fbd94bac320994f9c1917e634210febd2ba878
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211216"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
@@ -62,7 +62,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
  TIMEOUT  
  Especifica la cantidad de tiempo en segundos que se va esperar antes de colocar el mensaje en la cola.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Un temporizador de conversación proporciona a la aplicación un método para recibir un mensaje en una conversación tras una cantidad de tiempo específica. Si se llama a BEGIN CONVERSATION TIMER en una conversación antes de que el temporizador haya expirado, el tiempo de espera se establece en el valor nuevo. A diferencia de la duración de la conversación, cada parte de la conversación cuenta con un temporizador de conversación independiente. El mensaje **DialogTimer** llega a la cola local sin afectar a la parte remota de la conversación. Por lo tanto, una aplicación puede utilizar un mensaje del temporizador con cualquier fin.  
   
  Por ejemplo, puede utilizar el temporizador de conversación para evitar que la aplicación espere durante demasiado tiempo una respuesta atrasada. Si tiene previsto que la aplicación complete el diálogo en 30 segundos, debe establecer el temporizador de conversación para dicho diálogo en 60 segundos (30 segundos más un período de gracia de 30 segundos). Si el diálogo sigue abierto después de 60 segundos, la aplicación recibe un mensaje de tiempo de espera agotado en la cola para dicho diálogo.  

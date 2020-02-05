@@ -16,13 +16,13 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 043a13a84eebe9fc1c2cac96628ce6303653e8ac
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768590"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284116"
 ---
 # <a name="distributor-information-publications"></a>Información de distribuidor, Publicaciones
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,12 +56,12 @@ La pestaña **Agentes** muestra información acerca de los agentes y trabajos de
  Estado del agente. En la lista siguiente se muestran los valores de estado posibles:  
   
 -   Error    
--   Reintentar    
+-   Reintento    
 -   En ejecución    
 -   No está en ejecución   
 -   No se ha iniciado nunca  
   
- **publicador**  
+ **Publicador**  
  La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del publicador.  
   
  **Publicación**  
@@ -76,7 +76,7 @@ La pestaña **Agentes** muestra información acerca de los agentes y trabajos de
  **Última hora de inicio**  
  Última hora en que se inició el agente.  
   
- **Duración**  
+ **Duration**  
  Intervalo de tiempo que se ejecutó el agente. Este tiempo representa el tiempo transcurrido si el agente se está ejecutando actualmente o el tiempo total de ejecución si ya finalizó la ejecución.  
   
  **Última acción**  
@@ -85,7 +85,7 @@ La pestaña **Agentes** muestra información acerca de los agentes y trabajos de
  **Tasa de entrega**  
  La tasa, en comandos por segundo, a la que se confirman los comandos de inicialización en la base de datos de distribución durante la última ejecución del agente.  
   
- **Latencia**  
+ **Latency**  
  El tiempo, en segundos, que ha transcurrido entre el último cambio confirmado en la base de datos de publicación y el comando correspondiente que se confirma en la base de datos de distribución.  
   
  **#Trans**  
@@ -94,7 +94,7 @@ La pestaña **Agentes** muestra información acerca de los agentes y trabajos de
  **#Cmds**  
  El número de comandos confirmados en la base de datos de distribución durante la última ejecución del agente. Un comando es lo mismo que un cambio en los datos, como una actualización.  
   
- **Promedio de número de comandos**  
+ **Avg. #Cmds**  
  El promedio de comandos por transacción durante la última ejecución del agente.  
   
 ### <a name="merge-agent"></a>Agente de mezcla  
@@ -103,7 +103,7 @@ La pestaña **Agentes** muestra información acerca de los agentes y trabajos de
   
 -   Error  
   
--   Reintentar  
+-   Reintento  
   
 -   En ejecución  
   
@@ -111,7 +111,7 @@ La pestaña **Agentes** muestra información acerca de los agentes y trabajos de
   
 -   No se ha iniciado nunca  
   
- **publicador**  
+ **Publicador**  
  La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del publicador.  
   
  **Publicación**  
@@ -126,7 +126,7 @@ La pestaña **Agentes** muestra información acerca de los agentes y trabajos de
  **Última hora de inicio**  
  Última hora en que se inició el agente.  
   
- **Duración**  
+ **Duration**  
  Intervalo de tiempo que se ejecutó el agente. Este tiempo representa el tiempo transcurrido si el agente se está ejecutando actualmente o el tiempo total de ejecución si ya finalizó la ejecución.  
   
  **Última acción**  

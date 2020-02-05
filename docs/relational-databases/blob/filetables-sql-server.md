@@ -16,10 +16,10 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125165"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68125165"
   
  Es decir, ahora puede almacenar archivos y documentos en tablas especiales de FileTables denominadas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y tener acceso a ellos desde las aplicaciones Windows como si estuviesen almacenados en el sistema de archivos, sin efectuar cambios en las aplicaciones cliente.  
   
- La característica FileTable se basa en la tecnología de FILESTREAM de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre FILESTREAM, vea [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
+ La característica FileTable se basa en la tecnología de FILESTREAM de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre FILESTREAM, vea [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
 ##  <a name="Goals"></a> Ventajas de la característica FileTable  
  Los objetivos de la característica FileTable incluyen los siguientes:  
@@ -127,7 +127,7 @@ ms.locfileid: "68125165"
  Describe las tareas administrativas comunes para administrar FileTables.  
   
 ##  <a name="relcontent"></a> Contenido relacionado  
- [FileTable Schema](../../relational-databases/blob/filetable-schema.md)  
+ [Esquema de FileTable](../../relational-databases/blob/filetable-schema.md)  
  Describe los esquemas predefinido y fijo de una FileTable.  
   
  [Compatibilidad de FileTable con otras características de SQL Server](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)  

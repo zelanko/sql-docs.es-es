@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 51dc2ba27e346dea75f1bd347491d4932695fd43
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077531"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Configuración de SQL Server Integration Services en Linux con ssis-conf
@@ -23,7 +23,7 @@ Ejecute el script de configuración `ssis-conf` cuando instale SQL Server Integr
 
 También puede usar la utilidad `ssis-conf` para configurar las siguientes propiedades:
 
-| Comando | Descripción |
+| Get-Help | Descripción |
 |-------------|---------------------------------------------------------------------|
 | set-edition | Establece la edición de SQL Server.                                       |
 | telemetry   | Habilita o deshabilita el servicio de telemetría de SQL Server Integration Services. |
@@ -142,6 +142,6 @@ lcid = 2052
 
 ## <a name="related-content-about-ssis-on-linux"></a>Contenido relacionado sobre SSIS en Linux
 -   [Extracción, transformación y carga de datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
--   [Instalación de SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
+-   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
 -   [Limitaciones y problemas conocidos de SSIS en Linux](sql-server-linux-ssis-known-issues.md)
 -   [Programación de la ejecución de paquetes de SQL Server Integration Services en Linux con cron](sql-server-linux-schedule-ssis-packages.md)

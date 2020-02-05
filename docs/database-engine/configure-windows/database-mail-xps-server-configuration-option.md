@@ -14,10 +14,10 @@ ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e16286e558d860a346ba8fff366009f064e65f91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011957"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs (opción de configuración del servidor)
@@ -26,7 +26,7 @@ ms.locfileid: "68011957"
 
 Use la opción **DatabaseMail XPs** para habilitar Correo electrónico de base de datos en este servidor. Los valores posibles son:  
   
-- `0`: Correo electrónico de base de datos no está disponible (valor predeterminado).  
+- `0`: Correo electrónico de base de datos no está disponible (el valor predeterminado).  
   
 - `1`: Correo electrónico de base de datos está disponible.  
   

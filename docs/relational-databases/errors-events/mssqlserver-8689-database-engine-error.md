@@ -12,22 +12,22 @@ ms.assetid: 99467a32-6576-4272-a076-b16c06933f2a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 02f21fac714387e94038a0de593e263d946fc514
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120559"
 ---
-# <a name="mssqlserver8689"></a>MSSQLSERVER_8689
+# <a name="mssqlserver_8689"></a>MSSQLSERVER_8689
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|8689|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|8689|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|USEPLAN_ERR_NO_DB|  
 |Texto del mensaje|La base de datos '%.*ls' especificada en la sugerencia USE PLAN no existe. Especifique una base de datos existente.|  
@@ -40,5 +40,5 @@ Asegúrese de que todas las bases de datos que se especifican en la sugerencia U
   
 ## <a name="see-also"></a>Consulte también  
 [Sugerencias de consulta &#40;Transact-SQL&#41;](~/t-sql/queries/hints-transact-sql-query.md)  
-[Plan Guides](~/relational-databases/performance/plan-guides.md) (Guías de plan)  
+[Guías de plan](~/relational-databases/performance/plan-guides.md)  
   

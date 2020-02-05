@@ -25,10 +25,10 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094573"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
@@ -45,7 +45,7 @@ Esta función devuelve información acerca de los eventos de base de datos o ser
 EVENTDATA( )  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `EVENTDATA` devuelve datos solo cuando se hace referencia al mismo directamente dentro de un desencadenador DDL o LOGON. `EVENTDATA` devuelve NULL si otras rutinas lo llaman, incluso si un desencadenador DDL o LOGON llama a esas rutinas.
   
 Los datos que `EVENTDATA` devuelve no son válidos después de una transacción que
@@ -73,7 +73,7 @@ Los datos que `EVENTDATA` devuelve no son válidos después de una transacción 
 Las contraseñas no se muestran cuando se ejecutan las instrucciones `CREATE LOGIN` o `ALTER LOGIN`. Esto protege la seguridad del inicio de sesión.  
   
 ## <a name="schemas-returned"></a>Esquemas devueltos  
-EVENTDATA devuelve un valor de tipo de datos **xml**. De forma predeterminada, la definición del esquema para todos los eventos se instala en este directorio: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
+EVENTDATA devuelve un valor de tipo de datos **xml**. De manera predeterminada, la definición de esquema para todos los eventos se instala en este directorio: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  
   
 La página web [Esquemas XML de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=31850) también tiene el esquema de eventos.  
   

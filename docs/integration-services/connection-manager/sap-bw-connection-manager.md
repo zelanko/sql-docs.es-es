@@ -13,10 +13,10 @@ f1_keywords:
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0f0ebc393c48562c5fcd783b4c056aa218e8ffaa
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298476"
 ---
 # <a name="sap-bw-connection-manager"></a>Administrador de conexiones de SAP BW
@@ -40,7 +40,7 @@ ms.locfileid: "71298476"
   
 -   Proporcione el número de host y del sistema para un único servidor de aplicaciones o proporcione el servidor de mensajes, grupo y SID de un grupo de servidores con equilibrio de carga.  
   
--   Habilite el registro personalizado de llamadas a funciones RFC para los componentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. (Este registro es independiente del registro opcional que puede habilitar en los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]). Para habilitar el registro de las llamadas a funciones RFC, debe especificar un directorio en el que almacenar los archivos de registro que se crean antes y después de cada llamada a funciones RFC. (Esta característica de registro crea múltiples archivos de registro en formato XML. Dado que estos archivos de registro también contienen todas las filas de datos que se transfieren, es posible que los archivos de registro consuman gran cantidad de espacio en disco). Si no selecciona un directorio de registro, el registro no estará habilitado.  
+-   Habilite el registro personalizado de llamadas a funciones RFC para los componentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. (Este registro es independiente del registro opcional que puede habilitar en los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ). Para habilitar el registro de las llamadas a funciones RFC, debe especificar un directorio en el que almacenar los archivos de registro que se crean antes y después de cada llamada a funciones RFC. (Esta característica de registro crea múltiples archivos de registro en formato XML. Dado que estos archivos de registro también contienen todas las filas de datos que se transfieren, es posible que los archivos de registro consuman gran cantidad de espacio en disco). Si no selecciona un directorio de registro, el registro no estará habilitado.  
   
     > [!IMPORTANT]  
     >  Si los datos que se transfieren contienen información confidencial, los archivos de registro también contendrán esa información confidencial.  
@@ -72,7 +72,7 @@ ms.locfileid: "71298476"
   
     -   Haga doble clic en administrador de conexiones de SAP BW.  
   
-         -O bien-  
+         O bien  
   
     -   Haga clic con el botón derecho en el administrador de conexiones de SAP BW y, después, seleccione **Editar**.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "71298476"
  **Lenguaje**  
  Permite especificar el idioma que usa el sistema. Por ejemplo, especifique **EN** para inglés.  
   
- **User name**  
+ **Nombre de usuario**  
  Permite especificar el nombre de usuario que se va a utilizar para establecer la conexión al sistema.  
   
  **Contraseña**  
@@ -145,7 +145,7 @@ ms.locfileid: "71298476"
   
  Si no selecciona un directorio de registro, el registro no estará habilitado.  
   
- **Examinar**  
+ **Browse**  
  Permite examinar para seleccionar una carpeta para el directorio de registro.  
   
  **Probar conexión**  

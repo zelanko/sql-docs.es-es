@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139600"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relaciones de claves externas.
@@ -72,10 +72,10 @@ ms.locfileid: "68139600"
      **Relación seleccionada**  
      Muestra las relaciones existentes. Seleccione una relación para mostrar sus propiedades en la cuadrícula situada a la derecha. Si la lista está vacía, no se han definido relaciones para la tabla.  
   
-     **Agregar**  
+     **Add (Agregar)**  
      Crea una nueva relación. Debe definir **Especificación de tablas y columnas** para que la relación sea válida.  
   
-     **Delete**  
+     **Eliminar**  
      Elimina la relación seleccionada en la lista **Relaciones seleccionadas** . Para cancelar la adición de una relación, utilice este botón para eliminar la relación.  
   
      **Categoría General**  
@@ -103,7 +103,7 @@ ms.locfileid: "68139600"
      Se expande para mostrar los campos de propiedades de **Nombre** y **Descripción**.  
   
      **Nombre**  
-     Muestra el nombre de relación. Cuando se crea una nueva relación, se le da un nombre predeterminado que se basa en la tabla de la ventana activa del **Diseñador de tablas**. Este nombre se puede cambiar en cualquier momento.  
+     Muestra el nombre de relación. Cuando se crea una nueva relación, se le da un nombre predeterminado que se basa en la tabla de la ventana activa del **Diseñador de tablas**. Puede cambiar el nombre en cualquier momento.  
   
      **Descripción**  
      Describe la relación. Para escribir una descripción más detallada, haga clic en **Descripción** y luego en los puntos suspensivos **(...)** que aparecen a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
@@ -111,7 +111,7 @@ ms.locfileid: "68139600"
      **Categoría Diseñador de tablas**  
      Se expande para mostrar la información de **Comprobar datos existentes al crear o al habilitar de nuevo** y **Exigir para replicación**.  
   
-     **Enforce For Replication**  
+     **Exigir para replicación**  
      Indica si se exigirá la restricción cuando un agente de replicación realice una inserción, actualización o eliminación en esta tabla.  
   
      **Exigir restricción de clave externa**  

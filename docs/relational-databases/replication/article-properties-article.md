@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 081802afb9f66380da93f46bf75011b0f4ddb811
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 22410fd71e91084c99823ceba020ed43f54ed75e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768201"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288279"
 ---
 # <a name="article-properties---ltarticlegt"></a>Article Properties - &lt;Article&gt; (Propiedades del artículo: &lt;Artículo&gt;)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   El cuadro de diálogo **Propiedades del artículo** está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación** . Le permite ver y establecer propiedades para todos los tipos de artículo. Algunas propiedades solo se pueden establecer cuando se crea la publicación, mientras que otras se pueden establecer únicamente si la publicación no tiene suscripciones activas. Las propiedades que no se pueden establecer se muestran como de solo lectura.  
   
 > [!NOTE]  
->  Una vez creada una publicación, algunos cambios de las propiedades requieren una nueva instantánea. Si una publicación tiene suscripciones, algunos cambios también requieren reinicializar todas las suscripciones. Para más información, vea [Change Publication and Article Properties](../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
+>  Una vez creada una publicación, algunos cambios de las propiedades requieren una nueva instantánea. Si una publicación tiene suscripciones, algunos cambios también requieren reinicializar todas las suscripciones. Para obtener más información, vea [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
  Cada propiedad del cuadro de diálogo **Propiedades del artículo** incluye una descripción. Al hacer clic en una propiedad, se muestra su descripción en la parte inferior del cuadro de diálogo. Este tema ofrece información adicional acerca de varias propiedades. Las propiedades se agrupan en las siguientes categorías:  
   
@@ -87,10 +87,10 @@ ms.locfileid: "68768201"
  Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
  **Replicar**  
- Esta opción se aplica únicamente a los procedimientos de almacenamiento. Determina si se debe replicar la definición del procedimiento almacenado (instrucción CREATE PROCEDURE) o su ejecución. Si replica la ejecución del procedimiento, la definición del procedimiento se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor. Esto puede mejorar notablemente el rendimiento para los casos en que se llevan a cabo grandes operaciones en lote. Para más información, consulte [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+ Esta opción se aplica únicamente a los procedimientos de almacenamiento. Determina si se debe replicar la definición del procedimiento almacenado (instrucción CREATE PROCEDURE) o su ejecución. Si replica la ejecución del procedimiento, la definición del procedimiento se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor. Esto puede mejorar notablemente el rendimiento para los casos en que se llevan a cabo grandes operaciones en lote. Para más información, vea [Publishing Stored Procedure Execution in Transactional Replication](../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Opciones para publicaciones de combinación  
- El cuadro de diálogo **Propiedades del artículo** para las publicaciones de mezcla tiene dos pestañas: **Propiedades** y **Solucionador**.  
+ El cuadro de diálogo **Propiedades del artículo** para las publicaciones de combinación tiene dos pestañas: **Propiedades** y **Solucionador**.  
   
 ### <a name="properties-tab"></a>Pestaña Propiedades  
  **Dirección de la sincronización**  
@@ -111,7 +111,7 @@ ms.locfileid: "68768201"
  Determina si se deben tratar los cambios de la misma fila o columna como un conflicto.  
   
  **Comprobar permiso INSERT**, **Comprobar permiso UPDATE**y **Comprobar permiso DELETE**  
- Determina si se debe comprobar durante la sincronización que el inicio de sesión del suscriptor tenga permisos INSERT, UPDATE o DELETE en las tablas publicadas en la base de datos de publicaciones. El valor predeterminado es **False** porque la replicación de mezcla no requiere que se otorguen estos permisos; el acceso a las tablas publicadas se controla a través de la lista de acceso a la publicación (PAL). Para más información sobre la PAL, vea [Proteger el publicador](../../relational-databases/replication/security/secure-the-publisher.md).  
+ Determina si se debe comprobar durante la sincronización que el inicio de sesión del suscriptor tenga permisos INSERT, UPDATE o DELETE en las tablas publicadas en la base de datos de publicaciones. El valor predeterminado es **False** porque la replicación de mezcla no requiere que se otorguen estos permisos; el acceso a las tablas publicadas se controla a través de la lista de acceso a la publicación (PAL). Para obtener más información sobre la PAL, vea [Secure the Publisher](../../relational-databases/replication/security/secure-the-publisher.md) (Proteger el publicador).  
   
  Puede solicitar la comprobación de los permisos si desea permitir que uno o varios suscriptores carguen algunos cambios en los datos publicados, pero no otros. Por ejemplo, podría agregar un suscriptor a la PAL, pero sin otorgarle al suscriptor ningún permiso en las tablas de la base de datos de publicaciones. Entonces podría establecer la opción Comprobar permiso DELETE en **True**: el suscriptor podría cargar inserciones y actualizaciones, pero no eliminaciones.  
   
@@ -126,12 +126,12 @@ ms.locfileid: "68768201"
  Si selecciona el solucionador predeterminado, los conflictos se resuelven sobre la base de la prioridad asignada a cada suscriptor o del primer cambio escrito en el publicador, en función del tipo de suscripciones utilizadas. Para más información, vea [Detectar y solucionar conflictos de replicación de mezcla](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Usar un solucionador personalizado (registrada en el distribuidor)**  
- Si opta por utilizar un solucionador de artículos (puede ser una proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un escrito por el usuario), debe seleccionar un solucionador del cuadro de lista. Para más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Si opta por utilizar un solucionador de artículos (puede ser una proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un escrito por el usuario), debe seleccionar un solucionador del cuadro de lista. Para más información, consulte [Replicación de mezcla avanzada: detección y resolución de conflictos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Si el solucionador requiere una entrada, especifíquela en el cuadro de texto **Especifique la información necesaria para el solucionador** . Para obtener más información acerca de la entrada requerida por los solucionadores personalizados de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , vea [Microsoft COM-Based Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  **Permitir que el suscriptor resuelva los conflictos de modo interactivo durante la sincronización a petición**  
- Seleccione esta opción si los suscriptores van a utilizar sincronización a petición (valor predeterminado para la replicación de mezcla) y desea solucionar conflictos de manera interactiva. Especifique la sincronización a petición en la página **Programación de sincronización** del Asistente para nueva suscripción. Para solucionar conflictos de manera interactiva, utilice la interfaz del usuario Solucionador interactivo. Para más información, consulte [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Seleccione esta opción si los suscriptores van a utilizar sincronización a petición (valor predeterminado para la replicación de mezcla) y desea solucionar conflictos de manera interactiva. Especifique la sincronización a petición en la página **Programación de sincronización** del Asistente para nueva suscripción. Para solucionar conflictos de manera interactiva, utilice la interfaz del usuario Solucionador interactivo. Para obtener más información, consulte [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Solicitar comprobación de una firma digital antes de la mezcla**  
  Todos los solucionadores basados en COM proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] están firmados. Seleccione esta opción para comprobar que el solucionador sea válido al sincronizar.  
@@ -161,7 +161,7 @@ ms.locfileid: "68768201"
  Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
 ### <a name="data-mapping-tab"></a>Pestaña Asignación de datos  
- **Nombre de columna**  
+ **Nombre de la columna**  
  Nombre de la columna en el publicador (solo lectura).  
   
  **Tipo de datos del publicador**  

@@ -17,10 +17,10 @@ ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914270"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE (permisos de servidor de Transact-SQL)
@@ -92,7 +92,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *server_role*  
  Especifica un rol de servidor definido por el usuario.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los permisos del ámbito del servidor solamente pueden revocarse si la base de datos actual es maestra.  
   
  REVOKE quita los permisos GRANT y DENY.  
@@ -146,7 +146,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-revoking-a-permission-from-a-login"></a>A. Revocar un permiso de un inicio de sesión  
- En el siguiente ejemplo se revoca el permiso `VIEW SERVER STATE` del inicio de sesión `WanidaBenshoof` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En el siguiente ejemplo se revoca el permiso `VIEW SERVER STATE` del inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `WanidaBenshoof`.  
   
 ```  
 USE master;  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ### <a name="b-revoking-the-with-grant-option"></a>B. Revocar la opción WITH GRANT  
- En el siguiente ejemplo se revoca el derecho a conceder `CONNECT SQL` desde el inicio de sesión `JanethEsteves` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En el siguiente ejemplo se revoca el derecho a conceder `CONNECT SQL` desde el inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `JanethEsteves`.  
   
 ```  
 USE master;  

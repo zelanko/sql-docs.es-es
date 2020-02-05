@@ -1,28 +1,28 @@
 ---
 title: Referencia de azdata bdc spark session
-titleSuffix: SQL Server big data clusters
 description: Artículo de referencia sobre los comandos de azdata bdc spark session.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f1da72349e7594d267ae0d965ddad03cee93017b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6829ce474b2f2f0b000a8ded5cfae2e293e1c2da
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531739"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258624"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-En el artículo siguiente se proporciona referencia de los comandos de `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `bdc spark session` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [azdata bdc spark session create](#azdata-bdc-spark-session-create) | Cree una sesión de Spark.
@@ -125,7 +125,7 @@ Get session info for session with ID of 0.
 ```bash
 azdata spark session info --session-id 0
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--session-id -i`
 Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -149,7 +149,7 @@ Get session log for session with ID of 0.
 ```bash
 azdata spark session log --session-id 0
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--session-id -i`
 Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -173,7 +173,7 @@ Get session state for session with ID of 0.
 ```bash
 azdata spark session state --session-id 0
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--session-id -i`
 Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -197,7 +197,7 @@ Delete a session.
 ```bash
 azdata spark session delete --session-id 0
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--session-id -i`
 Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales

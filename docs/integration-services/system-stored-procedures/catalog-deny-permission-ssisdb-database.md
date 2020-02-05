@@ -11,10 +11,10 @@ ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6fe8a8e0fa76201ad4f363f0a91440d1c62958e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281038"
 ---
 # <a name="catalogdeny_permission-ssisdb-database"></a>catalog.deny_permission (base de datos de SSISDB)
@@ -73,14 +73,14 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   Pertenencia al rol de servidor de **sysadmin**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este procedimiento almacenado le permite denegar los tipos de permiso descritos en la tabla siguiente:  
   
 |Valor de permission_type|Nombre del permiso|Descripción del permiso|Tipos de objetos aplicables|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Permite a la entidad de seguridad leer información que se considera parte del objeto, como las propiedades. No permite a la entidad de seguridad enumerar o leer el contenido de otros objetos contenidos dentro del objeto.|Carpeta, proyecto, entorno, operación|  
 |`2`|MODIFY|Permite a la entidad de seguridad modificar información que se considera parte del objeto, como las propiedades. No permite a la entidad de seguridad modificar otros objetos contenidos dentro del objeto.|Carpeta, proyecto, entorno, operación|  
-|`3`|Ejecute|Permite a la entidad de seguridad ejecutar todos los paquetes del proyecto.|Proyecto|  
+|`3`|Ejecute|Permite a la entidad de seguridad ejecutar todos los paquetes del proyecto.|proyecto|  
 |`4`|MANAGE_PERMISSIONS|Permite a la entidad de seguridad asignar permisos a los objetos.|Carpeta, proyecto, entorno, operación|  
 |`100`|CREATE_OBJECTS|Permite a la entidad de seguridad crear objetos en la carpeta.|Carpeta|  
 |`101`|READ_OBJECTS|Permite a la entidad de seguridad leer todos los objetos de la carpeta.|Carpeta|  

@@ -13,10 +13,10 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821956"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Usar el cuadro de diálogo Nuevo grupo de disponibilidad (SQL Server Management Studio)
@@ -45,7 +45,7 @@ ms.locfileid: "74821956"
 -   Une las réplicas secundarias al grupo de disponibilidad.    
 -   Realiza la sincronización de datos inicial.  
   
- Para obtener más información sobre estas tareas de configuración, vea [Seguimiento: después de crear un agente de escucha de grupo de disponibilidad](#FollowUp) más adelante en este tema.  
+ Para obtener información sobre estas tareas de configuración, vea [Seguimiento: Después de crear un grupo de disponibilidad](#FollowUp), más adelante en este tema.  
   
 ##  <a name="Permissions"></a> Permisos  
  Se requiere la pertenencia al rol fijo de servidor **sysadmin** y el permiso de servidor CREATE AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
@@ -70,7 +70,7 @@ ms.locfileid: "74821956"
     > [!TIP]  
     >  Si ha agregado una réplica y no puede conectarse a la instancia de servidor de host, puede quitar la réplica y agregar una nueva. Para obtener más información, vea [Quitar una réplica secundaria de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) y [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-8.  En el panel **Seleccionar una página** del cuadro de diálogo, haga clic en **Preferencias de copia de seguridad**. A continuación, en la página **Preferencias de copia de seguridad** , especifique dónde deben producirse las copias de seguridad según un rol de réplica y asigne prioridades de copia de seguridad a cada instancia de servidor que hospedará una réplica de disponibilidad para este grupo de disponibilidad. Para obtener más información, vea [Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad (página Preferencias de copia de seguridad)](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
+8.  En el panel **Seleccionar una página** del cuadro de diálogo, haga clic en **Preferencias de copia de seguridad**. A continuación, en la página **Preferencias de copia de seguridad** , especifique dónde deben producirse las copias de seguridad según un rol de réplica y asigne prioridades de copia de seguridad a cada instancia de servidor que hospedará una réplica de disponibilidad para este grupo de disponibilidad. Para obtener más información, vea [Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad &#40;página Preferencias de copia de seguridad&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
 9. Para crear el grupo de disponibilidad, haga clic en **Aceptar**. Esto hace que el diálogo compruebe si las bases de datos especificadas cumplen los requisitos previos.  
   

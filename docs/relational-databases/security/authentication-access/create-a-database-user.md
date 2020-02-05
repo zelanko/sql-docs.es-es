@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981938"
 ---
 # <a name="create-a-database-user"></a>Crear un usuario de base de datos
@@ -91,7 +91,7 @@ ms.locfileid: "73981938"
   
 5.  Cuando se selecciona una opción, las demás opciones del cuadro de diálogo podrían cambiar. Algunas opciones solo se aplican a tipos específicos de usuarios de base de datos. Algunas opciones pueden dejarse en blanco y usarán un valor predeterminado.  
   
-     **Nombre de usuario.**  
+     **Nombre de usuario**  
      Escriba un nombre para el nuevo usuario. Si ha elegido **Usuario de Windows** en la lista **Tipo de usuario**, también puede hacer clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccione Usuario o Grupo**.  
   
      **Nombre de inicio de sesión**  

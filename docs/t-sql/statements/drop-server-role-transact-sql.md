@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929243"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE (Transact-SQL)
@@ -45,7 +45,7 @@ DROP SERVER ROLE role_name
  *role_name*  
  Especifica el rol de servidor definido por el usuario que se va a quitar del servidor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los roles de servidor definidos por el usuario que tienen elementos protegibles no se pueden quitar del servidor. Para quitar un rol de servidor definido por el usuario que tiene elementos protegibles, primero debe transferir la propiedad de esos elementos protegibles o eliminarlos.  
   
  Los roles de servidor definidos por el usuario que tienen miembros no se pueden quitar. Para quitar un rol de servidor definido por el usuario que tenga miembros, primero debe quitar los miembros del rol mediante [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).  

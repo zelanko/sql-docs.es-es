@@ -19,10 +19,10 @@ ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcf14745af6da26cc625e928d75f510e0da9a2e8
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70030351"
 ---
 # <a name="data-type-precedence-transact-sql"></a>Prioridad de tipo de datos (Transact-SQL)
@@ -52,8 +52,8 @@ Cuando un operador combina dos expresiones de tipos de datos distintos, el tipo 
 1. **tinyint**  
 1. **bit**  
 1. **ntext**  
-1. **texto**  
-1. **imagen**  
+1. **text**  
+1. **image**  
 1. **timestamp**  
 1. **uniqueidentifier**  
 1. **nvarchar** (**nvarchar(max)** incluido)  
@@ -63,7 +63,7 @@ Cuando un operador combina dos expresiones de tipos de datos distintos, el tipo 
 1. **varbinary** (**varbinary(max)** incluido)  
 1. **binary** (el más bajo)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)

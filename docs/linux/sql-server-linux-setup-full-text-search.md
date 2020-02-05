@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874766"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Instalación de Búsqueda de texto completo de SQL Server en Linux
@@ -88,7 +88,7 @@ La búsqueda de texto completo utiliza [separadores de palabras](../relational-d
 
 | Idioma | Id. de idioma |
 |---|---|
-| Neutro | 0 |
+| Neutra | 0 |
 | Árabe | 1025 |
 | Bengali (India) | 1093 |
 | Bokmål | 1044 |
@@ -100,13 +100,13 @@ La búsqueda de texto completo utiliza [separadores de palabras](../relational-d
 | Chinese (Macao SAR) | 5124 |
 | Chinese (Singapore) | 4100 |
 | Croata | 1050 |
-| Czech | 1029 |
-| Danish | 1030 |
+| Checo | 1029 |
+| Danés | 1030 |
 | Neerlandés | 1043 |
 | Inglés | 3082 |
 | Francés | 1036 |
-| German | 1031 |
-| Greek | 1032 |
+| Alemán | 1031 |
+| Griego | 1032 |
 | Gujarati | 1095 |
 | Hebreo | 1037 |
 | Hindi | 1081 |
@@ -123,11 +123,11 @@ La búsqueda de texto completo utiliza [separadores de palabras](../relational-d
 | Maratí | 1102 |
 | Polaco | 1045 |
 | Portugués | 2070 |
-| Punjabí | 1094 |
+| Punjabi | 1094 |
 | Rumano | 1048 |
 | Ruso | 1049 |
-| Serbian (Cyrillic) | 3098 |
-| Serbian (Latin) | 2074 |
+| Serbio (cirílico) | 3098 |
+| Serbio (latino) | 2074 |
 | Chino simplificado | 2052 |
 | Eslovaco | 1051 |
 | Esloveno | 1060 |

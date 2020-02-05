@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7da76d948774ecbedfc363bdcff3404698d5cf43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085731"
 ---
 # <a name="create-check-constraints"></a>Crear restricciones CHECK
@@ -71,13 +71,13 @@ ms.locfileid: "68085731"
     > [!NOTE]  
     >  Asegúrese de que escribe los valores de restricción no numéricos entre comillas sencillas (').  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 5.  En la categoría **Identidad** , puede cambiar el nombre de la restricción CHECK y agregar una descripción (propiedad extendida) para la restricción.  
   
 6.  En la categoría **Diseñador de tablas** , puede definir cuándo debe exigirse la restricción.  
   
-    |**Para:**|**Seleccione Sí en los campos siguientes:**|  
+    |**Para**:|**Seleccione Sí en los campos siguientes:**|  
     |-------------|---------------------------------------------|  
     |Pruebe la restricción en los datos existentes antes de que se creara la restricción|**Comprobar los datos existentes al crear o habilitar**|  
     |Exigir la restricción siempre que se produzca una operación de replicación en esta tabla|**Exigir para replicación**|  

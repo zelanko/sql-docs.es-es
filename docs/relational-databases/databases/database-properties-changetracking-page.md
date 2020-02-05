@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2661424dcfe87f7151bbd92b2dfbf76861913fbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099630"
 ---
 # <a name="database-properties-changetracking-page"></a>Propiedades de la base de datos (página ChangeTracking)
@@ -25,7 +25,7 @@ ms.locfileid: "68099630"
   Utilice esta página para ver o modificar la configuración del seguimiento de cambios de la base de datos seleccionada. Para obtener más información sobre las opciones disponibles en esta página, vea [Habilitar y deshabilitar el seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md).  
   
 ## <a name="options"></a>Opciones  
- **Seguimiento de los cambios**  
+ **Seguimiento de cambios**  
  Utilice esta opción para habilitar o deshabilitar el seguimiento de cambios de la base de datos.  
   
  Para habilitar el seguimiento de cambios, debe tener el permiso para modificar la base de datos.  

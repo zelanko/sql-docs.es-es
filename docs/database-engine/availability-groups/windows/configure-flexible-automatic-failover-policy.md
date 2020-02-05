@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 39e6e14700fe7ad9d9c1c3ba71eca82b3855beb2
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056685"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configuración de una directiva de conmutación automática por error flexible para un grupo de disponibilidad Always On
@@ -69,9 +69,9 @@ ms.locfileid: "74056685"
   
 |Nivel|Condición de error|[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valor|Valor de PowerShell|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|Uno|Por inactividad de servidor. Especifica que se inicia una conmutación automática por error en alguno de los casos siguientes:<br /><br /> El servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está inactivo.<br /><br /> La concesión del grupo de disponibilidad para conectarse al clúster de WSFC expira porque no se ha recibido ninguna confirmación de la instancia del servidor. Para más información, vea [Cómo funciona: tiempo de espera de concesión de Always On de SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).<br /><br /> <br /><br /> Este es el nivel menos restrictivo.|1|**OnServerDown**|  
+|Uno|Por inactividad de servidor. Especifica que se inicia una conmutación automática por error en alguno de los casos siguientes:<br /><br /> El servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está inactivo.<br /><br /> La concesión del grupo de disponibilidad para conectarse al clúster de WSFC expira porque no se ha recibido ninguna confirmación de la instancia del servidor. Para obtener más información, vea [Cómo funciona: tiempo de espera de concesión de AlwaysOn de SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).<br /><br /> <br /><br /> Este es el nivel menos restrictivo.|1|**OnServerDown**|  
 |Dos|Al dejar de responder el servidor. Especifica que se inicia una conmutación automática por error en alguno de los casos siguientes:<br /><br /> La instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se conecta al clúster y se ha superado el umbral de tiempo de espera de comprobación de estado del grupo de disponibilidad definido por el usuario.<br /><br /> La réplica de disponibilidad tiene un estado de error.|2|**OnServerUnresponsive**|  
-|Tres|En errores de servidor críticos. Especifica que se inicia una conmutación automática por error en caso de errores internos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] graves, como bloqueos por subproceso huérfanos, infracciones serias de acceso de escritura o volcado excesivo.<br /><br /> Es el nivel predeterminado.|3|**OnCriticalServerError**|  
+|tres|En errores de servidor críticos. Especifica que se inicia una conmutación automática por error en caso de errores internos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] graves, como bloqueos por subproceso huérfanos, infracciones serias de acceso de escritura o volcado excesivo.<br /><br /> Es el nivel predeterminado.|3|**OnCriticalServerError**|  
 |Cuatro|En errores de servidor moderados. Especifica que se inicia una conmutación automática por error en caso de errores internos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] moderados, tales como una condición persistente de falta de memoria en el grupo de recursos de servidor interno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|4|**OnModerateServerError**|  
 |Cinco|En cualquier condición de error apta. Especifica que se inicia una conmutación automática por error en el caso de condiciones de error aptas, incluidas las siguientes:<br /><br /> Detección de un interbloqueo del programador.<br /><br /> Detección de un interbloqueo irresoluble.<br /><br /> <br /><br /> Es el nivel más restrictivo.|5|**OnAnyQualifiedFailureConditions**|  
   
@@ -100,13 +100,13 @@ ms.locfileid: "74056685"
         |------------------------------|-----------|-------------------------------------------|  
         |1|Uno|Por inactividad de servidor. El servicio SQL Server se detiene debido a una conmutación por error o reinicio.|  
         |2|Dos|Al dejar de responder el servidor. Se cumple cualquier condición de un valor inferior, el servicio SQL Server se conecta al clúster y se supera el umbral del tiempo de espera de comprobación de estado, o la réplica principal actual está en un estado de error.|  
-        |3|Tres|En errores de servidor críticos. Se cumple cualquier condición de un valor inferior o se produce un error de servidor crítico interno.<br /><br /> Es el nivel predeterminado.|  
+        |3|tres|En errores de servidor críticos. Se cumple cualquier condición de un valor inferior o se produce un error de servidor crítico interno.<br /><br /> Es el nivel predeterminado.|  
         |4|Cuatro|En errores de servidor moderados. Se cumple cualquier condición de un valor inferior o se produce un error de servidor moderado.|  
         |5|Cinco|En cualquier condición de error apta. Se cumple cualquier condición de un valor inferior o se produce una condición de error adecuada.|  
   
          Para obtener más información sobre los niveles de condición de conmutación por error, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
-    -   Para configurar el umbral del tiempo de espera de comprobación de estado, use la opción HEALTH_CHECK_TIMEOUT = *n*, donde *n* es un entero de 15 000 milisegundos (15 segundos) a 4 294 967 295 milisegundos. El valor predeterminado es 30000 milisegundos (30 segundos).  
+    -   Para configurar el umbral del tiempo de espera de comprobación de estado, use la opción HEALTH_CHECK_TIMEOUT = *n* , donde *n* es un entero de 15 000 milisegundos (15 segundos) a 4 294 967 295 milisegundos. El valor predeterminado es 30000 milisegundos (30 segundos).  
   
          Por ejemplo, la siguiente instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] cambia el umbral de tiempo de espera de comprobación de estado de un grupo de disponibilidad disponible, `AG1`, 60.000 milisegundos (un minuto).  
   
@@ -124,17 +124,17 @@ ms.locfileid: "74056685"
   
     -   Para establecer el nivel de condición de conmutación por error, utilice el parámetro **FailureConditionLevel**_level_ , donde *level* es uno de los siguientes valores:  
   
-        |Valor|Nivel|La conmutación por error iniciada es automática cuando se produce...|  
+        |Value|Nivel|La conmutación por error iniciada es automática cuando se produce...|  
         |-----------|-----------|-------------------------------------------|  
         |**OnServerDown**|Uno|Por inactividad de servidor. El servicio SQL Server se detiene debido a una conmutación por error o reinicio.|  
         |**OnServerUnresponsive**|Dos|Al dejar de responder el servidor. Se cumple cualquier condición de un valor inferior, el servicio SQL Server se conecta al clúster y se supera el umbral del tiempo de espera de comprobación de estado, o la réplica principal actual está en un estado de error.|  
-        |**OnCriticalServerError**|Tres|En errores de servidor críticos. Se cumple cualquier condición de un valor inferior o se produce un error de servidor crítico interno.<br /><br /> Es el nivel predeterminado.|  
+        |**OnCriticalServerError**|tres|En errores de servidor críticos. Se cumple cualquier condición de un valor inferior o se produce un error de servidor crítico interno.<br /><br /> Es el nivel predeterminado.|  
         |**OnModerateServerError**|Cuatro|En errores de servidor moderados. Se cumple cualquier condición de un valor inferior o se produce un error de servidor moderado.|  
         |**OnAnyQualifiedFailureConditions**|Cinco|En cualquier condición de error apta. Se cumple cualquier condición de un valor inferior o se produce una condición de error adecuada.|  
   
          Para obtener más información sobre los niveles de condición de conmutación por error, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
-         Por ejemplo, el siguiente comando cambia el nivel de condición de error de un grupo de disponibilidad existente, `AG1` al nivel uno.  
+         Por ejemplo, el siguiente comando cambia el nivel de condición de error de un grupo de disponibilidad existente, `AG1`al nivel uno.  
   
         ```  
         Set-SqlAvailabilityGroup `   
@@ -172,7 +172,7 @@ ms.locfileid: "74056685"
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Cómo funciona: tiempo de espera de concesión de Always On de SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
+-   [Cómo funciona: tiempo de espera de concesión de AlwaysOn de SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

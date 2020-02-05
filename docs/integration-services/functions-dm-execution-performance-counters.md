@@ -10,19 +10,16 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 957d0fa1d5b311fbecfd76340e443e8f2f3f81f5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b5de8c538d0ee91f8d176637beceabdf9352177a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296430"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76037045"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>Funciones - dm_execution_performance_counters
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
-
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Devuelve las estadísticas de rendimiento de una ejecución en el servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
@@ -39,10 +36,10 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
  Si no se especifica un identificador de ejecución, se devuelven estadísticas de rendimiento de varias ejecuciones. Si es miembro del rol de base de datos **ssis_admin** , se devuelven las estadísticas de rendimiento de todas las ejecuciones actuales.  Si no es miembro del rol de base de datos **ssis_admin** , se devuelven las estadísticas de rendimiento de las ejecuciones actuales para las que tiene permisos de lectura. *execution_id* es **BigInt**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En la tabla siguiente se muestran los valores de nombre de contador devueltos por la función dm_execution_performance_counter.  
   
-|Nombre de contador|Descripción|  
+|Nombre del contador|Descripción|  
 |------------------|-----------------|  
 |Bytes BLOB leídos|Número de bytes de datos de objetos binarios grandes (BLOB) que el motor de flujo de datos lee de todos los orígenes.|  
 |Bytes BLOB escritos|Número de bytes de datos BLOB que el motor de flujo de datos escribe en todos los destinos.|  
@@ -57,10 +54,10 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |Filas leídas|Número total de filas listas para su ejecución.|  
 |Filas escritas|Número total de filas escritas por la ejecución.|  
   
-## <a name="return"></a>Devolución  
+## <a name="return"></a>Valor devuelto  
  La función dm_execution_performance_counters devuelve una tabla con las columnas siguientes para una ejecución en curso. La información devuelta corresponde a todos los paquetes contenidos en la ejecución. Si no hay ninguna ejecución en curso, se devuelve una tabla vacía.  
   
-|Nombre de la columna|Tipo de columna|Descripción|Notas|  
+|Nombre de columna|Tipo de columna|Descripción|Observaciones|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** no es un valor válido.|Identificador único para la ejecución que contiene el paquete.||  
 |counter_name|**nvarchar(128)**|Nombre del contador.|Vea la sección **Comentarios** de los valores.|  

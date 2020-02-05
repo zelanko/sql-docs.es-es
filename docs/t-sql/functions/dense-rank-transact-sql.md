@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 89cfdcb49734897dbc41552158c9faad850f331a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68135924"
 ---
-# <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
+# <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Esta función devuelve el rango de cada fila dentro de una partición del conjunto de resultados, sin espacios en los valores de clasificación. El rango de una fila específica es uno más el número de valores de rango distintos anteriores a esa fila específica.  
@@ -48,10 +48,10 @@ Primero divide el conjunto de resultados generado por la cláusula [FROM](../../
  \<order_by_clause>  
 Determina el orden en el que se aplica la función `DENSE_RANK` a las filas de una partición.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **bigint**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Si dos o más filas tienen el mismo valor de rango en la misma partición, cada una de esas filas recibirá el mismo rango. Por ejemplo, si los dos mejores vendedores tienen el mismo valor de SalesYTD, los dos tendrán un valor de rango de uno. El siguiente vendedor con mayor valor en SalesYTD tendrá un valor de rango de dos. Esto supera en uno el número de rangos distintos anteriores a la fila en cuestión. Por tanto, los números devueltos por la función `DENSE_RANK` no tienen espacios y siempre tienen valores de rango consecutivos.  
   
 El criterio de ordenación que usa la consulta global determina el orden de las filas en el conjunto de resultados. Esto implica que una fila que tiene el rango uno no tiene que ser la primera fila de la partición.  
@@ -155,7 +155,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|FirstName|LastName|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
+|Nombre|Apellidos|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
 |Michael|Blythe|1|1|1|1|4 557 045,0459|98027|  
 |Linda|Mitchell|2|1|1|1|5 200 475,2313|98027|  

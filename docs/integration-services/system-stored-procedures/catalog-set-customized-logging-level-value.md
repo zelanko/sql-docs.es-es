@@ -11,10 +11,10 @@ ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fc237875d0ba5b4f28838609f6b172c55ffe0e90
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296747"
 ---
 # <a name="catalogset_customized_logging_level_value"></a>catalog.set_customized_logging_level_value 
@@ -38,12 +38,12 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  Es el nombre de un nivel de registro personalizado existente.  
   
- El parámetro *level_name* es **nvarchar(128)** .  
+ *level_name* es **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
  Es el nombre de la propiedad que se va a cambiar. Los valores válidos son **PROFILE** y **EVENTS**.  
   
- El parámetro *property_name* es **nvarchar(128)** .  
+ *property_name* es **nvarchar(128)** .  
   
  [ @property_value = ] *property_value*  
  Es el nuevo valor de la propiedad especificada del nivel de registro personalizado especificado.  
@@ -52,7 +52,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
   
  El parámetro *property_value* es **bigint**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="return-codes"></a>Códigos de retorno  
  0 (correcto)  

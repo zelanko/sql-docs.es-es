@@ -22,10 +22,10 @@ ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cce8533a1ac74feb95577d28f73cb6f87c15aa31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223598"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE (Transact-SQL)
@@ -56,7 +56,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
  *rule*  
  Es la regla que se va a quitar. Los nombres de reglas deben ajustarse a las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar el nombre de esquema de la regla es opcional.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para quitar una regla, primero desenlace la regla si ésta está enlazada actualmente a una columna o a un tipo de datos de alias. Para desenlazar la regla, use **sp_unbindrule**. Si la regla está enlazada, al intentar quitarla se muestra un mensaje de error y se cancela la instrucción DROP RULE.  
   
  Después de quitar una regla, los datos nuevos escritos en las columnas que controlaba anteriormente la regla se escriben sin las restricciones de la regla. Los datos existentes no se ven afectados de ninguna forma.  

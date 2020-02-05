@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 427367994418ea7e82288541c89b47cc8bb7ea75
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: eb45cf400b0fe8318d0bef5a99b36f20bff8ef21
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958349"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287126"
 ---
 # <a name="sql-server-replication"></a>Replicación de SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Para obtener información sobre la compatibilidad con versiones anteriores, vea 
   
 ## <a name="publications-and-articles"></a>Publicaciones y artículos 
   
--   [Create a Publication](publish/create-a-publication.md)    
+-   [Create a Publication](publish/create-a-publication.md) (Creación de una publicación)    
 -   [Definir un artículo](publish/define-an-article.md)   
 -   [Ver y modificar propiedades de publicación](publish/view-and-modify-publication-properties.md)   
 -   [er y modificar las propiedades de un artículo](publish/view-and-modify-article-properties.md)    
@@ -91,7 +91,7 @@ Para obtener información sobre la compatibilidad con versiones anteriores, vea 
 -   [Crear una suscripción de extracción](create-a-pull-subscription.md)    
 -   [Ver y modificar las propiedades de una suscripción de extracción](view-and-modify-pull-subscription-properties.md)    
 -   [Eliminar una suscripción de extracción](delete-a-pull-subscription.md)    
--   [Crear una suscripción de inserción](create-a-push-subscription.md)   
+-   [Create a Push Subscription](create-a-push-subscription.md) (Creación de una suscripción de inserción)   
 -   [Ver y modificar las propiedades de una suscripción de inserción](view-and-modify-push-subscription-properties.md)   
 -   [Eliminar una suscripción de inserción](delete-a-push-subscription.md)   
 -   [Especificar programaciones de sincronización](specify-synchronization-schedules.md)    
@@ -129,7 +129,7 @@ Para obtener información sobre la compatibilidad con versiones anteriores, vea 
 -   [Configurar el trabajo del conjunto de transacciones para un publicador de Oracle &#40;programación de la replicación con Transact-SQL&#41;](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
 -   [Actualizar scripts de replicación &#40;programación de la replicación con Transact-SQL&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>Monitor
+## <a name="monitor"></a>Supervisión
   
 -   [Permitir el uso del Monitor de replicación a los usuarios que no son administradores](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Supervisar la replicación mediante programación](monitor/programmatically-monitor-replication.md)    

@@ -1,10 +1,9 @@
 ---
-title: Cuadro de diálogo Abrir archivo | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Abrir archivo
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 869af839389aec533f132f6e2174d8495ffe1f20
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 61a0a699c7d754d3b21b671da5cd29ea0ec0f240
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263324"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251454"
 ---
 # <a name="open-file-dialog-box"></a>Cuadro de diálogo Abrir archivo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +75,7 @@ Proporciona las opciones para organizar y ver los contenidos del elemento selecc
 **Vistas en miniatura**  
 Muestra vistas en miniatura de los elementos del panel de información.  
   
-**Mosaicos**  
+**Iconos**  
 Muestra archivos y carpetas como iconos grandes.  
   
 **Iconos**  
@@ -86,7 +87,7 @@ Muestra archivos y carpetas en formato de lista.
 **Detalles**  
 Muestra el nombre, el tamaño, el tipo y la fecha de última modificación de los archivos y carpetas en formato de lista. Para ordenar según un detalle determinado, haga clic en su encabezado de columna.  
   
-**Vista web**  
+**WebView**  
 Este comando no está disponible.  
   
 ## <a name="tools"></a>Herramientas  

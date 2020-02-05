@@ -14,10 +14,10 @@ ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570684"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes
@@ -30,7 +30,7 @@ ms.locfileid: "65570684"
 |Nivel del permiso|Abreviatura|  
 |----------------------|------------------|  
 |Control total|**F**|  
-|Contribuir|**C**|  
+|Contribuciones|**C**|  
 |Visitante|**V**|  
   
  Los permisos que no afectan a un servidor de informes no se muestran en esta referencia. Todos los permisos de personalización se excluyen de este artículo de referencia. Aunque puede incluir elementos del servidor de informes en un sitio web personalizado, el servidor de informes no controla directamente las operaciones o solicitudes de personalización.  

@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2765c7c610bd37e68124d7b45ddd0390cc8777dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113700"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
@@ -52,15 +52,15 @@ CHAR ( integer_expression )
 Un entero entre 0 y 255. `CHAR` devuelve un valor `NULL` para las expresiones de entero fuera de este intervalo, o cuando el entero expresa solo el primer byte de un carácter de doble byte.
 
 > [!NOTE]
-> Algunos juegos de caracteres no europeos, como [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), incluyen caracteres que se pueden representar en un esquema de codificación de byte único, pero requieren una codificación multibyte. Para más información sobre los juegos de caracteres, vea [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
+> Algunos juegos de caracteres no Europaos, como [Shift Japanese Industrial Standards](https://www.wikipedia.org/wiki/Shift_JIS), incluyen caracteres que se pueden representar en un esquema de codificación de byte único, pero requieren una codificación multibyte. Para más información sobre los juegos de caracteres, vea [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets). 
   
 ## <a name="return-types"></a>Tipos de valores devueltos
 **char(1)**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Use `CHAR` para insertar caracteres de control en las cadenas de caracteres. En esta tabla se muestran algunos caracteres de control usado con frecuencia.
   
-|Carácter de control|Valor|  
+|Carácter de control|Value|  
 |---|---|
 |Pestaña|**char(9)**|  
 |Avance de línea|**char(10)**|  
@@ -199,7 +199,7 @@ first_byte_of_double_byte_character first_byte_of_double_byte_character
 NULL                                NULL                                         
 ```
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  

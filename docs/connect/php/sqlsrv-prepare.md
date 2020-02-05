@@ -18,13 +18,13 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b16e58b8535d91fd29281aa986ab5ba26875dc38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014989"
 ---
-# <a name="sqlsrvprepare"></a>sqlsrv_prepare
+# <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Crea un recurso de instrucción asociado a la conexión especificada. Esta función resulta útil para la ejecución de varias consultas.  
@@ -67,20 +67,20 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$options* [OPCIONAL]: matriz asociativa que establece <a name="properties">propiedades de consulta</a>. En la siguiente tabla se indican las claves admitidas y los valores correspondientes:
 
-|Key|Valores admitidos|Descripción|  
+|Clave|Valores admitidos|Descripción|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|Un entero positivo|Configura el tamaño de búfer que contiene el conjunto de resultados de un cursor de cliente.<br /><br />El valor predeterminado es 10240 KB. Para obtener más información, vea [Especificación de un tipo de cursor y selección de filas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
 |DecimalPlaces|Un número entero comprendido entre 0 y 4, ambos incluidos|Especifica los lugares decimales al dar formato a los valores de moneda obtenidos.<br /><br />Se omitirá cualquier entero negativo o un valor mayor que 4.<br /><br />Esta opción funciona sólo cuando es FormatDecimals es **true**.|
-|FormatDecimals|**True** o **False**<br /><br />El valor predeterminado es **false**.|Especifica si se agregan ceros iniciales a las cadenas decimales cuando sea apropiado y habilita la opción `DecimalPlaces` para dar formato a los tipos de moneda.<br /><br />Para obtener más información, consulte [Aplicación de formato a cadenas decimales y valores de moneda (controlador SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
+|FormatDecimals|**true** o **false**<br /><br />El valor predeterminado es **false**.|Especifica si se agregan ceros iniciales a las cadenas decimales cuando sea apropiado y habilita la opción `DecimalPlaces` para dar formato a los tipos de moneda.<br /><br />Para obtener más información, consulte [Aplicación de formato a cadenas decimales y valores de moneda (controlador SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
 |QueryTimeout|Un entero positivo|Establece el tiempo de espera de consulta en segundos. De manera predeterminada, el controlador espera indefinidamente los resultados.|  
-|ReturnDatesAsStrings|**True** o **False**<br /><br />El valor predeterminado es **false**.|Configura la instrucción para recuperar los tipos de fecha y hora como cadenas (**true**). Para más información, consulte [Recuperación de los tipos de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
+|ReturnDatesAsStrings|**true** o **false**<br /><br />El valor predeterminado es **false**.|Configura la instrucción para recuperar los tipos de fecha y hora como cadenas (**true**). Para más información, consulte [Recuperación de los tipos de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |De desplazamiento|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Para obtener más información sobre estos valores, vea [Especificación de un tipo de cursor y selección de filas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
-|SendStreamParamsAtExec|**True** o **False**<br /><br />El valor predeterminado es **true**.|Configura el controlador para enviar todos los datos de flujo en el momento de la ejecución (**true**) o para enviar los datos de flujo en fragmentos (**false**). De manera predeterminada, este valor se establece como **True**. Para obtener más información, consulte [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
+|SendStreamParamsAtExec|**true** o **false**<br /><br />El valor predeterminado es **true**.|Configura el controlador para enviar todos los datos de flujo en el momento de la ejecución (**true**) o para enviar los datos de flujo en fragmentos (**false**). De manera predeterminada, este valor se establece como **True**. Para obtener más información, consulte [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   
 ## <a name="return-value"></a>Valor devuelto  
 Un recurso de instrucción. Si no se puede crear el recurso de instrucción, se devuelve el valor **False** .  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Al preparar una instrucción que usa variables como parámetros, estas se enlazan a la instrucción. Esto significa que si actualiza los valores de las variables, la próxima vez que se ejecute la instrucción, lo hará con los valores de parámetro actualizados.  
   
 La combinación de **sqlsrv_prepare** y **sqlsrv_execute** separa la preparación y la ejecución de la instrucción en dos llamadas de función y se puede usar para ejecutar consultas con parámetros. Esta función resulta ideal para ejecutar una instrucción varias veces con distintos valores de parámetros para cada ejecución.  

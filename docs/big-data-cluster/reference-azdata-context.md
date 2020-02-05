@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 36b670ee8485c2e8db58847e9439dfb5fa9920ce
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f2716a8176124539aa7caf382193359ff5435aa6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531677"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820994"
 ---
 # <a name="azdata-context"></a>azdata context
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-En el siguiente artículo encontrará referencias de los comandos `sql` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `context` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [azdata context list](#azdata-context-list) | Muestra los contextos disponibles en el perfil de usuario.
@@ -66,7 +66,7 @@ Deletes contextNamespace from the user profile.
 ```bash
 azdata context delete -n contextNamespace
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--namespace -n`
 Espacio de nombres del contexto que quiere eliminar.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -90,7 +90,7 @@ Establece contextNamespace como contexto activo en el perfil de usuario.
 ```bash
 azdata context set -n contextNamespace
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--namespace -n`
 Espacio de nombres del contexto que quiere establecer.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -107,4 +107,4 @@ Aumente el nivel de detalle de registro. Use --debug para obtener registros de d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md). Para más información sobre cómo instalar la herramienta `azdata`, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).
+Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta `azdata`, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).

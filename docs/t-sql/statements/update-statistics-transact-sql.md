@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ca8f97c98ec94ca021f025ffc5b67152e8253ad6
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982563"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971448"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ Actualiza las estadísticas de optimización de consulta para una tabla o vista 
   
 La actualización de las estadísticas asegura que las consultas se compilan con estadísticas actualizadas. Sin embargo, la actualización de las estadísticas hace que las consultas se vuelvan a compilar. Recomendamos no actualizar las estadísticas con demasiada frecuencia, porque hay que elegir el punto válido entre la mejora de los planes de consulta y el tiempo empleado en volver a compilar las consultas. Las compensaciones específicas dependen de su aplicación. `UPDATE STATISTICS` puede usar tempdb para ordenar la muestra de filas con fines de creación de estadísticas.  
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -111,7 +111,7 @@ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el muestreo de da
   
  Para la mayoría de las cargas de trabajo, no es necesario hacer un examen completo, sino tan solo un muestreo predeterminado.  
 Pero para ciertas cargas de trabajo que son sensibles a distribuciones de datos muy diferentes, puede que sea necesario un tamaño de muestreo mayor o incluso un examen completo.  
-Para más información, vea el blog [CSS SQL Server Engineers](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx) (Ingenieros de CSS SQL Server).  
+Para más información, vea el blog [CSS SQL Server Engineers](https://docs.microsoft.com/archive/blogs/psssql/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed) (Ingenieros de CSS SQL Server).  
   
  RESAMPLE  
  Se actualiza cada estadística utilizando su velocidad de muestra más reciente.  
@@ -135,7 +135,7 @@ Cuando es **ON**, las estadísticas conservan el porcentaje de muestreo definido
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, …n] ) ] Obliga a que se recalculen las estadísticas de nivel de hoja que abarcan las particiones especificadas en la cláusula ON PARTITIONS y después a que se combinen para generar las estadísticas globales. WITH RESAMPLE es necesario porque no se pueden combinar estadísticas de partición generadas con distintas frecuencias de muestreo.  
   
-**Válido para**  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.
   
  ALL | COLUMNS | INDEX  
  Actualice todas las estadísticas existentes, las estadísticas creadas en una o más columnas, o las estadísticas creadas para los índices. Si no se especifica ninguna de las opciones, la instrucción UPDATE STATISTICS actualiza todas las estadísticas en la tabla o vista indizada.  
@@ -163,10 +163,10 @@ Cuando es **ON**, las estadísticas conservan el porcentaje de muestreo definido
 -   Estadísticas creadas sobre tablas internas.  
 -   Estadísticas creadas con índices espaciales o índices XML.  
   
-**Válido para**  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.
 
 MAXDOP = *max_degree_of_parallelism*  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
  Reemplaza la opción de configuración **max degree of parallelism** durante la operación estadística. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
@@ -183,7 +183,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ### <a name="when-to-use-update-statistics"></a>Cuándo utilizar UPDATE STATISTICS  
  Para obtener más información sobre cuándo usar `UPDATE STATISTICS`, vea [Estadísticas](../../relational-databases/statistics/statistics.md).  

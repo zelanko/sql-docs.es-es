@@ -9,23 +9,23 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 81c1a84ea196e7f986f9427605de575f59a3152c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: d3d640fdeb503a2fe210429f9d2b1ca534b4a0a9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531708"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74821171"
 ---
 # <a name="azdata-bdc-sql-status"></a>azdata bdc sql status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-En el artículo siguiente, se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `bdc sql status` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
-[azdata bdc sql status show](#azdata-bdc-sql-status-show) | Estado del servicio de SQL Server.
+[azdata bdc sql status show](#azdata-bdc-sql-status-show) | Estado del servicio SQL Server.
 ## <a name="azdata-bdc-sql-status-show"></a>azdata bdc sql status show
 Estado del servicio SQL Server.
 ```bash

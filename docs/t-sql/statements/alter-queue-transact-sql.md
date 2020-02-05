@@ -24,10 +24,10 @@ ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982053"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982053"
 
   Cambia las propiedades de una cola.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -157,7 +157,7 @@ A diferencia de REORGANIZE en tablas de usuario, REORGANIZE en una cola siempre 
   
  Una cola que tenga configurado en OFF el control de mensajes dudosos no se deshabilitará después de cinco reversiones de transacción consecutivas. Esto permite que el sistema de control de mensajes dudosos sea definido por la aplicación.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando una cola que tiene especificado un procedimiento almacenado de activación contiene mensajes, al cambiar el estado de activación de OFF a ON, se activa inmediatamente el procedimiento almacenado de activación. Cambiar el estado de activación de ON a OFF impide que el agente active instancias del procedimiento almacenado, pero las instancias que están en ejecución no se detienen.  
   
  Modificar una cola para agregar un procedimiento almacenado de activación no afecta al estado de activación de la cola. Modificar el procedimiento almacenado de activación de la cola no afecta a las instancias del procedimiento almacenado de activación que se estén ejecutando en el momento actual.  
@@ -241,7 +241,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
-### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I: Mover una tabla interna de colas a otro grupo de archivos  
+### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I. Mover una tabla interna de colas a otro grupo de archivos  
   
 **Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.  
   

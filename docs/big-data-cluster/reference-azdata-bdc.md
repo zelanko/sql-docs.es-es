@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a4b619396c2dcdad589deff3f9fc6a03fe37c1d5
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: d5d5cb5256f4a1b8389d882300a89f0ee0012a99
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531690"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820985"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-En el artículo siguiente se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `bdc` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [azdata bdc create](#azdata-bdc-create) | Crea el clúster de macrodatos.
@@ -99,7 +99,7 @@ Eliminación del BDC.
 ```bash
 azdata bdc delete --name <cluster_name>
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--name -n`
 Nombre del clúster de macrodatos; se usa para el espacio de nombres de Kubernetes.
 ### <a name="optional-parameters"></a>Parámetros opcionales
@@ -132,7 +132,7 @@ Actualización del BDC a una nueva imagen con la etiqueta "cu2" de un nuevo repo
 ```bash
 azdata bdc upgrade -t cu2 -r foo/bar/baz
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--name -n`
 Nombre del clúster de macrodatos, se usa para espacios de nombres de kubernetes.
 #### `--tag -t`

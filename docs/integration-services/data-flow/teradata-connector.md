@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca25b7425ce74cea820e295a6a99bc3a3c1e2817
-ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75755851"
 ---
 # <a name="microsoft-connector-for-teradata-preview"></a>Microsoft Connector para Teradata (versión preliminar)
@@ -64,10 +64,10 @@ Después de instalar el conector, debe reiniciar el Servicio de integración de 
 
 Para ejecutar un paquete SSIS que tenga como destino SQL Server 2017 y versiones anteriores, sí debe instalar **Microsoft Connector para Teradata de Attunity** con la versión correspondiente, que encontrará en el vínculo siguiente:
 
-- [SQL Server 2017: Microsoft Connector Versión 5.0 para Teradata de Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
-- [SQL Server 2016: Microsoft Connector Versión 4.0 para Teradata de Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
-- [SQL Server 2014: Microsoft Connector Versión 3.0 para Teradata de Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
-- [SQL Server 2012: Microsoft Connector Versión 2.0 para Teradata de Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
+- [SQL Server 2017: Microsoft Connector Version 5.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
+- [SQL Server 2016: Microsoft Connector Version 4.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
+- [SQL Server 2014: Microsoft Connector Version 3.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
+- [SQL Server 2012: Microsoft Connector Version 2.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
 
 ## <a name="uninstallation"></a>Desinstalación
 

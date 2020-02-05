@@ -15,10 +15,10 @@ ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 95893aac0b6ca62b60b12f9d35daf15e77e565f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929305"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (tipo de datos Geometry)
@@ -40,7 +40,7 @@ Devuelve una aproximación poligonal de una instancia de **geometry** que contie
  *relative*  
  Expresión **bool** que indica si se va a usar un máximo relativo para la desviación. Cuando relative está establecido en falso (0), se establece un máximo absoluto para la desviación que puede tener una aproximación lineal. Cuando relative está establecido en true (1), la tolerancia se calcula como un producto del parámetro de tolerancia y el diámetro del cuadro de límite para el objeto espacial.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
@@ -48,7 +48,7 @@ Devuelve una aproximación poligonal de una instancia de **geometry** que contie
 ## <a name="exceptions"></a>Excepciones  
  Al establecer la tolerancia <= 0 se produce una excepción `ArgumentOutOfRange`.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método puede especificar una cantidad de tolerancia a errores para el resultado **LineString** que se obtiene.  
   
  En la siguiente tabla se muestra el tipo de instancia que `CurveToLineWithTolerance()` devuelve para varios tipos.  

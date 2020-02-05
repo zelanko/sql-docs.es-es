@@ -9,10 +9,10 @@ ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9dbecce71d9464267da63dcebb7388cd947a168f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579497"
 ---
 # <a name="report-builder-functions---level-function"></a>Funciones del Generador de informes: función Level
@@ -29,13 +29,13 @@ Level(scope)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ámbito*  
+ *scope*  
  (**Cadena**) Opcional. Nombre de un conjunto de datos, un grupo o una región de datos que contiene los elementos de informe a los que se va a aplicar la función de agregado. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Devuelve un **Integer**. Si el parámetro *scope* especifica un conjunto de datos o una región de datos, o bien una agrupación no recursiva (es decir, una agrupación que no contenga el elemento **Parent** ), la función **Level** devuelve 0. Si se omite el parámetro *scope* , devuelve el nivel del ámbito actual.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor que devuelve la función **Level** se basa en cero; es decir, el primer nivel de una jerarquía es 0.  
   
  La función **Level** puede utilizarse para aplicar sangría en una jerarquía recursiva, como puede ser una lista de empleados.  

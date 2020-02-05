@@ -9,10 +9,10 @@ ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041338"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico circular a un informe (Generador de informes)
@@ -75,7 +75,7 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
   
 8.  (Opcional) Haga clic en el botón Ejecutar ( **!** ) para ver los datos en los que se basará su gráfico.  
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
 ## <a name="ChartType"></a>2. Elegir el tipo de gráfico  
 Podrá elegir entre varios tipos de gráfico predefinidos.  
@@ -89,7 +89,7 @@ Podrá elegir entre varios tipos de gráfico predefinidos.
   
 3.  Haga clic en **Siguiente** para obtener una vista previa.  
   
-5.  Haga clic en **Finalizar**.  
+5.  Haga clic en **Finalizar**  
   
     El gráfico se agrega a la superficie de diseño. No ve los valores reales del gráfico circular, ve Product 1, Product 2, etc., para darle una idea del aspecto que tendrá el gráfico.  
     
@@ -113,7 +113,7 @@ En cada sector del gráfico circular, puede mostrar un porcentaje de este sector
   
 3.  Haga clic con el botón derecho en una etiqueta y, después, haga clic en **Propiedades de la etiqueta de la serie**.  
   
-4.  En el cuadro **Datos de etiqueta**, seleccione **#PERCENT**.  
+4.  En el cuadro **Datos de etiqueta** , seleccione **#PERCENT**.  
     
 5.  (Opcional) Para especificar el número de posiciones decimales que se deben mostrar en la etiqueta, en el cuadro **Datos de etiqueta** tras **#PERCENT**, escriba **{Pn}** , donde *n* es el número de posiciones decimales que se deben mostrar. Por ejemplo, para no mostrar ninguna posición decimal, escriba **#PERCENT{P0}** .  
 
@@ -207,11 +207,11 @@ Dado que el gráfico circular es la única visualización del informe, el gráfi
   
 3.  En **Nombre**, escriba **Gráfico circular de ventas**.  
   
-4.  Haga clic en **Guardar**.  
+4.  Haga clic en **Save**(Guardar).  
   
 El informe se guardará en el servidor de informes.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 Ha completado correctamente el tutorial Agregar un gráfico circular al informe. Para obtener más información sobre los gráficos, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte también  

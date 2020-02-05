@@ -1,10 +1,9 @@
 ---
-title: Crear un proxy del Agente SQL Server | Microsoft Docs
-ms.custom: ''
+title: Create a SQL Server Agent Proxy
+ms.custom: seo-lt-2019
 ms.date: 05/04/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +11,15 @@ helpviewer_keywords:
 ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 24a1b058fcada694bc117bb261c17b863e4be569
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 5abaf32126cb8d61c6bdc3e7634aa00b6066c054
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553097"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245853"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Create a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +46,9 @@ Una cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 ### <a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Permisos  
   
--   Solo los miembros del rol fijo de servidor **sysadmin** disponen del permiso necesario para crear, modificar o eliminar cuentas de proxy. Los usuarios que no son miembros del rol fijo de servidor **sysadmin** deben agregarse a uno de los siguientes roles fijos de base de datos del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** para usar los servidores proxy: **SQLAgentUserRole**, **SQLAgentReaderRole** o **SQLAgentOperatorRole**.  
+-   Solo los miembros del rol fijo de servidor **sysadmin** disponen del permiso necesario para crear, modificar o eliminar cuentas de proxy. Los usuarios que no son miembros del rol fijo de servidor **sysadmin** deben agregarse a uno de los siguientes roles fijos de base de datos del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** para usar los servidores proxy: **SQLAgentUserRole**, **SQLAgentReaderRole**o **SQLAgentOperatorRole**.  
   
 -   Requiere el permiso **ALTER ANY CREDENTIAL** si crea una credencial además del proxy.  
   
@@ -106,7 +107,7 @@ Una cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion
     GO  
     ```  
   
-Para obtener más información, vea:  
+Para más información, consulte:  
   
 -   [CREATE CREDENTIAL (Transact-SQL)](https://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)  
   

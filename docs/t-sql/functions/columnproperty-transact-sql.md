@@ -20,10 +20,10 @@ ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ff96377eac69c1596e0d2e2661714f82dd2cae9a
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983023"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73983023"
 
 Esta función devuelve información de la columna o el parámetro.
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,7 +49,7 @@ Una expresión que contiene el nombre de la columna o del parámetro.
 *property*  
 Para el argumento *id*, el argumento *propiedad* especifica el tipo de información que devolverá la función `COLUMNPROPERTY`. El argumento *propiedad* puede tener uno de estos valores:
   
-|Valor|Descripción|Valor devuelto|  
+|Value|Descripción|Valor devuelto|  
 |---|---|---|
 |**AllowsNull**|Permite valores NULL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**ColumnId**|Valor del Id. de columna correspondiente a **sys.columns.column_id**.|Identificador de columna<br /><br /> **Nota:** Cuando se consultan varias columnas, pueden aparecer espacios en la secuencia de valores de los Id. de columna.|  
@@ -60,7 +60,7 @@ Para el argumento *id*, el argumento *propiedad* especifica el tipo de informaci
 |**IsCursorType**|El parámetro de procedimiento es del tipo CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsDeterministic**|La columna es determinista. Esta propiedad solo se aplica a columnas calculadas y columnas de vistas.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida No es una columna calculada o una columna de vista.|  
 |**IsFulltextIndexed**|La columna se registra para la indización de texto completo.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
-|**IsHidden**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.is_hidden**|**Válido para** : [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] y versiones posteriores.<br /><br /> 0: no está oculto<br /><br /> 1: Hidden|  
+|**IsHidden**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.is_hidden**|**Válido para** : [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] y versiones posteriores.<br /><br /> 0: no está oculto<br /><br /> 1: oculto|  
 |**IsIdentity**|La columna utiliza la propiedad IDENTITY.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsIdNotForRepl**|La columna comprueba el valor IDENTITY_INSERT.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsIndexable**|La columna se puede indizar.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
@@ -85,7 +85,7 @@ Devuelve NULL si se produce un error o si el autor de la llamada no tiene permis
   
 Un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como `COLUMNPROPERTY`, es posible que devuelvan NULL si el usuario no tiene el permiso correcto para el objeto. Vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md) para obtener más información.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Cuando se comprueba la propiedad determinista de una columna, primero se comprueba si se trata de una columna calculada. El argumento **IsDeterministic** devuelve NULL para las columnas no calculadas. Las columnas calculadas se pueden especificar como columnas de índice.
   
 ## <a name="examples"></a>Ejemplos  
@@ -106,7 +106,7 @@ Column Length
 50
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)
   

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3f0a8dd4c5faecc54b7d1c5a5d506fc7cf4ecd00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907075"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
@@ -46,10 +46,10 @@ SOUNDEX ( character_expression )
  *character_expression*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) alfanumérica de datos de caracteres. *character_expression* puede ser una constante, una variable o una columna.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **varchar**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  SOUNDEX convierte una cadena alfanumérica en un código de cuatro caracteres que se basa en cómo suena la cadena cuando se pronuncia. El primer carácter del código es el primer carácter de *character_expression*, convertido a mayúsculas. Los caracteres segundo a cuarto del código son números que representan las letras de la expresión. Las letras A, E, I, O, U, H, W e Y se omiten a menos que sean la primera letra de la cadena. Se agregan ceros al final si se necesita crear un código de cuatro caracteres. Para más información sobre el código SOUNDEX, vea [The Soundex Indexing System](https://www.archives.gov/research/census/soundex.html) (Sistema de indización Soundex).  
   
  Se pueden comparar códigos SOUNDEX de distintas cadenas para ver la similitud de las cadenas cuando se pronuncian. La función DIFFERENCE realiza una operación SOUNDEX en dos cadenas y devuelve un entero que representa la similitud de los códigos SOUNDEX para esas cadenas.  

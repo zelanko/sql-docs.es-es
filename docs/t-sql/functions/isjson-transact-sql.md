@@ -18,10 +18,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 0d3060af2114f62c1c21b25e79abf4714acfbe4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109442"
 ---
 # <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
@@ -46,7 +46,7 @@ ISJSON ( expression )
   
  No devuelve errores.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  **ISJSON** no comprueba la unicidad de las claves en el mismo nivel.  
   
 ## <a name="examples"></a>Ejemplos  

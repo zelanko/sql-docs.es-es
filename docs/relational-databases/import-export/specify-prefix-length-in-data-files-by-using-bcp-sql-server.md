@@ -17,10 +17,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 689206ce4462b4befeded788fc6e679af6215a59
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056368"
 ---
 # <a name="specify-prefix-length-in-data-files-using-bcp-sql-server"></a>Especificación de la longitud de prefijo en archivos de datos con bcp (SQL Server)
@@ -60,7 +60,7 @@ ms.locfileid: "74056368"
 |**nvarchar**|2|2|2|2|  
 |**text***|4|4|4|4|  
 |**ntext***|4|4|4|4|  
-|**binario**|2|2|2|2|  
+|**binary**|2|2|2|2|  
 |**varbinary**|2|2|2|2|  
 |**image***|4|4|4|4|  
 |**datetime**|0|1|0|1|  
@@ -78,7 +78,7 @@ ms.locfileid: "74056368"
 |**bit**|0|1|0|1|  
 |**uniqueidentifier**|1|1|0|1|  
 |**timestamp**|1|1|1|1|  
-|**varchar(max)**|8|8|8|8|  
+|**ntext**|8|8|8|8|  
 |**varbinary(max)**|8|8|8|8|  
 |**UDT** (un tipo de datos definido por el usuario)|8|8|8|8|  
 |**XML**|8|8|8|8|  

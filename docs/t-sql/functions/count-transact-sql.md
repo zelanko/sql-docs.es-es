@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026492"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
@@ -67,7 +67,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_claus
 ## <a name="return-types"></a>Tipos de valores devueltos
  **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 COUNT(\*) devuelve el número de elementos de un grupo. Esto incluye los valores NULL y los duplicados
   
 COUNT(ALL *expresión*) evalúa *expresión* en todas las filas del grupo y devuelve el número de valores no NULL.
@@ -277,10 +277,10 @@ ProductCount   SalesOrderID`
 1              SO55981
 ```
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/count-big-transact-sql.md)  
-[Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   
 

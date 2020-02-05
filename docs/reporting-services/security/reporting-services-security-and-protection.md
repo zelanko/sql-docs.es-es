@@ -12,10 +12,10 @@ ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 03234369ed7422433b35a5e3d296f6db1d1b2223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570657"
 ---
 # <a name="reporting-services-security-and-protection"></a>Seguridad y protección de Reporting Services
@@ -33,6 +33,6 @@ ms.locfileid: "65570657"
   
 |Descripciones de las tareas|Vínculos|  
 |-----------------------|-----------|  
-|Configurar SSL (Capa de sockets seguros) para proteger las conexiones de cliente al servidor de informes.|[Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
+|Configurar SSL (Capa de sockets seguros) para proteger las conexiones de cliente al servidor de informes.|[Configuración de conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
   
   

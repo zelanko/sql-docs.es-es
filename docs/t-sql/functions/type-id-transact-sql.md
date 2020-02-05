@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71e719d816e1afb9457d99049fa69c4749c18c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098742"
 ---
-# <a name="typeid-transact-sql"></a>TYPE_ID (Transact-SQL)
+# <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve el Id. de un nombre de tipo de datos especificado.  
@@ -45,7 +45,7 @@ TYPE_ID ( [ schema_name ] type_name )
  *type_name*  
  Es el nombre del tipo de datos. *type_name* es de tipo **nvarchar**. *type_name* puede ser un tipo de datos del sistema o definido por el usuario.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
 ## <a name="exceptions"></a>Excepciones  
@@ -53,7 +53,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como TYPE_ID, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  TYPE_ID devuelve NULL si el nombre del tipo no es válido o si el autor de la llamada no tiene suficientes permisos para hacer referencia al tipo.  
   
 ## <a name="examples"></a>Ejemplos  

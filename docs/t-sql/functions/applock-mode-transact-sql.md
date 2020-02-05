@@ -21,13 +21,13 @@ ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4544cc4f0a4d7c1d6d33e1f71bde4b55c09a59c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040357"
 ---
-# <a name="applockmode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
+# <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Esta función devuelve el modo de bloqueo mantenido por el propietario del bloqueo en un recurso de aplicación específico. Como función de bloqueo de la aplicación, APPLOCK_MODE funciona en la base de datos actual. La base de datos es el ámbito de los bloqueos de la aplicación.
@@ -58,7 +58,7 @@ Devuelve el modo de bloqueo mantenido por el propietario del bloqueo en un recur
   
 ||||  
 |-|-|-|  
-|**NoLock**|**Update**|**\*SharedIntentExclusive**|  
+|**NoLock**|**Actualizar**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
 |**Shared**|**Exclusivo**||  
   
@@ -129,7 +129,7 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)  
 [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
 [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)

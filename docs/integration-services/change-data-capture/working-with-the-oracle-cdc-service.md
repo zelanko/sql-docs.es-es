@@ -11,10 +11,10 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95f2fc808723fa3a69222ead3f362007585231f1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294520"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabajar con el servicio CDC de Oracle
@@ -54,7 +54,7 @@ ms.locfileid: "71294520"
   
  El propietario de esta base de datos es el administrador del servicio CDC de Oracle, que puede controlar todas las instancias CDC de Oracle hospedadas en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Vea también:**  
+ **Consulte también:**  
   
  [Cómo preparar SQL Server para CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   
@@ -76,13 +76,13 @@ ms.locfileid: "71294520"
   
 |Elemento|Descripción|  
 |----------|-----------------|  
-|TIMESTAMP|Marca de tiempo UTC exacta en que se escribió el registro de seguimiento.|  
-|tipo|Contiene uno de los valores siguientes.<br /><br /> error<br /><br /> INFO<br /><br /> seguimiento|  
+|timestamp|Marca de tiempo UTC exacta en que se escribió el registro de seguimiento.|  
+|type|Contiene uno de los valores siguientes.<br /><br /> ERROR<br /><br /> INFO<br /><br /> TRACE|  
 |Nodo|Nombre del nodo en el que se escribió el registro.|  
 |status|Código de estado usado por la tabla de estado.|  
 |sub_status|Código de subestado usado por la tabla de estado.|  
 |status_message|Mensaje de estado usado por la tabla de estado.|  
-|origen|Nombre del componente CDC de Oracle que produjo el registro de seguimiento.|  
+|source|Nombre del componente CDC de Oracle que produjo el registro de seguimiento.|  
 |text_data|Datos de texto adicionales para aquellos casos en los que el registro de errores o de seguimiento contiene una carga de texto.|  
 |binary_data|Datos binarios adicionales para aquellos casos en los que el registro de errores o de seguimiento contiene una carga binaria.|  
   
@@ -95,7 +95,7 @@ ms.locfileid: "71294520"
   
 |Elemento|Descripción|  
 |----------|-----------------|  
-|NAME|Nombre de la base de datos de Oracle en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|name|Nombre de la base de datos de Oracle en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|Marca de tiempo (UTC) del último cambio en la tabla **xdbcdc_config** de la base de datos CDC correspondiente o marca de tiempo (UTC) de la fila actual de esta tabla.<br /><br /> El desencadenador UPDATE aplica un valor GETUTCDATE() para este elemento. **config_version** permite al servicio CDC identificar la instancia CDC que hay que comprobar para ver si hay un cambio de configuración o para ver si está habilitada/deshabilitada.|  
 |cdc_service_name|Este elemento determina qué servicio CDC de Oracle controla la base de datos de Oracle seleccionada.|  
 |enabled|Indica si la instancia CDC de Oracle está activa (1) o deshabilitada (0). Cuando el servicio CDC de Oracle se inicia, solo se inician las instancias marcadas como habilitadas (1).<br /><br /> **Nota**: Una instancia CDC de Oracle puede deshabilitarse debido a un error que no se puede reintentar. En este caso, la instancia se debe reiniciar manualmente después de que se resuelva el error.|  
@@ -183,18 +183,18 @@ ms.locfileid: "71294520"
 ##  <a name="BKMK_CommandConfigCDC"></a> Usar la línea de comandos para configurar el servicio CDC  
  Puede usar el programa de servicio CDC de Oracle (xdbcdcsvc.exe) desde la línea de comandos. El programa de servicio CDC es un archivo ejecutable de 32 bits y 64 bits nativo de Windows.  
   
- **Vea también**  
+ **Consulte también**  
   
  [Cómo usar la interfaz de línea de comandos del servicio CDC](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)  
   
 ### <a name="service-program-commands"></a>Comandos del programa de servicio  
  En esta sección se describen los siguientes comandos que se usan para configurar el servicio CDC.  
   
--   [Config](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_config)  
+-   [Config](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_config) (Configuración).  
   
--   [Crear](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_create)  
+-   [Creación](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_create)  
   
--   [Delete](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_delete)  
+-   [Eliminar](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_delete)  
   
 ###  <a name="BKMK_config"></a> Config  
  Use `Config` para actualizar una configuración del servicio CDC de Oracle desde un script. El comando se puede usar para actualizar únicamente determinadas partes de la configuración del servicio CDC (por ejemplo, solo la cadena de conexión sin conocer la contraseña de la clave asimétrica). El comando debe ser ejecutado por un administrador del equipo. A continuación se muestra un ejemplo del comando `Config` .  

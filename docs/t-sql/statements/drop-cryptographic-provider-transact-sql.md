@@ -18,10 +18,10 @@ ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 578026f567fc844cf2d0fdd13ce53d83e23f24ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898199"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
@@ -42,7 +42,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
  *provider_name*  
  Es el nombre del proveedor de Administración extensible de claves.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para eliminar un proveedor de Administración extensible de claves (EKM), se deben detener todas las sesiones que utilizan el proveedor.  
   
  Un proveedor de EKM se puede quitar únicamente si no existe ninguna credencial asignada a él.  

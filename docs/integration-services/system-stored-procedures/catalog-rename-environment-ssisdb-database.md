@@ -11,10 +11,10 @@ ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 532513a6d8c62cb1f1f36e6dc2c8b83a7c96089b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295395"
 ---
 # <a name="catalogrename_environment-ssisdb-database"></a>catalog.rename_environment (base de datos de SSISDB)
@@ -66,7 +66,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   El nuevo nombre ya se ha utilizado en un entorno existente  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las referencias de entorno de los proyectos no se actualizan automáticamente al cambiar el nombre del entorno. Las referencias del entorno deben actualizadas como corresponda. Este procedimiento almacenado tendrá éxito aunque las referencias del entorno se interrumpan cambiando el nombre del entorno. Las referencias del entorno se deben actualizar después de que se completa este procedimiento almacenado.  
   
 > [!NOTE]  

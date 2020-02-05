@@ -21,10 +21,10 @@ ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71711068"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtros con parámetros: filtros de fila con parámetros
@@ -33,7 +33,7 @@ ms.locfileid: "71711068"
   
  Las particiones no superpuestas se pueden compartir entre varias suscripciones o restringirse de forma que solo una suscripción reciba una partición determinada. La configuración que controla el comportamiento de la partición se describe en "Usar las opciones de filtrado apropiadas" más adelante en este tema. Con esta configuración, puede adaptar los filtros con parámetros a los requisitos de rendimiento y de la aplicación. En general, las particiones superpuestas proporcionan un mayor grado de flexibilidad, mientras que las particiones no superpuestas replicadas en una sola suscripción proporcionan un mejor rendimiento.  
   
- Los filtros con parámetros se utilizan en una sola tabla y generalmente se combinan con filtros de combinación para extender el filtrado a las tablas relacionadas. Para más información, vea [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
+ Los filtros con parámetros se utilizan en una sola tabla y generalmente se combinan con filtros de combinación para extender el filtrado a las tablas relacionadas. Para obtener más información, consulte [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
  Para definir o modificar un filtro de fila con parámetros, vea [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
@@ -179,7 +179,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   En una jerarquía de filtros de combinación, un artículo con una partición superpuesta no puede aparecer por encima de un artículo con una partición no superpuesta. Es decir, un artículo primario debe usar particiones no superpuestas si las utiliza el artículo secundario. Para obtener información acerca de los filtros de combinación, vea [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
--   Un filtro de combinación en el que la partición no superpuesta es un proceso secundario debe tener la propiedad **join unique key** establecida en 1. Para más información, vea [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
+-   Un filtro de combinación en el que la partición no superpuesta es un proceso secundario debe tener la propiedad **join unique key** establecida en 1. Para obtener más información, consulte [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
 -   El artículo solamente debe tener un filtro con parámetros o un filtro de combinación. Se admite tener un filtro con parámetros y ser el proceso primario en un filtro de combinación. No se permite tener un filtro con parámetros y ser el proceso secundario en un filtro de combinación. Tampoco se permite tener más de un filtro de combinación.  
   

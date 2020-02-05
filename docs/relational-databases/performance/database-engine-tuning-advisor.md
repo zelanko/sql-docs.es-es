@@ -12,10 +12,10 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 52b3154649a06bfb899e6993eb875a04190c59d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946949"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -111,7 +111,7 @@ El Asistente para la optimización de motor de base de datos está diseñado par
   
 -   Especifique solo las estructuras de diseño de la base de datos física que desee que el Asistente para la optimización de motor de base de datos analice. El Asistente para la optimización de motor de base de datos proporciona muchas opciones, pero especifica solo las necesarias.  
   
-## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>Dependencia en el procedimiento almacenado extendido xp_msver  
+## <a name="dependency-on-xp_msver-extended-stored-procedure"></a>Dependencia en el procedimiento almacenado extendido xp_msver  
  El Asistente para la optimización de motor de base de datos depende del procedimiento almacenado extendido **xp_msver** para poder ofrecer una funcionalidad completa. Este procedimiento almacenado extendido está activado de manera predeterminada. El Asistente para la optimización de motor de base de datos usa este procedimiento almacenado extendido para obtener el número de procesadores y la memoria disponible del equipo en el que reside la base de datos que está optimizando. Si **xp_msver** no está disponible, el Asistente para la optimización de motor de base de datos adopta las características de hardware del equipo donde se ejecuta el Asistente para la optimización de motor de base de datos. Si no están disponibles las características de hardware del equipo donde se ejecuta el Asistente para la optimización de motor de base de datos, se presuponen un procesador y 1.024 MB de memoria.  
   
  Esta dependencia afecta a las recomendaciones de partición porque el número de particiones recomendadas depende de estos dos valores (número de procesadores y memoria). La dependencia afecta además a los resultados de optimización si utiliza un servidor de prueba para optimizar el servidor de producción. En este escenario, el Asistente para la optimización de motor de base de datos usa **xp_msver** para obtener propiedades de hardware del servidor de producción. Después de optimizar la carga de trabajo en el servidor de prueba, el Asistente para la optimización de motor de base de datos usa estas propiedades de hardware para generar una recomendación. Para obtener más información, vea [xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md).  

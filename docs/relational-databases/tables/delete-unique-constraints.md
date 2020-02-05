@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e6790d66ad3a5f80a0964ada3c68311ef3d83b25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68016441"
 ---
 # <a name="delete-unique-constraints"></a>Eliminar restricciones UNIQUE
@@ -68,7 +68,7 @@ ms.locfileid: "68016441"
   
 4.  Haga clic en **Eliminar**.  
   
-5.  En el menú **Archivo** , haga clic en **Guardar**_nombre de tabla_.  
+5.  En el menú **Archivo**, haga clic en ***Guardar** _nombre de tabla_.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

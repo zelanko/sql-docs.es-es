@@ -15,10 +15,10 @@ ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d8162a8eef652a14993f67e4e3931be7362e6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929662"
 ---
 # <a name="drop-xml-indexes"></a>Quitar índices XML
@@ -27,7 +27,7 @@ ms.locfileid: "67929662"
   
  La sintaxis de DROP con *TableName.IndexName* está desapareciendo y no es compatible con los índices XML.  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Ejemplo: Creación y eliminación de un índice XML principal  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Ejemplo: crear y quitar un índice XML principal  
  En el ejemplo siguiente se muestra cómo crear un índice XML en una columna de tipo **xml** .  
   
 ```  
@@ -69,7 +69,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Ejemplo: Creación de un índice XML con la opción de índice DROP_EXISTING  
+## <a name="example-creating-an-xml-index-by-using-the-drop_existing-index-option"></a>Ejemplo: crear un índice XML utilizando la opción de índice DROP_EXISTING  
  El ejemplo siguiente muestra cómo crear un índice XML en una columna (`XmlColx`). A continuación, se creará otro índice XML con el mismo nombre en una columna diferente (`XmlColy`). Dado que se ha especificado la opción `DROP_EXISTING` , el índice XML existente en (`XmlColx)` se quita y se crea un índice XML en (`XmlColy`).  
   
 ```  

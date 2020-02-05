@@ -16,10 +16,10 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4616e2c10657e1af8db9c706c518fdf690618303
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822301"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "74822301"
     ```  
   
     > [!IMPORTANT]  
-    >  Si existe un extremo para la creación de reflejo de la base de datos y ya se está utilizando, se recomienda utilizar ese extremo para cada sesión en la instancia de servidor. Si quita un extremo en uso, se interrumpirán las conexiones de las sesiones existentes. Si se ha establecido un testigo para una sesión, la eliminación del extremo de creación de reflejo de la base de datos puede hacer que el servidor principal de esa sesión pierda quórum; si sucede esto, la base de datos se queda sin conexión y sus usuarios quedan desconectados. Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Si existe un extremo para la creación de reflejo de la base de datos y ya se está utilizando, se recomienda utilizar ese extremo para cada sesión en la instancia de servidor. Si quita un extremo en uso, se interrumpirán las conexiones de las sesiones existentes. Si se ha establecido un testigo para una sesión, la eliminación del extremo de creación de reflejo de la base de datos puede hacer que el servidor principal de esa sesión pierda quórum; si sucede esto, la base de datos se queda sin conexión y sus usuarios quedan desconectados. Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
      Si el asociado carece de un punto de conexión, vea [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   

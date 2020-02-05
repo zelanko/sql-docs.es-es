@@ -22,10 +22,10 @@ ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8aaae44a73bc7cd7ccf41bf1c33823664044a2e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086735"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext, text e image (Transact-SQL)
@@ -40,16 +40,16 @@ Tipos de datos de longitud fija y variable para almacenar valores de gran tamañ
 **ntext**  
 Datos Unicode de longitud variable con una longitud máxima de cadena de 2^30 - 1 (1.073.741.823) bytes. El tamaño de almacenamiento, en bytes, es dos veces la longitud de cadena especificada. El sinónimo en ISO de **ntext** es **national text**.
   
-**texto**  
+**text**  
 Datos no Unicode de longitud variable en la página de códigos del servidor y con una longitud máxima de cadena de 2^31-1 (2.147.483.647). Cuando la página de códigos del servidor utiliza caracteres de doble byte, el almacenamiento sigue siendo de 2.147.483.647 bytes. Dependiendo de la cadena de caracteres, el espacio de almacenamiento puede ser inferior a 2.147.483.647 bytes.
   
-**imagen**  
+**image**  
 Datos binarios de longitud variable desde 0 hasta 2^31-1 (2.147.483.647) bytes.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Las siguientes funciones e instrucciones se pueden usar con datos de tipo **ntext**, **text** o **image**.
   
-|Funciones|Instrucciones|  
+|Functions|Instrucciones|  
 |---|---|
 |[DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)|[READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)|  
 |[PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)|[SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)|  
@@ -57,11 +57,11 @@ Las siguientes funciones e instrucciones se pueden usar con datos de tipo **ntex
 |[TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)|[WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)|  
 |[TEXTVALID &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)||  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Conversiones de tipos de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)  
 [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
-[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
+[Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
 

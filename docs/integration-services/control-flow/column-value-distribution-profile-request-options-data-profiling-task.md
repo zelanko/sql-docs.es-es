@@ -13,10 +13,10 @@ ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd0f778495220f227e2dd1fca42c8f5104ea7d2b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294230"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de distribución de valores de columna (tarea de generación de perfiles de datos)
@@ -49,7 +49,7 @@ ms.locfileid: "71294230"
   
  Para obtener más información, vea la sección "Opciones de TableorView" en este tema.  
   
- **Column**  
+ **Columna**  
  Seleccione la columna existente de la que se va a generar un perfil. Seleccione **(\*)** para generar un perfil de todas las columnas.  
   
  Para obtener más información, vea la sección "Opciones de Column" en este tema.  
@@ -74,15 +74,15 @@ ms.locfileid: "71294230"
 > [!NOTE]  
 >  Si el carácter comodín **(\*)** se usa para **ColumnName**, **CompareOptions** es de solo lectura y se establece en el valor **Default**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Default**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
+|**Valor predeterminado**|Ordena y compara datos basados en la intercalación de la columna en la tabla de origen.|  
 |**BinarySort**|Ordena y compara los datos según los patrones de bits definidos para cada carácter. El orden binario utiliza la distinción de mayúsculas y minúsculas, y de acentos. El orden binario es también el más rápido.|  
 |**DictionarySort**|Ordena y compara los datos según el orden y las reglas de comparación definidas en los diccionarios del idioma o alfabeto asociado.|  
   
  Si selecciona **DictionarySort**, también puede seleccionar cualquier combinación de las opciones enumeradas en la tabla siguiente. De forma predeterminada, no se selecciona ninguna de estas opciones adicionales.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica si la comparación distingue entre mayúsculas y minúsculas. Si se establece esta opción, la comparación de las cadenas omite la distinción entre mayúsculas y minúsculas. Por ejemplo, "ABC" se interpreta igual que "abc".|  
 |**IgnoreNonSpace**|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "Ã¥" se considera igual que "a".|  
@@ -97,7 +97,7 @@ ms.locfileid: "71294230"
  **ValueDistributionOption**  
  Especifique si calcular la distribución para todos los valores de las columna. El valor predeterminado de esta opción es **FrequentValues**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**AllValues**|La distribución se calcula para todos los valores de las columnas.|  
 |**FrequentValues**|La distribución solo se calcula para los valores cuya frecuencia supera el valor mínimo especificado en **FrequentValueThreshold**. Los valores que no cumplen **FrequentValueThreshold** se excluyen del informe de salida.|  

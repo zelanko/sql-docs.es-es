@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0476871b5788e47648e96abe2f9c12d2ee98e2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67990868"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>Planear y probar el plan de actualización del Motor de base de datos
@@ -33,11 +33,11 @@ ms.locfileid: "67990868"
 ## <a name="pre-upgrade-planning-checklist"></a>Lista de comprobación previa a la planificación de la actualización  
  Antes de actualizar [!INCLUDE[ssDE](../../includes/ssde-md.md)], revise esta lista de comprobación y los artículos relacionados. Estos artículos se aplican a todas las actualizaciones, independientemente del método de actualización, y con ellos puede determinar cuál es la actualización más adecuada: local, gradual o una nueva instalación. Por ejemplo, es posible que no pueda realizar una actualización local o gradual si va a actualizar el sistema operativo, o bien si actualiza desde SQL Server 2005 o desde una versión de 32 bits de SQL Server. Para ver un árbol de decisión, consulte [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
--   **Requisitos de hardware y software:** revise los requisitos de hardware y software para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Podrá encontrarlos en: [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Una parte de cualquier plan de ciclo de actualización es plantearse la actualización del hardware (el hardware más reciente es más rápido y necesita menos licencias porque tiene menos procesadores o debido a la consolidación de los servidores y las bases de datos) y del sistema operativo. Estos tipos de cambios de hardware y software repercuten en el tipo de método de actualización que elija.  
+-   **Requisitos de hardware y software:** revise los requisitos de hardware y software para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Podrá encontrarlos en [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Una parte de cualquier plan de ciclo de actualización es plantearse la actualización del hardware (el hardware más reciente es más rápido y necesita menos licencias porque tiene menos procesadores o debido a la consolidación de los servidores y las bases de datos) y del sistema operativo. Estos tipos de cambios de hardware y software repercuten en el tipo de método de actualización que elija.  
   
 -   **Entorno actual:** investigue su entorno actual para descubrir los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se utilizan y los clientes que se conectan a él.  
   
-    -   **Proveedores de cliente:** aunque la actualización no requiere actualizar el proveedor de cada uno de los clientes, puede optar por hacerlo. Si va a actualizar desde [!INCLUDE[sql14](../../includes/sssql14-md.md)] o desde una versión anterior, las siguientes características de [!INCLUDE[sql15](../../includes/sssql15-md.md)] requieren un proveedor actualizado para cada cliente, o bien una actualización del proveedor para ofrecer una funcionalidad adicional:  
+    -   **Proveedores de cliente:** aunque la actualización no requiere actualizar el proveedor para cada uno de los clientes, puede optar por hacerlo. Si va a actualizar desde [!INCLUDE[sql14](../../includes/sssql14-md.md)] o desde una versión anterior, las siguientes características de [!INCLUDE[sql15](../../includes/sssql15-md.md)] requieren un proveedor actualizado para cada cliente, o bien una actualización del proveedor para ofrecer una funcionalidad adicional:  
   
        -   [Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67990868"
 -   **Edición:** determine la edición adecuada de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] para su actualización e identifique las rutas de actualización válidas para esta. Para obtener información detallada, vea [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Antes de actualizar de una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra, compruebe que las funciones que actualmente utiliza son compatibles con la edición a la que desea actualizar.  
   
     > [!NOTE]  
-    >  Al actualizar [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edición Enterprise, elija entre Enterprise Edition: Licencia basada en Core y Enterprise Edition. Estas ediciones Enterprise solo se diferencian en los modos de licencia. Para obtener más información, consulte [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+    >  Al actualizar [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, elija entre “Enterprise Edition: licencia básica” y “Enterprise Edition”. Estas ediciones Enterprise solo se diferencian en los modos de licencia. Para obtener más información, consulte [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 -   **Compatibilidad con versiones anteriores:** lea el artículo sobre la compatibilidad con versiones anteriores del motor de base de datos de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] para ver los cambios en el comportamiento entre [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] y la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde la que vaya a actualizar. Consulte [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "67990868"
 ## <a name="develop-and-test-the-upgrade-plan"></a>Desarrollo y prueba del plan de actualización  
  El mejor método consiste en tratar la actualización como cualquier otro proyecto de TI. Organice un equipo de actualización con conocimientos sobre la administración de bases de datos; redes; extracción, transformación y carga (ETL); y otras destrezas necesarias para llevar a cabo la actualización. El equipo debe realizar lo siguiente:  
   
--   **Elegir el método de actualización:** vea [Elegir un método de actualización del motor de base de datos](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
+-   **Elegir el método de actualización:** vea [Elección de un método de actualización del motor de base de datos](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
 -   **Desarrollar un plan de reversión:** la ejecución de este plan le permite restaurar el entorno original si necesita llevar a cabo una reversión.  
   
@@ -97,4 +97,4 @@ ms.locfileid: "67990868"
 [Actualizar el motor de base de datos](../../database-engine/install-windows/upgrade-database-engine.md) 
   
 ## <a name="additional-resources"></a>Recursos adicionales 
-[Guía de migración de bases de datos](https://aka.ms/datamigration)  
+[Guía sobre Database Migration](https://aka.ms/datamigration)  

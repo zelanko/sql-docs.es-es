@@ -20,10 +20,10 @@ ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbdae019d2b4903bcebb0339df0ef243d6974766
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68112920"
 ---
 # <a name="create-instances-of-xml-data"></a>Crear instancias de datos XML
@@ -94,7 +94,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Si no se utiliza el parámetro *style* o su valor es 0, no se mantendrán los espacios en blanco insignificantes para la conversión de la instancia DT xml. Para obtener más información sobre cómo usar el operador CONVERT y su parámetro *style* al convertir datos de cadena a instancias DT xml, vea [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Ejemplo: Conversión de un valor de cadena a XML con tipo y asignación a una columna  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Ejemplo: convertir un valor de cadena a xml con tipo y asignarlo a una columna  
  En el ejemplo siguiente se convierte una variable de cadena que contiene un fragmento de XML al tipo de datos **xml** y, a continuación, se almacena en la columna de tipo **xml** :  
   
 ```  
@@ -122,7 +122,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Ejemplo: Conversión de una cadena a XML con tipo y asignación a una variable  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Ejemplo: convertir una cadena a xml con tipo y asignarla a una variable  
  En el ejemplo siguiente, se convierte una cadena a tipo **xml** y se asigna a una variable de tipo de datos **xml** :  
   
 ```  
@@ -216,7 +216,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
   
 ## <a name="see-also"></a>Consulte también  
  [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Métodos de tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Lenguaje de manipulación de datos XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

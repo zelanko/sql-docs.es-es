@@ -14,10 +14,10 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947354"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Tarea de Azure Data Lake Analytics
@@ -44,11 +44,11 @@ Puede especificar el nombre y la descripción de la tarea.
 
 ### <a name="u-sql-configuration"></a>Configuración de U-SQL
 
-La configuración de U-SQL tiene dos opciones: **SourceType** y opciones dinámicas en función del valor de **SourceType**. 
+La configuración de U-SQL tiene dos valores: **SourceType** y opciones dinámicas en función del valor de **SourceType**. 
 
 **SourceType**: especifica el origen del script de U-SQL. El script se envía a una cuenta de Data Lake Analytics durante la ejecución del paquete SSIS. Las opciones de esta propiedad son las siguientes:
 
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**DirectInput**|Especifica el script de U-SQL a través del editor insertado. Si selecciona este valor, se mostrará la opción dinámica **USQLStatement**.|  
 |**FileConnection**|Especifica un archivo .usql local que contiene el script de U-SQL. Si selecciona esta opción, se mostrará la opción dinámica **FileConnection**.|  
@@ -56,7 +56,7 @@ La configuración de U-SQL tiene dos opciones: **SourceType** y opciones dinámi
 
 **SourceType Dynamic Options** (Opciones dinámicas de SourceType) especifica el contenido del script de la consulta U-SQL. 
 
-|Tipo de origen|Opciones dinámicas|  
+|SourceType|Opciones dinámicas|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Escriba la consulta U-SQL que se enviará directamente en el cuadro de opción o seleccione el botón Examinar (...) para escribir la consulta U-SQL en el cuadro de diálogo **Enter U-SQL Query** (Escribir consulta U-SQL).|  
 |**SourceType = FileConnection**|Seleccione un administrador de conexiones de archivos existente o seleccione <**Nueva conexión...** > para crear una nueva conexión de archivos. Para información relacionada, consulte [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md) y [Editor del administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
@@ -66,28 +66,28 @@ La configuración de U-SQL tiene dos opciones: **SourceType** y opciones dinámi
 ### <a name="job-configuration"></a>Configuración del trabajo
 La configuración del trabajo especifica las propiedades del envío del trabajo de U-SQL.
 
-- **AzureDataLakeAnalyticsConnection:** especifica la cuenta de Data Lake Analytics a la que se envía el script U-SQL. Elija la conexión en la lista de administradores de conexión definidos. Para crear una conexión, seleccione <**Nueva conexión**>. Para información relacionada, consulte [Administrador de conexiones de Azure Data Lake Analytics](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md).
+- **AzureDataLakeAnalyticsConnection**: especifica la cuenta de Data Lake Analytics donde se envía el script U-SQL. Elija la conexión en la lista de administradores de conexión definidos. Para crear una conexión, seleccione <**Nueva conexión**>. Para información relacionada, consulte [Administrador de conexiones de Azure Data Lake Analytics](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md).
 
-- **JobName:** especifica el nombre del trabajo de U-SQL. 
-- **AnalyticsUnits:** especifica el número de unidades de análisis del trabajo de U-SQL.
-- **Priority:** especifica la prioridad del trabajo de U-SQL. Este valor se puede establecer entre 0 y 1000. Cuanto menor sea el número, mayor será la prioridad.
-- **RuntimeVersion:** especifica la versión en tiempo de ejecución de Data Lake Analytics del trabajo de U-SQL. De manera predeterminada, está establecido en "default". Por lo general, no es necesario modificar esta propiedad.
-- **Synchronous:** un valor booleano especifica si la tarea espera que se complete la ejecución del trabajo o no. Si el valor se establece en true, la tarea se marca como **correcta** después de que se completa el trabajo. Si el valor se establece en false, la tarea se marca como **correcta** después de que el trabajo pasa la fase de preparación.
+- **JobName**: especifica el nombre del trabajo de U-SQL. 
+- **AnalyticsUnits**: especifica el número de unidades de análisis del trabajo de U-SQL.
+- **Priority**: especifica la prioridad del trabajo de U-SQL. Este valor se puede establecer entre 0 y 1000. Cuanto menor sea el número, mayor será la prioridad.
+- **RuntimeVersion**: especifica la versión en tiempo de ejecución de Data Lake Analytics del trabajo de U-SQL. De manera predeterminada, está establecido en "default". Por lo general, no es necesario modificar esta propiedad.
+- **Synchronous**: un valor booleano especifica si la tarea espera que se complete la ejecución del trabajo o no. Si el valor se establece en true, la tarea se marca como **correcta** después de que se completa el trabajo. Si el valor se establece en false, la tarea se marca como **correcta** después de que el trabajo pasa la fase de preparación.
 
-  |Valor|Descripción|
+  |Value|Descripción|
   |-----------|-----------------|
   |True|El resultado de la tarea se basa en el resultado de la ejecución del trabajo de U-SQL. El trabajo se realiza correctamente > La tarea se realiza correctamente. El trabajo no se realiza > La tarea no se realiza. La tarea se realiza correctamente o no se realiza > La tarea se completa.|
   |False|El resultado de la tarea se basa en el resultado de la preparación y el envío del trabajo de U-SQL. El envío del trabajo se realiza correctamente y pasa la fase de preparación > La tarea se realiza correctamente. El envío del trabajo no se realiza o el trabajo no pasa la fase de preparación > La tarea no se realiza. La tarea se realiza correctamente o no se realiza > La tarea se completa.|
 
-- **TimeOut:** especifica un tiempo de espera en segundos para la ejecución del trabajo. Si se agota el tiempo de espera del trabajo, este se cancela y se marca como no realizado correctamente. Esta propiedad no está disponible si **Synchronous** está establecido en false.
+- **TimeOut**: especifica un tiempo de espera en segundos para la ejecución del trabajo. Si se agota el tiempo de espera del trabajo, este se cancela y se marca como no realizado correctamente. Esta propiedad no está disponible si **Synchronous** está establecido en false.
 
 ## <a name="parameter-mapping-page-configuration"></a>Configuración de la página de asignación de parámetros
 
 Use la página **Asignación de parámetros** del cuadro de diálogo **Azure Data Lake Analytics Task Editor** (Editor de la tarea de Azure Data Lake Analytics) para asignar variables a los parámetros (variables U-SQL) en el script U-SQL.
 
-- **Nombre de variable:** una vez que se ha agregado una asignación de parámetro mediante **Agregar**, seleccione en la lista una variable de sistema o una variable definida por el usuario. De manera alternativa, puede seleccionar <**Nueva variable...** > para agregar una variable nueva con el cuadro de diálogo **Agregar variable**. Para información relacionada, consulte [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
+- **Nombre de variable**: una vez que agrega una asignación de parámetro mediante al seleccionar **Agregar**, seleccione en la lista una variable de sistema o una variable definida por el usuario. De manera alternativa, puede seleccionar <**Nueva variable...** > para agregar una variable nueva con el cuadro de diálogo **Agregar variable**. Para información relacionada, consulte [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
 
-- **Nombre del parámetro:** proporcione un nombre de variable o de parámetro en el script de U-SQL. Asegúrese de que el nombre del parámetro empieza con el signo \@, como \@Param1. 
+- **Nombre de parámetro:** proporcione un nombre de variable o de parámetro en el script de U-SQL. Asegúrese de que el nombre del parámetro empieza con el signo \@, como \@Param1. 
 
 Este es un ejemplo de cómo pasar parámetros al script de U-SQL.
 
@@ -121,7 +121,7 @@ OUTPUT @rs1
 
 Tenga en cuenta que las rutas de acceso de entrada y salida están definidas en los parámetros **\@in** y **\@out**. Los valores de los parámetros **\@in** y **\@out** del script U-SQL se pasan de manera dinámica mediante la configuración de la asignación de parámetros.
 
-|Nombre de variable|Nombre del parámetro|
+|Nombre de la variable|Nombre de parámetro|
 |-------------|--------------|
 |Usuario: Variable1|\@in|
 |Usuario: Variable2|\@out| 
@@ -130,7 +130,7 @@ Tenga en cuenta que las rutas de acceso de entrada y salida están definidas en 
 
 Puede asignar todas las propiedades de la configuración de la página General como una expresión de propiedad para habilitar la actualización dinámica de la propiedad en el runtime. Para información relacionada, consulte [Usar expresiones de propiedad en paquetes](../../integration-services/expressions/use-property-expressions-in-packages.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 - [Administrador de conexiones de Azure Data Lake Analytics](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)
 - [Tarea Sistema de archivos de Azure Data Lake Store](../../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
 - [Administrador de conexiones de Azure Data Lake Store](../../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)

@@ -13,10 +13,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082897"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar la búsqueda semántica en tablas y columnas
@@ -43,7 +43,7 @@ ms.locfileid: "68082897"
   
 -   Puede crear un índice en columnas que contenga cualquiera de los tipos de datos admitidos para la indización de texto completo. Para obtener más información, vea [Crear y administrar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
--   Puede especificar cualquier tipo de documento admitido para la indexación de texto completo para las columnas **varbinary(max)** . Para obtener más información, consulte: [Procedimientos: Determinar qué tipos de documento se pueden indexar](#doctypes) en este tema.  
+-   Puede especificar cualquier tipo de documento admitido para la indexación de texto completo para las columnas **varbinary(max)** . Para obtener más información, vea [Cómo: determinar qué tipos de documento se pueden indizar](#doctypes) más adelante en este tema.  
   
 -   La indexación semántica crea dos tipos de índices para las columnas que seleccione: un índice de frases clave y un índice de similitud de documentos. No puede seleccionar solo uno de los tipos de índice o el otro cuando habilite la indización semántica. Sin embargo, puede consultar estos dos índices por separado. Para obtener más información, vea [Buscar frases clave en documentos con la búsqueda semántica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) y [Buscar documentos similares y relacionados con la búsqueda semántica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68082897"
  
  Llame a la instrucción **CREATE FULLTEXT INDEX** y especifique **STATISTICAL_SEMANTICS** para cada columna en la que quiera crear un índice semántico. Para obtener más información sobre todas las opciones de esta instrucción, vea [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
- **Ejemplo 1: Creación de un índice único, un índice de texto completo y un índice semántico**  
+ **Ejemplo 1: crear un índice único, un índice de texto completo y un índice semántico**  
   
  En el ejemplo siguiente, se crea un catálogo de texto completo predeterminado, **ft**. Después, se crea un índice único en la columna **JobCandidateID** de la tabla **HumanResources.JobCandidate** de la base de datos de ejemplo AdventureWorks2012. Este índice único se requiere como columna de clave de un índice de texto completo. Después, en el ejemplo se crea un índice de texto completo y un índice semántico en la columna **Resume** .  
   
@@ -80,7 +80,7 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
- **Ejemplo 2: Creación de un índice de texto completo y semántico en varias columnas con rellenado de índice retrasado**  
+ **Ejemplo 2: Crear un índice de texto completo y semántico en varias columnas con rellenado de índice retrasado**  
   
  En el ejemplo siguiente se crea un catálogo de texto completo, **documents_catalog**, en la base de datos de ejemplo AdventureWorks2012. A continuación, se crea un índice de texto completo que usa este nuevo catálogo. El índice de texto completo se crea en las columnas **Title**, **DocumentSummary**y **Document** de la tabla **Production.Document** , mientras que el índice semántico se crea únicamente en la columna **Document** . Este índice de texto completo usa el catálogo de texto completo recién creado y un índice de clave única existente, **PK_Document_DocumentID**. Tal como se recomienda, esta clave de índice se crea en una columna de enteros, **DocumentID**. En el ejemplo se especifica el LCID de inglés, 1033, que es el idioma de los datos de las columnas.  
   
@@ -131,7 +131,7 @@ GO
   
 -   Para agregar una indexación semántica a una columna que ya esté habilitada para la indexación de texto completo, use la opción **ADD STATISTICAL_SEMANTICS** . Solo puede agregar una indización semántica a una columna en una única instrucción **ALTER** .  
   
- **Ejemplo: Incorporación de una indización semántica a una columna que ya tenga indexación de texto completo**  
+ **Ejemplo: agregar una indización semántica a una columna que ya tenga indización de texto completo**  
   
  En el ejemplo siguiente se modifica un índice de texto completo existente en la tabla **Production.Document** de la base de datos de ejemplo AdventureWorks2012. En el ejemplo se agrega un índice semántico en la columna **Document** de la tabla **Production.Document** , que ya tiene un índice de texto completo. En el ejemplo se especifica que el índice no se volverá a rellenar automáticamente.  
   
@@ -258,14 +258,14 @@ GO
   
 |Idioma|LCID|  
 |--------------|----------|  
-|German|1031|  
-|Inglés (Estados Unidos)|3082|  
+|Alemán|1031|  
+|Inglés (EE. UU.)|3082|  
 |Francés|1036|  
 |Italiano|1040|  
 |Portugués (Brasil)|1046|  
 |Ruso|1049|  
 |Sueco|1053|  
-|Inglés (Reino Unido)|2057|  
+|English (Reino Unido)|2057|  
 |Portugués (Portugal)|2070|  
 |Español|3082|  
   
@@ -274,10 +274,10 @@ GO
   
  Si el tipo de documento que desea indizar no está en la lista de tipos compatibles, puede tener que buscar, descargar, e instalar filtros adicionales. Para obtener más información, consulte [ver o cambiar los filtros registrados y separadores de palabras](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Procedimiento recomendado: Creación de un grupo de archivos independiente para los índices de texto completo y semánticos  
+##  <a name="BestPracticeFilegroup"></a> Recomendado: considere la posibilidad de crear un grupo de archivos independiente para los índices de texto completo y semánticos  
  Plantéese crear un grupo de archivos independiente para los índices de texto completo y semántico si la asignación de espacio en disco es un problema. Los índices semánticos se crean en el mismo grupo de archivos que el índice de texto completo. Un índice semántico totalmente rellenado puede contener una gran cantidad de datos.  
  
-##  <a name="IssueNoResults"></a> Problema: Búsqueda en una columna específica que no devuelve resultados  
+##  <a name="IssueNoResults"></a> Problema: la búsqueda en una columna específica no devuelve resultados  
  **¿Se especificó un LCID que no sea Unicode para un idioma Unicode?**  
  Se puede habilitar la indización semántica en un tipo de columna que no sea Unicode con un LCID para un idioma que solo tenga palabras Unicode, como LCID 1049 para ruso. En este caso, nunca se obtendrán resultados de los índices semánticos de esta columna.  
   

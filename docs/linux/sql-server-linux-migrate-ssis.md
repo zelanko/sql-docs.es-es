@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: e6230ee4efebc4b1af873a61e9f2ebfc191df171
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943818"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extracción, transformación y carga de datos en Linux con SSIS
@@ -71,7 +71,7 @@ Hay tres formas de ejecutar un paquete SSIS cifrado con una contraseña:
 
 ## <a name="design-packages"></a>Diseñar paquetes
 
-**Conectarse a orígenes de datos ODBC**. Con SSIS en la actualización de CTP 2.1 de Linux y versiones posteriores, los paquetes SSIS pueden usar conexiones ODBC en Linux. Esta funcionalidad se ha probado con SQL Server y los controladores ODBC de MySQL, pero también se espera que funcione con cualquier controlador ODBC de Unicode que respete la especificación de ODBC. En tiempo de diseño, puede proporcionar un DSN o una cadena de conexión para conectarse a los datos ODBC; también puede usar la autenticación de Windows. Para obtener más información, consulte [la entrada de blog que anuncia la compatibilidad con ODBC en Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+**Conectarse a orígenes de datos ODBC**. Con SSIS en la actualización de CTP 2.1 de Linux y versiones posteriores, los paquetes SSIS pueden usar conexiones ODBC en Linux. Esta funcionalidad se ha probado con SQL Server y los controladores ODBC de MySQL, pero también se espera que funcione con cualquier controlador ODBC de Unicode que respete la especificación de ODBC. En tiempo de diseño, puede proporcionar un DSN o una cadena de conexión para conectarse a los datos ODBC; también puede usar la autenticación de Windows. Para obtener más información, vea [la entrada de blog que anuncia la compatibilidad con ODBC en Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
 **Rutas**. Proporcione rutas de estilo Windows en los paquetes SSIS. SSIS en Linux no admite rutas de estilo Linux, sino que asigna rutas de estilo Windows a rutas de estilo Linux en tiempo de ejecución. Después, por ejemplo, SSIS en Linux asigna la ruta de estilo Windows `C:\test` a la ruta de estilo Linux `/test`.
 
@@ -111,7 +111,7 @@ Para más información sobre SSIS, vea los siguientes artículos:
 - [Tutoriales de SQL Server Integration Services](../integration-services/integration-services-tutorials.md)
 
 ## <a name="related-content-about-ssis-on-linux"></a>Contenido relacionado sobre SSIS en Linux
--   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
--   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
+-   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Limitaciones y problemas conocidos de SSIS en Linux](sql-server-linux-ssis-known-issues.md)
--   [Programación de la ejecución de paquetes de SQL Server Integration Services en Linux con cron](sql-server-linux-schedule-ssis-packages.md)
+-   [Programación de la ejecución de paquetes de SQL Server Integration Services en Linux con cron](sql-server-linux-schedule-ssis-packages.md)

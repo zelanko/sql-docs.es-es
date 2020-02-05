@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68035684"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Tabla de ejemplo HumanResources.myTeam (SQL Server)
@@ -31,12 +31,12 @@ ms.locfileid: "68035684"
   
  La tabla **myTeam** contiene las columnas siguientes.  
   
-|columna|Tipo de datos|Nulabilidad|Descripción|  
+|Columna|Tipo de datos|Nulabilidad|Descripción|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|No NULL|Clave principal para las filas. Identificador de empleado de un miembro de mi equipo.|  
 |**Nombre**|**nvarchar(50)**|No NULL|Nombre de un miembro de mi equipo.|  
-|**Title**|**nvarchar(50)**|Admisión de valores NULL|Cargo que tiene el empleado en mi equipo.|  
-|**Información previa**|**nvarchar(50)**|No NULL|Fecha y hora de la última actualización de la fila. (Es el valor predeterminado).|  
+|**Título**|**nvarchar(50)**|Nullable|Cargo que tiene el empleado en mi equipo.|  
+|**Información preliminar**|**nvarchar(50)**|No NULL|Fecha y hora de la última actualización de la fila. (Es el valor predeterminado).|  
   
 **Para crear HumanResources.myTeam**  
   

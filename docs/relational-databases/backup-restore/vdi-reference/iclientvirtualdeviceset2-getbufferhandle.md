@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 844ddad21eaf3fb579d6a0981f2a042238e92372
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847336"
 ---
 # <a name="iclientvirtualdeviceset2getbufferhandle-vdi"></a>IClientVirtualDeviceSet2::GetBufferHandle (VDI)
@@ -45,7 +45,7 @@ HRESULT IClientVirtualDeviceSet2::GetBufferHandle (
 | VD_E_PROTOCOL | El conjunto de dispositivos virtuales no está abierto actualmente. |
 | VD_E_INVALID | pBuffer no es una dirección válida. |
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 El proceso que invoca la función GetBufferHandle es responsable de invocar IClientVirtualDevice2::CompleteCommand cuando se complete la transferencia de datos.
 

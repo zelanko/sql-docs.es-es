@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cdd1dc130efb795b957911c51d5d8c2243522d38
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281621"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Ejecutar un paquete SSIS desde Visual Studio Code con Transact-SQL
@@ -27,7 +27,7 @@ Visual Studio Code es un editor de código para Windows, macOS y Linux que admit
 ## <a name="prerequisites"></a>Prerequisites
 
 Antes de empezar, asegúrese de haber instalado la versión más reciente de Visual Studio Code y cargado la extensión `mssql`. Para descargar estas herramientas, consulte las páginas siguientes:
--   [Descargar Visual Studio Code](https://code.visualstudio.com/Download)
+-   [Descarga de Visual Studio Code](https://code.visualstudio.com/Download)
 -   [Extensión mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="supported-platforms"></a>Plataformas compatibles
@@ -36,7 +36,7 @@ Puede usar la información que aparece en este inicio rápido para ejecutar un p
 
 -   SQL Server en Windows.
 
--   Azure SQL Database. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+-   Azure SQL Database. Para más información sobre cómo implementar y ejecutar paquetes en Azure, vea [Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
 
 No puede usar la información que aparece en este inicio rápido para ejecutar un paquete de SSIS en Linux. Para más información sobre cómo ejecutar paquetes en Linux, vea [Extract, transform, and load data on Linux with SSIS](../linux/sql-server-linux-migrate-ssis.md) (Extraer, transformar y cargar datos en Linux con SSIS).
 
@@ -54,7 +54,7 @@ Para habilitar los comandos `mssql` y T-SQL IntelliSense, ajuste el modo de leng
 
 Para ejecutar el paquete en Azure SQL Database, debe obtener la información de conexión necesaria para conectarse a la base de datos del catálogo de SSIS (SSISDB). Necesita el nombre completo y la información de inicio de sesión del servidor en los procedimientos siguientes.
 
-1. Inicie sesión en el [Portal de Azure](https://portal.azure.com/).
+1. Inicie sesión en [Azure Portal](https://portal.azure.com/).
 2. Seleccione **Bases de datos SQL** en el menú izquierdo y, después, seleccione la base de datos SSISDB en la página **Bases de datos SQL**. 
 3. En la página **Introducción** de la base de datos, compruebe el nombre completo del servidor. Mantenga el puntero del ratón sobre el nombre del servidor para ver la opción **Haga clic para copiar**. 
 4. Si olvida la información de inicio de sesión del servidor de Azure SQL Database, navegue a la página del servidor de SQL Database para ver el nombre del administrador del servidor. Si es necesario, puede restablecer la contraseña.
@@ -78,13 +78,13 @@ Use Visual Studio Code para establecer una conexión con el catálogo de SSIS.
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nombre del servidor** | Nombre completo del servidor | Si se está conectando a un servidor de Azure SQL Database, el nombre tendrá este formato: `<server_name>.database.windows.net`. |
    | **Nombre de la base de datos** | **SSISDB** | Nombre de la base de datos a la que se va a conectar. |
-   | **Autenticación** | Inicio de sesión de SQL | Con la autenticación de SQL Server puede conectarse a SQL Server o a Azure SQL Database. Si se va a conectar a un servidor de Azure SQL Database, no puede usar la autenticación de Windows. |
-   | **User name** | Cuenta de administrador del servidor | Esta es la cuenta que especificó cuando creó el servidor. |
-   | **Contraseña (inicio de sesión de SQL)** | Contraseña de la cuenta de administrador del servidor | Esta es la contraseña que especificó cuando creó el servidor. |
+   | **Autenticación** | Inicio de sesión SQL | Con la autenticación de SQL Server puede conectarse a SQL Server o a Azure SQL Database. Si se va a conectar a un servidor de Azure SQL Database, no puede usar la autenticación de Windows. |
+   | **Nombre de usuario** | La cuenta de administrador del servidor | Esta es la cuenta que especificó cuando creó el servidor. |
+   | **Contraseña (Inicio de sesión de SQL)** | La contraseña de la cuenta de administrador del servidor | Esta es la contraseña que especificó cuando creó el servidor. |
    | **¿Desea guardar la contraseña?** | Sí o no | Si no quiere escribir la contraseña cada vez, seleccione Sí. |
    | **Enter a name for this profile** (Escriba un nombre para el perfil) | Nombre de perfil, como **mySSISServer** | Un nombre de perfil guardado acelera la conexión en inicios de sesión posteriores. | 
 
-5. Presione la tecla **ESC** para cerrar el mensaje de información que le indica que el perfil está creado y conectado.
+5. Presione la tecla **ESC** para cerrar el mensaje de información que indica que el perfil se ha creado y conectado.
 
 6. Compruebe la conexión en la barra de estado.
 
@@ -93,7 +93,7 @@ Ejecute el siguiente código Transact-SQL para ejecutar un paquete SSIS.
 
 1. En la ventana **Editor**, escriba la siguiente consulta en la ventana de consulta vacía. (Este código es el que genera la opción **Script** en el cuadro de diálogo **Ejecutar paquete** en SSMS).
 
-2. Actualice los valores de parámetro del procedimiento almacenado `catalog.create_execution` de su sistema.
+2. Actualice los valores de parámetro del procedimiento almacenado `catalog.create_execution` del sistema.
 
 3. Presione **CTRL+MAYÚS+E** para ejecutar el código y ejecute el paquete.
 
@@ -118,7 +118,7 @@ GO
 ## <a name="next-steps"></a>Pasos siguientes
 - Tenga en cuenta otras formas de ejecutar un paquete.
     - [Ejecutar un paquete SSIS con SSMS](./ssis-quickstart-run-ssms.md)
-    - [Ejecutar un paquete SSIS con Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
+    - [Run an SSIS package with Transact-SQL (SSMS) (Ejecutar un paquete SSIS con Transact-SQL [SSMS])](./ssis-quickstart-run-tsql-ssms.md)
     - [Ejecutar un paquete SSIS desde el símbolo del sistema](./ssis-quickstart-run-cmdline.md)
     - [Run an SSIS package with PowerShell](ssis-quickstart-run-powershell.md) (Ejecutar un paquete de SSIS con PowerShell)
     - [Ejecutar un paquete SSIS con C#](./ssis-quickstart-run-dotnet.md) 

@@ -14,10 +14,10 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908556"
 ---
 # <a name="view-offline-log-files"></a>Ver sin conexión archivos de registro
@@ -29,7 +29,7 @@ ms.locfileid: "72908556"
 > [!NOTE]  
 >  También puede utilizar estos métodos para conectar a una instancia que está en línea, pero por el motivo que sea no puede conectarse a través de una conexión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Introducción  
  Para conectarse a los archivos de registro sin conexión, debe haber una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalada en el equipo que está utilizando para ver los archivos de registro sin conexión y en el equipo donde se encuentran los archivos de registro que desea ver. Si hay una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalada en los dos equipos, puede ver los archivos sin conexión para las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y para las instancias que ejecutan versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cualquiera de los dos equipos.  
   
  Si utiliza servidores registrados, la instancia a la que desea conectarse debe estar registrada en **Grupos de servidores locales** o en **Servidores de administración central**. La instancia se puede registrar sola o pertenecer a un grupo de servidores. Para obtener más información acerca de cómo agregar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a servidores registrados, vea los temas siguientes:  
@@ -100,7 +100,7 @@ ms.locfileid: "72908556"
   
 3.  En el árbol de consola, busque la instancia en la que desea ver los archivos sin conexión.  
   
-4.  Realice una de las siguientes operaciones:  
+4.  Realice una de las siguientes acciones:  
   
     -   Si la instancia está en **Grupos de servidor locales**, expanda **Grupos de servidor locales**, expanda el grupo de servidores (si la instancia pertenece a un grupo), haga clic con el botón derecho en la instancia y, después, haga clic en **Ver registro de SQL Server**.  
   

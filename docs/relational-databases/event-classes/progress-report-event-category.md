@@ -15,15 +15,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cfe1638d6bb1bc1d56e7160ec51cd15138be1f30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940653"
 ---
 # <a name="progress-report-event-category"></a>Informe de progreso (categoría de eventos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En la categoría de eventos **Informe de progreso** se incluye la clase de eventos **Informe de progreso: Online Index Operation**.  
+  La categoría de eventos **Informe de progreso** contiene la clase de eventos **Progress Report: Online Index Operation** .  
   
 |Tema|Descripción|  
 |-----------|-----------------|  

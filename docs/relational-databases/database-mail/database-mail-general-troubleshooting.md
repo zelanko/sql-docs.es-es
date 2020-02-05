@@ -14,16 +14,16 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: fb063b3af008ad7e734197a0d4360c9d83535cd3
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74094555"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Pasos generales para solucionar problemas del Correo electrónico de base de datos 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-La solución de problemas del Correo electrónico de base de datos conlleva comprobar las siguientes áreas generales del sistema del Correo electrónico de base de datos. Estos procedimientos se presentan en un orden lógico, pero se pueden evaluar en cualquier orden.
+La solución de problemas del Correo electrónico de base de datos implica la comprobación de las siguientes áreas generales del sistema del Correo electrónico de base de datos. Estos procedimientos se presentan en un orden lógico, pero se pueden evaluar en cualquier orden.
 
 ## <a name="permissions"></a>Permisos
 
@@ -43,7 +43,7 @@ Debe ser miembro del rol fijo de servidor sysadmin para solucionar los problemas
     ```
 
    En el panel de resultados, confirme que run_value para [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) está establecido en 1.
-   Si run_value no es 1, el Correo electrónico de base de datos no está habilitado. El Correo electrónico de base de datos no está habilitado automáticamente para reducir el número de características disponibles en caso de ataque por parte de un usuario malintencionado. Para obtener más información, vea [Descripción de la configuración del área expuesta](../security/surface-area-configuration.md).
+   Si run_value no es 1, el Correo electrónico de base de datos no está habilitado. El Correo electrónico de base de datos no se habilita automáticamente para reducir el número de características disponibles en caso de ataque por parte de un usuario malintencionado. Para obtener más información, vea [Descripción de la configuración del área expuesta](../security/surface-area-configuration.md).
 
 1. Si decide que es adecuado habilitar el Correo electrónico de base de datos, ejecute el código siguiente:
 
@@ -81,7 +81,7 @@ Debe ser miembro del rol fijo de servidor sysadmin para solucionar los problemas
     ,@membername = '<database user>';
     ```
 
-1. Para enviar mensajes del Correo electrónico de base de datos, los usuarios deben tener acceso al menos a un perfil del Correo electrónico de base de datos. Para obtener una lista de los usuarios (entidades de seguridad) y los perfiles a los que tienen acceso, ejecute la instrucción siguiente.
+1. Para enviar mensajes del Correo electrónico de base de datos, los usuarios deben tener acceso al menos a un perfil del Correo electrónico de base de datos. Para obtener una lista de los usuarios (entidades de seguridad) y los perfiles a los que tienen acceso, ejecute la instrucción que se indica a continuación.
 
     ```sql
     EXEC msdb.dbo.sysmail_help_principalprofile_sp;
@@ -96,13 +96,13 @@ Debe ser miembro del rol fijo de servidor sysadmin para solucionar los problemas
     ```sql
     EXEC msdb.dbo.sysmail_help_status_sp;
     ```
-1. Si no se ha iniciado la activación del Correo electrónico de base de datos, ejecute la siguiente instrucción:
+1. Si no se ha iniciado la activación del Correo electrónico de base de datos, ejecute la instrucción que se indica a continuación:
 
     ```sql
     EXEC msdb.dbo.sysmail_start_sp;
     ```
 
-1. Si se ha iniciado el programa externo del Correo electrónico de base de datos, compruebe el estado de la cola de correo electrónico con la siguiente instrucción:
+1. Si se ha iniciado el programa externo del Correo electrónico de base de datos, compruebe el estado de la cola de correo electrónico con la instrucción siguiente:
 
     ```sql
     EXEC msdb.dbo.sysmail_help_queue_sp @queue_type = 'mail';
@@ -125,7 +125,7 @@ EXEC msdb.dbo.sysmail_start_sp;
 
 ## <a name="do-problems-affect-some-or-all-accounts"></a>¿Hay problemas que afecten a algunas (o a todas) las cuentas?
 
-1. Si ha decidido que solo algunos perfiles pueden enviar correo, puede que tenga problemas con las cuentas del Correo electrónico de base de datos utilizadas por los perfiles problemáticos. Para determinar qué cuentas envían correo correctamente, ejecute la instrucción siguiente:
+1. Si ha determinado que solo algunos perfiles pueden enviar correo, puede que tenga problemas con las cuentas del Correo electrónico de base de datos utilizadas por los perfiles problemáticos. Para determinar qué cuentas envían correo correctamente, ejecute la instrucción siguiente:
 
     ```sql
     SELECT sent_account_id, sent_date FROM msdb.dbo.sysmail_sentitems;

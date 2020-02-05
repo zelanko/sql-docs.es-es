@@ -16,10 +16,10 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 82ff8e58891d07ccbecfef119c05c0cef1bbb06e
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095268"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar y deshabilitar la captura de datos modificados (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "74095268"
   Este tema describe cómo habilitar y deshabilitar la captura de datos modificados para una tabla y una base de datos.  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>Habilitar la captura de datos modificados en una base de datos  
- Para que pueda crearse una instancia de captura para tablas individuales, es preciso que un miembro del rol fijo de servidor **sysadmin** habilite previamente la base de datos para la captura de datos modificados. Esto se hace ejecutando el procedimiento almacenado [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) en el contexto de la base de datos. Para saber si una base de datos ya está habilitada, consulte la columna **is_cdc_enabled** en la vista de catálogo **sys.databases**.  
+ Para que pueda crearse una instancia de captura para tablas individuales, es preciso que un miembro del rol fijo de servidor **sysadmin** habilite previamente la base de datos para la captura de datos modificados. Esto se hace ejecutando el procedimiento almacenado [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) en el contexto de la base de datos. Para saber si una base de datos ya está habilitada, consulte la columna **is_cdc_enabled** en la vista de catálogo **sys.databases** .  
   
  Al habilitar una base de datos para la captura de datos modificados, se crean para la base de datos el esquema **cdc** , el usuario **cdc** , las tablas de metadatos y otros objetos de sistema. El esquema **cdc** contiene las tablas de metadatos de la captura de datos modificados y, una vez que las tablas de origen han sido habilitadas para esta captura, también contiene las tablas de cambios individuales que sirven como repositorio de los datos de cambios. Este esquema **cdc** también contiene las funciones de sistema asociadas que se usan para consultar los datos modificados.  
   

@@ -15,10 +15,10 @@ ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7a0a6d1fa10576eab5e515031e8233af95c2d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934910"
 ---
 # <a name="availability-database-is-suspended-for-an-availability-group"></a>Suspensión de la base de datos de disponibilidad para un grupo de disponibilidad
@@ -30,7 +30,7 @@ ms.locfileid: "67934910"
 |-|-|  
 |**Nombre de directiva**|Estado de suspensión de la base de datos de disponibilidad|  
 |**Problema**|Base de datos de disponibilidad suspendida.|  
-|**Categoría**|**Advertencia**|  
+|**Categoría**|**Warning (ADVERTENCIA)**|  
 |**Faceta**|Base de datos de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
@@ -39,7 +39,7 @@ ms.locfileid: "67934910"
 > [!NOTE]  
 >  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Base de datos de disponibilidad suspendida](https://go.microsoft.com/fwlink/p/?LinkId=220860) en TechNet Wiki.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  La sincronización de datos de esta base de datos de disponibilidad podría haberse suspendido debido al siguiente:  
   
 -   Debido a un error, el sistema puede haber suspendido la sincronización de datos.  

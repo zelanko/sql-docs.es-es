@@ -13,10 +13,10 @@ ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85f97f8e7fe754a4c52b34f52ecb45d142a43c4b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297780"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Asistente para dimensiones variables (Ayuda F1)
@@ -28,7 +28,7 @@ ms.locfileid: "71297780"
   
  Para obtener más información acerca de este asistente, vea [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  
   
- [Asistente para dimensiones variables (página de bienvenida)](../../../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md)  
+ [Asistente para dimensiones de variación lenta (página de bienvenida)](../../../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md)  
  Presenta el Asistente para dimensiones variables.  
   
  [Seleccionar una tabla de dimensiones y claves &#40;Asistente para dimensiones de variación lenta&#41;](../../../integration-services/data-flow/transformations/select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md)  
@@ -46,11 +46,11 @@ ms.locfileid: "71297780"
  [Miembros de dimensión deducidos &#40;Asistente para dimensiones de variación lenta&#41;](../../../integration-services/data-flow/transformations/inferred-dimension-members-slowly-changing-dimension-wizard.md)  
  Especifique opciones para miembros de dimensión deducidos.  
   
- [Finalizar el Asistente para dimensiones variables](../../../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md)  
+ [Finalización del Asistente para dimensiones de variación lenta](../../../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md)  
  Muestra las opciones de configuración seleccionadas por el usuario.  
   
 ## <a name="see-also"></a>Consulte también  
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)   
- [Configurar salidas mediante el Asistente para dimensión de variación lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configuración de salidas con el Asistente para dimensiones de variación lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

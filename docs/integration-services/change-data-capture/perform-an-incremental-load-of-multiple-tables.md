@@ -13,10 +13,10 @@ ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f933683e11229500ceea29c3a10180a13c154baf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294633"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>Realizar una carga incremental de varias tablas
@@ -49,7 +49,7 @@ ms.locfileid: "71294633"
   
 4.  Utilice varias tareas Ejecutar paquete para ejecutar los paquetes secundarios para cada tabla que se va a cargar. Pase los extremos calculados en el paquete primario a cada paquete secundario mediante configuraciones de variable de paquete primario.  
   
-     Para obtener más información, vea [Tarea Ejecutar paquete](../../integration-services/control-flow/execute-package-task.md) y [Usar los valores de variables y parámetros en un paquete secundario](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
+     Para más información, vea [Tarea Ejecutar paquete](../../integration-services/control-flow/execute-package-task.md) y [Usar los valores de variables y parámetros en un paquete secundario](../../integration-services/packages/legacy-package-deployment-ssis.md#child).  
   
 #### <a name="to-create-child-packages-to-perform-those-steps-that-have-to-be-done-for-each-source-table"></a>Para crear paquetes secundarios que realicen los pasos que se deben efectuar para cada tabla de origen  
   

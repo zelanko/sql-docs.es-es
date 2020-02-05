@@ -11,10 +11,10 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244384"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Generación y análisis de CLUSTER.LOG para un grupo de disponibilidad Always On
@@ -59,9 +59,9 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
 |Identificador|Source|Ejemplo de CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
-|Mensajes precedidos por `[RES]` y `[hadrag]`|hadrres.dll (DLL de recursos Always On)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] Grupo de disponibilidad SQL Server \<ag>: `[hadrag]` Solicitud sin conexión.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] Grupo de disponibilidad SQL Server \<ag>: `[hadrag]` El subproceso de la concesión ha terminado<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] Grupo de disponibilidad SQL Server \<ag>: `[hadrag]` Instrucción SQL libre<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] Grupo de disponibilidad SQL Server \<ag>: `[hadrag]` Desconecte de SQL Server|  
+|Mensajes precedidos por `[RES]` y `[hadrag]`|hadrres.dll (DLL de recursos Always On)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO [RES] Grupo de disponibilidad de SQL Server \<ag>: `[hadrag]` solicitud sin conexión.<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR [RES] Grupo de disponibilidad de SQL Server \<ag>: `[hadrag]` el subproceso de la concesión ha terminado<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO [RES] Grupo de disponibilidad de SQL Server \<ag>: `[hadrag]` instrucción SQL gratis<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO [RES] Grupo de disponibilidad de SQL Server \<ag>: `[hadrag]` desconecte de SQL Server|  
 |Mensajes precedidos por `[RHS]`|RHS. EXE (Subsistema de hospedaje de recursos, proceso de host de hadrres.dll)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO [RHS] El recurso ag está sin conexión. RHS está a punto de informar del estado del recurso a RCM.|  
-|Mensajes precedidos por `[RCM]`|Supervisión del control de recursos (servicio de clúster)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO  [RCM] rcm::RcmGroup::Move: Primero se devuelve el grupo "ag" al estado sin conexión...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO [RCM] TransitionToState(ag) en línea --> OfflineCallIssued.|  
+|Mensajes precedidos por `[RCM]`|Supervisión del control de recursos (servicio de clúster)|000011d0.00000f80::2011/08/05-13:47:42.480 INFO [RCM] rcm::RcmGroup::Move: primero se devuelve el grupo «ag» al estado sin conexión...<br /><br /> 000011d0.00000f80::2011/08/05-13:47:42.496 INFO [RCM] TransitionToState(ag) en línea --> OfflineCallIssued.|  
 |RcmApi/ClusAPI|Una llamada API, que significa principalmente que SQL Server está solicitando la acción|000011d0.00000f80::2011/08/05-13:47:42.465 INFO [RCM] rcm::RcmApi::MoveGroup: (ag, 2)|  
   
 ## <a name="debug-always-on-resource-dll-in-isolation"></a>Depurar el DLL del recurso Always On de forma aislada  
@@ -69,7 +69,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  Para aislar un grupo de disponibilidad desde otros DLL de recursos de clúster, incluidos otros grupos de disponibilidad, haga lo siguiente para ejecutar hadrres.dll dentro de un proceso rhs.exe independiente:  
   
-1.  Abra el **Editor del Registro** y desplácese hasta la clave siguiente: HKEY_LOCAL_MACHINE\Cluster\Resources. Esta clave contiene las claves para todos los recursos, cada uno con un GUID diferente.  
+1.  Abra **Editor del Registro** y navegue hasta la siguiente clave: HKEY_LOCAL_MACHINE\Cluster\Resources. Esta clave contiene las claves para todos los recursos, cada uno con un GUID diferente.  
   
 2.  Busque la clave de recurso que contenga un valor **Nombre** que coincida con el nombre del grupo de disponibilidad.  
   

@@ -21,10 +21,10 @@ ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d8f9264a456464b40cfce4382cb7d70cbb7ce4cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295752"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Cargar y ejecutar un paquete local mediante programación
@@ -61,7 +61,7 @@ ms.locfileid: "71295752"
   
 1.  Inicie el entorno de desarrollo de Visual Studio y cree una nueva aplicación en su lenguaje de desarrollo preferido. En este ejemplo se utiliza una aplicación de consola; sin embargo, también puede ejecutar un paquete de una aplicación Windows Forms, un formulario Web Forms o servicio web ASP.NET o un servicio de Windows.  
   
-2.  En el menú **Proyecto**, haga clic en **Agregar referencia** y agregue una referencia a **Microsoft.SqlServer.ManagedDTS.dll**. Haga clic en **Aceptar**.  
+2.  En el menú **Proyecto**, haga clic en **Agregar referencia** y agregue una referencia a **Microsoft.SqlServer.ManagedDTS.dll**. Haga clic en **OK**.  
   
 3.  Use la instrucción **Imports** de Visual Basic o la instrucción **using** de C# para importar el espacio de nombres **Microsoft.SqlServer.Dts.Runtime**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "71295752"
   
 5.  Ejecute el proyecto. En el código de ejemplo se ejecuta el paquete de ejemplo CalculatedColumns que se instala con los ejemplos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El resultado de la ejecución del paquete se muestra en la ventana de la consola.  
   
-### <a name="sample-code"></a>Código muestra  
+### <a name="sample-code"></a>Código de ejemplo  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  
@@ -140,7 +140,7 @@ namespace RunFromClientAppCS
   
 3.  Ejecute el proyecto. En el código de ejemplo se ejecuta el paquete de ejemplo CalculatedColumns que se instala con los ejemplos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El resultado de la ejecución del paquete se muestra en la ventana de la consola, junto con cualquier error que se produzca.  
   
-### <a name="sample-code"></a>Código muestra  
+### <a name="sample-code"></a>Código de ejemplo  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  

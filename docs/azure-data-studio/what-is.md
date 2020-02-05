@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: 943ff8fdcf2eadd428d1ec6ceb5d15fe34ad9291
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.openlocfilehash: 7cf4f98a4cb8d191cebd9b361fd63217b9cd2228
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952411"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "75956496"
 ---
 # <a name="what-is-azure-data-studio"></a>¿Qué es Azure Data Studio?
 
@@ -95,9 +95,9 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 |Temas|Sí||
 |Modo oscuro|Sí||
 |Azure Resource Explorer|Vista previa||
-|Asistente para generar scripts||Sí|
+|Asistente para generar scripts||Vista previa|
 |Importación y exportación de DACPAC||Sí|
-|Propiedades de objeto||Sí|
+|Propiedades de objeto||Vista previa|
 |Diseñador de tablas||Sí|
 
 ### <a name="query-editor"></a>Editor de consultas

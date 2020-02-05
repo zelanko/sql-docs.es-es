@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46ce5f22f38b9854be8161aa3d104a60e41886ab
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844349"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Referencia de Transact-SQL (motor de base de datos)
@@ -49,7 +49,7 @@ Para encontrar las tablas, las visualizaciones, las funciones y los procedimient
 - [Vistas de catálogo del sistema](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
 - [Vistas de compatibilidad del sistema](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
 - [Vistas de administración dinámica del sistema](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [Funciones del sistema](../relational-databases/system-functions/system-functions-category-transact-sql.md)
+- [System functions](../relational-databases/system-functions/system-functions-category-transact-sql.md) (Funciones del sistema)
 - [Vistas de esquema de información del sistema](../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [Procedimientos almacenados del sistema](../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
 - [Tablas del sistema](../relational-databases/system-tables/system-tables-transact-sql.md)
@@ -87,7 +87,7 @@ En los documentos de SQL se incluyen estas otras referencias de idioma:
 
 Ahora que ya sabe cómo encontrar los temas de referencia de T-SQL, ya puede hacer lo siguiente:
 
-- Consultar un breve tutorial sobre cómo escribir instrucciones T-SQL, vea [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). 
+- Consultar un breve tutorial sobre cómo escribir instrucciones T-SQL, [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md). 
 - Ver el artículo [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
 
   

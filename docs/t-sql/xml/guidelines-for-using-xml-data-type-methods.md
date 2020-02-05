@@ -1,5 +1,5 @@
 ---
-title: Directrices para usar los métodos del tipo de datos xml | Microsoft Docs
+title: Directrices para usar los métodos del tipo de datos xml{1}{2}| Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b354f824da86e3bfcc5fb8d6279cb755048046d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051301"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Directrices para utilizar los métodos del tipo de datos xml
@@ -84,7 +84,7 @@ El esquema XML se utiliza para comprobar el tipo del XML con tipo. Si se especif
 
 Es importante ser consciente de la diferencia entre `//first-name[1]` y `(//first-name)[1]` en la comprobación de tipos. La primera expresión devuelve una secuencia de nodos `<first-name>` en la que cada nodo es el nodo `<first-name>` que está más a la izquierda entre los de su mismo nivel. La última expresión devuelve el primer nodo singleton `<first-name>` por orden de los documentos en la instancia XML.
 
-### <a name="example-using-value"></a>Ejemplo: uso de value()
+### <a name="example-using-value"></a>Ejemplo: utilizar value()
 
 La siguiente consulta en una columna XML sin tipo da como resultado un error de compilación estático. Esto se debe a que **value()** espera un nodo singleton como primer argumento y el compilador no puede determinar si solo va a aparecer un nodo `<last-name>` en tiempo de ejecución:
 

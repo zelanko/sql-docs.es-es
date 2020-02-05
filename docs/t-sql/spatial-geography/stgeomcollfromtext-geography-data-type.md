@@ -18,10 +18,10 @@ ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e8669d2d4a04fba9a18f091dabab04fc1284ce03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042247"
 ---
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText (tipo de datos geography)
@@ -43,12 +43,12 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geography** que quiere devolver.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El tipo OGC de la instancia de **geography** devuelto por STGeomCollFromText() se establece en la entrada WKT correspondiente.  
   
  Este método produce una excepción **ArgumentException** si la entrada no es válida.  

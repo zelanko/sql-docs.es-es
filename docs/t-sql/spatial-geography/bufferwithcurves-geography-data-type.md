@@ -18,10 +18,10 @@ ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f0e5927216d6bc0ff1acbb2146d7f23c31012ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066550"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (tipo de datos de geografía)
@@ -40,7 +40,7 @@ ms.locfileid: "68066550"
  *distance*  
  Es un valor de tipo **float** que indica la distancia máxima a la que los puntos que forman el búfer pueden estar de la instancia de geography.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
@@ -54,13 +54,13 @@ ms.locfileid: "68066550"
   
 -   **NULL** se pasa al método, como en `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En la siguiente tabla se muestran los resultados devueltos para distintos valores de distancia.  
   
 |Valor de distancia|Dimensiones de tipo|Tipo espacial devuelto|  
 |--------------------|---------------------|---------------------------|  
 |distancia < 0|Cero o uno|Instancia de **GeometryCollection** vacía|  
-|distancia \< 0|Dos o más|Instancia de **CurvePolygon** o **GeometryCollection** con un búfer negativo.<br /><br /> Nota: un búfer negativo puede crear una instancia de **GeometryCollection** vacía.|
+|distancia \< 0|Dos o más|Instancia de **CurvePolygon** o **GeometryCollection** con un búfer negativo.<br /><br /> Nota: Un búfer negativo puede crear una instancia de **GeometryCollection** vacía.|
 |distancia = 0|Todas las dimensiones|Copia de la instancia de **geography** que hace la llamada|  
 |distancia > 0|Todas las dimensiones|Instancia de **CurvePolygon** o **GeometryCollection**|  
   

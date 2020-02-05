@@ -14,10 +14,10 @@ ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f5433d6082f2860805368f636383eb2e17959e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048860"
 ---
 # <a name="event-notifications"></a>Notificaciones de eventos
@@ -69,7 +69,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |El mismo propietario posee los desencadenadores DML y las tablas en que se aplican.|El propietario de una notificación de eventos en una cola puede tener un propietario diferente que el objeto en el que se aplica.|  
 |Los desencadenadores admiten la cláusula EXECUTE AS.|Las notificaciones de eventos no admiten la cláusula EXECUTE AS.|  
 |Se puede capturar la información de eventos del desencadenador DDL mediante la función EVENTDATA, que devuelve un tipo de datos **xml** .|Las notificaciones de eventos envían información de eventos **xml** a un servicio de Service Broker. El formato de la información usa el mismo esquema que la función EVENTDATA.|  
-|Los metadatos sobre los desencadenadores se encuentran en las vistas de catálogo **sys.triggers** y **sys.server_triggers** .|Los metadatos sobre las notificaciones de eventos se encuentran en las vistas de catálogo **sys.event_notifications** y **sys.server_event_notifications**.|  
+|Los metadatos sobre los desencadenadores se encuentran en las vistas de catálogo **sys.triggers** y **sys.server_triggers** .|Los metadatos sobre las notificaciones de eventos se encuentran en las vistas de catálogo **sys.event_notifications** y **sys.server_event_notifications** .|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Notificaciones de eventos y Seguimiento de SQL  
  En la siguiente tabla se compara y contrasta el uso de notificaciones de eventos y de la Seguimiento de SQL para supervisar eventos de servidor.  

@@ -11,10 +11,10 @@ ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4a84025efefa397cd1f33a706073faceb0ad70ae
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292129"
 ---
 # <a name="request-log"></a>Registro de solicitudes
@@ -52,7 +52,7 @@ ms.locfileid: "71292129"
  **Tipo**  
  Muestra el tipo de evento que se ha registrado. En la tabla siguiente se enumeran los tipos de evento posibles.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |S|Mensaje de correcto.|  
 |E|Mensaje de error|  
@@ -60,7 +60,7 @@ ms.locfileid: "71292129"
 |I|Mensaje informativo.|  
 |Un|Se anuló la operación.|  
   
- **de mensaje**  
+ **Mensaje**  
  Muestra el texto del mensaje asociado al evento registrado.  
   
 ## <a name="see-also"></a>Consulte también  

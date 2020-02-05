@@ -27,10 +27,10 @@ ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: cc9716cbd1e27c6589b964c3c3d6208105f4863c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101949"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
@@ -51,7 +51,7 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
  WITH NO_INFOMSGS  
  Suprime todos los mensajes de información.  
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 Cuando se ejecuta un procedimiento almacenado extendido, la DLL permanece cargada por la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que se cierra el servidor. Esta instrucción permite que se pueda descargar de la memoria una DLL sin tener que cerrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para mostrar los archivos DLL cargados actualmente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ejecute **sp_helpextendedproc**.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  

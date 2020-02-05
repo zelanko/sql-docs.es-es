@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e9bd4cb0c2fff4259814f6e33a65777023a801fd
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412529"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Compatibilidad de SQL Server Management Studio con OLTP en memoria
@@ -82,7 +82,7 @@ ms.locfileid: "74412529"
   
 1.  Para obtener información sobre el uso de memoria:  
   
-    -   En el **Explorador de objetos**, haga clic con el botón derecho en la tabla optimizada para memoria, haga clic en **Propiedades**y, después, haga clic en la página **Almacenamiento** . El valor de la propiedad **Espacio de datos** indica la memoria utilizada por los datos de la tabla. El valor de la propiedad **Espacio de índice** indica la memoria utilizada por los índices de la tabla.  
+    -   En **Explorador de objetos**, haga clic con el botón secundario en la tabla optimizada para memoria, aga clic en **Propiedades** y, a continuación, haga clic en la página **Almacenamiento**. El valor de la propiedad **Espacio de datos** indica la memoria utilizada por los datos de la tabla. El valor de la propiedad **Espacio de índice** indica la memoria utilizada por los índices de la tabla.  
   
     -   En el **Explorador de objetos**, haga clic con el botón derecho en la base de datos, haga clic en **Propiedades**y, después, haga clic en la página **General** . El valor de la propiedad **Memoria asignada a los objetos optimizados para memoria** indica la memoria asignada a los objetos optimizados para memoria en la base de datos. El valor de la propiedad **Memoria usada por los objetos optimizados para memoria** indica la memoria usada por los objetos optimizados para memoria en la base de datos.  
   

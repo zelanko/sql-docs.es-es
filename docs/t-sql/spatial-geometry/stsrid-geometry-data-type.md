@@ -18,10 +18,10 @@ ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: f1119c0c906e3a3825882e3fe1043e9bdaceb0f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066299"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid (tipo de datos geometry)
@@ -38,10 +38,10 @@ Esta propiedad se puede modificar.
 STSrid  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
- Tipo CLR: **SqlInt32**  
+ Tipo de CLR: **SqlInt32**  
   
 ## <a name="examples"></a>Ejemplos  
  En el primer ejemplo se crea una instancia de **geometry** con el valor SRID 13 y se usa `STSrid` para confirmar dicho SRID.  

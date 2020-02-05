@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: c553e650dcbcfabc8ad2d18ce490221c0d2439ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054601"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Programar la ejecución de paquetes SSIS implementados en Azure con SQL Server Management Studio (SSMS)
@@ -29,7 +29,7 @@ Si usa SQL Database para hospedar el catálogo de SSIS, `SSISDB`, puede usar est
 
 Si usa SSMS para programar un paquete, SSIS crea automáticamente tres objetos de Data Factory, con nombres que se basan en el nombre del paquete seleccionado y en la marca de tiempo. Por ejemplo, si el nombre del paquete SSIS es **MyPackage**, SSMS crea objetos de Data Factory parecidos a los siguientes:
 
-| Objeto | Nombre |
+| Object | Nombre |
 |---|---|
 | Canalización | **Pipeline_MyPackage_2018-05-08T09_00_00Z** |
 | Ejecutar una actividad de paquete SSIS | **Activity_MyPackage_2018-05-08T09_00_00Z** |
@@ -75,5 +75,5 @@ La característica descrita en este artículo require SQL Server Management Stud
 Para obtener información sobre otros métodos para programar un paquete SSIS, vea [Programar la ejecución de un paquete SSIS en Azure](ssis-azure-schedule-packages.md).
 
 Para obtener más información sobre las canalizaciones, las actividades y los desencadenadores de Azure Data Factory, vea los siguientes artículos:
--   [Canalizaciones y actividades de Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
--   [Ejecución y desencadenadores de la canalización en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)
+-   [Canalizaciones y actividades en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)
+-   [Ejecución y desencadenadores de canalización en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)

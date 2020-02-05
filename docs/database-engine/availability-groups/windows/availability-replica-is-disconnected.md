@@ -15,10 +15,10 @@ ms.assetid: 1a2162d3-54fb-4356-b349-effbdc15a5a4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0fc0dbd2df2d0383e7fd63eddc941170d4b0a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67988652"
 ---
 # <a name="availability-replica-is-disconnected-within-an-always-on-availability-group"></a>La réplica de disponibilidad está desconectada en un grupo de disponibilidad Always On
@@ -30,8 +30,8 @@ ms.locfileid: "67988652"
 |-|-|  
 |**Nombre de directiva**|Estado de conexión de la réplica de disponibilidad|  
 |**Problema**|La réplica de disponibilidad está desconectada.|  
-|**Categoría**|**Crítico**|  
-|**Faceta**|Réplica de disponibilidad|  
+|**Categoría**|**Critical)** (Crítico)|  
+|**Faceta**|réplica de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
  Esta directiva comprueba el estado de conexión entre las réplicas de disponibilidad. La directiva está en mal estado cuando el estado de conexión de la réplica de disponibilidad es DISCONNECTED. De lo contrario, la directiva está en un estado correcto.  
@@ -39,7 +39,7 @@ ms.locfileid: "67988652"
 > [!NOTE]  
 >  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Réplica de disponibilidad desconectada](https://go.microsoft.com/fwlink/p/?LinkId=220857) en TechNet Wiki.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  La réplica secundaria no está conectada a la réplica principal. El estado de conexión es DISCONNECTED. Este problema puede deberse a lo siguiente:  
   
 -   El puerto de conexión puede estar en conflicto con otra aplicación.  

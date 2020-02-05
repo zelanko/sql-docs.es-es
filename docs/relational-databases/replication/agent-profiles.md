@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bea15bd12af6675bd0567e2f607d865c50453717
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 0d31b6cff8b4e0f1845ddb9c5e0fd3a24fc24e4e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770772"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288325"
 ---
 # <a name="agent-profiles"></a>Perfiles de agente
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,15 +34,15 @@ ms.locfileid: "68770772"
  Seleccione el perfil que se utilizará al crear los trabajos de un determinado tipo de agente. Por ejemplo, si crea varias suscripciones para una publicación de combinación, el trabajo del Agente de mezcla de cada suscripción utilizará el perfil seleccionado. Si desea cambiar el perfil de los trabajos existentes, seleccione un perfil y, a continuación, haga clic en **Cambiar agentes existentes**.  
   
  **Nombre**  
- El nombre del perfil.  
+ Nombre del perfil.  
   
  **Tipo**  
- Tipo de perfil: **Usuario** (definido por el usuario) o **Sistema** (predefinido).  
+ Indica el tipo de perfil: **Usuario** (definido por el usuario) o **Sistema** (predefinido).  
   
  **Propiedades (...)**  
  Haga clic para ver los valores utilizados por cada parámetro en el perfil del agente.  
   
- **Nueva**  
+ **Nuevo**  
  Haga clic para crear un perfil nuevo.  
   
  **Eliminar**  

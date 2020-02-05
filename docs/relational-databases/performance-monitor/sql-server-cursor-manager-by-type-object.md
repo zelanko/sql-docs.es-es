@@ -14,10 +14,10 @@ ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 712cc824e6faa834bd8d6023e4948e9e80dfabce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986695"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>Cursor Manager by Type (objeto de SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "67986695"
 |-------------------------------------|-----------------|  
 |**Cursores activos**|Número de cursores activos.|  
 |**Frecuencia de aciertos de caché**|Proporción entre los aciertos de caché y las búsquedas.|  
-|**Base de frecuencia de aciertos de caché**|Exclusivamente para uso interno.| 
+|**Base de frecuencia de aciertos de caché**|Solo para uso interno.| 
 |**Recuentos de cursores en caché**|Número de cursores de un tipo determinado en la caché.|  
 |**Recuentos de uso de caché de cursor/seg.**|Número de veces que se ha utilizado cada tipo de cursor en caché.|  
 |**Uso de memoria de cursores**|Cantidad de memoria consumida por los cursores en kilobytes (KB).|  

@@ -18,10 +18,10 @@ ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d9244a2833a75925fab1f00d6ce20915f5ceaafb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930339"
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (tipo de datos geometry)
@@ -36,12 +36,12 @@ Devuelve un objeto que representa la forma convexa de una instancia de **geometr
 .STConvexHull ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  `STConvexHull()` devuelve el polígono convexo menor que contiene la instancia de **geometry** dada. **Points** o las instancias colineales de **LineString** generarán una instancia del mismo tipo que el de la entrada.  
   
 ## <a name="examples"></a>Ejemplos  

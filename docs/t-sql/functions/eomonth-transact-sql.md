@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 481faddf2a0a12bcc44a8b4e677101afa68c37a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904385"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
@@ -47,10 +47,10 @@ Expresión opcional de tipo entero que especifica el número de meses que se van
   
 Si el argumento, *month_to_add* tiene un valor, `EOMONTH` agrega el número especificado de meses a *start_date* y, después, devuelve el último día del mes de la fecha resultante. Si esto desborda el intervalo válido de fechas, `EOMONTH` producirá un error.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **date**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 La función `EOMONTH` se puede enviar de forma remota a servidores [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores. No se puede enviar de forma remota a servidores con una versión anterior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  
@@ -90,7 +90,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. EOMONTH con y sin el parámetro month_to_add  
+### <a name="c-eomonth-with-and-without-the-month_to_add-parameter"></a>C. EOMONTH con y sin el parámetro month_to_add  
   
 Nota: Los valores que se muestran en estos conjuntos de resultados reflejan una fecha de ejecución (ambos inclusive)
         

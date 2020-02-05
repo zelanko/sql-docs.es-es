@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119854"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversión no determinista de las cadenas de fecha literales en valores DATE
@@ -119,7 +119,7 @@ YMD-Interpretation--?--NotGuaranteed
 
 En el ejemplo de código anterior, el último ejemplo tiene una discrepancia entre el formato **ymd** y la cadena de entrada. El tercer nodo de la cadena de entrada representa un valor numérico que es demasiado grande para ser un día. Microsoft no garantiza el valor de salida de este tipo de errores.
 
-#### <a name="convert-offers-explicit-codes-for-deterministic-control-of-date-formats"></a>CONVERT ofrece códigos explícitos para control _determinista_ de formatos de fecha
+#### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT ofrece códigos explícitos para control _determinista_ de formatos de fecha
 
 El artículo de documentación de CAST y CONVERT enumera códigos explícitos que puede usar con la función CONVERT para controlar de forma _determinista_ las conversiones de fecha. Cada mes el artículo está entre nuestras páginas más visitadas.
 
@@ -142,7 +142,7 @@ La conversión de los datos de caracteres no Unicode entre intercalaciones tambi
 
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Establecer un idioma de la sesión](../../relational-databases/collations/set-a-session-language.md)
 - [Tipos de datos y funciones de fecha y hora (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)

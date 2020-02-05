@@ -14,10 +14,10 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295797"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitor de ejecución de paquetes y otras operaciones
@@ -86,7 +86,7 @@ ms.locfileid: "71295797"
 |Validar paquete|301|  
 |Configurar catálogo|1000|  
   
- **Detener**  
+ **Detención**  
  Haga clic para detener una operación que se esté ejecutando actualmente.  
 
 ## <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Ver y detener los paquetes en ejecución en el Servidor de Integration Services
@@ -208,5 +208,5 @@ ms.locfileid: "71295797"
     -   **Todas las conexiones**  
 
 ## <a name="see-also"></a>Consulte también  
- [Ejecución de proyectos y paquetes](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
+ [Execution of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)  (Ejecución de proyectos y paquetes)  
  [Solucionar problemas de informes para la ejecución de paquetes](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

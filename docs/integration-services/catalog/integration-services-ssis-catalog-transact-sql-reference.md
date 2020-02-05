@@ -11,10 +11,10 @@ ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f1484b14b492094d21e18c5752def4b8114cd857
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298957"
 ---
 # <a name="integration-services-ssis-catalog-transact-sql-reference"></a>Referencia de Transact-SQL de catálogo de Integration Services (SSIS)
@@ -22,8 +22,8 @@ ms.locfileid: "71298957"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[Vistas &#40;catálogo de Integration Services&#41;](../../integration-services/system-views/views-integration-services-catalog.md)  
+[Views &#40;Integration Services Catalog&#41;](../../integration-services/system-views/views-integration-services-catalog.md) (Vistas [catálogo de Integration Services])  
   
- [Procedimientos almacenados &#40;catálogo de Integration Services&#41;](../../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
+ [Stored Procedures &#40;Integration Services Catalog&#41;](../../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md) (Procedimientos almacenados [catálogo de Integration Services])  
   
  [Funciones &#40;catálogo de Integration Services&#41;](https://msdn.microsoft.com/library/9f2aec85-3d4c-415f-b1f8-8328a60b1c7f) 

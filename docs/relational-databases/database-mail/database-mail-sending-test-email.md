@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce8a48b7e8315a564eaa1338df35a04226e705d4
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906072"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Envío de un correo electrónico de prueba con el Correo electrónico de base de datos  
@@ -47,7 +47,7 @@ Debe ser miembro del rol fijo de servidor sysadmin para utilizar el cuadro de di
 
     En la columna sent_status se indica si se ha enviado el mensaje de correo electrónico de prueba.
 
-1. Si se produce un error, ejecute la siguiente instrucción para ver el mensaje correspondiente:
+1. Si se produce un error, ejecute la instrucción siguiente para ver el mensaje correspondiente:
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 

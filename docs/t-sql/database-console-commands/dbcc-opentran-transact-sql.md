@@ -26,10 +26,10 @@ ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7075de83b3f2d13d80d0eb08db1d780827eddeec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039083"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
@@ -64,7 +64,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  Suprime todos los mensajes de información.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Utilice DBCC OPENTRAN para determinar si hay alguna transacción abierta dentro del registro de transacciones. Cuando utiliza la instrucción BACKUP LOG, solo puede truncar la parte inactiva del registro; una transacción abierta puede evitar que el registro se trunque completamente. Para identificar una transacción abierta, utilice sp_who para obtener el Id. del proceso del sistema.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  

@@ -14,10 +14,10 @@ ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c28f8dbaa649e0755c6f18f7cc0f1485f022e4a6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71289559"
 ---
 # <a name="hex-ssis-expression"></a>HEX (expresión de SSIS)
@@ -41,7 +41,7 @@ HEX(integer_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  HEX devuelve null si *integer_expression* es null.  
   
  El argumento *integer_expression* debe devolver un entero. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  

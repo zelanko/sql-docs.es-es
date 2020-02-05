@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 65f4db24d081dc8ceb85201eee088005662e9146
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040440"
 ---
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
@@ -44,7 +44,7 @@ ACOS ( float_expression )
 *float_expression*  
 Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) o bien de tipo **float** o bien de un tipo que se puede convierte en float de manera implícita. Solo se admite un valor comprendido entre -1,00 y 1,00. Con valores fuera de este intervalo se devuelve NULL, y ASIN notifica un error del dominio.
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **float**
   
 ## <a name="examples"></a>Ejemplos  
@@ -66,7 +66,7 @@ The ACOS of the number is: 3.14159
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [Funciones](../../t-sql/functions/functions.md)
   

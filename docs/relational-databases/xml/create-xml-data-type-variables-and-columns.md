@@ -14,10 +14,10 @@ ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16cb419ef7cc893575e91c695158e9d7b66ce2c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984869"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Crear variables y columnas del tipo de datos XML
@@ -134,7 +134,7 @@ INSERT INTO T values(1,'<Product />')
   
 -   La aplicación efectúa una recuperación de datos en la columna XML y no requiere un índice XML en la columna XML.  
   
--   Desea generar un índice XML en la columna de tipo de datos **xml** y la clave principal de la tabla principal es la misma que su clave de agrupación en clústeres. Para obtener más información, vea [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+-   Desea generar un índice XML en la columna de tipo de datos **xml** y la clave principal de la tabla principal es la misma que su clave de agrupación en clústeres. Para obtener más información, consulte [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
  Puede crear la columna de tipo de datos **xml** en otra tabla si se cumplen las condiciones siguientes:  
   

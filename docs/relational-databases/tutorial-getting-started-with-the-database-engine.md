@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff27b763f5bbb658de2d5e762ecdecdaea7fc583
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095720"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Introducción al motor de base de datos
@@ -34,10 +34,10 @@ Este tutorial le muestra cómo conectarse a [!INCLUDE[ssDE](../includes/ssde-md.
   
 El tutorial está compuesto por dos lecciones:  
   
-[Lección 1: Conexión al motor de base de datos](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+[Lección 1: conectarse al motor de base de datos](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
 En esta lección aprenderá a conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] y a permitir que otras personas se conecten.  
   
-[Lección 2: Conexión desde otro equipo](../relational-databases/lesson-2-connecting-from-another-computer.md)  
+[Lección 2: Conectarse desde otro equipo](../relational-databases/lesson-2-connecting-from-another-computer.md)  
 En esta lección aprenderá a conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] desde un segundo equipo, incluidas la habilitación de protocolos, la configuración de puertos y la configuración de opciones del firewall.  
   
 ## <a name="requirements"></a>Requisitos  

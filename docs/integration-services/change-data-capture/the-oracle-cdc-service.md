@@ -11,10 +11,10 @@ ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a11a67f64a40aa5fe08d375a9f11fa186c568b1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298606"
 ---
 # <a name="the-oracle-cdc-service"></a>El servicio CDC de Oracle
@@ -47,7 +47,7 @@ GO
   
  La configuración de la instancia CDC de Oracle se guarda en la tabla **cdc.xdbcdc_config** , que es la tabla con la que trabaja la Consola del diseñador CDC de Oracle. Puesto que toda la configuración de una instancia CDC de Oracle se encuentra en la instancia y las bases de datos CDC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino, es posible crear scripts de implementación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para una instancia CDC de Oracle. Esto se realiza mediante las consolas de configuración del servicio CDC de Oracle y del Diseñador CDC de Oracle.  
   
-## <a name="security-considerations"></a>Consideraciones de seguridad  
+## <a name="security-considerations"></a>Consideraciones sobre la seguridad  
  A continuación se describen los requisitos de seguridad necesarios para trabajar con el servicio CDC para Oracle.  
   
 ### <a name="protection-of-source-oracle-data"></a>Protección de datos de Oracle de origen  

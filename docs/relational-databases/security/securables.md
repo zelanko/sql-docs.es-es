@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 30688490a06c784a2149e53f7e175b6350d3d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986566"
 ---
 # <a name="securables"></a>Elementos protegibles
@@ -31,25 +31,25 @@ ms.locfileid: "67986566"
 
   Los elementos protegibles son los recursos cuyo acceso es regulado por el sistema de autorización del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Por ejemplo, una tabla es un elemento protegible. Algunos elementos protegibles pueden estar incluidos en otros, con lo que se crean jerarquías anidadas denominadas "ámbitos" que a su vez se pueden proteger. Los ámbitos protegibles son **servidor**, **base de datos**y **esquema**.  
   
-## <a name="securable-scope-server"></a>Ámbito protegible: Servidor  
+## <a name="securable-scope-server"></a>Ámbito protegible: servidor  
  El ámbito protegible **servidor** contiene los siguientes valores que puede proteger:  
   
 -   grupo de disponibilidad  
   
--   Extremo  
+-   Punto de conexión  
   
--   Login  
+-   Inicio de sesión  
   
 -   Rol de servidor  
   
 -   Base de datos  
   
-## <a name="securable-scope-database"></a>Ámbito protegible: Base de datos  
+## <a name="securable-scope-database"></a>Ámbito protegible: base de datos  
  El ámbito protegible **base de datos** contiene los siguientes valores que puede proteger:  
   
 -   Rol de aplicación  
   
--   Ensamblado  
+-   Assembly  
   
 -   Clave asimétrica  
   
@@ -67,13 +67,13 @@ ms.locfileid: "67986566"
   
 -   (Base de datos) Rol  
   
--   Ruta  
+-   Enrutar  
   
--   esquema  
+-   Schema  
   
 -   Lista de propiedades de búsqueda  
   
--   ssNoVersion  
+-   Servicio  
   
 -   Clave simétrica  
   
@@ -98,7 +98,7 @@ ms.locfileid: "67986566"
   
     -   Synonym (Sinónimo)  
   
-    -   Table  
+    -   Tabla  
   
     -   Ver 
     

@@ -17,10 +17,10 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1c3ccadbe443ca555e5386ea3d3434405ae97461
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291477"
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformación Limpieza de DQS
@@ -55,7 +55,7 @@ ms.locfileid: "71291477"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Abrir, desbloquear, cambiar nombre y eliminar un proyecto de calidad de los datos](../../../data-quality-services/open-unlock-rename-and-delete-a-data-quality-project.md)  
+-   [Abrir, desbloquear, cambiar nombre y eliminar un proyecto de calidad de datos](../../../data-quality-services/open-unlock-rename-and-delete-a-data-quality-project.md)  
   
 -   Artículo sobre la [limpieza de datos complejos con dominios compuestos](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx), en social.technet.microsoft.com.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71291477"
  **Administrador de conexiones de calidad de datos**  
  Seleccione un administrador de conexiones DQS existente de la lista, o bien haga clic en **Nuevo**para crear una conexión.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones con el cuadro de diálogo **Administrador de conexiones de limpieza de DQS** . Vea [Set the options in the DQS Cleansing Connection Manager dialog box](#manager).  
   
  **Base de conocimiento de calidad de datos**  
@@ -138,14 +138,14 @@ ms.locfileid: "71291477"
  **Estandarizar salida**  
  Indica si los datos se van a generar en el formato estandarizado según el formato de salida que se haya definido para los dominios. Para más información sobre el formato estandarizado, vea [Limpieza de datos](../../../data-quality-services/data-cleansing.md).  
   
- **Confianza**  
+ **Confidence**  
  Indica si se debe incluir el nivel de confianza para los datos corregidos. El nivel de confianza indica el grado de certeza de DQS para la corrección o sugerencia. Para más información sobre los niveles de confianza, vea [Limpieza de datos](../../../data-quality-services/data-cleansing.md).  
   
  **Reason**  
  Indica si se debe incluir el motivo de la corrección de los datos.  
   
  **Datos anexados**  
- Indica si se van a generar datos adicionales que se hayan recibido de un proveedor de datos de referencia existente. Para más información, consulte [Reference Data Services in DQS](../../../data-quality-services/reference-data-services-in-dqs.md).  
+ Indica si se van a generar datos adicionales que se hayan recibido de un proveedor de datos de referencia existente. Para obtener más información, consulte [Reference Data Services in DQS](../../../data-quality-services/reference-data-services-in-dqs.md).  
   
  **Esquema de datos anexados**  
  Indica si se va a generar el esquema de datos. Para más información, vea [Adjuntar un dominio o un dominio compuesto a datos de referencia](../../../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  

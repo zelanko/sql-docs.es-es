@@ -13,10 +13,10 @@ ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 31ee9136f4c2b0f0864db0ecd3931e2e45ea4fdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942742"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Optimizar el rendimiento de publicadores de Oracle
@@ -25,7 +25,7 @@ ms.locfileid: "67942742"
   
  Además, existen dos opciones para publicadores de Oracle que están relacionadas con el rendimiento:  
   
--   Especificar la opción de publicación adecuada: Oracle o puerta de enlace de Oracle.  
+-   Especificar la opción de publicación adecuada: Oracle o Puerta de enlace de Oracle.  
   
 -   Configurar el trabajo del conjunto de transacciones para procesar cambios en el publicador en un intervalo adecuado.  
   

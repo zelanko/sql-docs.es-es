@@ -14,10 +14,10 @@ ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 80c62c0048f40ba945d3204c414180be9f8e0d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995645"
 ---
 # <a name="sql-server-transactions-object"></a>Transactions (objeto de SQL Server)
@@ -35,10 +35,10 @@ ms.locfileid: "67995645"
 |**Espacio disponible en tempdb (KB)**|Cantidad de espacio (en kilobytes) disponible en **tempdb**. Debe haber suficiente espacio disponible para incluir el almacén de versiones de nivel de aislamiento de instantáneas y todos los objetos temporales nuevos creados en esta instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Tiempo mayor de ejecución de transacción**|Tiempo (en segundos) transcurrido desde el inicio de la transacción que ha estado activa durante más tiempo que las demás transacciones actuales. Este contador solo muestra actividad cuando la base de datos está en el nivel de aislamiento de instantánea de lectura confirmada activa. No registra ninguna actividad si la base de datos está en cualquier otro nivel de aislamiento.|  
 |**Transacciones de versión que no son instantáneas**|Número de transacciones activas actualmente que no utilizan el nivel de aislamiento de instantáneas y que han realizado modificaciones en los datos que, a su vez, han generado versiones de filas en el almacén de versiones de **tempdb** .|  
-|**Transacciones de instantáneas**|Número de transacciones activas actualmente que utilizan el nivel de aislamiento de instantáneas.<br /><br /> Nota: El contador de objetos **Transacciones de instantáneas** responde cuando se produce el primer acceso a los datos, no cuando se emite la instrucción `BEGIN TRANSACTION`.|  
+|**Transacciones de instantáneas**|Número de transacciones activas actualmente que utilizan el nivel de aislamiento de instantáneas.<br /><br /> Nota: El contador del objeto **Transacciones de instantáneas** responde cuando se produce el primer acceso a los datos, no cuando se emite la instrucción `BEGIN TRANSACTION` .|  
 |**Transactions**|Número de transacciones activas actualmente de todos los tipos.|  
 |**Frecuencia de conflictos de actualización**|Porcentaje de transacciones que utilizan el nivel de aislamiento de instantáneas y que han experimentado conflictos de actualización durante el último segundo. Un conflicto de actualización se produce cuando una transacción de nivel de aislamiento de instantáneas intenta modificar una fila ya modificada por otra transacción y que no se había confirmado al iniciar la transacción de nivel de aislamiento de instantáneas.|  
-|**Base de frecuencia de conflictos de actualización**|Exclusivamente para uso interno.|
+|**Base de frecuencia de conflictos de actualización**|Solo para uso interno.|
 |**Transacciones de instantáneas de actualización**|Número de transacciones activas actualmente que utilizan el nivel de aislamiento de instantáneas y que tienen datos modificados.|  
 |**Velocidad de limpieza de versión (KB/seg.)**|Velocidad (en kilobytes por segundo) a la que las versiones de filas se quitan del almacén de versiones de aislamiento de instantáneas en **tempdb**.|  
 |**Velocidad de generación de versión (KB/seg.)**|Velocidad (en kilobytes por segundo) a la que se agregan nuevas versiones de fila al almacén de versiones de aislamiento de instantáneas en **tempdb**.|  

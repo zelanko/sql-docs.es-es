@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de1dc6567603b0b16324aa798527a0b79282fa83
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095743"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importar documentos JSON en SQL Server
@@ -147,9 +147,9 @@ En este ejemplo, OPENROWSET(BULK) lee el contenido del archivo y pasa ese conten
 
 |Identificador|Nombre|price|pages_i|Autor|
 |---|---|---|---|---|
-|978-0641723445|The Lightning Thief|12,5|384|Rick Riordan| 
+|978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 |978-1423103349|The Sea of Monsters|6,49|304|Rick Riordan| 
-|978-1857995879|Sophie's World: The Greek Philosophers|3,07|64|Jostein Gaarder| 
+|978-1857995879|Sophie's World : The Greek Philosophers|3,07|64|Jostein Gaarder| 
 |978-1933988177|Lucene in Action, Second Edition|30,5|475|Michael McCandless|
 ||||||
 

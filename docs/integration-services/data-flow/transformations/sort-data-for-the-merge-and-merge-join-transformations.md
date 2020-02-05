@@ -14,10 +14,10 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297785"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Ordenar datos para las transformaciones Mezclar y Combinación de mezcla
@@ -42,7 +42,7 @@ ms.locfileid: "71297785"
   
      La transformación Ordenar utiliza la intercalación de Windows para ordenar los valores de cadena.  
   
-     -O bien-  
+     O bien  
   
 -   Use el operador CAST de Transact-SQL para convertir primero los valores **varchar** en valores **nvarchar** y, después, use la cláusula ORDER BY de Transact-SQL para ordenar los datos.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "71297785"
   
 9. Repita el paso 8 para cada columna ordenada.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   

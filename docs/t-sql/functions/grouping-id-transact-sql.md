@@ -19,13 +19,13 @@ ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910650"
 ---
-# <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
+# <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Es una función que calcula el nivel de agrupación. GROUPING_ID solo se puede usar en la lista de \<selección> de SELECT, las cláusulas HAVING u ORDER BY cuando se especifica GROUP BY.  
@@ -43,13 +43,13 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  \<column_expression>  
  Es una *column_expression* en una cláusula [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md).  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  GROUPING_ID \<column_expression> deben coincidir exactamente con la expresión en la lista GROUP BY. Por ejemplo, si agrupa por DATEPART (yyyy, \<*nombre de columna*>), use GROUPING_ID (DATEPART (yyyy, \<*nombre de columna*>)) o, si agrupa por \<*nombre de columna*>, use GROUPING_ID (\<*nombre de columna*>).  
   
-## <a name="comparing-groupingid--to-grouping-"></a>Comparar GROUPING_ID() con GROUPING()  
+## <a name="comparing-grouping_id--to-grouping-"></a>Comparar GROUPING_ID() con GROUPING()  
  GROUPING_ID (\<column_expression> [ **,** ...*n* ]) introduce el equivalente del valor devuelto de GROUPING (\<column_expression>) de cada columna de su lista de columnas en cada fila de salida como una cadena de unos y ceros. GROUPING_ID interpreta dicha cadena como un número de base 2 y devuelve el número entero equivalente. Por ejemplo, considere la siguiente instrucción: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. La tabla siguiente muestra los valores de entrada y salida de GROUPING_ID().  
   
 |Columnas agregadas|Entrada de GROUPING_ID (a, b, c) = GROUPING(a) + GROUPING(b) + GROUPING(c)|Resultado de GROUPING_ID()|  
@@ -62,10 +62,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`bc`|`011`|`3`|  
 |`abc`|`111`|`7`|  
   
-## <a name="technical-definition-of-groupingid-"></a>Definición técnica de GROUPING_ID ()  
- Cada argumento de GROUPING_ID debe ser un elemento de la lista GROUP BY. GROUPING_ID () devuelve un mapa de bits de **integer** cuyos bits N más bajos pueden ser literales. Un **bit** literal indica que el argumento correspondiente no es una columna de agrupación en la fila de salida determinada. El **bit** de menor orden corresponde al argumento N y el **bit** de menor orden de N-1<sup>ésimo</sup>, al argumento 1.  
+## <a name="technical-definition-of-grouping_id-"></a>Definición técnica de GROUPING_ID ()  
+ Cada argumento de GROUPING_ID debe ser un elemento de la lista GROUP BY. GROUPING_ID () devuelve un mapa de bits de **integer** cuyos bits N más bajos pueden ser literales. Un **bit** literal indica que el argumento correspondiente no es una columna de agrupación en la fila de salida determinada. El **bit** de menor orden corresponde al argumento N y el <sup>bit</sup> de menor orden de N-1**ésimo**, al argumento 1.  
   
-## <a name="groupingid--equivalents"></a>Equivalentes de GROUPING_ID ()  
+## <a name="grouping_id--equivalents"></a>Equivalentes de GROUPING_ID ()  
  En una consulta de agrupación única, GROUPING (\<column_expression>) equivale a GROUPING_ID (\<column_expression>) y ambos devuelven 0.  
   
  Por ejemplo, las siguientes instrucciones son equivalentes:  
@@ -92,7 +92,7 @@ SELECT 0 FROM T GROUP BY A,B
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-groupingid-to-identify-grouping-levels"></a>A. Usar GROUPING_ID para identificar niveles de agrupación  
+### <a name="a-using-grouping_id-to-identify-grouping-levels"></a>A. Usar GROUPING_ID para identificar niveles de agrupación  
  El ejemplo siguiente devuelve el recuento de empleados por `Name` y `Title`, `Name,` y total de la compañía de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. `GROUPING_ID()` se usa para crear un valor en cada fila de la columna `Title` que identifica su nivel de agregación.  
   
 ```  
@@ -114,7 +114,7 @@ WHERE DH.EndDate IS NULL
 GROUP BY ROLLUP(D.Name, E.JobTitle);  
 ```  
   
-### <a name="b-using-groupingid-to-filter-a-result-set"></a>B. Usar GROUPING_ID para filtrar un conjunto de resultados  
+### <a name="b-using-grouping_id-to-filter-a-result-set"></a>B. Usar GROUPING_ID para filtrar un conjunto de resultados  
   
 #### <a name="simple-example"></a>Ejemplo sencillo  
  En el código siguiente, para devolver solo las filas que tienen un recuento de empleados por cargo, quite los caracteres de comentario de `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Para devolver solo las filas que tienen un recuento de empleados por departamento, quite los caracteres de comentario de `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`.  
@@ -138,7 +138,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
   
  A continuación se muestra el conjunto de resultados sin filtrar.  
   
-|Nombre|Title|Grouping Level|Employee Count|Nombre|  
+|Nombre|Título|Grouping Level|Employee Count|Nombre|  
 |----------|-----------|--------------------|--------------------|----------|  
 |Document Control|Control Specialist|0|2|Document Control|  
 |Document Control|Document Control Assistant|0|2|Document Control|  
@@ -235,7 +235,7 @@ ORDER BY
     ,(H.SalesPersonID))ASC;  
 ```  
   
-### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. Usar GROUPING_ID () con ROLLUP y CUBE para identificar niveles de agrupación  
+### <a name="c-using-grouping_id--with-rollup-and-cube-to-identify-grouping-levels"></a>C. Usar GROUPING_ID () con ROLLUP y CUBE para identificar niveles de agrupación  
  El código de los ejemplos siguientes muestra el uso de `GROUPING()` para calcular la columna `Bit Vector(base-2)`. `GROUPING_ID()` se usa para calcular la columna `Integer Equivalent` correspondiente. El orden de columnas en la función `GROUPING_ID()` es el contrario del orden de las columnas que concatena la función `GROUPING()`.  
   
  En estos ejemplos, `GROUPING_ID()` se usa para crear un valor para cada fila de la columna `Grouping Level` que identifica el nivel de agrupación. Los niveles de agrupación no son siempre una lista consecutiva de enteros que comienzan por 1 (0, 1, 2,...*n*).  
@@ -304,7 +304,7 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
   
  A continuación se muestra un conjunto parcial de resultados.  
   
-|Year|Month|Day|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
+|Year|Month|Día|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
 |2007|1|1|1497452,6066|000|0|Year Month Day|  
 |2007|1|2|21772,3494|000|0|Year Month Day|  
@@ -385,7 +385,7 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
   
  A continuación se muestra un conjunto parcial de resultados.  
   
-|Year|Month|Day|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
+|Year|Month|Día|Total Due|Bit Vector (base-2)|Integer Equivalent|Grouping Level|  
 |----------|-----------|---------|---------------|----------------------------|------------------------|--------------------|  
 |2007|1|1|1497452,6066|000|0|Year Month Day|  
 |2007|1|2|21772,3494|000|0|Year Month Day|  
@@ -411,8 +411,8 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
 |NULL|2|2|76282.9556|001|4|Month Day|  
 |NULL|1|NULL|3473805.1218|101|5|Month|  
 |NULL|2|NULL|5890708.5198|101|5|Month|  
-|NULL|NULL|1|9220000.2675|011|6|Day|  
-|NULL|NULL|2|144513.3741|011|6|Day|  
+|NULL|NULL|1|9220000.2675|011|6|Día|  
+|NULL|NULL|2|144513.3741|011|6|Día|  
 |NULL|NULL|NULL|9364513,6416|111|7|Total general|  
   
 ## <a name="see-also"></a>Consulte también  

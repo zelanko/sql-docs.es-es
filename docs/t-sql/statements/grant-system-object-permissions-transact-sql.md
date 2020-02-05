@@ -17,10 +17,10 @@ ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050670"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT (permisos de objeto de sistema de Transact-SQL)
@@ -47,7 +47,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  Especifica la entidad de seguridad para la que se concede el permiso.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Puede utilizar esta instrucción para conceder permisos para determinados procedimientos almacenados, procedimientos almacenados extendidos, funciones con valores de tabla, funciones escalares, vistas, vistas de catálogo, vistas de compatibilidad, vistas INFORMATION_SCHEMA, vistas de administración dinámica y tablas del sistema instalados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada objeto del sistema existe como registro único en la base de datos de recursos del servidor (mssqlsystemresource). La base de datos de recursos es de solo lectura. Se muestra un vínculo al objeto como registro en el esquema sys de todas las bases de datos. Es posible conceder, denegar y revocar el permiso para ejecutar o seleccionar un objeto del sistema.  
   
  Para conceder un permiso para ejecutar o seleccionar un objeto no es necesario cumplir todos los permisos requeridos para utilizar el objeto. La mayoría de los objetos realiza operaciones para las que se necesitan permisos adicionales. Por ejemplo, un usuario para el que se concede el permiso EXECUTE para sp_addlinkedserver no puede crear un servidor vinculado a menos que el usuario sea también miembro del rol fijo de servidor sysadmin.  
@@ -76,7 +76,7 @@ GO
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. Conceder el permiso SELECT para una vista  
- En este ejemplo se concede el permiso `Sylvester1` del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para seleccionar una vista que presente todos los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, el ejemplo concede el permiso adicional necesario para ver los metadatos para los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no son propiedad del usuario.  
+ En este ejemplo se concede el permiso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del inicio de sesión de `Sylvester1` para seleccionar una vista que presente todos los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, el ejemplo concede el permiso adicional necesario para ver los metadatos para los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no son propiedad del usuario.  
   
 ```  
 USE AdventureWorks2012;  

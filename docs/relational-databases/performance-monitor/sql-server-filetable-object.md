@@ -13,10 +13,10 @@ ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f2110726db47cf76adffca4b10f153ce941565cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093507"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, objeto FileTable
@@ -47,15 +47,15 @@ En la siguiente tabla se describen los objetos de rendimiento **FileTable** de S
 |**Solicitudes de actualización de elemento de FileTable/s**|Número total de solicitudes de actualización de elemento de FileTable por segundo.|
 |**Operaciones de eliminación de identificación de FileTable/s**|Número total de operaciones de eliminación de identificación de FileTable por segundo.|
 |**Operaciones de tabla de FileTable/s**|Número total de eventos operativos de tabla procesados por el componente de almacén de FileTable por segundo.|
-|**BASE de tiempo de eliminación de elemento de FileTable**|Exclusivamente para uso interno.|
-|**BASE de tiempo de enumeración de FileTable**|Exclusivamente para uso interno.|
-|**BASE de tiempo de eliminación de identificación de FileTable**|Exclusivamente para uso interno.|
-|**BASE de tiempo para mover elemento de FileTable**|Exclusivamente para uso interno.|
-|**Tiempo por BASE de solicitud de archivo E/S**|Exclusivamente para uso interno.|
-|**Tiempo por BASE respuesta de archivo E/S**|Exclusivamente para uso interno.|
-|**BASE de tiempo para cambiar nombre de elemento de FileTable**|Exclusivamente para uso interno.|
-|**BASE de tiempo para obtener elemento de FileTable**|Exclusivamente para uso interno.|
-|**BASE de tiempo de actualización de elemento de FileTable**|Exclusivamente para uso interno.| 
+|**BASE de tiempo de eliminación de elemento de FileTable**|Solo para uso interno.|
+|**BASE de tiempo de enumeración de FileTable**|Solo para uso interno.|
+|**BASE de tiempo de eliminación de identificación de FileTable**|Solo para uso interno.|
+|**BASE de tiempo para mover elemento de FileTable**|Solo para uso interno.|
+|**Tiempo por BASE de solicitud de archivo E/S**|Solo para uso interno.|
+|**Tiempo por BASE respuesta de archivo E/S**|Solo para uso interno.|
+|**BASE de tiempo para cambiar nombre de elemento de FileTable**|Solo para uso interno.|
+|**BASE de tiempo para obtener elemento de FileTable**|Solo para uso interno.|
+|**BASE de tiempo de actualización de elemento de FileTable**|Solo para uso interno.| 
  
 ## <a name="see-also"></a>Consulte también  
 [Supervisar el uso de recursos (Monitor de sistema)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

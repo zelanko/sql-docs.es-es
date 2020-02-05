@@ -18,10 +18,10 @@ ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7844f1d38f5d2e6f36f971eb83d8961596483142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042611"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (tipo de datos Geography)
@@ -40,12 +40,12 @@ ms.locfileid: "68042611"
  *otra_geografía*  
  Especifica la segunda instancia de **geography** a la que la instancia de **geography** que realiza la llamada está intentando determinar la distancia más corta.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método devuelve una instancia de **LineString** con los extremos en los bordes de las dos instancias de **geography** que no se cruzan y que se comparan. La longitud de la instancia de **LineString** devuelta es igual a la distancia más corta entre las dos instancias de **geography**. Se devuelve una instancia vacía de **LineString** cuando las dos instancias de **geography** se cruzan.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,5 +1,5 @@
 ---
-title: 'Paso 1: Creación de carpetas de trabajo y variables de entorno | Microsoft Docs'
+title: 'Paso 1: Crear carpetas de trabajo y variables de entorno | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 08de88d45b31e4c00c9ce5a7790405c6da1542a2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284132"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lección 1-1: Crear carpetas de trabajo y variables de entorno
@@ -54,7 +54,7 @@ Si planea implementar los paquetes en otro equipo, debe crear dos conjuntos de v
   
 5.  En el cuadro de diálogo **Nueva variable del sistema** , escriba **DataTransfer** en el cuadro **Nombre de variable** y **C:\DeploymentTutorial\datatransferconfig.dtsconfig** en el cuadro **Valor de variable** .  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 7.  Haga clic en **Nueva** otra vez y escriba **LoadXMLData** en el cuadro **Nombre de variable** y **C:\DeploymentTutorial\loadxmldataconfig.dtsconfig** en el cuadro **Valor de variable** .  
   
@@ -76,7 +76,7 @@ Si planea implementar los paquetes en otro equipo, debe crear dos conjuntos de v
   
 5.  En el cuadro de diálogo **Nueva variable del sistema** , escriba **DataTransfer** en el cuadro **Nombre de variable** y **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig** en el cuadro **Valor de variable** .  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 7.  Haga clic en **Nueva** otra vez y escriba **LoadXMLData** en el cuadro **Nombre de variable** y **C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig** en el cuadro **Valor de variable** .  
   

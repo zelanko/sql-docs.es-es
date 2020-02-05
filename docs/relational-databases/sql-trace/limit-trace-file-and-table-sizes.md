@@ -17,10 +17,10 @@ ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b12834eac33fd016279b6f2f3a79cee413c3d23d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072889"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Limitar el tamaño de la tabla y el archivo de seguimiento
@@ -30,7 +30,7 @@ ms.locfileid: "68072889"
 > [!NOTE]  
 >  Si guarda datos del seguimiento en un archivo que ya existe, puede anexar datos al archivo o sobrescribirlo. Si decide anexar datos al archivo y el archivo de seguimiento ya ha alcanzado o supera el tamaño máximo de archivo especificado, se le ofrece la posibilidad de aumentar el tamaño máximo de archivo o especificar un archivo nuevo. Lo mismo ocurre con las tablas de seguimiento.  
   
-## <a name="maximum-file-size"></a>Tamaño máximo del archivo  
+## <a name="maximum-file-size"></a>Tamaño de archivo máximo  
  Un seguimiento con un tamaño máximo de archivo deja de guardar información de seguimiento en el archivo una vez que se ha alcanzado el tamaño máximo del archivo. Esta opción le permite agrupar eventos en archivos más pequeños y más fáciles de administrar. Además, al limitar el tamaño del archivo, la ejecución de seguimientos desatendidos es más segura, ya que el seguimiento se detiene al alcanzar el tamaño máximo del archivo. Para establecer el tamaño máximo de archivo de los seguimientos creados puede utilizar procedimientos almacenados de Transact-SQL o el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
  Hay un límite superior de 1 gigabyte (GB) para la opción de tamaño máximo del archivo. El tamaño máximo predeterminado de archivo es de 5 megabytes (MB).  

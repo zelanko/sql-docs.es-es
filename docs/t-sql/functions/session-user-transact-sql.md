@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c4bdf8b5057fcbf405d78872f7329c70c754ff76
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843338"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73843338"
 
   SESSION_USER devuelve el nombre de usuario del contexto actual en la base de datos actual.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,10 +43,10 @@ ms.locfileid: "73843338"
 SESSION_USER  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Utilice SESSION_USER con restricciones DEFAULT en las instrucciones CREATE TABLE o ALTER TABLE, o utilícela como cualquier función estándar. SESSION_USER se puede insertar en una tabla cuando no se especifica un valor predeterminado. Esta función no toma ningún argumento. SESSION_USER se puede utilizar en consultas.  
   
  Si se llama a SESSION_USER después de un cambio de contexto, SESSION_USER devolverá el nombre de usuario del contexto representado.  
@@ -139,7 +139,7 @@ Order #   Customer #  When Delivered       Received By
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C. Utilizar SESSION_USER para devolver el nombre de usuario de la sesión actual  
+### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C. Usar SESSION_USER para devolver el nombre de usuario de la sesión actual  
  En el siguiente ejemplo se devuelve la sesión de usuario de la sesión actual.  
   
 ```  

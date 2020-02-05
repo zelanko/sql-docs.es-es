@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a3b2d2ff81fddaae0b0ae68da9d4477819a61073
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101931"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
@@ -61,7 +61,7 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
  ALL  
  Purga la caché de datos en memoria de cada nodo de ejecución y del nodo de control. Este es el valor predeterminado si no se especifica ningún valor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Utilice DBCC DROPCLEANBUFFERS para probar consultas con una caché de búferes COLD sin apagar y reiniciar el servidor.
 Para quitar del grupo de búferes los búferes borrados y para quitar del grupo de objetos de almacén de columnas los objetos de almacén de columnas, use primero CHECKPOINT para crear una caché de búferes COLD. Así se obliga a que todas las páginas desfasadas de la base de datos actual se escriban en el disco y se borren los búferes. Una vez hecho esto, puede emitir el comando DBCC DROPCLEANBUFFERS para quitar todos los búferes del grupo de búferes.
   
@@ -74,11 +74,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="permissions"></a>Permisos  
 
-Se aplica a: SQL Server, almacenamiento de datos paralelo 
+Se aplica a: SQL Server, Almacenamiento de datos paralelos 
 
 - Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
 
-Se aplica a: Almacenamiento de datos SQL de Azure
+Se aplica a: Azure SQL Data Warehouse
 
 - Requiere pertenencia al rol fijo de servidor DB_OWNER.  
   

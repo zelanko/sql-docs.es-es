@@ -11,10 +11,10 @@ ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ce06430094825bf3268836657661930fea058e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296630"
 ---
 # <a name="catalogmaster_properties-ssisdb-database"></a>catalog.master_properties (base de datos SSISDB)
@@ -26,12 +26,12 @@ ms.locfileid: "71296630"
 
 Muestra las propiedades del patrón de escalabilidad horizontal de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|Nombre de la propiedad del patrón de escalabilidad horizontal.|  
 |property_value|**nvarchar(max)**|Valor de la propiedad del patrón de escalabilidad horizontal.|
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 Esta vista muestra una fila para cada propiedad del patrón de escalabilidad horizontal. Las propiedades mostradas en esta vista incluyen lo siguiente:
 
 |Nombre de propiedad|Descripción|  

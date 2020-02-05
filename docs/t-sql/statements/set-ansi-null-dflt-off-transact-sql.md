@@ -25,13 +25,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dc89ff5115596998bd1a38fdab9a04d626b22e09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67913930"
 ---
-# <a name="set-ansinulldfltoff-transact-sql"></a>SET ANSI_NULL_DFLT_OFF (Transact-SQL)
+# <a name="set-ansi_null_dflt_off-transact-sql"></a>SET ANSI_NULL_DFLT_OFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Modifica el comportamiento de la sesión para dejar sin efecto la nulabilidad predeterminada de las columnas nuevas cuando la opción ANSI null default de la base de datos es **true**. Para obtener más información acerca de cómo establecer el valor de ANSI null default, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
@@ -52,7 +52,7 @@ SET ANSI_NULL_DFLT_OFF { ON | OFF }
 SET ANSI_NULL_DFLT_OFF OFF
 ```
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta opción solo afecta a la nulabilidad de las columnas nuevas cuando esta nulabilidad no se especifica en las instrucciones CREATE TABLE ni ALTER TABLE. De forma predeterminada, cuando SET ANSI_NULL_DFLT_OFF es ON, las columnas nuevas creadas con las instrucciones ALTER TABLE y CREATE TABLE son NOT NULL si el estado de nulabilidad de la columna no se especifica explícitamente. SET ANSI_NULL_DFLT_OFF no afecta a las columnas creadas con una opción NULL o NOT NULL explícita.  
   
  No es posible establecer ON a la vez en SET ANSI_NULL_DFLT_OFF y SET ANSI_NULL_DFLT_ON. Si se establece una de las opciones en ON, la otra se establece en OFF. Por tanto, solo es posible establecer ON en SET ANSI_NULL_DFLT_OFF o en SET ANSI_NULL_DFLT_ON, o establecer OFF en ambas. Si alguna de estas dos opciones es ON (SET ANSI_NULL_DFLT_OFF o SET ANSI_NULL_DFLT_ON), tendrá efecto la opción correspondiente. Si ambas opciones están establecidas en OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza el valor de la columna is_ansi_null_default_on en la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  

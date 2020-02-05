@@ -29,10 +29,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68073160"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
@@ -78,7 +78,7 @@ Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 En la tabla siguiente se describen las columnas del conjunto de resultados.
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |**DbId**|Número de identificación de la base de datos del archivo que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] intentó reducir.|  
 |**FileId**|Número de identificación del archivo que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] intentó reducir.|  
@@ -90,7 +90,7 @@ En la tabla siguiente se describen las columnas del conjunto de resultados.
 >[!NOTE]
 > El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no presenta filas para los archivos que no se reducen.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 
 >[!NOTE]
 > Actualmente, Azure SQL Data Warehouse no admite DBCC SHRINKDATABASE. No se recomienda ejecutar este comando, ya que se trata de una operación de uso intensivo de E/S y puede dejar el almacén de datos sin conexión. Además, después de ejecutar este comando habrá implicaciones económicas para sus instantáneas del almacén de datos. 
@@ -120,7 +120,7 @@ Por ejemplo, si establece el valor de _porcentaje\_destino_ en 25 para reducir *
   
 Suponga que el archivo de datos de **mydb** contiene 7 MB de datos. Si se especifica un _porcentaje\_destino_ de 30, este archivo de datos se puede reducir al porcentaje libre de 30. Pero si se especifica un _porcentaje\_destino_ de 40, no se reduce el archivo de datos porque el [!INCLUDE[ssDE](../../includes/ssde-md.md)] no reducirá ningún archivo a un tamaño menor que el que los datos ocupan actualmente. 
 
-Este problema también se puede considerar de otra manera: 40 % de espacio disponible deseado + 70 % de datos en el archivo (7 MB de 10 MB) es mayor que 100 %. Cualquier valor de _tamaño\_destino_ mayor que 30 no reducirá el archivo de datos. No se reducirá porque el porcentaje de espacio disponible que quiere y el porcentaje actual que ocupa el archivo de datos es más del 100 %.
+O lo que es lo mismo: 40 % de espacio disponible deseado + 70 % de datos en el archivo (7 MB de 10 MB) es mayor que 100 %. Cualquier valor de _tamaño\_destino_ mayor que 30 no reducirá el archivo de datos. No se reducirá porque el porcentaje de espacio disponible que quiere y el porcentaje actual que ocupa el archivo de datos es más del 100 %.
   
 En los archivos de registro, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa _porcentaje\_destino_ para calcular el tamaño de destino completo del registro. Por ese motivo _porcentaje\_destino_ es la cantidad de espacio libre en el registro después de la operación de reducción. El tamaño final del registro entero se traduce al tamaño final de cada archivo de registro.
   
@@ -128,14 +128,14 @@ DBCC SHRINKDATABASE intenta reducir cualquier archivo de registro físico a su t
   
 Un archivo de registro solo se puede reducir a un límite de archivo de registro virtual. Por ese motivo, puede que no sea posible reducir un archivo de registro a un tamaño menor que el de un archivo de registro virtual. Puede que no sea posible incluso si no se está usando. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] elige dinámicamente el tamaño del archivo de registro virtual cuando se crean o se extienden archivos de registro.
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
 Tenga en cuenta la siguiente información cuando vaya a reducir una base de datos:
 -   Una operación de reducción es más efectiva después de una operación. Esta operación crea espacio no utilizado, como una operación para truncar o eliminar una tabla.  
 -   La mayoría de las bases de datos requieren que haya espacio disponible para realizar las operaciones diarias normales. Es posible que reduzca una base de datos varias veces y observe que vuelve a aumentar de tamaño. Este crecimiento indica que el espacio reducido es necesario para las operaciones normales. En estos casos, no sirve reducir la base de datos reiteradamente.  
 -   La reducción no mantiene el estado de fragmentación de los índices de la base de datos y generalmente aumenta la fragmentación hasta cierto punto. Este resultado es otra razón para no reducir la base de datos de forma repetida.  
 -   A menos que tenga un requisito específico, no establezca la opción de base de datos AUTO_SHRINK en ON.  
   
-## <a name="troubleshooting"></a>Solucionar problemas  
+## <a name="troubleshooting"></a>Solución de problemas  
 Es posible bloquear las operaciones de reducción mediante una transacción que se ejecuta con un [nivel de aislamiento basado en versiones de fila](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Por ejemplo, una operación de eliminación grande que se ejecuta con un nivel de aislamiento basado en versiones de fila está en curso cuando se ejecuta una operación DBCC SHRINK DATABASE. Cuando se produce esta situación, la operación de reducción esperará a que finalice la operación de eliminación antes de continuar. Cuando la operación de reducción espera, las operaciones DBCC SHRINKFILE y DBCC SHRINKDATABASE imprimen un mensaje informativo (5202 en el caso de SHRINKDATABASE y 5203 para SHRINKFILE). Este mensaje se imprime en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cada cinco minutos durante la primera hora y, después, cada hora posterior. Por ejemplo, si el registro de errores contiene el siguiente mensaje de error:  
   
 ```sql
@@ -171,7 +171,7 @@ En el ejemplo siguiente se reducen los archivos de datos y de registro de la bas
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  

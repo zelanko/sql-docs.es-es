@@ -20,10 +20,10 @@ ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e33ca6d8afdb7aa9245bbdc6b0ad225dcd00dade
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982471"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73982471"
 
   Devuelve información acerca de las opciones SET actuales.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,10 +39,10 @@ ms.locfileid: "73982471"
 @@OPTIONS  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **integer**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las opciones pueden proceder del empleo del comando **SET** o del valor **sp_configure user options**. Los valores para la sesión que se hayan configurado con el comando **SET** invalidan las opciones de **sp_configure**. Muchas herramientas, como [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] configuran opciones automáticamente. Cada usuario tiene una función @@OPTIONS que representa la configuración.  
   
  Con la instrucción SET puede cambiar el idioma y las opciones de procesamiento de consultas para una sesión de usuario específica. **\@\@OPTIONS** solo puede detectar las opciones establecidas en ON o en OFF.  

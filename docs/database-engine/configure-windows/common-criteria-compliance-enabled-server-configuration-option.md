@@ -18,10 +18,10 @@ ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
 ms.openlocfilehash: f072ed3e73b7dacd10254c04aaa34e5466b582b8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262219"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>Configuración de compatibilidad con criterio común habilitada
@@ -42,7 +42,7 @@ La opción de compatibilidad con el criterio común habilita los elementos sigui
   
  Si está usando el procedimiento almacenado del sistema `sp_configure` para cambiar la configuración, solo podrá cambiar la opción common criteria compliance enabled si Mostrar opciones avanzadas está establecido en 1. La configuración surte efecto cuando se reinicia el servidor. Los valores posibles son 0 y 1:  
   
--   0 indica que no está habilitada la opción de cumplimiento del criterio común. Ésta es la opción predeterminada.  
+-   0 indica que no está habilitada la opción de cumplimiento del criterio común. Este es el valor predeterminado.  
   
 -   1 indica que está habilitada la opción de cumplimiento del criterio común.  
   

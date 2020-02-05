@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: daa05543715f81511aa0faa8467fc78819999404
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075889"
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Tipos de datos admitidos para OLTP en memoria
@@ -23,7 +23,7 @@ ms.locfileid: "68075889"
 
   En este artículo se enumeran los tipos de datos que no son compatibles para las características de OLTP en memoria de:  
   
--   Tablas con optimización para memoria  
+-   Tablas optimizadas para memoria  
   
 -   Módulos T-SQL compilados de manera nativa  
   
@@ -54,7 +54,7 @@ A partir de SQL Server 2016, cabe destacar lo siguiente en relación con los tip
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>Identificar las columnas de LOB y otras columnas no consecutivas
 
-A partir de SQL Server 2016, las tablas optimizadas en memoria [admiten las columnas de forma no consecutiva](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), lo que permite que una sola fila de tabla sea mayor que 8060 bytes. La siguiente instrucción Transact-SQL SELECT informa de todas las columnas que no son consecutivas en tablas optimizadas para memoria. Tenga en cuenta lo siguiente:
+A partir de SQL Server 2016, las tablas optimizadas en memoria [admiten las columnas de forma no consecutiva](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md), lo que permite que una sola fila de tabla sea mayor que 8060 bytes. La siguiente instrucción Transact-SQL SELECT informa de todas las columnas que no son consecutivas en tablas optimizadas para memoria. Observe lo siguiente:
 
 - Todas las columnas de clave de índice se almacenan en filas consecutivas.
   - Las claves de índice no únicas ahora pueden incluir columnas que aceptan valores NULL en tablas optimizadas para memoria.

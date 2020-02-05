@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032232"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitaciones y problemas conocidos de SSIS en Linux
@@ -72,7 +72,7 @@ Las siguientes tareas del plan de mantenimiento no se admiten en Linux:
 
 Las siguientes tareas del plan de mantenimiento se admiten en Linux:
 - Comprobar la integridad de la base de datos
-- Reducir la base de datos
+- Reducir base de datos
 - Reorganizar índice
 - Recompilar índice
 - Actualizar estadísticas
@@ -102,7 +102,7 @@ Las siguientes tareas del plan de mantenimiento se admiten en Linux:
 
 ## <a name="supported-data-flow-transformations"></a>Transformaciones de flujos de datos admitidas
 - Agregado
-- Auditar
+- Auditoría
 - Balanced Data Distributor
 - Mapa de caracteres
 - División condicional
@@ -113,8 +113,8 @@ Las siguientes tareas del plan de mantenimiento se admiten en Linux:
 - agrupación aproximada
 - Búsqueda aproximada
 - Importar columna
-- Lookup
-- Mezcla
+- Búsqueda
+- Merge
 - Merge Join
 - Multidifusión
 - Dinamización
@@ -143,7 +143,7 @@ Los proveedores de registro de SSIS para archivos de texto, archivos XML y SQL 
 -   No se puede usar una variable de entorno en una ruta de acceso de archivo. Si especifica una variable de entorno, el texto literal que especifique aparece en la ruta de acceso del archivo. Por ejemplo, si especifica `%TMP%/log.txt`, el proveedor de registro anexa el texto literal `/%TMP%/log.txt` al directorio del host actual.
 
 ## <a name="related-content-about-ssis-on-linux"></a>Contenido relacionado sobre SSIS en Linux
--   [Extraer, transformar y cargar datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
+-   [Extracción, transformación y carga de datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
 -   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
 -   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Programación de la ejecución de paquetes de SQL Server Integration Services en Linux con cron](sql-server-linux-schedule-ssis-packages.md)

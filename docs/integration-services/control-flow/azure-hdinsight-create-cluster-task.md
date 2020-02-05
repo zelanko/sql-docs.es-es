@@ -14,10 +14,10 @@ ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa9599ae0a4c3a38a409131b3f9f344bd478e15b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294312"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Tarea de creación de clúster de HDInsight de Azure
@@ -44,9 +44,9 @@ En la tabla siguiente se proporciona una descripción de los campos de este cuad
 |AzureStorageConnection|Seleccione un administrador de conexiones de almacenamiento de Azure existente o cree uno que haga referencia a una cuenta de almacenamiento de Azure que se asociará con el clúster de HDInsight.|
 |SubscriptionId|Especifique el identificador de la suscripción en la que se creará el clúster de HDInsight.|
 |ResourceGroup|Especifique el grupo de recursos de Azure en el que se creará el clúster de HDInsight.|
-|Ubicación|Especifique la ubicación del clúster de HDInsight. El clúster debe crearse en la misma ubicación que la cuenta de Azure Storage especificada.|  
-|nombreDeClúster|Especifique un nombre para el clúster de HDInsight que se va a crear.|  
-|ClusterSize|Especifique el número de nodos que quiere crear en el clúster.|  
+|Location|Especifique la ubicación del clúster de HDInsight. El clúster debe crearse en la misma ubicación que la cuenta de Azure Storage especificada.|  
+|ClusterName|Especifique un nombre para el clúster de HDInsight que se va a crear.|  
+|clusterSize|Especifique el número de nodos que quiere crear en el clúster.|  
 |BlobContainer|Especifique el nombre del contenedor de almacenamiento predeterminado que quiere asociar con el clúster de HDInsight.|  
 |UserName|Especifique el nombre de usuario que se usará para conectarse al clúster de HDInsight.|  
 |Contraseña|Especifique la contraseña que se usará para conectarse al clúster de HDInsight.|

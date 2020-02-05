@@ -14,10 +14,10 @@ ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9f81ec185224818060faed79ecf18e08a1743ea7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140739"
 ---
 # <a name="data-collector-security"></a>Seguridad del recopilador de datos
@@ -32,7 +32,7 @@ ms.locfileid: "68140739"
 ## <a name="general-security"></a>Seguridad general  
  El recopilador de datos se instala según los estándares especificados para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-### <a name="network-security"></a>Seguridad de la red  
+### <a name="network-security"></a>Seguridad de redes  
  Se puede pasar información confidencial entre las instancias de destino, la instancia relacional asociada al servidor de configuración, los conjuntos de recopilación que se están ejecutando y el servidor que hospeda el almacén de administración de datos.  
   
  Para proteger los datos que se transfieren a través de una red, se implementan mecanismos de seguridad estándar, como el cifrado de protocolos para [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "68140739"
 > [!IMPORTANT]  
 >  Los miembros del rol db_ssisadmin y del rol dc_admin quizá puedan elevar sus privilegios a sysadmin. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] los puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de sysadmin del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para utilizar una cuenta de proxy con privilegios limitados o agregar solo los miembros de sysadmin a los roles dc_admin y db_ssisadmin.  
   
-### <a name="dcadmin-role"></a>Rol dc_admin  
+### <a name="dc_admin-role"></a>Rol dc_admin  
  Los usuarios asignados al rol **dc_admin** tienen acceso de administrador completo (crear, leer, actualizar y eliminar) a la configuración del recopilador de datos de una instancia del servidor. Los miembros de este rol pueden realizar las operaciones siguientes:  
   
 -   Establecer propiedades de nivel del recopilador.  
@@ -73,7 +73,7 @@ ms.locfileid: "68140739"
   
 -   **dc_operator**. Los miembros de la función **dc_admin** heredan los permisos concedidos a **dc_operator**.  
   
-### <a name="dcoperator-role"></a>Rol dc_operator  
+### <a name="dc_operator-role"></a>Rol dc_operator  
  Los miembros del rol **dc_operator** tienen acceso de lectura y actualización. Este rol admite tareas de operaciones relacionadas con la ejecución y configuración de conjuntos de recopilación. Los miembros de este rol pueden realizar las operaciones siguientes:  
   
 -   Iniciar o detener un conjunto de recopilación.  
@@ -94,7 +94,7 @@ ms.locfileid: "68140739"
   
  Para obtener más información, vea [Roles de Integration Services &#40;servicio SSIS&#41;](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
-### <a name="dcproxy-role"></a>Rol dc_proxy  
+### <a name="dc_proxy-role"></a>Rol dc_proxy  
  Los miembros del rol **dc_proxy** tienen acceso de lectura a los conjuntos de recopilación y a las propiedades de nivel de recopilador. Los miembros de este rol también pueden ejecutar los trabajos que les pertenecen, así como crear pasos de trabajos que se ejecuten como una cuenta de proxy existente.  
   
  Los miembros de este rol pueden realizar las operaciones siguientes:  
@@ -126,7 +126,7 @@ ms.locfileid: "68140739"
   
  Los usuarios que son miembros del rol fijo de servidor **sysadmin** tienen acceso total a las vistas del recopilador de datos. No obstante, deben agregarse explícitamente a los roles de la base de datos para realizar otras operaciones.  
   
-### <a name="mdwadmin-role"></a>Rol mdw_admin  
+### <a name="mdw_admin-role"></a>Rol mdw_admin  
  Los miembros del rol **mdw_admin** tienen acceso de lectura, escritura, actualización y eliminación al almacén de administración de datos.  
   
  Los miembros de este rol pueden realizar las operaciones siguientes:  
@@ -138,10 +138,10 @@ ms.locfileid: "68140739"
   
 -   Ejecutar trabajos de mantenimiento en el almacén de administración de datos, por ejemplo archivado o limpieza.  
   
-### <a name="mdwwriter-role"></a>Rol mdw_writer  
+### <a name="mdw_writer-role"></a>Rol mdw_writer  
  Los miembros del rol **mdw_writer** pueden cargar y escribir datos en el almacén de administración de datos. Cualquier recopilador de datos que almacene datos en el almacén de administración de datos tiene que ser miembro de este rol.  
   
-### <a name="mdwreader-role"></a>Rol mdw_reader  
+### <a name="mdw_reader-role"></a>Rol mdw_reader  
  Los miembros del rol **mdw_reader** tienen acceso de lectura al almacén de administración de datos. Dado que la finalidad de este rol es permitir solucionar problemas proporcionando acceso a datos históricos, los miembros de este rol no pueden ver otros elementos del esquema de almacén de administración de datos.  
   
 ## <a name="see-also"></a>Consulte también  

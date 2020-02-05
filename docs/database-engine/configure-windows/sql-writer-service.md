@@ -22,10 +22,10 @@ ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816675"
 ---
 # <a name="sql-writer-service"></a>servicio del objeto de escritura de SQL
@@ -34,7 +34,7 @@ ms.locfileid: "71816675"
   
  El servicio del objeto de escritura de SQL se instala automáticamente. Se debe ejecutar cuando la aplicación Servicio de instantáneas de volumen (VSS) solicita una copia de seguridad o una restauración. Para configurar el servicio, utilice el applet Servicios de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. El servicio SQL Writer se instala en todos los sistemas operativos.  
   
-## <a name="purpose"></a>Finalidad  
+## <a name="purpose"></a>Propósito  
  Durante la ejecución, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] bloquea los archivos de datos y tiene acceso exclusivo a estos. Cuando no se ejecuta el servicio del objeto de escritura de SQL, los programas de copia de seguridad que se estén ejecutando en Windows no tendrán acceso a los archivos de datos, y se deberán realizar las copias de seguridad mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Utilice el servicio del objeto de escritura de SQL para que los programas de copia de seguridad de Windows puedan copiar archivos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mientras se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -76,6 +76,6 @@ ms.locfileid: "71816675"
   
 -   Restauración de página  
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 El servicio SQL Writer es un servicio independiente del motor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se comparte entre diferentes versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y entre diferentes instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo servidor.  El archivo de servicio de SQL Writer se envía como parte del paquete de instalación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se marcará con el mismo número de versión que el motor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el que se envía.  Cuando se instala una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un servidor o se actualiza una instancia existente, si el número de versión de la instancia que se instala o actualiza es mayor que el número de versión del servicio SQL Writer que se encuentra actualmente en el servidor, ese archivo se reemplazará por el del paquete de instalación.  Tenga en cuenta que si el servicio SQL Writer se actualizó mediante un Service Pack o una actualización acumulativa y se está instalando una versión RTM de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible sustituir una versión más reciente del servicio SQL Writer por otra más antigua, siempre que la instalación tenga un mayor número de versión principal.  Por ejemplo, el servicio SQL Writer se actualizó en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2.  Si esa instancia se actualiza a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM, el servicio SQL Writer actualizado se reemplazará por una versión anterior.  En este caso, necesitaría aplicar la última actualización acumulativa a la nueva instancia para obtener la versión más reciente del servicio SQL Writer.
 

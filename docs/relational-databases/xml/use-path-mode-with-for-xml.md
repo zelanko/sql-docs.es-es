@@ -19,10 +19,10 @@ ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dff9b54963eb88bb29172d270c092c33d0be4127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039175"
 ---
 # <a name="use-path-mode-with-for-xml"></a>Usar el modo PATH con FOR XML
@@ -49,7 +49,7 @@ ms.locfileid: "68039175"
   
 -   [Compatibilidad con elementos de espacio de nombres en el modo PATH](../../relational-databases/xml/namespace-support-in-path-mode.md)  
   
--   [Ejemplos: Uso del modo PATH](../../relational-databases/xml/examples-using-path-mode.md)  
+-   [Ejemplos: Usar el modo PATH](../../relational-databases/xml/examples-using-path-mode.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Agregar espacios de nombres a consultas con WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

@@ -11,10 +11,10 @@ ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68045189"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Configuración del grupo de disponibilidad de SQL Server Always On en Windows y Linux (multiplataforma)
@@ -210,7 +210,7 @@ Los pasos para crear el AG son los mismos que los pasos para crear un AG para ca
 
    Antes de ejecutar el script, actualice los valores de la base de datos.
 
-      * Reemplace `<TestDB>` por el nombre de su base de datos.
+      * Reemplace `<TestDB>` por el nombre de la base de datos.
 
       * Reemplace `<F:\Path>` por la ruta de acceso de los archivos de base de datos y de registro. Use la misma ruta de acceso para los archivos de base de datos y de registro. 
 
@@ -230,7 +230,7 @@ Los pasos para crear el AG son los mismos que los pasos para crear un AG para ca
 
 1. Si no utiliza la propagación automática, restaure la base de datos en el servidor de réplica secundaria (Linux). [Migración de una base de datos SQL Server de Windows a Linux mediante Copia de seguridad y restauración](sql-server-linux-migrate-restore-database.md). Restaure la base de datos `WITH NORECOVERY` en la réplica secundaria. 
 
-1. Agregue la base de datos al AG. Actualice el script de ejemplo. Reemplace `<TestDB>` por el nombre de su base de datos. En la réplica principal, ejecute la consulta SQL para agregar la base de datos al AG.
+1. Agregue la base de datos al AG. Actualice el script de ejemplo. Reemplace `<TestDB>` por el nombre de la base de datos. En la réplica principal, ejecute la consulta SQL para agregar la base de datos al AG.
 
    ```sql
    ALTER AG [ag1] ADD DATABASE <TestDB>

@@ -13,10 +13,10 @@ ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d7097c59f77b95a561420183e2e899c0672dc5e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67908120"
 ---
 # <a name="publication-peer-to-peer-replication"></a>Publicación (replicación punto a punto)
@@ -24,7 +24,7 @@ ms.locfileid: "67908120"
   La página **Publicación** muestra las publicaciones transaccionales habilitadas para la replicación punto a punto. Las publicaciones se habilitan en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación** .  
   
 ## <a name="options"></a>Opciones  
- **publicador**  
+ **Publicador**  
  Muestra el servidor al que está conectado. Para conectar con otro servidor, seleccione **Buscar publicador de SQL Server**.  
   
  **Bases de datos y publicaciones**  

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 24c005d2b9b95827dce28bc78303a75828270143
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105036"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
@@ -54,7 +54,7 @@ Una expresión **integer** o **bigint** donde empieza la búsqueda. Si no se esp
 ## <a name="return-types"></a>Tipos de valores devueltos
 **bigint** si *expressionToSearch* tiene el tipo de datos **nvarchar(max)** , **varbinary(max)** o **varchar(max)** ; **int** en caso contrario.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Si *expressionToFind* o *expressionToSearch* tiene un tipo de datos Unicode (**nchar** o **nvarchar**) y la otra expresión no, la función CHARINDEX convierte esa otra expresión a un tipo de datos Unicode. CHARINDEX no se puede usar con los tipos de datos **image**, **ntext** o **text**.
   
 Si *expressionToFind* o *expressionToSearch* tiene un valor NULL, CHARINDEX devuelve NULL.
@@ -233,12 +233,12 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
 0
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  [LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  
  [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
  [+ &#40;Concatenación de cadenas&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

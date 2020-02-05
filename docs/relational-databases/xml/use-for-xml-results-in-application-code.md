@@ -19,10 +19,10 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 754b7a4baaff71cf0abe7193e5ba9c9cbd0a943a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039186"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar los resultados de FOR XML en el código de aplicación
@@ -154,9 +154,9 @@ ms.locfileid: "68039186"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>Procesamiento del documento XML MyDataIsle en el cliente  
   
--   **AnnualSales:** 1 500 000  
+-   **AnnualSales:** 1500000  
   
--   **AnnualRevenue:** 150 000  
+-   **AnnualRevenue:** 150000  
   
 -   **BankName:** Primary International  
   
@@ -166,7 +166,7 @@ ms.locfileid: "68039186"
   
 -   **Specialty:** Road  
   
--   **SquareFeet:** 38 000  
+-   **SquareFeet:** 38000  
   
 -   **Brands:** 3  
   
@@ -291,7 +291,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  La compatibilidad con el tipo de datos **xml** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite solicitar que el resultado de una consulta FOR XML se devuelva como un tipo de datos **xml** en lugar de datos con tipo cadena o imagen, especificando la [directiva TYPE](../../relational-databases/xml/type-directive-in-for-xml-queries.md). Cuando se usa la directiva TYPE en las consultas FOR XML, el tipo de acceso que se proporciona mediante programación a los resultados de FOR XML es similar al que se muestra en [Usar datos XML en las aplicaciones](../../relational-databases/xml/use-xml-data-in-applications.md).  
+>  La compatibilidad con el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]xml**de** permite solicitar que el resultado de una consulta FOR XML se devuelva como un tipo de datos **xml** en lugar de datos con tipo cadena o imagen, especificando la [directiva TYPE](../../relational-databases/xml/type-directive-in-for-xml-queries.md). Cuando se usa la directiva TYPE en las consultas FOR XML, el tipo de acceso que se proporciona mediante programación a los resultados de FOR XML es similar al que se muestra en [Usar datos XML en las aplicaciones](../../relational-databases/xml/use-xml-data-in-applications.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  

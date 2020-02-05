@@ -23,10 +23,10 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258681"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de medios, familias de medios y conjuntos de copias de seguridad (SQL Server)
@@ -52,7 +52,7 @@ ms.locfileid: "75258681"
 ##  <a name="OvMediaSetsFamiliesBackupSets"></a> Información general de los conjuntos de medios, las familias de medios y los conjuntos de copias de seguridad  
  Las copias de seguridad de uno o varios medios de copia de seguridad constituyen un conjunto de medios. Un *conjunto de medios* es una colección ordenada de *medios de copia de seguridad*, cintas o archivos de disco, o blobs de Azure en la que se han escrito una o más operaciones de copia de seguridad mediante un tipo y número fijos de dispositivos de copia de seguridad. Un conjunto de medios dado usa unidades de cinta, unidades de disco o blobs de Azure, pero no una combinación de dos o más. 
  
-**Ejemplo**: los dispositivos de copia de seguridad asociados con un conjunto de medios pueden ser tres unidades de cinta denominadas `\\.\TAPE0`, `\\.\TAPE1` y `\\.\TAPE2`. Este conjunto de medios está formado solamente por cintas, empezando con un mínimo de tres (una por unidad). El tipo y número de los dispositivos de copia de seguridad se establece cuando se crea un conjunto de medios y ya no se pueden cambiar. Sin embargo, si es necesario, entre las operaciones de las copias de seguridad y restauración un dispositivo determinado puede sustituirse por un dispositivo del mismo tipo.  
+**Ejemplo:** los dispositivos de copia de seguridad asociados con un conjunto de medios pueden ser tres unidades de cinta denominadas `\\.\TAPE0`, `\\.\TAPE1`y `\\.\TAPE2`. Este conjunto de medios está formado solamente por cintas, empezando con un mínimo de tres (una por unidad). El tipo y número de los dispositivos de copia de seguridad se establece cuando se crea un conjunto de medios y ya no se pueden cambiar. Sin embargo, si es necesario, entre las operaciones de las copias de seguridad y restauración un dispositivo determinado puede sustituirse por un dispositivo del mismo tipo.  
   
  Un conjunto de medios se crea en el medio de copia de seguridad durante una operación de copia de seguridad al dar formato a un medio de copia de seguridad. Para obtener más información, vea [Crear un conjunto de medios](#CreatingMediaSet), más adelante en este tema. Después de dar formato, cada archivo o cinta contiene un encabezado de medios para el conjunto de medios y está listo para recibir el contenido de la copia de seguridad. Con el encabezado adecuado, la operación de copia de seguridad empieza a realizar la copia de seguridad de los datos especificados en los medios de copia de seguridad en todos los dispositivos de copia de seguridad especificados para la operación.  
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 ms.openlocfilehash: ff7b069ebde75185b0e500bc7052edc6e99fc927
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68265350"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy-for-an-always-on-availability-group"></a>El estado de sincronización de datos de bases de datos de disponibilidad no es correcto para un grupo de disponibilidad Always On
@@ -31,7 +31,7 @@ ms.locfileid: "68265350"
 |-|-|  
 |**Nombre de directiva**|Estado de sincronización de datos de la base de datos de disponibilidad|  
 |**Problema**|El estado de sincronización de datos de las bases de datos de disponibilidad no es correcto|  
-|**Categoría**|**Advertencia**|  
+|**Categoría**|**Warning (ADVERTENCIA)**|  
 |**Faceta**|Base de datos de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
@@ -40,7 +40,7 @@ ms.locfileid: "68265350"
 > [!NOTE]  
 >  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [El estado de sincronización de datos de alguna base de datos de disponibilidad no está en buen estado](https://go.microsoft.com/fwlink/p/?LinkId=220858) en TechNet Wiki.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  El estado de sincronización de datos de esta base de datos de disponibilidad no es correcto. En una réplica de disponibilidad de confirmación asincrónica, cada base de datos de disponibilidad debe estar en el estado SYNCHRONIZING. En una réplica de confirmación sincrónica, cada base de datos de disponibilidad debe estar en el estado SYNCHRONIZED.  
   
 ## <a name="possible-solution"></a>Solución posible  

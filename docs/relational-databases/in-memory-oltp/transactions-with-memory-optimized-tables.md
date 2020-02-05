@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c80e52eff233c2d04cb77fb5cf5d85bdac8fe34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68081765"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -114,17 +114,17 @@ Cuando está implicada una tabla optimizada para memoria, la duración de una tr
   
 A continuación se muestran las descripciones de las fases.  
   
-#### <a name="regular-processing-phase-1-of-3"></a>Procesamiento normal: Fase 1 (de 3)  
+#### <a name="regular-processing-phase-1-of-3"></a>Procesamiento normal: fase 1 (de 3)  
   
 - Esta fase se compone de la ejecución de todas las consultas y las instrucciones DML en la consulta.  
 - Durante esta fase, las instrucciones consultan la versión de las tablas optimizadas para memoria en el momento de inicio lógico de la transacción.  
   
-#### <a name="validation-phase-2-of-3"></a>Validación: Fase 2 (de 3)  
+#### <a name="validation-phase-2-of-3"></a>Validación: fase 2 (de 3)  
   
 - La fase de validación arranca con la asignación de la hora de finalización, esto es, marcando la transacción como completa lógicamente. Tras la finalización de este paso, todos los cambios de la transacción quedan visibles para las demás transacciones, que crearán una dependencia de esta transacción. Las transacciones dependientes no se pueden confirmar hasta no haber confirmado correctamente esta transacción. Además, las transacciones que conservan estas dependencias no pueden devolver conjuntos de resultados al cliente para procurar que el cliente solamente vea los datos confirmados correctamente en la base de datos.  
 - Esta fase incluye la validación de lectura repetible y la validación serializable. En la primera, comprueba si alguna de las filas leídas por la transacción se ha actualizado desde la última vez que se comprobó, mientras que, en el caso de la segunda, comprueba si alguna de las filas se ha insertado en un rango de datos analizado por esta transacción. Según la tabla de [Niveles de aislamiento y conflictos](#isolation-levels), la validación de lectura repetible y la validación serializable pueden ocurrir cuando se usa el aislamiento SNAPSHOT para validar la coherencia de las restricciones de clave única y externa.  
   
-#### <a name="commit-processing-phase-3-of-3"></a>Confirmación del procesamiento: Fase 3 (de 3)  
+#### <a name="commit-processing-phase-3-of-3"></a>Procesamiento de confirmación: fase 3 (de 3)  
   
 - Durante la fase de confirmación, los cambios en las tablas durables se escriben en el registro y el registro se escribe en disco. Después, el control se devuelve al cliente.  
 - Una vez completado el proceso de confirmación, se notificará a todas las transacciones dependientes que pueden confirmarse.  
@@ -263,7 +263,7 @@ go
   - Bases de datos tempdb.  
   - Acceso de solo lectura desde la base de datos maestra.  
   
-- No se admiten transacciones distribuidas: Cuando se usa BEGIN DISTRIBUTED TRANSACTION, la transacción no puede tener acceso a una tabla optimizada para memoria.  
+- No se admiten transacciones distribuidas: cuando se usa BEGIN DISTRIBUTED TRANSACTION, la transacción no puede tener acceso a una tabla optimizada para memoria.  
   
 ## <a name="natively-compiled-stored-procedures"></a>procedimientos almacenados compilados de forma nativa  
   

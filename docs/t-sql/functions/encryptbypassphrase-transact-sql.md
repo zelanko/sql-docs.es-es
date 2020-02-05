@@ -20,10 +20,10 @@ ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8aefacd470b045caafc73474126468fc01658276
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904362"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
@@ -68,10 +68,10 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  @authenticator  
  Variable que contiene datos a partir de los cuales se obtiene un autenticador.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **varbinary** con un tamaño máximo de 8000 bytes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una frase de contraseña es una contraseña que incluye espacios. La ventaja de usar una frase de contraseña es que es más fácil recordar una frase con significado que una cadena larga de caracteres.  
   
  Esta función no comprueba la complejidad de la contraseña.  

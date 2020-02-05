@@ -19,10 +19,10 @@ ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ac25131e24aa89253abfc13eac69a4a60d0b7aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040291"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
@@ -45,7 +45,7 @@ Nombre del ensamblado.
 *property_name*  
 El nombre de una propiedad de la que se va a recuperar información. *property_name* puede tener uno de los valores siguientes:
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |---|---|
 |**CultureInfo**|Configuración regional del ensamblado.|  
 |**PublicKey**|Clave pública o símbolo (token) de clave pública del ensamblado.|  
@@ -55,7 +55,7 @@ El nombre de una propiedad de la que se va a recuperar información. *property_n
 |**VersionBuild**|Componente de generación (tercera parte) del número de identificación de la versión de cuatro partes del ensamblado.|  
 |**VersionRevision**|Componente de revisión (cuarta parte) del número de identificación de la versión de cuatro partes del ensamblado.|  
 |**SimpleName**|Nombre sencillo del ensamblado.|  
-|**Arquitectura**|Arquitectura del procesador del ensamblado.|  
+|**Architecture**|Arquitectura del procesador del ensamblado.|  
 |**CLRName**|Cadena canónica que codifica el nombre sencillo, número de versión, referencia cultural, clave pública y arquitectura del ensamblado. Este valor identifica de forma única el ensamblado en Common Language Runtime (CLR).|  
   
 ## <a name="return-type"></a>Tipo de valor devuelto
@@ -70,7 +70,7 @@ GO
 SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
 [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)
   

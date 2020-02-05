@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71271910"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
@@ -52,7 +52,7 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** Hace que la cláusula COLLATE herede la intercalación de la base de datos actual.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La cláusula COLLATE se puede especificar en varios niveles. Entre ellas, figuran:
 
@@ -148,14 +148,14 @@ Colima
 Chiapas
 ```
 
-### <a name="b-additional-examples"></a>B. Otros ejemplos
+### <a name="b-additional-examples"></a>B. Ejemplos adicionales
 
 Para ver más ejemplos en los que se usa **COLLATE**, consulte el ejemplo de [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples)**G. Crear una base de datos y especificar un nombre de intercalación y sus opciones**, y el ejemplo de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column)**V. Cambiar la intercalación de columnas**.
 
 ## <a name="see-also"></a>Consulte también
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
-- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
+- [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)
 - [Prioridad de intercalación](../../t-sql/statements/collation-precedence-transact-sql.md)
 - [Constantes](../../t-sql/data-types/constants-transact-sql.md)
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)

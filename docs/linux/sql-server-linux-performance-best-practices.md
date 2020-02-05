@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 543488eada46a088f3c634ce2326c7e2db2a97a5
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105440"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Procedimientos recomendados de rendimiento e instrucciones de configuración para SQL Server en Linux
@@ -61,7 +61,7 @@ Se trata de la configuración recomendada del sistema operativo Linux relacionad
 
 En la tabla siguiente se proporcionan recomendaciones para la configuración de la CPU:
 
-| Configuración | Valor | Más información |
+| Configuración | Value | Más información |
 |---|---|---|
 | Regulador de frecuencia de CPU | rendimiento | Consulte el comando **cpupower**. |
 | ENERGY_PERF_BIAS | rendimiento | Consulte el comando **x86_energy_perf_policy**. |
@@ -70,7 +70,7 @@ En la tabla siguiente se proporcionan recomendaciones para la configuración de 
 
 En la tabla siguiente se proporcionan recomendaciones para la configuración del disco:
 
-| Configuración | Valor | Más información |
+| Configuración | Value | Más información |
 |---|---|---|
 | lectura anticipada del disco | 4096 | Consulte el comando **blockdev**. |
 | configuración de sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | Consulte el comando **sysctl**. |

@@ -30,10 +30,10 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930326"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
@@ -96,7 +96,7 @@ Suprime todos los mensajes de información.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 En la siguiente tabla se describen las columnas de conjunto de resultados.
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |---|---|
 |**DbId**|Número de identificación de la base de datos del archivo que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] intentó reducir.|  
 |**FileId**|Número de identificación del archivo que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] intentó reducir.|  
@@ -105,7 +105,7 @@ En la siguiente tabla se describen las columnas de conjunto de resultados.
 |**UsedPages**|El número de páginas de 8 KB que utiliza actualmente el archivo.|  
 |**EstimatedPages**|El número de páginas de 8 KB al que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] estima que se puede reducir el archivo.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 DBCC SHRINKFILE se aplica a los archivos de la base de datos actual. Para más información sobre cómo cambiar la base de datos actual, vea [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
 Puede detener las operaciones DBCC SHRINKFILE en cualquier momento sin que por ello se pierda el trabajo ya completado. Si usa el parámetro EMPTYFILE y cancela la operación, el archivo no se marca para evitar que se agreguen datos adicionales.
@@ -131,7 +131,7 @@ Tenga en cuenta la siguiente información cuando vaya a reducir un archivo:
 
 -   Reduzca varios archivos en la misma base de datos de forma secuencial en lugar de simultáneamente. La contención en las tablas del sistema puede provocar bloqueo y conducir a retrasos.  
   
-## <a name="troubleshooting"></a>Solucionar problemas  
+## <a name="troubleshooting"></a>Solución de problemas  
 En esta sección se describe el modo de diagnosticar y corregir los problemas que pueden ocurrir al ejecutar el comando DBCC SHRINKFILE:
   
 ### <a name="the-file-doesnt-shrink"></a>El archivo no se reduce.

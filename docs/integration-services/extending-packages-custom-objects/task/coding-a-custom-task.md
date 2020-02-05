@@ -19,10 +19,10 @@ ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23cea7d670916db9dfd13fa37170967a3c19d11c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297126"
 ---
 # <a name="coding-a-custom-task"></a>Codificar una tarea personalizada
@@ -56,7 +56,7 @@ ms.locfileid: "71297126"
   
  El rendimiento es algo que hay que tener en cuenta para determinar lo que se valida y lo que no. Por ejemplo, la entrada para una tarea podría ser una conexión a través de una red que tiene poco ancho banda o mucha intensidad de tráfico. La validación puede tardar varios segundos para procesar si decide validar que el recurso está disponible. Otra validación puede producir un viaje de ida y vuelta (round trip) a un servidor de gran demanda y la rutina de validación podría ser lenta. Aunque hay muchas propiedades y configuraciones que se pueden validar, no se debería validar todo.  
   
--   La clase <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> también llama al código del método **Validate** antes de que se ejecute la tarea. Asimismo, la clase <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> cancela la ejecución si se produce un error en la validación.  
+-   La clase **también llama al código del método**Validate<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> antes de que se ejecute la tarea. Asimismo, la clase <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> cancela la ejecución si se produce un error en la validación.  
   
 #### <a name="user-interface-considerations-during-validation"></a>Consideraciones de interfaz de usuario durante la validación  
  La clase <xref:Microsoft.SqlServer.Dts.Runtime.Task> incluye una interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> como un parámetro para el método **Validate**. La interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> contiene los métodos a los que llama la tarea para producir eventos en el motor en tiempo de ejecución. Se llama a los métodos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> cuando se produce una advertencia o condición de error durante la validación. Ambos métodos de advertencia requieren los mismos parámetros que incluyen un código de error, componente de origen, descripción, archivo de Ayuda e información de contexto de ayuda. El Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] usa esta información para mostrar indicaciones visuales en la superficie de diseño. Las indicaciones visuales que proporciona el diseñador incluyen un icono de exclamación que aparece junto a la tarea en la superficie del diseñador. Esta indicación visual muestra al usuario que la tarea requiere configuración adicional antes de que la ejecución pueda continuar.  
@@ -173,7 +173,7 @@ End Class
 |<xref:Microsoft.SqlServer.Dts.Runtime.VariableDispenser>|Contiene las variables disponibles para la tarea. Las tareas usan variables a través de VariableDispenser; las tareas no usan directamente las variables. VariableDispenser bloquea y desbloquea las variables y evita los interbloqueos o sobrescrituras.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>|Contiene los métodos que la tarea llama para producir eventos en el motor en tiempo de ejecución.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.IDTSLogging>|Contiene los métodos y propiedades que usa la tarea para escribir entradas en el registro de eventos.|  
-|Objeto|Contiene el objeto de transacción del que forma parte el contenedor, si existe. Este valor se pasa como un parámetro al método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> de un objeto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
+|Object|Contiene el objeto de transacción del que forma parte el contenedor, si existe. Este valor se pasa como un parámetro al método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> de un objeto <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.|  
   
 ### <a name="providing-execution-feedback"></a>Proporcionar comentarios de ejecución  
  Las tareas ajustan su código en bloques **try/catch** para evitar que se generen excepciones en el motor en tiempo de ejecución. Esto asegura que el paquete termina la ejecución y no se detiene de forma inesperada. Sin embargo, el motor en tiempo de ejecución proporciona otros mecanismos para controlar las condiciones de error que se pueden producir durante la ejecución de una tarea. Estos mecanismos incluyen la exposición de mensajes de error y advertencia, la devolución de un valor de la estructura <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>, la exposición de mensajes, la devolución del valor <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> y la divulgación de información acerca de los resultados de ejecución de la tarea a través de la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.Task.ExecutionValue%2A>.  
@@ -183,7 +183,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> también facilita la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> que se usa para proporcionar la información adicional sobre los resultados de ejecución. Por ejemplo, si una tarea elimina las filas de una tabla como parte de su método **Execute**, podría devolver el número de filas eliminadas como el valor de la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A>. Además, <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> proporciona la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecValueVariable%2A>. Esta propiedad permite al usuario asignar la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> que devuelve la tarea a cualquier variable visible en la tarea. En ese momento la variable especificada se puede usar para establecer las restricciones de precedencia entre las tareas.  
   
 ### <a name="execution-example"></a>Ejemplo de ejecución  
- En el ejemplo de código siguiente se muestra una implementación del método **Execute** y se expone una propiedad **ExecutionValue** invalidada. La tarea elimina el archivo que especifica la propiedad **fileName** de la tarea. La tarea expone una advertencia si el archivo no existe, o si la propiedad **fileName** es una cadena vacía. La tarea devuelve un valor **booleano<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> en la propiedad**  para indicar si se eliminó el archivo.  
+ En el ejemplo de código siguiente se muestra una implementación del método **Execute** y se expone una propiedad **ExecutionValue** invalidada. La tarea elimina el archivo que especifica la propiedad **fileName** de la tarea. La tarea expone una advertencia si el archivo no existe, o si la propiedad **fileName** es una cadena vacía. La tarea devuelve un valor **booleano** en la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> para indicar si se eliminó el archivo.  
   
 ```csharp  
 using System;  

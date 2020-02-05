@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c871da0fcd20cffc2c6510d7084f79faefa2d50
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412798"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Patrón de aplicación para crear particiones de tablas con optimización para memoria
@@ -37,7 +37,7 @@ ms.locfileid: "74412798"
   
 -   Agregue la partición activa.  
   
- ![Cambie la partición.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "|::ref1::|")  
+ ![Cambie la partición.](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "Conmutación de particiones")  
 Mantenimiento de datos activo  
   
  Después de eliminar ActiveOrders, las acciones tienen que realizarse durante una ventana de mantenimiento para evitar que las consultan pierdan datos durante el tiempo que transcurre entre la eliminación de los datos y el cambio a la tabla de ensayo.  

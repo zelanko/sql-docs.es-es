@@ -13,10 +13,10 @@ ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fd94228e072f670e2bf32a46281f195bdf9b80ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099618"
 ---
 # <a name="database-properties-filegroups-page"></a>Propiedades de la base de datos (página Grupos de archivos)
@@ -41,13 +41,13 @@ ms.locfileid: "68099618"
  **Solo lectura**  
  Seleccione esta opción para establecer el grupo de archivos en un estado de solo lectura.  
   
- **Default**  
+ **Valor predeterminado**  
  Seleccione esta opción para establecer este grupo de archivos como el valor predeterminado. Puede tener un grupo de archivos predeterminado para las filas y un grupo de archivos predeterminado para los datos de FILESTREAM.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega una nueva fila en blanco a la lista de grupos de archivo de la base de datos.  
   
- **Quitar**  
+ **Remove**  
  Quita la fila del grupo de archivos seleccionado de la cuadrícula.  
   
 ## <a name="memory-optimized-data-filegroup-options"></a>Opciones de grupo de archivos de datos con optimización para memoria  
@@ -57,10 +57,10 @@ ms.locfileid: "68099618"
  **Archivos FILESTREAM**  
  Muestra el número de archivos (contenedores) en el grupo de archivos de datos optimizados para memoria. Puede agregar contenedores en la página **Archivos** .  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega una nueva fila en blanco a la lista de grupos de archivo de la base de datos.  
   
- **Quitar**  
+ **Remove**  
  Quita la fila del grupo de archivos seleccionado de la cuadrícula.  
   
 ## <a name="see-also"></a>Consulte también  

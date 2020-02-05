@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e05fa19c8453418c22829862801c5044e6c25d2b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707147"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Cómo usar Visual Studio Code para implementar aplicaciones en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -27,7 +27,7 @@ En este artículo se explica cómo implementar aplicaciones en un clúster de ma
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Clúster de macrodatos de SQL Server](big-data-cluster-overview.md)
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>Capacidades
 
 Esta extensión admite las siguientes tareas en Visual Studio Code:
 
@@ -120,7 +120,7 @@ El código fuente de la aplicación debería estar en la carpeta del área de tr
 
 Si no quiere una plantilla con scaffolding y prefiere simplemente un `spec.yaml` para la implementación de una aplicación que ya ha compilado, haga clic en el botón `New Deploy Spec` situado junto al botón `New App Template` y siga el mismo proceso, aunque solo recibe el `spec.yaml`, que puede modificar como prefiera.
 
-### <a name="deploy-app"></a>Implementar aplicación
+### <a name="deploy-app"></a>Implementación de una aplicación
 
 Puede implementar esta aplicación al instante mediante el CodeLens `Deploy App` de `spec.yaml` o presionar el botón de carpeta de relámpago junto al archivo `spec.yaml` en el menú Especificaciones de la aplicación. La extensión descomprime todos los archivos del directorio donde se encuentra `spec.yaml` e implementa la aplicación en el clúster. 
 
@@ -184,10 +184,10 @@ Al llamar a una aplicación implementada, si algún parámetro de entrada es int
 - Vector
     - `inputs:`
         - `x: [1, 2, 3]`
-- Matriz
+- Matrix
     - `inputs:`
         - `x: [[A,B,C],[1,2,3]]`
-- Objeto
+- Object
     - `inputs:`
         - `x: {A: 1, B: 2, C: 3}`
 
@@ -201,7 +201,7 @@ Para eliminar una aplicación, simplemente haga clic en el botón de papelera qu
 
 Averigüe cómo integrar aplicaciones implementadas en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en aplicaciones propias en [Consumo de aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información. También puede ver los ejemplos adicionales de [Ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy) para probar la extensión.
 
-Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md) para obtener más información sobre los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
+Vea [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]¿Qué son los [?[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] para obtener más información sobre los ](big-data-cluster-overview.md).
 
 
 Nuestro objetivo es que esta extensión le resulte útil y le agradecemos sus comentarios. Envíelos al [equipo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://aka.ms/sqlfeedback).

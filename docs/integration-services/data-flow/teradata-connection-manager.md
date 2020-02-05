@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d520f83f515694bd8852ce11ea13fce7f3213596
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245124"
 ---
 # <a name="use-the-teradata-connection-manager"></a>Uso del administrador de conexiones de Teradata
@@ -58,7 +58,7 @@ Para establecer la propiedad, siga estos pasos:
 
 1. Abra SQL Server Data Tools (SSDT).
 1. En el área **Administrador de conexiones**, haga clic con el botón derecho en **Administrador de conexiones de Teradata** y, luego, seleccione **Propiedades**.
-1. En el panel **Propiedades**, seleccione *True* o *False* para la propiedad `UseUTF8CharSet`.
+1. En el panel **Propiedades**, seleccione `UseUTF8CharSet`True*o*False*para la propiedad*.
 
 ## <a name="troubleshoot-the-teradata-connection-manager"></a>Solución de problemas del administrador de conexiones de Teradata
 

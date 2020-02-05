@@ -15,10 +15,10 @@ ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dc0df82879f835428640b403a5d9b2befa66e34a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294499"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones de archivos
@@ -37,7 +37,7 @@ ms.locfileid: "71294499"
  **Tipo de uso**  
  Especifique el tipo de archivo que va a utilizar para el administrador de conexiones de varios archivos.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Crear archivos**|El administrador de conexiones creará los archivos.|  
 |**Archivos existentes**|El administrador de conexiones utilizará archivos existentes.|  
@@ -47,13 +47,13 @@ ms.locfileid: "71294499"
  **Archivos/Carpetas**  
  Muestra los archivos o carpetas que se han agregado mediante los botones descritos a continuación.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue un archivo desde el cuadro de diálogo **Seleccionar archivos** o agregue una carpeta desde el cuadro de diálogo **Buscar carpeta** .  
   
- **Editar**  
+ **Edición**  
  Seleccione un archivo o una carpeta y reemplácelos con un archivo o una carpeta diferentes desde el cuadro de diálogo **Seleccionar archivos** o **Buscar carpeta** , respectivamente.  
   
- **Quitar**  
+ **Remove**  
  Seleccione un archivo o una carpeta y quítelos de la lista con el botón **Quitar** .  
   
  **Botones de flecha**  

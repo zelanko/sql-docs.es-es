@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075063"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
@@ -66,7 +66,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  Los valores NULL que devuelve *subquery* o *expression* comparados con *test_expression* por medio de IN o NOT IN devuelven UNKNOWN. La utilización de valores NULL con IN o NOT IN puede provocar resultados inesperados.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si se incluye de manera explícita un número sumamente grande de valores (muchos miles de valores separados por comas) entre paréntesis en una cláusula IN, se pueden agotar los recursos y recibir los errores 8623 o 8632. Para evitar este problema, almacene los elementos de la lista IN en una tabla y use una subconsulta SELECT en una cláusula IN.  
   
  Error 8623:  

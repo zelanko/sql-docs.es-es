@@ -22,10 +22,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056260"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Configuración y administración de separadores de palabras y lematizadores para la búsqueda (SQL Server)
@@ -95,11 +95,11 @@ Para más información y opciones adicionales, vea [sys.fulltext_index_columns &
 
 ### <a name="info-about-the-mssqlserver_30053-error"></a>Información sobre el error MSSQLSERVER_30053
   
-|Propiedad|Valor|
+|Propiedad|Value|
 |-|-|
-|Nombre del producto|SQL Server|  
-|Identificador del evento|30053|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|30053|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|FTXT_QUERY_E_WORDBREAKINGTIMEOUT|  
 |Texto del mensaje|Se agotó el tiempo de espera de separación de palabras para la cadena de consulta de texto completo. Esto puede ocurrir si el divisor de palabras tarda mucho tiempo en procesar la cadena de consulta de texto completo, o si se está ejecutando un gran número de consultas en el servidor. Intente ejecutar de nuevo la consulta con menos carga.|  

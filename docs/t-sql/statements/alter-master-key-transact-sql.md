@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e2f8c5534e58299f17f89543668404e7ea8507bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071293"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
@@ -98,7 +98,7 @@ ALTER MASTER KEY <alter_option>
 
 PASSWORD ='*password*' Especifica una contraseña con la que se va a cifrar o descifrar la clave maestra de la base de datos. *password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 La opción REGENERATE vuelve a crear la clave maestra de la base de datos y todas las claves que ésta protege. Las claves se descifran primero con la antigua clave maestra y, a continuación, se cifran con la nueva clave maestra. Puesto que esta operación hace un uso intensivo de recursos, debe programarse durante un periodo de baja demanda, a menos que la clave maestra se encuentre en peligro.
 

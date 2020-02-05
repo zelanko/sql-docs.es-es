@@ -13,10 +13,10 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1850f5d85baf418e0ce872f641a920514156101f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137384"
 ---
 # <a name="contained-database-collations"></a>Intercalaciones de bases de datos independientes
@@ -132,7 +132,7 @@ END;
 |Datos de Temp (predeterminado)|Intercalación de TempDB|DATABASE_DEFAULT|  
 |Metadatos|DATABASE_DEFAULT / CATALOG_DEFAULT|CATALOG_DEFAULT|  
 |Metadatos temporales|Intercalación de TempDB|CATALOG_DEFAULT|  
-|Variables|Intercalación de instancia|CATALOG_DEFAULT|  
+|variables|Intercalación de instancia|CATALOG_DEFAULT|  
 |Etiquetas Goto|Intercalación de instancia|CATALOG_DEFAULT|  
 |Nombres de cursor|Intercalación de instancia|CATALOG_DEFAULT|  
   

@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 78e19aa69d5d5141be7b142074a1c4d120ea8519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121871"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
@@ -50,14 +50,14 @@ boolean_expression OR boolean_expression
 ## <a name="result-value"></a>Valor del resultado  
  OR devuelve TRUE cuando alguna de las condiciones es TRUE.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En la siguiente tabla se muestra el resultado del operador OR.  
   
-||TRUE|FALSE|UNKNOWN|  
+||TRUE|FALSE|DESCONOCIDO|  
 |------|----------|-----------|-------------|  
 |**TRUE**|TRUE|TRUE|TRUE|  
-|**FALSE**|TRUE|FALSE|UNKNOWN|  
-|**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
+|**FALSE**|TRUE|FALSE|DESCONOCIDO|  
+|**UNKNOWN**|TRUE|DESCONOCIDO|DESCONOCIDO|  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se utiliza la vista `vEmployeeDepartmentHistory` para recuperar los nombres del personal de `Quality Assurance` que trabaja en el turno de tarde o en el de noche. Si se omiten los paréntesis, la consulta devuelve los empleados de `Quality Assurance` que trabajan en el turno de tarde y todos los empleados que trabajan en el turno de noche.  

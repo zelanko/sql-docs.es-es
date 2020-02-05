@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b22210bdcabf1972e7fa76d7871ebd94e1f23ff5
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72452901"
 ---
 # <a name="temporal-table-security"></a>Seguridad de la tabla temporal
@@ -61,14 +61,14 @@ Cuando SYSTEM_VERSIONING esté establecido en ON, las operaciones de modificaci�
 ||Crear una nueva tabla de historial|Volver a usar la tabla de historial existente|
 |-|------------------------------|----------------------------------|
 |Permiso necesario|El permiso**CREATE TABLE** en la base de datos.<br /><br /> El permiso**ALTER** en los esquemas en los que se están creando las tablas actuales y de historial.|El permiso**CREATE TABLE** en la base de datos.<br /><br /> El permiso**ALTER** en el esquema en el que se creará la tabla actual.<br /><br /> El permiso**CONTROL** en la tabla de historial especificada como parte de la instrucción **CREATE TABLE** que crea la tabla temporal.|
-|Auditar|En la auditoría se muestra que los usuarios trataron de crear dos objetos. La operación puede producir un error debido a una falta de permisos para crear la tabla en la base de datos o modificar esquemas para cualquiera de las dos tablas.|En la auditoría se muestra que la tabla temporal se creó. La operación puede generar un error debido a la falta de permisos para crear una tabla en la base de datos o alterar el esquema para la tabla temporal, o bien que no se dispongan que los permisos suficientes en la tabla de historial.|
+|Auditoría|En la auditoría se muestra que los usuarios trataron de crear dos objetos. La operación puede producir un error debido a una falta de permisos para crear la tabla en la base de datos o modificar esquemas para cualquiera de las dos tablas.|En la auditoría se muestra que la tabla temporal se creó. La operación puede generar un error debido a la falta de permisos para crear una tabla en la base de datos o alterar el esquema para la tabla temporal, o bien que no se dispongan que los permisos suficientes en la tabla de historial.|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>Seguridad de la instrucción ALTER TABLE SET (tabla temporal) (SYSTEM_VERSIONING ON/OFF)
 
 ||Crear una nueva tabla de historial|Volver a usar la tabla de historial existente|
 |-|------------------------------|----------------------------------|
 |Permiso necesario|El permiso**CONTROL** en la base de datos.<br /><br /> El permiso**CREATE TABLE** en la base de datos.<br /><br /> El**ALTER** permiso en los esquemas en los que se está creando la tabla de historial.|El permiso**CONTROL** en la tabla original que se ha modificado.<br /><br /> El permiso**CONTROL** en la tabla de historial especificada como parte de la instrucción **ALTER TABLE** .|
-|Auditar|En la auditoría se muestra que se modificó la tabla temporal y que la de historial se creó a la vez. La operación puede generar un error debido a la falta de permisos para crear una tabla en la base de datos, alterar el esquema para la tabla de historial o modificar la tabla de temporal.|En la auditoría se muestra que se modificó la tabla temporal, pero que la operación requería acceso a la de historial. La operación puede generar un error debido a una falta de permisos en la tabla de historial o en la actual.|
+|Auditoría|En la auditoría se muestra que se modificó la tabla temporal y que la de historial se creó a la vez. La operación puede generar un error debido a la falta de permisos para crear una tabla en la base de datos, alterar el esquema para la tabla de historial o modificar la tabla de temporal.|En la auditoría se muestra que se modificó la tabla temporal, pero que la operación requería acceso a la de historial. La operación puede generar un error debido a una falta de permisos en la tabla de historial o en la actual.|
 
 ## <a name="security-of-select-statement"></a>Seguridad de la instrucción SELECT
 

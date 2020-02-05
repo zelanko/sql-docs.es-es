@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594504"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configuración del cifrado de columnas mediante el asistente para Always Encrypted
@@ -48,7 +48,7 @@ Se recomienda el uso de PowerShell:
     - [Protección de la información confidencial en Azure SQL Database con Always Encrypted y con claves maestras de columna en el almacén de certificados de Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
     - [Protección de la información confidencial en Azure SQL Database con Always Encrypted y con claves maestras de columna en Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted-azure-key-vault)
 
- - Para ver un vídeo que incluye el uso del asistente, vea [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Protección de la información confidencial con Always Encrypted). Consulte también el blog del equipo de seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps (Asistente para cifrado de SSMS: habilitación de Always Encrypted en unos sencillos pasos)](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545).  
+ - Para ver un vídeo que incluye el uso del asistente, vea [Keeping Sensitive Data Secure with Always Encrypted](https://channel9.msdn.com/events/DataDriven/SQLServer2016/AlwaysEncrypted)(Protección de la información confidencial con Always Encrypted). Consulte también el blog del equipo de seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][SSMS Encryption Wizard - Enabling Always Encrypted in a Few Easy Steps (Asistente para cifrado de SSMS: habilitación de Always Encrypted en unos sencillos pasos)](https://techcommunity.microsoft.com/t5/SQL-Server/SSMS-Encryption-Wizard-Enabling-Always-Encrypted-in-a-Few-Easy/ba-p/384545).  
  - Para obtener más información sobre las claves de Always Encrypted, vea [Información general de administración de claves de Always Encrypted](overview-of-key-management-for-always-encrypted.md).
  - Para obtener más información sobre los tipos de cifrado admitidos en Always Encrypted, vea [Selección del cifrado determinista o aleatorio](always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
  
@@ -101,14 +101,14 @@ Para obtener más información acerca de cómo crear y almacenar claves maestras
 > [!TIP]
 > El asistente solo le permite buscar y crear claves en el almacén de certificados de Windows y en Azure Key Vault. También genera automáticamente los nombres de las nuevas claves y los objetos de metadatos de la base de datos que describen las claves. Si necesita más control sobre la manera en que se aprovisionan las claves (y más opciones para un almacén de claves que contenga su clave maestra de columna), puede usar los cuadros de diálogo **Nueva clave maestra de columna** y **Nueva clave de cifrado de columnas** para crear las claves y, después, ejecute el asistente y seleccione las claves que ha generado. Vea [Aprovisionamiento de claves maestras de columna con el cuadro de diálogo Nueva clave maestra de columna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) y [Aprovisionamiento de claves de cifrado de columnas con el cuadro de diálogo Nueva clave de cifrado de columnas](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog). 
 
-## <a name="next-steps"></a>Next Steps
-- [Consulta de columnas mediante Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+## <a name="next-steps"></a>Pasos siguientes
+- [Consulta de columnas mediante Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Consulte también  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
- - [Información general de administración de claves de Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
- - [Configurar Always Encrypted con SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
+ - [Información general sobre la administración de claves de Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
+ - [Configuración de Always Encrypted con SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
  - [Aprovisionamiento de claves de Always Encrypted mediante PowerShell](configure-always-encrypted-keys-using-powershell.md)
  - [Configuración del cifrado de columnas mediante Always Encrypted con PowerShell](configure-column-encryption-using-powershell.md)
  - [Configuración del cifrado de columnas mediante Always Encrypted con un paquete DAC](configure-always-encrypted-using-dacpac.md)

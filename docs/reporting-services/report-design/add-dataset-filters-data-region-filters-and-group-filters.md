@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65582055"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo
@@ -60,7 +60,7 @@ ms.locfileid: "65582055"
   
  En las secciones siguientes, se describe cada una de las partes de la ecuación de filtro.  
   
-### <a name="expression"></a>Expresión  
+### <a name="expression"></a>Expression  
  Cuando el procesador de informes evalúe la ecuación de filtro en tiempo de ejecución, los tipos de datos de la expresión y el valor deberán ser los mismos. La extensión de procesamiento de datos o el proveedor de datos que se usa para recuperar los datos del origen de datos determinará el tipo de datos del campo que seleccione en **Expresión** . Los valores predeterminados de **Valor** determinan el tipo de datos de la expresión especificada en Valor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los tipos de datos admitidos para una definición de informe determinan las opciones para el tipo de datos. El proveedor de datos puede convertir los valores de la base de datos en un tipo CLR.  
   
 ### <a name="data-type"></a>Tipo de datos  
@@ -70,24 +70,24 @@ ms.locfileid: "65582055"
 |--------------------------------------------|-----------------------|  
 |**Boolean**|**Boolean**|  
 |**DateTime**|**DateTime**, **DateTimeOffset**|  
-|**Integer**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
+|**Entero**|**Int16**, **Int32**, **UInt16**, **Byte**, **SByte**|  
 |**Float**|**Single**, **Double**, **Decimal**|  
 |**Texto**|**String**, **Char**, **GUID**, **Timespan**|  
   
  En los casos en que es necesario especificar un tipo de datos, puede especificar su propia conversión en la parte Valor de la expresión.  
   
-### <a name="operator"></a>Operador  
+### <a name="operator"></a>Operator  
  En la tabla siguiente, se especifican los operadores que puede usar en una ecuación de filtro y lo que el procesador de informes usa para evaluar la ecuación de filtro.  
   
-|Operador|Acción|  
+|Operator|Acción|  
 |--------------|------------|  
 |**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compara la expresión con un valor.|  
 |**TopN, BottomN**|Compara la expresión con un valor **Integer** .|  
 |**TopPercent, BottomPercent**|Compara la expresión con un valor **Integer** o **Float** .|  
 |**Entre**|Prueba si la expresión está entre dos valores, ambos inclusive.|  
-|**Entrada**|Prueba si la expresión está dentro de un conjunto de valores.|  
+|**In**|Prueba si la expresión está dentro de un conjunto de valores.|  
   
-### <a name="value"></a>Valor  
+### <a name="value"></a>Value  
  La expresión de valor especifica la parte final de la ecuación de filtro. El procesador de informes convierte la expresión evaluada en el tipo de datos que especificó y, a continuación, evalúa la ecuación de filtro completa para determinar si los datos especificados en Expresión pasan a través del filtro.  
   
  Para convertir en un tipo de datos que no es un tipo de datos CLR estándar, debe modificar la expresión para que realice la conversión de manera explícita. Puede usar las funciones de conversión del cuadro de diálogo **Expresión** comprendidas en la categoría **Funciones comunes**, **Conversión**. Por ejemplo, para un campo `ListPrice` que representa datos que están almacenados como un tipo de datos **money** en un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la extensión de procesamiento de datos devuelve el valor de campo como un tipo de datos <xref:System.Decimal> . Si desea establecer un filtro para usar solo valores mayores que **$50000.00** en la moneda del informe, convierta el valor en Decimal con la expresión `=CDec(50000.00)`.  

@@ -12,13 +12,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: d340d362301698f7dfaef28476ea659b948163bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109383"
 ---
-# <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
+# <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -73,7 +73,7 @@ JSON_MODIFY convierte todos los caracteres especiales en el nuevo valor si el ti
 
  Devuelve el valor actualizado de *expression* como texto con formato JSON correcto.  
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
  La función JSON_MODIFY permite actualizar el valor de una propiedad existente, insertar un nuevo par clave-valor o eliminar una clave según una combinación de modos y valores proporcionados.  
   
@@ -94,7 +94,7 @@ JSON_MODIFY convierte todos los caracteres especiales en el nuevo valor si el ti
 
  En el siguiente ejemplo se muestran las operaciones básicas que se pueden realizar con texto JSON.  
   
- **Consulta**
+ **Consultar**
   
 ```sql  
 
@@ -127,7 +127,7 @@ SET @info=JSON_MODIFY(@info,'append $.skills','Azure')
 PRINT @info
 ```  
   
- **Resultado**
+ **Resultados**
   
 ```json  
 {
@@ -153,7 +153,7 @@ PRINT @info
 
  Con JSON_MODIFY solo se puede actualizar una propiedad. Si tiene que realizar varias actualizaciones, puede usar varias llamadas JSON_MODIFY.  
   
- **Consulta**
+ **Consultar**
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -167,7 +167,7 @@ SET @info=JSON_MODIFY(JSON_MODIFY(JSON_MODIFY(@info,'$.name','Mike'),'$.surname'
 PRINT @info
 ```  
   
- **Resultado**
+ **Resultados**
   
 ```json  
 {
@@ -183,7 +183,7 @@ PRINT @info
 ### <a name="example---rename-a-key"></a>Ejemplo: cambiar una clave de nombre  
  En el siguiente ejemplo se muestra cómo cambiar el nombre de una propiedad en texto JSON con la función JSON_MODIFY. En primer lugar, puede tomar el valor de una propiedad existente e insertarlo como un nuevo par clave-valor. Luego, puede eliminar la antigua clave estableciendo el valor de la propiedad anterior en NULL.  
   
- **Consulta**
+ **Consultar**
   
 ```sql  
 DECLARE @product NVARCHAR(100)='{"price":49.99}'
@@ -202,7 +202,7 @@ SET @product=
 PRINT @product
 ```  
   
- **Resultado**
+ **Resultados**
   
 ```json  
 {
@@ -218,7 +218,7 @@ PRINT @product
 
  En el siguiente ejemplo se muestra cómo aumentar el valor de una propiedad en texto JSON con la función JSON_MODIFY. En primer lugar, puede tomar el valor de la propiedad existente e insertarlo como un nuevo par clave-valor. Luego, puede eliminar la antigua clave estableciendo el valor de la propiedad anterior en NULL.  
   
- **Consulta**
+ **Consultar**
   
 ```sql  
 DECLARE @stats NVARCHAR(100)='{"click_count": 173}'
@@ -233,7 +233,7 @@ SET @stats=JSON_MODIFY(@stats,'$.click_count',
 PRINT @stats
 ```  
   
- **Resultado**
+ **Resultados**
   
 ```json  
 {
@@ -247,7 +247,7 @@ PRINT @stats
 
  JSON_MODIFY trata el argumento *newValue* como texto sin formato incluso cuando contiene texto con formato JSON correcto. Como resultado, la salida JSON de la función se inserta entre comillas dobles y todos los caracteres especiales son caracteres de escape, tal y como se muestra en el siguiente ejemplo.  
   
- **Consulta**  
+ **Consultar**  
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -261,7 +261,7 @@ SET @info=JSON_MODIFY(@info,'$.skills','["C#","T-SQL","Azure"]')
 PRINT @info
 ```  
   
- **Resultado**
+ **Resultados**
   
 ```json  
 {
@@ -275,7 +275,7 @@ PRINT @info
   
  Para evitar el escape automático, proporcione un *newValue* con la función JSON_QUERY. JSON_MODIFY sabe que el valor devuelto por JSON_MODIFY tiene un formato JSON correcto, por lo que aplica escape.  
   
- **Consulta**  
+ **Consultar**  
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -289,7 +289,7 @@ SET @info=JSON_MODIFY(@info,'$.skills',JSON_QUERY('["C#","T-SQL","Azure"]'))
 PRINT @info
 ```  
   
- **Resultado**
+ **Resultados**
   
 ```json  
 {

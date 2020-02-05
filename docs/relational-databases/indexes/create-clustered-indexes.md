@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024991"
 ---
 # <a name="create-clustered-indexes"></a>Crear índices clúster
@@ -91,7 +91,7 @@ ms.locfileid: "68024991"
   
 5.  En el cuadro de diálogo **Seleccionar columnas de**_nombre\_tabla_, active la casilla de la columna de tabla que se va a agregar al índice agrupado.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 7.  En el cuadro de diálogo **Nuevo índice** , haga clic en **Aceptar**.  
   

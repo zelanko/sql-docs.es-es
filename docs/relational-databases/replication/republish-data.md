@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c37a0b953177d0e3d978607982da54c613a3d2a2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3006b3258d26f359e5eab98856ca7ffe43d8321a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908240"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287334"
 ---
 # <a name="republish-data"></a>Volver a publicar datos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,14 +59,14 @@ ms.locfileid: "72908240"
   
  La replicación es compatible con los casos de republicación que se muestran en la tabla siguiente.  
   
-|publicador|Suscriptor de publicación|Suscriptor|  
+|Publicador|Suscriptor de publicación|Suscriptor|  
 |---------------|---------------------------|----------------|  
 |Publicación transaccional|Suscripción transaccional/publicación transaccional|Suscripción transaccional|  
 |Publicación transaccional|Suscripción transaccional/publicación de mezcla*|Suscripción de mezcla|  
 |Publicación de combinación|Suscripción de mezcla/publicación de combinación|Suscripción de mezcla|  
 |Publicación de combinación|Suscripción de mezcla/publicación transaccional|Suscripción transaccional|  
   
- \*Debe establecer la propiedad `@published_in_tran_pub` en la publicación de mezcla. De forma predeterminada, la replicación transaccional espera que las tablas del suscriptor se traten como de solo lectura. Si la replicación de mezcla realiza cambios en los datos de una tabla de una suscripción transaccional, la convergencia de los datos puede no producirse. Para evitar este riesgo, se recomienda que cada tabla de este tipo se especifique como solo para descarga en la publicación de combinación. Esto evita que un suscriptor de mezcla cargue cambios de datos en la tabla. Para obtener más información, vea [Optimize Merge Replication Performance with Download-Only Articles](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md) (Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga).  
+ \*Debe establecer la propiedad `@published_in_tran_pub` en la publicación de mezcla. De forma predeterminada, la replicación transaccional espera que las tablas del suscriptor se traten como de solo lectura. Si la replicación de mezcla realiza cambios en los datos de una tabla de una suscripción transaccional, la convergencia de los datos puede no producirse. Para evitar este riesgo, se recomienda que cada tabla de este tipo se especifique como solo para descarga en la publicación de combinación. Esto evita que un suscriptor de mezcla cargue cambios de datos en la tabla. Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar distribución](../../relational-databases/replication/configure-distribution.md)   

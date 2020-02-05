@@ -18,10 +18,10 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: de9df087cd068ad27029cb17ae553390b054a2f8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297455"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Literales numéricos, de cadena y booleanos
@@ -60,10 +60,10 @@ ms.locfileid: "71297455"
 |------------------------|-----------------|  
 |{D}+{IS}|Literal numérico entero con al menos un dígito (D) y, opcionalmente, el sufijo de valor largo o sin signo (IS).  Ejemplos: 457, 785u, 986L y 7945ul.|  
 |{D}+{E}{FS}|Literal numérico no entero con al menos un dígito (D), notación científica y el sufijo de valor largo o de tipo flotante.  Ejemplos: 4E8l, 13e-2f y 5E+L.|  
-|{D}*"."{D}+{E}?{FS}|Literal numérico no entero con una posición decimal, una fracción decimal con al menos un dígito (D), un exponente opcional (E) y un identificador de valor de punto flotante o largo (FS). Este literal numérico tiene el tipo de datos DT_R4 o DT_R8.  Ejemplos: 6.45E3f, .89E-2l y 1.05E+7F.|  
-|{D}+"."{D}*{E}?{FS}|Literal numérico no entero con al menos un dígito significativo (D), una posición decimal, un exponente (E) y un identificador de valor largo o de punto flotante (FS). Este literal numérico tiene el tipo de datos DT_R4 o DT_R8.  Ejemplos: 1.E-4f, 4.6E6L y 8.365E+2f.|  
+|{D}*"."{D}+{E}?{FS}|Literal numérico no entero con una posición decimal, una fracción decimal con al menos un dígito (D), un exponente opcional (E) y un identificador de valor de punto flotante o largo (FS). Este literal numérico tiene el tipo de datos DT_R4 o DT_R8.  Ejemplos: 6,45E3f, 0,89E-2l y 1,05E+7F.|  
+|{D}+"."{D}*{E}?{FS}|Literal numérico no entero con al menos un dígito significativo (D), una posición decimal, un exponente (E) y un identificador de valor largo o de punto flotante (FS). Este literal numérico tiene el tipo de datos DT_R4 o DT_R8.  Ejemplos: 1,E-4f, 4,6E6L y 8,365E+2f.|  
 |{D}*.{D}+|Literal numérico no entero con precisión y escala. Tiene una posición decimal y una fracción decimal con al menos un dígito (D). Este literal numérico tiene el tipo de datos DT_NUMERIC.  Ejemplos: 0,9, 5,8 y 0,346.|  
-|{D}+.{D}*|Literal numérico no entero con precisión y escala. Tiene al menos un dígito significativo (D) y una posición decimal. Este literal numérico tiene el tipo de datos DT_NUMERIC.  Ejemplos: 6., 0.2 y 8.0.|  
+|{D}+.{D}*|Literal numérico no entero con precisión y escala. Tiene al menos un dígito significativo (D) y una posición decimal. Este literal numérico tiene el tipo de datos DT_NUMERIC.  Ejemplos: 6,0, 0,2 y 8,0.|  
 |#{D}+|Identificador de linaje. Consta del carácter de número (#) y al menos un dígito (D). Ejemplos: #123.|  
 |0[xX]{H}+{uU}|Literal numérico en formato hexadecimal. Incluye un cero, una x en mayúsculas o minúsculas, al menos una H en mayúsculas y, opcionalmente, el sufijo de valor sin signo. Ejemplos: 0xFF0A y 0X000010000U.|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71297455"
   
  Las expresiones pueden incluir literales numéricos con distintos tipos de datos. Cuando el evaluador de expresiones evalúa estas expresiones, convierte los datos a tipos compatibles. Para más información, consulte [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
- Sin embargo, la conversión entre algunos tipos de datos requiere una conversión de tipos explícita. El evaluador de expresiones proporciona el operador de conversión para realizar la conversión explícita de tipos de datos. Para obtener más información, vea [Conversión &#40;expresión de SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
+ Sin embargo, la conversión entre algunos tipos de datos requiere una conversión de tipos explícita. El evaluador de expresiones proporciona el operador de conversión para realizar la conversión explícita de tipos de datos. Para más información, vea [Conversión &#40;expresión de SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
 ### <a name="mapping-numeric-literals-to-integration-services-data-types"></a>Asignar literales numéricos a tipos de datos de Integration Services  
  El evaluador de expresiones realiza las siguientes conversiones al evaluar literales numéricos:  
@@ -85,7 +85,7 @@ ms.locfileid: "71297455"
     |L|DT_I8|  
     |UL|DT_UI8|  
   
-    > **IMPORTANTE** Si falta el sufijo de valor largo (L o l), el evaluador de expresiones asignará valores con signo al tipo de datos DT_I4 y valores sin signo al tipo de datos DT_UI4, aunque el valor desborde el tipo de datos.  
+    > **IMPORTANTE:** Si falta el sufijo de valor largo (L o l), el evaluador de expresiones asignará valores con signo al tipo de datos DT_I4 y valores sin signo al tipo de datos DT_UI4, aunque el valor desborde el tipo de datos.  
   
 -   Un literal numérico que incluya un exponente se convertirá al tipo de datos DT_R4 o DT_R8. Si la expresión incluye el sufijo largo, se convierte a DT_R8; si incluye el sufijo de tipo flotante, se convierte al tipo de datos DT_R4.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "71297455"
 |\a|Alerta|  
 |\b|Retroceso|  
 |\f|Avance de página|  
-|\n|Nueva línea|  
+|\n|Línea nueva|  
 |\r|Retorno de carro|  
 |\t|Tabulación horizontal|  
 |\v|Tabulación vertical|  
@@ -116,6 +116,6 @@ ms.locfileid: "71297455"
 ## <a name="boolean-literals"></a>Literales booleanos  
  El evaluador de expresiones admite los literales booleanos habituales: **True** y **False**. El evaluador de expresiones no distingue mayúsculas de minúsculas; cualquier combinación de mayúsculas y minúsculas es válida. Por ejemplo, TRUE es tan válido como True.  
   
-> **NOTA:** En una expresión, un literal booleano debe estar delimitado por espacios.  
+> **NOTA:** en una expresión, un literal booleano debe estar delimitado por espacios.  
   
   

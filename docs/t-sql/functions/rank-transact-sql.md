@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 631ef62034027217e8893f2fab42ce299157c1ba
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661444"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
@@ -50,10 +50,10 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. _order\_by\_clause_ determina el orden de los datos antes de que se aplique la función. *order_by_clause* es obligatorio. La \<cláusula rows o range> de la cláusula OVER no se puede especificar para la función RANK. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **bigint**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si dos o más filas se enlazan en un rango, cada fila enlazada recibe el mismo rango. Por ejemplo, si los dos mejores vendedores tienen el mismo valor de SalesYTD, los dos tienen el rango uno. El vendedor con el siguiente valor más alto de SalesYTD recibe el rango tres, porque ya hay dos filas con un rango superior. Por tanto, la función RANK no siempre devuelve enteros consecutivos.  
   
  El criterio de ordenación empleado por la consulta global determina el orden en que aparecen las filas en el conjunto de resultados.  

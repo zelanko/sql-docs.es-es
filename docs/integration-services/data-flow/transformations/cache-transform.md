@@ -17,10 +17,10 @@ ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b934ea191a0dc4f9f276b4e483f5f5671bd0cc3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297999"
 ---
 # <a name="cache-transform"></a>Transformación de caché
@@ -70,10 +70,10 @@ ms.locfileid: "71297999"
  **Cache connection manager**  
  Seleccione un administrador de conexiones de caché existente usando la lista o cree una conexión mediante el botón **Nueva** .  
   
- **Nueva**  
+ **Nuevo**  
  Cree una nueva conexión mediante el cuadro de diálogo Administrador de conexiones de caché.  
   
- **Editar**  
+ **Edición**  
  Modifique una conexión existente.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -20,10 +20,10 @@ ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4d9b391d58d8a55b7486cda447d13246df16093b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130151"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
@@ -39,10 +39,10 @@ ms.locfileid: "68130151"
 @@NESTLEVEL  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cada vez que un procedimiento almacenado llama a otro procedimiento almacenado o ejecuta un código administrado haciendo referencia a una rutina Common Language Runtime (CLR), un tipo o un agregado, se incrementa el nivel de anidamiento. Cuando se sobrepasa el máximo de 32, se termina la transacción.  
   
  Cuando @@NESTLEVEL se ejecuta en una cadena de [!INCLUDE[tsql](../../includes/tsql-md.md)], el valor devuelto es 1 + el nivel de anidamiento actual. Cuando @@NESTLEVEL se ejecuta de forma dinámica con sp_executesql, el valor devuelto es 2 + el nivel de anidamiento actual.  

@@ -16,10 +16,10 @@ ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 209186cf3756c0bfb9b572a33ba470a83e0cd493
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051438"
 ---
 # <a name="parse-geography-data-type"></a>Parse (tipo de datos geography)
@@ -40,12 +40,12 @@ Parse ( 'geography_tagged_text' )
  *geography_tagged_text*  
  Es la representación WKT de la instancia de **geography** que se devuelve. *geography_tagged_text* es una expresión **nvarchar**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El tipo OGC de la instancia de **geography** devuelta por `Parse()` se establece en la entrada WKT correspondiente.  
   
  La cadena "Null" se interpretará como una instancia NULL de **geography**.  

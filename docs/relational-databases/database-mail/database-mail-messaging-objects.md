@@ -16,10 +16,10 @@ ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8eb132920a6b51303e5725ecdb770dd742972f42
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70809947"
 ---
 # <a name="database-mail-messaging-objects"></a>Objetos de mensajería de Correo electrónico de base de datos
@@ -35,12 +35,12 @@ ms.locfileid: "70809947"
   
 |Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
-|[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**Ver**|Enumera todos los mensajes enviados al Correo electrónico de base de datos.|  
-|[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**Ver**|Enumera los mensajes acerca del comportamiento del [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md).|  
-|[sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|**Ver**|Información acerca de los mensajes que el Correo electrónico de base de datos no ha podido enviar.|  
-|[sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)|**Ver**|Información acerca de los datos adjuntos a mensajes del Correo electrónico de base de datos.|  
-|[sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)|**Ver**|Información acerca de los mensajes que se han enviado mediante el Correo electrónico de base de datos.|  
-|[sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|**Ver**|Información acerca de los mensajes que el Correo electrónico de base de datos está intentando enviar.|  
+|[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**Vista**|Enumera todos los mensajes enviados al Correo electrónico de base de datos.|  
+|[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**Vista**|Enumera los mensajes acerca del comportamiento del [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md).|  
+|[sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|**Vista**|Información acerca de los mensajes que el Correo electrónico de base de datos no ha podido enviar.|  
+|[sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)|**Vista**|Información acerca de los datos adjuntos a mensajes del Correo electrónico de base de datos.|  
+|[sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)|**Vista**|Información acerca de los mensajes que se han enviado mediante el Correo electrónico de base de datos.|  
+|[sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|**Vista**|Información acerca de los mensajes que el Correo electrónico de base de datos está intentando enviar.|  
 |[sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)|**Procedimiento almacenado**|Envía mensajes de correo electrónico utilizando el Correo electrónico de base de datos.|  
 |[sysmail_delete_log_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|**Procedimiento almacenado**|Elimina mensajes del registro del Correo electrónico de base de datos.|  
 |[sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)|**Procedimiento almacenado**|Elimina elementos de correo de la cola del Correo electrónico de base de datos.|  

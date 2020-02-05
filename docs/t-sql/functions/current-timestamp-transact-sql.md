@@ -32,13 +32,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15d684788ee14713c0a6fb2e8d742d7a81a6eed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026413"
 ---
-# <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
+# <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Esta función devuelve la marca de tiempo del sistema de base de datos actual como un valor **datetime** sin el desplazamiento de zona horaria de la base de datos. `CURRENT_TIMESTAMP` deriva este valor del sistema operativo del equipo en el que se ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -61,10 +61,10 @@ CURRENT_TIMESTAMP
 ## <a name="arguments"></a>Argumentos  
 Esta función no toma ningún argumento.
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
 **datetime**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden hacer referencia a `CURRENT_TIMESTAMP` desde cualquier parte desde donde puedan hacer referencia a una expresión **datetime**.
   
 `CURRENT_TIMESTAMP` es una función no determinista. Las vistas y las expresiones que hacen referencia a esta columna no se pueden indizar.
@@ -137,7 +137,7 @@ GETUTCDATE()       20:18:45.3470000
 SELECT CURRENT_TIMESTAMP;  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 516159955d7e4d69d52f1f462c818e3c005f30b3
-ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70958338"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Limitaciones y consideraciones de las tablas temporales
@@ -49,10 +49,10 @@ Tenga en cuenta lo siguiente al trabajar con tablas temporales:
 - Los desencadenadores**INSTEAD OF** no se permiten en la tabla actual o de historial para evitar que se invalide la lógica DML. Los desencadenadores**AFTER** solo se permiten en la tabla actual. Se bloquean en la tabla de historial para evitar que se invalide la lógica DML.
 - El uso de tecnologías de replicación está limitado:
 
-  - **Always On:** totalmente compatible
-  - **Captura de datos modificados y seguimiento de cambios:** solo se admite en la tabla actual
-  - **Replicación transaccional y de instantáneas**: solo se admite para un publicador único sin la función de temporalidad habilitada, y un suscriptor que tenga esa función habilitada. En este caso, el publicador se usa para una carga de trabajo OLTP, mientras que el suscriptor sirve para la descarga de informes (incluidas las consultas "AS OF"). No se admite el uso de varios suscriptores, puesto que este escenario puede provocar que los datos temporales sean incoherentes (cada uno de ellos dependería del reloj del sistema local).
-  - **Replicación de mezcla:** no es compatible con las tablas temporales
+  - **Always On** : totalmente compatible.
+  - **Captura de datos y seguimiento de datos modificados** : solo es compatible con la tabla actual.
+  - **Replicación transaccional y de instantáneas**: solo es compatible con un publicador único sin la función de temporalidad habilitada, y con un suscriptor que tenga dicha función habilitada. En este caso, el publicador se usa para una carga de trabajo OLTP, mientras que el suscriptor sirve para la descarga de informes (incluidas las consultas "AS OF"). No se admite el uso de varios suscriptores, puesto que este escenario puede provocar que los datos temporales sean incoherentes (cada uno de ellos dependería del reloj del sistema local).
+  - **Replicación de mezcla:** no es compatible con las tablas temporales.
 
 - Las consultas normales solo afectan a los datos de la tabla actual. Para consultar los datos en la tabla de historial, debe usar consultas temporales. Este asunto se explica más adelante en este documento, en la sección titulada "Consulta de datos temporales".
 - Una estrategia de indexación óptima consiste en incluir un índice de almacén de columnas agrupado o un índice de almacén de filas de árbol B en la tabla actual, así como un índice de almacén de columnas agrupado en la tabla de historial para que el rendimiento y el tamaño de almacenamiento sean óptimos. Si crea o usa su propia tabla de historial, recomendamos encarecidamente que genere este tipo de índice que consta de columnas de periodo empezando por el fin de la columna de periodo con el fin de acelerar las consultas temporales y las que forman parte de la comprobación de coherencia de datos. La tabla de historial predeterminada cuenta con un índice de almacén de filas agrupado que se ha creado en función de las columnas de periodo (fin e inicio). Como mínimo, se recomienda un índice de almacén de filas no agrupado.

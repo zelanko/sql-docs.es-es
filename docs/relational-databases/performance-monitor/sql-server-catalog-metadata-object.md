@@ -13,10 +13,10 @@ ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 3b408951b0a1f32bda0920260aae18ab93350fdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986715"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQL Server, objeto de metadatos de catálogo
@@ -31,7 +31,7 @@ En la tabla siguiente se describen los objetos de rendimiento de **metadatos de 
 |**Catalog Metadata Object**|Número de entradas en la caché de metadatos de catálogo.|
 |**Cache Entries Pinned Count**|Número de entradas de caché de metadatos de catálogo que están fijadas.|
 |**Frecuencia de aciertos de caché**|Proporción entre aciertos de caché de metadatos de catálogo y búsquedas.|
-|**Base de frecuencia de aciertos de caché**|Exclusivamente para uso interno.|
+|**Base de frecuencia de aciertos de caché**|Solo para uso interno.|
 
 Hay una instancia del contador para cada base de datos.
 

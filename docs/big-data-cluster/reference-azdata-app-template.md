@@ -1,28 +1,28 @@
 ---
 title: Referencia de azdata app template
-titleSuffix: SQL Server big data clusters
 description: Artículo de referencia sobre los comandos azdata app template.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3cdee262be7ef0c14d935c95eb9389d4a3ae03a3
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: da1b98649eeb48d5ae2d6ca05e61da53f519e944
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531920"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251055"
 ---
 # <a name="azdata-app-template"></a>azdata app template
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-En el artículo siguiente se proporciona referencia de los comandos de `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `app template` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [`azdata app template list`](#azdata-app-template-list) | Capture plantillas admitidas.
@@ -43,7 +43,7 @@ azdata app template list --url https://github.com/diffrent/templates.git
 ```
 ### <a name="optional-parameters"></a>Parámetros opcionales
 #### `--url -u`
-Especifique otra ubicación de repositorio de plantillas. Valor predeterminado: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+Especifique otra ubicación de repositorio de plantillas. Predeterminado: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
 Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
@@ -79,7 +79,7 @@ azdata app template pull --name ssis
 #### `--name -n`
 Nombre de la plantilla. Para obtener la lista completa de nombres de plantillas admitidos, ejecute `azdata app template list`.
 #### `--url -u`
-Especifique otra ubicación de repositorio de plantillas. Valor predeterminado: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+Especifique otra ubicación de repositorio de plantillas. Predeterminado: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 #### `--destination -d`
 Dónde colocar la plantilla de esqueleto de la aplicación.
 `./templates`

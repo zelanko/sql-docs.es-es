@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d9908d99f81094b8b8d3c2afd5c82ad870c2de22
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995740"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
@@ -50,7 +50,7 @@ El nombre de la base de datos cuyo número de identificación de base de datos d
 ## <a name="return-types"></a>Tipos de valores devueltos
 **int**
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 `DB_ID` solo se puede usar para devolver el identificador de la base de datos actual de Azure SQL Database. Se devuelve NULL si el nombre de la base de datos que especificó es distinto de la base de datos actual.
 
 > [!NOTE]
@@ -119,7 +119,7 @@ En este ejemplo se devuelve el identificador de base de datos de la base de dato
 SELECT DB_ID('AdventureWorksPDW2012');  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
 [Funciones de metadatos &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  

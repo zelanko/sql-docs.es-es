@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 99b6522316928fcd7397d27c1a5c85d927a8e0b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934860"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Actualizaciones de ediciones y versiones admitidas
@@ -34,7 +34,7 @@ ms.locfileid: "67934860"
   
 -   Antes de actualizar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], habilite la autenticación de Windows para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y compruebe la configuración predeterminada: la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser miembro del grupo sysadmin de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Para actualizar a [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], debe ejecutar un sistema operativo admitido. Para obtener más información, vea [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+-   Para actualizar a [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], debe estar ejecutando un sistema operativo admitido. Para más información, vea [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   La actualización se bloqueará si hay un reinicio pendiente.  
   
@@ -139,7 +139,7 @@ Los escenarios no especificados en la lista anterior no se admiten, incluidos pe
 -   Compatibilidad con componentes personalizados de terceros de Integration Services de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], por ejemplo de ejecución y actualización.  
   
 ## <a name="includesssql15-mdincludessssql15-mdmd-edition-upgrade"></a>Actualización de la edición de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]  
-En la tabla siguiente se enumeran los escenarios de actualización de edición de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]admitidos.  
+En la tabla siguiente se enumeran los escenarios de actualización de la edición de [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] admitidos.  
   
 Para obtener instrucciones paso a paso sobre cómo realizar una actualización de edición, vea [Actualizar a una edición diferente de SQL Server 2016 &#40;programa de instalación&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md).  
   

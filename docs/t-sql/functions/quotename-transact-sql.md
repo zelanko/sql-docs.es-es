@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 761e6f43f1199d4eb16060cd769a30ebba220ef8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914254"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
@@ -49,7 +49,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  '*quote_character*'  
  Es una cadena de un solo carácter que se utiliza como delimitador. Puede ser una comilla simple ( **'** ), un corchete de apertura o cierre ( **[]** ), comillas dobles ( **"** ), un paréntesis de apertura o cierre ( **()** ), un signo de mayor que o menor que ( **><** ), una llave de apertura o cierre ( **{}** ) o un acento grave ( **\`** ). Se devuelve NULL si se proporciona un carácter no admitido. Si no se especifica *quote_character*, se usarán corchetes.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **nvarchar(258)**  
   
 ## <a name="examples"></a>Ejemplos  

@@ -15,10 +15,10 @@ ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 4bb425d07d566f4bb06d18a8f74f493a649fa8b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101022"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (tipo de datos geometry)
@@ -37,12 +37,12 @@ Devuelve una instancia de **LineString** con dos puntos que representan la dista
  *otra_geometría*  
  La segunda instancia de **geometry** a la que la instancia de **geometry** que realiza la llamada está intentando determinar la distancia más corta.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El método devuelve una instancia de **LineString** con los extremos en los bordes de las dos instancias de **geometry** que no se cruzan y que se comparan. La longitud de la instancia de **LineString** devuelta es igual a la distancia más corta entre las dos instancias de **geometry**. Se devuelve una instancia vacía de **LineString** cuando las dos instancias de **geometry** se cruzan.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,10 +1,9 @@
 ---
-title: Cambiar la disponibilidad de un operador | Microsoft Docs
-ms.custom: ''
+title: Cambiar la disponibilidad de un operador
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,13 +21,15 @@ helpviewer_keywords:
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8b9fa196aefb37de169439853704e9b52153c6a7
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 21445e5a736159123c797e18d4dae3ece58c6a02
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553328"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255711"
 ---
 # <a name="change-an-operator39s-availability"></a>Cambiar la disponibilidad de un operador
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ En este tema se describe cómo cambiar la programación de un operador para reci
   
 ### <a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Permisos  
 Solo los miembros del rol fijo de servidor **sysadmin** pueden editar operadores.  
   
 ## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
@@ -57,9 +58,9 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden editar operadores
   
 4.  Haga clic con el botón derecho en el operador que desea habilitar o deshabilitar y seleccione **Propiedades**; luego, haga clic en la pestaña **General** .  
   
-5.  En el cuadro de diálogo **Propiedades de** _nombre\_operador_, active o desactive la casilla **Habilitado**.  
+5.  En el cuadro de diálogo _Propiedades de\__ nombre**operador**, active o desactive la casilla **Habilitado**.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ## <a name="TsqlProcedure"></a>Usar Transact-SQL  
   

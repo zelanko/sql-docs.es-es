@@ -18,10 +18,10 @@ ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d6c68aa9859fbe7e1066ad392377d6b50289fd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042391"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (tipo de datos geography)
@@ -36,15 +36,15 @@ ms.locfileid: "68042391"
 .STCurveToLine()  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Devuelve una instancia de **LineString** para una instancia de **CircularString** o **CompoundCurve**.  
   
- Devuelve una instancia de **Polygon** para una instancia **CurvePolygon**.  
+ Devuelve una instancia de **Polygon** para una instancia de **CurvePolygon**.  
   
  Devuelve una copia de instancias de **geography** que no contienen instancias de **CircularString**, **CompoundCurve** o **CurvePolygon**.  
   

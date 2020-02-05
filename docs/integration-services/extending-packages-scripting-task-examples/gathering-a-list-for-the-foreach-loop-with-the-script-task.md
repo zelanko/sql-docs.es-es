@@ -16,10 +16,10 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0001806e1a8f0cba9a879297b4dab49367dd84a8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297014"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Recopilar una lista para el bucle Foreach con la tarea Script
@@ -36,7 +36,7 @@ ms.locfileid: "71297014"
  En el ejemplo siguiente se utilizan métodos del espacio de nombres **System.IO** para recopilar una lista de libros de Excel del equipo que son posteriores o anteriores a un número de días especificado por el usuario en una variable. Busca de forma recursiva en los directorios de la unidad C los archivos que tienen la extensión .xls y examina la fecha en la que cada archivo se modificó por última vez para determinar si el archivo pertenece a la lista. Agrega los archivos correspondientes a un objeto **ArrayList** y guarda **ArrayList** en una variable para el uso posterior en un contenedor de bucles Para cada uno. El contenedor de bucles Foreach se configura para utilizar el enumerador de variable para Foreach.  
   
 > [!NOTE]  
->  La variable que utiliza con el enumerador de variable para Para cada uno debe ser del tipo **Object**. El objeto que incluye en la variable debe implementar una de las interfaces siguientes: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** o **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. En general, se usa **Array** o **ArrayList**. **ArrayList** requiere una referencia y una instrucción **Imports** para el espacio de nombres **System.Collections**.  
+>  La variable que utiliza con el enumerador de variable para Para cada uno debe ser del tipo **Object**. El objeto que se coloca en la variable debe implementar una de las interfaces siguientes: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** o **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. En general, se usa **Array** o **ArrayList**. **ArrayList** requiere una referencia y una instrucción **Imports** para el espacio de nombres **System.Collections**.  
   
  Puede experimentar con esta tarea utilizando diferentes valores positivos y negativos en la variable de paquete `FileAge`. Por ejemplo, puede escribir 5 para buscar archivos creados en los cinco últimos días o escribir -3 para buscar archivos creados hace más de tres días. Esta tarea puede tardar un minuto o dos en una unidad de disco con un gran número de carpetas donde buscar.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71297014"
   
 4.  En el código, importe los espacios de nombres **System.Collections** y **System.IO**.  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```vb  
 Imports System  

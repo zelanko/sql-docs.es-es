@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8c785e98a06e31448c22422f85f3be34efcffa6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051110"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Estimar el tamaño de un índice clúster
@@ -42,7 +42,7 @@ ms.locfileid: "68051110"
   
 3.  Sumar los valores calculados.  
   
-## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Paso 1: Calcular el espacio utilizado para almacenar datos en el nivel hoja  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Paso 1. Calcular el espacio utilizado para almacenar datos en el nivel hoja  
   
 1.  Especifique el número de filas que habrá en la tabla:  
   
@@ -119,7 +119,7 @@ ms.locfileid: "68051110"
   
      ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
   
-## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Paso 2. Calcular el espacio utilizado para almacenar información de índice  
+## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Paso 2. Calcular el espacio utilizado para almacenar información de índice  
  Los siguientes pasos pueden utilizarse para calcular el espacio necesario para almacenar los niveles superiores del índice:  
   
 1.  Especifique el número de columnas de longitud fija y variable de la clave de índice, y calcule el espacio necesario para su almacenamiento:  
@@ -198,14 +198,14 @@ ms.locfileid: "68051110"
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## <a name="step-3-total-the-calculated-values"></a>Paso 3. Sumar los valores calculados  
+## <a name="step-3-total-the-calculated-values"></a>Paso 3. Sumar los valores calculados  
  Sume los valores obtenidos en los dos pasos anteriores:  
   
  Tamaño del índice agrupado (bytes) = ***Leaf_Space_Used*** + ***Index_Space_used***  
   
  En este cálculo no se tiene en cuenta lo siguiente:  
   
--   Particiones  
+-   Creación de particiones  
   
      La sobrecarga de espacio de la creación de particiones es mínima, pero resulta difícil de calcular. No es importante incluirla.  
   

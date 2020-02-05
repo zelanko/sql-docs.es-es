@@ -14,10 +14,10 @@ ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a7ecbe24971e4138dfc55c847d07efa5e901f1f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295264"
 ---
 # <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package (base de datos de SSISDB)
@@ -95,7 +95,7 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   Se hace referencia a las variables de los parámetros del paquete, pero no se han incluido entornos a los que se haga referencia en la validación  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La validación ayuda a identificar problemas que pueden impedir que el paquete se ejecute correctamente. Use las vistas [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) o [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) para supervisar el estado de validación.  
   
   

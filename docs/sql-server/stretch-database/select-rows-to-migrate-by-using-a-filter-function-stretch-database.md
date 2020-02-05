@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844549"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Seleccionar las filas que se van a migrar mediante una función de filtro (Stretch Database)
@@ -27,7 +27,7 @@ ms.locfileid: "73844549"
   Si almacena los datos inactivos en una tabla independiente, puede configurar Stretch Database para migrar toda la tabla. Por otro lado, si la tabla contiene datos activos e inactivos, puede especificar un predicado de filtro para seleccionar las filas que se migrarán. El predicado de filtro es una función insertada con valores de tabla. En este artículo se describe cómo escribir una función insertada con valores de tabla para seleccionar las filas que se migrarán.  
   
 > [!IMPORTANT]
-> Si se indica una función de filtro que tiene un rendimiento bajo, la migración de datos también tendrá un rendimiento bajo. Stretch Database aplica la función de filtro a la tabla mediante el operador CROSS APPLY.  
+> Si se indica una función de filtro que tiene un rendimiento bajo, la migración de datos también tendrá un rendimiento bajo. Stretch Database aplica la función de filtro a la tabla por medio del operador CROSS APPLY.  
   
  Si no se especifica una función de filtro, se migrará toda la tabla.  
   
@@ -197,7 +197,7 @@ ALTER TABLE SensorTelemetry
   )
 ```
   
-## <a name="addafterwiz"></a>Agregar una función de filtro después de ejecutar el asistente  
+## <a name="addafterwiz"></a>Incorporación de una función de filtro después de ejecutar el asistente  
   
 Si quiere usar una función que no se puede crear en el Asistente para **habilitar base de datos para Stretch** , puede ejecutar la instrucción **ALTER TABLE** para especificar una función después de salir del asistente. No obstante, antes de aplicar una función, tendrá que detener la migración de datos que ya está en curso y devolver los datos migrados. (Para obtener más información en la que se explica por qué esto es necesario, vea [Reemplazar una función de filtro existente](#replacePredicate)).
   
@@ -368,7 +368,7 @@ COMMIT ;
   
     ```  
   
--   En el ejemplo siguiente se utilizan los operadores BETWEEN y NOT BETWEEN. Este uso es válido porque la función resultante cumple las reglas descritas aquí después de reemplazar los operadores BETWEEN y NOT BETWEEN por las expresiones AND y OR equivalentes.  
+-   En el ejemplo siguiente se usan los operadores BETWEEN y NOT BETWEEN. Este uso es válido porque la función resultante cumple las reglas descritas aquí después de reemplazar los operadores BETWEEN y NOT BETWEEN por las expresiones AND y OR equivalentes.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example3(@column1 int, @column2 int)  
@@ -382,7 +382,7 @@ COMMIT ;
   
     ```  
   
-     La función anterior es equivalente a la función siguiente después de reemplazar los operadores BETWEEN y NOT BETWEEN por las expresiones AND y OR equivalentes.  
+     La función anterior es equivalente a la función siguiente después de reemplazar los operadores BETWEEN y NOT BETWEEN por expresiones AND y OR equivalentes.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example4(@column1 int, @column2 int)  
@@ -436,7 +436,7 @@ COMMIT ;
   
     ```  
   
--   Las funciones siguientes no son válidas porque las expresiones que utilizan operadores algebraicos o funciones integradas se deben evaluar como constante cuando se define la función. No se pueden incluir referencias de columna en las expresiones algebraicas o llamadas de función.  
+-   Las funciones siguientes no son válidas porque las expresiones que utilizan operadores algebraicos o funciones integradas se deben evaluar como constante cuando se define la función. No puede incluir referencias de columna en expresiones algebraicas o llamadas de función.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_example8(@column1 int)  
@@ -492,7 +492,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
   
  Si la función devuelve un resultado no vacío para la fila, la fila será apta para la migración.  
   
-## <a name="replacePredicate"></a>Reemplazar una función de filtro existente  
+## <a name="replacePredicate"></a>Reemplazo de una función de filtro existente  
  Para reemplazar una función de filtro especificada anteriormente, vuelva a ejecutar la instrucción **ALTER TABLE** y especifique un nuevo valor para el parámetro **FILTER_PREDICATE** . Por ejemplo:  
   
 ```sql  

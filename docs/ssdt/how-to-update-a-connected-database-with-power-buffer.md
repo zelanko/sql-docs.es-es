@@ -1,25 +1,26 @@
 ---
-title: 'Procedimientos: Actualizar una base de datos conectada con Power Buffer | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Actualización de una base de datos conectada con Power Buffer
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bad8fd64e0242d4dbe965b91d8d8be5ab9796591
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: d9feeb9bee84cede398bba5105912385fd5e8c2e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034993"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244259"
 ---
-# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Procedimientos: Actualización de una base de datos conectada con Power Buffer
+# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Cómo: Actualizar una base de datos conectada con Power Buffer
+
 La tecnología Power Buffer de SQL Server Data Tools simplifica la aplicación de cambios a una base de datos conectada almacenando todas las ediciones de la sesión actual. Todos los errores ocasionados por la edición en la ventana Power Buffer (en el Editor de Transact\-SQL o en el Diseñador de tablas) aparecen inmediatamente en el panel **Lista de errores**, lo que le permite seguir los errores identificados para solucionarlos mejor. Puede comprobar los cambios pendientes hasta que esté preparado para aplicarlos a la base de datos. Durante el proceso de actualización, SSDT crea automáticamente un script ALTER basado en las ediciones y le avisa de cualquier problema posible. A continuación, puede aplicar a la misma base de datos todos los cambios que se han acumulado en todas las ventanas Power Buffer abiertas o puede guardar el script ALTER para implementarlo más adelante.  
   
 SSDT también reconoce los cambios realizados al esquema de la base de datos fuera de Visual Studio. Por ejemplo, si agrega una tabla nueva a una base de datos existente en SQL Server Management Studio, ese cambio aparecerá inmediatamente en el Explorador de objetos de SQL Server en Visual Studio sin necesidad de actualizarlo manualmente. La característica de detección de desfases garantiza que siempre está viendo la definición de esquema más reciente de una base de datos en el Explorador de objetos de SQL Server. Tenga en cuenta que los objetos de base de datos abiertos en el Diseñador de tablas o en el Editor de Transact\-SQL para su edición no se actualizarán para mostrar los cambios fuera de Visual Studio.  

@@ -17,10 +17,10 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909487"
 ---
 # <a name="filter-a-trace"></a>Filtrar un seguimiento
@@ -63,9 +63,9 @@ ms.locfileid: "72909487"
   
 |Operador relacional|Símbolo del operador|Descripción|  
 |-------------------------|---------------------|-----------------|  
-|Like|Like|Especifica que los datos del evento de seguimiento deben ser como el texto escrito. Acepta varios valores.|  
+|Like|LIKE|Especifica que los datos del evento de seguimiento deben ser como el texto escrito. Acepta varios valores.|  
 |No es como|No es como|Especifica que los datos del evento de seguimiento no deben ser como el texto escrito. Acepta varios valores.|  
-|Es igual a|=|Especifica que los datos del evento de seguimiento deben ser iguales al valor escrito. Acepta varios valores.|  
+|Equals|=|Especifica que los datos del evento de seguimiento deben ser iguales al valor escrito. Acepta varios valores.|  
 |No es igual a|<>|Especifica que los datos del evento de seguimiento deben ser distintos del valor escrito. Acepta varios valores.|  
 |Mayor que|>|Especifica que los datos del evento de seguimiento deben ser mayores que el valor escrito.|  
 |Mayor o igual que|>=|Especifica que los datos del evento de seguimiento deben ser mayores o iguales que el valor escrito.|  
@@ -86,7 +86,7 @@ ms.locfileid: "72909487"
 |**DatabaseID**|=, <>, >=, <=|  
 |**DatabaseName**|LIKE, NOT LIKE|  
 |**DBUserName**|LIKE, NOT LIKE|  
-|**Duración**|=, <>, >=, \<=|  
+|**Duration**|=, <>, >=, \<=|  
 |**EndTime**|>=, <=|  
 |**Error**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
@@ -122,13 +122,13 @@ ms.locfileid: "72909487"
 |**RoleName**|LIKE, NOT LIKE|  
 |**RowCounts**|=, <>, >=, <=|  
 |**SessionLoginName**|LIKE, NOT LIKE|  
-|**Severity**|=, <>, >=, <=|  
+|**Gravedad**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|Utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar los eventos de esta columna de datos. Para obtener más información, vea [Filtrar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
-|**Correcto**|=, <>, >=, <=|  
+|**Success**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
 |**TargetLoginSid**|Utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para filtrar los eventos de esta columna de datos. Para obtener más información, vea [Filtrar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
 |**TargetUserName**|LIKE, NOT LIKE|  

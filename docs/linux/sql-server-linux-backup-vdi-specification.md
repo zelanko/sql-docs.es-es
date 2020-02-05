@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
 ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810971"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Especificación del SDK de cliente VDI de SQL Server en Linux
@@ -65,7 +65,7 @@ Este capítulo contiene descripciones de cada una de las funciones de cliente. L
 - Sintaxis de la función
 - Lista de parámetros
 - Valores devueltos
-- Notas
+- Observaciones
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 
@@ -81,7 +81,7 @@ Este capítulo contiene descripciones de cada una de las funciones de cliente. L
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| | **Nombre** | Identifica el conjunto de dispositivos virtuales. Deben seguirse las reglas para los nombres usados por CreateFileMapping(). Cualquier carácter excepto la barra diagonal inversa (puede usarse \)). Esta es una cadena de caracteres. Se recomienda agregar un prefijo a la cadena con nombre del producto o la compañía del usuario y el nombre de la base de datos. |
+| | **name** | Identifica el conjunto de dispositivos virtuales. Deben seguirse las reglas para los nombres usados por CreateFileMapping(). Cualquier carácter excepto la barra diagonal inversa (puede usarse \)). Esta es una cadena de caracteres. Se recomienda agregar un prefijo a la cadena con nombre del producto o la compañía del usuario y el nombre de la base de datos. |
 | |**cfg** | Esta es la configuración del conjunto de dispositivos virtuales. Para obtener más información, consulte la sección "Configuración" más adelante en este documento.
 
 | Valores devueltos | Argumento | Explicación
@@ -129,7 +129,7 @@ Este capítulo contiene descripciones de cada una de las funciones de cliente. L
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| | **Nombre** |Identifica el conjunto de dispositivos virtuales.
+| | **name** |Identifica el conjunto de dispositivos virtuales.
 | | **ppVirtualDevice** |Cuando la función se ejecuta correctamente, se devuelve un puntero al dispositivo virtual. Este dispositivo se usa con GetCommand y CompleteCommand.
 
 | Valores devueltos | Argumento | Explicación
@@ -161,7 +161,7 @@ Si esta función no se realiza correctamente, se devuelve un valor NULL a travé
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
 | |**timeout** |Se trata del tiempo de espera, en milisegundos. Use INFINTE para esperar indefinidamente. Use 0 para sondear un comando. Se devuelve VD_E_TIMEOUT si no hay ningún comando disponible actualmente. Si se agota el tiempo de espera, el cliente decide la siguiente acción.
-| |**Timeout** |Se trata del tiempo de espera, en milisegundos. Use INFINTE o un valor negativo para esperar indefinidamente. Use 0 para sondear un comando. Se devuelve VD_E_TIMEOUT si no hay ningún comando disponible antes de que el tiempo de expiración se agote. Si se agota el tiempo de expiración, el cliente decide la siguiente acción.
+| |**Tiempo de espera** |Se trata del tiempo de espera, en milisegundos. Use INFINTE o un valor negativo para esperar indefinidamente. Use 0 para sondear un comando. Se devuelve VD_E_TIMEOUT si no hay ningún comando disponible antes de que el tiempo de expiración se agote. Si se agota el tiempo de expiración, el cliente decide la siguiente acción.
 | |**ppCmd** |Cuando un comando se devuelve correctamente, el parámetro devuelve la dirección de un comando que se va a ejecutar. La memoria devuelta es de solo lectura. Cuando se completa el comando, este puntero se pasa a la rutina CompleteCommand. Para obtener más información sobre cada comando, vea "Comandos" más adelante en este documento.
         
 | Valores devueltos | Argumento | Explicación

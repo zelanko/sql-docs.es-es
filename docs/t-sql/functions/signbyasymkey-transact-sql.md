@@ -24,10 +24,10 @@ ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 804f8c1f2f7c59edec2c4e40c7d47f99ac71b5e7
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314550"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
@@ -54,10 +54,10 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
  *password*  
  Especifica la antigua contraseña con la que está protegida la clave privada. *password* es **nvarchar(128)** .  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **varbinary** con un tamaño máximo de 8000 bytes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Requiere permiso CONTROL en la clave asimétrica.  
   
 ## <a name="examples"></a>Ejemplos  

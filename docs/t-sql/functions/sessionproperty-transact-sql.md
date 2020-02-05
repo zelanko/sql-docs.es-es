@@ -20,10 +20,10 @@ ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68022198"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
@@ -55,10 +55,10 @@ SESSIONPROPERTY (option)
 |QUOTED_IDENTIFIER|Especifica si las reglas de ISO en cuanto a si hay que seguir las comillas delimitadoras de identificadores y cadenas literales.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |\<Cualquier otra cadena>|NULL = La entrada no es válida.|  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **sql_variant**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las opciones SET se indican mediante la combinación de las opciones de nivel de servidor, de nivel de base de datos y especificadas por el usuario.  
   
 ## <a name="examples"></a>Ejemplos  

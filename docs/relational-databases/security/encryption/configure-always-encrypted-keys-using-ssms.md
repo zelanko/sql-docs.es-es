@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595760"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio
@@ -27,7 +27,7 @@ ms.locfileid: "73595760"
 
 En este artículo se indican los pasos para aprovisionar claves maestras de columna y claves de cifrado de columna para Always Encrypted mediante [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md).
 
-Para obtener información general sobre la administración de claves de Always Encrypted, incluidos algunos procedimientos recomendados y consideraciones de seguridad importantes, vea [Información general de administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
+Para obtener información general sobre la administración de claves de Always Encrypted, incluidos algunos procedimientos recomendados y consideraciones de seguridad importantes, vea [Información general de administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).
 
 <a name="provisioncmk"></a>
 ## <a name="provision-column-master-keys-with-the-new-column-master-key-dialog"></a>Aprovisionamiento de claves maestras de columna con el cuadro de diálogo Nueva clave maestra de columna
@@ -73,7 +73,7 @@ Necesita tener el permiso *ALTER ANY COLUMN MASTER KEY* en la base de datos para
 - **Proveedor de almacén de claves (CNG)** : se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del KSP.
 - **Proveedor de servicios criptográficos (CAPI)** : se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del CSP.
 
-Para obtener más información, vea [Creación y almacenamiento de claves maestras de columna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+Para más información, vea [Creación y almacenamiento de claves maestras de columna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 <a name="provisioncek"></a> 
 ## <a name="provision-column-encryption-keys-with-the-new-column-encryption-key-dialog"></a>Aprovisionamiento de claves de cifrado de columna con el cuadro de diálogo Nueva clave de cifrado de columnas
@@ -84,7 +84,7 @@ El cuadro de diálogo **Nueva clave de cifrado de columnas** permite generar una
 2.  Haga clic con el botón derecho en la carpeta **Claves de cifrado de columna** y seleccione **Nueva clave de cifrado de columnas...** . 
 3.  En el cuadro de diálogo **Nueva clave de cifrado de columnas** , escriba el nombre del objeto de metadatos de la clave de cifrado de columnas.
 4.  Seleccione un objeto de metadatos que represente la clave maestra de columna de la base de datos.
-5.  Haga clic en **Aceptar**. 
+5.  Haga clic en **OK**. 
 
 Una vez que complete el cuadro de diálogo, SQL Server Management Studio generará una clave de cifrado de columna y luego recuperará los metadatos para la clave maestra de columna seleccionada en la base de datos. Después, SSMS usará los metadatos de la clave maestra de columna para ponerse en contacto con el almacén de claves que contiene la clave maestra de columna y cifrar la clave de cifrado de columna. Por último, SSMS crea los datos de metadatos para el nuevo cifrado de columnas en la base de datos. Para ello, genera y emite una instrucción [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md).
 
@@ -103,19 +103,19 @@ Para obtener más información, vea [Creación y almacenamiento de claves maestr
 
 El [Asistente para Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md) es una herramienta para cifrar, descifrar y volver a cifrar las columnas seleccionadas de una base de datos. Aunque puede usar claves ya configuradas, también permite generar una nueva clave maestra de columna y un nuevo cifrado de columna. 
 
-## <a name="next-steps"></a>Next Steps
-- [Configuración del cifrado de columna mediante el Asistente para Always Encrypted](always-encrypted-wizard.md)
-- [Configuración del cifrado de columna mediante Always Encrypted con un paquete DAC](configure-always-encrypted-using-dacpac.md)
+## <a name="next-steps"></a>Pasos siguientes
+- [Configuración del cifrado de columna mediante el asistente para Always Encrypted](always-encrypted-wizard.md)
+- [Configuración del cifrado de columnas mediante Always Encrypted con un paquete DAC](configure-always-encrypted-using-dacpac.md)
 - [Rotación de claves de Always Encrypted mediante SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md)
-- [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)
-- [Migración de datos a o desde columnas mediante Always Encrypted con el Asistente para importación y exportación de SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
+- [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)
+- [Migración de datos a o desde columnas mediante Always Encrypted con el Asistente para importación y exportación de SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
 
 ## <a name="see-also"></a>Consulte también
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Información general de administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
+- [Información general sobre la administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Creación y almacenamiento de claves maestras de columna para Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
-- [Configurar Always Encrypted con SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
-- [Aprovisionamiento de claves de Always Encrypted mediante PowerShell](configure-always-encrypted-keys-using-powershell.md)
+- [Configuración de Always Encrypted con SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
+- [Aprovisionamiento de claves de Always Encrypted mediante PowerShell](configure-always-encrypted-keys-using-powershell.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)
 - [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md)
 - [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)

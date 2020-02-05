@@ -11,10 +11,10 @@ ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca82bdc8a04ffee4426ffb934a9e9a4ddaf4654f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296609"
 ---
 # <a name="catalogextended_operation_info-ssisdb-database"></a>catalog.extended_operation_info (base de datos de SSISDB)
@@ -26,7 +26,7 @@ ms.locfileid: "71296609"
 
   Muestra la información extendida sobre todas las operaciones del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |info_id|**bigint**|El identificador único (id.) de la información extendida.|  
 |operation_id|**bigint**|El Identificador único de la operación que corresponde a la información extendida.|  
@@ -37,7 +37,7 @@ ms.locfileid: "71296609"
 |start_time|**datetimeoffset(7)**|Fecha y hora en que empezó la operación.|  
 |end_time|**datetimeoffset(7)**|La fecha y hora en la que finalizó la operación.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una operación única puede tener varias filas de información extendida.  
   
 ## <a name="permissions"></a>Permisos  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982938"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982938"
 
   Devuelve el valor de propiedad del índice con nombre o las estadísticas de un número de identificación, nombre de índice o estadísticas y nombre de propiedad de una tabla especificada. Devuelve NULL para los índices XML.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,7 +53,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  A menos que se especifique lo contrario, se devuelve NULL si *property* no es un nombre de propiedad válido, si *object_ID* no es un identificador de objeto válido, si *object_ID* es un tipo de objeto incompatible con la propiedad especificada o si el autor de la llamada no tiene permiso para ver los metadatos del objeto.  
   
-|Propiedad|Descripción|Valor|  
+|Propiedad|Descripción|Value|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|Profundidad del índice.|Número de niveles del índice.<br /><br /> NULL = El índice o la entrada XML no es válido.|  
 |**IndexFillFactor**|Valor de factor de relleno utilizado al crear o volver a generar el índice por última vez.|Factor de relleno|  
@@ -71,7 +71,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsColumnstore**|El índice es un índice de almacén de columnas optimizado de memoria xVelocity.|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |**IsOptimizedForSequentialKey**|El índice tiene habilitada la optimización para inserciones de la última página.|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores. <br><br>1 = True<br><br>0 = False| 
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
 ## <a name="exceptions"></a>Excepciones  

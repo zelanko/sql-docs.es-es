@@ -14,10 +14,10 @@ ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bfad11f3bcba41160fcb46ede37f6e7ea3c5ece4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295159"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (base de datos de SSISDB)
@@ -29,7 +29,7 @@ ms.locfileid: "71295159"
 
   Muestra los mensajes registrados durante las operaciones del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|El identificador único (ID) del mensaje.|  
 |operation_id|**bigint**|El identificador único de la operación.|  
@@ -39,7 +39,7 @@ ms.locfileid: "71295159"
 |message|**nvarchar(max)**|Texto del mensaje.|  
 |extended_info_id|**bigint**|Es el id. de la información adicional relacionada con el mensaje de la operación, que se encuentra en la vista [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta vista muestra una fila para cada mensaje registrado durante una operación en el catálogo. El mensaje lo puede genera el servidor, el proceso de ejecución del paquete o el motor de ejecución.  
   
  Esta vista muestra los siguientes tipos de mensaje:  
@@ -49,7 +49,7 @@ ms.locfileid: "71295159"
 |-1|Desconocido|  
 |120|Error|  
 |110|Advertencia|  
-|70|Información|  
+|70|Information|  
 |10|Validación previa|  
 |20|Validación posterior|  
 |30|Ejecución previa|  

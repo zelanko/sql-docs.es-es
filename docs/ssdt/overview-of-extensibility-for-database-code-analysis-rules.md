@@ -1,23 +1,24 @@
 ---
-title: Información general sobre extensibilidad para reglas de análisis de código de base de datos | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Extensibility for Database Code Analysis Rules
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd64a7c3152941a88122543dc4b8b80045f175a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ef4ab84a123252dd35da85213110b8b4abb616ad
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984492"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251966"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>Información general sobre extensibilidad para reglas de análisis de código de base de datos
+
 Las ediciones de Visual Studio que contienen SQL Server Data Tools incluyen reglas de análisis de código que proporcionan información acerca del diseño, nomenclatura y advertencias de rendimiento de Transact\-SQL en el código de la base de datos. Para obtener más información, consulte [Análisis del código de bases de datos para mejorar la calidad del código](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx).  
   
 Si las reglas de análisis de código integradas no abarcan un problema de Transact\-SQL determinado que desee incluir, puede crear reglas de análisis de código de base de datos personalizadas. Por ejemplo, es posible que desee crear una regla personalizada que evite el uso de la instrucción WAITFOR DELAY, como se demuestra en [Tutorial para la creación de un ensamblado de reglas de análisis de código estático personalizadas para SQL Server](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md). Para crear reglas de análisis de código de base de datos personalizadas, utilice las clases del espacio de nombres [CodeAnalysis](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.aspx).  
@@ -27,11 +28,11 @@ Antes de crear reglas de análisis de código personalizadas, deberá comprender
 ## <a name="database-code-analysis-rules-components"></a>Componentes de las reglas de análisis de código de base de datos  
 En el siguiente diagrama se muestra cómo interactúan los componentes de las reglas de análisis de código de base de datos:  
   
-![Componentes de las reglas de análisis de código de base de datos](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "Database Code Analysis Rules Components")  
+![Database Code Analysis Rules Components](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "Componentes de las reglas de análisis de código de base de datos")  
   
-Cuando se usa la función de reglas de análisis de código de base de datos, ya sea mediante la ejecución de análisis de código estático directamente (para obtener más información, vea [Cómo: Analizar código de Transact-SQL para buscar defectos](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)) o mediante la realización de una compilación, todas las reglas se cargan y utilizan en función de cómo las haya configurado en el proyecto. Para más información, vea: [Cómo: Habilitar y deshabilitar reglas específicas para el análisis de código estático de base de datos](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx). El Administrador de extensiones también cargará los ensamblados de reglas personalizadas que haya creado y registrado. Para más información, vea: [Cómo: Instalar y administrar las extensiones de características](../ssdt/how-to-install-and-manage-feature-extensions.md).  
+Cuando se usa la característica de análisis de código de base de datos, ya sea mediante la ejecución directa de análisis de código estático (para obtener más información, consulte [Cómo: analizar código de Transact-SQL para buscar defectos](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)) o mediante la realización de una compilación, todas las reglas se cargan y utilizan según cómo se hayan configurado en el proyecto. Para obtener más información, consulte [Cómo: habilitar y deshabilitar reglas específicas para el análisis de código estático de base de datos](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx). El Administrador de extensiones también cargará los ensamblados de reglas personalizadas que haya creado y registrado. Para obtener más información, consulte [Cómo: instalar y administrar las extensiones de características](../ssdt/how-to-install-and-manage-feature-extensions.md).  
   
-Una clase de reglas de análisis de código personalizadas hereda de [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx). La clase de reglas personalizadas puede tener acceso a un número de objetos útiles a través de su contexto de ejecución de regla. Estos incluyen:  
+Una clase de reglas de análisis de código personalizadas hereda de [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx). La clase de reglas personalizadas puede tener acceso a un número de objetos útiles a través de su contexto de ejecución de regla. Entre ellas se incluyen las siguientes:  
   
 -   Metadatos acerca de la propia regla.  
   

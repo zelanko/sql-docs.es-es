@@ -15,10 +15,10 @@ ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0628f715be90586e851fee55301e8c82032739c3
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73593928"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -65,7 +65,7 @@ ms.locfileid: "73593928"
   
 2.  Haga clic en **Nuevo documento** y en **Informe del Generador de informes**. Si no ve esta opción, revise el procedimiento anterior para agregar los tipos de contenido del servidor de informes a una biblioteca.  
   
-### <a name="create-a-basic-report"></a>Crear un informe básico  
+### <a name="create-a-basic-report"></a>Creación de un informe básico  
   
 1.  En una biblioteca de documentos de SharePoint, cree un informe básico de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que solo contenga un cuadro de texto, por ejemplo un título. El informe no contiene ningún origen de datos o conjuntos de datos. El objetivo es comprobar que puede abrir el Generador de informes y obtener una vista previa de un informe básico.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "73593928"
   
 2.  Abra las aplicaciones de la consola Servicios y compruebe que se está ejecutando el servicio Servidor de informes. Para ver el estado del servicio del servidor de informes, haga clic en **Inicio**, seleccione **Panel de control**, haga doble clic en **Herramientas administrativas**y, después, en **Servicios**. Cuando aparezca la lista de servicios, desplácese a **Servidor de informes (MSSQLSERVER)** . El estado debe ser **Iniciado**.  
   
-3.  Abra un explorador y escriba la dirección URL del servidor de informes en la barra de direcciones. La dirección está formada por el nombre del servidor y el nombre del directorio virtual que haya especificado para el servidor de informes durante la instalación. De manera predeterminada, el directorio virtual del servidor de informes se denomina **ReportServer**. Se puede usar la dirección URL siguiente para comprobar la instalación del servidor de informes: https:// *\<nombre de equipo>* /ReportServer *\<_nombre de instancia>* . La dirección URL será distinta si el servidor de informes se instala como una instancia con nombre. Para obtener más información sobre el formato de las direcciones URL, vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Si es un administrador local en Windows Vista o Windows Server 2008, vea [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41; (Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  Abra un explorador y escriba la dirección URL del servidor de informes en la barra de direcciones. La dirección está formada por el nombre del servidor y el nombre del directorio virtual que haya especificado para el servidor de informes durante la instalación. De manera predeterminada, el directorio virtual del servidor de informes se denomina **ReportServer**. Se puede usar la dirección URL siguiente para comprobar la instalación del servidor de informes: https:// *\<nombre de equipo>* /ReportServer *\<_nombre de instancia>* . La dirección URL será distinta si el servidor de informes se instala como una instancia con nombre. Para más información sobre el formato de las direcciones URL, vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Si es un administrador local en Windows Vista o Windows Server 2008, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-4.  Ejecute informes para probar el funcionamiento del servidor de informes. Para este paso, puede crear un informe de muestra con el tutorial. Para obtener más información, vea [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+4.  Ejecute informes para probar el funcionamiento del servidor de informes. Para este paso, puede crear un informe de muestra con el tutorial. Para más información, vea [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 ### <a name="to-verify-that-the-includessrswebportalincludesssrswebportalmd-is-installed-and-running"></a>Para comprobar que el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] está instalado y funciona  
   
@@ -100,7 +100,7 @@ ms.locfileid: "73593928"
   
 2.  Use el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] para crear una carpeta nueva o cargar un archivo para probar si se pasan definiciones a la base de datos del servidor de informes. Si estas operaciones son correctas, la conexión funciona.  
   
-     Para obtener más información, vea [Web Portal &#40;SSRS Native Mode&#41; (Portal web &#40;modo nativo de SSRS&#41;)](../../reporting-services/web-portal-ssrs-native-mode.md).  
+     Para más información, vea [Web Portal &#40;SSRS Native Mode&#41; (Portal web &#40;modo nativo de SSRS&#41;)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Para comprobar que el Diseñador de informes está instalado y funciona  
   

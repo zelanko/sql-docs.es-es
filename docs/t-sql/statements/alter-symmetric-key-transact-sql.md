@@ -22,10 +22,10 @@ ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7314659cc8d0ba18b5b7b7b562ad5df467988638
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070247"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY (Transact-SQL)
@@ -77,7 +77,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  ASYMMETRIC KEY *Asym_Key_Name*  
  Especifica la clave asimétrica que se utiliza para cifrar la clave simétrica que va a cambiarse. La clave asimétrica debe existir en la base de datos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!CAUTION]  
 >  Si se utiliza una contraseña para cifrar una clave simétrica, en lugar de la clave pública de la clave maestra de base de datos, se utiliza el algoritmo de cifrado TRIPLE_DES. Por ello, las claves creadas con un algoritmo de cifrado seguro, como AES, se protegen mediante un algoritmo menos seguro.  

@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72304953"
 ---
 # <a name="hierarchical-data-sql-server"></a>Datos jerárquicos (SQL Server)
@@ -163,7 +163,7 @@ GO
   
      En un índice con prioridad a la amplitud, todos los elementos secundarios directos de un nodo se ubican conjuntamente. Por lo tanto, los índices con prioridad a la amplitud son eficaces para responder a las consultas sobre elementos secundarios inmediatos, como "Buscar todos los empleados que informan directamente a este gerente".  
   
- Saber si es mejor tener un índice con prioridad de profundidad, con prioridad de amplitud, o ambos, y cuál de estos se debe establecer como clave de agrupación en clústeres (cuando proceda), depende de la importancia relativa de los tipos de consultas anteriores y de la importancia relativa de las operaciones SELECT frente a las de DML. Para obtener un ejemplo detallado de las estrategias de indización, vea [Tutorial: Uso del tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Saber si es mejor tener un índice con prioridad de profundidad, con prioridad de amplitud, o ambos, y cuál de estos se debe establecer como clave de agrupación en clústeres (cuando proceda), depende de la importancia relativa de los tipos de consultas anteriores y de la importancia relativa de las operaciones SELECT frente a las de DML. Para obtener un ejemplo detallado de las estrategias de indización, consulte [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Crear índices  
@@ -271,7 +271,7 @@ INSERT SimpleDemo
 ##  <a name="tasks"></a> Tareas relacionadas  
   
 ###  <a name="migrating"></a> Migrar de elemento primario/secundario a hierarchyid  
- La mayoría de los árboles se representan mediante elementos primario y secundario. La manera más fácil de migrar de una estructura de elemento primario y secundario a una tabla que use **hierarchyid** consiste en usar una columna temporal o una tabla temporal para realizar el seguimiento del número de nodos en cada nivel de la jerarquía. Para obtener un ejemplo sobre cómo migrar una tabla de elemento primario/secundario, vea la lección 1 de [Tutorial: Uso del tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ La mayoría de los árboles se representan mediante elementos primario y secundario. La manera más fácil de migrar de una estructura de elemento primario y secundario a una tabla que use **hierarchyid** consiste en usar una columna temporal o una tabla temporal para realizar el seguimiento del número de nodos en cada nivel de la jerarquía. Para ver un ejemplo sobre la migración de una tabla de elemento primario/secundario, consulte la lección 1 de [Tutorial: Usar el tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Administrar un árbol mediante hierarchyid  
@@ -540,7 +540,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de los métodos del tipo de datos hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Tutorial: Uso del tipo de datos hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

@@ -1,10 +1,7 @@
 ---
-title: TuningOptions (DTA, elemento) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: TuningOptions (DTA, elemento)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20b266aa90f9c1a68607468e284fe9e5d8eb9e95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 92b52745273894cd5c1537e4ae8bbb5a0b476ce0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105919"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304841"
 ---
 # <a name="tuningoptions-element-dta"></a>TuningOptions (DTA, elemento)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contiene las opciones de optimización de una sesión de optimización concreta.  
+
+Contiene las opciones de optimización de una sesión de optimización concreta.  
   
 ## <a name="syntax"></a>Sintaxis  
   

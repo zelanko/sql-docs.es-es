@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f559d5e46f06e8bdf33687713ce2dc0c5c49cb78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089340"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started (clase de eventos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La clase de eventos **FT:Crawl Started** indica que se ha iniciado un rastreo de texto completo (llenado). Utilice esta clase de eventos para comprobar si las tareas de trabajo están recogiendo una solicitud de rastreo.  
   
-## <a name="ft-crawl-started-event-class-data-columns"></a>FT: Crawl Started (columnas de datos de la clase de eventos)  
+## <a name="ft-crawl-started-event-class-data-columns"></a>Columnas de datos de la clase de eventos FT:Crawl Started  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  

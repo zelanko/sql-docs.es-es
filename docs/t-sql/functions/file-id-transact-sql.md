@@ -23,13 +23,13 @@ ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 63744a6731e7c57a21a821ce7ab65cb49e095e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071532"
 ---
-# <a name="fileid-transact-sql"></a>FILE_ID (Transact-SQL)
+# <a name="file_id-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Para el nombre lógico dado de un archivo de componente de la base de datos actual, esta función devuelve el número de identificación (id.) del archivo.  
@@ -49,10 +49,10 @@ FILE_ID ( file_name )
 *file_name*  
 Una expresión de tipo **sysname**, que representa el nombre lógico del archivo cuyo valor de identificador de archivo `FILE_ID` va a devolver.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **smallint**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 *file_name* corresponde al nombre de archivo lógico mostrado en la columna name de las vistas de catálogo sys.master_files o sys.database_files.  
 
 `FILE_ID` devuelve `NULL` si *file_name* no corresponde al nombre lógico de un archivo de componente de la base de datos actual.

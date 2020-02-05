@@ -1,10 +1,9 @@
 ---
-title: Propiedades de la consulta (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Propiedades de la consulta
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a5365ffd384ae7feeee35924388ad0f89b03d629
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 0be86ddee956542e2637547acc989cf35407f2dd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266291"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255326"
 ---
 # <a name="query-properties-visual-database-tools"></a>Propiedades de la consulta (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +35,7 @@ Se expande para mostrar la propiedad **Nombre** .
 **Nombre**  
 Muestra el nombre de la consulta actual. No se puede cambiar en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-**Database Name**  
+**Nombre de la base de datos**  
 Muestra el nombre del origen de datos de la tabla seleccionada  
   
 **Nombre de servidor**  
@@ -74,7 +75,7 @@ Permite especificar que la consulta incluirá una cláusula TOP, que solo devuel
   
 Utilice este cuadro para cambiar el número de filas que se van a devolver o para especificar un porcentaje diferente. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o posterior.)  
   
-**Expresión**  
+**Expression**  
 Especifica el número o el porcentaje de filas que la consulta va a devolver. Si establece **Porcentaje** en Sí, este número indicará el porcentaje de filas que devolverá la consulta, mientras que si establece **Porcentaje** en No, representará el número de filas que se devolverá. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 o posterior.)  
   
 **Porcentaje**  

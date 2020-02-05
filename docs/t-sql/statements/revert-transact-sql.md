@@ -23,10 +23,10 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252172"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
@@ -48,7 +48,7 @@ REVERT
  WITH COOKIE = @*varbinary_variable*  
  Especifica la cookie que se creó en la instrucción independiente [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) correspondiente. *\@varbinary_variable* es **varbinary(100)** .  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  REVERT se puede especificar en un módulo, por ejemplo, en un procedimiento almacenado o una función definida por el usuario, o como una instrucción independiente. Cuando se especifica en un módulo, REVERT solo se aplica a las instrucciones EXECUTE AS definidas en el módulo. Por ejemplo, el siguiente procedimiento almacenado emite una instrucción `EXECUTE AS` seguida de una instrucción `REVERT`.  
   
 ```  

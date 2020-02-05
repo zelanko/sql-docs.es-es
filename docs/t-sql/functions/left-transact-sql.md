@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 361059daeb60402f564caa09837046117804ba6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059923"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
@@ -50,12 +50,12 @@ LEFT ( character_expression , integer_expression )
   
  El parámetro *integer_expression* cuenta un carácter suplente UTF 16 como un carácter.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve **varchar** cuando *character_expression* es de un tipo de datos de caracteres no Unicode.  
   
  Devuelve **nvarchar** cuando *character_expression* es de un tipo de datos de caracteres Unicode.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Al usar intercalaciones de SC, el parámetro *integer_expression* cuenta un par suplente UTF 16 como un carácter. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Ejemplos  

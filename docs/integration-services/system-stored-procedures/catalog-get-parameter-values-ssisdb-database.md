@@ -11,10 +11,10 @@ ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0338675549b49dd5c50eff9a8996f7a3ee6ee329
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73049948"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (base de datos de SSISDB)
@@ -55,14 +55,14 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve una tabla que tiene el siguiente formato:  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|Tipo de parámetro. El valor es `20` para un parámetro de proyecto y `30` para un parámetro de paquete.|  
 |parameter_data_type|**nvarchar(128)**|El tipo de datos del parámetro.|  
-|parameter_name|**sysname**|Nombre del parámetro.|  
-|parameter_value|**sql_variant**|El valor del parámetro.|  
+|parameter_name|**sysname**|El nombre del parámetro.|  
+|parameter_value|**sql_variant**|Valor del parámetro.|  
 |sensitive|**bit**|Cuando el valor es `1`, el valor del parámetro es confidencial. Cuando el valor es `0`, el valor del parámetro no es confidencial.|  
-|required|**bit**|Cuando el valor es `1`, se requiere el valor del parámetro para iniciar la ejecución. Cuando el valor es `0`, no se requiere el valor del parámetro para iniciar la ejecución.|  
+|requerido|**bit**|Cuando el valor es `1`, se requiere el valor del parámetro para iniciar la ejecución. Cuando el valor es `0`, no se requiere el valor del parámetro para iniciar la ejecución.|  
 |value_set|**bit**|Cuando el valor es `1`, el valor del parámetro se ha asignado. Cuando el valor es `0`, el valor del parámetro no se ha asignado.|  
   
 > [!NOTE]  

@@ -22,13 +22,13 @@ ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4b354807fedda0f273d5f3822591f7f84912b028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127408"
 ---
-# <a name="rowcountbig-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
+# <a name="rowcount_big-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve el número de filas afectadas por la última instrucción ejecutada. Esta función actúa como [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md), salvo que el tipo de valor devuelto de ROWCOUNT_BIG es **bigint**.  
@@ -42,10 +42,10 @@ ms.locfileid: "68127408"
 ROWCOUNT_BIG ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **bigint**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  A continuación de una instrucción SELECT, esta función devuelve el número de filas devueltas por la instrucción.  
   
  A continuación de las instrucciones INSERT, UPDATE o DELETE, esta función devuelve el número de filas afectadas por la instrucción de modificación de datos.  

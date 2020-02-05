@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bfedebc32722f860fb0c84f385742c441023140d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072211"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
@@ -51,7 +51,7 @@ THROW [ { error_number | @local_variable },
  *state*  
  Es una constante o una variable comprendida entre 0 y 255 que indica el estado que se ha de asociar al mensaje. *state* es **tinyint**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La instrucción anterior a la instrucción THROW debe ir seguida del terminador de instrucción punto y coma (;).  
   
  Si una construcción TRY…CATCH no está disponible, el lote de instrucciones se finaliza. Se establecen el número de línea y el procedimiento donde se produce la excepción. La gravedad se establece en 16.  

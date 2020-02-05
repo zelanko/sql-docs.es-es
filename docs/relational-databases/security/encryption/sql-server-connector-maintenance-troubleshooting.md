@@ -13,10 +13,10 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557940"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Conector de SQL Server, apéndice
@@ -37,14 +37,14 @@ ms.locfileid: "75557940"
   
  Para TDE, así es cómo se lograría:  
   
--   **En PowerShell:** cree una nueva clave asimétrica (con un nombre diferente de la clave asimétrica de TDE actual) en Key Vault.  
+-   **En PowerShell:** cree una nueva clave asimétrica (con un nombre diferente de la clave asimétrica de TDE actual) en el Almacén de claves.  
   
     ```powershell  
     Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **Con [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o sqlcmd.exe:** use las siguientes instrucciones, como se muestra en el paso 3 de la sección 3.  
+-   **Mediante [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o sqlcmd.exe:** use las instrucciones siguientes, tal como se muestra en el paso 3, sección 3.  
   
      Importe la nueva clave asimétrica.  
   
@@ -153,7 +153,7 @@ En resumen, estos son los pasos:
 * Conceda permisos a la entidad de servicio de SQL Server para que use este nuevo almacén.  
 * Modifique la credencial de SQL Server que usa el motor de base de datos para reflejar el nuevo nombre de almacén (si es necesario).  
   
-Las copias de seguridad de claves se pueden restaurar entre regiones de Azure, siempre que permanezcan en la misma región geográfica o nube nacional: Estados Unidos, Canadá, Japón, Australia, India, APAC, Europa, Brasil, China, US Government o Alemania.  
+Se pueden restaurar las copias de seguridad de claves en regiones de Azure, siempre y cuando permanezcan en la misma región geográfica o nube nacional: Estados Unidos, Canadá, Japón, Australia, India, APAC, Brasil y Europa, China, US Gov o Alemania.  
   
   
 ##  <a name="AppendixB"></a> B. Preguntas más frecuentes  

@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228435"
 ---
 # <a name="common-errors-with-database-mail"></a>Errores comunes del Correo electrónico de base de datos 
@@ -33,7 +33,7 @@ Ejemplo:
 EXEC msdb.dbo.sp_send_dbmail ...
 ```
 
-O bien:
+O:
 
 ```sql
 USE msdb;
@@ -44,7 +44,7 @@ EXEC dbo.sp_send_dbmail ...
 Utilice el [Asistente para configuración de Correo electrónico de base de datos](configure-database-mail.md) para habilitar y configurar el Correo electrónico de base de datos.
 
 ## <a name="profile-not-valid"></a>Perfil no válido
-Este mensaje tiene dos causas posibles. El perfil especificado no existe o el usuario que ejecuta [sp_send_dbmail (Transact-SQL)](../system-stored-procedures/sp-send-dbmail-transact-sql.md) no tiene permiso para tener acceso al perfil.
+Este mensaje tiene dos causas posibles: El perfil especificado no existe o el usuario que ejecuta [sp_send_dbmail (Transact-SQL)](../system-stored-procedures/sp-send-dbmail-transact-sql.md) no tiene permiso para tener acceso al perfil.
 
 Para comprobar los permisos de un perfil, ejecute el procedimiento almacenado [sysmail_help_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) con el nombre del perfil. Use el procedimiento almacenado [sysmail_add_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) o el [Asistente para configuración de Correo electrónico de base de datos](configure-database-mail.md) para conceder permiso a un usuario o grupo de msdb para tener acceso a un perfil.
 

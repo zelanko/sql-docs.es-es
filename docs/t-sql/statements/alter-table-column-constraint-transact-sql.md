@@ -21,10 +21,10 @@ ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: f45cb5b270bff9b2609ca0228c4e37a06314d368
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982001"
 ---
 # <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "73982001"
 
   Especifica las propiedades de una restricción PRIMARY KEY, FOREIGN KEY, UNIQUE o CHECK que forma parte de una nueva definición de columna agregada a una tabla mediante [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -170,7 +170,7 @@ ms.locfileid: "73982001"
  *logical_expression*  
  Es una expresión lógica empleada en una restricción CHECK que devuelve TRUE o FALSE. El parámetro *logical_expression* usado con restricciones CHECK no puede hacer referencia a otra tabla, aunque sí a otras columnas de la misma tabla para la misma fila. La expresión no puede hacer referencia a un tipo de datos de alias.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando se agregan restricciones FOREIGN KEY o CHECK, se comprueba si hay infracciones de restricción en todos los datos existentes a menos que se especifique la opción WITH NOCHECK. Si se produce alguna infracción, ALTER TABLE no se ejecuta correctamente y se devuelve un error. Cuando se agrega una nueva restricción PRIMARY KEY o UNIQUE a una columna existente, los datos de las columnas deben ser únicos. Si se detectan valores duplicados, ALTER TABLE no se ejecuta correctamente. La opción WITH NOCHECK no tiene efecto cuando se agregan restricciones PRIMARY KEY o UNIQUE.  
   
  Cada restricción PRIMARY KEY y UNIQUE genera un índice. El número de restricciones UNIQUE y PRIMARY KEY no puede hacer que el número de índices de la tabla supere 999 índices no clúster y 1 índice clúster. Las restricciones de clave externa no generan automáticamente un índice. Sin embargo, las columnas de clave externa suelen emplearse en los criterios de combinación en consultas mediante la correspondencia de la columna o columnas de la restricción de clave externa de una tabla y la columna o columnas de la clave única o principal de la otra tabla. Un índice de las columnas de clave externa permite al [!INCLUDE[ssDE](../../includes/ssde-md.md)] buscar con rapidez datos relacionados en la tabla de clave externa.  

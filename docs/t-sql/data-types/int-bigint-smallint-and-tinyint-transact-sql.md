@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077898"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint y tinyint (Transact-SQL)
@@ -47,7 +47,7 @@ Tipos de datos numéricos exactos que utilizan datos enteros. Para ahorrar espac
 |**smallint**|De -2^15 (-32.768) a 2^15-1 (32.767)|2 bytes|  
 |**tinyint**|De 0 a 255|1 byte|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 El tipo de datos **int** es el principal tipo de datos de valores enteros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El tipo de datos **bigint** está pensado para usarse cuando los valores enteros pueden exceder el intervalo admitido por el tipo de datos **int**.
   
 **bigint** se encuentra entre **smallmoney** y **int** en el gráfico de prioridad de tipo de datos.
@@ -107,7 +107,7 @@ MyBigIntColumn       MyIntColumn MySmallIntColumn MyTinyIntColumn
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

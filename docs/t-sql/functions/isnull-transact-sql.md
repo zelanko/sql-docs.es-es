@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b49310a633c822f8c57f66cc36951dfebe2c0707
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843643"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73843643"
 
 Sustituye el valor NULL por el valor especificado.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,10 +49,10 @@ ISNULL ( check_expression , replacement_value )
  *replacement_value*  
  Es la expresión que se devuelve si *check_expression* es NULL. *valor_de_reemplazo* debe ser de un tipo que se pueda convertir implícitamente en el tipo de *expresión_de_comprobación*.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve el mismo tipo que *check_expression*. Si se proporciona un literal NULL como *check_expression*, devuelve el tipo de datos de *replacement_value*. Si se proporciona un literal NULL como *check_expression* y no se proporciona *replacement_value*, se devuelve un **int**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor de *check_expression* se devuelve si no es NULL; de lo contrario, se devuelve *replacement_value* después de convertirse de forma implícita al tipo de *check_expression*, si los tipos son diferentes. *replacement_value* se puede truncar si *replacement_value* es mayor que *check_expression*.  
   
 > [!NOTE]  
@@ -97,18 +97,18 @@ GO
 |  ---------------   |  -------------  |   --------  |   ---------------    |
 |  No Discount       |  0.00           |   0         |   0                  |
 |  Volume Discount   |  0.02           |   11        |   14                 |
-|  Volume Discount   |  0.05           |   15        |   4                  |
-|  Volume Discount   |  0.10           |   25        |   0                  |
-|  Volume Discount   |  0.15           |   41        |   0                  |
-|  Volume Discount   |  0.20           |   61        |   0                  |
+|  Volume Discount   |  0,05           |   15        |   4                  |
+|  Volume Discount   |  0,10           |   25        |   0                  |
+|  Volume Discount   |  0,15           |   41        |   0                  |
+|  Volume Discount   |  0,20           |   61        |   0                  |
 |  Mountain-100 Cl   |  0.35           |   0         |   0                  |
-|  Sport Helmet Di   |  0.10           |   0         |   0                  |
-|  Road-650 Overst   |  0.30           |   0         |   0                  |
+|  Sport Helmet Di   |  0,10           |   0         |   0                  |
+|  Road-650 Overst   |  0,30           |   0         |   0                  |
 |  Mountain Tire S   |  0.50           |   0         |   0                  |
-|  Sport Helmet Di   |  0.15           |   0         |   0                  |
+|  Sport Helmet Di   |  0,15           |   0         |   0                  |
 |  LL Road Frame S   |  0.35           |   0         |   0                  |
-|  Touring-3000 Pr   |  0.15           |   0         |   0                  |
-|  Touring-1000 Pr   |  0.20           |   0         |   0                  |
+|  Touring-3000 Pr   |  0,15           |   0         |   0                  |
+|  Touring-1000 Pr   |  0,20           |   0         |   0                  |
 |  Half-Price Peda   |  0.50           |   0         |   0                  |
 |  Mountain-500 Si   |  0.40           |   0         |   0                  |
 

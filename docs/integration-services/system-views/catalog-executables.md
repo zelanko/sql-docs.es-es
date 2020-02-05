@@ -11,10 +11,10 @@ ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 687e6940b9674cdff852d8aff3e0f6c05423cc70
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296618"
 ---
 # <a name="catalogexecutables"></a>catalog.executables 
@@ -28,7 +28,7 @@ ms.locfileid: "71296618"
   
  Un ejecutable es una tarea o un contenedor que se agrega al flujo de control de un paquete.  
   
-|Nombre de columna|**Data type**|Descripción|  
+|Nombre de la columna|**Tipo de datos**|Descripción|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|El identificador único para el ejecutable.|  
 |execution_id|**bigint**|Identificador único de la instancia de ejecución.|  
@@ -49,5 +49,5 @@ ms.locfileid: "71296618"
 > [!NOTE]  
 >  Cuando se dispone de permiso para realizar una operación en el servidor, también se dispone de permiso para ver información sobre la operación. Se aplica la seguridad en el nivel de fila; solo se muestran las filas para las que disponga de permiso para ver.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   

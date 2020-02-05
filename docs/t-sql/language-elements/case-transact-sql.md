@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950357"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
@@ -87,7 +87,7 @@ END
  WHEN *Boolean_expression*  
  Es la expresión booleana que se evalúa cuando se utiliza el formato CASE de búsqueda. *Boolean_expression* es cualquier expresión booleana válida.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve el tipo de prioridad más alto del conjunto de tipos de *result_expressions* y la expresión *else_result_expression* opcional. Para obtener más información, vea [Prioridad de tipo de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ### <a name="return-values"></a>Valores devueltos  
@@ -111,7 +111,7 @@ END
   
 -   Si no hay ninguna *Boolean_expression*que se evalúe como TRUE, el [!INCLUDE[ssDE](../../includes/ssde-md.md)]devuelve la *else_result_expression* si se especifica una cláusula ELSE, o bien un valor NULL si no se especifica ninguna cláusula ELSE.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo permite 10 niveles de anidamiento en las expresiones CASE.  
   
  La expresión CASE no se puede utilizar para controlar el flujo de ejecución de los bloques de instrucciones, funciones definidas por el usuario, procedimientos almacenados e instrucciones de Transact-SQL. Para obtener una lista de los métodos de control de flujo, vea [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
@@ -179,7 +179,7 @@ GO
 ```  
   
 ### <a name="c-using-case-in-an-order-by-clause"></a>C. Usar CASE en una cláusula ORDER BY  
- En los ejemplos siguientes se utiliza la expresión CASE en una cláusula ORDER BY para determinar el criterio de ordenación de las filas según el valor de una columna dada. En el primer ejemplo se evalúe el valor de la columna `SalariedFlag` de la tabla `HumanResources.Employee`. Los empleados que tienen la columna `SalariedFlag` establecida en 1 se devuelven en orden descendente según el `BusinessEntityID`. Los empleados que tienen la columna `SalariedFlag` establecida en 0 se devuelven en orden ascendente según el `BusinessEntityID`. En el segundo ejemplo, el conjunto de resultados se ordena según la columna `TerritoryName` cuando la columna `CountryRegionName` es igual a 'United States' y según la columna `CountryRegionName` en las demás filas.  
+ En los ejemplos siguientes se utiliza la expresión CASE en una cláusula ORDER BY para determinar el criterio de ordenación de las filas según el valor de una columna dada. En el primer ejemplo se evalúe el valor de la columna `SalariedFlag` de la tabla `HumanResources.Employee`. Los empleados que tienen la columna `SalariedFlag` establecida en 1 se devuelven en orden descendente según el `BusinessEntityID`. Los empleados que tienen la columna `SalariedFlag` establecida en 0 se devuelven en orden ascendente según el `BusinessEntityID`. En el segundo ejemplo, el conjunto de resultados se ordena según la columna `TerritoryName` cuando la columna `CountryRegionName` es igual a 'Estados Unidos' y según la columna `CountryRegionName` en las demás filas.  
   
 ```  
 SELECT BusinessEntityID, SalariedFlag  

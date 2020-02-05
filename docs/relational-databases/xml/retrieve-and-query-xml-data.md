@@ -14,10 +14,10 @@ ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fd1505bbbfc03308cbdbf6a5fc9fba122c4da24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995267"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperar y consultar datos XML
@@ -92,13 +92,13 @@ GO
   
 |Opciones de SET|Valores requeridos|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNINGS|ON|  
-|ARITHABORT|ON|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
-|NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|ANSI_NULLS|ACTIVAR|  
+|ANSI_PADDING|ACTIVAR|  
+|ANSI_WARNINGS|ACTIVAR|  
+|ARITHABORT|ACTIVAR|  
+|CONCAT_NULL_YIELDS_NULL|ACTIVAR|  
+|NUMERIC_ROUNDABORT|Apagado|  
+|QUOTED_IDENTIFIER|ACTIVAR|  
   
  Si no se establecen las opciones como se indica, no funcionarán las consultas y modificaciones de los métodos del tipo de datos **xml** .  
   

@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68212300"
----
 En este artículo se ofrece una visión global de las soluciones de continuidad empresarial para alta disponibilidad y recuperación ante desastres en SQL Server. 
 
 Una tarea habitual que todo usuario que implemente SQL Server debe tener en cuenta es la comprobación de que todas las instancias de SQL Server críticas y las bases de datos que contienen están disponibles en el momento en que el negocio y los usuarios finales las necesitan; ya sea de 9 a 5 o durante todo el día. El objetivo es mantener la empresa en funcionamiento con una interrupción mínima o inexistente. Este concepto se conoce también como continuidad empresarial.
@@ -75,7 +67,7 @@ Un clúster WSFC y Pacemaker se parecen más de lo que se diferencian. Ambos pro
 Debido a la diferencia en la pila de clúster, se necesitan algunos cambios para los grupos de disponibilidad porque SQL Server tiene que controlar algunos de los metadatos que se controlan de forma nativa por un clúster WSFC. El mayor [!IMPORTANT] cambio es la introducción de un tipo de clúster para un grupo de disponibilidad. Está almacenado en sys.availability_groups en las columnas cluster_type y cluster_type_desc. Hay tres tipos de clústeres:
 
 * WSFC 
-* External
+* Externo
 * None
 
 Todos los grupos de disponibilidad que necesitan disponibilidad deben utilizar un clúster subyacente, lo que en el caso de SQL Server 2017 significa un clúster WSFC o Pacemaker. Para los grupos de disponibilidad basados en Windows Server que usan un clúster WSFC subyacente, el tipo de clúster predeterminado es WSFC (y no es necesario configurarlo). Para los grupos de disponibilidad basados en Linux, al crear el grupo de disponibilidad, el tipo de clúster debe establecerse como Externo. La integración con Pacemaker se configura después de crear el grupo de disponibilidad, mientras que en un clúster de WSFC esto se hace en el momento de la creación.
@@ -91,7 +83,7 @@ La captura de pantalla siguiente muestra la compatibilidad para los distintos ti
 
 ![Opciones de AG de SSMS](media/sql-server-ha-story/image2.png)
  
-##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
+##### <a name="required_synchronized_secondaries_to_commit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
 SQL Server 2016 aumentó la compatibilidad para el número de réplicas sincrónicas de dos a tres en la versión Enterprise Edition. Sin embargo, si se sincronizaba una réplica secundaria pero la otra experimentaba un problema, no existía ningún modo de controlar el comportamiento a fin de indicar a la principal que esperase a la réplica que tenía un comportamiento inadecuado o que le permitiera continuar. Esto significa que la réplica principal en algún momento seguiría recibiendo tráfico de escritura, incluso si la réplica secundaria no estuviera en estado sincronizado, con lo que se produciría una pérdida de datos en la réplica secundaria.
 SQL Server 2017 incluye ahora una opción que permite controlar el comportamiento de lo que sucede cuando hay réplicas sincrónicas denominada REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT. La opción funciona como se describe a continuación:

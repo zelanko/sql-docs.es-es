@@ -18,10 +18,10 @@ ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2b159a11227792ddf445088162a832b0d897deec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107800"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance (tipo de datos geometry)
@@ -40,12 +40,12 @@ ms.locfileid: "68107800"
  *other_geometry*  
  Es otra instancia de **geometry** a partir de la que medir la distancia entre la instancia en la que se invoca a `STDistance()`. Si *other_geometry* es un conjunto vacío, `STDistance()` devuelve NULL.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Tipo de valor devuelto de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  `STDistance()` siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**.  
   
 ## <a name="examples"></a>Ejemplos  

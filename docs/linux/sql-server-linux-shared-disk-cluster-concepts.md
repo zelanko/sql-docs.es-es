@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 81d283ba02ec62a2de8d3c8f0e56be8c55d58190
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032391"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Instancias de clúster de conmutación por error: SQL Server en Linux
@@ -28,7 +28,7 @@ Para crear una FCI de SQL Server en Linux, vea [Configurar la instancia de clús
 * En RHEL, la capa de agrupación en clústeres se basa en el [complemento HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) de Red Hat Enterprise Linux (RHEL). 
 
     > [!NOTE] 
-    > El acceso al complemento HA y la documentación de Red Hat exige una suscripción. 
+    > El acceso al complemento de alta disponibilidad y la documentación de Red Hat exige una suscripción. 
 
 * En SLES, la capa de agrupación en clústeres se basa en [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) de SUSE Linux Enterprise.
 
@@ -36,7 +36,7 @@ Para crear una FCI de SQL Server en Linux, vea [Configurar la instancia de clús
 
 Tanto el complemento HA de RHEL como la extensión HAE de SUSE se basan en [Pacemaker](https://clusterlabs.org/).
 
-Como se muestra en el diagrama siguiente, el almacenamiento se presenta en dos servidores. Los componentes de agrupación en clústeres (Corosync y Pacemaker) coordinan las comunicaciones y la administración de recursos. Uno de los servidores tiene la conexión activa a los recursos de almacenamiento y SQL Server. Cuando Pacemaker detecta un error, los componentes de agrupación en clústeres administran el traslado de los recursos al otro nodo.  
+Como se muestra en el diagrama siguiente, el almacenamiento se presenta en dos servidores. Los componentes de agrupación en clústeres (Corosync y Pacemaker) coordinan las comunicaciones y la administración de recursos. Uno de los servidores tiene la conexión activa a los recursos de almacenamiento y SQL Server. Cuando Pacemaker detecta un error, los componentes de agrupación en clústeres administran el traslado de los recursos al otro nodo.  
 
 ![Clúster de SQL de disco compartido de Red Hat Enterprise Linux 7](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
@@ -83,6 +83,6 @@ Las rutas de acceso predeterminadas de las bases de datos que no son del sistema
 
 En los temas siguientes se explica cómo configurar los tipos de almacenamiento admitidos para una FCI de SQL Server basada en Linux:
 
-- [Configuración de la instancia de clúster de conmutación por error: iSCSI: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-- [Configuración de la instancia de clúster de conmutación por error: NFS: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-- [Configuración de la instancia de clúster de conmutación por error: SMB: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
+- [Configurar la instancia de clúster de conmutación por error - iSCSI - SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+- [Configurar la instancia de clúster de conmutación por error - NFS - SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+- [Configurar la instancia de clúster de conmutación por error - SMB - SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)

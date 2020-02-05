@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 523b082be7b61991db13d588a7203ad4ce5597ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68055429"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Deshabilitar compresión de una tabla o un índice
@@ -152,7 +152,7 @@ ms.locfileid: "68055429"
   
     6.  Debajo de **Resumen**, en **Descripción**, compruebe que todos los valores de la programación de trabajo son correctos.  
   
-    7.  Haga clic en **Aceptar**.  
+    7.  Haga clic en **OK**.  
   
      Después de completar esta página, haga clic en **Siguiente**.  
   
@@ -171,10 +171,10 @@ ms.locfileid: "68055429"
      **Estado**  
      Indica si la acción del asistente como conjunto ha devuelto el valor **Correcto** o **Error**.  
   
-     **de mensaje**  
+     **Mensaje**  
      Proporciona los mensajes de error o de advertencia devueltos por el proceso.  
   
-     **Informe**  
+     **Report**  
      Crea un informe que contiene los resultados del Asistente para la creación de particiones. Las opciones son **Ver informe**, **Guardar informe en archivo**, **Copiar informe al Portapapeles**y **Enviar informe como correo electrónico**.  
   
      **Ver informe**  

@@ -12,22 +12,22 @@ ms.assetid: f33f514c-56aa-42e2-841b-e91244da90e2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 473d752109ce90476602a0a60d7f6f5263caac09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68060592"
 ---
-# <a name="mssqlserver107"></a>MSSQLSERVER_107
+# <a name="mssqlserver_107"></a>MSSQLSERVER_107
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|107|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|107|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|P_NOCORRMATCH|  
 |Texto del mensaje|El prefijo de columna '%.*ls' no coincide con un nombre de tabla o un nombre de alias utilizado en la consulta.|  
@@ -56,7 +56,7 @@ Haga coincidir los prefijos de columna con los nombres de tabla o con los nombre
 SELECT T1.* FROM dbo.ErrorLog AS T1;  
 ```  
   
-o Administrador de configuración de  
+or  
   
 ```  
 SELECT ErrorLog.* FROM dbo.ErrorLog;  

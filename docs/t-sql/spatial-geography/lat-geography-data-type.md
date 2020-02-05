@@ -18,10 +18,10 @@ ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7da6aca6ccc5180d379ff853267d2de9f682cfb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040095"
 ---
 # <a name="lat-geography-data-type"></a>Lat (tipo de datos geography)
@@ -35,12 +35,12 @@ ms.locfileid: "68040095"
 .Lat  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo CLR: **SqlDouble**  
+ Tipo de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En el modelo OpenGIS, Lat se define solo en instancias de **geography** que constan de un único punto. Esta propiedad devuelve NULL si las instancias de **geography** contienen más de un punto. Esta propiedad es precisa y de solo lectura.  
   
 ## <a name="examples"></a>Ejemplos  

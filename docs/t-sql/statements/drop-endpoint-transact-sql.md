@@ -22,10 +22,10 @@ ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1b490b3aae8fce4ef7b4ae912275e8a338f44833
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898060"
 ---
 # <a name="drop-endpoint-transact-sql"></a>DROP ENDPOINT (Transact-SQL)
@@ -46,7 +46,7 @@ DROP ENDPOINT endPointName
  *endPointName*  
  Es el nombre del extremo que se va a quitar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las instrucciones ENDPOINT DDL no se pueden ejecutar dentro de una transacción de usuario.  
   
 ## <a name="permissions"></a>Permisos  

@@ -18,10 +18,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071171"
 ---
 # <a name="insert-sql-graph"></a>INSERT (gráfico SQL)
@@ -32,7 +32,7 @@ Agrega una o varias filas a una tabla `node` o `edge` en [!INCLUDE[ssNoVersion](
 > [!NOTE]   
 >  Para obtener instrucciones Transact-SQL estándar, vea [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
-![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="insert-into-node-table-syntax"></a>Sintaxis INSERT en tabla de nodo 
 La sintaxis para insertar en una tabla de nodo es la misma que para una tabla normal. 
@@ -116,7 +116,7 @@ Patrón de búsqueda proporcionado a la cláusula `MATCH` como parte del predica
 Los usuarios deben proporcionar valores en `$from_id` y `$to_id` al realizar una operación de inserción en una tabla perimetral. Se devolverá un error si no se proporciona un valor o se insertan valores NULL en esas columnas. 
   
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Insertar en un nodo es lo mismo que insertar en cualquier tabla relacional. Los valores de la columna $node_id se generan automáticamente.
 
 Al insertar en una tabla perimetral, los usuarios deben proporcionar valores para las columnas `$from_id` y `$to_id`.   

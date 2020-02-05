@@ -20,10 +20,10 @@ ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0bc401b25b2822b7322c856ed3b2de0e670656b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944502"
 ---
 # <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
@@ -43,10 +43,10 @@ ms.locfileid: "67944502"
 @@REMSERVER  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  @@REMSERVER permite a un procedimiento almacenado comprobar el nombre del servidor de base de datos desde el que se ejecuta.  
   
 ## <a name="examples"></a>Ejemplos  

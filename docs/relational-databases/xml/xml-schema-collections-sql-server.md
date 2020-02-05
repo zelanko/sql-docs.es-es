@@ -22,10 +22,10 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68096817"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Colecciones de esquemas XML (SQL Server)
@@ -36,9 +36,9 @@ ms.locfileid: "68096817"
   
 -   Asignar un tipo a los datos XML cuando se almacenan en la base de datos  
   
- Tenga en cuenta que la colección de esquemas XML es una entidad de metadatos como una tabla de la base de datos. Se pueden crear, modificar y arrastrar. Los esquemas especificados en una instrucción [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) se importan automáticamente en el objeto de la colección de esquemas XML recién creado. Se pueden importar otros esquemas o componentes de esquemas en un objeto de la colección existente de la base de datos usando la instrucción [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md).  
+ Tenga en cuenta que la colección de esquemas XML es una entidad de metadatos como una tabla de la base de datos. Se pueden crear, modificar y arrastrar. Los esquemas especificados en una instrucción [CREATE XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) se importan automáticamente en el objeto de la colección de esquemas XML recién creado. Se pueden importar otros esquemas o componentes de esquemas en un objeto de la colección existente de la base de datos usando la instrucción [ALTER XML SCHEMA COLLECTION (Transact-SQL)](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) .  
   
- Como se describe en el tema [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md), el XML almacenado en una columna o variable al que está asociado un esquema se conoce como XML **con tipo**, porque el esquema indica la información del tipo de datos necesaria para los datos de la instancia. SQL Server usa esta información del tipo para optimizar el almacenamiento de datos.  
+ Como se describe en el tema [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md), el XML almacenado en una columna o variable al que está asociado un esquema se conoce como XML **con tipo** , porque el esquema indica la información del tipo de datos necesaria para los datos de la instancia. SQL Server usa esta información del tipo para optimizar el almacenamiento de datos.  
   
  El motor de procesamiento de consultas también usa el esquema para la comprobación de los tipos y para optimizar las consultas y la modificación de datos.  
   

@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: e08891eb7cb9fb897b48e37d6d8caa0e12620d06
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68768359"
 ---
 # <a name="subscribe-to-publications"></a>Suscribirse a publicaciones
@@ -38,7 +38,7 @@ ms.locfileid: "68768359"
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
-|Suscripción|Características|Se utiliza si|  
+|Subscription|Características|Se utiliza si|  
 |------------------|---------------------|--------------|  
 |Suscripción de inserción|Con una suscripción de inserción, el publicador propaga los cambios al suscriptor sin que éste lo solicite. Los cambios pueden insertarse en los suscriptores a petición, de manera continua o según una programación. De forma predeterminada, el Agente de distribución o el Agente de mezcla se ejecutan en el distribuidor.|Normalmente, los datos se sincronizarán de forma continua o con una frecuencia determinada.<br /><br /> Las publicaciones requieren que el movimiento de datos sea casi en tiempo real.<br /><br /> La sobrecarga del procesador en el distribuidor no afecta al rendimiento.<br /><br /> Se utiliza frecuentemente en la replicación de instantáneas y transaccional.|  
 |Suscripción de extracción|En una suscripción de extracción, el suscriptor solicita los cambios efectuados en el publicador. Las suscripciones de extracción permiten al usuario del suscriptor determinar cuándo se sincronizan los cambios en los datos. El Agente de distribución o el Agente de mezcla se ejecutan en el suscriptor.|Los datos se sincronizarán, generalmente, a petición o en función de una programación, en lugar de hacerlo de forma continuada.<br /><br /> La publicación dispone de un gran número de suscriptores y/o la ejecución de todos los agentes en el distribuidor supone un uso demasiado intensivo de recursos.<br /><br /> Los suscriptores son autónomos, están desconectados o se desplazan. Los suscriptores determinan cuándo se conectarán y sincronizarán los cambios.<br /><br /> Se utiliza frecuentemente en la replicación de mezcla.|  
@@ -68,7 +68,7 @@ ms.locfileid: "68768359"
   
  **Para crear una suscripción de inserción**  
   
- [Crear una suscripción de inserción](../../relational-databases/replication/create-a-push-subscription.md)  
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md) (Creación de una suscripción de inserción)  
   
  **Para ver o modificar las propiedades de una suscripción de inserción**  
   

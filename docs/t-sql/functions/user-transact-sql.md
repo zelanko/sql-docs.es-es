@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46bb30958394b2196c5521620cf503f4558a6f82
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844324"
 ---
 # <a name="user-transact-sql"></a>USER (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73844324"
 
   Permite insertar en una tabla un valor proporcionado por el sistema para el nombre de usuario actual de la base de datos cuando no se especifica ningún valor predeterminado.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,10 +43,10 @@ ms.locfileid: "73844324"
 USER  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  USER ofrece la misma funcionalidad que la función del sistema USER_NAME.  
   
  Puede utilizar USER con restricciones DEFAULT en las instrucciones CREATE TABLE o ALTER TABLE, o bien utilizarla como cualquier función estándar.  

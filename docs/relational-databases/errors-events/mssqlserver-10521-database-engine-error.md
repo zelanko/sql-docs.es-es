@@ -12,10 +12,10 @@ ms.assetid: ba2d7e44-207c-4428-b5f0-c975ac122c0d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d2dde7bedad58273cb207b05f54824c9c5ddff5c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305854"
 ---
 # <a name="mssqlserver_10521"></a>MSSQLSERVER_10521
@@ -25,9 +25,9 @@ ms.locfileid: "72305854"
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|10521|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|10521|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|PG_PARAM_NEEDED|  
 |Texto del mensaje|No se puede crear la guía de plan "%.\*ls" porque se ha especificado **\@type** como "%ls" y el valor del parámetro "%ls" es NULL. Este tipo requiere un valor no NULL para el parámetro. Especifique un valor no NULL para el parámetro o cambie el tipo por otro que admita un valor NULL para el parámetro.|  

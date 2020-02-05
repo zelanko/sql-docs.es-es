@@ -19,10 +19,10 @@ ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 236749303a05b54f37be5e24f10f56fc6f5bc41d
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71227155"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
@@ -74,13 +74,13 @@ La credencial usada debe crearse mediante el uso de `SHARED ACCESS SIGNATURE` co
 
   
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
  Solo puede modificarse un único origen de cada vez. Las solicitudes simultáneas para modificar el mismo origen hacen que una instrucción tenga que esperar. Aun así, es posible modificar varios orígenes al mismo tiempo. Esta instrucción se puede ejecutar simultáneamente con otras instrucciones.
 
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER ANY EXTERNAL DATA SOURCE.
  > [!IMPORTANT]  
- > El permiso ALTER ANY EXTERNAL DATA SOURCE concede a cualquier entidad de seguridad la capacidad de crear y modificar cualquier objeto de origen de datos externo y, por lo tanto, también permite obtener acceso a todas las credenciales con ámbito de base de datos de la base de datos. Debe considerarse como un permiso con muchos privilegios, por lo que solo debe concederse a las entidades de seguridad de confianza del sistema.
+ > El permiso ALTER ANY EXTERNAL DATA SOURCE concede a cualquier entidad de seguridad la capacidad de crear y modificar cualquier objeto de origen de datos externo y, por lo tanto, también permite acceder a todas las credenciales con ámbito de base de datos de la base de datos. Debe considerarse como un permiso con muchos privilegios, por lo que solo debe concederse a las entidades de seguridad de confianza del sistema.
 
 
 ## <a name="examples"></a>Ejemplos  

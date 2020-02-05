@@ -26,13 +26,13 @@ ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ead8278841f3eafa97f31b91480cb8464ce77dd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071494"
 ---
-# <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
+# <a name="file_name-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Esta función devuelve el nombre de archivo lógico correspondiente a un número de identificación (id.) de archivo dado.  
@@ -49,10 +49,10 @@ FILE_NAME ( file_id )
 *file_id*  
 Número de identificación de archivo cuyo nombre de archivo `FILE_NAME` va a devolver. *file_id* tiene un tipo de datos **int**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 *file_ID* corresponde a la columna file_id de la vista de catálogo sys.master_files o la vista de catálogo sys.database_files.  
   
 ## <a name="examples"></a>Ejemplos  

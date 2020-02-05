@@ -18,10 +18,10 @@ ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d026e01ee6675d0af462492469913d280124cc31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000367"
 ---
 # <a name="write-database-engine"></a>Write (motor de base de datos)
@@ -39,10 +39,10 @@ void Write( BinaryWriter w )
 *w*  
 Un objeto **BinaryWriter** en el que se escribirá la representación binaria de este nodo de **hierarchyid**.
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **Tipo de valor devuelto de CLR: void**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa Write internamente cuando es necesario, por ejemplo, al cargar datos en la columna **hierarchyid**. También se llama a Write internamente cuando se realiza una conversión entre **hierarchyid** y **varbinary**.
   
 ## <a name="examples"></a>Ejemplos  
@@ -55,7 +55,7 @@ byte[] encoding = stream.ToArray();
   
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Read &#40;motor de base de datos&#41;](../../t-sql/data-types/read-database-engine.md)  
 [ToString &#40;motor de base de datos&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  

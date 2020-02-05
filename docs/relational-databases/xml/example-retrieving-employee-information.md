@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Recuperación de información de los empleados | Microsoft Docs'
+title: 'Ejemplo: Recuperar información de los empleados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3e123a5195d9eb6a5dd489c635cdd687b42f720
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006781"
 ---
-# <a name="example-retrieving-employee-information"></a>Ejemplo: Recuperación de información de los empleados
+# <a name="example-retrieving-employee-information"></a>Ejemplo: Recuperar información de los empleados
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   En este ejemplo, se recupera el identificador y el nombre de cada empleado. En la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , el identificador de empleado se puede obtener de la columna BusinessEntityID de la tabla Employee. Los nombres de los empleados se pueden obtener de la tabla Person. Para combinar las tablas, se puede usar la columna BusinessEntityID.  
   
@@ -58,7 +58,7 @@ INNER JOIN Person.Person AS P
 ON  E.BusinessEntityID = P.BusinessEntityID;  
 ```  
   
- Combina estas consultas con `UNION AL`L, aplica `FOR XML EXPLICIT` y especifica la cláusula `ORDER BY` querida. El conjunto de filas se debe ordenar primero según el valor de `BusinessEntityID` y, a continuación, por nombre, de modo que los valores NULL en el nombre aparezcan al principio. Si ejecuta la siguiente consulta sin la cláusula FOR XML, podrá ver la tabla universal generada.  
+ Combina estas consultas con `UNION AL`L, aplica `FOR XML EXPLICIT`y especifica la cláusula `ORDER BY` querida. El conjunto de filas se debe ordenar primero según el valor de `BusinessEntityID` y, a continuación, por nombre, de modo que los valores NULL en el nombre aparezcan al principio. Si ejecuta la siguiente consulta sin la cláusula FOR XML, podrá ver la tabla universal generada.  
   
  Esta es la consulta final:  
   

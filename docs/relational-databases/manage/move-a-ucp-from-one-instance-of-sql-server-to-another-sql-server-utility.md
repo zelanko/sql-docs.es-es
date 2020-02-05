@@ -11,10 +11,10 @@ ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bffc65e8586e8a158c58f7afb5cfb244835e8c86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115391"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>Mover un UCP desde una instancia de SQL Server a otra (utilidad de SQL Server)
@@ -25,9 +25,9 @@ ms.locfileid: "68115391"
   
 #### <a name="move-a-ucp-from-one-instance-of-sql-server-to-another"></a>Mover un UCP desde una instancia de SQL Server a otra.  
   
-1.  Cree un nuevo UCP en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que será la nueva instancia del host del UCP. Para obtener más información, vea [Crear un punto de control de la Utilidad de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  
+1.  Cree un nuevo UCP en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que será la nueva instancia del host del UCP. Para obtener más información, vea [Crear un punto de control de la Utilidad de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md).  
   
-2.  Si se ha establecido la configuración de la directiva no predeterminada para alguna de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en su utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tome nota de los umbrales de la directiva, de forma que pueda restablecerlos en el UCP nuevo. Las directivas predeterminadas se aplicarán cuando se agreguen las instancias al UCP nuevo. Si las directivas predeterminadas están en vigor, la vista de lista de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará **Global** en la columna **Tipo de directiva** .  
+2.  Si se ha establecido la configuración de la directiva no predeterminada para alguna de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en su utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tome nota de los umbrales de la directiva, de forma que pueda restablecerlos en el UCP nuevo. Las directivas predeterminadas se aplicarán cuando se agreguen las instancias al UCP nuevo. Si las directivas predeterminadas están en vigor, la vista de lista de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará **Global** en la columna **Tipo de directiva** .  
   
 3.  Quite todas las instancias administradas del UCP anterior. Para obtener más información, vea [Quitar una instancia de SQL Server de la Utilidad de SQL Server](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
   

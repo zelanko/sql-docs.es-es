@@ -21,10 +21,10 @@ ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065998"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
@@ -55,7 +55,7 @@ FOR CONVERSATION
  Especifica el nombre de la prioridad de conversación que se va a modificar. El nombre debe hacer referencia a una prioridad de conversación de la base de datos actual.  
   
  SET  
- Especifica los criterios para determinar si la prioridad de conversación se aplica a una conversación. SET es necesario y debe contener al menos un criterio: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME o PRIORITY_LEVEL.  
+ Especifica los criterios para determinar si la prioridad de conversación se aplica a una conversación. SET es necesario y debe incluir al menos un criterio: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME o PRIORITY_LEVEL.  
   
  CONTRACT_NAM = {*ContractName* | **ANY**}  
  Especifica el nombre de un contrato que se va a usar como criterio para determinar si la prioridad de conversación se aplica a una conversación. *ContractName* es un identificador de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y debe especificar el nombre de un contrato en la base de datos actual.  
@@ -107,7 +107,7 @@ FOR CONVERSATION
   
  Si no se especifica PRIORITY_LEVEL, la propiedad de nivel de prioridad no se modifica.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Ninguna de las propiedades modificadas por ALTER BROKER PRIORITY se aplica a las conversaciones existentes. Las conversaciones existentes continúan con la prioridad que les fue asignada cuando se iniciaron.  
   
  Para obtener más información, vea [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md).  

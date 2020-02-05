@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificación de la directiva XMLTEXT | Microsoft Docs'
+title: 'Ejemplo: Especificar la directiva XMLTEXT | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006677"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Ejemplo: Especificación de la directiva XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Ejemplo: Especificar la directiva XMLTEXT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   En este ejemplo se muestra cómo se tratan los datos de la columna de desbordamiento con la directiva **XMLTEXT** en una instrucción `SELECT` con el modo EXPLICIT.  
   
@@ -127,7 +127,7 @@ FOR XML EXPLICIT
  </Parent>
  ```  
   
- En este elemento de consulta, se especifica *directive* para el atributo `PersonName`. De este modo, `PersonName` se agrega como subelemento del elemento <`Parent`> que lo incluye. Los atributos de <`xmltext`> se siguen agregando al elemento <`Parent`> que lo incluye. El contenido del elemento <`overflow`> (los subelementos) se antepone a otros subelementos de los elementos <`Parent`> que lo incluyen.  
+ En este elemento de consulta, se especifica *directive* para el atributo `PersonName` . De este modo, `PersonName` se agrega como subelemento del elemento <`Parent`> que lo incluye. Los atributos de <`xmltext`> se siguen agregando al elemento <`Parent`> que lo incluye. El contenido del elemento <`overflow`> (los subelementos) se antepone a otros subelementos de los elementos <`Parent`> que lo incluyen.  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  

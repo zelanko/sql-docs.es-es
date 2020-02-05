@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981784"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73981784"
 
   Devuelve el nombre de inicio de sesión asociado a un número de identificación de seguridad (SID).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,14 +48,14 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="arguments"></a>Argumentos  
  *server_user_sid*  
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Se trata del número de identificación opcional de seguridad del inicio de sesión. *server_user_sid* es **varbinary(85)** . *server_user_sid* puede ser el número de identificación de seguridad de cualquier inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o de un usuario o grupo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Si no se especifica *server_user_sid*, se devuelve información acerca del usuario actual. Si el parámetro contiene la palabra NULL, se devolverá NULL.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  SUSER_SNAME puede usarse como una restricción DEFAULT en ALTER TABLE o CREATE TABLE. Se puede utilizar SUSER_SNAME en una lista de selección, en la cláusula WHERE y en cualquier lugar en el que se permita una expresión. SUSER_SNAME siempre debe ir seguida de paréntesis, aunque no se especifique ningún parámetro.  
   
  Si se llama sin un argumento, SUSER_SNAME devuelve el nombre del contexto de seguridad actual. Si se llama sin un argumento en un lote que ha cambiado de contexto mediante EXECUTE AS, SUSER_SNAME devuelve el nombre del contexto suplantado. Si se llama desde un contexto suplantado, ORIGINAL_LOGIN devuelve el nombre del contexto original.  
@@ -78,7 +78,7 @@ GO
 ### <a name="b-using-suser_sname-with-a-windows-user-security-id"></a>B. Usar SUSER_SNAME con un identificador de seguridad de usuario de Windows  
  En el siguiente ejemplo se devuelve el nombre de inicio de sesión asociado a un número de identificación de seguridad de Windows.  
   
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
 ```  
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
@@ -105,7 +105,7 @@ GO
 ### <a name="d-calling-suser_sname-in-combination-with-execute-as"></a>D. Llamar a SUSER_SNAME junto con EXECUTE AS  
  En este ejemplo se muestra el comportamiento de SUSER_SNAME si se llama desde un contexto suplantado.  
   
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
 ```  
 SELECT SUSER_SNAME();  

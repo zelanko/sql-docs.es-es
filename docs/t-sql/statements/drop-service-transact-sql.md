@@ -22,10 +22,10 @@ ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c23b3895afaae2e474898a617c2fbabee4df2abe
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73791310"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73791310"
 
   Quita un servicio existente.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +47,7 @@ DROP SERVICE service_name
  *service_name*  
  Nombre del servicio que se va a quitar. No se pueden especificar nombres de servidor, base de datos o esquema.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  No se puede quitar un servicio si hay alguna prioridad de conversación que haga referencia a él.  
   
  Al quitar un servicio, se eliminan todos los mensajes para dicho servicio de la cola que utiliza. [!INCLUDE[ssSB](../../includes/sssb-md.md)] envía un error al lado remoto de cualquier conversación abierta que utilice el servicio.  

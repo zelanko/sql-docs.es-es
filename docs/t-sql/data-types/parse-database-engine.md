@@ -18,10 +18,10 @@ ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119816"
 ---
 # <a name="parse-database-engine"></a>Parse (motor de base de datos)
@@ -46,16 +46,16 @@ static SqlHierarchyId Parse ( SqlString input )
   
 ## <a name="arguments"></a>Argumentos  
 *input*  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]: valor de tipo de datos de carácter que se va a convertir.
+[!INCLUDE[tsql](../../includes/tsql-md.md)]: Valor de tipo de datos de carácter que se va a convertir.
   
-CLR: valor de cadena que se va a evaluar.
+CLR: Valor de cadena que se va a evaluar.
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **Tipo de valor devuelto de SQL Server: hierarchyid**
   
 **Tipo devuelto de CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Si Parse recibe un valor que no es una representación de cadena válida de un **hierarchyid**, se producirá una excepción. Por ejemplo, si los tipos de datos **char** contienen espacios finales, se producirá una excepción.
   
 ## <a name="examples"></a>Ejemplos  
@@ -89,7 +89,7 @@ string input = "/1/2/";
 SqlHierarchyId.Parse(input);  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Referencia de los métodos del tipo de datos hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

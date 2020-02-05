@@ -18,10 +18,10 @@ ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1ca7e74743773fb42a85300a37cc6b8aaa9d8f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066267"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin (tipo de datos geometry)
@@ -40,12 +40,12 @@ Devuelve 1 si una instancia de **geometry** se encuentra totalmente dentro de ot
  *other_geometry*  
  Es otra instancia de **geometry** con la que se compara la instancia en la que se invoca `STWithin()`.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**.
   
 ## <a name="examples"></a>Ejemplos  

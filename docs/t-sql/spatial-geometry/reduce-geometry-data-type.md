@@ -18,10 +18,10 @@ ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5725b95df233f46e9e003f6c2af155ae943ba2b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101042"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (tipo de datos geometry)
@@ -40,12 +40,12 @@ Devuelve una aproximación de la instancia de **geometry** especificada. La apro
  *tolerance*  
  Es un valor de tipo **float**. *tolerancia* es la tolerancia que se usa como entrada para el algoritmo de aproximación.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para los tipos de colección, este algoritmo funciona independientemente en cada tipo **geometry** contenido en la instancia.  
   
  Este algoritmo no modifica las instancias de **Point**.  

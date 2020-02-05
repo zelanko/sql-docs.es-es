@@ -18,10 +18,10 @@ ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 19aec9ae5a0253e74ff8816fadcfdbb7a2a74001
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042449"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (tipo de datos Geography)
@@ -40,7 +40,7 @@ ms.locfileid: "68042449"
  *n*  
  Es una expresión **int** entre 1 y el número de curvas de la instancia de **geography**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
@@ -48,7 +48,7 @@ ms.locfileid: "68042449"
 ## <a name="exceptions"></a>Excepciones  
  Si n < 1, se produce una excepción **ArgumentOutOfRangeException**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando se dan los criterios siguientes, se devuelve **NULL**.  
   
 -   Se declara la instancia de **geography**, pero no se crea.  

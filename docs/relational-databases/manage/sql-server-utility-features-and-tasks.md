@@ -18,10 +18,10 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 08c4877b4fc3280826100cdfe7f0dfcad716ca22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115313"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Características y tareas de la utilidad de SQL Server
@@ -41,7 +41,7 @@ ms.locfileid: "68115313"
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |Describe las consideraciones para configurar un servidor que ejecute los conjuntos de recopilación de la utilidad y que no sean de la utilidad en la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Consideraciones para ejecutar conjuntos de recopilación de la utilidad y que no sean de la utilidad en la misma instancia de SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |Describe cómo crear un punto de control de la Utilidad de SQL Server.|[Crear un punto de control de la Utilidad de SQL Server &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Describe cómo conectarse a una Utilidad de SQL Server.|[Conectarse a una utilidad de SQL Server](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  

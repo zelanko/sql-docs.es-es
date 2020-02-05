@@ -14,10 +14,10 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b9ac40997cd2d9962d067d181a66e9614de477d1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297690"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (Not bit a bit) (expresión de SSIS)
@@ -42,7 +42,7 @@ ms.locfileid: "71297690"
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve el tipo de datos de *integer_expression*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  None  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  

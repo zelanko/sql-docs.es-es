@@ -20,10 +20,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056099"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
@@ -74,7 +74,7 @@ ms.locfileid: "74056099"
   
 2.  Expanda **Bases de datos**y, a continuación, expanda la base de datos en la que desea crear la lista de propiedades de búsqueda.  
   
-3.  Expanda **Almacenamiento**y haga clic con el botón derecho en **Listas de propiedades de búsqueda**.  
+3.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario del mouse en **Listas de propiedades de búsqueda**.  
   
 4.  Seleccione **Nueva lista de propiedades de búsqueda**.  
   
@@ -195,7 +195,7 @@ GO
   
 5.  Haga clic con el botón derecho en la lista de propiedades y seleccione **Propiedades**.  
   
-6.  En el cuadro de diálogo **Editor de lista de propiedades de búsqueda** , utilice la cuadrícula de Propiedades para agregar o quitar propiedades de búsqueda:  
+6.  En el cuadro de diálogo **Editor de lista de propiedades de búsqueda**, utilice la cuadrícula de Propiedades para agregar o quitar propiedades de búsqueda:  
   
     1.  Para quitar una propiedad de documento, haga clic en el encabezado de fila a la izquierda de la propiedad y presione SUPR.  
   
@@ -218,7 +218,7 @@ GO
   
 2.  Expanda **Bases de datos**y, a continuación, expanda la base de datos.  
   
-3.  Expanda **Almacenamiento**y, a continuación, expanda el nodo **Listas de propiedades de búsqueda** .  
+3.  Expanda **Almacenamiento** y, a continuación, expanda el nodo **Listas de propiedades de búsqueda**.  
   
 4.  Haga clic con el botón derecho en la lista de propiedades que quiera eliminar y haga clic en **Eliminar**.  
   

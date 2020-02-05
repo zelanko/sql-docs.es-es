@@ -12,22 +12,22 @@ ms.assetid: f25852f9-b91c-4356-b817-78bec9ec8db4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f02dafba3f6fbb8742c8b81ded8fccf39f0509f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098321"
 ---
-# <a name="mssqlserver3414"></a>MSSQLSERVER_3414
+# <a name="mssqlserver_3414"></a>MSSQLSERVER_3414
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|3414|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|3414|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|REC_GIVEUP|  
 |Texto del mensaje|Se ha producido un error durante la recuperación que impide reiniciar la base de datos '%.*ls' (id. de base de datos %d). Diagnostique los errores de recuperación y corríjalos, o restaure desde una copia de seguridad en buen estado. Si los errores no se han corregido o se espera que haya errores, póngase en contacto con el soporte técnico.|  

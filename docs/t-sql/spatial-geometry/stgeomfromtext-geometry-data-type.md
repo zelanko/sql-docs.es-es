@@ -18,10 +18,10 @@ ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7850a3fec40dcdd6606086d44e626e2e5f57ea93
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950172"
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (tipo de datos geometry)
@@ -43,12 +43,12 @@ STGeomFromText ( 'geometry_tagged_text' , SRID )
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometry** que se quiere devolver.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El tipo OGC de la instancia de **geometry** devuelta por `STGeomFromText()` se establece en la entrada WKT correspondiente.  
   
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  

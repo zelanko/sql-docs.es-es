@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59c4f13d53a8ffa296a685883bd4797d59403c55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130158"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
@@ -45,7 +45,7 @@ NCHAR ( integer_expression )
   
  Cuando la intercalación de la base de datos admite la marca SC, se trata de un entero positivo de 0 a 1114111 (de 0 a 0x10FFFF). Si se especifica un valor fuera de este rango, se devuelve NULL.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **nchar(1)** cuando la intercalación de la base de datos predeterminada no admite caracteres complementarios.  
   
  **nvarchar(2)** cuando la intercalación de la base de datos predeterminada admite caracteres complementarios.  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 76675cf49ba1ac19e18b3bb4b96980aa30c4f6c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115885"
 ---
 # <a name="objecttype-trace-event-column"></a>Columna de evento de seguimiento ObjectType
@@ -28,7 +28,7 @@ ms.locfileid: "68115885"
   
 ## <a name="object-type-column-values"></a>Valores de la columna Object Type  
   
-|Valor|Definición|  
+|Value|Definición|  
 |-----------|----------------|  
 |8259|Restricción CHECK|  
 |8260|Valor predeterminado (restricción o independiente)|  
@@ -42,11 +42,11 @@ ms.locfileid: "68115885"
 |8280|Procedimiento almacenado extendido|  
 |16724|Desencadenador CLR|  
 |16964|Base de datos|  
-|16975|Objeto|  
+|16975|Object|  
 |17222|Catálogo de texto|  
 |17232|Procedimiento almacenado de CLR|  
-|17235|esquema|  
-|17475|Credencial|  
+|17235|Schema|  
+|17475|Credential:|  
 |17491|Evento de DDL|  
 |17741|Evento de administración|  
 |17747|Evento de seguridad|  
@@ -64,8 +64,8 @@ ms.locfileid: "68115885"
 |19283|ObfusKey|  
 |19521|Inicio de sesión de clave asimétrica|  
 |19523|Inicio de sesión de certificado|  
-|19538|Rol|  
-|19539|Inicio de sesión de SQL|  
+|19538|Role|  
+|19539|Inicio de sesión SQL|  
 |19543|Inicio de sesión de Windows|  
 |20034|Enlace de servicio remoto|  
 |20036|Notificación de evento en base de datos|  
@@ -81,9 +81,9 @@ ms.locfileid: "68115885"
 |20821|Restricción única|  
 |21057|Rol de aplicación|  
 |21059|Certificado|  
-|21075|Servidor|  
+|21075|Server|  
 |21076|Desencadenador de Transact-SQL|  
-|21313|Ensamblado|  
+|21313|Assembly|  
 |21318|Función escalar de CLR|  
 |21321|Función escalar SQL insertada|  
 |21328|Esquema de partición|  

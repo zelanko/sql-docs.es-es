@@ -18,10 +18,10 @@ ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 59842dc6ee0fa2d0438aeed0620cf7ac04094c59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896408"
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB (tipo de datos geography)
@@ -38,19 +38,19 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *cadena_de_varias_líneas_WKB*  
- Es la representación WKB de la instancia de **geographyMultiLineString** que se va a devolver. *WKB_multilinestring* es una expresión **varbinary(max)** .  
+ Es la representación WKB de la instancia de **geographyMultiLineString** que se va a devolver. *cadena_de_varias_líneas_WKB* es una expresión **varbinary(max)** .  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geographyMultiLineString** que se quiere devolver.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
- Tipo de OGC: **MultiLineString**  
+ Tipo OGC: **MultiLineString**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  

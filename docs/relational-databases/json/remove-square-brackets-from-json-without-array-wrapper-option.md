@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7de18ecb5bf47c8d1fc03f95716bbebfb27cf7ae
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096093"
 ---
 # <a name="remove-square-brackets-from-json---without_array_wrapper-option"></a>Eliminación de corchetes de JSON: opción WITHOUT_ARRAY_WRAPPER
@@ -29,7 +29,7 @@ Si usa esta opción con un resultado de varias filas, el resultado no es un valo
 ## <a name="example-single-row-result"></a>Ejemplo (resultado de fila única)  
 En el ejemplo siguiente se muestra la salida de la cláusula **FOR JSON** con y sin la opción **WITHOUT_ARRAY_WRAPPER** .  
   
- **Consulta**  
+ **Consultar**  
   
 ```sql  
 SELECT 2015 as year, 12 as month, 15 as day  
@@ -59,7 +59,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 ## <a name="example-multiple-row-result"></a>Ejemplo (resultado de varias filas)
 Este es otro ejemplo de una cláusula **FOR JSON** con y sin la opción **WITHOUT_ARRAY_WRAPPER** . En este ejemplo, se genera un resultado de varias filas. El resultado no es un valor JSON válido debido a la existencia de varios elementos y los corchetes que faltan.
   
- **Consulta**  
+ **Consultar**  
   
 ```sql  
 SELECT TOP 3 SalesOrderNumber, OrderDate, Status  

@@ -11,10 +11,10 @@ ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a0c867d9acba6542d90f72595fa0f71ab6d62e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026055"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO and DMO XPs (opción de configuración del servidor)
@@ -26,12 +26,12 @@ ms.locfileid: "68026055"
   
  En la siguiente tabla se describen los valores posibles:  
   
-|Valor|Significado|  
+|Value|Significado|  
 |-----------|-------------|  
 |0|SMO XPs no está disponible.|  
-|1|SMO XPs está disponible. Ésta es la opción predeterminada.|  
+|1|SMO XPs está disponible. Este es el valor predeterminado.|  
   
- La configuración surte efecto de forma inmediata.  
+ Esta configuración surte efecto inmediatamente.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se habilitan los procedimientos almacenados extendidos de SMO.  

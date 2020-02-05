@@ -12,10 +12,10 @@ ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 177da1486d7cab622bacaea56cd886bd8dc06d06
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251492"
 ---
 # <a name="mssqlserver_21889"></a>MSSQLSERVER_21889
@@ -25,9 +25,9 @@ ms.locfileid: "72251492"
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|21889|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|21889|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SQLErrorNum21889|  
 |Texto del mensaje|La instancia de SQL Server "%s" no es un publicador de replicación. Ejecute **sp_adddistributor** en la instancia de SQL Server "%s" con el distribuidor "%s" a fin de habilitar la instancia para hospedar la base de datos de publicación "%s". Asegúrese de especificar el mismo inicio de sesión y contraseña que se usarán para el publicador original.|  

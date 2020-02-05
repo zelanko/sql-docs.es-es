@@ -21,13 +21,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11d5012cadf7bdb028ce921f9039d5502363cbc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064690"
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>Funciones de intercalación: TERTIARY_WEIGHTS (Transact-SQL)
+# <a name="collation-functions---tertiary_weights-transact-sql"></a>Funciones de intercalación: TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Para cada carácter en una expresión de cadena no Unicode definida con una intercalación terciaria de SQL, esta función devuelve una cadena binaria de pesos.
@@ -47,7 +47,7 @@ Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de c
 ## <a name="return-types"></a>Tipos de valores devueltos
 `TERTIARY_WEIGHTS` devuelve **varbinary** cuando *non_Unicode_character_string_expression* es **char** o **varchar**, y devuelve **varbinary(max)** cuando *non_Unicode_character_string_expression* tiene un tipo de datos **varchar(max)** .
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `TERTIARY_WEIGHTS` devuelve NULL cuando una colección terciaria de SQL no define *non_Unicode_character_string_expression*. En esta tabla se muestran las intercalaciones terciarias de SQL:
   
 |Id. de orden|Intercalación de SQL|  
@@ -97,7 +97,7 @@ Col2 AS TERTIARY_WEIGHTS(Col1));
 GO   
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

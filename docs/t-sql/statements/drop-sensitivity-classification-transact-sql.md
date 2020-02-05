@@ -26,10 +26,10 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223596"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
@@ -58,7 +58,7 @@ Es el nombre de la columna de base de datos de la que se va a quitar la clasific
     - *table_name*: es el nombre de la tabla a la que pertenece la columna clasificada.
     - *column_name*: es el nombre de la columna de la que se va a quitar la clasificación.
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 
 - Se pueden quitar varias clasificaciones de objetos con una sola instrucción "DROP SENSITIVITY CLASSIFICATION".
 

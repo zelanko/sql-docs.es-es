@@ -1,5 +1,5 @@
 ---
-title: P+F
+title: Preguntas más frecuentes
 titleSuffix: Azure Data Studio
 description: Preguntas más frecuentes (P+F) sobre Azure Data Studio.
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959547"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>Preguntas más frecuentes de [!INCLUDE[Azure Data Studio](../includes/name-sos.md)]
@@ -142,7 +142,7 @@ No. Las inversiones en las herramientas insignia de Windows (SSMS, SSDT y PowerS
 |Importación de archivos planos|Vista previa|Sí|
 |Agente SQL|Vista previa|Sí|
 |SQL Profiler|Vista previa|Sí|
-|AlwaysOn||Sí|
+|Always On||Sí|
 |Always Encrypted||Sí|
 |Asistente para copiar datos||Sí|
 |Asistente para la optimización de datos||Sí|
@@ -154,7 +154,7 @@ No. Las inversiones en las herramientas insignia de Windows (SSMS, SSDT y PowerS
 |PolyBase||Sí|
 |Almacén de consultas||Sí|
 |Servidores registrados||Sí|
-|REPLICATION||Sí|
+|Replicación||Sí|
 |Administración de seguridad||Sí|
 |Service Broker||Sí|
 |SQL Mail||Sí|

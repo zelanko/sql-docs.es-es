@@ -18,10 +18,10 @@ ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2b80156459988793ae4733c9617562b5b6120ae5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100982"
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary (tipo de datos geometry)
@@ -36,7 +36,7 @@ ms.locfileid: "68100982"
 .STAsBinary ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **varbinary (max)**  
   
  Tipo de valor devuelto de CLR: **SqlBytes**  

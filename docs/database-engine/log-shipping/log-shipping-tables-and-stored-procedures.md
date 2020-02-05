@@ -16,10 +16,10 @@ ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 25424e7e41a2d1fdf1efb88f01c53f24902e7072
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68030725"
 ---
 # <a name="log-shipping-tables-and-stored-procedures"></a>Log Shipping Tables and Stored Procedures
@@ -28,7 +28,7 @@ ms.locfileid: "68030725"
   
 ## <a name="primary-server-tables"></a>Tablas de servidor principal  
   
-|Table|Descripción|  
+|Tabla|Descripción|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Almacena el Id. del trabajo de alerta. Esta tabla solo se usa en el servidor principal si no se ha configurado ningún servidor de supervisión remoto.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Almacena los detalles de error de los trabajos de trasvase de registros asociados con este servidor principal.|  
@@ -53,7 +53,7 @@ ms.locfileid: "68030725"
   
 ## <a name="secondary-server-tables"></a>Tablas de servidor secundario  
   
-|Table|Descripción|  
+|Tabla|Descripción|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Almacena el Id. del trabajo de alerta. Esta tabla solo se usa en el servidor secundario si no se ha configurado ningún servidor de supervisión remoto.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Almacena los detalles de error de los trabajos de trasvase de registros asociados con este servidor secundario.|  
@@ -82,7 +82,7 @@ ms.locfileid: "68030725"
   
 ## <a name="monitor-server-tables"></a>Tablas de servidor de supervisión  
   
-|Table|Descripción|  
+|Tabla|Descripción|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)|Almacena el Id. del trabajo de alerta.|  
 |[log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)|Almacena los detalles de errores de los trabajos de trasvase de registros.|  

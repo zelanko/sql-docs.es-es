@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 67a4a4ad32e1d9471dc9a5b3d2f1c7b067cf480b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68122123"
 ---
 # <a name="-modulus-transact-sql"></a>% (Módulo) (Transact-SQL)
@@ -55,7 +55,7 @@ dividend % divisor
 ## <a name="result-types"></a>Tipos de resultado  
  Determinados por los tipos de datos de los dos argumentos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El operador aritmético de módulo se puede usar en la lista de selección de la instrucción SELECT con cualquier combinación de nombres de columnas, constantes numéricas o cualquier expresión válida de las categorías de tipos de datos entero y monetario o del tipo de datos **numeric**.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -82,7 +82,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C. Ejemplo sencillo  
+### <a name="c-simple-example"></a>C: ejemplo sencillo  
  En el siguiente ejemplo se muestran los resultados del operador `%` al dividir 3 entre 2.  
   
 ```  

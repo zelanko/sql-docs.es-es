@@ -14,10 +14,10 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a9e62710d28b9b7e0ad66ff157b841f939d6dfaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041093"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Detección de conflictos en la replicación punto a punto
@@ -70,7 +70,7 @@ ms.locfileid: "68041093"
 ## <a name="enabling-conflict-detection"></a>Habilitar la detección de conflictos  
  Para utilizar la detección de conflictos, todos los nodos deben estar ejecutando [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o una versión posterior, y debe haberse habilitado la detección para todos los nodos. De forma predeterminada, en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] y versiones posteriores, la detección de conflictos está habilitada en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Se recomienda tener habilitada la detección, incluso en escenarios en los que no se espere ningún conflicto. La detección de conflictos se puede habilitar y deshabilitar utilizando [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o procedimientos almacenados de [!INCLUDE[tsql](../../../includes/tsql-md.md)] :  
   
--   Puede habilitar y deshabilitar la detección en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mediante la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación** o con la página **Configurar topología** del Asistente de configuración de la topología punto a punto. Para obtener más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
+-   Puede habilitar y deshabilitar la detección en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mediante la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación** o con la página **Configurar topología** del Asistente de configuración de la topología punto a punto. Para más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
      Si configura la detección de conflictos mediante [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], el Agente de distribución se configura para que deje de aplicar cambios cuando se detecte un conflicto.  
   

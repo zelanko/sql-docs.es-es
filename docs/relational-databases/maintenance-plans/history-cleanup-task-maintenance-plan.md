@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 37841e848aab5ff991741e5d460500834c9185e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115793"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Tarea Limpieza de historial (Plan de mantenimiento)
@@ -27,10 +27,10 @@ ms.locfileid: "68115793"
  Esta instrucción usa las instrucciones **sp_purge_jobhistory** y **sp_delete_backuphistory** .  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **Conexión**  
+ **Connection**  
  Seleccione la conexión al servidor que va a utilizar para la realización de esta tarea.  
   
- **Nueva**  
+ **Nuevo**  
  Cree una nueva conexión de servidor que utilizará al realizar esta tarea. El cuadro de diálogo **Nueva conexión** se describe posteriormente.  
   
  **Historial de copias de seguridad y restauración**  
@@ -52,7 +52,7 @@ ms.locfileid: "68115793"
 >  Si el número de objetos afectados es elevado, es posible que deba esperar un rato hasta que se muestren.  
   
 ## <a name="new-connection-dialog-box"></a>Cuadro de diálogo Nueva conexión  
- **Nombre de conexión**  
+ **Nombre de la conexión**  
  Escriba un nombre para la nueva conexión.  
   
  **Seleccionar o especificar un nombre de servidor**  
@@ -70,7 +70,7 @@ ms.locfileid: "68115793"
  **Utilizar un nombre de usuario y una contraseña específicos**  
  Se conecta a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] de SQL Server utilizando la autenticación de SQL Server. Esta opción no está disponible.  
   
- **User name**  
+ **Nombre de usuario**  
  Proporcione un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la autenticación. Esta opción no está disponible.  
   
  **Contraseña**  

@@ -20,13 +20,13 @@ ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d07892e1a47025107205f590d6a41aebebbb571a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071565"
 ---
-# <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
+# <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Esta función devuelve el estado de la última instrucción FETCH del cursor emitida contra cualquier cursor abierto actualmente por la conexión.  
@@ -39,7 +39,7 @@ Esta función devuelve el estado de la última instrucción FETCH del cursor emi
 @@FETCH_STATUS  
 ```  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  **integer**  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -51,7 +51,7 @@ Esta función devuelve el estado de la última instrucción FETCH del cursor emi
 |-2|Falta la fila capturada.|
 |-9|El cursor no está realizando ninguna operación de búsqueda.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Como `@@FETCH_STATUS` es global para todos los cursores de una conexión, úselo con cuidado. Después de ejecutar una instrucción FETCH, la prueba de `@@FETCH_STATUS` se debe realizar antes de que se ejecute otra instrucción FETCH sobre otro cursor. `@@FETCH_STATUS` no está definido antes de producirse las capturas en la conexión.  
   
 Por ejemplo, supongamos que un usuario ejecuta una instrucción FETCH sobre un cursor y a continuación llama a un procedimiento almacenado que abre y procesa los resultados de otro cursor. Cuando devuelve el control desde el procedimiento almacenado llamado, `@@FETCH_STATUS` refleja la última instrucción FETCH ejecutada dentro de ese procedimiento almacenado, no la ejecutada antes de llamar al procedimiento almacenado.  

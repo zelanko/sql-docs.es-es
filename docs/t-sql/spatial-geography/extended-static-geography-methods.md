@@ -15,10 +15,10 @@ ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1ef55fb04372451cb3481956c2d30e4626427c49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930396"
 ---
 # <a name="extended-static-geography-methods"></a>Métodos de geografía estáticos extendidos
@@ -46,7 +46,7 @@ ms.locfileid: "67930396"
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos de agregado de geografía estáticos](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   
- [Métodos de OGC en instancias de Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
+ [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   

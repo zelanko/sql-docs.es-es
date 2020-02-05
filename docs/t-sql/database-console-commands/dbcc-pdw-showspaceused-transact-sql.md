@@ -13,18 +13,18 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116487"
 ---
-# <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
+# <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Muestra el número de filas, el espacio en disco reservado y el espacio en disco usado para una tabla específica o para todas las tablas de una base de datos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,28 +48,28 @@ Requiere el permiso VIEW SERVER STATE.
 ## <a name="result-sets"></a>Conjuntos de resultados  
 Este es el conjunto de resultados de todas las tablas.
   
-|columna|Tipo de datos|Descripción|  
+|Columna|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
-|reserved_space|BIGINT|Espacio total usado para la base de datos, en KB.|  
-|data_space|BIGINT|Espacio usado para los datos, en KB.|  
-|index_space|BIGINT|Espacio usado para los índices, en KB.|  
-|unused_space|BIGINT|Espacio que forma parte del espacio reservado y que no se usa, en KB.|  
-|pdw_node_id|INT|Nodo de ejecución que se usa para los datos.|  
+|reserved_space|bigint|Espacio total usado para la base de datos, en KB.|  
+|data_space|bigint|Espacio usado para los datos, en KB.|  
+|index_space|bigint|Espacio usado para los índices, en KB.|  
+|unused_space|bigint|Espacio que forma parte del espacio reservado y que no se usa, en KB.|  
+|pdw_node_id|int|Nodo de ejecución que se usa para los datos.|  
   
 Este es el conjunto de resultados de una tabla.
   
-|columna|Tipo de datos|Descripción|Intervalo|  
+|Columna|Tipo de datos|Descripción|Intervalo|  
 |------------|---------------|-----------------|-----------|  
-|rows|BIGINT|Número de filas.||  
-|reserved_space|BIGINT|Espacio total reservado para el objeto, en KB.||  
-|data_space|BIGINT|Espacio usado para los datos, en KB.||  
-|index_space|BIGINT|Espacio usado para los índices, en KB.||  
-|unused_space|BIGINT|Espacio que forma parte del espacio reservado y que no se usa, en KB.||  
-|pdw_node_id|INT|Nodo de ejecución que se usa para notificar el uso de espacio.||  
-|distribution_id|INT|Distribución que se usa para notificar el uso de espacio.|El valor es -1 para las tablas replicadas.|  
+|rows|bigint|Número de filas.||  
+|reserved_space|bigint|Espacio total reservado para el objeto, en KB.||  
+|data_space|bigint|Espacio usado para los datos, en KB.||  
+|index_space|bigint|Espacio usado para los índices, en KB.||  
+|unused_space|bigint|Espacio que forma parte del espacio reservado y que no se usa, en KB.||  
+|pdw_node_id|int|Nodo de ejecución que se usa para notificar el uso de espacio.||  
+|distribution_id|int|Distribución que se usa para notificar el uso de espacio.|El valor es -1 para las tablas replicadas.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. Sintaxis básica de DBCC PDW_SHOWSPACEUSED  
+### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. Sintaxis básica de DBCC PDW_SHOWSPACEUSED  
 En los ejemplos siguientes se muestran varias formas de mostrar el número de filas, el espacio en disco reservado y el espacio en disco usado por la tabla FactInternetSales en la base de datos [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
 ```sql
@@ -89,7 +89,7 @@ DBCC PDW_SHOWSPACEUSED ( FactInternetSales );
   
 DBCC PDW_SHOWSPACEUSED;  
 ```  
- ## <a name="see-also"></a>Vea también
+ ## <a name="see-also"></a>Consulte también
 [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
 [DBCC PDW_SHOWPARTITIONSTATS &#40;Transact-SQL&#41;](dbcc-pdw-showpartitionstats-transact-sql.md)
 

@@ -17,10 +17,10 @@ ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d0b05e5d73c75e340535c3323a8219dedf5be76d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101234"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (tipo de datos geometry)
@@ -34,12 +34,12 @@ El tipo de una instancia de **geometry** es NULL. Devuelve 0 si la instancia no 
 .IsNull  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo CLR: **SqlBoolean**  
+ Tipo de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  `IsNull` se puede usar para comprobar si una instancia de **geometry** es NULL. `IsNull` devuelve 0 si la instancia no es NULL; en caso contrario, devuelve NULL.  
   
  Este método lo usa principalmente la infraestructura de SQL Server; no es recomendable usar `IsNull` para comprobar si una instancia es NULL.  

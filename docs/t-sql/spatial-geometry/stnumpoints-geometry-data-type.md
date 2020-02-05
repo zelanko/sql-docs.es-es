@@ -18,10 +18,10 @@ ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: b15d0601255cc7f53b677c333f531057a05573a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075077"
 ---
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints (tipo de datos geometry)
@@ -36,12 +36,12 @@ ms.locfileid: "68075077"
 .STNumPoints ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método cuenta los puntos de la descripción de una instancia de **geometry**. Los puntos duplicados se cuentan. Si esta instancia es de tipo **collection**, este método devuelve la suma de los puntos de cada uno de sus elementos.  
   
 ## <a name="examples"></a>Ejemplos  

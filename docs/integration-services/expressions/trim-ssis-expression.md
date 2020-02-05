@@ -15,10 +15,10 @@ ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8a6b946110049321c50427e33fbca05876ec6384
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297344"
 ---
 # <a name="trim-ssis-expression"></a>TRIM (expresión de SSIS)
@@ -45,10 +45,10 @@ TRIM(character_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  TRIM devuelve un resultado NULL si el valor del argumento es NULL.  
   
- TRIM solo funciona con el tipo de datos DT_WSTR. Un argumento *character_expression* que sea un literal de cadena o una columna de datos con el tipo de datos DT_STR se convertirá implícitamente al tipo de datos DT_WSTR antes de que TRIM realice su operación. Los otros tipos de datos deben convertirse explícitamente al tipo de datos DT_WSTR. Para más información, vea [Tipos de datos de Integration Services](../../integration-services/data-flow/integration-services-data-types.md) y [Conversión &#40;expresión de SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
+ TRIM solo funciona con el tipo de datos DT_WSTR. Un argumento *character_expression* que sea un literal de cadena o una columna de datos con el tipo de datos DT_STR se convertirá implícitamente al tipo de datos DT_WSTR antes de que TRIM realice su operación. Los otros tipos de datos deben convertirse explícitamente al tipo de datos DT_WSTR. Para obtener más información, vea [Tipos de datos de Integration Services](../../integration-services/data-flow/integration-services-data-types.md) y [Conversión &#40;expresión de SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  
  Este ejemplo quita los espacios iniciales y finales de un literal de cadena. El resultado devuelto es "New York".  

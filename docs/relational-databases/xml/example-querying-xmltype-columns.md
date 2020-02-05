@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Consulta de columnas de tipo XML | Microsoft Docs'
+title: 'Ejemplo: consultar columnas de tipo XML | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa648babb6c6ba6ae9578921833d2c2201fb4c95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006815"
 ---
-# <a name="example-querying-xmltype-columns"></a>Ejemplo: Consulta de columnas de tipo XML
+# <a name="example-querying-xmltype-columns"></a>Ejemplo: Consultar columnas de tipo XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   La consulta siguiente incluye columnas de tipo **xml** . La consulta recupera el identificador, el nombre y los pasos de fabricación del modelo de producto en la primera ubicación de la columna `Instructions` de tipo **xml** .  
   
@@ -49,7 +49,7 @@ GO
  </ProductModelData>  
 ```  
   
- Si la consulta especifica un nombre de columna para el XML devuelto por la consulta XQuery, como se especifica en la siguiente instrucción `SELECT`, los pasos de fabricación se incluyen en el elemento que tiene el nombre especificado.  
+ Si la consulta especifica un nombre de columna para el XML devuelto por la consulta XQuery, como se especifica en la siguiente instrucción `SELECT` , los pasos de fabricación se incluyen en el elemento que tiene el nombre especificado.  
   
 ```  
 USE AdventureWorks2012;  

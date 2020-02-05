@@ -27,10 +27,10 @@ ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086112"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
@@ -84,7 +84,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  Solo se puede especificar WAITFOR con TIMEOUT en mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obtener más información, vea [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md) y [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La transacción se está ejecutando mientras se ejecuta la instrucción WAITFOR y no se puede ejecutar ninguna otra solicitud para la misma transacción.  
   
  El retraso de tiempo real puede variar en relación con el tiempo especificado en *time_to_pass*, *time_to_execute* o *timeout*, y depende del nivel de actividad del servidor. El contador de tiempo se inicia cuando se programa el subproceso de la declaración WAITFOR. Si el servidor está ocupado, es posible que no se programe el subproceso inmediatamente; por tanto, el retraso de tiempo puede ser mayor que el tiempo especificado.  

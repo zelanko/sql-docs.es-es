@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056127"
 ---
 # <a name="dml-triggers"></a>Desencadenadores DML
@@ -60,10 +60,10 @@ ms.locfileid: "68056127"
 |Aplicabilidad|Tablas|Tablas y vistas|  
 |Cantidad por tabla o vista|Varios por cada acción de desencadenamiento (UPDATE, DELETE y INSERT)|Uno por cada acción de desencadenamiento (UPDATE, DELETE y INSERT)|  
 |Referencias en cascada|No se aplica ninguna restricción|No se permiten los desencadenadores INSTEAD OF UPDATE y DELETE en tablas que son destino de las restricciones de integridad referencial en cascada|  
-|Ejecución|Después:<br /><br /> Procesamiento de restricciones<br /><br /> Acciones de integridad referencial declarativa<br /><br /> Creación de tablas**inserted** y **deleted**<br /><br /> La acción de desencadenamiento|Antes: Procesamiento de restricciones<br /><br /> En lugar de:  La acción de desencadenamiento<br /><br /> Después: Creación de tablas  **inserted** y **deleted**|  
+|Ejecución|Después:<br /><br /> Procesamiento de restricciones<br /><br /> Acciones de integridad referencial declarativa<br /><br /> Creación de tablas**inserted** y **deleted**<br /><br /> La acción de desencadenamiento|Antes: Procesamiento de restricciones<br /><br /> En lugar de: La acción de desencadenamiento<br /><br /> Después: Creación de tablas  **inserted** y **deleted**|  
 |Orden de la ejecución|Se puede especificar la primera y la última ejecución|No aplicable|  
-|Referencias a columnas**varchar(max)** , **nvarchar(max)** y **varbinary(max)** en tablas **inserted** y **deleted**|Permitido|Permitido|  
-|Referencias a columnas**text**, **ntext**y **image** en las tablas **inserted** y **deleted**|No permitido|Permitido|  
+|Referencias a columnas**varchar(max)** , **nvarchar(max)** y **varbinary(max)** en tablas **inserted** y **deleted**|Permitida|Permitida|  
+|Referencias a columnas**text**, **ntext**y **image** en las tablas **inserted** y **deleted**|No permitida|Permitida|  
   
  Desencadenadores CLR  
  Un desencadenador CLR puede ser un desencadenador AFTER o INSTEAD OF. Un desencadenador CLR también puede ser un desencadenador DDL. En lugar de ejecutar un procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , un desencadenador CLR ejecuta uno o más métodos escritos en código administrado que son miembros de un ensamblado creado en .NET Framework y cargado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -79,7 +79,7 @@ ms.locfileid: "68056127"
 |Describe cómo especificar el orden en el que se activan los desencadenadores AFTER.|[Especificar el primer y el último desencadenador](../../relational-databases/triggers/specify-first-and-last-triggers.md)|  
 |Describe cómo usar las tablas inserted y delete especiales en código del desencadenador.|[Usar las tablas insertadas y eliminadas](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)|  
 |Describe cómo modificar o cambiar el nombre de un desencadenador DML.|[Modificar o cambiar el nombre de desencadenadores DML](../../relational-databases/triggers/modify-or-rename-dml-triggers.md)|  
-|Describe cómo ver información acerca de los desencadenadores DML.|[Obtener información acerca de los desencadenadores DML](../../relational-databases/triggers/get-information-about-dml-triggers.md)|  
+|Describe cómo ver información acerca de los desencadenadores DML.|[Obtener información sobre los desencadenadores DML](../../relational-databases/triggers/get-information-about-dml-triggers.md)|  
 |Describe cómo eliminar o deshabilitar los desencadenadores DML.|[Eliminar o deshabilitar desencadenadores DML](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |Describe cómo administrar la seguridad de los desencadenadores.|[Administrar la seguridad de los desencadenadores](../../relational-databases/triggers/manage-trigger-security.md)|  
   

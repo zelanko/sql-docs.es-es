@@ -18,13 +18,13 @@ ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8fcd041edda3e8575e3dfc05615d2e23f6da20fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130268"
 ---
-# <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
+# <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve el valor **rowversion** activo más bajo de la base de datos actual. Un valor **rowversion** está activo si se utiliza en una transacción que no se ha confirmado todavía. Para más información, vea [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md).  
@@ -41,10 +41,10 @@ ms.locfileid: "68130268"
 MIN_ACTIVE_ROWVERSION  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve un valor **binary(8)** .  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  MIN_ACTIVE_ROWVERSION es una función no determinista que devuelve el valor **rowversion** activo más bajo de la base de datos actual. Normalmente, se genera un nuevo valor **rowversion** cuando se realiza una inserción o una actualización en una tabla que contiene una columna de tipo **rowversion**. Si no hay ningún valor activo en la base de datos, MIN_ACTIVE_ROWVERSION devuelve el mismo valor que @@DBTS + 1.  
   
  MIN_ACTIVE_ROWVERSION es útil en escenarios como la sincronización de datos que usa valores **rowversion** para agrupar conjuntos de cambios. Si una aplicación usa @@DBTS en lugar de MIN_ACTIVE_ROWVERSION, es posible que se pierdan los cambios que están activos cuando se produce la sincronización.  

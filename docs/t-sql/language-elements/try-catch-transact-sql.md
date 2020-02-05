@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121557"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
@@ -63,7 +63,7 @@ END CATCH
  *statement_block*  
  Grupo de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] incluidas en un lote o en un bloque BEGIN…END.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una construcción TRY…CATCH detecta todos los errores de ejecución que tienen una gravedad mayor de 10 y que no cierran la conexión de la base de datos.  
   
  Un bloque TRY debe ir seguido inmediatamente por un bloque CATCH asociado. Si se incluye cualquier otra instrucción entre las instrucciones END TRY y BEGIN CATCH se genera un error de sintaxis.  
@@ -200,7 +200,7 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-## <a name="uncommittable-transactions-and-xactstate"></a>Transacciones no confirmables y XACT_STATE  
+## <a name="uncommittable-transactions-and-xact_state"></a>Transacciones no confirmables y XACT_STATE  
  Si un error generado en un bloque TRY hace que se invalide el estado de la transacción actual, la transacción se clasifica como una transacción no confirmable. Un error que normalmente termina una transacción fuera de un bloque TRY hace que la transacción no confirmable cuando se produce dentro de un bloque TRY. Una transacción no confirmable solo puede realizar operaciones de lectura o ROLLBACK TRANSACTION. La transacción no puede ejecutar ninguna instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que genere una operación de escritura o COMMIT TRANSACTION. La función XACT_STATE devuelve el valor -1 si una transacción se ha clasificado como transacción no confirmable. Cuando finaliza el lote, [!INCLUDE[ssDE](../../includes/ssde-md.md)] revierte todas las transacciones activas no confirmables. Si no se envió ningún mensaje de error cuando la transacción entró en un estado no confirmable, cuando finalice la ejecución del lote se enviará un mensaje de error a la aplicación cliente. Esto indica que se ha detectado y revertido una transacción no confirmable.  
   
  Para más información sobre las transacciones no confirmables y la función XACT_STATE, vea [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md).  
@@ -256,7 +256,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>C. Uso de TRY…CATCH con XACT_STATE  
+### <a name="c-using-trycatch-with-xact_state"></a>C. Uso de TRY…CATCH con XACT_STATE  
  En este ejemplo se muestra cómo utilizar la construcción `TRY...CATCH` para controlar los errores que se producen en una transacción. La función `XACT_STATE` determina si la transacción debe confirmarse o revertirse. En este ejemplo `SET XACT_ABORT` es `ON`. Esto hace que la transacción sea no confirmable cuando se produce el error por infracción de restricción.  
   
 ```sql  

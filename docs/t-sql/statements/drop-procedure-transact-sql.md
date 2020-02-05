@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ed342f6b73ee596d8429aa4b952c4becf7d41ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044032"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
@@ -65,7 +65,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
  *procedure*  
  Nombre del procedimiento almacenado o grupo de procedimientos almacenados que se van a quitar. No se pueden quitar procedimientos concretos de un grupo de procedimientos numerados, ya que de este modo se quita el grupo de procedimientos completo.  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  Antes de quitar un procedimiento almacenado, compruebe los objetos dependientes y modifique estos objetos como corresponda. La acción de quitar un procedimiento almacenado puede hacer que los objetos dependientes y los scripts sufran errores cuando estos objetos no están actualizados. Para más información, vea [Ver las dependencias de un procedimiento almacenado](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
   
 ## <a name="metadata"></a>Metadatos  

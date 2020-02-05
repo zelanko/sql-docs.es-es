@@ -15,10 +15,10 @@ ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930133"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (tipo de datos geometry)
@@ -37,7 +37,7 @@ Devuelve la curva especificada a partir de una instancia de **geometry** que es 
  *curve_index*  
  Es una expresión **int** entre 1 y el número de curvas de la instancia de **geometry**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
@@ -45,7 +45,7 @@ Devuelve la curva especificada a partir de una instancia de **geometry** que es 
 ## <a name="exceptions"></a>Excepciones  
  Si *curve_index* < 1, se produce una `ArgumentOutOfRangeException`.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Se devuelve **NULL** cuando se da alguna de las condiciones siguientes:  
   
 -   La instancia de **geometry** se declara, pero no se crea.  

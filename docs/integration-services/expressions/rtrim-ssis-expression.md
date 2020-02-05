@@ -14,10 +14,10 @@ ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bb899229cf38697ea7abf25fb82dddb7d2826842
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297387"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (expresión de SSIS)
@@ -44,7 +44,7 @@ RTRIM(character expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  RTRIM solo funciona con el tipo de datos DT_WSTR. Un argumento *character_expression* que sea un literal de cadena o una columna de datos con el tipo de datos DT_STR se convertirá implícitamente al tipo de datos DT_WSTR antes de que RTRIM realice su operación. Los otros tipos de datos deben convertirse explícitamente al tipo de datos DT_WSTR. Para obtener más información, vea [Tipos de datos de Integration Services](../../integration-services/data-flow/integration-services-data-types.md) y [Conversión &#40;expresión de SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
  RTRIM devuelve un resultado NULL si el valor del argumento es NULL.  

@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070270"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
@@ -67,7 +67,7 @@ Quita la entidad de seguridad del servidor especificada del rol de servidor. *se
 WITH NAME **=** _new_server_role_name_  
 Especifica el nuevo nombre del rol de servidor definido por el usuario. Este nombre no puede existir ya en el servidor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 El cambio de nombre de un rol de servidor definido por el usuario no cambia el número de identificación, el propietario ni los permisos del rol.  
   
 Para cambiar la pertenencia a roles, `ALTER SERVER ROLE` reemplaza sp_addsrvrolemember y sp_dropsrvrolemember. Estos procedimientos almacenados están desusados.  

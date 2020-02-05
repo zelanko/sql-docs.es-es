@@ -11,10 +11,10 @@ ms.assetid: 67a992d1-7524-4f4b-b3d8-ebd9e5ea82a8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68c9fca56732dd0757d7c602152b523132d5eafc
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294881"
 ---
 # <a name="view-the-list-of-packages-on-the-integration-services-server"></a>Ver la lista de paquetes en el servidor de Integration Services
@@ -27,7 +27,7 @@ ms.locfileid: "71294881"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] access  
  Para ver la lista de paquetes que están almacenados en el servidor, consulte la vista [catalog.packages &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-packages-ssisdb-database.md).  
   
- Entrada [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+ En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Para ver los paquetes almacenados en el servidor con el Explorador de objetos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], siga el procedimiento siguiente.  
   
 ### <a name="to-view-packages-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Para ver los paquetes con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  

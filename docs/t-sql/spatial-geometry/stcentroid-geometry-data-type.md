@@ -18,10 +18,10 @@ ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5663bc7a7236a49b6b97c41ed5c96e53f337c186
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930164"
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (tipo de datos geometry)
@@ -36,14 +36,14 @@ Devuelve el centro geométrico de una instancia de **geometry** que consta de un
 .STCentroid ( )  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
  Tipo Open Geospatial Consortium (OGC): **Point**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  `STCentroid()` devuelve null si la instancia de **geometry** no es de tipo **Polygon, CurvePolygon** o **MultiPolygon**.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ae451d86f2490765f3871deca925f4b6348e2304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140421"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Tutorial: Uso del tipo de datos hierarchyid
@@ -28,10 +28,10 @@ Este tutorial está destinado a usuarios con experiencia en [!INCLUDE[tsql](../.
 ## <a name="what-you-will-learn"></a>Aprendizaje  
 El tutorial está compuesto por dos lecciones:  
   
-[Lección 1: Conversión de una tabla en una estructura jerárquica](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
+[Lección 1: Convertir una tabla en una estructura jerárquica](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
 En esta lección, se toma una tabla existente de empleados, estructurada como una jerarquía de elementos primarios y secundarios, y se mueven los datos a una nueva tabla que representa la jerarquía mediante el tipo de datos **hierarchyid** . Esta lección requiere la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-[Lección 2: Creación y administración de los datos de una tabla jerárquica](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+[Lección 2: Creación y administración de los datos de una tabla jerárquica](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
 En esta lección, se crea una tabla mediante el tipo de datos **hierarchyid** para representar la estructura de la jerarquía. A continuación, se manipulan los datos de la tabla usando los métodos jerárquicos.  
   
 ## <a name="requirements"></a>Requisitos  

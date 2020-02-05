@@ -14,10 +14,10 @@ ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 98241060994cd97944db30a777bc23f475b8cb0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995701"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>Objeto SQL Server: Estadísticas de grupo de recursos de servidor
@@ -26,23 +26,23 @@ ms.locfileid: "67995701"
   
  Cada grupo de recursos de servidor activo crea una instancia del objeto de rendimiento SQLServer:Estadísticas de grupo de recursos de servidor que tiene el mismo nombre que el grupo de recursos de servidor del regulador de recursos. En la tabla siguiente se describen los contadores admitidos en esta instancia.  
   
-|Nombre de contador|Descripción|  
+|Nombre del contador|Descripción|  
 |------------------|-----------------|  
 |**Cantidad de concesiones de memoria activas (KB)**|Cantidad total actual, en kilobytes (KB), de memoria concedida. Esta información también está disponible en [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md).| 
 |**Número de concesiones de memoria activas**|Número total actual de concesiones de memoria. Esta información también está disponible en [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md).|  
 |**Promedio de E/S de lectura de disco (ms)**|Tiempo promedio, en milisegundos, de una operación de lectura del disco.|  
-|**Base de E/S de lectura de disco (ms) promedio**|Exclusivamente para uso interno.|
+|**Base de E/S de lectura de disco (ms) promedio**|Solo para uso interno.|
 |**Promedio de escrituras en disco (ms)**|Tiempo promedio, en milisegundos, de una operación de escritura en el disco.|  
-|**Base de E/S de escritura en disco (ms) promedio**|Exclusivamente para uso interno.|
+|**Base de E/S de escritura en disco (ms) promedio**|Solo para uso interno.|
 |**Destino de memoria caché (KB)**|Destino del agente de memoria actual, en kilobytes (KB), para la memoria caché.|  
 |**Destino de memoria de compilación (KB)**|Destino del agente de memoria actual, en kilobytes (KB), para la compilación de consultas.|  
 |**% de efecto de control de CPU**|Efecto del regulador de recursos en el grupo de recursos de servidor. Se calcula como (% de uso de la CPU) / (% de uso de la CPU sin regulador de recursos).|  
 |**% de CPU retrasada**|CPU del sistema retrasada para todas las solicitudes de la instancia especificada del objeto de rendimiento como porcentaje del tiempo total activo.|
-|**Base de % de CPU retrasada**|Exclusivamente para uso interno.|
+|**Base de % de CPU retrasada**|Solo para uso interno.|
 |**% efectivo de la CPU**|Uso de CPU del sistema por todas las solicitudes de la instancia especificada del objeto de rendimiento como porcentaje del tiempo total activo.|
-|**Base de % efectivo de la CPU**|Exclusivamente para uso interno.|
+|**Base de % efectivo de la CPU**|Solo para uso interno.|
 |**% de uso de CPU**|El uso de ancho banda de CPU por parte de todas las solicitudes en todos los grupos de cargas de trabajo pertenecientes a este grupo. Este número se mide en relación al equipo y se normaliza respecto a todas las CPUs del sistema. Este valor cambiará a medida que la cantidad de CPU disponible para el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] varíe. No se normaliza respecto a lo que el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recibe.|  
-|**Base de % de uso de la CPU**|Exclusivamente para uso interno.|
+|**Base de % de uso de la CPU**|Solo para uso interno.|
 |**% objetivo de uso de CPU**|Valor de destino del porcentaje de uso de CPU para el grupo de recursos de servidor según la configuración del grupo de recursos de servidor y la carga del sistema.|  
 |**% de CPU infringida**|Diferencia entre la reserva de CPU y el porcentaje de programación efectiva.|
 |**Bytes de lectura de disco/s**|Número de bytes leídos del disco en el último segundo.|  

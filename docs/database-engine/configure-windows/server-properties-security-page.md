@@ -13,10 +13,10 @@ ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 11a8e63d75f4194727344009dfac6f2fed77edaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031429"
 ---
 # <a name="server-properties---security-page"></a>Propiedades del servidor (página Seguridad)
@@ -37,7 +37,7 @@ ms.locfileid: "68031429"
 >  El cambio de la configuración de seguridad requiere reiniciar el servicio. Cuando se cambia la Autenticación de servidor al modo de autenticación de Windows y SQL Server, la cuenta SA no se habilita automáticamente. Para utilizar la cuenta SA, ejecute [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) con la opción ENABLE.  
   
 ## <a name="login-auditing"></a>Auditoría de inicio de sesión  
- **Ninguno**  
+ **None**  
  Desactiva la auditoría de inicio de sesión.  
   
  **Solo inicios de sesión erróneos**  

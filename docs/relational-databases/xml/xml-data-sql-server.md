@@ -14,17 +14,17 @@ ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc11a8dd385266d38bb12f067d2ffa1a88030b87
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70190427"
 ---
 # <a name="xml-data-sql-server"></a>Datos XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una plataforma eficaz para desarrollar aplicaciones completas para la administración de datos semiestructurados. La compatibilidad con XML está integrada en todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e incluye lo siguiente:  
   
--   El tipo de datos **xml** . Los valores XML se pueden almacenar de forma nativa en una columna de tipo de datos **xml** cuyo tipo se puede asignar de acuerdo con una colección de esquemas XML o que puede dejarse sin tipo. Es posible indizar la columna XML.  
+-   El tipo de datos **xml** . Los valores XML se pueden almacenar de forma nativa en una columna de tipo de datos **xml** cuyo tipo se puede asignar de acuerdo con una colección de esquemas XML o que puede dejarse sin tipo. Puede indexar la columna XML.  
   
 -   La capacidad de especificar una consulta XQuery con datos XML almacenados en columnas y variables de tipo **xml** .  
   

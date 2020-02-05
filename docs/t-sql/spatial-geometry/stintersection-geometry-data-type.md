@@ -18,10 +18,10 @@ ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: e57a3551660467254a9c291ed78ed41aae30b7c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950133"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection (tipo de datos geometry)
@@ -40,12 +40,12 @@ Devuelve un objeto que representa los puntos donde una instancia de **geometry**
  *other_geometry*  
  Es otra instancia de **geometry** usada para compararla con la instancia en la que se invoca `STIntersection()`, con objeto de determinar sus puntos de intersección.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  `STIntersection()` siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**. El resultado puede contener segmentos de arco circulares solo si las instancias de entrada los contienen.  
   
 ## <a name="examples"></a>Ejemplos  

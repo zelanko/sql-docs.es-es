@@ -19,13 +19,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fcdbb300bbc9209f284cd5a92d192a219f79052d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075327"
 ---
-# <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
+# <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Esta función devuelve una cadena resultante de la concatenación, o la combinación, de dos o más valores de cadena de una manera integral. Separa esos valores de cadena concatenados con el delimitador especificado en el primer argumento de función. (`CONCAT_WS` indica *concatenar con separador*).
@@ -45,7 +45,7 @@ Una expresión de cualquier tipo.
 ## <a name="return-types"></a>Tipos de valores devueltos
 Un valor de cadena cuya longitud y tipo dependen de la entrada.
 
-## <a name="remarks"></a>Notas   
+## <a name="remarks"></a>Observaciones   
 `CONCAT_WS` toma un número variable de argumentos de cadena y los concatena (o combina) en una sola cadena. Separa esos valores de cadena concatenados con el delimitador especificado en el primer argumento de función. `CONCAT_WS` requiere un argumento separador y un mínimo de otros dos argumentos de valor de cadena; de lo contrario, `CONCAT_WS` producirá un error. `CONCAT_WS` convierte implícitamente todos los argumentos en tipos de cadena antes de la concatenación. 
 
 La conversión implícita de cadenas sigue las reglas existentes para las conversiones de tipos de datos. Para obtener más información sobre las conversiones de tipo de datos y comportamiento, consulte [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
@@ -123,7 +123,7 @@ STRING_AGG(CONCAT_WS( ',', database_id, ISNULL(recovery_model_desc,''), ISNULL(c
 FROM sys.databases;
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  

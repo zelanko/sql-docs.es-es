@@ -23,10 +23,10 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2772440c98d103790808564b5cdddcde4c2dfd42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117180"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
@@ -99,7 +99,7 @@ Por ejemplo, si se elige un tamaño de caché de 50, [!INCLUDE[ssNoVersion](../.
 Cuando se crean con la opción **CACHE**, un apagado inesperado (como un corte de suministro eléctrico) puede provocar la pérdida de los números de secuencia que permanecen en la memoria caché.  
   
 ## <a name="general-remarks"></a>Notas generales  
- Los números de secuencia se generan fuera del ámbito de la transacción actual. Se utilizan tanto si la transacción que usa el número de secuencia se confirma como si se revierte. La validación de duplicados solo se produce una vez que un registro está totalmente relleno. Esto puede dar lugar a casos en que se use el mismo número para más de un registro durante la creación, pero luego se identifica como un duplicado. Si ocurre esto y se han aplicado otros valores autonuméricos a registros posteriores, esto puede dar lugar a una discrepancia entre los valores autonuméricos y su comportamiento esperado.
+ Los números de secuencia se generan fuera del ámbito de la transacción actual. Se utilizan tanto si la transacción que usa el número de secuencia se confirma como si se revierte. La validación de duplicados solo se produce una vez que un registro está totalmente relleno. Esto puede dar lugar a casos en que se use el mismo número para más de un registro durante la creación, pero luego se identifique como un duplicado. Si ocurre esto y se han aplicado otros valores autonuméricos a registros posteriores, esto puede dar lugar a una discrepancia entre los valores autonuméricos y su comportamiento esperado.
   
 ### <a name="cache-management"></a>Administración de la memoria caché  
  Para mejorar el rendimiento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna con antelación el número de números de secuencia especificados por el argumento **CACHE**.  
@@ -170,7 +170,7 @@ GRANT CREATE SEQUENCE ON SCHEMA::Test TO [AdventureWorks\Larry]
   
  Si una secuencia utiliza un tipo de datos definido por el usuario, el creador de la secuencia debe tener el permiso REFERENCES en el tipo.  
   
-### <a name="audit"></a>Auditar  
+### <a name="audit"></a>Auditoría  
  Para auditar **CREATE SEQUENCE**, supervise el **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Ejemplos  

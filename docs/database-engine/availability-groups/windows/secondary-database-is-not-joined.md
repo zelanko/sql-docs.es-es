@@ -14,10 +14,10 @@ ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0fa4abf575c847bae10342a3870fc2c3785d16a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014233"
 ---
 # <a name="secondary-database-is-not-joined"></a>Base de datos secundaria sin combinar
@@ -29,7 +29,7 @@ ms.locfileid: "68014233"
 |-|-|  
 |**Nombre de directiva**|Estado de combinación de la base de datos de disponibilidad|  
 |**Problema**|Base de datos secundaria sin combinar.|  
-|**Categoría**|**Advertencia**|  
+|**Categoría**|**Warning (ADVERTENCIA)**|  
 |**Faceta**|Base de datos de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
@@ -38,7 +38,7 @@ ms.locfileid: "68014233"
 > [!NOTE]  
 >  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [La base de datos secundaria no se ha combinado](https://go.microsoft.com/fwlink/p/?LinkId=220862) en TechNet Wiki.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  Esta base de datos secundaria no está combinada con el grupo de disponibilidad. La configuración de esta base de datos secundaria está incompleta.  
   
 ## <a name="possible-solution"></a>Solución posible  

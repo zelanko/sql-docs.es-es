@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59cbaf203b8e877f9476e807008345b9af05b0fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944534"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
@@ -52,14 +52,14 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  *string\_replacement*  
  Es la cadena de reemplazo. *string_replacement* puede tener un tipo de datos de carácter o binario.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve **nvarchar** si uno de los argumentos de entrada tiene el tipo de datos **nvarchar**; de lo contrario, REPLACE devuelve **varchar**.  
   
  Devuelve NULL si alguno de los argumentos es NULL.  
   
  Si *string_expression* no es de tipo **varchar(max)** o **nvarchar(max), REPLACE** trunca el valor devuelto en 8000 bytes. Para devolver valores mayores de 8000 bytes, *string_expression* se debe convertir explícitamente en un tipo de datos de valores grandes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  REPLACE realiza comparaciones basándose en la intercalación de la entrada. Para realizar una comparación de una intercalación especificada, puede usar [COLLATE](~/t-sql/statements/collations.md) para aplicar una intercalación explícita a la entrada.  
   
  0x0000 (**char(0)** ) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en REPLACE.  

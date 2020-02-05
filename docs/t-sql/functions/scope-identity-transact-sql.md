@@ -21,13 +21,13 @@ ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111333"
 ---
-# <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
+# <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve el último valor de identidad insertado en una columna de identidad en el mismo ámbito. Un ámbito es un módulo: un procedimiento almacenado, desencadenador, función o lote. Por tanto, si dos instrucciones se encuentran en el mismo procedimiento almacenado, función o lote, están en el mismo ámbito.  
@@ -40,10 +40,10 @@ ms.locfileid: "68111333"
 SCOPE_IDENTITY()  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  SCOPE_IDENTITY, IDENT_CURRENT y @@IDENTITY son funciones parecidas ya que devuelven valores insertados en columnas de identidad.  
   
  IDENT_CURRENT no está limitado por el ámbito y la sesión; se limita a una tabla especificada. IDENT_CURRENT devuelve el valor generado para una tabla específica en cualquier sesión y cualquier ámbito. Para obtener más información, vea [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  
@@ -58,7 +58,7 @@ SCOPE_IDENTITY()
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. Uso de @@IDENTITY y SCOPE_IDENTITY con desencadenadores  
+### <a name="a-using-identity-and-scope_identity-with-triggers"></a>A. Uso de @@IDENTITY y SCOPE_IDENTITY con desencadenadores  
  Este ejemplo crea dos tablas, `TZ` y `TY`, y un desencadenador INSERT en `TZ`. Cuando se inserta una fila en `TZ`, el desencadenador `Ztrig` se activa e inserta una fila en `TY`.  
   
 ```sql  
@@ -73,7 +73,7 @@ INSERT TZ
   
 SELECT * FROM TZ;  
 ```     
-Conjunto de resultados: Esta es la apariencia de la tabla TZ.  
+Conjunto de resultados: este es el aspecto de la tabla TZ.  
   
 ```  
 Z_id   Z_name  
@@ -92,7 +92,7 @@ INSERT TY (Y_name)
   
 SELECT * FROM TY;  
 ```   
-Conjunto de resultados: Esta es la apariencia de TY:  
+Conjunto de resultados: este es el aspecto de TY.  
 ```  
 Y_id  Y_name  
 ---------------  
@@ -132,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Uso de @@IDENTITY y SCOPE_IDENTITY() con una replicación  
+### <a name="b-using-identity-and-scope_identity-with-replication"></a>B. Uso de @@IDENTITY y SCOPE_IDENTITY() con una replicación  
  Los ejemplos siguientes muestran cómo se usan `@@IDENTITY` y `SCOPE_IDENTITY()` para las inserciones en una base de datos publicada para la replicación de mezcla. Las dos tablas de los ejemplos se encuentran en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]: `Person.ContactType` no está publicado y `Sales.Customer` sí. La replicación de mezcla agrega desencadenadores a las tablas publicadas. Por lo tanto, `@@IDENTITY` puede devolver el valor de la inserción en una tabla de sistema de replicación en lugar de la inserción en una tabla de usuario.  
   
  La tabla `Person.ContactType` tiene un valor de identidad máximo de 20. Si inserta una fila en la tabla, `@@IDENTITY` y `SCOPE_IDENTITY()` devolverán el mismo valor.  

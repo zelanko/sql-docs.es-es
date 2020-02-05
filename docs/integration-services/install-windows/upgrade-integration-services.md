@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262790"
 ---
 # <a name="upgrade-integration-services"></a>Actualizar Integration Services
@@ -57,7 +57,7 @@ ms.locfileid: "68262790"
   
 -   Ejecutar la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y seleccionar la opción para **Actualizar desde SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
--   Ejecutar **setup.exe** en el símbolo del sistema y especificar la opción **/ACTION=upgrade**. Para obtener más información, vea la sección "Scripts de instalación de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]" en [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+-   Ejecutar **setup.exe** en el símbolo del sistema y especificar la opción **/ACTION=upgrade** . Para obtener más información, vea la sección "Scripts de instalación de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]" en [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
  No puede utilizar la actualización para realizar las acciones siguientes:  
   

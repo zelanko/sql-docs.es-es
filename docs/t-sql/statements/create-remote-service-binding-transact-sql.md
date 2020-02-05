@@ -38,10 +38,10 @@ ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2fc021cec09a7f62d05f5e435db9d6fc2597fce3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117342"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
@@ -78,7 +78,7 @@ CREATE REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  Especifica si se va a utilizar la autenticación anónima en la comunicación con el servicio remoto. Si ANONYMOUS = ON, se usa la autenticación anónima y las operaciones en la base de datos remota se realizan como miembro del rol fijo de base de datos **public**. Si ANONYMOUS = OFF, las operaciones en la base de datos remota se realizan como un usuario específico de esa base de datos. Si no se especifica esta cláusula, el valor predeterminado es OFF.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa un enlace de servicio remoto para encontrar el certificado que se utilizará en una nueva conversación. La clave pública del certificado asociado a *user_name* se usa para autenticar mensajes enviados al servicio remoto y para cifrar una clave de sesión que se usará después para cifrar la conversación. El certificado de *user_name* debe corresponder al certificado de un usuario de la base de datos que hospede el servicio remoto.  
   
  Un enlace de servicio remoto solo es necesario para servicios iniciadores que se comunican con servicios de destino que están fuera de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una base de datos que hospeda un servicio iniciador debe contener enlaces de servicio remoto para todos los servicios de destino que están fuera de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La base de datos que hospeda un servicio de destino no necesita contener enlaces de servicio remoto para los servicios iniciadores que se comunican con el servicio de destino. Cuando los servicios iniciador y de destino están en la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no es necesario ningún enlace de servicio remoto. No obstante, si hay un enlace de servicio remoto cuyo *service_name* especificado para TO SERVICE coincide con el nombre del servicio local, [!INCLUDE[ssSB](../../includes/sssb-md.md)] usará el enlace.  

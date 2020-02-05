@@ -24,10 +24,10 @@ ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001637"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
@@ -106,7 +106,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
  DROP  
  Quita la propiedad especificada de la lista de propiedades especificada por *list_name*. Si se quita una propiedad, se elimina del registro y, por tanto, ya no se pueden realizar búsquedas en ella.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cada índice de texto completo puede tener solo una lista de propiedades de búsqueda.  
   
  Para habilitar la realización de consultas en una propiedad de búsqueda dada, debe agregarla a la lista de propiedades de búsqueda del índice de texto completo y, a continuación, volver a rellenar el índice.  

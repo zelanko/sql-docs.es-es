@@ -11,10 +11,10 @@ ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 194eb7232aaf0ffd1f323d6291c0efb06f88a397
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298590"
 ---
 # <a name="user-roles"></a>Roles de usuario
@@ -27,7 +27,7 @@ ms.locfileid: "71298590"
 ## <a name="windows-user-roles"></a>Roles de usuario de Windows  
  A continuación se describen los roles de usuario de Windows que el servicio CDC de Oracle emplea.  
   
-### <a name="computer-administrator-oracle-cdc-service"></a>Administrador de equipo: Servicio CDC de Oracle  
+### <a name="computer-administrator-oracle-cdc-service"></a>Administrador del equipo: Servicio CDC de Oracle  
  El administrador del equipo es un usuario de Windows responsable de crear y mantener el servicio CDC en el equipo. Este usuario debe pertenecer al grupo Administradores del equipo local.  
   
  Entre las tareas realizadas por el administrador del equipo del servicio CDC de Oracle se incluyen:  

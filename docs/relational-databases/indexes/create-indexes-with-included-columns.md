@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c3ec437ccaaf3280be800ea6f80ac6ad38a0a1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024908"
 ---
 # <a name="create-indexes-with-included-columns"></a>Crear índices con columnas incluidas
@@ -90,13 +90,13 @@ ms.locfileid: "68024908"
   
 7.  En el cuadro de diálogo **Seleccionar columnas de**_nombre\_tabla_, active las casillas de las columnas de tabla que se van a agregar al índice.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. En la pestaña **Columnas incluidas**, haga clic en **Agregar...** .  
   
 10. En el cuadro de diálogo **Seleccionar columnas de**_nombre\_tabla_, active las casillas de las columnas de tabla que se van a agregar al índice como columnas sin clave.  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
 12. En el cuadro de diálogo **Nuevo índice** , haga clic en **Aceptar**.  
   

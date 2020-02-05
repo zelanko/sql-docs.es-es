@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 05906cfd0e72531bf332ebca4215df047eb8e3fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026461"
 ---
-# <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
+# <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta función calcula la distribución acumulativa de un valor en un grupo de valores. Es decir, `CUME_DIST` calcula la posición relativa de un valor especificado en un grupo de valores. Suponiendo un orden ascendente, el `CUME_DIST` de un valor en la fila _r_ se define como el número de filas con valores menores o iguales que el valor de la fila _r_, dividido entre el número de filas evaluadas en la partición o el conjunto de resultados de la consulta. `CUME_DIST` es similar a la función `PERCENT_RANK`.
@@ -49,7 +49,7 @@ El argumento _cláusula\_partition\_by_ divide el conjunto de resultados de la c
 ## <a name="return-types"></a>Tipos de valores devueltos
 **float(53)**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `CUME_DIST` devuelve un intervalo de valores mayor que 0 y menor o igual que 1. Los valores equivalentes siempre se evalúan como el mismo valor de distribución acumulativa. `CUME_DIST` incluye valores NULL de forma predeterminada y los trata como los posibles valores más bajos.
   
 `CUME_DIST` sea no determinista. Para obtener más información, consulte [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
@@ -94,7 +94,7 @@ Information Services   Bueno                  27.4038               0.4         
 (15 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [PERCENT_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/percent-rank-transact-sql.md)
   
   

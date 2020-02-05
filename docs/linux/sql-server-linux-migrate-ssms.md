@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.openlocfilehash: f99ff799ec91ea455cc37bd994c8555330a8ff0f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105552"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Exportación e importación de una base de datos en Linux con SSMS o SqlPackage.exe en Windows
@@ -28,7 +28,7 @@ Siempre debe instalar y usar la versión más reciente de SQL Server Management 
 
 ## <a name="export-a-database-with-ssms"></a>Exportación de una base de datos con SSMS
 
-1. Escriba **Microsoft SQL Server Management Studio** en el cuadro de búsqueda de Windows para iniciar SSMS y, luego, haga clic en la aplicación de escritorio.
+1. Para iniciar SSMS, escriba **Microsoft SQL Server Management Studio** en el cuadro de búsqueda de Windows y, luego, haga clic en la aplicación de escritorio.
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
@@ -46,7 +46,7 @@ El archivo *.BACPAC se crea correctamente en la ubicación elegida y ya puede im
 
 ## <a name="import-a-database-with-ssms"></a>Importación de una base de datos con SSMS
 
-1. Escriba **Microsoft SQL Server Management Studio** en el cuadro de búsqueda de Windows para iniciar SSMS y, luego, haga clic en la aplicación de escritorio.
+1. Para iniciar SSMS, escriba **Microsoft SQL Server Management Studio** en el cuadro de búsqueda de Windows y, luego, haga clic en la aplicación de escritorio.
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
@@ -79,5 +79,5 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 Para obtener más información sobre el uso de SSMS, consulte [Uso de SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx). Para obtener más información sobre SqlPackage.exe, consulte la [documentación de referencia de SqlPackage](https://msdn.microsoft.com/library/hh550080.aspx).

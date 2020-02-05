@@ -26,10 +26,10 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fefd85737e5d58e71dae6fd81dc2c0306b0838e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927632"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE: funciones de desencadenador (Transact-SQL)
@@ -50,10 +50,10 @@ UPDATE ( column )
  *column*  
  Es el nombre de la columna que se va a probar para una acción INSERT o UPDATE. Debido a que el nombre de la tabla se especifica en la cláusula ON del desencadenador, no lo incluya antes del nombre de la columna. Esta columna puede ser de cualquier [tipo de datos](../../t-sql/data-types/data-types-transact-sql.md) admitido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, no se pueden utilizar columnas calculadas en este contexto.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Boolean  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  UPDATE() devuelve TRUE independientemente de si un intento de INSERT o UPDATE tiene éxito.  
   
  Para probar una acción INSERT o UPDATE en más de una columna, especifique una cláusula UPDATE(*column*) distinta a continuación de la primera. También puede probar acciones INSERT o UPDATE en varias columnas con COLUMNS_UPDATED, que devuelve un patrón de bits que indica las columnas que se insertaron o se actualizaron.  

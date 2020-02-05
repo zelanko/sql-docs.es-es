@@ -11,10 +11,10 @@ ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5f3450320f28a2f0abd133c93d1b43512484d446
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296573"
 ---
 # <a name="catalogexecution_data_taps"></a>catalog.execution_data_taps 
@@ -26,7 +26,7 @@ ms.locfileid: "71296573"
 
   Muestra información de cada derivación de datos definida en una ejecución.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |data_tap_id|**bigint**|Identificador (id.) único de la derivación de datos.|  
 |execution_id|**bigint**|Identificador único (id.) de la instancia de ejecución.|  

@@ -1,6 +1,6 @@
 ---
-title: Personalizar (página Barras de herramientas) | Microsoft Docs
-ms.custom: ''
+title: Personalizar (página Barras de herramientas)
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09926451f7dc8f2e9ef8a6fd355b86eb9230bfd8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d6297151c5f31c88d108835f1c6c4955bfbccf8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264023"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242189"
 ---
 # <a name="customize-toolbars-page"></a>Personalizar (página Barras de herramientas)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,16 +30,16 @@ Muestra las barras de herramientas integradas y cualquier otra barra de herramie
 > [!NOTE]  
 > La barra de menús no puede ocultarse. Solo se puede restablecer.  
   
-**Nueva**  
+**Nuevo**  
 Muestra el cuadro de diálogo **Nueva barra de herramientas** , que permite crear y dar nombre a una barra de herramientas personalizada.  
   
-**Rename**  
+**Cambiar el nombre**  
 Muestra el cuadro de diálogo **Cambiar nombre de herramientas** , que solo permite cambiar el nombre de una barra de herramientas personalizada.  
   
 **Eliminar**  
 Elimina la barra de herramientas personalizada de la lista **Barra de herramientas** .  
   
-**Restablecer**  
+**Reset**  
 Elimina cualquier cambio en la barra de herramientas predefinida seleccionada en la lista **Barra de herramientas** y la restablece a su estado original. Solo está disponible si selecciona una barra de herramientas integrada.  
   
 **Iconos grandes**  

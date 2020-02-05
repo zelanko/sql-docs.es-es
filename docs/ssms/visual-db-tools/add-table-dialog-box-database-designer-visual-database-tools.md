@@ -1,10 +1,7 @@
 ---
-title: Cuadro de diálogo Agregar tabla (Diseñador de bases de datos) (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Cuadro de diálogo Agregar tabla (Diseñador de bases de datos)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +10,19 @@ f1_keywords:
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e8d75f91a4373cbaa70521395020794d6976ee30
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 9fcd2f3dbb1d0eca44a1cc5025239b81de26b24f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263425"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253411"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>Agregar tabla (cuadro de diálogo, Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Permite agregar tablas en el Diseñador de bases de datos.  
   
@@ -31,13 +33,13 @@ Permite agregar tablas en el Diseñador de bases de datos.
 **Actualizar**  
 Actualiza la lista de tablas para que coincidan con el estado actual de la base de datos.  
   
-**Agregar**  
+**Add (Agregar)**  
 Agrega las tablas seleccionadas.  
   
 > [!NOTE]  
 > Si desea agregar varias tablas al diagrama, puede seleccionarlas todas antes de hacer clic en **Agregar**. Como alternativa, puede hacer doble clic en cada una de las tablas que desee agregar y, luego, hacer clic en **Cerrar** cuando termine.  
   
-**Cerrar**  
+**Close**  
 Cierra el cuadro de diálogo sin agregar más tablas.  
   
 ## <a name="see-also"></a>Consulte también  

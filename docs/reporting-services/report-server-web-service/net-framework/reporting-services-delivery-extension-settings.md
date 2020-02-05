@@ -21,10 +21,10 @@ ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b801fc7ada9e370d12388ba341259f1c13c7a0f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128849"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Configuración de la extensión de entrega de Reporting Services
@@ -36,23 +36,23 @@ ms.locfileid: "63128849"
 ## <a name="e-mail-delivery-settings"></a>Configuración de entrega por correo electrónico  
  En la tabla siguiente se enumeran las opciones de configuración de la entrega por correo electrónico para las suscripciones que utilizan el correo electrónico del servidor de informes.  
   
-|Configuración|Valor|  
+|Configuración|Value|  
 |-------------|-----------|  
-|**TO**|Dirección de correo electrónico que aparece en la línea **Para** del mensaje. Varias direcciones de correo electrónico se separan mediante puntos y coma. Requerido.|  
+|**TO**|Dirección de correo electrónico que aparece en la línea **Para** del mensaje. Varias direcciones de correo electrónico se separan mediante puntos y coma. Necesario.|  
 |**CC**|Dirección de correo electrónico que aparece en la línea **CC** del mensaje. Varias direcciones de correo electrónico se separan mediante puntos y coma. Opcional.|  
 |**BCC**|Dirección de correo electrónico que aparece en la línea **CCO** del mensaje. Varias direcciones de correo electrónico se separan mediante puntos y coma. Opcional.|  
 |**ReplyTo**|Dirección de correo electrónico que aparece en el encabezado **Responder** del mensaje. El valor debe ser una dirección de correo electrónico única. Opcional.|  
 |**IncludeReport**|Valor que indica si incluir el informe en la entrega por correo electrónico. El valor **true** indica que el informe se entrega en el cuerpo del mensaje de correo electrónico.|  
 |**RenderFormat**|Nombre de la extensión de representación que se usa para generar el informe representado. El nombre debe corresponder a una de las extensiones de representación visibles instaladas en el servidor de informes. Se requiere este valor si el valor **IncludeReport** está establecido en **true**.|  
 |**Prioridad**|Prioridad con la que se envía el mensaje de correo electrónico. Los valores válidos son **LOW**, **NORMAL** y **HIGH**. El valor predeterminado es **NORMAL**.|  
-|**Asunto**|El texto de la línea de asunto del mensaje de correo electrónico.|  
-|**Comentario**|Texto incluido en el cuerpo del mensaje de correo electrónico.|  
+|**Subject**|El texto de la línea de asunto del mensaje de correo electrónico.|  
+|**Comment**|Texto incluido en el cuerpo del mensaje de correo electrónico.|  
 |**IncludeLink**|Valor que indica si incluir un vínculo al informe en el cuerpo del correo electrónico.|  
   
 ## <a name="file-share-delivery-settings"></a>Configuración de la entrega a recursos compartidos de archivos  
  En la tabla siguiente se enumeran las opciones de configuración de la entrega a recursos compartidos de archivos para las suscripciones.  
   
-|Configuración|Valor|  
+|Configuración|Value|  
 |-------------|-----------|  
 |**FILENAME**|Nombre del archivo que se va a guardar en disco.|  
 |**FILEEXTN**|Indica si incluir una extensión de archivo para el informe representado. El valor es **true** o **false**.|  

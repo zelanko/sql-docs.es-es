@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4435a1683b42b48e83aa2902aaba59c4b7a2ab22
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 8322db228d67fc4341e3138c8a79079114065ba5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531871"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820939"
 ---
 # <a name="azdata-bdc-app-status"></a>azdata bdc app status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-En el artículo siguiente se proporciona referencia de los comandos de `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `bdc app status` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [azdata bdc app status show](#azdata-bdc-app-status-show) | Estado del servicio de aplicaciones.
@@ -47,9 +47,9 @@ azdata bdc app status show --resource appproxy
 ```
 ### <a name="optional-parameters"></a>Parámetros opcionales
 #### `--resource -r`
-Obtención de este recurso en este servicio.
+Obtenga este recurso en este servicio.
 #### `--all -a`
-Representación de todas las instancias de cada recurso en el servicio.
+Muestre todas las instancias de cada recurso en el servicio.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
 Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.

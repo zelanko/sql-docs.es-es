@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 371321c8b91d3d7c56ac2721deb29a664209f004
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 7cb67f55af03fc8c948df6f17ee2924dea12825f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531905"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820970"
 ---
 # <a name="azdata-app"></a>aplicación de azdata
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-En el artículo siguiente se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `app` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [azdata app template](reference-azdata-app-template.md) | Plantillas.
@@ -64,7 +64,7 @@ azdata app init --name reduce --template ssis
 #### `--spec -s`
 Generar solo un archivo spec.yaml de la aplicación.
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 #### `--template -t`
@@ -72,7 +72,7 @@ Nombre de la plantilla. Para obtener la lista completa de nombres de plantillas 
 #### `--destination -d`
 Dónde colocar el esqueleto de la aplicación. Valor predeterminado: directorio de trabajo actual.
 #### `--url -u`
-Especifique otra ubicación de repositorio de plantillas. Valor predeterminado: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+Especifique otra ubicación de repositorio de plantillas. Predeterminado: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
 Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
@@ -94,7 +94,7 @@ Crea una aplicación desde un directorio que contenga un archivo spec.yaml de es
 ```bash
 azdata app create --spec /path/to/dir/with/spec/yaml
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--spec -s`
 Ruta a un directorio con un archivo de especificación de YAML en el que se describe la aplicación.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -156,7 +156,7 @@ azdata app list
 ```
 ### <a name="optional-parameters"></a>Parámetros opcionales
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -181,9 +181,9 @@ Elimina aplicaciones por nombre y versión.
 ```bash
 azdata app delete --name reduce --version v1    
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -217,9 +217,9 @@ Ejecuta una aplicación con varios parámetros de entrada.
 ```bash
 azdata app run --name reduce --version v1 --inputs x=10,y5.6    
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 ### <a name="optional-parameters"></a>Parámetros opcionales
@@ -252,7 +252,7 @@ azdata app describe --name reduce --version v1
 #### `--spec -s`
 Ruta a un directorio con un archivo de especificación de YAML en el que se describe la aplicación.
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 ### <a name="global-arguments"></a>Argumentos globales

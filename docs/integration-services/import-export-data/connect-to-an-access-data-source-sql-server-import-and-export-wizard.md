@@ -10,10 +10,10 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296293"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de Access (Asistente para importación y exportación de SQL Server)
@@ -51,10 +51,10 @@ Especifique la ruta de acceso y el nombre del archivo de Access. Por ejemplo, **
 > [!NOTE]
 > Si hace clic en **Examinar** para buscar el archivo de Access, el cuadro de diálogo **Abrir** filtra los archivos con el formato y la extensión de archivo .mdb anteriores de forma predeterminada. Sin embargo, el proveedor de datos también puede abrir archivos con el formato y la extensión de archivo .accdb más recientes.
   
- **Examinar**  
+ **Browse**  
  Busque el archivo de base de datos desde el cuadro de diálogo **Abrir**.  
   
- **User name**  
+ **Nombre de usuario**  
 Proporcione un nombre de usuario válido si existe un archivo de información de grupo de trabajo asociado a la base de datos.  
   
  **Contraseña**  
@@ -69,7 +69,7 @@ Especifique las opciones avanzadas, como la contraseña de la base de datos o un
 Si no ve Access en la lista de orígenes de datos, ¿está ejecutando el asistente de 64 bits? Los proveedores para Excel y Access son normalmente de 32 bits y no son visibles en el asistente de 64 bits. Ejecute al asistente de 32 bits en su lugar.
 
 > [!NOTE]
-> Para usar la versión de 64 bits del Asistente para importación y exportación de SQL Server, tendrá que instalar SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
+> Para usar la versión de 64 bits del asistente para importación y exportación de SQL Server, tendrá que instalar SQL Server. SQL Server Data Tools (SSDT) y SQL Server Management Studio (SSMS) son aplicaciones de 32 bits y solo instalan archivos de 32 bits, incluida la versión de 32 bits del asistente.
 
 ## <a name="officeDownloads"></a>Obtener los archivos que necesita para conectarse a Access  
 Es posible que tenga que descargar los componentes de conectividad para orígenes de datos de Microsoft Office, incluidos Access y Excel, si aún no están instalados. Descargue la versión más reciente de los componentes de conectividad para los archivos de Access y Excel aquí: [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).
@@ -101,7 +101,7 @@ Para permitir que los valores de identidad existentes en los datos de origen se 
 
 Si las claves principales existentes están en una columna de identidad, una columna autonumérica o su equivalente, normalmente es necesario seleccionar esta opción para mantener los valores de clave principales existentes. De lo contrario, la columna de identidad de destino normalmente asigna nuevos valores.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Choose a Data Source](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) (Selección de un origen de datos)  
 [Choose a Destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md) (Selección de un destino)
 

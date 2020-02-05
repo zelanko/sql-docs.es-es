@@ -18,10 +18,10 @@ ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050790"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT (permisos de servidor de Transact-SQL)
@@ -83,7 +83,7 @@ GRANT permission [ ,...n ]
  *server_role*  
  Especifica un rol de servidor definido por el usuario.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los permisos del ámbito del servidor solamente pueden concederse si la base de datos actual es maestra.  
   
  Puede ver información acerca de los permisos del servidor en la vista de catálogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), mientras que la información acerca de las entidades de seguridad de servidor puede verse en la vista de catálogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Encontrará información sobre la pertenencia de roles de servidor en la vista de catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
@@ -127,7 +127,7 @@ GRANT permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los tres permisos de servidor siguientes se agregaron en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Permiso **CONNECT ANY DATABASE**  
@@ -145,7 +145,7 @@ GRANT permission [ ,...n ]
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-granting-a-permission-to-a-login"></a>A. Conceder un permiso a un inicio de sesión  
- En el siguiente ejemplo se concede el permiso `CONTROL SERVER` al inicio de sesión `TerryEminhizer` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En el siguiente ejemplo se concede el permiso `CONTROL SERVER` al inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `TerryEminhizer`.  
   
 ```  
 USE master;  
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. Conceder un permiso que dispone del permiso GRANT  
- En el siguiente ejemplo se concede `ALTER ANY EVENT NOTIFICATION` al inicio de sesión `JanethEsteves` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el derecho para conceder este permiso a otro inicio de sesión.  
+ En el siguiente ejemplo se concede `ALTER ANY EVENT NOTIFICATION` al inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `JanethEsteves` con el derecho para conceder este permiso a otro inicio de sesión.  
   
 ```  
 USE master;  

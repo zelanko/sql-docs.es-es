@@ -11,10 +11,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908669"
 ---
 # <a name="install-polybase-on-windows"></a>Instalación de PolyBase en Windows
@@ -33,7 +33,7 @@ Para instalar una versión de evaluación de SQL Server, vaya a [SQL Server Eval
    
 - Espacio mínimo disponible en disco duro: 2 GB.
   
-- Recomendaciones: Un mínimo de 16 GB de RAM.
+- Recomendado: memoria RAM mínima de 16 GB.
    
 - TCP/IP debe estar habilitado para que PolyBase funcione correctamente. TCP/IP está habilitado de manera predeterminada en todas las ediciones de SQL Server, excepto en las ediciones Developer y Express de SQL Server. Para que PolyBase funcione correctamente en las ediciones Developer y Express, debe habilitar la conectividad TCP/IP. Vea [Habilitar o deshabilitar un protocolo de red de servidor](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 
@@ -104,13 +104,13 @@ Use los valores de esta tabla para crear scripts de instalación. Los servicios 
 
 |Componente de SQL Server|Parámetro y valores|Descripción|  
 |--------------------------|--------------------------|-----------------|  
-|Control del programa de instalación de SQL Server|**Necesario**<br /><br /> /FEATURES=PolyBase|Selecciona la característica PolyBase.|  
-|motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica la cuenta del servicio de motor. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
+|Control del programa de instalación de SQL Server|**Obligatorio**<br /><br /> /FEATURES=PolyBase|Selecciona la característica PolyBase.|  
+|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica la cuenta del servicio de motor. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
 |Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica la contraseña de la cuenta del servicio de motor.|  
-|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio para el motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
+|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio del Motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
 |Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica la cuenta del servicio Movimiento de datos. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
 |Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCPASSWORD|Especifica la contraseña de la cuenta de movimiento de datos.|  
-|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica el modo de inicio para el servicio de movimiento de datos: Automático (predeterminado), Deshabilitado y Manual.|  
+|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica el modo de inicio del servicio Movimiento de datos: Automático (predeterminado), Deshabilitado y Manual.|  
 |PolyBase|**Opcional**<br /><br /> /PBSCALEOUT|Especifica si la instancia de SQL Server se usa como parte de un grupo de cálculo de escalabilidad horizontal de PolyBase. <br />Valores admitidos: True, False.|  
 |PolyBase|**Opcional**<br /><br /> /PBPORTRANGE|Especifica un intervalo de puertos con un mínimo de seis puertos para los servicios de PolyBase. Ejemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
@@ -123,10 +123,10 @@ Use los valores de esta tabla para crear scripts de instalación. Los servicios 
 |Control del programa de instalación de SQL Server|**Obligatorio**<br /><br /> /FEATURES=PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore habilita la compatibilidad con todas las características de PolyBase, excepto la conectividad de Hadoop. PolyBaseJava habilita la conectividad de Hadoop. PolyBase habilita ambas. |  
 |Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica la cuenta del servicio de motor. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
 |Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica la contraseña de la cuenta del servicio de motor.|  
-|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio para el motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
+|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio del Motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
 |Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica la cuenta del servicio de movimiento de datos. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
 |Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCPASSWORD|Especifica la contraseña de la cuenta de movimiento de datos.|  
-|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica el modo de inicio para el servicio de movimiento de datos: Automático (predeterminado), Deshabilitado y Manual.|  
+|Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCSTARTUPTYPE|Especifica el modo de inicio del servicio Movimiento de datos: Automático (predeterminado), Deshabilitado y Manual.|  
 |PolyBase|**Opcional**<br /><br /> /PBSCALEOUT|Especifica si la instancia de SQL Server se usa como parte de un grupo de cálculo de escalabilidad horizontal de PolyBase. <br />Valores admitidos: True, False.|  
 |PolyBase|**Opcional**<br /><br /> /PBPORTRANGE|Especifica un intervalo de puertos con un mínimo de seis puertos para los servicios de PolyBase. Ejemplo:<br /><br /> `/PBPORTRANGE=16450-16460`|  
 

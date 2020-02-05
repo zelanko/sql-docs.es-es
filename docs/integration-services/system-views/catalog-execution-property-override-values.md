@@ -11,10 +11,10 @@ ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5ad38c81101d983f70130bd0df5526ccba785f57
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296553"
 ---
 # <a name="catalogexecution_property_override_values"></a>catalog.execution_property_override_values 
@@ -26,7 +26,7 @@ ms.locfileid: "71296553"
 
   Muestra los valores de invalidación de la propiedad que se establecieron durante la ejecución del paquete.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |property_id|**bigint**|Identificador único para el valor de invalidación de la propiedad.|  
 |execution_id|**bigint**|Identificador único de la instancia de ejecución.|  
@@ -34,7 +34,7 @@ ms.locfileid: "71296553"
 |property_value|**nvarchar(max)**|Valor invalidación de la propiedad.|  
 |sensitive|**bit**|Cuando el valor es 1, la propiedad es confidencial y se cifra cuando se almacena. Cuando el valor es 0, la propiedad no es confidencial y el valor se almacena como texto simple.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta vista muestra una fila para cada ejecución en la que los valores de propiedad se invalidan mediante la sección **Invalidaciones de propiedad** en la pestaña **Opciones avanzadas** del diálogo **Ejecutar paquete**. La ruta de acceso a la propiedad se deriva de la propiedad **Ruta de acceso del paquete** de la tarea del paquete.  
   
 ## <a name="permissions"></a>Permisos  

@@ -20,10 +20,10 @@ ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dc29fadcbe0fe3a3f2eca8616b89e9ec3e45a7a9
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258312"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>Disponibilidad de los permisos de grupo DENY (Transact-SQL)
@@ -98,7 +98,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>A. Denegar el permiso VIEW DEFINITION en un grupo de disponibilidad  
- En el siguiente ejemplo se deniega el permiso `VIEW DEFINITION` en el grupo de disponibilidad `MyAg` para el inicio de sesión `ZArifin`de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En el siguiente ejemplo se deniega el permiso `VIEW DEFINITION` en el grupo de disponibilidad `MyAg` para el inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de `ZArifin`.  
   
 ```  
 USE master;  

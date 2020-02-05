@@ -11,10 +11,10 @@ ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 37fc28cbcdbeaa261550f0490dccaf2a25c51cdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579070"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>Ejemplos de ecuaciones de filtro (Generador de informes y SSRS)
@@ -26,11 +26,11 @@ ms.locfileid: "65579070"
 ## <a name="filter-examples"></a>Ejemplos de filtros  
  En la tabla siguiente, se muestran ejemplos de ecuaciones de filtro que usan tipos de datos y operadores diferentes. El elemento de informe para el que se define un filtro determina el ámbito de la comparación. Por ejemplo, para un filtro definido en un conjunto de datos, **TOP % 10** es el 10 por ciento de los valores más altos del conjunto de datos; para un filtro definido en un grupo, **TOP% 10** es el 10 por ciento de los valores más altos del grupo.  
   
-|Expresión simple|Tipo de datos|Operador|Valor|Descripción|  
+|Expresión simple|Tipo de datos|Operator|Value|Descripción|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
-|`[SUM(Quantity)]`|**Integer**|**>**|`7`|Incluye valores de datos que son mayores que 7.|  
-|`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|Incluye los 10 valores de datos más altos.|  
-|`[SUM(Quantity)]`|**Integer**|**TOP %**|`20`|Incluye el 20% de los valores de datos más altos.|  
+|`[SUM(Quantity)]`|**Entero**|**>**|`7`|Incluye valores de datos que son mayores que 7.|  
+|`[SUM(Quantity)]`|**Entero**|**TOP N**|`10`|Incluye los 10 valores de datos más altos.|  
+|`[SUM(Quantity)]`|**Entero**|**TOP %**|`20`|Incluye el 20% de los valores de datos más altos.|  
 |`[Sales]`|**Texto**|**>**|`=CDec(100)`|Incluye todos los valores de tipo System.Decimal (tipos de datos "money" de SQL) mayores que $100.|  
 |`[OrderDate]`|**DateTime**|**>**|`2008-01-01`|Incluye todas las fechas desde el 1 de enero de 2008 hasta la fecha actual.|  
 |`[OrderDate]`|**DateTime**|**BETWEEN**|`2008-01-01`<br /><br /> `2008-02-01`|Incluye las fechas desde el 1 de enero de 2008 hasta el 1 de febrero de 2008, inclusive.|  

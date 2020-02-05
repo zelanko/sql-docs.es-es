@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9e891ee16ce664e12f12b16c9deda957d0fa2263
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727728"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Supervisar instrucciones de T-SQL PREDICT con eventos extendidos en SQL Server Machine Learning Services
@@ -24,7 +24,7 @@ Obtenga información sobre cómo usar eventos extendidos para supervisar y soluc
 
 Los siguientes eventos extendidos están disponibles en todas las versiones de SQL Server que admiten instrucciones de T-SQL [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql). 
 
-|NAME |object_type|description| 
+|name |object_type|description| 
 |----|----|----|
 |predict_function_completed |event  |Detalles del tiempo de ejecución integrado|
 |predict_model_cache_hit |event|Se produce cuando se recupera un modelo de la caché del modelo de la función PREDICT. El uso de este evento junto con otros eventos predict_model_cache_* permite solucionar problemas causados por la caché del modelo de la función PREDICT.|

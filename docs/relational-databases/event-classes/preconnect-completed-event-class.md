@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2d674bf516dbdf25f940e9b14792d71c01d44806
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940660"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed, clase de eventos
@@ -35,8 +35,8 @@ ms.locfileid: "67940660"
 |Duration|**bigint**|La cantidad de tiempo, en microsegundos, que ha utilizado la función clasificadora.|13|Sí|  
 |ObjectID|**int**|El Id. del objeto clasificador definido por el usuario.|22|Sí|  
 |CPU|**int**|Uso de la CPU en milisegundos.|18|Sí|  
-|Reads|**int**|El número de lecturas lógicas.|16|Sí|  
-|Writes|**int**|El número de escrituras lógicas.|17|Sí|  
+|Lecturas|**int**|El número de lecturas lógicas.|16|Sí|  
+|Escrituras|**int**|El número de escrituras lógicas.|17|Sí|  
 |GroupID|**int**|El Id. del grupo de cargas de trabajo clasificado.|66|Sí|  
 |Error|**int**|El último número de error en caso de que la función clasificadora definida por el usuario no se ejecute.|31|Sí|  
 |State|**int**|El estado del último error.|30|Sí|  

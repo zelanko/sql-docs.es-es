@@ -1,6 +1,6 @@
 ---
-title: Asistente Generar y publicar scripts | Microsoft Docs
-ms.custom: ''
+title: Asistente generar y publicar scripts
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -43,18 +43,18 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0671a283261a6c0867e4349f8cd0f2baadf0cbd7
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122998"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253901"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Puede usar el **Asistente Generar y publicar scripts** para crear scripts con el fin de transferir una base de datos entre instancias de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Puede generar scripts para una base de datos en una instancia del motor de base de datos en la red local o a partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Los scripts generados se pueden ejecutar en otra instancia del motor de base de datos o [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. También puede usar el asistente para publicar el contenido de una base de datos directamente en un servicio web creado usando Database Publishing Services. Es posible crear scripts para una base de datos completa o limitarlos a objetos específicos.  
 
-Para un tutorial más detallado sobre cómo usar el Asistente para generar y publicar scripts, consulte [Tutorial: Asistente para generar scripts](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
+Para un tutorial más detallado sobre cómo usar el Asistente para generar y publicar scripts, vea [Tutorial: Asistente para generar Scripts](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
 
 
   
@@ -123,7 +123,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
  **Guardar scripts en una ubicación específica**: guarda uno o varios archivos de script Transact-SQL en una ubicación que especifique.  
 
-  ![Guardar](media/generate-and-publish-scripts-wizard/save.png)   
+  ![Save](media/generate-and-publish-scripts-wizard/save.png)   
   
 -   **Guardar en el archivo** : guarda el script en uno o varios archivos .sql. Haga clic en el botón Examinar ( **…** ) para especificar el nombre y la ubicación del archivo. Active la casilla **Sobrescribir el archivo existente** para reemplazar el archivo si ya existe uno con el mismo nombre. Haga clic en **Un solo archivo** o en **Archivo único por objeto** para especificar el modo en que se deben generar los scripts. Haga clic en **Texto Unicode** o en **Texto ANSI** para especificar el tipo de texto que se debe usar en el script.  
   
@@ -172,11 +172,11 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
 -   **Incluir enlaces** : genera un script para enlazar los objetos predeterminados y de regla. El valor predeterminado es **False**. Para obtener más información, vea [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) y [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md).  
   
--   **Incluir intercalación**: incluye información de intercalación en el script. El valor predeterminado es **False**. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+-   **Incluir intercalación** : incluye información de intercalación en el script. El valor predeterminado es **False**. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 -   **Generar script de valores predeterminados** : incluye los objetos predeterminados que se usan para establecer los valores en las columnas de tabla. El valor predeterminado es **True**. Para obtener más información, vea [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md).  
   
--   **Incluir DROP y CREATE en el script**: Si es **Incluir CREATE en el script**, se incluyen las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] para crear objetos. Si es **Incluir DROP en el script**, se incluyen las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] para quitar objetos. Si es **Incluir DROP y CREATE en el script**, se incluye la instrucción DROP de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el script, seguida de la instrucción CREATE, por cada objeto del script. El valor predeterminado es **Incluir CREATE en el script**.  
+-   **Incluir DROP y CREATE en el script** : Si es **Incluir CREATE en el script**, se incluyen las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] para crear objetos. Si es **Incluir DROP en el script**, se incluyen las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] para quitar objetos. Si es **Incluir DROP y CREATE en el script**, se incluye la instrucción DROP de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el script, seguida de la instrucción CREATE, por cada objeto del script. El valor predeterminado es **Incluir CREATE en el script**.  
   
 -   **Generar script de propiedades extendidas** : incluye propiedades extendidas en el script si el objeto tiene propiedades extendidas. El valor predeterminado es **True**.  
   
@@ -190,9 +190,9 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
 -   **Incluir estadísticas en el script** : si se establece el valor **Incluir estadísticas en el script**, esta opción incluye la instrucción **CREATE STATISTICS** para volver a crear estadísticas del objeto. La opción **Incluir estadísticas e histogramas en el script** también crea información de histogramas. El valor predeterminado es **No incluir estadísticas en el script**. Para obtener más información, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
--   **Incluir USE DATABASE en el script**: agrega la instrucción **USE DATABASE** al script. Para asegurarse de que se creen objetos de base de datos en la base de datos correcta, incluya la instrucción **USE DATABASE** . Cuando necesite utilizar el script en otra base de datos, seleccione **False** para omitir la instrucción **USE DATABASE** . El valor predeterminado es **True**. Para obtener más información, vea [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).  
+-   **Incluir USE DATABASE en el script** : agrega la instrucción **USE DATABASE** al script. Para asegurarse de que se creen objetos de base de datos en la base de datos correcta, incluya la instrucción **USE DATABASE** . Cuando necesite utilizar el script en otra base de datos, seleccione **False** para omitir la instrucción **USE DATABASE** . El valor predeterminado es **True**. Para obtener más información, vea [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).  
   
--   **Tipos de datos para generar por script**: selecciona lo que se debe generar por script: **Solo datos**, **Solo esquema** o ambos. El valor predeterminado **Solo esquema**.  
+-   **Tipos de datos que se deben incluir en el script** : selecciona lo que se incluirá en el script: **Solo datos**, **Solo esquema**o ambos. El valor predeterminado **Solo esquema**.  
   
  **Opciones de tabla o vista** : las siguientes opciones solo se aplican a scripts para tablas o vistas.  
   
@@ -242,11 +242,11 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
 1.  **Convertir UDDT en tipos base** : si es **True**, los tipos de datos definidos por el usuario (UDDT) se convierten en los tipos de datos base subyacentes que se usaron para crearlos. Use **True** cuando el UDDT no exista en la base de datos en la que se ejecutará el script. Si es **False**, se usan los UDDT. El valor predeterminado es **False**.  
   
-2.  **Publicar intercalación** : incluye información de intercalación de las columnas de la tabla. El valor predeterminado es **False**. Para más información, consulte [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+2.  **Publicar intercalación** : incluye información de intercalación de las columnas de la tabla. El valor predeterminado es **False**. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 3.  **Publicar valores predeterminados** : incluye los objetos predeterminados que se usan para establecer los valores en las columnas de tabla. El valor predeterminado es **True**. Para obtener más información, vea [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md).  
   
-4.  **Publicar objetos dependientes**: publica un script para cualquier objeto que deba estar presente cuando se ejecute el script para el objeto seleccionado. El valor predeterminado es **True**.  
+4.  **Publicar objetos dependientes** : publica un script para cualquier objeto que deba estar presente cuando se ejecute el script para el objeto seleccionado. El valor predeterminado es **True**.  
   
 5.  **Publicar propiedades extendidas** : incluye las propiedades extendidas en el script que se envía al proveedor para su publicación, si el objeto tiene propiedades extendidas. El valor predeterminado es **True**.  
   
@@ -256,13 +256,13 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
 8.  **Publicar estadísticas** : si se establece el valor **Publicar estadísticas**, incluye la instrucción **CREATE STATISTICS** para volver a crear estadísticas del objeto. La opción **Publicar estadísticas e histogramas** también crea información de histogramas. El valor predeterminado es **No publicar estadísticas**. Para obtener más información, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
-9. **Publicar opciones vardecimal**: cuando se habilita en la tabla de base de datos de origen, permite usar el formato de tabla **vardecimal** en la tabla de base de datos de destino. El valor predeterminado es **True**.  
+9. **Publicar opciones vardecimal** : cuando se habilita en la tabla de base de datos de origen, permite usar el formato de tabla **vardecimal** en la tabla de base de datos de destino. El valor predeterminado es **True**.  
   
 10. **Nombres de objeto de certificación de esquema** : incluye el nombre de esquema en el nombre de los objetos que se crean. El valor predeterminado es **True**.  
   
 11. **Incluir enlaces** : incluye enlaces para los objetos predeterminados y de regla en el script enviado al proveedor para su publicación. El valor predeterminado es **True**. Para obtener más información, vea [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) y [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md).  
   
-12. **Tipos de datos para publicar**: selecciona lo que se debe generar por script: **Solo datos**, **Solo esquema** o ambos. El valor predeterminado es **Esquema y datos**.  
+12. **Tipos de datos que se van a publicar** : selecciona lo que se incluirá en el script: **Solo datos**, **Solo esquema**o ambos. El valor predeterminado es **Esquema y datos**.  
   
  **Opciones de publicación**: especifica si se usarán transacciones al publicar el proveedor de hospedaje web.  
   
@@ -286,7 +286,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
 8.  **Publicar seguimiento de cambios** : incluye el seguimiento de cambios en el proceso de publicación, si se ha habilitado en la base de datos de origen o en las tablas de la base de datos de origen. El valor predeterminado es **False**. Para obtener más información, vea [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
-9. **Publicar opciones de compresión de datos**: incluye las opciones de compresión de datos en el proceso de publicación, si se han configurado en la base de datos de origen o en las tablas de la base de datos de origen. El valor predeterminado es **True**. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+9. **Publicar opciones de compresión de datos** : incluye las opciones de compresión de datos en el proceso de publicación, si se han configurado en la base de datos de origen o en las tablas de la base de datos de origen. El valor predeterminado es **True**. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 ###  <a name="ProvConfig"></a> Página Configuración de proveedor  
  Use este cuadro de diálogo para ver o modificar la configuración del proveedor de hospedaje. La información de este cuadro de diálogo se puede utilizar para:  
@@ -331,7 +331,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
  **Detalles** : vea en la columna **Acción** el progreso del asistente. Después de generar los scripts, el asistente los guarda en un archivo o los usa para publicar en un servicio web, según las selecciones. Cuando cada uno de estos pasos se haya completado, haga clic en el valor de la columna **Resultado** para ver el resultado del paso correspondiente.  
   
- **Guardar informe** : haga clic en esta opción para guardar los resultados del progreso del asistente en un archivo.  
+ **Guardar informe:** haga clic en esta opción para guardar los resultados del progreso del asistente en un archivo.  
   
  **Cancelar** : haga clic en esta opción para cerrar el asistente antes de que se haya completado el procesamiento, o si se produce un error.  
   
@@ -347,9 +347,9 @@ Para generar un script de objetos con la sintaxis de [!INCLUDE[ssSDW_md](../../i
 
 1. Haga clic en **Herramientas** y, luego, en **Opciones**.  
 2. En **Opciones generales de scripting** , establezca lo siguiente:  
-    1. Script para el tipo de motor de base de datos: **Microsoft Azure SQL Database**.  
-    2. Script para la edición del motor de base de datos: **Microsoft Azure SQL Data Warehouse Edition**.  
-3. Haga clic en **Aceptar**.
+    1. Script para el tipo de motor de base de datos: **Base de datos SQL de Microsoft Azure**.  
+    2. Script para la edición del motor de la base de datos: **Edición de Almacenamiento de datos SQL de Microsoft Azure**.  
+3. Haga clic en **OK**.
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>Cómo generar scripts para el Almacenamiento de datos SQL cuando no es la opción de scripting predeterminada  
 
@@ -359,8 +359,8 @@ Si establece el [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] como la opción
 2. Seleccione **Generar scripts…** .  
 3. Elija los objetos de los que quiera generar un script.  
 4. En **Opciones de scripting**, haga clic en **Opciones avanzadas**. En **General** , establezca lo siguiente:  
-    1. Script para el tipo de motor de base de datos: **Microsoft Azure SQL Database**.  
-    2. Script para la edición del motor de base de datos: **Microsoft Azure SQL Data Warehouse Edition**.  
+    1. Script para el tipo de motor de base de datos: **Base de datos SQL de Microsoft Azure**.  
+    2. Script para la edición del motor de la base de datos: **Edición de Almacenamiento de datos SQL de Microsoft Azure**.  
 5. Haga clic en **Guardar o publicar scripts** y, luego, en **Finalizar**.  
 
 No se conservarán las opciones establecidas en el paso 4. Si prefiere que se conserven estas opciones, siga las instrucciones de **Cómo establecer opciones de scripting predeterminadas en el Almacenamiento de datos SQL**.  

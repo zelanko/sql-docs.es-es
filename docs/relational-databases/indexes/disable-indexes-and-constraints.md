@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107143"
 ---
 # <a name="disable-indexes-and-constraints"></a>Deshabilitar índices y restricciones
@@ -130,7 +130,7 @@ ms.locfileid: "68107143"
  Muestra el nombre de la tabla o vista en la que se ha creado el índice.  
   
  **Tipo de índice**  
- Muestra el tipo de índice: **agrupado**, **no agrupado**, **espacial** o **XML**.  
+ Muestra el tipo de índice: **Agrupado**, **No agrupado**, **Espacial**o **XML**.  
   
  **Estado**  
  Muestra el estado de la operación de deshabilitación. Los valores posibles tras la ejecución son:  
@@ -151,11 +151,11 @@ ms.locfileid: "68107143"
   
      Se ha encontrado un error durante la operación de deshabilitación de índices; la operación no ha finalizado correctamente.  
   
--   **Detenido**  
+-   **Stopped**  
   
      La deshabilitación del índice no ha finalizado correctamente porque el usuario ha detenido la operación.  
   
- **de mensaje**  
+ **Mensaje**  
  Proporciona el texto de los mensajes de error durante la operación de deshabilitación. Durante la ejecución, los errores aparecen como hipervínculos. El texto de los hipervínculos describe el cuerpo del error. La columna **Mensaje** pocas veces es lo suficientemente ancha para poder leer el texto completo del mensaje. Hay dos maneras de leer el texto completo:  
   
 -   Mueva el puntero sobre la celda del mensaje para que aparezca la información sobre herramientas con el texto de error.  

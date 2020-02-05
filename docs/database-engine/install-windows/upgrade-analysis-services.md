@@ -22,10 +22,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: dbf87499f1bc5c23ae272daa393ef981a97e66d5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892566"
 ---
 # <a name="upgrade-analysis-services"></a>Actualizar Analysis Services
@@ -43,7 +43,7 @@ ms.locfileid: "68892566"
 > Los niveles de compatibilidad de las bases de datos asociadas a un servidor determinado seguirán siendo los mismos, a menos que los cambie manualmente.
    
   
-### <a name="in-place-upgrade"></a>Actualización en contexto  
+### <a name="in-place-upgrade"></a>Actualización local  
  El proceso de actualización migra automáticamente las bases de datos existentes de la instancia antigua a la instancia nueva. Dado que los metadatos y los datos binarios son compatibles entre las dos versiones, después de actualizar se conservarán los datos y no es necesario migrarlos manualmente.  
   
  Para actualizar una instancia existente, ejecute el programa de instalación y especifique el nombre de la instancia existente como nombre de la nueva instancia.  
@@ -88,7 +88,7 @@ ms.locfileid: "68892566"
   
  Para obtener más información, vea [Nivel de compatibilidad de una base de datos multidimensional &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services) y [Nivel de compatibilidad para modelos tabulares de Analysis Services](https://docs.microsoft.com/analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Actualización de PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
   

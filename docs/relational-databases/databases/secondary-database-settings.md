@@ -13,10 +13,10 @@ ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82a8df3e80a851de5fb09cda3e28620f163a3de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127222"
 ---
 # <a name="secondary-database-settings"></a>Configuración de base de datos secundaria
@@ -32,7 +32,7 @@ ms.locfileid: "68127222"
  **Base de datos secundaria**  
  Muestra el nombre de la base de datos secundaria de la configuración del trasvase de registros. Cuando agregue una nueva base de datos secundaria a una configuración del trasvase de registros, puede elegir una base de datos de la lista o escribir el nombre de una nueva en el cuadro. Si especifica el nombre de una nueva base de datos, deberá seleccionar una opción en la pestaña **Inicialización** que restaure una copia de seguridad completa de la base de datos principal en la base de datos secundaria. La nueva base de datos se crea como parte de la operación de restauración.  
   
- **Conectar**  
+ **Conexión**  
  Se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para utilizarla como servidor secundario en la configuración del trasvase de registros. La cuenta utilizada para la conexión debe ser miembro del rol fijo de servidor sysadmin en la instancia de servidor secundario.  
   
  **Pestaña Inicializar**  

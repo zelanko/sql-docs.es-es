@@ -24,13 +24,13 @@ author: CarlRabeler
 ms.author: carlrab
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 1b1706a78402c705eac92f135a492ea352544fe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928962"
 ---
-# <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
+# <a name="set-identity_insert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Permite insertar valores explícitos en la columna identidad de una tabla.  
@@ -54,7 +54,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
  *table_name*  
  Es el nombre de la tabla con una columna de identidad.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  En todo momento, solo una tabla de una sesión puede tener la propiedad IDENTITY_INSERT establecida en ON. Si ya existe una tabla con esta propiedad establecida en ON y se ejecuta una instrucción SET IDENTITY_INSERT ON para otra tabla, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un mensaje de error que indica que SET IDENTITY_INSERT ya está establecido en ON y la tabla para la que se ha establecido.  
   
  Si el valor insertado es mayor que el valor de identidad actual de la tabla, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza automáticamente el nuevo valor insertado como valor de identidad actual.  

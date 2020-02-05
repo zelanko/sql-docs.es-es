@@ -26,10 +26,10 @@ ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: c3b8061b49d0acacedae323645cd8822beaa016e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68102035"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
@@ -67,7 +67,7 @@ DBCC CHECKFILEGROUP
  Es el número de identificación (identificador) del grupo de archivos de la base de datos actual para el que se debe comprobar la asignación de tablas y la integridad estructural.  
   
  NOINDEX  
- Especifica que no se deben realizar comprobaciones intensivas de índices no clúster para las tablas de usuario. Esto reduce el tiempo total de ejecución. La opción NOINDEX no afecta a las tablas del sistema, ya que DBCC CHECKFILEGROUP siempre comprueba todos los índices de las tablas del sistema.  
+ Especifica que no se deben realizar comprobaciones intensivas de índices no agrupado para las tablas de usuario. Esto reduce el tiempo total de ejecución. La opción NOINDEX no afecta a las tablas del sistema, ya que DBCC CHECKFILEGROUP siempre comprueba todos los índices de las tablas del sistema.  
   
  ALL_ERRORMSGS  
  Muestra un número ilimitado de errores por objeto. De forma predeterminada, se muestran todos los mensajes de error. Especificar u omitir esta opción no tiene ningún efecto.  
@@ -99,7 +99,7 @@ DBCC CHECKFILEGROUP
 > [!CAUTION]  
 >  Si MAXDOP se establece en cero, el servidor elige el grado máximo de paralelismo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 DBCC CHECKFILEGROUP y DBCC CHECKDB son comandos DBCC similares. La diferencia principal es que DBCC CHECKFILEGROUP se limita al grupo de archivos especificado y a las tablas necesarias.
 DBCC CHECKFILEGROUP ejecuta los siguientes comandos:
 -   [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) del grupo de archivos.  

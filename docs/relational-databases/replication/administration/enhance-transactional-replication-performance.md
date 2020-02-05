@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8ed18a3ea7ce4804146d448765d9f18e8b2a7f73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710378"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288182"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aumentar el rendimiento de la replicación transaccional
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "71710378"
   
 -   Ejecute los agentes continuamente en lugar de utilizar programaciones frecuentes.  
   
-     Configurar los agentes para que se ejecuten continuamente en vez de crear programaciones frecuentes (por ejemplo, cada minuto) mejora el rendimiento de la replicación, ya que el agente no tiene que iniciarse y detenerse. Si configura el Agente de distribución para que se ejecute continuamente, los cambios se propagan con latencia baja a los demás servidores conectados en la topología. Para obtener más información, vea:  
+     Configurar los agentes para que se ejecuten continuamente en vez de crear programaciones frecuentes (por ejemplo, cada minuto) mejora el rendimiento de la replicación, ya que el agente no tiene que iniciarse y detenerse. Si configura el Agente de distribución para que se ejecute continuamente, los cambios se propagan con latencia baja a los demás servidores conectados en la topología. Para más información, consulte:  
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar programaciones de sincronización](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
@@ -146,7 +146,7 @@ Es posible que se haya percatado de las siguientes tendencias en los contadores 
 - El valor del contador de rendimiento **Dist: Transacciones entregadas/s** es siempre 0.
 - El contador de rendimiento **Dist: Latencia de entrega** informa de un aumento del valor hasta que se resuelve el interbloqueo.
 
-En el tema "Agente de distribución de replicación" de Libros en pantalla de SQL Server se incluye la descripción siguiente para el parámetro *SubscriptionStreams*: "Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores".
+El tema "Agente de distribución de replicación" de los Libros en pantalla de SQL Server contiene la siguiente descripción del parámetro *SubscriptionStreams*: "Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores".
 
 El Agente de distribución utiliza una sesión para reintentar el lote que no se pudo aplicar. Después de que el Agente de distribución haya aplicado correctamente el lote, retomará el uso de varias sesiones sin reiniciar.
 
@@ -160,6 +160,6 @@ Confirmar un conjunto de transacciones tiene una sobrecarga fija; al confirmar u
   
 [Trabajar con perfiles del Agente de replicación](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
-[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+[Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

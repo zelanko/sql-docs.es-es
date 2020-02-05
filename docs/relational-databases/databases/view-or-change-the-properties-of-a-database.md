@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: dc1e6d1021e1e7cf30a683d8c81c625a56b9766c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127056"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Ver o cambiar las propiedades de una base de datos
@@ -50,7 +50,7 @@ ms.locfileid: "68127056"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER en la base de datos para cambiar las propiedades de una base de datos. Se requiere como mínimo pertenecer al rol de base de datos Public para ver las propiedades de una base de datos.  
   
 ##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
@@ -64,7 +64,7 @@ ms.locfileid: "68127056"
 3.  En el cuadro de diálogo **Propiedades de la base de datos** , seleccione una página para ver la información correspondiente. Por ejemplo, seleccione la página **Archivos** para ver información acerca de los archivos de datos y de registro.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
- Transact-SQL proporciona una serie de métodos diferentes para ver y cambiar las propiedades de una base de datos. Para ver las propiedades de una base de datos, puede usar la función [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) y la vista de catálogo [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) . Para cambiar las propiedades de una base de datos, puede utilizar la versión de la instrucción ALTER DATABASE para su entorno:  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) o [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md). Para ver las propiedades de ámbito de base de datos, use la vista de catálogo [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) . Para modificar dichas propiedades, use la instrucción [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) .  
+ Transact-SQL proporciona una serie de métodos diferentes para ver y cambiar las propiedades de una base de datos. Para ver las propiedades de una base de datos, puede usar la función [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) y la vista de catálogo [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) . Para cambiar las propiedades de una base de datos, puede usar la versión de la instrucción ALTER DATABASE para su entorno: [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) o [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md). Para ver las propiedades de ámbito de base de datos, use la vista de catálogo [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) . Para modificar dichas propiedades, use la instrucción [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) .  
   
 #### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>Para ver una propiedad de una base de datos con la función DATABASEPROPERTYEX  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68127056"
     FROM sys.databases WHERE name = 'AdventureWorks2012';  
     ```  
   
-#### <a name="to-view-the-properties-of-a-database-scoped-configuration-by-querying-sysdatabasesscopedconfiguration"></a>Para ver las propiedades de una configuración de ámbito de base de datos mediante una consulta sys.databases_scoped_configuration  
+#### <a name="to-view-the-properties-of-a-database-scoped-configuration-by-querying-sysdatabases_scoped_configuration"></a>Para ver las propiedades de una configuración de ámbito de base de datos mediante una consulta sys.databases_scoped_configuration  
   
 1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)] y luego a la base de datos cuyas propiedades desea ver.  
   

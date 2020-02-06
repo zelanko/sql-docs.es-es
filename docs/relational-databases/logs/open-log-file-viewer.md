@@ -13,10 +13,10 @@ ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68083981"
 ---
 # <a name="open-log-file-viewer"></a>Abrir el Visor de archivos de registro
@@ -55,7 +55,7 @@ ms.locfileid: "68083981"
   
 1.  En el Explorador de objetos, expanda **Administración**.  
   
-2.  Realice una de las acciones siguientes:  
+2.  Realice cualquiera de las siguientes acciones:  
   
     -   Haga clic con el botón derecho en **Registros de SQL Server**, seleccione **Ver**y, después, haga clic en **Registro de SQL Server** o **Registro de Windows y SQL Server**.  
   

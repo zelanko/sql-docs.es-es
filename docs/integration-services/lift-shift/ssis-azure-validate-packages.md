@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: fd6c55f439b9d95473c5e36ea88cc7c5e1fb555e
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72915994"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Validación de paquetes de SQL Server Integration Services (SSIS) implementados en Azure
@@ -41,7 +41,7 @@ El asistente comprobará si determinados administradores de conexión tienen los
 
 El asistente realiza las siguientes comprobaciones de validación para los administradores de conexión de la lista.
 
-| Connection Manager | Autenticación de Windows | Ruta del archivo | Ruta de acceso UNC | Nombre de host | Proveedor o controlador |
+| Connection Manager | Autenticación de Windows | Ruta de acceso del archivo | Ruta de acceso UNC | Nombre de host | Proveedor o controlador |
 |--------------------|----------|-----------|-----|-----------|-------------------|
 | Ado                | âœ"        |           |     | âœ"         | âœ"                 |
 | AdoNet             | âœ"        |           |     | âœ"         | âœ"                 |

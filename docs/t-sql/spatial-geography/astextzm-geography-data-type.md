@@ -20,10 +20,10 @@ ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a711e81c796293f9c9ac8694b1dc32e0e60f6938
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066602"
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM (tipo de datos geography)
@@ -38,12 +38,12 @@ ms.locfileid: "68066602"
 .AsTextZM ()  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **nvarchar(max)**  
   
  Tipo de valor devuelto de CLR: **SqlChars**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una instancia de `Point` que contiene valores **Z** (elevación) y **M** (medida). `STAsText()` selecciona los valores WKT (-122.34900 47.65100); `AsTextZM()` selecciona los mismos valores WKT y también devuelve los valores para **Z** y **M**, lo que da como resultado (-122.34900 47.65100 10.3 12).  

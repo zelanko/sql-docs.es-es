@@ -23,10 +23,10 @@ ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b447e659b68ced56484296f4763a25e843022b06
-ms.sourcegitcommit: ab7209b5856537bfef0a6e9d0527d9002bd0a528
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75608024"
 ---
 # <a name="sql-server-configuration-manager"></a>Administrador de configuración de SQL Server
@@ -49,7 +49,7 @@ ms.locfileid: "75608024"
 >  -   **Windows 10**:  
 >          Para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , escriba SQLServerManager13.msc (para **) en la**página de inicio [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]. Para otras versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], reemplace 13 por el número correspondiente. Al hacer clic en SQLServerManager13.msc, se abre el Administrador de configuración. Para anclar el Administrador de configuración a la página de inicio o a la barra de tareas, haga clic con el botón derecho en SQLServerManager13.msc y, después, haga clic en **Abrir ubicación del archivo**. En el Explorador de archivos de Windows, haga clic con el botón derecho en SQLServerManager13.msc y, después, haga clic en **Anclar a Inicio** o **Anclar a la barra de tareas**.  
 > -   **Windows 8**:  
->          Para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], escriba **SQLServerManager\<versión>.msc** (por ejemplo, **SQLServerManager13.msc**) en el acceso a **Buscar** de **Aplicaciones** y, después, pulse **Entrar**.  
+>          Para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], escriba **SQLServerManager**versión>.msc **(por ejemplo,** SQLServerManager13.msc **) en el acceso a \<Buscar** de **Aplicaciones** y, después, pulse **Entrar**.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] El Administrador de configuración y SQL Server Management Studio usan el Instrumental de administración de Windows (WMI) para ver y cambiar algunas configuraciones del servidor. WMI proporciona una forma unificada de crear una interfaz con las llamadas a la API que administran las operaciones del Registro solicitadas por las herramientas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y de proporcionar un mejor control y manipulación de los servicios SQL seleccionados del complemento del Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información sobre cómo configurar permisos relacionados con WMI, vea [Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md).  
   

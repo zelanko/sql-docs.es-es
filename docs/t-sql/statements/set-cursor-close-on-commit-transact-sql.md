@@ -24,13 +24,13 @@ ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 392a50a23bd33235bb5a89eb95d585ebd5531527
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929109"
 ---
-# <a name="set-cursorcloseoncommit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
+# <a name="set-cursor_close_on_commit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Controla el comportamiento de la instrucción COMMIT TRANSACTION de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El valor predeterminado de esta configuración es OFF. Indica que el servidor no cerrará los cursores cuando se confirme una transacción.  
@@ -44,7 +44,7 @@ ms.locfileid: "67929109"
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si SET CURSOR_CLOSE_ON_COMMIT es ON, este valor cierra cualquier cursor abierto al confirmar o revertir de conformidad con ISO. Si SET CURSOR_CLOSE_ON_COMMIT es OFF, no se cierra el cursor cuando se confirma una transacción.  
   
 > [!NOTE]  

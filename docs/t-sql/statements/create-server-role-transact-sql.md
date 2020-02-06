@@ -25,10 +25,10 @@ ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117132"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
@@ -51,7 +51,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  AUTHORIZATION *server_principal*  
  Es el inicio de sesión que será propietario del nuevo rol de servidor. Si no se especifica un inicio de sesión, el rol de servidor será propiedad del inicio de sesión que ejecute CREATE SERVER ROLE.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los roles de servidor son elementos protegibles en el nivel de servidor. Después de crear un rol de servidor, configure los permisos de nivel de servidor del rol utilizando GRANT, DENY y REVOKE. Para agregar inicios de sesión a un rol de servidor y quitarlos, use [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md). Para quitar un rol de servidor, utilice [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md). Para obtener más información, vea [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Puede ver los roles de servidor consultando las vistas de catálogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) y [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  

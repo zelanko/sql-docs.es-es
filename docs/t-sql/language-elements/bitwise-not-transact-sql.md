@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee403317d9b10733126f462b47dc8d57d7f177d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943033"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (NOT bit a bit) (Transact-SQL)
@@ -59,7 +59,7 @@ ms.locfileid: "67943033"
   
  **bit** si los valores de entrada son **bit**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El operador bit a bit **~** realiza una operación lógica NOT bit a bit para *expression*, tomando un bit cada vez. Si *expression* tiene un valor de 0, los bits en el conjunto de resultados están establecidos en 1; de lo contrario, el bit en el resultado se borra a un valor de 0. En otras palabras, los unos pasan a los ceros y los ceros pasan a unos.  
   
 > [!IMPORTANT]  

@@ -18,10 +18,10 @@ ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7b7c9706f3b2943780e48ba5fe99769ddc059c94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065532"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT (permisos de certificado de Transact-SQL)
@@ -74,7 +74,7 @@ AS *granting_principal*
 -   usuario de base de datos asignado a una clave asimétrica  
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Un certificado es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden conceder para un certificado se muestran a continuación, junto con permisos más generales que los incluyen por implicación.  
   
 |Permiso de certificado|Implicado por el permiso de certificado|Implícito en el permiso de base de datos|  

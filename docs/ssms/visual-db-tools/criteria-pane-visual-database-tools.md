@@ -1,10 +1,9 @@
 ---
-title: Panel Criterios (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Panel de criterios
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,14 @@ helpviewer_keywords:
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf5d5f7a306b443fd01f9112b4197485ce3ce2ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 2e7bc19ea897e370617aeb8e0e0995e857489464
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263904"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258701"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Panel Criterios (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,16 +59,16 @@ Si no se ve el panel Criterios, haga clic con el botón derecho en el diseñador
   
 |**Columna**|**Tipo de consulta**|**Descripción**|  
 |--------------|------------------|-------------------|  
-|columna|All|Muestra el nombre de una columna de datos utilizada para la consulta o la expresión de una columna calculada. Esta columna está bloqueada de modo que sea siempre visible a medida que se desplaza horizontalmente.|  
+|Columna|All|Muestra el nombre de una columna de datos utilizada para la consulta o la expresión de una columna calculada. Esta columna está bloqueada de modo que sea siempre visible a medida que se desplaza horizontalmente.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica un nombre alternativo para una columna o el nombre que puede utilizar para una columna calculada.|  
-|Table|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica el nombre de la tabla u objeto con estructura de tabla para la columna de datos asociada. Esta columna está en blanco para las columnas calculadas.|  
-|Salida|SELECT, INSERT FROM, MAKE TABLE|Especifica si una columna de datos aparece en los resultados de consulta.<br /><br />Nota: Si la base de datos lo permite, puede utilizar una columna de datos para las cláusulas de orden o búsqueda sin mostrarla en el conjunto de resultados.|  
+|Tabla|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica el nombre de la tabla u objeto con estructura de tabla para la columna de datos asociada. Esta columna está en blanco para las columnas calculadas.|  
+|Output|SELECT, INSERT FROM, MAKE TABLE|Especifica si una columna de datos aparece en los resultados de consulta.<br /><br />Nota: Si la base de datos lo permite, puede utilizar una columna de datos para las cláusulas de orden o búsqueda sin mostrarla en el conjunto de resultados.|  
 |Tipo de orden|SELECT, INSERT FROM|Especifica que se utiliza la columna de datos asociada para ordenar los resultados de una consulta y si el orden es ascendente o descendente.|  
 |Criterio de ordenación|SELECT, INSERT FROM|Especifica la prioridad de orden de las columnas de datos utilizadas para ordenar el conjunto de resultados. Cuando cambia el criterio de ordenación de una columna de datos, el criterio de ordenación del resto de las columnas se actualiza en consecuencia.|  
 |Agrupar por|SELECT, INSERT FROM, MAKE TABLE|Especifica que la columna de datos asociada se está utilizando para crear una consulta de funciones agregadas. Esta columna de cuadrícula aparece solamente si ha elegido **Agrupar por** en el menú **Herramientas** o si ha agregado una cláusula GROUP BY al panel SQL.<br /><br />De forma predeterminada, el valor de esta columna se establece en **Agrupar por**y la columna se incluye en la cláusula GROUP BY.<br /><br />Al moverse a una celda de esta columna y seleccionar una función de agregado para aplicar a la columna de datos asociada, se agrega la expresión resultante de forma predeterminada como una columna de resultados para el conjunto de resultados.|  
 |Criterios|All|Especifica una condición de búsqueda (filtro) para la columna de datos asociada. Escriba un operador (el predeterminado es "=") y el valor que haya que buscar. Incluya los valores de texto entre comillas simples.<br /><br />Si la columna de datos asociada forma parte de una cláusula GROUP BY, la expresión especificada se utilizará para una cláusula HAVING.<br /><br />Si especifica valores para más de una celda de la columna de cuadrícula **Criterios**, las condiciones de búsqueda resultantes se vinculan de forma automática con un operador lógico AND.<br /><br />Para especificar varias expresiones de condición de búsqueda para una sola columna de base de datos, por ejemplo (fname > 'A') AND (fname < 'M'), agregue la columna de datos al panel Criterios dos veces y especifique valores independientes en la columna de cuadrícula **Criterios** para cada instancia de la columna de datos.|  
 |O...|All|Especifica una expresión de condición de búsqueda adicional para la columna de datos, vinculada a expresiones previas con un operador lógico OR. Puede agregar más columnas de cuadrícula **O…** presionando la tecla TAB en la columna **O…** situada más a la derecha.|  
-|Anexar|INSERT FROM|Especifica el nombre de la columna de datos de destino de la columna de datos asociada. Al crear una consulta Insert From, el Diseñador de consultas y vistas intenta hacer coincidir el origen con una columna de datos de destino adecuada. Si el Diseñador de consultas y vistas no puede elegir una columna coincidente, se deberá proporcionar el nombre de columna.|  
+|Append|INSERT FROM|Especifica el nombre de la columna de datos de destino de la columna de datos asociada. Al crear una consulta Insert From, el Diseñador de consultas y vistas intenta hacer coincidir el origen con una columna de datos de destino adecuada. Si el Diseñador de consultas y vistas no puede elegir una columna coincidente, se deberá proporcionar el nombre de columna.|  
 |Valor nuevo|UPDATE, INSERT INTO|Especifica el valor que se va a colocar en la columna asociada. Escriba un valor literal o una expresión.|  
   
 ## <a name="see-also"></a>Consulte también  

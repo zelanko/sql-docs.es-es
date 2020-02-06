@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d1cfd06fd881c4749879365feda14e3cfcb877a9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727505"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>Errores de scripting de R en SQL Server
@@ -37,7 +37,7 @@ Si el tiempo de ejecución de R funciona pero el script devuelve errores, se rec
 
 También se recomienda revisar y reescribir ligeramente el script para corregir cualquier problema con los tipos de datos que pueden surgir al trasladar datos entre R y el motor de base de datos. Para obtener más información, consulte [Bibliotecas de R y tipos de datos](r/r-libraries-and-data-types.md).
 
-Además, puede usar el paquete sqlrutils para agrupar el script de R en un formato que se consuma más fácilmente como un procedimiento almacenado. Para obtener más información, vea:
+Además, puede usar el paquete sqlrutils para agrupar el script de R en un formato que se consuma más fácilmente como un procedimiento almacenado. Para más información, consulte:
 * [Paquete sqlrutils](r/ref-r-sqlrutils.md)
 * [Creación de un procedimiento almacenado mediante sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
@@ -65,7 +65,7 @@ Para permitir que las credenciales de Windows se pasen de forma segura desde un 
 
 1. Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] como administrador en la instancia donde quiera ejecutar el código de R.
 
-2. Ejecute el script siguiente. Asegúrese de editar el nombre del grupo de usuarios, si ha cambiado el valor predeterminado, y el nombre de equipo y de instancia.
+2. Ejecute el siguiente script. Asegúrese de editar el nombre del grupo de usuarios, si ha cambiado el valor predeterminado, y el nombre de equipo y de instancia.
 
     ```sql
     USE [master]

@@ -1,25 +1,26 @@
 ---
-title: Usar condiciones de prueba en pruebas unitarias de SQL Server | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Usar condiciones de prueba en pruebas unitarias de SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconditions
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa2bce398b6ac03422044c9ffad23f91ab81818c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140973"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243518"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Usar condiciones de prueba en pruebas unitarias de SQL Server
+
 En una prueba unitaria de SQL Server, se ejecutan uno o varios scripts de prueba Transact\-SQL. Los resultados se pueden evaluar dentro del script Transact\-SQL y usar THROW o RAISERROR para devolver un error y que no se supere la prueba, o se pueden definir condiciones de prueba en la prueba para evaluar los resultados. La prueba devuelve una instancia de la clase [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx). La instancia de esta clase contiene uno o más DataSets, el tiempo de ejecución y las filas afectadas por el script. Toda esta información se recopila durante la ejecución del script. Estos resultados se pueden evaluar utilizando las condiciones de prueba. SQL Server Data Tools proporciona un conjunto de condiciones de prueba predefinidas. También puede crear y usar condiciones personalizadas, consulte [Condiciones de prueba personalizadas para pruebas unitarias de SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
   
 ## <a name="predefined-test-conditions"></a>Condiciones de prueba predefinidas  
@@ -32,7 +33,7 @@ En la tabla siguiente se enumeran las condiciones de prueba predefinidas que pue
 |Tiempo de ejecución|Se produce un error si el script de prueba Transact\-SQL lleva más tiempo del esperado en ejecutarse. El tiempo de ejecución predeterminado es de 30 segundos.<br /><br />El tiempo de ejecución se aplica únicamente a la prueba de script de prueba, no al script anterior a la prueba ni al script posterior a la prueba.|  
 |Esquema esperado|Se produce un error si las columnas y los tipos de datos del conjunto de resultados no coinciden con los especificados para la condición de prueba. Debe especificar un esquema mediante las propiedades de la condición de prueba. Para obtener más información, vea [Especificar un esquema esperado](#SpecifyExpectedSchema).|  
 |No concluyente|Siempre genera una prueba con un resultado de No concluyente. Esta es la condición predeterminada agregada a cada prueba. Esta condición de prueba se incluye para indicar que la comprobación de la prueba no se ha implementado. Elimine esta condición de prueba de la prueba después de agregar otras condiciones de prueba.|  
-|No se admite ResultSet vacío|Se produce un error si el conjunto de resultados está vacío. Puede usar esta condición de prueba o EmptyResultSet con la función @@RAISERROR de Transact\-SQL en el script de prueba para comprobar si una actualización funcionó correctamente. Por ejemplo, puede guardar los valores anteriores a la actualización, ejecutar la actualización, comparar los valores posteriores a la actualización y generar un error si no se obtienen los resultados esperados.|  
+|No se admite ResultSet vacío|Se produce un error si el conjunto de resultados está vacío. Puede usar esta condición de prueba o EmptyResultSet con la función @\- de Transact@RAISERRORSQL en el script de prueba para comprobar si una actualización funcionó correctamente. Por ejemplo, puede guardar los valores anteriores a la actualización, ejecutar la actualización, comparar los valores posteriores a la actualización y generar un error si no se obtienen los resultados esperados.|  
 |Recuento de filas|Se produce un error si el conjunto de resultados no contiene el número de filas esperado.|  
 |Valor escalar|Se produce un error si un valor determinado del conjunto de resultados no es igual al valor especificado. El **Valor esperado** predeterminado es null.|  
   
@@ -41,9 +42,9 @@ En la tabla siguiente se enumeran las condiciones de prueba predefinidas que pue
 >   
 > La duración notificada no incluye el tiempo usado para la generación de datos y la implementación del esquema, porque aparecen antes de que se ejecuten las pruebas. Para ver la duración de la prueba, seleccione una serie de pruebas en la ventana **Resultados de pruebas**, haga clic con el botón derecho y elija **Ver detalles de resultados de pruebas**.  
   
-Puede agregar condiciones de prueba a pruebas unitarias de SQL Server mediante el panel Condiciones de prueba del Diseñador de pruebas unitarias de SQL Server. Para más información, vea: [Cómo: Incorporar condiciones de prueba a pruebas unitarias de SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
+Puede agregar condiciones de prueba a pruebas unitarias de SQL Server mediante el panel Condiciones de prueba del Diseñador de pruebas unitarias de SQL Server. Para más información, consulte [Cómo: Agregar condiciones de prueba a pruebas unitarias de SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
   
-También puede modificar el código del método de prueba directamente para agregar más funcionalidad. Para más información, vea: [Cómo: Abrir una prueba unitaria de SQL Server para editarla](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md) y [Cómo: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md). Por ejemplo, puede agregar funcionalidad a un método de prueba si agrega instrucciones Assert. Para más información, consulte [Usar aserciones de Transact-SQL en pruebas unitarias de SQL Server](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md).  
+También puede modificar el código del método de prueba directamente para agregar más funcionalidad. Para más información, consulte [Cómo: Abrir una prueba unitaria de SQL Server para editarla](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md) y [Cómo: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md). Por ejemplo, puede agregar funcionalidad a un método de prueba si agrega instrucciones Assert. Para más información, consulte [Usar aserciones de Transact-SQL en pruebas unitarias de SQL Server](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md).  
   
 ## <a name="expected-failures"></a>Errores esperados  
 Puede crear pruebas unitarias de SQL Server para probar el comportamiento que no debe ejecutarse correctamente. Estos errores esperados se conocen a veces como pruebas negativas. A continuación, se exponen algunos ejemplos:  
@@ -72,7 +73,7 @@ Donde:
   
 Se omite cualquier parámetro no especificado. Estos parámetros se pasan a la instrucción **THROW** en el código de base de datos. Si especifica MatchFirstError = false, el atributo coincidirá con cualquier error de SQL en la excepción. El comportamiento predeterminado (MatchFirstError = true) consiste en hacer coincidir solamente el primer error que aparezca.  
   
-Para obtener un ejemplo de cómo usar excepciones esperadas y una prueba unitaria negativa de SQL Server, vea [Tutorial: Crear y ejecutar una prueba unitaria de SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Para obtener un ejemplo de cómo usar excepciones esperadas y una prueba unitaria negativa de SQL Server, consulte [Tutorial: Crear y ejecutar una prueba unitaria de SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="SpecifyDataChecksum"></a>Especificar una suma de comprobación de datos  
 Para mostrar el Diseñador de pruebas unitarias de SQL Server, haga doble clic en el archivo de código fuente de la prueba unitaria en el **Explorador de soluciones**.  
@@ -91,7 +92,7 @@ Después de agregar una condición de prueba Suma de comprobación de datos a la
   
     Aparece el cuadro de diálogo **Configuración de TestConditionName** .  
   
-5.  Especifique una conexión a la base de datos que desee probar. Para más información, vea: [Cómo: Crear una conexión a una base de datos](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Especifique una conexión a la base de datos que desee probar. Para más información, consulte [Cómo: Crear una conexión a una base de datos](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
   
 6.  De manera predeterminada, el cuerpo de Transact\-SQL de la prueba aparece en el panel de edición. Puede modificar el código en caso necesario, para generar los resultados esperados. Por ejemplo, si la prueba tiene código anterior a la prueba, quizás tenga que agregar ese código.  
   
@@ -121,7 +122,7 @@ Una vez agregada una condición de prueba Esquema esperado a la prueba unitaria 
   
     Aparece el cuadro de diálogo **Configuración de TestConditionName** .  
   
-5.  Especifique una conexión a la base de datos que desee probar. Para más información, vea: [Cómo: Crear una conexión a una base de datos](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Especifique una conexión a la base de datos que desee probar. Para más información, consulte [Cómo: Crear una conexión a una base de datos](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
   
 6.  De manera predeterminada, el cuerpo de Transact\-SQL de la prueba aparece en el panel de edición. Puede modificar el código en caso necesario, para generar los resultados esperados. Por ejemplo, si la prueba tiene código anterior a la prueba, quizás tenga que agregar ese código.  
   

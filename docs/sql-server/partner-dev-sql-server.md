@@ -9,12 +9,12 @@ ms.technology: ''
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: c865464022ba18e03be5baa5b66b4b4a87ce2799
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 769c421c087de366ec262c3e5b8744ffb78f3ba6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095860"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75656822"
 ---
 # <a name="sql-server-development-partners"></a>Asociados de desarrollo de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +31,8 @@ Para admitir el desarrollo de soluciones de base de datos de SQL Server, elija e
 Para más información sobre otros asociados, consulte los artículos sobre [asociados de alta disponibilidad y recuperación ante desastres][hadr_partners], [asociados de administración][management_partners] y [asociados de supervisión][monitor_partners].
 
 <!--Image references-->
-[1]: ./media/partner-hadr-sql-server/idera_logo.png
-[2]: ./media/partner-hadr-sql-server/click2cloud_logo.png
+[1]: ./media/partner-hadr-sql-server/idera-logo.png
+[2]: ./media/partner-hadr-sql-server/click2cloud-logo.png
 
 <!--Article links-->
 [hadr_partners]: ./partner-hadr-sql-server.md
@@ -42,7 +42,7 @@ Para más información sobre otros asociados, consulte los artículos sobre [aso
 <!--Website links -->
 
 [idera_website]:https://www.idera.com/rapid-sql-ide
-[click2cloud_website]:https://www.click2cloud.net
+[click2cloud_website]:https://www.click2cloud.com/
 <!--Get Started Links-->
 
 <!--Datasheet Links-->

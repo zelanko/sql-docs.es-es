@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72008456"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Actualización o revisión de bases de datos replicadas
@@ -36,7 +36,7 @@ ms.locfileid: "72008456"
     - En un suscriptor a una publicación de combinación todas las versiones pueden ser iguales o inferiores a la versión del publicador que se admite según el ciclo de soporte del ciclo de vida de las versiones.  
  
 La ruta de actualización a SQL Server es diferente según el modelo de implementación. SQL Server ofrece dos rutas de actualización en general:
-- En paralelo: se implementa un entorno en paralelo y se mueven al entorno nuevo las bases de datos junto con los objetos de nivel de instancia asociados, como los inicios de sesión, los trabajos, etc. 
+- En paralelo: se implementa un entorno en paralelo y se mueven al entorno nuevo las bases de datos junto con los objetos de nivel de instancia asociados, como los inicios de sesión, trabajos, etc. 
 - Actualización local: se permite que los medios de instalación de SQL Server actualicen la instalación de SQL Server existente mediante el reemplazo de los bits de SQL Server y la actualización de los objetos de base de datos. Para los entornos que ejecutan grupos de disponibilidad Always On o instancias de clúster de conmutación por error, una actualización local se combina con una [actualización gradual](choose-a-database-engine-upgrade-method.md#rolling-upgrade) para minimizar el tiempo de inactividad. 
 
 Un enfoque común que se ha adoptado para las actualizaciones en paralelo de las topologías de replicación es mover los pares de publicador y suscriptor por partes al nuevo entorno en paralelo, en lugar de mover toda la topología. Este enfoque por fases ayuda a controlar el tiempo de inactividad y a minimizar, hasta cierto punto, el impacto para la empresa que depende de la replicación.  
@@ -72,7 +72,7 @@ La mayor parte de este artículo se centra en la actualización de la versión d
 -   [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)
 -   [Iniciar y detener un agente de replicación &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)
 -   [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)
--   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Conceptos de los ejecutables del Agente de replicación](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 
 Para más información sobre la ejecución del Agente de mezcla, vea estos artículos:
@@ -88,7 +88,7 @@ Antes de actualizar desde una edición de [!INCLUDE[ssnoversion](../../includes/
 ## <a name="steps-to-upgrade-a-replication-topology"></a>Pasos para actualizar una topología de replicación
 En estos pasos se describe el orden en que se deben actualizar los servidores de una topología de replicación. Se aplican los mismos pasos con independencia de que se ejecute la replicación transaccional o de mezcla. Pero en estos pasos no se describe la replicación punto a punto, las suscripciones de actualización en cola ni las suscripciones de actualización inmediata. 
 
-### <a name="in-place-upgrade"></a>Actualización en contexto 
+### <a name="in-place-upgrade"></a>Actualización local 
 1. Actualice el distribuidor. 
 2. Actualice el publicador y el suscriptor. Se pueden actualizar en cualquier orden. 
 

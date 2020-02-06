@@ -23,10 +23,10 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2bc1c2c7951efceca6d50a30098284f2bc3ef132
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982591"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "73982591"
 
   Crea un índice espacial en la tabla y la columna especificadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se puede crear un índice antes de que la tabla posea datos. Los índices se pueden crear en tablas o vistas de otra base de datos especificando un nombre completo de base de datos. Los índices espaciales requieren que la tabla tenga una clave principal clúster. Para más información sobre los índices espaciales, vea [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -314,7 +314,7 @@ PAD_INDEX = { ON | **OFF** }
   
 Especifica el relleno del índice. El valor predeterminado es OFF.  
   
-ON     
+ACTIVAR     
 Indica que el porcentaje de espacio disponible especificado por *fillfactor* se aplica a las páginas de nivel intermedio del índice.  
   
 No se especifica OFF ni *fillfactor*.     
@@ -342,10 +342,10 @@ SORT_IN_TEMPDB = { ON | **OFF** }
   
  Indica si los resultados de ordenación temporales deben almacenarse en tempdb. El valor predeterminado es OFF.  
   
- ON     
+ ACTIVAR     
  Los resultados de ordenación intermedios utilizados para generar el índice se almacenan en tempdb. Esto puede reducir el tiempo necesario para crear un índice si tempdb y la base de datos de usuarios están en conjuntos de discos distintos. Sin embargo, esto aumenta la cantidad de espacio en disco utilizado durante la generación del índice.  
   
- OFF     
+ Apagado     
  Los resultados de orden intermedios se almacenan en la misma base de datos que el índice.  
   
  Además del espacio necesario en la base de datos del usuario para crear el índice, tempdb debe tener la misma cantidad de espacio adicional para almacenar los resultados de orden intermedio. Para más información, vea [Opción SORT_IN_TEMPDB para índices](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
@@ -356,10 +356,10 @@ No tiene ningún efecto sobre los índices espaciales porque el tipo de índice 
 STATISTICS_NORECOMPUTE = { ON | **OFF**}     
 Especifica si se vuelven a calcular las estadísticas de distribución. El valor predeterminado es OFF.  
   
- ON    
+ ACTIVAR    
  Las estadísticas obsoletas no se vuelven a calcular automáticamente.  
   
- OFF    
+ Apagado    
  Se habilita la actualización automática de las estadísticas.  
   
  Para restaurar la actualización automática de estadísticas, establezca STATISTICS_NORECOMPUTE en OFF o ejecute UPDATE STATISTICS sin la cláusula NORECOMPUTE.  
@@ -372,10 +372,10 @@ DROP_EXISTING = { ON | **OFF** }
   
  Especifica que se quite y se vuelva a generar el índice espacial con nombre preexistente. El valor predeterminado es OFF.  
   
- ON     
+ ACTIVAR     
  El índice existente se quita y se vuelve a generar. El nombre de índice especificado debe ser el mismo que el de un índice actualmente existente; sin embargo, la definición se puede modificar. Por ejemplo, puede especificar columnas, criterio de ordenación, esquema de particionamiento u opciones de índice diferentes.  
   
- OFF     
+ Apagado     
  Se muestra un error si ya existe el nombre de índice especificado.  
   
  El tipo de índice no puede cambiarse utilizando DROP_EXISTING.  
@@ -393,10 +393,10 @@ ALLOW_ROW_LOCKS = { **ON** | OFF }
   
  Especifica si se permiten los bloqueos de fila. El valor predeterminado es ON.  
   
- ON     
+ ACTIVAR     
  Los bloqueos de fila se admiten al obtener acceso al índice. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina cuándo se usan los bloqueos de fila.  
   
- OFF     
+ Apagado     
  No se usan los bloqueos de fila.  
   
 ALLOW_PAGE_LOCKS = { **ON** | OFF }     
@@ -404,10 +404,10 @@ ALLOW_PAGE_LOCKS = { **ON** | OFF }
   
  Especifica si se permiten bloqueos de página. El valor predeterminado es ON.  
   
- ON    
+ ACTIVAR    
  Los bloqueos de página se permiten al obtener acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina el momento en que se usan los bloqueos de página.  
   
- OFF     
+ Apagado     
  No se utilizan bloqueos de página.  
   
 MAXDOP =*max_degree_of_parallelism*      
@@ -448,7 +448,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE    
  El índice no usa compresión de páginas.  
   
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 Cada opción solamente puede especificarse una vez para cada instrucción CREATE SPATIAL INDEX. Si se especifica dos veces cualquier opción, se produce un error.  
   
 Puede crear un máximo de 249 índices espaciales en cada columna espacial de una tabla. Crear más de un índice espacial en una columna espacial concreta puede resultar útil, por ejemplo, para indizar parámetros de teselación diferentes en una única columna.  
@@ -571,7 +571,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
    WITH ( GRIDS = ( LEVEL_3 = HIGH, LEVEL_2 = HIGH ) );  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)       
 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)       
 [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)       

@@ -1,10 +1,9 @@
 ---
-title: Crear un paso de trabajo de Analysis Services | Microsoft Docs
-ms.custom: ''
+title: Create an Analysis Services Job Step
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +11,15 @@ helpviewer_keywords:
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e27f429820039b7d804f52776e9cf5dd33bf27dd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 45f053ee1c69e5e36885fd72c6099823647381f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267281"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258495"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 
@@ -53,7 +54,7 @@ En este tema se describe cómo crear y definir los pasos de trabajo del Agente [
   
 ### <a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Permisos  
   
 -   Para ejecutar un paso de trabajo que utilice el subsistema de Analysis Services, un usuario debe ser miembro del rol fijo de servidor **sysadmin** o tener acceso a una cuenta de proxy válida definida para utilizar este subsistema. Además, la cuenta de servicio o el proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben ser un administrador de Analysis Services y una cuenta de dominio de Windows válida.  
   

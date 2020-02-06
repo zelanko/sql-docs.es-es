@@ -26,10 +26,10 @@ ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3f821e16baa3853926da1323457385365ea64807
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141263"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY (Transact-SQL)
@@ -62,7 +62,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
  FORCE  
  Especifica que el proceso RESTORE debe continuar, aunque la clave maestra de base de datos actual no se encuentre abierta o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pueda descifrar algunas claves privadas cifradas con ella.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Al restaurar la clave maestra, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descifra todas las claves cifradas con la clave maestra actualmente activa y cifra estas claves con la clave maestra restaurada. Esta operación requiere un uso intensivo de recursos, por lo que debe programarse durante un período de baja demanda. Si la clave maestra de base de datos no se encuentra abierta, no puede abrirse o alguna de las claves cifradas con ella no pueden descifrarse, la operación de restauración no se puede realizar.  
   
  Utilice la opción FORCE únicamente si la clave maestra es irrecuperable o si se producen errores en el descifrado. Se perderá la información cifrada solamente con una clave irrecuperable.  

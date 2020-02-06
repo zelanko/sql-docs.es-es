@@ -19,13 +19,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 09b1f1036f298179033c9ab1ba2e7c3ffed1ce06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109372"
 ---
-# <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
+# <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -69,7 +69,7 @@ Si el formato de *path* no es válido, **JSON_QUERY** devuelve un error.
   
 - En el modo strict, **JSON_QUERY** devuelve un error.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 
 ### <a name="lax-mode-and-strict-mode"></a>Modo lax y modo strict
 
@@ -92,17 +92,17 @@ Si el formato de *path* no es válido, **JSON_QUERY** devuelve un error.
   
  En la tabla siguiente se compara el comportamiento de **JSON_QUERY** en modo lax y modo strict. Para más información sobre la especificación del modo de ruta de acceso opcional (lax o strict), vea [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
-|Ruta de acceso|Valor devuelto en el modo lax|Valor devuelto en el modo strict|Más información|  
+|Path|Valor devuelto en el modo lax|Valor devuelto en el modo strict|Más información|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|Devuelve todo el texto JSON.|Devuelve todo el texto JSON.|N/A|  
+|$|Devuelve todo el texto JSON.|Devuelve todo el texto JSON.|N/a|  
 |$.info.type|NULL|Error|No es un objeto o una matriz.<br /><br /> Use **JSON_VALUE** en su lugar.|  
 |$.info.address.town|NULL|Error|No es un objeto o una matriz.<br /><br /> Use **JSON_VALUE** en su lugar.|  
-|$.info."address"|N"{ "town":"Bristol", "county":"Avon", "country":"England" }"|N"{ "town":"Bristol", "county":"Avon", "country":"England" }"|N/A|  
-|$.info.tags|N"[ "Sport", "Water polo"]"|N"[ "Sport", "Water polo"]"|N/A|  
+|$.info."address"|N"{ "town":"Bristol", "county":"Avon", "country":"England" }"|N"{ "town":"Bristol", "county":"Avon", "country":"England" }"|N/a|  
+|$.info.tags|N"[ "Sport", "Water polo"]"|N"[ "Sport", "Water polo"]"|N/a|  
 |$.info.type[0]|NULL|Error|No es una matriz.|  
 |$.info.none|NULL|Error|La propiedad no existe.|  
 
-### <a name="using-jsonquery-with-for-json"></a>Uso de JSON_QUERY con FOR JSON
+### <a name="using-json_query-with-for-json"></a>Uso de JSON_QUERY con FOR JSON
 
 **JSON_QUERY** devuelve un fragmento de JSON válido. Como resultado, **FOR JSON** no incluye entre caracteres de escape los caracteres especiales del valor devuelto de **JSON_QUERY**.
 
@@ -132,7 +132,7 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Datos JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

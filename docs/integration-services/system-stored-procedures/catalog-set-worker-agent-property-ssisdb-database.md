@@ -11,10 +11,10 @@ ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ea5a3a5d3d816c8debe1fb51b69a953cf6dd324a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295244"
 ---
 # <a name="catalogset_worker_agent_property-ssisdb-database"></a>catalog.set_worker_agent_property (base de datos de SSISDB)
@@ -40,9 +40,9 @@ Id. de agente de trabajo del trabajo de escalabilidad horizontal. *WorkerAgentId
 El nombre de la propiedad. *PropertyName* es **nvarchar(256)** .
 
 [@PropertyValue =] *PropertyValue*  
-Valor de la propiedad. *PropertyValue* es **nvarchar(max)** .
+El valor de la propiedad. *PropertyValue* es **nvarchar(max)** .
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 Los nombres de propiedad válidos son **DisplayName**, **Descriptio0n** y **Tags**.
 
 ## <a name="return-code-value"></a>Valor de código de retorno  

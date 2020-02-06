@@ -1,5 +1,5 @@
 ---
-title: Características en desuso del motor de base de datos | Microsoft Docs
+title: Características en desuso del Motor de base de datos | Microsoft Docs
 titleSuffix: SQL Server 2019
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-ver15'
 ms.openlocfilehash: c90f78d9aa7773dc4462c732a8181c3340d797f8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252732"
 ---
 # <a name="deprecated-database-engine-features-in-includesssqlv15-mdincludessssqlv15-mdmd"></a>Características en desuso del motor de base de datos de [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]

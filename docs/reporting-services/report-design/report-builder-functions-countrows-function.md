@@ -9,10 +9,10 @@ ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9295abe7d34ee0b799517137163d4581d8b34ce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579608"
 ---
 # <a name="report-builder-functions---countrows-function"></a>Funciones del Generador de informes: función CountRows
@@ -29,16 +29,16 @@ CountRows(scope, recursive)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ámbito*  
+ *scope*  
  (**Cadena**) Nombre de un conjunto de datos, una región de datos o un grupo que contiene los elementos de informe que hay que contar.  
   
- *recursivos*  
+ *recursive*  
  (**Tipo enumerado**) Opcional. **Simple** (valor predeterminado) o **RdlRecursive**. Especifica si se debe realizar la agregación de forma recursiva.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Devuelve un **Integer**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  **CountRows** cuenta todas las filas del ámbito especificado, incluso las filas que contienen valores NULL.  
   
  El valor de *scope* no puede ser una expresión y debe hacer referencia al ámbito actual o a un ámbito contenedor.  

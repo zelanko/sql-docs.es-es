@@ -11,10 +11,10 @@ ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 97d78f4a96a87b6ffe373335167b796ea5a2de3d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296588"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
@@ -26,7 +26,7 @@ ms.locfileid: "71296588"
 
   Esta vista muestra una fila cada vez que un componente de flujo de datos envía datos a un componente de nivel inferior para una ejecución del paquete determinada. La información de esta vista se puede usar para calcular el rendimiento de datos de un componente.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|Identificador (id.) único de los datos.|  
 |execution_id|**bigint**|Identificador único de la instancia de ejecución.|  
@@ -40,7 +40,7 @@ ms.locfileid: "71296588"
 |created_time|**datatimeoffset(7)**|Hora en que se obtuvieron los valores.|  
 |execution_path|**nvarchar(max)**|Ruta de acceso de ejecución del componente.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 -   Cuando hay varios resultados del componente, se agrega una fila para cada uno de ellos.  
   

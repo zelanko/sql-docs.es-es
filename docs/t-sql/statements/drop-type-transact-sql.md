@@ -21,10 +21,10 @@ ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 00659f76da827bf5e00df72d966b32ec56e1f7ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072110"
 ---
 # <a name="drop-type-transact-sql"></a>DROP TYPE (Transact-SQL)
@@ -52,7 +52,7 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
  *type_name*  
  Es el nombre del tipo de datos de alias o del tipo definido por el usuario que desea quitar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La instrucción DROP TYPE no se ejecuta si se cumple alguna de las siguientes condiciones:  
   
 -   Hay tablas en la base de datos que contienen columnas del tipo de datos de alias o del tipo definido por el usuario. Encontrará más información sobre las columnas de tipo de alias o de tipo definido por el usuario si consulta las vistas de catálogo [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) o [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md).  

@@ -14,10 +14,10 @@ ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9daa6cf4c788c4ca63a9cc394c9a814a8c27cb5b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295208"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (base de datos de SSISDB)
@@ -29,7 +29,7 @@ ms.locfileid: "71295208"
 
   Muestra las instancias de ejecución del paquete en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Los paquetes que se ejecutan con la tarea Ejecutar paquete se ejecutan en la misma instancia de ejecución que el paquete primario.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|Identificador (id.) único global de la instancia de ejecución.|  
 |nombreDeCarpeta|**sysname(nvarchar(128))**|Nombre de la carpeta que contiene el proyecto.|  
@@ -62,7 +62,7 @@ ms.locfileid: "71295208"
 |machine_name|**nvarchar(128)**|Nombre del equipo en el que se está ejecutando la instancia del servidor.|  
 |dump_id|**uniqueidentifier**|El identificador de un volcado de ejecución.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta vista muestra una fila para cada instancia de ejecución del catálogo.  
   
 ## <a name="permissions"></a>Permisos  

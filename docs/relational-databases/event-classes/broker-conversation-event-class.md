@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3330b9b44f2794daf8e9cd45e9806991a6a815de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999770"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation, clase de eventos
@@ -38,7 +38,7 @@ ms.locfileid: "67999770"
 |**GUID**|**uniqueidentifier**|Id. de conversación del diálogo. Este identificador se transmite como parte del mensaje y lo comparten ambas partes de la conversación.|54|No|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para averiguar el nombre de host, use la función **HOST_NAME** .|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> 0 = usuario<br /><br /> 1 = sistema|60|No|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**MethodName**|**nvarchar**|Grupo de conversación al que pertenece la conversación.|47|No|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario al que pertenece la conexión que generó este evento.|6|Sí|  
@@ -46,7 +46,7 @@ ms.locfileid: "67999770"
 |**Prioridad**|**int**|Nivel de prioridad de la conversación.|5|Sí|  
 |**RoleName**|**nvarchar**|Rol del identificador de conversación. Es **initiator** o **target**.|38|No|  
 |**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo seguimiento se realiza.|26|No|  
-|**Severity**|**int**|Gravedad del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si este evento informa de un error.|29|No|  
+|**Gravedad**|**int**|Gravedad del error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si este evento informa de un error.|29|No|  
 |**SPID**|**int**|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso relacionado con el cliente.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**TextData**|**ntext**|El estado actual de la conversación. Puede tener uno de los siguientes valores:|1|Sí|  
@@ -54,14 +54,14 @@ ms.locfileid: "67999770"
 |||**SI**. Entrada iniciada. Otra instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] inició una nueva conversación con la instancia actual, pero la instancia actual no ha terminado de recibir el primer mensaje. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría crear la conversación en este estado si se fragmenta el primer mensaje o si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recibe los mensajes sin orden. No obstante, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría crear la conversación en el estado CO si la primera transmisión recibida de la conversación contiene el primer mensaje completo.|||  
 |||**CO**. Conversando. La conversación está establecida y los dos lados de la conversación pueden enviar mensajes. La mayor parte de la comunicación de un servicio típico tiene lugar cuando la conversación está en este estado.|||  
 |||**DI**. Entrada desconectada. El lado remoto de la conversación ha emitido un END CONVERSATION. La conversación permanece en este estado hasta que el lado local de la conversación emite un END CONVERSATION. Una aplicación puede seguir recibiendo mensajes de la conversación. Puesto que el lado remoto de la conversación ha finalizado la conversación, una aplicación no puede enviar mensajes en esta conversación. Cuando una aplicación emite un END CONVERSATION, la conversación pasa al estado CD (Cerrada).|||  
-|||**DO**. Salida desconectada. El lado local de la conversación ha emitido un END CONVERSATION. La conversación permanece en este estado hasta que el lado remoto de la conversación confirma un END CONVERSATION. Una aplicación no puede seguir enviando ni recibiendo mensajes de la conversación. Cuando el lado remoto de la conversación confirma el END CONVERSATION, la conversación pasa al estado CD (Cerrada).|||  
+|||**HACER**. Salida desconectada. El lado local de la conversación ha emitido un END CONVERSATION. La conversación permanece en este estado hasta que el lado remoto de la conversación confirma un END CONVERSATION. Una aplicación no puede seguir enviando ni recibiendo mensajes de la conversación. Cuando el lado remoto de la conversación confirma el END CONVERSATION, la conversación pasa al estado CD (Cerrada).|||  
 |||**ER**. Error. Se ha producido un error en este extremo. Las columnas Error, Severity y State contienen información sobre el error específico que se ha producido.|||  
 |||**CD**. Cerrada. El extremo de la conversación ya no se utiliza.|||  
 |**Identificador de transacción**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
   
  En la tabla siguiente se indican los valores de la subclase de esta clase de eventos.  
   
-|Id.|Subclase|Descripción|  
+|id|Subclase|Descripción|  
 |--------|--------------|-----------------|  
 |1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **SEND Message** cuando el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ejecuta una instrucción SEND.|  
 |2|FINALIZAR CONVERSACIÓN|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **END CONVERSATION** cuando el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ejecuta una instrucción END CONVERSATION que no incluye la cláusula WITH ERROR.|  

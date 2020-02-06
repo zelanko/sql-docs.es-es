@@ -25,10 +25,10 @@ ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 810367b817aec0688a2bc5168be10c7ff073affc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73980995"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "73980995"
 
   Quita uno o varios desencadenadores DML o DDL de la base de datos actual.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -81,7 +81,7 @@ ON ALL SERVER
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Puede eliminar un desencadenador DML si quita éste o quita la tabla del desencadenador. Cuando se quita una tabla, también se quitan todos los desencadenadores asociados.  
   
  Cuando se quita un desencadenador, se quita la información acerca del desencadenador de las vistas de catálogos **sys.objects**, **sys.triggers** y **sys.sql_modules**.  

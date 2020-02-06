@@ -1,32 +1,33 @@
 ---
-title: Usar MSDeploy con el proveedor de dbSqlPackage | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 04/26/2017
+title: Usar MSDeploy con el proveedor de dbSqlPackage
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9279a433d848108b204cadc6990803695f9e82d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
+ms.openlocfilehash: f4c45335bae79a0307be27efb88cb0858bd6439f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140983"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243562"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Usar MSDeploy con el proveedor de dbSqlPackage
+
 **DbSqlPackage** es un proveedor de **MSDeploy** que permite interactuar con bases de datos de SQL Server y SQL Azure. **DbSqlPackage** admite las siguientes acciones:  
   
 -   **Extract**: crea un archivo de instantánea de base de datos (.dacpac) a partir de bases de datos de SQL Server o SQL Azure.  
   
--   **Publish**: actualiza de forma incremental un esquema de la base de datos para coincidir con el esquema de un archivo .dacpac de origen.  
+-   **Publicar**: actualiza de forma incremental un esquema de la base de datos para que coincida con el esquema de un archivo .dacpac de origen.  
   
--   **DeployReport**: crea un informe XML de los cambios que realizaría una acción de publicación.  
+-   **DeployReport**: crea un informe XML de los cambios que una acción de publicación realizarían.  
   
--   **Script**: crea un script de Transact\-SQL equivalente al script ejecutado por la acción de publicación.  
+-   **Script**: crea un script Transact\-SQL equivalente al script ejecutado por la acción de publicación.  
   
 Para más información sobre DACFx, consulte la documentación sobre la API administrada de DACFx en [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) o [SqlPackage.exe](../tools/sqlpackage.md) (herramienta de línea de comandos de DACFx).  
   

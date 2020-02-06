@@ -20,10 +20,10 @@ ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0a9954e823ae66017c3a6105f0f0ec27964b7043
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246167"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>Disponibilidad de los permisos de grupo GRANT (Transact-SQL)
@@ -100,7 +100,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>A. Conceder el permiso VIEW DEFINITION en un grupo de disponibilidad  
- En el siguiente ejemplo se concede el `VIEW DEFINITION`permiso en el grupo de disponibilidad`MyAg` para el inicio de sesión `ZArifin`de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En el siguiente ejemplo se concede el `VIEW DEFINITION`permiso en el grupo de disponibilidad`MyAg` para el inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de `ZArifin`.  
   
 ```  
 USE master;  
@@ -109,7 +109,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. Conceder el permiso TAKE OWNERSHIP con la opción GRANT  
- En el siguiente ejemplo se concede el permiso `TAKE OWNERSHIP` para el grupo de disponibilidad `MyAg` al usuario `PKomosinski` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con `GRANT OPTION`.  
+ En el siguiente ejemplo se concede el permiso `TAKE OWNERSHIP` para el grupo de disponibilidad `MyAg` al usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `PKomosinski` con `GRANT OPTION`.  
   
 ```  
 USE master;  
@@ -119,7 +119,7 @@ GO
 ```  
   
 ### <a name="c-granting-control-permission-on-an-availability-group"></a>C. Concede el permiso CONTROL para una grupo de disponibilidad  
- En el siguiente ejemplo se concede el `CONTROL`permiso en el grupo de disponibilidad`MyAg` para el usuario `PKomosinski`de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTROL permite un control completo de inicio de sesión del grupo de disponibilidad, aunque no es el propietario del mismo. Para cambiar la propiedad de una base de datos, consulte [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ En el siguiente ejemplo se concede el `CONTROL`permiso en el grupo de disponibilidad`MyAg` para el usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de `PKomosinski`. CONTROL permite un control completo de inicio de sesión del grupo de disponibilidad, aunque no es el propietario del mismo. Para cambiar la propiedad de una base de datos, consulte [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
 ```  
 USE master;  

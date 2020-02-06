@@ -20,10 +20,10 @@ ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 83655bc03b2f55d9d7d426d1fa58ce4e86570d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114985"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY permisos de clave asimétrica (Transact-SQL)
@@ -93,7 +93,7 @@ DENY { permission  [ ,...n ] }
   
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una clave asimétrica es un elemento protegible de nivel de base de datos que contiene la base de datos que es su entidad primaria en la jerarquía de permisos. A continuación, se enumeran los permisos más específicos y limitados que se pueden conceder para una clave asimétrica, además de los permisos más generales que los incluyen implícitamente.  
   
 |Permiso de clave asimétrica|Implícito en el permiso de clave asimétrica|Implícito en el permiso de base de datos|  

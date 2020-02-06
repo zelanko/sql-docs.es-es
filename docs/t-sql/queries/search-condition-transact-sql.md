@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68027650"
 ---
 # <a name="search-condition-transact-sql"></a>Condiciones de búsqueda (Transact-SQL)
@@ -115,7 +115,7 @@ ms.locfileid: "68027650"
  Especifica las condiciones de las filas devueltas en el conjunto de resultados de una instrucción SELECT, una expresión de consulta o una subconsulta. En una instrucción UPDATE, especifica las filas que se van a actualizar. En una instrucción DELETE, especifica las filas que se van a eliminar. No hay límite en el número de predicados que se pueden incluir en una condición de búsqueda de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  \<graph_search_pattern>  
- Especifica el patrón de coincidencia del grafo. Para obtener más información sobre los argumentos de esta cláusula, vea [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
+ Especifica el patrón de coincidencia de gráficos. Para obtener más información sobre los argumentos de esta cláusula, vea [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
  
  NOT  
  Niega la expresión booleana que especifica el predicado. Para obtener más información, vea [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
@@ -200,7 +200,7 @@ ms.locfileid: "68027650"
  EXISTS  
  Se utiliza con una subconsulta para probar la existencia de filas devueltas por la subconsulta. Para obtener más información, vea [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El orden de prioridad de los operadores lógicos es NOT (el más alto), seguido de AND y OR. Se pueden utilizar paréntesis para invalidar esta prioridad en una condición de búsqueda. El orden de evaluación de los operadores lógicos puede variar dependiendo de las opciones elegidas por el optimizador de consultas. Para obtener más información sobre el funcionamiento de los operadores lógicos en valores lógicos, vea [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md), [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md) y [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  

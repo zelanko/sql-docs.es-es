@@ -23,13 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 33f282c79c15a8b9548d799ef86e026fd7357d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098706"
 ---
-# <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
+# <a name="type_name-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve el nombre de tipo no calificado de un Id. de tipo específico.  
@@ -46,7 +46,7 @@ TYPE_NAME ( type_id )
  *type_id*  
  Es el identificador del tipo que se va a utilizar. *type_id* es de tipo **int** y puede hacer referencia a un tipo de cualquier esquema al que el autor de la llamada tenga permiso de acceso.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **sysname**  
   
 ## <a name="exceptions"></a>Excepciones  
@@ -54,7 +54,7 @@ TYPE_NAME ( type_id )
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como TYPE_NAME, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  TYPE_NAME devolverá un NULL cuando *type_id* no sea válido o cuando el autor de la llamada no cuente con los permisos necesarios para hacer referencia al tipo.  
   
  TYPE_NAME funciona con tipos de datos de sistema así como con tipos de datos definidos por el usuario. El tipo puede estar contenido en cualquier esquema, pero siempre se devuelve un nombre de tipo no calificado. Esto significa que el nombre no tiene el prefijo _schema_ **.** Prefix.  

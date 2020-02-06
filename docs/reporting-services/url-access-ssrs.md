@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574247"
 ---
 # <a name="url-access-ssrs"></a>Acceso URL (SSRS)
@@ -108,13 +108,13 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |Descripciones de las tareas|Vínculos|  
 |-----------------------|-----------|  
-|Acceder a los elementos del servidor de informes, como informes, orígenes de datos compartidos y recursos.|[Acceder a elementos del servidor de informes mediante el acceso URL](../reporting-services/access-report-server-items-using-url-access.md)|  
-|Pasar parámetros de informe a un informe.|[Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
-|Establecer la configuración regional de los parámetros de informe de la cadena de acceso URL, que define las interpretaciones de las fechas, divisas, etc. específicas de la configuración regional.|[Establecer el idioma para los parámetros de informe en una dirección URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
-|Enviar valores específicos para la extensión de representación que personalicen cómo se va a representar el informe.|[Especificar la configuración de la información del dispositivo en una dirección URL](../reporting-services/specify-device-information-settings-in-a-url.md)|  
-|Exportar un informe directamente a un formato de archivo sin verlo en el explorador.|[Exportar un informe mediante el acceso URL](../reporting-services/export-a-report-using-url-access.md)|  
-|Abrir un informe y navegar directamente a la ubicación de una cadena.|[Buscar un informe mediante un acceso URL](../reporting-services/search-a-report-using-url-access.md)|  
-|Representar una instantánea específica del historial de informes.|[Representar instantáneas del historial de informes mediante acceso URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
+|Acceder a los elementos del servidor de informes, como informes, orígenes de datos compartidos y recursos.|[Acceso a elementos del servidor de informes mediante el acceso URL](../reporting-services/access-report-server-items-using-url-access.md)|  
+|Pasar parámetros de informe a un informe.|[Paso de un parámetro de informe en una dirección URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
+|Establecer la configuración regional de los parámetros de informe de la cadena de acceso URL, que define las interpretaciones de las fechas, divisas, etc. específicas de la configuración regional.|[Establecimiento del idioma para los parámetros de informe en una dirección URL](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
+|Enviar valores específicos para la extensión de representación que personalicen cómo se va a representar el informe.|[Especificación de la configuración de la información del dispositivo en una dirección URL](../reporting-services/specify-device-information-settings-in-a-url.md)|  
+|Exportar un informe directamente a un formato de archivo sin verlo en el explorador.|[Exportación de un informe con el acceso URL](../reporting-services/export-a-report-using-url-access.md)|  
+|Abrir un informe y navegar directamente a la ubicación de una cadena.|[Búsqueda de un informe con el acceso URL](../reporting-services/search-a-report-using-url-access.md)|  
+|Representar una instantánea específica del historial de informes.|[Representación de una instantánea del historial de informes con el acceso URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>Consulte también  
  [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   

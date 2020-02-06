@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc10141cc2b6c069894868b2a153abc31c4c250c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155827"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
@@ -84,7 +84,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  *table_name*  
  Es el nombre de la tabla que se va a quitar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  No se puede utilizar DROP TABLE para quitar una tabla a la que haga referencia una restricción FOREIGN KEY. Primero se debe quitar la restricción FOREIGN KEY o la tabla de referencia. Si la tabla de referencia y la tabla que tiene la clave principal se van a quitar en la misma instrucción DROP TABLE, la tabla de referencia debe aparecer primero.  
   
  Se pueden quitar varias tablas de cualquier base de datos. Si la tabla que se va a quitar hace referencia a la clave principal de otra tabla que también se va a quitar, la tabla de referencia con la clave externa debe aparecer antes que la tabla que tiene la clave principal a la que se hace referencia.  

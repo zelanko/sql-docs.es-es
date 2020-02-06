@@ -10,10 +10,10 @@ ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594112"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar una dirección URL (Administrador de configuración de SSRS)
@@ -90,7 +90,7 @@ ms.locfileid: "73594112"
   
 9. Haga clic en **Aplicar** para crear la dirección URL.  
   
-10. Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página. Observe que la base de datos del servidor de informes debe crearse y configurarse para poder probar la dirección URL. Para obtener más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+10. Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página. Observe que la base de datos del servidor de informes debe crearse y configurarse para poder probar la dirección URL. Para más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]
 >  Si tiene enlaces SSL y reservas de direcciones URL existentes y desea cambiar el enlace SSL para, por ejemplo, usar otro certificado o encabezado de host, se recomienda que complete los pasos siguientes por orden:  
@@ -155,7 +155,7 @@ ms.locfileid: "73594112"
   
 4.  Especifique el puerto. Si especifica un puerto personalizado, la dirección URL de la aplicación siempre debe incluir el número de puerto.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  Para probar la dirección URL, abra una ventana del explorador y escriba la dirección URL.  
   

@@ -20,10 +20,10 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa922a5a850a6cee9b782d894994835d8e1d9a1c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291766"
 ---
 # <a name="aggregate-transformation"></a>Transformación Agregado
@@ -38,13 +38,13 @@ ms.locfileid: "71291766"
   
 |Operación|Descripción|  
 |---------------|-----------------|  
-|GROUP BY|Divide los conjuntos de datos en grupos. Se pueden usar columnas de cualquier tipo de datos para la agrupación. Para más información, vea [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
-|SUM|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para más información, vea [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
-|Promedio|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para más información, vea [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md).|  
+|Agrupar por|Divide los conjuntos de datos en grupos. Se pueden usar columnas de cualquier tipo de datos para la agrupación. Para más información, vea [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
+|Sum|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para más información, vea [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
+|Average|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para más información, vea [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md).|  
 |Count|Devuelve el número de elementos de un grupo. Para más información, vea [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md).|  
 |COUNT DISTINCT|Devuelve el número de valores únicos distintos de NULL de un grupo.|  
 |Mínima|Devuelve el valor mínimo en un grupo. Para más información, vea [MIN &#40;Transact-SQL&#41;](../../../t-sql/functions/min-transact-sql.md). En comparación con la función MIN de Transact-SQL, esta operación se puede usar únicamente con tipos de datos numéricos, de fecha y hora.|  
-|Máximo|Devuelve el valor máximo en un grupo. Para más información, vea [MAX &#40;Transact-SQL&#41;](../../../t-sql/functions/max-transact-sql.md). En comparación con la función MAX de Transact-SQL, esta operación se puede usar únicamente con tipos de datos numéricos, de fecha y hora.|  
+|Máxima|Devuelve el valor máximo en un grupo. Para más información, vea [MAX &#40;Transact-SQL&#41;](../../../t-sql/functions/max-transact-sql.md). En comparación con la función MAX de Transact-SQL, esta operación se puede usar únicamente con tipos de datos numéricos, de fecha y hora.|  
   
  La transformación Agregado controla los valores NULL de la misma forma que el motor de base de datos relacional de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Este comportamiento se define en el estándar SQL-92. Se aplican las reglas siguientes:  
   
@@ -71,9 +71,9 @@ ms.locfileid: "71291766"
 ## <a name="performance-considerations"></a>Consideraciones de rendimiento  
  La transformación Agregado incluye un conjunto de propiedades que se pueden establecer para mejorar el rendimiento de la transformación.  
   
--   Cuando realice una operación **Group by** , defina las propiedades Keys o KeysScale del componente y las salidas de componente. Si usa Keys, puede especificar el número exacto de claves que se espera que la transformación administre. (En este contexto, Keys hace referencia al número de grupos que se espera como resultado de una operación **Group by**). Con KeysScale, puede especificar un número aproximado de claves. Si especifica un valor correcto para Keys o KeyScale, mejorará el rendimiento porque la transformación podrá asignar la memoria adecuada a los datos que almacena en memoria caché.  
+-   Cuando realice una operación **Group by** , defina las propiedades Keys o KeysScale del componente y las salidas de componente. Si usa Keys, puede especificar el número exacto de claves que se espera que la transformación administre. (En este contexto, Keys hace referencia al número de grupos que se espera como resultado de una operación **Group by** ). Con KeysScale, puede especificar un número aproximado de claves. Si especifica un valor correcto para Keys o KeyScale, mejorará el rendimiento porque la transformación podrá asignar la memoria adecuada a los datos que almacena en memoria caché.  
   
--   Cuando realice una operación **Distinct count** , defina las propiedades CountDistinctKeys o CountDistinctScale del componente. Con CountDistinctKeys, puede especificar el número exacto de claves que se espera que la transformación controle en una operación count distinct. (En este contexto, CountDistinctKeys hace referencia al número de valores distintos que se esperan como resultado de una operación **Distinct count**). Mediante CountDistinctScale, puede especificar una cantidad aproximada de claves para una operación count distinct. Si especifica un valor correcto para CountDistinctKeys o CountDistinctScale, mejorará el rendimiento porque la transformación podrá asignar la memoria adecuada a los datos que almacena en memoria caché.  
+-   Cuando realice una operación **Distinct count** , defina las propiedades CountDistinctKeys o CountDistinctScale del componente. Con CountDistinctKeys, puede especificar el número exacto de claves que se espera que la transformación controle en una operación count distinct. (En este contexto, CountDistinctKeys hace referencia al número de valores distintos que se esperan como resultado de una operación **Distinct count** ). Mediante CountDistinctScale, puede especificar una cantidad aproximada de claves para una operación count distinct. Si especifica un valor correcto para CountDistinctKeys o CountDistinctScale, mejorará el rendimiento porque la transformación podrá asignar la memoria adecuada a los datos que almacena en memoria caché.  
   
 ## <a name="aggregate-transformation-configuration"></a>Configuración de la transformación Agregado  
  La transformación Agregado se configura en los niveles de transformación, salida y columna.  
@@ -106,7 +106,7 @@ ms.locfileid: "71291766"
   
  La transformación Agregado es asincrónica, lo que significa que no utiliza ni publica datos fila por fila. En lugar de ello, utiliza todo el conjunto de filas, realiza sus agrupaciones y agregaciones, y, seguidamente, publica los resultados.  
   
- Esta transformación no pasa por ninguna columna, sino que crea nuevas columnas en el flujo de datos para los datos que publica. Solo las columnas de entrada a las que se aplican las funciones de agregado o las columnas de entrada que usa la transformación para agrupar se copian en la salida de transformación. Por ejemplo, una entrada de transformación Agregado puede tener tres columnas: **PaísRegión**, **Ciudad** y **Población**. La transformación agrupa de acuerdo con la columna **CountryRegion** y aplica la función Sum a la columna **Population** . Por tanto, la salida no incluye la columna **City** .  
+ Esta transformación no pasa por ninguna columna, sino que crea nuevas columnas en el flujo de datos para los datos que publica. Solo las columnas de entrada a las que se aplican las funciones de agregado o las columnas de entrada que usa la transformación para agrupar se copian en la salida de transformación. Por ejemplo, una entrada de la transformación Agregado puede tener tres columnas: **CountryRegion**, **City**y **Population**. La transformación agrupa de acuerdo con la columna **CountryRegion** y aplica la función Sum a la columna **Population** . Por tanto, la salida no incluye la columna **City** .  
   
  Puede también agregar varias salidas a la transformación Agregado y dirigir cada agregación a una salida diferente. Por ejemplo, si la transformación Agregado aplica las funciones Sum y Average, cada agregación se puede dirigir a una salida diferente.  
   
@@ -118,13 +118,13 @@ ms.locfileid: "71291766"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  Para obtener más información sobre cómo establecer valores de propiedades, haga clic en uno de los temas siguientes:  
   
--   [Agregar valores en un conjunto de datos mediante la transformación Agregado](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+-   [Incorporación de valores en un conjunto de datos con la transformación Agregado](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
@@ -154,12 +154,12 @@ ms.locfileid: "71291766"
  **Escala de claves**  
  En la pantalla Avanzadas, especifique opcionalmente el número aproximado de claves que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se seleccionan las propiedades **Escala de claves** y **Claves** , tendrá prioridad el valor de **Claves** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|No especificado|No se utiliza la propiedad Escala de claves.|  
-|Baja|La agregación podrá escribir aproximadamente 500 000 claves.|  
+|Sin especificar|No se utiliza la propiedad Escala de claves.|  
+|Bajo|La agregación podrá escribir aproximadamente 500 000 claves.|  
 |Media|La agregación podrá escribir aproximadamente 5.000.000 claves.|  
-|Alta|La agregación podrá escribir más de 25.000.000 claves.|  
+|Alto|La agregación podrá escribir más de 25.000.000 claves.|  
   
  **Claves**  
  En la pantalla Avanzadas, especifique opcionalmente el número exacto de claves que podrá escribir la agregación. Si se especifican **Escala de claves** y **Claves** , tendrá prioridad **Claves** .  
@@ -173,7 +173,7 @@ ms.locfileid: "71291766"
  **Alias de salida**  
  Escriba un alias para cada columna. El nombre predeterminado es el de la columna de entrada, pero puede elegir cualquier nombre descriptivo único.  
   
- **Operación**  
+ **operación**  
  Elija una operación de la lista de operaciones disponibles con la siguiente tabla como guía.  
   
 |Operación|Descripción|  
@@ -181,9 +181,9 @@ ms.locfileid: "71291766"
 |**GROUP BY**|Divide los conjuntos de datos en grupos. Podrán agruparse columnas con cualquier tipo de datos. Para obtener más información, vea GROUP BY.|  
 |**Sum**|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para obtener más información, vea SUM.|  
 |**Promedio**|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para obtener más información, vea AVG.|  
-|**Count**|Devuelve el número de elementos de un grupo. Para obtener más información, vea COUNT.|  
+|**Recuento**|Devuelve el número de elementos de un grupo. Para obtener más información, vea COUNT.|  
 |**CountDistinct**|Devuelve el número de valores únicos distintos de NULL de un grupo. Para obtener más información, vea COUNT y Distinct.|  
-|**Mínima**|Devuelve el valor mínimo en un grupo. Está restringido a los tipos de datos numéricos.|  
+|**Mínimo**|Devuelve el valor mínimo en un grupo. Está restringido a los tipos de datos numéricos.|  
 |**Máximo**|Devuelve el valor máximo en un grupo. Está restringido a los tipos de datos numéricos.|  
   
  **Marcas de comparación**  
@@ -192,12 +192,12 @@ ms.locfileid: "71291766"
  **Count Distinct Scale**  
  Opcionalmente, puede especificar el número aproximado de valores DISTINCT que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se especifican **CountDistinctScale** y **CountDistinctKeys** , tendrá prioridad **CountDistinctKeys** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|No especificado|No se utiliza la propiedad **CountDistinctScale** .|  
-|Baja|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
+|Sin especificar|No se utiliza la propiedad **CountDistinctScale** .|  
+|Bajo|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
 |Media|La agregación podrá escribir aproximadamente 5 000 000 valores DISTINCT.|  
-|Alta|La agregación podrá escribir más de 25.000.000 valores DISTINCT.|  
+|Alto|La agregación podrá escribir más de 25.000.000 valores DISTINCT.|  
   
  **Count Distinct Keys**  
  Opcionalmente, puede especificar el número exacto de valores DISTINCT que podrá escribir la agregación. Si se especifican **CountDistinctScale** y **CountDistinctKeys** , tendrá prioridad **CountDistinctKeys** .  
@@ -214,12 +214,12 @@ ms.locfileid: "71291766"
  **Escala de claves**  
  Si lo desea, especifique el número aproximado de claves que espera la agregación. La transformación utiliza esta información para optimizar el tamaño de caché inicial. De forma predeterminada, el valor de esta opción es **No especificado**. Si se especifica tanto **Escala de claves** como **Número de claves** , prevalece la opción **Número de claves** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|No especificado|No se utiliza la propiedad **Escala de claves** .|  
-|Baja|La agregación podrá escribir aproximadamente 500 000 claves.|  
+|Sin especificar|No se utiliza la propiedad **Escala de claves** .|  
+|Bajo|La agregación podrá escribir aproximadamente 500 000 claves.|  
 |Media|La agregación podrá escribir aproximadamente 5.000.000 claves.|  
-|Alta|La agregación podrá escribir más de 25.000.000 claves.|  
+|Alto|La agregación podrá escribir más de 25.000.000 claves.|  
   
  **Número de claves**  
  Si lo desea, especifique el número exacto de claves que espera la agregación. La transformación utiliza esta información para optimizar el tamaño de caché inicial. Si se especifica tanto **Escala de claves** como **Número de claves** , prevalece la opción **Número de claves** .  
@@ -227,12 +227,12 @@ ms.locfileid: "71291766"
  **Escala Count Distinct**  
  Opcionalmente, puede especificar el número aproximado de valores DISTINCT que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se especifica tanto **Escala Count Distinct** como **Claves Count Distinct** , prevalece la opción **Claves Count Distinct** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|No especificado|No se utiliza la propiedad CountDistinctScale.|  
-|Baja|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
+|Sin especificar|No se utiliza la propiedad CountDistinctScale.|  
+|Bajo|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
 |Media|La agregación podrá escribir aproximadamente 5 000 000 valores DISTINCT.|  
-|Alta|La agregación podrá escribir más de 25.000.000 valores DISTINCT.|  
+|Alto|La agregación podrá escribir más de 25.000.000 valores DISTINCT.|  
   
  **Claves Count Distinct**  
  Opcionalmente, puede especificar el número exacto de valores DISTINCT que podrá escribir la agregación. Si se especifica tanto **Escala Count Distinct** como **Claves Count Distinct** , prevalece la opción **Claves Count Distinct** .  

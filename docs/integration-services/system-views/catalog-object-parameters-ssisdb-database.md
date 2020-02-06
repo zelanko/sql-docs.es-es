@@ -11,10 +11,10 @@ ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c462eb1957f1c8014dd9220f86cb9ae3e32ea65f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295191"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (base de datos de SSISDB)
@@ -26,15 +26,15 @@ ms.locfileid: "71295191"
 
   Muestra los parámetros para todos los paquetes y proyectos en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |parameter_id|**bigint**|Identificador (id.) único del parámetro.|  
 |identificador de proyecto|**bigint**|Identificador único del proyecto.|  
 |object_type|**smallint**|Tipo de parámetro. El valor es `20` para un parámetro de proyecto y `30` para un parámetro de paquete.|  
 |object_name|**sysname**|Nombre del proyecto o paquete correspondiente.|  
-|parameter_name|**sysname(nvarchar(128))**|Nombre del parámetro.|  
+|parameter_name|**sysname(nvarchar(128))**|El nombre del parámetro.|  
 |data_type|**nvarchar(128)**|El tipo de datos del parámetro.|  
-|required|**bit**|Cuando el valor es `1`, se requiere el valor del parámetro para iniciar la ejecución. Cuando el valor es `0`, no se requiere el valor del parámetro para iniciar la ejecución.|  
+|requerido|**bit**|Cuando el valor es `1`, se requiere el valor del parámetro para iniciar la ejecución. Cuando el valor es `0`, no se requiere el valor del parámetro para iniciar la ejecución.|  
 |sensitive|**bit**|Cuando el valor es `1`, el valor del parámetro es confidencial. Cuando el valor es `0`, el valor del parámetro no es confidencial.|  
 |description|**nvarchar(1024)**|Descripción opcional del paquete.|  
 |design_default_value|**sql_variant**|Valor predeterminado para el parámetro que se asignó durante el diseño del proyecto o paquete.|  

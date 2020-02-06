@@ -11,10 +11,10 @@ ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f85e27484378d1074564a320aea7f8ed1766e1ce
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251324"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (base de datos de SSISDB)
@@ -76,7 +76,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   El usuario no tiene permisos suficientes  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Durante la implementación o la actualización de un proyecto, el procedimiento almacenado no comprueba el nivel de protección de paquetes individuales en el proyecto.  
   
   

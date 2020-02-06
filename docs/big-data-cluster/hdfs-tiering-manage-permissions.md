@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 758338618a312d8efe92503581ae82d49d353e51
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531973"
 ---
 # <a name="manage-hdfs-permissions-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Administración de permisos de HDFS para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -135,4 +135,4 @@ azdata bdc hdfs acl set --path '/sale' --aclspec  'user::rw-,user:tom:rwx,group:
 
 - [Referencia de `azdata`](reference-azdata.md)
 
-- [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

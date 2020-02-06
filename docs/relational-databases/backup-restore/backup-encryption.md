@@ -11,10 +11,10 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 19a8597136f073d609c7a9cc77ce8e2b73c72004
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71688290"
 ---
 # <a name="backup-encryption"></a>Cifrado de copia de seguridad
@@ -28,12 +28,12 @@ ms.locfileid: "71688290"
   
 - **Algoritmo de cifrado:** los algoritmos de cifrado admitidos son: AES 128, AES 192, AES 256 y Triple DES  
   
-- **Sistema de cifrado:** un certificado o clave asimétrica  
+- **Sistema de cifrado:** un certificado o una clave asimétrica  
   
 > [!CAUTION]  
 > Es muy importante realizar una copia de seguridad del certificado o la clave asimétrica, y preferiblemente en una ubicación diferente de la que se usó para cifrar el archivo de copia de seguridad. Sin el certificado o la clave asimétrica, no puede restaurar la copia de seguridad, lo que deja inutilizable el archivo de copia de seguridad.  
   
- **Restaurar la copia de seguridad cifrada:** la restauración de SQL Server no necesita que se especifiquen parámetros de cifrado durante la restauración. Requiere que el certificado o la clave simétrica utilizada para cifrar el archivo de copia de seguridad esté disponible en la instancia en la que está realizando la restauración. La cuenta de usuario que realiza la restauración debe tener permisos de **VIEW DEFINITION** en el certificado o la clave. Si restaura la copia de seguridad cifrada en una instancia diferente, debe asegurarse de que el certificado esté disponible en esa instancia.  
+ **Restaurar la copia de seguridad cifrada:** la restauración de SQL Server no requiere que se especifiquen parámetros de cifrado durante la restauración. Requiere que el certificado o la clave simétrica utilizada para cifrar el archivo de copia de seguridad esté disponible en la instancia en la que está realizando la restauración. La cuenta de usuario que realiza la restauración debe tener permisos de **VIEW DEFINITION** en el certificado o la clave. Si restaura la copia de seguridad cifrada en una instancia diferente, debe asegurarse de que el certificado esté disponible en esa instancia.  
   
  Si va a restaurar una copia de seguridad desde una base de datos cifrada TDE, el certificado TDE debe estar disponible en la instancia en la que va a restaurar.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71688290"
 ##  <a name="Prerequisites"></a> Requisitos previos  
  Estos son los requisitos previos para cifrar una copia de seguridad:  
   
-1. **Creación de una clave maestra de base datos para la base de datos maestra:** La clave maestra de base de datos es una clave simétrica que se utiliza para proteger las claves privadas de certificados y las claves asimétricas presentes en la base de datos. Para obtener más información, vea [SQL Server y claves de cifrado de base de datos &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+1. **Crear una clave maestra de base de datos para la base de datos maestra:** la clave maestra de base de datos es una clave simétrica que se usa para proteger las claves privadas de certificados y las claves asimétricas presentes en la base de datos. Para obtener más información, vea [SQL Server y claves de cifrado de base de datos &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 1. Cree un certificado o clave asimétrica para utilizarla en el cifrado de copia de seguridad. Para obtener más información sobre cómo crear un certificado, vea [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md). Para obtener más información sobre cómo crear una clave asimétrica, vea [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md).  
   
@@ -80,7 +80,7 @@ Para cifrar una copia de seguridad o restaurar desde una copia de seguridad cifr
 ## <a name="Methods"></a> Métodos de cifrado de copia de seguridad  
  Las secciones siguientes proporcionan una introducción breve a los pasos para cifrar los datos durante la copia de seguridad. Para ver un tutorial completo de los diferentes pasos para cifrar la copia de seguridad mediante Transact-SQL, vea [Crear una copia de seguridad cifrada](../../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-### <a name="using-sql-server-management-studio"></a>Usar SQL Server Management Studio  
+### <a name="using-sql-server-management-studio"></a>Uso de SQL Server Management Studio  
  Puede cifrar una copia de seguridad al crear la copia de seguridad de una base de datos en alguno de los siguientes cuadros de diálogo:  
   
 1. [Copia de seguridad de la base de datos &#40;página Opciones de copia de seguridad&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md) En la página **Opciones de copia de seguridad**, puede seleccionar **Cifrado** y especificar el algoritmo de cifrado y el certificado o la clave asimétrica que va a usar para el cifrado.  

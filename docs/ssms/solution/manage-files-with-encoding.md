@@ -1,6 +1,6 @@
 ---
-title: Administrar archivos con codificación | Microsoft Docs
-ms.custom: ''
+title: Administrar archivos con codificación
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c75981961540081d8761bfb4cdf24028b41d1071
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 67106a11e7a42f6167c0d08df99917ed057f11f5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262829"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251876"
 ---
 # <a name="manage-files-with-encoding"></a>Administrar archivos con codificación
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ Puede elegir el editor que desea utilizar para modificar el archivo.
 4.  En la lista **Seleccione el programa que desee usar** , seleccione un editor y, a continuación, haga clic en **Abrir**. Para abrir el archivo con una codificación determinada, seleccione un editor compatible con la codificación, como el Editor de consultas de SQL con codificación o el Editor XML con codificación.  
   
 ## <a name="saving-files"></a>Guardar archivos  
-También se puede guardar el código con una codificación Unicode o una página de códigos distinta para que sea compatible con varios idiomas, como europeo occidental o europeo oriental. Puede asociar una codificación de caracteres concreta a un archivo para facilitar la visualización del código en ese idioma, así como un tipo de fin de línea para ser compatible con un sistema operativo determinado. Además, algunos caracteres, cuando se utilizan en los nombres de archivo, no se pueden guardar a menos que se haga con codificación Unicode.  
+También se puede guardar el código con una codificación Unicode o una página de códigos distinta para que sea compatible con varios idiomas, como Europao occidental o Europao oriental. Puede asociar una codificación de caracteres concreta a un archivo para facilitar la visualización del código en ese idioma, así como un tipo de fin de línea para ser compatible con un sistema operativo determinado. Además, algunos caracteres, cuando se utilizan en los nombres de archivo, no se pueden guardar a menos que se haga con codificación Unicode.  
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>Para guardar un archivo con una codificación o un tipo de fin de línea diferente  
   

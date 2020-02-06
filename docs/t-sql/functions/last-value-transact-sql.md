@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53053b4f2176a01970f433072634a49ec0d21eb3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109191"
 ---
-# <a name="lastvalue-transact-sql"></a>LAST_VALUE (Transact-SQL)
+# <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   Devuelve el último valor de un conjunto ordenado de valores de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -50,7 +50,7 @@ LAST_VALUE ( [ scalar_expression ] )
   
  *order_by_clause* determina el orden de los datos antes de que se aplique la función. *order_by_clause* es obligatorio. *rows_range_clause* limita aún más las filas de la partición, ya que especifica puntos de inicio y final. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Es el mismo tipo que *scalar_expression*.  
   
 ## <a name="general-remarks"></a>Notas generales  
@@ -58,7 +58,7 @@ LAST_VALUE ( [ scalar_expression ] )
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-lastvalue-over-partitions"></a>A. Usar LAST_VALUE en particiones  
+### <a name="a-using-last_value-over-partitions"></a>A. Usar LAST_VALUE en particiones  
  En el ejemplo siguiente se devuelve la fecha de contratación del último empleado de cada departamento para el sueldo especificado (Rate). La cláusula PARTITION BY divide los empleados por departamento y la función de LAST_VALUE se aplica a cada partición independientemente. La cláusula ORDER BY especificada en la cláusula OVER determina el orden lógico en el que se aplica la función LAST_VALUE a las filas de cada partición.  
   
 ```  
@@ -99,7 +99,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
 ```  
   
-### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. Usar FIRST_VALUE y LAST_VALUE en una expresión calculada  
+### <a name="b-using-first_value-and-last_value-in-a-computed-expression"></a>B. Usar FIRST_VALUE y LAST_VALUE en una expresión calculada  
  En el ejemplo siguiente se usan las funciones FIRST_VALUE y LAST_VALUE en expresiones calculadas para mostrar las diferencias entre los valores de cuota de ventas del trimestre actual y el primer y el último trimestre del año respectivamente para un número determinado de empleados. La función FIRST_VALUE devuelve el valor de la cuota de ventas del primer trimestre del año y la resta del valor de la cuota de ventas del trimestre actual. Se devuelve en la columna derivada DifferenceFromFirstQuarter. Para el primer trimestre de un año, el valor de la columna DifferenceFromFirstQuarter es 0. La función LAST_VALUE devuelve el valor de cuota de ventas para el último trimestre del año y lo resta del valor de la cuota de ventas actual del trimestre actual. Se devuelve en la columna derivada DifferenceFromLastQuarter. Para el último trimestre de un año, el valor de la columna DifferenceFromLastQuarter es 0.  
   
  La cláusula "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" se requiere en este ejemplo para los valores distintos de cero que se devuelve en la columna DifferenceFromLastQuarter, como se muestra debajo. El intervalo predeterminado es "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW". En este ejemplo, mediante ese intervalo predeterminado (o sin incluir un intervalo, lo que produce el valor predeterminado que se utiliza) daría lugar a que en la columna DifferenceFromLastQuarter se devolvieran ceros. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  

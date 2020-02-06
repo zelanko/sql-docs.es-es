@@ -11,10 +11,10 @@ ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f8e46dd253514329ee486c940a14f8dc48b4e9b
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68702688"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Controlador ODBC de Microsoft para SQL Server

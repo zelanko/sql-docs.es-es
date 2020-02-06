@@ -1,10 +1,7 @@
 ---
-title: Workload (DTA, elemento) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Workload (DTA, elemento)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fb526f31bb36ca7d4dd046f8a0f3a4f7962c6ea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 22331332715639b12f7a2cc82d8b71d723a1fecd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105941"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307894"
 ---
 # <a name="workload-element-dta"></a>Workload (DTA, elemento)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Especifica la carga de trabajo que se va a utilizar durante una sesión de optimización.  
+
+Especifica la carga de trabajo que se va a utilizar durante una sesión de optimización.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +53,7 @@ ms.locfileid: "68105941"
 |**Elemento primario**|[Iniciar y utilizar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
 |**Elementos secundarios**|[File &#40;DTA, elemento&#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Database &#40;DTA, elemento de Workload&#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [EventString &#40;DTA, elemento&#41;](../../tools/dta/eventstring-element-dta.md)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una carga de trabajo es un conjunto de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecuta en una o varias bases de datos que se desean optimizar. El Asistente para la optimización de motor de base de datos puede utilizar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , archivos de seguimiento y tablas de seguimiento como cargas de trabajo.  
   
  Si se especifica una carga de trabajo en un archivo de entrada XML y una carga de trabajo en la línea de comandos mediante la herramienta **dta** , la carga de trabajo especificada en la línea de comandos se utilizará para la optimización. Todas las opciones de optimización especificadas en la línea de comandos tienen preferencia sobre las especificadas en un archivo de entrada XML. La única excepción se produce cuando se usa una configuración especificada por el usuario en el modo de evaluación del archivo de entrada XML. Por ejemplo, si se especifica una configuración en el elemento **Configuration** del archivo de entrada XML y el elemento **EvaluateConfiguration** también se ha especificado como una de las opciones de optimización, las opciones de optimización especificadas en el archivo de entrada XML tendrán preferencia sobre aquellas especificadas en la línea de comandos.  

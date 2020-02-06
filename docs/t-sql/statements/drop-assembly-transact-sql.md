@@ -23,10 +23,10 @@ ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6b5b788ef8978ce88fdb3d8aa0567724023fd5cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984286"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
@@ -56,7 +56,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  WITH NO DEPENDENTS  
  Si se especifica, solo quita *assembly_name* y ninguno de los ensamblados dependientes a los que hace referencia el ensamblado. Si no se especifica, DROP ASSEMBLY quita *assembly_name* y todos los ensamblados dependientes.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Al quitar un ensamblado se quita el propio ensamblado y todos sus archivos asociados, como el código de origen y los archivos de depuración, de la base de datos.  
   
  Si no se especifica WITH NO DEPENDENTS, DROP ASSEMBLY quita *assembly_name* y todos los ensamblados dependientes. Si se generan errores al intentar quitar los ensamblados dependientes, DROP ASSEMBLY devuelve un error.  

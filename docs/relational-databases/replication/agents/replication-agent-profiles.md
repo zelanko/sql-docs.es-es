@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 3a329c8d8564e92319be773250761085f34643df
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: a752b21460c2dd337d12ee43acdd981dadd4335b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770794"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288282"
 ---
 # <a name="replication-agent-profiles"></a>Perfiles del Agente de replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68770794"
 ## <a name="snapshot-agent-profiles"></a>Perfiles del Agente de instantáneas  
  En la siguiente tabla se muestran los parámetros definidos en el perfil predeterminado del Agente de instantáneas. Para obtener más información acerca de estos parámetros, vea [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md).  
   
-||predeterminados|  
+||default|  
 |-|-------------|  
 |**-BcpBatchSize**|100000|  
 |**-HistoryVerboseLevel**|2|  
@@ -56,7 +56,7 @@ ms.locfileid: "68770794"
 ## <a name="log-reader-agent-profiles"></a>Perfiles del Agente de registro del LOG  
  En la siguiente tabla se muestran los parámetros definidos en los perfiles del Agente de registro del LOG. Cada columna de la tabla representa un perfil con nombre. Para obtener más información acerca de estos parámetros, vea [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md).  
   
-||predeterminados|historial detallado|  
+||default|historial detallado|  
 |-|-------------|---------------------|  
 |**-HistoryVerboseLevel**|1|2|  
 |**-LoginTimeout**|15|15|  
@@ -68,7 +68,7 @@ ms.locfileid: "68770794"
 ## <a name="distribution-agent-profiles"></a>Perfiles del Agente de distribución  
  En la siguiente tabla se muestran los parámetros definidos en los perfiles del Agente de distribución. Cada columna de la tabla representa un perfil con nombre. Para obtener más información acerca de estos parámetros, vea [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
-||predeterminados|historial detallado|Administrador de sincronización de Windows|Continuar después de errores de coherencia de datos.|Perfil de distribución para secuencias OLEDB|  
+||default|historial detallado|Administrador de sincronización de Windows|Continuar después de errores de coherencia de datos.|Perfil de distribución para secuencias OLEDB|  
 |-|-------------|---------------------|-------------------------------------|-----------------------------------------|----------------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|2147473647|  
 |**-CommitBatchSize**|100|100|100|100|100|  
@@ -78,8 +78,8 @@ ms.locfileid: "68770794"
 |**-LoginTimeout**|15|15|15|15|15|  
 |**-MaxBcpThreads**|1|1|1|1|1|  
 |**-MaxDeliveredTransactions**|0|0|0|0|0|  
-|**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32768|  
-|**-PacketSize**|NULL|NULL|NULL|NULL|32768|  
+|**-OledbStreamThreshold**|NULL|NULL|NULL|NULL|32 768|  
+|**-PacketSize**|NULL|NULL|NULL|NULL|32 768|  
 |**-PollingInterval**|5|5|5|5|5|  
 |**-QueryTimeout**|1800|1800|1800|1800|1800|  
 |**-SkipErrors**|NULL|NULL|NULL|**-SkipErrors** 2601:2627:20598|NULL|  
@@ -89,7 +89,7 @@ ms.locfileid: "68770794"
 ## <a name="merge-agent-profiles"></a>Perfiles del Agente de mezcla  
  En la siguiente tabla se muestran los parámetros definidos en los perfiles del Agente de mezcla. Cada columna de la tabla representa un perfil con nombre. Para obtener más información acerca de estos parámetros, vea [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md).  
   
-||predeterminados|historial detallado|Administrador de sincronización de Windows|validación del recuento de filas|validación del recuento de filas y de la suma de comprobación|conexión lenta|grandes volúmenes entre servidores|  
+||default|historial detallado|Administrador de sincronización de Windows|validación del recuento de filas|validación del recuento de filas y de la suma de comprobación|conexión lenta|grandes volúmenes entre servidores|  
 |-|-------------|---------------------|-------------------------------------|-------------------------|--------------------------------------|---------------|------------------------------------|  
 |**-BcpBatchSize**|100000|100000|1000|100000|100000|100000|100000|  
 |**-ChangesPerHistory**|100|50|50|100|100|100|1000|  
@@ -120,7 +120,7 @@ ms.locfileid: "68770794"
 ## <a name="queue-reader-agent-profiles"></a>Perfiles del Agente de lectura de cola  
  En la siguiente tabla se muestran los parámetros definidos en el perfil predeterminado del Agente de lectura de cola. Para obtener más información acerca de estos parámetros, vea [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md).  
   
-||predeterminados|  
+||default|  
 |-|-------------|  
 |**-HistoryVerboseLevel**|1|  
 |**-LoginTimeout**|15|  
@@ -130,6 +130,6 @@ ms.locfileid: "68770794"
 ## <a name="see-also"></a>Consulte también  
  [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)   
- [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+ [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

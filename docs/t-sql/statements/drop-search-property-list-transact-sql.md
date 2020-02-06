@@ -21,10 +21,10 @@ ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 746d2f33d780e4eada7accabdd029998c9e61742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070180"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
@@ -50,7 +50,7 @@ DROP SEARCH PROPERTY LIST property_list_name
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  No puede quitar una lista de propiedades de búsqueda de una base de datos mientras la lista está asociada a algún índice de texto completo y los intentos de hacerlo producirán un error. Para quitar una lista de propiedades de búsqueda de un índice de texto completo determinado, use la instrucción [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) y especifique la cláusula SET SEARCH PROPERTY LIST con OFF o el nombre de otra lista de propiedades de búsqueda.  
   
  **Para ver las listas de propiedades en una instancia del servidor**  
@@ -69,7 +69,7 @@ SELECT name FROM sys.registered_search_property_lists;
  Se necesita el permiso CONTROL en la lista de propiedades de búsqueda.  
   
 > [!NOTE]  
->  El propietario de la lista de propiedades puede conceder permisos CONTROL para la lista. De manera predeterminada, el usuario que crea una lista de propiedades de búsqueda es su propietario. El propietario se puede cambiar usando la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
+>  El propietario de la lista de propiedades puede conceder permisos CONTROL para la lista. De manera predeterminada, el usuario que crea una lista de propiedades de búsqueda es su propietario. El propietario se puede cambiar usando la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)][ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se quita la lista de propiedades `JobCandidateProperties` de la base de datos `AdventureWorks2012`.  

@@ -1,21 +1,23 @@
 ---
-title: Cuadro de diálogo Agregar referencia de base de datos | Microsoft Docs
+title: Cuadro de diálogo Agregar referencia de base de datos
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: ''
-ms.custom: SSDT
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: e8ff16ab27f47cd283c81606a4db9b580db523d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a43b16b3c45a0f98ca22a4d1e0d3e291cf92f95d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984700"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256143"
 ---
 # <a name="add-database-reference-dialog-box"></a>Cuadro de diálogo Agregar referencia de base de datos
+
 En este tema se describen los procedimientos que puede realizar en el cuadro de diálogo **Agregar referencia de base de datos**.  
   
 Las referencias de base de datos le permiten:  
@@ -28,7 +30,8 @@ En un proyecto compuesto, las referencias de base de datos dividen una gran base
   
 Las referencias de base de datos se pueden realizar en un proyecto de base de datos de la solución actual o un DACPAC. Si se agrega una referencia de base de datos a un proyecto se modifican las dependencias y el orden de compilación de dicho proyecto.  
   
-## <a name="selecting-the-database-to-reference"></a>Seleccionar la base de datos a la que se va a hacer referencia  
+## <a name="selecting-the-database-to-reference"></a>Seleccionar la base de datos a la que se va a hacer referencia
+
 Puede hacer referencia a otro proyecto de base de datos en la misma solución, una base de datos del sistema o una base de datos en un DACPAC.  
   
 Si hay más de un proyecto de base de datos en la solución, se habilita **Proyectos de base de datos en la solución actual**. Puede hacer referencia a otra base de datos en la solución.  
@@ -37,7 +40,8 @@ Seleccione **Base de datos del sistema** si va a seleccionar una de las bases de
   
 Seleccione **Aplicación de capa de datos (archivo .dacpac)** para hacer referencia a una base de datos en un DACPAC y examine el directorio con el archivo DACPAC.  
   
-## <a name="selecting-the-databases-relative-location"></a>Seleccionar la ubicación relativa de la base de datos  
+## <a name="selecting-the-databases-relative-location"></a>Seleccionar la ubicación relativa de la base de datos
+
 Una vez seleccionada la base de datos a la que desea hacer referencia, puede especificar la ubicación esperada de un objeto de base de datos, relativa al proyecto al que se hace referencia.  
   
 Las referencias se pueden resolver para objetos en una de las siguientes ubicaciones:  
@@ -59,7 +63,8 @@ Si seleccionó **Base de datos diferente, servidor diferente**, se requiere una 
 > [!IMPORTANT]  
 > En algunas situaciones, puede crear una referencia de base de datos que tenga el mismo nombre que una referencia de base de datos existente. Dos referencias de base de datos con el mismo nombre pueden dar lugar a un comportamiento inesperado. En esta situación, elimine ambas referencias de base de datos.  
   
-## <a name="common-procedures"></a>Procedimientos habituales  
+## <a name="common-procedures"></a>Procedimientos habituales
+
 Lo siguiente son procedimientos habituales:  
   
 ### <a name="to-create-a-reference-to-a-database-on-the-same-server"></a>Para crear una referencia a una base de datos del mismo servidor  
@@ -112,6 +117,6 @@ Cuando publique este proyecto, puede implementar proyectos compuestos en la mism
   
 3.  En el cuadro de diálogo **Configuración de publicación avanzada**, asegúrese de que selecciona **Incluir objetos compuestos** en la lista **Opciones de implementación avanzadas**.  
   
-## <a name="see-also"></a>Consulte también  
-[Desarrollo de bases de datos sin conexión orientado a proyectos](../ssdt/project-oriented-offline-database-development.md)  
-  
+## <a name="see-also"></a>Consulte también
+
+[Desarrollo de bases de datos sin conexión orientado a proyectos](../ssdt/project-oriented-offline-database-development.md)

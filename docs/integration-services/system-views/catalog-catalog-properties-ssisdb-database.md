@@ -11,10 +11,10 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9b5f7628f0284cb4662f0cf88bff1fd80cb2014e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295230"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties (base de datos SSISDB)
@@ -26,18 +26,18 @@ ms.locfileid: "71295230"
 
   Muestra las propiedades del catálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|Nombre de la propiedad de catálogo.|  
 |property_value|**nvarchar(256)**|Valor de la propiedad de catálogo.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta vista muestra una fila para cada propiedad de catálogo.
   
 |Nombre de propiedad|Descripción|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|Modo de ejecución de paquetes predeterminado de todo el servidor: `Server` (0) o `Scale Out` (1). |
-|**ENCRYPTION_ALGORITHM**|El tipo de algoritmo de cifrado que se utiliza para cifrar los datos confidenciales. Entre los valores compatibles se incluyen: `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192` y `AES_256`. Nota: Para modificar esta propiedad, la base de datos de catálogo debe estar en modo de usuario único.|
+|**ENCRYPTION_ALGORITHM**|El tipo de algoritmo de cifrado que se utiliza para cifrar los datos confidenciales. Entre los valores compatibles se incluyen: `DES`, `TRIPLE_DES`, `TRIPLE_DES_3KEY`, `DESX`, `AES_128`, `AES_192` y `AES_256`. Nota: para modificar esta propiedad la base de datos de catálogo debe estar en modo de usuario único.|
 |**IS_SCALEOUT_ENABLED**|Cuando el valor es `True`, se habilita la característica de escalabilidad horizontal de SSIS. Si no habilitó la escalabilidad horizontal, es posible que esta propiedad no aparezca en la vista.|
 |**MAX_PROJECT_VERSIONS**|Es el número de nuevas versiones de proyecto que se retendrán en un proyecto único. Si está habilitada la limpieza de versiones, se eliminarán las versiones anteriores que superen este número.|  
 |**OPERATION_CLEANUP_ENABLED**|Si el valor es `TRUE`, se eliminarán del catálogo los detalles y los mensajes de la operación anteriores a **RETENTION_WINDOW** (días). Si el valor es `FALSE`, se almacenarán todos los detalles y los mensajes de la operación en el catálogo. Nota: un trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza la limpieza de operaciones.|  

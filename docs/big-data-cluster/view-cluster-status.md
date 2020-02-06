@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73531585"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Procedimiento para ver el estado de un clúster de macrodatos 
@@ -211,7 +211,7 @@ Este es un resultado de ejemplo de este comando:
 
 Puede ver el estado de un recurso específico en el clúster con el comando [azdata bdc status show](reference-azdata-bdc-status.md). Cuando se usa este comando, se puede filtrar con el parámetro `--resource`. Estos son algunos ejemplos de entradas del parámetro `--resource`:
 
-- maestra
+- maestro
 - control
 - compute-0
 - storage-0
@@ -318,4 +318,4 @@ Puede ver el estado del controlador con el comando [`azdata bdc control status s
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para más información sobre los clústeres de macrodatos, vea [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md)
+Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md) para obtener más información sobre los clústeres de macrodatos.

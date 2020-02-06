@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342003"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
@@ -57,10 +57,10 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  *replaceWith_expression*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de datos de caracteres. *character_expression* puede ser una constante, una variable o una columna de datos binarios o de caracteres. Esta expresión reemplaza los caracteres *legth* de *character_expression*, empezando por *start*. Si se proporciona `NULL` como *replaceWith_expression*, los caracteres se quitan sin insertar nada.   
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve datos de caracteres si *character_expression* es de alguno de los tipos de datos de caracteres admitidos. Devuelve datos binarios si *character_expression* es de alguno de los tipos de datos binarios admitidos.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si la posición de inicio o la longitud es negativa, o si la posición de inicio es mayor que la longitud de la primera cadena, se devuelve una cadena NULL. Si la posición inicial es 0, se devuelve un valor NULL. Si la longitud que se va a eliminar es mayor que la primera cadena, se elimina hasta el primer carácter de la primera cadena.  
 
 Si el valor resultante es mayor que el máximo admitido por el tipo devuelto, se genera un error.  

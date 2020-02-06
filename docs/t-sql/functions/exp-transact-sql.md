@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 638e9960af007710b7c9a891109597db14227092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071592"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
@@ -43,15 +43,15 @@ EXP ( float_expression )
  *float_expression*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo **float** o de un tipo que se puede convertir en **float** de manera implícita.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **float**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La constante **e** (2.718281…) es la base de los logaritmos naturales.  
   
  El exponente de un número es la constante **e** elevada a la potencia del número. Por ejemplo, EXP(1,0) = e^1,0 = 2,71828182845905 y EXP(10) = e^10 = 22026,4657948067.  
   
- El valor exponencial del logaritmo natural de un número es el propio número: EXP (LOG (*n*)) = *n*. Y el logaritmo natural del valor exponencial de un número es el propio número: LOG (EXP (*n*)) = *n*.  
+ El valor exponencial del logaritmo natural de un número es el propio número: EXP (LOG (*n*)) = *n*. Asimismo, el logaritmo natural del valor exponencial de un número es el propio número: LOG (EXP (*n*)) = *n*.  
   
 ## <a name="examples"></a>Ejemplos  
   

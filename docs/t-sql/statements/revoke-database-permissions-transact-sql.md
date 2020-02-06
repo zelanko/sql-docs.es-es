@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59536e4f4ba418aef0ee49737a67df43f903435d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983280"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE (permisos de base de datos de Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73983280"
 
   Revoca los permisos concedidos y denegados en una base de datos.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -90,29 +90,29 @@ permission | ALL [ PRIVILEGES ]
  Especifica un rol de aplicación.  
   
  *Database_user_mapped_to_Windows_User*  
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Especifica un usuario de base de datos asignado a un usuario de Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Especifica un usuario de base de datos asignado a un grupo de Windows.  
   
  *Database_user_mapped_to_certificate*  
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Especifica un usuario de base de datos asignado a un certificado.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Especifica un usuario de base de datos asignado a una clave asimétrica.  
   
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Se producirá un error en la instrucción si no se especifica CASCADE para revocar un permiso a una entidad de seguridad a la que se concedió dicho permiso con GRANT OPTION especificado.  
   
  Una base de datos es un elemento protegible que contiene el servidor, que es su entidad primaria en la jerarquía de permisos. La mayoría de permisos limitados y específicos que se pueden revocar en una base de datos se muestran en la siguiente tabla, junto con permisos más generales que los incluyen por implicación.  
@@ -207,7 +207,7 @@ permission | ALL [ PRIVILEGES ]
 ### <a name="a-revoking-permission-to-create-certificates"></a>A. Revocar el permiso para crear certificados  
  En el siguiente ejemplo se revoca el permiso `CREATE CERTIFICATE` para la base de datos `AdventureWorks2012` del usuario `MelanieK`.  
   
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
 ```  
 USE AdventureWorks2012;  

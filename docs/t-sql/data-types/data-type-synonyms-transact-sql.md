@@ -17,10 +17,10 @@ ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ebe6db6130b3d9f058c1c8c65572263348f3dd99
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72689843"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>Sinónimos de tipos de datos (Transact-SQL)
@@ -64,7 +64,7 @@ CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character
   
 `VarCharCol` se asigna a un tipo de datos **nvarchar(10)** y todas las funciones de metadatos posteriores informan de la columna como columna **nvarchar(10)** . Las funciones de metadatos nunca informarán de ellos como columna **variable de carácter nacional (10)** .
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   

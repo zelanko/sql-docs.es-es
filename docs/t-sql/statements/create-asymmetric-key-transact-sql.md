@@ -24,10 +24,10 @@ ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064692"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73064692"
   
  Esta función no es compatible con la exportación de la base de datos con el Marco de trabajo de la aplicación de capa de datos (DACFx). Debe quitar todas las claves asimétricas antes de exportar.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -114,7 +114,7 @@ CREATE ASYMMETRIC KEY asym_key_name
  ENCRYPTION BY PASSWORD = '*password*'  
  Especifica la contraseña con la que se cifra la clave privada. Si no está presente esta cláusula, la clave privada se cifrará con la clave maestra de la base de datos. *password* tiene un máximo de 128 caracteres. *password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una *clave asimétrica* es una entidad protegible en el nivel de base de datos. De manera predeterminada, esta entidad contiene una clave pública y otra privada. Si se ejecuta sin la cláusula FROM, CREATE ASYMMETRIC KEY genera un nuevo par de claves. Si se ejecuta con la cláusula FROM, CREATE ASYMMETRIC KEY importa un par de claves desde un archivo o importa una clave pública desde un ensamblado o un archivo DLL.  
   
  De manera predeterminada, la clave privada está protegida por la clave maestra de la base de datos. Si no se ha creado una clave maestra de base de datos, se necesita una contraseña para proteger la clave privada.  

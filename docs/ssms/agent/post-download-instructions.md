@@ -1,10 +1,9 @@
 ---
-title: Exponer instrucciones de descarga | Microsoft Docs
-ms.custom: ''
+title: Exponer instrucciones de descarga
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,13 +11,15 @@ f1_keywords:
 ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1aa7a21699843dcc4a763b087c0ed24a11ec32ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 625c5735c448adb7c520cf6a70db16f28de7511d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265602"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247560"
 ---
 # <a name="post-download-instructions"></a>Exponer instrucciones de descarga
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

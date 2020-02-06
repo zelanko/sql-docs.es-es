@@ -21,10 +21,10 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252792"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Conmutación de roles durante una sesión de creación de reflejo de la base de datos (SQL Server)
@@ -96,7 +96,7 @@ ms.locfileid: "75252792"
   
  En la ilustración siguiente se muestra un ejemplo del uso de la conmutación por error manual para mantener la disponibilidad de la base de datos mientras se actualiza una instancia de servidor de bases de datos. Cuando se ha completado la actualización, un administrador puede realizar la conmutación por error para volver a la instancia de servidor original. Esto resulta útil cuando el administrador desea detener la sesión de creación de reflejos y utilizar el servidor reflejado en cualquier otro lugar. De este modo, se puede utilizar repetidamente una única instancia de servidor al actualizar una serie de instancias de servidor de bases de datos.  
   
- ![Conmutación por error manual planeada](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "|::ref2::|")  
+ ![Conmutación por error manual planeada](../../database-engine/database-mirroring/media/dbm-failovmanuplanned.gif "Conmutación por error manual planeada")  
   
 ###  <a name="ConditionsForManualFo"></a> Condiciones requeridas para una conmutación por error manual  
  La conmutación por error manual exige establecer la seguridad de la transacción en FULL (es decir, modo de alta seguridad). Cuando los asociados están conectados y la base de datos ya está sincronizada, se admite la conmutación por error manual.  
@@ -159,7 +159,7 @@ ms.locfileid: "75252792"
 -   El servidor principal ha perdido la comunicación con el resto de la configuración del reflejo de la base de datos, mientras que el servidor reflejado y el testigo conservan el quórum. Sin embargo, si todas las instancias de servidor pierden la comunicación, y el testigo y el servidor reflejado la recuperan después, no se produce la conmutación automática por error.  
   
     > [!NOTE]  
-    >  Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   El servidor reflejado ha detectado la pérdida del servidor principal.  
   

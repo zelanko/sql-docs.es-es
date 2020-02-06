@@ -23,10 +23,10 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb409823bad1370c38b6dc99f04c7e49d58796a
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982405"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
@@ -36,7 +36,7 @@ Proporciona estadísticas de uso del espacio del registro de transacciones para 
   
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([versión preliminar en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -69,9 +69,9 @@ Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.
 ## <a name="result-sets"></a>Conjuntos de resultados  
  En la tabla siguiente se describen las columnas del conjunto de resultados.  
   
-|Nombre de columna|Definición|  
+|Nombre de la columna|Definición|  
 |---|---|
-|**Database Name**|Nombre de la base de datos para la que se presentan las estadísticas del registro.|  
+|**Nombre de la base de datos**|Nombre de la base de datos para la que se presentan las estadísticas del registro.|  
 |**Tamaño del registro (MB)**|Tamaño actual asignado al registro. Este valor siempre es menor que la cantidad asignada originalmente como espacio del registro, ya que [!INCLUDE[ssDE](../../includes/ssde-md.md)] reserva una pequeña cantidad de espacio en disco para información interna de encabezados.|  
 |**Espacio de registro utilizado (%)**|Porcentaje del archivo de registro que se usa actualmente para almacenar la información del registro de transacciones.|  
 |**Estado**|Estado del archivo de registro. Siempre es 0.|  
@@ -82,7 +82,7 @@ A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], use la DMV [sys.d
 Las entradas del registro de transacciones que realizó cada transacción en una base de datos. Para obtener más información, vea [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) y [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
   
 ## <a name="permissions"></a>Permisos  
-Para ejecutar consultas `DBCC SQLPERF(LOGSPACE)`, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se necesita el permiso `VIEW SERVER STATE` en el servidor. Para restablecer las estadísticas de esperas y bloqueos temporales, se requiere el permiso `ALTER SERVER STATE` en el servidor.
+Para ejecutar consultas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en `DBCC SQLPERF(LOGSPACE)` se necesita el permiso `VIEW SERVER STATE` en el servidor. Para restablecer las estadísticas de esperas y bloqueos temporales, se requiere el permiso `ALTER SERVER STATE` en el servidor.
   
 En los niveles Premium y críticos para la empresa de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] se necesita el permiso `VIEW DATABASE STATE` en la base de datos. En los niveles estándar, básico y de uso general de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se requiere la cuenta de administrador de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. No se admiten el reinicio de las estadísticas de espera y bloqueos temporales.
   

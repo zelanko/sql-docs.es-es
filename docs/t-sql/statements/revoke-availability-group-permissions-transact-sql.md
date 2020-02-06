@@ -20,10 +20,10 @@ ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ceb07117a8842faa35d005dba008d15b3810040a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75242613"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>Disponibilidad de los permisos de grupo REVOKE (Transact-SQL)
@@ -107,7 +107,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. Revocar el permiso VIEW DEFINITION en un grupo de disponibilidad  
- En el siguiente ejemplo se revoca el `VIEW DEFINITION`permiso en el grupo de disponibilidad`MyAg` para el inicio de sesión `ZArifin`de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En el siguiente ejemplo se revoca el `VIEW DEFINITION`permiso en el grupo de disponibilidad`MyAg` para el inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de `ZArifin`.  
   
 ```  
 USE master;  

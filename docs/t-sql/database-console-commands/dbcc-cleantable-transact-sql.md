@@ -27,10 +27,10 @@ ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 8cb3c1c0eba5c39083b6a6b39b4040639909808c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101975"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
@@ -64,14 +64,14 @@ DBCC CLEANTABLE
  WITH NO_INFOMSGS  
  Suprime todos los mensajes de información.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 DBCC CLEANTABLE recupera el espacio que deja una columna de longitud variable quitada. Una columna de longitud variable puede tener uno de los siguientes tipos de datos: **varchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **varbinary**, **varbinary(max)** , **text**, **ntext**, **image**, **sql_variant** y **xml**. El comando no recupera espacio después de que se haya quitado una columna de longitud fija.
 Si las columnas quitadas estuvieran almacenadas de manera consecutiva, DBCC CLEANTABLE recupera espacio de la unidad de asignación IN_ROW_DATA de la tabla. Si estuvieran almacenadas de manera no consecutiva, se recupera espacio de la unidad de asignación ROW_OVERFLOW_DATA o LOB_DATA en función del tipo de datos de la columna quitada. Si al recuperar espacio de una página ROW_OVERFLOW_DATA o LOB_DATA se crea una página vacía, DBCC CLEANTABLE la quita.
 DBCC CLEANTABLE se ejecuta como una o varias transacciones. Si no se especifica un tamaño de proceso por lotes, el comando procesa toda la tabla en una transacción y la tabla se bloquea en modo exclusivo durante la operación. Para algunas tablas grandes, la longitud de una transacción y el espacio de registro necesario puede ser muy grande. Si se especifica un tamaño de proceso por lotes, el comando se ejecuta en una serie de transacciones; cada una de ellas incluye el número de filas especificado. DBCC CLEANTABLE no se puede ejecutar como una transacción dentro de otra transacción.
 Esta operación se registra por completo.
 DBCC CLEANTABLE no se admite para su uso en tablas del sistema, tablas temporales o la parte de índice de almacén de columnas optimizado en memoria xVelocity de una tabla.
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
 DBCC CLEANTABLE no debe ejecutarse como una tarea de mantenimiento rutinaria. En lugar de ello, debe utilizarse después de realizar cambios significativos en columnas de longitud variable de una tabla o vista indizada, y hay que recuperar inmediatamente el espacio sin utilizar. Como alternativa, puede volver a generar los índices en la tabla o vista; no obstante, esta operación consume más recursos.
   
 ## <a name="result-sets"></a>Conjuntos de resultados  

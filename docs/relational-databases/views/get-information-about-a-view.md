@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909889"
 ---
 # <a name="get-information-about-a-view"></a>Obtener información acerca de una vista
@@ -71,7 +71,7 @@ ms.locfileid: "72909889"
      **Server**  
      Nombre de la instancia de servidor actual.  
   
-     **Usuario**  
+     **User**  
      Nombre del usuario de esta conexión.  
   
      **Fecha de creación**  
@@ -111,7 +111,7 @@ ms.locfileid: "72909889"
      **(Nombre)**  
      Nombre de la vista actual.  
   
-     **Database Name**  
+     **Nombre de la base de datos**  
      Nombre de la base de datos que contiene esta vista.  
   
      **Descripción**  
@@ -120,7 +120,7 @@ ms.locfileid: "72909889"
      **Esquema**  
      Muestra el esquema al que pertenece la vista.  
   
-     **Nombre del servidor**  
+     **Nombre de servidor**  
      Nombre de la instancia de servidor actual.  
   
      **Enlace a esquema**  
@@ -147,7 +147,7 @@ ms.locfileid: "72909889"
      **(Superior)**  
      Especifica que la vista incluirá una cláusula TOP, que solo devuelve las primeras n filas o el primer n por cierto de filas en el conjunto de resultados. De forma predeterminada, la vista devolverá las diez primeras filas en el conjunto de resultados. Use esto para cambiar el número de filas que se van a devolver o para especificar un porcentaje diferente.  
   
-     **Expresión**  
+     **Expression**  
      Muestra qué porcentaje (si **Porcentaje** está establecido en **Sí**) o registros (si **Porcentaje** está establecido en **No**) devolverá la vista.  
   
      **Porcentaje**  

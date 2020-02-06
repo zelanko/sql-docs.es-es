@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b4647814765225a2c1deeedd05f77bed80d7e992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056154"
 ---
 # <a name="ddl-triggers"></a>Desencadenadores DDL
@@ -115,7 +115,7 @@ GO
 |----------|-----------|  
 |Describe cómo crear, modificar, eliminar o deshabilitar los desencadenadores DDL.|[Implementar desencadenadores DDL](../../relational-databases/triggers/implement-ddl-triggers.md)|  
 |Describe cómo crear un desencadenador DDL de CLR.|[Crear desencadenadores CLR](../../relational-databases/triggers/create-clr-triggers.md)|  
-|Describe cómo devolver información acerca de los desencadenadores DDL.|[Obtener información acerca de los desencadenadores DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)|  
+|Describe cómo devolver información acerca de los desencadenadores DDL.|[Obtener información sobre los desencadenadores DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)|  
 |Describe cómo devolver información acerca de un evento que activa un desencadenador DDL mediante la función EVENTDATA.|[Usar la función EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)|  
 |Describe cómo administrar la seguridad de los desencadenadores.|[Administrar la seguridad de los desencadenadores](../../relational-databases/triggers/manage-trigger-security.md)|  
   

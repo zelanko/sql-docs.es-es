@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e97480b767e10a27c7e9647c2e6ae7369d4b37f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040227"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
@@ -69,7 +69,7 @@ El resultado evaluado de la *expresión* determina el tipo de valor devuelto.
 |Categorías **money** y **smallmoney**|**money**|  
 |Categorías **float** y **real**|**float**|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Si el tipo de datos de *expression* es un tipo de datos de alias, el tipo de valor devuelto es también del tipo de datos de alias. No obstante, si se asciende el tipo de datos base del tipo de datos de alias, por ejemplo, de **tinyint** a **int**, el valor devuelto adquirirá el tipo de datos ascendido, no el tipo de datos de alias.
   
 AVG () calcula la media de un conjunto de valores dividiendo la suma de estos valores por el recuento de valores no NULL. Si la suma supera el valor máximo para el tipo de datos del valor devuelto, AVG() devolverá un error.
@@ -233,8 +233,8 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
-[OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) (Cláusula OVER [Transact-SQL])
+[OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

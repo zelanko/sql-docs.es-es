@@ -11,10 +11,10 @@ ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115320"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utilizar el explorador de Utilidad para administrar la utilidad de SQL Server
@@ -38,7 +38,7 @@ ms.locfileid: "68115320"
 ### <a name="sql-server-utility-navigation-pane"></a>Panel de navegación de la utilidad de SQL Server  
  El panel de navegación del explorador de la utilidad proporciona una vista de árbol de objetos de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , agrupada por punto de control de la utilidad. Para expandir las carpetas, haga clic en el signo más (+) o en el nombre de UCP en el panel de navegación del explorador de la utilidad. Haga clic con el botón secundario en las carpetas o en los objetos para realizar tareas comunes. Los nodos de la vista de árbol son como sigue:  
   
--   El nodo superior de la vista de árbol es el punto de control de la utilidad (UCP). El nombre del nodo se construye como: "Utility_Name" (ComputerName\UCP_instance_name). Si no tiene un UCP, debe crear uno. Si no está conectado a una Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe conectarse a una. Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Haga clic en el nombre de UCP en la vista de árbol para rellenar el panel de contenido del explorador de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con datos en la vista de panel. Para obtener más información, vea [Panel de la utilidad &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
+-   El nodo superior de la vista de árbol es el punto de control de la utilidad (UCP). El nombre de nodo se crea como se indica a continuación: "Nombre_Utilidad (NombreEquipo\nombre_instancia_UCP)." Si no tiene un UCP, debe crear uno. Si no está conectado a una Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe conectarse a una. Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Haga clic en el nombre de UCP en la vista de árbol para rellenar el panel de contenido del explorador de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con datos en la vista de panel. Para obtener más información, vea [Panel de la utilidad &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
   
      Haga clic con el botón secundario en el nodo UCP para actualizar los datos en el panel.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68115320"
  Cuando un nodo contiene un gran número de objetos, puede resultar difícil encontrar el que se busca. En estos casos, use la característica de filtro del explorador de la utilidad a fin de reducir la lista. Por ejemplo, puede que desee encontrar una instancia concreta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o solo los equipos con espacio de archivo infrautilizado. Haga clic con el botón derecho en la carpeta que quiere filtrar y, después, haga clic en **Configuración del filtro** para abrir el cuadro de diálogo Configuración del filtro del Explorador de Utilidad. Puede filtrar la lista por nombre, CPU del equipo, CPU de instancia, espacio de archivos, espacio de volumen, configuración de invalidación de directiva u hora de última notificación. Las columnas **Operador** y **Valor** proporcionan operadores de filtrado adicionales en una lista desplegable.  
   
 ### <a name="starting-powershell"></a>Iniciar PowerShell  
- Puede iniciar una sesión de PowerShell haciendo clic con el botón derecho en la mayoría de las carpetas y objetos en el árbol del Explorador de objetos y seleccionando **Iniciar PowerShell**. De este modo se inicia una sesión de PowerShell que tiene habilitada la compatibilidad con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, y tiene establecida la ruta de acceso al objeto en el que hizo clic con el botón secundario en el Explorador de objetos. A continuación, puede escribir comandos de PowerShell en un entorno interactivo de PowerShell. Para más información, consulte [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
+ Puede iniciar una sesión de PowerShell haciendo clic con el botón derecho en la mayoría de las carpetas y objetos en el árbol del Explorador de objetos y seleccionando **Iniciar PowerShell**. De este modo se inicia una sesión de PowerShell que tiene habilitada la compatibilidad con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, y tiene establecida la ruta de acceso al objeto en el que hizo clic con el botón secundario en el Explorador de objetos. A continuación, puede escribir comandos de PowerShell en un entorno interactivo de PowerShell. Para más información, consulte el artículo sobre [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
   
  PowerShell no tiene ayuda F1, pero incluye un cmdlet **Get-Help** que proporciona información sobre el uso de PowerShell. Para obtener más información sobre el uso de Get-Help, vea [Obtener ayuda de SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   

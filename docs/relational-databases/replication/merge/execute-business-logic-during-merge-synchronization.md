@@ -19,10 +19,10 @@ ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321505"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Ejecutar lógica de negocios durante la sincronización de mezcla
@@ -31,8 +31,7 @@ ms.locfileid: "75321505"
   
 -   Referencia de la interfaz de programación de aplicaciones (API): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Instrucciones para implementar un controlador de lógica de negocios: [Implementar un controlador de lógica de negocios para un artículo de mezcla
-](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Instrucciones sobre cómo implementar un controlador de lógica de negocios: [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md) (Implementar un controlador de lógica de negocios para un artículo de mezcla)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Usos de los controladores de lógica de negocios  
  El proceso de sincronización de mezcla puede invocar controladores de lógica de negocios para que lleven a cabo las siguientes acciones:  

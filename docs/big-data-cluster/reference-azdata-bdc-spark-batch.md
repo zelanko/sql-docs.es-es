@@ -1,28 +1,28 @@
 ---
 title: Referencia de azdata bdc spark batch
-titleSuffix: SQL Server big data clusters
 description: Artículo de referencia sobre los comandos de azdata bdc spark batch.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fc3dc5a987ae55ba410ca64c15a3a4b776465b54
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 5d141669313a90bd04cda2e54d5a9e9d5a3c68f6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531759"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258632"
 ---
 # <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-En el artículo siguiente se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `bdc spark batch` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [azdata bdc spark batch create](#azdata-bdc-spark-batch-create) | Cree una sesión de Spark.
@@ -55,7 +55,7 @@ Cree una sesión de Spark.
 ```bash
 azdata spark batch create --code "2+2"
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--file -f`
 Ruta de acceso al archivo que se va a ejecutar.
 ### <a name="optional-parameters"></a>Parámetros opcionales
@@ -129,7 +129,7 @@ Get batch info for batch with ID of 0.
 ```bash
 azdata spark batch info --batch-id 0
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--batch-id -i`
 Número de identificador de lote de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -153,7 +153,7 @@ Get batch log for batch with ID of 0.
 ```bash
 azdata spark batch log --batch-id 0
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--batch-id -i`
 Número de identificador de lote de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -177,7 +177,7 @@ Get batch state for batch with ID of 0.
 ```bash
 azdata spark batch state --batch-id 0
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--batch-id -i`
 Número de identificador de lote de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -201,7 +201,7 @@ Delete a batch.
 ```bash
 azdata spark batch delete --batch-id 0
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--batch-id -i`
 Número de identificador de lote de Spark.
 ### <a name="global-arguments"></a>Argumentos globales

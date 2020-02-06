@@ -17,10 +17,10 @@ ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2f375de9db1cce966206402b99d3e54724cbf2bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065608"
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>GRANT (permisos de ensamblado Transact-SQL)
@@ -73,7 +73,7 @@ AS *granting_principal*
 -   usuario de base de datos asignado a una clave asimétrica  
 -   usuario de base de datos no asignado a una entidad de seguridad del servidor  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Un ensamblado es un elemento protegible de base de datos incluido en la base de datos primaria en la jerarquía de permisos. A continuación, se enumeran los permisos más específicos y limitados que se pueden conceder para un ensamblado, además de los permisos más generales que los incluyen implícitamente.  
   
 |Permiso de ensamblado|Implícito en permiso de ensamblado|Implícito en el permiso de base de datos|  

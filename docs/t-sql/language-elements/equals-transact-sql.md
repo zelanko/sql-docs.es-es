@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a08dbc63f765b436d9f6bb56be6456f197217db8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075269"
 ---
 # <a name="-equals-transact-sql"></a>= (Igual a) (Transact-SQL)
@@ -48,7 +48,7 @@ expression = expression
 ## <a name="result-types"></a>Tipos de resultado  
  Boolean  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Al comparar mediante una expresión NULL, el resultado depende de la configuración de `ANSI_NULLS`:  
   
 -   Si `ANSI_NULLS` se establece en ON, el resultado de las comparaciones con NULL es UNKNOWN, según la convención ANSI de que NULL es un valor desconocido y no se puede comparar con ningún otro, incluidos otros valores NULL.  

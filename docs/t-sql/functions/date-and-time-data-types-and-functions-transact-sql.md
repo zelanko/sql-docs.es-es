@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: a7beec472b0f4b70662c364081641b6ea91be507
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75256089"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Tipos de datos y funciones de fecha y hora (Transact-SQL)
@@ -59,7 +59,7 @@ En la tabla siguiente se muestran los tipos de datos de fecha y hora de [!INCLUD
 |[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|De 0001-01-01 00:00:00.0000000 a 9999-12-31 23:59:59.9999999 (en UTC)|100 nanosegundos|De 8 a 10|Sí|Sí|  
   
 > [!NOTE]  
->  El tipo de datos [rowversion ](../../t-sql/data-types/rowversion-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] no es un tipo de datos de fecha y hora. **timestamp** es un sinónimo en desuso de **rowversion**.  
+>  El tipo de datos [!INCLUDE[tsql](../../includes/tsql-md.md)]rowversion [ de ](../../t-sql/data-types/rowversion-transact-sql.md) no es un tipo de datos de fecha y hora. **timestamp** es un sinónimo en desuso de **rowversion**.  
   
 ##  <a name="DateandTimeFunctions"></a> Funciones de fecha y hora  
 En las tablas siguientes se enumeran las funciones de fecha y hora de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obtener más información sobre el determinismo, vea [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).

@@ -15,10 +15,10 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bd0f58fc45889bfef8701538bebc4ec94af85944
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115749"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Tarea Limpieza de mantenimiento (Plan de mantenimiento)
@@ -26,10 +26,10 @@ ms.locfileid: "68115749"
   Utilice la **Tarea Limpieza de mantenimiento** para quitar archivos antiguos que estén relacionados con los planes de mantenimiento, incluidos los informes de texto creados por planes de mantenimiento y archivos de copia de seguridad de la base de datos.  
   
 > [!NOTE]  
->  La tarea Limpieza de mantenimiento no elimina automáticamente archivos incluidos en las subcarpetas del directorio especificado. Esta característica reduce la posibilidad de un ataque malintencionado que utilice la tarea Limpieza de mantenimiento para eliminar archivos. Si quiere eliminar archivos en las subcarpetas de primer nivel, debe seleccionar **Incluir subcarpetas de primer nivel**.  
+>  La tarea Limpieza de mantenimiento no elimina automáticamente archivos incluidos en las subcarpetas del directorio especificado. Esta característica reduce la posibilidad de un ataque malintencionado que utilice la tarea Limpieza de mantenimiento para eliminar archivos. Si quiere eliminar archivos en las subcarpetas de primer nivel, hay que seleccionar **Incluir subcarpetas de primer nivel**.  
   
 ## <a name="options"></a>Opciones  
- **Conexión**  
+ **Connection**  
  Muestra la conexión actual.  
   
  **Nuevo**  
@@ -72,7 +72,7 @@ ms.locfileid: "68115749"
 >  Si el número de objetos afectados es elevado, es posible que deba esperar un rato hasta que se muestren.  
   
 ## <a name="new-connection-dialog-box"></a>Cuadro de diálogo Nueva conexión  
- **Nombre de conexión**  
+ **Nombre de la conexión**  
  Escriba un nombre para la nueva conexión.  
   
  **Seleccionar o especificar un nombre de servidor**  
@@ -90,7 +90,7 @@ ms.locfileid: "68115749"
  **Utilizar un nombre de usuario y una contraseña específicos**  
  Se conecta a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con la autenticación de SQL Server. Esta opción no está disponible.  
   
- **User name**  
+ **Nombre de usuario**  
  Proporcione un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la autenticación. Esta opción no está disponible.  
   
  **Contraseña**  

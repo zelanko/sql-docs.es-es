@@ -14,10 +14,10 @@ ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661430"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Replicación y creación de reflejo de la base de datos (SQL Server)
@@ -92,11 +92,11 @@ ms.locfileid: "68661430"
   
      El Agente de distribución y el Control ActiveX de distribución de SQL no tienen este parámetro porque no se conectan al publicador.  
   
-     Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo. Los parámetros se pueden especificar en perfiles de agente y desde el símbolo del sistema. Para obtener más información, vea:  
+     Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo. Los parámetros se pueden especificar en perfiles de agente y desde el símbolo del sistema. Para más información, consulte:  
   
     -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Conceptos de los ejecutables del Agente de replicación](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
      Se recomienda agregar el parámetro **-PublisherFailoverPartner** a un perfil de agente y, después, especificar el nombre de la entidad reflejada en el perfil. Por ejemplo, si configura la replicación con procedimientos almacenados:  
   

@@ -13,10 +13,10 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68057892"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurar el trasvase de registros (SQL Server)
@@ -78,9 +78,9 @@ ms.locfileid: "68057892"
   
 8.  Tenga presente la programación de copia de seguridad que aparece en el cuadro **Programación** bajo **Trabajo de copia de seguridad**. Si desea personalizar la programación de su instalación, a continuación, haga clic en **Programar** y ajuste la programación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] según sus necesidades.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Al crear una configuración de trasvase de registros, puede controlar el comportamiento de la compresión de copia de seguridad de las copias de seguridad del registro eligiendo una de las opciones siguientes: **Usar la configuración de servidor predeterminada**, **Comprimir copia de seguridad** o **No comprimir copia de seguridad**. Para obtener más información, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Al crear una configuración de trasvase de registros, puede controlar el comportamiento de compresión de copia de seguridad de las copias de seguridad del registro eligiendo una de las opciones siguientes: **Usar la configuración de servidor predeterminada**, **Comprimir copia de seguridad**o **No comprimir copia de seguridad**. Para obtener más información, consulte [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. En **Instancias de servidores secundarios y bases de datos**, haga clic en **Agregar**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "68057892"
   
 21. Tenga presente la programación de la restauración que aparece en el cuadro **Programación** bajo **Trabajo de restauración**. Si desea personalizar la programación de su instalación, haga clic en **Programar** y, a continuación, ajuste la programación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] según sus necesidades. El programa debe parecerse al de la copia de seguridad.  
   
-22. Haga clic en **Aceptar**.  
+22. Haga clic en **OK**.  
   
 23. En **Instancia del servidor de supervisión**, active la casilla **Utilizar una instancia del servidor de supervisión** y, a continuación, haga clic en **Configuración**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68057892"
   
 26. En **Retención de historial**, elija el período de tiempo que desea retener un registro del historial de trasvase de registros.  
   
-27. Haga clic en **Aceptar**.  
+27. Haga clic en **OK**.  
   
 28. En el cuadro de diálogo **Propiedades de la base de datos** , haga clic en **Aceptar** para comenzar el proceso de configuración.  
   

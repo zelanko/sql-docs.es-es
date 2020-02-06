@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295694"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificar el origen de paquetes con firmas digitales
@@ -40,7 +40,7 @@ ms.locfileid: "71295694"
   
 -   Para comprobar la firma digital de todos los paquetes antes de cargarlos en tiempo de diseño, establezca la opción **Comprobar la firma digital al cargar un paquete** en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Esta opción es un valor de configuración global para todos los paquetes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
--   Para comprobar la firma digital de un paquete concreto, especifique la opción **/VerifyS[igned]** al usar la utilidad **dtexec** para ejecutar el paquete. Para más información, consulte [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+-   Para comprobar la firma digital de un paquete concreto, especifique la opción **/VerifyS[igned]** al usar la utilidad **dtexec** para ejecutar el paquete. Para obtener más información, consulte [utilidad dtexec](../../integration-services/packages/dtexec-utility.md).  
   
 ## <a name="set-a-registry-value-to-check-package-signature"></a>Establecer un valor del Registro para comprobar la firma del paquete  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] también admite un valor opcional del Registro, **BlockedSignatureStates**, que puede utilizarse para administrar la directiva de una organización para cargar los paquetes firmados y sin firmar. El valor del Registro puede evitar que los paquetes se carguen si están sin firmar o si tienen firmas que no sean válidas o de confianza. Para obtener más información sobre cómo establecer este valor del Registro, vea [Implementar una directiva de firma estableciendo un valor del Registro](#registry).  
@@ -62,7 +62,7 @@ ms.locfileid: "71295694"
   
  En la tabla siguiente se enumeran los valores válidos de los datos DWORD y su directiva asociada.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0|Sin restricción administrativa.|  
 |1|Bloquear firmas no válidas.<br /><br /> Este valor no bloquea los paquetes sin firmar.|  
@@ -88,7 +88,7 @@ ms.locfileid: "71295694"
   
 7.  En el cuadro de diálogo **Editar valor DWORD** , escriba el valor 0, 1, 2 o 3.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. En el menú **Archivo** , haga clic en **Salir**.    
 
@@ -133,7 +133,7 @@ ms.locfileid: "71295694"
   
 8.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Firma digital** .  
   
-9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
      Aunque se haya firmado el paquete, también debe configurar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para comprobar la firma digital antes de cargar el paquete.  
 
@@ -146,10 +146,10 @@ ms.locfileid: "71295694"
  **Firmar**  
  Haga clic para abrir el cuadro de diálogo **Seleccionar certificado** y seleccione el certificado que quiere usar.  
   
- **Quitar**  
+ **Remove**  
  Haga clic para quitar la firma digital.  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Información general sobre seguridad &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
   

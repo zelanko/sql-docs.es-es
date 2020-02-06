@@ -16,10 +16,10 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ef2e4b408dabf7b054465149b2489e07fbdefef8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295027"
 ---
 # <a name="variables-window"></a>Ventana Variables
@@ -65,7 +65,7 @@ ms.locfileid: "71295027"
 > [!NOTE]  
 >  Si asigna una expresión variable, no puede cambiar el tipo de datos.  
   
- **Value**  
+ **Valor**  
  Presenta el valor de la variable. Puede actualizar el valor de la variable para variables definidas por el usuario. Este valor puede ser un literal o una expresión y el valor puede ser una cadena de varias líneas. Para asignar una expresión variable, haga clic en el botón de la elipse que se encuentra junto a la columna **Expresión** en la ventana **Variables** .  
   
  **Espacio de nombres**  
@@ -77,7 +77,7 @@ ms.locfileid: "71295027"
  **Descripción**  
  Vea la descripción de la variable. Puede cambiar la descripción para variables definidas por el usuario. De manera predeterminada, la ventana **Variables** no muestra esta columna. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  
   
- **Expresión**  
+ **Expression**  
  Vea la expresión asignada a la variable. Para asignar una expresión, haga clic en el botón de la elipse.  
   
  Si asigna una expresión a una variable, un marcador especial de icono se muestra junto a la variable. Este marcador de icono especial también aparece junto a los administradores de conexiones y las tareas con expresiones establecidas.  
@@ -101,9 +101,9 @@ ms.locfileid: "71295027"
   
 -   **Ámbito**  
   
--   **Data type**  
+-   **Tipo de datos**  
   
--   **Value**  
+-   **Valor**  
   
 -   **Espacio de nombres**  
   
@@ -111,7 +111,7 @@ ms.locfileid: "71295027"
   
 -   **Descripción**  
   
--   **Expresión**  
+-   **Expression**  
   
 ## <a name="see-also"></a>Consulte también  
  [Variables de Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   

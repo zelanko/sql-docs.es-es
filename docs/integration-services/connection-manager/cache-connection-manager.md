@@ -15,10 +15,10 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294452"
 ---
 # <a name="cache-connection-manager"></a>Administrador de conexiones de caché
@@ -92,7 +92,7 @@ ms.locfileid: "71294452"
  **Nombre de archivo**  
  Escriba la ruta y el nombre de archivo del archivo caché.  
   
- **Examinar**  
+ **Browse**  
  Busque el archivo caché.  
   
  **Actualizar los metadatos**  
@@ -131,6 +131,6 @@ ms.locfileid: "71294452"
  Especifica la página de códigos para el tipo de columna. Si procede en el caso del tipo de datos, puede actualizar la **Code Page**.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [Implementación de una transformación Búsqueda en el modo Caché completa con el Administrador de conexiones de caché](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 795ef4c95981636eec2e95bc6f85c24d7da27eb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065663"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
@@ -141,7 +141,7 @@ ON SERVER
 |TRACK_CAUSALITY = { ON &#124; **OFF** }|Especifica si se va a realizar el seguimiento de la causalidad. Si está habilitado, la causalidad permite correlacionar eventos relacionados en las diferentes conexiones con el servidor.|  
 |STARTUP_STATE = { ON &#124; **OFF** }|Especifica si esta sesión de eventos se inicia automáticamente cuando se inicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Si STARTUP_STATE=ON, la sesión de eventos se iniciará solo si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene y se reinicia a continuación.<br /><br /> ON = La sesión de eventos comienza en el inicio.<br /><br /> **OFF** = La sesión de eventos NO comienza en el inicio.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los argumentos `ADD` y `DROP` no pueden usarse en la misma instrucción.  
   
 ## <a name="permissions"></a>Permisos  

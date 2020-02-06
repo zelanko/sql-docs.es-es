@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905949"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -46,7 +46,7 @@ ms.locfileid: "72905949"
  **Server**  
  Nombre de la instancia de servidor actual.  
   
- **Usuario**  
+ **User**  
  Nombre del usuario de esta conexión.  
   
  **Fecha de creación**  
@@ -86,7 +86,7 @@ ms.locfileid: "72905949"
  Indica si se ha replicado la tabla en otra base de datos mediante la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los valores posibles son **True** o **False**.  
   
 ##  <a name="ChangeTracking"></a> Página Seguimiento de cambios  
- **Seguimiento de los cambios**  
+ **Seguimiento de cambios**  
  Indica si el seguimiento de cambios está habilitado para la tabla. El valor predeterminado es **False**.  
   
  Esta opción solo está disponible cuando el seguimiento de cambios está habilitado para la base de datos.  
@@ -154,7 +154,7 @@ ms.locfileid: "72905949"
  **Espacio de datos**  
  La cantidad de espacio en megabytes que ocupan los datos en la tabla.  
   
-### <a name="partitioning"></a>Particiones  
+### <a name="partitioning"></a>Creación de particiones  
  Esta sección solo está disponible si la tabla tiene particiones. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  **Columna de partición**  

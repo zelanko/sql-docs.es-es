@@ -19,10 +19,10 @@ ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 665497328238fbaa88d666fb214af336531e93c7
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72260161"
 ---
 # <a name="point-geography-data-type"></a>Point (tipo de datos geography)
@@ -47,7 +47,7 @@ Point ( Lat, Long, SRID )
  *SRID*  
  Es una expresión **int** que representa el [identificador de referencia espacial](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) de la instancia de **geografía** que quiere devolver.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo de valor devuelto de CLR: **SqlGeography**  

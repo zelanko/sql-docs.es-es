@@ -22,10 +22,10 @@ ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: befa0085a7fc1a52ae02ba9443617b0593bb14ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910049"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION (Transact-SQL)
@@ -57,7 +57,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  QUEUE *queue_name*  
  Indica que el ámbito de la notificación de eventos se aplica a la cola especificada por *queue_name*. Se debe especificar QUEUE si se especificó cuando se creó la notificación de eventos. *queue_name* es el nombre de la cola y también se debe especificar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si una notificación de eventos se activa y se quita en la misma transacción, la instancia de notificación de eventos se envía y después se quita la notificación de eventos.  
   
 ## <a name="permissions"></a>Permisos  

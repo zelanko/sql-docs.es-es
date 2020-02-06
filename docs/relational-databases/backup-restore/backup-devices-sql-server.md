@@ -26,10 +26,10 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909173"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de copia de seguridad (SQL Server)
@@ -91,7 +91,7 @@ RESTORE DATABASE AdventureWorks2012
   
   
 ##  <a name="BackupFileDiskPath"></a> Especificar la ruta de acceso del archivo de copia de seguridad en disco 
- Cuando se especifica un archivo de copia de seguridad, se debe especificar ruta de acceso completa y el nombre de archivo. Si especifica solo el nombre de archivo o la ruta de acceso relativa al realizar la copia de seguridad de un archivo, el archivo de copia de seguridad se sitúa en el directorio predeterminado de copias de seguridad. El directorio predeterminado de copias de seguridad es C:\Archivos de programa\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, donde *n* es el número de la instancia de servidor. Por lo tanto, para la instancia del servidor predeterminada, el directorio de copia de seguridad predeterminado es: C:\Archivos de programa\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup.  
+ Cuando se especifica un archivo de copia de seguridad, se debe especificar ruta de acceso completa y el nombre de archivo. Si especifica solo el nombre de archivo o la ruta de acceso relativa al realizar la copia de seguridad de un archivo, el archivo de copia de seguridad se sitúa en el directorio predeterminado de copias de seguridad. El directorio predeterminado de copias de seguridad es C:\Archivos de programa\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, donde *n* es el número de la instancia de servidor. Por lo tanto, para la instancia de servidor predeterminada, el directorio predeterminado de copia de seguridad es C:\Archivos de programa\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup.  
   
  Para evitar ambigüedades, particularmente en los scripts, recomendamos especificar de forma explícita la ruta de acceso del directorio de copias de seguridad en cada cláusula DISK. Sin embargo, esto es menos importante cuando se utiliza el Editor de consultas. En ese caso, si está seguro de que el archivo de copia de seguridad reside en el directorio predeterminado de copias de seguridad, puede omitir la ruta de acceso de una cláusula DISK. Por ejemplo, la siguiente instrucción `BACKUP` realiza una copia de seguridad de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en el directorio predeterminado de copias de seguridad.  
   
@@ -101,7 +101,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **NOTA:** La ubicación predeterminada se almacena en la clave del Registro **BackupDirectory** bajo **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**.  
+> **NOTA:** La ubicación predeterminada se almacena en la clave del Registro **BackupDirectory** en **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer**.  
   
    
 ###  <a name="NetworkShare"></a> Copia de seguridad en un archivo de recurso compartido de red  
@@ -173,7 +173,7 @@ GO
   
      Se puede controlar si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene abierto el resto de la cinta después de la operación de copia de seguridad o restauración, o si libera y rebobina la cinta una vez se llena. El comportamiento predeterminado es rebobinar la cinta (REWIND).  
   
-> **NOTA:** Para obtener más información sobre la sintaxis y los argumentos de BACKUP, vea [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Para obtener más información sobre los argumentos y la sintaxis de RESTORE, vea [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE &#40;argumentos, Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md), respectivamente.  
+> **NOTA:** Para obtener más información sobre la sintaxis y los argumentos de BACKUP, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md). Para obtener más información sobre los argumentos y la sintaxis de RESTORE, vea [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE &#40;argumentos, Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md), respectivamente.  
   
 ###  <a name="OpenTapes"></a> Administración de cintas abiertas  
  Para ver una lista de los dispositivos de cinta abiertos y el estado de las solicitudes de montaje, vea la vista de administración dinámica [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) . En esta vista se muestran todas las cintas abiertas. Se incluyen las cintas en uso que se encuentran temporalmente inactivas mientras esperan a la siguiente operación BACKUP o RESTORE.  
@@ -264,7 +264,7 @@ GO
   
 -   [Eliminar un dispositivo de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Backup Device (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)   

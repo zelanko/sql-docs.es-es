@@ -25,13 +25,13 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a18b99d8e4700a840fa3cdc98af492bc0193bbaa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914729"
 ---
-# <a name="objectname-transact-sql"></a>OBJECT_NAME (Transact-SQL)
+# <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve el nombre del objeto de la base de datos para los objetos de ámbito de esquema. Para obtener una lista de los objetos de ámbito de esquema, vea [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
@@ -51,7 +51,7 @@ OBJECT_NAME ( object_id [, database_id ] )
  *database_id*  
  Identificador de la base de datos donde se va a buscar el objeto. *database_id* es **int**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **sysname**  
   
 ## <a name="exceptions"></a>Excepciones  
@@ -62,7 +62,7 @@ OBJECT_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ANY en el objeto. Para especificar un identificador de base de datos, también se requiere el permiso CONNECT en la base de datos o se debe habilitar la cuenta de invitado.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las funciones del sistema se pueden usar en la lista de selección, en la cláusula WHERE y en cualquier lugar donde se permita una expresión. Para obtener más información, vea [Expressions](../../t-sql/language-elements/expressions-transact-sql.md) y [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
  El valor que devuelve esta función del sistema usa la intercalación de la base de datos actual.  
@@ -89,7 +89,7 @@ GO
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-objectname-in-a-where-clause"></a>A. Usar OBJECT_NAME en una cláusula WHERE  
+### <a name="a-using-object_name-in-a-where-clause"></a>A. Usar OBJECT_NAME en una cláusula WHERE  
  El siguiente ejemplo devuelve columnas de la vista de catálogo `sys.objects` para el objeto especificado por `OBJECT_NAME` en la cláusula `WHERE` de la instrucción `SELECT`.  
   
 ```  
@@ -134,7 +134,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-objectname-in-a-where-clause"></a>D. Usar OBJECT_NAME en una cláusula WHERE  
+### <a name="d-using-object_name-in-a-where-clause"></a>D. Usar OBJECT_NAME en una cláusula WHERE  
  El siguiente ejemplo devuelve columnas de la vista de catálogo `sys.objects` para el objeto especificado por `OBJECT_NAME` en la cláusula `WHERE` de la instrucción `SELECT`. (El número de objeto [274100017 en el ejemplo siguiente] será diferente.  Para probar este ejemplo, busque un número de objeto válido mediante la ejecución de `SELECT name, object_id FROM sys.objects;` en la base de datos).  
   
 ```  

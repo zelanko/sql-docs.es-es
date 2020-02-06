@@ -16,10 +16,10 @@ ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d94ffd0182bfad3ed95f52640a2aed01ceeaa54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118971"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
@@ -39,10 +39,10 @@ DECOMPRESS ( expression )
  *expression*  
 Un valor **varbinary(** _n_ **)** , **varbinary(max)** o **binary(** _n_ **)** . Para más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 Un valor de tipo de datos **varbinary (max)** . `DECOMPRESS` usará el algoritmo ZIP para descomprimir el argumento de entrada. El usuario debe convertir explícitamente el resultado en un tipo de destino si es necesario.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="examples"></a>Ejemplos  
   

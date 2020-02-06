@@ -11,10 +11,10 @@ ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 36d73a0248be0bd8f9a0873e5ae8445ee68af2e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295279"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value (base de datos de SSISDB)
@@ -49,10 +49,10 @@ catalog.set_object_parameter_value [@object_type =] object_type
  Nombre del proyecto que contiene el parámetro. *project_name* es **nvarchar(128)** .  
   
  [@parameter_name =] *parameter_name*  
- Nombre del parámetro. El parámetro *parameter_name* es de tipo **nvarchar(128)** .  
+ El nombre del parámetro. El parámetro *parameter_name* es de tipo **nvarchar(128)** .  
   
  [@parameter_value =] *parameter_value*  
- El valor del parámetro. El parámetro *parameter_value* es de tipo **sql_variant**.  
+ Valor del parámetro. El parámetro *parameter_value* es de tipo **sql_variant**.  
   
  [@object_name =] *object_name*  
  Nombre del paquete. Este argumento es necesario cuando el parámetro es un parámetro de paquete. El parámetro *object_name* es **nvarchar(260)** .  
@@ -88,7 +88,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   El usuario no tiene los permisos adecuados.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 -   Si no se especifica ningún parámetro *value_type*, se usa un valor literal de *parameter_value* de forma predeterminada. Cuando se usa un valor literal, el parámetro*value_set* de la vista [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) se establece en `1`. No se permiten valores de parámetro NULL.  
   

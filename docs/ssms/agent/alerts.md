@@ -1,10 +1,7 @@
 ---
-title: Alertas | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Alertas
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,15 +19,20 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c29706e1bf94f8717b90964f8edc3a8fff4bc474
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383794"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252686"
 ---
-# <a name="alerts"></a>Trabajos
+# <a name="alerts"></a>Alertas
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -82,7 +84,7 @@ Puede especificar una alerta para que se produzca en respuesta a uno o más even
 ## <a name="selecting-a-performance-condition"></a>Seleccionar una condición de rendimiento  
 Puede especificar una alerta para que se active en respuesta a una condición de rendimiento determinada. En este caso, debe especificar el contador de rendimiento que se supervisa, un umbral para la alerta y el comportamiento que el contador debe mostrar si la alerta tiene lugar. Para establecer una condición de rendimiento, debe definir los siguientes elementos en la página [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] General **del cuadro de diálogo** Nueva alerta **o** Propiedades de alerta **del Agente** :  
   
--   **Objeto**  
+-   **Object**  
   
     El objeto es el área de rendimiento que se supervisa.  
   
@@ -110,7 +112,7 @@ Puede especificar que una alerta tenga lugar como respuesta a un determinado eve
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente se registra como un cliente de WMI en el espacio de nombres de WMI que se proporciona para consultar los eventos.  
   
--   **Query**  
+-   **Consultar**  
   
     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente usa la instrucción de Lenguaje de consulta de Instrumental de administración de Windows (WQL) proporcionada para identificar el evento específico.  
   

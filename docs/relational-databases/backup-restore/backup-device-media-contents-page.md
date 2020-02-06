@@ -13,10 +13,10 @@ ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c877ffb5bb15836f21a6a37c7cd8ccb22b27cc10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987764"
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo de copia de seguridad (página Contenido de los medios)
@@ -32,7 +32,7 @@ ms.locfileid: "67987764"
 ## <a name="options"></a>Opciones  
  Vea la información acerca del medio individual, el conjunto de medios y los conjuntos de copias de seguridad.  
   
- **Multimedia**  
+ **Elementos multimedia**  
  Disco o conjunto de cintas donde se almacena la información de la copia de seguridad.  
   
  **Secuencia del medio**  
@@ -59,7 +59,7 @@ ms.locfileid: "67987764"
 |Encabezado|Valores|  
 |------------|------------|  
 |**Nombre**|Nombre del conjunto de copia de seguridad.|  
-|**Tipo**|Objeto del que se ha realizado una copia de seguridad: Base de datos, Archivo o en *\<blanco>* (para registros de transacciones).|  
+|**Tipo**|Objeto del que se realizó una copia de seguridad: Base de datos, Archivo o *en blanco>\<* (para registros de transacciones).|  
 |**Componente**|Tipo de copia de seguridad realizada: Completa, Diferencial o Registro de transacciones.|  
 |**Server**|Nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.|  
 |**Base de datos**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  

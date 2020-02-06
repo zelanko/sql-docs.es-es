@@ -18,10 +18,10 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5216b324477f1af7fb727af3462ccce8d64e6a64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012100"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
@@ -49,7 +49,7 @@ ms.locfileid: "68012100"
  El enlace de canal establece un canal seguro (Schannel) entre un cliente y una instancia del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El servicio comprueba la autenticidad del cliente comparando el token de enlace de canal (CBT) del cliente específico de ese canal, con su propio CBT. El enlace de canal trata tanto los ataques de suplantación como los de atracción. Sin embargo, incurre en un costo de tiempo de ejecución mayor, porque requiere cifrado de Seguridad de la capa de transporte (TLS) de todo el tráfico de la sesión. El enlace de canal se produce cuando una aplicación cliente usa el cifrado para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independientemente de si el cifrado lo fuerza el cliente o el servidor.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 y SSL 3.0. Si fuerza un protocolo diferente (como por ejemplo, TLS 1.1 o TLS 1.2) realizando cambios en la capa SChannel del sistema operativo, las conexiones a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podrían no funcionar como es debido.  
+>  Los proveedores de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admiten TLS 1.0 y SSL 3.0. Si fuerza un protocolo diferente (como por ejemplo, TLS 1.1 o TLS 1.2) realizando cambios en la capa SChannel del sistema operativo, las conexiones a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podrían no funcionar como es debido.  
   
 ### <a name="operating-system-support"></a>Sistemas operativos admitidos  
  Los siguientes vínculos proporcionan más información acerca del modo en que Windows admite la **protección ampliada**:  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843712"
 ---
 # <a name="what-are-the-sql-database-functions"></a>¿Cuáles son las funciones de base de datos SQL?
@@ -34,7 +34,7 @@ Obtenga información sobre las categorías de las funciones integradas que se pu
   
 ## <a name="aggregate-functions"></a>Funciones de agregado
 
-Las funciones de agregado realizan un cálculo sobre un conjunto de valores y devuelven un solo valor. Se pueden usar en la lista de selección o en la cláusula HAVING de una instrucción SELECT. Puede usar una agregación en combinación con la cláusula GROUP BY para calcular la agregación en las categorías de filas. Use la cláusula OVER para calcular la agregación en un intervalo de valor específico. La cláusula OVER no puede seguir las agregaciones GROUPING o GROUPING_ID.
+Las funciones de agregado realizan un cálculo en un conjunto de valores y devuelven un valor único. Se pueden usar en la lista de selección o en la cláusula HAVING de una instrucción SELECT. Puede usar una agregación en combinación con la cláusula GROUP BY para calcular la agregación en las categorías de filas. Use la cláusula OVER para calcular la agregación en un intervalo de valor específico. La cláusula OVER no puede seguir las agregaciones GROUPING o GROUPING_ID.
 
 Todas las funciones de agregación son deterministas; es decir, siempre devuelven el mismo resultado cuando se ejecutan con los mismos valores de entrada. Para más información, vea [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
 

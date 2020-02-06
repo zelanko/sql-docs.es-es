@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5eff5410ecd53148a16ae1e726407a7883606a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999713"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped, clase de eventos
@@ -43,15 +43,15 @@ ms.locfileid: "67999713"
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IndexID|**int**|Número de saltos que quedan para el mensaje reenviado.|24|No|  
 |IntegerData|**int**|Número de fragmento del mensaje reenviado.|25|No|  
-|LoginSid|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|LoginSid|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |NTDomainName|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|**nvarchar**|Nombre del usuario al que pertenece la conexión que generó este evento.|6|Sí|  
 |ObjectId|**int**|Tiempo de vida del mensaje reenviado.|22|No|  
 |ObjectName|**nvarchar**|Identificador del mensaje reenviado.|34|No|  
 |OwnerName|**nvarchar**|Identificador de la instancia del agente del destino del mensaje.|37|No|  
-|RoleName|**nvarchar**|Rol del identificador de conversación. Una de las siguientes opciones:<br /><br /> \- Iniciador. Este agente inició la conversación.<br /><br /> \- Destino. Este agente es el destino de la conversación.|38|No|  
-|ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
-|Severity|**int**|Número de nivel de gravedad para el texto del evento.|29|No|  
+|RoleName|**nvarchar**|Rol del identificador de conversación. Uno de los valores siguientes:<br /><br /> \- Iniciador. Este agente inició la conversación.<br /><br /> \- Destino. Este agente es el destino de la conversación.|38|No|  
+|nombreDeServidor|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
+|severity|**int**|Número de nivel de gravedad para el texto del evento.|29|No|  
 |SPID|**int**|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|12|Sí|  
 |StartTime|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |State|**int**|Indica la ubicación en el código fuente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que produjo el evento. Cada lugar en el que se puede producir este evento tiene un código de estado diferente. Un ingeniero de soporte técnico de Microsoft puede utilizar este código de estado para buscar el lugar en que se produjo el evento.|30|No|  

@@ -19,10 +19,10 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8211045a72ae56b04bb93b7be7e83f296f2467e5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291664"
 ---
 # <a name="character-map-transformation"></a>Transformación Mapa de caracteres
@@ -52,19 +52,19 @@ ms.locfileid: "71291664"
 |Minúsculas|Conversión de caracteres a minúsculas.|  
 |Chino simplificado|Asigna caracteres de chino tradicional a caracteres de chino simplificado.|  
 |Chino tradicional|Asigna caracteres de chino simplificado a caracteres de chino tradicional.|  
-|Mayúsculas|Conversión de caracteres a mayúsculas.|  
+|Uppercase|Conversión de caracteres a mayúsculas.|  
   
 ## <a name="mutually-exclusive-mapping-operations"></a>Operaciones de asignación mutuamente exclusivas  
  En una transformación pueden realizarse varias operaciones. Sin embargo, algunas operaciones son mutuamente exclusivas. La siguiente tabla enumera las restricciones que se aplican al usar varias operaciones sobre la misma columna. Las operaciones sobre las columnas Operación A y Operación B son mutuamente exclusivas.  
   
 |Operación A|Operación B|  
 |-----------------|-----------------|  
-|Minúsculas|Mayúsculas|  
+|Minúsculas|Uppercase|  
 |Hiragana|Katakana|  
 |Formato medio|Formato completo|  
 |Chino tradicional|Chino simplificado|  
 |Minúsculas|Hiragana, katakana, formato medio, formato completo|  
-|Mayúsculas|Hiragana, katakana, formato medio, formato completo|  
+|Uppercase|Hiragana, katakana, formato medio, formato completo|  
   
 ## <a name="configuration-of-the-character-map-transformation"></a>Configuración de la transformación Mapa de caracteres  
  Puede configurar la transformación Mapa de caracteres de las maneras siguientes:  
@@ -77,7 +77,7 @@ ms.locfileid: "71291664"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Propiedades personalizadas de transformación](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -100,18 +100,18 @@ ms.locfileid: "71291664"
  **Destino**  
  Especifique si se guardan los resultados de las operaciones de cadena en contexto, utilizando la columna existente, o se guardan los datos modificados como una columna nueva.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Nueva columna|Guardar los datos en una columna nueva. Asigne el nombre de columna en **Alias de salida**.|  
 |Modificación en contexto|Guardar los datos modificados en la columna existente.|  
   
- **Operación**  
+ **operación**  
  Seleccione de la lista las funciones de cadena que se aplicarán a los datos de la columna.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Minúsculas|Convertir en minúsculas.|  
-|Mayúsculas|Convertir en mayúsculas.|  
+|Uppercase|Convertir en mayúsculas.|  
 |Inversión de byte|Convertir invirtiendo el orden de los bytes.|  
 |Hiragana|Convertir caracteres japoneses katakana en caracteres hiragana.|  
 |Katakana|Convertir caracteres japoneses hiragana en caracteres katakana.|  

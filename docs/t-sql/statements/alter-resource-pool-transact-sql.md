@@ -18,10 +18,10 @@ ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57849c8d99700f61c251177c3c3195b2277163ae
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982088"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73982088"
 
   Cambia la configuración del grupo de recursos de servidor del regulador de recursos existente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -116,7 +116,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  Si MAX_IOPS_PER_VOLUME se establece en 0 para un grupo, este no está regulado y puede tomar todas las IOPS del sistema, incluso aunque otros grupos tengan establecido un valor MIN_IOPS_PER_VOLUME. En este caso, se recomienda establecer el valor de MAX_IOPS_PER_VOLUME para este grupo en un número alto (por ejemplo, el valor máximo 2^31-1) si desea que se regule la E/S de este grupo.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  MAX_CPU_PERCENT y MAX_MEMORY_PERCENT deben ser mayores o iguales que MIN_CPU_PERCENT y MIN_MEMORY_PERCENT, respectivamente.  
   
  MAX_CPU_PERCENT puede usar la capacidad de CPU por encima del valor de MAX_CPU_PERCENT si está disponible. Aunque puede haber picos periódicos por encima de CAP_CPU_PERCENT, las cargas de trabajo no pueden exceder CAP_CPU_PERCENT durante períodos de tiempo prolongados, incluso cuando se dispone de capacidad de CPU adicional.  
@@ -127,7 +127,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  Cuando se cambia un plan que afecta al valor, el valor nuevo solo se aplica a los planes previamente almacenados en caché después de ejecutar DBCC FREEPROCCACHE (*pool_name*), donde *pool_name* es el nombre de un grupo de recursos de Resource Governor.  
   
--   Si se va a cambiar AFFINITY de varios programadores a uno solo, la ejecución de DBCC FREEPROCCACHE no es necesaria porque los planes paralelos se pueden ejecutar en serie. Pero es posible que no sea tan eficaz como un plan compilado como un plan en serie.  
+-   Si se va a cambiar AFFINITY de varios programadores a uno solo, la ejecución de DBCC FREEPROCCACHE no es necesaria porque los planes paralelos se pueden ejecutar en serie. Pero puede que no sea tan eficaz como un plan compilado como un plan en serie.  
   
 -   Si se va a cambiar AFFINITY de un programador a varios, la ejecución de DBCC FREEPROCCACHE no es necesaria. Pero los planes en serie no se pueden ejecutar en paralelo, así que el borrado de la memoria caché respectiva permite compilar potencialmente nuevos planes mediante paralelismo.  
   

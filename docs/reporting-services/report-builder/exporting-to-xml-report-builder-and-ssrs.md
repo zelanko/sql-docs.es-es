@@ -9,10 +9,10 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52d83c17a1cfe79f8add7f0764216d404c14cfd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580754"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportar a XML (Generador de informes y SSRS)
@@ -32,11 +32,11 @@ ms.locfileid: "65580754"
 |Cuadro de texto|Se representa como un atributo o elemento dentro de su contenedor.|  
 |Rectángulo|Se representa como un elemento dentro de su contenedor.|  
 |Grupos de columnas de matriz|Se representan como elementos dentro de grupos de filas.|  
-|Mapa|Se representa como un elemento dentro del elemento de su contenedor. Las capas de mapa son elementos secundarios del mapa. Cada capa de mapa incluye los elementos y los atributos de los miembros del mapa.|  
+|Map|Se representa como un elemento dentro del elemento de su contenedor. Las capas de mapa son elementos secundarios del mapa. Cada capa de mapa incluye los elementos y los atributos de los miembros del mapa.|  
 |Gráfico|Se representa como un elemento dentro del elemento de su contenedor. Las series son elementos secundarios del gráfico y las categorías son los elementos secundarios de una serie. Representa todas las etiquetas de gráfico de cada valor de gráfico. Las etiquetas y los valores se incluyen como atributos.|  
 |Barra de datos|Se representan como un elemento dentro del elemento de su contenedor, de forma similar a un gráfico. Normalmente, una barra de datos no incluye jerarquías o etiquetas, solo valores.|  
 |Minigráfico|Se representan como un elemento dentro del elemento de su contenedor, de forma similar a un gráfico. Normalmente, un minigráfico no incluye jerarquías ni etiquetas, solo valores.|  
-|Medidor|Se representa como un elemento dentro del elemento de su contenedor. Se representa como un único elemento con los valores máximo y mínimo de la escala, los valores inicial y final del intervalo, y el valor del puntero como atributos.|  
+|Indicador|Se representa como un elemento dentro del elemento de su contenedor. Se representa como un único elemento con los valores máximo y mínimo de la escala, los valores inicial y final del intervalo, y el valor del puntero como atributos.|  
 |Indicador|Se representa como un elemento dentro del elemento de su contenedor, de forma similar a un medidor. Se representa como un único elemento con el nombre del estado activo, los estados disponibles y el valor de los datos como atributos.|  
   
  Los informes que se representan con la extensión de representación en XML también siguen estas reglas:  
@@ -80,7 +80,7 @@ ms.locfileid: "65580754"
   
  Los valores de las variables son los siguientes:  
   
-|Nombre|Valor|  
+|Nombre|Value|  
 |----------|-----------|  
 |Informe|Report.DataElementName|  
 |ReportURL|Dirección URL absoluta con codificación URL al informe en el servidor.|  

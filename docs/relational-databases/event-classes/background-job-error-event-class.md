@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e3560501061819b3911d7dd628d29e5dda09f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999864"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error [clase de eventos]
@@ -38,7 +38,7 @@ ms.locfileid: "67999864"
 |**IntegerData2**|**int**|Número de secuencia de trabajo.|55|Sí|  
 |**ObjectID**|**int**|Identificador del objeto asignado por el sistema.|22|Sí|  
 |**SessionLoginName**|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Sí|  
-|**Severity**|**int**|Nivel de gravedad del error del último intento (solo**EventSubClass** 1).|20|Sí|  
+|**Gravedad**|**int**|Nivel de gravedad del error del último intento (solo**EventSubClass** 1).|20|Sí|  
 |**StartTime**|**datetime**|Hora en que se creó el trabajo.|14|Sí|  
 |**State**|**int**|Estado del error del último intento (solo**EventSubClass** 1).|30|Sí|  
 |**TextData**|**ntext**|Descripción del valor de subclase de evento.|1|Sí|  

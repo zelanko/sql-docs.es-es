@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09f32949faca6994d460284a56e2b08315f1b43b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072250"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Concatenación de cadenas) (Transact-SQL)
@@ -67,7 +67,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve el tipo de datos del argumento con la mayor prioridad. Para obtener más información, vea [Prioridad de tipo de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El operador + (Concatenación de cadenas) se comporta de modo distinto cuando trabaja con una cadena vacía de longitud cero que cuando trabaja con valores NULL o desconocidos. Se puede especificar una cadena de caracteres de longitud cero como dos comillas simples sin caracteres incluidos entre las comillas. Se puede especificar una cadena binaria de longitud cero como 0x sin ningún valor de byte especificado en la constante hexadecimal. La concatenación de una cadena de longitud cero siempre concatena las dos cadenas especificadas. Si trabaja con cadenas de valor NULL, el resultado de la concatenación depende de la configuración de la sesión. Al igual que en las operaciones aritméticas realizadas con valores NULL, si se agrega un valor NULL a un valor conocido, el resultado suele ser un valor desconocido y la operación de concatenación de cadenas que se realiza con un valor NULL también debe generar un resultado NULL. No obstante, puede modificar este comportamiento si cambia la configuración de `CONCAT_NULL_YIELDS_NULL` para la sesión actual. Para obtener más información, vea [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
   
  Si el resultado de la concatenación de cadenas es superior al límite de 8.000 bytes, el resultado se trunca. Sin embargo, si una de las cadenas concatenadas como mínimo es un tipo de valor grande, no se produce el truncamiento.  

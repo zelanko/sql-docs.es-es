@@ -20,18 +20,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 506f3f0e79501b16ea5455ab1ff4d4ee83a7abff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040210"
 ---
-# <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
+# <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Devuelve el valor binario de suma de comprobación calculado en una fila de una tabla o en una lista de expresiones.
   
-![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,9 +43,9 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 *\**  
 Especifica que el cálculo abarca todas las columnas de tabla. BINARY_CHECKSUM no incluye en el cálculo las columnas que tienen tipos de datos no comparables. Entre los tipos de datos no comparables están los siguientes:  
 * **cursor**  
-* **imagen**  
+* **image**  
 * **ntext**  
-* **texto**  
+* **text**  
 * **xml**  
 
 y los tipos de datos no comparables definidos por el usuario de CLR (Common Language Runtime).
@@ -53,10 +53,10 @@ y los tipos de datos no comparables definidos por el usuario de CLR (Common Lang
 *expression*  
 Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo. BINARY_CHECKSUM no incluye en el cálculo las expresiones que tienen tipos de datos no comparables.
 
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `BINARY_CHECKSUM(*)`, calculado en cualquier fila de una tabla, devuelve el mismo valor siempre que la fila no se modifique posteriormente. `BINARY_CHECKSUM` cumple las propiedades de una función hash: si se aplica sobre dos listas de expresiones, devuelve el mismo valor si los elementos correspondientes de las dos listas tienen el mismo tipo y son iguales cuando se comparan utilizando el operador igual (=). En esta definición, se dice que la comparación de valores NULL de un tipo específico se consideran como iguales. Si al menos uno de los valores de la lista de expresiones cambia, la suma de comprobación de la expresión también puede cambiar, Sin embargo, este cambio no se garantiza, así que para detectar si los valores han cambiado, se recomienda el uso de `BINARY_CHECKSUM` solo si su aplicación puede tolerar la ausencia de cambio ocasional. De lo contrario, es más aconsejable usar `HASHBYTES`. Con un algoritmo hash MD5 especificado, la probabilidad de que `HASHBYTES` devuelva el mismo resultado, para dos entradas diferentes, es mucho menor en comparación con `BINARY_CHECKSUM`.
   
 `BINARY_CHECKSUM` puede operar en una lista de expresiones y devuelve el mismo valor para una lista especificada. `BINARY_CHECKSUM` aplicado a dos listas de expresiones cualquiera devuelve el mismo valor si los elementos correspondientes de ambas listas tienen el mismo tipo y la misma representación de bytes. Para esta definición, los valores NULL de un tipo especificado se considera que tienen la misma representación de bytes.
@@ -70,7 +70,7 @@ Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de c
 * **nvarchar**  
 * **varchar**  
 
-o Administrador de configuración de  
+or  
 
 * **sql_variant** (si el tipo base de **sql_variant** es un tipo de datos String).  
   
@@ -96,7 +96,7 @@ SELECT BINARY_CHECKSUM(*) from myTable;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  

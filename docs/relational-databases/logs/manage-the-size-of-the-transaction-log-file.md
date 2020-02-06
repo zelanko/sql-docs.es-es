@@ -15,10 +15,10 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084018"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Administrar el tamaño del archivo de registro de transacciones
@@ -74,7 +74,7 @@ Para obtener más información, vea [Recomendaciones](#Recommendations) en este 
  Para evitar esta sobrecarga, aumente el tamaño del registro de transacciones de **tempdb** después de iniciar o reiniciar la instancia de servidor. Para obtener más información, consulte [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
 ##  <a name="ControlGrowth"></a> Controlar el crecimiento de un archivo de registro de transacciones  
- Use la instrucción [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) para administrar el crecimiento de un archivo de registro de transacciones. Observe lo siguiente:  
+ Use la instrucción [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) para administrar el crecimiento de un archivo de registro de transacciones. Tenga en cuenta lo siguiente:  
   
 -   Para cambiar el tamaño del archivo actual en unidades de KB, MB, GB y TB, use la opción `SIZE`.  
 -   Para cambiar el incremento de crecimiento, use la opción `FILEGROWTH`. El valor 0 indica que el aumento automático se establece en OFF y no se permite ningún espacio adicional.  
@@ -112,7 +112,7 @@ Estas son algunas recomendaciones generales referentes a los archivos de registr
     -   El tamaño del archivo se reduce hasta un tamaño en el que solo el 25% del archivo corresponde al espacio sin utilizar o hasta el tamaño original del archivo (el que sea mayor). 
     -   Para obtener información sobre cómo cambiar la configuración de la propiedad **auto_shrink**, vea [Ver o cambiar las propiedades de una base de datos](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md) y [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
 [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)    
 [Copias de seguridad de registros de transacciones en Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Backups)    

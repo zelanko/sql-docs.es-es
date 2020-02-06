@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df18a2ca6f79982db41b5188283bf1721b518e31
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595750"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Configuración del cifrado de columna mediante Always Encrypted con un paquete DAC 
@@ -40,7 +40,7 @@ Para realizar operaciones criptográficas, la herramienta que se use para implem
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> Si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] y su instancia de SQL Server está configurada con un enclave seguro, puede ejecutar las operaciones criptográficas en contexto, sin sacar los datos de la base de datos. Consulte [Configuración del cifrado de columna en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Tenga en cuenta que el cifrado en contexto no está disponible para las implementaciones de DACPAC.
+> Si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] y su instancia de SQL Server está configurada con un enclave seguro, puede ejecutar las operaciones criptográficas en contexto, sin sacar los datos de la base de datos. Vea [Configuración del cifrado de columnas en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Tenga en cuenta que el cifrado en contexto no está disponible para las implementaciones de DACPAC.
 
 ::: moniker-end
 
@@ -60,14 +60,14 @@ Si la operación de actualización desencadena una operación de cifrado de dato
 Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md). 
 
  
-## <a name="next-steps"></a>Next Steps
-- [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)
-- [Consulta de columnas mediante Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+## <a name="next-steps"></a>Pasos siguientes
+- [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)
+- [Consulta de columnas mediante Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 
 ## <a name="see-also"></a>Consulte también  
  - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
- - [Información general de administración de claves de Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
- - [Configurar Always Encrypted con SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
- - [Configuración del cifrado de columna mediante el Asistente para Always Encrypted](always-encrypted-wizard.md)
- - [Configuración del cifrado de columna mediante Always Encrypted con PowerShell](configure-column-encryption-using-powershell.md)
+ - [Información general sobre la administración de claves de Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
+ - [Configuración de Always Encrypted con SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
+ - [Configuración del cifrado de columna mediante el asistente para Always Encrypted](always-encrypted-wizard.md)
+ - [Configuración del cifrado de columnas mediante Always Encrypted con PowerShell](configure-column-encryption-using-powershell.md)
  

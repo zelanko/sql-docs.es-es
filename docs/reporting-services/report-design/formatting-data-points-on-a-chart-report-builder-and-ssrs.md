@@ -12,10 +12,10 @@ ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0481f39c0c047f401914e2c710a1f52c393bc335
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580337"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS)
@@ -70,7 +70,7 @@ En el informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-
 |#TOTAL|Total de todos los valores Y de la serie.|All|`=Sum(Fields!MyDataField.Value)`|  
 |#LEGENDTEXT|Texto correspondiente al texto del elemento de la leyenda.|All|None|  
 |#AVG|Promedio de todos los valores Y de la serie.|All|`=Avg(Fields!MyDataField.Value)`|  
-|#MIN|Mínimo de todos los valores Y de la serie.|Todos|`=Min(Fields!MyDataField.Value)`|  
+|#MIN|Mínimo de todos los valores Y de la serie.|All|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|Máximo de todos los valores Y de la serie.|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|El primero de todos los valores Y de la serie.|All|`=First(Fields!MyDataField.Value)`|  
   

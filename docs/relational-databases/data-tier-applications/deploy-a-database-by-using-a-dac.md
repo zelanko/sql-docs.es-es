@@ -20,17 +20,17 @@ ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fae39a6cd0fcd61b18419f8e46786067a4a69dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134807"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implementar una base de datos mediante una DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Use el asistente para **implementar una base de datos en SQL Azure** para implementar una base de datos entre una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un servidor de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] o entre dos servidores de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
-##  <a name="BeforeBegin"></a> Antes de empezar  
+##  <a name="BeforeBegin"></a> Antes de comenzar  
  El asistente emplea un archivo de almacenamiento BACPAC de aplicación de capa de datos (DAC) para implementar los datos y las definiciones de los objetos de base de datos. Realiza una operación de exportación de DAC de la base de datos de origen y una importación de DAC al destino.  
   
 ###  <a name="DBOptSettings"></a> Opciones y configuración de bases de datos  
@@ -78,9 +78,9 @@ ms.locfileid: "68134807"
   
     -   [Página Resumen](#Summary)  
   
-    -   [Progreso](#Progress)  
+    -   [Progress](#Progress)  
     
-    -   [Resultado](#Results)  
+    -   [Resultados](#Results)  
   
 ##  <a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos del asistente **Implementar la base de datos** .  

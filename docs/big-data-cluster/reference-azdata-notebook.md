@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3d9b5538170e57b09a1cf8bc4360a68187595ac2
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0a866dcca1debba47abf2e2e241d00151b8641ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531670"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820962"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-En el artículo siguiente se proporciona referencia de los comandos de `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `notebook` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [azdata notebook view](#azdata-notebook-view) | Sirve para ver un cuaderno.  Opción para detenerse en el primer error de ejecución de celda.
@@ -42,7 +42,7 @@ Sirve para ver cuaderno.  Esto muestra todas las celdas, a menos que se detecte 
 ```bash
 azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb' --stop-on-error
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--path -p`
 Ruta de acceso al cuaderno que se va a ver.
 ### <a name="optional-parameters"></a>Parámetros opcionales
@@ -75,7 +75,7 @@ Sirve para ejecutar el cuaderno.
 ```bash
 azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--path -p`
 Ruta de acceso de archivo al cuaderno que se va a ejecutar.
 ### <a name="optional-parameters"></a>Parámetros opcionales

@@ -18,10 +18,10 @@ ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: de7e95ab26102c0b3bbe1e33c57ae9491a5b9a2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "65945889"
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
@@ -67,7 +67,7 @@ ASYMKEYPROPERTY(256, 'sid') AS SID ;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
 [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
 [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  

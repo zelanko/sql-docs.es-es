@@ -9,14 +9,14 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041887"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes y SSRS)
-En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , agregue un indicador de rendimiento clave (KPI) a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
+En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], agregará un indicador clave de rendimiento (KPI) a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
 
 Los KPI son valores medibles con significado empresarial. En este escenario, el resumen de ventas por subcategorías de producto es el KPI. El estado actual del KPI se muestra con colores, medidores e indicadores.
   
@@ -49,11 +49,11 @@ En esta sección, elija un origen de datos compartido, cree un conjunto de datos
   
 4.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos**.  
   
-5.  Haga clic en **Siguiente**.  
+5.  Haga clic en **Next**.  
   
 6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no está disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen del datos incrustados en su lugar. Para más información, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página **Diseñar una consulta** , haga clic en **Editar como texto**.  
   
@@ -97,7 +97,7 @@ En esta sección, elija un origen de datos compartido, cree un conjunto de datos
   
 10. En la barra de herramientas del diseñador de consultas, haga clic en Ejecutar ( **!** ).
 
-11. Haga clic en **Siguiente**.  
+11. Haga clic en **Next**.  
   
 ## <a name="CompleteWizard"></a>2. Organizar datos y elegir el diseño en el asistente  
 El Asistente para tabla o matriz proporciona un diseño inicial en el que se van a mostrar los datos. El panel de vista previa del asistente le ayudará a visualizar el resultado de las agrupaciones de datos antes de completar la tabla o el diseño de la matriz.  
@@ -120,7 +120,7 @@ El Asistente para tabla o matriz proporciona un diseño inicial en el que se van
   
     Los pasos 4 y 5 organizan los valores de los campos por fecha primeramente y, después, por todas las ventas de esa fecha.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
     Al ejecutar el informe, la tabla muestra cada fecha, todos los pedidos de cada fecha, y todos los productos, cantidades y totales de ventas de cada pedido.  
   
@@ -130,11 +130,11 @@ El Asistente para tabla o matriz proporciona un diseño inicial en el que se van
   
 9. Desactive la opción **Expandir o contraer grupos**.  
   
-    En este tutorial, el informe que ha creado no usa la característica de obtención de detalles que permite a un usuario expandir una jerarquía de grupos primarios para mostrar filas de grupos secundarios y filas de detalles.  
+    En este tutorial, el informe creado no usa la característica de obtención de detalles que permite a un usuario expandir una jerarquía de grupos primarios para mostrar filas de grupos secundarios y filas de detalles.  
   
-10. Haga clic en **Siguiente**.  
+10. Haga clic en **Next**.  
   
-11. Haga clic en **Finalizar**.  
+11. Haga clic en **Finalizar**  
   
       La tabla se agrega a la superficie de diseño. La tabla tiene cinco columnas y cinco filas. El panel Grupos de filas muestra tres grupos de filas: SalesDate, Subcategory y Details. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos. El panel Grupos de columnas está vacío.  
       
@@ -159,7 +159,7 @@ Vamos a hacer las columnas más anchas y establecer el formato de moneda y fecha
 
    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [$12,345.00]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.
     
-    ![generador-de-informes-marcador de posición-botón-valor](../reporting-services/media/report-builder-placeholder-value-button.png)
+    ![generador-de-informes-botón-valor-marcador-de-posición](../reporting-services/media/report-builder-placeholder-value-button.png)
 
 5. (Opcional) En la pestaña **Inicio** , en el grupo **Número** , haga clic dos veces en el botón **Disminuir decimales** para mostrar las cifras en dólares sin centavos.
 
@@ -229,7 +229,7 @@ Un medidor muestra un valor único de un conjunto de datos. En este tutorial se 
   
 10. En el cuadro de diálogo **Propiedades del puntero lineal** > **Opciones de puntero** > **Tipo de puntero**, asegúrese de que **Barra** está seleccionado. 
  
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
 12. Haga clic con el botón derecho en la escala del medidor y haga clic en **Propiedades de escala**.  
   
@@ -240,7 +240,7 @@ Un medidor muestra un valor único de un conjunto de datos. En este tutorial se 
 
 14. En la pestaña **Etiquetas** , compruebe **Ocultar etiquetas de escala**.
 
-15. Haga clic en **Aceptar**.
+15. Haga clic en **OK**.
   
 14. Arrastre el medidor dentro de la tabla a la segunda celda vacía de la columna KPI lineal, en la fila que muestra las ventas subtotales del campo `Subcategory` situado junto al campo donde ha agregado la fórmula del color de fondo.  
   
@@ -282,7 +282,7 @@ Los indicadores son medidores pequeños y simples que comunican los valores de d
   
     En este informe, podrá cambiar también el ámbito de un indicador colocado en la celda del subtotal de la subcategoría para realizar la sincronización en el campo SalesDate.  
   
-11. Haga clic en **Aceptar**.
+11. Haga clic en **OK**.
 
 11. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
 
@@ -318,7 +318,7 @@ Guarde el informe un servidor de informes o en su equipo. Si no guarda el inform
   
 4.  En **Nombre**, reemplace el nombre predeterminado por **KPI de ventas del producto**.  
   
-5.  Haga clic en **Guardar**.  
+5.  Haga clic en **Save**(Guardar).  
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
@@ -333,10 +333,10 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
   
 1.  En **Nombre**, reemplace el nombre predeterminado por **KPI de ventas del producto**.  
   
-2.  Haga clic en **Guardar**.  
+2.  Haga clic en **Save**(Guardar).  
   
-## <a name="next-steps"></a>Next Steps  
-Ha completado correctamente el tutorial Agregar un KPI a un informe. Para obtener más información, vea:
+## <a name="next-steps"></a>Pasos siguientes  
+Ha completado correctamente el tutorial Agregar un KPI a un informe. Para más información, consulte:
 *  [Medidores](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicadores](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   

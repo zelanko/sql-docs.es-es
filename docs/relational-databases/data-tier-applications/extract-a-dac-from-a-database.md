@@ -20,10 +20,10 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134793"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraer una DAC de una base de datos
@@ -31,7 +31,7 @@ ms.locfileid: "68134793"
   Use el **Asistente para extraer aplicación de capa de datos** o un script de Windows PowerShell para extraer un paquete de aplicación de capa de datos (DAC) de una base de datos de SQL Server existente. El proceso de extracción crea un archivo de paquete DAC que contiene definiciones de los objetos de base de datos y sus elementos relacionados a nivel de instancia. Por ejemplo, un archivo de paquete DAC contiene las tablas de base de datos, procedimientos almacenados, vistas y usuarios, junto con los inicios de sesión que se asignan a los usuarios de la base de datos.  
   
  
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  Puede extraer una DAC de las bases de datos que residen en instancias de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 o posterior. Si el proceso de extracción se ejecuta en una base de datos que se implementó a partir de una DAC, solo las definiciones de los objetos de la base de datos se extraen. El proceso no hace referencia a la DAC registrada en **msdb** (**maestra** en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). El proceso de extracción no registra la definición de DAC en la instancia actual del motor de base de datos. Para obtener más información sobre el registro de una DAC, vea [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md).  
   
 ##  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
@@ -66,7 +66,7 @@ ms.locfileid: "68134793"
   
  **No volver a mostrar esta página.** - Haga clic en la casilla para evitar que la página se muestre en el futuro.  
   
- **Siguiente >:** avance a la página **Elegir método**.  
+ **Siguiente >** : continúa hasta la página **Elegir método**.  
   
  **Cancelar:** termina el asistente sin extraer una aplicación de capa de datos de la base de datos.  
   
@@ -120,7 +120,7 @@ Seleccione los datos de referencia que quiera incluir en el archivo de paquete d
   
  **Guardar informe:** haga clic en esta opción para guardar los resultados del progreso del asistente en un archivo.  
   
- **Terminar:** haga clic en esta opción para cerrar el asistente después de que se haya completado el procesamiento o si se produce un error.  
+ **Terminar** : haga clic en esta opción para cerrar el asistente después de que se haya completado el procesamiento o si se produce un error.  
    
 ##  <a name="ExtractDACPowerShell"></a> Extraer una DAC con PowerShell  
  **Para extraer una DAC de una base de datos con el método Extract() en un script de PowerShell**  
@@ -160,7 +160,7 @@ $extractionunit.Description = $description
 $extractionunit.Extract($dacpacPath)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

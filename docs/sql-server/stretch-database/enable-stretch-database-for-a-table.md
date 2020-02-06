@@ -12,17 +12,17 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843805"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  Si quiere configurar una tabla para Stretch Database, seleccione **Stretch | Habilitar** para una tabla de SQL Server Management Studio para el asistente **Habilitar la tabla para Stretch**. También puede utilizar Transact-SQL para habilitar Stretch Database en una tabla existente o crear una tabla nueva con Stretch Database habilitado.  
+  Si quiere configurar una tabla para Stretch Database, seleccione **Stretch | Habilitar** para una tabla de SQL Server Management Studio para el asistente **Habilitar la tabla para Stretch** . También puede utilizar Transact-SQL para habilitar Stretch Database en una tabla existente o crear una tabla nueva con Stretch Database habilitado.  
   
 -   Si los datos inactivos están almacenados en otra tabla, puede migrarla entera.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "73843805"
  
  **Requisitos previos**. Si selecciona **Stretch | Habilitar** para una tabla y aún no se ha habilitado Stretch Database para la base de datos, el asistente configura primero la base de datos para Stretch Database. Siga los pasos de [Introducción mediante la ejecución del Asistente para Habilitar base de datos para Stretch](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md) en lugar de los pasos de este artículo.  
   
- **Permisos**. Para habilitar Stretch Database en una base de datos o tabla, se requieren permisos db_owner. Además, para habilitar Stretch Database en una tabla, también se requieren permisos ALTER en la tabla.  
+ **Permisos**. Para habilitar Stretch Database en una base de datos o tabla, se requieren permisos db_owner. La habilitación de Stretch Database en una tabla también requiere permisos ALTER en la tabla.  
 
  > [!NOTE]
  > Posteriormente, si deshabilita Stretch Database, recuerde que al deshabilitar Stretch Database para una tabla o una base de datos no se elimina el objeto remoto. Si quiere eliminar la tabla o la base de datos remotas, tiene que quitarlas mediante el Portal de administración de Azure. Los objetos remotos siguen acumulando gastos de Azure hasta que se eliminan manualmente.
@@ -44,7 +44,7 @@ ms.locfileid: "73843805"
  **Introducción**  
  Consulte la finalidad del asistente y los requisitos previos.  
   
- **Selección de las tablas de base de datos**  
+ **Selección de tablas de base de datos**  
  Confirme que la tabla que desea habilitar se muestra y está seleccionada.  
   
  Puede migrar toda una tabla o especificar una función de filtro simple en el asistente. Si quiere usar un tipo de función de filtro diferente para seleccionar las filas que va a migrar, realice una de las siguientes acciones.  
@@ -58,7 +58,7 @@ ms.locfileid: "73843805"
  **Resumen**  
  Revise los valores especificados y las opciones seleccionadas en el asistente. Después, seleccione **Finalizar** para habilitar Stretch.  
   
- **Resultado**  
+ **Resultados**  
  Consulte los resultados.  
   
 ##  <a name="EnableTSQLTable"></a> Uso de Transact-SQL para habilitar Stretch Database en una tabla  

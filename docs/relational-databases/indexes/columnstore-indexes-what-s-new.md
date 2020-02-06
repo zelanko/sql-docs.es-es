@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 690455f8dba76b45643ac4971c988059c56e33f9
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009424"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Novedades de los índices de almacén de columnas
@@ -53,13 +53,13 @@ ms.locfileid: "70009424"
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] agrega estas nuevas características.
 
-### <a name="functional"></a>Funciones
+### <a name="functional"></a>Funcional
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] admite columnas calculadas no persistentes en índices de almacén de columnas agrupados. No se admiten columnas persistentes en índices de almacén de columnas agrupados. No se puede crear un índice no agrupado en un índice de almacén columnas con una columna calculada. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] incorpora mejoras esenciales destinadas a mejorar el rendimiento y la flexibilidad de los índices de almacén de columnas. Estas mejoras optimizan los escenarios de almacenamiento de datos y facilitan los análisis operativos en tiempo real.  
   
-### <a name="functional"></a>Funciones  
+### <a name="functional"></a>Funcional  
   
 -   Una tabla de almacén de filas puede contar con un índice de almacén de columnas no agrupado actualizable. Antes, el índice de almacén de columnas no agrupado era de solo lectura.  
   

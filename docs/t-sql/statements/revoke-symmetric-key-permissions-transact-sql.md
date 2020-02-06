@@ -17,10 +17,10 @@ ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 33c1a7821f532249c13400c3937706267e22bf7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914180"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE (permisos de clave simétrica de Transact-SQL)
@@ -99,7 +99,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Puede ver información sobre claves simétricas en la vista de catálogo [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md).  
   
  Se producirá un error en la instrucción si no se especifica CASCADE para revocar un permiso de una entidad de seguridad a la que se concedió dicho permiso con GRANT OPTION especificado.  

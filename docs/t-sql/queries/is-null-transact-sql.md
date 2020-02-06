@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 90a62fed8292a5d5cbb1945cdfe8b2cee2502235
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901941"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
@@ -67,7 +67,7 @@ expression IS [ NOT ] NULL
   
  Si el valor de *expression* es NULL, IS NOT NULL devuelve FALSE; de lo contrario, devuelve TRUE.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para determinar si una expresión es NULL, utilice IS NULL o IS NOT NULL en lugar de los operadores de comparación (como = o !=). Los operadores de comparación devuelven UNKNOWN si uno de los argumentos o ambos son NULL.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -103,7 +103,7 @@ ORDER BY LastName DESC;
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Operadores lógicos &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

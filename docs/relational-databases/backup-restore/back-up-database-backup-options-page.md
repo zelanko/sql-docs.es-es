@@ -14,10 +14,10 @@ ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f461997fbbbbc7e63256b67b8fecf40381aab788
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940976"
 ---
 # <a name="back-up-database-backup-options-page"></a>Copia de seguridad de la base de datos (página Opciones de copia de seguridad)
@@ -34,7 +34,7 @@ ms.locfileid: "67940976"
 >  Puede definir un plan de mantenimiento de base de datos para crear copias de seguridad. Para obtener más información, vea [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md) y [Usar el Asistente para planes de mantenimiento](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [BACKUP](../../t-sql/statements/backup-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente si hace clic en el botón **Script** y, después, selecciona un destino para el script.  
+>  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and then selecting a destination for the script.  
   
 ## <a name="options"></a>Opciones  
   

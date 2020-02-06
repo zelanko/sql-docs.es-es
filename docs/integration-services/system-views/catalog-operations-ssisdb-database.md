@@ -14,10 +14,10 @@ ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d2cae61482de6b3269122249b310166987cfb44b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296544"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (base de datos de SSISDB)
@@ -29,7 +29,7 @@ ms.locfileid: "71296544"
 
   Muestra los detalles de todas las operaciones del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |operation_id|**bigint**|Identificador (id.) único de la operación.|  
 |operation_type|**smallint**|Tipo de operación.|  
@@ -48,7 +48,7 @@ ms.locfileid: "71296544"
 |server_name|**nvarchar(128)**|Información del servidor Windows y de la instancia asociada a una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|Nombre del equipo en el que se está ejecutando la instancia del servidor.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta vista muestra una fila por cada operación del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Permite al administrador enumerar todas las operaciones lógicas que se realizaron en el servidor, por ejemplo la implementación de un proyecto o la ejecución de un paquete.  
   
  Esta vista muestra los siguientes tipos de operación, como se muestra en la columna **operation_type**:  
@@ -58,11 +58,11 @@ ms.locfileid: "71296544"
 |`1`|Inicialización de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|**NULL**|**NULL**|  
 |`2`|Período de retención<br /><br /> (Trabajo del SQL Agent)|**NULL**|**NULL**|  
 |`3`|MaxProjectVersion<br /><br /> (Trabajo del SQL Agent)|**NULL**|**NULL**|  
-|`101`|**deploy_project**<br /><br /> (Procedimiento almacenado)|Identificador de proyecto|Nombre del proyecto|  
-|`106`|**restore_project**<br /><br /> (Procedimiento almacenado)|Identificador de proyecto|Nombre del proyecto|  
+|`101`|**deploy_project**<br /><br /> (Procedimiento almacenado)|Identificador de proyecto|Nombre de proyecto|  
+|`106`|**restore_project**<br /><br /> (Procedimiento almacenado)|Identificador de proyecto|Nombre de proyecto|  
 |`200`|**create_execution** y **start_execution**<br /><br /> (Procedimientos almacenados)|Identificador de proyecto|**NULL**|  
 |`202`|**stop_operation**<br /><br /> (Procedimiento almacenado)|Identificador de proyecto|**NULL**|  
-|`300`|**validate_project**<br /><br /> (Procedimiento almacenado)|Identificador de proyecto|Nombre del proyecto|  
+|`300`|**validate_project**<br /><br /> (Procedimiento almacenado)|Identificador de proyecto|Nombre de proyecto|  
 |`301`|**validate_package**<br /><br /> (Procedimiento almacenado)|Identificador de proyecto|Nombre del paquete|  
 |`1000`|**configure_catalog**<br /><br /> (Procedimiento almacenado)|**NULL**|**NULL**||  
   

@@ -1,10 +1,9 @@
 ---
-title: Desplazarse por el Diseñador de diagramas de base de datos (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: Navegar por el Diseñador de diagramas de base de datos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,18 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bba0d3bab215a745161581b79beccc528b274010
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3a43ab4d45ddb30a655beefa9b39713f1d451054
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267459"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75225550"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Desplazarse por el Diseñador de diagramas de base de datos (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Puede trabajar en el Diseñador de diagramas de base de datos a través del teclado y el mouse (ratón). Consulte las tablas siguientes para obtener información sobre métodos específicos del Diseñador de diagramas de base de datos.  
   
-|**Para**|**Presione**|  
+|**To**|**Presione**|  
 |----------|-------------|  
 |Obtener acceso al menú Diagrama de base de datos|ALT+M|  
 |Desplazarse entre las tablas y las relaciones si están disponibles|TAB, o MAYÚS+TAB|  

@@ -11,10 +11,10 @@ ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9691deb08bdc6bce05945e1210edd91273f1bc61
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293175"
 ---
 # <a name="create-new-infoobject"></a>Crear nuevo InfoObject
@@ -24,7 +24,7 @@ ms.locfileid: "71293175"
 
   Use el cuadro de diálogo **Crear nuevo InfoObject** para crear un nuevo InfoObject en el sistema SAP Netweaver BW.  
   
- Puede abrir el cuadro de diálogo **Crear InfoObject** desde la página **Administrador de conexiones** del **Editor de destino de SAP BW**. Para obtener más información acerca del destino de SAP BW, vea [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Puede abrir el cuadro de diálogo **Crear InfoObject** desde la página **Administrador de conexiones** del **Editor de destino de SAP BW**. Para más información acerca del destino de SAP BW, consulte [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  La documentación de Microsoft Connector 1.1 for SAP BW da por supuesto que se está familiarizado con el entorno SAP Netweaver BW. Para obtener más información acerca de SAP Netweaver BW, o sobre cómo configurar los objetos y los procesos de SAP Netweaver BW, vea la documentación de SAP.  
@@ -133,7 +133,7 @@ ms.locfileid: "71293175"
  **Tipo de InfoObject**  
  Permite ver el tipo de InfoObject. En la siguiente tabla se muestran los posibles valores para el tipo.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |CHA|Características|  
 |KYF|Cifras clave|  
@@ -143,17 +143,17 @@ ms.locfileid: "71293175"
 ### <a name="attributes-options"></a>Opciones de Atributos  
  Use las opciones siguientes para agregar y quitar los atributos para el InfoObject que está creando:  
   
- **Agregar**  
+ **Add (Agregar)**  
  Permite agregar un InfoObject existente como atributo.  
   
  Para agregar un InfoObject existente, haga clic en Agregar y, a continuación, use el cuadro de diálogo **Buscar InfoObject** para buscar el InfoObject. Para obtener más información sobre este cuadro de diálogo, vea [Look Up InfoObject](../../integration-services/data-flow/look-up-infoobject.md).  
   
- **Nueva**  
+ **Nuevo**  
  Permite agregar un InfoObject nuevo como atributo.  
   
  Para crear y agregar un InfoObject nuevo, haga clic en Nuevo y, a continuación, use una nueva instancia del cuadro de diálogo crear **Crear nuevo InfoObject** para crear el InfoObject nuevo.  
   
- **Quitar**  
+ **Remove**  
  Quita el InfoObject seleccionado de la lista **Atributos** .  
   
 ## <a name="see-also"></a>Consulte también  

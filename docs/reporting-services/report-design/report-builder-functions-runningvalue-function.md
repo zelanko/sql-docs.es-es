@@ -9,10 +9,10 @@ ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 91447a23f04b05dc27d0ddcc47ba845d3dc313a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577175"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>Funciones del Generador de informes: función RunningValue
@@ -35,13 +35,13 @@ RunningValue(expression, function, scope)
  *function*  
  (**Enum**) Nombre de la función de agregado que se aplica a la expresión; por ejemplo, **Sum**. Esta función no puede ser **RunningValue**, **RowNumber**ni **Aggregate**.  
   
- *ámbito*  
+ *scope*  
  (**String**) Constante de cadena que es el nombre de un conjunto de datos, grupo, región de datos o NULL (**Nothing** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica el contexto en el que evaluar la agregación. **Nothing** especifica el contexto más externo, normalmente el conjunto de datos de informe.  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
  Viene determinado por la función de agregado especificada en el parámetro *function* .  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor para **RunningValue** se restablece en 0 para cada nueva instancia del ámbito. Si se especifica un grupo, el valor actual se restablece cuando cambia la expresión de grupo. Si se especifica una región de datos, el valor actual se restablece en cada instancia nueva de la región de datos. Si se especifica un conjunto de datos, el valor actual no se restablece en todo el conjunto de datos.  
   
  **RunningValue** no se puede utilizar en un filtro o expresión de ordenación.  

@@ -11,10 +11,10 @@ ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6d31ad18b9a7de5b045a9ed868d20a0f35ab441b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281380"
 ---
 # <a name="catalogadd_data_tap_by_guid"></a>catalog.add_data_tap_by_guid 
@@ -70,7 +70,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 'D:\demos\datafiles\DCVendorOutput.csv'  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para agregar derivaciones de datos, la instancia de la ejecución debe estar en el estado creado (un valor 1 en la columna **status** de la vista [catalog.operations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)). El valor de estado cambia cuando se ejecuta la ejecución. Puede crear una ejecución mediante una llamada a [catalog.create_execution &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
  A continuación se indican algunas consideraciones sobre el procedimiento almacenado add_data_tap_by_guid.  

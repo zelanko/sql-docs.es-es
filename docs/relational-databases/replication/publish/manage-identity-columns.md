@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b7418f2f38bd853d462727c2fac65d08e0bd1e8d
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: ee2425a5b2ff846e37dfe6acb06d8b26b54fd7da
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846667"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287633"
 ---
 # <a name="manage-identity-columns"></a>Administrar columnas de identidad
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -69,11 +69,11 @@ ms.locfileid: "70846667"
   
 5.  Si seleccionó **Automático** o **True** en el paso 4, escriba los valores de las opciones en la siguiente tabla. Para obtener más información sobre cómo usar estos valores, vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-    |Opción|Valor|Descripción|  
+    |Opción|Value|Descripción|  
     |------------|-----------|-----------------|  
     |**Tamaño de intervalo del publicador**|Valor entero para el tamaño del intervalo (por ejemplo, 20 000).|Vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
     |**Tamaño de intervalo del suscriptor**|Valor entero para el tamaño del intervalo (por ejemplo, 10000).|Vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-    |**Porcentaje de umbral del intervalo**|Valor entero para el umbral de porcentaje (por ejemplo, 90 equivale a 90 por ciento).|Porcentaje del total de valores de identidad utilizados en un nodo antes de que se asigne un nuevo intervalo de identidad.<br /><br /> <br /><br /> Nota: Se debe especificar este valor, pero solo se usa en: suscriptores que usan suscripciones de actualización en cola y suscriptores de publicaciones de combinación que ejecuten [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o versiones anteriores de otras ediciones de SQL Server. Para obtener más información, vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+    |**Porcentaje de umbral del intervalo**|Valor entero para el umbral de porcentaje (por ejemplo, 90 equivale a 90 por ciento).|Porcentaje del total de valores de identidad utilizados en un nodo antes de que se asigne un nuevo intervalo de identidad.<br /><br /> <br /><br /> Nota: Este valor se debe especificar, pero solo lo utilizan suscriptores que usan suscripciones de actualización en cola y suscriptores de publicaciones de combinación que ejecuten [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o versiones anteriores de otras ediciones de SQL Server. Para obtener más información, vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).|  
     |**Valor de inicio del siguiente intervalo**|Valor entero. Solo lectura.|El valor en el que comenzará el siguiente intervalo. Por ejemplo, si el intervalo actual es 5001-6000, este valor será 6001.|  
     |**Valor máximo de identidad**|Valor entero. Solo lectura.|El valor más grande de la columna de identidad. Está determinado por el tipo de datos base de la columna.|  
     |**Incremento**|Valor entero. Solo lectura.|La cantidad en la que se debe incrementar o reducir el número de la columna de identidad para cada inserción: por lo general se establece en 1.|  

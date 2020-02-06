@@ -1,10 +1,9 @@
 ---
-title: Implementar trabajos | Microsoft Docs
-ms.custom: ''
+title: Implementar trabajos
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +14,15 @@ helpviewer_keywords:
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 31cef7a310eed27fc086b5f9a8b78167f8fc35c5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9770382558af7e77090235775c133dbeaeabff51
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262379"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242345"
 ---
 # <a name="implement-jobs"></a>Implementar trabajos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ Puede ejecutar los trabajos manualmente o configurarlos para que se ejecuten de 
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |Contiene información sobre cómo crear trabajos y asignar su propiedad.|[Crear trabajos](../../ssms/agent/create-jobs.md)|  
 |Contiene información sobre cómo organizar trabajos en categorías.|[Organizar los trabajos](../../ssms/agent/organize-jobs.md)|  
 |Contiene información acerca de los diferentes tipos de pasos de trabajo que puede crear y cómo administrarlos.|[Administrar pasos de trabajo](../../ssms/agent/manage-job-steps.md)|  

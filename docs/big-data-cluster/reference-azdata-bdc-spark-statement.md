@@ -1,28 +1,28 @@
 ---
 title: Referencia de azdata bdc spark statement
-titleSuffix: SQL Server big data clusters
 description: Artículo de referencia sobre los comandos de azdata bdc spark statement.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f8fcfb09201e9995b9c86f47adeab54fc037b866
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 38d556944db9e8c269fb8acf8f3089050fb8b1d8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531773"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258610"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-En el artículo siguiente se proporciona una referencia de los comandos de `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `bdc spark statement` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [azdata bdc spark statement list](#azdata-bdc-spark-statement-list) | Enumera todas las instrucciones de la sesión de Spark correspondiente.
@@ -39,7 +39,7 @@ List all the session statements.
 ```bash
 azdata spark statement list --session-id 0
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--session-id -i`
 Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -64,7 +64,7 @@ Ejecuta una instrucción.
 ```bash
 azdata spark statement create --session-id 0 --code "2+2"
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--session-id -i`
 Número de identificador de sesión de Spark.
 #### `--code -c`
@@ -91,7 +91,7 @@ Obtiene información de instrucción de la sesión con identificador 0 e identif
 ```bash
 azdata spark statement info --session-id 0 --statement-id 0
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--session-id -i`
 Número de identificador de sesión de Spark.
 #### `--statement-id -s`
@@ -118,7 +118,7 @@ Cancela una instrucción.
 ```bash
 azdata spark statement cancel --session-id 0 --statement-id 0
 ```
-### <a name="required-parameters"></a>Parámetros necesarios
+### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--session-id -i`
 Número de identificador de sesión de Spark.
 #### `--statement-id -s`

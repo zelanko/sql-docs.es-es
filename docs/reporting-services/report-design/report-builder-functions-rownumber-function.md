@@ -9,10 +9,10 @@ ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e918a674b48eeb34fad7ea660b7e907fc9dcb44b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577185"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>Funciones del Generador de informes: función RowNumber
@@ -29,10 +29,10 @@ RowNumber(scope)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *ámbito*  
+ *scope*  
  (**String**) El nombre de un conjunto de datos, región de datos, grupo o valor NULL (**Nothing** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) que especifica el contexto en el que se evaluará el número de filas. **Nothing** especifica el contexto más externo, normalmente el conjunto de datos de informe.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  **RowNumber** devuelve el valor actual del recuento de filas dentro del ámbito especificado, al igual que [RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md) devuelve el valor actual de una función de agregado. Cuando especifique un ámbito, especifique cuándo se deberá restablecer el recuento de filas en 1.  
   
  *scope* no puede ser una expresión. *scope* debe ser un ámbito contenedor. Entre los ámbitos más habituales, desde el contenedor más externo al más interno, se encuentran los conjuntos de datos de informe, las regiones de datos, los grupos de filas o los grupos de columnas.  

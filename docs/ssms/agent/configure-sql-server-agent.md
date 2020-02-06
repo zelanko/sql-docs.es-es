@@ -1,10 +1,7 @@
 ---
-title: Configurar el Agente SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: Configure SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,15 +12,20 @@ helpviewer_keywords:
 ms.assetid: 2e361a62-9e92-4fcd-80d7-d6960f127900
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b5f766351e9551143fdbd66571224e11845d659
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: fd3f2468b6100e226d3942f9587fde968391e0fb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553152"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243636"
 ---
 # <a name="configure-sql-server-agent"></a>Configure SQL Server Agent
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -41,7 +43,7 @@ En este tema se describe cómo especificar algunas opciones de configuración pa
   
 ### <a name="Security"></a>Seguridad  
   
-#### <a name="Permissions"></a>Permissions  
+#### <a name="Permissions"></a>Permisos  
 Para realizar sus funciones, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe configurarse de modo que use las credenciales de una cuenta que sea miembro del rol fijo de servidor **sysadmin** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cuenta debe tener los siguientes permisos de Windows:  
   
 -   Iniciar sesión como servicio (SeServiceLogonRight)  

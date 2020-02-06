@@ -23,10 +23,10 @@ ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79be8af32c13b9e910b94b40bd3c1bf9b2c0e2c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071403"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
@@ -50,17 +50,17 @@ FILEPROPERTY ( file_name , property )
  *property*  
  Es una expresión que contiene el nombre de la propiedad de archivo que se va a devolver. *property* es **varchar (128)** y puede ser uno de estos valores.  
   
-|Valor|Descripción|Valor devuelto|  
+|Value|Descripción|Valor devuelto|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|El grupo de archivos es de solo lectura.|1 = True<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
 |**IsPrimaryFile**|El archivo es el archivo principal.|1 = True<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
 |**IsLogFile**|El archivo es un archivo de registro.|1 = True<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
 |**SpaceUsed**|Cantidad de espacio utilizada por el archivo especificado.|Número de páginas asignadas en el archivo.|  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  *file_name* corresponde a la columna **name** de la vista de catálogo **sys.master_files** o **sys.database_files**.  
   
 ## <a name="examples"></a>Ejemplos  

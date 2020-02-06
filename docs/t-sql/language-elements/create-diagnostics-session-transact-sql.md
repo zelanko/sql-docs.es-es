@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68088978"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
@@ -88,7 +88,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |Duration|Duración del evento.|  
 |SPID|Identificador de proceso del servicio.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Se permite para cada usuario un máximo de 10 sesiones de diagnóstico simultáneas. Vea [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md) para obtener una lista de las sesiones actuales y anule las que ya no necesite mediante `DROP DIAGNOSTICS SESSION`.  
   
  Las sesiones de diagnóstico seguirán recopilando metadatos hasta que se anulen.  

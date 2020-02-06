@@ -20,10 +20,10 @@ ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b27695eba9f1092b09d147c373877a9b44789497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065902"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
@@ -51,7 +51,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  ENABLE | DISABLE  
  Habilita o deshabilita un proveedor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si el proveedor cambia el archivo .dll que se utiliza para implementar la Administración extensible de claves en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es preciso utilizar la instrucción ALTER CRYPTOGRAPHIC PROVIDER.  
   
  Cuando la ruta de acceso del archivo .dll se actualiza mediante la instrucción ALTER CRYPTOGRAPHIC PROVIDER, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza las acciones siguientes:  

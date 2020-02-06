@@ -11,10 +11,10 @@ ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4102ee4dc551a02a8b6853062e19d448ab414e7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296531"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (base de datos de SSISDB)
@@ -26,11 +26,11 @@ ms.locfileid: "71296531"
 
   Muestra los detalles de todos los proyectos que aparecen en el catálogo de **SSISDB**.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |identificador de proyecto|**bigint**|El identificador único (Id.) del proyecto.|  
 |folder_id|**bigint**|El identificador único de la carpeta donde reside el proyecto.|  
-|NAME|**sysname**|Nombre del proyecto.|  
+|name|**sysname**|Nombre del proyecto.|  
 |description|**nvarchar(1024)**|Descripción opcional del proyecto.|  
 |project_format_version|**int**|Versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizada para desarrollar el proyecto.|  
 |deployed_by_sid|**varbinary(85)**|Identificador de seguridad (SID) del usuario que instaló el proyecto.|  
@@ -41,7 +41,7 @@ ms.locfileid: "71296531"
 |validation_status|**char(1)**|El estado de la validación|  
 |last_validation_time|**datetimeoffset(7)**|Hora de la última validación.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta vista muestra una fila para cada proyecto del catálogo.  
   
 ## <a name="permissions"></a>Permisos  

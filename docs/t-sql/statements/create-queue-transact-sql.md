@@ -26,10 +26,10 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b1446d4b43524a1e670084812279284d86eb1b0b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326096"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
@@ -110,7 +110,7 @@ Una cola que tenga configurado en OFF el control de mensajes dudosos no se desha
 
 *grupo de archivos ON |* [**DEFAULT**] Especifica el grupo de archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se va a crear esta cola. Puede usar el parámetro *filegroup* para identificar un grupo de archivos o emplear el identificador DEFAULT para usar el grupo de archivos predeterminado de la base de datos de Service Broker. En el contexto de esta cláusula, DEFAULT no es una palabra clave y debe delimitarse como un identificador. Si no se especifica ningún grupo de archivos, la cola utiliza el grupo de archivos predeterminado de la base de datos.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Una cola puede ser el destino de una instrucción SELECT. No obstante, el contenido de una cola solo puede modificarse mediante instrucciones que funcionan en conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)], como SEND, RECEIVE y END CONVERSATION. Una cola no puede ser el destino de una instrucción INSERT, UPDATE, DELETE o TRUNCATE.
 
@@ -128,7 +128,7 @@ Una cola es un objeto propiedad de un esquema. Las colas aparecen en la vista de
 
 La siguiente tabla contiene las columnas de una cola.
 
-|Nombre de columna|Tipo de datos|Descripción|
+|Nombre de la columna|Tipo de datos|Descripción|
 |-----------------|---------------|-----------------|
 |status|**tinyint**|Estado del mensaje. La instrucción RECEIVE devuelve todos los mensajes que tienen **1** como estado. Si la retención de los mensajes está activada, el estado se establece en 0. Si está desactivada, el mensaje se elimina de la cola. Los mensajes de la cola pueden contener uno de los valores siguientes:<br /><br /> **0**=Mensaje recibido retenido<br /><br /> **1**=Listo para recibir<br /><br /> **2**=Sin completar<br /><br /> **3**=Mensaje enviado retenido|
 |priority|**tinyint**|Nivel de prioridad asignado a este mensaje.|

@@ -26,10 +26,10 @@ helpviewer_keywords:
 - rank
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
 ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73882403"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
@@ -94,7 +94,7 @@ Es un identificador asociado con el tipo de información. A menudo se usa con pl
 Es un identificador basado en un conjunto de valores predefinidos que definen el rango de sensibilidad. Lo usan otros servicios como Advanced Threat Protection para detectar anomalías en función de su rango.
 
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 
 - Solo se puede agregar una clasificación a un único objeto. La adición de una clasificación a un objeto que ya está clasificado sobrescribirá la clasificación existente.
 - Se pueden clasificar varios objetos con una sola instrucción `ADD SENSITIVITY CLASSIFICATION`.

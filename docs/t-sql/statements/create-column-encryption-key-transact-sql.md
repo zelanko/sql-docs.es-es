@@ -29,10 +29,10 @@ ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 28952359d69fa1fa1c140a8a2a18222ec114cea0
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593902"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73593902"
 
 Crea un objeto de metadatos de clave de cifrado de columna para [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) o [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Un objeto de metadatos de clave de cifrado de columna contiene uno o dos valores cifrados de una clave de cifrado de columna que se usa para cifrar los datos de una columna. Cada valor se cifra mediante una clave maestra de columna. 
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -75,7 +75,7 @@ BLOB de valor de clave de cifrado de columna cifrada.
 > [!WARNING]  
 >  En esta instrucción no se deben pasar nunca valores de clave de cifrado de columna con texto sin formato. Si lo hace, perderá las ventajas que ofrece esta característica.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 La instrucción `CREATE COLUMN ENCRYPTION KEY` debe incluir al menos uno o dos valores. Puede usar la instrucción [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) para agregar un segundo valor más adelante. También puede utilizar la instrucción `ALTER COLUMN ENCRYPTION KEY` para quitar un valor.  
   
 Normalmente, una clave de cifrado de columna se crea con un solo valor cifrado. En ocasiones, hay que rotar una clave maestra de columna para reemplazar la de la columna actual por la nueva. Cuando tenga que rotar la clave, agregue un nuevo valor de la clave de cifrado de columna, cifrado con la nueva clave maestra de columna. Esta rotación le permite garantizar que las aplicaciones cliente puedan acceder a los datos cifrados con la clave de cifrado de columna, mientras la nueva clave maestra de columna se pone a disposición de las aplicaciones cliente. Un controlador compatible con Always Encrypted en una aplicación cliente que no tenga acceso a la nueva clave maestra usará el valor de clave de cifrado de columna que está cifrado con la clave maestra de columna para acceder a datos confidenciales.  

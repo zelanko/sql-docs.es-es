@@ -19,10 +19,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1876c16455876931d6a5c1d091d9d4c0dc860fcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103423"
 ---
 # <a name="create-statistics"></a>Crear estadísticas
@@ -96,10 +96,10 @@ ms.locfileid: "68103423"
      **Permitir valores NULL**  
      Indica si la columna acepta valores NULL.  
   
-     **Agregar**  
+     **Add (Agregar)**  
      Agregue columnas adicionales de la tabla a la cuadrícula de estadísticas.  
   
-     **Quitar**  
+     **Remove**  
      Quita la columna seleccionada de la cuadrícula de estadísticas.  
   
      **Subir**  
@@ -117,7 +117,7 @@ ms.locfileid: "68103423"
      La siguiente propiedad se muestra en la página **Filtro** del cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre\_tabla_.  
   
      **Expresión de filtro**  
-     Define qué filas de datos se incluyen en las estadísticas filtradas. Por ejemplo, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Define qué filas de datos se incluyen en las estadísticas filtradas. Por ejemplo: `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  En el cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre\_tabla_, en la página **General** haga clic en **Agregar**.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68103423"
      **Identidad**  
      Cuando se activa, indica una columna de identidad.  
   
-     **Allow NULLs**  
+     **Permitir valores NULL**  
      Indica si la columna acepta valores NULL.  
   
 6.  En el cuadro de diálogo **Seleccionar columnas** , active la casilla o casillas de cada columna para la que desee crear una estadística y haga clic en **Aceptar**.  

@@ -23,13 +23,13 @@ ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 59b44b3356a0f71074543eb35107040ff8c47982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071502"
 ---
-# <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
+# <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Esta función devuelve el número de identificación del archivo (id.) para el nombre lógico especificado de un archivo de datos, registro o texto completo de la base de datos actual. 
@@ -46,12 +46,12 @@ FILE_IDEX ( file_name )
  *file_name*  
 Una expresión de tipo **sysname** que devuelve el valor de id. de archivo "FILE_IDEX" del nombre del archivo. 
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **int**  
   
 **NULL** en caso de error  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 *file_name* corresponde al nombre de archivo lógico mostrado en la columna **name** de las vistas de catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) o [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
 Utilice `FILE_IDEX` en una lista SELECT, en una cláusula WHERE o en cualquier lugar que admita el uso de una expresión. Para obtener más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  

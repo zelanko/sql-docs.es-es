@@ -18,13 +18,13 @@ ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dba855440971ba74ce15fb108e1ac88ebeb1cd24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914575"
 ---
-# <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
+# <a name="original_db_name-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve el nombre de la base de datos especificada por el usuario en la cadena de conexión de la base de datos. Esta base de datos se especifica mediante la opción **sqlcmd-d** (USE *database*). También puede especificarse con la expresión de origen de datos Open Database Connectivity (ODBC) (initial catalog =*databasename*).  
@@ -40,7 +40,7 @@ ms.locfileid: "67914575"
 ORIGINAL_DB_NAME ()  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Si no se especifica la base de datos inicial, la función devuelve una cadena vacía.  
   
 ## <a name="see-also"></a>Consulte también  

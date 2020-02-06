@@ -18,10 +18,10 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47b924754f221b93e8f9e661a1b12afb5f07fcd4
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70026231"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "70026231"
 
   Cambia una configuración existente del grupo de cargas de trabajo de Resource Governor y, opcionalmente, la asigna a un grupo de recursos de Resource Governor.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -142,7 +142,7 @@ El elemento *value* es un entero hasta [!INCLUDE[ssSQL17](../../includes/sssql17
 > [!NOTE]  
 > La opción "default" distingue entre mayúsculas y minúsculas.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  ALTER WORKLOAD GROUP está permitido en el grupo predeterminado.  
   
  Los cambios en la configuración del grupo de cargas de trabajo no surtirán efecto hasta que se ejecute ALTER RESOURCE GOVERNOR RECONFIGURE. Cuando se cambia un plan que afecta al valor, el nuevo valor solo se aplica a los planes previamente almacenados en caché después de ejecutar DBCC FREEPROCCACHE (*pool_name*), donde *pool_name* es el nombre de un grupo de recursos de Resource Governor con el que está asociado el grupo de cargas de trabajo.  
@@ -156,7 +156,7 @@ El elemento *value* es un entero hasta [!INCLUDE[ssSQL17](../../includes/sssql17
   
  Si va a ejecutar instrucciones de DDL, se recomienda familiarizarse primero con los estados de Resource Governor. Para obtener más información, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- REQUEST_MEMORY_GRANT_PERCENT: En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se permite que la creación de índices use más memoria del área de trabajo que la concedida inicialmente para mejorar el rendimiento. El regulador de recursos admite este tratamiento especial en versiones posteriores; sin embargo, la concesión inicial y cualquier concesión de memoria adicional están limitadas por la configuración del grupo de cargas de trabajo y del grupo de recursos de servidor.  
+ REQUEST_MEMORY_GRANT_PERCENT: en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se permite que la creación de índices use más memoria del área de trabajo que la concedida inicialmente para mejorar el rendimiento. El regulador de recursos admite este tratamiento especial en versiones posteriores; sin embargo, la concesión inicial y cualquier concesión de memoria adicional están limitadas por la configuración del grupo de cargas de trabajo y del grupo de recursos de servidor.  
   
  **Creación de índices en una tabla con particiones**  
   

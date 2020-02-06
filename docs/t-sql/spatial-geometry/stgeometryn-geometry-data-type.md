@@ -18,10 +18,10 @@ ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8eb3644652d826744b50b6980b0dbe0a42ae2d55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950208"
 ---
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (tipo de datos geometry)
@@ -40,12 +40,12 @@ Devuelve una geometría especificada en una **colección de geometría**.
  *expression*  
  Expresión **int** entre 1 y el número de instancias de **geometry** en la colección **geometrycollection**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Este método devuelve **null** si el parámetro es mayor que el resultado de `STNumGeometries()` y producirá una excepción **ArgumentOutOfRangeException** si el parámetro *expresión* es menor que 1.  
   
 ## <a name="examples"></a>Ejemplos  

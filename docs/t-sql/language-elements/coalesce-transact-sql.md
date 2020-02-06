@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950289"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
@@ -45,10 +45,10 @@ COALESCE ( expression [ ,...n ] )
 _expression_  
 Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cualquier tipo.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 Devuelve el tipo de datos de _expresión_ con la prioridad de tipo de datos más alta. Si ninguna de las expresiones admiten valores NULL, el resultado tiene un tipo que no admite valores NULL.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Si todos los argumentos son `NULL`, `COALESCE` devuelve `NULL`. Al menos uno de los valores NULL debe ser `NULL` con tipo.  
   
 ## <a name="comparing-coalesce-and-case"></a>Comparar COALESCE y CASE  
@@ -109,7 +109,7 @@ La función `ISNULL` y la expresión `COALESCE` tienen una finalidad similar, pe
     );  
     ```  
   
-4.  Las validaciones de `ISNULL` y `COALESCE` también son diferentes. Por ejemplo, con `ISNULL`, un valor `NULL` se convierte en **int**, mientras que con `COALESCE` es necesario proporcionar un tipo de datos.  
+4.  Las validaciones de `ISNULL` y `COALESCE` también son diferentes. Por ejemplo, con `NULL`, un valor `ISNULL` se convierte en **int**, mientras que con `COALESCE` es necesario proporcionar un tipo de datos.  
   
 5.  `ISNULL` toma solo dos parámetros. Por el contrario `COALESCE` toma un número variable de parámetros.  
   
@@ -189,7 +189,7 @@ Total Salary
 (12 row(s) affected)
 ```  
   
-### <a name="c-simple-example"></a>C. Ejemplo sencillo  
+### <a name="c-simple-example"></a>C: ejemplo sencillo  
 En el ejemplo siguiente se muestra cómo `COALESCE` selecciona los datos de la primera columna que tiene un valor que no es NULL. Para este ejemplo, se supone que la tabla `Products` contiene estos datos:  
   
 ```  
@@ -219,7 +219,7 @@ NULL         White      PN9876         White
   
 Observe que en la primera fila, el valor `FirstNotNull` es `PN1278`, no `Socks, Mens`. Esto se debe a que en el ejemplo la columna `Name` no se especificó como un parámetro para `COALESCE`.  
   
-### <a name="d-complex-example"></a>D. Ejemplo complejo  
+### <a name="d-complex-example"></a>D: ejemplo complejo  
 En el ejemplo siguiente se usa `COALESCE` para comparar los valores de tres columnas y devolver solo el valor distinto de NULL que se encuentra en las columnas.  
   
 ```sql  

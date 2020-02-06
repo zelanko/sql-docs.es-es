@@ -1,6 +1,6 @@
 ---
-title: Editor de consultas del motor de base de datos (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Editor de consultas del motor de base de datos (SQL Server Management Studio)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,12 +23,12 @@ ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26a6e67287c7a2effdd62604fa492a532ed636bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1a21b567232bf24b561e014de231268632cc4b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263501"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253944"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de consultas del motor de base de datos (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,10 +55,10 @@ ms.locfileid: "68263501"
 ## <a name="sql-editor-toolbar"></a>Barra de herramientas del Editor SQL  
  Cuando el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] está abierto, la barra de herramientas del Editor SQL aparece con los botones siguientes.  
   
- **Conectar**  
+ **Conexión**  
  Se abre el cuadro de diálogo **Conectar al servidor** . Utilice este cuadro de diálogo para establecer una conexión a un servidor.  
   
- **Desconectar**  
+ **Desconexión**  
  Desconecta el Editor de consultas actual del servidor.  
   
  **Cambiar conexión**  
@@ -70,7 +70,7 @@ ms.locfileid: "68263501"
  **Bases de datos disponibles**  
  Cambia la conexión a una base de datos distinta del mismo servidor.  
   
- **Execute**  
+ **Ejecutar**  
  Ejecuta el código seleccionado o, si no se ha seleccionado ningún código, ejecuta todo el código del Editor de consultas.  
   
  **Depuración**  
@@ -132,19 +132,19 @@ ms.locfileid: "68263501"
  **Interrumpir todos**  
  Establece el depurador para interrumpir todos los procesos a los que está asociado cuando se produce una interrupción.  
   
- **Detener depuración**  
+ **Detener la depuración**  
  Saca la ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] seleccionada del modo de depuración y restaura el modo de ejecución estándar.  
   
  **Mostrar la instrucción siguiente**  
  Mueve el cursor a la siguiente instrucción que se va a ejecutar.  
   
- **Paso a paso por instrucciones**  
+ **Depurar paso a paso por instrucciones**  
  Se ejecuta la siguiente instrucción. Si la siguiente instrucción invoca un procedimiento almacenado, función o desencadenador de Transact-SQL, el depurador muestra una nueva ventana del **Editor de consultas** que contiene el código del módulo. La ventana está en el modo de depuración y la ejecución se detiene en la primera instrucción del módulo. Después puede desplazarse por el módulo, por ejemplo, estableciendo puntos de interrupción o recorriendo el código.  
   
- **Paso a paso por procedimientos**  
+ **Depurar paso a paso por procedimientos**  
  Se ejecuta la siguiente instrucción. Si la instrucción invoca un procedimiento almacenado, una función o un desencadenador Transact-SQL, el módulo se ejecuta hasta que termine y los resultados se devuelven al código de llamada. Si está seguro de que no hay errores en el módulo, puede omitirlo. La ejecución se detiene en la instrucción que sigue a la llamada al módulo.  
   
- **Paso a paso para salir**  
+ **Depurar paso a paso para salir**  
  Vuelve al nivel de la siguiente llamada superior (función, procedimiento almacenado o desencadenador). La ejecución se detiene en la instrucción que sigue a la llamada al procedimiento almacenado, a la función o al desencadenador.  
   
  **Windows**  

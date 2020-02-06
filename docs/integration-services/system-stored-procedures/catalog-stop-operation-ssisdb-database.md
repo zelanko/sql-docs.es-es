@@ -11,10 +11,10 @@ ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 95216c6ecca08c48d845a63fb43486ace9bb44a5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296706"
 ---
 # <a name="catalogstop_operation-ssisdb-database"></a>catalog.stop_operation (base de datos de SSISDB)
@@ -60,7 +60,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   La operación ya se ha detenido  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Solo un usuario, y no más de uno a la vez, debe detener una operación en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si varios usuarios intentan detener la operación, el procedimiento almacenado indicará que se ha realizado correctamente (valor `0`) en el primer intento, pero los intentos subsiguientes producirán un error.  
   
   

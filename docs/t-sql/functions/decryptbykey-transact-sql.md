@@ -21,10 +21,10 @@ ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9ca108b3336a77becc605040b12c0361db4ac903
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251380"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
@@ -58,10 +58,10 @@ Los datos que se usaron como base para la generación del autenticador. Debe coi
 **\@authenticator**  
 Una variable que contiene datos a partir de los que se genera un autenticador. Debe coincidir con el valor que se proporcionó a [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *\@authenticator* tiene un tipo de datos **sysname**.  
 
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 **varbinary**, con un tamaño máximo de 8 000 bytes. `DECRYPTBYKEY` devuelve NULL si la clave simétrica usada para el cifrado de los datos no está abierta o si *ciphertext* es NULL.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `DECRYPTBYKEY` usa una clave simétrica. La base de datos debe tener esta clave simétrica ya abierta. `DECRYPTBYKEY` permitirá varias claves abiertas a la vez. No es necesario abrir la clave inmediatamente antes de descifrar el texto cifrado.  
   
 El cifrado y descifrado simétricos suelen funcionar con relativa rapidez, y funcionan bien para las operaciones que implican grandes volúmenes de datos.  

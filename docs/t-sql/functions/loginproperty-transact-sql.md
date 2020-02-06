@@ -33,10 +33,10 @@ ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7fb31db6e9b438fbab74a8b23462d8c7dc897d46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059764"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
@@ -60,7 +60,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  Es una expresión que contiene la información de propiedad que se va a devolver para el inicio de sesión. *propertyname* puede ser uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**BadPasswordCount**|Devuelve el número de intentos consecutivos de inicio de sesión con una contraseña incorrecta.|  
 |**BadPasswordTime**|Devuelve la hora del último intento de inicio de sesión con una contraseña incorrecta.|  
@@ -111,7 +111,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   NULL si el inicio de sesión no es un inicio de sesión de SQL Server válido.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Esta función integrada devuelve información sobre la configuración de la directiva de contraseñas de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los nombres de las propiedades no distinguen mayúsculas de minúsculas, por lo que nombres de propiedades como **BadPasswordCount** y **badpasswordcount** son equivalentes. Los valores de las propiedades **PasswordHash, PasswordHashAlgorithm** y **PasswordLastSetTime** están disponibles en todas las configuraciones compatibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero las demás propiedades solo están disponibles cuando se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] y tanto CHECK_POLICY como CHECK_EXPIRATION están habilitadas. Para obtener más información, vea [Password Policy](../../relational-databases/security/password-policy.md).  
   
 ## <a name="permissions"></a>Permisos  
@@ -120,7 +120,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. Comprobar si se debe cambiar la contraseña de un inicio de sesión  
- En el ejemplo siguiente se comprueba si el inicio de sesión `John3` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe cambiar la contraseña la próxima vez que se conecte a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En el ejemplo siguiente se comprueba si el inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `John3` debe cambiar la contraseña la próxima vez que se conecte a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  
@@ -128,7 +128,7 @@ GO
 ```  
   
 ### <a name="b-checking-whether-a-login-is-locked-out"></a>B. Comprobar si un inicio de sesión está bloqueado  
- En el ejemplo siguiente se comprueba si el inicio de sesión `John3` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está bloqueado.  
+ En el ejemplo siguiente se comprueba si el inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `John3` está bloqueado.  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsLocked');  

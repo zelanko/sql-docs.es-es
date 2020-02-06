@@ -9,10 +9,10 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63294663"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz (Generador de informes)
@@ -47,11 +47,11 @@ En esta sección, elegirá un origen de datos compartido, creará un conjunto de
   
 4.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos**.  
   
-5.  Haga clic en **Siguiente**.  
+5.  Haga clic en **Next**.  
   
 6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no hay disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen de datos incrustados en su lugar. Para más información sobre cómo crear un origen de datos insertado, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página **Diseñar una consulta** , haga clic en **Editar como texto**.  
   
@@ -92,7 +92,7 @@ En esta sección, elegirá un origen de datos compartido, creará un conjunto de
   
 10. (opcional) Haga clic en el icono Ejecutar (!) para ejecutar la consulta y ver los datos.
 
-11. Haga clic en **Siguiente**.  
+11. Haga clic en **Next**.  
   
 ## <a name="Groups"></a>2. Organizar datos y elegir el diseño desde el Asistente para nueva tabla o matriz  
 Utilice el asistente para proporcionar un diseño inicial en el que mostrar los datos. El panel de vista previa del asistente le ayudará a visualizar el resultado de las agrupaciones de datos antes de completar el diseño de la matriz.  
@@ -121,7 +121,7 @@ Utilice el asistente para proporcionar un diseño inicial en el que mostrar los 
     
     ![report-builder-arrange-fields-report-wizard](../reporting-services/media/report-builder-arrange-fields-report-wizard.png)  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página Elegir el diseño, en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
@@ -129,9 +129,9 @@ Utilice el asistente para proporcionar un diseño inicial en el que mostrar los 
   
 10. Compruebe que la opción **Expandir o contraer grupos** está seleccionada.  
   
-11. Haga clic en **Siguiente**.  
+11. Haga clic en **Next**.  
   
-13. Haga clic en **Finalizar**.  
+13. Haga clic en **Finalizar**  
   
     La matriz se agrega a la superficie de diseño. El panel Grupos de filas muestra dos grupos de filas: Territory y SalesDate. El panel Grupos de columnas muestra dos grupos de columnas: Subcategory y Product. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
     
@@ -310,7 +310,7 @@ En este tutorial, guarde el informe en un servidor de informes. Si no tiene acce
   
 4.  En **Nombre**, reemplace el nombre predeterminado por **SalesByTerritorySubcategory**.  
   
-5.  Haga clic en **Guardar**.  
+5.  Haga clic en **Save**(Guardar).  
   
 El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
@@ -322,7 +322,7 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
   
 3.  En **Nombre**, reemplace el nombre predeterminado por **SalesByTerritorySubcategory**.  
   
-4.  Haga clic en **Guardar**.  
+4.  Haga clic en **Save**(Guardar).  
   
 ## <a name="RotateTextBox"></a>9. (Opcional) Girar 270 grados el cuadro de texto  
 Un informe con matrices se puede expandir horizontal y verticalmente cuando se ejecuta. Girando los cuadros de texto verticalmente o 270 grados, puede ahorrar espacio horizontal. El informe representado se hace más estrecho y, si se exporta a un formato como Microsoft Word, tendrá más posibilidades de ajustar en una página impresa.  
@@ -352,11 +352,11 @@ Un cuadro de texto también puede mostrar el texto como horizontal o como, verti
   
 El nombre del territorio se escribe verticalmente, de arriba abajo. El alto del grupo de fila de Territory varía por la longitud del nombre del territorio.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 Concluye así el tutorial para sobre el modo de crear un informe de matriz. Para obtener más información sobre matrices, consulte: 
 -    [Tablas, matrices y listas](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
--    [Crear una matriz](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
--    [Describir las áreas de la región de datos Tablix](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
+-    [Creación de una matriz](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)
+-    [Descripción de las áreas de la región de datos Tablix](../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md) 
 -    [Celdas, filas y columnas de la región de datos Tablix](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Consulte también  

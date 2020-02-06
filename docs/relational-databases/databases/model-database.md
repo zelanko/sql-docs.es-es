@@ -15,10 +15,10 @@ ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 81f96fac7ea9021c1f5eb39ad186dcdd35c92127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067373"
 ---
 # <a name="model-database"></a>Base de datos model
@@ -52,41 +52,41 @@ Para SQL Server 2014, vea [Base de datos modelo](https://docs.microsoft.com/sql/
   
 |Opción de base de datos|Valor predeterminado|Se puede modificar|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|Sí|  
-|ANSI_NULL_DEFAULT|OFF|Sí|  
-|ANSI_NULLS|OFF|Sí|  
-|ANSI_PADDING|OFF|Sí|  
-|ANSI_WARNINGS|OFF|Sí|  
-|ARITHABORT|OFF|Sí|  
-|AUTO_CLOSE|OFF|Sí|  
-|AUTO_CREATE_STATISTICS|ON|Sí|  
-|AUTO_SHRINK|OFF|Sí|  
-|AUTO_UPDATE_STATISTICS|ON|Sí|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|No|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
+|ALLOW_SNAPSHOT_ISOLATION|Apagado|Sí|  
+|ANSI_NULL_DEFAULT|Apagado|Sí|  
+|ANSI_NULLS|Apagado|Sí|  
+|ANSI_PADDING|Apagado|Sí|  
+|ANSI_WARNINGS|Apagado|Sí|  
+|ARITHABORT|Apagado|Sí|  
+|AUTO_CLOSE|Apagado|Sí|  
+|AUTO_CREATE_STATISTICS|ACTIVAR|Sí|  
+|AUTO_SHRINK|Apagado|Sí|  
+|AUTO_UPDATE_STATISTICS|ACTIVAR|Sí|  
+|AUTO_UPDATE_STATISTICS_ASYNC|Apagado|Sí|  
+|CHANGE_TRACKING|Apagado|No|  
+|CONCAT_NULL_YIELDS_NULL|Apagado|Sí|  
+|CURSOR_CLOSE_ON_COMMIT|Apagado|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
 |Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sí<br /><br /> Sí|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
-|DB_CHAINING|OFF|No|  
-|ENCRYPTION|OFF|No|  
-|MIXED_PAGE_ALLOCATION|ON|No|  
-|NUMERIC_ROUNDABORT|OFF|Sí|  
+|DATE_CORRELATION_OPTIMIZATION|Apagado|Sí|  
+|DB_CHAINING|Apagado|No|  
+|ENCRYPTION|Apagado|No|  
+|MIXED_PAGE_ALLOCATION|ACTIVAR|No|  
+|NUMERIC_ROUNDABORT|Apagado|Sí|  
 |PAGE_VERIFY|CHECKSUM|Sí|  
 |PARAMETERIZATION|SIMPLE|Sí|  
-|QUOTED_IDENTIFIER|OFF|Sí|  
-|READ_COMMITTED_SNAPSHOT|OFF|Sí|  
+|QUOTED_IDENTIFIER|Apagado|Sí|  
+|READ_COMMITTED_SNAPSHOT|Apagado|Sí|  
 |RECOVERY|Depende de la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *|Sí|  
-|RECURSIVE_TRIGGERS|OFF|Sí|  
+|RECURSIVE_TRIGGERS|Apagado|Sí|  
 |Opciones de Service Broker|DISABLE_BROKER|No|  
-|TRUSTWORTHY|OFF|No|  
+|TRUSTWORTHY|Apagado|No|  
   
  *Para comprobar el modelo de recuperación actual de la base de datos, consulte [Ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) o [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
  Para obtener una descripción de estas opciones de la base de datos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restricciones  
  Las siguientes operaciones no se pueden realizar en la base de datos **modelo** :  
   
 -   Agregar archivos o grupos de archivos.  

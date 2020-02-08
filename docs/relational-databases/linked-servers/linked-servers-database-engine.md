@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165344"
 ---
 # <a name="linked-servers-database-engine"></a>Servidores vinculados (motor de base de datos)
@@ -64,7 +64,7 @@ El proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!IN
 ## <a name="linked-server-details"></a>Detalles de servidores vinculados  
  En la siguiente ilustración se muestran los conceptos básicos de una configuración con servidores vinculados.  
   
- ![Nivel de cliente, nivel de servidor y nivel de servidor de base de datos](../../relational-databases/linked-servers/media/lsvr.gif "|::ref1::|")  
+ ![Nivel de cliente, nivel de servidor y nivel de servidor de base de datos](../../relational-databases/linked-servers/media/lsvr.gif "Nivel de cliente, nivel de servidor y nivel de servidor de base de datos")  
   
 Normalmente, los servidores vinculados se utilizan para tratar consultas distribuidas. Cuando una aplicación cliente ejecuta una consulta distribuida mediante un servidor vinculado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analiza el comando y envía solicitudes a OLE DB. La solicitud de conjuntos de filas se puede realizar como una consulta al proveedor o abriendo una tabla base del proveedor.  
 

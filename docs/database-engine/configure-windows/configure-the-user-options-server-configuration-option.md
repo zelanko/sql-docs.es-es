@@ -15,10 +15,10 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d06cb92287537293739fa9bd7b1a86ea7ffd767a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012163"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Establecer la opción de configuración del servidor Opciones de usuario
@@ -50,7 +50,7 @@ ms.locfileid: "68012163"
   
 -   En la tabla siguiente se muestran y describen los valores de configuración para **opciones de usuario**. No todos los valores de configuración son compatibles entre sí. Por ejemplo, ANSI_NULL_DFLT_ON y ANSI_NULL_DFLT_OFF no se pueden establecer al mismo tiempo.  
   
-    |Valor|Configuración|Descripción|  
+    |Value|Configuración|Descripción|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|Controla la comprobación de restricciones provisionales o diferidas.|  
     |2|IMPLICIT_TRANSACTIONS|Para las conexiones de biblioteca de red dblib, controla si una transacción se inicia de manera implícita al ejecutar una instrucción. El valor IMPLICIT_TRANSACTIONS no tiene ningún efecto en las conexiones ODBC u OLEDB.|  

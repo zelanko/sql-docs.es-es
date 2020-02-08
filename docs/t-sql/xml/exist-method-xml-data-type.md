@@ -15,10 +15,10 @@ ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9621d6be1c309930f6104d2193d6127a3167cd7a
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278157"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() (método del tipo de datos xml)
@@ -43,7 +43,7 @@ exist (XQuery)
  XQuery  
  Es una expresión XQuery, un literal de cadena.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]  
 >  El método **exist()** devuelve 1 para la expresión XQuery que devuelve un resultado no vacío. Si se especifican las funciones **true()** o **false()** dentro del método **exist()** , el método **exist()** devolverá 1, porque las funciones **true()** y **false()** devuelven los valores booleanos True y False respectivamente. En otras palabras, devuelven un resultado no vacío. Por tanto, **exist()** devolverá 1 (True), como se muestra en el siguiente ejemplo:  

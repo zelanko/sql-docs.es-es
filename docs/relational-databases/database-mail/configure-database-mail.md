@@ -40,10 +40,10 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095704"
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
@@ -168,7 +168,7 @@ ms.locfileid: "74095704"
  **Autenticación básica**  
  Se especifica el nombre de usuario y la contraseña que requiere el servidor SMTP.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Escriba el nombre de usuario que utiliza el Correo electrónico de base de datos para iniciar la sesión en el servidor SMTP. Si el servidor SMTP requiere autenticación básica, el nombre de usuario es necesario.  
   
  **Contraseña**  
@@ -218,7 +218,7 @@ ms.locfileid: "74095704"
  **Autenticación básica**  
  Se especifica el nombre de usuario y la contraseña que requiere el servidor SMTP.  
   
- **User name**  
+ **Nombre de usuario**  
  Muestra o actualiza el nombre de usuario que utiliza el Correo electrónico de base de datos para iniciar la sesión en el servidor SMTP. Si el servidor SMTP requiere autenticación básica, el nombre de usuario es necesario.  
   
  **Contraseña**  
@@ -246,10 +246,10 @@ ms.locfileid: "74095704"
  **Cuentas SMTP**  
  Elija una o más cuentas para el perfil. La prioridad establece el orden en el que el Correo electrónico de base de datos utiliza las cuentas. Si no se incluye ninguna cuenta, debe hacer clic en **Agregar** para continuar y agregar una nueva cuenta SMTP.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue una cuenta al perfil.  
   
- **Quitar**  
+ **Remove**  
  Quite la cuenta seleccionada del perfil.  
   
  **Subir**  
@@ -277,10 +277,10 @@ ms.locfileid: "74095704"
  **Cuentas SMTP**  
  Elija una o más cuentas para el perfil. La prioridad de conmutación por error establece el orden en que el Correo electrónico de base de datos utiliza la cuenta en caso de una conmutación por error.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue una cuenta al perfil.  
   
- **Quitar**  
+ **Remove**  
  Quite la cuenta seleccionada del perfil.  
   
  **Subir**  
@@ -341,7 +341,7 @@ ms.locfileid: "74095704"
   
  Los perfiles pueden ser predeterminados. En este caso, los usuarios o los roles pueden utilizar el perfil para enviar correo electrónico sin especificarlo explícitamente. Si el usuario o el rol que envía el mensaje de correo electrónico tiene un perfil privado predeterminado, el Correo electrónico de base de datos utilizará dicho perfil. Si el usuario o el rol no tiene un perfil privado predeterminado, **sp_send_dbmail** usa el perfil público predeterminado de la base de datos **msdb** . Si no hay ningún perfil privado predeterminado para el usuario o el rol ni tampoco ningún perfil público predeterminado para la base de datos, **sp_send_dbmail** devuelve un error. Solo se puede marcar un perfil como predeterminado.  
   
- **Público**  
+ **Pública**  
  Seleccione esta opción para convertir en público el perfil especificado.  
   
  **Profile Name**  
@@ -362,10 +362,10 @@ ms.locfileid: "74095704"
   
  Los perfiles pueden ser predeterminados. En este caso, los usuarios o los roles pueden utilizar el perfil para enviar correo electrónico sin especificarlo explícitamente. Si el usuario o el rol que envía el mensaje de correo electrónico tiene un perfil privado predeterminado, el Correo electrónico de base de datos utilizará dicho perfil. Si el usuario o el rol no tiene un perfil privado predeterminado, **sp_send_dbmail** usa el perfil público predeterminado de la base de datos **msdb** . Si no hay ningún perfil privado predeterminado para el usuario o el rol ni tampoco ningún perfil público predeterminado para la base de datos, **sp_send_dbmail** devuelve un error.  
   
- **User name**  
+ **Nombre de usuario**  
  Seleccione el nombre de un usuario o un rol de la base de datos **msdb** .  
   
- **Acceso**  
+ **Acceder**  
  Seleccione si el usuario o el rol tienen acceso al perfil especificado.  
   
  **Nombre del perfil**  
@@ -424,10 +424,10 @@ ms.locfileid: "74095704"
  **Perfil de Correo electrónico de base de datos**  
  Seleccione un perfil de Correo electrónico de base de datos de la lista. Este campo es obligatorio. Si no aparece ningún perfil, significa que no hay ninguno o que no tiene permiso para ninguno. Utilice el **Asistente para configuración de Correo electrónico de base de datos** para crear y configurar perfiles. Si no aparece ningún perfil, utilice el Asistente para configuración de Correo electrónico de base de datos para crear un perfil para su utilización.  
   
- **Para**  
+ **To**  
  Dirección de correo electrónico de los destinatarios de los mensajes. Se requiere al menos un destinatario.  
   
- **Asunto**  
+ **Subject**  
  Línea de asunto del mensaje de correo electrónico de prueba. Cambie el asunto predeterminado a fin de identificar más fácilmente el mensaje para solucionar el problema.  
   
  **Cuerpo**  
@@ -438,7 +438,7 @@ ms.locfileid: "74095704"
  **Correo electrónico enviado**  
  **mailitem_id** del mensaje de correo electrónico de prueba.  
   
- **Solucionar problemas**  
+ **Solución de problemas**  
  Haga clic para abrir los Libros en pantalla en el tema [Solucionar problemas del Correo electrónico de base de datos](https://msdn.microsoft.com/library/ms188663.aspx).  
   
  [Asistente para configuración de Correo electrónico de base de datos](#DBWizard)  

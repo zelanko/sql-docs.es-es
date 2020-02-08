@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028754"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
@@ -114,6 +114,6 @@ Ahora puede agregar trabajos de escalabilidad horizontal con la ayuda del [Admin
 Para actualizar la escalabilidad horizontal en entornos de alta disponibilidad, siga los [pasos de actualización de Always On para el catálogo de SSIS](../catalog/ssis-catalog.md#Upgrade), actualice el Servicio principal de escalabilidad horizontal y el Trabajo de escalabilidad horizontal en todas las máquinas y vuelva a crear el rol de clúster de conmutación por error de Windows Server en el paso 7 anterior con la nueva versión del Servicio principal de escalabilidad horizontal.
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información, vea los artículos siguientes:
+Para más información, consulte los siguientes artículos:
 -   [Servicio principal de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
 -   [Trabajo de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

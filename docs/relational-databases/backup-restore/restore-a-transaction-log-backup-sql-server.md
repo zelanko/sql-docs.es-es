@@ -20,10 +20,10 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 852c7f2c8f9f25903ee575d8e3b85df1d0009b1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111177"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar una copia de seguridad de registros de transacciones (SQL Server)
@@ -71,7 +71,7 @@ ms.locfileid: "68111177"
   
 #### <a name="to-restore-a-transaction-log-backup"></a>Para restaurar una copia de seguridad del registro de transacciones  
   
-1.  Tras conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
+1.  Después de conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
 2.  Expanda **Bases de datos**y, en función de la base de datos, seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68111177"
   
      En la tabla siguiente se muestran los encabezados de columna de la cuadrícula y se describen sus valores.  
   
-    |Encabezado|Valor|  
+    |Encabezado|Value|  
     |------------|-----------|  
     |**Restauración**|Las casillas seleccionadas indican los conjuntos de copias de seguridad que se restaurarán.|  
     |**Nombre**|Nombre del conjunto de copia de seguridad.|  
@@ -116,7 +116,7 @@ ms.locfileid: "68111177"
     |**Posición**|Posición del conjunto de copias de seguridad en el volumen.|  
     |**Expiración**|Fecha y hora de expiración del conjunto de copia de seguridad.|  
   
-7.  Seleccione una de las opciones siguientes:  
+7.  Seleccione uno de los siguientes:  
   
     -   **A un momento dado**  
   
@@ -130,7 +130,7 @@ ms.locfileid: "68111177"
   
          En la tabla siguiente se muestran los encabezados de columna de la cuadrícula y se describen sus valores.  
   
-        |Encabezado|Valor|  
+        |Encabezado|Value|  
         |------------|-----------|  
         |\<blank>|Muestra una casilla para seleccionar la marca.|  
         |**Marca de transacción**|Nombre de la transacción marcada especificada por el usuario cuando se confirmó la transacción.|  

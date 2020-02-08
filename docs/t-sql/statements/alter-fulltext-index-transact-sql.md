@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981814"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73981814"
 
   Cambia las propiedades de un índice de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -86,7 +86,7 @@ ALTER FULLTEXT INDEX ON table_name
  AUTO  
  Especifica que los cambios sometidos a seguimiento se propagarán automáticamente cuando los datos se modifiquen en la tabla base (*rellenado automático*). Aunque los cambios se propagan de forma automática, podrían no reflejarse de inmediato en el índice de texto completo. AUTO es el valor predeterminado.  
   
- OFF  
+ Apagado  
  Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mantendrá una lista de cambios en los datos indizados.  
   
  ADD | DROP *column_name*  
@@ -167,7 +167,7 @@ ALTER FULLTEXT INDEX ON table_name
  SET STOPLIST { OFF| SYSTEM | *stoplist_name* }  
  Cambia la lista de palabras irrelevantes de texto completo asociada al índice, si hay alguna.  
   
- OFF  
+ Apagado  
  Especifica que no se asocie al índice de texto completo ninguna lista de palabras irrelevantes.  
   
  SYSTEM  
@@ -183,7 +183,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Cambia la lista de propiedades de búsqueda asociada al índice, si hay alguna.  
   
- OFF  
+ Apagado  
  Especifica que no se asocie al índice de texto completo ninguna lista de propiedades. Al desactivar la lista de propiedades de búsqueda de un índice de texto completo (ALTER FULLTEXT INDEX... SET SEARCH PROPERTY LIST OFF), la búsqueda de propiedades en la tabla base ya no es posible.  
   
  De forma predeterminada, cuando se desactiva una lista de propiedades de búsqueda existente, el índice de texto completo se vuelve a rellenar automáticamente. Si se especifica WITH NO POPULATION al desactivar la lista de propiedades de búsqueda, este rellenado automático no sucede. Sin embargo, se recomienda ejecutar, si procede, un rellenado completo del índice de texto completo para mayor comodidad. Al rellenar el índice de texto completo, se eliminan los metadatos específicos de cada propiedad de búsqueda que se haya quitado, con lo que el índice de texto completo resultará más pequeño y eficaz.  
@@ -208,12 +208,12 @@ ALTER FULLTEXT INDEX ON table_name
 ## <a name="change-tracking-no-population"></a> Interacciones del seguimiento de cambios y del parámetro NO POPULATION  
  Que se rellene el índice de texto completo depende de si el seguimiento de cambios está habilitado y si se especifica WITH NO POPULATION en la instrucción ALTER FULLTEXT INDEX. En la tabla siguiente se resume el resultado de su interacción.  
   
-|Seguimiento de los cambios|WITH NO POPULATION|Resultado|  
+|Seguimiento de cambios|WITH NO POPULATION|Resultado|  
 |---------------------|------------------------|------------|  
-|No se ha habilitado|No se ha especificado|Se realiza un rellenado completo en el índice.|  
+|No se ha habilitado|Sin especificar|Se realiza un rellenado completo en el índice.|  
 |No se ha habilitado|Specified|No se produce el rellenado del índice hasta que se emite una instrucción ALTER FULLTEXT INDEX...START POPULATION.|  
-|Habilitado|Specified|Se produce un error y no se altera el índice.|  
-|Habilitado|No se ha especificado|Se realiza un rellenado completo en el índice.|  
+|habilitado|Specified|Se produce un error y no se altera el índice.|  
+|habilitado|Sin especificar|Se realiza un rellenado completo en el índice.|  
   
  Para más información sobre rellenar índices de texto completo, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   

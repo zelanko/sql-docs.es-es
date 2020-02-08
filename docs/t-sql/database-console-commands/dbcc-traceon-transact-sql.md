@@ -21,10 +21,10 @@ ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 3831a9244b3e946dcba01b7d8c31825a75f7b39f
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69553261"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
@@ -53,7 +53,7 @@ Activa las marcas de seguimiento especificadas de forma global. Este argumento e
 WITH NO_INFOMSGS  
 Suprime todos los mensajes de información.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 En un servidor de producción, para evitar un comportamiento impredecible, se recomienda habilitar únicamente marcas de seguimiento en todo el servidor mediante uno de los siguientes métodos:
 -   Use la opción de inicio de la línea de comandos **-T** de Sqlservr.exe. Es una práctica recomendada porque garantiza que todas las instrucciones se ejecutarán con la marca de seguimiento habilitada. Incluye comandos en scripts de inicio. Para más información, consulte [sqlservr Application](../../tools/sqlservr-application.md).  
 -   Use DBCC TRACEON **(** _trace#_ [ **,** ... *.n*] **,-1)** solo mientras los usuarios o las aplicaciones no ejecuten simultáneamente instrucciones en el sistema.  

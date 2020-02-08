@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: ad9346cacd3cb29b19245fb11b0d21c373d93738
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595660"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>Habilitación de Always Encrypted con enclaves seguros para las columnas cifradas existentes 
@@ -72,6 +72,6 @@ Este método implica volver a cifrar una columna con una clave de cifrado de col
 
 Para obtener más información sobre cómo girar el cifrado de una columna a través de una herramienta de cliente, vea [Rotación de claves de Always Encrypted con SQL Server Management Studio](rotate-always-encrypted-keys-using-ssms.md) y [Rotación de claves de Always Encrypted con PowerShell](rotate-always-encrypted-keys-using-powershell.md).
 
-## <a name="next-steps"></a>Next Steps
-- [Consulta de columnas mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-query-columns.md)
+## <a name="next-steps"></a>Pasos siguientes
+- [Consulta de columnas mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-query-columns.md)
 - [Desarrollo de aplicaciones mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-client-development.md)

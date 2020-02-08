@@ -11,10 +11,10 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72041248"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalación de las herramientas de línea de comandos sqlcmd y bcp de SQL Server en Linux
@@ -229,7 +229,7 @@ Si [ejecuta SQL Server en un contenedor de Docker](quickstart-install-connect-do
     | SLES | `sudo zypper install msodbcsql-<version>.rpm`<br/>`sudo zypper install mssql-tools-<version>.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_<version>.deb`<br/>`sudo dpkg -i mssql-tools_<version>.deb` |
 
-1. **Resuelva las dependencias que faltan** : Es posible que falten dependencias en este punto. Si no es así, puede omitir este paso. En algunos casos, debe localizar e instalar manualmente estas dependencias.
+1. **Resuelva las dependencias que faltan**: Es posible que falten dependencias en este punto. Si no es así, puede omitir este paso. En algunos casos, debe localizar e instalar manualmente estas dependencias.
 
     En el caso de paquetes RPM, puede inspeccionar las dependencias necesarias con los siguientes comandos:
 

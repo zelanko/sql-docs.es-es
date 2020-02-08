@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68811200"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out support for high availability via SQL Server failover cluster instance (Compatibilidad con la escalabilidad horizontal para una alta disponibilidad mediante Instancia de clústeres de conmutación por error de SQL Server).
@@ -76,6 +76,6 @@ Instale el certificado de cliente del trabajador en todos los nodos del clúster
 > El Administrador de escalabilidad horizontal no es compatible con el clúster de conmutación por error de SQL Server. Si usa el Administrador de escalabilidad horizontal para agregar el trabajador de escalabilidad horizontal, deberá instalar manualmente el certificado del trabajador en todos los nodos principales.
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información, vea los artículos siguientes:
+Para más información, consulte los siguientes artículos:
 -   [Servicio principal de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
 -   [Trabajo de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

@@ -18,10 +18,10 @@ ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 09dc970627cb282ed2597c191727b57c173c7bc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930633"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (tipo de datos geography)
@@ -40,12 +40,12 @@ Comprueba si la instancia de **geography** es del tipo especificado.
 *tipo_de_geography*  
 La cadena **nvarchar(4000)** en la que se especifica uno de los 16 tipos expuestos en la jerarquía de tipos de **geography**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
 Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
 Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Devuelve 1 si el tipo de una instancia de **geography** coincide con el tipo especificado, o si el tipo especificado es un antecesor del tipo de la instancia; en caso contrario, devuelve 0.  
   
 Este método del tipo de datos **geography** admite instancias de **FullGlobe** o instancias espaciales mayores que un hemisferio.  

@@ -9,10 +9,10 @@ ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3a4db20da76fa0188db3171f879e6fdcaefdacd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63200882"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Agrupar datos por columnas o por filas en un informe para dispositivos móviles | Reporting Services
@@ -60,5 +60,5 @@ En los siguientes pasos se usa una tabla de comparación de valores totales con 
 
    Ahora, cada barra del gráfico representa los valores de cada categoría en la columna Categoría.
 
-### <a name="see-also"></a>Vea también
+### <a name="see-also"></a>Consulte también
 * [Visualizaciones de informes para dispositivos móviles de Reporting Services](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)

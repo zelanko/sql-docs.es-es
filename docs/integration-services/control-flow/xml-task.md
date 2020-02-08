@@ -17,10 +17,10 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ca59166f994a0bd982c2f00c5c60c39207e9e02a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293661"
 ---
 # <a name="xml-task"></a>Tarea XML
@@ -61,9 +61,9 @@ ms.locfileid: "71293661"
 |Operación|Descripción|  
 |---------------|-----------------|  
 |Diferencias|Compara dos documentos XML. Usando el documento XML de origen como documento base, la operación de comparación lo compara con otro documento XML, detecta sus diferencias y escribe las diferencias en un documento DiffGram XML. Esta operación incluye propiedades para personalizar la comparación.|  
-|Mezcla|Combina dos documentos XML. Usando el documento XML de origen como documento base, la operación de combinación agrega el contenido de un segundo documento en el documento base. La operación puede especificar una ubicación de combinación dentro del documento base.|  
+|Merge|Combina dos documentos XML. Usando el documento XML de origen como documento base, la operación de combinación agrega el contenido de un segundo documento en el documento base. La operación puede especificar una ubicación de combinación dentro del documento base.|  
 |Revisión|Aplica el resultado de la operación de comparación, denominada documento DiffGram, en un documento XML para crear un nuevo documento principal que incluye contenido del documento DiffGram.|  
-|Validar|Valida el documento XML según una definición de tipo de documento (DTD) o un esquema de definición de esquema XML (XSD).|  
+|Validación|Valida el documento XML según una definición de tipo de documento (DTD) o un esquema de definición de esquema XML (XSD).|  
 |XPath|Realiza consultas y evaluaciones XPath.|  
 |XSLT|Realiza transformaciones XSL en documentos XML.|  
   
@@ -149,25 +149,25 @@ ms.locfileid: "71293661"
  **OperationType**  
  Seleccione un tipo de operación de la lista. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Validar**|Valida el documento XML según una definición de tipo de documento (DTD) o un esquema de definición de esquema XML (XSD). Seleccione esta opción para mostrar las opciones dinámicas de la sección **Validar**.|  
+|**Validación**|Valida el documento XML según una definición de tipo de documento (DTD) o un esquema de definición de esquema XML (XSD). Seleccione esta opción para mostrar las opciones dinámicas de la sección **Validar**.|  
 |**XSLT**|Realiza transformaciones XSL en documentos XML. Seleccione esta opción para mostrar las opciones dinámicas de la sección **XSLT**.|  
 |**XPATH**|Realiza consultas y evaluaciones XPath. Seleccione esta opción para mostrar las opciones dinámicas de la sección **XPATH**.|  
-|**Mezcla**|Combina dos documentos XML. Seleccione esta opción para mostrar las opciones dinámicas de la sección **Mezclar**.|  
+|**Combinar**|Combina dos documentos XML. Seleccione esta opción para mostrar las opciones dinámicas de la sección **Mezclar**.|  
 |**Diferencias**|Compara dos documentos XML. Seleccione esta opción para mostrar las opciones dinámicas de la sección **Comparación**.|  
 |**Revisión**|Aplica la salida de la operación de comparación para crear un nuevo documento. Seleccione esta opción para mostrar las opciones dinámicas de la sección **Revisión**.|  
   
  **Tipo de origen**  
  Seleccione el tipo de origen del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
   
- **Source**  
+ **Origen**  
  Si **Source** se establece en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos **(…)** para escribir el código XML mediante el cuadro de diálogo **Editor de origen del documento**.  
   
  Si **Source** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...** > para crear un nuevo administrador de conexiones.  
@@ -197,7 +197,7 @@ ms.locfileid: "71293661"
  **DestinationType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
@@ -205,7 +205,7 @@ ms.locfileid: "71293661"
  **ValidationType**  
  Seleccione el tipo de validación. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**DTD**|Use una definición de tipo de documento (DTD).|  
 |**XSD**|Use un esquema de definición de esquema XML (XSD). Seleccione esta opción para mostrar las opciones dinámicas de la sección **ValidationType**.|  
@@ -222,7 +222,7 @@ ms.locfileid: "71293661"
  **SecondOperandType**  
  Seleccione el tipo de origen del segundo documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
@@ -260,7 +260,7 @@ ms.locfileid: "71293661"
  **DestinationType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
@@ -268,7 +268,7 @@ ms.locfileid: "71293661"
  **SecondOperandType**  
  Seleccione el tipo de origen del segundo documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
@@ -306,7 +306,7 @@ ms.locfileid: "71293661"
  **DestinationType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
@@ -314,7 +314,7 @@ ms.locfileid: "71293661"
  **SecondOperandType**  
  Seleccione el tipo de origen del segundo documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
@@ -337,9 +337,9 @@ ms.locfileid: "71293661"
  **XPathOperation**  
  Seleccione el tipo de resultado XPath. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Evaluation**|Devuelve los resultados de una función XPath.|  
+|**Evaluación**|Devuelve los resultados de una función XPath.|  
 |**Lista de nodos**|Devuelve los nodos seleccionados como un fragmento de XML.|  
 |**Valores**|Devuelve el valor de texto interno de todos los nodos seleccionados concatenado en una cadena.|  
   
@@ -349,7 +349,7 @@ ms.locfileid: "71293661"
  **XPathStringSourceType**  
  Seleccione el tipo de origen del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
@@ -386,7 +386,7 @@ ms.locfileid: "71293661"
  **DestinationType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
@@ -394,7 +394,7 @@ ms.locfileid: "71293661"
  **SecondOperandType**  
  Seleccione el tipo de destino del segundo documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
@@ -417,7 +417,7 @@ ms.locfileid: "71293661"
  **DiffAlgorithm**  
  Seleccione el algoritmo de comparación que desea utilizar para comparar los documentos. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Automático**|Permita que la tarea XML determine si es necesario utilizar el algoritmo rápido o preciso.|  
 |**Rápido**|Utilice un algoritmo de comparación rápido, aunque menos preciso.|  
@@ -426,7 +426,7 @@ ms.locfileid: "71293661"
  **Opciones de comparación**  
  Establezca las opciones de comparación de la operación de comparación. Las opciones se muestran en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|Especifique si desea comparar la declaración XML.|  
 |**IgnoreDTD**|Especifique si desea ignorar la definición de tipo de documento (DTD).|  
@@ -461,7 +461,7 @@ ms.locfileid: "71293661"
  **DestinationType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
@@ -469,7 +469,7 @@ ms.locfileid: "71293661"
  **SecondOperandType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
@@ -507,7 +507,7 @@ ms.locfileid: "71293661"
  **DestinationType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  
 |**Variable**|Establezca el origen para la variable que contiene el documento XML.|  
@@ -515,7 +515,7 @@ ms.locfileid: "71293661"
  **SecondOperandType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Entrada directa**|Establezca el origen para un documento XML.|  
 |**Conexión de archivos**|Seleccione el archivo que contiene el documento XML.|  

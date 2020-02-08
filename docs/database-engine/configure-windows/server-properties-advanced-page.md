@@ -13,10 +13,10 @@ ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1672b245f061f521c9114bca71f723fe75553c96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025591"
 ---
 # <a name="server-properties---advanced-page"></a>Propiedades del servidor (página Opciones avanzadas)
@@ -35,7 +35,7 @@ ms.locfileid: "68025591"
  **Nivel de acceso de FILESTREAM**  
  Muestra el nivel actual de compatibilidad con FILESTREAM en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para cambiar el nivel de acceso, seleccione uno de los valores siguientes:  
   
- **Deshabilitado**  
+ **Deshabilitada**  
  Los datos de objeto binario grande (BLOB) no pueden almacenarse en el sistema de archivos. Este es el valor predeterminado.  
   
  **Acceso Transact-SQL habilitado**  
@@ -77,10 +77,10 @@ ms.locfileid: "68025591"
   
  Si un catálogo de texto completo no está disponible, se vuelven a generar los índices de texto completo asociados. Esta opción solo está disponible para bases de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
- **Volver a generar**  
+ **Recompilación**  
  Los catálogos de texto completo se vuelven a generar con los separadores de palabras nuevos y mejorados. La regeneración de los índices puede llevar cierto tiempo y, después de la actualización, podría ser necesaria una cantidad significativa de CPU y de memoria.  
   
- **Restablecer**  
+ **Reset**  
  Los catálogos de texto completo se restablecen. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Los archivos de catálogo de texto completo se quitan, pero los metadatos de los catálogos de texto completo y los índices de texto completo se conservan. Después de actualizarse, todos los índices de texto completo quedan deshabilitados para el seguimiento de cambios y los rastreos no se inician de forma automática. El catálogo permanecerá vacío hasta que se emita manualmente un rellenado completo después de que se complete la actualización.  
   
  Para obtener más información sobre cómo elegir la opción de actualización de texto completo, vea [Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
@@ -101,7 +101,7 @@ ms.locfileid: "68025591"
   
  Por ejemplo, el valor predeterminado 2049 indica que la fecha escrita como "14/3/49" se interpretará como 14 de marzo de 2049 y la fecha escrita como "14/3/50", como 14 de marzo de 1950. Para más información, consulte [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
-## <a name="network"></a>red  
+## <a name="network"></a>Red  
  **Tamaño de paquete de red**  
  Establece el tamaño de paquete (en bytes) que se utiliza en toda la red. El valor predeterminado es 4.096 bytes. Si una aplicación realiza operaciones de copia masiva, o bien envía o recibe una gran cantidad de datos de tipo **text** o **image** , el uso de paquetes de un tamaño superior al predeterminado puede mejorar la eficacia, ya que tiene como resultado un número menor de operaciones de lectura y escritura en la red. Si una aplicación envía y recibe pequeñas cantidades de información, puede establecer un tamaño de 512 bytes para cada paquete, lo que es suficiente para la mayor parte de las transferencias de datos. Para más información, consulte [Establecer la opción de configuración del servidor Tamaño de paquete de red](../../database-engine/configure-windows/configure-the-network-packet-size-server-configuration-option.md).  
   
@@ -128,7 +128,7 @@ ms.locfileid: "68025591"
  **Espera de consulta**  
  Especifica el tiempo en segundos (de 0 a 2.147.483.647) que espera una consulta para utilizar los recursos antes de agotarse el tiempo de espera. Si se utiliza el valor predeterminado -1, el tiempo de espera calculado será 25 veces el costo estimado de la consulta. Para más información, consulte [Establecer la opción de configuración del servidor Espera de consulta](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

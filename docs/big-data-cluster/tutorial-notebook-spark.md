@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4acb5c2306064da29d3537fc881dbfc3d312ad2f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844239"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Tutorial: ejecutar un cuaderno de ejemplo en un clúster de macrodatos de SQL Server
@@ -30,7 +30,7 @@ En este tutorial, se muestra cómo cargar y ejecutar un cuaderno en Azure Data S
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Extensión de SQL Server 2019**
+   - **Extensión de SQL Server 2019**
 - [Cargar datos de ejemplo en un clúster de macrodatos](tutorial-load-sample-data.md)
 
 ## <a name="download-the-sample-notebook-file"></a>Descargar el archivo de cuaderno de ejemplo
@@ -47,7 +47,7 @@ Siga estas instrucciones para cargar el archivo de cuaderno de ejemplo **spark-s
    curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
    ```
 
-## <a name="open-the-notebook"></a>Abrir el cuaderno
+## <a name="open-the-notebook"></a>Apertura del cuaderno
 
 En los pasos siguientes, se muestra cómo abrir el archivo del cuaderno en Azure Data Studio:
 

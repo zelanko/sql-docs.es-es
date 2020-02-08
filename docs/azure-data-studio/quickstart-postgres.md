@@ -11,10 +11,10 @@ ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
 ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71127250"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Inicio rápido: Conexión a PostgreSQL y consulta con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -34,7 +34,7 @@ Para completar este inicio rápido, necesitará [!INCLUDE[name-sos](../includes/
 
 2. La primera vez que se inicia [!INCLUDE[name-sos](../includes/name-sos-short.md)], se abre el cuadro de diálogo **Conexión**. Si el cuadro de diálogo **Conexión** no se abre, haga clic en el icono **Nueva conexión** en la página **SERVIDORES**:
 
-   ![Icono Nueva conexión](media/quickstart-postgresql/new-connection-icon.png)
+   ![Icono de Nueva conexión](media/quickstart-postgresql/new-connection-icon.png)
 
 3. En el formulario que aparece, vaya a **Tipo de conexión** y seleccione **PostgreSQL** en el menú desplegable.
 
@@ -46,11 +46,11 @@ Para completar este inicio rápido, necesitará [!INCLUDE[name-sos](../includes/
    | Configuración       | Valor de ejemplo | Descripción |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nombre del servidor** | localhost | Nombre completo del servidor |
-   | **User name** | postgres | Nombre de usuario con el que quiere iniciar sesión. |
-   | **Contraseña (inicio de sesión de SQL)** | *password* | Contraseña de la cuenta con la que inicia sesión. |
+   | **Nombre de usuario** | postgres | Nombre de usuario con el que quiere iniciar sesión. |
+   | **Contraseña (Inicio de sesión de SQL)** | *password* | Contraseña de la cuenta con la que inicia sesión. |
    | **Contraseña** | *Comprobación* | Active esta casilla si no quiere escribir la contraseña cada vez que se conecte. |
-   | **Nombre de la base de datos** | \<Default\> | Rellene esta opción si quiere que la conexión especifique una base de datos. |
-   | **Grupo del servidor** | \<Default\> | Esta opción le permite asignar esta conexión a un grupo de servidores específico que cree. | 
+   | **Nombre de la base de datos** | \<Valor predeterminado\> | Rellene esta opción si quiere que la conexión especifique una base de datos. |
+   | **Grupo del servidor** | \<Valor predeterminado\> | Esta opción le permite asignar esta conexión a un grupo de servidores específico que cree. | 
    | **Nombre (opcional)** | *dejar en blanco* | Esta opción permite especificar un nombre descriptivo para el servidor. | 
 
 5. Seleccione **Conectar**. 
@@ -84,7 +84,7 @@ Una vez finalizada la consulta, haga clic con el botón derecho en **Bases de da
 
 1. Cambie el contexto de la conexión a **tutorialdb** con la lista desplegable del editor de consultas. 
 
-   ![Cambio de contexto](media/quickstart-postgresql/change-context.png)
+   ![Cambiar el contexto](media/quickstart-postgresql/change-context.png)
 
 2. Pegue la siguiente instrucción SQL en el editor de consultas y haga clic en **Ejecutar**. 
 
@@ -118,7 +118,7 @@ Pegue el siguiente fragmento de código en la ventana de consulta y haga clic en
       ( 4, 'Janet', 'United States','janet1@adventure-works.com');
    ```
 
-## <a name="query-the-data"></a>Consulta de los datos
+## <a name="query-the-data"></a>Consultar los datos
 
 1. Pegue el siguiente fragmento de código en el editor de consultas y haga clic en **Ejecutar**:
    
@@ -131,6 +131,6 @@ Pegue el siguiente fragmento de código en la ventana de consulta y haga clic en
 
    ![Vista de resultados](media/quickstart-postgresql/view-results.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Pasos siguientes
 
 Obtenga información sobre los [escenarios disponibles para Postgres en Azure Data Studio](postgres-extension.md). 

@@ -11,10 +11,10 @@ ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909150"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solución de problemas de conectividad de Kerberos con PolyBase
@@ -55,7 +55,7 @@ En PolyBase, cuando se solicita autenticación con respecto a cualquier recurso 
 
 Los problemas con la autenticación pertenecen a uno o más de los cuatro pasos mencionados. Para facilitar una depuración más rápida, PolyBase introdujo una herramienta de diagnóstico integrada para permitir la identificación del punto de error.
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 PolyBase tiene los siguientes archivos XML de configuración que contienen las propiedades del clúster de Hadoop:
 
@@ -104,7 +104,7 @@ La herramienta se ejecuta de forma independiente a [!INCLUDE[ssNoVersion](../../
 | --- | --- |
 | *Dirección del nodo de nombre* | La dirección IP o el nombre de dominio completo del nodo de nombre. Hace referencia al argumento "LOCATION" de CREATE EXTERNAL DATA SOURCE T-SQL.|
 | *Puerto del nodo de nombre* | El puerto del nodo de nombre. Hace referencia al argumento "LOCATION" de CREATE EXTERNAL DATA SOURCE T-SQL. Por ejemplo, 8020. |
-| *Entidad de servicio* | La entidad de servicio de administración del Centro de distribución de claves. Coincide con el argumento "IDENTITY" de `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
+| *Entidad de seguridad de servicio* | La entidad de servicio de administración del Centro de distribución de claves. Coincide con el argumento "IDENTITY" de `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
 | *Contraseña del servicio* | En lugar de escribir la contraseña en la consola, almacénela en un archivo y pase aquí la ruta de acceso al archivo. El contenido del archivo debe coincidir con el que use como argumento "SECRET" en `CREATE DATABASE SCOPED CREDENTIAL` T-SQL. |
 | *Ruta de acceso al archivo HDFS remoto (opcional)* | La ruta de acceso de un archivo existente al cual acceder. Si no se especifica, se usará la raíz "/". |
 
@@ -229,7 +229,7 @@ Resulta útil tener cierta experiencia en Java para revisar los registros y depu
 
 Si sigue teniendo problemas para acceder a Kerberos, siga los pasos que hay a continuación para depurar:
 
-1. Asegúrese de que puede acceder a los datos de HDFS de Kerberos desde fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede elegir entre lo siguiente: 
+1. Asegúrese de que puede acceder a los datos de HDFS de Kerberos desde fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede: 
 
     - Escribir su propio programa de Java, o
     - Usar la clase `HdfsBridge` desde la carpeta de instalación de PolyBase. Por ejemplo:
@@ -249,7 +249,7 @@ Si sigue teniendo problemas para acceder a Kerberos, siga los pasos que hay a co
 
 4. Si el Centro de distribución de claves solo puede admitir AES256, asegúrese de que los [archivos de directiva de JCE](http://www.oracle.com/technetwork/java/javase/downloads/index.html) estén instalados.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Integrating PolyBase with Cloudera using Active Directory Authentication](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/10/17/integrating-polybase-with-cloudera-using-active-directory-authentication) (Integración de PolyBase con Cloudera mediante Autenticación de Active Directory)  
 [Cloudera's Guide to setting up Kerberos for CDH](https://www.cloudera.com/documentation/enterprise/5-6-x/topics/cm_sg_principal_keytab.html) (Guía de Cloudera para configurar Kerberos para CDH)  
 [Hortonworks' Guide to Setting up Kerberos for HDP](https://docs.hortonworks.com/HDPDocuments/Ambari-2.2.0.0/bk_Ambari_Security_Guide/content/ch_configuring_amb_hdp_for_kerberos.html) (Guía de Hortonworks para configurar Kerberos para HDP)  

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6c1f1fe588447ba4fdbac3cdc66fcc17ea5a6508
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72041229"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
@@ -50,7 +50,7 @@ ROUND ( numeric_expression , length [ ,function ] )
  *function*  
  Es el tipo de operación que se va a realizar. *function* debe ser **tinyint**, **smallint** o **int**. Si *function* se omite o tiene el valor 0 (predeterminado), *numeric_expression* se redondea. Si se especifica un valor distinto de 0, *numeric_expression* se trunca.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve los tipos de datos siguientes.  
   
 |Resultado de la expresión|Tipo de valor devuelto|  
@@ -63,7 +63,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |Categorías **money** y **smallmoney**|**money**|  
 |Categorías **float** y **real**|**float**|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  ROUND siempre devuelve un valor. Si *length* es un valor negativo y mayor que el número de dígitos anteriores al separador decimal, ROUND devuelve 0.  
   
 |Ejemplo|Resultado|  

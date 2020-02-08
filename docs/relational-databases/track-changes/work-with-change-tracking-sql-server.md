@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 11cfb403fb6bd038549f2273810bb937e625eaf7
-ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74564781"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabajar con el seguimiento de cambios (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "74564781"
   
      En la ilustración siguiente se muestra cómo se usa CHANGETABLE(CHANGES ...) para obtener los cambios.  
   
-     ![Ejemplo de resultado de una consulta de seguimiento de cambios](../../relational-databases/track-changes/media/queryoutput.gif "|::ref1::|")  
+     ![Ejemplo de resultado de una consulta de seguimiento de cambios](../../relational-databases/track-changes/media/queryoutput.gif "Ejemplo de resultado de una consulta de seguimiento de cambios")  
   
  Función CHANGE_TRACKING_CURRENT_VERSION()  
  Se utiliza para obtener la versión actual que se utilizará la próxima vez que se consulten los cambios. Esta versión representa la versión de la última transacción confirmada.  

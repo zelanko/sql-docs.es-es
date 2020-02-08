@@ -28,10 +28,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ac0817f4dcbcefd3fc783d2cf0d0ae35afc0c546
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255813"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
@@ -148,7 +148,7 @@ sirve como valor predeterminado. Después de establecer DATEFIRST, use esta inst
 Los valores devueltos para DATEPART (**year**, *date*), DATEPART (**month**, *date*) y DATEPART (**day**, *date*) son los mismos que los que devuelven las funciones [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md) y [DAY](../../t-sql/functions/day-transact-sql.md), respectivamente.
   
 ## <a name="iso_week-datepart"></a>iso_week datepart  
-ISO 8601 incluye el sistema ISO de fecha-semana, un sistema de numeración para las semanas. Cada semana se asocia al año en el que cae el jueves. Por ejemplo, la semana 1 de 2004 (2004W01) abarcaba del lunes 29 de diciembre de 2003 al domingo 4 de enero de 2004. En las regiones y países europeos normalmente se usa este estilo de numeración. En las regiones y países que no son europeos normalmente no se usa.
+ISO 8601 incluye el sistema ISO de fecha-semana, un sistema de numeración para las semanas. Cada semana se asocia al año en el que cae el jueves. Por ejemplo, la semana 1 de 2004 (2004W01) abarcaba del lunes 29 de diciembre de 2003 al domingo 4 de enero de 2004. En las regiones y países Europaos normalmente se usa este estilo de numeración. En las regiones y países que no son Europaos normalmente no se usa.
 
 Nota: El número más alto de la semana en un año puede ser 52 o 53.
   
@@ -157,7 +157,7 @@ Es posible que los sistemas de numeración que se usan en otros países o region
 |Primer día de la semana|La primera semana del año contiene|Semanas asignadas dos veces|Usado por/en|  
 |---|---|---|---|
 |Domingo|1 de enero,<br /><br /> El primer sábado,<br /><br /> 1-7 días del año|Sí|Estados Unidos|  
-|Lunes|1 de enero,<br /><br /> El primer domingo,<br /><br /> 1-7 días del año|Sí|La mayoría de los países europeos y Reino Unido|  
+|Lunes|1 de enero,<br /><br /> El primer domingo,<br /><br /> 1-7 días del año|Sí|La mayoría de los países Europaos y Reino Unido|  
 |Lunes|4 de enero,<br /><br /> El primer jueves,<br /><br /> 4-7 días del año|No|ISO 8601, Noruega y Suecia|  
 |Lunes|7 de enero,<br /><br /> El primer lunes,<br /><br /> 7 días del año|No||  
 |Miércoles|1 de enero,<br /><br /> El primer martes,<br /><br /> 1-7 días del año|Sí||  

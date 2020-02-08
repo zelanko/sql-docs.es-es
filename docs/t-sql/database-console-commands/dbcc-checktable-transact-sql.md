@@ -27,10 +27,10 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: a4c68ce8ca6174f036b2b893a664b758745369d0
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982322"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73982322"
 
 Comprueba la integridad de todas las páginas y estructuras que constituyen la tabla o la vista indizada.
 
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>Sintaxis    
     
@@ -130,7 +130,7 @@ MAXDOP
  > [!NOTE]  
  > Si MAXDOP se establece en cero, el servidor elige el grado máximo de paralelismo.  
     
-## <a name="remarks"></a>Notas    
+## <a name="remarks"></a>Observaciones    
     
 > [!NOTE]    
 > Para ejecutar DBCC CHECKTABLE en todas las tablas de la base de datos, use [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).    

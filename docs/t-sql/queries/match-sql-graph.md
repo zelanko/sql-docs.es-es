@@ -20,10 +20,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 40ce8094d651ee9ae1423b9c3feb636c33befca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901953"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
@@ -134,7 +134,7 @@ El patrón de longitud arbitraria toma los cuantificadores del patrón de estilo
 * **+** : repite el patrón una o más veces. Finaliza en cuanto encuentra una ruta de acceso más corta.    
 * **{1, n}** : repite el patrón de 1 a "n" veces. Finaliza en cuanto encuentra una ruta de acceso más corta.     
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Los nombres de nodo dentro de MATCH se pueden repetir.  Dicho de otro, un nodo se puede atravesar un número arbitrario de veces en la misma consulta.  
 Los nombres de borde no se pueden repetir dentro de MATCH.  
 Un borde puede apuntar a cualquier dirección, pero debe tener una dirección explícita.  

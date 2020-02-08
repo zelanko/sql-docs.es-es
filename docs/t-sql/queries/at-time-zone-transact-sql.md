@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: ff3d3db1ab4fc3d02e8710cf482225523285c0a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031523"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
@@ -45,13 +45,13 @@ inputdate AT TIME ZONE timezone
  *timezone*  
  Nombre de la zona horaria de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se basa en las zonas horarias almacenadas en el Registro de Windows. Las zonas horarias instaladas en el equipo se almacenan en el siguiente subárbol del Registro: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. También se puede exponer una lista de las zonas horarias instaladas a través de la vista [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve el tipo de datos de **datetimeoffset**.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Valor **datetimeoffset** de la zona horaria de destino.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  **AT TIME ZONE** aplica reglas específicas para la conversión de valores de entrada en tipos de datos **smalldatetime**, **datetime** y **datetime2**, que se encuentran en un intervalo afectado por el cambio del horario de verano:  
   
 -   Cuando los relojes están adelantados, hay un desfase en la hora local igual a la duración del ajuste de reloj. La duración suele ser de 1 hora, pero también puede ser de 30 o 45 minutos, según la zona horaria. Los puntos en tiempo que están en este desfase se convierten con el desplazamiento *después* del cambio del horario de verano.  

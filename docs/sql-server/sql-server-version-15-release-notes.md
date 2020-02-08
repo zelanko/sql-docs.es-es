@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: f03c9999471f1f196263cfab43960008c7d26aaf
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74096119"
 ---
 # <a name="includesql-server-2019includessssqlv15-mdmd-release-notes"></a>Notas de la versión de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describen las limitaciones y los problemas conocidos de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Para obtener información relacionada, consulte estos artículos:
+En este artículo se describen las limitaciones y los problemas conocidos de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Para obtener información relacionada, consulte:
 
 > [Novedades de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]](../sql-server/what-s-new-in-sql-server-ver15.md)
 
@@ -45,7 +45,7 @@ El número de compilación RTM de SQL Server 2019 es `15.0.2000.5`.
   1. SQL Server Management Studio (SSMS) (versión 18.0, 18.1, 18.2 o 18.3) está instalado en el servidor.
   1. La instalación de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] se intenta desde medios extraíbles. Por ejemplo, el soporte de instalación es un DVD.
 
-- **Solución**:
+- **Solución alternativa**:
   1. Desinstale cualquier versión de SSMS anterior a SSMS 18.3.1.
   1. Instale una versión más reciente de SSMS (18.3.1 o posterior). Para obtener la versión más reciente, consulte [Descargar SSMS](../ssms/download-sql-server-management-studio-ssms.md).
   1. Instale [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] de la manera habitual.
@@ -72,11 +72,11 @@ El número de compilación RTM de SQL Server 2019 es `15.0.2000.5`.
 
    `The view 'Index' or its master was not found or no view engine supports the searched locations.`
 
-- **Solución**: Abra el portal de MDS y vaya al recurso manualmente.
+- **Solución alternativa**: Abra el portal de MDS y vaya al recurso manualmente.
 
 - **Se aplica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Requisitos de hardware y software para instalar SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 

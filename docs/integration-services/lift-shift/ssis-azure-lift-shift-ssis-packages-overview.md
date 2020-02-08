@@ -11,10 +11,10 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
 ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896179"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift
@@ -35,7 +35,7 @@ En la tabla siguiente se resaltan las diferencias entre SSIS local y SSIS en Azu
 
 La diferencia más importante es la separación del almacenamiento y el tiempo de ejecución. Azure Data Factory hospeda el motor en tiempo de ejecución para paquetes SSIS en Azure. El motor en tiempo de ejecución se denomina Azure SSIS Integration Runtime (Azure SSIS IR). Para más información, vea [Azure SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime).
 
-| Ubicación | Storage | Tiempo de ejecución | Escalabilidad |
+| Location | Storage | Tiempo de ejecución | Escalabilidad |
 |---|---|---|---|
 | En el entorno local | SQL Server | Tiempo de ejecución de SSIS hospedado por SQL Server | Escalabilidad horizontal de SSIS (en SQL Server 2017 y versiones posteriores)<br/><br/>Soluciones personalizadas (en versiones anteriores de SQL Server) |
 | En Azure | SQL Database o Instancia administrada de SQL Database | Azure SSIS Integration Runtime, un componente de Azure Data Factory | Opciones de escalado de Azure SSIS Integration Runtime |
@@ -75,7 +75,7 @@ Para conectarse a archivos y recursos compartidos de archivos, consulte [Abrir y
 
 ### <a name="available-ssis-components"></a>Componentes de SSIS disponibles
 
-Al aprovisionar una instancia de SQL Database para hospedar SSISDB, también se instalan Azure Feature Pack para SSIS y el componente redistribuible de Access. Estos componentes proporcionan conectividad a varios orígenes de datos de **Azure** y a archivos de **Excel y Access**, así como a los orígenes de datos compatibles con los componentes integrados.
+Al aprovisionar una instancia de SQL Database para hospedar SSISDB, también se instalan el paquete de características de Azure para SSIS y el acceso redistribuible. Estos componentes proporcionan conectividad a varios orígenes de datos de **Azure** y a archivos de **Excel y Access**, así como a los orígenes de datos compatibles con los componentes integrados.
 
 También se pueden instalar componentes adicionales: por ejemplo, se puede instalar un controlador que no esté instalado de forma predeterminada. Para más información, consulte [Custom setup for the Azure-SSIS integration runtime](/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) (Configuración personalizada de Azure SSIS Integration Runtime).
 
@@ -85,9 +85,9 @@ Si es un ISV, puede actualizar la instalación de los componentes con licencia p
 
 ### <a name="transaction-support"></a>Compatibilidad con transacciones
 
-Con SQL Server local y en máquinas virtuales de Azure, puede usar las transacciones del Coordinador de transacciones distribuidas de Microsoft (MSDTC). Para configurar MSDTC en cada nodo de Azure SSIS IR, use la capacidad de configuración personalizada. Para obtener más información, consulte [Custom setup for the Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) (Configuración personalizada de Integration Runtime de SSIS de Azure).
+Con SQL Server local y en máquinas virtuales de Azure, puede usar las transacciones del Coordinador de transacciones distribuidas de Microsoft (MSDTC). Para configurar MSDTC en cada nodo de Azure SSIS IR, use la capacidad de configuración personalizada. Para más información, consulte [Custom setup for the Azure-SSIS integration runtime](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) (Instalación personalizada de la instancia de Integration Runtime para la integración de SSIS en Azure).
 
-Con Azure SQL Database solo puede usar transacciones elásticas. Para más información, vea [Distributed transactions across cloud databases](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-transactions-overview) (Transacciones distribuidas por bases de datos de nube).
+Con Azure SQL Database solo puede usar transacciones elásticas. Para más información, consulte [Transacciones distribuidas en bases de datos en la nube](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-transactions-overview).
 
 ## <a name="deploy-and-run-packages"></a>Implementar y ejecutar paquetes
 
@@ -117,7 +117,7 @@ El proceso de implementación valida los paquetes para garantizar que se puedan 
 
 Para obtener un ejemplo de implementación en el que se usa SSMS y el Asistente para implementación de Integration Services, consulte [Tutorial: Implementación y ejecución de un paquete de SQL Server Integration Services (SSIS) en Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
-### <a name="version-support"></a>Compatibilidad de versiones
+### <a name="version-support"></a>Compatibilidad con versiones
 
 Puede implementar en Azure un paquete creado con cualquier versión de SSIS. Al implementar un paquete en Azure, si no hay ningún error de validación, el paquete se actualiza automáticamente al formato de paquete más reciente. Dicho de otra manera, siempre se actualiza a la versión más reciente de SSIS.
 

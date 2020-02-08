@@ -17,10 +17,10 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294142"
 ---
 # <a name="ftp-task"></a>Tarea FTP
@@ -41,11 +41,11 @@ ms.locfileid: "71294142"
 > [!IMPORTANT]  
 >  El administrador de conexiones FTP solo admite la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
   
- Al tener acceso a un archivo local o un directorio local, la tarea FTP utiliza un administrador de conexiones de archivos o información de ruta de acceso almacenada en una variable. En contraste, al tener acceso a un archivo remoto o un directorio remoto, la tarea FTP utiliza una ruta especificada directamente en el servidor remoto, como se especifica en el administrador de conexiones FTP, o información de ruta almacenada en una variable. Para obtener más información, vea [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md) e [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
+ Al tener acceso a un archivo local o un directorio local, la tarea FTP utiliza un administrador de conexiones de archivos o información de ruta de acceso almacenada en una variable. En contraste, al tener acceso a un archivo remoto o un directorio remoto, la tarea FTP utiliza una ruta especificada directamente en el servidor remoto, como se especifica en el administrador de conexiones FTP, o información de ruta almacenada en una variable. Para más información, vea [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md) e [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
  Esto significa que la tarea FTP puede recibir varios archivos y eliminar varios archivos remotos, pero si utiliza un administrador de conexiones, solo puede enviar un archivo y eliminar únicamente un archivo local, porque un administrador de conexiones de archivos solo puede tener acceso a un único archivo. Para tener acceso a varios archivos locales, la tarea FTP debe utilizar una variable para proporcionar la información de ruta. Por ejemplo, una variable que contiene "C:\Prueba\&#42;.txt" proporciona una ruta de acceso que permite eliminar o enviar todos los archivos del directorio Prueba que tienen una extensión .txt.  
   
- Para enviar varios archivos y tener acceso a varios archivos y directorios locales, también puede ejecutar la tarea FTP varias veces incluyéndola en un contenedor de bucles Foreach. El contenedor de bucles Foreach puede recorrer los archivos de un directorio mediante el enumerador Foreach File. Para más información, consulte [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md).  
+ Para enviar varios archivos y tener acceso a varios archivos y directorios locales, también puede ejecutar la tarea FTP varias veces incluyéndola en un contenedor de bucles Foreach. El contenedor de bucles Foreach puede recorrer los archivos de un directorio mediante el enumerador Foreach File. Para más información, vea [Contenedor Foreach Loop](../../integration-services/control-flow/foreach-loop-container.md).  
   
  La tarea FTP admite los caracteres comodín *?* y *\** en las rutas. Esto permite que la tarea tenga acceso a varios archivos. Sin embargo, solo puede usar caracteres comodín en la parte de la ruta de acceso que especifica el nombre de archivo. Por ejemplo, C:\MiDirectorio\\*.txt es una ruta válida, pero C:\\\**\MiTexto.txt no.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "71294142"
  **IsRemotePathVariable**  
  Indica si la ruta remota se almacena en una variable. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**True**|La ruta de destino está almacenada en una variable. Al seleccionar este valor se muestra la opción dinámica **RemoteVariable**.|  
 |**False**|La ruta de destino se especifica en un administrador de conexiones de archivos. Al seleccionar este valor se muestra la opción dinámica **RemotePath**.|  
@@ -122,15 +122,15 @@ ms.locfileid: "71294142"
  **IsLocalPathVariable**  
  Indica si la ruta de acceso local está almacenada en una variable. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**True**|La ruta de destino está almacenada en una variable. Al seleccionar este valor se muestra la opción dinámica **LocalVariable**.|  
 |**False**|La ruta de destino se especifica en un administrador de conexiones de archivos. Al seleccionar este valor se muestra la opción dinámica **LocalPath**.|  
   
- **Operación**  
+ **operación**  
  Seleccione la operación de FTP que se realizará. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Enviar archivos**|Envía archivos. Al seleccionar este valor se muestran las opciones dinámicas **LocalVariable**, **LocalPathRemoteVariable** y **RemotePath**.|  
 |**Recibir archivos**|Recibe archivos. Al seleccionar este valor se muestran las opciones dinámicas **LocalVariable**, **LocalPathRemoteVariable** y **RemotePath**.|  

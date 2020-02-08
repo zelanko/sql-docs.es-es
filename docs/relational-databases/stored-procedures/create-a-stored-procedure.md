@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 73aee045b57ca7fde08c24adca4a3d4267d06c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934075"
 ---
 # <a name="create-a-stored-procedure"></a>Crear un procedimiento almacenado
@@ -55,7 +55,7 @@ En este tema se describe cómo se crea un procedimiento almacenado de [!INCLUDE[
   
 5.  En el cuadro de diálogo **Especificar valores para parámetros de plantilla** , especifique los siguientes valores para los parámetros mostrados.  
   
-    |Parámetro|Valor|  
+    |Parámetro|Value|  
     |---------------|-----------|  
     |Autor|*Su nombre.*|  
     |Create Date|*La fecha de hoy.*|  
@@ -68,7 +68,7 @@ En este tema se describe cómo se crea un procedimiento almacenado de [!INCLUDE[
     |@Datatype_For_Param2|**nvarchar**(50)|  
     |Default_Value_For_Param2|NULL|  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 7.  En el **Editor de consultas**, reemplace la instrucción SELECT por la siguiente instrucción:  
   

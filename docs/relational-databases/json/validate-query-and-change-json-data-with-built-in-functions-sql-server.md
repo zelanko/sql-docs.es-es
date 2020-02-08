@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096063"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Validar, consultar y cambiar datos JSON con funciones integradas (SQL Server)
@@ -103,7 +103,7 @@ ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.
 
 Los resultados de esta consulta se muestran en la tabla siguiente:
 
-| Nombre | City | Condado |
+| Nombre | City | County |
 | --- | --- | --- |
 | AndersenFamily | NY | Manhattan |
 
@@ -194,7 +194,7 @@ Observe el siguiente ejemplo de texto JSON.
   
 En este ejemplo de texto JSON, los miembros de datos "a" y "c" son valores de cadena, mientras que el miembro de datos "b" es una matriz. **JSON_VALUE** y **JSON_QUERY** devuelven los resultados siguientes:  
   
-|Ruta de acceso|**JSON_VALUE** devuelve|**JSON_QUERY** devuelve|  
+|Path|**JSON_VALUE** devuelve|**JSON_QUERY** devuelve|  
 |-----------|-----------------------------|-----------------------------|  
 |**$**|NULL o error|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL o error|  

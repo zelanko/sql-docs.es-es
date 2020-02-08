@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2f8a3f4dbdbaa9cbd2cf1c99a86ad6f3573ab11
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844335"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
@@ -48,10 +48,10 @@ USER_NAME ( [ id ] )
  *id*  
  Es el número de identificación asociado a un usuario de la base de datos. *id* es **int**. Es obligatorio utilizar paréntesis.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando se omite *id*, se supone que se trata del usuario actual en el contexto actual. Si el parámetro contiene la palabra NULL, se devolverá NULL. Cuando se llama a USER_NAME sin especificar un *id* después de una instrucción EXECUTE AS, USER_NAME devuelve el nombre del usuario representado. Si una entidad de seguridad de Windows ha tenido acceso a la base de datos en forma de miembro de un grupo, USER_NAME devuelve el nombre de la entidad de seguridad de Windows en vez del nombre del grupo.  
   
 ## <a name="examples"></a>Ejemplos  

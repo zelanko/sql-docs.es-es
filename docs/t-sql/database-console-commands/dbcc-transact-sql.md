@@ -37,10 +37,10 @@ ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7f0d3d07f6f4a0ef3a35991c4805c478ed702bdf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982443"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
@@ -54,7 +54,7 @@ Las instrucciones de comandos de consola de base de datos se dividen en las sigu
 |---|---|
 |Mantenimiento|Tareas de mantenimiento en las bases de datos, los índices o los grupos de archivos.|  
 |Varios|Tareas varias como habilitar marcas de seguimiento o quitar una DLL de la memoria.|  
-|Informativa|Tareas que recopilan y muestran diversos tipos de información.|  
+|Informativo|Tareas que recopilan y muestran diversos tipos de información.|  
 |Validación|Operaciones de validación en una base de datos, tabla, índice, catálogo, grupo de archivos o asignación de páginas de base de datos.|  
   
 Los comandos DBCC reciben parámetros de entrada y devuelven valores. Todos los parámetros de los comandos DBCC pueden aceptar literales Unicode y DBCS.

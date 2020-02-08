@@ -19,10 +19,10 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 07a4d09e55999c9e6f85e059f576c1460baf750a
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71823560"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminar una aplicación de capa de datos
@@ -102,7 +102,7 @@ ms.locfileid: "71823560"
   
  Los archivos de registro y de datos de la base de datos se eliminan de forma permanente.  
   
- **< Anterior**: vuelve a la página **Introducción**.  
+ **< Anterior:** vuelve a la página **Introducción**.  
   
  **Siguiente >** : avanza a la página **Resumen**.  
   

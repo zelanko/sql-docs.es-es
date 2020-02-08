@@ -13,10 +13,10 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f9298d2ff1dc79d14fa5de943d2d7cfccf8bcbd4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298836"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Crear y editar un servicio CDC de Oracle
@@ -34,7 +34,7 @@ ms.locfileid: "71298836"
   
  Especifique la siguiente información en los cuadros de diálogos Nuevo servicio de Windows CDC de Oracle o Propiedades del servicio CDC.  
   
-**Nombre de servicio**  
+**Nombre del servicio**  
  Escriba el nombre del nuevo servicio de Windows CDC de Oracle. Si es posible, no debe usar nombres largos. No se pueden usar los caracteres / y \ en el nombre del servicio.  
   
 > [!NOTE]  
@@ -63,7 +63,7 @@ ms.locfileid: "71298836"
  **Nombre del servidor**: seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destino a la que quiera conectarse (por ejemplo, **\\\\<nombre_equipo>\\<nombre_instancia>** ). De forma predeterminada, aparecerá la instancia de servidor a la que se ha conectado por última vez.  
   
  **Autenticación**  
- Seleccione una de las opciones siguientes:  
+ Seleccione uno de los siguientes:  
   
 -   **Autenticación de Windows**: si selecciona esta opción, el servicio CDC de Oracle se conecta a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino con la identidad de la cuenta de servicio. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un equipo diferente, se debe usar la autenticación de Windows con cuentas de dominio.  
   

@@ -24,10 +24,10 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a81d65cfd0716ba386db98b3d9973fb4e57876a7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298190"
 ---
 # <a name="ole-db-destination"></a>Destino de OLE DB
@@ -134,7 +134,7 @@ ms.locfileid: "71298190"
  **Administrador de conexiones OLE DB**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones con el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
   
  **Modo de acceso a datos**  
@@ -148,7 +148,7 @@ ms.locfileid: "71298190"
 |Carga rápida de variable de nombre de tabla o nombre de vista|Especifica el nombre de la tabla o la vista en una variable y utiliza la opción de carga rápida para cargar los datos. Para obtener más información acerca de los modos de acceso a datos de carga rápida, optimizados para inserciones masivas, vea [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).|  
 |Comando SQL|Carga los datos en el destino OLE DB mediante una consulta SQL.|  
   
- **Vista previa**  
+ **Versión preliminar**  
  Obtenga una vista previa de los resultados mediante el cuadro de diálogo **Vista previa de los resultados de la consulta** . La vista previa puede mostrar hasta 200 filas.  
   
 ### <a name="data-access-mode-dynamic-options"></a>Opciones dinámicas del modo de acceso a datos  
@@ -168,7 +168,7 @@ ms.locfileid: "71298190"
  **Nombre de la tabla o la vista**  
  Seleccione una tabla o una vista de la base de datos con esta lista, o bien haga clic en **Nuevo**para crear una tabla.  
   
- **Nueva**  
+ **Nuevo**  
  Permite crear una tabla con el cuadro de diálogo **Crear tabla** .  
   
 > [!NOTE]  
@@ -204,14 +204,14 @@ ms.locfileid: "71298190"
 >  Los errores de restricciones en el destino provocan el error del lote completo de las filas definidas por **Tamaño máximo de confirmación de inserción** .  
   
 #### <a name="data-access-mode--table-name-or-view-name-variable"></a>Modo de acceso a datos = Variable de nombre de tabla o nombre de vista  
- **Nombre de variable**  
+ **Nombre de la variable**  
  Seleccione la variable que contiene el nombre de la tabla o vista.  
   
 #### <a name="data-access-mode--table-name-or-view-name-variable---fast-load"></a>Modo de acceso a datos = Carga rápida de variable de nombre de tabla o nombre de vista  
- **Nombre de variable**  
+ **Nombre de la variable**  
  Seleccione la variable que contiene el nombre de la tabla o vista.  
   
- **Nueva**  
+ **Nuevo**  
  Permite crear una tabla con el cuadro de diálogo **Crear tabla** .  
   
 > [!NOTE]  
@@ -251,7 +251,7 @@ ms.locfileid: "71298190"
  **Generar consulta**  
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
- **Examinar**  
+ **Browse**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
  **Analizar consulta**  

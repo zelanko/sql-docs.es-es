@@ -12,10 +12,10 @@ ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 23ff55d4fcb9e9cf398e732376a01ab5495b2a4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099247"
 ---
 # <a name="enable-resource-governor"></a>Habilitar el regulador de recursos
@@ -24,7 +24,7 @@ ms.locfileid: "68099247"
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
   
--   **Para habilitar Resource Governor, mediante:**  [Explorador de objetos](#RGOnObjEx), [propiedades de Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
+-   **Para habilitar Resource Governor, mediante:**  [Explorador de objetos](#RGOnObjEx), [Propiedades de Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Habilitar el regulador de recursos tiene como consecuencia lo siguiente:  
@@ -53,7 +53,7 @@ ms.locfileid: "68099247"
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
   
-2.  Haga clic con el botón derecho en **Regulador de recursos** y luego haga clic en **Propiedades**. De este modo se abre la página **Propiedades del regulador de recursos** .  
+2.  Haga clic con el botón derecho en **Regulador de recursos** y, luego, haga clic en **Propiedades**. De este modo se abre la página **Propiedades del regulador de recursos** .  
   
 3.  Haga clic en la casilla **Habilitar regulador de recursos** y, a continuación, haga clic en **Aceptar**.  
   

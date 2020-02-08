@@ -19,10 +19,10 @@ ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e38b03a9e903666593567bf34eaa50c578de6825
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055332"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Ver o cambiar las programaciones del conjunto de recopilación (SQL Server Management Studio)
@@ -49,7 +49,7 @@ ms.locfileid: "74055332"
   
 2.  Haga clic con el botón derecho en un conjunto de recopilación que use el modo de almacenamiento en memoria caché, como **Estadísticas de consultas**y haga clic en **Propiedades** para abrir el cuadro de diálogo [Propiedades del conjunto de recopilación de datos](#CollectionSet) .  
   
-3.  Puede cambiar la frecuencia de recopilación en la página **General** . Para ello, siga estos pasos:  
+3.  Puede cambiar la frecuencia de recopilación en la página **General** . Para ello, siga estos pasos.  
   
     1.  En el panel de detalles, haga doble clic en el número que se muestra para la columna **Frecuencia de recopilación (s)** en la tabla **Elementos de recopilación** .  
   

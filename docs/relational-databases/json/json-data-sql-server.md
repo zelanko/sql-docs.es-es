@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 80f6d40fd2c548135595fd96de6de4b967460a90
-ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74190358"
 ---
 # <a name="json-data-in-sql-server"></a>Datos JSON en SQL Server
@@ -53,7 +53,7 @@ SQL Server proporciona funciones y operadores integrados que permiten hacer lo s
 - Ejecutar cualquier consulta de Transact-SQL en los objetos JSON convertidos.  
 - Dar formato JSON a los resultados de consultas de Transact-SQL.  
   
-![Información general de la compatibilidad integrada de JSON](../../relational-databases/json/media/jsonslides1overview.png "|::ref1::|")  
+![Información general de la compatibilidad integrada de JSON](../../relational-databases/json/media/jsonslides1overview.png "Información general de la compatibilidad integrada de JSON")  
   
 ## <a name="key-json-capabilities-of-sql-server-and-sql-database"></a>Funcionalidades clave de JSON de SQL Server y SQL Database
 

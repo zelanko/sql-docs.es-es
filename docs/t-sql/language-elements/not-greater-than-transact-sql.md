@@ -22,10 +22,10 @@ ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ddc661b856767c140091e662118f3d5198318266
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072452"
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt; (No mayor que) (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68072452"
 
   Compara dos expresiones (es un operador de comparación). Cuando se comparan expresiones no NULL, el resultado es TRUE si el operando de la izquierda no tiene un valor mayor que el operando de la derecha; en caso contrario, el resultado es FALSE. A diferencia del operador de igualdad =, el resultado de la comparación !> de dos valores NULL no depende del valor de ANSI_NULLS.  
   
- ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -9,10 +9,10 @@ ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713430"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Errores conocidos y resoluciones con captura de datos modificados para Oracle de Attunity
@@ -20,7 +20,7 @@ ms.locfileid: "71713430"
 
 En este tema se enumeran las principales incidencias y las resoluciones conocidas al ver una instancia de captura de datos modificados (CDC) en la herramienta de configuración de Oracle CDC Designer. Esta herramienta forma parte de la captura de datos modificados para Oracle de Attunity, que se incluye a partir de SQL Server 2012. 
 
-## <a name="bug-fixes"></a>Correcciones de errores
+## <a name="bug-fixes"></a>Corrección de errores
 Antes de dedicar demasiado tiempo a solucionar problemas, es importante usar las últimas compilaciones de CDC para Oracle de Attunity con el fin de evitar incidencias conocidas, como las siguientes:
 
 ### <a name="sql-server-2017"></a>SQL Server 2017
@@ -156,7 +156,7 @@ Para establecer la cuenta de usuario, seleccione CDCInstance en el panel izquier
 
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Trabajar con datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

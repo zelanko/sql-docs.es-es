@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19019a0493ef20aac9ab51090d64646d5d626185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041803"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
@@ -59,7 +59,7 @@ SET DATEFIRST 7 ;
  *number* |  **@** _number_var_  
  Es un entero que indica el primer día de la semana. Puede ser uno de los siguientes valores.  
   
-|Valor|Primer día de la semana:|  
+|Value|Primer día de la semana:|  
 |-----------|------------------------------|  
 |**1**|Lunes|  
 |**2**|Martes|  
@@ -69,7 +69,7 @@ SET DATEFIRST 7 ;
 |**6**|Sábado|  
 |**7** (predeterminado, Inglés (EE. UU.))|Domingo|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Para ver el valor actual de SET DATEFIRST, use la función [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md).  
   
  La opción SET DATEFIRST se establece en tiempo de ejecución, no en tiempo de análisis.  

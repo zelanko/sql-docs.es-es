@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032223"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configuración del clúster de disco compartido de SLES para SQL Server
@@ -28,9 +28,9 @@ Para obtener más información sobre la configuración del clúster, las opcione
 
 Para completar el siguiente escenario de un extremo a otro, necesita dos máquinas para implementar el clúster de dos nodos y otro servidor para configurar el recurso compartido de NFS. En los pasos siguientes se describe cómo se configurarán estos servidores.
 
-## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Instalación y configuración del sistema operativo en cada nodo de clúster
+## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Instalación y configuración del sistema operativo en cada nodo del clúster
 
-El primer paso consiste en configurar el sistema operativo en los nodos de clúster. A efectos de este tutorial, use SLES con una suscripción válida para el complemento de alta disponibilidad.
+El primer paso es configurar el sistema operativo en los nodos del clúster. A efectos de este tutorial, use SLES con una suscripción válida para el complemento de alta disponibilidad.
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Instalación y configuración de SQL Server en cada nodo de clúster
 
@@ -44,7 +44,7 @@ El primer paso consiste en configurar el sistema operativo en los nodos de clús
     ```
 
     > [!NOTE]
-    > En el momento de la instalación, se genera una clave maestra del servidor para la instancia de SQL Server y se coloca en `/var/opt/mssql/secrets/machine-key`. En Linux, SQL Server siempre se ejecuta como una cuenta local denominada mssql. Dado que se trata de una cuenta local, su identidad no se comparte entre los nodos. Por lo tanto, debe copiar la clave de cifrado del nodo principal a cada nodo secundario para que cada cuenta local de mssql pueda acceder a ella para descifrar la clave maestra del servidor.
+    > En el momento de la instalación, se genera una clave maestra del servidor para la instancia de SQL Server y se coloca en `/var/opt/mssql/secrets/machine-key`. En Linux, SQL Server siempre se ejecuta como una cuenta local denominada mssql. Dado que se trata de una cuenta local, su identidad no se comparte entre los nodos. Por lo tanto, debe copiar la clave de cifrado del nodo principal en cada nodo secundario para que cada cuenta local de mssql pueda acceder a ella y así descifrar la clave maestra del servidor.
 4. En el nodo principal, cree un inicio de sesión de SQL Server para Pacemaker y conceda el permiso de inicio de sesión para ejecutar `sp_server_diagnostics`. Pacemaker usa esta cuenta para comprobar qué nodo ejecuta SQL Server.
 
     ```bash
@@ -67,7 +67,7 @@ El primer paso consiste en configurar el sistema operativo en los nodos de clús
     sudo ip addr show
     ```
 
-    Establezca el nombre de equipo en cada nodo. Asigne a cada nodo un nombre único que tenga 15 caracteres o menos. Para establecer el nombre de equipo, agréguelo a `/etc/hostname` con [yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) o [manualmente](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html).
+    Establezca el nombre de equipo en cada nodo. Asigne a cada nodo un nombre único que tenga 15 caracteres o menos. Para establecer el nombre de equipo, agréguelo a `/etc/hostname` con [yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) o [manualmente](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html).
 
     En el ejemplo siguiente se muestra `/etc/hosts` con adiciones para dos nodos denominados `SLES1` y `SLES2`.
 
@@ -134,7 +134,7 @@ Antes de configurar el cliente NFS para montar la ruta de acceso de los archivos
 
 En este momento, ambas instancias de SQL Server están configuradas para ejecutarse con los archivos de base de datos en el almacenamiento compartido. El siguiente paso consiste en configurar SQL Server para Pacemaker. 
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Instalación y configuración de Pacemaker en cada nodo de clúster
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Instalación y configuración de Pacemaker en todos los nodos del clúster
 
 1. **En ambos nodos del clúster, cree un archivo para almacenar el nombre de usuario y la contraseña de SQL Server para el inicio de sesión de Pacemaker**. Con el siguiente comando se crea y rellena este archivo:
 
@@ -195,7 +195,7 @@ En este momento, ambas instancias de SQL Server están configuradas para ejecut
 
 En los pasos siguientes se explica cómo configurar el recurso de clúster para SQL Server. Hay dos opciones de configuración que debe personalizar.
 
-- **SQL Server Resource Name** (Nombre del recurso de SQL Server): nombre del recurso de SQL Server en clúster. 
+- **Nombre del recurso de SQL Server**: nombre de recurso de SQL Server en clúster. 
 - **Valor del tiempo de espera**: el valor del tiempo de espera es la cantidad de tiempo que el clúster espera mientras un recurso se pone en línea. En el caso de SQL Server, es el tiempo que espera que SQL Server tarde en poner en línea la base de datos maestra (`master`). 
 
 Actualice los valores del siguiente script para su entorno. Ejecute en un nodo para configurar e iniciar el servicio en clúster.
@@ -249,7 +249,7 @@ Full list of resources:
 
 Para administrar los recursos de clúster, consulte el siguiente tema de SUSE: [Managing Cluster Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm ) (Administración de recursos de clúster)
 
-### <a name="manual-failover"></a>conmutación por error manual
+### <a name="manual-failover"></a>Conmutación por error manual
 
 Aunque los recursos se configuran para conmutar por error (o migrar) automáticamente a otros nodos del clúster en caso de que se produzca un error de hardware o software, también puede trasladar manualmente un recurso a otro nodo del clúster mediante la interfaz gráfica de usuario de Pacemaker o la línea de comandos. 
 

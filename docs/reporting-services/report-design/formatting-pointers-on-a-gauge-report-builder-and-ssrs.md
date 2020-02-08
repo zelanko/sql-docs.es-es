@@ -9,10 +9,10 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 780cda075d8280d71f3438c79359c58ad1ac3133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575635"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a los punteros de un medidor (Generador de informes y SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "65575635"
 ##  <a name="SpecifyingImage"></a> Especificar una imagen como puntero en un medidor radial  
  Además de la lista integrada de estilos de puntero, puede especificar una imagen como puntero. Esto es muy eficaz cuando se usa una imagen para reemplazar un estilo de puntero de aguja existente. La imagen se superpone en el puntero, pero toda la funcionalidad de éste sigue intacta. Las opciones de color y degradado no son aplicables cuando se usa una imagen para el puntero.  
   
- Si la imagen del puntero tiene forma irregular, debe definir el color como transparente para ocultar las áreas de la imagen que no deben aparecer en el medidor. Al definir un color transparente, el medidor transpone la imagen encima del puntero existente y la recorta para que solo aparezca la forma del puntero. El medidor cambia la escala de la imagen para que se ajuste al tamaño del puntero. Al especificar una imagen para un puntero, cualquier puntero que se agregue posteriormente encima del medidor se dibujará debajo la imagen. Por este motivo, se recomienda no especificar una imagen para el puntero si hay varios punteros en el medidor. Para obtener más información, vea [Especificar una imagen como puntero en un medidor (Generador de informes y SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
+ Si la imagen del puntero tiene forma irregular, debe definir el color como transparente para ocultar las áreas de la imagen que no deben aparecer en el medidor. Al definir un color transparente, el medidor transpone la imagen encima del puntero existente y la recorta para que solo aparezca la forma del puntero. El medidor cambia la escala de la imagen para que se ajuste al tamaño del puntero. Al especificar una imagen para un puntero, cualquier puntero que se agregue posteriormente encima del medidor se dibujará debajo la imagen. Por este motivo, se recomienda no especificar una imagen para el puntero si hay varios punteros en el medidor. Para más información, consulte [Especificar una imagen como puntero en un medidor (Generador de informes y SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
   
 ## <a name="see-also"></a>Consulte también  
  [Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

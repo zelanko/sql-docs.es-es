@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f918fea905451aed787416aff0e2c22cae9e2bf5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258081"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831932"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,17 +157,14 @@ ms.locfileid: "75258081"
     -   Si un subproceso determinado está inactivo durante un tiempo, se libera de nuevo en el grupo de subprocesos general de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Normalmente, un subproceso inactivo se libera después de unos 15 segundos de inactividad. Sin embargo, dependiendo de la última actividad, un subproceso inactivo se puede conservar más tiempo.  
 
     -   Una instancia de SQL Server utiliza hasta 100 subprocesos para puesta al día en paralelo para las réplicas secundarias. Cada base de datos utiliza hasta la mitad del número total de núcleos de CPU, pero no más de 16 subprocesos por base de datos. Si el número total de subprocesos necesarios para una única instancia supera los 100, SQL Server utiliza un solo subproceso de puesta al día para cada base de datos restante. Los subprocesos de rehacer en serie se liberan después de unos 15 segundos de inactividad. 
-    
-    > [!NOTE]
-    > Las bases de datos se eligen para un único subproceso en función de su identificador de base de datos ascendente. Como tal, el orden de creación de la base de datos se debe considerar para las instancias de SQL Server que hospedan más bases de datos de grupos de disponibilidad que los subprocesos de trabajo disponibles. Por ejemplo, en un sistema con más de 32 núcleos de CPU, las seis primeras bases de datos (ordenados por identificador de base de datos) de un grupo o de varios grupos de disponibilidad usarán el modo de fase de puesta al día en paralelo, y todas las bases de datos usarán el modo de fase de puesta al día única.
-  
+     
 -   Además, los grupos de disponibilidad usan subprocesos no compartidos, de la manera siguiente:  
   
     -   Cada réplica principal usa 1 subproceso de captura de registro para cada base de datos principal. Además, usa 1 subproceso de envío de registro para cada base de datos secundaria. Los subprocesos de envío de registro se liberan después de unos 15 segundos de inactividad.    
   
     -   Una copia de seguridad en una réplica secundaria contiene un subproceso en la réplica principal mientras dura la operación de copia de seguridad.  
   
- Para más información, vea [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Series de aprendizaje de Always ON - HADRON: Uso del grupo de trabajo para las bases de datos compatibles con HADRON) (Blog de ingenieros de CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+ Para más información, vea [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (Series de aprendizaje de Always ON - HADRON: Uso del grupo de trabajo para las bases de datos compatibles con HADRON) (Blog de ingenieros de CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 ###  <a name="PermissionsSI"></a> Permisos (instancia del servidor)  
   
@@ -186,7 +183,7 @@ ms.locfileid: "75258081"
   
 ###  <a name="RelatedContentSI"></a> Contenido relacionado (instancia del servidor)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
   
 ##  <a name="NetworkConnect"></a> Recomendaciones de conectividad de red  
  Se recomienda usar los mismos vínculos de red para las comunicaciones entre los nodos de WSFC y las comunicaciones entre las réplicas de disponibilidad.  El uso de vínculos de red independientes puede provocar comportamientos inesperados si alguno de los vínculos da error (incluso de forma intermitente).  
@@ -386,7 +383,7 @@ ms.locfileid: "75258081"
   
 -   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -10,10 +10,10 @@ ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 1e5a45aa66d7d49f2c7499e0dcf975e5ebcb5b78
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255442"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar PolyBase para obtener acceso a datos externos en Hadoop
@@ -64,7 +64,7 @@ En primer lugar, configure SQL Server PolyBase para usar el proveedor específic
    - Servicio de movimiento de datos de SQL Server PolyBase  
    - Motor de SQL Server PolyBase  
   
-   ![detener e iniciar servicios de PolyBase en services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "|::ref1::|")  
+   ![detener e iniciar servicios de PolyBase en services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "detener e iniciar servicios de PolyBase en services.msc")  
   
 ## <a id="pushdown"></a> Habilitar el cálculo de la aplicación  
 

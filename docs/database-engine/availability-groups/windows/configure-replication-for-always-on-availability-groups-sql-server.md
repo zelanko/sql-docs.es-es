@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72689659"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configuración de la replicación con grupos de disponibilidad Always On
@@ -187,7 +187,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  Se encontraron uno o varios errores de validación del publicador para el host de réplica 'MyReplicaHostName'.  
   
- Este comportamiento es el esperado. Debe comprobar la presencia de las entradas del servidor del suscriptor en estos host de réplica secundaria consultando las entradas de sysserver directamente en el host.  
+ Este es el comportamiento esperado. Debe comprobar la presencia de las entradas del servidor del suscriptor en estos host de réplica secundaria consultando las entradas de sysserver directamente en el host.  
   
 ##  <a name="step7"></a> 7. Agregar el publicador original al Monitor de replicación  
  En cada réplica del grupo de disponibilidad, agregue el publicador original al Monitor de replicación.  

@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72783397"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configuración de SQL Server en Linux con la herramienta mssql-conf
@@ -26,7 +26,7 @@ ms.locfileid: "72783397"
 
 |||
 |---|---|
-| [Agente](#agent) | Habilite el Agente SQL Server. |
+| [Agent](#agent) | Habilite el Agente SQL Server. |
 | [Intercalación](#collation) | Establezca una nueva intercalación para SQL Server en Linux. |
 | [Comentarios del cliente](#customerfeedback) | Elija si SQL Server envía comentarios a Microsoft o no. |
 | [Perfil de Correo electrónico de base de datos](#dbmail) | Establezca el perfil de correo electrónico de base de datos predeterminado para SQL Server en Linux. |
@@ -54,7 +54,7 @@ ms.locfileid: "72783397"
 
 |||
 |---|---|
-| [Agente](#agent) | Habilite el Agente SQL Server. |
+| [Agent](#agent) | Habilitar el Agente SQL Server |
 | [Intercalación](#collation) | Establezca una nueva intercalación para SQL Server en Linux. |
 | [Comentarios del cliente](#customerfeedback) | Elija si SQL Server envía comentarios a Microsoft o no. |
 | [Perfil de Correo electrónico de base de datos](#dbmail) | Establezca el perfil de correo electrónico de base de datos predeterminado para SQL Server en Linux. |
@@ -102,7 +102,7 @@ Para cambiar esta configuración, siga estos pasos:
    sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
    ```
 
-2. Reinicie el servicio SQL Server:
+2. Reinicie el servicio SQL Server:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -141,7 +141,7 @@ La configuración **telemetry.customerfeedback** cambia si SQL Server envía co
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
    ```
 
-1. Reinicie el servicio SQL Server:
+1. Reinicie el servicio SQL Server:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -159,7 +159,7 @@ Las configuraciones **filelocation.defaultdatadir** y **filelocation.defaultlogd
    sudo mkdir /tmp/data
    ```
 
-1. Cambie el propietario y el grupo del directorio por el usuario **mssql**:
+1. Cambie el propietario y el grupo del directorio al usuario **mssql**:
 
    ```bash
    sudo chown mssql /tmp/data
@@ -172,7 +172,7 @@ Las configuraciones **filelocation.defaultdatadir** y **filelocation.defaultlogd
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultdatadir /tmp/data
    ```
 
-1. Reinicie el servicio SQL Server:
+1. Reinicie el servicio SQL Server:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -199,7 +199,7 @@ Para cambiar estas configuraciones, siga estos pasos:
    sudo mkdir /tmp/masterdatabasedir
    ```
 
-1. Cambie el propietario y el grupo del directorio por el usuario **mssql**:
+1. Cambie el propietario y el grupo del directorio al usuario **mssql**:
 
    ```bash
    sudo chown mssql /tmp/masterdatabasedir
@@ -285,7 +285,7 @@ Para configurar esta nueva ubicación, use los comandos siguientes:
    sudo mkdir /tmp/dump
    ```
 
-1. Cambie el propietario y el grupo del directorio por el usuario **mssql**:
+1. Cambie el propietario y el grupo del directorio al usuario **mssql**:
 
    ```bash
    sudo chown mssql /tmp/dump
@@ -298,7 +298,7 @@ Para configurar esta nueva ubicación, use los comandos siguientes:
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultdumpdir /tmp/dump
    ```
 
-1. Reinicie el servicio SQL Server:
+1. Reinicie el servicio SQL Server:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -316,7 +316,7 @@ Para cambiar esta configuración:
    sudo mkdir /tmp/logs
    ```
 
-1. Cambie el propietario y el grupo del directorio por el usuario **mssql**:
+1. Cambie el propietario y el grupo del directorio al usuario **mssql**:
 
    ```bash
    sudo chown mssql /tmp/logs
@@ -329,7 +329,7 @@ Para cambiar esta configuración:
    sudo /opt/mssql/bin/mssql-conf set filelocation.errorlogfile /tmp/logs/errorlog
    ```
 
-1. Reinicie el servicio SQL Server:
+1. Reinicie el servicio SQL Server:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -348,7 +348,7 @@ Para configurar esta nueva ubicación, use los comandos siguientes:
    sudo mkdir /tmp/backup
    ```
 
-1. Cambie el propietario y el grupo del directorio por el usuario **mssql**:
+1. Cambie el propietario y el grupo del directorio al usuario **mssql**:
 
    ```bash
    sudo chown mssql /tmp/backup
@@ -361,7 +361,7 @@ Para configurar esta nueva ubicación, use los comandos siguientes:
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultbackupdir /tmp/backup
    ```
 
-1. Reinicie el servicio SQL Server:
+1. Reinicie el servicio SQL Server:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -426,7 +426,7 @@ Para obtener información sobre cómo se usa esto con los grupos de disponibilid
 
 La configuración **telemetry.userrequestedlocalauditdirectory** habilita la auditoría local y le permite establecer el directorio en el que se crean los registros de auditoría local.
 
-1. Cree un directorio de destino para los nuevos registros de auditoría local. En el ejemplo siguiente se crea un nuevo directorio **/tmp/audit**:
+1. Cree un directorio de destino para los nuevos registros de Auditoría local. En el ejemplo siguiente se crea un nuevo directorio **/tmp/audit**:
 
    ```bash
    sudo mkdir /tmp/audit
@@ -445,7 +445,7 @@ La configuración **telemetry.userrequestedlocalauditdirectory** habilita la aud
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
    ```
 
-1. Reinicie el servicio SQL Server:
+1. Reinicie el servicio SQL Server:
 
    ```bash
    sudo systemctl restart mssql-server
@@ -507,7 +507,7 @@ Además de establecer estos valores, también debe configurar el enrutamiento y 
 
 Hay algunas otras configuraciones de mssql-conf que puede usar para supervisar y solucionar problemas de MSDTC. En la siguiente tabla se describen brevemente estas configuraciones. Para obtener más información sobre su uso, consulte los detalles en el artículo de soporte técnico de Windows [Cómo habilitar el seguimiento de diagnóstico para MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
-| Configuración mssql-conf | Descripción |
+| Parámetro de mssql-conf | Descripción |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Configure solo llamadas RPC seguras para transacciones distribuidas. |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | Configure solo llamadas RPC de seguridad para transacciones distribuidas. |
@@ -564,7 +564,7 @@ accepteulaml = Y
 
 El acceso de red saliente para las extensiones de R, Python y Java en la característica [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) está deshabilitado de forma predeterminada. Para habilitar las solicitudes salientes, establezca la propiedad booleana "outboundnetworkaccess" con mssql-conf.
 
-Después de establecer la propiedad, reinicie el servicio SQL Server Launchpad para leer los valores actualizados del archivo INI. En un mensaje de reinicio se le recuerda si se ha modificado una configuración relacionada con la extensibilidad.
+Después de establecer la propiedad, reinicie el servicio SQL Server Launchpad para leer los valores actualizados del archivo INI. En un mensaje de reinicio se le recuerda si se ha modificado un valor relacionado con la extensibilidad.
 
 ```bash
 # Adds the extensibility section and property.
@@ -597,7 +597,7 @@ La configuración **network.tcpport** cambia el puerto TCP en el que SQL Server
    sudo /opt/mssql/bin/mssql-conf set network.tcpport <new_tcp_port>
    ```
 
-2. Reinicie el servicio SQL Server:
+2. Reinicie el servicio SQL Server:
 
    ```bash
    sudo systemctl restart mssql-server

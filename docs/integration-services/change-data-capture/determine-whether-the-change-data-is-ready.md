@@ -13,10 +13,10 @@ ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294768"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Determinar si los datos modificados están preparados
@@ -90,7 +90,7 @@ ms.locfileid: "71294768"
   
  En la tabla siguiente, la primera columna muestra los valores devueltos desde la tarea Ejecutar SQL por la consulta de ejemplo de Transact-SQL. La segunda columna muestra cómo responden los otros componentes a estos valores.  
   
-|Valor devuelto|Significado|Respuesta|  
+|Valor devuelto|Significado|Response|  
 |------------------|-------------|--------------|  
 |0|Indica que los datos modificados no están listos.<br /><br /> No hay ningún registro de captura de datos modificados posterior al punto final del intervalo seleccionado.|La ejecución continúa con el componente que implementa un retraso. A continuación, el control vuelve al contenedor de bucles For, que sigue comprobando la tarea Ejecutar SQL mientras el valor devuelto sea 0.|  
 |1|Podría indicar que no se han capturado los datos modificados para el intervalo completo, o que se ha eliminado. Esto se trata como una condición de error.<br /><br /> No hay ningún registro de captura de datos modificados anterior al punto inicial del intervalo seleccionado.|La ejecución continúa con el componente opcional que registra el error.|  
@@ -335,7 +335,7 @@ ms.locfileid: "71294768"
   
 8.  Cierre el entorno de desarrollo de script y el **Editor de la tarea Script**.  
   
-## <a name="next-step"></a>Paso siguiente  
+## <a name="next-step"></a>siguiente paso  
  Después de determinar que los datos modificados están listos, el paso siguiente consiste en preparar la consulta de los mismos.  
   
  **Tema siguiente:** [Preparar para consultar datos modificados](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  

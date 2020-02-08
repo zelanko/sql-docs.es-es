@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed6848494d9d9673905dadbff036ad97f3be834c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894884"
 ---
-# <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
+# <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Las variables se declaran en el cuerpo de un proceso por lotes o un procedimiento con la instrucción DECLARE, y se les asignan valores con una instrucción SET o SELECT. Las variables de cursor pueden declararse con esta instrucción y utilizarse con otras instrucciones relacionadas con los cursores. Después de la declaración, todas las variables se inicializan como NULL, a menos que se proporcione un valor como parte de la declaración.  
@@ -158,7 +158,7 @@ Define el tipo de datos de **table**. La declaración de tabla incluye definicio
  *logical_expression*  
  Es una expresión lógica que devuelve TRUE o FALSE.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Las variables se suelen utilizar en un proceso por lotes o procedimiento como contadores para WHILE, LOOP o un bloque IF…ELSE.  
   
  Las variables solo se pueden usar en expresiones y no en lugar de nombres de objeto o palabras clave. Para formar instrucciones SQL dinámicas, utilice EXECUTE.  

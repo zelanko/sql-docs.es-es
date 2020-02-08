@@ -14,16 +14,16 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 92ff867d98b83f1934972a576df8295c3f9ca79d
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228412"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>Correo electrónico de base de datos: correo en cola, no entregado 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-En este tema se describe cómo solucionar problemas en los que los mensajes de correo electrónico se colocan satisfactoriamente en la cola, pero no se entregan.
+En este se tema describe cómo solucionar problemas en los que los mensajes de correo electrónico se colocan satisfactoriamente en la cola, pero no se entregan.
 
 ## <a name="diagnose-the-problem"></a>Diagnóstico del problema 
 
@@ -52,7 +52,7 @@ Si hay entradas en la vista **sysmail_event_log**, consulte la vista **sysmail_a
 
 ## <a name="message-status-unsent"></a>Estado del mensaje: no enviado 
 
-Un estado de **no enviado** indica que el [programa externo de Correo electrónico de base de datos](database-mail-external-program.md) todavía no ha procesado el mensaje de correo electrónico. Es posible que el programa externo de Correo electrónico de base de datos se haya retrasado en el procesamiento de los mensajes; la velocidad a la que el programa externo procesa los mensajes depende de las condiciones de la red, del tiempo de espera de reintento, del volumen de mensajes y de la capacidad del servidor SMTP. Si el problema continúa, pruebe a utilizar más de un perfil para distribuir los mensajes entre más de un servidor SMTP.
+Un estado de **no enviado** indica que el [programa externo de Correo electrónico de base de datos](database-mail-external-program.md) todavía no ha procesado el mensaje de correo electrónico. Es posible que el programa externo de Correo electrónico de base de datos se haya retrasado en el procesamiento de los mensajes; la velocidad a la que el programa externo procesa los mensajes depende de las condiciones de la red, el tiempo de espera de reintento, el volumen de mensajes y la capacidad del servidor SMTP. Si el problema continúa, pruebe a utilizar más de un perfil para distribuir los mensajes entre más de un servidor SMTP.
 
 Compruebe la fecha de notificación más reciente de los mensajes entregados satisfactoriamente. Si la última entrega correcta se ha producido hace algún tiempo, revise la vista sysmail_event_log para comprobar que el programa externo fue iniciado satisfactoriamente por Service Broker. Si el último intento no ha iniciado el programa externo, compruebe que el Programa externo de Correo electrónico de base de datos está ubicado en el directorio correcto, y que la cuenta de servicio de SQL Server dispone del permiso necesario para ejecutar el ejecutable.
 
@@ -61,11 +61,11 @@ Compruebe la fecha de notificación más reciente de los mensajes entregados sat
 
 ## <a name="message-status-retrying"></a>Estado del mensaje: reintentando
 
-El estado reintentando indica que el Correo electrónico de base de datos ha intentado entregar el mensaje al servidor SMTP pero no ha podido hacerlo. Normalmente, esto se debe a una interrupción de la red, a un error del servidor SMTP o a que la cuenta de Correo electrónico de base de datos no se ha configurado correctamente. Finalmente, el mensaje debería entregarse o producir un error y publicar un mensaje en el registro de eventos.
+El estado reintentando indica que el Correo electrónico de base de datos ha intentado entregar el mensaje al servidor SMTP pero no ha podido hacerlo. Normalmente esto se debe a una interrupción de la red, a un error del servidor SMTP o a que la cuenta de Correo electrónico de base de datos no se ha configurado correctamente. Finalmente, el mensaje debería entregarse o producir un error y publicar un mensaje en el registro de eventos.
 
 ## <a name="message-status-sent"></a>Estado del mensaje: enviado
 
-Un estado de **enviado** indica que el programa externo de Correo electrónico de base de datos ha entregado satisfactoriamente el mensaje de correo electrónico al servidor SMTP. Si el mensaje no ha llegado a su destino, el servidor SMTP ha aceptado el mensaje de Correo electrónico de base de datos, pero no ha entregado el mensaje al destinatario final. Consulte los registros del servidor SMTP o póngase en contacto con el administrador del servidor SMTP. También puede probar el servidor de correo SMTP mediante otro cliente, como Outlook Express.
+Un estado de **enviado** indica que el programa externo de Correo electrónico de base de datos ha entregado satisfactoriamente el mensaje de correo electrónico al servidor SMTP. Si el mensaje no llegó a su destino, el servidor SMTP aceptó el mensaje de Correo electrónico de base de datos, pero no entregó el mensaje al destinatario final. Compruebe los registros del servidor SMTP o póngase en contacto con el administrador del servidor SMTP. También puede probar el servidor de correo SMTP mediante otro cliente, como Outlook Express.
 
 ## <a name="message-status-failed"></a>Estado del mensaje: error
 

@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee0119ccd051912551c1274860265d48750ac969
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111338"
 ---
-# <a name="schemaname-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
+# <a name="schema_name-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve el nombre de esquema asociado a un Id. de esquema.  
@@ -45,12 +45,12 @@ SCHEMA_NAME ( [ schema_id ] )
 |----------|----------------|  
 |*schema_id*|Id. del esquema. *schema_id* es un **int**. Si *schema_id* no se define, SCHEMA_NAME devolverá el nombre del esquema predeterminado del autor de llamada.|  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **sysname**  
   
  Devuelve NULL cuando *schema_id* no es un Id. válido.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  SCHEMA_NAME devuelve nombres de esquemas del sistema y esquemas definidos por el usuario. SCHEMA_NAME se puede llamar en una lista de selección, en una cláusula WHERE y en cualquier lugar en el que se permita una expresión.  
   
 ## <a name="examples"></a>Ejemplos  

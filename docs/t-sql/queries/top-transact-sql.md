@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948247"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -67,7 +67,7 @@ Devuelve dos o más filas que ocupan el último lugar en el conjunto de resultad
   
 Puede especificar la cláusula TOP con el argumento WITH TIES solo en instrucciones SELECT y solo si también ha especificado la cláusula ORDER BY. El orden devuelto de los registros enlazados es arbitrario. ORDER BY no afecta a esta regla.  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
 En una instrucción SELECT, utilice siempre una cláusula ORDER BY con la cláusula TOP. Porque es la única manera de indicar previsiblemente a qué filas afecta TOP.  
   
 Utilice OFFSET y FETCH en la cláusula ORDER BY en lugar de la cláusula TOP para implementar una solución de paginación de consulta. Una solución de paginación (es decir, el envío de fragmentos o "páginas" de datos al cliente) es más fácil de implementar mediante OFFSET y FETCH. Para obtener más información, vea [ORDER BY &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md).  
@@ -137,7 +137,7 @@ GO
   
 Utilizando TOP y ORDER BY en una operación de subselección, se puede asegurar de que los resultados de la cláusula ORDER BY se apliquen a la cláusula TOP y no a ordenar el resultado de la operación UNION.  
   
- El conjunto de resultados es el siguiente.  
+ El conjunto de resultados es el siguiente:  
   
  ```
  Model         Color      Price  
@@ -155,7 +155,7 @@ No puede combinar TOP con OFFSET y FETCH en la misma expresión de consulta (en 
   
 ## <a name="examples"></a>Ejemplos  
   
-|Categoría|Elementos de sintaxis ofrecidos|  
+|Category|Elementos de sintaxis ofrecidos|  
 |--------------|------------------------------|  
 |[Sintaxis básica](#BasicSyntax)|TOP • PERCENT|  
 |[Incluir valores equivalentes](#tie)|WITH TIES|  

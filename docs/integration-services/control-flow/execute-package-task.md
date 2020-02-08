@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294194"
 ---
 # <a name="execute-package-task"></a>Tarea Ejecutar paquete
@@ -172,12 +172,12 @@ ms.locfileid: "71294194"
  **Ubicación**  
  Seleccione la ubicación del paquete secundario. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**SQL Server**|Establezca la ubicación de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Sistema de archivos**|Permite establecer como ubicación el sistema de archivos.|  
   
- **Conexión**  
+ **Connection**  
  Seleccione el tipo de ubicación de almacenamiento para el paquete secundario.  
   
  **PackageNameReadOnly**  
@@ -190,7 +190,7 @@ ms.locfileid: "71294194"
 #### <a name="location-dynamic-options"></a>Opciones dinámicas de ubicación  
   
 ##### <a name="location--sql-server"></a>Ubicación = SQL Server  
- **Conexión**  
+ **Connection**  
  Seleccione un administrador de conexiones OLE DB de la lista o haga clic en \<**Nueva conexión…** > para crear un administrador de conexiones.  
   
  **Temas relacionados:** [Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
@@ -199,7 +199,7 @@ ms.locfileid: "71294194"
  Escriba el nombre del paquete secundario, o bien haga clic en los puntos suspensivos (…) y, después, busque el paquete.  
   
 ##### <a name="location--file-system"></a>Ubicación = Sistema de archivos  
- **Conexión**  
+ **Connection**  
  Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…** > para crear un administrador de conexiones.  
   
  **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md)  
@@ -218,10 +218,10 @@ ms.locfileid: "71294194"
  **Enlazar un parámetro o variable**  
  Seleccione el parámetro o variable que contiene el valor que desea pasar al paquete secundario.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para asignar un parámetro o variable a un parámetro de paquete secundario.  
   
- **Quitar**  
+ **Remove**  
  Haga clic para quitar una asignación entre un parámetro o variable y un parámetro de paquete secundario.  
   
   

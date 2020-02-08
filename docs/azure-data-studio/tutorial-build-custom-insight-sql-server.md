@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959098"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Compilación de un widget de información personalizada
@@ -30,10 +30,10 @@ Durante este tutorial aprenderá a realizar lo siguiente:
 
 ## <a name="prerequisites"></a>Prerequisites
 
-En este tutorial se requiere la instancia de SQL Server o Azure SQL Database *TutorialDB*. Para crear la base de datos *TutorialDB*, complete alguno de los siguientes inicios rápidos:
+En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB*, complete uno de los siguientes inicios rápidos:
 
-- [Conectarse y consultar SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Conectarse y consultar Azure SQL Database con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Conectarse a una instancia de SQL Server y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Conectarse a una instancia de Azure SQL Database y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 ## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Ejecución de su propia consulta y visualización del resultado en una vista de gráfico
@@ -163,7 +163,7 @@ En este paso, ejecute un script SQL para consultar las sesiones activas actuales
     ![Información de activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
-En este tutorial ha aprendido a realizar lo siguiente:
+En este tutorial, ha aprendido a:
 > [!div class="checklist"]
 > * Ejecución de su propia consulta y su visualización en un gráfico
 > * Compilación de un widget de información personalizada a partir del gráfico

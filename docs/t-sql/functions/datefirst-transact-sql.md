@@ -33,10 +33,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2fc2ca71731fa632db2a857e1b727574722058c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119176"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
@@ -54,10 +54,10 @@ Vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-
 @@DATEFIRST  
 ```  
   
-## <a name="return-type"></a>Tipo devuelto  
+## <a name="return-type"></a>Tipo de valor devuelto  
 **tinyint**
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 SET DATEFIRST *n* especifica el primer día (DOMINGO, LUNES, MARTES, etc.) de la semana. El valor *n* puede oscilar entre 1 y 7.
 
 ```sql
@@ -107,7 +107,7 @@ First Day         Today
 SELECT @@DATEFIRST;  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Funciones de configuración &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)
   
   

@@ -19,10 +19,10 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 38af7d056eab840a5cf83eefa96ec2731e58bc67
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292772"
 ---
 # <a name="excel-source"></a>Origen de Excel
@@ -71,20 +71,20 @@ ms.locfileid: "71292772"
  **Administrador de conexiones OLE DB**  
  Seleccione un Administrador de conexiones con Excel en la lista o cree una conexión haciendo clic en **Nueva**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones mediante el cuadro de diálogo **Administrador de conexiones con Excel** .  
   
  **Modo de acceso a datos**  
  Especifique el método para seleccionar datos del origen.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Tabla o vista|Recupera los datos de una hoja de cálculo o un rango con nombre del archivo Excel.|  
 |Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada:** [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Comando SQL|Recupera datos del archivo Excel mediante una consulta SQL. |  
 |Comando SQL de variable|Especifique el texto de la consulta SQL de una variable.|  
   
- **Vista previa**  
+ **Versión preliminar**  
  Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . La vista previa puede mostrar hasta 200 filas.  
   
 ### <a name="data-access-mode-dynamic-options"></a>Opciones dinámicas del modo de acceso a datos  
@@ -94,7 +94,7 @@ ms.locfileid: "71292772"
  Seleccione el nombre de la hoja de cálculo o el rango con nombre de los disponibles en el libro de Excel.  
   
 #### <a name="data-access-mode--table-name-or-view-name-variable"></a>Modo de acceso a datos = Variable de nombre de tabla o nombre de vista  
- **Nombre de variable**  
+ **Nombre de la variable**  
  Seleccione la variable que contiene el nombre de la hoja de cálculo o el rango con nombre.  
   
 #### <a name="data-access-mode--sql-command"></a>Modo de acceso a datos = Comando SQL  
@@ -104,17 +104,17 @@ ms.locfileid: "71292772"
  **Parámetros**  
  Si ha escrito una consulta con parámetros mediante ? como marcador de posición de parámetro en el texto de la consulta, utilice el cuadro de diálogo **Establecer parámetros de consulta** para asignar los parámetros de entrada de las consultas a las variables del paquete.  
   
- **Build query**  
+ **Generar consulta**  
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
- **Examinar**  
+ **Browse**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
  **Analizar consulta**  
  Comprueba la sintaxis del texto de la consulta.  
   
 #### <a name="data-access-mode--sql-command-from-variable"></a>Modo de acceso a datos = Comando SQL de variable  
- **Nombre de variable**  
+ **Nombre de la variable**  
  Seleccione la variable que contiene el texto de la consulta SQL.  
   
 ## <a name="excel-source-editor-columns-page"></a>Editor de origen de Excel (página Columnas)

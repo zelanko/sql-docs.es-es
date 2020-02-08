@@ -20,10 +20,10 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113478"
 ---
 # <a name="plan-guides"></a>Guías de plan
@@ -56,7 +56,7 @@ BEGIN
 END;  
 ```  
   
- Asuma que este procedimiento almacenado se ha compilado y optimizado para `@Country_region = N'AU'` (Australia). Sin embargo, dado hay relativamente pocos pedidos de ventas que se originen en Australia, el rendimiento se reduce cuando la consulta ejecuta usando valores para los parámetros que se corresponden con países con más pedidos de ventas. Dado que el mayor número de pedidos de ventas se origina en Estados Unidos, el rendimiento de un plan de consulta generado para `@Country_region = N'US'` será probablemente mejor para todos los valores posibles del parámetro `@Country_region` .  
+ Asuma que este procedimiento almacenado se ha compilado y optimizado para `@Country_region = N'AU'` (Australia). Sin embargo, dado hay relativamente pocos pedidos de ventas que se originen en Australia, el rendimiento se reduce cuando la consulta ejecuta usando valores para los parámetros que se corresponden con países con más pedidos de ventas. Dado que el mayor número de pedidos de ventas se origina en Estados Unidos, el rendimiento de un plan de consulta generado para `@Country_region = N'US'` será probablemente mejor para todos los valores posibles del parámetro `@Country_region`.  
   
  Puede solucionar este problema modificando el procedimiento almacenado y agregando la sugerencia de consulta `OPTIMIZE FOR` a la consulta. No obstante, puesto que el procedimiento almacenado se encuentra en una aplicación implementada, no puede modificar directamente el código de la aplicación. En su lugar, puede crear la guía de plan siguiente en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
@@ -161,7 +161,7 @@ where SalesOrderID =  @so_id',
 |Tarea|Tema|  
 |----------|-----------|  
 |Describe cómo crear una guía de plan.|[Crear una nueva guía de plan](../../relational-databases/performance/create-a-new-plan-guide.md)|  
-|Describe cómo crear una guía de plan para consultas con parámetros.|[Crear una guía de plan para consultas parametrizadas](../../relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md)|  
+|Describe cómo crear una guía de plan para consultas con parámetros.|[Crear una guía de plan para consultas con parámetros](../../relational-databases/performance/create-a-plan-guide-for-parameterized-queries.md)|  
 |Describe cómo controlar el comportamiento de parametrización de consultas mediante guías de plan.|[Especificar el comportamiento de parametrización de consultas por medio de guías de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)|  
 |Describe cómo incluir un plan de consulta fijo en una guía de plan.|[Aplicar un plan de consulta fijo a una guía de plan](../../relational-databases/performance/apply-a-fixed-query-plan-to-a-plan-guide.md)|  
 |Describe cómo especificar sugerencias de consulta en una guía de plan.|[Asociar sugerencias de consulta a una guía de plan](../../relational-databases/performance/attach-query-hints-to-a-plan-guide.md)|  

@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a73c0554c878aea4fa89ffb7170547d55271f15
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982214"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT (permisos de base de datos de Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73982214"
 
 Concede permisos en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -100,7 +100,7 @@ Especifica un usuario de base de datos asignado a una clave asimétrica.
 
 *Database_user_with_no_login* Especifica un usuario de base de datos sin entidad de seguridad de servidor correspondiente.
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 > [!IMPORTANT]
 > En algunos casos, una combinación de los permisos ALTER y REFERENCE podría permitir al receptor ver datos o ejecutar funciones no autorizadas. Por ejemplo: Un usuario con el permiso ALTER en una tabla y el permiso REFERENCE en una función puede crear una columna calculada sobre una función y hacer que se ejecute. En este caso, el usuario también debe disponer del permiso SELECT en la columna calculada.

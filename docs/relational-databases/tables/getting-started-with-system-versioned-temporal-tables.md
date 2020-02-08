@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 725dbc3306f9ad9616b5cbeca2d96249dca1c4a8
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165786"
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>Introducción a las tablas temporales con versión del sistema
@@ -26,7 +26,7 @@ Según el escenario, puede crear nuevas tablas temporales con versión del siste
 
 Además de DML y consultas convencionales, las tablas temporales también proporcionan formas sencillas y prácticas de obtener detalles a través de la sintaxis de Transact-SQL extendida. Todas las tablas con versión del sistema tienen una tabla de historial asignada pero es completamente transparente para los usuarios a menos que desean optimizar el rendimiento de la carga de trabajo o el espacio de almacenamiento creando índices adicionales o eligiendo distintas opciones de almacenamiento.
 
-El siguiente diagrama muestra el flujo de trabajo típico con tablas temporales con versión del sistema: ![Introducción a las tablas temporales](../../relational-databases/tables/media/getting-started-with-temporal.png "|::ref1::|")
+El siguiente diagrama muestra el flujo de trabajo típico con tablas temporales con versión del sistema: ![Introducción a las tablas temporales](../../relational-databases/tables/media/getting-started-with-temporal.png "Introducción a las tablas temporales")
 
 Este tema se divide en los siguientes 5 temas secundarios:
 

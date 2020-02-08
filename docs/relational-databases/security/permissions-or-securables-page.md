@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 949e3c3cfc14082ef2093dfdd11baa01218ccb2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68076622"
 ---
 # <a name="permissions-or-securables-page"></a>Página Permisos o Elementos protegibles
@@ -57,7 +57,7 @@ ms.locfileid: "68076622"
  **WITH GRANT**  
  Refleja el estado de la opción WITH GRANT para el permiso indicado. Este cuadro es de solo lectura. Para aplicar este permiso, use la instrucción [GRANT](../../t-sql/statements/grant-transact-sql.md) .  
   
- **Denegar**  
+ **Deny**  
  Active esta casilla para denegar el permiso al inicio de sesión. Desactívela para revocar el permiso.  
   
  **Permisos de columna**  
@@ -74,6 +74,6 @@ ms.locfileid: "68076622"
   
 ## <a name="see-also"></a>Consulte también  
  [Roles de nivel de base de datos](../../relational-databases/security/authentication-access/database-level-roles.md)   
- [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centro de seguridad para el Motor de base de datos de SQL Server y Azure SQL Database](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

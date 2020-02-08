@@ -12,10 +12,10 @@ ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a24b1a2f008c23adc5445ec5ed36c51ade181486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581335"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>archivo de configuración RSReportDesigner
@@ -50,7 +50,7 @@ ms.locfileid: "65581335"
     <Designer> . . . </Designer>  
 ```  
   
-## <a name="configuration-settings"></a>Parámetros de configuración  
+## <a name="configuration-settings"></a>Valores de configuración  
   
 |Configuración|Descripción|  
 |-------------|-----------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "65581335"
 |**InstanceName**|Identificador del servidor de vista previa. No modifique este valor.|  
 |**SessionCookies**|Especifica si el servidor de informes utiliza cookies del explorador para mantener información de la sesión. Los valores válidos son **true** y **false**. El valor predeterminado es **true**. Si este valor se establece en false, los datos de la sesión se almacenan en la base de datos **reportservertempdb** .|  
 |**SessionTimeoutMinutes**|Especifica el período durante el cual una cookie de sesión es válida. El valor predeterminado es 3 minutos.|  
-|**PolicyLevel**|Especifica el archivo de configuración de la directiva de seguridad. El valor válido es Rspreviewpolicy.config. Para más información, consulte [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|  
+|**PolicyLevel**|Especifica el archivo de configuración de la directiva de seguridad. El valor válido es Rspreviewpolicy.config. Para obtener más información, vea [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|  
 |**CacheDataForPreview**|Cuando se establece en **True**, el Diseñador de informes almacena los datos en un archivo caché en el equipo local. Los valores válidos son **True** (valor predeterminado) y **False**. Para más información, consulte [Previewing Reports](../../reporting-services/reports/previewing-reports.md).|  
 |**Render**|Enumera las extensiones de representación que están disponibles en el Diseñador de informes para obtener vistas previas. Las extensiones de representación que se utilicen para la vista previa deberían ser idénticas a las instaladas con el servidor de informes.<br /><br /> **Name** especifica la extensión de representación. Si va a invocar una extensión de representación mediante código, utilice este valor para llamar una extensión específica.<br /><br /> **Type** especifica el nombre completo de clase de la extensión, junto con el nombre de la biblioteca, separados por comas.<br /><br /> **Visible** especifica si el nombre aparece en una interfaz de usuario. Este valor puede ser **True** (valor predeterminado) o **False**. Si es **True**, aparece en las interfaces de usuario.|  
 |**Data**|Enumera las extensiones de procesamiento de datos que están disponibles en el Diseñador de informes para conectarse a orígenes de datos que proporcionan información a los informes. Las extensiones de procesamiento de datos utilizadas en el Diseñador de informes pueden ser idénticas a las instaladas con el servidor de informes. Si agrega o quita extensiones personalizadas, vea [Deploying a Data Processing Extension](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> **Name** especifica la extensión de procesamiento de datos.<br /><br /> **Type** especifica el nombre completo de clase de la extensión, junto con el nombre de la biblioteca, separados por comas.|  

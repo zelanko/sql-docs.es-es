@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f32f4219e438a3f6dc390d11b50e6487c47ee49
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 71ab699e99a3d22b6b04299b8de1ccb18e5f0708
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531249"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971372"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Instalación de SQL Server Machine Learning Services (Python y R) en Linux
 
@@ -35,7 +35,7 @@ La ubicación del paquete de las extensiones de Python y R está en los reposito
 
 Machine Learning Services también se admite en contenedores de Linux. No proporcionamos contenedores pregenerados con Machine Learning Services, pero puede crear uno a partir de los contenedores de SQL Server mediante [una plantilla de ejemplo disponible en GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-Machine Learning Services está instalado de forma predeterminada en los clústeres de macrodatos de SQL Server y no necesita seguir los pasos de este caso. Para obtener más información, vea [Uso de Machine Learning Services (Python y R) en clústeres de macrodatos](../big-data-cluster/machine-learning-services.md).
+Machine Learning Services está instalado de forma predeterminada en los clústeres de macrodatos de SQL Server y no necesita seguir los pasos de este caso. Para más información, vea [Uso de Machine Learning Services (Python y R) en Clústeres de macrodatos](../big-data-cluster/machine-learning-services.md).
 
 ## <a name="uninstall-preview-release"></a>Desinstalación de una versión preliminar
 
@@ -51,12 +51,12 @@ ls /opt/microsoft/mssql/bin
 
 ### <a name="2-uninstall-ctprc-packages"></a>2. Desinstalación de paquetes de CTP/RC
 
-Realice la desinstalación en el nivel de paquete más bajo. Los paquetes ascendentes que dependan de un paquete de nivel inferior se desinstalarán automáticamente.
+Realice la desinstalación en el nivel de paquete más bajo. Los paquetes superiores que dependen de un paquete de nivel inferior se desinstalan automáticamente.
 
-  + Para la integración de R, quite **microsoft-r-open** *.
+  + Para la integración de R, quite **microsoft-r-open***.
   + Para la integración de Python, quite **mssql-mlservices-python**.
 
-Los comandos para quitar paquetes aparecen recogidos en la siguiente tabla.
+Los comandos para quitar paquetes aparecen en la tabla siguiente.
 
 | Plataforma  | Comandos de eliminación de paquetes | 
 |-----------|----------------------------|
@@ -426,7 +426,7 @@ Puede descargar paquetes desde [https://packages.microsoft.com/](https://package
 
 |||
 |--|----|
-| Paquetes mssql/mlservices | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| Paquetes mssql/mlservices | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | Paquetes microsoft-r-open | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 
@@ -434,14 +434,14 @@ Puede descargar paquetes desde [https://packages.microsoft.com/](https://package
 
 |||
 |--|----|
-| Paquetes mssql/mlservices | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| Paquetes mssql/mlservices | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | Paquetes microsoft-r-open | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 #### <a name="sles12-paths"></a>Rutas de acceso de SLES/12
 
 |||
 |--|----|
-| Paquetes mssql/mlservices | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| Paquetes mssql/mlservices | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | Paquetes microsoft-r-open | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
 
 #### <a name="package-list"></a>Lista de paquetes

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69634550"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Actualización de los componentes de aprendizaje automático (R y Python) en instancias de SQL Server
@@ -20,7 +20,7 @@ ms.locfileid: "69634550"
 
 La integración de R y Python en SQL Server incluye paquetes de código abierto y de propiedad de Microsoft. En el servicio de SQL Server estándar, los paquetes se actualizan según el ciclo de versiones de SQL Server, con correcciones de errores en los paquetes existentes en la versión actual, pero sin actualizaciones de versiones principales. 
 
-Pero muchos científicos de datos están acostumbrados a trabajar con paquetes más recientes a medida que están disponibles. En el caso de SQL Server Machine Learning Services (en base de datos) y SQL Server R Services (en bases de datos), puede obtener [versiones más recientes de R y Python](#version-map) *enlazándolos* con **Microsoft Machine Learning Server**. 
+Pero muchos científicos de datos están acostumbrados a trabajar con paquetes más recientes a medida que están disponibles. En el caso de SQL Server Machine Learning Services (en base de datos) y SQL Server R Services (en bases de datos), puede obtener [versiones más recientes de R y Python](#version-map)*enlazándolos* con **Microsoft Machine Learning Server**. 
 
 ## <a name="what-is-binding"></a>¿Qué es un enlace?
 
@@ -62,8 +62,8 @@ Microsoft R Open (MRO) en R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1 
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n/a | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [modelos previamente entrenados](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n/a | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n/a | 1,0 |  1,0 |  1,0 |  1,0 |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n/a | 1,0 |  1,0 |  1,0 |  1,0 |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n/a | 1.0 |  1.0 |  1.0 |  1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n/a | 1.0 |  1.0 |  1.0 |  1.0 |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -74,8 +74,8 @@ Componente |Versión inicial | MLS 9.3 | | | |
 Microsoft R Open (MRO) en R | R 3.3.3 | R 3.4.3 | | | |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | | | |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1,0 |  1,0 | | | |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1,0 |  1,0 | | | |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | | | |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | | | |
 Anaconda 4.2 en Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| | | |
 [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
@@ -239,7 +239,7 @@ Puede restaurar una instancia enlazada a una instalación inicial de los compone
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>Paso 1: Desenlazar
+### <a name="step-1-unbind"></a>Paso 1: Unbind
 
 Tiene dos opciones para revertir el enlace: volver a ejecutar el programa de instalación o usar la utilidad de línea de comandos SqlBindR.
 
@@ -250,7 +250,7 @@ Tiene dos opciones para revertir el enlace: volver a ejecutar el programa de ins
 2. El instalador identifica las instancias locales que son candidatas para el desenlace.
 3. Anule la selección de la casilla situada junto a la instancia que quiera revertir a la configuración original.
 4. Acepte el contrato de licencia. Debe indicar que acepta los términos de licencia, también en la instalación.
-5. Haga clic en **Finalizar**. El proceso tarda unos minutos.
+5. Haga clic en **Finalizar** El proceso tarda unos minutos.
 
 #### <a name="bkmk_cmdunbind"></a> Desenlace mediante la línea de comandos
 
@@ -296,7 +296,7 @@ Es posible que haya agregado otros paquetes de código abierto o de terceros a l
 
 El instalador de MLS y SqlBindR devuelven los siguientes mensajes y códigos de error.
 
-|Código de error  | de mensaje           | Detalles               |
+|Código de error  | Message           | Detalles               |
 |------------|-------------------|-----------------------|
 |Error de enlace 0 | Correcto | Enlace pasado sin errores. |
 |Error de enlace 1 | Argumentos no válidos | Error de sintaxis. |
@@ -340,7 +340,7 @@ Si encuentra carpetas con un nombre como este, puede quitarlas una vez concluida
 > [!NOTE]
 > Espere a que haya concluido la instalación. Quitar las bibliotecas de R asociadas a una versión y agregar las nuevas bibliotecas de R puede tardar mucho tiempo. Una vez finalizada la operación, se quitarán las carpetas temporales.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 + [Instalación de Machine Learning Server para Windows (con conexión a Internet)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 + [Instalación de Machine Learning Server para Windows (sin conexión)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)

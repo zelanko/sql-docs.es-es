@@ -41,10 +41,10 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982792"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -74,7 +74,7 @@ Crea una función definida por el usuario en [!INCLUDE[ssNoVersion](../../includ
 > [!NOTE]  
 > Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vea [CREATE FUNCTION (SQL Data Warehouse)](../../t-sql/statements/create-function-sql-data-warehouse.md).
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -333,7 +333,7 @@ Es un valor predeterminado para el parámetro. Si se define un valor *default*, 
   
  En las TVF insertadas, el valor devuelto de TABLE se define mediante una única instrucción SELECT. Las funciones insertadas no tienen variables devueltas asociadas.  
   
- <a name="mstvf"></a> En las MSTVF, \@*return_variable* es una variable de TABLE, que se usa para almacenar y acumular las filas que se deben devolver como valor de la función. \@ *return_variable* solamente se puede especificar para funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], no para funciones CLR.  
+ <a name="mstvf"></a> En las MSTVF, \@*return_variable* es una variable de TABLE, que se usa para almacenar y acumular las filas que se deben devolver como valor de la función. \@*return_variable* solamente se puede especificar para funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], no para funciones CLR.  
   
  *select_stmt*  
  Es la instrucción SELECT individual que define el valor devuelto de una función insertada con valores de tabla (TVF).  
@@ -531,7 +531,7 @@ Especifica si esta UDF escalar se debe insertar o no. Esta cláusula solo se apl
  ALLOW_PAGE_LOCKS = { **ON** | OFF }  
  Especifica si se permiten bloqueos de página. El valor predeterminado es ON.  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
 Si una función definida por el usuario no se crea con la cláusula `SCHEMABINDING`, los cambios que se realicen en los objetos subyacentes pueden afectar a la definición de la función y generar resultados inesperados al invocarla. Recomendamos implementar uno de los siguientes métodos para garantizar que la función no queda sin actualizar como consecuencia de los cambios realizados en sus objetos subyacentes:  
   
 -   Especifique la cláusula `WITH SCHEMABINDING` cuando vaya a crear la función. Así se asegura de que no se pueden modificar los objetos a los que se hace referencia en la definición de la función a menos que también se modifique la función.  
@@ -541,7 +541,7 @@ Si una función definida por el usuario no se crea con la cláusula `SCHEMABINDI
 > [!IMPORTANT]  
 > Para obtener más información y consideraciones de rendimiento de funciones insertadas con valores de tabla (TVF insertadas) y funciones con valores de tabla de varias instrucciones (MSTVF), vea [Crear funciones definidas por el usuario (motor de base de datos)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md). 
 
-## <a name="data-types"></a>Tipos de datos  
+## <a name="data-types"></a>Tipo de datos  
  Si se especifican parámetros en una función CLR, deben ser de tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tal como se definieron anteriormente para *scalar_parameter_data_type*. Para más información sobre la comparación de los tipos de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con los tipos de datos de integración de CLR o los tipos de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime, vea [Mapping CLR Parameter Data](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md) (Asignar datos de parámetros CLR).  
   
  Para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haga referencia al método correcto cuando se sobrecarga en una clase, el método indicado en \<method_specifier> debe tener las siguientes características: 

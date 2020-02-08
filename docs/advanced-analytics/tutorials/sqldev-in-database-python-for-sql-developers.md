@@ -1,5 +1,5 @@
 ---
-title: 'Python + T-SQL: Modelo de desarrollo'
+title: 'Python + T-SQL: Desarrollo del modelo'
 description: Conozca cómo insertar código de Python en procedimientos almacenados de SQL Server y en funciones de T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b67be59da71667167594ef82e67dfef6f8118fbb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3bafc3a524ec854dc9bf1669660827d5a6bc80f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725220"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901892"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>Tutorial: Análisis de datos de Python para desarrolladores de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,12 +30,12 @@ Todo el código de Python que se usa en este tutorial se ajusta en procedimiento
 
 ## <a name="overview"></a>Información general
 
-El proceso de compilar una solución de aprendizaje automático es una tarea compleja para la que se necesitan varias herramientas y la coordinación de expertos en la materia en distintas fases:
+El proceso de compilación de una solución de Machine Learning es una tarea compleja para la que se necesitan varias herramientas y la coordinación de expertos en la materia en distintas fases:
 
-+ obtener datos y limpiarlos
-+ explorar los datos y compilar características útiles para el modelado
-+ entrenar y ajustar el modelo
-+ implementar en producción
++ Obtención y limpieza de datos
++ Exploración de los datos y compilación de características útiles para el modelado
++ Entrenamiento y ajuste del modelo
++ Implementación en producción
 
 La mejor manera de desarrollar y probar el código actual es usar un entorno de desarrollo dedicado. Pero, después de haber probado completamente el script, puede implementarlo fácilmente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el entorno de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] que ya conoce. El mecanismo principal para poner operativo el código en SQL Server consiste en ajustar el código externo en procedimientos almacenados.
 
@@ -57,7 +57,7 @@ Después de guardar el modelo en la base de datos, llame al modelo de predicció
 
 + [Permisos](../security/user-permission.md)
 
-+ [Base de datos de demo Taxis de Nueva York](demo-data-nyctaxi-in-sql.md)
++ [Base de datos de demo NYC Taxi](demo-data-nyctaxi-in-sql.md)
 
 Todas las tareas se pueden realizar mediante procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 

@@ -1,11 +1,7 @@
 ---
-title: 'Procedimientos: Usar Comparación de esquemas para comparar distintas definiciones de base de datos | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Uso de Comparación de esquemas para comparar distintas definiciones de base de datos
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce83808ac5953902f8f655c619f87feeffa4e8c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: f31d543906e4bfedb16e412be703ebc8cd797a04
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097514"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226851"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procedimientos: Uso de Comparación de esquemas para comparar distintas definiciones de base de datos
+
 SQL Server Data Tools (SSDT) incluye una utilidad Comparación de esquemas que puede usar para comparar dos definiciones de base de datos.  El origen y el destino de la comparación pueden ser cualquier combinación de una base de datos conectada, un proyecto de base de datos de SQL Server, o un archivo de instantánea o .dacpac.  Los resultados de la comparación se muestran como una serie de acciones que hay que realizar con el destino para que sea igual que el origen.  Una vez completada la comparación puede actualizar el destino directamente (si es un proyecto o una base de datos) o generar un script de actualización que produzca el mismo efecto.  
   
 Las diferencias entre el origen y el destino aparecen en una cuadrícula para facilitar su examen.  Puede profundizar y examinar cada diferencia en la cuadrícula de resultados o mediante un script.  También puede excluir selectivamente diferencias específicas.  

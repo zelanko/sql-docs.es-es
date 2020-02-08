@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4c305cf11073c6903c75a9ce8b987cc041aa9fa7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981955"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
@@ -46,7 +46,7 @@ Ejecuta una cadena de comandos o una cadena de caracteres dentro de un lote de [
 > [!IMPORTANT]  
 >  Antes de llamar a EXECUTE con una cadena de caracteres, valide la cadena de caracteres. Nunca ejecute un comando construido desde la entrada de usuario que no se haya validado.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -208,7 +208,7 @@ Execute a character string
  Un módulo que se haya creado en otra base de datos se puede ejecutar si el usuario que lo ejecuta es el propietario del módulo o dispone de los permisos adecuados para ejecutar el módulo en esa base de datos. Un módulo puede ejecutarse en otro servidor que esté ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si el usuario que ejecuta el módulo tiene los permisos adecuados para utilizar ese servidor (acceso remoto) y para ejecutar el módulo en dicha base de datos. Si se especifica un nombre de servidor, pero no se especifica nombre de base de datos, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] busca el módulo en la base de datos predeterminada del usuario.  
   
  ;*number*  
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Es un entero opcional que se utiliza para agrupar procedimientos que tengan el mismo nombre. Este parámetro no se utiliza para los procedimientos almacenados extendidos.  
   
@@ -266,12 +266,12 @@ Si pasa una sola palabra que no comienzan por `@` y que no está incluida entre 
  AS \<context_specification>  
  Especifica el contexto en el que se ejecuta la instrucción.  
   
- Login  
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+ LOGIN  
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Especifica que el contexto que se va a suplantar es un inicio de sesión. El ámbito de la suplantación es el servidor.  
   
- User  
+ USER  
  Especifica que el contexto de ejecución que se va a suplantar es un usuario de la base de datos actual. El ámbito de la suplantación se restringe a la base de datos actual. Un cambio de contexto a un usuario de base de datos no hereda los permisos de nivel de servidor de ese usuario.  
   
 > [!IMPORTANT]  
@@ -291,7 +291,7 @@ Si pasa una sola palabra que no comienzan por `@` y que no está incluida entre 
  Indica los parámetros para los que se suministran valores en los comandos de paso a través \<arg-list> que se usan en una instrucción EXEC('…', \<arg-list>) AT \<linkedsrv>.  
   
  AT *linked_server_name*  
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Especifica que *command_string* se ejecuta en *linked_server_name* y los resultados, si hay alguno, se devuelven al cliente. *linked_server_name* debe hacer referencia a una definición de servidor vinculado existente en el servidor local. Los servidores vinculados se definen por medio de [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
@@ -327,7 +327,7 @@ Si pasa una sola palabra que no comienzan por `@` y que no está incluida entre 
   
  El conjunto de resultados real devuelto durante la ejecución puede ser diferente del definido mediante la cláusula WITH RESULT SETS de una de las formas siguientes: número de conjuntos de resultados, número de columnas, nombre de columna, nulabilidad y tipo de datos. Si el número de conjuntos de resultados es diferente, se produce un error y se anula el lote.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Los parámetros se pueden proporcionar a través de *value* o usando @*parameter_name*=*value*. Un parámetro no forma parte de una transacción; por tanto, si se cambia un parámetro en una transacción que se revierte posteriormente, el valor del parámetro no vuelve a su valor anterior. El valor devuelto al procedimiento llamante es siempre el valor del parámetro en el momento en que finaliza el módulo llamado.  
   
  El anidamiento tiene lugar cuando un módulo llama a otro o ejecuta código administrado que hace referencia a un módulo CLR, un tipo definido por el usuario o un agregado. El nivel de anidamiento se aumenta cuando el código administrado o el módulo llamado comienzan la ejecución y disminuye cuando el código administrado o el módulo llamado terminan. Si se supera el máximo de 32 niveles de anidamiento, habrá un error de la cadena completa de llamada. El nivel actual de anidamiento se almacena en la función del sistema @@NESTLEVEL.  
@@ -370,7 +370,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
   
  Aunque CompanyDomain\SqlUser1 tiene acceso a la base de datos a través de la pertenencia al grupo SQLUsers, se producirá un error en la instrucción `EXECUTE @string_variable AS USER = 'CompanyDomain\SqlUser1'` porque `CompanyDomain\SqlUser1` no existe como una entidad de seguridad en la base de datos.  
   
-### <a name="best-practices"></a>Procedimientos recomendados  
+### <a name="best-practices"></a>Prácticas recomendadas  
  Especifique un inicio de sesión o usuario que tenga al menos los privilegios requeridos para realizar las operaciones definidas en la instrucción o el módulo. Por ejemplo, no especifique un nombre de inicio de sesión que tiene permisos de nivel de servidor, si solo se necesitan permisos de nivel de base de datos; o no especifique una cuenta de propietario de base de datos a menos que se requieran esos permisos.  
   
 ## <a name="permissions"></a>Permisos  
@@ -455,7 +455,7 @@ GO
 ### <a name="d-using-execute-with-a-remote-stored-procedure"></a>D. Usar EXECUTE con un procedimiento almacenado remoto  
  En el ejemplo siguiente se ejecuta el procedimiento almacenado `uspGetEmployeeManagers` en el servidor remoto `SQLSERVER1` y se almacena el estado de retorno, que indica éxito o fracaso, en `@retstat`.  
   
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
 ```  
 DECLARE @retstat int;  
@@ -514,7 +514,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
 ### <a name="g-using-execute-with-at-linked_server_name"></a>G. Usar EXECUTE con AT linked_server_name  
  En el siguiente ejemplo se pasa una cadena de comandos a un servidor remoto. Crea un servidor vinculado `SeattleSales` que apunta a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecuta una instrucción DDL (`CREATE TABLE`) contra ese servidor vinculado.  
   
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
 ```  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
@@ -546,7 +546,7 @@ GO
 ### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>J. Usar EXECUTE para consultar una base de datos de Oracle en un servidor vinculado  
  En el siguiente ejemplo se ejecutan varias instrucciones de `SELECT` en el servidor Oracle remoto. El ejemplo empieza agregando el servidor Oracle como un servidor vinculado y creando el inicio de sesión del servidor vinculado.  
   
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
 ```  
 -- Setup the linked server.  
@@ -589,7 +589,7 @@ GO
 ### <a name="l-using-a-parameter-with-execute-and-at-linked_server_name"></a>L. Usar un parámetro con EXECUTE y AT linked_server_name  
  En el ejemplo siguiente se pasa una cadena de comando a un servidor remoto mediante un marcador de posición (signo de interrogación, `?`) para un parámetro. El ejemplo crea un servidor vinculado `SeattleSales` que apunta a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecuta una instrucción `SELECT` en ese servidor vinculado. La instrucción `SELECT` utiliza el signo de interrogación como marcador de posición para el parámetro `ProductID` (`952`), que se suministra a continuación de la instrucción.  
   
-**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
 ```  
 -- Setup the linked server.  
@@ -622,7 +622,7 @@ WITH RESULT SETS
   
 ```  
   
-### <a name="n-using-execute-to-redefine-a-two-result-sets"></a>N. Usar EXECUTE para volver a definir dos conjuntos de resultados  
+### <a name="n-using-execute-to-redefine-a-two-result-sets"></a>Hora Usar EXECUTE para volver a definir dos conjuntos de resultados  
  Al ejecutar una instrucción que devuelve más de un conjunto de resultados, defina cada conjunto de resultados esperado. En el siguiente ejemplo de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] se crea un procedimiento que devuelve dos conjuntos de resultados. Después, se ejecuta el procedimiento por medio de la cláusula **WITH RESULT SETS** y se especifican dos definiciones del conjunto de resultados.  
   
 **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]

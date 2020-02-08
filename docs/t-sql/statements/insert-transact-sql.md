@@ -33,10 +33,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982223"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "73982223"
 
 Agrega una o varias filas a una tabla o una vista en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener ejemplos, vea [Ejemplos](#InsertExamples).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -295,10 +295,10 @@ Cláusula OUTPUT
 > [!NOTE]
 >  Si no se proporciona una lista de columnas, se produce un error de sintaxis.  
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 Para obtener información específica sobre cómo insertar datos en tablas de SQL Graph, vea [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md). 
 
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  Use la función @@ROWCOUNT para devolver el número de filas insertadas a la aplicación cliente. Para más información, vea [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ### <a name="best-practices-for-bulk-importing-data"></a>Prácticas recomendadas para la importación masiva de datos  
@@ -335,7 +335,7 @@ Las filas que se insertan en un montón como el resultado de una acción de inse
   
 Estas optimizaciones son similares a las que están disponibles con el comando BULK INSERT. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
-## <a name="data-types"></a>Tipos de datos  
+## <a name="data-types"></a>Tipo de datos  
  Al insertar filas, considere el comportamiento de los tipos de datos siguientes:  
   
 -   Si se va a cargar un valor en columnas con un tipo de datos **char**, **varchar** o **varbinary**, el relleno o el truncamiento de los espacios en blanco finales (espacios para **char** y **varchar**, ceros para **varbinary**) se determinan a partir del valor de la opción SET ANSI_PADDING definida para la columna al crear la tabla. Para obtener más información, vea [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
@@ -413,7 +413,7 @@ En Almacenamiento de datos paralelos, la cláusula ORDER BY no es válida en VIE
   
 ##  <a name="InsertExamples"></a> Ejemplos  
   
-|Categoría|Elementos de sintaxis ofrecidos|  
+|Category|Elementos de sintaxis ofrecidos|  
 |--------------|------------------------------|  
 |[Sintaxis básica](#BasicSyntax)|INSERT • constructor con valores de tabla|  
 |[Tratar los valores de columna](#ColumnValues)|IDENTITY • NEWID • valores predeterminados • tipos definidos por el usuario|  
@@ -716,7 +716,7 @@ GO
  Los ejemplos de esta sección demuestran cómo insertar filas en una tabla de destino remota usando un [servidor vinculado](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [función de conjunto de filas](../../t-sql/functions/rowset-functions-transact-sql.md) para hacer referencia a la tabla remota.  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. Insertar datos en una tabla remota mediante un servidor vinculado  
- El ejemplo siguiente inserta filas en una tabla remota. En el ejemplo primero se crea un vínculo al origen de datos remoto mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). El nombre del servidor vinculado, `MyLinkServer`, se especifica después como parte del nombre de objeto de cuatro partes con el formato *server.catalog.schema.object*.  
+ El ejemplo siguiente inserta filas en una tabla remota. En el ejemplo primero se crea un vínculo al origen de datos remoto mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). El nombre del servidor vinculado, `MyLinkServer`, se especifica después como parte del nombre de objeto de cuatro partes con el formato*server.catalog.schema.object*.  
   
 **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
@@ -744,7 +744,7 @@ VALUES (N'Public Relations', N'Executive General and Administration');
 GO  
 ```  
   
-#### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>N. Insertar datos en una tabla remota con una función OPENQUERY  
+#### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>Hora Insertar datos en una tabla remota con una función OPENQUERY  
  En el siguiente ejemplo se inserta una fila en una tabla remota especificando la función de conjunto de filas [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). En este ejemplo se usa el nombre del servidor vinculado creado en el ejemplo anterior.  
   
 **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
@@ -970,7 +970,7 @@ GO
 SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;  
 ```  
 
-#### <a name="w-inserting-data-using-the-select-option"></a>W. Insertar datos con la opción SELECT  
+#### <a name="w-inserting-data-using-the-select-option"></a>Hora Insertar datos con la opción SELECT  
  En el siguiente ejemplo se muestra cómo insertar varias filas de datos usando una instrucción INSERT con una opción SELECT. En la primera instrucción `INSERT` se usa directamente una instrucción `SELECT` para recuperar datos de la tabla de origen y, luego, almacenar el conjunto de resultados en la tabla `EmployeeTitles`.  
   
 ```sql

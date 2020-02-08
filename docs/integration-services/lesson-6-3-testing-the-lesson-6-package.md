@@ -11,10 +11,10 @@ ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a0c50372c199d80dc0e6d3d7e3326918011f8a28
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283064"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>Lección 6-3: Probar el paquete de la lección 6
@@ -35,7 +35,7 @@ Antes de probar el paquete, compruebe que los flujos de datos y de control del p
   
 **Flujo de datos**  
   
-![Flujo de datos](../integration-services/media/task5lesson5data.gif "Flujo de datos")  
+![Flujo de datos](../integration-services/media/task5lesson5data.gif "Data Flow")  
   
 ## <a name="test-the-lesson-6-package"></a>Probar el paquete de la lección 6  
   

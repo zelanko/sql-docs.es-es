@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959533"
 ---
 # <a name="integrated-terminal"></a>Terminal integrado
@@ -93,7 +93,7 @@ El comando **Ver: Alternar terminal integrado** está enlazado con **Ctrl+`** pa
 
 A continuación se muestran los métodos abreviados de teclado para navegar rápidamente por el terminal integrado:
 
-|Key|Comando|  
+|Clave|Get-Help|  
 |---|---|  
 |**Ctrl+\`**|Mostrar el terminal integrado|  
 |**Ctrl+Mayús+\`**|Crear un terminal|  
@@ -107,7 +107,7 @@ A continuación se muestran los métodos abreviados de teclado para navegar ráp
 
 Hay disponibles otros comandos del terminal y se pueden enlazar a sus métodos abreviados de teclado preferidos.
 
-Estas sobrecargas son:
+Son las siguientes:
 
 * `workbench.action.terminal.focus`: centre el terminal. Esto es parecido a la alternación, pero centra el terminal en lugar de ocultarlo, si está visible.
 * `workbench.action.terminal.focusNext`: centra la siguiente instancia del terminal.

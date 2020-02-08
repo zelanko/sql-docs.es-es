@@ -13,10 +13,10 @@ ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305074"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ejecutar paquetes en la escalabilidad horizontal de Integration Services (SSIS)
@@ -28,7 +28,7 @@ Tras implementar los paquetes en el servidor de Integration Services, puede ejec
 
 -   [Cuadro de diálogo Ejecutar paquete en escalabilidad horizontal](#scale_out_dialog)
 
--   [Procedimientos almacenados](#stored_proc)
+-   [procedimientos almacenados](#stored_proc)
 
 -   [trabajos del Agente SQL Server](#sql_agent)
 
@@ -65,7 +65,7 @@ Tras implementar los paquetes en el servidor de Integration Services, puede ejec
 
 1.  Cree las ejecuciones.
 
-    Llame a `[catalog].[create_execution]` para cada paquete. Establezca el parámetro  **\@runinscaleout** en `True`. Si no se permite a todos los equipos de trabajo de Escalabilidad horizontal ejecutar el paquete, establezca el parámetro **\@useanyworker** en `False`. Para obtener más información sobre este procedimiento almacenado y el parámetro **\@useanyworker**, consulte [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
+    Llame a `[catalog].[create_execution]` para cada paquete. Establezca el parámetro **\@runinscaleout** en `True`. Si no se permite a todos los equipos de trabajo de Escalabilidad horizontal ejecutar el paquete, establezca el parámetro **\@useanyworker** en `False`. Para obtener más información sobre este procedimiento almacenado y el parámetro **\@useanyworker**, consulte [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
 
 2. Establezca los parámetros de ejecución.
 

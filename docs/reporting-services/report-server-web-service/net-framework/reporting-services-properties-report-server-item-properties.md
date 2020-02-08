@@ -14,10 +14,10 @@ ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 645382a105edd65248d82c0f325d88c37857d0e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63128823"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propiedades de Reporting Services: propiedades de los elementos del servidor de informes
@@ -34,11 +34,11 @@ ms.locfileid: "63128823"
 |**CreationDate**|Fecha y hora cuando el elemento se agregó a la base de datos del servidor de informes.|  
 |**Descripción**|Descripción del elemento.|  
 |**Oculto**|Valor que indica si el elemento está visible y disponible para los usuarios.|  
-|**ID**|Identificador de un elemento de la base de datos del servidor de informes.|  
+|**Id**|Identificador de un elemento de la base de datos del servidor de informes.|  
 |**ModifiedBy**|Nombre del usuario que modificó el elemento de la base de datos del servidor de informes en último lugar.|  
 |**ModifiedDate**|Fecha y hora cuando el usuario modificó el elemento por última vez.|  
 |**Nombre**|Nombre de un elemento de la base de datos del servidor de informes.|  
-|**Ruta de acceso**|Nombre de la ruta de acceso completa del elemento. La ruta de acceso de cualquier elemento de la base de datos del servidor de informes tiene una longitud máxima de 260 caracteres.|  
+|**Path**|Nombre de la ruta de acceso completa del elemento. La ruta de acceso de cualquier elemento de la base de datos del servidor de informes tiene una longitud máxima de 260 caracteres.|  
 |**Tamaño**|El tamaño, en bytes, de un elemento en la base de datos del servidor de informes.|  
 |**Tipo**|Tipo de un elemento de la base de datos del servidor de informes.|  
 |**VirtualPath**|Ruta de acceso virtual de un elemento de la base de datos del servidor de informes. El valor de la propiedad <xref:ReportService2010.CatalogItem.VirtualPath%2A> es la ruta de acceso en la que un usuario espera ver el elemento. Por ejemplo, un informe denominado informe1, que se encuentra en la carpeta personal Mis informes, tiene la ruta de acceso virtual /Mis informes. La ruta de acceso real del elemento es /Usuarios/nombredeusuario/Mis informes.|  

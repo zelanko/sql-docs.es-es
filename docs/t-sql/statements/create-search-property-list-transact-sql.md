@@ -24,10 +24,10 @@ ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e838729d064a6101d4efb8fc57c7cd7b9910ad8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117281"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
@@ -62,9 +62,9 @@ CREATE SEARCH PROPERTY LIST new_list_name
  Especifica el nombre de un usuario o rol que posea la lista de propiedades. *owner_name* debe ser el nombre de un rol del que el usuario actual sea miembro, o bien el usuario actual debe tener el permiso IMPERSONATE sobre *owner_name*. Si no se especifica, la propiedad se otorga al usuario actual.  
   
 > [!NOTE]  
->  El propietario se puede cambiar usando la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
+>  El propietario se puede cambiar usando la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)][ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
   
 > [!NOTE]  
 >  Para más información sobre las listas de propiedades en general, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  

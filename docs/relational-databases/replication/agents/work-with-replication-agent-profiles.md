@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93ee480a595178627f65613b502c10e44dffc8e3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 7b0a47ff73186642e0b0b48aec06e5320fc44d15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907803"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288246"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Trabajar con perfiles del Agente de replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -234,7 +234,7 @@ ms.locfileid: "72907803"
   
 1.  Cree una conexión al distribuidor utilizando una instancia de la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.AgentProfile> .  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.AgentProfile>.  
   
 3.  Establezca las siguientes propiedades en el objeto:  
   
@@ -258,7 +258,7 @@ ms.locfileid: "72907803"
   
 1.  Cree una conexión al distribuidor utilizando una instancia de la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creado en el paso 1.  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> creado en el paso 1.  
   
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si este método devuelve **false**, compruebe que el distribuidor existe.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "72907803"
   
 1.  Cree una conexión al distribuidor utilizando una instancia de la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.AgentProfile> . Establezca el nombre del perfil para <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> y la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.AgentProfile>. Establezca el nombre del perfil para <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> y la <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 1 para <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si este método devuelve **false**, significa que el nombre especificado era incorrecto o el perfil no existe en el servidor.  
   
@@ -295,6 +295,6 @@ Los cambios en los parámetros del agente tendrán efecto la próxima vez que se
  [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)   
- [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+ [Agente de lectura de cola de replicación](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
   

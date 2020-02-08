@@ -6,17 +6,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/05/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660780"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971221"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Instalación de extensiones de lenguaje de SQL Server en Linux
 
@@ -30,7 +30,7 @@ La ubicación del paquete de las extensiones de Java está en los repositorios d
 
 Extensiones de lenguaje también se admite en contenedores de Linux. No se proporcionan contenedores preintegrados con Extensiones de lenguaje, pero puede crear uno a partir de los contenedores de SQL Server mediante [una plantilla de ejemplo disponible en GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-Las extensiones de lenguaje y [Machine Learning Services](../advanced-analytics/index.yml) se instalan de forma predeterminada en los clústeres de macrodatos de SQL Server. Si usa Clústeres de macrodatos, no es necesario que siga los pasos de este artículo. Para obtener más información, vea [Uso de Machine Learning Services (Python y R) en clústeres de macrodatos](../big-data-cluster/machine-learning-services.md).
+Las extensiones de lenguaje y [Machine Learning Services](../advanced-analytics/index.yml) se instalan de forma predeterminada en Clústeres de macrodatos de SQL Server. Si usa Clústeres de macrodatos, no es necesario que siga los pasos de este artículo. Para más información, vea [Uso de Machine Learning Services (Python y R) en Clústeres de macrodatos](../big-data-cluster/machine-learning-services.md).
 
 ## <a name="uninstall-preview-version"></a>Desinstalación de la versión preliminar
 
@@ -62,7 +62,7 @@ Los comandos para quitar paquetes aparecen en la tabla siguiente.
 
 Realice la instalación en el nivel de paquete más alto, siguiendo las instrucciones de este artículo correspondientes a su sistema operativo.
 
-Para cada conjunto específico de un sistema operativo de instrucciones de instalación, el  *nivel de paquete superior* es **Ejemplo 1: instalación completa** para el conjunto completo de paquetes o **Ejemplo 2: instalación mínima** para el número mínimo de paquetes necesario para una instalación viable.
+En cada conjunto de instrucciones de instalación específico del sistema operativo, el *nivel de paquete más alto* será o **Ejemplo 1: instalación completa** en el caso del conjunto completo de paquetes o **Ejemplo 2: instalación mínima** si se trata del número mínimo de paquetes necesarios para una instalación viable.
 
 1. Ejecute los comandos de instalación mediante los administradores de paquetes y la sintaxis de la distribución de Linux: 
 
@@ -80,7 +80,7 @@ Para cada conjunto específico de un sistema operativo de instrucciones de insta
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ Debe tener una herramienta para ejecutar comandos de T-SQL. Se necesita un editor de consultas para la configuración y la validación posteriores a la instalación. Se recomienda [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), una descarga gratuita que se ejecuta en Linux.
++ Debe tener una herramienta para ejecutar comandos de T-SQL. Se necesita un editor de consultas para la configuración y la validación posteriores a la instalación. Recomendamos [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), una descarga gratuita que se ejecuta en Linux.
 
 ## <a name="package-list"></a>Lista de paquetes
 
@@ -165,7 +165,7 @@ sudo zypper install mssql-server-extensibility-java
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-3. Habilite el acceso de red saliente. El acceso de red saliente está deshabilitado de forma predeterminada. Para habilitar las solicitudes salientes, establezca la propiedad booleana "outboundnetworkaccess" con la herramienta mssql-conf. Para obtener más información, vea [Configuración de SQL Server en Linux con mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
+3. Habilite el acceso de red saliente. El acceso de red saliente está deshabilitado de forma predeterminada. Para habilitar las solicitudes salientes, establezca la propiedad booleana "outboundnetworkaccess" con la herramienta mssql-conf. Para más información, vea [Configuración de SQL Server en Linux con mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 
    ```bash
    # Run as SUDO or root
@@ -232,9 +232,9 @@ Puede instalar y configurar el motor de base de datos y Extensiones de lenguaje 
   sudo /opt/mssql/bin/mssql-conf setup
   ```
 
-  Se le pide que acepte el contrato de licencia del motor de base de datos, elija una edición y establezca la contraseña de administrador. 
+  Se le pedirá que acepte el contrato de licencia del motor de base de datos, que elija una edición y que establezca la contraseña de administrador. 
 
-4. Reinicie el servicio si se le pide.
+4. Reinicie el servicio, si se le pide.
 
   ```bash
   sudo systemctl restart mssql-server.service
@@ -262,19 +262,19 @@ Puede descargar paquetes desde [https://packages.microsoft.com/](https://package
 
 |||
 |--|----|
-| Paquetes de mssql/extensibility-java | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| Paquetes de mssql/extensibility-java | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### <a name="ubuntu1604-paths"></a>Rutas de acceso de Ubuntu/16.04
 
 |||
 |--|----|
-| Paquetes de mssql/extensibility-java | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| Paquetes de mssql/extensibility-java | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>Rutas de acceso de SUSE/12
 
 |||
 |--|----|
-| Paquetes de mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| Paquetes de mssql/extensibility-java | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>Lista de paquetes
 
@@ -297,7 +297,7 @@ mssql-server-extensibility-java-15.0.1000
 
 Existe paridad entre Linux y Windows para la [regulación de recursos](../t-sql/statements/create-external-resource-pool-transact-sql.md) de los grupos de recursos externos, pero las estadísticas de [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) tienen actualmente unidades diferentes en Linux. 
  
-| Nombre de columna   | Descripción | Valor en Linux | 
+| Nombre de la columna   | Descripción | Valor en Linux | 
 |---------------|--------------|---------------|
 |peak_memory_kb | Cantidad máxima de memoria usada con el grupo de recursos | En Linux, esta estadística tiene como origen el subsistema CGroups memory, donde el valor es memory.max_usage_in_bytes. |
 |write_io_count | Total de operaciones de E/S de escritura emitidas desde el restablecimiento de las estadísticas de Resource Governor | En Linux, esta estadística tiene como origen el subsistema CGroups blkio, donde el valor de la fila de escritura es blkio.throttle.io_serviced. | 
@@ -308,6 +308,6 @@ Existe paridad entre Linux y Windows para la [regulación de recursos](../t-sql/
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Los desarrolladores de Java pueden empezar con algunos ejemplos sencillos y conocer los aspectos básicos del funcionamiento de Java con SQL Server. Para el siguiente paso, vea los vínculos siguientes:
+Los desarrolladores de Java pueden empezar con algunos ejemplos sencillos y conocer los aspectos básicos del funcionamiento de Java con SQL Server. Para conocer el siguiente paso, vea los vínculos siguientes:
 
 + [Tutorial: Expresiones regulares con Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)

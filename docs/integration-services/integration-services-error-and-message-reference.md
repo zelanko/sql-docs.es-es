@@ -15,10 +15,10 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7d55050b132a3367ecc495d0afedcad6f0d2351b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284425"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referencia de errores y mensajes de Integration Services
@@ -1417,7 +1417,7 @@ ms.locfileid: "71284425"
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|El número de filas %2!ld! no es válido para la propiedad "%1". Debe ser mayor que 0.|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|Se pidió al adaptador que escribiera una cadena de %1!I64d! bytes de longitud, pero todos los datos deben tener menos de 4294967295 bytes de longitud.|  
 |0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|No se asignó ninguna entrada a una salida. "%1" debe tener al menos una columna de entrada asignada a una columna de salida.|  
-|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|La conversión de "%1" con página de códigos %2!d! en "%3" con página de códigos %4!d! no se admite.|  
+|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|La conversión de "%1" con página de códigos %2!d! en "%3" con página de códigos %4!d! no está permitida.|  
 |0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|La asignación de columna de metadatos externos a %1 no es válida.  El Id. de columna de metadatos externos no puede ser cero.|  
 |0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|Se ha asignado %1 a una columna de metadatos externa que no existe.|  
 |0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|Error al escribir datos de objeto long de tipo DT_TEXT, DT_NTEXT o DT_IMAGE en el búfer de la tarea Flujo de datos para la columna "%1".|  

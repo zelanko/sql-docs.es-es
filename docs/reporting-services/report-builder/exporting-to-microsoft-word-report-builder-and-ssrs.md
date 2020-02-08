@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 328f3bc8106cd499326cfce79430fef7886cd9b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413563"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688206"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
 
@@ -55,7 +55,7 @@ ms.locfileid: "66413563"
   
 |Propiedades del elemento de informe|Descripción|  
 |-------------------------------|-----------------|  
-|Título del informe|Title|  
+|Título del informe|Título|  
 |Autor del informe|Autor|  
 |Descripción del informe|Comentarios|  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66413563"
   
 -   **Expresión compleja:**  la expresión es `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Expresión con ejecuciones de texto:** Texto, **Average Sales**, y expresión,  `=Avg(Fields!YTDPurchase.Value, "Sales)`, y texto, **Page Number**, y expresión `=Globals!PageNumber`  
+-   **Expresión con ejecuciones de texto:** Texto, **Promedio de ventas** y expresión, `=Avg(Fields!YTDPurchase.Value, "Sales)` y texto, **Número de página** y expresión `=Globals!PageNumber`  
   
  Para evitar este problema, use varias ejecuciones de texto en vez de una expresión compleja cuando use expresiones en encabezados y pies de página. Las dos siguientes expresiones son equivalentes. La primera es una expresión compleja y la segunda usa ejecuciones de texto. El representador de Word solo analiza correctamente la segunda expresión.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "66413563"
 > [!IMPORTANT]  
 >  La extensión de representación de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) está en desuso. Para más información, vea [Características obsoletas de SQL Server Reporting Services en SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- El representador de Word es compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 si se instala el Paquete de compatibilidad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel y PowerPoint. Para obtener más información, consulte [Paquete de compatibilidad de Microsoft Office para formatos de archivo de Word, Excel y PowerPoint](https://www.microsoft.com/download/details.aspx?id=12439).  
+ El representador de Word es compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 si se instala el Paquete de compatibilidad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel y PowerPoint. Para obtener más información, consulte [Paquete de compatibilidad de Microsoft Office para formatos de archivo de Word, Excel y PowerPoint](https://www.microsoft.com/download/details.aspx?id=1285).
   
  El nombre de la versión anterior de la extensión de representación de Word, solo compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, cambia a Word 2003. Solo la extensión de representación de Word está disponible de forma predeterminada. Debe actualizar los archivos de configuración de Reporting Services para que la extensión de representación de Word 2003 esté disponible. El tipo de contenido de los archivos generados por el representador de Word 2003 es **application/vnd.ms-word** y la extensión de nombre de archivo es .doc.  
   

@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165682"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Actualización de bases de datos mediante el Asistente para la optimización de consultas
@@ -89,7 +89,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
         -  Establezca el nivel de compatibilidad previsto de la base de datos de destino en el que debería estar la base de datos de usuario una vez completado el flujo de trabajo de QTA.
         Cuando termine, haga clic en **Siguiente**.
     
-       ![Nueva ventana de configuración de sesión de actualización de base de datos](../../relational-databases/performance/media/qta-new-session-setup.png "|::ref3::|")  
+       ![Nueva ventana de configuración de sesión de actualización de base de datos](../../relational-databases/performance/media/qta-new-session-setup.png "Nueva ventana de configuración de actualización de base de datos")  
   
     2.  En la ventana **Configuración**, dos columnas muestran el estado **Actual** del Almacén de consultas de la base de destino, así como la configuración **Recomendada**. 
         -  La configuración recomendada se selecciona de forma predeterminada, pero al hacer clic en el botón de radio en la columna actual, se acepta la configuración actual y también se permite ajustar con precisión la configuración actual del Almacén de consultas. 
@@ -153,7 +153,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
 
         La siguiente página confirma que el nivel de compatibilidad de la base de datos se ha actualizado correctamente.
 
-        ![QTA, paso 2 subpaso 2](../../relational-databases/performance/media/qta-step2-substep2.png "|::ref9::|")
+        ![QTA, paso 2 subpaso 2](../../relational-databases/performance/media/qta-step2-substep2.png "QTA, paso 2 subpaso 2")
 
     3.  **Recopilación de datos observados** solicita al usuario que vuelva a ejecutar el ciclo de carga de trabajo representativo para que el Almacén de consultas pueda recopilar una línea de base comparativa que se use para buscar oportunidades de optimización. Mientras se ejecuta la carga de trabajo, use el botón **Actualizar** para seguir actualizando la lista de consultas con regresión, si se ha detectado alguna. Cambie el valor **Queries to show** (Consultas que se van a mostrar) para limitar el número de consultas que aparecen. El orden de la lista se ve afectado por **Métrica** (Duración o Tiempo de CPU) y **Agregación** (Promedio es el valor predeterminado). Seleccione también cuántas **consultas se van a mostrar**. Una vez completada esa carga de trabajo, active **Done with workload run** (Ejecución de carga de trabajo lista) y haga clic en **Siguiente**.
 

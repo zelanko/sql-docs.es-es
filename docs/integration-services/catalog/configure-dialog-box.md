@@ -15,10 +15,10 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299006"
 ---
 # <a name="configure-dialog-box"></a>Cuadro de diálogo Configurar
@@ -63,7 +63,7 @@ ms.locfileid: "71299006"
  **Nombre**  
  Muestra el nombre de parámetro.  
   
- **Value**  
+ **Valor**  
  Muestra el valor del parámetro. Haga clic en los puntos suspensivos para cambiar el valor del cuadro de diálogo **Establecer valor de parámetro** .  
   
  La siguiente es una lista de las opciones de la pestaña de **Administradores de conexiones** . Use esta pestaña para cambiar los valores de las propiedades del administrador de conexiones. En el servidor SSIS se generan automáticamente parámetros para las propiedades.  
@@ -74,10 +74,10 @@ ms.locfileid: "71299006"
  **Nombre**  
  Muestra el nombre del administrador de conexiones.  
   
- **Nombre de la propiedad**  
+ **Nombre de propiedad**  
  Muestra el nombre de la propiedad del administrador de conexiones.  
   
- **Value**  
+ **Valor**  
  Muestra el valor asignado a la propiedad del administrador de conexiones. Haga clic en los puntos suspensivos para cambiar el valor del cuadro de diálogo **Establecer valor de parámetro** . Puede especificar un valor literal, asignar una variable de entorno que contiene el valor que desea usar o emplear el valor predeterminado del paquete.  
   
 ##  <a name="references"></a> Establecer las opciones de la página Referencias  
@@ -94,12 +94,12 @@ ms.locfileid: "71299006"
  **Abrir**  
  Haga clic para abrir el cuadro de diálogo de **Propiedades del entorno** .  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar una referencia a un entorno. En el cuadro de diálogo **Examinar entornos** , haga clic en un entorno y después en **Aceptar**.  
   
  Puede seleccionar un entorno contenido en cualquier carpeta del proyecto bajo el nodo de **SSISDB** .  
   
- **Quitar**  
+ **Remove**  
  Haga clic en un entorno que se muestra en el área de **Referencias** y, después, haga clic **Quitar**.  
   
   

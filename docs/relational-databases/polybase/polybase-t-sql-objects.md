@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: e1e07db85220c9312ab71bb5fb020b9a9d611a5f
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710525"
 ---
 # <a name="polybase-transact-sql-reference"></a>Referencia de Transact-SQL de PolyBase
@@ -195,7 +195,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
 
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Crear tablas externas para Azure Data Lake Store
-Se aplica a: Almacenamiento de datos SQL de Azure
+Se aplica a: Azure SQL Data Warehouse
 
 Para obtener más información, vea [Carga de datos de Azure Data Lake Store](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store).
 
@@ -554,4 +554,4 @@ Para obtener ejemplos de consultas, vea [Consultas de PolyBase](../../relational
   
 ## <a name="see-also"></a>Consulte también  
 [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
-[Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md)
+[PolyBase Guide](../../relational-databases/polybase/polybase-guide.md)

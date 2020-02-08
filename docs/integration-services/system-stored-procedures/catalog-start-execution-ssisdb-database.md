@@ -11,10 +11,10 @@ ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 341d48d35404cd8d18c3f1474693305b7fadb3cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296721"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution (base de datos de SSISDB)
@@ -39,7 +39,7 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  [@retry_count =] *retry_count*  
  Es el número de reintentos si se produce un error en la ejecución. Solo tendrá efecto si la ejecución está en modo de escalabilidad horizontal. Este parámetro es opcional. Si no se especifica, su valor se establece en 0. El parámetro *retry_count* es **int**.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una ejecución se usa para especificar los valores de parámetro que va a usar un paquete durante una instancia única de ejecución del paquete. Puede ocurrir que, después de crear una instancia de ejecución y antes de que se inicie, el proyecto correspondiente se implemente de nuevo. En este caso, la instancia de ejecución hará referencia a un proyecto obsoleto. Esta referencia no válida hace que el procedimiento almacenado genere un error.  
   
 > [!NOTE]  

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000457"
 ---
 # <a name="time-transact-sql"></a>hora (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68000457"
   
 ## <a name="time-description"></a>Descripción de time  
   
-|Propiedad|Valor|  
+|Propiedad|Value|  
 |--------------|-----------|  
 |Sintaxis|**time** [ (*escala de fracciones de segundo*) ]|  
 |Uso|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
@@ -56,7 +56,7 @@ ms.locfileid: "68000457"
 |Conservación y reconocimiento del ajuste de zona horaria|No|  
 |Reconocimiento del horario de verano|No|  
   
-|Escala especificada|Resultado (precisión, escala)|Longitud de la columna (bytes)|Fracciones<br /><br /> segundos<br /><br /> precisión|  
+|Escala especificada|Resultado (precisión, escala)|Longitud de la columna (bytes)|Fracciones<br /><br /> segundos<br /><br /> precision|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
 |**time**|(16,7) [(12,3) en Informatica]|5 (4 en Informatica)|7 (3 en Informatica)|  
 |**time(0)**|(8,0)|3|0-2|  
@@ -232,7 +232,7 @@ SELECT
         'datetimeoffset';  
 ```  
   
-|Tipo de datos|Salida|  
+|Tipo de datos|Output|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  

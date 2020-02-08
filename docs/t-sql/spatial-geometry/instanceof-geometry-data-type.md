@@ -18,10 +18,10 @@ ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7eee6c8aa847a199f7b1547f61bbcd523039644f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101245"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (tipo de datos geometry)
@@ -40,12 +40,12 @@ Este método comprueba si la instancia de **geometry** es la misma que la del ti
 *geometry_type*  
 Cadena **nvarchar(4000)** en la que se especifica uno de los 15 tipos expuestos en la jerarquía de tipos de **geometry**.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La entrada del método debe ser uno de los tipos siguientes: **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** y **MultiPoint**. Este método produce una excepción **ArgumentException** si se usa cualquier otra cadena como entrada.  
   
 ## <a name="examples"></a>Ejemplos  

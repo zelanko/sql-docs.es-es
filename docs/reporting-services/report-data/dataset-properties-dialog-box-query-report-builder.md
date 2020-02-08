@@ -13,10 +13,10 @@ ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e05ae59d963bd9b165d2f6f825955ee276683328
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500454"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Consulta (Generador de informes)
@@ -30,13 +30,13 @@ Seleccione **Consulta** en el cuadro de diálogo **Propiedades del conjunto de d
  **Usar un conjunto de datos compartido**  
  Seleccione esta opción para utilizar un conjunto de datos predefinido del servidor de informes.  
   
- **Examinar**  
+ **Browse**  
  Vaya a una carpeta en un servidor de informes o sitio de SharePoint, y seleccione un conjunto de datos compartido (.rsd).  
   
  **Utilizar un conjunto de datos incrustado en mi informe**  
  Seleccione esta opción para crear un conjunto de datos y usarlo únicamente este informe.  
   
- **Origen de datos**  
+ **Data Source** (Origen de datos)  
  Seleccione el origen de datos en el que se basará el conjunto de datos. Para crear un origen de datos nuevo, haga clic en **Nuevo**.  
   
  **Tipo de consulta**  
@@ -45,7 +45,7 @@ Seleccione **Consulta** en el cuadro de diálogo **Propiedades del conjunto de d
 > [!NOTE]  
 >  Todos los orígenes de datos no admiten todos los tipos de consulta. Por ejemplo, **Tabla** solo la admiten los tipos de orígenes de datos **OLE DB** y **ODBC**.  
   
- **Consulta**  
+ **Consultar**  
  Esta opción aparece cuando se elige la opción de tipo de comando **Texto** . Escriba una consulta o importe una consulta existente haciendo clic en **Importar**. Haga clic en el botón **Expresión** (*fx*) para editar la expresión.  
   
 > [!NOTE]  

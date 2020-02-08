@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 81bdd9f2077a3fb773e36399aedc9c2323169f2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929068"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
@@ -53,7 +53,7 @@ SET DATEFORMAT { format | @format_var }
  *format* |  **@** _format_var_  
  Es el orden de las partes de la fecha. Los parámetros válidos son **mdy**, **dmy**, **ymd**, **ydm**, **myd** y **dym**. Puede ser Unicode o juegos de caracteres de doble byte (DBCS) convertidos a Unicode. El valor predeterminado para inglés de EE. UU. es **mdy**. Para más información sobre el DATEFORMAT predeterminado de todos los lenguajes admitidos, vea [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  El valor de DATEFORMAT **ydm** no se admite en los tipos de datos **date**, **datetime2** y **datetimeoffset**.  
   
  El valor de DATEFORMAT puede interpretar las cadenas de caracteres de manera diferente para los tipos de datos de fecha, dependiendo de su formato de cadena. Por ejemplo, las interpretaciones de **datetime** y **smalldatetime** pueden no coincidir con **date**, **datetime2** o **datetimeoffset**. DATEFORMAT afecta a la interpretación de cadenas de caracteres cuando se convierten en valores de fecha para la base de datos. No afecta a la presentación de los valores de tipo de datos de fecha ni al formato en el que se almacenan en la base de datos.  

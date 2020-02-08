@@ -13,10 +13,10 @@ ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3664aa3565a1df42657f206e1f102f4e1f2a8db6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294638"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Preparar SQL Server para CDC
@@ -35,8 +35,8 @@ ms.locfileid: "71294638"
 ### <a name="server-name"></a>Nombre del servidor  
  Escriba el nombre del servidor donde se encuentra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="authentication"></a>Autenticación  
- Seleccione una de las opciones siguientes:  
+### <a name="authentication"></a>Authentication  
+ Seleccione uno de los siguientes:  
   
 -   **Autenticación de Windows**  
   

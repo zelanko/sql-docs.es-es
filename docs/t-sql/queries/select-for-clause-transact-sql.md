@@ -22,10 +22,10 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904353"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT: cláusula FOR (Transact-SQL)
@@ -216,7 +216,7 @@ _Suprimir los saltos de línea no deseados:_ es posible que quiera usar SQL Serv
  Especifica que las columnas se devuelven como subelementos. Sin embargo, se les asignan atributos XML. Esta opción solo se admite en los modos RAW, AUTO y PATH. Para obtener más información, vea [Usar el modo RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md).  
   
  XSINIL  
- Especifica que se va a crear un elemento con el atributo **xsi:nil** establecido en **True** para los valores de columna NULL. Esta opción solo se puede especificar con la directiva ELEMENTS. Para obtener más información, vea:
+ Especifica que se va a crear un elemento con el atributo **xsi:nil** establecido en **True** para los valores de columna NULL. Esta opción solo se puede especificar con la directiva ELEMENTS. Para más información, consulte:
 
 - [Generar elementos para valores NULL mediante el parámetro XSINIL](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md).
 - [FOR XML en la instrucción SELECT](../../relational-databases/xml/for-xml-sql-server.md)

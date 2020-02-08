@@ -10,12 +10,12 @@ ms.author: maghan
 ms.custom: seodec18
 ms.date: 12/26/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: e0094ffaaa1be646b470547277026385c9dae24e
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.openlocfilehash: c5c75b2fda96d970b243161636d791029e311330
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75727032"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516497"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Descarga e instalación de Azure Data Studio
 
@@ -57,13 +57,11 @@ Le recomendamos que use el *instalador de usuario*, ya que no se necesitan privi
 2. Busque el archivo descargado y extraiga su contenido.
 3. Ejecute `\azuredatastudio-windows\azuredatastudio.exe`:
 
-
 ## <a name="get-azure-data-studio-for-macos"></a>Descargar Azure Data Studio para macOS
 
 1. Descargue [[!INCLUDE[name-sos](../includes/name-sos-short.md)] para macOS](https://go.microsoft.com/fwlink/?linkid=2113528).
 2. Para extraer el contenido del archivo zip, haga doble clic en este.
 3. Para que [!INCLUDE[name-sos](../includes/name-sos-short.md)] esté disponible en *Launchpad*, arrastre *Azure Data Studio.app* hasta la carpeta *Aplicaciones*.
-
 
 ## <a name="get-azure-data-studio-for-linux"></a>Descargar Azure Data Studio para Linux
 
@@ -146,10 +144,12 @@ Si ha instalado [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] con un
 - Windows Server 2008 R2 (64 bits)
 
 ### <a name="macos"></a>macOS
+
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
+
 - Red Hat Enterprise Linux 7.4
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server v12 SP2
@@ -164,6 +164,7 @@ Si ha instalado [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] con un
 |             |           |            |
 
 ## <a name="check-for-updates"></a>Buscar actualizaciones
+
 Para buscar las actualizaciones más recientes, haga clic en el icono de engranaje de la parte inferior izquierda de la ventana y seleccione **Buscar actualizaciones**.
 
 ## <a name="supported-sql-offerings"></a>Ofertas de SQL admitidas
@@ -173,9 +174,8 @@ Para buscar las actualizaciones más recientes, haga clic en el icono de engrana
 ## <a name="upgrade-from-sql-operations-studio"></a>Actualizar desde SQL Operations Studio
 
 Si aún usa SQL Operations Studio, necesita actualizar Azure Data Studio. SQL Operations Studio era el nombre de la versión preliminar de Azure Data Studio. En septiembre de 2018, [cambiamos el nombre a Azure Data Studio](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/) y publicamos la versión de disponibilidad general. Como SQL Operations Studio ya no se actualiza ni se admite, pedimos a todos los usuarios de SQL Operations Studio que descarguen la versión más reciente de Azure Data Studio para obtener las características, actualizaciones de seguridad y secciones más recientes.
- 
-Al actualizar desde la versión preliminar anterior a la versión más reciente de Azure Data Studio, perderá las extensiones y la configuración actuales. Para migrar la configuración, siga las instrucciones en la siguiente sección, *Migrar la configuración del usuario*:
 
+Al actualizar desde la versión preliminar anterior a la versión más reciente de Azure Data Studio, perderá las extensiones y la configuración actuales. Para migrar la configuración, siga las instrucciones en la siguiente sección, *Migrar la configuración del usuario*:
 
 ## <a name="move-user-settings"></a>Migrar la configuración del usuario
 
@@ -203,6 +203,7 @@ Para migrar configuraciones personalizadas, métodos abreviados de teclado o fra
 ## <a name="next-steps"></a>Pasos siguientes
 
 Para empezar, vea una de las siguientes guías de inicio rápido:
+
 - [Conectar y consultar SQL Server](quickstart-sql-server.md)
 - [Conectar y consultar Azure SQL Database](quickstart-sql-database.md)
 - [Conectar y consultar almacenamiento de datos de Azure](quickstart-sql-dw.md)

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ddaca1490782c8fd3a88b941fbabe6af48531726
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727755"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Supervisar SQL Server Machine Learning Services mediante vistas de administración dinámica (DMV)
@@ -79,7 +79,7 @@ WHERE name = 'external scripts enabled';
 
 La consulta devuelve las columnas siguientes:
 
-| columna | Descripción |
+| Columna | Descripción |
 |--------|-------------|
 | IsMLServicesInstalled | Devuelve 1 si se ha instalado SQL Server Machine Learning Services para la instancia. De lo contrario, devuelve 0. |
 | ExternalScriptsEnabled | Devuelve 1 si los scripts externos están habilitados para la instancia. De lo contrario, devuelve 0. |
@@ -107,7 +107,7 @@ ON s.session_id = r.session_id;
 
 La consulta devuelve las columnas siguientes:
 
-| columna | Descripción |
+| Columna | Descripción |
 |--------|-------------|
 | session_id | Identifica la sesión asociada a cada conexión principal activa. |
 | blocking_session_id | Id. de la sesión que bloquea la solicitud. Si esta columna es NULL, la solicitud no está bloqueada o la información de la sesión de bloqueo no está disponible (o no puede ser identificada). |
@@ -119,9 +119,9 @@ La consulta devuelve las columnas siguientes:
 | last_wait_type | Si esta solicitud se ha bloqueado anteriormente, esta columna devuelve el tipo de la última espera. |
 | total_elapsed_time | Tiempo total transcurrido en milisegundos desde que llegó la solicitud. |
 | cpu_time | Tiempo de CPU en milisegundos utilizado por la solicitud. |
-| reads | Número de lecturas realizadas por esta solicitud. |
+| Lecturas | Número de lecturas realizadas por esta solicitud. |
 | logical_reads | Número de lecturas lógicas realizadas por la solicitud. |
-| writes | Número de escrituras realizadas por esta solicitud. |
+| Escrituras | Número de escrituras realizadas por esta solicitud. |
 | language | Palabra clave que representa un lenguaje de script compatible. |
 | degree_of_parallelism | Número que indica el número de procesos paralelos que se crearon. Este valor podría ser diferente del número de procesos paralelos que se solicitaron. |
 | external_user_name | La cuenta de trabajo de Windows bajo la que se ejecutó el script. |
@@ -143,7 +143,7 @@ ORDER BY language, counter_name;
 
 La consulta devuelve las columnas siguientes:
 
-| columna | Descripción |
+| Columna | Descripción |
 |--------|-------------|
 | language | Nombre del lenguaje de script externo registrado. |
 | counter_name | Nombre de una función de script externo seleccionada. |
@@ -193,7 +193,7 @@ FROM sys.dm_os_sys_info;
 
 La consulta devuelve las columnas siguientes:
 
-| columna | Descripción |
+| Columna | Descripción |
 |--------|-------------|
 | physical_memory_kb | Cantidad total de la memoria física del equipo. |
 | committed_kb | Memoria confirmada en kilobytes (KB) en el administrador de memoria. No incluye la memoria reservada del administrador de memoria. |
@@ -222,12 +222,12 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 La consulta devuelve las columnas siguientes:
 
-| columna | Descripción |
+| Columna | Descripción |
 |--------|-------------|
-| NAME | Nombre del grupo de recursos externos o SQL Server. |
+| name | Nombre del grupo de recursos externos o SQL Server. |
 | max_memory_percent | Memoria máxima que puede usar SQL Server o el grupo de recursos externos. |
 
-## <a name="resource-pools"></a>Grupos de recursos de servidor
+## <a name="resource-pools"></a>Grupos de recursos
 
 En [Resource Governor de SQL Server](../../relational-databases/resource-governor/resource-governor.md), un [grupo de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md) representa un subconjunto de los recursos físicos de una instancia. Puede especificar los límites en la cantidad de CPU, E/S física y memoria que las solicitudes de aplicaciones entrantes, incluida la ejecución de scripts externos, pueden usar en el conjunto de recursos. Vea los grupos de recursos usados para SQL Server y los scripts externos.
 
@@ -247,7 +247,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 La consulta devuelve las columnas siguientes:
 
-| columna | Descripción |
+| Columna | Descripción |
 |--------|-------------|
 | pool_name | Nombre del grupo de recursos de servidor. Los grupos de recursos de SQL Server llevan el prefijo `SQL Server`, mientras que los grupos de recursos externos llevan el prefijo `External Pool`.
 | total_cpu_usage_hours | Uso acumulado de la CPU en milisegundos desde que se restablecieron las estadísticas del regulador de recursos. |
@@ -276,7 +276,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 Las columnas que se devuelven son:
 
-| columna | Descripción |
+| Columna | Descripción |
 |--------|-------------|
 | Paquete | Nombre del paquete instalado. |
 | Versión | Versión del paquete. |
@@ -302,11 +302,11 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 Las columnas que se devuelven son:
 
-| columna | Descripción |
+| Columna | Descripción |
 |--------|-------------|
 | Paquete | Nombre del paquete instalado. |
 | Versión | Versión del paquete. |
-| Ubicación | Directorio en el que se puede encontrar el paquete. |
+| Location | Directorio en el que se puede encontrar el paquete. |
 
 ## <a name="next-steps"></a>Pasos siguientes
 

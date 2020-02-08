@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 043e1e570efc42988dcf6b0fb66098cbcd7fc9ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024871"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
@@ -121,7 +121,7 @@ De este modo, el optimizador de consultas puede procesar la combinación con may
   
 |||  
 |-|-|  
-|**Tareas**|**Tema**|  
+|**Tareas**|**Tema.**|  
 |Describe cómo crear funciones de partición y esquemas de partición y cómo aplicarlos a una tabla o índice.|[Crear tablas e índices con particiones](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)|  
 |||  
   

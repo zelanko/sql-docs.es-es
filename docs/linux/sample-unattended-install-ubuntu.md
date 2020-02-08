@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910483"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ejemplo: script de instalación desatendida de SQL Server para Ubuntu
+# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Sample: script de instalación desatendida de SQL Server para Ubuntu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -28,7 +28,7 @@ Este script de Bash de ejemplo instala SQL Server 2017 en Ubuntu 16.04 sin la in
 
 - Necesita al menos 2 GB de memoria para ejecutar SQL Server en Linux.
 - El sistema de archivos debe ser **XFS** o **EXT4**. No se admiten otros sistemas de archivos, como **BTRFS**.
-- Para conocer otros requisitos del sistema, consulte [Requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
+- Para conocer otros requisitos del sistema, vea [Requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
 
 ## <a name="sample-script"></a>Script de ejemplo
 
@@ -174,29 +174,29 @@ Para ejecutar el script
    ```
 
 ### <a name="understanding-the-script"></a>Descripción del script
-Lo primero que hace el script de Bash es establecer algunas variables. Pueden ser variables de scripting, como en el ejemplo, o variables de entorno. La variable `MSSQL_SA_PASSWORD` es **necesaria** para la instalación de SQL Server, las demás son variables personalizadas creadas para el script. Este script de ejemplo realiza los siguientes pasos:
+Lo primero que hace el script de Bash es establecer algunas variables. Pueden ser variables de scripting, como en el ejemplo, o variables de entorno. La variable `MSSQL_SA_PASSWORD` es **necesaria** para la instalación de SQL Server; las demás son variables personalizadas creadas para el script. Este script de ejemplo realiza los siguientes pasos:
 
-1. Importar las claves públicas de Microsoft GPG
+1. Importar las claves públicas de Microsoft GPG.
 
-1. Registrar los repositorios de Microsoft para SQL Server y las herramientas de línea de comandos
+1. Registrar los repositorios de Microsoft para SQL Server y las herramientas de línea de comandos.
 
-1. Actualizar los repositorios locales
+1. Actualizar los repositorios locales.
 
-1. Instalar SQL Server
+1. Instalación de SQL Server
 
-1. Configurar SQL Server con ```MSSQL_SA_PASSWORD``` y aceptar automáticamente el contrato de licencia para el usuario final
+1. Configurar SQL Server con ```MSSQL_SA_PASSWORD``` y aceptar automáticamente el contrato de licencia para el usuario final.
 
-1. Aceptar automáticamente el contrato de licencia para el usuario final para las herramientas de línea de comandos de SQL Server, instalarlas e instalar el paquete unixODBC-dev
+1. Aceptar automáticamente el contrato de licencia para el usuario final para las herramientas de línea de comandos de SQL Server, instalarlas e instalar el paquete unixodbc-dev.
 
-1. Agregar las herramientas de línea de comandos de SQL Server a la ruta de acceso para facilitar su uso
+1. Agregar las herramientas de línea de comandos de SQL Server a la ruta de acceso para facilitar su uso.
 
-1. Instalar el Agente SQL Server si se establece la variable de scripting ```SQL_INSTALL_AGENT```, activada de forma predeterminada
+1. Instalar el Agente SQL Server si se establece la variable de scripting ```SQL_INSTALL_AGENT```, activada de forma predeterminada.
 
-1. Opcionalmente, instalar Búsqueda de texto completo de SQL Server, si está establecida la variable ```SQL_INSTALL_FULLTEXT```
+1. Opcionalmente, instalar Búsqueda de texto completo de SQL Server, si está establecida la variable ```SQL_INSTALL_FULLTEXT```.
 
-1. Desbloquear el puerto 1433 para TCP en el firewall del sistema, necesario para conectarse a SQL Server desde otro sistema
+1. Desbloquear el puerto 1433 para TCP en el firewall del sistema, necesario para conectarse a SQL Server desde otro sistema.
 
-1. Opcionalmente, establecer marcas de seguimiento para el seguimiento del interbloqueo (requiere quitar marca de comentario de las líneas)
+1. Opcionalmente, establecer marcas de seguimiento para el seguimiento del interbloqueo (requiere quitar marca de comentario de las líneas).
 
 1. SQL Server ya está instalado; para que sea operativo, reinicie el proceso.
 

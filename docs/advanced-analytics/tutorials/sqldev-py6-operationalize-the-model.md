@@ -1,5 +1,5 @@
 ---
-title: 'Python+T-SQL: Ejecución de predicciones'
+title: 'Python + T-SQL: Ejecución de predicciones'
 description: Tutorial en el que se explica cómo poner operativo un script de Python insertado en procedimientos almacenados de SQL Server con funciones de T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6ac6abe2ea0f04ee0778b80b98bf28f3f12c2f6e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 00e4ba99b23abff0147627239093328e6f483ffb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73724716"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901861"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Ejecución de predicciones con Python insertado en un procedimiento almacenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ En este escenario, por operacionalización se entiende implementar el modelo en 
 En esta lección se muestran dos métodos para crear predicciones basadas en un modelo de Python: puntuación por lotes y puntuación fila por fila.
 
 - **Puntuación por lotes:** para proporcionar varias filas de datos de entrada, pase una consulta SELECT como argumento al procedimiento almacenado. El resultado es una tabla de observaciones correspondientes a los casos de entrada.
-- **Puntuación individual:** pase un conjunto de valores de parámetros individuales como entrada.  El procedimiento almacenado devuelve una sola fila o valor.
+- **Puntuación individual:** Pase un conjunto de valores de parámetros individuales como entrada.  El procedimiento almacenado devuelve una sola fila o valor.
 
 Todo el código de Python necesario para la puntuación se facilita como parte de los procedimientos almacenados.
 
@@ -356,6 +356,6 @@ En este tutorial, ha aprendido a trabajar con código de Python insertado en pro
 
 [Entrenamiento y almacenamiento de un modelo de Python](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Extensión de Python en SQL Server](../concepts/extension-python.md)

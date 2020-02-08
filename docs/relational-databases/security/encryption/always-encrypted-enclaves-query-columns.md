@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d0a522d6deb01169189d6f5faaf7ba2f189d1522
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595510"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves"></a>Consulta de columnas mediante Always Encrypted con enclaves seguros
@@ -34,7 +34,7 @@ Los siguientes tipos de consulta conllevan el uso de un enclave seguro:
 > Las consultas enriquecidas relativas a columnas de cadena de caracteres cifradas requieren que las columnas usen intercalaciones con un criterio de ordenación binary2 (intercalaciones BIN2). 
 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Pasos siguientes
 - [Consulta de columnas mediante Always Encrypted con enclaves seguros con SSMS](always-encrypted-enclaves-query-columns-ssms.md)
 
 ## <a name="see-also"></a>Consulte también

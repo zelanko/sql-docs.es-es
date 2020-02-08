@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727561"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalación de modelos de aprendizaje automático entrenados previamente en SQL Server
@@ -211,9 +211,9 @@ Para obtener más información sobre los algoritmos que se usan en estos modelos
 
 + [El kit de herramientas de red computacional de Microsoft ofrece un rendimiento de cálculo de aprendizaje profundo distribuido más eficaz](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-+ [Servicios de aprendizaje de máquina SQL Server](sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md)
 + [Actualización de los componentes de R y Python en instancias de SQL Server](../install/upgrade-r-and-python.md)
 + [Paquete MicrosoftML para R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [Paquete microsoftml para Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 92844b0a512129400e5f676f054fc68c68b26ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082583"
 ---
 # <a name="rename-columns-database-engine"></a>Cambiar el nombre a las columnas (motor de base de datos)
@@ -66,7 +66,7 @@ Requiere el permiso ALTER en el objeto.
 
 1. En el **Explorador de objetos**, haga clic con el botón derecho en la tabla en la que quiere cambiar nombres de columnas y elija **Diseño**.
 2. En **Nombre de columna**, seleccione el nombre que desea cambiar y escriba uno nuevo.
-3. En el menú **Archivo** , haga clic en **Guardar**_nombre de tabla_.
+3. En el menú **Archivo**, haga clic en ***Guardar** _nombre de tabla_.
 
 > [!NOTE]
 > También puede cambiar el nombre de una columna en la pestaña **Propiedades de columna** . Seleccione la columna cuyo nombre desea cambiar y escriba un nuevo valor en **Nombre**.

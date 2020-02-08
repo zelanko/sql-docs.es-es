@@ -12,12 +12,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c97d3ae0dd6b334e129134ba391124d8de3e8260
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73595800"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910238"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Consulta de columnas mediante Always Encrypted con SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ Para habilitar/deshabilitar parametrización de Always Encrypted para la ventana
 2. Seleccione **Opciones de consulta…** .
 3. Vaya a **Ejecución** > **Avanzadas**.
 4. Seleccione o anule la selección de **Habilitar parametrización de Always Encrypted**.
-5. Haga clic en **Aceptar**.
+5. Haga clic en **OK**.
 
 Para habilitar/deshabilitar parametrización de Always Encrypted para ventanas futuras del Editor de consultas, haga lo siguiente:
 
@@ -136,7 +136,7 @@ Para habilitar/deshabilitar parametrización de Always Encrypted para ventanas f
 2. Seleccione **Opciones...** .
 3. Vaya a **Ejecución de consulta** > **SQL Server** > **Avanzadas**.
 4. Seleccione o anule la selección de **Habilitar parametrización de Always Encrypted**.
-5. Haga clic en **Aceptar**.
+5. Haga clic en **OK**.
 
 Si ejecuta una consulta en una ventana del Editor de consultas que usa una conexión de base de datos con Always Encrypted habilitado, pero la parametrización no está habilitada para la ventana del Editor de consultas, se le pedirá que la habilite.
 
@@ -162,7 +162,7 @@ DECLARE @Salary money = $30000;
 Y, a continuación, algunos ejemplos de variables que SQL Server Management Studio no intentará parametrizar:
 
 ```sql
-DECLARE @Name nvarchar(50); --Initialization seperate from declaration
+DECLARE @Name nvarchar(50); --Initialization separate from declaration
 SET @Name = 'Abel';
 
 DECLARE @StartDate date = GETDATE(); -- a function used instead of a literal
@@ -214,8 +214,8 @@ WHERE [SSN] = @SSN;
 > [!NOTE]
 > Sin parametrización, la columna completa, incluidas las conversiones de tipo, se procesan dentro de SQL Server/Azure SQL Database. Con la parametrización habilitada, .NET Framework ejecuta algunas conversiones de tipo dentro de SQL Server Management Studio. Debido a las diferencias entre el sistema de tipo de .NET Framework y el sistema de tipo de SQL Server (por ejemplo, una precisión distinta de algunos tipos, como float), una consulta que se ejecuta con parametrización habilitada puede generar resultados distintos a los de la consulta ejecutada sin la parametrización habilitada. 
 
-## <a name="next-steps"></a>Next Steps
-- [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)
+## <a name="next-steps"></a>Pasos siguientes
+- [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)
 
 
 ## <a name="see-also"></a>Consulte también

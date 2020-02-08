@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727105"
 ---
 # <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Tutorial: Creación de un modelo en Python para clasificar clientes por categorías con SQL Server Machine Learning Services
@@ -27,9 +27,9 @@ En la parte tres de esta serie de tutoriales de cuatro partes, creará un modelo
 En este artículo, aprenderá a:
 
 > [!div class="checklist"]
-> * Definir el número de clústeres para un algoritmo de k-means
-> * Realizar la agrupación en clústeres
-> * Analizar los resultados
+> * Definición del número de clústeres para un algoritmo de k-means
+> * Agrupación en clústeres
+> * Análisis de los resultados
 
 En la [parte uno](python-clustering-model.md), ha instalado los requisitos previos y ha restaurado la base de datos de ejemplo.
 
@@ -78,7 +78,7 @@ plt.show()
 
 Según el gráfico, parece que *k = 4* sería un buen valor para probar. El valor *k* agrupará los clientes en cuatro clústeres.
 
-## <a name="perform-clustering"></a>Realizar la agrupación en clústeres
+## <a name="perform-clustering"></a>Agrupación en clústeres
 
 En el siguiente script de Python, usará la función KMeans del paquete sklearn.
 
@@ -145,7 +145,7 @@ Estas son dos formas en que se podrían interpretar estos resultados:
 
 El clúster 0 es claramente un conjunto de clientes inactivos. Puede que quiera dirigir sus actividades de marketing hacia este grupo para generar interés por las compras. En el paso siguiente, consultará en la base de datos las direcciones de correo electrónico de los clientes del clúster 0 para enviarles un correo electrónico promocional.
 
-## <a name="clean-up-resources"></a>Limpiar recursos
+## <a name="clean-up-resources"></a>Limpieza de recursos
 
 Si no quiere continuar con este tutorial, elimine la base de datos tpcxbb_1gb de la instancia de SQL Server.
 

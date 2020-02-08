@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680961"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implementación de proyectos y paquetes de Integration Services (SSIS)
@@ -133,9 +133,9 @@ Para más información sobre el error descrito en esta sección y los permisos n
   
 ###  <a name="convert"></a> Para convertir un proyecto al modelo de implementación de proyectos  
   
-1.  Abra el proyecto en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]y, en el Explorador de soluciones, haga clic con el botón derecho en el proyecto y haga clic en **Convertir en el modelo de implementación de proyectos**.  
+1.  Abra el proyecto en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]y, en el Explorador de soluciones, haga clic con el botón derecho en el proyecto y seleccione **Convertir al modelo de implementación de proyectos**.  
   
-     -O bien-  
+     O bien  
   
      En el Explorador de objetos de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en el nodo **Proyectos** y seleccione **Importar paquetes**.  
   
@@ -145,17 +145,17 @@ Para más información sobre el error descrito en esta sección y los permisos n
   
 1.  Abra el proyecto en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]y, en el menú **Proyecto** , seleccione **Implementar** para iniciar el **Asistente para implementación de Integration Services**.  
   
-     o Administrador de configuración de  
+     or  
   
      En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** en el Explorador de objetos y busque la carpeta Proyectos correspondiente al proyecto que quiere implementar. Haga clic con el botón derecho en la carpeta **Proyectos** y, después, haga clic en **Implementar proyecto**.  
   
-     o Administrador de configuración de  
+     or  
   
      En el símbolo del sistema, ejecute **isdeploymentwizard.exe** de **%Archivos de programa%\Microsoft SQL Server\130\DTS\Binn**. En equipos de 64 bits, también hay una versión de 32 bits de la herramienta en **%Archivos de programa (x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  En la página **Seleccionar origen** , haga clic en **Archivo de implementación de proyecto** para seleccionar el archivo de implementación del proyecto.  
   
-     o Administrador de configuración de  
+     or  
   
      Haga clic en **Catálogo de Integration Services** para seleccionar un proyecto que ya se haya implementado en el catálogo de SSISDB.  
   
@@ -296,7 +296,7 @@ Inicie el asistente de una de estas dos formas:
 
  - Escriba **"Asistente de implementación de SQL Server"** en Windows Search 
 
- o Administrador de configuración de
+ or
 
  - Busque el archivo ejecutable **ISDeploymentWizard.exe** en la carpeta de instalación de SQL Server; por ejemplo: "C:\Archivos de programa (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
@@ -306,7 +306,7 @@ Inicie el asistente de una de estas dos formas:
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### <a name="select-source"></a>Seleccionar origen
+#### <a name="select-source"></a>Selección del origen
 
  Para implementar un archivo de implementación de proyectos que haya creado, seleccione **Archivo de implementación de proyecto** y especifique la ruta de acceso del archivo .ispac. Para implementar un proyecto que resida en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , seleccione **Catálogo de Integration Services**y especifique el nombre del servidor y la ruta de acceso al proyecto en el catálogo. Haga clic en **Siguiente** para ver la página **Seleccionar destino** .  
   
@@ -318,13 +318,13 @@ Inicie el asistente de una de estas dos formas:
 
  La página permite revisar la configuración seleccionada. Puede cambiar las selecciones si hace clic en **Anterior**o si hace clic en cualquiera de los pasos del panel izquierdo. Haga clic en **Implementar** para iniciar el proceso de implementación.  
   
-#### <a name="results"></a>Resultado
+#### <a name="results"></a>Results
 
  Una vez completado el proceso de implementación, debería ver la página **Resultados** . Esta página muestra si cada acción si se completó correctamente o no. Si la acción no se realiza correctamente, haga clic en **Error** en la columna **Resultado** para que aparezca una explicación del error. Haga clic en **Guardar informe** para guardar los resultados en un archivo XML o haga clic en **Cerrar** para salir del asistente.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### <a name="select-source"></a>Seleccionar origen
+#### <a name="select-source"></a>Selección del origen
 
  La página **Seleccionar origen** del **Asistente para implementación de Integration Services** muestra la configuración específica del modelo de implementación de paquetes cuando selecciona la opción **lmplementación del paquete** del **modelo de implementación**.  
   
@@ -344,7 +344,7 @@ Inicie el asistente de una de estas dos formas:
 
  Haga clic en la opción **Siguiente** de la página **Seleccionar destino** para cambiar a la página **Revisión** del **Asistente para implementación de Integration Services**. En esta página, revise el informe de resumen sobre la acción de implementación. Después de la comprobación, haga clic en el botón **Implementar** para realizar la acción de implementación.  
   
-#### <a name="results"></a>Resultado
+#### <a name="results"></a>Results
 
  Una vez completada la implementación, debería ver la página **Resultados** . En la página **Resultados**, revise los resultados de cada paso del proceso de implementación. Haga clic en **Guardar informe** para guardar el informe de implementación o en **Cerrar** para cerrar el asistente.  
 
@@ -363,7 +363,7 @@ Inicie el asistente de una de estas dos formas:
   
 2.  Haga clic con el botón derecho en la carpeta **Entornos** y, después, haga clic en **Crear entorno**.  
   
-3.  Escriba un nombre para el entorno y opcionalmente una descripción. Haga clic en **Aceptar**.  
+3.  Escriba un nombre para el entorno y opcionalmente una descripción. Haga clic en **OK**.  
   
 4.  Haga clic con el botón derecho en el nuevo entorno y, después, haga clic en **Propiedades**.  
   
@@ -593,7 +593,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Utilizar autenticación de SQL Server**  
  Cuando un usuario se conecta con un nombre de inicio de sesión y una contraseña especificados desde una conexión que no es de confianza, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autentica la conexión (para hacerlo, comprueba si se ha configurado una cuenta de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y si la contraseña especificada coincide con la almacenada anteriormente). Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no tiene configurada una cuenta de inicio de sesión, la autenticación no se realizará correctamente y el usuario recibirá un mensaje de error.  
   
- **User name**  
+ **Nombre de usuario**  
  Especifique un nombre de usuario cuando utilice la autenticación de SQL Server.  
   
  **Contraseña**  
@@ -609,7 +609,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Estado**  
  Indica si un paquete está listo para convertir el modelo de implementación de proyectos.  
   
- **de mensaje**  
+ **Mensaje**  
  Muestra un mensaje asociado al paquete.  
   
  **Contraseña**  
@@ -671,7 +671,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="configurations"></a> Establecer las opciones de la página Seleccionar configuraciones  
  Seleccione las configuraciones del paquete que desea reemplazar por parámetros.  
   
- **Paquete**  
+ **Package**  
  Muestra el archivo de paquete.  
   
  **Tipo**  
@@ -697,7 +697,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="createParameters"></a> Establecer las opciones de la página Crear parámetros  
  Seleccione el nombre y el ámbito de parámetro para cada propiedad de configuración.  
   
- **Paquete**  
+ **Package**  
  Muestra el archivo de paquete.  
   
  **Nombre de parámetro**  
@@ -713,7 +713,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Ámbito**  
  Muestra el ámbito del parámetro.  
   
- **Value**  
+ **Valor**  
  Muestra el valor del parámetro.  
   
  Haga clic en los puntos suspensivos junto al campo del valor para configurar las propiedades de parámetro.  

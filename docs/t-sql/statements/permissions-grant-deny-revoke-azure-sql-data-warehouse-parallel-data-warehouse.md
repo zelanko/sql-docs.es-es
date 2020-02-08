@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255466"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permisos: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Almacenamiento de datos paralelos)
@@ -36,7 +36,7 @@ ms.locfileid: "75255466"
   
 -   **REVOCAR** quita los permisos **GRANT** o **DENY** existentes.  
   
- ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -242,7 +242,7 @@ REVOKE
 ### <a name="chart-of-permissions"></a>Gráfico de permisos  
  En este póster se representan gráficamente todos los permisos. Es la manera más fácil de ver la jerarquía anidada de permisos. Por ejemplo, el permiso **ALTER LOGIN ON** se puede conceder por sí mismo, pero también se incluye si se concede a un inicio de sesión el permiso **CONTROL** en ese inicio de sesión, o si se concede el permiso **ALTER ANY LOGIN** a un inicio de sesión.  
   
- ![Póster de permisos de seguridad de APS](../../t-sql/statements/media/aps-security-perms-poster.png "|::ref2::|")  
+ ![Póster de permisos de seguridad de APS](../../t-sql/statements/media/aps-security-perms-poster.png "Póster de permisos de seguridad de APS")  
   
  Para descargar una versión a tamaño completo de este póster, vea [Permisos de PDW de SQL Server](https://go.microsoft.com/fwlink/?LinkId=244249) en la sección de archivos del sitio de Yammer de APS (o solicítelo por correo electrónico a **apsdoc\@microsoft.com**).  
   

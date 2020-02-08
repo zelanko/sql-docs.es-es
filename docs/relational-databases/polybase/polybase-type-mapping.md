@@ -8,10 +8,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 ms.openlocfilehash: 34f6b61160b687fa6864a2660b632524188b922c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710465"
 ---
 # <a name="type-mapping-with-polybase"></a>Asignación de tipos con PolyBase
@@ -35,11 +35,11 @@ En tablas externas que hacen referencia a archivos de orígenes de datos externo
 | ------------- | ------------------------- | -------------- | --------------------- | ------------------------------ |
 | TINYINT       | Byte                      | TINYINT        | ByteWritable          | Solo para números sin signo.     |
 | SMALLINT      | Int16                     | SMALLINT       | ShortWritable         |
-| INT           | Int32                     | INT            | IntWritable           |
-| BIGINT        | Int64                     | BIGINT         | LongWritable          |
+| int           | Int32                     | int            | IntWritable           |
+| bigint        | Int64                     | bigint         | LongWritable          |
 | bit           | Boolean                   | boolean        | BooleanWritable       |
-| FLOAT         | Doble                    | double         | DoubleWritable        |
-| REAL          | Único                    | FLOAT          | FloatWritable         |
+| FLOAT         | Double                    | double         | DoubleWritable        |
+| real          | Single                    | FLOAT          | FloatWritable         |
 | money         | Decimal                   | double         | DoubleWritable        |
 | SMALLMONEY    | Decimal                   | double         | DoubleWritable        |
 | NCHAR         | String<br /><br /> Char[] | string         | Varchar               |
@@ -48,11 +48,11 @@ En tablas externas que hacen referencia a archivos de orígenes de datos externo
 | varchar       | String<br /><br /> Char[] | string         | Varchar               |
 | binary        | Byte[]                    | binary         | BytesWritable         | Se aplica a Hive 0.8 y posterior. |
 | varbinary     | Byte[]                    | binary         | BytesWritable         | Se aplica a Hive 0.8 y posterior. |
-| Date          | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| smalldatetime | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| datetime2     | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| DATETIME      | DateTime                  | TIMESTAMP      | TimestampWritable     |
-| time          | Timespan                  | TIMESTAMP      | TimestampWritable     |
+| date          | DateTime                  | timestamp      | TimestampWritable     |
+| smalldatetime | DateTime                  | timestamp      | TimestampWritable     |
+| datetime2     | DateTime                  | timestamp      | TimestampWritable     |
+| datetime      | DateTime                  | timestamp      | TimestampWritable     |
+| time          | TimeSpan                  | timestamp      | TimestampWritable     |
 | Decimal       | Decimal                   | Decimal        | BigDecimalWritable    | Se aplica a Hive 0.11 y posterior. |
 
 <!--SQL Server 2019-->
@@ -62,11 +62,11 @@ En tablas externas que hacen referencia a archivos de orígenes de datos externo
 
 | Tipo de datos de Oracle | Tipo de SQL Server | 
 | -------------    | --------------- |
-|float             |float            |
+|Float             |Float            |
 |NUMBER            |Decimal          |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
-|BINARY_DOUBLE     |float            | 
+|BINARY_DOUBLE     |Float            | 
 |CHAR              |Char             |
 |VARCHAR2          |Varchar          | 
 |NVARCHAR2         |nvarchar         | 
@@ -93,15 +93,15 @@ En tablas externas que hacen referencia a archivos de orígenes de datos externo
 
 | Tipo de datos BSON     | Tipo de SQL Server |
 | ------------------ | --------------- |
-| Doble             | float           |
+| Double             | Float           |
 | String             | nvarchar        |
 | Datos binarios        | nvarchar        |
 | Id. de objeto          | nvarchar        |
 | Boolean            | bit             |
-| date               | Datetime2       |
-| Entero de 32 bits     | int             |
+| Date               | Datetime2       |
+| Entero de 32 bits     | Int             |
 | Timestamp          | nvarchar        |
-| Entero de 64 bits     | Bigint          |
+| Entero de 64 bits     | BigInt          |
 |Decimal 128         | Decimal         | 
 | DBPointer          | nvarchar        |
 | JavaScript         | nvarchar        |
@@ -119,13 +119,13 @@ MongoDB usa documentos BSON para almacenar los registros de datos. A diferencia 
 
 | Tipo de datos de Teradata | Tipo de SQL Server | 
 | -------------      | -------------   |
-|INTEGER             |int              |
+|INTEGER             |Int              |
 |SMALLINT            |SmallInt         |
-|bigint              |Bigint           |
+|bigint              |BigInt           |
 |BYTEINT             |SmallInt         |
 |DECIMAL             |Decimal          |
 |FLOAT               |Decimal          |
-|BYTE                |Binario           |
+|BYTE                |Binary           |
 |VARBYTE             |Varbinary        |
 |BLOB                |varbinary        |
 |CHAR                |Nchar            |
@@ -134,7 +134,7 @@ MongoDB usa documentos BSON para almacenar los registros de datos. A diferencia 
 |Graphic             |Nchar            |
 |JSON                |nvarchar         |
 |VARGRAPHIC          |nvarchar         |
-|DATE                |date             |
+|DATE                |Date             |
 |timestamp           |Datetime2        |
 |TIME                |Time             |
 |TIME WITH TIME ZONE |Time             |

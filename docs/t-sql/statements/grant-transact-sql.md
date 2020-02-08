@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e23c4794b00daca7a228a3cd189835fcdf32628a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050650"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68050650"
 
   Concede permisos sobre un elemento protegible a una entidad de seguridad.  El concepto general es GRANT \<un permiso> ON \<un objeto> TO \<un usuario, inicio de sesión o grupo>. Para ver conceptos generales sobre los permisos, vea [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
- ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -113,13 +113,13 @@ GRANT OPTION
  Indica que el receptor también podrá conceder el permiso especificado a otras entidades de seguridad.  
   
 AS *principal*  
- Use la cláusula AS de la entidad de seguridad para indicar que la entidad de seguridad registrada como el otorgante del permiso debe ser una entidad de seguridad distinta de la persona que ejecuta la instrucción. Por ejemplo, suponga que la usuaria Mary tiene el principal_id 12 y el usuario Raul, el principal_id 15. Mary ejecuta `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Ahora, la tabla sys.database_permissions indicará que el grantor_principal_id era 15 (Raul), aunque la instrucción realmente la ejecutó el usuario 13 (Mary).
+ Use la cláusula AS de la entidad de seguridad para indicar que la entidad de seguridad registrada como el otorgante del permiso debe ser una entidad de seguridad distinta de la persona que ejecuta la instrucción. Por ejemplo, suponga que la usuaria María tiene el principal_id 12 y el usuario Raúl tiene el principal_id 15. Mary ejecuta `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Ahora, la tabla sys.database_permissions indicará que el grantor_principal_id era 15 (Raul), aunque la instrucción realmente la ejecutó el usuario 13 (Mary).
 
 Normalmente, el uso de la cláusula AS no se suele recomendar, a menos que necesite definir explícitamente la cadena de permisos. Para más información, vea la sección **Resumen del algoritmo de comprobación de permiso** de [Permisos (motor de base de datos)](../../relational-databases/security/permissions-database-engine.md).
 
 El uso de AS en esta instrucción no implica la capacidad de suplantar a otro usuario. 
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La sintaxis completa de la instrucción GRANT es compleja. El diagrama de sintaxis anterior se ha simplificado para concentrar la atención en su estructura. La sintaxis completa para conceder permisos para elementos protegibles específicos se describe en los artículos enumerados a continuación.  
   
  Se puede utilizar la instrucción REVOKE para retirar permisos concedidos y la instrucción DENY para evitar que una entidad de seguridad obtenga un permiso específico mediante una instrucción GRANT.  
@@ -129,7 +129,7 @@ El uso de AS en esta instrucción no implica la capacidad de suplantar a otro us
  Los permisos de nivel de base de datos se conceden en el ámbito de la base de datos especificada. Si un usuario necesita permisos para objetos de otra base de datos, cree la cuenta del usuario en la otra base de datos o conceda a la cuenta del usuario acceso a la otra base de datos y a la base de datos actual.  
   
 > [!CAUTION]  
->  Un permiso DENY de nivel de tabla no tiene prioridad sobre uno GRANT de nivel de columna. Esta incoherencia en la jerarquía de permisos se ha mantenido por motivos de compatibilidad con versiones anteriores. Se quitará en una versión futura.  
+>  Un permiso DENY de nivel de tabla no tiene prioridad sobre uno GRANT de nivel de columna. Esta incoherencia en la jerarquía de permisos se ha mantenido por motivos de compatibilidad con versiones anteriores. Se eliminará en una próxima versión.  
   
  El procedimiento almacenado del sistema sp_helprotect informa de los permisos sobre un elemento protegible en el nivel de base de datos.  
   
@@ -163,33 +163,33 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |||  
 |-|-|  
 |Rol de aplicación|[GRANT &#40;permisos de entidad de seguridad de base de datos de Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Ensamblado|[GRANT &#40;permisos de ensamblado de Transact-SQL&#41;](../../t-sql/statements/grant-assembly-permissions-transact-sql.md)|  
+|Assembly|[GRANT &#40;permisos de ensamblado de Transact-SQL&#41;](../../t-sql/statements/grant-assembly-permissions-transact-sql.md)|  
 |Clave asimétrica|[GRANT &#40;permisos de clave asimétrica de Transact-SQL&#41;](../../t-sql/statements/grant-asymmetric-key-permissions-transact-sql.md)|  
 |Grupo de disponibilidad|[GRANT &#40;permisos de grupos de disponibilidad de Transact-SQL&#41;](../../t-sql/statements/grant-availability-group-permissions-transact-sql.md)|  
 |Certificado|[GRANT &#40;permisos de certificado de Transact-SQL&#41;](../../t-sql/statements/grant-certificate-permissions-transact-sql.md)|  
 |Contrato|[GRANT &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
 |Base de datos|[GRANT &#40;permisos de base de datos de Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)|
 |Credencial de ámbito de base de datos|[GRANT (credencial de ámbito de base de datos de Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)|  
-|Extremo|[GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
+|Punto de conexión|[GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
 |Catálogo de texto completo|[GRANT &#40;permisos de texto completo de Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
 |Lista de palabras irrelevantes de texto completo|[GRANT &#40;permisos de texto completo de Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
 |Función|[Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Login|[GRANT &#40;permisos de entidad de seguridad de servidor de Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
+|Inicio de sesión|[GRANT &#40;permisos de entidad de seguridad de servidor de Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
 |Tipo de mensaje|[GRANT &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Objeto|[Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Object|[Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Cola|[Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Enlace de servicio remoto|[GRANT &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|Rol|[GRANT &#40;permisos de entidad de seguridad de base de datos de Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Ruta|[GRANT &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|esquema|[GRANT &#40;permisos de esquema de Transact-SQL&#41;](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
+|Role|[GRANT &#40;permisos de entidad de seguridad de base de datos de Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Enrutar|[GRANT &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Schema|[GRANT &#40;permisos de esquema de Transact-SQL&#41;](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
 |Lista de propiedades de búsqueda|[GRANT &#40;permisos de lista de propiedades de búsqueda de Transact-SQL&#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
-|Servidor|[GRANT &#40;permisos de servidor de Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
-|ssNoVersion|[GRANT &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Server|[GRANT &#40;permisos de servidor de Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
+|Servicio|[GRANT &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
 |Procedimiento almacenado|[Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Clave simétrica|[GRANT &#40;permisos de clave simétrica de Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
 |Synonym (Sinónimo)|[Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Objetos de sistema|[Permisos de objeto de sistema GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)|  
-|Table|[Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|Tabla|[Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |Tipo|[GRANT &#40;permisos de tipo de Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
 |Usuario|[GRANT &#40;permisos de entidad de seguridad de base de datos de Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
 |Ver|[Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  

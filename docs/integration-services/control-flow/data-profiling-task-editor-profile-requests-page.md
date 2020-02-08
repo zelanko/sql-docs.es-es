@@ -15,10 +15,10 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a13799d353fcf1e1dff1999009cc2f1e8dcedc76
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294181"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil)
@@ -28,7 +28,7 @@ ms.locfileid: "71294181"
 
   Use la página **Solicitudes de perfil** del **Editor de tareas de generación de perfiles de datos** para seleccionar y configurar los perfiles que desee calcular. En una única tarea de generación de perfiles puede calcular varias filas para varias columnas o combinaciones de columnas en varias tablas o vistas.  
   
- Para obtener más información sobre cómo usar la tarea de generación de perfiles de datos, vea [Configuración de la Tarea de generación de perfiles de datos](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Para obtener más información sobre cómo usar el Visor de perfil de datos para analizar la salida de la tarea de generación de perfiles de datos, vea [Visor de perfil de datos](../../integration-services/control-flow/data-profile-viewer.md).  
+ Para más información sobre cómo usar la tarea de generación de perfiles de datos, vea [Configuración de la Tarea de generación de perfiles de datos](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Para obtener más información sobre cómo usar el Visor de perfil de datos para analizar la salida de la tarea de generación de perfiles de datos, vea [Visor de perfil de datos](../../integration-services/control-flow/data-profile-viewer.md).  
   
  **Para abrir la página Solicitudes de perfil del Editor de tareas de generación de perfiles de datos**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "71294181"
 ### <a name="requests-pane-options"></a>Opciones del panel de solicitudes  
  El panel de solicitudes tiene las opciones siguientes:  
   
- **Ver**  
+ **Vista**  
  Seleccione si ver todos los perfiles configurados para la tarea o simplemente uno de los perfiles.  
   
  Las columnas del panel de solicitudes cambia según la **Vista** que seleccione. Para obtener más información sobre cada una de esas columnas, consulte la sección siguiente, "Columnas del panel de solicitudes".  
@@ -68,7 +68,7 @@ ms.locfileid: "71294181"
  **Tipo de perfil**  
  Seleccione un perfil de datos en las opciones siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Solicitud de perfil de claves candidatas**|Calcule un perfil de claves candidatas.<br /><br /> Este perfil notifica si una columna o conjunto de columnas es una clave, o una clave aproximada, para la tabla seleccionada. Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores en una posible columna de clave.|  
 |**Solicitud de perfil de distribución de longitud de columnas**|Calcule un perfil de distribución de longitud de columnas.<br /><br /> El perfil de distribución de longitud de columnas indica las diferentes longitudes de los valores de cadena de la columna seleccionada y el porcentaje de filas de la tabla que cada longitud representa. Este perfil puede ayudarle a identificar los problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, genera un perfil de una columna de códigos de estados de Estados Unidos de dos caracteres y detecta valores menores de dos caracteres.|  

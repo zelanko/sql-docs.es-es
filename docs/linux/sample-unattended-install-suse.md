@@ -9,26 +9,26 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 392d8d477a2e136d54e6f0f06608eb0ebeda12a5
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593514"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Ejemplo: Script de instalación desatendida de SQL Server para SUSE Linux Enterprise Server
+# <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Sample: Script de instalación desatendida de SQL Server para SUSE Linux Enterprise Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este script de Bash de ejemplo instala SQL Server 2017 en SUSE Linux Enterprise Server (SLES) v12 SP2 sin entrada interactiva. Proporciona ejemplos de instalación del motor de base de datos, las herramientas de línea de comandos de SQL Server, el Agente SQL Server y realiza los pasos posteriores a la instalación. Opcionalmente, puede instalar la búsqueda de texto completo y crear un usuario administrativo.
+Este script de Bash de ejemplo instala SQL Server 2017 en SUSE Linux Enterprise Server (SLES) v12 SP2 sin entrada interactiva. Proporciona ejemplos de instalación del motor de base de datos, las herramientas de línea de comandos de SQL Server y el Agente SQL Server, y realiza los pasos posteriores a la instalación. De manera opcional, puede instalar la característica de búsqueda de texto completo y crear un usuario administrativo.
 
 > [!TIP]
-> Si no necesita un script de instalación desatendida, la manera más rápida de instalar SQL Server es seguir la [guía de inicio rápido para SLES](quickstart-install-connect-suse.md). Para obtener más información sobre la instalación, consulte la [guía de instalación de SQL Server en Linux](sql-server-linux-setup.md).
+> Si no necesita un script de instalación desatendida, la manera más rápida de instalar SQL Server es seguir la [guía de inicio rápido para SLES](quickstart-install-connect-suse.md). Para obtener más información sobre la instalación, vea la [guía de instalación de SQL Server en Linux](sql-server-linux-setup.md).
 
 ## <a name="prerequisites"></a>Prerequisites
 
 - Necesita al menos 2 GB de memoria para ejecutar SQL Server en Linux.
 - El sistema de archivos debe ser **XFS** o **EXT4**. No se admiten otros sistemas de archivos, como **BTRFS**.
-- Para conocer otros requisitos del sistema, consulte [Requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
+- Para conocer otros requisitos del sistema, vea [Requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
 
 > [!IMPORTANT]
 > SQL Server 2017 requiere libsss_nss_idmap0, que no se proporciona en los repositorios predeterminados de SLES. Puede instalarlo desde el SDK de SLES v12 SP2.
@@ -184,7 +184,7 @@ Lo primero que hace el script de Bash es establecer algunas variables. Pueden se
 
 1. Actualizar los repositorios locales.
 
-1. Instalar SQL Server
+1. Instalación de SQL Server
 
 1. Configurar SQL Server con ```MSSQL_SA_PASSWORD``` y aceptar automáticamente el contrato de licencia para el usuario final.
 

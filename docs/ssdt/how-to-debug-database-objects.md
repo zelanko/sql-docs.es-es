@@ -1,23 +1,24 @@
 ---
-title: 'Procedimientos: Depurar objetos de base de datos | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Depuración de objetos de base de datos
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 57854937595ba57dee8c36bd4877fd05362f2e40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ba04eba5107968f1be11c62fbac0f57ca5733b3f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035206"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241460"
 ---
-# <a name="how-to-debug-database-objects"></a>Procedimientos: Depuración de objetos de base de datos
+# <a name="how-to--debug-database-objects"></a>Procedimientos:  Depuración de objetos de base de datos
+
 Una prueba unitaria de SQL Server consta de lo siguiente:  
   
 -   El código de la prueba unitaria escrito en Visual C\# o Visual Basic. Este código, que lo genera el Diseñador de pruebas unitarias de SQL Server, es el responsable de ejecutar el script de Transact\-SQL que conforma el cuerpo de la prueba.  

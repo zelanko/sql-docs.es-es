@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896965"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Usar certificados en la escalabilidad horizontal de SQL Server Integration Services
@@ -88,9 +88,9 @@ Actualice el archivo de configuración del servicio de patrón de escalabilidad 
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Reconectar los trabajadores de escalabilidad horizontal con el patrón de escalabilidad horizontal
 Para cada trabajador de escalabilidad horizontal, elimine el trabajador y vuelva a agregarlo con [Scale Out Manager](integration-services-ssis-scale-out-manager.md) o siga estos pasos:
 
-A.  Instale el certificado SSL de cliente en el almacén raíz del equipo local en el nodo del trabajador.
+a.  Instale el certificado SSL de cliente en el almacén raíz del equipo local en el nodo del trabajador.
 
-B.  Actualice el archivo de configuración de mantenimiento del trabajador de escalabilidad horizontal.
+b.  Actualice el archivo de configuración de mantenimiento del trabajador de escalabilidad horizontal.
 
 Actualice el archivo de configuración del servicio del trabajador de escalabilidad horizontal, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, en el nodo del trabajador. Actualice **MasterHttpsCertThumbprint** a la huella digital del certificado SSL nuevo.
 
@@ -142,6 +142,6 @@ Actualice el archivo de configuración del servicio del trabajador de escalabili
 #### <a name="6-restart-the-scale-out-worker-service"></a>6. Reiniciar el servicio de trabajador de escalabilidad horizontal
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información, vea los artículos siguientes:
+Para más información, consulte los siguientes artículos:
 -   [Servicio principal de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
 -   [Trabajo de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

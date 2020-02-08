@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594404"
 ---
 # <a name="always-encrypted-cryptography"></a>Criptografía de Always Encrypted
@@ -99,7 +99,7 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>Paso 4: Concatenation  
+### <a name="step-4-concatenation"></a>Paso 4: Concatenación  
  Por último, el valor cifrado se genera mediante la concatenación del byte de la versión del algoritmo, la dirección MAC, el IV y el texto de cifrado AES_256_CBC:  
   
 ```  
@@ -140,7 +140,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |Tipo de datos|Longitud del texto cifrado [bytes]|  
 |---------------|---------------------------------|  
 |**bigint**|65|  
-|**binario**|Varía. Utilice la fórmula anterior.|  
+|**binary**|Varía. Utilice la fórmula anterior.|  
 |**bit**|65|  
 |**char**|Varía. Utilice la fórmula anterior.|  
 |**date**|65|  
@@ -152,7 +152,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**geography**|N/D (no compatible).|  
 |**geometry**|N/D (no compatible).|  
 |**hierarchyid**|N/D (no compatible).|  
-|**imagen**|N/D (no compatible).|  
+|**image**|N/D (no compatible).|  
 |**int**|65|  
 |**money**|65|  
 |**nchar**|Varía. Utilice la fórmula anterior.|  
@@ -165,7 +165,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**smallmoney**|65|  
 |**sql_variant**|N/D (no compatible).|  
 |**sysname**|N/D (no compatible).|  
-|**texto**|N/D (no compatible).|  
+|**text**|N/D (no compatible).|  
 |**time**|65|  
 |**timestamp**<br /><br /> (**rowversion**)|N/D (no compatible).|  
 |**tinyint**|65|  

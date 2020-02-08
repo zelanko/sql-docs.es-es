@@ -20,13 +20,13 @@ ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105011"
 ---
-# <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
+# <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Esta función devuelve la suma de comprobación de los valores de un grupo. `CHECKSUM_AGG` omite los valores NULL. La [cláusula OVER](../../t-sql/queries/select-over-clause-transact-sql.md) puede seguir a `CHECKSUM_AGG`.
@@ -52,7 +52,7 @@ Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de e
 ## <a name="return-types"></a>Tipos de valores devueltos
 Devuelve la suma de comprobación de todos los valores de *expression* como **int**.
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
 `CHECKSUM_AGG` puede detectar cambios en una tabla.
   
 El resultado `CHECKSUM_AGG` no depende del orden de las filas de la tabla. Asimismo, las funciones `CHECKSUM_AGG` permiten el uso de la palabra clave `DISTINCT` y de la cláusula `GROUP BY`.
@@ -97,7 +97,7 @@ FROM Production.ProductInventory;
 287  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
 [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
 [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)

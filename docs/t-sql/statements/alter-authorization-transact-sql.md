@@ -27,10 +27,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982881"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73982881"
 
   Cambia la propiedad de un elemento protegible.    
     
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Sintaxis    
     
@@ -130,7 +130,7 @@ ALTER AUTHORIZATION ON
 |ASSEMBLY|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
 |ASYMMETRIC KEY|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
 |AVAILABILITY GROUP |**SE APLICA A**: SQL Server 2012 y versiones posteriores|
-|CERTIFICATE|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
+|CERTIFICADO|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|    
 |CONTRACT|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores|    
 |DATABASE|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Para obtener más información, consulte la sección [bases de datos ALTER AUTHORIZATION FOR](#AlterDB) que encontrará más adelante.|    
 |ENDPOINT|**SE APLICA A**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores|    
@@ -154,7 +154,7 @@ ALTER AUTHORIZATION ON
  *principal_name* | SCHEMA OWNER    
  Nombre de la entidad de seguridad que va a ser propietaria de la entidad. Los objetos de base de datos deben tener una entidad de base de datos como propietaria; un usuario o rol de base de datos. Los objetos de servidor (como bases de datos) deben tener una entidad de servidor (un inicio de sesión) como propietaria. Indique **SCHEMA OWNER** como *principal_name* para indicar que el objeto debe tener como propietaria la entidad que posee el esquema del objeto.    
     
-## <a name="remarks"></a>Notas    
+## <a name="remarks"></a>Observaciones    
  Se puede usar ALTER AUTHORIZATION para cambiar la propiedad de cualquier entidad que tenga propietario. La propiedad de las entidades que contienen bases de datos se puede transferir a cualquier entidad de seguridad de nivel de base de datos. La propiedad de las entidades de nivel de servidor solo se puede transferir a entidades de seguridad de nivel de servidor.    
     
 > [!IMPORTANT]    
@@ -253,7 +253,7 @@ ON d.owner_sid = sl.sid;
     
 ```    
   
-### <a name="best-practice"></a>Práctica recomendada  
+### <a name="best-practice"></a>Procedimiento recomendado  
   
 En lugar de utilizar a los usuarios de Azure AD como propietarios individuales de la base de datos, utilice un grupo de Azure AD como miembro del rol fijo de base de datos **db_owner**. En los pasos siguientes se muestra cómo configurar un inicio de sesión deshabilitado como propietario de la base de datos y cómo convertir un grupo de Azure Active Directory (`mydbogroup`) en un miembro del rol **db_owner**. 
 1.  Inicie sesión en SQL Server como administrador de Azure AD y cambie el propietario de la base de datos a un inicio de sesión deshabilitado para la autenticación de SQL Server. Por ejemplo, desde la base de datos de usuario, ejecute:  

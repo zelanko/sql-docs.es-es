@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713267"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configuración de transacciones distribuidas para un grupo de disponibilidad Always On
@@ -195,7 +195,7 @@ Después de confirmar o revertir la transacción, puede usar `ALTER DATABASE` pa
 
 Para más información sobre cómo resolver transacciones dudosas, vea [Resolve Transactions Manually](https://technet.microsoft.com/library/cc754134.aspx) (Resolver transacciones manualmente).
 
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 
 [Transacciones distribuidas](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 
@@ -205,4 +205,4 @@ Para más información sobre cómo resolver transacciones dudosas, vea [Resolve 
 
 [Supporting XA Transactions](https://technet.microsoft.com/library/cc753563(v=ws.10).aspx) (Compatibilidad con las transacciones XA)
 
-[How It Works: Session/SPID (-2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/) (Funcionamiento de Session/SPID [-2] en las transacciones de DTC)
+[Cómo funciona: Session/SPID (-2) for DTC Transactions](https://blogs.msdn.microsoft.com/bobsql/2016/08/04/how-it-works-sessionspid-2-for-dtc-transactions/) (Funcionamiento de Session/SPID [-2] en las transacciones de DTC)

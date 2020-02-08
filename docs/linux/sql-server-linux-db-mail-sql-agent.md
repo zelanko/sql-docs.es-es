@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: 31f8931f6e0eddc67b2e58ae794631a9ae6555b7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077447"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Correo electrónico de BD y alertas por correo electrónico con el Agente SQL en Linux
@@ -36,7 +36,7 @@ RECONFIGURE
 GO  
 ```
 
-## <a name="2-create-a-new-account"></a>2. Crear nueva cuenta
+## <a name="2-create-a-new-account"></a>2. Creación de una nueva cuenta
 ```sql
 EXECUTE msdb.dbo.sysmail_add_account_sp 
 @account_name = 'SQLAlerts', 
@@ -122,4 +122,4 @@ GO
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información sobre cómo usar el Agente SQL Server para crear, programar y ejecutar trabajos, consulte [Ejecución de un trabajo de Agente SQL Server en Linux.](sql-server-linux-run-sql-server-agent-job.md)
+Para obtener más información sobre cómo usar el Agente SQL Server para crear, programar y ejecutar trabajos, vea [Ejecución de un trabajo del Agente SQL Server en Linux](sql-server-linux-run-sql-server-agent-job.md).

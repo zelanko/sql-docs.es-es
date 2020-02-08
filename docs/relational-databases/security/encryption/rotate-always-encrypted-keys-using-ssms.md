@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5d0a96f061f01749194cd3f0d1be1aae5443ff8a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595710"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>Rotación de claves de Always Encrypted mediante SQL Server Management Studio
@@ -47,7 +47,7 @@ En este paso, todas las claves de cifrado de columna, que están protegidas con 
 2.  Haga clic con el botón derecho en ella y seleccione **Rotar**.
 3.  En el cuadro de diálogo **Rotación de clave maestra de columna** , seleccione el nombre de la nueva clave maestra de columna que creó en el paso 1 en el campo **Destino** .
 4.  Revise la lista de claves de cifrado de columna, protegidas por las claves maestras de columna existentes. Estas claves se verán afectadas por la rotación.
-5.  Haga clic en **Aceptar**.
+5.  Haga clic en **OK**.
 
 SQL Server Management Studio obtendrá los metadatos de las claves de cifrado de columnas que están protegidas con la clave maestra de columna antigua y los metadatos de las claves maestras de columna antigua y nueva. Después, SSMS usará los metadatos de la clave maestra de columna para tener acceso al almacén de claves que contiene la clave maestra de columna antigua y descifrar las claves de cifrado de columnas. Posteriormente, SSMS obtendrá acceso al almacén de claves que contiene la nueva clave maestra de columna para generar un conjunto de valores cifrados de las claves de cifrado de columnas y, después, agregará los valores nuevos a los metadatos, para lo que generará y emitirá instrucciones [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) .
 
@@ -80,7 +80,7 @@ Existe otro motivo para limpiar el valor antiguo antes de archivar o quitar la c
 1.  En el **Explorador de objetos**, vaya a la carpeta **Security > Always Encrypted Keys** y encuentre la clave maestra de columna existente que quiere reemplazar.
 2.  Haga clic con el botón derecho en la clave maestra de columna existente y seleccione **Limpieza**.
 3.  Revise la lista de valores de claves de cifrado de columna que se van a quitar.
-4.  Haga clic en **Aceptar**.
+4.  Haga clic en **OK**.
 
 SQL Server Management Studio emitirá instrucciones [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/alter-column-encryption-key-transact-sql.md) para quitar los valores cifrados de las claves de cifrado de columnas que están cifradas con la clave maestra de columna antigua.
 
@@ -90,7 +90,7 @@ Si decide quitar la definición de la clave maestra de columna antigua de la bas
 
 1. En el **Explorador de objetos**, vaya a la carpeta **Seguridad > Siempre claves cifradas > Claves maestras de columna** y encuentre la clave maestra de columna antigua que quiere quitar de la base de datos.
 2. Haga clic con el botón derecho en la clave maestra de columna antigua y seleccione **Eliminar**. De este modo, se generará y emitirá una instrucción [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md) para quitar los metadatos de la clave maestra de columna.
-3. Haga clic en **Aceptar**.
+3. Haga clic en **OK**.
 
 > [!NOTE]
 > Es muy recomendable no eliminar permanentemente la antigua clave maestra de columna después de la rotación. Debería conservarla en su almacén de claves actual o archivarla en otra ubicación segura. Si restaura la base de datos desde un archivo de copia de seguridad a un punto en el tiempo anterior a la configuración de la nueva clave maestra de columna, necesitará la clave antigua para tener acceso a los datos.
@@ -141,14 +141,14 @@ También debe tener acceso a las claves maestras de columna de las claves de cif
 
 Para más información, vea [Creación y almacenamiento de claves maestras de columna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-## <a name="next-steps"></a>Next Steps
-- [Consulta de columnas mediante Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+## <a name="next-steps"></a>Pasos siguientes
+- [Consulta de columnas mediante Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
 - [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Consulte también
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Información general de administración de claves de Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
-- [Configurar Always Encrypted con SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
+- [Información general sobre la administración de claves de Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
+- [Configuración de Always Encrypted con SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
 - [Configurar Always Encrypted con PowerShell](configure-always-encrypted-using-powershell.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)
 - [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md)

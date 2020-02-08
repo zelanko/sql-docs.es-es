@@ -22,10 +22,10 @@ ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c9048efd86a7a4a993a9fff6bcab7f9058144f7e
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843764"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73843764"
 
   Genera un mensaje a partir de un mensaje existente en sys.messages o de una cadena proporcionada. La funcionalidad de FORMATMESSAGE es similar a la de la instrucción RAISERROR. Sin embargo, RAISERROR imprime el mensaje inmediatamente, mientras que FORMATMESSAGE devuelve el mensaje formateado para que se pueda seguir procesando.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,10 +53,10 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
  *param_value*  
  Valor de parámetro que se utiliza en el mensaje. Puede ser más de un valor. Los valores se deben especificar en el orden en el que las variables de marcador de posición aparezcan en el mensaje. El número máximo de valores es 20.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **nvarchar**  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Al igual que la instrucción RAISERROR, FORMATMESSAGE modifica el mensaje sustituyendo los valores de los parámetros suministrados por variables de marcador de posición del mensaje. Para más información sobre los marcadores de posición permitidos en los mensajes de error y el proceso de edición, vea [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
  FORMATMESSAGE busca el mensaje en el idioma actual del usuario. Si no hay una versión del mensaje en otro idioma, se utiliza la versión en inglés.  

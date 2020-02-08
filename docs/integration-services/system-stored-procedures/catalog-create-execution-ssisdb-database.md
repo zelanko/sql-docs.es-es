@@ -11,10 +11,10 @@ ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8076434e550f27ac292eec1b7385fce93d60e3ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295556"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (base de datos de SSISDB)
@@ -46,7 +46,7 @@ catalog.create_execution [@folder_name = folder_name
  El nombre de la carpeta que contiene el paquete que se va a ejecutar. *folder_name* es **nvarchar(128)** .  
   
  [@project_name =] *project_name*  
- Nombre del proyecto que contiene el paquete que se va a ejecutar. El parámetro *project_name* es de tipo **nvarchar(128)** .  
+ Nombre del proyecto que contiene el paquete que se va a ejecutar. *project_name* es **nvarchar(128)** .  
   
  [@package_name =] *package_name*  
  El nombre del paquete que se va a ejecutar. El parámetro *package_name* es de tipo **nvarchar(260)** .  
@@ -73,7 +73,7 @@ Este parámetro es opcional. Si no se especifica, su valor se establece en 1. El
  Devuelve el identificador único de una instancia de ejecución. El parámetro *execution_id* es de tipo **bigint**.  
 
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Una ejecución se utiliza para especificar los valores de parámetro que va a usar un paquete durante una instancia única de ejecución del paquete.  
   
  Si una referencia de entorno se especifica con el parámetro *reference_id*, el procedimiento almacenado rellena los parámetros de paquete y proyecto con los valores literales o los valores a los que se hace referencia de las variables de entorno correspondientes. Si se especifica la referencia de entorno, los valores de parámetro predeterminados se utilizan durante la ejecución del paquete. Para determinar exactamente qué valores se usan para una instancia determinada de ejecución, utilice el valor del parámetro de salida *execution_id* de este de procedimiento almacenado y consulte la vista [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md).  

@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 20cf6e1c3c98a99898a7b302980d76cef327be5d
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70228495"
 ---
 # <a name="set-statements-transact-sql"></a>Instrucciones SET (Transact-SQL)
@@ -39,7 +39,7 @@ El lenguaje de programación [!INCLUDE[tsql](../../includes/tsql-md.md)] ofrece 
   
 Para obtener información sobre cómo establecer variables locales con la instrucción SET, vea [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
-|Categoría|Instrucciones|  
+|Category|Instrucciones|  
 |--------------|----------------|  
 |Instrucciones de fecha y hora|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)<br /><br /> [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|  
 |Instrucciones de bloqueo|[SET DEADLOCK_PRIORITY](../../t-sql/statements/set-deadlock-priority-transact-sql.md)<br /><br /> [SET LOCK_TIMEOUT](../../t-sql/statements/set-lock-timeout-transact-sql.md)|  

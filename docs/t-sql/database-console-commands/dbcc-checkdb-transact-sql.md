@@ -35,10 +35,10 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982421"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
@@ -60,7 +60,7 @@ Esto significa que los comandos DBCC CHECKALLOC, DBCC CHECKTABLE o DBCC CHECKCAT
 >     
 > Puesto que las opciones de reparación de DBCC no están disponibles para las tablas optimizadas para memoria, debe hacer periódicamente copia de seguridad de las bases de datos y probar dichas copias. Si se producen problemas de integridad de datos en una tabla optimizada para memoria, debe restaurar desde la última copia de seguridad válida conocida.    
 
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Sintaxis    
     
@@ -168,7 +168,7 @@ DATA_PURITY
 > [!WARNING] 
 > Si MAXDOP se establece en cero, SQL Server elige el grado máximo de paralelismo que se va a usar.    
 
-## <a name="remarks"></a>Notas    
+## <a name="remarks"></a>Observaciones    
 DBCC CHECKDB no examina los índices deshabilitados. Para más información sobre los índices deshabilitados, vea [Deshabilitar índices y restricciones](../../relational-databases/indexes/disable-indexes-and-constraints.md).    
 
 Si un tipo definido por el usuario se marca como ordenado por bytes, solo debe existir una serialización del tipo definido por el usuario. La serialización incoherente de los tipos definidos por el usuario ordenados por bytes provoca el error 2537 cuando se ejecuta DBCC CHECKDB. Para más información, vea los [requisitos de los tipos definidos por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    
@@ -201,7 +201,7 @@ En Microsoft SQL Server 2012 o en una versión anterior de SQL Server, podría e
 Cuando FILESTREAM está habilitado para una base de datos y una tabla, puede almacenar opcionalmente los objetos binarios grandes (BLOB) **varbinary(max)** en el sistema de archivos. Al utilizar DBCC CHECKDB en una base de datos que almacena BLOB en el sistema de archivos, DBCC comprueba la coherencia de nivel de vínculo entre el sistema de archivos y la base de datos.
 Por ejemplo, si una tabla contiene una columna **varbinary(max)** en la que se usa el atributo FILESTREAM, DBCC CHECKDB comprobará que existe una asignación uno a uno entre los directorios del sistema de archivos y los archivos y filas de tabla, las columnas y los valores de columna. DBCC CHECKDB puede reparar el daño producido si se especifica la opción de REPAIR_ALLOW_DATA_LOSS. Para reparar el daño producido en FILESTREAM, DBCC eliminará las filas de tabla que sean datos del sistema de archivos que faltan.
     
-## <a name="best-practices"></a>Procedimientos recomendados    
+## <a name="best-practices"></a>Prácticas recomendadas    
 Se recomienda utilizar la opción `PHYSICAL_ONLY` si se usa con frecuencia en sistemas de producción. El uso de PHYSICAL_ONLY puede reducir mucho el tiempo de ejecución de DBCC CHECKDB en bases de datos grandes. También se recomienda ejecutar DBCC CHECKDB sin opciones de forma periódica. La frecuencia con que se deben realizar estas ejecuciones varía en función de la empresa y su entorno de producción.
     
 ## <a name="checking-objects-in-parallel"></a>Comprobar objetos en paralelo    

@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b880e3758481e5b061221bd2753b5a26f01ed856
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71708363"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: consultar Oracle desde un clúster de macrodatos de SQL Server
@@ -36,7 +36,7 @@ En este tutorial, aprenderá a:
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Extensión de SQL Server 2019**
+   - **Extensión de SQL Server 2019**
 - [Cargar datos de ejemplo en un clúster de macrodatos](tutorial-load-sample-data.md)
 
 ## <a name="create-an-oracle-table"></a>Crear una tabla de Oracle
@@ -69,7 +69,7 @@ El primer paso es crear un origen de datos externo que pueda acceder al servidor
 
 1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta**.
 
-   ![Consulta de la instancia maestra de SQL Server](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
+   ![Consultar una instancia maestra de SQL Server](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
 1. Ejecute el siguiente comando de Transact-SQL para cambiar el contexto de la base de datos **Ventas** de la instancia maestra.
 

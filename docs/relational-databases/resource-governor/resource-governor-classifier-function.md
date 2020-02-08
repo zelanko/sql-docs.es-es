@@ -15,17 +15,17 @@ ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: eeb3d08f0a14434fa5d071d88a3d26ec6fcaf6c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903915"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   El proceso de clasificación del regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna las sesiones de entrada a un grupo de carga de trabajo según las características de la sesión. Puede adaptar la lógica de clasificación escribiendo una función definida por el usuario, denominada función clasificadora.  
   
-## <a name="classification"></a>Clasificación  
+## <a name="classification"></a>clasificación  
  El regulador de recursos admite la clasificación de sesiones de entrada. La clasificación se basa en un conjunto de criterios escritos por el usuario contenidos en una función. Los resultados de la lógica de la función permiten al regulador de recursos clasificar las sesiones en los grupos de cargas de trabajo existentes.  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ ms.locfileid: "72903915"
   
 2.  Ejecución del desencadenador LOGON  
   
-3.  Clasificación  
+3.  clasificación  
 
  Cuando la clasificación se inicia, el regulador de recursos ejecuta la función clasificadora y utiliza el valor devuelto por la función para enviar solicitudes al grupo de cargas de trabajo adecuado.  
   

@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077444"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Creación y configuración de un grupo de disponibilidad para SQL Server en Linux
@@ -316,7 +316,7 @@ En este ejemplo se crean certificados para una configuración de tres nodos. Los
 
 En esta sección se explica cómo usar [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) o Transact-SQL para crear el grupo de disponibilidad para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Usar [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
+### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Use [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
 
 En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo de clúster Externo mediante SSMS con el Asistente para nuevo grupo de disponibilidad.
 
@@ -324,11 +324,11 @@ En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo d
 
 2.  En el cuadro de diálogo Introducción, haga clic en **Siguiente**.
 
-3.  En el cuadro de diálogo Especificar opciones de grupo de disponibilidad, escriba un nombre para el grupo de disponibilidad y seleccione un tipo de clúster EXTERNO o NINGUNO en la lista desplegable. Debe usarse Externo cuando se vaya a implementar Pacemaker. Ninguno es para escenarios especializados, como el escalado horizontal de lectura. La selección de la opción para la detección del estado del nivel de la base de datos es opcional. Para obtener más información sobre esta opción, vea [Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Haga clic en **Siguiente**.
+3.  En el cuadro de diálogo Especificar opciones de grupo de disponibilidad, escriba un nombre para el grupo de disponibilidad y seleccione un tipo de clúster EXTERNO o NINGUNO en la lista desplegable. Debe usarse Externo cuando se vaya a implementar Pacemaker. Ninguno es para escenarios especializados, como el escalado horizontal de lectura. La selección de la opción para la detección del estado del nivel de la base de datos es opcional. Para obtener más información sobre esta opción, vea [Opción de conmutación por error de detección del estado del nivel de la base de datos de un grupo de disponibilidad](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Haga clic en **Next**.
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  En el cuadro de diálogo Seleccionar bases de datos, seleccione las bases de datos que van a participar en el grupo de disponibilidad. Cada base de datos debe tener una copia de seguridad completa para que se pueda agregar a un grupo de disponibilidad. Haga clic en **Siguiente**.
+4.  En el cuadro de diálogo Seleccionar bases de datos, seleccione las bases de datos que van a participar en el grupo de disponibilidad. Cada base de datos debe tener una copia de seguridad completa para que se pueda agregar a un grupo de disponibilidad. Haga clic en **Next**.
 
 5.  En el cuadro de diálogo Especificar réplicas, haga clic en **Agregar réplica**.
 
@@ -354,17 +354,17 @@ En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo d
 
 11. Si se crea un cliente de escucha para escenarios legibles, SSMS 17.3 o posterior permite la creación del enrutamiento de solo lectura en el asistente. También se puede agregar más adelante mediante SSMS o Transact-SQL. Para agregar enrutamiento de solo lectura ahora:
 
-    A.  Seleccione la pestaña Enrutamiento de solo lectura.
+    a.  Seleccione la pestaña Enrutamiento de solo lectura.
 
-    B.  Escriba las direcciones URL de las réplicas de solo lectura. Estas direcciones URL son similares a los puntos de conexión, salvo que usan el puerto de la instancia, no el punto de conexión.
+    b.  Escriba las direcciones URL de las réplicas de solo lectura. Estas direcciones URL son similares a los puntos de conexión, salvo que usan el puerto de la instancia, no el punto de conexión.
 
     c.  Seleccione cada dirección URL y, en la parte inferior, seleccione las réplicas legibles. Para realizar una selección múltiple, mantenga presionada la tecla MAYÚS o haga clic y arrastre.
 
-12. Haga clic en **Siguiente**.
+12. Haga clic en **Next**.
 
-13. Elija cómo se van a inicializar las réplicas secundarias. El valor predeterminado es usar [propagación automática](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), que requiere la misma ruta de acceso en todos los servidores que participan en el grupo de disponibilidad. También puede hacer que el asistente realice una copia de seguridad, copie y restaure (la segunda opción); la una si ha realizado una copia de seguridad de la base de datos, la ha copiado y restaurado manualmente en las réplicas (tercera opción); o agregue la base de datos más adelante (última opción). Al igual que con los certificados, si realiza copias de seguridad de forma manual y las copia, se deben establecer los permisos de los archivos de copia de seguridad en las otras réplicas. Haga clic en **Siguiente**.
+13. Elija cómo se van a inicializar las réplicas secundarias. El valor predeterminado es usar [propagación automática](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), que requiere la misma ruta de acceso en todos los servidores que participan en el grupo de disponibilidad. También puede hacer que el asistente realice una copia de seguridad, copie y restaure (la segunda opción); la una si ha realizado una copia de seguridad de la base de datos, la ha copiado y restaurado manualmente en las réplicas (tercera opción); o agregue la base de datos más adelante (última opción). Al igual que con los certificados, si realiza copias de seguridad de forma manual y las copia, se deben establecer los permisos de los archivos de copia de seguridad en las otras réplicas. Haga clic en **Next**.
 
-14. En el cuadro de diálogo Validación, si todo no se devuelve como Correcto, investigue. Algunas advertencias son aceptables y no son graves, por ejemplo si no se crea un cliente de escucha. Haga clic en **Siguiente**.
+14. En el cuadro de diálogo Validación, si todo no se devuelve como Correcto, investigue. Algunas advertencias son aceptables y no son graves, por ejemplo si no se crea un cliente de escucha. Haga clic en **Next**.
 
 15. En el cuadro de diálogo Resumen, haga clic en **Finalizar**. El proceso de creación del grupo de disponibilidad ya comienza.
 

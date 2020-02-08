@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef5c610cb71a0f638c2dfba8aad1fbdb77308dfa
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412819"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
@@ -73,7 +73,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  El plan de ejecución estimado como se muestra en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es el siguiente:  
   
- ![Plan de consulta para una combinación de tablas basadas en disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "|::ref1::|")  
+ ![Plan de consulta para una combinación de tablas basadas en disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "Plan de consulta para una combinación de tablas basadas en disco.")  
 Plan de consulta para una combinación de tablas basadas en disco.  
   
  Acerca de este plan de consulta:  
@@ -92,7 +92,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  El plan estimado de esta consulta es:  
   
- ![Plan de consulta para una combinación hash de tablas basadas en disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "|::ref2::|")  
+ ![Plan de consulta para una combinación hash de tablas basadas en disco.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "Plan de consulta para una combinación hash de tablas basadas en disco.")  
 Plan de consulta para una combinación hash de tablas basadas en disco.  
   
  En esta consulta, las filas de la tabla Order se recuperan con el índice clúster. Ahora se utiliza el operador físico **Hash Match** para **Inner Join**. El índice clúster en la tabla Order no está ordenado en CustomerID y, por lo tanto, **Merge Join** requeriría un operador de ordenación, lo que afectaría al rendimiento. Tenga en cuenta el costo relativo del operador **Hash Match** (75 %) en comparación con el costo del operador **Merge Join** del ejemplo anterior (46 %). El optimizador habría considerado el operador **Hash Match** también en el ejemplo anterior pero concluyó que el operador **Merge Join** proporcionaba un rendimiento mejor.  
@@ -100,7 +100,7 @@ Plan de consulta para una combinación hash de tablas basadas en disco.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Procesamiento de consultas para las tablas basadas en disco  
  El siguiente diagrama muestra el flujo de procesamiento de consultas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las consultas ad hoc:  
   
- ![Canalización de procesamiento de consultas de SQL Server](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "|::ref3::|")  
+ ![Canalización de procesamiento de consultas de SQL Server](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Canalización de procesamiento de consultas de SQL Server")  
 Canalización de procesamiento de consultas de SQL Server  
   
  En este escenario:  
@@ -220,7 +220,7 @@ Compilación nativa de procedimientos almacenados.
   
  La invocación de un procedimiento almacenado compilado de forma nativa se traduce en la llamada a una función del archivo DLL.  
   
- ![Ejecución de los procedimientos almacenados compilados de forma nativa.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "|::ref7::|")  
+ ![Ejecución de los procedimientos almacenados compilados de forma nativa.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "Ejecución de los procedimientos almacenados compilados de forma nativa.")  
 Ejecución de los procedimientos almacenados compilados de forma nativa.  
   
  La invocación de un procedimiento almacenado compilado de forma nativa se describe como sigue:  
@@ -294,7 +294,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Después de eliminar todas las filas menos una en la tabla Customer:  
   
- ![Combinaciones y estadísticas de columnas.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "|::ref8::|")  
+ ![Combinaciones y estadísticas de columnas.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Combinaciones y estadísticas de columnas.")  
   
  Acerca de este plan de consulta:  
   

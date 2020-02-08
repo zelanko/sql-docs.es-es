@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68254865"
 ---
 # <a name="report-server-service-trace-log"></a>Registro de seguimiento del servicio del servidor de informes
@@ -62,7 +62,7 @@ El comportamiento del registro de seguimiento se administra en el archivo de con
 |**FileName**|Especifica la primera parte del nombre del archivo de registro. El valor especificado en **Prefix** completa el resto del nombre.||  
 |**FileSizeLimitMb**|Especifica un límite superior para el tamaño del registro de seguimiento. El tamaño del archivo se indica en megabytes.<br /><br /> Puede controlar el tamaño de archivo si establece niveles de seguimiento (de 0 a 4) para controlar cuánto contenido debe registrarse. También puede especificar los componentes a los que se realizó el seguimiento. Si se alcanza el valor máximo del archivo de registro antes de la fecha de expiración de 14 días, las entradas nuevas reemplazarán a las más antiguas.|Los valores válidos son de 0 a un número entero definido como máximo. El valor predeterminado es 32. Si especifica 0 o un número negativo, el servidor de informes trata el valor como 1.|  
 |**KeepFilesForDays**|Especifica los días tras los que se elimina un archivo de registro de seguimiento.|Los valores válidos son de 0 a un número entero definido como máximo. El valor predeterminado es 14. Si especifica 0 o un número negativo, el servidor de informes trata el valor como 1.|  
-|**Prefix**|Especifica un valor generado que distingue una instancia de registro de otra.|De manera predeterminada, se anexan valores de marca de tiempo a los nombres de los archivos de registro de seguimiento. Este valor se establece en "appdomain, tid, time". No modifique este parámetro.|  
+|**Prefijo**|Especifica un valor generado que distingue una instancia de registro de otra.|De manera predeterminada, se anexan valores de marca de tiempo a los nombres de los archivos de registro de seguimiento. Este valor se establece en "appdomain, tid, time". No modifique este parámetro.|  
 |**TraceListeners**|Especifica un destino de salida para el contenido del registro de seguimiento. Se pueden especificar varios destinos separados por comas.|Los valores válidos son:<br /><br /> <br /><br /> DebugWindow<br /><br /> File (predeterminado)<br /><br /> StdOut|  
 |**TraceFileMode**|Especifica si los registros de seguimiento incluyen datos de un período de 24 horas. Es recomendable tener un único registro de seguimiento para cada componente y día.|Este valor se establece en "Unique (default)". No modifique este valor.|  
 |**Categoría de componentes**|Especifica los componentes para los cuales se genera la información de registro de seguimiento y el nivel de seguimiento en este formato.<br /><br /> \<categoría de componente>:\<tracelevel><br /><br /> Puede especificar todos los componentes o algunos de ellos (**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**). Si no desea generar información para un componente específico, puede deshabilitar el seguimiento para el mismo (por ejemplo, "SemanticModelGenerator:0"). No deshabilite el seguimiento para **all**.<br /><br /> Puede establecer "SemanticQueryEngine:4" si desea ver las instrucciones Transact-SQL generadas para cada consulta semántica. Las instrucciones Transact-SQL se registran en el registro de seguimiento. El ejemplo siguiente muestra el valor de configuración que agrega las instrucciones Transact-SQL al registro:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|Las categorías de componentes se pueden establecer en:<br /><br /> <br /><br /> **All** se utiliza para realizar un seguimiento de la actividad general del servidor de informes para todos los procesos que no están divididos en las categorías específicas.<br /><br /> **RunningJobs** se usa para realizar un seguimiento de una operación de suscripción o informe en curso.<br /><br /> **SemanticQueryEngine** se usa para realizar un seguimiento de una consulta semántica procesada cuando un usuario realiza una exploración de datos ad hoc en un informe basado en un modelo.<br /><br /> **SemanticModelGenerator** se utiliza para realizar un seguimiento de generación de modelos.<br /><br /> **http** se utiliza para habilitar el archivo de registro HTTP del servidor de informes. Para obtener más información, vea [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md).|  
@@ -104,7 +104,7 @@ En versiones anteriores de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnovers
 + ReportServer_ *\<marca de tiempo>* .log
 + ReportServerService_main_ *\<marca de tiempo>* .log
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
 - [Referencia de errores y eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

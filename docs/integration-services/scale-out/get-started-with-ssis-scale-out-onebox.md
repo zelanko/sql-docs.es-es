@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: a2d6929277b7d024e45daaefd5cb41dccd495c63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082163"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>Introducción a la escalabilidad horizontal de SSIS en un único equipo
@@ -45,7 +45,7 @@ En las páginas **Configuración de escalabilidad horizontal de Integration Serv
 
 Finalice el Asistente para la instalación de SQL Server.
 
-## <a name="2-install-sql-server-management-studio"></a>2. Instalar SQL Server Management Studio
+## <a name="2-install-sql-server-management-studio"></a>2. Instalación de SQL Server Management Studio
 
 Descargue e instale [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe3f77ac629aab7534077274aa9cf62a50149b57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900905"
 ---
 # <a name="raw-file-custom-properties"></a>Propiedades personalizadas de archivo sin formato
@@ -52,7 +52,7 @@ ms.locfileid: "62900905"
   
  Para más información, consulte [Raw File Destination](raw-file-destination.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Common Properties](../common-properties.md)  
   
   

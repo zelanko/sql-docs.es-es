@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 5: Agregar una tarea de flujo de datos | Microsoft Docs'
+title: 'Tarea 5: agregar una tarea flujo de datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489146"
 ---
-# <a name="task-5-adding-data-flow-task"></a>Tarea 5: Adición de una tarea Flujo de datos
+# <a name="task-5-adding-data-flow-task"></a>Tarea 5: agregar una tarea Flujo de datos
   En esta tarea, agregará una tarea Flujo de datos al flujo de control del paquete SSIS.  
   
-1.  Arrastre y coloque **Data Flow Task** desde **cuadro de herramientas de SSIS** a la **flujo de Control** ficha en el Diseñador SSIS. Si no ve el **cuadro de herramientas de SSIS**, haga clic en el **flujo de Control** , haga clic **SSIS** en la barra de menús y haga clic en **cuadro de herramientas de SSIS**.  
+1.  Arrastre y coloque la **tarea flujo de datos** desde el **cuadro de herramientas de SSIS** hasta la pestaña flujo de **control** del diseñador SSIS. Si no ve el cuadro de **herramientas de SSIS**, haga clic en cualquier lugar de la pestaña **flujo de control** , haga clic en **SSIS** en la barra de menús y, a continuación, haga clic en cuadro de **herramientas de SSIS**.  
   
-     ![Tarea en el cuadro de herramientas SSIS de flujo de datos de arrastrar y colocar](../../2014/tutorials/media/et-addingdataflowtask.jpg "tareas desde el cuadro de herramientas SSIS de flujo de datos de arrastrar y colocar")  
+     ![Tarea de flujo de datos de arrastrar y colocar desde el cuadro de herramientas SSIS](../../2014/tutorials/media/et-addingdataflowtask.jpg "Tarea de flujo de datos de arrastrar y colocar desde el cuadro de herramientas SSIS")  
   
-2.  Haga clic en el **Data Flow Task** en el **flujo de Control** ficha y haga clic en **cambiar el nombre**.  
+2.  Haga clic con el botón secundario en la **tarea flujo de datos** en la pestaña **flujo de control** y haga clic en **cambiar nombre**.  
   
-3.  Tipo **Receive, limpieza, coincidencia y reparar datos de proveedor** y presione **ENTRAR**.  
+3.  Escriba **Receive, cleane, Match y ajustar Supplier Data** y presione **entrar**.  
   
-4.  Haga doble clic en el **Data Flow Task** para cambiar a la **de flujo de datos** ficha.  
+4.  Haga doble clic en la **tarea flujo de datos** para cambiar a la pestaña **flujo de datos** .  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 6: Agregar origen de Excel al flujo de datos](task-6-adding-excel-source-to-the-data-flow.md)  
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 6: agregar el origen de Excel al flujo de datos](task-6-adding-excel-source-to-the-data-flow.md)  
   
   

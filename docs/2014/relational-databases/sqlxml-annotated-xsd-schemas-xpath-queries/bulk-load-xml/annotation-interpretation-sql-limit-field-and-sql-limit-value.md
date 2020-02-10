@@ -1,5 +1,5 @@
 ---
-title: 'SQL: limit-campo y SQL: limit-value (SQLXML 4.0) | Microsoft Docs'
+title: 'SQL: Limit-Field y SQL: Limit-Value (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5d49a8159601236d280aed809fa41287cd4ab22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013565"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field y sql:limit-value (SQLXML 4.0)
-  Carga masiva XML procesa las anotaciones `sql:limit-field` y `sql:limit-value` por su definición. Para obtener más información, consulte [filtrar valores mediante SQL: limit-campo y SQL: limit-valor &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md).  
+  Carga masiva XML procesa las anotaciones `sql:limit-field` y `sql:limit-value` por su definición. Para obtener más información, vea [filtrar valores mediante SQL: Limit-Field y SQL: Limit-value &#40;SQLXML 4,0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md).  
   
  Por ejemplo, supongamos que una base de datos contiene las tablas siguientes:  
   

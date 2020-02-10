@@ -1,5 +1,5 @@
 ---
-title: Seleccione los paquetes (Asistente actualización del paquete SSIS) | Microsoft Docs
+title: Seleccionar paquetes (Asistente para actualización del paquete SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056020"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Seleccionar paquetes (Asistente para actualización del paquete SSIS)
@@ -30,7 +30,7 @@ ms.locfileid: "66056020"
  **Nombre del paquete existente**  
  Seleccione uno o varios paquetes para actualizar.  
   
- **Actualizar nombre de paquete**  
+ **Nombre del paquete de actualización**  
  Proporcione el nombre del paquete de destino o use el nombre predeterminado que proporciona el asistente.  
   
 > [!NOTE]  
@@ -42,8 +42,8 @@ ms.locfileid: "66056020"
  **Aplicar a la selección**  
  Aplique la contraseña especificada para descifrar los paquetes de la actualización seleccionados.  
   
-## <a name="see-also"></a>Vea también  
- [Seleccionar ubicación de origen &#40;Asistente para actualización del paquete SSIS&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
+## <a name="see-also"></a>Consulte también  
+ [Seleccione la ubicación de origen &#40;Asistente para actualización del paquete SSIS&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
  [Actualizar paquetes de Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

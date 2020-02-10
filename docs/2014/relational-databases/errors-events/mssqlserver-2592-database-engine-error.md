@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e8c6d2cc2803a222e831a32a3f3e803a0433068
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914352"
 ---
-# <a name="mssqlserver2592"></a>MSSQLSERVER_2592
+# <a name="mssqlserver_2592"></a>MSSQLSERVER_2592
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2592|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2592|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_REPAIR_INDEX_REBUILT|  
-|Texto del mensaje|Reparación: El índice INDEX_TYPE vuelto a generar correctamente para el objeto OBJECT en la base de datos 'DATABASE'.|  
+|Texto del mensaje|Reparación: se ha vuelto a generar correctamente el índice INDEX_TYPE para el objeto "OBJECT" de la base de datos '"DATABASE".|  
   
 ## <a name="explanation"></a>Explicación  
  REPAIR indica que se ha vuelto a generar un índice.  

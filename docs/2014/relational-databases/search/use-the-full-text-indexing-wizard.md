@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7bab4ee8f03eb666e1a8396fbf8957b1e42f2c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010899"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar el Asistente para indización de texto completo
@@ -43,13 +43,15 @@ ms.locfileid: "66010899"
      **Columnas disponibles**  
      Para incluir una columna en el índice, active la casilla situada junto al nombre de columna. Las columnas que no son aptas para la indización de texto completo aparecen en gris con las casillas deshabilitadas.  
   
-     **Idioma para el separador de palabras**  
-     Seleccione un idioma en la lista desplegable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizará esta opción para identificar los separadores de palabras correctos para el índice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa separadores de palabras para identificar límites de palabras en los datos indexados de texto completo.  
+     **Idioma del separador de palabras**  
+     Seleccione un idioma en la lista desplegable. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizará esta opción para identificar los separadores de palabras correctos para el índice. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa separadores de palabras para identificar límites de palabras en los datos indexados de texto completo.  
   
      **Columna de tipo**  
      Seleccione el nombre de la columna que incluye el tipo de documento de la columna que se va a incluir en el índice de texto completo.  
   
-     El **columna de tipo** solo se habilita cuando la columna mencionada en el **columnas disponibles** columna es de tipo `varbinary(max)` o `image`.  
+     La **columna tipo** solo se habilita cuando la columna mencionada en la columna **columnas disponibles** es del `varbinary(max)` tipo `image`o.  
   
      **Semántica estadística**  
      Seleccione si desea habilitar la indización semántica para la columna seleccionada. Para obtener más información, vea [Búsqueda semántica &#40;SQL Server&#41;](semantic-search-sql-server.md).  
@@ -58,7 +60,7 @@ ms.locfileid: "66010899"
   
 2.  Seleccione las opciones de seguimiento de cambios.  
   
-     **Automáticamente**  
+     **Manera**  
      Seleccione este botón de opción para que el índice de texto completo se actualice automáticamente cuando se produzcan cambios en los datos subyacentes.  
   
      **Manualmente**  
@@ -67,7 +69,7 @@ ms.locfileid: "66010899"
      **No realizar seguimiento de cambios**  
      Seleccione este botón de opción si no desea que el índice de texto completo se actualice con los cambios en los datos subyacentes.  
   
-     **Iniciar llenado completo al crea el índice**  
+     **Iniciar llenado completo al crear el índice**  
      Seleccione este botón de opción para iniciar un llenado completo tras la finalización correcta de este asistente. De esta forma, se creará la estructura del índice de texto completo en el catálogo y se llenará con los datos indizados de texto completo.  
   
 3.  Seleccione el catálogo, el grupo de archivos de índice y la lista de palabras irrelevantes.  
@@ -79,7 +81,7 @@ ms.locfileid: "66010899"
     |-|-|  
     |**Crear un nuevo catálogo**|Seleccione esta opción para crear un nuevo catálogo de texto completo.|  
   
-     **Name**  
+     **Nombre**  
      Escriba un nombre para el nuevo catálogo de texto completo.  
   
      **Establecer como catálogo predeterminado**  
@@ -93,11 +95,11 @@ ms.locfileid: "66010899"
   
      Seleccione uno de los siguientes valores:  
   
-    |Valor|Descripción|  
+    |Value|Descripción|  
     |-----------|-----------------|  
-    |**\<default>**|Si la tabla o la vista no tienen particiones, seleccione este valor para usar el mismo grupo de archivos que la tabla o vista subyacente. Si la tabla o la vista tienen particiones, se usa el grupo de archivos principal.|  
-    |**PRIMARY**|Seleccione este valor para usar el grupo de archivos principal para el nuevo índice de texto completo.|  
-    |*grupo de archivos predeterminado especificado por el usuario*|Si existe una lista de palabras irrelevantes predeterminada definida por el usuario, seleccione su nombre en la lista con el fin de utilizar ese grupo de archivos para el nuevo índice de texto completo.|  
+    |**\<>predeterminada**|Si la tabla o la vista no tienen particiones, seleccione este valor para usar el mismo grupo de archivos que la tabla o vista subyacente. Si la tabla o la vista tienen particiones, se usa el grupo de archivos principal.|  
+    |**PRINCIPAL**|Seleccione este valor para usar el grupo de archivos principal para el nuevo índice de texto completo.|  
+    |*Grupo de archivos predeterminado especificado por el usuario*|Si existe una lista de palabras irrelevantes predeterminada definida por el usuario, seleccione su nombre en la lista con el fin de utilizar ese grupo de archivos para el nuevo índice de texto completo.|  
   
      **Seleccionar lista de palabras irrelevantes de texto completo**  
      Especifique una lista de palabras irrelevantes para usarla en el índice de texto completo, o deshabilite el uso de la lista de palabras irrelevantes.  
@@ -106,11 +108,11 @@ ms.locfileid: "66010899"
   
      Seleccione uno de los siguientes valores:  
   
-    |Valor|Descripción|  
+    |Value|Descripción|  
     |-----------|-----------------|  
-    |**\<system>**|Seleccione este valor para utilizar la lista de palabras irrelevantes del sistema en el nuevo índice de texto completo. Este es el valor predeterminado.|  
-    |**\<off>**|Seleccione este valor para deshabilitar las listas de palabras irrelevantes para el nuevo índice de texto completo.|  
-    |*user-defined-stoplist-name*|La lista muestra el nombre de cada lista de palabras irrelevantes definida por el usuario, si hay alguna, que se haya creado en la base de datos. Seleccione la lista de palabras irrelevantes definida por el usuario que desee para utilizarla para el nuevo índice de texto completo.|  
+    |**\<>del sistema**|Seleccione este valor para utilizar la lista de palabras irrelevantes del sistema en el nuevo índice de texto completo. Este es el valor predeterminado.|  
+    |**\<desactivado>**|Seleccione este valor para deshabilitar las listas de palabras irrelevantes para el nuevo índice de texto completo.|  
+    |*User-Defined-STOPLIST-Name*|La lista muestra el nombre de cada lista de palabras irrelevantes definida por el usuario, si hay alguna, que se haya creado en la base de datos. Seleccione la lista de palabras irrelevantes definida por el usuario que desee para utilizarla para el nuevo índice de texto completo.|  
   
 4.  Opcionalmente, defina la programación de rellenado. Las operaciones de indización comenzarán inmediatamente, a menos que se hayan programado para que se ejecuten posteriormente. Las programaciones se crearán inmediatamente, aunque no se ejecuten hasta la hora programada.  
   
@@ -120,7 +122,7 @@ ms.locfileid: "66010899"
      **Nueva programación de catálogo**  
      Permite definir una programación de llenado para un catálogo de texto completo.  
   
-     **Editar**  
+     **Edición**  
      Permite editar una programación.  
   
      **Eliminar**  
@@ -128,10 +130,10 @@ ms.locfileid: "66010899"
   
 5.  Vea o controle el progreso del Asistente para indización de texto completo.  
   
-     **Detener**  
+     **Detención**  
      Interrumpe la operación actual e impide que el asistente lleve a cabo operaciones de texto completo posteriores durante esta sesión.  
   
-     **Informe**  
+     **Report**  
      Cuando finalice la ejecución de todas las operaciones, haga clic en este botón para obtener acceso a un informe sobre las operaciones efectuadas. Puede ver el informe, imprimirlo en un archivo, copiarlo al portapapeles o enviarlo por correo electrónico.  
   
   

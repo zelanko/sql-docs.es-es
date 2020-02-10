@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011145"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitar los resultados de la búsqueda con RANK
@@ -37,7 +37,7 @@ ms.locfileid: "66011145"
   
 ##  <a name="examples"></a> Ejemplos del uso de RANK para limitar los resultados de la búsqueda  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Ejemplo A: búsqueda de solo las tres primeras coincidencias  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Ejemplo A: buscar solo las tres primeras coincidencias  
  En el ejemplo siguiente se usa CONTAINSTABLE para devolver las tres primeras coincidencias.  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Ejemplo B: búsqueda de solo las diez primeras coincidencias  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Ejemplo B: buscar las diez primeras coincidencias  
  En el ejemplo siguiente se usa CONTAINSTABLE para devolver la descripción de los 5 productos más destacados, donde la columna `Description` contiene la palabra “aluminum” cerca de la palabra “light” o de la palabra “lightweight”.  
   
 ```  
@@ -104,7 +104,7 @@ GO
   
  En la siguiente lista se mencionan algunos términos y valores estadísticos de uso frecuente que son importantes para calcular la clasificación.  
   
- Property  
+ Propiedad  
  Una columna indizada de texto completo de la fila.  
   
  Documento  
@@ -141,9 +141,9 @@ GO
 ### <a name="rank-computation-issues"></a>Problemas de cálculo de rango  
  El proceso de cálculo de rango depende de varios factores.  Los separadores de palabras de cada uno de los idiomas acortan el texto de forma distinta. Por ejemplo, un separador de palabras podría separar la cadena "dog-house" en "dog" "house" y otro en "dog-house". Por este motivo, las coincidencias y las categorías variarán en función del idioma especificado, ya que no solo son distintas las palabras sino también la longitud del documento. La diferencia de longitud del documento puede afectar a las categorías de todas las consultas.  
   
- Las estadísticas como `IndexRowCount` pueden variar enormemente. Por ejemplo, si un catálogo tiene 2.000 millones de filas en el índice maestro, un nuevo documento se indizará en un índice intermedio de la memoria y los rangos de dicho documento basados en el número de documentos en el índice almacenado en la memoria podrían desviarse de los rangos de los documentos del índice maestro. Por este motivo, tras realizar un llenado que dé como resultado la indización o reindización de un gran número de filas, se recomienda mezclar los índices en un índice maestro mediante la instrucción ALTER FULLTEXT CATALOG ... REORGANIZE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El motor de búsqueda de texto completo también mezclará automáticamente los índices basándose en parámetros como el número y el tamaño de los índices intermedios.  
+ Las estadísticas como `IndexRowCount` pueden variar enormemente. Por ejemplo, si un catálogo tiene 2.000 millones de filas en el índice maestro, un nuevo documento se indizará en un índice intermedio de la memoria y los rangos de dicho documento basados en el número de documentos en el índice almacenado en la memoria podrían desviarse de los rangos de los documentos del índice maestro. Por este motivo, tras realizar un llenado que dé como resultado la indización o reindización de un gran número de filas, se recomienda mezclar los índices en un índice maestro mediante la instrucción ALTER FULLTEXT CATALOG ... REORGANIZE de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El motor de búsqueda de texto completo también mezclará automáticamente los índices basándose en parámetros como el número y el tamaño de los índices intermedios.  
   
- Los valores de `MaxOccurrence` se normalizan en 1 de 32 intervalos. Esto significa que, por ejemplo, un documento de 50 palabras se trata igual que un documento de 100 palabras. A continuación se muestra la tabla utilizada para la normalización. Como las longitudes de los documentos se encuentran en el intervalo entre los valores de tabla adyacentes 32 y 128, efectivamente se tratan como si tuvieran la misma longitud, 128 (32 < `docLength` < = 128).  
+ Los valores de `MaxOccurrence` se normalizan en 1 de 32 intervalos. Esto significa que, por ejemplo, un documento de 50 palabras se trata igual que un documento de 100 palabras. A continuación se muestra la tabla utilizada para la normalización. Dado que las longitudes del documento están en el intervalo entre los valores de tabla adyacentes 32 y 128, se tratan de forma eficaz como si tuvieran la misma longitud, 128 (32 < `docLength` <= 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   
@@ -203,7 +203,7 @@ qtf is the frequency of the term in the query.
 ```  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Consultar con búsqueda de texto completo](query-with-full-text-search.md)  
   
   

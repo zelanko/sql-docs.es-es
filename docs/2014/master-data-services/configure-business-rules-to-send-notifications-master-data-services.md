@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b0ea6e215b5192d1b9e84ed252708b188d5c5a59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483957"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Configurar reglas de negocios para enviar notificaciones (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], configure reglas de negocios para enviar notificaciones cuando desee notificar a los usuarios los cambios de los valores de los atributos.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso a las áreas funcionales de **Permisos de usuario y de grupo** y de **Administración del sistema** . Si no tiene permiso para el área funcional de **Permisos de usuario y grupo** , no puede ver la lista de usuarios y grupos a los que enviar las notificaciones.  
@@ -47,11 +47,11 @@ ms.locfileid: "65483957"
   
 4.  En la lista **Entidad** , seleccione una entidad.  
   
-5.  Desde el **tipo de miembro** lista, seleccione un tipo de miembro.  
+5.  En la lista **tipo de miembro** , seleccione un tipo de miembro.  
   
 6.  En la lista **Atributo** , seleccione un atributo o deje el valor predeterminado de **Todos**.  
   
-7.  En la cuadrícula, en la fila de la regla de negocios, haga doble clic en el **notificación** campo.  
+7.  En la cuadrícula, en la fila de la regla de negocios, haga doble clic en el campo **notificación** .  
   
 8.  En el submenú, haga clic en un usuario o un grupo al que desea enviar la notificación por correo electrónico.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "65483957"
   
     -   [Configurar notificaciones por correo electrónico &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Notificaciones &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)   
  [Configurar notificaciones por correo electrónico &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de serie temporal | Microsoft Docs'
+title: 'Lección 2: agregar modelos de minería de datos a la estructura de minería de datos de serie temporal | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62855716"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lección 2: Adición de modelos de minería de datos a la estructura de minería de datos de serie temporal
-  En esta lección, agregará un nuevo modelo de minería de datos a la estructura de minería de datos que acaba de crear en [lección 1: Creación de una serie temporal del modelo de minería de datos y la estructura de minería de datos](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de serie temporal
+  En esta lección, agregará un nuevo modelo de minería de datos a la estructura de minería de datos que acaba de crear en la [Lección 1: crear un modelo de minería de datos de serie temporal y una estructura de minería](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)de datos.  
   
 ## <a name="alter-mining-structure-statement"></a>Instrucción ALTER MINING STRUCTURE  
- Para agregar un nuevo modelo de minería de datos a una estructura de minería de datos existente, se utiliza el [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) instrucción. El código de la instrucción se puede dividir en las partes siguientes:  
+ Para agregar un nuevo modelo de minería de datos a una estructura de minería de datos existente, use la instrucción [ALTER Mining structure &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) . El código de la instrucción se puede dividir en las partes siguientes:  
   
 -   Identificación de la estructura de minería de datos  
   
@@ -57,7 +57,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- Para obtener información sobre la nomenclatura de un objeto en DMX, vea [identificadores &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Para obtener información sobre cómo asignar un nombre a un objeto en DMX, consulte [identifiers &#40;dmx&#41;](/sql/dmx/identifiers-dmx).  
   
  Las líneas siguientes del código definen columnas de la estructura de minería de datos que utilizará el modelo de minería de datos:  
   
@@ -75,7 +75,7 @@ USING <algorithm name>([<algorithm parameters>])
 WITH DRILLTHROUGH  
 ```  
   
- Para obtener más información acerca de los parámetros del algoritmo que puede ajustar, vea [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
+ Para obtener más información sobre los parámetros de algoritmo que puede ajustar, vea [referencia técnica del algoritmo de serie temporal de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md).  
   
  Puede especificar que una columna del modelo de minería de datos se utilice para la predicción mediante la sintaxis siguiente:  
   
@@ -95,7 +95,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>Para agregar un modelo de minería de datos de serie temporal ARIMA  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX** para abrir el Editor de consultas y una nueva consulta en blanco.  
+1.  En **Explorador de objetos**, haga clic con el botón secundario [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]en la instancia de, seleccione **nueva consulta**y, a continuación, haga clic en **DMX** para abrir el editor de consultas y una nueva consulta en blanco.  
   
 2.  Copie el ejemplo genérico de la instrucción ALTER MINING STRUCTURE en la consulta en blanco.  
   
@@ -181,11 +181,11 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-8.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
+8.  En el menú **archivo** , haga clic en **Guardar DMXQuery1. DMX como**.  
   
-9. En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Forecasting_ARIMA.dmx`.  
+9. En el cuadro de diálogo **Guardar como** , vaya a la carpeta correspondiente y asigne el nombre `Forecasting_ARIMA.dmx`al archivo.  
   
-10. En la barra de herramientas, haga clic en el **Execute** botón.  
+10. En la barra de herramientas, haga clic en el botón **Ejecutar** .  
   
 ## <a name="adding-an-artxp-time-series-model-to-the-structure"></a>Agregar un modelo de serie temporal ARTXP a la estructura  
  El algoritmo ARTXP era el algoritmo de serie temporal predeterminado de SQL Server 2005 y se optimizó para la predicción a corto plazo. Para comparar las predicciones con los tres algoritmos de serie temporal, agregará un modelo más que se basa en el algoritmo ARTXP.  
@@ -209,19 +209,19 @@ WITH DRILLTHROUGH
     WITH DRILLTHROUGH  
     ```  
   
-2.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
+2.  En el menú **archivo** , haga clic en **Guardar DMXQuery1. DMX como**.  
   
-3.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Forecasting_ARTXP.dmx`.  
+3.  En el cuadro de diálogo **Guardar como** , vaya a la carpeta correspondiente y asigne el nombre `Forecasting_ARTXP.dmx`al archivo.  
   
-4.  En la barra de herramientas, haga clic en el **Execute** botón.  
+4.  En la barra de herramientas, haga clic en el botón **Ejecutar** .  
   
  En la siguiente lección procesará todos los modelos y la estructura de minería de datos.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 3: Procesamiento de la serie temporal estructura y modelos](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [Lección 3: Procesar la estructura de serie temporal y los modelos](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Algoritmo de serie temporal de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Referencia técnica del algoritmo de serie temporal de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
+ [Microsoft Time Series Algorithm Technical Reference](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   

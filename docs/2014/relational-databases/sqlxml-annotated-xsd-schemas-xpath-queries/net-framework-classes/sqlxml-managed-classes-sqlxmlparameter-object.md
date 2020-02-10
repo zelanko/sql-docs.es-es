@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13267e732c6eb5eae388ff8e79ed1d6e0be5febc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010759"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>Objeto SqlXmlParameter (clases administradas de SQLXML)
   El objeto SqlXmlParameter admite estas propiedades:  
   
- NOMBRE  
- Nombre del parámetro. Se pueden pasar parámetros a los comandos. Una llamada al método CreateParameter del objeto SqlXmlCommand crea el objeto de parámetro.  
+ Nombre  
+ El nombre del parámetro. Se pueden pasar parámetros a los comandos. La llamada al método CreateParameter del objeto SqlXmlCommand crea el objeto de parámetro.  
   
- Valor  
- El valor del parámetro. Para obtener un ejemplo funcional, consulte [Executing SQL Queries &#40;SQLXML Managed Classes&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
+ Value  
+ Valor del parámetro. Para obtener un ejemplo funcional, vea [ejecutar consultas SQL &#40;clases administradas de SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto SqlXmlCommand &#40;clases administradas de SQLXML&#41;](sqlxml-managed-classes-sqlxmlcommand-object.md)   
  [Objeto SqlXmlAdapter &#40;clases administradas de SQLXML&#41;](sqlxml-managed-classes-sqlxmladapter-object.md)   
  [Acceso a la funcionalidad de SQLXML en el entorno .NET](accessing-sqlxml-functionality-in-the-net-environment.md)  

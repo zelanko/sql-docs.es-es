@@ -16,14 +16,15 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: db5ec327ab7f7672a55fbaa0d2cd086bbcfc67cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896307"
 ---
 # <a name="creating-a-custom-log-provider"></a>Crear un proveedor de registro personalizado
-  El entorno en tiempo de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye amplias funciones de registro. Un registro permite capturar eventos que se generan durante la ejecución del paquete. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye varios proveedores de registro que permiten crear registros y almacenarlos en diversos formatos como XML, texto, base de datos o en el registro de eventos de Windows. Si uno de estos proveedores o formatos de salida no se ajusta sus necesidades, puede crear un proveedor de registro personalizado.  
+  El entorno en tiempo de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye amplias funciones de registro. Un registro permite capturar eventos que se generan durante la ejecución del paquete. 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye varios proveedores de registro que permiten crear registros y almacenarlos en diversos formatos como XML, texto, base de datos o en el registro de eventos de Windows. Si uno de estos proveedores o formatos de salida no se ajusta sus necesidades, puede crear un proveedor de registro personalizado.  
   
  Los pasos necesarios para crear un proveedor de registro personalizado son similares a los pasos para crear cualquier otro objeto personalizado para [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
   
@@ -33,7 +34,7 @@ ms.locfileid: "62896307"
   
 -   Invalide la implementación de los métodos y las propiedades de la clase base. Para un proveedor de registro, estos incluyen la propiedad <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.ConfigString%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, los métodos <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>.  
   
--   Las interfaces de usuario personalizadas para los proveedores de registro personalizados no están implementadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
+-   Las interfaces de usuario personalizadas para los proveedores de registro personalizados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]no se implementan en.  
   
 ## <a name="getting-started-with-a-custom-log-provider"></a>Introducción a un proveedor de registro personalizado  
   
@@ -46,7 +47,7 @@ ms.locfileid: "62896307"
 >  Muchos proveedores de registro de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] tienen una interfaz de usuario personalizada que implementa <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> y reemplaza el cuadro de texto **Configuración** en el cuadro de diálogo **Configurar registros de SSIS** por una lista desplegable filtrada de administradores de conexiones disponibles. Sin embargo, las interfaces de usuario personalizadas para los proveedores de registro personalizados no se implementan en [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
 ### <a name="applying-the-dtslogprovider-attribute"></a>Aplicar el atributo DtsLogProvider  
- Aplique el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> a la clase que ha creado para identificarlo como un proveedor de registro. Este atributo proporciona información en tiempo de diseño, como el nombre y la descripción del proveedor de registro. El `DisplayName` y `Description` propiedades del atributo corresponden a la **nombre** y `Description` las columnas mostradas en la **configurar registros de SSIS** editor, que se muestra cuándo configuración del registro para un paquete en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Aplique el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> a la clase que ha creado para identificarlo como un proveedor de registro. Este atributo proporciona información en tiempo de diseño, como el nombre y la descripción del proveedor de registro. Las `DisplayName` propiedades `Description` y del atributo corresponden al **nombre** y `Description` las columnas que se muestran en el editor **configurar registros de SSIS** , que se muestra al configurar el registro para [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]un paquete en.  
   
 > [!IMPORTANT]  
 >  La propiedad <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.LogProviderType%2A> del atributo no se usa. Sin embargo, debe especificar un valor para la propiedad o el proveedor de registro personalizado no aparecerá en la lista de proveedores de registro disponibles.  
@@ -73,10 +74,10 @@ public class MyLogProvider : LogProviderBase
 ## <a name="building-deploying-and-debugging-a-custom-log-provider"></a>Generar, implementar y depurar un proveedor de registro personalizado  
  Los pasos para generar, implementar y depurar un proveedor de registro personalizado en [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] son muy similares a los pasos requeridos para otros tipos de objetos personalizados. Para obtener más información, consulte [Generar, implementar y depurar objetos personalizados](../building-deploying-and-debugging-custom-objects.md).  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
- [Programar un proveedor de registro personalizado](coding-a-custom-log-provider.md)   
+## <a name="see-also"></a>Consulte también  
+ [Codificar un proveedor de registro personalizado](coding-a-custom-log-provider.md)   
  [Desarrollar una interfaz de usuario para un proveedor de registro personalizado](developing-a-user-interface-for-a-custom-log-provider.md)  
   
   

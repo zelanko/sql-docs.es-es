@@ -1,5 +1,5 @@
 ---
-title: Ejecutar un diagrama de actualización mediante ADO (SQLXML 4.0) | Microsoft Docs
+title: Ejecutar un diagrama mediante ADO (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54ee962310cb1ac41e442155a146afec8758c64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014835"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Ejecutar un diagrama de actualización mediante ADO (SQLXML 4.0)
@@ -26,19 +26,19 @@ ms.locfileid: "66014835"
   
  En esta aplicación de ejemplo:  
   
--   El **conn** objeto (**ADODB. Conexión**) establece una conexión a una instancia de ejecución [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un equipo servidor concreto.  
+-   Objeto **Conn** (**ADODB. Conexión**) establece una conexión a una instancia en ejecución [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de en un equipo servidor específico.  
   
--   El **cmd** objeto (**ADODB.Command**) se ejecuta en la conexión establecida.  
+-   El objeto **cmd** (**ADODB. Command**) se ejecuta en la conexión establecida.  
   
 -   El lenguaje de comandos está establecido en DBGUID_MSSQLXML.  
   
--   El diagrama de actualización se copia en la secuencia de comandos (**strmIn**).  
+-   Diagrama se copia en la secuencia de comandos (**strmIn**).  
   
--   Flujo de salida del comando se establece en el **StrmOut** objeto (**ADODB. Stream**) a reciba cualquiera de los datos devueltos.  
+-   El flujo de salida del comando se establece en el objeto **StrmOut** (**ADODB. Stream**) para recibir los datos devueltos.  
   
 -   Finalmente se ejecuta el comando (diagrama de actualización).  
   
- Éste es el código de ejemplo:  
+ Este es el código de ejemplo:  
   
 ```vb  
 Private Sub Form_Load()  
@@ -182,7 +182,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>Pasar parámetros  
- En las aplicaciones Visual Basic proporcionadas anteriormente, los parámetros no se pasan. En esta aplicación, el **ContactID** y **MiddleName** valores se pasan como entrada parametrizada en el diagrama de actualización.  
+ En las aplicaciones Visual Basic proporcionadas anteriormente, los parámetros no se pasan. En esta aplicación, los valores **ContactID** y **MiddleName** se pasan como entrada parametrizada a diagrama.  
   
 ```vb  
 Private Sub Form_Load()  

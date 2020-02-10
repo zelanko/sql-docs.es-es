@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010357"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Obtener acceso a FileTables con API de entrada-salida de archivo
@@ -77,7 +77,7 @@ ms.locfileid: "66010357"
   
 ##  <a name="considerations"></a> Consideraciones adicionales sobre el acceso de E/S de archivos a FileTables  
   
-###  <a name="vnn"></a> Usar nombres de red virtual (VNN) con grupos de disponibilidad AlwaysOn  
+###  <a name="vnn"></a>Usar nombres de Virtual Network (VNN) con Grupos de disponibilidad AlwaysOn  
  Cuando la base de datos que contiene datos de FILESTREAM o FileTable pertenece a un grupo de disponibilidad AlwaysOn, todo acceso a los datos de FILESTREAM o FileTable a través de las API del sistema de archivos debe utilizar los VNN en lugar de nombres de equipo. Para obtener más información, vea [FILESTREAM y FileTable con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
 ###  <a name="partial"></a> Actualizaciones parciales  
@@ -111,21 +111,21 @@ ms.locfileid: "66010357"
 |**Flujos con nombre**|No||  
 |**Archivos dispersos**|Sí|La dispersión se puede establecer solo en archivos y afecta al almacenamiento del flujo de datos. Dado que los datos de FILESTREAM se almacenan en volúmenes NTFS, la característica FileTable admite archivos dispersos reenviando las solicitudes al sistema de archivos NTFS.|  
 |**Compresión**|Sí||  
-|**Cifrado**|Sí||  
-|**TxF**|Sin||  
-|**Identificadores de archivo**|Sin||  
-|**Identificadores de objeto**|Sin||  
-|**Vínculos simbólicos**|Sin||  
-|**Vínculos físicos**|Sin||  
+|**Encryptiion**|Sí||  
+|**TxF**|No||  
+|**Identificadores de archivo**|No||  
+|**Identificadores de objeto**|No||  
+|**Vínculos simbólicos**|No||  
+|**Vínculos físicos**|No||  
 |**Nombres cortos**|No||  
-|**Notificaciones de cambio de directorio**|Sin||  
+|**Notificaciones de cambio de directorio**|No||  
 |**Bloqueo de intervalo de bytes**|Sí|Las solicitudes de bloqueo de intervalo de butes se pasan al sistema de archivos NTFS.|  
-|**Archivos asignados en memoria**|Sin||  
+|**Archivos asignados en memoria**|No||  
 |**Cancelar E/S**|Sí||  
-|**Seguridad**|Sin|Se aplica la seguridad de nivel de recursos compartidos de Windows y la seguridad de nivel de tabla y columna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**Diario USN**|Sin|Los cambios de metadatos en archivos y directorios de una FileTable son operaciones DML en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por consiguiente, se registran en el archivo de registro de la base de datos correspondiente. Sin embargo, no se registran en el diario de NTFS USN (salvo los cambios de tamaño).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden usar para capturar información similar.|  
+|**Seguridad**|No|Se aplica la seguridad de nivel de recursos compartidos de Windows y la seguridad de nivel de tabla y columna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**Diario USN**|No|Los cambios de metadatos en archivos y directorios de una FileTable son operaciones DML en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por consiguiente, se registran en el archivo de registro de la base de datos correspondiente. Sin embargo, no se registran en el diario de NTFS USN (salvo los cambios de tamaño).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden usar para capturar información similar.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cargar archivos en FileTables](load-files-into-filetables.md)   
  [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [Obtener acceso a FileTables con Transact-SQL](access-filetables-with-transact-sql.md)   

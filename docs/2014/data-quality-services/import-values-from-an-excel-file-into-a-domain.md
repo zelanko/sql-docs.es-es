@@ -15,14 +15,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 74be4b3e924d02f6992b927af35c7774c3ea0ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484311"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importar valores desde un archivo de Excel a un dominio
-  En este tema se describe cómo importar valores desde un archivo de Excel a un dominio de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El uso de un archivo de Excel para importar valores de dominio en la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] simplifica el proceso de generación del conocimiento, lo que permite ahorrar tiempo y esfuerzo. Permite a quienes tienen una lista de valores de datos válidos en un archivo de Excel o en un archivo de texto importar dichos valores en un dominio. Desde un archivo de Excel es posible importar valores de dominio en uno o varios dominios de una base de conocimiento. (Vea [Importar dominios desde un archivo de Excel a la detección del conocimiento](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) para obtener más información sobre cómo importar dominios a una base de conocimiento). No se admite la exportación a un archivo Excel.  
+  En este tema se describe cómo importar valores desde un archivo de Excel a un dominio de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El uso de un archivo de Excel para importar valores de dominio en la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] simplifica el proceso de generación del conocimiento, lo que permite ahorrar tiempo y esfuerzo. Permite a quienes tienen una lista de valores de datos válidos en un archivo de Excel o en un archivo de texto importar dichos valores en un dominio. Desde un archivo de Excel es posible importar valores de dominio en uno o varios dominios de una base de conocimiento. (Consulte [importar dominios desde un archivo de Excel en la detección de conocimiento](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) para obtener más información acerca de la importación de dominios en una base de conocimiento). No se admite la exportación a un archivo de Excel.  
   
  Puede importar valores de datos de dos formas:  
   
@@ -40,9 +40,9 @@ ms.locfileid: "65484311"
 ####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para poder importar valores de dominio desde un archivo de Excel.  
   
-##  <a name="Import"></a> Importar valores desde un archivo de Excel a un dominio  
+##  <a name="Import"></a>Importar valores de un archivo de Excel a un dominio  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra una base de conocimiento en la actividad Administración de dominios.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65484311"
   
 9. Seleccione **Usar la primera fila como encabezado** si la primera fila de la hoja de cálculo representa el nombre del dominio y las restantes filas representan valores de dominio válidos.  
   
-10. Haga clic en **Aceptar**. Aparece una barra de progreso, indicando cuántos valores se han importado correctamente, cuántos no se han importado y cuál es el número total de valores. Haga clic en el botón **Cancelar** para cancelar el proceso.  
+10. Haga clic en **OK**. Aparece una barra de progreso, indicando cuántos valores se han importado correctamente, cuántos no se han importado y cuál es el número total de valores. Haga clic en el botón **Cancelar** para cancelar el proceso.  
   
 11. Compruebe que aparece el mensaje "Importación completada" en el cuadro de diálogo **Importar valores del dominio**. En este cuadro de diálogo podrá comprobar los valores que se han importado correctamente y los que no. Indica el nombre y la ruta de acceso del archivo, el estado de conclusión de la operación, cuántos valores se han importado correctamente, cuántos no se han importado y el número total de valores procesados.  
   
@@ -70,10 +70,10 @@ ms.locfileid: "65484311"
   
 14. Haga clic en **Finalizar** para agregar los valores a la base de conocimiento.  
   
-##  <a name="FollowUp"></a> Seguimiento: después de importar valores desde un archivo de Excel a un dominio  
+##  <a name="FollowUp"></a>Seguimiento: después de importar valores de un archivo de Excel a un dominio  
  Una vez importados los valores en un dominio, puede realizar en él otras tareas de administración, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Synonyms"></a> Importar sinónimos  
+##  <a name="Synonyms"></a>Importar sinónimos  
  Los sinónimos se importan de la manera siguiente:  
   
 -   En primer lugar, se importan todos los valores y, a continuación, se establece la conexión de sinónimos.  
@@ -88,7 +88,7 @@ ms.locfileid: "65484311"
   
 -   Si, por cualquier motivo, los valores no se pueden conectar manualmente en la aplicación, las conexiones de sinónimos no se podrán aplicar durante la operación de importación.  
   
-##  <a name="How"></a> How the import works  
+##  <a name="How"></a>Cómo funciona la importación  
  Esta operación importa los valores siguientes:  
   
  En la operación de importación, DQS importa desde un archivo de Excel de la manera siguiente:  

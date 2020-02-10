@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones SMTP | Microsoft Docs
+title: Editor del administrador de conexiones SMTP | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055559"
 ---
 # <a name="smtp-connection-manager-editor"></a>Editor del administrador de conexiones SMTP
@@ -27,7 +27,7 @@ ms.locfileid: "66055559"
  Para obtener más información acerca del administrador de conexiones SMTP, vea [SMTP Connection Manager](connection-manager/smtp-connection-manager.md).  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Proporcione un nombre único para el administrador de conexiones.  
   
  **Descripción**  
@@ -36,19 +36,19 @@ ms.locfileid: "66055559"
  **Servidor SMTP**  
  Proporcione el nombre del servidor SMTP.  
   
- **Utilizar autenticación de Windows**  
+ **Usar autenticación de Windows**  
  Seleccione esta opción para enviar correo electrónico mediante un servidor SMTP que utiliza Autenticación de Windows para autenticar el acceso al servidor.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones SMTP solo es compatible con la autenticación anónima y la autenticación de Windows. No admite la autenticación básica.  
   
 > [!NOTE]  
->  Cuando se usa Microsoft Exchange como servidor SMTP, es posible que deba establecer **utilizar autenticación de Windows** a `True`. Es posible que los servidores Exchange estén configurados para no permitir conexiones SMTP no autenticadas.  
+>  Al usar Microsoft Exchange como servidor SMTP, es posible que deba establecer **usar autenticación de Windows** en `True`. Es posible que los servidores Exchange estén configurados para no permitir conexiones SMTP no autenticadas.  
   
- **Habilitar capa de sockets seguros (SSL)**  
+ **Habilitar Capa de sockets seguros (SSL)**  
  Seleccione esta opción para cifrar comunicación mediante Capa de sockets seguros (SSL) al enviar mensajes de correo electrónico.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

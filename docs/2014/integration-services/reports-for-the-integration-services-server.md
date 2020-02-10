@@ -1,5 +1,5 @@
 ---
-title: Los informes del servidor de Integration Services | Microsoft Docs
+title: Informes para el servidor de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056442"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Informes para el servidor de Integration Services
@@ -31,7 +31,7 @@ ms.locfileid: "66056442"
   
  El informe muestra las siguientes secciones de información.  
   
-|Section|Descripción|  
+|Sección|Descripción|  
 |-------------|-----------------|  
 |**Información de ejecución**|Muestra el número de ejecuciones en distintos estados (error, en ejecución, correcto, otros) en las últimas 24 horas.|  
 |**Información del paquete**|Muestra el número total de paquetes que se han ejecutado en las últimas 24 horas.|  
@@ -45,7 +45,7 @@ ms.locfileid: "66056442"
   
  El informe muestra las siguientes secciones de información.  
   
-|Section|Descripción|  
+|Sección|Descripción|  
 |-------------|-----------------|  
 |Filter|Muestra el filtro actual que se aplica al informe, como el Intervalo de tiempo de inicio.|  
 |Información de ejecución|Muestra la hora de inicio, la hora de finalización y la duración de cada ejecución del paquete. Puede ver una lista de los valores de parámetro usados con una ejecución de paquete, como los valores que se pasaron a un paquete secundario mediante la tarea Ejecutar paquete. Para ver la lista de parámetros, haga clic en Información general.|  
@@ -59,7 +59,7 @@ ms.locfileid: "66056442"
   
  El informe muestra las siguientes secciones de información.  
   
-|Section|Descripción|  
+|Sección|Descripción|  
 |-------------|-----------------|  
 |Filter|Muestra el filtro actual que se aplica al informe, como conexiones con una cadena especificada y el intervalo de **Hora del último error** .<br /><br /> Establezca el intervalo de **Hora del último error** para que se muestren solo los errores de conexión que se produjeron durante un intervalo de fechas. El intervalo puede abarcar varios días, meses o años.|  
 |Detalles|Muestra la cadena de conexión, el número de ejecuciones en las que se produjo un error de conexión y la fecha en la que hubo un error de conexión por última vez.|  

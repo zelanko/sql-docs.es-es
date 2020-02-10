@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db039658fa292976062426268234d3978c1b32ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483003"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Jerarquías explícitas (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "65483003"
  Una jerarquía explícita puede ser desigual, lo que significa que puede terminar simultáneamente en niveles diferentes. Cada miembro consolidado puede tener un número ilimitado de miembros consolidados y miembros hoja subordinados, o bien es posible que no tenga ninguno. Los miembros hoja pueden estar subordinados a un solo miembro consolidado o a varios niveles de miembros consolidados.  
   
 > [!NOTE]  
->  Antes de poder crear una jerarquía explícita, la entidad debe estar habilitar para jerarquías explícitas. Para obtener más información, consulte [habilitar una entidad para jerarquías explícitas y colecciones &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
+>  Antes de poder crear una jerarquía explícita, la entidad debe estar habilitar para jerarquías explícitas. Para obtener más información, vea [habilitar una entidad para jerarquías explícitas y colecciones &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
   
 ## <a name="types-of-explicit-hierarchies"></a>Tipos de jerarquías explícitas  
  Existen dos tipos de jerarquías explícitas: obligatoria y no obligatoria.  
@@ -69,7 +69,7 @@ ms.locfileid: "65483003"
 |Puede ser desigual|Siempre contiene un número coherente de niveles|  
   
 ## <a name="explicit-hierarchy-example"></a>Ejemplo de jerarquía explícita  
- En el ejemplo siguiente, la entidad Product contiene a estos miembros hoja: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} y BK-R650 {Road-650}.  
+ En el ejemplo siguiente, la entidad Product contiene estos miembros hoja: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} y BK-R650 {Road-650}.  
   
  Para resumir estos miembros hoja en puntos específicos de consolidación, puede crear miembros consolidados en la entidad Product. Inserte los miembros consolidados en los niveles del árbol de jerarquía donde desea resumir los miembros hoja. No existe limitación alguna con respecto al lugar donde insertar los miembros consolidados; sin embargo, solo puede utilizar cada miembro (hoja o consolidado) una vez.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "65483003"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Habilitar una entidad para colecciones y jerarquías explícitas.|[Habilitar una entidad para jerarquías explícitas y colecciones &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Crear una nueva jerarquía explícita.|[Crear una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|Cambiar el nombre de una jerarquía explícita existente.|[Crear un nombre de jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|Habilitar una entidad para colecciones y jerarquías explícitas.|[Habilitar una entidad para colecciones y jerarquías explícitas &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|Crear una nueva jerarquía explícita.|[Cree una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Cambiar el nombre de una jerarquía explícita existente.|[Cambiar el nombre de una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
 |Eliminar una jerarquía explícita existente.|[Eliminar una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   

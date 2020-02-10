@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34e8f4a5b49c9e023c224e62c23326864ef26f65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011649"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usar el formato de caracteres Unicode para importar o exportar datos (SQL Server)
@@ -37,14 +37,14 @@ ms.locfileid: "66011649"
  Para usar un terminador de campo o de fila distinto al predeterminado que se proporciona con el formato de caracteres Unicode, vea [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 ## <a name="command-options-for-unicode-character-format"></a>Opciones de comando para el formato de caracteres Unicode  
- Puede importar datos del formato de caracteres Unicode en una tabla mediante **bcp**, BULK INSERT o INSERT... SELECT \* FROM OPENROWSET(BULK...). Para un comando **bcp** o una instrucción BULK INSERT, puede especificar el formato de datos en la línea de comandos. Para una instrucción INSERT ... SELECT * FROM OPENROWSET(BULK...), debe especificar el formato de los datos en un archivo de formato.  
+ Puede importar datos con formato de caracteres Unicode en una tabla mediante **BCP**, Bulk Insert o INSERT... SELECT \* from OPENROWSET (bulk...). Para un comando **BCP** o una instrucción BULK INSERT, puede especificar el formato de datos en la línea de comandos. Para una instrucción INSERT ... SELECT * FROM OPENROWSET(BULK...) , debe especificar el formato de datos en un archivo de formato.  
   
  El formato de caracteres Unicode puede usarse con las siguientes opciones de la línea de comandos:  
   
-|Comando|Opción|Descripción|  
+|Get-Help|Opción|Descripción|  
 |-------------|------------|-----------------|  
-|**bcp**|**-w**|Usa el formato de caracteres Unicode.|  
-|BULK INSERT|DATAFILETYPE **='** widechar **'**|Utiliza el formato de caracteres Unicode al importar datos masivamente.|  
+|**BCP**|**-w**|Usa el formato de caracteres Unicode.|  
+|BULK INSERT|DATAFILETYPE **= '** WideChar **'**|Utiliza el formato de caracteres Unicode al importar datos masivamente.|  
   
  Para obtener más información, vea [bcp (utilidad)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) u [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
@@ -84,7 +84,7 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 |Calificadores|Descripción|  
 |----------------|-----------------|  
 |**-w**|Especifica el formato de caracteres Unicode.|  
-|**-t** `,`|Especifica una coma (`,`) como terminador de campo.<br /><br /> Nota: El terminador de campo predeterminado es la ficha carácter Unicode (\t). Para obtener más información, vea [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-t**`,`|Especifica una coma (`,`) como terminador de campo.<br /><br /> Nota: el terminador de campo predeterminado es el carácter Unicode de tabulación (\t). Para obtener más información, vea [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para iniciar sesión correctamente.|  
   
  En el siguiente ejemplo se exportan masivamente datos en formato de caracteres Unicode desde la tabla `myTestUniCharData` en un nuevo archivo de datos denominado `myTestUniCharData-w.Dat` que usa la coma (`,`) como terminador de campo. En el símbolo del sistema de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, especifique:  
@@ -123,8 +123,8 @@ GO
   
 -   [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Consulte también  
+ [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   

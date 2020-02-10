@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 7: Crear un dominio compuesto | Microsoft Docs'
+title: 'Tarea 7: crear un dominio compuesto | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,28 +11,28 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488964"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>Tarea 7: Creación de un dominio compuesto
-  En esta tarea, creará un dominio compuesto, **validación de direcciones**, que consta de **Address Line**, **Ciudad**, **estado**y  **Código postal** dominios. Un dominio compuesto permite definir una regla entre dominios que afecta a varias dominios de una regla. Un dominio compuesto presenta otras ventajas como la posibilidad de analizar un valor de campo en varios dominios.  Por ejemplo, un valor de un campo Nombre completo se puede analizar en distintos dominios Nombre, Segundo nombre y Apellidos. En este tutorial, solo definirá una regla entre dominios. Consulte [administrar un dominio compuesto](https://msdn.microsoft.com/library/hh510399.aspx) para obtener más detalles.  
+# <a name="task-7-creating-a-composite-domain"></a>Tarea 7: crear una regla de dominio compuesto
+  En esta tarea, creará un dominio compuesto, **la validación de direcciones**, que comprende los dominios de línea de **Dirección**, **ciudad**, **Estado**y **código postal** . Un dominio compuesto permite definir una regla entre dominios que afecta a varias dominios de una regla. Un dominio compuesto presenta otras ventajas como la posibilidad de analizar un valor de campo en varios dominios.  Por ejemplo, un valor de un campo Nombre completo se puede analizar en distintos dominios Nombre, Segundo nombre y Apellidos. En este tutorial, solo definirá una regla entre dominios. Vea [administrar un dominio compuesto](https://msdn.microsoft.com/library/hh510399.aspx) para obtener más detalles.  
   
-1.  En el panel izquierdo, haga clic en **crear un dominio compuesto** en la barra de herramientas.  
+1.  En el panel izquierdo, haga clic en el botón **crear un dominio compuesto** en la barra de herramientas.  
   
-     ![Crear un botón de barra de herramientas del dominio compuesto](../../2014/tutorials/media/et-creatingacompositedomain-01.jpg "crear un botón de barra de herramientas del dominio compuesto")  
+     ![Botón de barra de herramientas Crear un dominio compuesto](../../2014/tutorials/media/et-creatingacompositedomain-01.jpg "Botón de barra de herramientas Crear un dominio compuesto")  
   
-2.  Escriba **validación de direcciones** para el **nombre de dominio compuesto**.  
+2.  Escriba la **validación de direcciones** para el nombre de **dominio compuesto**.  
   
-     ![Dominio compuesto validación de direcciones](../../2014/tutorials/media/et-creatingacompositedomain-02.jpg "dominio compuesto validación de direcciones")  
+     ![Dominio compuesto de validación de direcciones](../../2014/tutorials/media/et-creatingacompositedomain-02.jpg "Dominio compuesto de validación de direcciones")  
   
-3.  En la lista de dominios seleccione **Address Line**, **Ciudad**, **estado**, y **Zip** y haga clic en **flecha derecha** para agregarlos a la **dominios del dominio compuesto** lista.  
+3.  En la lista de dominios, seleccione **línea de dirección**, **ciudad**, **Estado**y **código postal** y haga clic en la **flecha derecha** para agregarlos a la lista **dominios en el dominio compuesto** .  
   
 4.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 8: Crear una regla de dominio compuesto](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 8: crear una regla de dominio compuesto](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
   
   

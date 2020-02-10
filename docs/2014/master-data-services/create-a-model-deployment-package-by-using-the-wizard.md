@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c88e5ac59730eede7c252261d7509ee77de9cd6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483602"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Crear un paquete de implementación de modelo mediante el asistente
   Use el Asistente para la implementación de modelos de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para crear un paquete de los objetos del modelo solamente. Si necesita incluir datos en un paquete, consulte [Implementar un paquete de implementación de modelo mediante MDSModelDeploy](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   En la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , debe tener permiso de acceso al área funcional **Administración del sistema** .  
@@ -43,7 +43,7 @@ ms.locfileid: "65483602"
   
 4.  En la página **Crear paquete** , seleccione un modelo en la lista **Modelo** .  
   
-5.  Haga clic en **Siguiente**.  
+5.  Haga clic en **Next**.  
   
 6.  Haga clic en **Descargar**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65483602"
   
 -   [Implementar un paquete de implementación de modelo mediante el asistente](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar modelos &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

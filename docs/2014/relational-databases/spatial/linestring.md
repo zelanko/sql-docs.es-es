@@ -13,13 +13,14 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 6bc07f8770e6cd7d1fb1e4b4e6e40ca8b1c5256f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014202"
 ---
 # <a name="linestring"></a>LineString
+  
   `LineString` es un objeto unidimensional que representa una secuencia de puntos y los segmentos de línea que los conectan.  
   
 ## <a name="linestring-instances"></a>Instancias de LineString  
@@ -46,7 +47,8 @@ DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';  
 ```  
   
- `@g3` muestra que se puede aceptar una instancia de `LineString`, pero no es válida.  
+ 
+  `@g3` muestra que se puede aceptar una instancia de `LineString`, pero no es válida.  
   
  No se acepta la siguiente instancia de `LineString`. Producirá una `System.FormatException`.  
   
@@ -125,7 +127,7 @@ LINESTRING(1 3, 1 3) is not a valid LineString
 POINT(1 3) is a valid Point.  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [STLength &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STStartPoint &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
  [STEndpoint &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type)   

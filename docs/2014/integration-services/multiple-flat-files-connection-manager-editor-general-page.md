@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones (página General) varios archivos planos | Microsoft Docs
+title: Editor del administrador de conexiones de varios archivos planos (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d4b926d08096087735458ed309e5bc4189a87df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057481"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Editor del administrador de conexiones de varios archivos planos (página General)
@@ -33,10 +33,10 @@ ms.locfileid: "66057481"
  **Descripción**  
  Describe la conexión. Como método recomendado, describa la conexión desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
   
- **Nombres de archivos**  
+ **Nombres de archivo**  
  Escriba la ruta de acceso y los nombres de los archivos que se van a utilizar en la conexión de varios archivos planos. Puede especificar varios archivos mediante el uso de caracteres comodín, como en el ejemplo "C:\\*.txt", o mediante el uso del carácter de barra vertical (|) para separar varios nombres de archivo. Todos los archivos deben tener el mismo formato de datos.  
   
- **Examinar**  
+ **Browse**  
  Busque los nombres de los archivos que se van a utilizar en la conexión de varios archivos planos. Puede seleccionar varios archivos. Todos los archivos deben tener el mismo formato de datos.  
   
  **Configuración regional**  
@@ -48,10 +48,10 @@ ms.locfileid: "66057481"
  **Página de códigos**  
  Especifique la página de códigos para el texto no Unicode.  
   
- **Formato**  
+ **Aplique**  
  Indique si se utiliza formato delimitado, de ancho fijo o derecho irregular. Todos los archivos deben tener el mismo formato de datos.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Delimitado|Las columnas se separan mediante delimitadores, que se especifican en la página **Columnas** .|  
 |Ancho fijo|Las columnas tienen un ancho fijo, que se especifica arrastrando líneas de marcador en la página **Columnas** .|  
@@ -60,30 +60,30 @@ ms.locfileid: "66057481"
  **Calificador de texto**  
  Especifique el calificador de texto que se va a utilizar. Por ejemplo, puede especificar que el texto se incluya entre comillas.  
   
- **Delimitador de filas de encabezados**  
+ **Delimitador de filas de encabezado**  
  Seleccione uno de los delimitadores de filas de encabezados de la lista o escriba el texto delimitador.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**{CR}{LF}**|La fila de encabezado está delimitada por una combinación de retorno de carro y avance de línea.|  
-|**{CR}**|La fila de encabezado está delimitada por un retorno de carro.|  
-|**{LF}**|La fila de encabezado está delimitada por un avance de línea.|  
+|**COMPRA LF**|La fila de encabezado está delimitada por una combinación de retorno de carro y avance de línea.|  
+|**COMPRA**|La fila de encabezado está delimitada por un retorno de carro.|  
+|**LF**|La fila de encabezado está delimitada por un avance de línea.|  
 |**Punto y coma {;}**|La fila de encabezado está delimitada por un punto y coma.|  
 |**Dos puntos {:}**|La fila de encabezado está delimitada por dos puntos.|  
-|**Coma {,}**|La fila de encabezado está delimitada por una coma.|  
+|**Unas{,}**|La fila de encabezado está delimitada por una coma.|  
 |**Tabulación {t}**|La fila de encabezado está delimitada por una tabulación.|  
 |**Barra vertical {&#124;}**|La fila de encabezado está delimitada por una barra vertical.|  
   
- **Filas de encabezados que se omitirán**  
+ **Filas de encabezado que se van a omitir**  
  Especifica el número de filas de encabezados que se van a omitir, en caso de que esto ocurra.  
   
  **Nombres de columna de la primera fila de datos**  
  Indica si deben esperarse o deben especificarse nombres de columna en la primera fila de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor del administrador de conexiones de varios archivos planos &#40;página Columnas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Editor del administrador de conexiones de varios archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor del administrador de conexiones de varios archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [&#40;página columnas del editor del administrador de conexiones de varios archivos planos&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [Editor del administrador de conexiones de varios archivos planos &#40;página avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [Editor del administrador de conexiones de varios archivos planos &#40;página de vista previa&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a71ee85fc4dce4abd7d8ef91a8f22529ce8d5a0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483015"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>Descripción del código XML de flujo de trabajo personalizado (Master Data Services)
@@ -64,17 +64,18 @@ ms.locfileid: "65483015"
   
 |Etiqueta|Descripción|  
 |---------|-----------------|  
-|\<Type>|El texto que especificó en el cuadro de texto **Tipo de flujo de trabajo** de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para identificar el ensamblado del flujo de trabajo personalizado que se debe cargar.|  
-|\<SendData>|Valor booleano controlado por la casilla **Incluir datos de miembro en el mensaje** de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Un valor de 1 indica que se envía la sección \<MemberData>; en caso contrario, no se envía la sección \<MemberData>.|  
+|\<Escribir>|El texto que especificó en el cuadro de texto **Tipo de flujo de trabajo** de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] para identificar el ensamblado del flujo de trabajo personalizado que se debe cargar.|  
+|\<> SendData|Valor booleano controlado por la casilla **Incluir datos de miembro en el mensaje** de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Un valor de 1 indica que se envía la sección \<MemberData>; en caso contrario, no se envía la sección \<MemberData>.|  
 |<Server_URL>|El texto que especificó en el cuadro de texto **Sitio de flujo de trabajo** de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
 |<Action_ID>|El texto que especificó en el cuadro de texto **Nombre de flujo de trabajo** de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
-|\<MemberData>|Contiene los datos del miembro que desencadenó la acción del flujo de trabajo. Se incluye solamente si el valor de \<SendData> es 1.|  
-|\<Enter*xxx*>|Este conjunto de etiquetas contiene metadatos sobre la creación del miembro, por ejemplo, cuándo se creó y quién lo creó.|  
-|\<LastChg*xxx*>|Este conjunto de etiquetas contiene metadatos sobre el último cambio realizado en el miembro, como cuándo se realizó el cambio y quién lo hizo.|  
-|\<Name>|Se cambió el primer atributo del miembro. Este miembro de ejemplo contiene únicamente los atributos Name y Code.|  
-|\<Code>|Se cambió el siguiente atributo del miembro. Si este miembro de ejemplo contuviera más atributos, se incluirían detrás de este.|  
+|
+  \<MemberData>|Contiene los datos del miembro que desencadenó la acción del flujo de trabajo. Se incluye solamente si el valor de \<SendData> es 1.|  
+|\<Escriba*XXX*>|Este conjunto de etiquetas contiene metadatos sobre la creación del miembro, por ejemplo, cuándo se creó y quién lo creó.|  
+|\<LastChg*XXX*>|Este conjunto de etiquetas contiene metadatos sobre el último cambio realizado en el miembro, como cuándo se realizó el cambio y quién lo hizo.|  
+|\<Nombre>|Se cambió el primer atributo del miembro. Este miembro de ejemplo contiene únicamente los atributos Name y Code.|  
+|\<> de código|Se cambió el siguiente atributo del miembro. Si este miembro de ejemplo contuviera más atributos, se incluirían detrás de este.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear un flujo de trabajo personalizado &#40;Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)   
  [Ejemplo de flujo de trabajo personalizado &#40;Master Data Services&#41;](create-a-custom-workflow-example.md)  
   

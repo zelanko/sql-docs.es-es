@@ -1,5 +1,5 @@
 ---
-title: Características en desuso de Master Data Services en SQL Server 2014 | Microsoft Docs
+title: Características desusadas Master Data Services en SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd6342542da7528fef633ba02a430a8ba2ef5857
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483060"
 ---
 # <a name="deprecated-master-data-services-features-in-sql-server-2014"></a>Características desusadas de Master Data Services en SQL Server 2014
@@ -23,7 +23,7 @@ ms.locfileid: "65483060"
 ## <a name="staging-process"></a>Proceso de almacenamiento provisional  
  El proceso de almacenamiento provisional que se empleaba en [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ya no está disponible en la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]; sin embargo, todavía está disponible en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- Los errores del proceso de almacenamiento provisional de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ya no se muestran en la interfaz de usuario. Códigos de error que se rellenan durante el proceso de almacenamiento provisional siguen estando disponibles en las tablas de ensayo y se pueden encontrar aquí: [ https://msdn.microsoft.com/library/ff487022.aspx ](https://msdn.microsoft.com/library/ff487022.aspx).  
+ Los errores del proceso de almacenamiento provisional de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ya no se muestran en la interfaz de usuario. Los códigos de error que se rellenan durante el proceso de almacenamiento provisional siguen estando disponibles en las tablas de almacenamiento provisional y [https://msdn.microsoft.com/library/ff487022.aspx](https://msdn.microsoft.com/library/ff487022.aspx)se pueden encontrar aquí:.  
   
  Las tablas de ensayo (tblStgMember, tblStgMemberAttribute y tblStgRelationship) siguen estando disponibles en la base de datos. El procedimiento almacenado usado para iniciar el proceso de almacenamiento provisional (mdm.udpStagingSweep) sigue estando disponible en la base de datos.  
   
@@ -34,9 +34,9 @@ ms.locfileid: "65483060"
  En [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] se ha implementado un proceso de almacenamiento temporal nuevo y de mayor rendimiento. Para más información, vea [Importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
 ## <a name="metadata"></a>Metadatos  
- Aunque el modelo metadatos se sigue mostrando en la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], no debe usarse. Se quitará en una versión futura. Los usuarios también pueden ver ya metadatos en el **Explorer** área funcional y ya no puede crear versiones del modelo de metadatos.  
+ Aunque el modelo metadatos se sigue mostrando en la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], no debe usarse. Se eliminará en una próxima versión. Los usuarios también pueden dejar de ver los metadatos en el área funcional del **Explorador** y ya no se pueden crear versiones del modelo de metadatos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Características descontinuadas de Master Data Services en SQL Server 2014](discontinued-master-data-services-features.md)  
   
   

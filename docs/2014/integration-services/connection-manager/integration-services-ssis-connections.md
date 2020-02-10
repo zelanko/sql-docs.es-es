@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833798"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexiones de Integration Services (SSIS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizan conexiones para realizar diferentes tareas y para implementar características de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]los paquetes utilizan conexiones para realizar diferentes tareas y para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implementar características: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
 -   Conectar con almacenes de datos de origen y destino tales como archivos de texto, archivos XML, libros de Excel y bases de datos relacionales para extraer y cargar datos.  
   
@@ -51,11 +51,12 @@ ms.locfileid: "62833798"
  Para realizar estas conexiones, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utiliza administradores de conexión, descritos en la siguiente sección.  
   
 ## <a name="connection-managers"></a>Administradores de conexión  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa el administrador de conexiones como una representación lógica de una conexión. En tiempo de diseño, se establecen las propiedades de un administrador de conexiones para que describan la conexión física que crea [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cuando se ejecuta el paquete. Por ejemplo, un administrador de conexiones incluye la propiedad `ConnectionString` que se establece en el tiempo de diseño. En el tiempo de ejecución, se crea una conexión física mediante el valor de la propiedad de la cadena de conexión.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa el administrador de conexiones como una representación lógica de una conexión. En tiempo de diseño, se establecen las propiedades de un administrador de conexiones para que describan la conexión física que crea [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cuando se ejecuta el paquete. Por ejemplo, un administrador de conexiones incluye la propiedad `ConnectionString` que se establece en el tiempo de diseño. En el tiempo de ejecución, se crea una conexión física mediante el valor de la propiedad de la cadena de conexión.  
   
  Un paquete puede usar varias instancias de un tipo de administrador de conexiones y se pueden establecer las propiedades de cada instancia. En el tiempo de ejecución, cada instancia de un tipo de administrador de conexiones crea una conexión que tiene diferentes atributos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona diferentes tipos de administradores de conexión que permiten que los paquetes se conecten a una serie de orígenes de datos y servidores:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona diferentes tipos de administradores de conexión que permiten que los paquetes se conecten a una variedad de orígenes de datos y servidores:  
   
 -   Se trata de administradores de conexión integrados que el programa de instalación instala al instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -64,7 +65,7 @@ ms.locfileid: "62833798"
 -   Puede crear su propio administrador de conexiones personalizado si los que hay disponibles no satisfacen sus necesidades.  
   
 ### <a name="built-in-connection-managers"></a>Administradores de conexión integrados  
- En la tabla siguiente se indican los tipos de administradores de conexión proporcionados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+ En la tabla siguiente se enumeran los tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de administrador de conexiones que proporciona.  
   
 |Tipo|Descripción|Tema|  
 |----------|-----------------|-----------|  
@@ -73,17 +74,17 @@ ms.locfileid: "62833798"
 |CACHE|Lee los datos del flujo de datos o de un archivo caché (.caw) y puede guardar los datos en el archivo caché.|[Administrador de conexiones de caché](cache-connection-manager.md)|  
 |DQS|Conecta a un servidor de Data Quality Services y una base de datos de Data Quality Services en el servidor.|[Administrador de conexiones de limpieza de DQS](dqs-cleansing-connection-manager.md)|  
 |EXCEL|Se conecta a un archivo de libro de Excel.|[Administrador de conexiones con Excel](excel-connection-manager.md)|  
-|FILE|Se conecta a un archivo o carpeta.|[Administrador de conexiones de archivos](file-connection-manager.md)|  
+|FILE|Se conecta a un archivo o carpeta.|[administrador de conexiones de archivos](file-connection-manager.md)|  
 |FLATFILE|Se conecta a los datos en un solo archivo plano.|[Administrador de conexiones de archivos planos](flat-file-connection-manager.md)|  
-|FTP|Se conecta a un servidor FTP.|[Administrador de conexiones FTP](ftp-connection-manager.md)|  
-|HTTP|Se conecta a un servidor web.|[Administrador de conexiones HTTP](http-connection-manager.md)|  
-|MSMQ|Se conecta a una cola de mensajes.|[Administrador de conexiones MSMQ](msmq-connection-manager.md)|  
-|MSOLAP100|Se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|[Administrador de conexiones de Analysis Services](analysis-services-connection-manager.md)|  
-|MULTIFILE|Se conecta a varios archivos y carpetas.|[Administrador de conexiones de varios archivos](multiple-files-connection-manager.md)|  
-|MULTIFLATFILE|Se conecta a varios archivos y carpetas de datos.|[Administrador de conexiones de varios archivos planos](multiple-flat-files-connection-manager.md)|  
-|OLEDB|Se conecta a un origen de datos mediante un proveedor OLE DB.|[Administrador de conexiones OLE DB](ole-db-connection-manager.md)|  
-|ODBC|Se conecta a un origen de datos mediante ODBC.|[Administrador de conexiones ODBC](odbc-connection-manager.md)|  
-|SMOServer|Se conecta a un servidor de objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO).|[Administrador de conexiones SMO](smo-connection-manager.md)|  
+|FTP|Se conecta a un servidor FTP.|[FTP, administrador de conexiones](ftp-connection-manager.md)|  
+|HTTP|Se conecta a un servidor web.|[HTTP, administrador de conexiones](http-connection-manager.md)|  
+|MSMQ|Se conecta a una cola de mensajes.|[MSMQ, administrador de conexiones](msmq-connection-manager.md)|  
+|MSOLAP100|Se conecta a una instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un proyecto de.|[administrador de conexiones de Analysis Services](analysis-services-connection-manager.md)|  
+|MULTIFILE|Se conecta a varios archivos y carpetas.|[administrador de conexiones de varios archivos](multiple-files-connection-manager.md)|  
+|MULTIFLATFILE|Se conecta a varios archivos y carpetas de datos.|[administrador de conexiones de varios archivos planos](multiple-flat-files-connection-manager.md)|  
+|OLEDB|Se conecta a un origen de datos mediante un proveedor OLE DB.|[OLE DB, administrador de conexiones](ole-db-connection-manager.md)|  
+|ODBC|Se conecta a un origen de datos mediante ODBC.|[ODBC, administrador de conexiones](odbc-connection-manager.md)|  
+|SMOServer|Se conecta a un servidor de objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO).|[SMO, administrador de conexiones](smo-connection-manager.md)|  
 |SMTP|Se conecta a un servidor de correo SMTP.|[Administrador de conexiones SMTP](smtp-connection-manager.md)|  
 |SQLMOBILE|Se conecta a una base de datos Compact [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Administrador de conexiones con SQL Server Compact Edition](sql-server-compact-edition-connection-manager.md)|  
 |WMI|Se conecta a un servidor y especifica el ámbito de la administración del Instrumental de administración de Windows (WMI) en el servidor.|[Administrador de conexiones WMI](wmi-connection-manager.md)|  
@@ -96,9 +97,12 @@ ms.locfileid: "62833798"
   
 |Tipo|Descripción|Tema|  
 |----------|-----------------|-----------|  
-|ORACLE|Se conecta a un Oracle \<información de versión > server.|El administrador de conexiones de Oracle es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
-|SAPBI|Se conecta a un sistema SAP NetWeaver BI versión 7.|El administrador de conexiones de SAP BI es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI incluye también un origen y un destino. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=262016).|  
-|TERADATA|Se conecta a un Teradata \<información de versión > server.|El administrador de conexiones de Teradata es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|ORACLE|Se conecta a un \<servidor de> de información de versión de Oracle.|El administrador de conexiones de Oracle es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|SAPBI|Se conecta a un sistema SAP NetWeaver BI versión 7.|El administrador de conexiones de SAP BI es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI incluye también un origen y un destino. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=262016).|  
+|TERADATA|Se conecta a un \<servidor de> de información de versión de Teradata.|El administrador de conexiones de Teradata es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
   
 ### <a name="custom-connection-managers"></a>Administradores de conexión personalizados  
  Puede crear también administradores de conexión personalizados. Para obtener más información, vea [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  

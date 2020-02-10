@@ -1,5 +1,5 @@
 ---
-title: 'Identificar columnas de clave mediante SQL: Key-campos (SQLXML 4.0) | Microsoft Docs'
+title: 'Identificar columnas de clave mediante SQL: Key-Fields (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013819"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificar columnas de clave mediante sql:key-fields (SQLXML 4.0)
@@ -36,19 +36,19 @@ ms.locfileid: "66013819"
   
  El valor de `sql:key-fields` identifica las columnas que identifican de forma única las filas de la relación. Si es necesaria más de una columna para identificar de forma única una fila, los valores de columna se delimitan mediante espacios.  
   
- Debe usar el `sql:key-fields` anotación cuando un elemento contiene un  **\<SQL: Relationship >** que se define entre el elemento y un elemento secundario, pero no proporciona la clave principal de la tabla que se especifica en el elemento primario.  
+ Debe utilizar la `sql:key-fields` anotación cuando un elemento contiene un ** \<>SQL: Relationship** definido entre el elemento y un elemento secundario, pero no proporciona la clave principal de la tabla que se especifica en el elemento primario.  
   
 ## <a name="examples"></a>Ejemplos  
- Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Crear un anidamiento correcto cuando \<SQL: Relationship > no proporciona suficiente información  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Generar el anidamiento adecuado cuando \<SQL: Relationship> no proporciona información suficiente  
  En este ejemplo se muestra dónde debe especificarse `sql:key-fields`.  
   
- Fíjese en el siguiente esquema. El esquema especifica una jerarquía entre el  **\<orden >** y  **\<cliente >** elementos en los que el  **\<orden >** elemento es el elemento primario y el  **\<cliente >** es un elemento secundario.  
+ Fíjese en el siguiente esquema. El esquema especifica una jerarquía entre el ** \<orden>** y ** \<** los elementos de>de cliente en los que el ** \<elemento Order>** es el elemento primario y el ** \<elemento Customer>** es un elemento secundario.  
   
- El  **\<SQL: Relationship >** etiqueta a la que se usa para especificar la relación de elementos primarios y secundarios. Identifica CustomerID en la tabla Sales.SalesOrderHeader como la clave primaria que hace referencia a la clave secundaria CustomerID en la tabla Sales.Customer. La información proporcionada en  **\<SQL: Relationship >** no es suficiente para identificar de forma única las filas de la tabla primaria (Sales.SalesOrderHeader). Por lo tanto, sin la anotación `sql:key-fields`, la jerarquía que se genera es inexacta.  
+ La ** \<etiqueta SQL: Relationship>** se usa para especificar la relación de elementos primarios y secundarios. Identifica CustomerID en la tabla Sales.SalesOrderHeader como la clave primaria que hace referencia a la clave secundaria CustomerID en la tabla Sales.Customer. La información proporcionada en ** \<SQL: Relationship>** no es suficiente para identificar de forma única las filas de la tabla primaria (sales. SalesOrderHeader). Por lo tanto, sin la anotación `sql:key-fields`, la jerarquía que se genera es inexacta.  
   
- Con `sql:key-fields` especificado en  **\<orden >** , la anotación identifica de forma única las filas en el elemento primario (tabla Sales.SalesOrderHeader) y sus elementos secundarios aparecen debajo de su elemento primario.  
+ Con `sql:key-fields` la ** \<>** especificada en el orden, la anotación identifica de forma única las filas de la tabla primaria (sales. SalesOrderHeader) y sus elementos secundarios aparecen debajo de su elemento primario.  
   
  Éste es el esquema:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66013819"
   
 1.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como KeyFields1.xml.  
   
-2.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como KeyFields1T.xml en el mismo directorio donde guardó KeyFields1.xml. La consulta XPath en la plantilla devuelve todos los  **\<orden >** elementos con un CustomerID es inferior a 3.  
+2.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como KeyFields1T.xml en el mismo directorio donde guardó KeyFields1.xml. La consulta XPath de la plantilla devuelve todos los ** \<elementos de order>** con un CustomerID de menos de 3.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -105,7 +105,7 @@ ms.locfileid: "66013819"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Éste es el conjunto de resultados parciales:  
   
@@ -124,8 +124,8 @@ ms.locfileid: "66013819"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>b. Especificar sql:key-fields para generar un anidamiento correcto del resultado  
- En el siguiente esquema, no hay ninguna jerarquía especificada mediante  **\<SQL: Relationship >** . El esquema todavía requiere que se especifique la anotación `sql:key-fields` para identificar de forma única a empleados en la tabla HumanResources.Employee.  
+### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Especificar sql:key-fields para generar un anidamiento correcto del resultado  
+ En el esquema siguiente, no se ha especificado ninguna jerarquía mediante ** \<SQL: Relationship>**. El esquema todavía requiere que se especifique la anotación `sql:key-fields` para identificar de forma única a empleados en la tabla HumanResources.Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -152,7 +152,7 @@ ms.locfileid: "66013819"
   
 1.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como KeyFields2.xml.  
   
-2.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como KeyFields2T.xml en el mismo directorio donde guardó KeyFields2.xml. La consulta XPath en la plantilla devuelve todos los  **\<HumanResources.Employee >** elementos:  
+2.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como KeyFields2T.xml en el mismo directorio donde guardó KeyFields2.xml. La consulta XPath de la plantilla devuelve todos los elementos ** \<humanresources. Employee>** :  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -170,9 +170,9 @@ ms.locfileid: "66013819"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

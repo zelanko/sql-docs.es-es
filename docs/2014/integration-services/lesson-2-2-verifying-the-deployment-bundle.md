@@ -1,5 +1,5 @@
 ---
-title: 'Paso 2: Comprobación del paquete de implementación | Microsoft Docs'
+title: 'Paso 2: Comprobar el conjunto de implementación | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 127044042eed7f082b6f1f7ba7ae6918232ba9ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891774"
 ---
-# <a name="step-2-verifying-the-deployment-bundle"></a>Paso 2: Comprobación del paquete de implementación
+# <a name="step-2-verifying-the-deployment-bundle"></a>Paso 2: Comprobar el paquete de implementación
   En la lección 1, ha creado el proyecto Deployment Tutorial y le ha agregado paquetes y archivos auxiliares; en la tarea anterior, ha creado una utilidad de implementación para el proyecto.  
   
  En esta tarea, comprobará el contenido del paquete de implementación. El paquete de implementación es la carpeta que copiará en el equipo de destino y que usará para instalar paquetes. Si ha usado el valor predeterminado (bin\Deployment) como ubicación de la utilidad de implementación, el paquete de implementación estará en la carpeta Bin\Deployment dentro de la carpeta Deployment Tutorial del proyecto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -50,13 +50,13 @@ ms.locfileid: "62891774"
   
      `<?xml version="1.0"?><DTSDeploymentManifest GeneratedBy="Domain\UserName" GeneratedFromProjectName="Deployment Tutorial" GeneratedDate="2006-02-24T13:29:02.6537669-08:00" AllowConfigurationChanges="true"><Package>DataTransfer.dtsx</Package><Package>LoadXMLData.dtsx</Package><ConfigurationFile>datatransferconfig.dtsconfig</ConfigurationFile><ConfigurationFile>loadxmldataconfig.dtsconfig</ConfigurationFile><MiscellaneousFile>Readme.txt</MiscellaneousFile><MiscellaneousFile>orders.xml</MiscellaneousFile><MiscellaneousFile>NewCustomers.txt</MiscellaneousFile><MiscellaneousFile>orders.xsd</MiscellaneousFile></DTSDeploymentManifest>`  
   
-4.  Compruebe que el valor de la `AllowConfigurationChanges` atributo es **true** y el XML incluye un `Package` (elemento) para cada uno de los dos paquetes, un `MiscellaneousFile` (elemento) para cada uno de los cuatro archivos no empaquetados y un `ConfigurationFile` elemento para cada uno de los dos archivos de configuración XML.  
+4.  Compruebe que el `AllowConfigurationChanges` valor del atributo es **true** y que el código XML incluye `Package` un elemento para cada uno de los dos paquetes `MiscellaneousFile` , un elemento para cada uno de los cuatro archivos que no son `ConfigurationFile` de paquete y un elemento para cada uno de los dos archivos de configuración XML.  
   
 5.  Salga de Internet Explorer o del editor de texto.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 3: Instalación de paquetes](../integration-services/lesson-3-install-ssis-package.md)  
+ [Lección 3: Instalar paquetes](../integration-services/lesson-3-install-ssis-package.md)  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
   

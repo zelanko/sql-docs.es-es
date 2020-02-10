@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060147"
 ---
 # <a name="create-and-map-a-server-environment"></a>Crear y asignar un entorno de servidor
@@ -28,11 +28,11 @@ ms.locfileid: "66060147"
 > [!IMPORTANT]  
 >  Para una ejecución determinada, un paquete solo puede ejecutarse con los valores contenidos en un único entorno de servidor.  
   
- Puede consultar las vistas para obtener una lista de entornos de servidor, referencias de entorno y variables de entorno. También puede llamar a procedimientos almacenados para agregar, eliminar y modificar entornos, referencias de entorno y variables de entorno. Para obtener más información, vea la sección **Entornos de servidor, variables de servidor y referencias del entorno de servidor** en [SSIS Catalog](catalog/ssis-catalog.md).  
+ Puede consultar las vistas para obtener una lista de entornos de servidor, referencias de entorno y variables de entorno. También puede llamar a procedimientos almacenados para agregar, eliminar y modificar entornos, referencias de entorno y variables de entorno. Para obtener más información, vea la sección **entornos de servidor, variables de servidor y referencias del entorno de servidor** en el catálogo de [SSIS](catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Para crear y utilizar un entorno de servidor  
   
-1.  En [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], expanda el nodo Catálogos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]> **SSISDB** en el Explorador de objetos y busque la carpeta **Entornos** del proyecto para el que quiera crear un entorno.  
+1.  En [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], expanda [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] el nodo catálogos> **SSISDB** en explorador de objetos y busque la carpeta **entornos** del proyecto para el que desea crear un entorno.  
   
 2.  Haga clic con el botón derecho en la carpeta **Entornos** y, después, haga clic en **Crear entorno**.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66060147"
   
 5.  En la página **Variables** , haga lo siguiente para agregar una variable.  
   
-    1.  Seleccione **Tipo** para la variable. **No** es necesario que el nombre de la variable coincida con el nombre del parámetro del proyecto al que asignará la variable.  
+    1.  Seleccione **Tipo** para la variable. **No** es necesario que el nombre de la variable coincida con el nombre del parámetro del proyecto que se asigna a la variable.  
   
     2.  Escriba la **Descripción** opcional para la variable.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66060147"
   
 13. Para asignar la variable de entorno a una propiedad del administrador de conexiones, haga lo siguiente. Se generan automáticamente parámetros en el servidor SSIS para las propiedades del administrador de conexiones.  
   
-    1.  En la pestaña **Administradores de conexiones** de la página **Parámetros** , haga clic en el botón Examinar situado junto al campo **Valor** .  
+    1.  En la pestaña **Administradores de conexiones** de la página **Parámetros**, haga clic en el botón Examinar situado junto al campo **Valor**.  
   
     2.  Haga clic en **Usar variable de entorno**y seleccione la variable de entorno que creó.  
   

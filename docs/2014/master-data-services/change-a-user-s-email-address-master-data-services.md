@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d540c414b1190a045fdb18b4b971e73f348459f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483580"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Cambiar la dirección de correo electrónico de un usuario (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar la dirección de correo electrónico a la que se envían las notificaciones y el formato predeterminado del correo electrónico de notificación.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional de **Usuarios y grupos** .  
@@ -39,13 +39,13 @@ ms.locfileid: "65483580"
   
 5.  Actualice el formato o la dirección de correo electrónico.  
   
-6.  Haga clic en **Guardar**.  
+6.  Haga clic en **Save**(Guardar).  
   
 ## <a name="next-steps"></a>Pasos siguientes  
   
--   [Asignar permisos del área funcional &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [Asignar permisos de área funcional &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Master Data Services de &#40;de seguridad&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

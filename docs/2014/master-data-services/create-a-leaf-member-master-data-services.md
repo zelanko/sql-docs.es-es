@@ -15,21 +15,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483408"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Crear un miembro hoja (Master Data Services)
-  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], crear un miembro hoja cuando desea agregar datos maestros en el sistema y no se utilizan tablas de almacenamiento provisional o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] para importar datos.  
+  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cree un miembro hoja si desea agregar datos maestros al sistema y no utiliza tablas de almacenamiento provisional o [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] para importar datos.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
   
--   Debe tener un mínimo de **actualización** permiso al objeto de modelo para la entidad que se va a agregar un miembro hoja.  
+-   Debe tener como mínimo el permiso **Actualizar** para el objeto de modelo hoja para la entidad a la que va a agregar un miembro.  
   
 ### <a name="to-create-a-leaf-member"></a>Crear un miembro hoja  
   
@@ -47,11 +47,11 @@ ms.locfileid: "65483408"
   
 7.  Opcional. En el cuadro **Anotaciones** , escriba un comentario sobre los motivos por los que se agregó el miembro. Todos los usuarios que tienen acceso al miembro pueden ver la anotación.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cargar o actualizar miembros en Master Data Services mediante el proceso de almacenamiento provisional](add-update-and-delete-data-master-data-services.md)   
- [Crear un miembro consolidado &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
+ [Cree un miembro consolidado &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
  [Miembros &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
   

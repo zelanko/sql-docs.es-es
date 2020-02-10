@@ -1,5 +1,5 @@
 ---
-title: Establecer opciones de herramienta y el diseño | Microsoft Docs
+title: Establecer las opciones de herramienta y el diseño | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110198"
 ---
 # <a name="setting-tool-options-and-layout"></a>Configurar las opciones de herramienta y el diseño
@@ -32,7 +32,7 @@ ms.locfileid: "66110198"
   
     -   Expanda la lista **Al iniciar** para ver lo que muestra el Asistente para la optimización de motor de base de datos cuando se inicia. De forma predeterminada, está seleccionada la opción **Mostrar una nueva sesión** .  
   
-    -   Haga clic en **Cambiar fuente** para ver las fuentes que puede elegir para las listas de bases de datos y tablas en la pestaña **General** . Las fuentes que elija para esta opción también se utilizarán en las cuadrículas de recomendación y los informes del Asistente para la optimización de motor de base de datos después de realizar la optimización. De forma predeterminada, el asistente utiliza las fuentes del sistema.  
+    -   Haga clic en **cambiar fuente** para ver las fuentes que puede elegir para las listas de bases de datos y tablas en la pestaña **General** . Las fuentes que elija para esta opción también se usan en Asistente para la optimización de motor de base de datos cuadrículas de recomendaciones e informes después de haber realizado la optimización. De forma predeterminada, el asistente utiliza las fuentes del sistema.  
   
     -   La opción **Número de elementos en las listas usadas más recientemente** puede establecerse entre **1** y **10**. De esta manera, se establece el número máximo de elementos en las listas que se muestran cuando hace clic en **Sesiones recientes** o **Archivos recientes** del menú **Archivo** . De forma predeterminada, el valor de esta opción es **4**.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "66110198"
     -   La opción **Preguntar antes de detener análisis de sesión** está activada de forma predeterminada para impedir la detención accidental de la sesión de optimización antes de que el Asistente para la optimización de motor de base de datos haya terminado de analizar la carga de trabajo.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Usar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Lección 2: Usar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

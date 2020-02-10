@@ -1,5 +1,5 @@
 ---
-title: Editor de origen XML (página Administrador de conexiones) | Microsoft Docs
+title: Editor de origen de XML (página Administrador de conexiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054297"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Editor de origen de XML (página Administrador de conexiones)
@@ -30,19 +30,19 @@ ms.locfileid: "66054297"
  **Modo de acceso a datos**  
  Especifique el método para seleccionar datos del origen.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Ubicación del archivo XML|Recupera datos de un archivo XML.|  
-|Archivo XML de variable|Especifica el nombre de archivo XML en una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Archivo XML de variable|Especifica el nombre de archivo XML en una variable.<br /><br /> **Información relacionada**: [usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Datos XML de variable|Recupera datos XML de una variable.|  
   
- **Utilizar esquema insertado**  
+ **Usar esquema en línea**  
  Especifique si los datos de origen XML contienen el esquema XSD que define y valida su estructura y sus datos.  
   
- **Ubicación de XSD**  
+ **Ubicación XSD**  
  Especifique la ruta de acceso y el nombre de archivo del archivo de esquema XSD, o busque el archivo haciendo clic en **Examinar**.  
   
- **Examinar**  
+ **Browse**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo de esquema XSD.  
   
  **Generar XSD**  
@@ -51,24 +51,24 @@ ms.locfileid: "66054297"
 ## <a name="data-access-mode-dynamic-options"></a>Opciones dinámicas del modo de acceso a datos  
   
 ### <a name="data-access-mode--xml-file-location"></a>Modo de acceso a datos = Ubicación del archivo XML  
- **Ubicación de XML**  
+ **Ubicación XML**  
  Especifique la ruta de acceso y el nombre de archivo del archivo de datos XML, o busque el archivo haciendo clic en **Examinar**.  
   
- **Examinar**  
+ **Browse**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo de datos XML.  
   
 ### <a name="data-access-mode--xml-file-from-variable"></a>Modo de acceso a datos = Datos XML de variable  
- **Nombre de variable**  
+ **Nombre de la variable**  
  Seleccione la variable que contiene la ruta de acceso y el nombre del archivo XML.  
   
 ### <a name="data-access-mode--xml-data-from-variable"></a>Modo de acceso a datos = Datos XML de variable  
- **Nombre de variable**  
+ **Nombre de la variable**  
  Seleccione la variable que contiene los datos XML.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origen de XML &#40;página Columnas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [Editor de origen de XML &#40;página Salida de error&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Editor de origen de XML &#40;página columnas&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Editor de origen de XML &#40;página salida de error&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Extraer datos mediante el origen de XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

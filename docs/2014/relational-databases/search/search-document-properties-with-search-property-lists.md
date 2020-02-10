@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011083"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
@@ -61,7 +61,7 @@ ms.locfileid: "66011083"
 ##  <a name="impact"></a> Impacto de habilitar la búsqueda de propiedades  
  Al configurar un índice de texto completo para que admita la búsqueda de una o varias propiedades, se incrementa en cierta medida el tamaño del índice en función del número de propiedades que se especifiquen en la lista de propiedades de búsqueda y del contenido de cada propiedad.  
   
- En las pruebas Corpus típicos de Microsoft Word<sup>?? </sup>, Excel<sup>?? </sup>y PowerPoint<sup>??</sup> documentos, configuramos un propiedades de búsqueda de texto completo para el índice típico. Al indizar estas propiedades, aumentó el tamaño del índice de texto completo en un 5 por ciento aproximadamente. Prevemos que este incremento de tamaño aproximado será generalizado en la mayoría de los corpus de documentos. Sin embargo, el incremento del tamaño dependerá en última instancia del volumen de los datos de propiedades de un determinado corpus de documentos respecto al volumen de la generalidad de los datos.  
+ Al probar los los corpus típicos de Microsoft Word<sup>?</sup>?, Excel<sup>??</sup>y PowerPoint<sup>?</sup> documentos: se ha configurado un índice de texto completo para indizar las propiedades de búsqueda típicas. Al indizar estas propiedades, aumentó el tamaño del índice de texto completo en un 5 por ciento aproximadamente. Prevemos que este incremento de tamaño aproximado será generalizado en la mayoría de los corpus de documentos. Sin embargo, el incremento del tamaño dependerá en última instancia del volumen de los datos de propiedades de un determinado corpus de documentos respecto al volumen de la generalidad de los datos.  
   
   
   
@@ -78,7 +78,7 @@ ms.locfileid: "66011083"
   
 2.  Expanda **Bases de datos**y, a continuación, expanda la base de datos en la que desea crear la lista de propiedades de búsqueda.  
   
-3.  Expanda **Almacenamiento**y haga clic con el botón derecho en **Listas de propiedades de búsqueda**.  
+3.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario del mouse en **Listas de propiedades de búsqueda**.  
   
 4.  Seleccione **Nueva lista de propiedades de búsqueda**.  
   
@@ -207,7 +207,7 @@ GO
   
 5.  Haga clic con el botón derecho en la lista de propiedades y seleccione **Propiedades**.  
   
-6.  En el cuadro de diálogo **Editor de lista de propiedades de búsqueda** , utilice la cuadrícula de Propiedades para agregar o quitar propiedades de búsqueda:  
+6.  En el cuadro de diálogo **Editor de lista de propiedades de búsqueda**, utilice la cuadrícula de Propiedades para agregar o quitar propiedades de búsqueda:  
   
     1.  Para quitar una propiedad de documento, haga clic en el encabezado de fila a la izquierda de la propiedad y presione SUPR.  
   
@@ -232,14 +232,14 @@ GO
   
 2.  Expanda **Bases de datos**y, a continuación, expanda la base de datos.  
   
-3.  Expanda **Almacenamiento**y, a continuación, expanda el nodo **Listas de propiedades de búsqueda** .  
+3.  Expanda **Almacenamiento** y, a continuación, expanda el nodo **Listas de propiedades de búsqueda**.  
   
 4.  Haga clic con el botón derecho en la lista de propiedades que quiera eliminar y haga clic en **Eliminar**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [Configurar y administrar filtros para búsquedas](configure-and-manage-filters-for-search.md)  
   

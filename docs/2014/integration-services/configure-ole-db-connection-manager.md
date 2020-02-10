@@ -1,5 +1,5 @@
 ---
-title: Configurar el Administrador de conexiones OLE DB | Microsoft Docs
+title: Configurar el administrador de conexiones de OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cef2c37c2775b1b5bd46e04f214d8ae77ee7b56d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060548"
 ---
 # <a name="configure-ole-db-connection-manager"></a>Configurar el administrador de conexiones OLE DB
@@ -33,13 +33,13 @@ ms.locfileid: "66060548"
  **Propiedades de conexión de datos**  
  Vea las propiedades y los valores de la conexión de datos OLE DB seleccionada.  
   
- **Nueva**  
+ **Nuevo**  
  Permite crear una conexión de datos OLE DB con el cuadro de diálogo **Administrador de conexiones** .  
   
  **Eliminar**  
  Permite seleccionar una conexión de datos y, después, eliminarla con el botón **Eliminar** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843671"
 ---
 # <a name="retrieve-files"></a>Recuperar archivos
@@ -26,19 +26,19 @@ ms.locfileid: "62843671"
   
  Puede usar el control de código fuente integrado para recuperar archivos de varias formas:  
   
--   **Obtener la última versión (recursivo)** comando  
+-   Comando **obtener la última versión (recursivo)**  
   
      Recupera la última versión protegida de los archivos seleccionados. Si se selecciona una solución o un proyecto, este comando recupera la última versión de todos los archivos de la solución y el proyecto.  
   
--   **Obtener** comando  
+-   **Get** (comando)  
   
-     Muestra el **obtener** cuadro de diálogo que puede usar para recuperar la versión más reciente de un archivo seleccionado, o para recuperar un subconjunto de los archivos de la solución o proyecto seleccionado.  
+     Muestra el cuadro de diálogo **obtener** , que puede usar para recuperar la versión más reciente de un archivo seleccionado o para recuperar un subconjunto de los archivos de la solución o proyecto seleccionados.  
   
 ### <a name="to-retrieve-the-latest-version-of-all-the-files-in-a-project"></a>Para recuperar la última versión de todos los archivos de un proyecto  
   
 1.  En el Explorador de soluciones, seleccione el proyecto.  
   
-2.  En el **archivo** menú, elija **Control de código fuente**y, a continuación, haga clic en **obtener última versión (recursivo)** .  
+2.  En el menú **archivo** , seleccione **control de código fuente**y, a continuación, haga clic en **obtener la última versión (recursivo)**.  
   
  Se recuperan las versiones más recientes de los archivos del proyecto en la ubicación del proyecto en el disco local.  
   
@@ -46,14 +46,14 @@ ms.locfileid: "62843671"
   
 1.  En el Explorador de soluciones, seleccione el elemento que desea recuperar.  
   
-2.  En el **archivo** menú, elija **Control de código fuente**y, a continuación, haga clic en **obtener**.  
+2.  En el menú **archivo** , seleccione **control de código fuente**y, a continuación, haga clic en **obtener**.  
   
-3.  En el **obtener** cuadro de diálogo, haga clic en **Aceptar**. Si ha seleccionado una solución o un proyecto en el Explorador de soluciones, también puede desactivar las casillas que aparecen junto a los elementos que no desea recuperar.  
+3.  En el cuadro de diálogo **obtener** , haga clic en **Aceptar**. Si ha seleccionado una solución o un proyecto en el Explorador de soluciones, también puede desactivar las casillas que aparecen junto a los elementos que no desea recuperar.  
   
-## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo obtener &#40;Control de código fuente&#41;](../../2014/database-engine/get-dialog-box-source-control.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo obtener &#40;control de código fuente&#41;](../../2014/database-engine/get-dialog-box-source-control.md)   
  [Establecer y recuperar información de versión](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Ver el historial de proyecto](../../2014/database-engine/view-project-history.md)   
+ [Ver el historial del proyecto](../../2014/database-engine/view-project-history.md)   
  [Ver el estado de archivo](../../2014/database-engine/view-file-status.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de resultados en la tarea Ejecutar SQL | Microsoft Docs
+title: Conjuntos de resultados en la tarea ejecutar SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056429"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Conjuntos de resultados en la tarea Ejecutar SQL
@@ -31,9 +31,9 @@ ms.locfileid: "66056429"
   
 -   [Rellenar una variable con un conjunto de resultados](#Populate_variable_with_result_set)  
   
--   [Configurar conjuntos de resultados en el Editor de tareas de ejecución SQL](#Configure_result_sets)  
+-   [Configurar conjuntos de resultados en el editor de la tarea Ejecutar SQL](#Configure_result_sets)  
   
-##  <a name="Result_set_type"></a> Especificar un conjunto de resultados tipo  
+##  <a name="Result_set_type"></a>Especificar un tipo de conjunto de resultados  
  La tarea Ejecutar SQL admite los siguientes tipos de conjuntos de resultados:  
   
 -   El conjunto de resultados **Ninguno** se usa cuando la consulta no devuelve ningún resultado. Por ejemplo, este conjunto de resultados se utiliza para consultas que agregan, cambian y eliminan registros de una tabla.  
@@ -46,7 +46,7 @@ ms.locfileid: "66056429"
   
  Si la tarea Ejecutar SQL utiliza el conjunto de resultados **Conjunto de resultados completo** y la consulta devuelve varios conjuntos de filas, la tarea solo devuelve el primero de ellos. Si el primer conjunto de filas genera un error, la tarea lo notifica. Si otros conjuntos de filas generan errores, la tarea no los notifica.  
   
-##  <a name="Populate_variable_with_result_set"></a> Llenar una Variable con un conjunto de resultados  
+##  <a name="Populate_variable_with_result_set"></a>Rellenar una variable con un conjunto de resultados  
  Puede enlazar el conjunto de resultados devuelto por una consulta con una variable definida por el usuario si el tipo del conjunto de resultados es una fila individual, un conjunto de filas o XML.  
   
  Si el tipo de conjunto de resultados es **Fila única**, puede enlazar una columna del resultado devuelto a una variable utilizando el nombre de la columna como nombre del conjunto de resultados, o puede utilizar la posición ordinal de la columna en la lista de columnas como dicho nombre. Por ejemplo, el nombre del conjunto de resultados para la consulta `SELECT Color FROM Production.Product WHERE ProductID = ?` puede ser **Color** o **0**. Si la consulta devuelve varias columnas y desea obtener acceso a los valores de todas ellas, debe enlazar cada columna a una variable distinta. Si asigna columnas a variables utilizando números como nombre de los conjuntos de resultados, los números reflejan el orden de aparición de las columnas en la lista de columnas de la consulta. Por ejemplo, en la consulta `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, puede utilizar 0 para la columna **Color** y 1 para la columna **ListPrice** . La capacidad de utilizar un nombre de columna como nombre del conjunto de resultados dependerá del proveedor para el que se haya configurado la tarea. No todos los proveedores ponen los nombres de columna a disposición.  
@@ -55,11 +55,11 @@ ms.locfileid: "66056429"
   
  Si el tipo de conjunto de resultados es **Conjunto de resultados completo** o **XML**, debe utilizar 0 como nombre del conjunto de resultados.  
   
- Cuando se asigna una variable a un conjunto de resultados con el tipo de conjunto de resultados **Fila única** , la variable debe tener un tipo de datos que sea compatible con el tipo de datos de la columna contenida en el conjunto de resultados. Por ejemplo, un conjunto de resultados que contiene una columna con un tipo de datos `String` no se puede asignar a una variable con un tipo de datos numérico. Al establecer el **TypeConversionMode** propiedad `Allowed`, la tarea Ejecutar SQL intentará convertir el parámetro de salida y resultados a los datos de tipo de la variable de los resultados de consulta que se asignan.  
+ Cuando se asigna una variable a un conjunto de resultados con el tipo de conjunto de resultados **Fila única** , la variable debe tener un tipo de datos que sea compatible con el tipo de datos de la columna contenida en el conjunto de resultados. Por ejemplo, un conjunto de resultados que contiene una columna con un tipo de datos `String` no se puede asignar a una variable con un tipo de datos numérico. Cuando establezca la propiedad **TypeConversionMode** en `Allowed`, la tarea ejecutar SQL intentará convertir el parámetro de salida y los resultados de la consulta al tipo de datos de la variable a la que se asignan los resultados.  
   
  Un conjunto de resultados XML solamente se puede asignar a una variable con el tipo de datos `String` o `Object`. Si la variable tiene el tipo de datos `String`, la tarea Ejecutar SQL devuelve una cadena y el origen XML puede consumir los datos XML. Si la variable tiene el tipo de datos `Object`, la tarea Ejecutar SQL devuelve un objeto DOM (modelo de objetos de documento).  
   
- Un **conjunto de resultados completo** debe asignar a una variable de la `Object` tipo de datos. El resultado devuelto es un objeto de conjunto de filas. Puede usar un contenedor de bucle Foreach para extraer los valores de las filas de una tabla almacenados en la variable Object y almacenarlos en las variables de paquete y, entonces, utilizar una tarea Script para escribir los datos almacenados en variables de paquetes en un archivo. Para ver una demostración de cómo usar un contenedor de bucle Foreach y una tarea Script, consulte el ejemplo en CodePlex, [Ejecutar parámetros SQL y conjuntos de resultados](https://go.microsoft.com/fwlink/?LinkId=157863), en msftisprodsamples.codeplex.com.  
+ Un **conjunto de resultados completo** se debe asignar a una variable `Object` del tipo de datos. El resultado devuelto es un objeto de conjunto de filas. Puede usar un contenedor de bucle Foreach para extraer los valores de las filas de una tabla almacenados en la variable Object y almacenarlos en las variables de paquete y, entonces, utilizar una tarea Script para escribir los datos almacenados en variables de paquetes en un archivo. Para ver una demostración de cómo usar un contenedor de bucle Foreach y una tarea Script, consulte el ejemplo en CodePlex, [Ejecutar parámetros SQL y conjuntos de resultados](https://go.microsoft.com/fwlink/?LinkId=157863), en msftisprodsamples.codeplex.com.  
   
  En la tabla siguiente se resumen los tipos de datos de variables que se pueden asignar a conjuntos de resultados.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66056429"
   
  La variable puede definirse en el ámbito de la tarea Ejecutar SQL o en el ámbito del paquete. Si la variable tiene ámbito de paquete, el conjunto de resultados estará disponible para otras tareas y otros contenedores del paquete, así como para cualquier paquete ejecutado por la tarea Ejecutar paquete o Ejecutar paquete DTS 2000.  
   
- Cuando se asigna una variable a un conjunto de resultados de **fila única** , los valores que no son de cadena devueltos por la instrucción SQL se convierten en cadenas cuando se cumplen las condiciones siguientes:  
+ Cuando se asigna una variable a un conjunto de resultados de **fila única**, los valores que no son de cadena devueltos por la instrucción SQL se convierten en cadenas cuando se cumplen las condiciones siguientes:  
   
 -   La propiedad **TypeConversionMode** se establece en True. Establezca el valor de propiedad en la ventana Propiedades o mediante el **Editor de la tarea Ejecutar SQL**.  
   
@@ -80,10 +80,10 @@ ms.locfileid: "66056429"
   
  Para obtener información sobre cómo cargar un conjunto de resultados en una variable, vea [Asignar conjuntos de resultados a variables en una tarea Ejecutar SQL](control-flow/execute-sql-task.md).  
   
-##  <a name="Configure_result_sets"></a> Configurar conjuntos de resultados la tarea Ejecutar SQL  
+##  <a name="Configure_result_sets"></a>Configurar conjuntos de resultados en la tarea ejecutar SQL  
  Para obtener más información acerca de las propiedades de los conjuntos de resultados que puede establecer en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , haga clic en el tema siguiente:  
   
--   [Ejecutar el Editor de la tarea SQL &#40;página conjunto de resultados&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
+-   [Editor de la tarea ejecutar SQL &#40;página conjunto de resultados&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   

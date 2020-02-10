@@ -21,16 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011066"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Buscar palabras cerca de otra palabra con NEAR
-  Puede usar un término de proximidad (NEAR) en un predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o en una función [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para buscar palabras o frases que están cerca unas de otras. También puede especificar el número máximo de términos de no búsqueda que separan el primero y el último término de búsqueda. Además, puede buscar palabras o frases en cualquier orden o puede buscar palabras y frases en el orden en el que las especifique. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite tanto el anterior [término de proximidad genérico](#Generic_NEAR), que está en desuso y el [término de proximidad personalizado](#Custom_NEAR), que es nuevo en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+  Puede usar un término de proximidad (NEAR) en un predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o en una función [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para buscar palabras o frases que están cerca unas de otras. También puede especificar el número máximo de términos de no búsqueda que separan el primero y el último término de búsqueda. Además, puede buscar palabras o frases en cualquier orden o puede buscar palabras y frases en el orden en el que las especifique. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]admite el anterior [término de proximidad genérico](#Generic_NEAR), que ahora está en desuso, y el [término de proximidad personalizado](#Custom_NEAR), que es nuevo [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]en.  
   
-##  <a name="Custom_NEAR"></a> El término de proximidad personalizado  
+##  <a name="Custom_NEAR"></a>El término de proximidad personalizado  
  El término de proximidad personalizado presenta las siguientes capacidades nuevas:  
   
 -   Puede especificar el número máximo de términos de no búsqueda, o *distancia máxima*, que separa el primero y el último término de búsqueda para que haya una coincidencia.  
@@ -51,11 +51,11 @@ ms.locfileid: "66011066"
   
  {  
   
- *término_búsqueda* [,... *n* ]  
+ *search_term* [,... *n* ]  
   
  |  
   
- (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
+ (*search_term* [,... *n* ]) [, <maximum_distance> [, <match_order>]]  
   
  }  
   
@@ -107,7 +107,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
 ```  
   
- No se puede combinar un término de proximidad personalizado con un término de proximidad genérico (*término1* NEAR *término2*), un término de generación (ISABOUT …) o un término ponderado (FORMSOF …).  
+ No se puede combinar un término de proximidad personalizado con un término de proximidad genérico (*term1* cerca de *term2*), un término de generación (isabout...) o un término ponderado (FORMSOF...).  
   
 ### <a name="example-using-the-custom-proximity-term"></a>Ejemplo: Usar el término de proximidad personalizado  
  En el siguiente ejemplo se buscan todos los resúmenes de documento que contienen el palabra "reflector" en el mismo documento que la palabra "bracket" en la tabla `Production.Document` de la base de datos de ejemplo `AdventureWorks2012` .  
@@ -125,7 +125,7 @@ GO
   
 
   
-##  <a name="Additional_Considerations"></a> Consideraciones adicionales para las búsquedas de proximidad  
+##  <a name="Additional_Considerations"></a>Consideraciones adicionales para las búsquedas de proximidad  
  En esta sección se describen las consideraciones que afectan tanto a las búsquedas de proximidad genéricas como a las personalizadas:  
   
 -   Apariciones superpuestas de términos de búsqueda  
@@ -153,14 +153,14 @@ GO
   
 
   
-##  <a name="Generic_NEAR"></a> El término de proximidad genérico desusado  
+##  <a name="Generic_NEAR"></a>El término de proximidad genérico desusado  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se recomienda que use el [término de proximidad personalizado](#Custom_NEAR).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Se recomienda usar el término de [proximidad personalizado](#Custom_NEAR).  
   
  Un término de proximidad genérico indica que todos los términos de búsqueda especificados deben estar en un documento para que se devuelva una coincidencia, independientemente del número de términos de no búsqueda (la *distancia*) que haya entre los términos de búsqueda. La sintaxis básica es:  
   
- { *search_term* { NEAR | ~ } *search_term* } [ ,...*n* ]  
+ { *search_term* {Near | ~} *search_term* } [ ,... *n* ]  
   
  Por ejemplo, en los ejemplos siguientes deben aparecer las palabras 'fox' y 'chicken', en cualquier orden, para que se genere una coincidencia:  
   
@@ -184,7 +184,7 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- No se puede combinar un término de proximidad genérico con un término de proximidad personalizado, como `NEAR((term1,term2),5)`, un término ponderado (ISABOUT …) o un término de generación (FORMSOF …).  
+ No se puede combinar un término de proximidad genérico con un término de proximidad personalizado `NEAR((term1,term2),5)`, como, un término ponderado (isabout...) o un término de generación (FORMSOF...).  
   
 ### <a name="example-using-the-generic-proximity-term"></a>Ejemplo: Usar el término de proximidad genérico  
  En el siguiente ejemplo se utiliza el término de proximidad genérico para buscar la palabra "reflector" en el mismo documento que la palabra "bracket".  
@@ -224,9 +224,9 @@ CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket ~ installatio
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
- [Consultar con búsqueda de texto completo](query-with-full-text-search.md)   
+ [Consulta con búsqueda de texto completo](query-with-full-text-search.md)   
  [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)  
   
   

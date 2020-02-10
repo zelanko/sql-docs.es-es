@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877149"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Restauraciones de base de datos completas (modelo de recuperación simple)
@@ -36,7 +36,7 @@ ms.locfileid: "62877149"
 > [!NOTE]  
 >  Para obtener más información sobre la compatibilidad con las copias de seguridad de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea la sección "Soporte de compatibilidad" de [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="Overview"></a> Información general de la restauración de la base de datos en el modelo de recuperación simple  
+##  <a name="Overview"></a>Información general de la restauración de bases de datos con el modelo de recuperación simple  
  Una restauración completa de base de datos con el modelo de recuperación simple implica una o dos instrucciones [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) , en función de si desea restaurar una copia de seguridad diferencial de la base de datos. Si solo usa copias de seguridad completas de la base de datos, restaure solo la copia de seguridad más reciente, como se muestra en la siguiente ilustración.  
   
  ![Restaurar solamente una copia de seguridad completa de la base de datos](../../database-engine/media/bnrr-rmsimple1-fulldbbu.gif "Restaurar solamente una copia de seguridad completa de la base de datos")  
@@ -113,7 +113,7 @@ GO
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   

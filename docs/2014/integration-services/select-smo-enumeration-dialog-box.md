@@ -1,5 +1,5 @@
 ---
-title: Seleccionar enumeración de SMO, cuadro de diálogo | Microsoft Docs
+title: Cuadro de diálogo Seleccionar enumeración de SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055949"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>Seleccionar enumeración de SMO, cuadro de diálogo
@@ -37,13 +37,13 @@ ms.locfileid: "66055949"
  **Nombres**  
  Utilice el tipo de enumeración Nombres.  
   
- **URN**  
+ **Urn**  
  Utilice el tipo de enumeración URN.  
   
- **Ubicaciones**  
+ **Lugar**  
  Utilice el tipo de enumeración Ubicaciones. Esta opción solo está disponible para archivos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Contenedor de bucles Para cada uno](control-flow/foreach-loop-container.md)   
  [Guía de programación para objetos de administración de SQL Server &#40;SMO&#41;](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   

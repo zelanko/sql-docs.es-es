@@ -1,5 +1,5 @@
 ---
-title: Transferir el Editor de la tarea los inicios de sesión (página inicios de sesión) | Microsoft Docs
+title: Editor de la tarea transferir inicios de sesión (página inicios de sesión) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae8ebf56e4ae7c4fce3566cb7688d203b8ceb318
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054932"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Editor de la tarea Transferir inicios de sesión (página Inicios de sesión)
@@ -37,7 +37,7 @@ ms.locfileid: "66054932"
  **LoginsToTransfer**  
  Seleccione los inicios de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que va a copiar del servidor de origen al de destino. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**AllLogins**|Todos los inicios de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el servidor de origen se copiarán al de destino.|  
 |**SelectedLogins**|Solo los inicios de sesión especificados con **LoginsList** se copiarán al servidor de destino.|  
@@ -54,19 +54,19 @@ ms.locfileid: "66054932"
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**FailTask**|La tarea genera un error si existen ya inicios de sesión con el mismo nombre en el servidor de destino.|  
 |**Sobrescribir**|La tarea sobrescribe los inicios de sesión con el mismo nombre en el servidor de destino.|  
-|**Omitir**|La tarea omite los inicios de sesión con el mismo nombre que existan en el servidor de destino.|  
+|**Skip**|La tarea omite los inicios de sesión con el mismo nombre que existan en el servidor de destino.|  
   
  **CopySids**  
  Seleccione esta opción si los identificadores de seguridad asociados a los inicios de sesión deben copiarse al servidor de destino. **CopySids** debe establecerse en **True** si la tarea Transferir inicios de sesión se utiliza junto con la tarea Transferir bases de datos. De lo contrario, la base de datos transferida no reconocerá los inicios de sesión copiados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
- [Editor de la tarea Transferir inicios de sesión &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea transferir inicios de sesión &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expresiones](expressions/expressions-page.md)   
  [Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)   
  [Contraseñas seguras](../relational-databases/security/strong-passwords.md)   

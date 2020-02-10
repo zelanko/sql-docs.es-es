@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1175b26436e3af9794057ec14eba35675209cf84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010865"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>Ejecutar consultas XPath (clases administradas de SQLXML)
@@ -88,7 +88,7 @@ class Test
   
 2.  Guarde el esquema XSD (MySchema.xml) que se proporciona en este ejemplo en una carpeta.  
   
-3.  Guarde el código C# (DocSample.cs) que se proporciona en este ejemplo en la misma carpeta donde se almacena el esquema. (Si almacena los archivos en otra carpeta, tendrá que modificar el código y especificar la ruta de acceso al directorio adecuada para el esquema de asignación).  
+3.  Guarde el código C# (DocSample.cs) que se proporciona en este ejemplo en la misma carpeta en la que se almacena el esquema. (Si almacena los archivos en otra carpeta, tendrá que modificar el código y especificar la ruta de acceso al directorio adecuada para el esquema de asignación).  
   
 4.  Compile el código. Para compilar el código en el símbolo del sistema, use:  
   

@@ -1,5 +1,5 @@
 ---
-title: Ver los objetos de paquete en el Explorador de paquetes | Microsoft Docs
+title: Ver objetos de paquete en el explorador de paquetes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b48b7b4f106b7be318777d6041c5574f9d6c3039
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054507"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>Ver objetos de paquete en el Explorador de paquetes
@@ -42,7 +42,7 @@ ms.locfileid: "66054507"
   
 -   Haga clic con el botón derecho en un objeto y luego haga clic en **Eliminar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver objetos de paquete](view-package-objects.md)  
   
   

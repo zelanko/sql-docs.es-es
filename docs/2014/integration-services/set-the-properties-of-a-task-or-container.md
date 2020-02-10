@@ -1,5 +1,5 @@
 ---
-title: Establecer las propiedades de una tarea o contenedor | Microsoft Docs
+title: Establecer las propiedades de una tarea o un contenedor | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 05e98e0a735cc54e129b82c65841c6db688953de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055668"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Establecer las propiedades de tareas o contenedores
@@ -55,7 +55,7 @@ ms.locfileid: "66055668"
   
      Para más información sobre cómo configurar el contenedor de bucles For, vea [Configurar un contenedor de bucles For](control-flow/for-loop-container.md).  
   
-     Para más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](control-flow/foreach-loop-container.md).  
+     Para obtener más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](control-flow/foreach-loop-container.md).  
   
     > [!NOTE]  
     >  El contenedor de secuencias no dispone de ningún editor personalizado.  
@@ -68,7 +68,7 @@ ms.locfileid: "66055668"
   
 8.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
  [Contenedores de Integration Services](control-flow/integration-services-containers.md)  
   

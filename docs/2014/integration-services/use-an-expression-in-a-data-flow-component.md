@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054819"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>utilizar una expresión en un componente de flujo de datos
@@ -64,7 +64,7 @@ ms.locfileid: "66054819"
     > [!NOTE]  
     >  Si la expresión no es válida, aparece una alerta que describe los errores de sintaxis de la expresión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
  [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
  [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   

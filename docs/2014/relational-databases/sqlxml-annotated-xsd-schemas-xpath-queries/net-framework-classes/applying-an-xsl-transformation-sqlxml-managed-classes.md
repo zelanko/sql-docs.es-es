@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 79f30fdbdd2db468e2dcb3690254463001f0fb12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012602"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Aplicar una transformación XSL (clases administradas de SQLXML)
   En este ejemplo se ejecuta una consulta SQL en la base de datos AdventureWorks. La transformación XSL se aplica al resultado de la consulta para generar una tabla de dos columnas con los nombres y los apellidos de los empleados.  
   
- El xslpath, propiedad del objeto SqlXmlCommand se utiliza para especificar el archivo XSL y su ruta de acceso de directorio.  
+ La propiedad XslPath del objeto SqlXmlCommand se usa para especificar el archivo XSL y su ruta de acceso de directorio.  
   
 > [!NOTE]  
 >  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión.  

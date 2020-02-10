@@ -1,5 +1,5 @@
 ---
-title: Ejecutar el Editor de la tarea SQL (página de conjunto de resultados) | Microsoft Docs
+title: Editor de la tarea ejecutar SQL (página conjunto de resultados) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058966"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>Editor de la tarea Ejecutar SQL (página Conjunto de resultados)
@@ -34,21 +34,21 @@ ms.locfileid: "66058966"
   
  Si el tipo de conjunto de resultados es **Conjunto de resultados completo** o **XML**, debe utilizar 0 como nombre del conjunto de resultados.  
   
- **Temas relacionados**: [Conjuntos de resultados en la tarea Ejecutar SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
+ **Temas relacionados**: [conjuntos de resultados en la tarea ejecutar SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
  **Nombre de variable**  
- Para asignar el conjunto de resultados a una variable, seleccione una variable o haga clic en \<**Nueva variable…** > para agregar una variable nueva con el cuadro de diálogo **Agregar variable**.  
+ Para asignar el conjunto de resultados a una variable, seleccione una variable o haga clic en \<**Nueva variable…**> para agregar una variable nueva con el cuadro de diálogo **Agregar variable**.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic para agregar una asignación de conjuntos de resultados.  
   
- **Quitar**  
+ **Remove**  
  Seleccione de la lista una asignación de conjuntos de resultados y, después, haga clic en **Quitar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ejecutar el Editor de la tarea SQL &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Ejecutar el Editor de la tarea SQL &#40;página asignación de parámetros&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
+ [Editor de la tarea ejecutar SQL &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
+ [&#40;página de asignación de parámetros del editor de la tarea ejecutar SQL&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
  [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference)  
   
   

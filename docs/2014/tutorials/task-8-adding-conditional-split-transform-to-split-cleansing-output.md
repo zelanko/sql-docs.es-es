@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 8: Agregar condicional divide la transformación para dividir la salida de limpieza | Microsoft Docs'
+title: 'Tarea 8: agregar la transformación división condicional para dividir la salida de limpieza | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,40 +11,40 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489671"
 ---
-# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Tarea 8: Adición de la transformación División condicional para dividir el resultado de la limpieza
-  En esta tarea, agregará una transformación División condicional al flujo de datos. La transformación División condicional puede dirigir filas a salidas diferentes en función del contenido de los datos. Para este tutorial, usará el **estado de registro** columna de salida de la transformación limpieza de DQS. En este tutorial solo cargará los registros correctos o corregidos en el servidor MDS. Por lo tanto, compruebe si el **estado de registro** es **correcto** o **corregido**y combinar los registros antes de cargar los registros a MDS.  
+# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Tarea 8: agregar la transformación División condicional para dividir el resultado de la limpieza
+  En esta tarea, agregará una transformación División condicional al flujo de datos. La transformación División condicional puede dirigir filas a salidas diferentes en función del contenido de los datos. En este tutorial, usará la columna salida del **Estado de registro** de la transformación limpieza de DQS. En este tutorial solo cargará los registros correctos o corregidos en el servidor MDS. Por lo tanto, se comprueba si el **Estado del registro** es **correcto** o **corregido**, y se combinan los registros antes de cargar los registros en MDS.  
   
-1.  Arrastrar y colocar **transformación División condicional** desde **común** sección la **cuadro de herramientas de SSIS** a la **de flujo de datos** ficha en **Limpiar datos de proveedor**.  
+1.  Arrastre y coloque la **transformación división condicional** desde la sección **común** del **cuadro de herramientas de SSIS** hasta la pestaña flujo de **datos** en **limpiar datos del proveedor**.  
   
-2.  Haga clic en **división condicional**y haga clic en **cambiar el nombre**. Tipo **elegir registros correctos y corregidos** y presione **ENTRAR**.  
+2.  Haga clic con el botón secundario en **división condicional**y haga clic en **cambiar nombre**. Escriba **elegir registros correctos y corregidos** y presione **entrar**.  
   
-3.  Conectar **limpiar datos de proveedor** y **elegir registros correctos y corregidos** mediante el conector azul.  
+3.  Conecte **limpiar datos de proveedor** y **Seleccione los registros correctos y corregidos** con el conector azul.  
   
-     ![Proveedor de limpiar datos -> corrección de selección & corregida](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-01.jpg "limpiar proveedor datos -> corrección de selección & corregida")  
+     ![Limpiar datos de proveedor: > seleccionar correcto & corregido](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-01.jpg "Limpiar datos de proveedor -> Corrección de selección & Corregida")  
   
-4.  Haga doble clic en **elegir registros correctos y corregidos** en el **de flujo de datos** ficha.  
+4.  Haga doble clic en **seleccionar registros correctos y corregidos** en la pestaña **flujo de datos** .  
   
-5.  Cambiar el **nombre de salida predeterminado** en la parte inferior de la pantalla para **correcto**.  
+5.  Cambie el **nombre de salida predeterminado** en la parte inferior de la pantalla para **corregirlo**.  
   
 6.  Expanda **columnas** en el **panel superior izquierdo**.  
   
-     ![Editor de transformación División condicional](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-02.jpg "Editor de transformación División condicional")  
+     ![División condicional, editor de transformación](../../2014/tutorials/media/et-addingcsttosplitcleansingoutput-02.jpg "División condicional, editor de transformación")  
   
-7.  Arrastrar y colocar **estado de registro** a la **condición** columna.  
+7.  Arrastre y coloque el **Estado del registro** en la columna **condición** .  
   
-8.  Tipo **== "Corregido"** junto a **[estado de registro]** para el **condición** columna.  
+8.  Escriba **= = "corregido"** junto a **[estado del registro]** para la columna **condición** .  
   
-9. Haga clic en **caso 1** en el **columna de nombre de salida**y cambie el nombre a **corregido**.  
+9. Haga clic en el **caso 1** en la **columna Nombre de salida**y cambie el nombre a **corregido**.  
   
-10. Haga clic en **Aceptar** para cerrar el **Editor de transformación División condicional** cuadro de diálogo.  
+10. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor de transformación división condicional** .  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 9: Agregar la unión de todos los transformación Combinar registros correctos y corregidos](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 9: agregar la transformación Unión de todo para combinar los registros correctos y corregidos](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

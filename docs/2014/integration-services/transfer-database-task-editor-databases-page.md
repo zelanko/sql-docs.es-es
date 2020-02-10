@@ -1,5 +1,5 @@
 ---
-title: Transferir el Editor de tareas de base de datos (página bases de datos) | Microsoft Docs
+title: Editor de la tarea transferir bases de datos (página bases de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055110"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Editor de la tarea Transferir bases de datos (página Bases de datos)
@@ -53,7 +53,7 @@ ms.locfileid: "66055110"
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**True**|Sobrescribir la base de datos del servidor de destino.|  
 |**False**|No sobrescribir la base de datos del servidor de destino.|  
@@ -82,16 +82,16 @@ ms.locfileid: "66055110"
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**True**|Volver a adjuntar la base de datos de origen.|  
 |**False**|No volver a adjuntar la base de datos de origen.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
- [Editor de la tarea Transferir bases de datos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea transferir bases de datos &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expresiones](expressions/expressions-page.md)   
- [Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)  
+ [SMO, administrador de conexiones](connection-manager/smo-connection-manager.md)  
   
   

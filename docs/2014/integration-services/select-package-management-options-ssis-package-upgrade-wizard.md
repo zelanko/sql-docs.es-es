@@ -1,5 +1,5 @@
 ---
-title: Seleccionar opciones de administración de paquetes (Asistente actualización del paquete SSIS) | Microsoft Docs
+title: Seleccionar opciones de Administración de paquetes (Asistente para actualización del paquete SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056028"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>Seleccionar opciones de administración de paquetes (Asistente para actualización del paquete SSIS)
@@ -43,13 +43,13 @@ ms.locfileid: "66056028"
   
  La validación agrega tiempo al proceso de actualización. Se recomienda no seleccionar esta opción con paquetes grandes que probablemente se actualizarán correctamente.  
   
- **Crear nuevo id. de paquete**  
+ **Crear nuevos ID. de paquete**  
  Se crean nuevos identificadores de paquete para los paquetes de actualización.  
   
- **Continuar el proceso de actualización cuando la actualización de un paquete genera un error**  
+ **Continuar el proceso de actualización cuando se produce un error en la actualización del paquete**  
  Se especifica que cuando un paquete no se pueda actualizar, el Asistente para actualizar paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] continúe actualizando el resto de los paquetes.  
   
- **Conflictos con nombres de paquete**  
+ **Conflictos de nombres de paquetes**  
  Se especifica cómo debe administrar el asistente los paquetes que tienen el mismo nombre. Esta opción tiene los valores que figuran en la siguiente tabla.  
   
  **Sobrescribir archivos de paquete existentes**  
@@ -66,7 +66,7 @@ ms.locfileid: "66056028"
  **Omitir configuraciones**  
  No carga configuraciones de paquetes durante la actualización del paquete. Si se selecciona esta opción se reduce el tiempo necesario para actualizar el paquete.  
   
- **Realizar copia de seguridad de paquetes originales**  
+ **Copia de seguridad de paquetes originales**  
  El asistente hace una copia de seguridad de los paquetes originales en una carpeta **SSISBackupFolder** . El asistente crea la carpeta **SSISBackupFolder** como una subcarpeta de la carpeta que contiene los paquetes originales y los paquetes actualizados.  
   
 > [!NOTE]  
@@ -74,7 +74,7 @@ ms.locfileid: "66056028"
   
  Para más información, vea [Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Actualizar paquetes de Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d2046882eeed6b04cd1b1c4035b89eccbddc4f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056685"
 ---
 # <a name="precedence-constraint-editor"></a>Editor de restricciones de precedencia
@@ -26,18 +26,18 @@ ms.locfileid: "66056685"
   
 ## <a name="options"></a>Opciones  
  **Operación de evaluación**  
- Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción** y **Expresión o restricción**.  
+ Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción**, y **Expresión o restricción**.  
   
  **Valor**  
- Especifique el valor de restricción: **Correcto**, **Error** o **Finalización**.  
+ Permite especificar el valor de restricción: **Correcto**, **Error**o **Conclusión**.  
   
 > [!NOTE]  
 >  La línea de restricción de precedencia es verde para **Correcto**, resaltada para **Error**y azul para **Conclusión**.  
   
- **Expresión**  
+ **Expression**  
  Si usa las operaciones **Expresión**, **Expresión y restricción**o **Expresión o restricción**, escriba una expresión o inicie el Generador de expresiones para crear la expresión. La expresión debe evaluarse como un valor booleano.  
   
- **Prueba**  
+ **Muestre**  
  Permite validar la expresión.  
   
  **Y lógico**  
@@ -52,7 +52,7 @@ ms.locfileid: "66056685"
 > [!NOTE]  
 >  Este tipo de restricción de precedencia se muestra como una línea de puntos verde, resaltada o azul.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Restricciones de precedencia](control-flow/precedence-constraints.md)   
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
  [Contenedores de Integration Services](control-flow/integration-services-containers.md)   

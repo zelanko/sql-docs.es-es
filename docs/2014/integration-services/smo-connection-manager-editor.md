@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones SMO | Microsoft Docs
+title: Editor del administrador de conexiones SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055595"
 ---
 # <a name="smo-connection-manager-editor"></a>administrador de conexiones SMO, editor del
@@ -33,13 +33,13 @@ ms.locfileid: "66055595"
  **Actualizar**  
  Actualiza la lista de sesiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponibles que se pueden detectar en la red.  
   
- **Utilizar autenticación de Windows**  
+ **Usar autenticación de Windows**  
  Utiliza la autenticación de Windows para conectarse a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] seleccionada.  
   
- **Utilizar autenticación de SQL Server**  
+ **Usar autenticación SQL Server**  
  Utiliza la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] seleccionada.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Si ha seleccionado la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , escriba el nombre de usuario de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Contraseña**  
@@ -48,7 +48,7 @@ ms.locfileid: "66055595"
  **Probar conexión**  
  Pruebe la conexión con la configuración establecida.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

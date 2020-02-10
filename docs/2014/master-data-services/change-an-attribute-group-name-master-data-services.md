@@ -13,16 +13,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 07642b9a47d23893e67ff035e9967b940aedb813
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483592"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Cambiar el nombre de un grupo de atributos (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar el nombre de un grupo de atributos.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -33,25 +33,25 @@ ms.locfileid: "65483592"
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
   
-2.  En el **vista de modelo** página, en la barra de menús, seleccione **administrar** y haga clic en **grupos de atributos**.  
+2.  En la página **vista de modelo** , en la barra de menús, seleccione **administrar** y haga clic en grupos de **atributos**.  
   
 3.  En la lista **Modelo** , seleccione un modelo.  
   
 4.  En la lista **Entidad** , seleccione una entidad.  
   
-5.  Haga clic en el signo más para expandir **grupos hoja**, **grupos consolidados**, o **grupos de colecciones**, según el tipo de grupo que desea actualizar.  
+5.  Haga clic en el signo más para expandir **grupos hoja**, **grupos consolidados**o **grupos de recopilación**, según el tipo de grupo que desee actualizar.  
   
 6.  Haga clic en el nombre del grupo de atributos con el nombre que desea cambiar.  
   
 7.  Haga clic en **Editar elemento seleccionado**.  
   
-8.  En el **nombre de grupo hoja** cuadro, **nombre del grupo consolidado** cuadro, o **el nombre del grupo de recopilación** , escriba el nombre actualizado del grupo de atributos.  
+8.  En el cuadro Nombre de grupo **hoja** , en el cuadro Nombre de **grupo consolidado** o en el cuadro **nombre del grupo de recopilación** , escriba el nombre actualizado del grupo de atributos.  
   
 9. Haga clic en **Guardar grupo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Grupos de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [Crear un grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)   
+ [Cree un grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)   
  [Eliminar un grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)  
   
   

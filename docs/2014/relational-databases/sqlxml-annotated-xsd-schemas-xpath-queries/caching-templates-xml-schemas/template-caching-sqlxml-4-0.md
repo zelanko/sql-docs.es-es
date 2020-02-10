@@ -1,5 +1,5 @@
 ---
-title: Plantilla de almacenamiento en caché (SQLXML 4.0) | Documentos de Microsoft
+title: Almacenamiento en caché de plantillas (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0024066a5a687828cc59d5053d62e891bbf198d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013208"
 ---
 # <a name="template-caching-sqlxml-40"></a>Almacenamiento en caché de plantillas (SQLXML 4.0)
@@ -33,17 +33,17 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- El tamaño de la plantilla se debería establecer en función de la memoria disponible y del número de plantillas que se esté utilizando. El valor predeterminado de **TemplateCacheSize** es 31. Puede aumentar el tamaño de caché si el acceso a la plantilla parece lento o puede reducirlo si hay poca memoria.  
+ El tamaño de la plantilla se debería establecer en función de la memoria disponible y del número de plantillas que se esté utilizando. El valor predeterminado de **TemplateCacheSize** size es 31. Puede aumentar el tamaño de caché si el acceso a la plantilla parece lento o puede reducirlo si hay poca memoria.  
   
- Para mejorar el rendimiento, se recomienda que establezca **TemplateCacheSize** mayor que el número de plantillas que normalmente utiliza. Si **Templatecachesize** es menor que el número de plantillas que tiene, el rendimiento se degrada como el número de aumento de las plantillas. El **TemplateCacheSize** se puede establecer en un máximo de 128.  
+ Para mejorar el rendimiento, se recomienda establecer **TemplateCacheSize** en un valor mayor que el número de plantillas que se suelen usar. Si **templatecachesize** es menor que el número de plantillas que tiene, el rendimiento se degrada a medida que aumenta el número de plantillas. El valor de **TemplateCacheSize** se puede establecer en un máximo de 128.  
   
  Cada vez que se utiliza una plantilla almacenada en la memoria caché, se comprueba el tiempo de modificación del archivo de plantilla para ver si es necesario actualizarlo. Esto se debe a que la copia en disco es más reciente que la copia en la caché.  
   
 > [!NOTE]  
 >  Los parámetros de plantilla y las propiedades de comandos no se almacenan en la memoria caché.  
   
-## <a name="see-also"></a>Vea también  
- [Almacenamiento en caché de esquema &#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)   
- [Almacenamiento en caché de XSL &#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte también  
+ [Almacenamiento en caché de esquemas &#40;SQLXML 4,0&#41;](schema-caching-sqlxml-4-0.md)   
+ [Almacenamiento en caché XSL &#40;SQLXML 4,0&#41;](xsl-caching-sqlxml-4-0.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Opciones de cuadrícula de variables | Microsoft Docs
+title: Opciones de la cuadrícula de variables | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054676"
 ---
 # <a name="variable-grid-options"></a>Opciones de la cuadrícula de variables
@@ -40,7 +40,7 @@ ms.locfileid: "66054676"
   
 -   **Ámbito**  
   
--   **Data type**  
+-   **Tipo de datos**  
   
 -   **Valor**  
   
@@ -50,10 +50,10 @@ ms.locfileid: "66054676"
   
 -   **Descripción**  
   
--   **Expresión**  
+-   **Expression**  
   
-## <a name="see-also"></a>Vea también  
- [Ventana Variables](../../2014/integration-services/variables-window.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ventana variables](../../2014/integration-services/variables-window.md)   
  [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)   
  [Controladores de eventos de Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  

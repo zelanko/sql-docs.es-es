@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62854907"
 ---
 # <a name="column-properties-general-page"></a>Propiedades de columna (página General)
@@ -25,7 +25,7 @@ ms.locfileid: "62854907"
  La información de esta página es de solo lectura. Para modificar la columna, cierre el cuadro de diálogo **Propiedades de columna** , expanda la tabla y las columnas en el Explorador de objetos, haga clic con el botón derecho en la columna y, después, haga clic en **Diseño**.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Nombre de la columna.  
   
  **Tipo de datos**  
@@ -38,7 +38,7 @@ ms.locfileid: "62854907"
  Indica si la columna es una clave principal. Los valores posibles son **True**o **False**.  
   
  **Permitir valores NULL**  
- Indica si la columna acepta valores NULL. Los valores posibles son **True** o **False**.  
+ Indica si la columna acepta valores NULL. Los valores posibles son **true** y **false**.  
   
  **Se calcula**  
  Indica si el valor de la columna es el resultado de una expresión calculada.  
@@ -47,7 +47,7 @@ ms.locfileid: "62854907"
  Indica la instrucción utilizada para calcular el texto de la columna. Para obtener más información, vea [Specify Computed Columns in a Table](specify-computed-columns-in-a-table.md).  
   
  **Identidad**  
- Indica si la columna es la columna de identidad de la tabla. Los valores posibles son **True** o **False**.  
+ Indica si la columna es la columna de identidad de la tabla. Los valores posibles son **true** y **false**.  
   
  **Inicialización de identidad**  
  Indica el valor de fila inicial de una columna de identidad.  
@@ -61,13 +61,13 @@ ms.locfileid: "62854907"
  **Esquema predeterminado**  
  Identifica el esquema de base de datos al que pertenece el valor predeterminado enlazado a la columna. Esta opción está en blanco si no existe ningún valor predeterminado enlazado.  
   
- **Regla**  
+ **Rule**  
  Identifica la restricción de integridad de datos enlazada a la columna. Esta opción está en blanco si no existe ninguna regla enlazada.  
   
- **Esquema de la regla**  
+ **Esquema de reglas**  
  Muestra el esquema de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que pertenece la regla enlazada a la columna referenciada. Esta opción está en blanco si no existe ninguna regla enlazada.  
   
- **Longitud**  
+ **Length**  
  Indica el número máximo de caracteres o bytes que acepta la columna.  
   
  **Intercalación**  
@@ -82,17 +82,18 @@ ms.locfileid: "62854907"
  **Espacio de nombres del esquema XML**  
  Define el tipo de la columna XML por medio de la validación del lenguaje de definición de esquemas XML (XSD).  
   
- **Esquema del espacio de nombres del esquema XML**  
+ **Esquema de espacio de nombres del esquema XML**  
  Esquema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que pertenece el espacio de nombres del esquema XML.  
   
 > [!NOTE]  
->  Existen varios significados comunes pero diferentes de la palabra esquema. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza esquemas para organizar objetos de base de datos. Es similar a la propiedad. XML utiliza el esquema para definir la organización de la información XML en una serie de espacios de nombres. Es una forma de agrupar código XML relacionado.  
+>  Existen varios significados comunes pero diferentes de la palabra esquema. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza esquemas para organizar objetos de base de datos. Es similar a la propiedad. XML utiliza el esquema para definir la organización de la información XML en una serie de espacios de nombres. Es una forma de agrupar código XML relacionado.  
   
- **Is Sparse**  
- Indica si la columna es una columna dispersa. Los valores posibles son **True** o **False**. Para obtener más información, vea [Usar columnas dispersas](use-sparse-columns.md).  
+ **Disperso**  
+ Indica si la columna es una columna dispersa. Los valores posibles son **true** y **false**. Para obtener más información, vea [Usar columnas dispersas](use-sparse-columns.md).  
   
  **Es un conjunto de columnas**  
- Indica si la columna es un conjunto de columnas. Los valores posibles son **True** o **False**. Para obtener más información, vea [Usar conjuntos de columnas](use-column-sets.md).  
+ Indica si la columna es un conjunto de columnas. Los valores posibles son **true** y **false**. Para obtener más información, vea [Usar conjuntos de columnas](use-column-sets.md).  
   
  **Estado de relleno ANSI**  
  Indica si el relleno ANSI está activado o desactivado. Para obtener más información, vea [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
@@ -103,7 +104,7 @@ ms.locfileid: "62854907"
  **Semántica estadística**  
  Indica si la búsqueda semántica estadística está habilitada para la columna. Para obtener más información, vea [Búsqueda semántica &#40;SQL Server&#41;](../search/semantic-search-sql-server.md).  
   
- **No disponible para replicación**  
- Especifica si la columna está disponible o no para replicación. Los valores posibles son **True** o **False**.  
+ **No para replicación**  
+ Especifica si la columna está disponible o no para replicación. Los valores posibles son **true** y **false**.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Principales consideraciones de seguridad SQLXML | Documentos de Microsoft
+title: Consideraciones básicas de seguridad de SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc25af8e18e826ce6b8323d714f090ac3d571a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010553"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Consideraciones básicas de seguridad de SQLXML
   A continuación se indican instrucciones de seguridad para utilizar SQLXML en el acceso a datos.  
   
--   El proveedor SQLXMLOLEDB expone una propiedad `StreamFlags` que permite establecer marcas que indican qué funcionalidad SQLXML se debe habilitar o deshabilitar en cada instancia concreta. Puede utilizar esta propiedad para personalizar el uso de SQLXML y asegurarse de que solo se habilitan los componentes que desea. Para obtener más información, consulte [proveedor SQLXMLOLEDB &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md).  
+-   El proveedor SQLXMLOLEDB expone una propiedad `StreamFlags` que permite establecer marcas que indican qué funcionalidad SQLXML se debe habilitar o deshabilitar en cada instancia concreta. Puede utilizar esta propiedad para personalizar el uso de SQLXML y asegurarse de que solo se habilitan los componentes que desea. Para obtener más información, vea [proveedor SQLXMLOLEDB &#40;SQLXML 4,0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md).  
   
 -   Cuando se producen y se devuelven errores SQLXML, pueden incluir información sobre el esquema de la base de datos como nombres de tabla, nombres de columna o información de tipo. Debe tener cuidado al controlar estos errores para que los usuarios no puedan detectar fácilmente la información sobre la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde no esté previsto ni sea necesario.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66010553"
   
 -   SQLXML puede realizar cambios de formato en los datos proporcionados basándose en las diferencias entre los modelos de datos XML y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por ejemplo, el formato para especificar una hora es distinto. SQLXML intentará resolver estas diferencias. Como resultado, es posible que se pierdan algunos datos de precisión.  
   
--   SQLXML no establece ningún límite en la cantidad de tiempo que tarda en procesar los datos. El procesamiento continuará hasta que se produce un error o procesamiento se ha completado.  
+-   SQLXML no establece ningún límite en la cantidad de tiempo que tarda en procesar los datos. El procesamiento continuará hasta que se produzca un error o se complete el procesamiento.  
   
 -   SQLXML no escribe en el sistema de archivos. Si los usuarios desean guardar los datos que recuperan de la base de datos, deben hacerlo en el código.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66010553"
   
 -   Al ejecutar DiffGrams, SQLXML traduce los DiffGrams en comandos DELETE, UPDATE e INSERT en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Estos comandos solo afectan a datos existentes. Los comandos que genera SQLXML nunca modifican la base de datos. Los usuarios deben ejecutar comandos explícitos para modificar la estructura de la base de datos. Por ejemplo, pueden incluirlos en un bloque `sql:query` de una plantilla.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Consideraciones de seguridad de SQLXML 4.0](sqlxml-4-0-security-considerations.md)  
   
   

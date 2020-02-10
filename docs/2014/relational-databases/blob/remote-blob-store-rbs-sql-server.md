@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4379e0ff3ca534acd6ae130cbdf0f8acd2b6a81f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66009849"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
@@ -55,11 +55,11 @@ ms.locfileid: "66009849"
 ## <a name="rbs-security"></a>Seguridad de RBS  
  Cuando usa un proveedor personalizado para almacenar los blobs fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pueden estar disponibles para otros procesos que omiten el sistema de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Asegúrese de que protege los blobs almacenados con opciones de cifrado y permisos apropiados para el medio de almacenamiento que use el proveedor personalizado.  
   
-##  <a name="rbsresources"></a> Recursos de RBS  
+##  <a name="rbsresources"></a>Recursos de RBS  
  **Documentación de RBS**  
  La documentación de RBS se incluye en el paquete del programa de instalación de Windows. Si desea examinar la documentación de RBS sin instalarlo, puede ver la versión de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de la documentación [en línea en MSDN Library](https://go.microsoft.com/fwlink/?LinkId=210192).  
   
- **Notas RBS**  
+ **Notas del producto de RBS**  
  En las notas del producto "[Almacenamiento remoto de blobs](https://go.microsoft.com/fwlink/?LinkId=210422)", que pueden descargarse como documento de Microsoft Word, se proporciona información detallada acerca de la instalación y configuración de RBS.  
   
  **Ejemplos de RBS**  

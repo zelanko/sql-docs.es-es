@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b46cd9ea4d461b4b6f5755e8fb9bb9199d1bdbbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913157"
 ---
-# <a name="mssqlserver7912"></a>MSSQLSERVER_7912
+# <a name="mssqlserver_7912"></a>MSSQLSERVER_7912
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7912|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7912|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_REPAIR_EXTENT_ALLOCATED|  
-|Texto del mensaje|Reparación: Se ha asignado la extensión P_ID al objeto ID O_ID, ID. de índice de partición PN_ID, unidad de asignación A_ID (tipo TYPE).|  
+|Texto del mensaje|Reparación: se ha asignado la extensión P_ID al id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID, id. de unidad de asignación A_ID (tipo TYPE).|  
   
 ## <a name="explanation"></a>Explicación  
  Este es un mensaje informativo de REPAIR que indica que se ha asignado una extensión al objeto especificado.  

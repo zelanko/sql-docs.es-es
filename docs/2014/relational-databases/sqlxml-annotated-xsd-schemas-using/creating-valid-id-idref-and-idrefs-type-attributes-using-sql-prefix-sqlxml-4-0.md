@@ -1,5 +1,5 @@
 ---
-title: 'Creación de identificador válido, IDREF e IDREFS tipo atributos mediante SQL: prefix (SQLXML 4.0) | Microsoft Docs'
+title: 'Crear atributos válidos de tipo ID, IDREF e IDREFS mediante SQL: prefix (SQLXML 4,0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013922"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Crear atributos válidos de tipo ID, IDREF e IDREFS mediante sql:prefix (SQLXML 4.0)
   Es posible especificar que un atributo sea un atributo de tipo ID. Los atributos especificados como IDREF o IDREFS pueden usarse para hacer referencia a los atributos de tipo ID, lo que habilita los vínculos entre documentos.  
   
- ID, IDREF e IDREFS corresponden a relaciones PK/FK (clave principal/clave externa) de la base de datos, con algunas diferencias. En un documento XML, los valores de los atributos de tipo ID deben ser distintos. Si **CustomerID** y **OrderID** atributos se especifican como tipo ID en un documento XML, estos valores deben ser distintos. Sin embargo, en una base de datos, las columnas CustomerID y OrderID pueden tener los mismos valores. (Por ejemplo, CustomerID = 1 y OrderID = 1 sería válido en la base de datos).  
+ ID, IDREF e IDREFS corresponden a relaciones PK/FK (clave principal/clave externa) de la base de datos, con algunas diferencias. En un documento XML, los valores de los atributos de tipo ID deben ser distintos. Si los atributos **CustomerID** y **OrderID** se especifican como tipo de identificador en un documento XML, estos valores deben ser distintos. Sin embargo, en una base de datos, las columnas CustomerID y OrderID pueden tener los mismos valores. (Por ejemplo, CustomerID = 1 y OrderID = 1 sería válido en la base de datos).  
   
  Para que los atributos ID, IDREFS e IDREF sean válidos:  
   
@@ -42,19 +42,19 @@ ms.locfileid: "66013922"
   
 -   El valor de un atributo ID, IDREF e IDREFS debe ser un token con nombre. (Por ejemplo, el valor entero 101 no puede ser un valor ID.)  
   
--   Los atributos de tipo ID, IDREF e IDREFS no pueden asignarse a columnas de tipo `text`, `ntext`, o `image` o cualquier otro tipo de datos binarios (por ejemplo, `timestamp`).  
+-   Los atributos de tipo ID, IDREF e IDREFS no se pueden asignar a columnas del `text`tipo, `ntext`, o `image` a cualquier otro tipo de datos binarios (por ejemplo `timestamp`,).  
   
  Si un documento XML contiene varios atributos de tipo ID, use la anotación `sql:prefix` para asegurarse de que los valores sean únicos.  
   
  Tenga en cuenta que la anotación `sql:prefix` no puede usarse con un atributo XSD fijo.  
   
 ## <a name="examples"></a>Ejemplos  
- Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Especificar tipos ID e IDREFS  
- En el siguiente esquema, el  **\<cliente >** elemento consta de los  **\<orden >** elemento secundario. El  **\<orden >** elemento también tiene un elemento secundario, el  **\<OrderDetail >** elemento.  
+ En el esquema siguiente, el ** \<elemento Customer>** está formado por el ** \<elemento secundario Order>** . El ** \<elemento Order>** también tiene un elemento secundario, el ** \<elemento OrderDetail>** .  
   
- El **OrderIDList** atributo de  **\<cliente >** es un atributo de tipo IDREFS que hace referencia a la **OrderID** atributo de la  **\< Orden >** elemento.  
+ El atributo **atributo OrderIDList** de ** \<Customer>** es un atributo de tipo IDREFS que hace referencia al atributo **OrderID** del elemento ** \<Order>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -108,7 +108,7 @@ ms.locfileid: "66013922"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
 1.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como sqlPrefix.xml.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66013922"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Éste es el resultado parcial:  
   

@@ -10,19 +10,19 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014250"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Un `CurvePolygon` es una superficie cerrada topológicamente definida por un anillo de límite exterior y cero o más anillos interiores  
   
 > [!IMPORTANT]  
->  Para obtener una descripción detallada y ejemplos de las características espaciales introducidas en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluido el `CurvePolygon` subtipo, descargue las notas del producto, [nuevas características espaciales de SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obtener una descripción detallada y ejemplos de las características espaciales [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]introducidas `CurvePolygon` en, incluido el subtipo, descargue las notas del producto [nuevas características espaciales en SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
- Los siguientes criterios definen atributos de un `CurvePolygon` instancia:  
+ Los siguientes criterios definen atributos de una `CurvePolygon` instancia de:  
   
 -   El límite de la instancia de `CurvePolygon` se define mediante el anillo exterior y todos los anillos interiores.  
   
@@ -130,7 +130,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>b. Declarar y crear instancias de una instancia geometry con un CurvePolygon en la misma instrucción  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Declarar y crear instancias de una instancia geometry con un CurvePolygon en la misma instrucción  
  Este fragmento de código muestra cómo declarar e inicializar una instancia de geometry con un `CurvePolygon` en la misma instrucción:  
   
 ```sql  
@@ -181,7 +181,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  @g1 y @g2 usan el mismo anillo de límite exterior: un círculo con un radio de 5 y los dos usan un cuadrado para un anillo interior.  Sin embargo, la instancia de @g1 es válida, pero la instancia de @g2 no lo es.  La razón de que @g2 no sea válida es que el anillo interior divide el espacio interior limitado por el anillo exterior en cuatro regiones independientes.  El siguiente dibujo muestra lo que ha sucedido:  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Polygon](polygon.md)   
  [CircularString](circularstring.md)   
  [CompoundCurve](compoundcurve.md)   

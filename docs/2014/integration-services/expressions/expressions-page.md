@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4cb37061fd90f8662ee6670bb558e99035c792e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898037"
 ---
 # <a name="expressions-page"></a>Página Expresiones
@@ -26,7 +26,7 @@ ms.locfileid: "62898037"
   
  Las expresiones de propiedad actualizan los valores de las propiedades cuando se ejecuta el paquete. Se pueden utilizar expresiones de propiedad con las propiedades de paquetes, tareas, contenedores, administradores de conexión y algunos componentes de flujo de datos. Las expresiones se evalúan y se usan los resultados en lugar de los valores en los que se han establecido las propiedades al configurar el paquete y los objetos de paquete. Las expresiones pueden incluir variables y las funciones y los operadores que proporciona el lenguaje de expresiones. Por ejemplo, se puede generar la línea de asunto de la tarea Enviar correo mediante la concatenación del valor de una variable que contenga la cadena "Pronóstico meteorológico para" y los resultados devueltos de la función GETDATE() para crear la cadena "Pronóstico meteorológico para 5/4/2006".  
   
- Para obtener más información sobre cómo se escriben las expresiones y cómo se usan las expresiones de propiedad, vea [Integration Services &#40;SSIS&#41; Expressions](integration-services-ssis-expressions.md) y [Usar expresiones de propiedad en paquetes](use-property-expressions-in-packages.md).  
+ Para obtener más información sobre cómo se escriben las expresiones y cómo se usan las expresiones de propiedad, vea [Expresiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md) y [Usar expresiones de propiedad en paquetes](use-property-expressions-in-packages.md).  
   
 ## <a name="options"></a>Opciones  
  **Expresiones (…)**  
@@ -35,7 +35,7 @@ ms.locfileid: "62898037"
  **\<property name>**  
  Haga clic en los puntos suspensivos para abrir el cuadro de diálogo **Generador de expresiones** . Para más información, consulte [Expression Builder](expression-builder.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Variables del sistema](../system-variables.md)   
  [Expresiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)  

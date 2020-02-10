@@ -1,5 +1,5 @@
 ---
-title: Editor de origen XML (página columnas) | Microsoft Docs
+title: Editor de origen de XML (página columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403e9394f23ba0d6ce503dbea3e46ad7f37b9cd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054315"
 ---
 # <a name="xml-source-editor-columns-page"></a>Editor de origen de XML (página Columnas)
@@ -36,10 +36,10 @@ ms.locfileid: "66054315"
  **Columna de salida**  
  Permite proporcionar un nombre único para cada columna de salida. El nombre predeterminado es el nombre de la columna externa (origen) seleccionada; sin embargo, puede elegir un nombre único y descriptivo. El nombre que indique se mostrará en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de origen de XML &#40;página Administrador de conexiones&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Editor de origen de XML &#40;página Salida de error&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Editor de origen de XML &#40;página salida de error&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Extraer datos mediante el origen de XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

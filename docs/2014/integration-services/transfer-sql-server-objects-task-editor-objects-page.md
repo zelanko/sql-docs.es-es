@@ -1,5 +1,5 @@
 ---
-title: Transferir el Editor de tareas de objetos de SQL Server (página objetos) | Microsoft Docs
+title: Editor de la tarea transferir objetos de SQL Server (página objetos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054867"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor de la tarea Transferir objetos de SQL Server (página Objetos)
@@ -52,10 +52,10 @@ ms.locfileid: "66054867"
  **ExistingData**  
  Especifique cómo se copiarán los datos al servidor de destino. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Reemplazar**|Se sobrescribirán los datos del servidor de destino.|  
-|**Anexar**|Los datos copiados desde el servidor de origen se anexarán a los datos existentes en el servidor de destino.|  
+|**Reemplace**|Se sobrescribirán los datos del servidor de destino.|  
+|**Append**|Los datos copiados desde el servidor de origen se anexarán a los datos existentes en el servidor de destino.|  
   
 > [!NOTE]  
 >  La opción **ExistingData** solo está disponible cuando **CopyData** se establece en **True**.  
@@ -79,7 +79,7 @@ ms.locfileid: "66054867"
  Expanda **ObjectsToCopy** para especificar los objetos que se deben copiar desde la base de datos de origen a la base de datos de destino.  
   
 > [!NOTE]  
->  **ObjectsToCopy** solo está disponible cuando **CopyAllObjects** se establece en **False**.  
+>  **ObjectsToCopy** solo está disponible cuando **CopyAllObjects** se establece en **false**.  
   
  Las opciones para copiar los siguientes tipos de objetos solo son compatibles con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -208,12 +208,12 @@ ms.locfileid: "66054867"
  **XmlSchemaCollectionsList**  
  Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar colecciones de esquemas XML** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
- [Editor de la tarea Transferir objetos de SQL Server &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [&#40;página general del editor de la tarea transferir objetos de SQL Server&#41;](general-page-of-integration-services-designers-options.md)   
  [Página Expresiones](expressions/expressions-page.md)   
- [Formatos de datos para importación en bloque o exportación masiva &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [Formatos de datos para importación o exportación masivas &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Consideraciones de seguridad para una instalación de SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

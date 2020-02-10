@@ -1,5 +1,5 @@
 ---
-title: Referencia de interfaz de usuario de administrador de conexiones ODBC | Microsoft Docs
+title: Referencia de la interfaz de usuario del administrador de conexiones ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4489dd45616c1f2f8240f53e6a3bb0c59f459580
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057277"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>Referencia de la interfaz de usuario del administrador de conexiones ODBC
@@ -33,13 +33,13 @@ ms.locfileid: "66057277"
  **Propiedades de conexión de datos**  
  Muestra las propiedades y valores del administrador de conexiones ODBC seleccionado.  
   
- **Nueva**  
+ **Nuevo**  
  Crea un administrador de conexiones ODBC mediante el cuadro de diálogo **Administrador de conexiones** . Este cuadro de diálogo también permite crear un nuevo origen de datos ODBC si es necesario.  
   
  **Eliminar**  
  Seleccione una conexión y elimínela con el botón **Eliminar** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

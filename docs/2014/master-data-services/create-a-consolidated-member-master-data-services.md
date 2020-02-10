@@ -15,18 +15,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f96ab2cb9c2076d36ae36d3aa3358ae4886a1b23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483433"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Crear un miembro consolidado (Master Data Services)
   En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cree un miembro consolidado si desea un nodo primario para una jerarquía explícita. Los miembros consolidados pueden tener sus propios atributos. Se utilizan para la agrupación. Tal y como se muestra en el ejemplo siguiente, los miembros consolidados pueden usarse para grupos de cuentas que tienen cuentas en ellos.  
   
- ![Miembros consolidados de MDS](../../2014/master-data-services/media/mds-consolidated-members.png "MDS miembros consolidados")  
+ ![Miembros consolidados de MDS](../../2014/master-data-services/media/mds-consolidated-members.png "Miembros consolidados de MDS")  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
@@ -51,15 +51,15 @@ ms.locfileid: "65483433"
   
 8.  Opcional. En el cuadro **Anotaciones** , escriba un comentario sobre los motivos por los que se agregó el miembro. Todos los usuarios que tienen acceso al miembro pueden ver la anotación.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
   
--   [Mover miembros dentro de una jerarquía &#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)  
+-   [Movimiento de miembros dentro de una jerarquía &#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
- [Crear una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [Crear un miembro hoja &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cree una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [Cree un miembro hoja &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)   
  [Cargar o actualizar miembros en Master Data Services mediante el proceso de almacenamiento provisional](add-update-and-delete-data-master-data-services.md)   
  [Miembros &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Jerarquías explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  

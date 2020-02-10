@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872340"
 ---
 # <a name="create-a-database"></a>Crear una base de datos
@@ -54,7 +54,7 @@ ms.locfileid: "62872340"
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
--   Cada vez que se crea, modifica o quita una base de datos de usuario, se debe hacer una copia de seguridad de la base de datos [maestra](master-database.md) .  
+-   Se debe realizar una copia de seguridad de la base de datos [maestra](master-database.md) cada vez que se crea, modifica o quita una base de datos de usuario.  
   
 -   Cuando cree una base de datos, defina el mayor tamaño posible para los archivos de datos según la cantidad de datos máxima prevista para la base datos.  
   
@@ -65,19 +65,19 @@ ms.locfileid: "62872340"
   
  Para mantener el control del uso del disco en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el permiso para crear bases de datos suele limitarse a un número reducido de cuentas de inicio de sesión.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-database"></a>Para crear una base de datos  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
   
-2.  Haga clic con el botón derecho en **Bases de datos**y luego haga clic en **Nueva base de datos**.  
+2.  Haga clic con el botón derecho en **Bases de datos**y, después, haga clic en **Nueva base de datos**.  
   
 3.  En **Nueva base de datos**, especifique un nombre de base de datos.  
   
 4.  Si desea crear la base de datos aceptando todos los valores predeterminados, haga clic en **Aceptar**; de lo contrario, continúe con siguientes los pasos opcionales.  
   
-5.  Para cambiar el nombre del propietario, haga clic en ( **...** ) para seleccionar otro.  
+5.  Para cambiar el nombre del propietario, haga clic en (**...**) para seleccionar otro.  
   
     > [!NOTE]  
     >  La opción **Usar indexación de texto completo** siempre está activada y atenuada porque, a partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], todas las bases de datos de usuario están habilitadas para texto completo.  
@@ -131,9 +131,9 @@ GO
   
  Para obtener más ejemplos, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
- [Archivos y grupos de archivos de base de datos](database-files-and-filegroups.md)   
- [Adjuntar y separar bases de datos &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Database Files and Filegroups](database-files-and-filegroups.md)   
+ [Desasociar y adjuntar bases de datos &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Agregar archivos de datos o de registro a una base de datos](add-data-or-log-files-to-a-database.md)  
   

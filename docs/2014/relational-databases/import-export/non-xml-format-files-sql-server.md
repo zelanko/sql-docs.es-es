@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011881"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Archivos de formato no XML [SQL Server]
@@ -106,7 +106,7 @@ ms.locfileid: "66011881"
   
 -   [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Crear un archivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)   
  [XML, archivos de formato &#40;SQL Server&#41;](xml-format-files-sql-server.md)   

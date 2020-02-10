@@ -1,5 +1,5 @@
 ---
-title: Exportar a Editor de transformación de columna (página columnas) | Microsoft Docs
+title: Editor de transformación exportar columna (página columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0d5e37211471285e971ba29bc3419e759b0c7af7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059008"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Editor de transformación Exportar columna (página Columnas)
@@ -27,23 +27,23 @@ ms.locfileid: "66059008"
  Para obtener más información acerca de la transformación Exportar columna, vea [Export Column Transformation](data-flow/transformations/export-column-transformation.md).  
   
 ## <a name="options"></a>Opciones  
- **Columna Extraer**  
+ **Extraer columna**  
  Seleccione de la lista las columnas de entrada que contengan datos de texto o imagen. Todas las filas deben poseer definiciones para la **Columna Extraer** y la **Columna Ruta de archivo**.  
   
- **Columna Ruta de archivo**  
+ **Columna ruta de archivo**  
  Seleccione de la lista las columnas de entrada que contengan rutas de archivo y nombres de archivo. Todas las filas deben poseer definiciones para la **Columna Extraer** y la **Columna Ruta de archivo**.  
   
- **Permitir la anexión**  
- Especifique si desea que la transformación anexe los datos a los archivos existentes. De manera predeterminada, es `false`.  
+ **Permitir anexar**  
+ Especifique si desea que la transformación anexe los datos a los archivos existentes. El valor predeterminado es `false`.  
   
- **Forzar el truncamiento**  
- Especifique si desea que la transformación elimine el contenido de los archivos existentes antes de escribir los datos. De manera predeterminada, es `false`.  
+ **Forzar truncamiento**  
+ Especifique si desea que la transformación elimine el contenido de los archivos existentes antes de escribir los datos. El valor predeterminado es `false`.  
   
- **BOM de escritura**  
+ **Escribir BOM**  
  Especifique si desea escribir una marca de orden de bytes (BOM) en el archivo. Solo se escribirá una BOM si los datos poseen el tipo de datos `DT_NTEXT` o DT_WSTR y no están anexados a un archivo de datos existente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformación Exportar columna &#40;página Salida de error&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
+ [Editor de transformación exportar columna &#40;página salida de error&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   
   

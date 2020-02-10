@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones HTTP (página servidor) | Microsoft Docs
+title: Editor del administrador de conexiones HTTP (página servidor) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 197a2668beb60acf2473a1f53786d7b553e08cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058252"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>Editor del administrador de conexiones HTTP (página Servidor)
@@ -35,10 +35,10 @@ ms.locfileid: "66058252"
   
  Si piensa utilizar el botón **Descargar WSDL** de la página **General** del **Editor de la tarea Servicio web** para descargar un archivo WSDL, escriba la dirección URL del archivo WSDL. Esta dirección URL finaliza con"?wsdl".  
   
- **Utilizar credenciales**  
+ **Usar credenciales**  
  Especifique si desea que el Administrador de conexiones HTTP utilice las credenciales de seguridad del usuario para la autenticación.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Si el Administrador de conexiones HTTP utiliza credenciales, debe especificar un nombre de usuario, una contraseña y un dominio.  
   
  **Contraseña**  
@@ -47,7 +47,7 @@ ms.locfileid: "66058252"
  **Dominio**  
  Si el Administrador de conexiones HTTP utiliza credenciales, debe especificar un nombre de usuario, una contraseña y un dominio.  
   
- **Utilizar certificado de cliente**  
+ **Usar certificado de cliente**  
  Especifique si desea que el Administrador de conexiones HTTP utilice un certificado de cliente para la autenticación.  
   
  **Certificado**  
@@ -62,8 +62,8 @@ ms.locfileid: "66058252"
  **Probar conexión**  
  Después de configurar el Administrador de conexiones HTTP, haga clic en **Probar conexión**para confirmar que la conexión es viable.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor del administrador de conexiones HTTP &#40;página Proxy&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
+ [Página proxy &#40;del editor del administrador de conexiones HTTP&#41;](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
   
   

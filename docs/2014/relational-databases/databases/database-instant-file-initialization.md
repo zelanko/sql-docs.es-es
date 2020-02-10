@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 491c8a63c7ee3ed06c90356c58820f34ed3c0bf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872102"
 ---
 # <a name="database-instant-file-initialization"></a>Inicialización instantánea de archivos de la base de datos
@@ -55,9 +55,9 @@ ms.locfileid: "62872102"
   
 4.  Haga clic en **Agregar usuario o grupo** y añada las cuentas de usuario que se utilicen para las copias de seguridad.  
   
-5.  Haga clic en **aplicar**y, a continuación, cierre todos los `Local Security Policy` cuadros de diálogo.  
+5.  Haga clic en **aplicar**y, a `Local Security Policy` continuación, cierre todos los cuadros de diálogo.  
   
-### <a name="security-considerations"></a>Consideraciones de seguridad  
+### <a name="security-considerations"></a>Consideraciones sobre la seguridad  
  Como el contenido del disco eliminado solo se sobrescribe cuando se escriben nuevos datos a los archivos, una entidad de seguridad no autorizada puede acceder al contenido eliminado. Mientras el archivo de la base de datos se adjunte a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta amenaza de divulgación de la información se reduce mediante la lista de control de acceso discrecional (DACL) del archivo. Esta DACL permite acceder al archivo solo a la cuenta de servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y al administrador local. Sin embargo, cuando el archivo está separado, un usuario o servicio que no tenga SE_MANAGE_VOLUME_NAME puede acceder a él. Existe una amenaza parecida al crear una copia de seguridad de la base de datos. El contenido eliminado puede estar disponible para un usuario servicio no autorizado si el archivo de copia de seguridad no está protegido con una DACL apropiada.  
   
  Si le preocupa la posibilidad de que se divulgue contenido eliminado, debe realizar una o ambas de las acciones siguientes:  
@@ -69,7 +69,7 @@ ms.locfileid: "62872102"
 > [!NOTE]  
 >  Deshabilitar la inicialización instantánea de archivos solo afecta a los archivos que se han creado o se ha aumentado su tamaño después de que el derecho del usuario se revocara.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

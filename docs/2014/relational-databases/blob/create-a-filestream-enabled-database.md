@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 810b1d36eefb99d6e1bcf855dc7710495429751a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010314"
 ---
 # <a name="create-a-filestream-enabled-database"></a>crear una base de datos habilitada para FILESTREAM
@@ -28,7 +28,7 @@ ms.locfileid: "66010314"
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic en **Nueva consulta** para mostrar el Editor de consultas.  
   
-2.  Copia el [!INCLUDE[tsql](../../includes/tsql-md.md)] código crea una base de datos habilitada para FILESTREAM denominada Archive.  
+2.  Copiar el [!INCLUDE[tsql](../../includes/tsql-md.md)] código crea una base de datos habilitada para FileStream denominada Archive.  
   
     > [!NOTE]  
     >  Para este script, debe existir el directorio C:\Data.  
@@ -59,7 +59,7 @@ GO
   
  Para las bases de datos existentes, puede usar la instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) para agregar un grupo de archivos FILESTREAM.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   

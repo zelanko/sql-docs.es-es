@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2eec829c3c8909bd318a86ecf35eedb9ac0f222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010081"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "66010081"
   
  Es decir, ahora puede almacenar archivos y documentos en tablas especiales de FileTables denominadas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y tener acceso a ellos desde las aplicaciones Windows como si estuviesen almacenados en el sistema de archivos, sin efectuar cambios en las aplicaciones cliente.  
   
- La característica FileTable se basa en la tecnología de FILESTREAM de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre FILESTREAM, vea [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md).  
+ La característica FileTable se basa en la tecnología de FILESTREAM de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre FILESTREAM, vea [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md).  
   
 ##  <a name="Goals"></a> Ventajas de la característica FileTable  
  Los objetivos de la característica FileTable incluyen los siguientes:  
@@ -126,7 +126,7 @@ ms.locfileid: "66010081"
   
   
 ##  <a name="relcontent"></a> Contenido relacionado  
- [FileTable Schema](filetable-schema.md)  
+ [Esquema de FileTable](filetable-schema.md)  
  Describe los esquemas predefinido y fijo de una FileTable.  
   
  [Compatibilidad de FileTable con otras características de SQL Server](filetable-compatibility-with-other-sql-server-features.md)  

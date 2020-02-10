@@ -1,5 +1,5 @@
 ---
-title: Especificar un eje (SQLXML 4.0) | Microsoft Docs
+title: Especificar un eje (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012649"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Especificar un eje (SQLXML 4.0)
@@ -33,31 +33,33 @@ ms.locfileid: "66012649"
   
      Contiene el elemento secundario del nodo de contexto.  
   
-     La expresión XPath siguiente (ruta de acceso de ubicación) selecciona del nodo de contexto actual todos los  **\<cliente >** elementos secundarios:  
+     La expresión XPath siguiente (ruta de acceso de ubicación) selecciona del nodo de contexto actual todos los ** \<clientes>** secundarios:  
   
     ```  
     child::Customer  
     ```  
   
-     En la consulta XPath siguiente, `child` es el eje. `Customer` es la prueba de nodo.  
+     En la consulta XPath siguiente, `child` es el eje. 
+  `Customer` es la prueba de nodo.  
   
 -   `parent`  
   
      Contiene el elemento primario del nodo de contexto.  
   
-     La expresión XPath siguiente selecciona todos los  **\<cliente >** elementos primarios de la  **\<orden >** elementos secundarios:  
+     La expresión XPath siguiente selecciona todos los ** \<** elementos primarios del cliente>del ** \<pedido>** elementos secundarios:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     Esto equivale a especificar `child::Customer`. En esta consulta XPath, `child` y `parent` son los ejes. `Customer` y `Order` son las pruebas de nodo.  
+     Esto equivale a especificar `child::Customer`. En esta consulta XPath, `child` y `parent` son los ejes. 
+  `Customer` y `Order` son las pruebas de nodo.  
   
 -   `attribute`  
   
      Contiene el atributo del nodo de contexto.  
   
-     La expresión XPath siguiente selecciona el **CustomerID** atributo del nodo de contexto:  
+     La expresión XPath siguiente selecciona el atributo **CustomerID** del nodo de contexto:  
   
     ```  
     attribute::CustomerID  
@@ -67,7 +69,7 @@ ms.locfileid: "66012649"
   
      Contiene el propio nodo de contexto.  
   
-     La expresión XPath siguiente selecciona el nodo actual si es el  **\<orden >** nodo:  
+     La expresión XPath siguiente selecciona el nodo actual si es el ** \<orden>** nodo:  
   
     ```  
     self::Order  

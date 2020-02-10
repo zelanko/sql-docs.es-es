@@ -17,29 +17,29 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fb27a109ec361b0287adfff4ba3e7abcaac062
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011828"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Especificar formatos de datos por razones de compatibilidad mediante bcp (SQL Server)
-  En este tema se describe los atributos de formato de datos, mensajes específicos de los campos y almacenamiento de datos de campo por campo en un archivo de formato no xml de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` comando. Comprenderlo puede ser útil cuando se realiza una exportación masiva datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para importarlos masivamente en otro programas, como por ejemplo otro programa de base de datos. Los formatos de datos predeterminados (nativo, carácter o Unicode) de la tabla de origen podrían ser incompatibles con la disposición de los datos esperada por el otro programa. Si existe una incompatibilidad, al exportar los datos, debe describirse su disposición.  
+  En este tema se describen los atributos de formato de datos, los mensajes específicos de los campos y el almacenamiento de datos campo por campo en un archivo de formato no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` XML del comando. Comprenderlo puede ser útil cuando se realiza una exportación masiva datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para importarlos masivamente en otro programas, como por ejemplo otro programa de base de datos. Los formatos de datos predeterminados (nativo, carácter o Unicode) de la tabla de origen podrían ser incompatibles con la disposición de los datos esperada por el otro programa. Si existe una incompatibilidad, al exportar los datos, debe describirse su disposición.  
   
 > [!NOTE]  
 >  Si no está familiarizado con los formatos de datos para importarlos o exportarlos, vea [Formatos de datos para importación en bloque o exportación masiva &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md).  
   
  **En este tema:**  
   
--   [Atributo de formato de datos bcp](#bcpDataFormatAttr)  
+-   [Atributos de formato de datos BCP](#bcpDataFormatAttr)  
   
--   [Información general sobre los mensajes específicos de los campos](#FieldSpecificPrompts)  
+-   [Información general de los mensajes específicos del campo](#FieldSpecificPrompts)  
   
--   [Almacenar datos campo por campo en un archivo de formato no XML](#FieldByFieldNonXmlFF)  
+-   [Almacenar datos campo a campo en un archivo de formato no XML](#FieldByFieldNonXmlFF)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="bcpDataFormatAttr"></a> Atributo de formato de datos bcp  
+##  <a name="bcpDataFormatAttr"></a>Atributos de formato de datos BCP  
  El comando `bcp` permite especificar la estructura de cada campo en función de los siguientes atributos de formato de datos:  
   
 -   tipo de almacenamiento en archivo  
@@ -58,8 +58,8 @@ ms.locfileid: "66011828"
   
      En el caso de campos de datos de caracteres, los caracteres de terminación le permiten marcar el final de cada campo en un archivo de datos (usando un *terminador de campo*) y el final de cada fila (usando un *terminador de fila*). Los caracteres de terminación son un modo de indicar a los programas que leen el archivo de datos dónde termina un campo o una fila y dónde comienza otro. Para obtener más información, vea [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
-##  <a name="FieldSpecificPrompts"></a> Información general acerca de peticiones específicas de campos  
- Si un interactivo `bcp` comando contiene el **en** o **out** opción pero no contiene el modificador de archivo de formato ( **-f**) o cambiar de un formato de datos () **- n**, **- c**, **-w**, o **-N**), cada columna de la tabla de origen o destino, el comando solicita para cada uno de los anteriores atributos, a su vez. En cada mensaje, el comando `bcp` proporciona un valor predeterminado basado en el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la columna de la tabla. Si acepta el valor predeterminado de todos los mensajes, se obtiene el mismo resultado que si especifica un formato nativo ( **-n**) en la línea de comandos. Cada mensaje muestra un valor predeterminado entre corchetes: [*default*]. Para aceptar el valor predeterminado que se muestra, presione la tecla ENTRAR. Para especificar un valor distinto del predeterminado, escriba el nuevo valor cuando en el mensaje.  
+##  <a name="FieldSpecificPrompts"></a>Información general de los mensajes específicos del campo  
+ Si un comando `bcp` interactivo contiene la opción **in** o **out** pero no contiene también el modificador de archivo de formato **(-f**) o un modificador de formato de datos (**-n**, **-c**, **-w**o **-n**), cada columna de la tabla de origen o de destino, el comando solicita cada uno de los atributos anteriores a su vez. En cada mensaje, el comando `bcp` proporciona un valor predeterminado basado en el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la columna de la tabla. Si acepta el valor predeterminado de todos los mensajes, se obtiene el mismo resultado que si especifica un formato nativo (**-n**) en la línea de comandos. Cada mensaje muestra un valor predeterminado entre corchetes: [*default*]. Para aceptar el valor predeterminado que se muestra, presione la tecla ENTRAR. Para especificar un valor distinto del predeterminado, escriba el nuevo valor cuando en el mensaje.  
   
 ### <a name="example"></a>Ejemplo  
  El siguiente ejemplo usa el comando `bcp` para exportar masivamente datos masivos desde la tabla `HumanResources.myTeam` interactivamente al archivo `myTeam.txt`. Antes de que pueda ejecutar el ejemplo, debe crear esta tabla. Para obtener más información sobre la tabla y cómo crearla, vea [Tabla de ejemplo HumanResources.myTeam &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
@@ -92,7 +92,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
   
  Se muestran en orden peticiones equivalentes (cuando se necesitan) para cada una de las columnas de la tabla.  
   
-##  <a name="FieldByFieldNonXmlFF"></a> Almacenar datos campo a campo en un formato de archivo no XML  
+##  <a name="FieldByFieldNonXmlFF"></a>Almacenar datos campo a campo en un archivo de formato no XML  
  Después de especificar todas las columnas de una tabla, el comando `bcp` le solicita que genere, si lo desea, un archivo de formato no XML para almacenar la información campo a campo recientemente suministrada (vea el ejemplo procedente). Si elige generar un archivo de formato, puede hacerlo siempre que exporte datos fuera de esa tabla o importe datos estructurados de manera similar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
@@ -111,20 +111,20 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
--   [Especificar el tipo de almacenamiento en archivo mediante bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [Especifique File Storage tipo mediante BCP &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
--   [Especificar la longitud de prefijo en los archivos de datos mediante bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [Especifique la longitud del prefijo en los archivos de datos mediante BCP &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [Especificar la longitud de campo mediante bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)  
+-   [Especifique la longitud de campo mediante el &#40;BCP SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)  
   
 -   [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Ninguno.  
   
-## <a name="see-also"></a>Vea también  
- [Importar y exportar datos en bloque &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
- [Formatos de datos para importación en bloque o exportación masiva &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Importación y exportación masivas de datos &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [Formatos de datos para importación o exportación masivas &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)  
   

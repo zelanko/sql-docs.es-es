@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856133"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Agregar columnas a una tabla (motor de base de datos)
@@ -32,7 +32,7 @@ ms.locfileid: "62856133"
   
      [Seguridad](#Security)  
   
--   **Para insertar las columnas, utilizando:**  
+-   **Para insertar columnas con:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62856133"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-insert-columns-into-a-table-with-table-designer"></a>Para insertar columnas en una tabla con el Diseñador de tablas  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62856133"
     > [!NOTE]  
     >  Los valores predeterminados de las propiedades de la columna se agregan cuando crea una columna nueva, pero se pueden cambiar en la pestaña **Propiedades de columna** .  
   
-6.  Cuando haya terminado de agregar columnas, en el menú **Archivo** , elija **Guardar**_nombre de la tabla_.  
+6.  Cuando haya terminado de agregar columnas, en el menú **Archivo**, elija **Guardar**_nombre de la tabla_.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -78,12 +78,12 @@ ms.locfileid: "62856133"
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
-3.  El ejemplo siguiente agrega dos columnas a la tabla `dbo.doc_exa`. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
+3.  El ejemplo siguiente agrega dos columnas a la tabla `dbo.doc_exa`. Copie y pegue el ejemplo siguiente en la ventana de consulta y haga clic en **Ejecutar** .  
   
 ```  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Para obtener más información, consulte [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
+##  <a name="FollowUp"></a>Para obtener más información, vea [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
   

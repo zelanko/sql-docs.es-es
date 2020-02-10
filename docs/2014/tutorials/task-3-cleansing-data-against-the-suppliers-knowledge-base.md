@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 3: Limpieza de datos con la Base de conocimiento proveedores | Microsoft Docs'
+title: 'Tarea 3: limpiar datos con la base de conocimiento proveedores | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dea74f8fc22bea5a0903a3dae17f6c969849181c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65485051"
 ---
-# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Tarea 3: Limpieza de datos en la base de conocimiento Proveedores
+# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Tarea 3: limpiar datos con la base de conocimiento Proveedores
   En esta tarea, ejecutará el proceso de limpieza asistida por PC. DQS emplea algoritmos avanzados y niveles de confianza basados en los valores de umbral especificados para analizar los datos comparándolos con la base de conocimiento seleccionada; a continuación, los limpia. Vea [Limpiar datos mediante el conocimiento de DQS (interno)](https://msdn.microsoft.com/library/hh213061.aspx) para obtener más detalles.  
   
 1.  Haga clic en **Iniciar** para iniciar el proceso de limpieza asistido por PC.  
   
-     ![Limpiar la página del proceso de limpieza](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-01.jpg "limpiar la página del proceso de limpieza")  
+     ![Página de limpieza del proceso de limpieza](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-01.jpg "Página de limpieza del proceso de limpieza")  
   
-2.  Cuando se complete el proceso de limpieza, revise las **estadísticas** en la pestaña **Generador de perfiles** . Estadísticas de origen proporciona el número de registros procesados, el número de registros correctos, el número de registros que DQS corrige, el número de registros que tienen cambios sugeridos por DQS y el número de registros que no son válidos. En el cuadro de lista de la derecha puede ver los valores corregidos, los valores sugeridos y la integridad (la medida en la que los datos están presentes) y la precisión (la medida en que los datos se pueden usar para los fines previstos) de los valores de todos los dominios implicados en el proceso de limpieza.  
+2.  Una vez completado el proceso de limpieza, revise las **estadísticas** en la pestaña **generador de perfiles** . Las estadísticas de origen proporcionan el número de registros procesados, el número de registros que se detectan como correctos, el número de registros que DQS corrige, el número de registros que tienen cambios sugeridos por DQS y el número de registros que no son válidos. En el cuadro de lista de la derecha puede ver los valores corregidos, los valores sugeridos y la integridad (la medida en la que los datos están presentes) y la precisión (la medida en que los datos se pueden usar para los fines previstos) de los valores de todos los dominios implicados en el proceso de limpieza.  
   
-     ![Resultados de limpieza](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-02.jpg "resultados de limpieza")  
+     ![Resultados de la limpieza](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-02.jpg "Resultados de la limpieza")  
   
 3.  Haga clic en **Siguiente** para cambiar a la página **Administrar y ver resultados** .  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 4: Administrar y ver resultados](../../2014/tutorials/task-4-manaing-and-viewing-results.md)  
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 4: administrar y ver los resultados](../../2014/tutorials/task-4-manaing-and-viewing-results.md)  
   
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874997"
 ---
 # <a name="restore-database-files-page"></a>Restaurar base de datos (página Archivos)
@@ -48,7 +48,7 @@ ms.locfileid: "62874997"
  **Restaurar como**  
  Enumera los nombres de archivo como los que se guardarán los archivos restaurados. Escriba o busque el nombre de archivo adecuado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Restaurar la base de datos &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
  [Restaurar base de datos &#40;página Opciones&#41;](restore-database-options-page.md)   
  [Argumentos RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   

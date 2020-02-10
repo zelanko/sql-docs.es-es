@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5defabecf637a230571a954c306d207b0f1bbcfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483303"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Crear una jerarquía explícita (Master Data Services)
@@ -25,14 +25,14 @@ ms.locfileid: "65483303"
   
  Después de crear una jerarquía explícita, puede agregarle miembros en el área funcional de **Explorador** .  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
 -   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
--   La entidad debe habilitarse para las jerarquías explícitas y las colecciones. Para obtener más información, consulte [habilitar una entidad para jerarquías explícitas y colecciones &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
+-   La entidad debe habilitarse para las jerarquías explícitas y las colecciones. Para obtener más información, vea [habilitar una entidad para jerarquías explícitas y colecciones &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md).  
   
 ### <a name="to-create-an-explicit-hierarchy"></a>Crear una jerarquía explícita  
   
@@ -46,25 +46,25 @@ ms.locfileid: "65483303"
   
 5.  Haga clic en **Editar entidad seleccionada**.  
   
-6.  En el **editar entidad** página, en el **jerarquías explícitas** panel, haga clic en **agregar jerarquía explícita**.  
+6.  En la página **Editar entidad** , en el panel **jerarquías explícitas** , haga clic en **Agregar jerarquía explícita**.  
   
-7.  En el **agregar jerarquía explícita** página, en el **nombre de jerarquía explícita** cuadro, escriba un nombre para la jerarquía.  
+7.  En la página **Agregar jerarquía explícita** , en el cuadro **nombre de jerarquía explícita** , escriba un nombre para la jerarquía.  
   
 8.  Opcionalmente, desactive la casilla **Mandatory hierarchy** (Jerarquía obligatoria) para crear la jerarquía como no obligatoria. Para obtener más información sobre los tipos de jerarquías, consulte [Jerarquías explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md).  
   
-9. Haga clic en **guardar jerarquía**.  
+9. Haga clic en **Guardar jerarquía**.  
   
-10. En el **editar entidad** página, haga clic en **guardar entidad**.  
+10. En la página **Editar entidad** , haga clic en **Guardar entidad**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
   
--   [Crear un miembro consolidado &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)  
+-   [Cree un miembro consolidado &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)  
   
--   [Mover miembros dentro de una jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)  
+-   [Movimiento de miembros dentro de una jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Jerarquías explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [Jerarquías derivadas con límites explícitos &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [Crear un nombre de jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
+ [Cambiar el nombre de una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  
   
   

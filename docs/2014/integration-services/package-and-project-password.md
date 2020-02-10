@@ -1,5 +1,5 @@
 ---
-title: Paquete y la contraseña del proyecto | Microsoft Docs
+title: Contraseña de paquete y de proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad916fddff23bcffbed37bab76b0b49d67c6c484
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056986"
 ---
 # <a name="package-and-project-password"></a>Contraseña de paquete y proyecto
@@ -27,7 +27,7 @@ ms.locfileid: "66056986"
  **Contraseña**  
  Escriba la contraseña.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información general sobre seguridad &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)  
   

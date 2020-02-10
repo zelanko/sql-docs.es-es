@@ -15,22 +15,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011908"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantener valores de identidad al importar datos de forma masiva (SQL Server)
-  Los archivos de datos contienen valores de identidad que pueden importarse de forma masiva en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De manera predeterminada, los valores de la columna de identidad del archivo de datos que se importa se omiten y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos. Los valores únicos se basan en los valores de inicialización y de incremento especificados durante la creación de la tabla.  
+  Los archivos de datos que contienen valores de identidad pueden importarse de forma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]masiva en una instancia de. De manera predeterminada, los valores de la columna de identidad del archivo de datos que se importa se omiten y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos. Los valores únicos se basan en los valores de inicialización y de incremento especificados durante la creación de la tabla.  
   
- Si el archivo de datos no contiene valores para la columna de identificadores de la tabla, use el archivo de formato para especificar que se debe omitir esta columna al importar los datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asignará automáticamente valores exclusivos para la columna.  
+ Si el archivo de datos no contiene valores para la columna de identificadores de la tabla, use el archivo de formato para especificar que se debe omitir esta columna al importar los datos. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asignará automáticamente valores exclusivos para la columna.  
   
  Para impedir que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigne valores de identidad al importar de forma masiva filas de datos en una tabla, utilice el calificador de comando adecuado para mantener la identidad. Al especificar un calificador para mantener la identidad, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza los valores de identidad del archivo de datos. Estos calificadores son:  
   
-|Comando|Calificador para mantener la identidad|Tipo de calificador|  
+|Get-Help|Calificador para mantener la identidad|Tipo de calificador|  
 |-------------|------------------------------|--------------------|  
-|`bcp`|**-E**|Modificador|  
+|`bcp`|**-E**|Switch|  
 |BULK INSERT|KEEPIDENTITY|Argumento|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|KEEPIDENTITY|Sugerencia de tabla|  
   
@@ -40,7 +41,7 @@ ms.locfileid: "66011908"
 >  Para crear un número que se incremente automáticamente y que se pueda usar en varias tablas, o que se pueda llamar desde las aplicaciones sin hacer referencia a ninguna tabla, vea [Números de secuencia](../sequence-numbers/sequence-numbers.md).  
   
 ## <a name="examples"></a>Ejemplos  
- En los ejemplos de este tema se realiza una importación masiva de datos utilizando INSERT ... SELECT * FROM OPENROWSET(BULK...) y se mantienen los valores predeterminados.  
+ Los ejemplos de este tema importan datos de forma masiva mediante INSERT... Seleccione * FROM OPENROWSET (BULK...) y mantenga los valores predeterminados.  
   
 ### <a name="sample-table"></a>Tabla de ejemplo  
  En ejemplos de importación en bloque, es necesario crear una tabla denominada **myTestKeepNulls** en la base de datos de ejemplo **AdventureWorks** en el esquema **dbo**. Para crear esta tabla en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], ejecute:  
@@ -79,7 +80,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
 |Calificadores|Descripción|  
 |----------------|-----------------|  
 |**-E**|Especifica el valor o valores de identidad del archivo de datos que se van a usar en la columna de identidad.|  
-|**-T**|Especifica que el `bcp` utilidad se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza.|  
+|**-T**|Especifica que la `bcp` utilidad se conecta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a con una conexión de confianza.|  
   
  En el símbolo del sistema de Windows, escriba:  
   
@@ -88,7 +89,7 @@ bcp AdventureWorks.HumanResources.myDepartment in C:\myDepartment-n.Dat -f C:\my
   
 ```  
   
-### <a name="b-using-bulk-insert-and-keeping-identity-values"></a>b. Usar BULK INSERT y mantener valores de identidad  
+### <a name="b-using-bulk-insert-and-keeping-identity-values"></a>B. Usar BULK INSERT y mantener valores de identidad  
  En el siguiente ejemplo se utiliza BULK INSERT para realizar una importación masiva de datos desde el archivo `myDepartment-c.Dat` en la tabla `AdventureWorks.HumanResources.myDepartment` . La instrucción utiliza el archivo de formato `myDepartment-f-n-x.Xml` e incluye la opción KEEPIDENTITY para que se mantengan todos los valores de identidad del archivo de datos.  
   
  En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], ejecute:  
@@ -134,7 +135,7 @@ GO
   
 -   [Mantener valores NULL o usar valores predeterminados durante la importación en bloque &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [Preparar los datos para exportar o importar en bloque &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [Preparar los datos para exportar o &#40;importar de forma masiva SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
  **Para usar un archivo de formato**  
   
@@ -160,15 +161,15 @@ GO
   
 -   [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Para especificar formatos de datos por razones de compatibilidad cuando se usa bcp**  
+ **Para especificar formatos de datos para la compatibilidad cuando se usa BCP**  
   
 1.  [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
-2.  [Especificar la longitud de prefijo en los archivos de datos mediante bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+2.  [Especifique la longitud del prefijo en los archivos de datos mediante BCP &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
-3.  [Especificar el tipo de almacenamiento en archivo mediante bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+3.  [Especifique File Storage tipo mediante BCP &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   

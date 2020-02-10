@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación Agrupación aproximada (pestaña columnas) | Microsoft Docs
+title: Editor de transformación agrupación aproximada (pestaña columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058356"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor de transformación Agrupación aproximada (pestaña Columnas)
@@ -30,7 +30,7 @@ ms.locfileid: "66058356"
  **Columnas de entrada disponibles**  
  Seleccione en esta lista las columnas de entrada utilizadas para agrupar filas con valores duplicados.  
   
- **Name**  
+ **Nombre**  
  Muestra los nombres de las columnas de entrada disponibles.  
   
  **Paso a través**  
@@ -57,17 +57,17 @@ ms.locfileid: "66058356"
  **Números**  
  Especifique la importancia de los números iniciales y finales en la comparación de los datos de la columna. Por ejemplo, si los números iniciales son significativos, "123 Main Street" no se agrupará con "456 Main Street."  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Neither**|Los números iniciales y finales no son significativos.|  
-|**Leading**|Solo son significativos los números iniciales.|  
-|**Trailing**|Solo son significativos los números finales.|  
+|**Había**|Los números iniciales y finales no son significativos.|  
+|**Mejor**|Solo son significativos los números iniciales.|  
+|**Finales**|Solo son significativos los números finales.|  
 |**LeadingAndTrailing**|Tanto los números iniciales como los finales son significativos.|  
   
  **Marcas de comparación**  
  Para más información sobre las opciones de comparación de cadenas, vea [Comparar datos de cadena](data-flow/comparing-string-data.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Identificar filas de datos similares mediante la transformación Agrupación aproximada](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

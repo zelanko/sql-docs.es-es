@@ -1,5 +1,5 @@
 ---
-title: Ejecutar consultas SQL mediante el método ExecuteXMLReader | Documentos de Microsoft
+title: Ejecutar consultas SQL mediante el método ExecuteXMLReader | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dfbd321e56d1df3b985ed7b89dde3a4b29d36c27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012527"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Ejecutar consultas SQL mediante el método ExecuteXMLReader
-  En lugar de usar el método ExecuteToStream, puede usar el método ExecuteXmlReader del objeto SqlXmlCommand para ejecutar comandos. Este método devuelve un objeto XmlReader que se puede usar para su posterior procesamiento del resultado (que en este ejemplo imprime los nombres de elemento o atributo y los valores).  
+  En lugar de usar el método ExecuteToStream, puede utilizar el método ExecuteXmlReader del objeto SqlXmlCommand para ejecutar comandos. Este método devuelve un objeto XmlReader que se puede usar para el procesamiento posterior del resultado (que en este ejemplo está imprimiendo los nombres de los elementos o atributos y los valores).  
   
 > [!NOTE]  
 >  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión.  

@@ -22,14 +22,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056891"
 ---
 # <a name="package-configurations"></a>Configuraciones de paquetes
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona configuraciones de paquetes que se pueden usar para actualizar los valores de las propiedades en tiempo de ejecución.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona configuraciones de paquetes que puede usar para actualizar los valores de las propiedades en tiempo de ejecución.  
   
 > [!NOTE]  
 >  Hay configuraciones disponibles para el modelo de implementación de paquetes. Se usan parámetros en lugar de configuraciones para el modelo de implementación de proyectos. El modelo de implementación de proyectos le permite implementar proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obtener más información acerca de los modelos de implementación, vea [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "66056891"
   
 -   Aumentan la flexibilidad de los paquetes. Por ejemplo, una configuración puede actualizar el valor de una variable que se utiliza en una expresión de propiedad.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite varios métodos distintos para almacenar configuraciones de paquetes, como archivos XML, tablas de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y variables de entorno y de paquete.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]admite varios métodos para almacenar configuraciones de paquetes, como archivos XML, tablas en una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos, y variables de entorno y de paquete.  
   
  Cada configuración es una pareja propiedad/valor. El archivo de configuración XML y los tipos de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pueden incluir varias configuraciones.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66056891"
   
 -   No puede usar la opción **/ConfigFile** para cargar configuraciones que reemplacen las configuraciones que ha especificado en tiempo de diseño.  
   
- Para obtener más información sobre estas opciones y cómo difiere el comportamiento de estas opciones entre [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] y versiones anteriores, vea [cambios de comportamiento en las características de Integration Services en SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
+ Para obtener más información acerca de estas opciones y cómo difiere el comportamiento de estas opciones [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] entre y versiones anteriores, vea [cambios de comportamiento en Integration Services características en SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 ## <a name="package-configuration-types"></a>Tipos de configuraciones de paquetes  
  En la tabla siguiente se describen los tipos de configuraciones de paquetes.  
@@ -90,7 +90,7 @@ ms.locfileid: "66056891"
 |Variable de entorno|Una variable de entorno contiene la configuración.|  
 |Entrada del Registro|Una entrada del Registro contiene la configuración.|  
 |Variable de paquete primario|Una variable del paquete contiene la configuración. Este tipo de configuración se utiliza habitualmente para actualizar las propiedades de los paquetes secundarios.|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table|Una tabla de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contiene la configuración. La tabla puede incluir varias configuraciones.|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]cuadro|Una tabla de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contiene la configuración. La tabla puede incluir varias configuraciones.|  
   
 ### <a name="xml-configuration-files"></a>Archivos de configuración XML  
  Si selecciona el tipo de configuración **Archivo de configuración XML** , puede crear un archivo de configuración, reutilizar un archivo existente y agregarle configuraciones nuevas, o bien reutilizar un archivo existente sobrescribiendo el contenido actual.  
@@ -144,7 +144,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  El nombre que asigna a la configuración es el valor que se almacena en la columna **ConfigurationFilter** .  
   
 ## <a name="direct-and-indirect-configurations"></a>Configuraciones directas e indirectas  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona configuraciones directas e indirectas. Si especifica las configuraciones directamente, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] crea un vínculo directo entre el elemento de configuración y la propiedad del objeto de paquete. Las configuraciones directas son una opción mejor cuando la ubicación del origen no cambia. Por ejemplo, si está seguro de que todas las implementaciones del paquete utilizarán la misma ruta de acceso al archivo, puede especificar un archivo de configuración XML.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]proporciona configuraciones directas e indirectas. Si especifica las configuraciones directamente, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] crea un vínculo directo entre el elemento de configuración y la propiedad del objeto de paquete. Las configuraciones directas son una opción mejor cuando la ubicación del origen no cambia. Por ejemplo, si está seguro de que todas las implementaciones del paquete utilizarán la misma ruta de acceso al archivo, puede especificar un archivo de configuración XML.  
   
  Las configuraciones indirectas utilizan variables de entorno. En lugar de especificar el entorno de configuración directamente, la configuración apunta a una variable de entorno, que a su vez contiene el valor de configuración. Las configuraciones indirectas son una opción mejor cuando la ubicación de la configuración puede cambiar en cada implementación de un paquete.  
   
@@ -155,7 +155,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 -   Artículo técnico con una [introducción a las configuraciones de paquetes de Integration Services](https://go.microsoft.com/fwlink/?LinkId=165643), en msdn.microsoft.com  
   
--   Entrada de blog, [crear paquetes de código: configuraciones de paquetes](https://go.microsoft.com/fwlink/?LinkId=217663), en www.sqlis.com.  
+-   Entrada de blog, [crear paquetes en configuraciones de paquetes de código](https://go.microsoft.com/fwlink/?LinkId=217663), en www.sqlis.com.  
   
 -   Entrada de blog, [ejemplo de API: agregar mediante programación un archivo de configuración a un paquete](https://go.microsoft.com/fwlink/?LinkId=217664), en blogs.msdn.com.  
   

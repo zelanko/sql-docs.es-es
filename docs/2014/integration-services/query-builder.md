@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1880ceffb03389bc87ee8f25d1817a5e4f593566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056640"
 ---
 # <a name="query-builder"></a>Generador de consultas
@@ -46,7 +46,7 @@ ms.locfileid: "66056640"
  **Barra de herramientas**  
  Use la barra de herramientas para administrar conjuntos de datos, seleccionar los paneles que desea mostrar y controlar funciones de consulta.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Mostrar u ocultar panel de diagrama**|Muestra u oculta el panel **Diagrama** .|  
 |**Mostrar u ocultar panel de cuadrícula**|Muestra u oculta el panel **Cuadrícula** .|  
@@ -70,12 +70,12 @@ ms.locfileid: "66056640"
 |Panel**SQL**|Muestra la consulta como texto SQL. Los cambios que se realicen en el panel **Diagrama** y en el panel **Cuadrícula** aparecerán aquí, y los cambios que se realicen aquí aparecerán en el panel **Diagrama** y en el panel **Cuadrícula** .|  
 |Panel**Resultados**|Muestra los resultados de la consulta al hacer clic en **Ejecutar** en la barra de herramientas.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tarea Ejecutar SQL](control-flow/execute-sql-task.md)   
  [Origen de OLE DB](data-flow/ole-db-source.md)   
  [Destino de OLE DB](data-flow/ole-db-destination.md)   
- [Transformación Búsqueda](data-flow/transformations/lookup-transformation.md)   
- [Servicios de integración &#40;SSIS&#41; consultas](integration-services-ssis-queries.md)   
+ [Transformación búsqueda](data-flow/transformations/lookup-transformation.md)   
+ [Integration Services &#40;consultas&#41; SSIS](integration-services-ssis-queries.md)   
  [MERGE en paquetes de Integration Services](control-flow/merge-in-integration-services-packages.md)  
   
   

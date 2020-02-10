@@ -14,22 +14,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011469"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Crear y administrar catálogos de texto completo
   Un catálogo de texto completo es un objeto virtual que no pertenece a ningún grupo de archivos; es un concepto lógico que hace referencia a un grupo de índices de texto completo.  
   
-##  <a name="creating"></a> Creación de un catálogo de texto completo  
+##  <a name="creating"></a>Crear un catálogo de texto completo  
   
 #### <a name="to-create-a-full-text-catalog"></a>Para crear un catálogo de texto completo  
   
 1.  En el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y, después, expanda la base de datos en la que quiere crear el catálogo de texto completo.  
   
-2.  Expanda **Almacenamiento**y, después, haga clic con el botón derecho en **Catálogos de texto completo**.  
+2.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario en **Catálogos de texto completo**.  
   
 3.  Seleccione **Nuevo catálogo de texto completo**.  
   
@@ -42,12 +42,12 @@ ms.locfileid: "66011469"
   
   
   
-##  <a name="props"></a> Ver las propiedades de un catálogo de texto completo  
+##  <a name="props"></a>Ver las propiedades de un catálogo de texto completo  
  Las funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)], como FULLTEXTCATALOGPROPERTY, se pueden usar para obtener el valor de diversas propiedades relacionadas con la indización de texto completo. Esta información es útil para administrar y solucionar problemas de la búsqueda de texto completo.  
   
  En la siguiente tabla se muestran las propiedades relacionadas con los catálogos de texto completo.  
   
-|Property|Descripción|Función|  
+|Propiedad|Descripción|Función|  
 |--------------|-----------------|--------------|  
 |`AccentSensitivity`|Opción de distinción de acentos.|[FULLTEXTCATALOGPROPERTY](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)|  
 |`ImportStatus`|Si se va a importar el catálogo de texto completo.|FULLTEXTCATALOGPROPERTY|  
@@ -60,45 +60,45 @@ ms.locfileid: "66011469"
   
   
   
-##  <a name="rebuildone"></a> Volver a generar un catálogo de texto completo  
+##  <a name="rebuildone"></a>Volver a generar un catálogo de texto completo  
   
 #### <a name="to-rebuild-a-full-text-catalog"></a>Para regenerar un catálogo de texto completo  
   
 1.  En el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y, después, expanda la base de datos que contiene el catálogo de texto completo que quiere volver a generar.  
   
-2.  Expanda **Almacenamiento**y, a continuación, expanda **Catálogos de texto completo**.  
+2.  Expanda **Almacenamiento** y, a continuación, expanda **Catálogos de texto completo**.  
   
 3.  Haga clic con el botón derecho en el nombre del catálogo de texto completo que quiere volver a generar y seleccione **Volver a generar**.  
   
-4.  Ante la pregunta **¿Quiere eliminar el catálogo de texto completo y volver a generarlo?** , haga clic en **Aceptar**.  
+4.  Ante la pregunta **¿Quiere eliminar el catálogo de texto completo y volver a generarlo?**, haga clic en **Aceptar**.  
   
 5.  En el cuadro de diálogo **Volver a generar el catálogo de texto completo** , haga clic en **Cerrar**.  
   
   
   
-##  <a name="rebuildall"></a> Volver a generar todos los catálogos de texto completo para una base de datos  
+##  <a name="rebuildall"></a>Volver a generar todos los catálogos de texto completo de una base de datos  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>Para recompilar los catálogos de texto completo de una base de datos  
   
 1.  En el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y, después, expanda la base de datos que contiene los catálogos de texto completo que quiere volver a generar.  
   
-2.  Expanda **Almacenamiento**y, después, haga clic con el botón derecho en **Catálogos de texto completo**.  
+2.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario en **Catálogos de texto completo**.  
   
 3.  Seleccione **Volver a generar todo**.  
   
-4.  Ante la pregunta **¿Quiere eliminar todos los catálogos de texto completo y volver a generarlos?** , haga clic en **Aceptar**.  
+4.  Ante la pregunta **¿Quiere eliminar todos los catálogos de texto completo y volver a generarlos?**, haga clic en **Aceptar**.  
   
 5.  En el cuadro de diálogo **Volver a generar todos los catálogos de texto completo** , haga clic en **Cerrar**.  
   
   
   
-##  <a name="removing"></a> Quitar un catálogo de texto completo de una base de datos  
+##  <a name="removing"></a>Quitar un catálogo de texto completo de una base de datos  
   
 #### <a name="to-remove-a-full-text-catalog-from-a-database"></a>Para quitar un catálogo de texto completo de una base de datos  
   
 1.  En el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y expanda la base de datos que contiene el catálogo de texto completo que quiere quitar.  
   
-2.  Expanda **Almacenamiento**y, a continuación, **Catálogos de texto completo**.  
+2.  Expanda **Almacenamiento** y, a continuación, **Catálogos de texto completo**.  
   
 3.  Haga clic con el botón derecho en el catálogo de texto completo que quiere quitar y seleccione **Eliminar**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66011469"
   
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

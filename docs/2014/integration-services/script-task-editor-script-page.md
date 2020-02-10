@@ -1,5 +1,5 @@
 ---
-title: Editor de la tarea script (página Script) | Microsoft Docs
+title: Editor de la tarea script (página script) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056189"
 ---
 # <a name="script-task-editor-script-page"></a>Editor de la tarea Script (página Script)
@@ -57,12 +57,12 @@ ms.locfileid: "66056189"
  **Editar script**  
  Abre la VSTA IDE donde puede crear o modificar el script.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [General Page](general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea Script &#40;página General&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
+ [Página general](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea script &#40;página general&#41;](../../2014/integration-services/script-task-editor-general-page.md)   
  [Página Expresiones](expressions/expressions-page.md)   
- [Ejemplos de tarea Script](extending-packages-scripting-task-examples/script-task-examples.md)   
+ [Ejemplos de tareas de script](extending-packages-scripting-task-examples/script-task-examples.md)   
  [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

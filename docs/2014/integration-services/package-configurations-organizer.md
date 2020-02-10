@@ -1,5 +1,5 @@
 ---
-title: Organizador de configuraciones de paquete | Microsoft Docs
+title: Organizador de configuraciones de paquetes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056966"
 ---
 # <a name="package-configurations-organizer"></a>Organizador de configuraciones de paquetes
@@ -32,7 +32,7 @@ ms.locfileid: "66056966"
 > [!NOTE]  
 >  Cuando las configuraciones de paquetes se cargan en el orden preferido, se cargan de arriba a abajo, según la lista que se muestra en el cuadro de diálogo **Organizador de configuraciones de paquetes** . Sin embargo, en tiempo de ejecución, las configuraciones de paquetes podrían no cargarse en el orden preferido. Concretamente, las configuraciones de paquetes principales se cargan después de las configuraciones de otros tipos.  
   
- Las configuraciones de paquetes actualizan los valores de las propiedades de los objetos de paquete en tiempo de ejecución. Cuando se carga un paquete, los valores de las configuraciones reemplazan los valores establecidos cuando se desarrolló el paquete. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite distintos tipos de configuración. Por ejemplo, se puede utilizar un archivo XML que contenga múltiples configuraciones o una variable de entorno que contenga una única configuración. Para obtener más información, vea [Package Configurations](../../2014/integration-services/package-configurations.md).  
+ Las configuraciones de paquetes actualizan los valores de las propiedades de los objetos de paquete en tiempo de ejecución. Cuando se carga un paquete, los valores de las configuraciones reemplazan los valores establecidos cuando se desarrolló el paquete. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]admite tipos de configuración diferentes. Por ejemplo, se puede utilizar un archivo XML que contenga múltiples configuraciones o una variable de entorno que contenga una única configuración. Para más información, consulte [Package Configurations](../../2014/integration-services/package-configurations.md).  
   
 ## <a name="options"></a>Opciones  
  **Habilitar configuraciones de paquetes**  
@@ -53,19 +53,19 @@ ms.locfileid: "66056966"
  **Propiedad de destino**  
  Presenta el nombre de la propiedad modificada por la configuración. La columna está en blanco si el tipo de configuración admite varias configuraciones.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega una configuración empleando el Asistente para la configuración de paquetes.  
   
- **Editar**  
+ **Edición**  
  Edita una configuración existente volviendo a ejecutar el Asistente para la configuración de paquetes.  
   
- **Quitar**  
- Seleccione una configuración y haga clic en **Quitar**.  
+ **Remove**  
+ Seleccione una configuración y, a continuación, haga clic en **Quitar**.  
   
  **Flechas**  
  Seleccione una configuración y utilice las flechas arriba y abajo para subirla o bajarla de la lista. Las configuraciones se cargan en la secuencia en la que aparecen en la lista.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md)  
   
   

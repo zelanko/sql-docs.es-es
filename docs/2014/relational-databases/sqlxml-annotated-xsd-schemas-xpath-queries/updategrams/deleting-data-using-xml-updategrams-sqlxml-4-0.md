@@ -1,5 +1,5 @@
 ---
-title: Eliminar datos con diagramas de actualización XML (SQLXML 4.0) | Documentos de Microsoft
+title: Eliminar datos mediante diagramas XML (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 444ef7d8c95b0cbd41ba3fbb55a6fbeb30870462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014867"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Eliminar datos con diagramas de actualización XML (SQLXML 4.0)
-  Un diagrama de actualización indica una operación de eliminación cuando una instancia de registro aparece en el  **\<antes >** bloque sin ningún registro correspondiente en el  **\<después >** bloque. En este caso, el diagrama de actualización elimina el registro en el  **\<antes >** bloque desde la base de datos.  
+  Un diagrama indica una operación de eliminación cuando una instancia de registro aparece en el ** \<bloque Before>** sin registros correspondientes en el ** \<bloque After>** . En este caso, diagrama elimina el registro del bloque ** \<Before>** de la base de datos.  
   
  Éste es el formato del diagrama de actualización para una operación de eliminación:  
   
@@ -41,21 +41,21 @@ ms.locfileid: "66014867"
 </ROOT>  
 ```  
   
- Puede omitir el  **\<después >** si el diagrama de actualización realiza solo una operación de eliminación de etiquetas. Si no especifica el elemento opcional `mapping-schema` atributo, el  **\<ElementName >** especificado en el diagrama de actualización se asigna a una tabla de base de datos y lo secundarios elementos o atributos se asignan a columnas de la tabla.  
+ Puede omitir la ** \<etiqueta After>** si diagrama solo realiza una operación de eliminación. Si no especifica el atributo opcional `mapping-schema` , el ** \<>ElementName** especificado en diagrama se asigna a una tabla de base de datos y los elementos secundarios o atributos se asignan a las columnas de la tabla.  
   
- Si un elemento especificado en el diagrama de actualización coincide con más de una fila en la tabla o no coincide con ninguna fila, el diagrama de actualización devuelve un error y cancela todo el  **\<sincronización >** bloque. Un elemento del diagrama de actualización solamente puede eliminar un registro a la vez.  
+ Si un elemento especificado en diagrama coincide con más de una fila de la tabla o no coincide con ninguna fila, diagrama devuelve un error y cancela todo ** \<** el bloque de>de sincronización. Un elemento del diagrama de actualización solamente puede eliminar un registro a la vez.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos de esta sección utilizan una asignación predeterminada (es decir, no se especifica ningún esquema de asignación en el diagrama de actualización). Para obtener más ejemplos de diagramas de actualización que utilizan los esquemas de asignación, consulte [especificar un esquema de asignación anotados en un diagrama de actualización &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
+ Los ejemplos de esta sección utilizan una asignación predeterminada (es decir, no se especifica ningún esquema de asignación en el diagrama de actualización). Para obtener más ejemplos de diagramas que usan esquemas de asignación, vea [especificar un esquema de asignación anotado en un diagrama &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
- Para crear ejemplos funcionales mediante los siguientes ejemplos, debe cumplir los requisitos especificados en [requisitos para ejecutar los ejemplos de SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para crear ejemplos funcionales mediante los ejemplos siguientes, debe cumplir los requisitos especificados en [requisitos para ejecutar ejemplos de SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-deleting-a-record-by-using-an-updategram"></a>A. Eliminar un registro mediante un diagrama de actualización  
  Los siguientes diagramas de actualización eliminan dos registros de la tabla HumanResources.Shift.  
   
  En estos ejemplos, el diagrama de actualización no especifica ningún esquema de asignación. Por tanto, el diagrama de actualización utiliza la asignación predeterminada, en la que el nombre de elemento se asigna a un nombre de tabla y los atributos o subelementos se asignan a columnas.  
   
- Este primer diagrama de actualización está centrado en atributos e identifica dos turnos (Day-Evening y Evening-Night) en el  **\<antes >** bloque. Porque no hay ningún registro correspondiente en el  **\<después >** bloque, se trata de una operación de eliminación.  
+ Esta primera diagrama está centrada en atributos e identifica dos turnos (día y noche) en el ** \<bloque Before>** . Dado que no hay ningún registro correspondiente en el ** \<bloque After>** , se trata de una operación de eliminación.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -80,15 +80,15 @@ ms.locfileid: "66014867"
   
 ##### <a name="to-test-the-updategram"></a>Para probar el diagrama de actualización  
   
-1.  Complete el ejemplo B ("insertar varios registros utilizando un diagrama de actualización") en [Updategrams de inserción de datos utilizando XML &#40;SQLXML 4.0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+1.  Complete el ejemplo B ("insertar varios registros mediante un diagrama") en la [inserción de datos mediante XML diagramas &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
-2.  Copie el diagrama de actualización anterior en el Bloc de notas y guárdelo como Updategram-RemoveShifts.xml en la misma carpeta que utilizó para completar ("insertar varios registros utilizando un diagrama de actualización") en [Updategrams de inserción de datos utilizando XML &#40;SQLXML 4.0&#41; ](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+2.  Copie el diagrama anterior en el Bloc de notas y guárdelo como Updategram-RemoveShifts. XML en la misma carpeta que se usó para completar ("insertar varios registros mediante un diagrama") en la [inserción de datos mediante XML diagramas &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
 3.  Cree y use el script de prueba de SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar el diagrama de actualización.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="see-also"></a>Vea también  
- [Consideraciones de seguridad de updategram &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>Consulte también  
+ [Consideraciones de seguridad de diagrama &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

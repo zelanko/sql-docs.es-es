@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877880"
 ---
 # <a name="variables-window"></a>Ventana Variables
@@ -64,20 +64,20 @@ ms.locfileid: "62877880"
  Presenta el valor de la variable. Puede actualizar el valor de la variable para variables definidas por el usuario. Este valor puede ser un literal o una expresión y el valor puede ser una cadena de varias líneas. Para asignar una expresión variable, haga clic en el botón de la elipse que se encuentra junto a la columna **Expresión** en la ventana **Variables** .  
   
  `Namespace`  
- Presenta el nombre del espacio de nombres. Las variables definidas por el usuario se crean inicialmente en el **usuario** espacio de nombres, pero puede cambiar el nombre del espacio de nombres en el `Namespace` campo. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  
+ Presenta el nombre del espacio de nombres. Las variables definidas por el usuario se crean Inicialmente en el espacio de nombres del **usuario** , pero puede cambiar el `Namespace` nombre del espacio de nombres en el campo. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  
   
- **Raise Change Event**  
+ **Desencadenar evento de cambio**  
  Indica si se activa un evento `OnVariableValueChanged` cuando un valor cambia. Puede actualizar el valor de la variable para variables definidas por el usuario y el sistema. De manera predeterminada, la ventana **Variables** no muestra esta columna. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  
   
  **Descripción**  
  Vea la descripción de la variable. Puede cambiar la descripción para variables definidas por el usuario. De manera predeterminada, la ventana **Variables** no muestra esta columna. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  
   
- **Expresión**  
+ **Expression**  
  Vea la expresión asignada a la variable. Para asignar una expresión, haga clic en el botón de la elipse.  
   
  Si asigna una expresión a una variable, un marcador especial de icono se muestra junto a la variable. Este marcador de icono especial también aparece junto a los administradores de conexiones y las tareas con expresiones establecidas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)   
  [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   

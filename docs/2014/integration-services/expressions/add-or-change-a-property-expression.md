@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bd9095a11ef304c256b6c5a60560a71866e744fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899023"
 ---
 # <a name="add-or-change-a-property-expression"></a>Agregar o cambiar una expresión de propiedad
@@ -43,7 +43,7 @@ ms.locfileid: "62899023"
   
     -   Escriba o cambie directamente la expresión de propiedad en la columna **Expresión** y, a continuación, haga clic en **Aceptar**.  
   
-         -o bien-  
+         O bien  
   
     -   Haga clic en los puntos suspensivos (…) en la fila de expresión de la propiedad para abrir el **Generador de expresiones**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62899023"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)   
  [Usar expresiones de propiedad en paquetes](use-property-expressions-in-packages.md)   
  [Paquetes de Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   

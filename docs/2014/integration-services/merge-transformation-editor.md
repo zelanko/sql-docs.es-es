@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057678"
 ---
 # <a name="merge-transformation-editor"></a>Editor de transformación Mezclar
   Use el **Editor de transformación Mezclar** para especificar las columnas de dos conjuntos de datos ordenados que desee combinar.  
   
 > [!IMPORTANT]  
->  La transformación Mezclar requiere datos ordenados para sus entradas. Para más información sobre este requisito importante, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
+>  La transformación Mezclar requiere datos ordenados para sus entradas. Para obtener más información sobre este importante requisito, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
  Para obtener más información acerca de la transformación Mezclar, vea [Merge Transformation](data-flow/transformations/merge-transformation.md).  
   
@@ -39,9 +39,9 @@ ms.locfileid: "66057678"
  **Entrada de Mezclar 2**  
  Seleccione la columna que desea mezclar como Entrada de Mezclar 2.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Ordenar datos para las transformaciones mezclar y combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Transformación Combinación de mezcla](data-flow/transformations/merge-join-transformation.md)   
  [Transformación Unión de todo](data-flow/transformations/union-all-transformation.md)  
   

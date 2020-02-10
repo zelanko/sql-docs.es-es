@@ -1,5 +1,5 @@
 ---
-title: Establecer valores de parámetro después de implementa el proyecto | Microsoft Docs
+title: Establecer los valores de los parámetros después de implementar el proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 910de9d388e60ae3664153e2f6cb3bb5203b289c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055780"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>Establecer valores de parámetro después de la implementación del proyecto
@@ -28,13 +28,13 @@ ms.locfileid: "66055780"
   
 3.  Abra la página de parámetros haciendo clic en **Parámetros** debajo de **Seleccionar una página**.  
   
-4.  Seleccione el parámetro deseado en la lista **Parámetros** . Nota: La columna **Contenedor** ayuda a distinguir los parámetros del proyecto de los parámetros del paquete.  
+4.  Seleccione el parámetro deseado en la lista **Parámetros** . Nota: la columna **Contenedor** ayuda a distinguir los parámetros del proyecto de los parámetros del paquete.  
   
 5.  En la columna de **Valor** , especifique el valor del parámetro predeterminado del servidor deseado.  
   
  Para establecer valores predeterminados del servidor con Transact-SQL, use el procedimiento almacenado de [catalog.set_object_parameter_value &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database). Para ver los valores predeterminados actuales del servidor, consulte la vista [catalog.object_parameters &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database). Para borrar un valor predeterminado del servidor, use el procedimiento almacenado [catalog.clear_object_parameter_value &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database).  
   
-## <a name="see-also"></a>Vea también  
- [Servicios de integración &#40;SSIS&#41; parámetros](integration-services-ssis-package-and-project-parameters.md)  
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;los parámetros de&#41; SSIS](integration-services-ssis-package-and-project-parameters.md)  
   
   

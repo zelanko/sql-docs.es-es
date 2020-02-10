@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97c5f6b71e2266586450dac9385f7ea9d163c956
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870204"
 ---
-# <a name="mssqlserver10785"></a>MSSQLSERVER_10785
+# <a name="mssqlserver_10785"></a>MSSQLSERVER_10785
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|MSSQLSERVER|  
-|Identificador del evento|10785|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|MSSQLSERVER|  
+|Id. de evento|10785|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|P3_HEKATON_XACT|  
 |Texto del mensaje|*construct* '*feature*' no se admite con una transacción activa que tiene acceso a tablas optimizadas en memoria o a procedimientos almacenados compilados de forma nativa.|  

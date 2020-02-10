@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1a0cb087f5a0cd429d9bc6f30ea08aaef3d07b3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483102"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Eliminar permisos de objeto de modelo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine los permisos del objeto de modelo para quitar las asignaciones que se hayan realizado.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional **Permisos de usuario y de grupo** .  
@@ -43,15 +43,15 @@ ms.locfileid: "65483102"
   
 5.  Si lo desea, seleccione un modelo en la lista desplegable **Modelo** .  
   
-6.  En el **resumen de permisos de modelo** panel, seleccione la fila para el permiso que desea eliminar.  
+6.  En el panel **Resumen de permisos de modelo** , seleccione la fila correspondiente al permiso que desea eliminar.  
   
-7.  Haga clic en **Eliminar permiso seleccionado**.  
+7.  Haga clic en **eliminar permiso seleccionado**.  
   
     > [!NOTE]  
     >  No puede quitar un permiso de un usuario si se hereda de un grupo. En su lugar debe quitar el permiso del grupo.  
   
-## <a name="see-also"></a>Vea también  
- [Permisos de objeto del modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Permisos del objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

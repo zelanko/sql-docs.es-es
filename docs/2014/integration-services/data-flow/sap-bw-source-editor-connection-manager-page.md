@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b630442c1a47bcd4ebabee75b82cff9b8f64d006
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901116"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Editor de origen de SAP BW (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de SAP BW** para seleccionar el administrador de conexiones de SAP BW para el origen de SAP BW. En esta página, puede seleccionar el modo de ejecución y los parámetros para extraer los datos del sistema SAP Netweaver BW.  
   
- Para más información sobre el componente de origen de SAP BW de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vea [Origen de SAP BW](sap-bw-source.md).  
+ Para obtener más información sobre el componente de origen de SAP BW de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW, vea [Origen de SAP BW](sap-bw-source.md).  
   
 > [!IMPORTANT]  
 >  La documentación de Microsoft Connector 1.1 for SAP BW da por supuesto que se está familiarizado con el entorno SAP Netweaver BW. Para obtener más información acerca de SAP Netweaver BW, o sobre cómo configurar los objetos y los procesos de SAP Netweaver BW, vea la documentación de SAP.  
@@ -44,7 +44,7 @@ ms.locfileid: "62901116"
  **Administrador de conexiones de SAP BW**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones con el cuadro de diálogo **Administrador de conexiones de SAP BW** .  
   
  Para obtener más información sobre este cuadro de diálogo, vea [SAP BW Connection Manager Editor](../sap-bw-connection-manager-editor.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "62901116"
 |**W - Esperar notificación**|Permite esperar para recibir la notificación del sistema SAP Netweaver BW para comenzar a extraer datos. En este caso, el sistema SAP Netweaver BW inicia el proceso de extracción.|  
 |**E - Extraer únicamente**|Recupere los datos asociados a un identificador de solicitud determinado. En este caso, el sistema SAP Netweaver BW ha extraído ya los datos a una tabla interna y el paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] solo lee los datos.|  
   
- **Vista previa**  
+ **Versión preliminar**  
  Permite abrir el cuadro de diálogo **Vista previa** , donde podrá obtener una vista previa de los resultados. Para más información, consulte [Preview](preview.md).  
   
 > [!IMPORTANT]  
@@ -121,7 +121,7 @@ ms.locfileid: "62901116"
  **Id. de solicitud**  
  Permite escribir el identificador de solicitud asociado a la extracción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de origen de SAP BW &#40;página Columnas&#41;](sap-bw-source-editor-columns-page.md)   
  [Editor de origen de SAP BW &#40;página Salida de error&#41;](sap-bw-source-editor-error-output-page.md)   
  [Editor de origen de SAP BW &#40;página Opciones avanzadas&#41;](sap-bw-source-editor-advanced-page.md)   

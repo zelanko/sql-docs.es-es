@@ -1,5 +1,5 @@
 ---
-title: Restricciones del modelo de programación de integración CLR | Microsoft Docs
+title: Restricciones del modelo de programación de la integración CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873819"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restricciones del modelo de programación de la integración CLR
-  Cuando se está generando un procedimiento almacenado administrado u otro objeto de base de datos administrado, hay realiza ciertas comprobaciones de código [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realiza comprobaciones en el ensamblado de código administrado cuando se registra primero en la base de datos mediante el `CREATE ASSEMBLY` instrucción y también en tiempo de ejecución. El código administrado también se comprueba en tiempo de ejecución porque en un ensamblado puede haber rutas de acceso al código que nunca se hayan alcanzado realmente en tiempo de ejecución.  Esto proporciona flexibilidad para registrar ensamblados de terceros, de manera especial, de forma que no se debe bloquear un ensamblado donde haya un código 'no seguro' diseñado para que se ejecute en un entorno cliente pero nunca se ejecutaría en el CLR hospedado. Los requisitos que el código administrado debe cumplir dependen de si el ensamblado se registra como `SAFE`, `EXTERNAL_ACCESS`, o `UNSAFE`, `SAFE` que se va las más estrictas y, a continuación se enumeran.  
+  Al compilar un procedimiento almacenado administrado u otro objeto de base de datos administrado, algunas comprobaciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] código realizadas por realiza comprobaciones en el ensamblado de código administrado cuando se registra por primera `CREATE ASSEMBLY` vez en la base de datos, mediante la instrucción y también en tiempo de ejecución. El código administrado también se comprueba en tiempo de ejecución porque en un ensamblado puede haber rutas de acceso al código que nunca se hayan alcanzado realmente en tiempo de ejecución.  Esto proporciona flexibilidad para registrar ensamblados de terceros, de manera especial, de forma que no se debe bloquear un ensamblado donde haya un código 'no seguro' diseñado para que se ejecute en un entorno cliente pero nunca se ejecutaría en el CLR hospedado. Los requisitos que debe cumplir el código administrado dependen de si el ensamblado está registrado `SAFE`como `EXTERNAL_ACCESS`, o `UNSAFE`, `SAFE` siendo el más estricto y se enumeran a continuación.  
   
- Además de las restricciones que se ubican en los ensamblados de código administrado, también hay permisos de seguridad de código que se conceden. Common Language Runtime (CLR) admite un modelo de seguridad denominado seguridad de acceso del código (CAS) para el código administrado. En este modelo, se conceden permisos a los ensamblados basados en la identidad del código. Los ensamblados `SAFE`, `EXTERNAL_ACCESS` y `UNSAFE` tienen permisos de CAS diferentes. Para obtener más información, consulte [CLR Integration Code Access Security](../security/clr-integration-code-access-security.md).  
+ Además de las restricciones que se ubican en los ensamblados de código administrado, también hay permisos de seguridad de código que se conceden. Common Language Runtime (CLR) admite un modelo de seguridad denominado seguridad de acceso del código (CAS) para el código administrado. En este modelo, se conceden permisos a los ensamblados basados en la identidad del código. Los ensamblados `SAFE`, `EXTERNAL_ACCESS` y `UNSAFE` tienen permisos de CAS diferentes. Para obtener más información, vea [seguridad de acceso del código de integración CLR](../security/clr-integration-code-access-security.md).  
   
 ## <a name="create-assembly-checks"></a>Comprobaciones de CREATE ASSEMBLY  
  Cuando se ejecuta la instrucción `CREATE ASSEMBLY` las comprobaciones siguientes se realizan para cada nivel de seguridad.  Si se produce un error en cualquier comprobación, se producirá un error en `CREATE ASSEMBLY` con un mensaje de error.  
@@ -35,13 +35,13 @@ ms.locfileid: "62873819"
   
 -   El ensamblado ya está registrado en la base de datos.  
   
--   El ensamblado es uno de los ensamblados compatibles. Para obtener más información, consulte [admite bibliotecas de .NET Framework](supported-net-framework-libraries.md).  
+-   El ensamblado es uno de los ensamblados compatibles. Para obtener más información, consulte [supported .NET Framework Libraries](supported-net-framework-libraries.md).  
   
--   Usa `CREATE ASSEMBLY FROM`  *\<ubicación >,* y están disponibles en todos los ensamblados que se hace referencia y sus dependencias  *\<ubicación >* .  
+-   Está usando `CREATE ASSEMBLY FROM` * \<> de ubicación,* y todos los ensamblados a los que se hace referencia y sus dependencias están disponibles en * \<la ubicación>*.  
   
--   Usa `CREATE ASSEMBLY FROM`  *\<bytes... >,* y todas las referencias se especifican a través de espacio separados por bytes.  
+-   Está utilizando `CREATE ASSEMBLY FROM` * \<bytes... >* y todas las referencias se especifican a través de bytes separados por espacios.  
   
-### <a name="externalaccess"></a>EXTERNAL_ACCESS  
+### <a name="external_access"></a>EXTERNAL_ACCESS  
  Todos los ensamblados `EXTERNAL_ACCESS` deben cumplir los criterios siguientes:  
   
 -   Los campos estáticos no se usan para almacenar información. Se permiten los campos estáticos de solo lectura.  
@@ -86,9 +86,9 @@ ms.locfileid: "62873819"
  En tiempo de ejecución, el ensamblado de código se comprueba para las condiciones siguientes. Si se encuentra cualquiera de estas condiciones, el código administrado no se puede ejecutar y se iniciará una excepción.  
   
 ### <a name="unsafe"></a>UNSAFE  
- Cargar un ensamblado, ya sea explícitamente mediante una llamada a la `System.Reflection.Assembly.Load()` método desde una matriz de bytes o implícitamente mediante el uso de `Reflection.Emit` espacio de nombres: no se permite.  
+ La carga de un ensamblado, ya sea `System.Reflection.Assembly.Load()` explícitamente llamando al método desde una matriz de bytes o implícitamente a través del uso del `Reflection.Emit` espacio de nombres, no se permite.  
   
-### <a name="externalaccess"></a>EXTERNAL_ACCESS  
+### <a name="external_access"></a>EXTERNAL_ACCESS  
  Se comprueban todas las condiciones `UNSAFE`.  
   
  Todos los tipos y métodos anotados con los siguientes valores de atributo de protección de host (HPA) en la lista compatible de ensamblados no están admitidos.  
@@ -111,15 +111,15 @@ ms.locfileid: "62873819"
   
 -   UI  
   
- Para obtener más información acerca de los HPA y una lista de tipos no permitidos y los miembros de los ensamblados compatibles, consulte [atributos de protección de Host y programación de integración de CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
+ Para obtener más información sobre hPa y una lista de tipos y miembros no permitidos en los ensamblados admitidos, vea [atributos de protección del host y programación de la integración CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   
 ### <a name="safe"></a>SAFE  
  Se comprueban todas las condiciones `EXTERNAL_ACCESS`.  
   
-## <a name="see-also"></a>Vea también  
- [Bibliotecas compatibles de .NET Framework](supported-net-framework-libraries.md)   
- [Seguridad de acceso del código de integración de CLR](../security/clr-integration-code-access-security.md)   
- [Atributos de protección de host y programación de la integración CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
+## <a name="see-also"></a>Consulte también  
+ [Bibliotecas de .NET Framework compatibles](supported-net-framework-libraries.md)   
+ [Seguridad de acceso del código de integración CLR](../security/clr-integration-code-access-security.md)   
+ [Atributos de protección del host y programación de la integración CLR](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [Crear un ensamblado](../assemblies/creating-an-assembly.md)  
   
   

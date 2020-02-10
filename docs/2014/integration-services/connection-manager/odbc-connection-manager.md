@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6c7ecd59bcf3a3ece0d61ecbb428bb39a80068f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833767"
 ---
 # <a name="odbc-connection-manager"></a>ODBC, administrador de conexiones
   Un administrador de conexiones ODBC habilita un paquete para conectarse a una serie de sistemas de administración de bases de datos mediante la especificación Conectividad abierta de bases de datos (ODBC).  
   
- Al agregar una conexión ODBC a un paquete y establecer propiedades del Administrador de la conexión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una conexión de administrador y agrega el Administrador de conexiones para el `Connections` recopilación del paquete. En el tiempo de ejecución el administrador de conexiones se resuelve como una conexión ODBC física.  
+ Cuando agrega una conexión ODBC a un paquete y establece las propiedades del administrador de conexiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , crea un administrador de conexiones y agrega el administrador de `Connections` conexiones a la colección del paquete. En el tiempo de ejecución el administrador de conexiones se resuelve como una conexión ODBC física.  
   
  La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `ODBC`.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62833767"
   
  Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conexiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

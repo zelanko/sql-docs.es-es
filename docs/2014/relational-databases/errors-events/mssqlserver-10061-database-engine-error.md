@@ -15,24 +15,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b77e1d920f97891d173bfdcdcb23ceb6c0acf0c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870713"
 ---
-# <a name="mssqlserver10061"></a>MSSQLSERVER_10061
+# <a name="mssqlserver_10061"></a>MSSQLSERVER_10061
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|10061|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|10061|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico||  
-|Texto del mensaje|Error al establecer una conexión al servidor.  La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Proveedor TCP, error: 0 - No se estableció ninguna conexión porque el equipo de destino la rechazó). (Microsoft SQL Server, Error: 10061)|  
+|Texto del mensaje|Error al establecer una conexión al servidor.  La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: proveedor TCP, error: 0 - No se pudo establecer conexión porque el equipo de destino rechazó.) (Microsoft SQL Server, Error: 10061)|  
   
 ## <a name="explanation"></a>Explicación  
  El servidor no respondió a la solicitud del cliente. Este error puede producirse porque el servidor no se ha iniciado.  
@@ -40,8 +40,8 @@ ms.locfileid: "62870713"
 ## <a name="user-action"></a>Acción del usuario  
  Asegúrese de que el servidor se haya iniciado.  
   
-## <a name="see-also"></a>Vea también  
- [Administrar el servicio del motor de base de datos](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrar los servicios de Motor de base de datos](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
  [Configurar protocolos de cliente](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Protocolos de red y bibliotecas de red](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Configuración de red de cliente](../../database-engine/configure-windows/client-network-configuration.md)   

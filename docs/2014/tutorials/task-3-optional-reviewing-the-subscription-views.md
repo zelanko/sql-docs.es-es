@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 3 (opcional): Revisar las vistas de suscripciones | Microsoft Docs'
+title: 'Tarea 3 (opcional): revisar las vistas de suscripciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5fa153b16e8fd978cab74838c9e0cee8a17cf72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489238"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>Tarea 3 (opcional): Revisión de las vistas de suscripciones
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>Tarea 3 (opcional): revisar las vistas de suscripciones
   En esta tarea, confirmará que se crean las vistas de SQL mediante SQL Server Management Studio.  
   
-1.  Iniciar **SQL Server Management Studio**. Haga clic en el **iniciar** botón, haga clic en **todos los programas**, haga clic en **Microsoft SQL Server 2012**y, a continuación, haga clic en **SQL Server Management Studio**.  
+1.  Inicie **SQL Server Management Studio**. Haga clic en el botón **Inicio** , en **todos los programas**, en **Microsoft SQL Server 2012**y, a continuación, haga clic en **SQL Server Management Studio**.  
   
-2.  En el **conectar al servidor** ventana, establezca **tipo de servidor** a **motor de base de datos**, tipo de la **nombre del servidor** (o seleccione **() local)** y seleccione adecuado **autenticación**y haga clic en **Connect**.  
+2.  En la **ventana conectar con el servidor** , establezca **tipo de servidor** en **motor de base de datos**, escriba el **nombre del servidor** (o seleccione **(local)**, seleccione la **autenticación**adecuada y haga clic en **conectar**.  
   
-3.  En el **Explorador de objetos** panel, expanda **bases de datos**, expanda **MDS**y, a continuación, expanda **vistas**.  
+3.  En el panel **Explorador de objetos** , expanda **bases de datos**, expanda **MDS**y, a continuación, expanda **vistas**.  
   
-4.  Confirme que ve el **MDM. Proveedores** vista en la lista.  
+4.  Confirme que ve la **MDM. Vista proveedores** de la lista.  
   
-     ![SQL Server Management Studio: MDM. Ver proveedores](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio: MDM. Vista de proveedores")  
+     ![SQL Server Management Studio - Vista mdm.Suppliers](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio - Vista mdm.Suppliers")  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 4: Crear un proyecto de SSIS con SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 4: crear un proyecto de SSIS con SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)

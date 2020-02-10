@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9177dceefb03617a1837f7f051fb52aa805f33aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833760"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services
@@ -27,13 +27,13 @@ ms.locfileid: "62833760"
  Para obtener más información acerca del administrador de conexiones de Analysis Services, vea [Analysis Services Connection Manager](analysis-services-connection-manager.md).  
   
 ## <a name="options"></a>Opciones  
- **Crear una conexión con un equipo que ejecuta Analysis Services**  
+ **Cree una conexión a un equipo que ejecute Analysis Services**  
  Use la conexión predeterminada con un servidor que ejecuta una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o haga clic en **Editar**para crear una nueva conexión.  
   
- **Editar**  
+ **Edición**  
  Use el cuadro de diálogo **Administrador de conexiones** para crear una conexión con un servidor que ejecuta una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]y para editar propiedades de conexión.  
   
- **Crear una conexión con un proyecto de Analysis Services en esta solución**  
+ **Crear una conexión a un proyecto de Analysis Services en esta solución**  
  Permite especificar que la conexión usará un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la solución abierta.  
   
 > [!NOTE]  
@@ -42,7 +42,7 @@ ms.locfileid: "62833760"
  **Proyecto de Analysis Services**  
  Seleccione un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la lista.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../integration-services-error-and-message-reference.md)   
  [Conexiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   

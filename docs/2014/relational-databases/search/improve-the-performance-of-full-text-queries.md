@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011266"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Mejorar el rendimiento de las consultas de texto completo
@@ -26,7 +26,8 @@ ms.locfileid: "66011266"
   
 -   Reorganice el catálogo de texto completo mediante [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql). Asegúrese de hacerlo antes de realizar pruebas de rendimiento porque la ejecución de esta instrucción produce una mezcla maestra de los índices de texto completo del catálogo.  
   
--   Limite la selección de columnas de clave de texto completo a una columna pequeña. Aunque se admite una columna de 900 bytes, recomendamos usar una columna de clave menor en un índice de texto completo. `int` y `bigint` ofrecen el mejor rendimiento.  
+-   Limite la selección de columnas de clave de texto completo a una columna pequeña. Aunque se admite una columna de 900 bytes, recomendamos usar una columna de clave menor en un índice de texto completo. 
+  `int` y `bigint` ofrecen el mejor rendimiento.  
   
 -   Al usar una clave de texto completo de un tipo entero, se evita una combinación con la tabla de asignación **docid** . Por consiguiente, este tipo de clave mejora el rendimiento de las consultas en un orden de magnitud y mejora el rendimiento del rastreo. Podrían producirse ventajas adicionales en el rendimiento si la clave de texto completo también es la del índice clúster.  
   
@@ -48,9 +49,9 @@ ms.locfileid: "66011266"
 -   Con las aplicaciones que contienen predicados de relación selectiva, las consultas que usan predicados relacionales selectivos y predicados de texto completo no selectivos podrían demostrar un mejor comportamiento cuando se escriben para utilizar el optimizador de consultas. Esto permite al optimizador de consultas decidir si puede explotar el predicado o una pila de intervalo para generar un plan de consulta efectivo. Este enfoque es más sencillo y a menudo más eficaz que indizar los datos relacionales como datos de texto completo.  
   
 ## <a name="related-resources"></a>Recursos relacionados  
- [Búsqueda de texto completo de SQL Server 2008: información interna y mejoras](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [Búsqueda de texto completo en SQL Server 2008: características internas y mejoras](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   

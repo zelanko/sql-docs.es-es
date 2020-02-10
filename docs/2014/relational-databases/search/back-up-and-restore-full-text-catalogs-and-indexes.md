@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 28ab36c2f9f500df89b1d936ec60871c0904bc1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012816"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Realizar copias de seguridad de los catálogos de texto completo y restaurarlos
@@ -103,7 +103,7 @@ GO
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [Actualizar la búsqueda de texto completo](upgrade-full-text-search.md)  
   

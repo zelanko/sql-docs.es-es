@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 048d0c4bc88f28274dc7efd686ad075242e926ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483093"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>Eliminar una jerarquía explícita (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65483093"
 > [!WARNING]  
 >  Cuando elimine una jerarquía explícita, se eliminarán también todos los miembros consolidados de la jerarquía. Si elimina todas las jerarquías explícitas de una entidad, también se eliminarían todas las recopilaciones de la entidad y la entidad dejaría de estar habilitada para las jerarquías explícitas y las recopilaciones.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -45,7 +45,7 @@ ms.locfileid: "65483093"
   
 5.  Haga clic en **Editar entidad seleccionada**.  
   
-6.  En el **editar entidad** página, en el **jerarquías explícitas** panel, haga clic en la jerarquía explícita que desea eliminar.  
+6.  En la página **Editar entidad** , en el panel **jerarquías explícitas** , haga clic en la jerarquía explícita que desea eliminar.  
   
 7.  Haga clic en **eliminar jerarquía seleccionada**.  
   
@@ -53,8 +53,8 @@ ms.locfileid: "65483093"
   
 9. En el cuadro de diálogo de confirmación adicional, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cree una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Jerarquías explícitas &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

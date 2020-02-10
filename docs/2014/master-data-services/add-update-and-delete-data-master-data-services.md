@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054273"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Agregar, actualizar y eliminar datos (Master Data Services)
@@ -28,9 +28,9 @@ ms.locfileid: "66054273"
   
 -   El modelo no debe tener un estado de **Confirmado**.  
   
- **Para agregar, actualizar y eliminar datos en la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
+ **Para agregar, actualizar y eliminar datos en la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos**  
   
-1.  Prepare los miembros para importarlos en la tabla de almacenamiento provisional apropiada de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] y proporcione valores para los campos obligatorios. Para obtener información general de las tablas de almacenamiento provisional, consulte [importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+1.  Prepare los miembros para importarlos en la tabla de almacenamiento provisional apropiada de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] y proporcione valores para los campos obligatorios. Para obtener información general sobre las tablas de almacenamiento provisional, vea [importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
     -   Para los miembros hoja, la tabla es stg.\<nombre>_Leaf, donde \<nombre> hace referencia a la entidad correspondiente. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de miembros hoja &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
@@ -38,11 +38,11 @@ ms.locfileid: "66054273"
   
     -   Para mover la ubicación de los miembros de jerarquías explícitas, la tabla es stg.\<nombre>_Relationship. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de relaciones &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md).  
   
-         Para obtener información general acerca de cómo mover los miembros de jerarquías explícitas, consulte [importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
+         Para obtener información general sobre cómo mover miembros de jerarquías explícitas, vea [importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
     -   Use el valor del campo **ImportType** para especificar que está creando nuevos miembros, desactivando o eliminando miembros. Para obtener más información sobre los valores, consulte [Tabla de almacenamiento provisional de miembros hoja &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md) y [Tabla de almacenamiento provisional de miembros consolidados &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
-         Para obtener información general de la desactivación y eliminación de miembros, vea [importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
+         Para obtener información general sobre la desactivación y eliminación de miembros, vea [importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
 2.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y conéctese a la instancia de Motor de base de datos de su base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -56,17 +56,17 @@ ms.locfileid: "66054273"
   
     -   Ejecute el procedimiento almacenado de almacenamiento provisional que corresponde a la tabla de almacenamiento provisional a la que desea mover los datos.  
   
-         Para obtener información general de los procedimientos almacenados de almacenamiento provisional y tablas de almacenamiento provisional, consulte [importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md). Para obtener más información sobre los parámetros de procedimientos almacenados de almacenamiento provisional y un ejemplo de código, consulte [Procedimiento almacenado de almacenamiento provisional &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
+         Para obtener información general sobre los procedimientos almacenados de almacenamiento provisional y las tablas de almacenamiento provisional, vea [importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md). Para obtener más información sobre los parámetros de procedimientos almacenados de almacenamiento provisional y un ejemplo de código, consulte [Procedimiento almacenado de almacenamiento provisional &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
     -   Use el área funcional de **Administración de integraciones** de Administración de datos maestros.  
   
-         En la página **Lotes de almacenamiento provisional** , seleccione el modelo al que va a agregar datos en la lista desplegable y, después, haga clic en **Iniciar lotes**. El estado del procesamiento por lotes se indica en el campo **Estado** . Para obtener más información sobre los estados, consulte [Estados de importación &#40;Master Data Services&#41;](../../2014/master-data-services/import-statuses-master-data-services.md).  
+         En la página **Lotes de almacenamiento provisional**, seleccione el modelo al que va a agregar datos en la lista desplegable y, a continuación, haga clic en **Iniciar lotes**. El estado del procesamiento por lotes se indica en el campo **Estado** . Para obtener más información sobre los estados, consulte [Estados de importación &#40;Master Data Services&#41;](../../2014/master-data-services/import-statuses-master-data-services.md).  
   
          ![Página Lotes de almacenamiento provisional en Master Data Manager](../../2014/master-data-services/media/mds-staging-batches.png "Página Lotes de almacenamiento provisional en Master Data Manager")  
   
          El proceso de almacenamiento provisional se inicia a intervalos definidos por el valor **Intervalo de lote de almacenamiento provisional** de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
   
-5.  Vea los errores que se produjeron durante el almacenamiento provisional. Para obtener más información, consulte [ver los errores que se producen durante el proceso de almacenamiento provisional &#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md) y [errores del proceso de ensayo &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
+5.  Vea los errores que se produjeron durante el almacenamiento provisional. Para obtener más información, vea [ver los errores que se producen durante el proceso de almacenamiento provisional &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md) y los [errores del proceso de almacenamiento provisional &#40;Master Data Services ](../../2014/master-data-services/staging-process-errors-master-data-services.md)&#41;.  
   
 6.  Valide los datos según reglas de negocios.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66054273"
   
      Al cargar datos usando tablas de almacenamiento provisional, los datos no se validan automáticamente con las reglas de negocios. Para obtener más información sobre qué es la validación y cuándo ocurre, consulte [Validación &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md).  
   
-## <a name="see-also"></a>Vea también  
- [Importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Master Data Services de &#40;de importación de datos&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

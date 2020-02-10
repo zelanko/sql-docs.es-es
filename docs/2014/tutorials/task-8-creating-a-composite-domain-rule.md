@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 8: Crear una regla de dominio compuesto | Microsoft Docs'
+title: 'Tarea 8: crear una regla de dominio compuesto | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,30 +11,30 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489626"
 ---
-# <a name="task-8-creating-a-composite-domain-rule"></a>Tarea 8: Creación de una regla de dominio compuesto
-  En esta tarea, creará una regla para el **validación de direcciones** dominio compuesto. Definir una regla entre dominios: si **Ciudad** es **Los Ángeles**, **estado** debe ser **CA** donde **Ciudad** y **estado** son dos dominios.  
+# <a name="task-8-creating-a-composite-domain-rule"></a>Tarea 8: crear una regla de dominio compuesto
+  En esta tarea, creará una regla para el dominio compuesto **validación de direcciones** . Defina una regla entre dominios: Si **City** es los **Ángeles**, el **Estado** debe ser **CA** , donde la **ciudad** y el **Estado** son dos dominios.  
   
-1.  En el panel derecho, cambie a la **reglas de CD** ficha.  
+1.  En el panel derecho, cambie a la pestaña **reglas de CD** .  
   
-2.  Haga clic en **agregar una nueva regla de dominio** desde la barra de herramientas.  
+2.  Haga clic en **Agregar una nueva regla de dominio** en la barra de herramientas.  
   
-3.  Tipo **regla ciudad-estado** para **nombre** y presione **ENTRAR**.  
+3.  Escriba **City: regla de estado** para **nombre** y presione **entrar**.  
   
-4.  En el **una regla de generación** panel, seleccione **Ciudad** en la lista de dominios y seleccione la condición **es igual al valor** y tipo **Los Ángeles** para el valor.  
+4.  En el panel **generar una regla** , seleccione **ciudad** en la lista de dominios y seleccione el valor de la condición **es igual a** y escriba los **Ángeles** para el valor.  
   
-5.  En el **, a continuación,** panel, seleccione **estado** en la lista de dominios y seleccione **es igual al valor**, tipo **CA** para el valor y presione **Ficha**.  
+5.  En el panel **then** , seleccione **Estado** en la lista de dominios y seleccione el **valor es igual a**, escriba **CA** como valor y presione **Tab**.  
   
-     ![Regla de dominio compuesto](../../2014/tutorials/media/et-creatingacompositedomainrule.jpg "regla de dominio compuesto")  
+     ![Regla de dominio compuesto](../../2014/tutorials/media/et-creatingacompositedomainrule.jpg "Regla de dominio compuesto")  
   
-6.  Haga clic en **cerrar** situado en la parte inferior de la página para cambiar a la página principal del cliente DQS. Publicará la base de conocimiento en la próxima lección. Observe que la base de conocimiento está en estado bloqueado (icono de candado).  
+6.  Haga clic en el botón **cerrar** situado en la parte inferior de la página para cambiar a la Página principal del cliente DQS. Publicará la base de conocimiento en la próxima lección. Observe que la base de conocimiento está en estado bloqueado (icono de candado).  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 9: Configurar un servicio de datos de referencia](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 9: configurar un servicio de datos de referencia](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
   
   

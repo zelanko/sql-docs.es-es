@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff30f298d961eeb07b16261e400cb9fd8cb2a257
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913075"
 ---
-# <a name="mssqlserver8642"></a>MSSQLSERVER_8642
+# <a name="mssqlserver_8642"></a>MSSQLSERVER_8642
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|8642|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|8642|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|EXCHNGSTART_ERR|  
 |Texto del mensaje|El procesador de consultas no puede iniciar los recursos de subproceso necesarios para la ejecución en paralelo.|  

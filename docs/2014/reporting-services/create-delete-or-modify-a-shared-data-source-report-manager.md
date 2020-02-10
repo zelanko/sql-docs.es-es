@@ -1,5 +1,5 @@
 ---
-title: Crear, eliminar o modificar un origen de datos compartidos (Administrador de informes) | Microsoft Docs
+title: Crear, eliminar o modificar un origen de datos compartido (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109613"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Crear, eliminar o modificar un origen de datos compartido (Administrador de informes)
@@ -39,7 +39,7 @@ Icono de origen de datos compartido
   
 3.  Haga clic en **Nuevo origen de datos**. Se abre la página **Nuevo origen de datos** .  
   
-4.  Escriba el nombre del elemento. El nombre debe incluir al menos un carácter y debe empezar con una letra. También puede incluir determinados símbolos, pero no espacios en blanco o los caracteres ; ? : \@ & = + , $ / * \< > | " /.  
+4.  Escriba el nombre del elemento. El nombre debe incluir al menos un carácter y debe empezar con una letra. También puede incluir determinados símbolos, pero no espacios en blanco o los caracteres ; ? : \@ & = +, $/* \< > | " /.  
   
 5.  Si lo desea, escriba una descripción que ofrezca a los usuarios información sobre la conexión. Esta descripción aparecerá en la página **Contenido** del Administrador de informes.  
   
@@ -47,7 +47,7 @@ Icono de origen de datos compartido
   
 7.  En **Cadena de conexión**, especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. Se recomienda que no especifique credenciales en la cadena de conexión.  
   
-     En el ejemplo siguiente, se muestra una cadena de conexión para establecer conexión con la base de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] local:  
+     En el ejemplo siguiente se muestra una cadena de conexión para conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] la base de datos local:  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
@@ -70,7 +70,7 @@ Icono de origen de datos compartido
     > [!NOTE]  
     >  El botón Probar conexión no se admite para el tipo de origen de datos XML.  
   
-10. Haga clic en **Aceptar**.  
+10. Haz clic en **Aceptar**.  
   
 ### <a name="to-modify-a-shared-data-source"></a>Para modificar un origen de datos compartido  
   
@@ -88,17 +88,17 @@ Icono de origen de datos compartido
   
          Haga clic en el elemento para abrirlo. Se abre la página de propiedades General.  
   
-         Haga clic en **Eliminar**y, después, en **Aceptar**.  
+         Haga clic en **Eliminar** y, a continuación, haga clic en **Aceptar**.  
   
     -   En la página **Contenido** , navegue a la carpeta que contiene el origen de datos que desea eliminar.  
   
-         Mantenga el mouse sobre el elemento, haga clic en la lista desplegable y seleccione **Eliminar** en el menú contextual.  
+         Mantenga el mouse sobre el elemento, haga clic en la lista desplegable y seleccione **Eliminar**en el menú contextual.  
   
          [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Contenido &#40;página del Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Administrador de informes de &#40;de página de contenido&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Administrar orígenes de datos de informe](report-data/manage-report-data-sources.md)   
  [Configurar propiedades de origen de datos para un informe &#40;Administrador de informes&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  

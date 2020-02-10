@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011740"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos (SQL Server)
   Un archivo de datos puede contener campos organizados en un orden diferente al de las columnas correspondientes en la tabla. Este tema trata los archivos de formato XML y no XML que se han modificado para alojar un archivo de datos cuyos campos están organizados en un orden diferente al de las columnas de la tabla. El archivo de formato modificado asigna los campos de datos a las columnas correspondientes de la tabla.  
   
 > [!NOTE]  
->  Se puede usar un archivo de formato XML o no XML para realizar una importación en bloque de un archivo de datos en la tabla mediante un comando de **bcp**, la instrucción BULK INSERT o INSERT... SELECT * FROM OPENROWSET(BULK...). Para obtener más información, vea [Usar un archivo de formato para importar datos en bloque &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
+>  Se puede usar un archivo de formato XML o no XML para importar de forma masiva un archivo de datos en la tabla mediante un comando **BCP** , una instrucción de Bulk Insert o una instrucción INSERT... SELECT * FROM OPENROWSET (BULK...). Para obtener más información, vea [Usar un archivo de formato para importar datos en bloque &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md).  
   
 ## <a name="sample-table-and-data-file"></a>Tabla y archivo de datos de ejemplo  
  Los ejemplos de archivos de formato modificados de este tema se basan en la siguiente tabla y archivo de datos.  
@@ -138,7 +138,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar un archivo de formato para omitir una columna de tabla &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Usar un archivo de formato para omitir un campo de datos &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   

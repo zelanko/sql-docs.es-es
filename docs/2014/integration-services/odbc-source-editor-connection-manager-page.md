@@ -1,5 +1,5 @@
 ---
-title: Editor de origen ODBC (página Administrador de conexiones) | Microsoft Docs
+title: Editor de origen de ODBC (página Administrador de conexiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057221"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Editor de origen de ODBC (página Administrador de conexiones)
@@ -44,7 +44,7 @@ ms.locfileid: "66057221"
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|Nombre de tabla|Recupera datos de una tabla o vista del origen de datos de ODBC. Cuando seleccione esta opción, seleccione un valor de la lista para lo siguiente:|  
+|Nombre de la tabla|Recupera datos de una tabla o vista del origen de datos de ODBC. Cuando seleccione esta opción, seleccione un valor de la lista para lo siguiente:|  
 ||**Nombre de la tabla o la vista**: seleccione una tabla o vista disponible en la lista o escriba una expresión regular para identificar la tabla.|  
 ||Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el comodín (*) para escribir cualquier parte del nombre con el fin de mostrar la tabla o las tablas que desea usar.|  
 |Comando SQL|Recupera datos del origen de datos de ODBC mediante una consulta SQL. Debe escribir la consulta con la sintaxis de la base de datos de origen con la que está trabajando. Cuando seleccione esta opción, escriba una consulta de una de las siguientes maneras:|  
@@ -55,7 +55,7 @@ ms.locfileid: "66057221"
 ### <a name="preview"></a>Vista previa  
  Haga clic en **Vista previa** para ver hasta las 200 primeras filas de los datos extraídos de la tabla o la vista seleccionada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedades personalizadas del origen ODBC](data-flow/odbc-source-custom-properties.md)   
  [Editor de orígenes ODBC &#40;página Columnas&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
  [Editor de orígenes ODBC &#40;página Salida de error&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b6c7b5cff8b288e688f2744c615d62bd8417acf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856631"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitor de actividad de trabajo (Configuración del filtro)
@@ -27,7 +27,7 @@ ms.locfileid: "62856631"
 ## <a name="all-jobs"></a>Todos los trabajos  
  Este grupo de criterios de filtro está disponible cuando se filtra el Monitor de actividad de trabajo.  
   
- **Name**  
+ **Nombre**  
  Filtra trabajos por nombre.  
   
  **Siguiente ejecución**  
@@ -48,7 +48,7 @@ ms.locfileid: "62856631"
  **Categoría**  
  Filtra trabajos por su categoría.  
   
- **Programado**  
+ **Programada**  
  Muestra todos los trabajos con o sin programaciones.  
   
  **Estado**  
@@ -59,12 +59,12 @@ ms.locfileid: "62856631"
  Este cuadro sin nombre proporciona una descripción breve de los criterios a medida que se seleccionan.  
   
  **Aplicar filtro**  
- Para aplicar el filtro, haga clic en **aplicar filtro** y, a continuación, haga clic en **Aceptar**. Para conservar la configuración de filtro en el **configuración del filtro** diálogo cuadro, pero no aplicarlos, desactive la opción **aplicar filtro**y, a continuación, haga clic en **Aceptar**, para mostrar todas las filas.  
+ Para aplicar el filtro, haga clic en **aplicar filtro** y, a continuación, haga clic en **Aceptar**. Para conservar la configuración del filtro en el cuadro de diálogo **configuración del filtro** , pero no aplicarla, desactive **aplicar filtro**y, a continuación, haga clic en **Aceptar**para mostrar todas las filas.  
   
- **Desactivar**  
+ **Borrar**  
  Recupera la configuración predeterminada del filtro.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Actividad de trabajos de monitor](../../ssms/agent/monitor-job-activity.md)  
   
   

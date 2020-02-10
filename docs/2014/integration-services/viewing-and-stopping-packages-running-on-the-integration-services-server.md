@@ -1,5 +1,5 @@
 ---
-title: Ver y detener los paquetes que se ejecutan en la integración de servicios de servidor | Microsoft Docs
+title: Ver y detener los paquetes que se ejecutan en el servidor de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054597"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Ver y detener los paquetes en ejecución en el Servidor de Integration Services
@@ -60,8 +60,8 @@ ms.locfileid: "66054597"
  Acceso mediante programación a través de la API administrada  
  Vea el espacio de nombres <xref:Microsoft.SqlServer.Management.IntegrationServices> y sus clases.  
   
-## <a name="see-also"></a>Vea también  
- [Ejecución de proyectos y paquetes](packages/run-integration-services-ssis-packages.md)   
+## <a name="see-also"></a>Consulte también  
+ [Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md)  (Ejecución de proyectos y paquetes)  
  [Solucionar problemas de informes para la ejecución de paquetes](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   
   

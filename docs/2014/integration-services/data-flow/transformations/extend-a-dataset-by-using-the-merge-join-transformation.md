@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8009dcd369327941004fe220782c38d5602b4dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900308"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Ampliar un conjunto de datos con la transformación Combinación de mezcla
@@ -56,12 +56,12 @@ ms.locfileid: "62900308"
   
 9. Opcionalmente, actualice los nombres de las columnas de salida en la columna **Alias de salida** .  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
- [Merge Join Transformation](merge-join-transformation.md)   
+## <a name="see-also"></a>Consulte también  
+ [Transformación Combinación de mezcla](merge-join-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)   
  [Rutas de Integration Services](../integration-services-paths.md)   
  [Tarea Flujo de datos](../../control-flow/data-flow-task.md)  

@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones (página columnas) varios archivos planos | Microsoft Docs
+title: Editor del administrador de conexiones de varios archivos planos (página columnas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057494"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Editor del administrador de conexiones de varios archivos planos (página Columnas)
@@ -39,28 +39,28 @@ ms.locfileid: "66057494"
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
-|**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
-|**{LF}**|Las filas se delimitan mediante un avance de línea.|  
+|**COMPRA LF**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
+|**COMPRA**|Las filas se delimitan mediante un retorno de carro.|  
+|**LF**|Las filas se delimitan mediante un avance de línea.|  
 |**Punto y coma {;}**|Las filas se delimitan mediante un punto y coma.|  
 |**Dos puntos {:}**|Las filas se delimitan mediante dos puntos.|  
-|**Coma {,}**|Las filas se delimitan mediante una coma.|  
+|**Unas{,}**|Las filas se delimitan mediante una coma.|  
 |**Tabulación {t}**|Las filas se delimitan mediante un tabulador.|  
 |**Barra vertical {&#124;}**|Las filas se delimitan mediante una barra vertical.|  
   
  **Delimitador de columna**  
  Selecciónelo de la lista de delimitadores de columna disponibles o escriba el texto delimitador.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**{CR}{LF}**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
-|**{CR}**|Las columnas se delimitan mediante un retorno de carro.|  
-|**{LF}**|Las columnas se delimitan mediante un avance de línea.|  
+|**COMPRA LF**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
+|**COMPRA**|Las columnas se delimitan mediante un retorno de carro.|  
+|**LF**|Las columnas se delimitan mediante un avance de línea.|  
 |**Punto y coma {;}**|Las columnas se delimitan mediante un punto y coma.|  
 |**Dos puntos {:}**|Las columnas se delimitan mediante un punto y coma.|  
-|**Coma {,}**|Las columnas se delimitan mediante una coma.|  
+|**Unas{,}**|Las columnas se delimitan mediante una coma.|  
 |**Tabulación {t}**|Las columnas se delimitan mediante un tabulador.|  
 |**Barra vertical {&#124;}**|Las columnas se delimitan mediante una barra vertical.|  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66057494"
  Al hacer clic en **Restablecer columnas**se eliminará todo, excepto las columnas originales.  
   
 ### <a name="format--fixed-width"></a>Formato = Ancho fijo  
- **Fuente**  
+ **Tipo**  
  Seleccione la fuente en la que se presentará la vista previa de los datos.  
   
  **Columnas de datos de origen**  
@@ -85,7 +85,7 @@ ms.locfileid: "66057494"
 > [!NOTE]  
 >  Los archivos de derecho irregular son aquellos en los que todas las columnas tiene un ancho fijo, a excepción de la última. Se delimita mediante el delimitador de fila.  
   
- **Fuente**  
+ **Tipo**  
  Seleccione la fuente en la que se presentará la vista previa de los datos.  
   
  **Columnas de datos de origen**  
@@ -94,24 +94,24 @@ ms.locfileid: "66057494"
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
-|**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
-|**{LF}**|Las filas se delimitan mediante un avance de línea.|  
+|**COMPRA LF**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
+|**COMPRA**|Las filas se delimitan mediante un retorno de carro.|  
+|**LF**|Las filas se delimitan mediante un avance de línea.|  
 |**Punto y coma {;}**|Las filas se delimitan mediante un punto y coma.|  
 |**Dos puntos {:}**|Las filas se delimitan mediante dos puntos.|  
-|**Coma {,}**|Las filas se delimitan mediante una coma.|  
+|**Unas{,}**|Las filas se delimitan mediante una coma.|  
 |**Tabulación {t}**|Las filas se delimitan mediante un tabulador.|  
 |**Barra vertical {&#124;}**|Las filas se delimitan mediante una barra vertical.|  
   
  **Restablecer columnas**  
  Al hacer clic en **Restablecer columnas**se eliminará todo, excepto las columnas originales.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor del administrador de conexiones de varios archivos planos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor del administrador de conexiones de varios archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor del administrador de conexiones de varios archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor del administrador de conexiones de varios archivos planos &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor del administrador de conexiones de varios archivos planos &#40;página avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [Editor del administrador de conexiones de varios archivos planos &#40;página de vista previa&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

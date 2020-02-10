@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df228060a5b714d92c9ae200d91851e4b579839d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011578"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurar y administrar filtros para búsquedas
@@ -25,7 +25,7 @@ ms.locfileid: "66011578"
   
  Un filtro determinado es específico de un tipo de documento concreto (.doc, .pdf, .xls, .xml, etc.). Estos filtros implementan la interfaz IFilter. Para obtener más información de estos tipos de documento, consulte la vista de catálogo [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
   
- Los documentos binarios se pueden almacenar en una sola columna de tipo  `varbinary(max)` o `image`. Para cada documento, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] elige el filtro correcto de acuerdo con la extensión de archivo. Dado que la extensión de archivo no está visible cuando el archivo se almacena en un `varbinary(max)` o `image` columna, la extensión de archivo (.doc, .xls, .pdf etc.) debe almacenarse en una columna independiente en la tabla, denominada columna de tipo. Esta columna de tipo debe ser de cualquier tipo de datos basado en caracteres y debe contener la extensión del archivo, como .doc para los documentos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word. En el **documento** tabla [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], **documento** columna es de tipo `varbinary(max)`y la columna de tipo **FileExtension**, es de tipo `nvarchar(8)`.  
+ Los documentos binarios se pueden almacenar en una sola columna de tipo  `varbinary(max)` o `image`. Para cada documento, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] elige el filtro correcto de acuerdo con la extensión de archivo. Dado que la extensión de archivo no está visible cuando el archivo se almacena `varbinary(max)` en `image` una columna o, la extensión de archivo (. doc,. xls,. pdf, etc.) debe almacenarse en una columna independiente de la tabla, denominada columna de tipo. Esta columna de tipo debe ser de cualquier tipo de datos basado en caracteres y debe contener la extensión del archivo, como .doc para los documentos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word. En la tabla **Document** en [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], la **columna Document** es de tipo `varbinary(max)`y la columna Type, **FileExtension**, es de tipo `nvarchar(8)`.  
   
 > [!NOTE]  
 >  Un filtro podría ser capaz de tratar los incrustados en el objeto primario, dependiendo de su implementación. Sin embargo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no configura los filtros para seguir los vínculos a otros objetos.  
@@ -42,7 +42,7 @@ EXEC sp_help_fulltext_system_components 'filter';
   
 -   [sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sys.fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)   
  [Compatibilidad de FILESTREAM con otras características de SQL Server](../blob/filestream-compatibility-with-other-sql-server-features.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación extracción de términos (pestaña Avanzadas) | Microsoft Docs
+title: Editor de transformación extracción de términos (pestaña avanzadas) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055268"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Editor de transformación Extracción de términos (pestaña Avanzadas)
@@ -27,7 +27,7 @@ ms.locfileid: "66055268"
  Para obtener más información acerca de la transformación Extracción de términos, vea [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Sustantivo**  
  Especifica que la transformación extrae únicamente nombres individuales.  
   
  **Frase**  
@@ -40,7 +40,7 @@ ms.locfileid: "66055268"
  Especifica que la puntuación está determinada por la frecuencia del término.  
   
  **TFIDF**  
- Mediante esta opción se indica que la puntuación está determinada por el valor TFIDF del término. La puntuación TFIDF es el producto de la frecuencia del término y la frecuencia inversa del documento, tal y como se define a continuación: TFIDF de un término T = (frecuencia de T) * log ((#filas en entrada)/(#filas con T))  
+ Mediante esta opción se indica que la puntuación está determinada por el valor TFIDF del término. La puntuación TFIDF es el producto de la frecuencia del término y la frecuencia inversa del documento, definida de esta forma: TFIDF de un término T = (frecuencia de T) * log( (n.º de filas de entrada) / (n.º de filas con T) )  
   
  **Umbral de frecuencia**  
  Permite especificar el número de veces que una palabra o frase debe aparecer antes de extraerla. El valor predeterminado es 2.  
@@ -48,16 +48,16 @@ ms.locfileid: "66055268"
  **Longitud máxima del término**  
  Permite especificar la longitud máxima de una frase en palabras. Esta opción afecta únicamente a frases. El valor predeterminado es 12.  
   
- **Utilizar extracción de términos con distinción de mayúsculas y minúsculas**  
- Permite especificar si la extracción distinguirá mayúsculas de minúsculas. De manera predeterminada, es `False`.  
+ **Usar extracción de términos con distinción de mayúsculas y minúsculas**  
+ Permite especificar si la extracción distinguirá mayúsculas de minúsculas. El valor predeterminado es `False`.  
   
  **Configurar la salida de errores**  
  Use el cuadro de diálogo [Configurar la salida de errores](../../2014/integration-services/configure-error-output.md) para especificar las opciones de control de errores para las filas que provocan errores.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformación Extracción de términos &#40;pestaña Extracción de términos&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [Editor de transformación Extracción de términos &#40;pestaña Exclusión&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
- [Transformación Búsqueda de términos](data-flow/transformations/lookup-transformation.md)  
+ [Editor de transformación extracción de términos &#40;pestaña extracción de términos&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [Editor de transformación extracción de términos &#40;pestaña exclusión&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [Búsqueda de términos, transformación](data-flow/transformations/lookup-transformation.md)  
   
   

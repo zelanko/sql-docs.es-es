@@ -1,5 +1,5 @@
 ---
-title: Firmar un paquete mediante un certificado Digital | Microsoft Docs
+title: Firmar un paquete mediante un certificado digital | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 31da686dbf25922205ea4d1b03ecaa3758457573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055615"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Firmar un paquete mediante un certificado digital
@@ -62,11 +62,11 @@ ms.locfileid: "66055615"
   
 8.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Firma digital** .  
   
-9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados** , en el menú **Archivo** .  
+9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-     Aunque se haya firmado el paquete, también debe configurar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para comprobar la firma digital antes de cargar el paquete. Para obtener más información, vea [Identificar el origen de paquetes con firmas digitales](security/identify-the-source-of-packages-with-digital-signatures.md).  
+     Aunque se haya firmado el paquete, también debe configurar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para comprobar la firma digital antes de cargar el paquete. Para más información, vea [Identificar el origen de paquetes con firmas digitales](security/identify-the-source-of-packages-with-digital-signatures.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información general sobre seguridad &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

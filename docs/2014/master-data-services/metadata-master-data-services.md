@@ -16,23 +16,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2bbb98653dbbaad577f9a48d7a778b41d19fbf37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054035"
 ---
 # <a name="metadata-master-data-services"></a>Metadatos (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los metadatos definidos por el usuario son la información que se usa para describir los objetos del modelo. Por ejemplo, puede que desee realizar el seguimiento de los propietarios de un modelo o entidad determinados, o realizar el seguimiento de los sistemas de origen que proporcionan los datos a una entidad.  
   
- Los metadatos definidos por el usuario se administran mediante un modelo denominado **metadatos**. Este modelo se incluye automáticamente cuando [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] está instalado, y es similar a todos los modelos MDS, salvo que no se puede crear versiones de él.  
+ Los metadatos definidos por el usuario se administran mediante un modelo denominado **metadatos**. Este modelo se incluye automáticamente cuando [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] se instala y es similar al resto de modelos de MDS, excepto en que no se pueden crear versiones de los mismos.  
   
  Después de rellenar el modelo de metadatos con los metadatos definidos por el usuario, puede incluirlo en las vistas de suscripciones, para que lo puedan usar los sistemas suscriptores.  
   
 ## <a name="metadata-entities"></a>Entidades de metadatos  
- El modelo de metadatos incluye cinco entidades, cada una de las cuales representa un tipo de objeto del modelo de datos maestros que admite los metadatos definidos por el usuario. Por ejemplo, el **definición de metadatos del modelo** entidad contiene miembros que representan los modelos y la **definición de metadatos de atributo** entidad tiene miembros que representan todos los atributos de todos los modelos.  
+ El modelo de metadatos incluye cinco entidades, cada una de las cuales representa un tipo de objeto del modelo de datos maestros que admite los metadatos definidos por el usuario. Por ejemplo, la entidad **definición de metadatos del modelo** contiene miembros que representan modelos y la entidad definición de **metadatos de atributo** tiene miembros que representan todos los atributos de todos los modelos.  
   
- Para definir los metadatos de un objeto del modelo, rellene uno de estos atributos del miembro. Por ejemplo, en el **definición de metadatos de entidad** entidad, puede rellenar el atributo de descripción del miembro precio con el texto: **El precio del producto cuando se vende a un cliente**.  
+ Para definir los metadatos de un objeto del modelo, rellene uno de estos atributos del miembro. Por ejemplo, en la entidad **definición de metadatos de entidad** , puede rellenar el atributo Descripción del miembro del precio con el texto: **el precio del producto cuando se vende a un cliente**.  
   
  Los miembros del modelo de metadatos se actualizan automáticamente siempre que se agregan o se eliminan los objetos del modelo compatibles con los metadatos definidos por el usuario.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66054035"
   
 -   Un atributo de forma libre denominado Fecha de la última revisión, que se utiliza para realizar el seguimiento de la fecha en que el propietario de un objeto lo revisó por última vez.  
   
--   Un atributo basado en dominio denominado orígenes, que usa para realizar un seguimiento y administrar los sistemas de origen que interactúan con el [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] instancia.  
+-   Un atributo basado en dominio denominado sources, que se utiliza para realizar un seguimiento de los sistemas de origen que [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] interactúan con la instancia de y administrarlos.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

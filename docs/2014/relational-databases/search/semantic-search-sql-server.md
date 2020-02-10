@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 651705426b52b822c3eb8c7cf9d341968bbc088f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010992"
 ---
 # <a name="semantic-search-sql-server"></a>Búsqueda semántica (SQL Server)
@@ -27,12 +27,12 @@ ms.locfileid: "66010992"
   
  Estos índices semánticos se consultan usando tres funciones de conjuntos de filas de Transact-SQL para recuperar los resultados como datos estructurados.  
   
-##  <a name="whatcanido"></a> ¿Qué puedo hacer con la búsqueda semántica?  
+##  <a name="whatcanido"></a>¿Qué puedo hacer con la búsqueda semántica?  
  La búsqueda semántica se basa en la características de búsqueda de texto completo existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero habilita nuevos escenarios que van más allá de las búsquedas sintácticas de palabras clave. Mientras que la búsqueda de texto completo permite consultar las *palabras* de un documento, la búsqueda semántica permite consultar el *significado* del documento. Las soluciones que ahora son posibles incluyen la extracción automática de etiquetas, la detección de contenido relacionado y la navegación jerárquica en contenido similar. Por ejemplo, puede consultar el índice de frases clave para compilar la taxonomía de una organización o un corpus de documentos. O bien, puede consultar el índice de similitud de documentos para identificar currículos que coincidan con la descripción de un trabajo.  
   
  En los ejemplos siguientes se demuestran las capacidades de la búsqueda semántica.  
   
-###  <a name="find1"></a> Buscar las frases clave en un documento  
+###  <a name="find1"></a>Buscar las frases clave de un documento  
  La consulta siguiente obtiene las frases clave que se identificaron en el documento de ejemplo. Muestra los resultados en orden descendente por la puntuación que clasifica la importancia estadística de cada frase clave. Esta consulta llama a la función [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql).  
   
 ```sql  
@@ -50,7 +50,7 @@ SELECT @Title AS Title, keyphrase, score
   
   
   
-###  <a name="find2"></a> Buscar documentos similares o relacionados  
+###  <a name="find2"></a>Buscar documentos similares o relacionados  
  La consulta siguiente obtiene los documentos que se identificaron como similares al documento de ejemplo o relacionados con este. Muestra los resultados en orden descendente por la puntuación que clasifica la similitud de los 2 documentos. Esta consulta llama a la función [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql).  
   
 ```vb  
@@ -70,7 +70,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
   
   
-###  <a name="find3"></a> Buscar las frases clave que hacen los documentos similares o relacionados  
+###  <a name="find3"></a>Buscar las frases clave que hacen que los documentos sean similares o relacionados  
  La consulta siguiente obtiene las frases clave que hacen a los 2 documentos de ejemplo similares o relacionados entre sí. Muestra los resultados en orden descendente por la puntuación que clasifica el peso de cada frase clave. Esta consulta llama a la función [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  
   
 ```sql  
@@ -89,7 +89,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
   
   
   
-##  <a name="store"></a> Almacenar documentos en SQL Server  
+##  <a name="store"></a>Almacenar documentos en SQL Server  
  Antes de poder indizar documentos con búsqueda semántica, tiene que almacenar los documentos en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  La característica FileTable de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , convierte los archivos y documentos no estructurados en objetos de primera clase de la base de datos relacional. Como resultado, los desarrolladores de bases de datos pueden manipular documentos junto con datos estructurados en operaciones basadas en conjuntos de Transact-SQL.  
@@ -108,7 +108,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [Buscar frases clave en documentos con la búsqueda semántica](find-key-phrases-in-documents-with-semantic-search.md)  
  Describe cómo buscar las frases clave en documentos o columnas de texto configurados para la indización semántica estadística.  
   
- [buscar documentos similares y relacionados con la búsqueda semántica](find-similar-and-related-documents-with-semantic-search.md)  
+ [Buscar documentos similares y relacionados con la búsqueda semántica](find-similar-and-related-documents-with-semantic-search.md)  
  Describe cómo buscar documentos o valores de texto similares e información acerca de su similitud o relación en columnas configuradas para la indización semántica estadística.  
   
  [Administrar y supervisar la búsqueda semántica](manage-and-monitor-semantic-search.md)  

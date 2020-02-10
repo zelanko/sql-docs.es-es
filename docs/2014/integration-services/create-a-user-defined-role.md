@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0277b936ddd4884f8a6b9b47b9184766dac9954b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060240"
 ---
 # <a name="create-a-user-defined-role"></a>Crear un rol definido por el usuario
@@ -41,6 +41,6 @@ ms.locfileid: "66060240"
   
 10. Opcionalmente, haga clic en **Propiedades extendidas** y configure las propiedades extendidas.  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
   

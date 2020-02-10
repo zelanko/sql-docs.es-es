@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f78f4bdf08b9a5caf9b2654289bf181080efff02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871519"
 ---
 # <a name="modified-features-contained-database"></a>Características modificadas (base de datos contenida)
@@ -45,13 +45,13 @@ ms.locfileid: "62871519"
  Las tablas temporales no pueden hacer referencia a tipos definidos por el usuario, colecciones de esquemas XML ni funciones definidas por el usuario.  
   
 ## <a name="collation"></a>Intercalación  
- En el modelo de base de datos dependiente, hay tres tipos distintos de intercalación: Intercalación de base de datos, intercalación de la instancia e intercalación de tempdb. Las bases de datos contenidas solo usan dos intercalaciones, la intercalación de base de datos y la nueva intercalación de catálogo. Vea [Contained Database Collations](contained-database-collations.md) para obtener más información sobre la intercalación de base de datos contenida.  
+ En el modelo de base de datos dependiente, hay tres tipos distintos de intercalación: intercalación de base de datos, intercalación de instancia e intercalación de tempdb. Las bases de datos contenidas solo usan dos intercalaciones, la intercalación de base de datos y la nueva intercalación de catálogo. Vea [Contained Database Collations](contained-database-collations.md) para obtener más información sobre la intercalación de base de datos contenida.  
   
 ## <a name="user-options"></a>Opciones de usuario  
  Al habilitar bases de datos independientes, la opción [user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) se debe establecer en 0 para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
- [Contained Database Collations](contained-database-collations.md)   
- [Contained Databases](contained-databases.md)  
+## <a name="see-also"></a>Consulte también  
+ [Intercalaciones de bases de datos independientes](contained-database-collations.md)   
+ [Bases de datos independientes](contained-databases.md)  
   
   

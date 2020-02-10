@@ -29,10 +29,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc37fbade038b39d6d05cb5b51ecc3e8ba405e2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871578"
 ---
 # <a name="file-states"></a>Estados de los archivos
@@ -46,9 +46,9 @@ ms.locfileid: "62871578"
 |State|Definición|  
 |-----------|----------------|  
 |ONLINE|El archivo está disponible para todas las operaciones. Los archivos del grupo de archivos principal siempre están en línea si la base de datos lo está. Si un archivo del grupo de archivos principal no está en línea, la base de datos no está en línea y los estados de los archivos secundarios no están definidos.|  
-|OFFLINE|El archivo no está disponible para su acceso y puede no estar presente en el disco. Los archivos pasan a estar sin conexión por una acción explícita del usuario y permanecen sin conexión hasta que se produce una acción adicional del usuario.<br /><br /> **\*\* Precaución \*\*** Un archivo solo debe establecerse como sin conexión cuando está dañado pero se puede restaurar. Un archivo que está sin conexión solo se puede poner en línea restaurándolo de la copia de seguridad. Para obtener más información sobre cómo restaurar un único archivo, vea [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).|  
+|OFFLINE|El archivo no está disponible para su acceso y puede no estar presente en el disco. Los archivos pasan a estar sin conexión por una acción explícita del usuario y permanecen sin conexión hasta que se produce una acción adicional del usuario.<br /><br /> ** \* PRECAUCIÓN \* \* ** Un archivo solo debe establecerse sin conexión cuando el archivo está dañado, pero se puede restaurar. Un archivo que está sin conexión solo se puede poner en línea restaurándolo de la copia de seguridad. Para obtener más información sobre cómo restaurar un único archivo, vea [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).|  
 |RESTORING|Se está restaurando el archivo. Los archivos entran en el estado de restauración a causa de un comando de restauración que afecta a todo el archivo y permanecen en ese estado hasta que se completa la restauración y se recupera el archivo.|  
-|RECOVERY PENDING|Se ha pospuesto la recuperación del archivo. Un archivo entra en este estado automáticamente a causa de un proceso de restauración por etapas en el que el archivo no se restaura ni recupera. Se necesita una acción adicional por parte del usuario para resolver el error y permitir que se complete el proceso de recuperación. Para obtener más información, vea [Restauraciones por etapas &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).|  
+|RECOVERY PENDING|Se ha pospuesto la recuperación del archivo. Un archivo entra en este estado automáticamente a causa de un proceso de restauración por etapas en el que el archivo no se restaura ni recupera. Se necesita una acción adicional por parte del usuario para resolver el error y permitir que se complete el proceso de recuperación. Para obtener más información, consulte [restauraciones por etapas &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).|  
 |SUSPECT|La recuperación del archivo no ha sido correcta durante un proceso de restauración en línea. Si el archivo está en el grupo de archivos principal, la base de datos también se marca como sospechosa. De lo contrario, solo es sospechoso el archivo y la base de datos sigue estando en línea.<br /><br /> El archivo permanecerá en el estado sospechoso hasta que esté disponible mediante uno de los siguientes métodos:<br /><br /> Restauración y recuperación<br /><br /> DBCC CHECKDB con REPAIR_ALLOW_DATA_LOSS|  
 |DEFUNCT|El archivo se quitó cuando no estaba en línea. Todos los archivos de un grupo de archivos pasan a estar inactivos cuando se quita un grupo de archivos sin conexión.|  
   

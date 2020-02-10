@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059647"
 ---
 # <a name="date-and-time-formats"></a>Formatos de fecha y hora
@@ -36,7 +36,7 @@ ms.locfileid: "66059647"
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> YYYY-MM-DD|Los formatos básico y extendido para un año de cuatro dígitos, un mes de dos dígitos y un día de dos dígitos. En el formato extendido, las partes de la fecha se encuentran separadas por guiones (-).|  
     |YYYY-MM|Formatos básico y extendido de precisión reducida para un año de cuatro dígitos y un mes de dos dígitos. En el formato extendido, las partes de la fecha se encuentran separadas por guiones (-).|  
-    |YYYY|El formato de precisión reducida es un año de cuatro dígitos.|  
+    |AAAA|El formato de precisión reducida es un año de cuatro dígitos.|  
   
  El análisis rápido no admite los siguientes formatos para datos de fecha:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66059647"
 |Segundos|Agregar 00.|  
 |Minutos|Agregar 00:00.|  
 |Hour|Agregar 00:00:00.|  
-|Day|Agregar 01 para el día del mes.|  
+|Día|Agregar 01 para el día del mes.|  
 |Month|Agregar 01 para el mes del año.|  
   
  Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  

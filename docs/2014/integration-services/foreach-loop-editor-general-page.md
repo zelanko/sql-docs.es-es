@@ -1,5 +1,5 @@
 ---
-title: Editor de bucles foreach (página General) | Microsoft Docs
+title: Editor de bucles foreach (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058521"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Editor de bucles Foreach (página General)
@@ -25,7 +25,7 @@ ms.locfileid: "66058521"
  Para más información sobre el contenedor de bucles Foreach y cómo configurarlo, vea [Contenedor de bucles Foreach](control-flow/foreach-loop-container.md) y [Configurar un contenedor de bucles Foreach](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Proporcione un nombre único para el contenedor de bucles Foreach. Este nombre se utiliza como etiqueta en el icono de tarea y en los registros.  
   
 > [!NOTE]  
@@ -34,9 +34,9 @@ ms.locfileid: "66058521"
  **Descripción**  
  Escriba una descripción del contenedor de bucles Foreach.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de bucles foreach &#40;página de la colección&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
+ [Página colección de &#40;del editor de bucles foreach&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Editor de bucles foreach &#40;página asignaciones de variables&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [Página Expresiones](expressions/expressions-page.md)   
  [Contenedor de bucles Para cada uno](control-flow/foreach-loop-container.md)   

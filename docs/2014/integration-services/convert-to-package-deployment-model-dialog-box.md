@@ -1,5 +1,5 @@
 ---
-title: Convertir en el cuadro de diálogo de modelo de implementación de paquete | Microsoft Docs
+title: Cuadro de diálogo convertir al modelo de implementación de paquetes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dfe1f6e5b752284b6bb0feec96f4f3dfd67cc4f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060349"
 ---
 # <a name="convert-to-package-deployment-model-dialog-box"></a>Convertir a modelo de implementación de paquetes, cuadro de diálogo
@@ -34,9 +34,9 @@ ms.locfileid: "66060349"
 > [!NOTE]  
 >  Para convertir un proyecto al modelo de implementación de paquetes, use el **Asistente para conversión de proyectos de Integration Services**. Para más información, consulte [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementación de proyectos y paquetes](packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [Implementación del paquete &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
- [Asistente para la conversión de proyectos de Integration Services](../../2014/integration-services/integration-services-project-conversion-wizard.md)  
+ [Implementación de paquetes &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)   
+ [Asistente para conversión de proyectos de Integration Services](../../2014/integration-services/integration-services-project-conversion-wizard.md)  
   
   

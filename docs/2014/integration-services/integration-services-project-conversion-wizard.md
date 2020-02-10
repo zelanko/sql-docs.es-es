@@ -1,5 +1,5 @@
 ---
-title: Asistente para la conversión de proyectos de Integration Services | Microsoft Docs
+title: Asistente para conversión de Integration Services proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057974"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Asistente para conversión de proyectos de Integration Services
@@ -33,11 +33,11 @@ ms.locfileid: "66057974"
   
 -   [Establecer las opciones de la página Seleccionar paquete](#selectPackages)  
   
--   [Establecer las opciones de la página Seleccionar destino](#destination)  
+-   [Establecer opciones en la página Seleccionar destino](#destination)  
   
--   [Establecer las opciones de la página Especificar propiedades del proyecto](#projectProperties)  
+-   [Establecer las opciones de la página especificar propiedades del proyecto](#projectProperties)  
   
--   [Establecer las opciones de la página Actualizar la tarea Ejecutar paquete](#executePackage)  
+-   [Establecer las opciones de la página actualizar la tarea ejecutar paquete](#executePackage)  
   
 -   [Establecer las opciones de la página Seleccionar configuraciones](#configurations)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66057974"
   
 -   [Establecer las opciones en Realizar conversión](#conversion)  
   
-##  <a name="open_dialog"></a> Abrir el Asistente para conversión de proyectos de Integration Services  
+##  <a name="open_dialog"></a>Abrir el Asistente para la conversión de Integration Services Project  
  Para abrir el asistente **Conversión de proyecto de Integration Services** , realice una de las acciones siguientes:  
   
 -   Abra el proyecto en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]y, en el Explorador de soluciones, haga clic con el botón derecho en el proyecto y seleccione **Convertir al modelo de implementación de proyectos**.  
@@ -58,7 +58,7 @@ ms.locfileid: "66057974"
   
  Dependiendo de si ejecuta el **Asistente para la conversión de proyectos de Integration Services** desde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o desde [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], el asistente realiza tareas de conversión diferentes. Para más información, consulte [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
-##  <a name="locate"></a> Establecer las opciones de la página Buscar paquetes  
+##  <a name="locate"></a>Establecer las opciones de la página Buscar paquetes  
   
 > [!NOTE]  
 >  La página **Buscar paquetes** solo está disponible cuando se ejecuta el asistente desde [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
@@ -81,13 +81,13 @@ ms.locfileid: "66057974"
  **Server**  
  Especifique el nombre del servidor o seleccione el servidor.  
   
- **Usar la autenticación de Windows**  
+ **Usar autenticación de Windows**  
  El modo de autenticación de Microsoft Windows permite que un usuario pueda conectarse a través de una cuenta de usuario de Windows. Si utiliza la autenticación de Windows, no será necesario que proporcione un nombre de usuario o una contraseña.  
   
- **Utilizar autenticación de SQL Server**  
+ **Usar autenticación SQL Server**  
  Cuando un usuario se conecta con un nombre de inicio de sesión y una contraseña especificados desde una conexión que no es de confianza, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autentica la conexión (para hacerlo, comprueba si se ha configurado una cuenta de inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y si la contraseña especificada coincide con la almacenada anteriormente). Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no tiene configurada una cuenta de inicio de sesión, la autenticación no se realizará correctamente y el usuario recibirá un mensaje de error.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Especifique un nombre de usuario cuando utilice la autenticación de SQL Server.  
   
  **Contraseña**  
@@ -96,14 +96,14 @@ ms.locfileid: "66057974"
  **Carpeta**  
  Escriba la ruta de acceso al paquete, o bien haga clic en **Examinar**para abrir la ubicación del paquete.  
   
-##  <a name="selectPackages"></a> Establecer las opciones de la página Seleccionar paquete  
+##  <a name="selectPackages"></a>Establecer opciones en la página seleccionar paquetes  
  **Nombre del paquete**  
  Muestra el archivo de paquete.  
   
  **Estado**  
  Indica si un paquete está listo para convertir el modelo de implementación de proyectos.  
   
- **de mensaje**  
+ **Mensaje**  
  Muestra un mensaje asociado al paquete.  
   
  **Contraseña**  
@@ -115,7 +115,7 @@ ms.locfileid: "66057974"
  **Actualizar**  
  Actualiza la lista de paquetes.  
   
-##  <a name="destination"></a> Establecer las opciones de la página Seleccionar destino  
+##  <a name="destination"></a>Establecer opciones en la página Seleccionar destino  
  En esta página, especifique el nombre y la ruta de un nuevo archivo de implementación del proyecto (.ispac) o seleccione un archivo existente.  
   
 > [!NOTE]  
@@ -133,7 +133,7 @@ ms.locfileid: "66057974"
  **Descripción del proyecto**  
  Escriba una descripción opcional para el proyecto.  
   
-##  <a name="projectProperties"></a> Establecer las opciones de la página Especificar propiedades del proyecto  
+##  <a name="projectProperties"></a>Establecer las opciones de la página especificar propiedades del proyecto  
   
 > [!NOTE]  
 >  La página **Especificar las propiedades del proyecto** solo está disponible cuando se ejecuta el asistente desde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
@@ -147,7 +147,7 @@ ms.locfileid: "66057974"
  **Descripción del proyecto**  
  Escriba una descripción del proyecto opcional.  
   
-##  <a name="executePackage"></a> Establecer las opciones de la página Actualizar la tarea Ejecutar paquete  
+##  <a name="executePackage"></a>Establecer las opciones de la página actualizar la tarea ejecutar paquete  
  Actualice las tareas Ejecutar paquete que se incluyen en los paquetes para usar una referencia basada en proyectos. Para obtener más información, vea [Execute Package Task Editor](../../2014/integration-services/execute-package-task-editor.md).  
   
  **Paquete primario**  
@@ -162,10 +162,10 @@ ms.locfileid: "66057974"
  **Asignar referencia**  
  Seleccione un paquete secundario que esté almacenado en el proyecto.  
   
-##  <a name="configurations"></a> Establecer las opciones de la página Seleccionar configuraciones  
+##  <a name="configurations"></a>Establecer las opciones de la página seleccionar configuraciones  
  Seleccione las configuraciones del paquete que desea reemplazar por parámetros.  
   
- **Paquete**  
+ **Package**  
  Muestra el archivo de paquete.  
   
  **Tipo**  
@@ -188,20 +188,20 @@ ms.locfileid: "66057974"
   
  Si no selecciona esta opción, solo se quitan las configuraciones que haya elegido reemplazar por parámetros.  
   
-##  <a name="createParameters"></a> Establecer las opciones de la página Crear parámetros  
+##  <a name="createParameters"></a>Establecer las opciones de la página crear parámetros  
  Seleccione el nombre y el ámbito de parámetro para cada propiedad de configuración.  
   
- **Paquete**  
+ **Package**  
  Muestra el archivo de paquete.  
   
- **Nombre de parámetro**  
+ **Nombre del parámetro**  
  Muestra el nombre de parámetro.  
   
  **Ámbito**  
  Seleccione el ámbito del parámetro, un paquete o un proyecto.  
   
-##  <a name="configureParameters"></a> Establecer las opciones de la página Configurar parámetros  
- **Name**  
+##  <a name="configureParameters"></a>Establecer las opciones de la página Configurar parámetros  
+ **Nombre**  
  Muestra el nombre de parámetro.  
   
  **Ámbito**  
@@ -218,16 +218,16 @@ ms.locfileid: "66057974"
   
  El cuadro de diálogo **Establecer detalles de parámetros** también muestra el tipo de datos de parámetro y el origen del parámetro.  
   
-##  <a name="review"></a> Establecer las opciones en la página Revisar  
+##  <a name="review"></a>Establecer las opciones de la página revisar  
  Use la página **Revisar** para confirmar las opciones que ha seleccionado para la conversión del proyecto.  
   
- **Anterior**  
+ **Previo**  
  Haga clic aquí para cambiar una opción.  
   
- **Convertir**  
+ **Verso**  
  Haga clic en esta opción para convertir el proyecto al modelo de implementación de proyectos.  
   
-##  <a name="conversion"></a> Establecer las opciones en Realizar conversión  
+##  <a name="conversion"></a>Establecer las opciones en realizar conversión  
  La página Realizar conversión muestra el estado de la conversión del proyecto.  
   
  **Acción**  
@@ -241,7 +241,7 @@ ms.locfileid: "66057974"
  **Guardar informe**  
  Haga clic en esta opción para guardar un resumen de la conversión del proyecto en un archivo .xml.  
   
-## <a name="see-also"></a>Vea también  
- [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Implementación de paquetes en el servidor de Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

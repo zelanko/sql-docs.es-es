@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d72ece429ae04e8cb6ee3af3acd872fa751d3a57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835457"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Tipos de datos de la instancia CDC de Oracle
@@ -25,7 +25,7 @@ ms.locfileid: "62835457"
   
 |Tipo de datos de base de datos de Oracle|Tipo de datos de SQL Server|  
 |-------------------------------|--------------------------|  
-|BINARY_FLOAT|REAL|  
+|BINARY_FLOAT|real|  
 |BINARY_DOUBLE|FLOAT|  
 |CHAR|NVARCHAR|  
 |DATE|DATETIME|  
@@ -36,8 +36,8 @@ ms.locfileid: "62835457"
 |NUMBER|FLOAT|  
 |NAVARCHAR2|NVARCHAR|  
 |RAW|VARBINARY|  
-|REAL|FLOAT|  
-|TIMESTAMP|DATETIME2|  
+|real|FLOAT|  
+|timestamp|DATETIME2|  
 |TIMESTAMP WITH TIME ZONE|VARCHAR (37)|  
 |TIMESTAMP WITH LOCAL TIME ZONE|VARCHAR (37)|  
 |VARCHAR2|VARCHAR|  
@@ -72,7 +72,7 @@ ms.locfileid: "62835457"
   
 -   VARRAY  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diseñador de captura de datos modificados para Oracle de Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
  [La instancia CDC de Oracle](the-oracle-cdc-instance.md)  
   

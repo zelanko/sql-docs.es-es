@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de nivel de protección de proyecto y de paquete | Microsoft Docs
+title: Nivel de protección de paquetes y proyectos (cuadro de diálogo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056946"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Nivel de protección de paquetes y del proyecto, cuadro de diálogo
@@ -28,7 +28,7 @@ ms.locfileid: "66056946"
  Para comprender los requisitos y las opciones de seguridad de paquetes, quizá le resulte útil ver [Control de acceso a la información confidencial en paquetes](security/access-control-for-sensitive-data-in-packages.md) e [Información general sobre seguridad &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
 ## <a name="options"></a>Opciones  
- **Package protection level**  
+ **Nivel de protección de paquetes**  
  Seleccione un nivel de protección de la lista.  
   
  **Contraseña**  
@@ -37,7 +37,7 @@ ms.locfileid: "66056946"
  **Vuelva a escribir la contraseña**  
  Escriba la contraseña nuevamente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

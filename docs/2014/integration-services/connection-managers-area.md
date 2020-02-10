@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44245b7e64a1ccb16180fd0ceaa0f1dde0937133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060402"
 ---
 # <a name="connection-managers-area"></a>Área de administradores de conexión
@@ -26,8 +26,8 @@ ms.locfileid: "66060402"
   
  Haga clic con el botón secundario en esta área y luego, en el menú, haga clic en la opción de la tarea que desee realizar.  
   
-## <a name="see-also"></a>Vea también  
- [Conexiones de Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;SSIS&#41; conexiones](connection-manager/integration-services-ssis-connections.md)   
  [Diseñador SSIS](ssis-designer.md)  
   
   

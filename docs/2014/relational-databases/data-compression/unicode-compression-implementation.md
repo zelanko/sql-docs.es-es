@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872983"
 ---
 # <a name="unicode-compression-implementation"></a>Implementación de la compresión Unicode
@@ -48,14 +48,14 @@ ms.locfileid: "62872983"
   
 |Configuración regional|Porcentaje de compresión|  
 |------------|-------------------------|  
-|Inglés|50%|  
-|German|50%|  
-|Hindi|50%|  
-|Turco|48 %|  
+|Inglés|50 %|  
+|Alemán|50 %|  
+|Hindi|50 %|  
+|Turco|48%|  
 |Vietnamita|39 %|  
-|Japonés|15 %|  
+|Japonés|15 %|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Comprimir datos](data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql)   
  [Implementación de la compresión de página](page-compression-implementation.md)   

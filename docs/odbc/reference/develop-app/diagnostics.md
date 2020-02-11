@@ -1,5 +1,5 @@
 ---
-title: Diagnóstico | Microsoft Docs
+title: Diagnósticos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd6640c0dc06d9e957176717ef26aa3e444ffa9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022521"
 ---
 # <a name="diagnostics"></a>Diagnóstico
-Funciones de ODBC devuelven información de diagnóstico de dos maneras. El código de retorno indica el éxito o error de la función, general, mientras que los registros de diagnóstico proporcionan información detallada acerca de la función. Incluso si la función se realiza correctamente, se devuelve al menos un registro de diagnóstico: el registro de encabezado.  
+Las funciones de ODBC devuelven información de diagnóstico de dos maneras. El código de retorno indica el éxito o error general de la función, mientras que los registros de diagnóstico proporcionan información detallada sobre la función. Al menos un registro de diagnóstico: se devuelve el registro de encabezado, incluso si la función se ejecuta correctamente.  
   
- Información de diagnóstico se usa en tiempo de desarrollo para detectar errores de programación como identificadores no válidos y errores de sintaxis en las instrucciones SQL codificadas de forma rígida. En tiempo de ejecución se usa para detectar errores de tiempo de ejecución y las advertencias como errores de sintaxis, las infracciones de acceso y el truncamiento de datos en instrucciones SQL escritas por el usuario.  
+ La información de diagnóstico se usa durante el desarrollo para detectar errores de programación, como identificadores no válidos y errores de sintaxis en instrucciones SQL codificadas de forma rígida. Se utiliza en tiempo de ejecución para detectar errores y advertencias en tiempo de ejecución, como el truncamiento de datos, las infracciones de acceso y los errores de sintaxis en instrucciones SQL escritas por el usuario.  
   
  Esta sección contiene los temas siguientes.  
   

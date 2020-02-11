@@ -1,5 +1,5 @@
 ---
-title: Finalización de la preparación del caso de prueba (SybaseToSQL) | Microsoft Docs
+title: Finalizando preparación del caso de prueba (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,53 +12,53 @@ ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c3085d17804866015a78e93556dd5373d3a1b8cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029138"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>Finalización de la preparación del caso de prueba (SybaseToSQL)
-Página final del asistente muestra la descripción del caso de prueba y la información acerca de los objetos que participan en la prueba. Además, en esta página se pueden establecer la prueba de las opciones de ejecución.  
+La página final del asistente muestra la descripción del caso de prueba e información sobre los objetos implicados en la prueba. Además, en esta página puede establecer las opciones de ejecución de pruebas.  
   
-El **información del caso de prueba** sección muestra el nombre del caso de prueba y la descripción.  
+La sección **información del caso de prueba** muestra el nombre y la descripción del caso de prueba.  
   
-El **objetos de prueba** sección contiene la lista de objetos probados agrupados por tipo de objeto con nombre.  
+La sección **objetos de prueba** contiene la lista con nombre de objetos probados agrupados por tipo de objeto.  
   
-El **objetos afectados se analicen** sección muestra la lista de objetos que se deben comparar los cambios de datos después de la ejecución de objetos probados con nombre.  
+En la sección **objetos afectados que se van a analizar** se muestra la lista con nombre de objetos que se deben comparar los cambios de datos después de la ejecución de objetos probados.  
   
-## <a name="test-case-settings"></a>Configuración de caso de prueba  
-En el **configuración de caso de prueba** sección puede establecer la siguiente ejecución de las opciones de prueba:  
+## <a name="test-case-settings"></a>Configuración del caso de prueba  
+En la sección **configuración de casos de prueba** puede establecer las siguientes opciones de prueba de ejecución:  
   
-### <a name="stop-test-execution-after-first-failure"></a>Detener la ejecución de pruebas tras el primer error  
-Especifica que la prueba se interrumpe si se produce un error durante la ejecución de pruebas.  
+### <a name="stop-test-execution-after-first-failure"></a>Detener la ejecución de pruebas después del primer error  
+Especifica que se interrumpa la prueba si se produce un error durante la ejecución de la prueba.  
   
--   Si elige **Sí**, interrumpir la ejecución de pruebas si se produce un error.  
+-   Si elige **sí**, la ejecución de prueba se interrumpe si se produce un error.  
   
--   Si elige **No**, continúa la ejecución de pruebas después de un error.  
+-   Si elige **no**, la ejecución de la prueba continúa después de un error.  
   
-### <a name="perform-data-rollback"></a>Realizar reversión de datos  
-Habilitar la reversión automática de los datos después de la ejecución de pruebas.  
+### <a name="perform-data-rollback"></a>Realizar la reversión de los datos  
+Habilitar la reversión automática de datos después de la ejecución de pruebas.  
   
--   Si elige **Sí**, se perderán los cambios de datos después de la ejecución de pruebas.  
+-   Si elige **sí**, los cambios de datos se perderán después de la ejecución de la prueba.  
   
--   Si elige **No**, todos los cambios de datos se guardará la ejecución de prueba.  
+-   Si elige **no**, se guardarán todos los datos de ejecución de pruebas.  
   
-### <a name="auxiliary-tables-saving-mode"></a>Modo de ahorro de tablas auxiliares  
-Define el modo de almacenamiento para las tablas auxiliares creadas durante la ejecución de pruebas. Vea la descripción de las tablas auxiliares en el [ejecutando casos de prueba &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) tema.  
+### <a name="auxiliary-tables-saving-mode"></a>Modo de guardado de tablas auxiliares  
+Define el modo de guardado de las tablas auxiliares creadas durante la ejecución de la prueba. Vea la descripción de las tablas auxiliares en los [casos de prueba en ejecución &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md) tema.  
   
--   Si selecciona **guardar siempre**, siempre se almacenarán datos de la tabla auxiliar para su uso posterior.  
+-   Si selecciona **Guardar siempre**, los datos de la tabla auxiliar siempre se almacenarán para su uso posterior.  
   
--   Si selecciona **guardar si la comparación de la tabla no se pudo**, se almacenarán los datos de la tabla auxiliar solo si se produce un error.  
+-   Si selecciona **Guardar si se**produce un error en la comparación de tablas, los datos de la tabla auxiliar se almacenarán solo si se produce un error.  
   
--   Si selecciona **eliminar siempre**, tablas auxiliares siempre se elimina después de la ejecución de pruebas.  
+-   Si selecciona **eliminar siempre**, las tablas auxiliares siempre se eliminarán después de la ejecución de la prueba.  
   
--   Si selecciona **usuario preguntar si la comparación de la tabla no se pudo**, el usuario puede seleccionar la acción es necesaria si se produce un error.  
+-   Si selecciona **preguntar al usuario si se**produce un error en la comparación de tablas, el usuario puede seleccionar la acción necesaria si se produce un error.  
   
-Haga clic en el **finalizar** botón para guardar el caso de prueba preparados en [utilizando repositorios de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
+Haga clic en el botón **Finalizar** para guardar el caso de prueba preparado en [usando repositorios de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Uso de repositorios de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
 [Ejecutar casos de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Pruebas con objetos de base de datos migrados &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Probar objetos de base de datos migrados &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999939"
 ---
 # <a name="object-explorer-details-pane"></a>Panel de detalles del Explorador de objetos
@@ -42,11 +42,11 @@ ms.locfileid: "62999939"
 |----------|------------|  
 |**Atrás**|Se desplaza a los elementos anteriores mostrados en Detalles del Explorador de objetos. Vuelve a ejecutar una búsqueda cuando la presentación previa es el resultado de una operación de búsqueda.|  
 |**Adelante**|Se desplaza a la siguiente pantalla después de seleccionar una operación **Atrás** .|  
-|**Subir**|Se desplaza al objeto o carpeta principal.|  
+|**Up** (Arriba)|Se desplaza al objeto o carpeta principal.|  
 |**Sincronizar**|Establece el foco del Explorador de objetos en el objeto seleccionado en Detalles del Explorador de objetos.|  
 |**Filter**|Cuando está disponible, muestra un subconjunto de objetos que se puede configurar.|  
 |**Actualizar**|Actualiza la presentación en Detalles del Explorador de objetos.|  
-|**Buscar**|Proporciona un área donde escribir un término de búsqueda para algunos objetos de la base de datos.|  
+|**Búsqueda**|Proporciona un área donde escribir un término de búsqueda para algunos objetos de la base de datos.|  
   
 ### <a name="column-header-selections"></a>Selecciones de encabezados de columnas  
  Las columnas de Detalles del Explorador de objetos se pueden seleccionar. Puede hacer clic con el botón secundario en cualquier encabezado de columna y buscar los elementos que desea mostrar. Sus selecciones se mantendrán en los distintos objetos por los que navegue. Las selecciones de cada usuario se mantienen al salir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y reiniciarlo.  
@@ -54,10 +54,10 @@ ms.locfileid: "62999939"
 > [!CAUTION]  
 >  Si se muestran todas las columnas de algunos tipos de objetos, como las bases de datos, se puede reducir ligeramente la velocidad de representación de conjuntos de objetos grandes.  
   
-### <a name="sorting"></a>Ordenar  
+### <a name="sorting"></a>Ordenación  
  Al hacer clic una vez en el encabezado de una columna, se ordenará por esa columna. Si vuelve a hacer clic en la misma columna, se clasifica en orden inverso por esa columna. Las selecciones de ordenación se mantienen para cada usuario en los objetos y las carpetas, así como al reiniciar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
-### <a name="filtering"></a>Filtrar  
+### <a name="filtering"></a>Filtros  
  Algunas listas de objetos que se muestran en Detalles del Explorador de objetos se pueden filtrar mediante el icono **Filtro** de la barra de herramientas de Detalles del Explorador de objetos. El icono se habilitará cuando sea posible la operación de filtrado.  
   
 ### <a name="details-pane"></a>Panel de detalles  
@@ -87,7 +87,7 @@ ms.locfileid: "62999939"
 ## <a name="sql-server-object-search"></a>Buscar objetos de SQL Server  
  Caracteres comodín  
   
--   Se admiten los caracteres comodín estándar. Por ejemplo, si se busca **dm_os%counters** , se devuelve tanto dm_os_memory_cache_counters como dm_os_performance_counters. Para obtener más información, consulte [texto de búsqueda con caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Se admiten los caracteres comodín estándar. Por ejemplo, si se busca **dm_os%counters** , se devuelve tanto dm_os_memory_cache_counters como dm_os_performance_counters. Para obtener más información, vea [buscar texto con caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
  Ámbito de búsqueda  
   
@@ -97,7 +97,7 @@ ms.locfileid: "62999939"
   
 -   La realización de búsquedas en conjuntos de objetos grandes puede tardar mucho tiempo y reducir el rendimiento del servidor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de objetos](object-explorer.md)  
   
   

@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b671200dce3b5be1e01e40b09ff285563c4d4f6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62985770"
 ---
 # <a name="reporting-services-extensions"></a>Extensiones de Reporting Services
-  La arquitectura modular de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ha diseñado para permitir ampliaciones. Hay una API de código administrado que permite desarrollar, instalar y administrar con facilidad las extensiones que usan numerosos componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Puede crear ensamblados privados o compartidos mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y agregar una nuevas funciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a fin de satisfacer sus necesidades empresariales en constante evolución.  
+  La arquitectura modular de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ha diseñado para permitir ampliaciones. Hay una API de código administrado que permite desarrollar, instalar y administrar con facilidad las extensiones que usan numerosos componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Puede crear ensamblados privados o compartidos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] mediante y agregar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] una nueva funcionalidad para satisfacer sus necesidades empresariales en constante evolución.  
   
  La arquitectura de extensibilidad única de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permite a los programadores extender características concretas del producto y sus componentes. Actualmente, hay numerosas funciones que permiten extender las capacidades de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. La API de procesamiento de datos incluye construcciones conocidas del proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y convenciones con las que los programadores pueden integrar el procesamiento de datos adicional en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Estas extensiones de procesamiento de datos agregan funcionalidad al servidor de informes y al Diseñador de informes, lo que habilita la integración sin problemas de los datos personalizados en los informes.  
   
@@ -36,16 +36,16 @@ ms.locfileid: "62985770"
  [Consideraciones de seguridad para las extensiones](security-considerations-for-extensions.md)  
  Describe problemas de seguridad relacionados con el desarrollo e implementación de extensiones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Implementación de una extensión de procesamiento de datos](data-processing/implementing-a-data-processing-extension.md)  
+ [Implementar una extensión de procesamiento de datos](data-processing/implementing-a-data-processing-extension.md)  
  Describe los requisitos y los pasos para implementar una extensión de procesamiento de datos para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Ejecución de una extensión de entrega](delivery-extension/implementing-a-delivery-extension.md)  
+ [Implementar una extensión de entrega](delivery-extension/implementing-a-delivery-extension.md)  
  Describe los requisitos y los pasos para implementar una extensión de entrega para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Ejecución de una extensión de representación](rendering-extension/implementing-a-rendering-extension.md)  
+ [Implementar una extensión de representación](rendering-extension/implementing-a-rendering-extension.md)  
  Contiene una introducción para desarrollar extensiones de representación.  
   
- [Implementación de una extensión de seguridad](security-extension/implementing-a-security-extension.md)  
+ [Implementar una extensión de seguridad](security-extension/implementing-a-security-extension.md)  
  Describe los requisitos y los pasos para implementar una extensión de seguridad de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  [Biblioteca de extensiones de Reporting Services](reporting-services-extension-library.md)  

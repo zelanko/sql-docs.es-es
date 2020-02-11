@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa5f333b050d817d68c8769d7e53a9455581a3ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768661"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Desarrollar objetos personalizados para Integration Services
-  Cuando los objetos de flujo de datos y flujo de control que se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no cumplen completamente los requisitos, puede desarrollar muchos tipos de objetos personalizados, entre los que se incluyen:  
+  Cuando el flujo de control y los objetos de flujo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se incluyen con no cumplen completamente sus requisitos, puede desarrollar muchos tipos de objetos personalizados por su cuenta, entre los que se incluyen:  
   
 -   **Tareas personalizadas**.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62768661"
   
  El modelo de objetos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] facilita este desarrollo personalizado con clases base que proporcionan un marco coherente y confiable para su implementación personalizada.  
   
- Si no tiene que reutilizar la funcionalidad personalizada por varios paquetes, la tarea Script y el componente de script le proporcionan toda la eficacia de un lenguaje de programación administrado con significativamente menos código de infraestructura para escribir. Para obtener más información, consulte [Comparing Scripting Solutions and Custom Objects](../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md) (Comparar soluciones de scripting y objetos personalizados).  
+ Si no tiene que reutilizar la funcionalidad personalizada por varios paquetes, la tarea Script y el componente de script le proporcionan toda la eficacia de un lenguaje de programación administrado con significativamente menos código de infraestructura para escribir. Para obtener más información, consulte [Comparing Scripting Solutions and Custom Objects (Comparar soluciones de scripting y objetos personalizados)](../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md).  
   
 ## <a name="steps-in-developing-a-custom-object-for-integration-services"></a>Pasos para desarrollar un objeto personalizado para Integration Services  
  Cuando se desarrollar un objeto personalizado para su uso en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], se desarrolla una biblioteca de clases (una DLL) que se cargará en tiempo de diseño y tiempo de ejecución por el Diseñador SSIS y por el tiempo de ejecución de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Los métodos más importantes que debe implementar no son métodos a los que llama desde su propio código, sino métodos que el tiempo de ejecución llama en los momentos adecuados para inicializar y validar su componente e invocar su funcionalidad.  
@@ -59,7 +59,7 @@ ms.locfileid: "62768661"
 ## <a name="base-classes-attributes-and-important-methods"></a>Clases base, atributos y métodos importantes  
  En esta tabla se proporciona una referencia sencilla de los elementos más importantes en el modelo de objetos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para cada tipo de objeto personalizado que puede desarrollar.  
   
-|Objeto personalizado|Clase base|Attribute|Métodos importantes|  
+|Objeto personalizado|Clase base|Atributo|Métodos importantes|  
 |-------------------|----------------|---------------|-----------------------|  
 |Tarea|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |Administrador de conexiones|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
@@ -110,9 +110,9 @@ ms.locfileid: "62768661"
   
 -   Entrada de Blog, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references (El proceso de compilación de la solución de Visual Studio muestra una advertencia acerca de la dependencia indirecta del ensamblado de .NET Framework debido a referencias SSIS)](https://go.microsoft.com/fwlink/?LinkId=215662) en blogs.msdn.com.  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conservar objetos personalizados](persisting-custom-objects.md)   
  [Generar, implementar y depurar objetos personalizados](building-deploying-and-debugging-custom-objects.md)  
   

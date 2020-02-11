@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126248"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Usar el acceso URL en una aplicación para Windows
@@ -31,7 +31,7 @@ ms.locfileid: "63126248"
 -   Usar el control <xref:System.Windows.Forms.WebBrowser> en un formulario Windows Forms para mostrar un informe.  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>Iniciar Internet Explorer desde un formulario Windows Forms  
- Puede utilizar la clase <xref:System.Diagnostics.Process> para tener acceso a un proceso que se está ejecutando en un equipo. La clase <xref:System.Diagnostics.Process> es una construcción de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que sirve de utilidad para iniciar, detener, controlar y supervisar las aplicaciones. Para ver un informe concreto en la base de datos del servidor de informes, puede iniciar el proceso **IExplore** y pasarle la dirección URL al informe. El ejemplo de código siguiente se puede utilizar para iniciar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer y una dirección URL de un informe concreto cuando el usuario hace clic en un botón de un formulario Windows Forms.  
+ Puede utilizar la clase <xref:System.Diagnostics.Process> para tener acceso a un proceso que se está ejecutando en un equipo. La <xref:System.Diagnostics.Process> clase es una construcción [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] útil para iniciar, detener, controlar y supervisar aplicaciones. Para ver un informe concreto en la base de datos del servidor de informes, puede iniciar el proceso **IExplore** y pasarle la dirección URL al informe. El ejemplo de código siguiente se puede utilizar para iniciar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer y una dirección URL de un informe concreto cuando el usuario hace clic en un botón de un formulario Windows Forms.  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -87,7 +87,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### <a name="to-add-the-webbrowser-control-to-your-windows-form"></a>Para agregar el control WebBrowser al formulario Windows Forms  
   
-1.  Cree una aplicación para Windows en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Cree una nueva aplicación Windows en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
 2.  Busque el control <xref:System.Windows.Forms.WebBrowser> en el cuadro de diálogo **Cuadro de herramientas**.  
   
@@ -97,7 +97,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
      El control <xref:System.Windows.Forms.WebBrowser> denominado webBrowser1 se agrega al formulario  
   
- Al llamar al método del control <xref:System.Windows.Forms.WebBrowser> **Navigate**, dirige el control a una dirección URL. Puede asignar una cadena de acceso URL concreta al control <xref:System.Windows.Forms.WebBrowser> en tiempo de ejecución como se muestra en el ejemplo siguiente.  
+ Al llamar al método del control <xref:System.Windows.Forms.WebBrowser>**Navigate**, dirige el control a una dirección URL. Puede asignar una cadena de acceso URL concreta al control <xref:System.Windows.Forms.WebBrowser> en tiempo de ejecución como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Dim url As String = "http://localhost/reportserver?/" & _  
@@ -113,11 +113,11 @@ string url = "http://localhost/reportserver?/" +
 webBrowser1.Navigate(url);  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Integración de Reporting Services en las aplicaciones](../application-integration/integrating-reporting-services-into-applications.md)   
- [Integración de Reporting Services con el acceso URL](integrating-reporting-services-using-url-access.md)   
- [Integración de Reporting Services con SOAP](integrating-reporting-services-using-soap.md)   
- [Integración de Reporting Services con los controles ReportViewer](integrating-reporting-services-using-reportviewer-controls.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integración de Reporting Services en aplicaciones](../application-integration/integrating-reporting-services-into-applications.md)   
+ [Integración de Reporting Services mediante el acceso URL](integrating-reporting-services-using-url-access.md)   
+ [Integración de Reporting Services mediante SOAP](integrating-reporting-services-using-soap.md)   
+ [Integrar Reporting Services mediante los controles ReportViewer](integrating-reporting-services-using-reportviewer-controls.md)   
  [Acceso URL &#40;SSRS&#41;](../url-access-ssrs.md)  
   
   

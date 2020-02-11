@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21e9b4b0f05b2728ac42bbba96a6227872ceaeec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015797"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Columnas de índice (Visual Database Tools, cuadro de diálogo)
@@ -24,14 +24,14 @@ ms.locfileid: "63015797"
   
 ## <a name="options"></a>Opciones  
  **Nombre de la columna**  
- Elija las columnas que participan en el índice. Seleccione  **\<None >** para quitar esa columna del índice...  
+ Elija las columnas que participan en el índice. Seleccione ** \<ninguno>** para quitar esa columna del índice.  
   
  **Criterio de ordenación**  
  Seleccione un criterio de ordenación para la columna especificada. Las opciones disponibles son **Ascendente** o **Descendente**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear índices clúster](../../relational-databases/indexes/create-clustered-indexes.md)   
  [Crear índices no clúster](../../relational-databases/indexes/create-nonclustered-indexes.md)   
- [Los índices y claves de cuadro de diálogo &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Cuadro de diálogo índices y claves &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

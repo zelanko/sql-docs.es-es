@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62931626"
 ---
 # <a name="choose-a-resolver"></a>Elegir un solucionador
@@ -34,15 +34,15 @@ ms.locfileid: "62931626"
   
 |Problema de resolución de conflictos|Recomendación|  
 |-------------------------------|--------------------|  
-|Diferentes categorías de usuarios necesitan diferentes valores de prioridad.|Utilice el solucionador predeterminado y cree suscripciones en el servidor con diferentes valores de prioridad.<br /><br /> O bien<br /><br /> Utilice un solucionador de artículos que reconozca una columna de valor de autoridad en el artículo para ayudar a solucionar el conflicto.|  
+|Diferentes categorías de usuarios necesitan diferentes valores de prioridad.|Utilice el solucionador predeterminado y cree suscripciones en el servidor con diferentes valores de prioridad.<br /><br /> -O bien-<br /><br /> Utilice un solucionador de artículos que reconozca una columna de valor de autoridad en el artículo para ayudar a solucionar el conflicto.|  
 |Se desea una solución del conflicto basada en la prioridad.|Utilice el solucionador predeterminado y cree suscripciones de cliente.|  
 |Es aceptable que varios usuarios cambien la misma fila de datos, siempre que no se hagan cambios conflictivos en la misma columna.|Utilice el solucionador predeterminado o un solucionador de artículos con el seguimiento por columnas habilitado.|  
 |Marcar como conflicto cualquier cambio múltiple en los valores de una fila.|Utilice el solucionador predeterminado o un solucionador de artículos con el seguimiento por filas habilitado.|  
 |Marcar como conflicto cualquier cambio múltiple en los valores de un registro lógico.|Utilice el solucionador predeterminado con seguimiento por registro lógico (la característica de registros lógicos no admite el uso de solucionadores personalizados ni controladores de lógica de negocios).|  
 |Los datos resultantes del conflicto deben ser diferentes de los datos originales en conflicto.|Utilice un solucionador de artículos que calcule nuevos valores.|  
   
-## <a name="see-also"></a>Vea también  
- [Detectar y solucionar conflictos en registros lógicos](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+## <a name="see-also"></a>Consulte también  
+ [Detecting and Resolving Conflicts in Logical Records](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Detección y resolución de conflictos de replicación de mezcla avanzada](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Volver a publicar datos](../republish-data.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Descendants (MDX) | Microsoft Docs
+title: Descendientes (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999988"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
@@ -48,20 +48,20 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Level_Expression*  
  Expresión MDX válida que devuelve un nivel.  
   
- *distancia*  
+ *Posición*  
  Expresión numérica válida que especifica la distancia desde el miembro especificado.  
   
  *Desc_Flag*  
  Expresión de cadena válida que especifica una marca de descripción que distingue entre posibles conjuntos de descendientes.  
   
-## <a name="remarks"></a>Comentarios  
- Si se especifica un nivel, el **descendientes** función devuelve un conjunto que contiene los descendientes del miembro especificado o los miembros del conjunto especificado, en un nivel especificado, modificado opcionalmente mediante una marca especificada en  *Desc_Flag*.  
+## <a name="remarks"></a>Observaciones  
+ Si se especifica un nivel, la función **Descendants** devuelve un conjunto que contiene los descendientes del miembro especificado o los miembros del conjunto especificado, en un nivel especificado, modificado opcionalmente por una marca especificada en *Desc_Flag*.  
   
- Si *distancia* se especifica, el **descendientes** función devuelve un conjunto que contiene los descendientes del miembro especificado o los miembros del conjunto especificado que son el número especificado de niveles de distancia de la jerarquía del miembro especificado, modificado opcionalmente mediante una marca especificada en *Desc_Flag*. Esta función se suele utilizar con el argumento Distance para tratar con jerarquías desiguales. Si la distancia especificada es cero (0), la función devuelve un conjunto que consta solamente del miembro especificado o el conjunto especificado.  
+ Si se especifica *Distance* , la función **Descendants** devuelve un conjunto que contiene los descendientes del miembro especificado o los miembros del conjunto especificado que son el número especificado de niveles en la jerarquía del miembro especificado, modificado opcionalmente mediante una marca especificada en *Desc_Flag*. Esta función se suele utilizar con el argumento Distance para tratar con jerarquías desiguales. Si la distancia especificada es cero (0), la función devuelve un conjunto que consta solamente del miembro especificado o el conjunto especificado.  
   
- Si se especifica una expresión de conjunto, la **descendientes** función se resuelve individualmente para cada miembro del conjunto y se vuelve a crear el conjunto. En otras palabras, la sintaxis usada para el **descendientes** función es funcionalmente equivalente a MDX [generar](../mdx/generate-mdx.md) función.  
+ Si se especifica una expresión de conjunto, la función **Descendants** se resuelve individualmente para cada miembro del conjunto y se vuelve a crear el conjunto. En otras palabras, la sintaxis que se usa para la función **Descendants** es funcionalmente equivalente a la función [Generate](../mdx/generate-mdx.md) de MDX.  
   
- Si no se especifica ningún nivel o distancia, el valor predeterminado del nivel utilizado por la función se determina mediante una llamada a la [nivel](../mdx/level-mdx.md) (función) (<\<miembro >>. Nivel) para el miembro especificado (si se especifica un miembro) o mediante una llamada a la **nivel** función para cada miembro del conjunto especificado (si se especifica un conjunto). Si no se especifican una expresión de nivel, una distancia o marcas, la función tiene el mismo efecto que el uso de la sintaxis siguiente:  
+ Si no se especifica ningún nivel o distancia, el valor predeterminado para el nivel utilizado por la función se determina mediante una [](../mdx/level-mdx.md) llamada a la función \<level (<miembro>>. Nivel) para el miembro especificado (si se especifica un miembro) o mediante una llamada a la función **LEVEL** para cada miembro del conjunto especificado (si se especifica un conjunto). Si no se especifican una expresión de nivel, una distancia o marcas, la función tiene el mismo efecto que el uso de la sintaxis siguiente:  
   
  `Descendants`  
   
@@ -89,7 +89,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  `)`  
   
- Mediante la modificación del valor de la marca de descripción, puede incluir o excluir descendientes en el nivel o distancia especificados, el elemento secundario anterior o posterior al nivel o distancia especificados (hasta el nodo hoja), así como los elementos secundarios hoja, independientemente del nivel o distancia especificados. La tabla siguiente describen las marcas permitidas en el *Desc_Flag* argumento.  
+ Mediante la modificación del valor de la marca de descripción, puede incluir o excluir descendientes en el nivel o distancia especificados, el elemento secundario anterior o posterior al nivel o distancia especificados (hasta el nodo hoja), así como los elementos secundarios hoja, independientemente del nivel o distancia especificados. En la tabla siguiente se describen las marcas permitidas en el argumento *Desc_Flag* .  
   
 |Marca|Descripción|  
 |----------|-----------------|  
@@ -123,7 +123,7 @@ SELECT Descendants
 FROM [Adventure Works]   
 ```  
   
- El ejemplo siguiente devuelve el promedio diario de la `Measures.[Gross Profit Margin]` medida calculada en los días de cada mes del año fiscal 2003, desde el **Adventure Works** cubo. El **descendientes** función devuelve un conjunto de días determinado en el miembro actual de la `[Date].[Fiscal]` jerarquía.  
+ En el ejemplo siguiente se devuelve el promedio diario `Measures.[Gross Profit Margin]` de la medida, calculado a lo largo de los días de cada mes del año fiscal 2003, del cubo **Adventure Works** . La función **Descendants** devuelve un conjunto de días determinado a partir del miembro actual de `[Date].[Fiscal]` la jerarquía.  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS Avg  
@@ -140,7 +140,7 @@ FROM [Adventure Works]
 WHERE ([Date].[Fiscal Year].&[2003])  
 ```  
   
- El ejemplo siguiente utiliza una expresión de nivel y devuelve Internet Sales Amount para cada State-Province de Australia, junto con el porcentaje del total de Internet Sales Amount para Australia para cada State-Province. Este ejemplo utiliza la función Item para extraer la primera (y única) tupla del conjunto devuelto por la **antecesores** función.  
+ El ejemplo siguiente utiliza una expresión de nivel y devuelve Internet Sales Amount para cada State-Province de Australia, junto con el porcentaje del total de Internet Sales Amount para Australia para cada State-Province. En este ejemplo se usa la función Item para extraer la primera tupla (y solo) del conjunto devuelto por la función **antecesores** .  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -161,7 +161,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

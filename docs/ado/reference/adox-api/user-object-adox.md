@@ -1,5 +1,5 @@
 ---
-title: Objeto User (ADOX) | Microsoft Docs
+title: Objeto user (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,37 +16,37 @@ ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf454e28e7a823eb643b5bbd92b0396fac15a028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964975"
 ---
 # <a name="user-object-adox"></a>Objeto User (ADOX)
-Representa una cuenta de usuario que tenga permisos de acceso dentro de una base de datos protegida.  
+Representa una cuenta de usuario que tiene permisos de acceso en una base de datos protegida.  
   
-## <a name="remarks"></a>Comentarios  
- El [usuarios](../../../ado/reference/adox-api/users-collection-adox.md) colección de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) representa todas las de los usuarios del catálogo. El **usuarios** colección para un [grupo](../../../ado/reference/adox-api/group-object-adox.md) representa sólo los usuarios del grupo específico.  
+## <a name="remarks"></a>Observaciones  
+ La colección de [usuarios](../../../ado/reference/adox-api/users-collection-adox.md) de un [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) representa todos los usuarios del catálogo. La colección de **usuarios** de un [Grupo](../../../ado/reference/adox-api/group-object-adox.md) solo representa a los usuarios del grupo específico.  
   
- Con las propiedades, colecciones y los métodos de un **usuario** objeto, puede:  
+ Con las propiedades, colecciones y métodos de un objeto de **usuario** , puede:  
   
--   Identificar al usuario con el [nombre](../../../ado/reference/adox-api/name-property-adox.md) propiedad.  
+-   Identifique al usuario con la propiedad [Name](../../../ado/reference/adox-api/name-property-adox.md) .  
   
--   Cambiar la contraseña de un usuario con el [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) método.  
+-   Cambiar la contraseña de un usuario con el método [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) .  
   
--   Determinar si un usuario tiene de lectura, escritura o eliminación de permisos con la [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) y [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) métodos.  
+-   Determine si un usuario tiene permisos de lectura, escritura o eliminación con los métodos [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) y [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) .  
   
--   Obtener acceso a los grupos a los que pertenece el usuario con el [grupos](../../../ado/reference/adox-api/groups-collection-adox.md) colección.  
+-   Acceder a los grupos a los que pertenece un usuario con la colección de [grupos](../../../ado/reference/adox-api/groups-collection-adox.md) .  
   
--   Obtener acceso a propiedades específicas del proveedor con el [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección.  
+-   Obtener acceso a las propiedades específicas del proveedor con la colección [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
--   Determinar la [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) para un usuario.  
+-   Determinar el [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) de un usuario.  
   
  Esta sección contiene el siguiente tema.  
   
 -   [Propiedades, métodos y eventos del objeto User](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vea también  
- [GetPermissions y SetPermissions métodos ejemplo (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de métodos GetPermissions y SetPermissions (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Colección de grupos (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Colección de usuarios (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

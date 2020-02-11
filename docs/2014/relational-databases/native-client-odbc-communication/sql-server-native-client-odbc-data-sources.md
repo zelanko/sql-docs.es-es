@@ -1,5 +1,5 @@
 ---
-title: Orígenes de datos SQL Server Native Client ODBC | Microsoft Docs
+title: SQL Server Native Client orígenes de datos ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,22 +19,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de1226d675859312e1ccaf908141586f865c8946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028392"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>Orígenes de datos de ODBC para SQL Server Native Client
   Un nombre del origen de datos (DSN) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica un origen de datos ODBC que contiene toda la información que una aplicación ODBC necesita para conectar a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un servidor concreto. Existen dos métodos que puede utilizar para definir un nombre del origen de datos ODBC:  
   
--   En un equipo cliente, abra Herramientas administrativas en el Panel de Control y haga doble clic en **orígenes de datos (ODBC)** . Así abrirá el Administrador de orígenes de datos ODBC, que puede utilizar para crear un DSN.  
+-   En un equipo cliente, abra herramientas administrativas en el panel de control y haga doble clic en **orígenes de datos (ODBC)**. Así abrirá el Administrador de orígenes de datos ODBC, que puede utilizar para crear un DSN.  
   
 -   En una aplicación ODBC, llame a [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md).  
   
  Un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene:  
   
--   El nombre del origen de datos.  
+-   el nombre del origen de datos.  
   
 -   Cualquier información necesaria para conectar a una instancia concreta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63028392"
   
  No es necesario contar con una aplicación ODBC para conectar a través de un origen de datos. Sin embargo, la aplicación debe proporcionar la misma información de conectividad a una función de conexión de ODBC que el controlador encontraría en un DSN.  
   
-## <a name="see-also"></a>Vea también  
- [Comunicar con SQL Server &#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Comunicarse con SQL Server &#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
   
   

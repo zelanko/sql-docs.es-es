@@ -17,13 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022191"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite suscripciones de inserción a IBM DB2/AS 400, DB2/MVS y DB2/Universal Database a través de los proveedores de OLE DB incluidos con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
   
 ## <a name="configuring-an-ibm-db2-subscriber"></a>Configuración de un suscriptor de IBM DB2  
@@ -62,7 +63,7 @@ ms.locfileid: "63022191"
   
      Los scripts se pueden modificar por distintas razones, aunque la más común es para modificar las asignaciones de tipos de datos. Para obtener más información, vea la sección "Consideraciones acerca de la asignación de tipos de datos", en este tema. Si modifica el script [!INCLUDE[tsql](../../../includes/tsql-md.md)] , los cambios deben limitarse a cambios en la asignación de tipos de datos y el script no debe contener ningún comentario. Si se necesitan cambios más importantes, cree un script DB2.  
   
-     **Para modificar el script de un artículo y suministrarlo como un script de creación personalizado**  
+     **Para modificar un script de artículo y suministrarlo como un script de creación personalizado**  
   
     1.  Una vez generada la instantánea para la publicación, navegue a la carpeta de instantáneas de la publicación.  
   
@@ -74,7 +75,7 @@ ms.locfileid: "63022191"
   
     5.  Ejecute sp_changearticle, especificando la ruta de acceso del archivo y el nombre de la propiedad *creation_script*. Para más información, vea [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql).  
   
-     **Para crear un script de un artículo y suministrarlo como un script de creación personalizado**  
+     **Para crear un script de artículo y suministrarlo como un script de creación personalizado**  
   
     1.  Cree un script de artículo con el dialecto DB2 SQL. Asegúrese de que la primera línea del archivo sea **bypass_translation**y de que no haya nada más en la línea.  
   
@@ -89,7 +90,8 @@ ms.locfileid: "63022191"
   
 -   Si desea crear previamente las tablas en el suscriptor en lugar de crearlas por medio de la replicación, use la opción Solo compatibilidad con replicación. Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](../initialize-a-transactional-subscription-without-a-snapshot.md).  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite utilizar nombres de tabla y de columna más largos que DB2:  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite utilizar nombres de tabla y de columna más largos que DB2:  
   
     -   Si la base de datos de publicación incluye tablas con nombres más largos que los admitidos por la versión de DB2 en el suscriptor, especifique otro nombre para la propiedad destination_table del artículo. Para más información sobre cómo configurar propiedades al crear una publicación, vea [Create a Publication](../publish/create-a-publication.md) (Crear una publicación) y [Define an Article](../publish/define-an-article.md) (Definir un artículo).  
   
@@ -98,7 +100,7 @@ ms.locfileid: "63022191"
 ## <a name="mapping-data-types-from-sql-server-to-ibm-db2"></a>Asignar tipos de datos de SQL Server a IBM DB2  
  En la tabla siguiente se muestran las asignaciones de tipos de datos que se utilizan cuando se replican datos en un suscriptor que ejecuta IBM DB2.  
   
-|Tipo de datos de SQL Server|Tipo de datos de IBM DB2|  
+|Tipos de datos de SQL Server|Tipo de datos de IBM DB2|  
 |--------------------------|-----------------------|  
 |`bigint`|DECIMAL(19,0)|  
 |`binary(1-254)`|CHAR(1-254) FOR BIT DATA|  
@@ -112,47 +114,47 @@ ms.locfileid: "63022191"
 |`datetimeoffset(0-7)`|VARCHAR(34)|  
 |`decimal(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
 |`decimal(32-38, 0-38)`|VARCHAR(41)|  
-|`float(53)`|Double|  
+|`float(53)`|DOUBLE|  
 |`float`|FLOAT|  
-|`geography`|IMAGE|  
-|`geometry`|IMAGE|  
-|`hierarchyid`|IMAGE|  
-|`image`|VARCHAR(0) PARA DATOS DE BITS<sup>1</sup>|  
+|`geography`|IMAGEN|  
+|`geometry`|IMAGEN|  
+|`hierarchyid`|IMAGEN|  
+|`image`|VARCHAR (0) para datos de bits<sup>1</sup>|  
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
-|`ntext`|VARCHAR(0)<sup>1</sup>|  
+|`ntext`|VARCHAR (0)<sup>1</sup>|  
 |`numeric(1-31, 0-31)`|DECIMAL(1-31,0-31)|  
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
-|`nvarchar(max)`|VARCHAR(0)<sup>1</sup>|  
-|`real`|REAL|  
+|`nvarchar(max)`|VARCHAR (0)<sup>1</sup>|  
+|`real`|real|  
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
 |`sql_variant`|N/D|  
 |`sysname`|VARCHAR(128)|  
-|`text`|VARCHAR(0)<sup>1</sup>|  
+|`text`|VARCHAR (0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
 |`timestamp`|CHAR(8) FOR BIT DATA|  
 |`tinyint`|SMALLINT|  
 |`uniqueidentifier`|CHAR(38)|  
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
-|`varbinary(max)`|VARCHAR(0) PARA DATOS DE BITS<sup>1</sup>|  
-|`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
-|`xml`|VARCHAR(0)<sup>1</sup>|  
+|`varbinary(max)`|VARCHAR (0) para datos de bits<sup>1</sup>|  
+|`varchar(max)`|VARCHAR (0)<sup>1</sup>|  
+|`xml`|VARCHAR (0)<sup>1</sup>|  
   
- <sup>1</sup> vea la sección siguiente para obtener más información sobre las asignaciones a VARCHAR(0).  
+ <sup>1</sup> consulte la sección siguiente para obtener más información acerca de las asignaciones a VARCHAR (0).  
   
 ### <a name="data-type-mapping-considerations"></a>Consideraciones acerca de la asignación de tipos de datos  
  Tenga en cuenta los siguientes problemas de asignación de tipos de datos al replicar en suscriptores de DB2:  
   
--   Al asignar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`, `varchar`, `binary` y `varbinary` a DB2 CHAR, VARCHAR, CHAR FOR BIT DATA y VARCHAR FOR BIT DATA, respectivamente, la replicación establece la longitud del tipo de datos DB2 a ser el mismo que el de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo.  
+-   Cuando se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`asignan `binary` , `varbinary` `varchar`y a DB2 Char, VARCHAR, char para datos de bits y VARCHAR para datos de bits, respectivamente, la replicación establece la longitud del tipo de datos de DB2 para que sea igual [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que la del tipo.  
   
      Esto permite crear correctamente la tabla generada en el suscriptor, siempre que la restricción del tamaño de página de DB2 sea suficientemente grande como para admitir el tamaño máximo de la fila. Asegúrese de que el nombre de inicio de sesión que utiliza para obtener acceso a la base de datos de DB2 tiene permisos de acceso a espacios de tabla de tamaño suficiente para las tablas que se van a replicar en DB2.  
   
--   DB2 admite columnas VARCHAR de hasta 32 kilobytes (KB); por lo tanto, es posible que algunas columnas de objetos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se puedan asignar correctamente a columnas VARCHAR de DB2. Sin embargo, el proveedor OLE DB que utiliza la replicación para DB2 no admite la asignación de objetos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a objetos grandes de DB2. Por este motivo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`, `varchar(max)`, `ntext`, y `nvarchar(max)` columnas se asignan a VARCHAR(0) en los scripts de creación generados. El valor de longitud 0 debe cambiarse a un valor apropiado antes de aplicar el script al suscriptor. Si no se cambia la longitud del tipo de datos, DB2 mostrará el error 604 cuando se intente crear la tabla en el suscriptor de DB2 (el error 604 indica que la precisión o el atributo de longitud de un tipo de datos no son válidos).  
+-   DB2 admite columnas VARCHAR de hasta 32 kilobytes (KB); por lo tanto, es posible que algunas columnas de objetos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se puedan asignar correctamente a columnas VARCHAR de DB2. Sin embargo, el proveedor OLE DB que utiliza la replicación para DB2 no admite la asignación de objetos grandes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a objetos grandes de DB2. Por esta razón, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text` `varchar(max)` `ntext`las columnas,, `nvarchar(max)` y se asignan a VARCHAR (0) en los scripts de creación generados. El valor de longitud 0 debe cambiarse a un valor apropiado antes de aplicar el script al suscriptor. Si no se cambia la longitud del tipo de datos, DB2 mostrará el error 604 cuando se intente crear la tabla en el suscriptor de DB2 (el error 604 indica que la precisión o el atributo de longitud de un tipo de datos no son válidos).  
   
      Basándose en sus conocimientos de la tabla de origen que desea replicar, determine si es apropiado asignar un objeto grande de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un elemento de longitud variable de DB2 y especifique una longitud máxima apropiada en un script de creación personalizado. Para obtener información acerca de cómo especificar un script de creación personalizado, vea el paso 5 de la sección "Configuración de un suscriptor de IBM DB2", en este tema.  
   
@@ -161,11 +163,11 @@ ms.locfileid: "63022191"
   
      Si no hay ninguna asignación apropiada para una columna de objetos grandes, puede utilizar el filtrado de columna en el artículo para que no se replique. Para obtener más información, vea [Filtrar datos publicados](../publish/filter-published-data.md).  
   
--   Cuando se replican [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` y `nvarchar` en DB2 CHAR y VARCHAR, la replicación utiliza el mismo especificador de longitud para el tipo de DB2 que para el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo. Sin embargo, es posible que la longitud del tipo de datos sea demasiado reducida para la tabla DB2 generada.  
+-   Al replicar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` y `nvarchar` a DB2 Char y VARCHAR, la replicación utiliza el mismo especificador de longitud para el tipo de DB2 que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el tipo. Sin embargo, es posible que la longitud del tipo de datos sea demasiado reducida para la tabla DB2 generada.  
   
-     En algunos entornos de DB2, un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` elemento de datos no está restringido a los caracteres de byte único; la longitud de un elemento CHAR o VARCHAR debe tenerlo en cuenta. También debe tener en cuenta los caracteres de *desplazamiento hacia dentro* y *desplazamiento hacia fuera* si se necesitan. Si desea replicar tablas con `nchar` y `nvarchar` columnas, es posible que deba especificar una longitud máxima mayor para el tipo de datos en un script de creación personalizado. Para obtener información acerca de cómo especificar un script de creación personalizado, vea el paso 5 de la sección "Configuración de un suscriptor de IBM DB2", en este tema.  
+     En algunos entornos de DB2, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` un elemento de datos no se limita a caracteres de un solo byte; la longitud de un elemento CHAR o VARCHAR debe tener esto en cuenta. También debe tener en cuenta los caracteres de *desplazamiento hacia dentro* y *desplazamiento hacia fuera* si se necesitan. Si va a replicar tablas con `nchar` columnas `nvarchar` y, puede que necesite especificar una longitud máxima mayor para el tipo de datos en un script de creación personalizado. Para obtener información acerca de cómo especificar un script de creación personalizado, vea el paso 5 de la sección "Configuración de un suscriptor de IBM DB2", en este tema.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
  [Suscribirse a publicaciones](../subscribe-to-publications.md)  
   

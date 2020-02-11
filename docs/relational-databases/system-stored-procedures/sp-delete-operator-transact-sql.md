@@ -18,13 +18,13 @@ ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: adeed3012f6009ac174d758e7fdd3464fc3d2320
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009122"
 ---
-# <a name="spdeleteoperator-transact-sql"></a>sp_delete_operator (Transact-SQL)
+# <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita un operador.  
@@ -40,9 +40,9 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` El nombre del operador que se va a eliminar. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'`Nombre del operador que se va a eliminar. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @reassign_to_operator = ] 'reassign_operator'` El nombre de un operador al que se pueden reasignar las alertas del operador especificado. *reassign_operator* es **sysname**, su valor predeterminado es null.  
+`[ @reassign_to_operator = ] 'reassign_operator'`Nombre del operador al que se pueden reasignar las alertas del operador especificado. *reassign_operator* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -50,11 +50,11 @@ sp_delete_operator [ @name = ] 'name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando se quita un operador, se quitan también todas las notificaciones asociadas con él.  
   
 ## <a name="permissions"></a>Permisos  
- Los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_delete_operator**.  
+ Los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_delete_operator**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se elimina el operador `François Ajenstat`.  
@@ -67,10 +67,10 @@ EXEC sp_delete_operator @name = 'François Ajenstat' ;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_help_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

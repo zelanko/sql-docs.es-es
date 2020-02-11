@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071473"
 ---
 # <a name="migrating-triggers"></a>Migrar desencadenadores
@@ -34,7 +34,7 @@ ms.locfileid: "63071473"
   
  Según el evento de desencadenador (FOR/AFTER o INSTEAD OF), puede incluir el contenido del desencadenador en el procedimiento almacenado adecuado que realiza la operación INSERT, UPDATE o DELETE en esa tabla. Por ejemplo, al migrar un desencadenador AFTER INSERT, puede modificar el procedimiento almacenado que realiza la operación de inserción si incluye el contenido del desencadenador después de la instrucción INSERT adecuada.  
   
- Puede utilizar un procedimiento almacenado interpretado o un procedimiento almacenado compilado de forma nativa. La mayoría de las construcciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] de un procedimiento almacenado interpretado pueden ejecutarse en una tabla optimizada para memoria. Sin embargo, en los procedimientos almacenados compilados de forma nativa solo se admite un subconjunto de construcciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para obtener información acerca de la compatibilidad de [!INCLUDE[tsql](../../includes/tsql-md.md)] en tablas optimizadas para memoria, vea [Acceso a tablas con optimización para memoria mediante Transact-SQL interpretado](accessing-memory-optimized-tables-using-interpreted-transact-sql.md). Para obtener información acerca de la compatibilidad de [!INCLUDE[tsql](../../includes/tsql-md.md)] en procedimientos almacenados compilados de forma nativa, vea [Construcciones Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ Puede utilizar un procedimiento almacenado interpretado o un procedimiento almacenado compilado de forma nativa. La mayoría de las construcciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] de un procedimiento almacenado interpretado pueden ejecutarse en una tabla optimizada para memoria. Sin embargo, en los procedimientos almacenados compilados de forma nativa solo se admite un subconjunto de construcciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para obtener información acerca de la compatibilidad de [!INCLUDE[tsql](../../includes/tsql-md.md)] en tablas optimizadas para memoria, vea [Accessing Memory-Optimized Tables Using Interpreted Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md). Para obtener información acerca de la compatibilidad de [!INCLUDE[tsql](../../includes/tsql-md.md)] en procedimientos almacenados compilados de forma nativa, vea [Transact-SQL Constructs Not Supported by In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
  A continuación se muestra un ejemplo simple de simulación del comportamiento de un desencadenador DML en una tabla optimizada para memoria.  
   
@@ -154,7 +154,7 @@ END
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Migrar a OLTP en memoria](migrating-to-in-memory-oltp.md)  
   
   

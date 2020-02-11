@@ -1,5 +1,5 @@
 ---
-title: Captura de filas | Microsoft Docs
+title: Capturando filas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140471"
 ---
 # <a name="fetching-rows"></a>Capturar filas
@@ -51,7 +51,7 @@ ms.locfileid: "63140471"
   
  Para capturar filas de la base de datos, el consumidor llama a un método, como **IRowset::GetNextRows** o **IRowsetLocate::GetRowsAt**. Estas operaciones de captura colocan los datos de filas del servidor en el búfer de filas del proveedor. El consumidor no tiene acceso directo al búfer de filas del proveedor. El consumidor usa **IRowset::GetData** para copiar los datos del búfer del proveedor en el búfer del consumidor e **IRowsetChange::SetData** para copiar los cambios de datos del búfer del consumidor en el búfer del proveedor.  
   
- El consumidor llama al método **GetData** y pasa el identificador a una fila, el identificador a un descriptor de acceso, y un puntero a un búfer asignado por el consumidor. **GetData** convierte los datos y devuelve las columnas como se especifica en los enlaces usados para crear el descriptor de acceso. El consumidor puede llamar a **GetData** más de una vez para una fila, con descriptores de acceso y búferes distintos y, por tanto, el consumidor puede obtener varias copias de los mismos datos.  
+ El consumidor llama al método **GetData** y pasa el identificador a una fila, el identificador a un descriptor de acceso, y un puntero a un búfer asignado por el consumidor. **GetData** convierte los datos y devuelve las columnas especificadas en los enlaces usados para crear el descriptor de acceso. El consumidor puede llamar a **GetData** más de una vez para una fila, con descriptores de acceso y búferes distintos y, por tanto, el consumidor puede obtener varias copias de los mismos datos.  
   
  Los datos de las columnas de longitud variable se pueden tratar de varias maneras. Primero, tales columnas se pueden enlazar a una sección finita de la estructura del consumidor. Esto produce un truncamiento cuando la longitud de los datos supera la longitud del búfer. El consumidor puede determinar que se ha producido ese truncamiento comprobando el estado DBSTATUS_S_TRUNCATED. La longitud devuelta siempre es la longitud verdadera en bytes, para que el consumidor pueda determinar también cuántos datos se han truncado.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63140471"
   
 -   [Posición de captura siguiente](fetching-rows-next-fetch-position.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conjuntos de filas](rowsets.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ejecución de la consola SSMA (SybaseToSQL) | Microsoft Docs
+title: Ejecución de la consola de SSMA (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -19,31 +19,31 @@ ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029155"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Ejecución de la consola de SSMA (SybaseToSQL)
-Microsoft proporciona un sólido conjunto de script de comandos del archivo para ejecutar y controlar las actividades SSMA. Las secciones que detallan la misma.  
+Microsoft proporciona un conjunto sólido de comandos de archivo de script para ejecutar y controlar las actividades de SSMA. Las secciones siguientes detallan el mismo.  
   
-## <a name="script-file-commands"></a>Comandos del archivo de script  
-La aplicación de consola utiliza ciertos comandos del archivo de script estándar como enumerados en esta sección.  
+## <a name="script-file-commands"></a>Comandos de archivo de script  
+La aplicación de consola usa determinados comandos de archivo de script estándar que se enumeran en esta sección.  
   
-## <a name="project-commands"></a>Comandos de proyecto  
-Los comandos de proyecto controlan la creación de proyectos, abrir, guardar y salir de proyectos.  
+## <a name="project-commands"></a>Comandos del proyecto  
+Los comandos del proyecto controlan la creación de proyectos, la apertura, el guardado y el cierre de proyectos.  
   
-### <a name="create-new-project"></a>create-new-project  
-Este comando crea un nuevo proyecto SSMA.  
+### <a name="create-new-project"></a>crear-nuevo-proyecto  
+Este comando crea un nuevo proyecto de SSMA.  
   
--   `project-folder` indica la carpeta del proyecto que se crean.  
+-   `project-folder`indica la carpeta del proyecto que se va a crear.  
   
--   `project-name` indica el nombre del proyecto. {string}  
+-   `project-name`indica el nombre del proyecto. {string}  
   
--   `overwrite-if-exists`Atributo opcional indica si se debe sobrescribir un proyecto existente. {boolean}  
+-   `overwrite-if-exists`Atributo opcional indica si se debe sobrescribir un proyecto existente. booleano  
   
--   `project-type:`Atributo opcional. Indica el tipo de proyecto, que es "sql-server-2005" proyecto o proyecto de "sql-server-2008" o "sql-server-2012" proyecto "sql-server-2014" proyecto o proyecto "sql azure". Valor predeterminado es "sql-server-2008".  
+-   `project-type:`Atributo opcional. Indica el tipo de proyecto, es decir, proyecto "SQL Server-2005" o proyecto "SQL-Server-2008" o proyecto "SQL-Server-2012" o proyecto "SQL-Server-2014" o proyecto "SQL-Azure". El valor predeterminado es "SQL-Server-2008".  
   
 **Ejemplo de sintaxis:**  
   
@@ -59,16 +59,16 @@ Este comando crea un nuevo proyecto SSMA.
    project-type="<sql-server-2008/sql-server-2005/sql-server-2012/sql-server-2014/sql-azure>"  
 />  
 ```  
-Es el atributo 'sobrescribir-if-exists' **false** de forma predeterminada.  
+El atributo ' overwrite-if-exists ' es **false** de forma predeterminada.  
   
-Atributo de tipo de proyecto es **sql-server-2008** de forma predeterminada.  
+El atributo ' Project-type ' es **SQL-Server-2008** de forma predeterminada.  
   
-### <a name="open-project"></a>open-project  
+### <a name="open-project"></a>proyecto abierto  
 Este comando abre el proyecto.
 
--   `project-folder` indica la carpeta del proyecto que se crean. El comando produce un error si la carpeta especificada no existe.  {string}  
+-   `project-folder`indica la carpeta del proyecto que se va a crear. El comando genera un error si la carpeta especificada no existe.  {string}  
   
--   `project-name` indica el nombre del proyecto. El comando produce un error si el proyecto especificado no existe.  {string}  
+-   `project-name`indica el nombre del proyecto. El comando genera un error si el proyecto especificado no existe.  {string}  
   
 **Ejemplo de sintaxis:**  
   
@@ -82,9 +82,9 @@ Este comando abre el proyecto.
 />  
 ```  
 > [!NOTE]  
-> SSMA para la aplicación de consola de SAP ASE admite la compatibilidad con versiones anteriores. Puede usarlo para abrir proyectos creados con una versión anterior de SSMA.  
+> La aplicación de consola SSMA for SAP ASE admite la compatibilidad con versiones anteriores. Puede utilizarlo para abrir proyectos creados por la versión anterior de SSMA.  
   
-### <a name="save-project"></a>Guardar proyecto  
+### <a name="save-project"></a>save-project  
 Este comando guarda el proyecto de migración.  
   
 **Ejemplo de sintaxis:**  
@@ -93,7 +93,7 @@ Este comando guarda el proyecto de migración.
 <save-project/>  
 ```  
   
-### <a name="close-project"></a>Cerrar proyecto  
+### <a name="close-project"></a>cerrar proyecto  
 Este comando cierra el proyecto de migración.  
   
 **Ejemplo de sintaxis:**  
@@ -103,21 +103,21 @@ Este comando cierra el proyecto de migración.
   if-modified="<save/error/ignore>"   (optional)  
 />  
 ```  
-Atributo "if-modificado" es opcional, **omitir** de forma predeterminada.  
+El atributo ' If-Modified ' es opcional y se **omite** de forma predeterminada.  
   
 ## <a name="database-connection-commands"></a>Comandos de conexión de base de datos  
-Los comandos de conexión de base de datos ayudan a conectar a la base de datos.  
+Los comandos de conexión de base de datos ayudan a conectarse a la base de datos.  
   
 > [!NOTE]  
-> - El **examinar** no se admite la característica de la interfaz de usuario en la consola.  
-> - Para obtener más información en "Crear archivos de Script", consulte [crear archivos de Script &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
+> - La característica de **exploración** de la interfaz de usuario no se admite en la consola de.  
+> - Para obtener más información sobre cómo crear archivos de scripts, vea [crear archivos de script &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
   
-### <a name="connect-source-database"></a>datos de origen conectarse  
+### <a name="connect-source-database"></a>Connect-Source-Database  
 Este comando realiza la conexión a la base de datos de origen y carga los metadatos de alto nivel de la base de datos de origen, pero no todos los metadatos.
   
-Si no se puede establecer la conexión al origen, se genera un error y la aplicación de consola detiene la ejecución.
+Si no se puede establecer la conexión con el origen, se genera un error y la aplicación de consola detiene la ejecución.
   
-El atributo de nombre definido para cada conexión en la sección servidor de archivo de conexión de servidor o el archivo de script se recupera la definición del servidor.  
+La definición del servidor se recupera del atributo name definido para cada conexión en la sección Server del archivo de conexión del servidor o del archivo de script.  
   
 **Ejemplo de sintaxis:**  
   
@@ -125,12 +125,12 @@ El atributo de nombre definido para cada conexión en la sección servidor de ar
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="force-load-sourcetarget-database"></a>Force-load-origen/destino-database  
-Este comando carga los metadatos de origen, y resulta útil para trabajar en el proyecto de migración sin conexión.  
+### <a name="force-load-sourcetarget-database"></a>forzar carga-origen/destino-base de datos  
+Este comando carga los metadatos de origen y resulta útil para trabajar en el proyecto de migración sin conexión.  
   
-Si no se puede establecer la conexión con el origen o destino, se genera un error y la aplicación de consola detiene la ejecución.  
+Si no se puede establecer la conexión con el origen o el destino, se genera un error y la aplicación de consola detiene la ejecución.  
   
-Este comando requiere uno o varios nodos de la metabase como parámetro de línea de comandos.  
+Este comando requiere uno o varios nodos de metabase como parámetro de línea de comandos.  
   
 **Ejemplo de sintaxis:**  
   
@@ -142,10 +142,10 @@ Este comando requiere uno o varios nodos de la metabase como parámetro de líne
 </force-load>  
 ```  
   
-### <a name="reconnect-source-database"></a>datos de origen volver a conectar  
-Este comando vuelve a conectarse a la base de datos de origen, pero no carga los metadatos a diferencia del comando de base de datos connect-origen.  
+### <a name="reconnect-source-database"></a>reconnect-Source-Database  
+Este comando vuelve a conectarse a la base de datos de origen, pero no carga ningún metadato a diferencia del comando Connect-Source-Database.  
   
-Si no puede establecerse (la conexión con el origen re), se genera un error y la aplicación de consola detiene la ejecución.  
+Si no se puede establecer la conexión con el origen, se genera un error y la aplicación de consola detiene la ejecución.  
   
 **Ejemplo de sintaxis:**  
   
@@ -153,12 +153,12 @@ Si no puede establecerse (la conexión con el origen re), se genera un error y l
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="connect-target-database"></a>base de destino conectarse  
-Este comando se conecta a la base de datos de SQL Server de destino y carga los metadatos de alto nivel de la base de datos de destino pero no los metadatos por completo.  
+### <a name="connect-target-database"></a>Connect-Target-Database  
+Este comando conecta con la base de datos de SQL Server de destino y carga los metadatos de alto nivel de la base de datos de destino, pero no los metadatos por completo.  
   
 Si no se puede establecer la conexión con el destino, se genera un error y la aplicación de consola detiene la ejecución.  
   
-El atributo de nombre definido para cada conexión en la sección servidor de archivo de conexión de servidor o el archivo de script se recupera la definición del servidor.  
+La definición del servidor se recupera del atributo name definido para cada conexión en la sección Server del archivo de conexión del servidor o del archivo de script.  
   
 **Ejemplo de sintaxis:**  
   
@@ -166,11 +166,11 @@ El atributo de nombre definido para cada conexión en la sección servidor de ar
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="reconnect-target-database"></a>base de destino vuelva a conectar  
+### <a name="reconnect-target-database"></a>reconnect-Target-Database  
   
-Este comando vuelve a conectarse a la base de datos de destino pero no carga los metadatos, a diferencia del comando de base de destino de connect.  
+Este comando vuelve a conectarse a la base de datos de destino, pero no carga ningún metadato, a diferencia del comando Connect-Target-Database.  
   
-Si no puede establecerse (re) de la conexión con el destino, se genera un error y la aplicación de consola detiene la ejecución.  
+Si no se puede establecer la conexión con el destino, se genera un error y la aplicación de consola detiene la ejecución.  
   
 **Ejemplo de sintaxis:**  
   
@@ -178,36 +178,36 @@ Si no puede establecerse (re) de la conexión con el destino, se genera un error
 <reconnect-target-database  server="<server-unique-name>"/>  
 ```  
   
-## <a name="report-commands"></a>Comandos de informes  
-Los comandos de informe generan informes sobre el rendimiento de diversas actividades de la consola SSMA.  
+## <a name="report-commands"></a>Comandos de informe  
+Los comandos de informe generan informes sobre el rendimiento de las diversas actividades de la consola de SSMA.  
   
-### <a name="generate-assessment-report"></a>informe de evaluación generar  
+### <a name="generate-assessment-report"></a>generar informe de evaluación  
   
-Este comando genera informes de evaluación de la base de datos de origen.  
+Este comando genera informes de evaluación en la base de datos de origen.  
   
-Si no se realiza la conexión de base de datos de origen antes de ejecutar este comando, se genera un error y se cierra la aplicación de consola.  
+Si no se realiza la conexión a la base de datos de origen antes de ejecutar este comando, se genera un error y se cierra la aplicación de consola.  
   
-No se puede conectar al servidor de base de datos de origen durante la ejecución del comando, también produce la finalización de la aplicación de consola.  
+No se puede conectar con el servidor de base de datos de origen durante la ejecución del comando, lo que da lugar a la finalización de la aplicación de consola.  
   
--   `conversion-report-folder:` Especifica la carpeta en la que se puede almacenar el informe de evaluación. (atributo opcional)  
+-   `conversion-report-folder:`Especifica la carpeta en la que se puede almacenar el informe de evaluación. (atributo opcional)  
   
--   `object-name:` Especifica los objetos que tienen en cuenta para la generación de informes de evaluación (admite nombres de objeto individuales o un nombre de objeto de grupo).  
+-   `object-name:`Especifica los objetos que se han tenido en cuenta para la generación de informes de evaluación (admite nombres de objeto individuales o un nombre de objeto de grupo).  
   
--   `object-type:` Especifica el tipo del objeto que se mencionan en el atributo de nombre de objeto (si se especifica la categoría de objeto, tipo de objeto será "categoría").  
+-   `object-type:`Especifica el tipo del objeto al que se ha llamado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "Category").  
   
--   `conversion-report-overwrite:` Especifica si se debe sobrescribir la carpeta de informes de evaluación si ya existe.  
+-   `conversion-report-overwrite:`Especifica si se va a sobrescribir la carpeta de informes de evaluación si ya existe.  
   
     **Valor predeterminado:** false. (atributo opcional)  
   
--   `write-summary-report-to:` Especifica la ruta de acceso a la que se generará el informe.  
+-   `write-summary-report-to:`Especifica la ruta de acceso en la que se generará el informe.  
   
-    Si solo se menciona la ruta de acceso de carpeta, a continuación, archivos por nombre **AssessmentReport&lt;n&gt;. XML** se crea. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **&lt;AssessmentReport n&gt;. **Se crea XML. (atributo opcional)  
   
-    Creación de informes tiene dos subcategorías adicionales:  
+    La creación de informes tiene dos subcategorías más:  
   
-    -   `report-errors` (= "true/false", no tiene valor predeterminado como "false" (atributos opcionales))  
+    -   `report-errors`(= "true/false", con el valor predeterminado "false" (atributos opcionales))  
   
-    -   `verbose` (= "true/false", no tiene valor predeterminado como "false" (atributos opcionales))  
+    -   `verbose`(= "true/false", con el valor predeterminado "false" (atributos opcionales))  
   
 **Ejemplo de sintaxis:**  
   
@@ -230,7 +230,7 @@ No se puede conectar al servidor de base de datos de origen durante la ejecució
   
 />  
 ```  
-o Administrador de configuración de  
+or  
   
 ```xml  
 <generate-assessment-report  
@@ -248,32 +248,32 @@ o Administrador de configuración de
 ```  
   
 ## <a name="migration-commands"></a>Comandos de migración  
-Los comandos de migración conversión el esquema de base de datos de destino en el esquema de origen y migración datos al servidor de destino.  
+Los comandos de migración convierten el esquema de la base de datos de destino en el esquema de origen y migran los datos al servidor de destino.  
   
-### <a name="convert-schema"></a>convertir esquema  
-Este comando realiza la conversión de esquema de origen al esquema de destino.  
+### <a name="convert-schema"></a>Convert-Schema  
+Este comando realiza la conversión del esquema del origen al esquema de destino.  
   
-Si no se realiza la conexión de base de datos de origen o de destino antes de ejecutar este comando o se produce un error en la conexión con el servidor de base de datos de origen o destino durante la ejecución del comando, se genera un error y se cierra la aplicación de consola.  
+Si no se realiza la conexión a la base de datos de origen o de destino antes de ejecutar este comando o se produce un error en la conexión con el servidor de origen o de destino durante la ejecución del comando, se genera un error y se cierra la aplicación de consola.  
   
--   `conversion-report-folder:` Especifica la carpeta en la que se puede almacenar el informe de evaluación. (atributo opcional)  
+-   `conversion-report-folder:`Especifica la carpeta en la que se puede almacenar el informe de evaluación. (atributo opcional)  
   
--   `object-name:` Especifica los objetos de origen que se consideran para la conversión de esquema (admite nombres de objeto individuales o un nombre de objeto de grupo).  
+-   `object-name:`Especifica los objetos de origen que se han tenido en cuenta para convertir el esquema (admite nombres de objeto individuales o un nombre de objeto de grupo).  
   
--   `object-type:` Especifica el tipo del objeto que se mencionan en el atributo de nombre de objeto (si se especifica la categoría de objeto, tipo de objeto será "categoría").  
+-   `object-type:`Especifica el tipo del objeto al que se ha llamado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "Category").  
   
--   `conversion-report-overwrite:` Especifica si se debe sobrescribir la carpeta de informes de evaluación si ya existe.  
+-   `conversion-report-overwrite:`Especifica si se va a sobrescribir la carpeta de informes de evaluación si ya existe.  
   
     **Valor predeterminado:** false. (atributo opcional)  
   
--   `write-summary-report-to:` Especifica la ruta de acceso a la que se generará el informe de resumen.  
+-   `write-summary-report-to:`Especifica la ruta de acceso en la que se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de carpeta, a continuación, archivos por nombre **SchemaConversionReport&lt;n&gt;. XML** se crea. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **&lt;SchemaConversionReport n&gt;. **Se crea XML. (atributo opcional)  
   
-    Creación de informes tiene dos subcategorías adicionales:  
+    La creación de informes tiene dos subcategorías más:  
   
-    -   `report-errors` (= "true/false", no tiene valor predeterminado como "false" (atributos opcionales))  
+    -   `report-errors`(= "true/false", con el valor predeterminado "false" (atributos opcionales))  
   
-    -   `verbose` (= "true/false", no tiene valor predeterminado como "false" (atributos opcionales))  
+    -   `verbose`(= "true/false", con el valor predeterminado "false" (atributos opcionales))  
   
 **Ejemplo de sintaxis:**  
   
@@ -295,7 +295,7 @@ Si no se realiza la conexión de base de datos de origen o de destino antes de e
   
 />  
 ```  
-o Administrador de configuración de  
+or  
   
 ```xml  
 <convert-schema  
@@ -314,19 +314,19 @@ o Administrador de configuración de
 ### <a name="migrate-data"></a>migrar datos  
 Este comando migra los datos de origen al destino.  
   
--   `object-name:` Especifica los objetos de origen tienen en cuenta para migrar datos (admite nombres de objeto individuales o un nombre de objeto de grupo).  
+-   `object-name:`Especifica los objetos de origen que se han tenido en cuenta para migrar datos (admite nombres de objeto individuales o un nombre de objeto de grupo).  
   
--   `object-type:` Especifica el tipo del objeto que se mencionan en el atributo de nombre de objeto (si se especifica la categoría de objeto de tipo de objeto será "categoría").  
+-   `object-type:`especifica el tipo del objeto al que se ha llamado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "Category").  
   
--   `write-summary-report-to:` Especifica la ruta de acceso a la que se generará el informe.  
+-   `write-summary-report-to:`Especifica la ruta de acceso en la que se generará el informe.  
   
-    Si solo se menciona la ruta de acceso de carpeta, a continuación, archivos por nombre **DataMigrationReport&lt;n&gt;. XML** se crea. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **&lt;DataMigrationReport n&gt;. **Se crea XML. (atributo opcional)  
   
-    Creación de informes tiene dos subcategorías adicionales:  
+    La creación de informes tiene dos subcategorías más:  
   
-    -   `report-errors` (= "true/false", no tiene valor predeterminado como "false" (atributos opcionales))  
+    -   `report-errors`(= "true/false", con el valor predeterminado "false" (atributos opcionales))  
   
-    -   `verbose` (= "true/false", no tiene valor predeterminado como "false" (atributos opcionales))  
+    -   `verbose`(= "true/false", con el valor predeterminado "false" (atributos opcionales))  
   
 **Ejemplo de sintaxis:**  
   
@@ -351,7 +351,7 @@ Este comando migra los datos de origen al destino.
   
 </migrate-data>  
 ```  
-o Administrador de configuración de  
+or  
   
 ```xml  
 <migrate-data  
@@ -365,18 +365,18 @@ o Administrador de configuración de
   report-errors="<true/false>" verbose="<true/false>"/>  
 ```  
   
-## <a name="migration-preparation-command"></a>Comando de preparación de migración  
-El comando de preparación de la migración inicia la asignación de esquema entre las bases de datos de origen y de destino.  
+## <a name="migration-preparation-command"></a>Comando de preparación de la migración  
+El comando de preparación de la migración inicia la asignación de esquemas entre las bases de datos de origen y de destino.  
   
 > [!NOTE]  
-> La salida de consola predeterminada para los comandos de migración es el informe de salida 'Full' con ningún informe de error detallado: Resumen solo al nodo raíz del árbol de objeto de origen.  
+> La configuración predeterminada de salida de la consola para los comandos de migración es el informe de salida ' completo ' sin informes de errores detallados: solo Resumen en el nodo raíz del árbol de objetos de origen.  
   
-### <a name="map-schema"></a>esquema de asignación  
+### <a name="map-schema"></a>Map-Schema  
 Este comando proporciona la asignación de esquema de la base de datos de origen al esquema de destino.  
   
--   `source-schema` Especifica el esquema de origen para migrar.  
+-   `source-schema`Especifica el esquema de origen que se va a migrar.  
   
--   `sql-server-schema` Especifica el esquema de destino al que se migrará el esquema de origen.  
+-   `sql-server-schema`Especifica el esquema de destino al que se migrará el esquema de origen.  
   
 **Ejemplo de sintaxis:**  
   
@@ -386,32 +386,32 @@ Este comando proporciona la asignación de esquema de la base de datos de origen
 sql-server-schema="<target-schema>"/>  
 ```  
   
-## <a name="manageability-commands"></a>Comandos de facilidad de uso  
-Los comandos de facilidad de uso ayudan a sincronizar los objetos de base de datos de destino con la base de datos de origen.  
+## <a name="manageability-commands"></a>Comandos de administración  
+Los comandos de administración ayudan a sincronizar los objetos de base de datos de destino con la base de datos de origen.  
   
 > [!NOTE]  
-> La salida de consola predeterminada para los comandos de migración es el informe de salida 'Full' con ningún informe de error detallado: Resumen solo al nodo raíz del árbol de objeto de origen.  
+> La configuración predeterminada de salida de la consola para los comandos de migración es el informe de salida ' completo ' sin informes de errores detallados: solo Resumen en el nodo raíz del árbol de objetos de origen.  
   
-### <a name="synchronize-target"></a>sincronizar de destino  
+### <a name="synchronize-target"></a>sincronizar-destino  
 Este comando sincroniza los objetos de destino con la base de datos de destino.  
  
 Si este comando se ejecuta en la base de datos de origen, se produce un error.  
   
-Si no se realiza la conexión de base de datos de destino antes de ejecutar este comando o se produce un error en la conexión al servidor de base de datos de destino durante la ejecución del comando, se genera un error y se cierra la aplicación de consola.  
+Si no se realiza la conexión a la base de datos de destino antes de ejecutar este comando o se produce un error en la conexión con el servidor de base de datos de destino durante la ejecución del comando, se genera un error y se cierra la aplicación de consola.  
   
--   `object-name:` Especifica los objetos de destino que se consideran para la sincronización con la base de datos de destino (admite nombres de objeto individuales o un nombre de objeto de grupo).  
+-   `object-name:`Especifica los objetos de destino que se tienen en cuenta para la sincronización con la base de datos de destino (admite nombres de objeto individuales o un nombre de objeto de grupo).  
   
--   `object-type:` Especifica el tipo del objeto que se mencionan en el atributo de nombre de objeto (si se especifica la categoría de objeto de tipo de objeto será "categoría").  
+-   `object-type:`Especifica el tipo del objeto al que se ha llamado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "Category").  
   
--   `on-error:` Especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
+-   `on-error:`Especifica si se deben especificar errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
   
-    -   report-total-as-warning  
+    -   Informe-total como ADVERTENCIA  
   
-    -   informes-each-como-warning  
+    -   Informe cada ADVERTENCIA  
   
-    -   Error de script  
+    -   error: script  
   
--   `report-errors-to:` Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional). Si solo se proporciona la ruta de acceso de carpeta, a continuación, archivos por nombre **TargetSynchronizationReport.XML** se crea.  
+-   `report-errors-to:`Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional). Si solo se especifica la ruta de acceso de la carpeta, se crea File by Name **TargetSynchronizationReport. XML** .  
   
 **Ejemplo de sintaxis:**  
   
@@ -430,7 +430,7 @@ fail-script>" (optional)
   
 />  
 ```  
-o Administrador de configuración de  
+or  
   
 ```xml  
 <synchronize-target  
@@ -439,7 +439,7 @@ o Administrador de configuración de
   
   object-type="<object-category>"/>  
 ```  
-o Administrador de configuración de  
+or  
   
 ```xml  
 <synchronize-target>  
@@ -453,26 +453,26 @@ o Administrador de configuración de
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>actualización de base de datos  
-Este comando actualiza los objetos de base de datos de origen.  
+### <a name="refresh-from-database"></a>actualizar desde la base de datos  
+Este comando actualiza los objetos de origen de la base de datos.  
   
 Si este comando se ejecuta en la base de datos de destino, se genera un error.  
   
-Este comando requiere uno o varios nodos de la metabase como parámetro de línea de comandos.  
+Este comando requiere uno o varios nodos de metabase como parámetro de línea de comandos.  
   
--   `object-name:` Especifica los objetos de origen que se consideran para la actualización de base de datos de origen (admite nombres de objeto individuales o un nombre de objeto de grupo).  
+-   `object-name:`Especifica los objetos de origen que se tienen en cuenta para actualizar desde la base de datos de origen (admite nombres de objeto individuales o un nombre de objeto de grupo).  
   
--   `object-type:` Especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto de tipo de objeto será "categoría").  
+-   `object-type:`Especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "categoría").  
   
--   `on-error:` Especifica si se debe llamar a los errores de actualización como advertencias o errores. Opciones disponibles para en caso de error:  
+-   `on-error:`Especifica si se va a llamar a los errores de actualización como advertencias o errores. Opciones disponibles para en caso de error:  
   
-    -   report-total-as-warning  
+    -   Informe-total como ADVERTENCIA  
   
-    -   informes-each-como-warning  
+    -   Informe cada ADVERTENCIA  
   
-    -   Error de script  
+    -   error: script  
   
--   `report-errors-to:` Especifica la ubicación del informe de errores para la operación de actualización (atributo opcional). Si solo se proporciona la ruta de acceso de carpeta, a continuación, archivos por nombre **SourceDBRefreshReport.XML** se crea.  
+-   `report-errors-to:`Especifica la ubicación del informe de errores para la operación de actualización (atributo opcional). Si solo se especifica la ruta de acceso de la carpeta, se crea File by Name **SourceDBRefreshReport. XML** .  
   
 **Ejemplo de sintaxis:**  
   
@@ -491,7 +491,7 @@ Este comando requiere uno o varios nodos de la metabase como parámetro de líne
   
 />  
 ```  
-o Administrador de configuración de  
+or  
   
 ```xml  
 <refresh-from-database  
@@ -500,7 +500,7 @@ o Administrador de configuración de
   
   object-type="<object-category>" />  
 ```  
-o Administrador de configuración de  
+or  
   
 ```xml  
 <refresh-from-database>  
@@ -510,23 +510,23 @@ o Administrador de configuración de
 </refresh-from-database>  
 ```  
   
-## <a name="script-generation-commands"></a>Secuencias de comandos de generación  
-Los comandos de generación de scripts realizan dos tareas: ayudan a guardar la salida en un archivo de script en la consola y registran la salida de T-SQL en la consola o un archivo basado en el parámetro especificado.  
+## <a name="script-generation-commands"></a>Comandos de generación de scripts  
+Los comandos de generación de script realizan tareas dobles: ayudan a guardar la salida de la consola en un archivo de script y registran la salida de T-SQL en la consola o en un archivo basado en el parámetro que se especifique.  
   
-### <a name="save-as-script"></a>Guardar como secuencia de comandos  
-Este comando se utiliza para guardar los Scripts de los objetos en un archivo se ha mencionado cuando metabase = target. Esta es una alternativa al comando de sincronización en que se obtención de las secuencias de comandos y ejecutar la misma base de datos de destino.  
+### <a name="save-as-script"></a>guardar como script  
+Este comando se usa para guardar los scripts de los objetos en un archivo mencionado cuando metabase = Target. Se trata de una alternativa al comando de sincronización en que obtenemos los scripts y ejecutamos lo mismo en la base de datos de destino.  
   
-Este comando requiere uno o varios nodos de la metabase como parámetro de línea de comandos.  
+Este comando requiere uno o varios nodos de metabase como parámetro de línea de comandos.  
   
--   `object-name:` Especifica los objetos cuyas secuencias de comandos son para guardarse (admite nombres de objeto individuales o un nombre de objeto de grupo).  
+-   `object-name:`Especifica los objetos cuyos scripts se van a guardar (admite nombres de objeto individuales o un nombre de objeto de grupo).  
   
--   `object-type:` Especifica el tipo del objeto que se mencionan en el atributo de nombre de objeto (si se especifica la categoría de objeto, tipo de objeto será "categoría").  
+-   `object-type:`Especifica el tipo del objeto al que se ha llamado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "Category").  
   
--   `metabase:` Especifica si es el origen o destino de la metabase.  
+-   `metabase:`Especifica si se trata de la metabase de origen o de destino.  
   
--   `destination:` Especifica la ruta de acceso o la carpeta en la que se debe guardar el script. Si no se especifica el nombre de archivo, se proporcionará un nombre de archivo en el .out formato (valor del atributo object_name).
+-   `destination:`Especifica la ruta de acceso o la carpeta en la que se debe guardar el script. Si no se especifica el nombre de archivo, se proporcionará un nombre de archivo con el formato (object_name valor de atributo). out.
   
--   `overwrite:` Si es true, a continuación, sobrescribe el mismo nombre de archivo si existe. Puede tener los valores (true/false).  
+-   `overwrite:`Si es true, sobrescribe el mismo nombre de archivo si existe. Puede tener los valores (true/false).  
   
 **Ejemplo de sintaxis:**  
   
@@ -545,7 +545,7 @@ Este comando requiere uno o varios nodos de la metabase como parámetro de líne
   
 />  
 ```  
-o Administrador de configuración de  
+or  
   
 ```xml  
 <save-as-script  
@@ -561,36 +561,36 @@ o Administrador de configuración de
 </save-as-script>  
 ```  
   
-### <a name="convert-sql-statement"></a>convert-sql-statement
+### <a name="convert-sql-statement"></a>Convert-SQL-Statement
 Este comando convierte la instrucción SQL.  
   
--   `context` Especifica el nombre del esquema.  
+-   `context`Especifica el nombre del esquema.  
   
--   `destination` Especifica si la salida debe almacenarse en un archivo.  
+-   `destination`Especifica si la salida se debe almacenar en un archivo.  
   
-    Si no se especifica este atributo, la instrucción T-SQL convertida se muestra en la consola. (atributo opcional)  
+    Si no se especifica este atributo, se muestra la instrucción T-SQL convertida en la consola. (atributo opcional)  
   
--   `conversion-report-folder` Especifica la carpeta en la que se puede almacenar el informe de evaluación. (atributo opcional)  
+-   `conversion-report-folder`Especifica la carpeta en la que se puede almacenar el informe de evaluación. (atributo opcional)  
   
--   `conversion-report-overwrite` Especifica si se debe sobrescribir la carpeta de informes de evaluación si ya existe.  
+-   `conversion-report-overwrite`Especifica si se va a sobrescribir la carpeta de informes de evaluación si ya existe.  
   
     **Valor predeterminado:** false. (atributo opcional)  
   
--   `write-converted-sql-to` Especifica la ruta de acceso de carpeta de archivo (o) que debe almacenarse el T-SQL convertido. Cuando se especifica una ruta de acceso de carpeta junto con el `sql-files` atributo, cada archivo de origen tiene un destino correspondiente archivo de Transact-SQL creado en la carpeta especificada. Cuando se especifica una ruta de acceso de carpeta junto con el `sql` atributo, el T-SQL convertido se escribe en un archivo denominado Result.out en la carpeta especificada.  
+-   `write-converted-sql-to`Especifica la ruta de acceso de la carpeta del archivo (o) en la que se debe almacenar el T-SQL convertido. Cuando se especifica una ruta de acceso de carpeta `sql-files` junto con el atributo, cada archivo de código fuente tiene un archivo T-SQL de destino correspondiente creado en la carpeta especificada. Cuando se especifica una ruta de acceso de carpeta `sql` junto con el atributo, el T-SQL convertido se escribe en un archivo denominado result. out en la carpeta especificada.  
   
--   `sql` Especifica las instrucciones sql de Sybase a convertirse, una o varias instrucciones se pueden separar con un ";"  
+-   `sql`especifica las instrucciones SQL de Sybase que se van a convertir; se pueden separar una o varias instrucciones mediante un ";"  
   
--   `sql-files` Especifica la ruta de acceso de los archivos de sql que se va a convertir en el código de T-SQL.  
+-   `sql-files`Especifica la ruta de acceso de los archivos SQL que se deben convertir al código T-SQL.  
   
--   `write-summary-report-to` Especifica la ruta de acceso donde se generará el informe de resumen. Si solo se menciona la ruta de acceso de carpeta, a continuación, archivos por nombre **ConvertSQLReport.XML** se crea. (atributo opcional)  
+-   `write-summary-report-to`Especifica la ruta de acceso donde se generará el informe de resumen. Si solo se menciona la ruta de acceso de la carpeta, se crea File by Name **ConvertSQLReport. XML** . (atributo opcional)  
   
-    Creación de informes de resumen tiene dos subcategorías adicionales, a saber:  
+    La creación de informes de resumen tiene dos subcategorías más, es decir:  
   
-    -   informe de errores (= "true/false", no tiene valor predeterminado como "false" (atributos opcionales)).  
+    -   Informe: errores (= "true/false", con el valor predeterminado "false" (atributos opcionales)).  
   
-    -   verbose (= "true/false", no tiene valor predeterminado como "false" (atributos opcionales)).  
+    -   verbose (= "true/false", con el valor predeterminado "false" (atributos opcionales)).  
   
-Este comando requiere uno o varios nodos de la metabase como parámetro de línea de comandos.  
+Este comando requiere uno o varios nodos de metabase como parámetro de línea de comandos.  
   
 **Ejemplo de sintaxis:**  
   
@@ -619,7 +619,7 @@ Este comando requiere uno o varios nodos de la metabase como parámetro de líne
   
 </convert-sql-statement>  
 ```  
-o Administrador de configuración de  
+or  
   
 ```  
 <convert-sql-statement  
@@ -644,7 +644,7 @@ o Administrador de configuración de
   
 />  
 ```  
-o Administrador de configuración de  
+or  
   
 ```  
 <convert-sql-statement  
@@ -661,15 +661,15 @@ o Administrador de configuración de
 ```  
   
 ## <a name="next-steps"></a>Pasos siguientes  
-Para obtener información sobre las opciones de línea de comandos, consulte [opciones de línea de comandos en la consola de SSMA (AccessToSQL)](../access/command-line-options-in-ssma-console-accesstosql.md).  
+Para obtener información sobre las opciones de línea de comandos, vea [Opciones de la línea de comandos en la consola de SSMA (AccessToSQL)](../access/command-line-options-in-ssma-console-accesstosql.md).  
   
-Para obtener información sobre un archivo de script de la consola de ejemplo, vea [trabajar con los archivos de Script de la consola de ejemplo &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
+Para obtener información sobre un archivo de script de consola de ejemplo, vea [trabajar con los archivos de script de la consola de ejemplo &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)  
   
 El paso siguiente depende de los requisitos del proyecto:  
   
--   Para especificar una contraseña o la exportación / importación de contraseñas, vea [administrar contraseñas &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
+-   Para especificar una contraseña o exportar o importar contraseñas, consulte [Administración de contraseñas &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md).  
   
--   Para generar informes, vea [generar informes &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
+-   Para generar informes, consulte [generación de informes &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md).  
   
--   Para solucionar problemas en la consola, consulte [Troubleshooting &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
+-   Para solucionar problemas de la consola de, consulte solución de problemas de [&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md).  
   

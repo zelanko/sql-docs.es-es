@@ -16,13 +16,13 @@ ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8436616ced84892dc7e484a5d83f3f0c3779f244
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771581"
 ---
-# <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
+# <a name="sp_scriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crea los scripts de los procedimientos INSERT, UPDATE y DELETE personalizados para todos los artículos de las tablas de una publicación en la que la opción de esquema de procedimiento personalizado de generación automática esté habilitada. **sp_scriptpublicationcustomprocs** es especialmente útil para configurar suscripciones para las que la instantánea se aplica manualmente.  
@@ -45,10 +45,10 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve un conjunto de resultados que consta de una única columna **nvarchar (4000)** . El conjunto de resultados forma toda la instrucción CREATE PROCEDURE que se necesita para crear el procedimiento almacenado personalizado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los artículos sin la opción de esquema de procedimiento personalizado de generación automática (0x2) no se benefician de la creación de script de los procedimientos personalizados.  
   
- **Sp_scriptpublicationcustomprocs** usa los procedimientos siguientes para crear procedimientos en el suscriptor y no se deben ejecutar directamente:  
+ Los procedimientos siguientes se usan en **sp_scriptpublicationcustomprocs** para crear procedimientos en el suscriptor y no deben ejecutarse directamente:  
   
  **sp_script_reconciliation_delproc**  
   
@@ -75,9 +75,9 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  **sp_scriptxupdproc**  
   
 ## <a name="permissions"></a>Permisos  
- El permiso de ejecución se concede a **Public**; dentro de este procedimiento almacenado se realiza una comprobación de seguridad de procedimiento para restringir el acceso a los miembros del rol fijo de servidor **sysadmin** y del rol fijo de base de datos **db_owner** en la base de datos actual.  
+ El permiso de ejecución se concede a **Public**; dentro de este procedimiento almacenado se realiza una comprobación de seguridad de procedimiento para restringir el acceso a los miembros del rol fijo de servidor **sysadmin** y **db_owner** rol fijo de base de datos en la base de datos actual.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

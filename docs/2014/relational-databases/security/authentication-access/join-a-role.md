@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011344"
 ---
 # <a name="join-a-role"></a>combinar un rol
@@ -62,9 +62,9 @@ ms.locfileid: "63011344"
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Requiere `ALTER ANY ROLE` permiso en la base de datos, `ALTER` permiso en el rol o la pertenencia **db_securityadmin**.  
+ Requiere `ALTER ANY ROLE` el permiso en la base `ALTER` de datos, el permiso en el rol o la pertenencia a **db_securityadmin**.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-add-a-member-to-a-fixed-server-role"></a>Para agregar un miembro a un rol fijo de servidor  
   
@@ -76,9 +76,9 @@ ms.locfileid: "63011344"
   
 4.  Haga clic con el botón derecho en el rol que quiere editar y seleccione **Propiedades**.  
   
-5.  En el **propiedades del rol de servidor -**_nombre_del_rol_de_servidor_ cuadro de diálogo el **miembros** página, haga clic en **agregar**.  
+5.  En el cuadro de diálogo **propiedades de rol de servidor-**_server_role_name_ , en la página **miembros** , haga clic en **Agregar**.  
   
-6.  En el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor** , en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de servidor que quiere agregar a este rol de servidor. O bien, haga clic en **Examinar...** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver a la **propiedades del rol de servidor -**_nombre_del_rol_de_servidor_ cuadro de diálogo.  
+6.  En el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor** , en **Escribir los nombres de objeto para seleccionar (ejemplos)** , especifique el inicio de sesión o el rol de servidor que quiere agregar a este rol de servidor. O bien, haga clic en **Examinar...** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver al cuadro **de diálogo Propiedades del rol de servidor-**_server_role_name_ .  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -98,9 +98,9 @@ ms.locfileid: "63011344"
   
 7.  Haga clic con el botón derecho en el rol que quiere editar y seleccione **Propiedades**.  
   
-8.  En el **propiedades de rol de base de datos -**_nombre_del_rol_de_la_base_de_datos_ cuadro de diálogo el **General** página, haga clic en **agregar**.  
+8.  En el cuadro de diálogo **propiedades del rol de la base de datos-**_database_role_name_ , en la página **General** , haga clic en **Agregar**.  
   
-9. En el cuadro de diálogo **Seleccionar usuario o rol de base de datos** , en **Escribir los nombres de objeto para seleccionar (ejemplos)**, especifique el inicio de sesión o el rol de la base de datos que quiere agregar a este rol de base de datos. O bien, haga clic en **Examinar...** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver a la **propiedades de rol de base de datos -**_nombre_del_rol_de_la_base_de_datos_ cuadro de diálogo.  
+9. En el cuadro de diálogo **Seleccionar usuario o rol de base de datos** , en **Escribir los nombres de objeto para seleccionar (ejemplos)** , especifique el inicio de sesión o el rol de la base de datos que quiere agregar a este rol de base de datos. O bien, haga clic en **Examinar...** y seleccione cualquier objeto disponible en el cuadro de diálogo **Buscar objetos** o todos ellos. Haga clic en **Aceptar** para volver al cuadro **de diálogo Propiedades del rol de la base de datos-**_database_role_name_ .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -136,7 +136,7 @@ ms.locfileid: "63011344"
   
  Para obtener más información, vea [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Roles de nivel de servidor](server-level-roles.md)   
  [Roles de nivel de base de datos](../authentication-access/database-level-roles.md)   
  [Roles de aplicación](../authentication-access/application-roles.md)  

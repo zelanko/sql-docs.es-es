@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ac7730e8437eaed304ed69c40e45fc93ee9b5531
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68888647"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>Crear una vista del origen de datos (Tutorial básico de minería de datos)
@@ -24,7 +24,7 @@ ms.locfileid: "68888647"
   
 1.  En **Explorador de soluciones**, haga clic con el botón secundario en **vistas del origen de datos**y seleccione **nueva vista del origen de datos**.  
   
-2.  En la página **Asistente para vistas del origen de datos** , haga clic en **Siguiente**.  
+2.  En la página inicial del **Asistente para orígenes de datos**, haga clic en **Siguiente**.  
   
 3.  En la página **seleccionar un origen de datos** , en **orígenes de datos relacionales**, seleccione el origen de datos Adventure Works DW 2012 que creó en la última tarea. Haga clic en **Next**.  
   
@@ -44,12 +44,12 @@ ms.locfileid: "68888647"
      La nueva vista del origen de datos se abre en la pestaña **Targeted mailing. DSV [Design]** .  
   
 ## <a name="previous-task-in-lesson"></a>Tarea anterior de la lección  
- [Tutorial de creación de &#40;un origen de datos básico de minería de datos&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Crear un origen de datos &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Creación de una estructura &#40;de distribución de correo directo tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Lección 2: crear una estructura de distribución de correo directo &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Definir una vista del origen de datos &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
   
   

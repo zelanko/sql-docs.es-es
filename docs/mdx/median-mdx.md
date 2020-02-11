@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b6f941e269bb9948dd39ba52db0ea4d0961c029a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033855"
 ---
 # <a name="median-mdx"></a>Median (MDX)
@@ -34,13 +34,14 @@ Median(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si se especifica una expresión numérica, dicha expresión numérica especificada se evalúa en todo el conjunto y devuelve el valor medio de esa evaluación. Si no se especifica una expresión numérica, el conjunto especificado se evalúa en el contexto actual de los miembros del conjunto y devuelve el valor medio de esa evaluación.  
   
  El valor medio es el valor central de un conjunto de números ordenados. (El valor medio no es lo mismo que el valor promedio, que es la suma de un conjunto de números dividido por el total de números de un conjunto.) El valor medio se determina al elegir el valor más pequeño de forma que al menos la mitad de los valores del conjunto no sean mayores que el valor elegido. Si el número de valores del conjunto es impar, el valor medio corresponde a un solo valor. Si el número de valores del conjunto es par, el valor medio corresponde a la suma de los dos valores centrales dividida por dos.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] omite los valores NULL al calcular el valor medio de un conjunto de números ordenados.  
+>  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] omite los valores NULL al calcular el valor medio de un conjunto de números ordenados.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve las ventas mensuales medias de cada trimestre, cada subcategoría y cada país del cubo de Adventure Works.  
@@ -59,7 +60,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Configurar un servidor para que escuche en un puerto de TCP específico (Administrador de configuración de SQL Server) | Microsoft Docs
+title: Configurar un servidor para que escuche en un puerto TCP específico (Administrador de configuración de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813591"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>Configurar un servidor para que escuche en un puerto TCP específico (Administrador de configuración de SQL Server)
@@ -30,14 +30,14 @@ ms.locfileid: "62813591"
  Para obtener más información sobre la configuración predeterminada de Firewall de Windows y una descripción de los puertos TCP que afectan al motor de base de datos, Analysis Services, Reporting Services e Integration Services, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!TIP]  
->  Al seleccionar un número de puerto, consulte [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) para obtener una lista de los números de puerto asignados a determinadas aplicaciones. Seleccione un número de puerto sin asignar. Para obtener más información, vea [El rango de puertos dinámicos predeterminado para TCP/IP ha cambiado en Windows Vista y Windows Server 2008](https://support.microsoft.com/kb/929851).  
+>  Al seleccionar un número de puerto, [http://www.iana.org/assignments/port-numbers](http://www.iana.org/assignments/port-numbers) consulte para obtener una lista de los números de Puerto asignados a determinadas aplicaciones. Seleccione un número de puerto sin asignar. Para obtener más información, vea [El rango de puertos dinámicos predeterminado para TCP/IP ha cambiado en Windows Vista y Windows Server 2008](https://support.microsoft.com/kb/929851).  
   
 > [!WARNING]  
 >  El Motor de base de datos empieza a escuchar en un puerto nuevo cuando se reinicia. Sin embargo, el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser supervisa el Registro e informa del nuevo número de puerto en cuanto cambia la configuración, incluso aunque el Motor de base de datos no lo use. Reinicie el Motor de base de datos para asegurar la coherencia y evitar errores de conexión.  
   
  **En este tema**  
   
--   **Para configurar un servidor de modo que la escucha se realice en un puerto TCP específico, utilizando:**  
+-   **Para configurar un servidor para que escuche en un puerto TCP específico, utilizando:**  
   
      [Administrador de configuración de SQL Server](#SSMSProcedure)  
   
@@ -45,17 +45,17 @@ ms.locfileid: "62813591"
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>Para asignar un número de puerto TCP/IP al Motor de base de datos de SQL Server  
   
-1.  En el panel de la consola del Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server** y **Protocolos de \<nombre de instancia>** . Después, haga doble clic en **TCP/IP**.  
+1.  En Administrador de configuración de SQL Server, en el panel de la consola, expanda **SQL Server configuración de red**, expanda **protocolos \<para nombre de instancia>** y, a continuación, haga doble clic en **TCP/IP**.  
   
-2.  En el cuadro de diálogo **Propiedades de TCP/IP** , en la pestaña **Direcciones IP** , aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP del equipo. Haga clic con el botón secundario en cada dirección y, a continuación, haga clic en **Propiedades** para identificar la dirección IP que desee configurar.  
+2.  En el cuadro de diálogo **Propiedades de TCP/IP**, en la pestaña **Direcciones IP**, aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP del equipo. Haga clic con el botón derecho en cada dirección y luego haga clic en **Propiedades** para identificar la dirección IP que quiera configurar.  
   
 3.  Si el cuadro de diálogo **Puertos dinámicos TCP** contiene **0**, que indica que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] escucha en los puertos dinámicos, elimine el 0.  
   
-4.  En el cuadro de diálogo **Propiedades de**_IP_ **n** , en el cuadro **Puerto TCP** box, type the port number you want this Propiedades de address to listen on, and then click **Aceptar**.  
+4.  En el cuadro de área **propiedades** de **IP**_n_ , en el cuadro **puerto TCP** , escriba el número de puerto en el que desea que escuche esta dirección IP y, a continuación, haga clic en **Aceptar**.  
   
 5.  En el panel de la consola, haga clic en **Servicios de SQL Server**.  
   
-6.  En el panel de detalles, haga clic con el botón derecho en **SQL Server (** \<nombre de instancia> **)** y, después, haga clic en **Reiniciar** para detener y reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+6.  En el panel de detalles, haga clic con el botón secundario en **SQL Server (**\<nombre de instancia>**)** y, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]continuación, haga clic en **reiniciar**para detener y reiniciar.  
   
  Después de haber configurado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que escuche en un puerto específico, dispone de tres métodos para conectarse a un puerto específico con una aplicación cliente:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62813591"
   
 -   Programar el cliente para conectarse mediante una cadena de conexión personalizada.  
   
-## <a name="see-also"></a>Vea también  
- [Crear o eliminar un alias de servidor para que lo utilice un cliente &#40;Administrador de configuración de SQL Server&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
+## <a name="see-also"></a>Consulte también  
+ [Crear o eliminar un alias de servidor para que lo use un cliente &#40;Administrador de configuración de SQL Server&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017168"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
@@ -34,10 +34,10 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si se especifica un conjunto de tuplas vacías o un conjunto vacío, esta función devuelve un valor vacío.  
   
- La tabla siguiente describe cómo el **agregado** función se comporta con distintas funciones de agregación.  
+ En la tabla siguiente se describe cómo se comporta la función de **agregado** con distintas funciones de agregación.  
   
 |Operador de agregación|Resultado|  
 |--------------------------|------------|  
@@ -46,16 +46,16 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Max|Devuelve el valor máximo del conjunto.|  
 |Min|Devuelve el valor mínimo del conjunto.|  
 |Funciones de agregación de suma parcial|Devuelve el cálculo de comportamiento de suma parcial del conjunto después de proyectar la forma al eje de tiempo.|  
-|Distinct Count|Agrega todos los datos de hechos que contribuyen al subcubo cuando el eje segmentador incluye un conjunto.<br /><br /> Devuelve el recuento distintivo de cada miembro del conjunto. El resultado depende de la seguridad de las celdas que se agregan y no de la seguridad de las celdas necesarias para el cálculo. La seguridad de celda del conjunto genera un error; la seguridad de celda por debajo de la granularidad del conjunto especificado se omite. Los cálculos en el conjunto generan un error. Los cálculos por debajo de la granularidad del conjunto se omiten. El recuento distintivo en un conjunto que incluye un miembro y uno o más de sus elementos secundarios devuelve el recuento distintivo de todos los hechos que contribuyen al miembro secundario.|  
+|Recuento distinto|Agrega todos los datos de hechos que contribuyen al subcubo cuando el eje segmentador incluye un conjunto.<br /><br /> Devuelve el recuento distintivo de cada miembro del conjunto. El resultado depende de la seguridad de las celdas que se agregan y no de la seguridad de las celdas necesarias para el cálculo. La seguridad de celda del conjunto genera un error; la seguridad de celda por debajo de la granularidad del conjunto especificado se omite. Los cálculos en el conjunto generan un error. Los cálculos por debajo de la granularidad del conjunto se omiten. El recuento distintivo en un conjunto que incluye un miembro y uno o más de sus elementos secundarios devuelve el recuento distintivo de todos los hechos que contribuyen al miembro secundario.|  
 |Atributos que no pueden agregarse.|Devuelve la suma de los valores.|  
 |Funciones de agregación combinada|No es compatible y genera un error.|  
 |Operadores unarios|No se respetan; los valores se agregan mediante la suma.|  
 |Medidas calculadas|Conjunto de orden de resolución para garantizar la aplicación de la medida calculada.|  
 |Miembros calculados|Se aplican las reglas normales, es decir, la última orden de resolución tiene prioridad.|  
-|Asignaciones|Las asignaciones se agregan de acuerdo con la función de agregación de medida. Si la función de agregación de medida es un recuento distintivo, se suma la asignación.|  
+|Assignments|Las asignaciones se agregan de acuerdo con la función de agregación de medida. Si la función de agregación de medida es un recuento distintivo, se suma la asignación.|  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente devuelve la suma de los `Measures.[Order Quantity]` miembro, se agregan durante los primeros ocho meses del año 2003 incluidos en el `Date` dimensión, desde el **Adventure Works** cubo.  
+ En el ejemplo siguiente se devuelve la suma `Measures.[Order Quantity]` del miembro, agregada durante los primeros ocho meses del año 2003 que se encuentran en la `Date` dimensión, del cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -93,7 +93,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- El ejemplo siguiente devuelve el recuento de los distribuidores cuyas ventas han disminuido en el período de tiempo anterior, de acuerdo con los valores de los miembros State-Province seleccionados por el usuario evaluados mediante la función Aggregate. El **Hierarchize** y **DrillDownLevel** las funciones se usan para devolver valores para las ventas de categorías de producto de la dimensión Product que han disminuido.  
+ El ejemplo siguiente devuelve el recuento de los distribuidores cuyas ventas han disminuido en el período de tiempo anterior, de acuerdo con los valores de los miembros State-Province seleccionados por el usuario evaluados mediante la función Aggregate. Las funciones **Hierarchy** y **DrillDownLevel** se utilizan para devolver valores para las ventas que se rechazan para las categorías de producto de la dimensión product.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -121,16 +121,16 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
- [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
+## <a name="see-also"></a>Consulte también  
+ [&#40;&#41;MDX de PeriodsToDate](../mdx/periodstodate-mdx.md)   
+ [Secundarios &#40;&#41;MDX](../mdx/children-mdx.md)   
+ [Jerarquía &#40;&#41;MDX](../mdx/hierarchize-mdx.md)   
+ [Count &#40;establecer&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Filtrar &#40;&#41;MDX](../mdx/filter-mdx.md)   
+ [&#41;AddCalculatedMembers &#40;MDX](../mdx/addcalculatedmembers-mdx.md)   
+ [&#41;DrilldownLevel &#40;MDX](../mdx/drilldownlevel-mdx.md)   
+ [Propiedades &#40;&#41;MDX](../mdx/properties-mdx.md)   
+ [&#41;PrevMember &#40;MDX](../mdx/prevmember-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

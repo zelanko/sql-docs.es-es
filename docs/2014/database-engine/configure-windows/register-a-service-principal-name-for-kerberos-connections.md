@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782000"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos
@@ -71,25 +71,25 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Instancia con nombre**  
   
--   *MSSQLSvc/FQDN*:[_puerto_**|**_nombreDeInstancia_], donde:  
+-   *MSSQLSvc/FQDN*: [_Puerto_**|**_nombreDeInstancia_], donde:  
   
     -   *MSSQLSvc* es el servicio que se va a registrar.  
   
     -   *FQDN* es el nombre de dominio completo del servidor.  
   
-    -   *puerto* en el número de puerto TCP.  
+    -   *Port* es el número de puerto TCP.  
   
-    -   *nombreDeInstancia* es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    -   *InstanceName* es el nombre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia.  
   
  **Instancia predeterminada**  
   
--   *MSSQLSvc/FQDN*:_puerto_**|**_MSSQLSvc/FQDN_, donde:  
+-   *MSSQLSvc/FQDN*:_Puerto_**|**_MSSQLSvc/FQDN_, donde:  
   
     -   *MSSQLSvc* es el servicio que se va a registrar.  
   
     -   *FQDN* es el nombre de dominio completo del servidor.  
   
-    -   *puerto* en el número de puerto TCP.  
+    -   *Port* es el número de puerto TCP.  
   
  El nuevo formato SPN no requiere un número de puerto. Esto significa que un servidor con varios puertos o un protocolo que no use números de puerto puede utilizar la autenticación Kerberos.  
   
@@ -98,14 +98,14 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 |||  
 |-|-|  
-|MSSQLSvc/*fqdn:puerto*|SPN predeterminado generado por el proveedor cuando se usa TCP. *puerto* en un número de puerto TCP.|  
+|MSSQLSvc/*FQDN: Puerto*|SPN predeterminado generado por el proveedor cuando se usa TCP. *puerto* en un número de puerto TCP.|  
 |MSSQLSvc/*fqdn*|SPN predeterminado generado por el proveedor para una instancia predeterminada cuando se usa un protocolo distinto de TCP. *fqdn* es un nombre de dominio completo.|  
-|MSSQLSvc/*fqdn:InstanceName*|SPN predeterminado generado por el proveedor para una instancia con nombre cuando se usa un protocolo distinto de TCP. *nombreDeInstancia* es el nombre de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc/*FQDN: nombreDeInstancia*|SPN predeterminado generado por el proveedor para una instancia con nombre cuando se usa un protocolo distinto de TCP. *InstanceName* es el nombre de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ##  <a name="Auto"></a> Registro automático de SPN  
- Cuando se inicia una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta registrar el SPN para el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando la instancia se detiene, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta anular el registro del SPN. En una conexión TCP/IP, el SPN se registra con el formato *MSSQLSvc/\<FQDN>*:*\<puertotcp>*. Las instancias con nombre y la instancia predeterminada se registran como *MSSQLSvc* en función del valor *\<puertotcp>* para diferenciar las instancias.  
+ Cuando se inicia una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta registrar el SPN para el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando la instancia se detiene, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta anular el registro del SPN. En una conexión TCP/IP, el SPN se registra con el formato *MSSQLSvc/\<FQDN>* : *\<puertotcp>* . Las instancias con nombre y la instancia predeterminada se registran como *MSSQLSvc* en función del valor *\<puertotcp>* para diferenciar las instancias.  
   
- Para otras conexiones compatibles con Kerberos, el SPN se registra en el formato *MSSQLSvc /\<FQDN >*:*\<instancename >* para una instancia con nombre. El formato para registrar la instancia predeterminada es *MSSQLSvc/\<FQDN>*.  
+ En el caso de otras conexiones compatibles con Kerberos, el SPN se registra con el formato *MSSQLSvc/\<FQDN>*:*\<InstanceName>* para una instancia con nombre. El formato para registrar la instancia predeterminada es *MSSQLSvc/\<FQDN>* .  
   
  Es posible que se requiera una intervención manual para registrar o anular el registro del SPN si la cuenta de servicio carece de los permisos requeridos para estas acciones.  
   
@@ -120,7 +120,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com:1433 accountname  
 ```  
   
- **Nota** : Si un SPN ya existe, se debe eliminar antes de que se pueda volver a registrar. Para ello, use el comando `setspn` junto con el modificador `-D` . Los ejemplos siguientes muestran cómo registrar manualmente un nuevo SPN basado en instancias. Para una instancia predeterminada, use:  
+ **Nota:** Si ya existe un SPN, debe eliminarse antes de que se pueda volver a registrar. Para ello, use el comando `setspn` junto con el modificador `-D` . Los ejemplos siguientes muestran cómo registrar manualmente un nuevo SPN basado en instancias. Para una instancia predeterminada, use:  
   
 ```  
 setspn -A MSSQLSvc/myhost.redmond.microsoft.com accountname  
@@ -135,7 +135,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
 ##  <a name="Client"></a> Conexiones de cliente  
  Los SPN especificados por el usuario son compatibles con los controladores de cliente. Sin embargo, si no se proporciona un SPN, se generará automáticamente basándose en el tipo de conexión de cliente. Para una conexión TCP, se usa un SPN con el formato *MSSQLSvc*/*FQDN*:[*puerto*] tanto para las instancias predeterminadas como para las instancias con nombre.  
   
- Para las conexiones de canalización con nombre y de memoria compartida, se usa un SPN con el formato *MSSQLSvc*/*FQDN*:*nombreDeInstancia* para una instancia con nombre y *MSSQLSvc*/*FQDN* para la instancia predeterminada.  
+ En el caso de las conexiones de canalización con nombre y de memoria compartida, se usa un SPN con el formato *MSSQLSvc*/*FQDN*:*InstanceName* para una instancia con nombre y se utiliza el*FQDN* de *MSSQLSvc*/para la instancia predeterminada.  
   
  **Usar una cuenta de servicio como un SPN**  
   
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |Escenario|Método de autenticación|  
 |--------------|---------------------------|  
-|El SPN se asigna a la cuenta de dominio, cuenta virtual, MSA o cuenta integrada correcta. Por ejemplo, Sistema local o Servicio de red.<br /><br /> Nota: Correcto significa que la cuenta asignada por el SPN registrado es la cuenta que se ejecuta el servicio SQL Server.|Las conexiones locales usan NTLM, mientras que las conexiones remotas usan Kerberos.|  
-|El SPN es la cuenta de dominio, cuenta virtual, MSA o cuenta integrada correcta.<br /><br /> Nota: Correcto significa que la cuenta asignada por el SPN registrado es la cuenta que se ejecuta el servicio SQL Server.|Las conexiones locales usan NTLM, mientras que las conexiones remotas usan Kerberos.|  
+|El SPN se asigna a la cuenta de dominio, cuenta virtual, MSA o cuenta integrada correcta. Por ejemplo, Sistema local o Servicio de red.<br /><br /> Nota: correcto significa que la cuenta asignada por el SPN registrado es la cuenta en la que se está ejecutando el servicio de SQL Server.|Las conexiones locales usan NTLM, mientras que las conexiones remotas usan Kerberos.|  
+|El SPN es la cuenta de dominio, cuenta virtual, MSA o cuenta integrada correcta.<br /><br /> Nota: correcto significa que la cuenta asignada por el SPN registrado es la cuenta en la que se está ejecutando el servicio de SQL Server.|Las conexiones locales usan NTLM, mientras que las conexiones remotas usan Kerberos.|  
 |El SPN se asigna a una cuenta de dominio, cuenta virtual, MSA o cuenta integrada incorrecta.|Se produce un error en la autenticación.|  
 |Se produce un error en la búsqueda de SPN o no se asigna a una cuenta de dominio, cuenta virtual, MSA o cuenta integrada correcta, o no es una cuenta de dominio, cuenta virtual MSA o cuenta integrada correcta.|Tanto las conexiones locales como las remotas usan NTLM.|  
   
@@ -170,7 +170,7 @@ WHERE session_id = @@SPID;
   
  Si no se puede anular el registro del SPN durante el cierre, se indica el problema en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el cierre continúa.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con Nombre de entidad de seguridad de servicio &#40;SPN&#41; en conexiones cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
  [Nombres de entidad de seguridad de servicio &#40;SPNs&#41; en conexiones cliente &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Nombres de entidad de seguridad de servicio &#40;SPNs&#41; en conexiones cliente &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   

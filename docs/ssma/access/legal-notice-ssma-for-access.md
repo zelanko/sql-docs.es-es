@@ -1,5 +1,5 @@
 ---
-title: Aviso legal (SSMA para Access) | Microsoft Docs
+title: Aviso legal (SSMA para el acceso) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,13 +14,13 @@ ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d22a41b67d4b33d573a1c3ecc5f2235560cceea3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947514"
 ---
-# <a name="legal-notice-ssma-for-access"></a>Aviso legal (SSMA para Access)
+# <a name="legal-notice-ssma-for-access"></a>Aviso legal (SSMA para el acceso)
 Tanto esta documentación como las aplicaciones de ejemplo que contiene, se proporcionan únicamente con fines informativos y sin ninguna garantía, ya sea expresa o implícita. La información que se proporciona en esta documentación, incluidas las direcciones URL y otras referencias a sitios web de Internet, está sujeta a modificaciones sin previo aviso. El usuario asume todos los riesgos derivados del uso de esta documentación.  
   
 El objetivo principal de las muestras que se incluyen en esta documentación es ilustrar un concepto o un uso razonable de una instrucción o cláusula determinada. La mayoría de las muestras no incluyen todo el código que debería tener un sistema totalmente en producción, puesto que se ha eliminado parte de la validación de datos comunes y el control de errores para resaltar en la muestra un determinado concepto o instrucción. No hay soporte técnico disponible para estas muestras ni para el código fuente incluido.  
@@ -38,7 +38,7 @@ SAP NetWeaver es una marca registrada de SAP AG en Alemania y en otros países o
 Las demás marcas comerciales pertenecen a sus respectivos propietarios.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Directiva de documentación para soporte y actualización de SQL Server  
-El contenido que aparece en la documentación de SQL Server solo se publica una vez se probó lo suficiente. Documentación del producto: libros en pantalla de SQL Server, archivos Léame, documentos de problemas conocidos y artículos de Knowledge Base - contiene contenido con respecto a las características de SQL Server y la funcionalidad que es suficientemente sólida para ser seguros para uso general por todos los clientes. Esta directiva se aplica tanto a la documentación de SQL Server como a los archivos Léame de las versiones y los Service Pack; un archivo Léame se considera una extensión de los Libros en pantalla.  
+El contenido que aparece en la documentación de SQL Server solo se publica una vez se probó lo suficiente. Documentación del producto: Libros en pantalla de SQL Server, archivos Léame, documentos de problemas conocidos y artículos de Knowledge Base: contiene contenido relacionado con SQL Server características y funcionalidades que es lo suficientemente sólida como para que todos los clientes puedan usarlos con carácter general. Esta directiva se aplica tanto a la documentación de SQL Server como a los archivos Léame de las versiones y los Service Pack; un archivo Léame se considera una extensión de los Libros en pantalla.  
   
 En varios casos, es posible que una determinada característica no esté documentada ya que no es algo que los clientes deban usar directamente. A menos que una característica se plasme en la documentación de SQL Server publicada por Microsoft, los contenidos de los libros o sitios web de terceros no serán compatibles con el servicio de asistencia al cliente de Microsoft y no se deberán usar para crear bases de datos o aplicaciones.  
   

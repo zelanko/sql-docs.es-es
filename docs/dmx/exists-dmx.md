@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889046"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
@@ -29,12 +29,12 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>Argumentos  
  *subquery*  
- Una instrucción SELECT con el formato Select * from \<Column name > [where \<Predicate list >].  
+ Una instrucción SELECT con el formato SELECT * FROM \<column Name> [where \<Predicate List>].  
   
 ## <a name="result-type"></a>Tipo de resultado  
  Devuelve **true** si el conjunto de resultados devuelto por la subconsulta contiene al menos una fila; de lo contrario, devuelve **false**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Puede utilizar la palabra clave NOT delante de EXISTS; por ejemplo, `WHERE NOT EXISTS (<subquery>)`.  
   
  La lista de columnas que se agrega al argumento de la subconsulta de EXISTS es irrelevante; la función solo comprueba la existencia de una fila que cumpla la condición.  
@@ -55,8 +55,8 @@ WHERE [[Model] = 'Patch kit'
   
  Otra manera de ver los mismos datos que devuelve esta consulta es abrir el modelo en el visor de asociaciones, hacer clic con el botón secundario en el conjunto de la **revisión kit = existente**, seleccionar la opción obtener **detalles** y, a continuación, seleccionar **solo casos del modelo**.  
   
-## <a name="see-also"></a>Vea también  
- [DMX &#40;de funciones&#41;](../dmx/functions-dmx.md)   
- [Sintaxis y ejemplos &#40;del filtro de modelos Analysis Services: minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
+## <a name="see-also"></a>Consulte también  
+ [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Sintaxis y ejemplos del filtro de modelos &#40;Analysis Services:&#41;de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   
   

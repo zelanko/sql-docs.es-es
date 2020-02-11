@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035693"
 ---
 # <a name="projects-sql-server-management-studio"></a>Proyectos (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "63035693"
   
 -   **Scripts MDX, DMX y XMLA**. Scripts MDX usados frecuentemente por el usuario. Si hace doble clic en un archivo .mdx del proyecto, el Editor abrirá el script seleccionado.  
   
--   **Varios**. Esta carpeta se puede usar para los archivos que no encajan en ninguno de los otros tipos de nodos predeterminados, como un archivo de texto que contenga los objetivos del proyecto.  
+-   **Varios**. Esta carpeta se puede usar para los archivos que no encajan en ninguno de los otros tipos de nodo predeterminados, como un archivo de texto que contenga los objetivos del proyecto.  
   
  Los proyectos también pueden estar integrados en un sistema de control de código fuente.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63035693"
 |Describe cómo cambiar la información de conexión para una consulta.|[Cambiar la conexión asociada a una consulta](change-the-connection-associated-with-a-query.md)|  
 |Describe cómo cambiar las propiedades de conexión.|[Ver o cambiar las propiedades de una conexión en un proyecto](view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de soluciones](solution-explorer.md)   
  [Soluciones &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
  [Control de código fuente del Explorador de soluciones](../../database-engine/solution-explorer-source-control.md)  

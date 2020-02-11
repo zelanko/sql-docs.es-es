@@ -20,10 +20,10 @@ ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039032"
 ---
 # <a name="comparison-expressions-xquery"></a>Expresiones de comparación (XQuery)
@@ -33,18 +33,18 @@ ms.locfileid: "68039032"
   
 -   Operadores de comparación generales  
   
--   Operadores de comparación de valor  
+-   Operadores de comparación de valores  
   
 -   Operadores de comparación de nodos  
   
--   Operadores de comparación de nodo  
+-   Operadores de comparación de orden de nodos  
   
 ## <a name="general-comparison-operators"></a>Operadores de comparación generales  
  Los operadores de comparación generales se pueden utilizar para comparar valores atómicos, secuencias o cualquier combinación de ambos.  
   
  Los operadores generales se definen en la tabla siguiente.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |=|Igual|  
 |!=|No igual|  
@@ -79,7 +79,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- La consulta siguiente devuelve imágenes pequeñas de un modelo del catálogo de productos proporcionado en la base de datos de ejemplo AdventureWorks. La consulta compara una secuencia de valores atómicos devueltos por `PD:ProductDescription/PD:Picture/PD:Size` con una secuencia de valores singleton, "small". Si la comparación es True, devuelve el < imagen\> elemento.  
+ La consulta siguiente devuelve imágenes pequeñas de un modelo del catálogo de productos proporcionado en la base de datos de ejemplo AdventureWorks. La consulta compara una secuencia de valores atómicos devueltos por `PD:ProductDescription/PD:Picture/PD:Size` con una secuencia de valores singleton, "small". Si la comparación es true, devuelve el elemento de imagen\> <.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -90,7 +90,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- La siguiente consulta compara una secuencia de números de teléfono de < número\> elementos a la cadena literal "112-111-1111". La consulta compara la secuencia de elementos de números de teléfono de la columna AdditionalContactInfo para determinar si un número de teléfono determinado de un cliente en concreto existe en el documento.  
+ La consulta siguiente compara una secuencia de números de teléfono en <elementos\> Number con el literal de cadena "112-111-1111". La consulta compara la secuencia de elementos de números de teléfono de la columna AdditionalContactInfo para determinar si un número de teléfono determinado de un cliente en concreto existe en el documento.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -103,7 +103,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- La consulta devuelve True. Esto indica que el número existe en el documento. La consulta siguiente es una versión ligeramente modificada de la consulta anterior. En esta consulta, los valores de números de teléfono recuperados del documento se comparan con una secuencia de dos valores de números de teléfono. Si la comparación es True, el < número\> se devuelve el elemento.  
+ La consulta devuelve True. Esto indica que el número existe en el documento. La consulta siguiente es una versión ligeramente modificada de la consulta anterior. En esta consulta, los valores de números de teléfono recuperados del documento se comparan con una secuencia de dos valores de números de teléfono. Si la comparación es true, se devuelve el\> elemento de número de <.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -121,7 +121,7 @@ WHERE ContactID=1
   
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 \<act:number   
@@ -139,7 +139,7 @@ WHERE ContactID=1
   
  Los operadores de comparación de valores se definen en la tabla siguiente.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |eq|Igual|  
 |ne|No igual|  
@@ -152,7 +152,7 @@ WHERE ContactID=1
   
  Estos operadores solo funcionan en valores atómicos singleton. Es decir, no se puede especificar una secuencia como uno de los operandos.  
   
- Por ejemplo, la siguiente consulta recupera \<imagen > elementos para un modelo de producto donde el tamaño de imagen es "pequeño:  
+ Por ejemplo, la consulta siguiente recupera los \<elementos de> de imagen para un modelo de producto en el que el tamaño de la imagen es "pequeño:  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -167,13 +167,14 @@ WHERE ProductModelID=19
   
  Observe lo siguiente en la consulta anterior:  
   
--   `declare namespace` define el prefijo de espacio de nombres que se utilizará posteriormente en la consulta.  
+-   
+  `declare namespace` define el prefijo de espacio de nombres que se utilizará posteriormente en la consulta.  
   
--   El \<tamaño > valor del elemento se compara con el valor atómico especificado, "small".  
+-   El \<tamaño> valor del elemento se compara con el valor atómico especificado, "Small".  
   
--   Tenga en cuenta que dado que los operadores de valores solo funcionan en valores atómicos, la **data()** función implícitamente se usa para recuperar el valor del nodo. Es decir, `data($P/PD:Size) eq "small"` obtiene el mismo resultado.  
+-   Tenga en cuenta que, dado que los operadores de valores solo funcionan en valores atómicos, la función **Data ()** se usa implícitamente para recuperar el valor del nodo. Es decir, `data($P/PD:Size) eq "small"` obtiene el mismo resultado.  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 \<PD:Picture   
@@ -187,7 +188,7 @@ WHERE ProductModelID=19
  Tenga en cuenta que las reglas de promoción de tipos para comparaciones de valores son las mismas que para las comparaciones generales. Además, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza las mismas reglas de conversión para los valores sin tipo durante las comparaciones de valores, al igual que durante las comparaciones generales. En cambio, las reglas de la especificación XQuery siempre convierten el valor sin tipo a xs:string durante las comparaciones de valores.  
   
 ## <a name="node-comparison-operator"></a>Operadores de comparación de nodos  
- El operador de comparación de nodo, **es**, solo se aplica a tipos de nodo. El resultado que devuelve indica si dos nodos pasados como operandos representan al mismo nodo en el documento de origen. Este operador devuelve True si los dos operandos son el mismo nodo. De lo contrario, devuelve False.  
+ El operador de comparación de nodos, **es**, se aplica solo a los tipos de nodo. El resultado que devuelve indica si dos nodos pasados como operandos representan al mismo nodo en el documento de origen. Este operador devuelve True si los dos operandos son el mismo nodo. De lo contrario, devuelve False.  
   
  La consulta siguiente comprueba si la ubicación de centro de trabajo 10 es la primera en el proceso de fabricación de un modelo de producto determinado.  
   
@@ -207,7 +208,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7           
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 ProductModelID       Result          
@@ -220,11 +221,11 @@ ProductModelID       Result
   
  A continuación se exponen las comparaciones que se realizan en función del orden en el documento:  
   
--   `<<` : Does **operando 1** preceder **operando 2** en el orden del documento.  
+-   `<<`: Hace preceder el **operando 1** delante del **operando 2** en el orden del documento.  
   
--   `>>` : Does **operando 1** siga **operando 2** en el orden del documento.  
+-   `>>`: El **operando 1** sigue el **operando 2** en el orden del documento.  
   
- La consulta siguiente devuelve True si la descripción del catálogo de productos el \<garantía > elemento que aparezcan antes que la \<Mantenimiento > elemento en el orden del documento de un determinado producto.  
+ La consulta siguiente devuelve true si la descripción del catálogo de productos \<tiene el elemento de garantía> que \<aparece antes que el elemento de> de mantenimiento en el orden del documento para un producto determinado.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -240,13 +241,13 @@ where ProductModelID=19
   
  Observe lo siguiente en la consulta anterior:  
   
--   El **value()** método de la **xml**se usa el tipo de datos en la consulta.  
+-   El método **Value ()** del tipo de datos **XML**se usa en la consulta.  
   
--   El resultado booleano de la consulta se convierte en **nvarchar (10)** y se devuelven.  
+-   El resultado booleano de la consulta se convierte en **nvarchar (10)** y se devuelve.  
   
 -   La consulta devuelve True.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Sistema de tipos &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [Expresiones XQuery](../xquery/xquery-expressions.md)  
   

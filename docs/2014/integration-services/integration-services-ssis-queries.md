@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4323715155ddb433012624f9d7a5df9bb0a29c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767667"
 ---
 # <a name="integration-services-ssis-queries"></a>Consultas de Integration Services (SSIS)
@@ -55,7 +55,7 @@ ms.locfileid: "62767667"
  Para más información, consulte [Query Builder](../../2014/integration-services/query-builder.md).  
   
 ## <a name="sql-in-files"></a>SQL en archivos  
- La instrucción SQL para la tarea Ejecutar SQL también puede residir en un archivo independiente. Por ejemplo, puede escribir una consulta utilizando herramientas como el Editor de consultas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], guardarla en un archivo y después, leer la consulta del archivo al ejecutar un paquete. El archivo solo puede contener las instrucciones SQL que se van a ejecutar y comentarios. Para utilizar una instrucción SQL almacenada en un archivo, debe proporcionar una conexión de archivos que especifique el nombre y la ubicación del archivo. Para más información, consulte [File Connection Manager](connection-manager/file-connection-manager.md).  
+ La instrucción SQL para la tarea Ejecutar SQL también puede residir en un archivo independiente. Por ejemplo, puede escribir una consulta utilizando herramientas como el Editor de consultas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], guardarla en un archivo y después, leer la consulta del archivo al ejecutar un paquete. El archivo solo puede contener las instrucciones SQL que se van a ejecutar y comentarios. Para utilizar una instrucción SQL almacenada en un archivo, debe proporcionar una conexión de archivos que especifique el nombre y la ubicación del archivo. Para obtener más información, consulte [File Connection Manager](connection-manager/file-connection-manager.md).  
   
 ## <a name="sql-in-variables"></a>SQL en variables  
  Si el origen de la instrucción SQL en la tarea Ejecutar SQL es una variable, debe proporcionar el nombre de la variable que contiene la consulta. La propiedad Value de la variable contiene el texto de la consulta. La propiedad ValueType de la variable se establece en un tipo de datos de cadena y luego se escribe o se copia la instrucción SQL en la propiedad Value. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) y [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md).  

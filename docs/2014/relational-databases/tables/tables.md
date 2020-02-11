@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211788"
 ---
 # <a name="tables"></a>Tablas
@@ -27,7 +27,7 @@ ms.locfileid: "68211788"
   
 -   Puede asignar propiedades a la tabla y a cada columna de la tabla para controlar los datos admitidos y otras propiedades. Por ejemplo, puede crear restricciones en una columna para no permitir valores nulos o para proporcionar un valor predeterminado si no se especifica un valor, o puede asignar una restricción de clave en la tabla que exige la unicidad o definir una relación entre las tablas.  
   
--   Los datos de la tabla se pueden comprimir por filas o por página. La compresión de datos puede permitir que se almacenen más filas en una página. Para más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+-   Los datos de la tabla se pueden comprimir por filas o por página. La compresión de datos puede permitir que se almacenen más filas en una página. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="types-of-tables"></a>Tipos de tablas  
  Además del rol estándar de las tablas básicas definidas por el usuario, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona los siguientes tipos de tabla que permiten llevar a cabo objetivos especiales en una base de datos:  
@@ -36,10 +36,11 @@ ms.locfileid: "68211788"
  Las tablas con particiones son tablas cuyos datos se han dividido horizontalmente entre unidades que pueden repartirse por más de un grupo de archivos de una base de datos. Las particiones facilitan la administración de índices y tablas grandes al permitir el acceso y la administración de subconjuntos de datos rápidamente y con eficacia, mientras se mantiene la integridad de la colección global. De forma predeterminada, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite hasta 15.000 particiones. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  Tablas temporales  
- Tablas temporales se almacenan en `tempdb`. Hay dos tipos de tablas temporales: locales y globales. Se diferencian entre sí por los nombres, la visibilidad y la disponibilidad. Las tablas temporales locales tienen como primer carácter de sus nombres un solo signo de número (#); solo son visibles para el usuario de la conexión actual y se eliminan cuando el usuario se desconecta de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las tablas temporales globales presentan dos signos de número (##) antes del nombre; son visibles para cualquier usuario después de su creación y se eliminan cuando todos los usuarios que hacen referencia a la tabla se desconectan de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Las tablas temporales se almacenan en `tempdb`. Hay dos tipos de tablas temporales: locales y globales. Se diferencian entre sí por los nombres, la visibilidad y la disponibilidad. Las tablas temporales locales tienen como primer carácter de sus nombres un solo signo de número (#); solo son visibles para el usuario de la conexión actual y se eliminan cuando el usuario se desconecta de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las tablas temporales globales presentan dos signos de número (##) antes del nombre; son visibles para cualquier usuario después de su creación y se eliminan cuando todos los usuarios que hacen referencia a la tabla se desconectan de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Tablas del sistema  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena los datos que definen la configuración del servidor y de todas sus tablas en un conjunto de tablas especial, conocido como tablas del sistema. Los usuarios no pueden consultar o actualizar directamente las tablas del sistema. La información de las tablas del sistema está disponible a través de las vistas del sistema. Para obtener más información, vea [Vistas del sistema &#40;Transact-SQL&#41;](/sql/t-sql/language-reference).  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena los datos que definen la configuración del servidor y de todas sus tablas en un conjunto de tablas especial, conocido como tablas del sistema. Los usuarios no pueden consultar o actualizar directamente las tablas del sistema. La información de las tablas del sistema está disponible a través de las vistas del sistema. Para obtener más información, vea [Vistas del sistema &#40;Transact-SQL&#41;](/sql/t-sql/language-reference).  
   
  Tablas anchas  
  Las tablas anchas usan las [columnas dispersas](use-sparse-columns.md) para aumentar hasta 30 000 el número total de columnas permitidas. Las columnas dispersas son columnas normales que disponen de un almacenamiento optimizado para los valores NULL. Este tipo de columnas reducen los requisitos de espacio de los valores NULL a costa de una mayor sobrecarga a la hora de recuperar valores no NULL. Una tabla ancha ha definido un [conjunto de columnas](use-column-sets.md), que es una representación XML sin tipo que combina todas las columnas dispersas de una tabla en una salida estructurada. El número de índices y estadísticas también se aumenta hasta 1.000 y 30.000, respectivamente. El tamaño máximo de una fila de una tabla ancha es de 8.019 bytes. Por consiguiente, la mayoría de los datos de cualquier fila deben ser NULL. El número máximo de columnas no dispersas más las columnas calculadas de una tabla ancha sigue siendo 1.024.  
@@ -64,27 +65,27 @@ ms.locfileid: "68211788"
 |Tareas de tabla|Tema|  
 |-----------------|-----------|  
 |Describe cómo crear una tabla.|[Crear tablas &#40;motor de base de datos&#41;](create-tables-database-engine.md)|  
-|Describe cómo eliminar una tabla.|[Eliminar tablas &#40;motor de base de datos&#41;](delete-tables-database-engine.md)|  
+|Describe cómo eliminar una tabla.|[Eliminar tablas &#40;Motor de base de datos&#41;](delete-tables-database-engine.md)|  
 |Describe cómo crear una nueva tabla que contenga algunas o todas las columnas de una tabla existente.|[Tablas duplicadas](duplicate-tables.md)|  
-|Describe cómo cambiar el nombre de una tabla.|[Cambiar el nombre a las tablas &#40;motor de base de datos&#41;](rename-tables-database-engine.md)|  
-|Describe cómo ver las propiedades de la tabla.|[Ver la definición de tabla](view-the-table-definition.md)|  
+|Describe cómo cambiar el nombre de una tabla.|[Cambiar el nombre de las tablas &#40;Motor de base de datos&#41;](rename-tables-database-engine.md)|  
+|Describe cómo ver las propiedades de la tabla.|[Vea la definición de tabla](view-the-table-definition.md)|  
 |Describe cómo determinar si otros objetos como una vista o un procedimiento almacenado dependen de una tabla.|[Ver las dependencias de una tabla](view-the-dependencies-of-a-table.md)|  
   
  En la tabla siguiente se proporcionan vínculos a las tareas comunes asociadas con la creación o modificación de columnas en una tabla.  
   
 |Tareas de columna|Tema|  
 |------------------|-----------|  
-|Describe cómo agregar columnas a una tabla existente.|[Agregar columnas a una tabla &#40;motor de base de datos&#41;](add-columns-to-a-table-database-engine.md)|  
+|Describe cómo agregar columnas a una tabla existente.|[Agregar columnas a una tabla &#40;Motor de base de datos&#41;](add-columns-to-a-table-database-engine.md)|  
 |Describe cómo eliminar columnas de una tabla.|[Eliminar columnas de una tabla](delete-columns-from-a-table.md)|  
-|Describe cómo cambiar el nombre de una columna.|[Cambiar el nombre a las columnas &#40;motor de base de datos&#41;](rename-columns-database-engine.md)|  
-|Describe cómo copiar columnas de una tabla a otra, copiar solo la definición de la columna o copiar la definición y los datos.|[Copiar columnas de una tabla a otra &#40;motor de base de datos&#41;](copy-columns-from-one-table-to-another-database-engine.md)|  
-|Describe cómo modificar una definición de columna mediante el cambio del tipo de datos u otra propiedad.|[Modificar columnas &#40;motor de base de datos&#41;](modify-columns-database-engine.md)|  
+|Describe cómo cambiar el nombre de una columna.|[Cambiar el nombre de las columnas &#40;Motor de base de datos&#41;](rename-columns-database-engine.md)|  
+|Describe cómo copiar columnas de una tabla a otra, copiar solo la definición de la columna o copiar la definición y los datos.|[Copiar columnas de una tabla a otra &#40;Motor de base de datos&#41;](copy-columns-from-one-table-to-another-database-engine.md)|  
+|Describe cómo modificar una definición de columna mediante el cambio del tipo de datos u otra propiedad.|[Modificar columnas &#40;Motor de base de datos&#41;](modify-columns-database-engine.md)|  
 |Describe cómo cambiar el orden en el que aparecen las columnas.|[Cambiar el orden de las columnas de una tabla](change-column-order-in-a-table.md)|  
 |Describe cómo crear una columna calculada en una tabla.|[Especificar columnas calculadas en una tabla](specify-computed-columns-in-a-table.md)|  
 |Describe cómo especificar un valor predeterminado de una columna. Este valor se usa si no se proporciona otro.|[Especificar valores predeterminados para las columnas](specify-default-values-for-columns.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Restricciones entre claves principales y claves externas](primary-and-foreign-key-constraints.md)   
+## <a name="see-also"></a>Consulte también  
+ [Restricciones de clave principal y externa](primary-and-foreign-key-constraints.md)   
  [Restricciones UNIQUE y restricciones CHECK](unique-constraints-and-check-constraints.md)  
   
   

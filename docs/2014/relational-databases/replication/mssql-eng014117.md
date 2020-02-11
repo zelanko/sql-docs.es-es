@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a249f5536846507996da4a7478a32dbe68e4dcd
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811251"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
@@ -25,9 +25,9 @@ ms.locfileid: "68811251"
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|14117|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|14117|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
 |Texto del mensaje|%1!' no está configurado como base de datos de distribución.|  
@@ -46,13 +46,13 @@ ms.locfileid: "68811251"
 ## <a name="user-action"></a>Acción del usuario  
  Compruebe que la instancia del distribuidor esté correctamente registrada. Si el nombre de red del equipo y el nombre de la instancia de SQL Server son diferentes, lleve a cabo una de estas acciones.  
   
--   Agregue el nombre de la instancia de SQL Server como nombre de red válido. Un método para establecer un nombre de red alternativo es agregarlo al archivo de hosts local. El archivo de hosts local se encuentra de manera predeterminada en WINDOWS\system32\drivers\etc o en WINNT\system32\drivers\etc. Para obtener más información, consulte la documentación de Windows.  
+-   Agregue el nombre de la instancia de SQL Server como nombre de red válido. Un método para establecer un nombre de red alternativo es agregarlo al archivo de hosts local. De manera predeterminada, el archivo de hosts local se encuentra en WINDOWS\system32\drivers\etc o WINNT\system32\drivers\etc. Para obtener más información, vea la documentación de Windows.  
   
      Por ejemplo, si el nombre de equipo es comp1 y el equipo tiene la dirección IP 10.193.17.129, y el nombre de la instancia es inst1/instname, agregue la siguiente entrada en el archivo de hosts:  
   
      10.193.17.129 inst1  
   
--   Deshabilite la distribución, registre la instancia y, a continuación, vuelva establecer la distribución. Si el valor de @@SERVERNAME no es correcto para una instancia no agrupada, siga estos pasos:  
+-   Deshabilite la distribución, registre la instancia y, a continuación, vuelva establecer la distribución. Si el valor de @@SERVERNAME no es correcto en una instancia no agrupada, siga estos pasos:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -71,7 +71,7 @@ ms.locfileid: "68811251"
   
 2.  Deshabilite la distribución y, a continuación, vuelva a habilitarla. Para más información, consulte [Configure Distribution](configure-distribution.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y eventos &#40;replicación&#41;](errors-and-events-reference-replication.md)  
   
   

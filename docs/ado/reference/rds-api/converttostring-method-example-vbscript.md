@@ -15,17 +15,17 @@ ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1feada03927b1c2359babf7d68d6c9a8ffcba2b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964555"
 ---
 # <a name="converttostring-method-example-vbscript"></a>Ejemplo del método ConvertToString (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- El ejemplo siguiente muestra cómo convertir un **Recordset** en una cadena codificada en formato MIME con el **RDSServer.DataFactory ConvertToString** método. A continuación, se muestra cómo se puede convertir la cadena en un **Recordset**. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **ConvertToString.htm**.  
+ En el ejemplo siguiente se muestra cómo convertir un **conjunto de registros** en una cadena codificada con MIME mediante el método ConvertToString de **RDSServer. DataFactory** . A continuación, muestra cómo se puede volver a convertir la cadena en un **conjunto de registros**. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **ConvertToString. htm**.  
   
 ```  
 <!-- BeginConvertToStringVBS -->  
@@ -93,7 +93,7 @@ MIME Encoded RS: <BR>
 <!-- EndConvertToStringVBS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Método ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 

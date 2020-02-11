@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015678"
 ---
 # <a name="view-statistics-properties"></a>Ver propiedades de estadísticas
@@ -31,7 +31,7 @@ ms.locfileid: "63015678"
   
      [Seguridad](#Security)  
   
--   **Para ver propiedades de estadísticas, mediante:**  
+-   **Para ver las propiedades de las estadísticas, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63015678"
 ####  <a name="Permissions"></a> Permisos  
  Para ver el objeto de estadísticas, el usuario debe ser propietario de la tabla o miembro del rol fijo de servidor `sysadmin`, del rol fijo de base de datos `db_owner` o del rol fijo de base de datos `db_ddladmin`.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-statistics-properties"></a>Para ver las propiedades de estadísticas  
   
@@ -68,34 +68,34 @@ ms.locfileid: "63015678"
      **Nombre de las estadísticas**  
      Muestra el nombre del objeto de base de datos donde se almacenan las estadísticas.  
   
-     **Estadísticas para INDEXnombre_de_estadísticas**  
-     Este cuadro de texto muestra las propiedades devueltas del objeto de estadísticas. Estas propiedades se dividen en tres secciones: Encabezado de estadísticas, Vector de densidad e Histograma.  
+     **Estadísticas de INDEXstatistics_name**  
+     Este cuadro de texto muestra las propiedades devueltas del objeto de estadísticas. Estas propiedades se dividen en tres secciones: encabezado de estadísticas, vector de densidad e histograma.  
   
      La siguiente información se describen las columnas devueltas en el conjunto de resultados para el encabezado de estadísticas.  
   
-     **Name**  
+     **Nombre**  
      Nombre del objeto de estadísticas.  
   
-     **Actualizado**  
+     **Actualice**  
      Fecha y hora de la última actualización de las estadísticas.  
   
-     **Filas**  
+     **Las**  
      Número total de filas que tenía la tabla o vista indizada la última vez que se actualizaron las estadísticas. Si las estadísticas se filtran o corresponden a un índice filtrado, el número de filas puede ser inferior al número de filas de la tabla.  
   
-     **Rows Sampled**  
+     **Filas muestreadas**  
      Número total de filas muestreadas para cálculos de estadísticas. Si Rows Sampled < Rows, el histograma y los resultados de la densidad que se muestren serán estimaciones extraídas de las filas muestreadas.  
   
      **Pasos**  
      Número de pasos del histograma. Cada paso abarca un intervalo de valores de columna seguido de un valor de columna límite superior. Los pasos del histograma se definen en la primera columna de clave de las estadísticas. El número máximo de pasos es 200.  
   
-     **Densidad**  
+     **Formatea**  
      Se calcula como 1 / *valores distintos* en todos los valores de la primera columna de clave del objeto de estadísticas, excepto en los valores límite del histograma. El optimizador de consultas no usa este valor de densidad y solo se muestra por motivos de compatibilidad con versiones anteriores a SQL Server 2008.  
   
      **Promedio de longitud de clave**  
      Número promedio de bytes por cada uno de los valores de las columnas de clave del objeto de estadísticas.  
   
-     **String Index**  
-     Sí indica que el objeto de estadísticas contiene estadísticas de resumen de las cadenas para mejorar los cálculos de cardinalidad de los predicados de consulta que utilizan el operador LIKE; por ejemplo, `WHERE ProductName LIKE '%Bike'`. Las estadísticas de resumen de cadenas se almacenan de forma independiente del histograma y se crean en la primera columna de clave del objeto de estadísticas cuando es de tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**o **ntext**.  
+     **Índice de cadena**  
+     Sí indica que el objeto de estadísticas contiene estadísticas de resumen de las cadenas para mejorar los cálculos de cardinalidad de los predicados de consulta que utilizan el operador LIKE; por ejemplo, `WHERE ProductName LIKE '%Bike'`. Las estadísticas de Resumen de cadenas se almacenan de forma independiente del histograma y se crean en la primera columna de clave del objeto de estadísticas cuando es de tipo **Char**, **VARCHAR**, **nchar**, **nvarchar**, **VARCHAR (Max)**, **nvarchar (Max)**, **Text**o **ntext**.  
   
      **Expresión de filtro**  
      Predicado del subconjunto de filas de la tabla incluido en el objeto de estadísticas. NULL = Estadísticas no filtradas.  
@@ -106,7 +106,7 @@ ms.locfileid: "63015678"
      La siguiente información describe las columnas devueltas en el conjunto de resultados del vector de densidad.  
   
      **Toda la densidad**  
-     La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores en cada uno de estos prefijos de columna distintos: (A), (A, B) y (A, B, C). Uso del prefijo (A, B, C), cada una de estas listas es una lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Uso del prefijo (A, B) los mismos valores de columna tienen estas listas de valores distintos: (3, 5), (4, 4) y (4, 5).  
+     La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores distintos de cada uno de estos prefijos de columna: (A), (A,B) y (A, B, C). Con el prefijo (A, B, C), cada una de estas listas es una lista de valores distintos: (3, 5, 6) (4, 4, 6) (4, 5, 6) (4, 5, 7). Con el prefijo (A, B), los mismos valores de columna tienen estas listas de valores distintos: (3, 5), (4, 4) y (4, 5).  
   
      **Promedio de longitud**  
      Promedio de longitud, en bytes, para almacenar una lista de los valores de columna del prefijo de columna. Por ejemplo, si cada valor de la lista (3, 5, 6) necesita 4 bytes, la longitud es 12 bytes.  
@@ -131,7 +131,7 @@ ms.locfileid: "63015678"
      **AVG_RANGE_ROWS**  
      Número medio de filas que tienen valores de columna duplicados en un paso del histograma, sin incluir el límite superior (RANGE_ROWS/DISTINCT_RANGE_ROWS para DISTINCT_RANGE_ROWS > 0).  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

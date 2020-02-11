@@ -18,24 +18,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833659"
 ---
 # <a name="multiple-files-connection-manager"></a>administrador de conexiones de varios archivos
   Un administrador de conexiones de varios archivos habilita un paquete para que haga referencia a los archivos y carpetas existentes o para crear archivos y carpetas en tiempo de ejecución.  
   
 > [!NOTE]  
->  Las tareas integradas y componentes de flujo de datos en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no usan el administrador de conexiones de varios archivos. Sin embargo, puede usar este administrador de conexiones en la tarea Script o en el componente de script. Para obtener información acerca de cómo se utilizan los administradores de conexión en la tarea Script, vea [Conectarse a orígenes de datos de la tarea Script](../extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md). Para obtener información acerca de cómo se utilizan los administradores de conexión en el componente de Script, consulte [conexión a orígenes de datos en el componente de Script] (.. / extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md.  
+>  Las tareas integradas y componentes de flujo de datos en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no usan el administrador de conexiones de varios archivos. Sin embargo, puede usar este administrador de conexiones en la tarea Script o en el componente de script. Para obtener información acerca de cómo se utilizan los administradores de conexión en la tarea Script, vea [Conectarse a orígenes de datos de la tarea Script](../extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md). Para obtener información sobre cómo usar los administradores de conexión en el componente de script, vea [conectar a orígenes de datos en el componente de script] (.. /extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md.  
   
 ## <a name="usage-types-of-the-multiple-files-connection-manager"></a>Tipos de uso del administrador de conexiones de varios archivos  
  La propiedad `FileUsageType` del administrador de conexiones de varios archivos especifica la forma en que se usa la conexión. El administrador de conexiones de varios archivos puede crear archivos, carpetas, usar archivos existentes y usar carpetas existentes.  
   
  La tabla siguiente enumera los valores de `FileUsageType`.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|El administrador de conexiones de varios archivos usa un archivo existente.|  
 |**1**|El administrador de conexiones de varios archivos crea un archivo.|  
@@ -59,7 +59,7 @@ ms.locfileid: "62833659"
   
  \<*ruta de acceso*>|\<*ruta de acceso*>  
   
- También puede especificar varios archivos o carpetas mediante caracteres comodín. Por ejemplo, para hacer referencia unidad de todos los archivos de texto en C, el valor de la `ConnectionString` propiedad se puede establecer en C:\\*.txt.  
+ También puede especificar varios archivos o carpetas mediante caracteres comodín. Por ejemplo, para hacer referencia a todos los archivos de texto de la unidad C, el `ConnectionString` valor de la propiedad se puede establecer\\en C: *. txt.  
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211725"
 ---
 # <a name="ddl-event-groups"></a>grupos de eventos DDL
@@ -27,7 +27,7 @@ ms.locfileid: "68211725"
 > [!NOTE]  
 >  Determinados procedimientos almacenados del sistema que realizan operaciones similares a DDL también pueden activar desencadenadores DDL o notificaciones de eventos. Pruebe los desencadenadores DDL y las notificaciones de eventos para determinar sus respuestas a los procedimientos almacenados del sistema que se ejecutan. Por ejemplo, tanto la instrucción CREATE TYPE como el procedimiento almacenado **sp_addtype** activarán un desencadenador DDL o una notificación de eventos creada en un evento CREATE_TYPE.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Los eventos que figuran bajo DDL_DATABASE_LEVEL_EVENTS se ejecutan en el nivel de servidor (instancia) o de base de datos. Los eventos que figuran bajo DDL_SERVER_LEVEL_EVENTS se ejecutan en el nivel de servidor.  
   
 ||||  
@@ -315,7 +315,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Notificaciones de eventos](../service-broker/event-notifications.md)   
  [Desencadenadores DDL](ddl-triggers.md)   
  [Eventos DDL](ddl-events.md)  

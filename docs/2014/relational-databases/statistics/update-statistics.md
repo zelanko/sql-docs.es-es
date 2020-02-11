@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033675"
 ---
 # <a name="update-statistics"></a>Actualizar estadísticas
@@ -44,7 +44,7 @@ ms.locfileid: "63033675"
 ####  <a name="Permissions"></a> Permisos  
  Si usa UPDATE STATISTICS o realiza cambios con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], es necesario el permiso ALTER en la tabla o vista. Si usa `sp_updatestats`, necesita pertenecer al rol fijo de servidor **sysadmin** o ser propietario de la base de datos (**dbo**).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-update-a-statistics-object"></a>Para actualizar un objeto de estadísticas  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63033675"
   
 5.  Haga clic con el botón derecho en el objeto de estadísticas que quiere actualizar y seleccione **Propiedades**.  
   
-6.  En el **propiedades de estadísticas -** _statistics_name_ cuadro de diálogo, seleccione el **actualizar las estadísticas de estas columnas** casilla de verificación y, a continuación, haga clic en **Aceptar**.  
+6.  En el cuadro de diálogo **propiedades de estadísticas-**_statistics_name_ , active la casilla **actualizar estadísticas de estas columnas** y, a continuación, haga clic en **Aceptar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

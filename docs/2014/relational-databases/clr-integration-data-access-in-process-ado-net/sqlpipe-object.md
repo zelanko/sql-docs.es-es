@@ -1,5 +1,5 @@
 ---
-title: Objeto SqlPipe | Microsoft Docs
+title: SqlPipe (objeto) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920052"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe, objetos
@@ -29,7 +29,8 @@ ms.locfileid: "62920052"
  En los objetos de base de datos de Common Language Runtime (CLR) que se ejecutan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede enviar los resultados a la canalización conectada mediante los métodos `Send` del objeto `SqlPipe`. Para obtener el objeto `Pipe`, debe obtener acceso a la propiedad `SqlContext` del objeto `SqlPipe`. La clase `SqlPipe` es conceptualmente similar a la clase `Response` incluida en ASP.NET. Para obtener más información, vea la documentación de referencia de la clase SqlPipe en el kit de desarrollo de software de .NET Framework.  
   
 ## <a name="returning-tabular-results-and-messages"></a>Devolver mensajes y resultados tabulares  
- `SqlPipe` incluye un método `Send`, que cuenta con tres sobrecargas. Estas sobrecargas son:  
+ 
+  `SqlPipe` incluye un método `Send`, que cuenta con tres sobrecargas. Son las siguientes:  
   
 -   `void Send(string message)`  
   
@@ -48,10 +49,12 @@ ms.locfileid: "62920052"
 ## <a name="returning-custom-result-sets"></a>Devolver conjuntos de resultados personalizados  
  Los procedimientos almacenados administrados pueden enviar conjuntos de resultados que no proceden de `SqlDataReader`. El método `SendResultsStart`, junto con `SendResultsRow` y `SendResultsEnd`, permite a los procedimientos almacenados enviar conjuntos de resultados personalizados al cliente.  
   
- `SendResultsStart` toma como entrada un `SqlDataRecord`. Este método marca el principio de un conjunto de resultados y utiliza los metadatos del registro para generar los metadatos que describen el conjunto de resultados. No envía el valor del registro con `SendResultsStart`. Todas las filas subsiguientes, enviadas mediante el método `SendResultsRow`, deben coincidir con la definición de los metadatos.  
+ 
+  `SendResultsStart` toma como entrada un `SqlDataRecord`. Este método marca el principio de un conjunto de resultados y utiliza los metadatos del registro para generar los metadatos que describen el conjunto de resultados. No envía el valor del registro con `SendResultsStart`. Todas las filas subsiguientes, enviadas mediante el método `SendResultsRow`, deben coincidir con la definición de los metadatos.  
   
 > [!NOTE]  
->  Después de llamar al método `SendResultsStart`, solo se puede llamar a `SendResultsRow` y `SendResultsEnd`. La llamada a cualquier otro método en la misma instancia de `SqlPipe` produce una excepción `InvalidOperationException`. `SendResultsEnd` devuelve `SqlPipe` al estado inicial con el que se puede llamar a otros métodos.  
+>  Después de llamar al método `SendResultsStart`, solo se puede llamar a `SendResultsRow` y `SendResultsEnd`. La llamada a cualquier otro método en la misma instancia de `SqlPipe` produce una excepción `InvalidOperationException`. 
+  `SendResultsEnd` devuelve `SqlPipe` al estado inicial con el que se puede llamar a otros métodos.  
   
 ### <a name="example"></a>Ejemplo  
  El procedimiento almacenado `uspGetProductLine` devuelve el nombre, el número de producto, el color y el precio de todos los productos de una línea de productos especificada. Este procedimiento almacenado acepta coincidencias exactas de *prodLine*.  
@@ -138,9 +141,9 @@ End Class
 EXEC uspGetProductLineVB 'T';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [SqlDataRecord, objeto](sqldatarecord-object.md)   
- [Procedimientos almacenados de CLR](../../database-engine/dev-guide/clr-stored-procedures.md)   
+## <a name="see-also"></a>Consulte también  
+ [Objeto SqlDataRecord](sqldatarecord-object.md)   
+ [Procedimientos almacenados CLR](../../database-engine/dev-guide/clr-stored-procedures.md)   
  [Extensiones específicas en proceso de SQL Server a ADO.NET](sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

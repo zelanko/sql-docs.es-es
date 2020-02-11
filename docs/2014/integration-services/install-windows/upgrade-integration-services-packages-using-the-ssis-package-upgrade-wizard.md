@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767897"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS
@@ -50,7 +50,7 @@ ms.locfileid: "62767897"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>Para ejecutar el asistente en el símbolo del sistema  
   
--   En el símbolo del sistema, ejecute el archivo SSISUpgrade.exe desde la **C:\Program Files\Microsoft SQL Server\120\DTS\Binn** carpeta.  
+-   En el símbolo del sistema, ejecute el archivo archivo ssisupgrade. exe de la carpeta **c:\Archivos de programa\Microsoft SQL Server\120\DTS\Binn**  
   
 ## <a name="backing-up-the-original-packages"></a>Hacer una copia de seguridad de los paquetes originales  
  Para hacer una copia de seguridad de los paquetes originales, tanto estos como los paquetes actualizados deben estar almacenados en la misma carpeta del sistema de archivos. En función de cómo ejecute el asistente, esta ubicación de almacenamiento podría seleccionarse automáticamente.  
@@ -86,7 +86,7 @@ ms.locfileid: "62767897"
 2.  En la página **Seleccionar opciones de administración de paquetes** del asistente, seleccione la opción **Realizar copia de seguridad de paquetes originales** .  
   
     > [!WARNING]  
-    >  El **paquetes originales de la copia de seguridad** opción no aparece al abrir un [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] project en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], que inicia el asistente automáticamente.  
+    >  La opción **Realizar copia de seguridad de paquetes originales** no se muestra cuando se abre un proyecto de [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], que inicia el asistente automáticamente.  
   
 3.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ejecute el Asistente para actualización del paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   

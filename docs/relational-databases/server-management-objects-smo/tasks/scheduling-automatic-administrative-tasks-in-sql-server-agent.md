@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74094385"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Programar tareas administrativas automáticas en el Agente SQL Server
@@ -38,9 +38,9 @@ ms.locfileid: "74094385"
  Los objetos del Agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se encuentran en el espacio de nombres <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Ejemplos  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-En el caso de los programas que utilizan el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe incluir la instrucción **using** para certificar el espacio de nombres del agente. Inserte la instrucción después de las otras instrucciones **using** , antes de cualquier declaración de la aplicación, como:
+En el caso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los programas que utilizan el agente, debe incluir la instrucción **using** para certificar el espacio de nombres del agente. Inserte la instrucción después de las otras instrucciones **using** , antes de cualquier declaración de la aplicación, como:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -168,7 +168,7 @@ $jbsch.Create();
   
  **ObjectName | Nombre de | Instancia de | ComparisionOp | CompValue**  
   
- Se requiere un operador para la notificación de alerta. El tipo de <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> requiere paréntesis porque el **operador** es una palabra clave [!INCLUDE[csprcs](../../../includes/csprcs-md.md)].  
+ Se requiere un operador para la notificación de alerta. El <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requiere los corchetes porque el **operador** es una [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] palabra clave.  
   
 ```csharp  
 {  
@@ -201,7 +201,7 @@ $jbsch.Create();
   
  **ObjectName | Nombre de | Instancia de | ComparisionOp | CompValue**  
   
- Se requiere un operador para la notificación de alerta. El tipo de <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> requiere paréntesis porque el **operador** es una palabra clave [!INCLUDE[csprcs](../../../includes/csprcs-md.md)].  
+ Se requiere un operador para la notificación de alerta. El <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requiere los corchetes porque el **operador** es una [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] palabra clave.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  
@@ -266,7 +266,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agente SQL Server](../../../ssms/agent/sql-server-agent.md)   
  [Implementar trabajos](../../../ssms/agent/implement-jobs.md)  
   

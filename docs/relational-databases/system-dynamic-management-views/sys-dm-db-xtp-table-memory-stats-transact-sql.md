@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_table_memory_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_db_xtp_table_memory_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,26 +22,26 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097942"
 ---
-# <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Devuelve estadísticas del uso de memoria para cada tabla de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] (usuario y sistema) de la base de datos actual. Las tablas del sistema tienen identificadores de objetos negativos y se emplean para almacenar información en tiempo de ejecución para el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. A diferencia de los objetos de usuario, las tablas del sistema son internas y solo existen en memoria; por tanto, no son visible mediante vistas de catálogo. Las tablas del sistema se usan para almacenar información como metadatos para todos los archivos de datos y delta del almacenamiento, solicitudes de combinación, marcas de agua de archivos delta para filtrar filas, tablas quitadas e información pertinente para la recuperación y las copias de seguridad. Puesto que el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] puede tener hasta 8.192 pares de archivos de datos y delta, para las bases de datos en memoria grandes, la memoria que ocupan las tablas del sistema puede ser de algunos megabytes.  
   
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Identificador de objeto de la tabla. Es NULL para las tablas del sistema de OLTP en memoria.|  
-|memory_allocated_for_table_kb|**bigint**|La memoria asignada para esta tabla.|  
-|memory_used_by_table_kb|**bigint**|Memoria utilizada por la tabla, incluidas las versiones de fila.|  
-|memory_allocated_for_indexes_kb|**bigint**|La memoria asignada para los índices en esta tabla.|  
-|memory_used_by_indexes_kb|**bigint**|La memoria usada por los índices en esta tabla.|  
+|memory_allocated_for_table_kb|**BIGINT**|La memoria asignada para esta tabla.|  
+|memory_used_by_table_kb|**BIGINT**|Memoria utilizada por la tabla, incluidas las versiones de fila.|  
+|memory_allocated_for_indexes_kb|**BIGINT**|La memoria asignada para los índices en esta tabla.|  
+|memory_used_by_indexes_kb|**BIGINT**|La memoria usada por los índices en esta tabla.|  
   
 ## <a name="permissions"></a>Permisos  
  Se devuelven todas las filas si tiene el permiso VIEW DATABASE STATE en la base de datos actual. De lo contrario, se devuelve un conjunto de filas vacío.  
@@ -212,7 +212,7 @@ used_memory_mb       target_memory_mb
 1356                 3845  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de tabla optimizado para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de administración dinámica de tablas optimizadas para memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

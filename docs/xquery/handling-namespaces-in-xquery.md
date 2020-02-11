@@ -17,10 +17,10 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004532"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Controlar espacios de nombres en XQuery
@@ -49,9 +49,9 @@ WHERE ProductModelID=7
 ...  
 ```  
   
- Tenga en cuenta que el **espacio de nombres** palabra clave se utiliza para definir un nuevo prefijo de espacio de nombres, "AWMI:". Este prefijo debe utilizarse después en la consulta para todos los elementos que se encuentren dentro del ámbito de dicho espacio de nombres.  
+ Tenga en cuenta que la palabra clave **namespace** se usa para definir un nuevo prefijo de espacio de nombres, "AWMI:". Este prefijo debe utilizarse después en la consulta para todos los elementos que se encuentren dentro del ámbito de dicho espacio de nombres.  
   
-### <a name="b-declaring-a-default-namespace"></a>b. Declarar un espacio de nombres predeterminado  
+### <a name="b-declaring-a-default-namespace"></a>B. Declarar un espacio de nombres predeterminado  
  En la consulta anterior, se definía un nuevo prefijo de espacio de nombres. Ese prefijo tenía que utilizarse después en la consulta para seleccionar las estructuras XML previstas. También puede declarar un espacio de nombres como espacio de nombres predeterminado, tal y como se muestra en la siguiente consulta modificada:  
   
 ```  
@@ -87,7 +87,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
   
@@ -115,7 +115,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. Construcción mediante espacios de nombres predeterminados  
- También puede definir un espacio de nombres predeterminado para utilizarlo en XML generado. Por ejemplo, la consulta siguiente muestra cómo se puede especificar un espacio de nombres predeterminado, "URI: SomeNamespace"\\, que se usará como el valor predeterminado para los elementos nombrados localmente que se construyen, como el `<Result>` elemento.  
+ También puede definir un espacio de nombres predeterminado para utilizarlo en XML generado. Por ejemplo, la consulta siguiente muestra cómo se puede especificar un espacio de nombres predeterminado, "URI:\\SomeNamespace", que se usará como valor predeterminado para los elementos con nombre local que se construyen, como el `<Result>` elemento.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -129,7 +129,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
   
@@ -145,7 +145,7 @@ where ProductModelID=19
   
  Observe que al reemplazar el espacio de nombres predeterminado del elemento o vaciarlo, todos los elementos nombrados localmente en el XML generado se enlazan posteriormente con el espacio de nombres predeterminado de reemplazo. Por lo tanto, si requiere flexibilidad a la hora de generar XML para poder beneficiarse de las ventajas de los espacios de nombres vacíos, no debe reemplazar el espacio de nombres predeterminado del elemento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar espacios de nombres a consultas con WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

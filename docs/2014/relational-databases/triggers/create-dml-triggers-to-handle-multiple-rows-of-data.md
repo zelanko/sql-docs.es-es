@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d960ae015bb2e52daa183e1f55d6ff119f234b18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676458"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Crear desencadenadores DML para administrar varias filas de datos
@@ -51,7 +51,7 @@ AFTER INSERT AS
    WHERE PurchaseOrderHeader.PurchaseOrderID = inserted.PurchaseOrderID ;  
 ```  
   
-### <a name="b-storing-a-running-total-for-a-multirow-or-single-row-insert"></a>b. Almacenar un total acumulativo para una inserción de una o varias filas  
+### <a name="b-storing-a-running-total-for-a-multirow-or-single-row-insert"></a>B. Almacenar un total acumulativo para una inserción de una o varias filas  
  En caso de una inserción de varias filas, el desencadenador DML del ejemplo A no funcionaría correctamente; la expresión situada a la derecha de una asignación de una instrucción UPDATE (`SubTotal` + `LineTotal`) debe tener un solo valor, no una lista de valores. Por lo tanto, el efecto del desencadenador es recuperar un valor de una sola fila de la tabla **inserted** y agregarlo al valor `SubTotal` existente en la tabla `PurchaseOrderHeader` para un valor `PurchaseOrderID` específico. Esta operación puede no tener el efecto esperado si se da un solo valor `PurchaseOrderID` más de una vez en la tabla **inserted** .  
   
  Para actualizar correctamente la tabla `PurchaseOrderHeader` , el desencadenador debe permitir que pueda haber varias filas en la tabla **inserted** . Puede hacerlo utilizando la función `SUM` que calcula el total `LineTotal` para un grupo de filas de la tabla **inserted** para cada `PurchaseOrderID`. La función `SUM` se incluye en una subconsulta correlacionada (la instrucción `SELECT` entre paréntesis). Esta subconsulta devuelve un único valor para cada `PurchaseOrderID` de la tabla **inserted** que coincida o esté correlacionado con un `PurchaseOrderID` de la tabla `PurchaseOrderHeader` .  
@@ -106,7 +106,7 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Desencadenadores DML](dml-triggers.md)  
   
   

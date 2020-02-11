@@ -1,5 +1,5 @@
 ---
-title: Editor del Administrador de conexiones de SAP BW | Microsoft Docs
+title: SAP BW editor del administrador de conexiones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056277"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Editor del administrador de conexiones SAP BW
@@ -33,7 +33,7 @@ ms.locfileid: "66056277"
   
     -   Haga doble clic en administrador de conexiones de SAP BW.  
   
-         -o bien-  
+         O bien  
   
     -   Haga clic con el botón derecho en el administrador de conexiones de SAP BW y, después, seleccione **Editar**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66056277"
  **Lenguaje**  
  Permite especificar el idioma que usa el sistema. Por ejemplo, especifique **EN** para inglés.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Permite especificar el nombre de usuario que se va a utilizar para establecer la conexión al sistema.  
   
  **Contraseña**  
@@ -106,13 +106,13 @@ ms.locfileid: "66056277"
   
  Si no selecciona un directorio de registro, el registro no estará habilitado.  
   
- **Examinar**  
+ **Browse**  
  Permite examinar para seleccionar una carpeta para el directorio de registro.  
   
  **Probar conexión**  
  Permite probar la conexión con los valores que ha especificado. Después de hacer clic en **Probar conexión**, aparecerá un cuadro de mensaje que indica si la conexión se realizó correctamente o no.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
   
   

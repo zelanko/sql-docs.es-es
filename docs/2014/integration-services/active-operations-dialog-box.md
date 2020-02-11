@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062218"
 ---
 # <a name="active-operations-dialog-box"></a>Operaciones activas, cuadro de diálogo
@@ -27,7 +27,7 @@ ms.locfileid: "66062218"
   
  **¿Qué desea hacer?**  
   
-1.  [Abrir el cuadro de diálogo Operaciones activas](#open_dialog)  
+1.  [Abrir el cuadro de diálogo operaciones activas](#open_dialog)  
   
 2.  [Configurar las opciones](#options)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66062218"
   
 ### <a name="options"></a>Opciones  
  **Tipo**  
- Especifica el tipo de operación. Los siguientes son los valores posibles para el **tipo** campo y los valores correspondientes en la columna operations_type de la instrucción Transact-SQL `catalog.operations` vista.  
+ Especifica el tipo de operación. A continuación se muestran los valores posibles para el campo de **tipo** y los valores correspondientes en la columna operations_type de la vista `catalog.operations` de Transact-SQL.  
   
 |||  
 |-|-|  
@@ -58,7 +58,7 @@ ms.locfileid: "66062218"
 |Validar paquete|301|  
 |Configurar catálogo|1000|  
   
- **Detener**  
+ **Detención**  
  Haga clic para detener una operación que se esté ejecutando actualmente.  
   
   

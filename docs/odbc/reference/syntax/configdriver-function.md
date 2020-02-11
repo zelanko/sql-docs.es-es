@@ -20,18 +20,18 @@ ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9e6c7759cf63611da167bf54a2e88487abc7b1cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016748"
 ---
 # <a name="configdriver-function"></a>Función ConfigDriver
 **Conformidad**  
- Versión de introducción: ODBC 2.5  
+ Versión introducida: ODBC 2,5  
   
  **Resumen**  
- **ConfigDriver** permite que un programa de instalación realizar la instalación y desinstalación de funciones sin necesidad de que el programa para llamar a **ConfigDSN**. Esta función llevará a cabo funciones específicas del controlador como crear información específica del controlador del sistema y realizar conversiones de DSN durante la instalación, así como para limpiar las modificaciones de información del sistema durante la desinstalación. Esta función se expone mediante la configuración del controlador de archivo DLL o un archivo DLL de configuración independiente.  
+ **ConfigDriver** permite a un programa de instalación realizar las funciones de instalación y desinstalación sin necesidad de que el programa llame a **ConfigDSN**. Esta función realizará funciones específicas del controlador, como la creación de información del sistema específica del controlador y la realización de conversiones de DSN durante la instalación, así como la limpieza de las modificaciones de la información del sistema durante la desinstalación. Esta función se expone mediante el archivo DLL de instalación del controlador o un archivo DLL de instalación independiente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,52 +49,52 @@ BOOL ConfigDriver(
   
 ## <a name="arguments"></a>Argumentos  
  *hwndParent*  
- [Entrada] Identificador de la ventana primaria. La función no mostrará los cuadros de diálogo si el identificador es null.  
+ Entradas Identificador de la ventana primaria. Si el identificador es null, la función no mostrará ningún cuadro de diálogo.  
   
  *fRequest*  
- [Entrada] Tipo de solicitud. El *fRequest* argumento debe contener uno de los siguientes valores:  
+ Entradas Tipo de solicitud. El argumento *fRequest* debe contener uno de los siguientes valores:  
   
- ODBC_INSTALL_DRIVER: Instalar a un nuevo controlador.  
+ ODBC_INSTALL_DRIVER: instalar un nuevo controlador.  
   
- ODBC_REMOVE_DRIVER: Quitar un controlador.  
+ ODBC_REMOVE_DRIVER: Quite un controlador.  
   
- Esta opción también puede ser específicos del controlador, en cuyo caso el *fRequest* argumento para la primera opción se debe iniciar desde ODBC_CONFIG_DRIVER_MAX + 1. El *fRequest* argumento para cualquier opción adicional también debe iniciar desde un valor mayor que ODBC_CONFIG_DRIVER_MAX + 1.  
+ Esta opción también puede ser específica del controlador, en cuyo caso el argumento *fRequest* de la primera opción debe comenzar desde ODBC_CONFIG_DRIVER_MAX + 1. El argumento *fRequest* de cualquier opción adicional también debe empezar con un valor mayor que ODBC_CONFIG_DRIVER_MAX + 1.  
   
  *lpszDriver*  
- [Entrada] El nombre del controlador como registrado en la clave de Odbcinst.ini la información del sistema.  
+ Entradas Nombre del controlador tal como está registrado en la clave Odbcinst. ini de la información del sistema.  
   
  *lpszArgs*  
- [Entrada] Una cadena terminada en null que contiene los argumentos para un determinado controlador *referien*.  
+ Entradas Una cadena terminada en null que contiene argumentos para un *fRequest*específico del controlador.  
   
  *lpszMsg*  
- [Salida] Una cadena terminada en null que contiene un mensaje de salida de la configuración del controlador.  
+ Genere Una cadena terminada en null que contiene un mensaje de salida de la configuración del controlador.  
   
  *cbMsgMax*  
- [Entrada] Longitud de *lpszMsg*.  
+ Entradas Longitud de *lpszMsg*.  
   
  *pcbMsgOut*  
- [Salida] Número total de bytes disponible para devolver en *lpszMsg*.  
+ Genere Número total de bytes disponibles que se van a devolver en *lpszMsg*.  
   
- Si el número de bytes disponible para devolver es mayor o igual a *cbMsgMax*, el mensaje de salida en *lpszMsg* se trunca a *cbMsgMax* menos la terminación null carácter. El *pcbMsgOut* argumento puede ser un puntero nulo.  
+ Si el número de bytes disponibles para devolver es mayor o igual que *cbMsgMax*, el mensaje de salida de *lpszMsg* se trunca en *cbMsgMax* menos el carácter de terminación null. El argumento *pcbMsgOut* puede ser un puntero nulo.  
   
 ## <a name="returns"></a>Devuelve  
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **ConfigDriver** devuelve FALSE, un asociado  *\*pfErrorCode* valor se registra en el búfer de error del instalador mediante una llamada a **SQLPostInstallerError** y puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se enumeran los  *\*pfErrorCode* valores que pueden devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **ConfigDriver** devuelve false, se envía un valor de * \*pfErrorCode* asociado al búfer de error del instalador mediante una llamada a **SQLPostInstallerError** y se puede obtener llamando a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_INVALID_HWND|Identificador de ventana no válida|El *hwndParent* argumento no era válido.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo de solicitud no válido|El *fRequest* argumento no era uno de los siguientes:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> La opción específicos del controlador era menor o igual a ODBC_CONFIG_DRIVER_MAX.|  
-|ODBC_ERROR_INVALID_NAME|Nombre de controlador o traductor no válido|El *lpszDriver* argumento no era válido. No se encontró en el registro.|  
-|ODBC_ERROR_REQUEST_FAILED|*Solicitar* error|No se pudo realizar la operación solicitada por el *fRequest* argumento.|  
-|ODBC_ERROR_DRIVER_SPECIFIC|Error específico del controlador o del traductor|Un error específico del controlador para el que no hay ningún error de instalador ODBC definido. El *SzError* argumento en una llamada a la **SQLPostInstallerError** función debe contener el mensaje de error específico del controlador.|  
+|ODBC_ERROR_INVALID_HWND|Identificador de ventana no válido|El argumento *hwndParent* no era válido.|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo de solicitud no válido|El argumento *fRequest* no era uno de los siguientes:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> La opción específica del controlador era menor o igual que ODBC_CONFIG_DRIVER_MAX.|  
+|ODBC_ERROR_INVALID_NAME|Nombre de traductor o controlador no válido|El argumento *lpszDriver* no era válido. No se encontró en el registro.|  
+|ODBC_ERROR_REQUEST_FAILED|Error en la *solicitud*|No se pudo realizar la operación solicitada por el argumento *fRequest* .|  
+|ODBC_ERROR_DRIVER_SPECIFIC|Error específico del controlador o del traductor|Error específico del controlador para el que no hay ningún error del instalador de ODBC definido. El argumento *SzError* en una llamada a la función **SQLPostInstallerError** debe contener el mensaje de error específico del controlador.|  
   
 ## <a name="comments"></a>Comentarios  
   
 ### <a name="driver-specific-options"></a>Opciones específicas del controlador  
- Una aplicación puede solicitar características específicas del controlador expuestas por el controlador mediante el uso de la *fRequest* argumento. El *fRequest* para la primera opción serán ODBC_CONFIG_DRIVER_MAX más 1, y opciones adicionales se incrementa en 1 de ese valor. Los argumentos requeridos por el controlador para esa función debe proporcionarse en una cadena terminada en null pasados en el *lpszArgs* argumento. Los controladores que proporciona dicha funcionalidad deben mantener una tabla de opciones específicas del controlador. Las opciones deben estar completamente documentadas en la documentación del controlador. Los escritores de aplicaciones que usan las opciones específicas del controlador deben tener en cuenta que esto hará que la aplicación menos interoperable.  
+ Una aplicación puede solicitar características específicas del controlador expuestas por el controlador mediante el argumento *fRequest* . El valor de *fRequest* para la primera opción será ODBC_CONFIG_DRIVER_MAX más 1, y las opciones adicionales se incrementarán en 1 a partir de ese valor. Los argumentos requeridos por el controlador para esa función deben proporcionarse en una cadena terminada en NULL pasada en el argumento *lpszArgs* . Los controladores que proporcionan esta funcionalidad deben mantener una tabla de opciones específicas del controlador. Las opciones deben estar completamente documentadas en la documentación del controlador. Los escritores de aplicaciones que usan opciones específicas del controlador deben tener en cuenta que esto hará que la aplicación sea menos interoperable.  
   
-### <a name="messages"></a>Mensajes  
- Una rutina de configuración del controlador puede enviar un mensaje de texto a una aplicación como una cadena terminada en null en la *lpszMsg* búfer. El mensaje se truncará a *cbMsgMax* menos el carácter de terminación null por el **ConfigDriver** función si es mayor o igual a *cbMsgMax* caracteres.
+### <a name="messages"></a>error de Hadoop  
+ Una rutina de instalación del controlador puede enviar un mensaje de texto a una aplicación como una cadena terminada en null en el búfer de *lpszMsg* . El mensaje se truncará en *cbMsgMax* menos el carácter de terminación null de la función **ConfigDriver** si es mayor o igual que *cbMsgMax* caracteres.

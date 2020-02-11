@@ -13,22 +13,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 741420467a50aff6cdd0486c91dbf69224b160e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761625"
 ---
-# <a name="mssqlserver50000"></a>MSSQLSERVER_50000
+# <a name="mssqlserver_50000"></a>MSSQLSERVER_50000
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
+|Nombre de producto|SQL Server|  
 |Versión del producto|11.0|  
-|Identificador del evento|50000|  
-|Origen del evento|SETUP|  
+|Id. de evento|50000|  
+|Origen de eventos|SETUP|  
 |Componente|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|  
 |Nombre simbólico||  
 |Texto del mensaje|Error de red al intentar leer el archivo '%.*ls'.|  

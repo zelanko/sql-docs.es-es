@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a3c8b1fbe01bf97eeba11d57ae2d7ee9095c3964
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056341"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Uso de un archivo de formato para asignar columnas de tabla a campos de un archivo de datos (SQL Server)
@@ -69,7 +69,7 @@ Para realizar una importación masiva de datos de `myRemap.bcp` en la tabla `myR
 Se trata del método más sencillo para crear el archivo de formato mediante la [utilidad bcp](../../tools/bcp-utility.md).  En primer lugar, cree un archivo de formato base a partir de la tabla existente.  En segundo lugar, modifique el archivo de formato base para reflejar el archivo de datos real.
 
 ### Creación de un archivo de formato no XML<a name="nonxml_format_file"></a>
-Revise [Archivos de formato no XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) para obtener información detallada. El siguiente comando hará uso de la [utilidad bcp](../../tools/bcp-utility.md) para generar un archivo de formato no xml, `myRemap.fmt`, basado en el esquema de `myRemap`.  Además, el calificador `c` se utiliza para especificar los datos de caracteres, `t,` se utiliza para especificar una coma como terminador de campo y `T` se utiliza para especificar una conexión de confianza que usa seguridad integrada.  En el símbolo del sistema, escriba el siguiente comando:
+Revise [Archivos de formato no XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) para obtener información detallada. El siguiente comando hará uso de la [utilidad BCP](../../tools/bcp-utility.md) para generar un archivo de formato no XML, `myRemap.fmt`, basado en el esquema de `myRemap`.  Además, el calificador `c` se utiliza para especificar los datos de caracteres, `t,` se utiliza para especificar una coma como terminador de campo y `T` se utiliza para especificar una conexión de confianza que usa seguridad integrada.  En el símbolo del sistema, escriba el siguiente comando:
 ```
 bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
@@ -80,7 +80,7 @@ Consulte [Estructura de los archivos de formato no XML](../../relational-databas
 3.  Asegúrese de que hay un retorno de carro después de la última fila del archivo de formato.
 
 Compare los cambios:     
-**Antes del**
+**Antes**
 ```
 13.0
 4
@@ -118,7 +118,7 @@ Consulte [Sintaxis de esquema para archivos de formato XML](../../relational-dat
 3. El orden de los elementos \<COLUMN> del elemento \<ROW> define el orden en el que la operación masiva los devuelve.  El archivo de formato XML asigna a cada elemento \<COLUMN> un nombre local que no tiene ninguna relación con la columna de la tabla de destino de una operación de importación en bloque.  El orden de los elementos \<COLUMN> es independiente del orden de los elementos \<FIELD> de una definición \<RECORD>.  Cada elemento \<COLUMN> corresponde a un elemento \<FIELD> (cuyo identificador se especifica en el atributo SOURCE del elemento \<COLUMN>).  Por lo tanto, los valores de \<COLUMN> SOURCE son los únicos atributos que requieren revisión.  Invierta el orden de los atributos 2 y 3 de \<COLUMN> SOURCE.
 
 Compare los cambios.  
-**Antes del**
+**Antes**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -249,7 +249,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
   
 ## <a name="see-also"></a>Consulte también  
-[bcp Utility](../../tools/bcp-utility.md)   
+[bcp (utilidad)](../../tools/bcp-utility.md)   
  [Usar un archivo de formato para omitir una columna de tabla &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Usar un archivo de formato para omitir un campo de datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   

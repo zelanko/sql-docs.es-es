@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056333"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Uso del formato de caracteres para importar o exportar datos (SQL Server)
@@ -49,7 +49,7 @@ Al utilizar el formato de caracteres, tenga en cuenta que:
   
     |Dirección de la operación masiva|Conversión|  
     |---------------------------------|----------------|  
-    |Exportar|Convierte los datos en representaciones de caracteres. Si se solicita de forma explícita, los datos se convierten a la página de códigos solicitada para las columnas de caracteres. Si no se especifica ninguna página de códigos, los datos de caracteres se convierten mediante la página de códigos OEM del equipo cliente.|  
+    |Exportación|Convierte los datos en representaciones de caracteres. Si se solicita de forma explícita, los datos se convierten a la página de códigos solicitada para las columnas de caracteres. Si no se especifica ninguna página de códigos, los datos de caracteres se convierten mediante la página de códigos OEM del equipo cliente.|  
     |Importar|Convierte los datos de caracteres en representaciones nativas, cuando es necesario, y traduce los datos de caracteres de la página de códigos del cliente a la página de códigos de las columnas de destino.|  
   
 -   Para evitar la pérdida de caracteres extendidos durante la conversión, utilice el formato de caracteres Unicode o especifique una página de códigos.  
@@ -63,7 +63,7 @@ Puede importar datos en formato de caracteres en una tabla usando [bcp](../../to
   
 El formato de caracteres se puede usar con las siguientes opciones de comando:  
   
-|Comando|Opción|Descripción|  
+|Get-Help|Opción|Descripción|  
 |-------------|------------|-----------------|  
 |BCP|**-c**|Hace que la utilidad bcp use datos de caracteres.\*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Utiliza el formato de caracteres al importar datos masivamente.|  
@@ -219,7 +219,7 @@ Para usar formatos de datos para la importación o exportación masivas
 -   [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

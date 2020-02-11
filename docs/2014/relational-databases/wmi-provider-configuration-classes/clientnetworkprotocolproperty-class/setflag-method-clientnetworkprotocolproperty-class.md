@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6c33eca0bf3281243aeee42ed89001cf9108d5d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245091"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>Método SetFlag (clase ClientNetworkProtocolProperty)
-  Establece la marca de la propiedad actual al que hace referencia el [Propertyidx (clase ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) valor.  
+  Establece la marca de la propiedad actual a la que hace referencia el valor de la [propiedad PropertyIdx (clase ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,8 +39,8 @@ BoolValue
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- Un [clase ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) objeto que representa un atributo del protocolo de red utilizado por el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente.  
+ *objeto*  
+ Objeto de la [clase ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) que representa un atributo del Protocolo de red utilizado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el cliente.  
   
 #### <a name="parameters"></a>Parámetros  
   
@@ -51,9 +51,9 @@ BoolValue
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor `uint32` que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

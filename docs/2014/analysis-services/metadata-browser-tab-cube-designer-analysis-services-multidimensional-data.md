@@ -1,5 +1,5 @@
 ---
-title: Metadatos (pestaña explorador, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Metadatos (pestaña explorador, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077847"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Metadatos (pestaña Explorador, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -38,7 +38,7 @@ ms.locfileid: "66077847"
   
  Cuando se trabaja con un modelo tabular, la lista de funciones contiene funciones MDX y funciones DAX. De lo contrario, la lista solo contiene funciones MDX. Un modelo multidimensional no puede usar funciones DAX directamente, aunque puede incluirse una expresión DAX como parte de una definición de objeto.  
   
- Sugerencia: Se muestran las carpetas que contienen las funciones de DAX en todas las letras en mayúsculas. Todas las demás carpetas contienen funciones MDX. Por ejemplo, hay dos carpetas para las funciones estadísticas: **ESTADÍSTICA** contiene las funciones DAX relacionadas.  
+ Sugerencia: las carpetas que contienen funciones DAX se muestran con todas las letras en mayúsculas. Todas las demás carpetas contienen funciones MDX. Por ejemplo, hay dos carpetas para las funciones estadísticas: **STATISTICAL** contiene las funciones DAX relacionadas.  
   
 ## <a name="context-menu"></a>Menú contextual  
  Las siguientes opciones están disponibles en el menú contextual que se muestra al hacer clic con el botón derecho en un elemento del panel **Metadatos** :  
@@ -46,13 +46,13 @@ ms.locfileid: "66077847"
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Agregar a consulta**|Haga clic para agregar el objeto seleccionado al panel inferior del área de creación de consultas.|  
-|**Agregar a filtro**|Haga clic para agregar la dimensión, el atributo, la jerarquía o el nivel seleccionados al área de filtro del **Explorador**.<br /><br /> Nota: Esta opción está habilitada sólo si una dimensión, atributo, jerarquía o nivel está seleccionado.|  
-|**Copiar**|Haga clic para agregar el elemento seleccionado al Portapapeles.<br /><br /> Nota: Esta opción copia el nombre completo del objeto.|  
+|**Agregar a filtro**|Haga clic para agregar la dimensión, el atributo, la jerarquía o el nivel seleccionados al área de filtro del **Explorador**.<br /><br /> Nota: Solo se habilitará esta opción si se selecciona una dimensión, un atributo, una jerarquía o un nivel.|  
+|**Copy**|Haga clic para agregar el elemento seleccionado al Portapapeles.<br /><br /> Nota: Esta opción copia el nombre completo del objeto.|  
   
-## <a name="see-also"></a>Vea también  
- [Barra de herramientas &#40;pestaña del explorador, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Analizar en Excel &#40;pestaña del explorador, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Consulta y filtro &#40;pestaña del explorador, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [Explorador &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Barra de herramientas &#40;pestaña explorador, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analizar en Excel &#40;pestaña explorador, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Consulta y filtro &#40;pestaña explorador, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [Explorador de cubos &#40;&#41; &#40;Analysis Services de datos multidimensionales&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

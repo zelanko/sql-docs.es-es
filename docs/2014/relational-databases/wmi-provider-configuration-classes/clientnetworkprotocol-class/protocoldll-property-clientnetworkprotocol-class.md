@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8558fde82245a02e04c34008eb124219354c4352
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192093"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>Propiedad ProtocolDLL (clase ClientNetworkProtocol)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  A [clase ClientNetworkProtocol](clientnetworkprotocol-class.md) que representa el protocolo de red utilizado por el cliente de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el archivo .dll de protocolo requerido por el protocolo de red del cliente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
- [Configurar bibliotecas de red y protocolos de red de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

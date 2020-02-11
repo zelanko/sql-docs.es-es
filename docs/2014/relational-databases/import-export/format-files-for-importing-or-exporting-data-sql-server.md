@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011950"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Archivos de formato para importar o exportar datos (SQL Server)
   Al importar masivamente datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o exportar masivamente datos de una tabla, puede usar un *archivo de formato* para almacenar toda la información de formato necesaria para exportar o importar datos masivamente. Esto incluye la información de formato para cada campo de un archivo de datos relativo a la tabla.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite dos tipos de archivos de formato: formatos XML y archivos de formato no XML. Tanto los archivos con formato XML como los archivos no XML contienen descripciones de todos los campos de un archivo de datos, y los archivos de formato XML también contienen descripciones de las columnas de tabla correspondientes. Por lo general, los archivos de formato XML y no XML son intercambiables. Sin embargo, es recomendable utilizar la sintaxis XML para los nuevos archivos de formato porque proporciona varias ventajas con relación a los archivos de formato no XML. Para obtener más información, vea [XML, archivos de formato &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite dos tipos de archivos de formato: archivos de formato XML y no XML. Tanto los archivos con formato XML como los archivos no XML contienen descripciones de todos los campos de un archivo de datos, y los archivos de formato XML también contienen descripciones de las columnas de tabla correspondientes. Por lo general, los archivos de formato XML y no XML son intercambiables. Sin embargo, es recomendable utilizar la sintaxis XML para los nuevos archivos de formato porque proporciona varias ventajas con relación a los archivos de formato no XML. Para obtener más información, vea [XML, archivos de formato &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66011950"
 -   Permite realizar la importación masiva de datos sin tener que agregar o eliminar datos innecesarios o reordenar los datos existentes en el archivo de datos. Los archivos de formato resultan especialmente útiles cuando existe una discrepancia entre los campos del archivo de datos y las columnas de la tabla.  
   
 ##  <a name="ExamplesOfFFs"></a> Ejemplos de archivos de formato  
- Los siguientes ejemplos muestran el diseño de un archivo de formato no XML y de un archivo de formato XML. Estos archivos de formato corresponden a la tabla `HumanResources.myTeam` de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Esta tabla tiene cuatro columnas: `EmployeeID`, `Name`, `Title` y `ModifiedDate`.  
+ Los siguientes ejemplos muestran el diseño de un archivo de formato no XML y de un archivo de formato XML. Estos archivos de formato corresponden a la tabla `HumanResources.myTeam` de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Esta tabla tiene cuatro columnas: `EmployeeID`, `Name`, `Title`y `ModifiedDate`.  
   
 > [!NOTE]  
 >  Para obtener más información sobre la tabla y cómo crearla, vea [Tabla de ejemplo HumanResources.myTeam &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
@@ -57,7 +57,7 @@ The contents of this format file are as follows: 9.0
   
  
   
-### <a name="b-using-an-xml-format-file"></a>b. Uso de un archivo de formato XML  
+### <a name="b-using-an-xml-format-file"></a>B. Uso de un archivo de formato XML  
  El siguiente archivo de formato XML usa el formato de datos nativo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la tabla `HumanResources.myTeam` . Este formato se creó usando el siguiente comando `bcp` .  
   
 ```  
@@ -128,9 +128,9 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivos de formato no XML &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
- [XML, archivos de formato &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
+ [Archivos de formato XML &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [Formatos de datos para importación en bloque o exportación masiva &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)  
   
   

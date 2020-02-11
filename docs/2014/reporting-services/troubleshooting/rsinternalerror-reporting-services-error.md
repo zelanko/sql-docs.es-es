@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 302772c87a1e1d4e5cf3ab1e7c5a304e6100b785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099156"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Error de Reporting Services
@@ -25,9 +25,9 @@ ms.locfileid: "66099156"
   
 |||  
 |-|-|  
-|Nombre del producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Identificador del evento|rsInternalError|  
-|Origen del evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
+|Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Id. de evento|rsInternalError|  
+|Origen de eventos|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
 |Componente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texto del mensaje|Error interno en el servidor de informes. Vea el registro de errores para obtener más detalles.|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66099156"
   
 ## <a name="internal-only"></a>Solo para uso interno  
   
-## <a name="see-also"></a>Vea también  
- [Iniciar y detener el servicio del servidor de informes](../report-server/start-and-stop-the-report-server-service.md)  
+## <a name="see-also"></a>Consulte también  
+ [Inicio y detención del servicio del servidor de informes](../report-server/start-and-stop-the-report-server-service.md)  
   
   

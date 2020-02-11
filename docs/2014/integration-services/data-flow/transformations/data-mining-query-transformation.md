@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44cdff7d7b6813e6fbdf52282621d8845d0643b9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890526"
 ---
 # <a name="data-mining-query-transformation"></a>Consulta de minería de datos, transformación
@@ -36,13 +36,13 @@ ms.locfileid: "68890526"
   
  Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Consulta de minería de datos** , haga clic en uno de los temas siguientes:  
   
--   [Editor de transformación Consulta de minería de datos &#40;pestaña Modelo de minería de datos&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Editor de transformación consulta de minería de datos &#40;pestaña modelo de minería de datos&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [Editor de transformación Consulta de minería de datos &#40;pestaña Modelo de minería de datos&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [Editor de transformación consulta de minería de datos &#40;pestaña modelo de minería de datos&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   

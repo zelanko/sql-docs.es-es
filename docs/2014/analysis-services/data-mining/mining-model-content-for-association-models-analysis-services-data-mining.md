@@ -1,5 +1,5 @@
 ---
-title: Contenido para los modelos de asociación del modelo de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
+title: Contenido del modelo de minería de datos para los modelos de asociación (Analysis Services-minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083691"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de asociación (Analysis Services - Minería de datos)
@@ -35,7 +35,7 @@ ms.locfileid: "66083691"
   
  Cada regla también está incluida en su propio nodo (NODE_TYPE = 8). Una *regla* describe un patrón general para la asociación de los elementos. Una regla es similar a una instrucción IF-THEN. El lado izquierdo de la regla muestra una condición o conjunto de condiciones existentes. El lado derecho de la regla muestra el elemento del conjunto de datos que está normalmente asociado a las condiciones del lado izquierdo.  
   
- **Nota** : si desea extraer las reglas o los conjuntos de datos, puede usar una consulta que devuelva únicamente los tipos de nodos deseados. Para más información, vea [Ejemplos de consultas del modelo de asociación](association-model-query-examples.md).  
+ **Nota:** Si desea extraer las reglas o conjuntos, puede usar una consulta para devolver solo los tipos de nodo que desee. Para más información, vea [Ejemplos de consultas del modelo de asociación](association-model-query-examples.md).  
   
 ## <a name="model-content-for-an-association-model"></a>Contenido del modelo para un modelo de asociación  
  Esta sección solo proporciona detalles y ejemplos para las columnas del contenido del modelo de minería de datos que son relevantes para los modelos de asociación.  
@@ -52,7 +52,7 @@ ms.locfileid: "66083691"
  Nombres de los atributos que corresponden a este nodo.  
   
  NODE_NAME  
- Nombre del nodo. Para un modelo de asociación, esta columna contendrá el mismo valor que NODE_UNIQUE_NAME.  
+ El nombre del nodo. Para un modelo de asociación, esta columna contendrá el mismo valor que NODE_UNIQUE_NAME.  
   
  NODE_UNIQUE_NAME  
  Nombre único del nodo.  
@@ -63,52 +63,52 @@ ms.locfileid: "66083691"
 |Identificador del tipo de nodo|Tipo|  
 |------------------|----------|  
 |1 (Modelo)|Raíz o nodo primario.|  
-|7 (Conjunto de elementos)|Conjunto de elementos o colección de pares de atributo-valor. Ejemplos:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> o Administrador de configuración de<br /><br /> `Gender = Male`.|  
+|7 (Conjunto de elementos)|Conjunto de elementos o colección de pares de atributo-valor. Ejemplos:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> or<br /><br /> `Gender = Male`.|  
 |8 (Regla)|Regla que define cómo se relacionan entre sí los elementos.<br /><br /> Ejemplo:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  
  Etiqueta o título asociado al nodo.  
   
- **Nodo de conjunto de elementos** Una lista de elementos separados por comas.  
+ **Nodo** conjunto de nodos Lista separada por comas de elementos.  
   
- **Nodo de regla** Contiene los lados derecho e izquierdo de la regla.  
+ **Nodo de regla** Contiene los lados izquierdo y derecho de la regla.  
   
  CHILDREN_CARDINALITY  
  Indica el número de elementos secundarios del nodo actual.  
   
- **Nodo primario** : indica el número total de conjuntos de elementos más las reglas.  
+ **Nodo primario** Indica el número total de conjuntos más reglas.  
   
 > [!NOTE]  
 >  Para obtener un análisis del recuento de conjuntos de elementos y reglas, vea la columna NODE_DESCRIPTION para el nodo raíz del modelo.  
   
- **Nodo de conjunto de elementos o de regla** : siempre 0.  
+ **Nodo de conjunto de reglas o regla** Siempre es 0.  
   
  PARENT_UNIQUE_NAME  
  Nombre único del nodo primario del nodo.  
   
- **Nodo primario** : siempre NULL.  
+ **Nodo primario** Siempre es NULL.  
   
- **Nodo de conjunto de elementos o de regla** : siempre 0.  
+ **Nodo de conjunto de reglas o regla** Siempre es 0.  
   
  NODE_DESCRIPTION  
  Descripción breve y fácil de comprender del contenido del nodo.  
   
- **Nodo primario** Incluye una lista separada por comas con la siguiente información sobre el modelo:  
+ **Nodo primario** Incluye una lista separada por comas de la siguiente información sobre el modelo:  
   
 |Elemento|Descripción|  
 |----------|-----------------|  
 |ITEMSET_COUNT|Recuento de todos los conjuntos de elementos del modelo.|  
 |RULE_COUNT|Recuento de todas las reglas del modelo.|  
-|MIN_SUPPORT|Soporte mínimo para cualquier conjunto de elementos único.<br /><br /> **Nota** Este valor puede ser diferente del valor establecido para el parámetro *MINIMUM _SUPPORT* .|  
-|MAX_SUPPORT|Soporte máximo para cualquier conjunto de elementos único.<br /><br /> **Nota** Este valor puede ser diferente del valor establecido para el parámetro *MAXIMUM_SUPPORT* .|  
-|MIN_ITEMSET_SIZE|Tamaño del conjunto de elementos más pequeño, representado como recuento de elementos.<br /><br /> Un valor de 0 indica que el estado `Missing` se trató como un elemento independiente.<br /><br /> **Nota** El valor predeterminado del parámetro *MINIMUM_ITEMSET_SIZE* es 1.|  
-|MAX_ITEMSET_SIZE|Indica el tamaño del conjunto de elementos más grande que se encontró.<br /><br /> **Nota** Este valor está restringido por el valor establecido para el parámetro *MAX_ITEMSET_SIZE* al crear el modelo. Este tamaño nunca puede superar dicho valor; sin embargo, puede ser menor. El valor predeterminado es 3.|  
-|MIN_PROBABILITY|Probabilidad mínima detectada para cualquier conjunto de elementos o regla únicos del modelo.<br /><br /> Ejemplo: 0.400390625<br /><br /> **Nota** En los conjuntos de elementos, este valor es siempre mayor que el establecido para el parámetro *MINIMUM_PROBABILITY* al crear el modelo.|  
-|MAX_PROBABILITY|Probabilidad máxima detectada para cualquier conjunto de elementos o regla únicos del modelo.<br /><br /> Ejemplo: 1<br /><br /> **Nota** : no hay ningún parámetro para restringir la probabilidad máxima de los conjuntos de elementos. Si quiere eliminar los elementos que son demasiado frecuentes, use el parámetro *MAXIMUM_SUPPORT* en su lugar.|  
-|MIN_LIFT|Cantidad mínima de elevación proporcionada por el modelo para cualquier conjunto de elementos.<br /><br /> Ejemplo: 0.14309369632511<br /><br /> Nota: Conocer la elevación mínima puede ayudar a determinar si la elevación para cualquier conjunto de elementos es importante.|  
-|MAX_LIFT|Cantidad máxima de elevación proporcionada por el modelo para cualquier conjunto de elementos.<br /><br /> Ejemplo: 1,95758227647523 **Nota** conocer la elevación máxima puede ayudar a determinar si la elevación para cualquier conjunto de elementos es importante.|  
+|MIN_SUPPORT|Soporte mínimo para cualquier conjunto de elementos único.<br /><br /> **Nota:** Este valor puede diferir del valor establecido para el parámetro *_SUPPORT mínimo* .|  
+|MAX_SUPPORT|Soporte máximo para cualquier conjunto de elementos único.<br /><br /> **Nota:** Este valor puede diferir del valor establecido para el parámetro *MAXIMUM_SUPPORT* .|  
+|MIN_ITEMSET_SIZE|Tamaño del conjunto de elementos más pequeño, representado como recuento de elementos.<br /><br /> Un valor de 0 indica que el estado `Missing` se trató como un elemento independiente.<br /><br /> **Nota:** El valor predeterminado del parámetro *MINIMUM_ITEMSET_SIZE* es 1.|  
+|MAX_ITEMSET_SIZE|Indica el tamaño del conjunto de elementos más grande que se encontró.<br /><br /> **Nota:** Este valor está restringido por el valor establecido para el parámetro *MAX_ITEMSET_SIZE* al crear el modelo. Este tamaño nunca puede superar dicho valor; sin embargo, puede ser menor. El valor predeterminado es 3.|  
+|MIN_PROBABILITY|Probabilidad mínima detectada para cualquier conjunto de elementos o regla únicos del modelo.<br /><br /> Ejemplo: 0,400390625<br /><br /> **Nota:** En el caso de conjuntos, este valor siempre es mayor que el valor establecido para el parámetro *MINIMUM_PROBABILITY* al crear el modelo.|  
+|MAX_PROBABILITY|Probabilidad máxima detectada para cualquier conjunto de elementos o regla únicos del modelo.<br /><br /> Ejemplo: 1<br /><br /> **Nota:** No hay ningún parámetro para restringir la probabilidad máxima de conjuntos. Si quiere eliminar los elementos que son demasiado frecuentes, use el parámetro *MAXIMUM_SUPPORT* en su lugar.|  
+|MIN_LIFT|Cantidad mínima de elevación proporcionada por el modelo para cualquier conjunto de elementos.<br /><br /> Ejemplo: 0,14309369632511<br /><br /> Nota: Conocer la elevación mínima puede ayudar a determinar si la elevación para cualquier conjunto de elementos es importante.|  
+|MAX_LIFT|Cantidad máxima de elevación proporcionada por el modelo para cualquier conjunto de elementos.<br /><br /> Ejemplo: 1,95758227647523 **Nota** : conocer la elevación máxima puede ayudar a determinar si la elevación para cualquier conjunto de elementos es importante.|  
   
- **Nodo de conjunto de elementos** Los nodos de conjunto de elementos contienen una lista de los elementos, mostrados como una cadena de texto separada por comas.  
+ **Nodo** conjunto de nodos Los nodos de conjunto de elementos contienen una lista de los elementos, que se muestran como una cadena de texto separada por comas.  
   
  Ejemplo:  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66083691"
   
  Esto significa que las cubiertas Touring y las botellas de agua se adquirieron juntas.  
   
- **Nodo de regla** Los nodos de regla contienen el lado izquierdo y el derecho de la regla, separados por una flecha.  
+ **Nodo de regla** Los nodos de regla contienen un lado izquierdo y derecho de la regla, separados por una flecha.  
   
  Ejemplo: `Touring Tire = Existing, Water Bottle = Existing -> Cycling cap = Existing`  
   
@@ -125,11 +125,11 @@ ms.locfileid: "66083691"
  NODE_RULE  
  Fragmento de XML que describe la regla o el conjunto de elementos que está incrustado en el nodo.  
   
- **Nodo primario** : en blanco.  
+ **Nodo primario** En blanco.  
   
- **Nodo de conjunto de elementos** : en blanco.  
+ **Nodo** conjunto de nodos En blanco.  
   
- **Nodo de regla** El fragmento XML incluye información útil adicional sobre la regla, como el soporte, la confianza y el número de elementos, así como el identificador del nodo que representa el lado izquierdo de la regla.  
+ **Nodo de regla** El fragmento XML incluye información útil adicional sobre la regla, como la compatibilidad, la confianza y el número de elementos, así como el identificador del nodo que representa el lado izquierdo de la regla.  
   
  MARGINAL_RULE  
  : en blanco.  
@@ -137,11 +137,11 @@ ms.locfileid: "66083691"
  NODE_PROBABILITY  
  Puntuación de confianza o probabilidad asociada al conjunto de elementos o a la regla.  
   
- **Nodo primario** : siempre 0.  
+ **Nodo primario** Siempre es 0.  
   
- **Nodo de conjunto de elementos** : probabilidad del conjunto de elementos.  
+ **Nodo** conjunto de nodos Probabilidad del conjunto de los.  
   
- **Nodo de regla** : valor de confianza para la regla.  
+ **Nodo de regla** Valor de confianza para la regla.  
   
  MARGINAL_PROBABILITY  
  Igual que NODE_PROBABILITY.  
@@ -149,11 +149,11 @@ ms.locfileid: "66083691"
  NODE_DISTRIBUTION  
  Esta tabla contiene información muy diferente, dependiendo de si el nodo es un conjunto de elementos o una regla.  
   
- **Nodo primario** : en blanco.  
+ **Nodo primario** En blanco.  
   
- **Nodo de conjunto de elementos** : muestra el nombre de cada elemento del conjunto de elementos, junto con un valor de soporte y probabilidad. Por ejemplo, si el conjunto de elementos contiene dos productos, se muestra el nombre de cada uno junto con el recuento de casos que incluyen cada producto.  
+ **Nodo** conjunto de nodos Enumera cada elemento del conjunto de elementos junto con un valor de probabilidad y soporte. Por ejemplo, si el conjunto de elementos contiene dos productos, se muestra el nombre de cada uno junto con el recuento de casos que incluyen cada producto.  
   
- **Nodo de regla** : contiene dos filas. La primera fila muestra el atributo del lado derecho de la regla, que es el elemento predicho, junto con una puntuación de confianza.  
+ **Nodo de regla** Contiene dos filas. La primera fila muestra el atributo del lado derecho de la regla, que es el elemento predicho, junto con una puntuación de confianza.  
   
  La segunda fila es única para los modelos de asociación; contiene un puntero al conjunto de elementos del lado derecho de la regla. El puntero se representa en la columna ATTRIBUTE_VALUE como identificador del conjunto de elementos que contiene únicamente el elemento del lado derecho.  
   
@@ -164,27 +164,27 @@ ms.locfileid: "66083691"
  NODE_SUPPORT  
  Número de casos que admiten este nodo.  
   
- **Nodo primario** : número de casos del modelo.  
+ **Nodo primario** Número de casos del modelo.  
   
- **Nodo de conjunto de elementos** : número de casos que contienen todos los elementos del conjunto de elementos.  
+ **Nodo** conjunto de nodos Número de casos que contiene todos los elementos del conjunto de elementos.  
   
- **Nodo de regla** : número de casos que contienen todos los elementos incluidos en la regla.  
+ **Nodo de regla** El número de casos que contienen todos los elementos incluidos en la regla.  
   
  MSOLAP_MODEL_COLUMN  
  Contiene información diferente dependiendo de si el nodo es un conjunto de elementos o una regla.  
   
- **Nodo primario** : en blanco.  
+ **Nodo primario** En blanco.  
   
- **Nodo de conjunto de elementos** : en blanco.  
+ **Nodo** conjunto de nodos En blanco.  
   
- **Nodo de regla** El identificador del conjunto de elementos que contiene los elementos del lado izquierdo de la regla. Por ejemplo, si la regla es `If {A,B} Then {C}`, esta columna incluye el identificador del conjunto de elementos que contiene únicamente `{A,B}`.  
+ **Nodo de regla** IDENTIFICADOR del conjunto de elementos que contiene los elementos del lado izquierdo de la regla. Por ejemplo, si la regla es `If {A,B} Then {C}`, esta columna incluye el identificador del conjunto de elementos que contiene únicamente `{A,B}`.  
   
  MSOLAP_NODE_SCORE  
- **Nodo primario** : en blanco.  
+ **Nodo primario** En blanco.  
   
- **Nodo de conjunto de elementos** : puntuación de importancia para el conjunto de elementos.  
+ **Nodo** conjunto de nodos Puntuación de importancia para el conjunto de resultados.  
   
- **Nodo de regla** : puntuación de importancia para la regla.  
+ **Nodo de regla** Puntuación de importancia de la regla.  
   
 > [!NOTE]  
 >  La importancia se calcula de forma diferente para los conjuntos de elementos y para las reglas. Para más información, vea [Referencia técnica del algoritmo de asociación de Microsoft](microsoft-association-algorithm-technical-reference.md).  
@@ -192,9 +192,9 @@ ms.locfileid: "66083691"
  MSOLAP_NODE_SHORT_CAPTION  
  : en blanco.  
   
-## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Algoritmo de asociación de Microsoft](microsoft-association-algorithm.md)   
+## <a name="see-also"></a>Consulte también  
+ [Contenido del modelo de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-model-content-analysis-services-data-mining.md)   
+ [Algoritmo de Asociación de Microsoft](microsoft-association-algorithm.md)   
  [Ejemplos de consultas del modelo de asociación](association-model-query-examples.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 902685dcf1f8c743453285820faa67bb70830614
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258351"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Generar objetos de base de datos con la integración de Common Language Runtime (CLR)
@@ -63,16 +63,16 @@ ms.locfileid: "75258351"
  [Funciones CLR definidas por el usuario](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  Describe cómo implementar y usar los distintos tipos de funciones CLR: funciones de agregado definidas por el usuario, escalares y con valores de tabla.  
   
- [Tipos definidos por el usuario CLR](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipos definidos por el usuario de CLR](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Describe cómo implementar y usar los tipos definidos por el usuario CLR.  
   
- [Procedimientos almacenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+ [Procedimientos almacenados de CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
  Describe cómo implementar y usar los procedimientos almacenados CLR.  
   
  [Desencadenadores CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
  Describe cómo implementar y usar los desencadenadores CLR.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Información general sobre la integración de Common Language Runtime &#40;CLR&#41;](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Usar la obtención de detalles desde los visores de modelos | Microsoft Docs
+title: Usar la obtención de detalles de los visores de modelos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebb910af4a9c01784fb74195ad6eed0f7f96db71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082836"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Usar la obtención de detalles desde los visores de modelos
@@ -24,11 +24,11 @@ ms.locfileid: "66082836"
   
 ### <a name="use-drillthrough-in-the-microsoft-tree-viewer"></a>Utilizar la obtención de detalles en el Visor de árboles de Microsoft  
   
-1.  En el Diseñador de minería de datos, seleccione un modelo de árboles de decisión y, a continuación, seleccione **Examinar modelo** para abrir el modelo en el **Visor de árboles de Microsoft**. En SQL Server Management Studio, haga clic con el botón derecho en el modelo y seleccione **Examinar**.  
+1.  En el Diseñador de minería de datos, seleccione un modelo de árboles de decisión y, a continuación, seleccione **Examinar modelo** para abrir el modelo en el **Visor de árboles de Microsoft**. En SQL Server Management Studio, haga clic con el botón secundario en el modelo y seleccione **examinar** .  
   
 2.  Haga clic con el botón derecho en cualquier nodo del gráfico de árbol y seleccione **Explorar en profundidad**.  
   
-3.  Seleccione una de las siguientes opciones: **Columnas del modelo solo** o **del modelo y estructura de columnas**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
+3.  Seleccione una de las opciones siguientes: **Solo columnas de modelos** o **Columnas de modelo y estructura**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
   
 4.  Se abre el cuadro de diálogo **Explorar en profundidad** , que muestra los datos de los casos o de la estructura. La barra de título del cuadro de diálogo también contiene una descripción que identifica el nodo desde el que se ejecutó la consulta de obtención de detalles.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66082836"
   
 2.  En la pestaña **Clúster** , haga clic con el botón derecho en cualquier nodo.  
   
-3.  Seleccione **obtención de detalles**y, a continuación, seleccione una de las siguientes opciones: **Columnas del modelo solo** o **del modelo y estructura de columnas**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
+3.  Seleccione **Obtener detalles**y, a continuación, seleccione una de las opciones siguientes: **Solo columnas de modelos** o **Columnas de modelo y estructura**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
   
 4.  Se abre el cuadro de diálogo **Explorar en profundidad** , que muestra los datos de los casos o de la estructura. La barra de título del cuadro de diálogo también contiene una descripción que identifica el clúster para los casos.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "66082836"
   
 ### <a name="use-drillthrough-in-the-microsoft-association-rules-viewer"></a>Utilizar la obtención de detalles en el Visor de reglas de asociación de Microsoft  
   
-1.  En el Diseñador de minería de datos, seleccione un modelo de asociación y, a continuación, seleccione **Examinar modelo** para abrir el modelo en el **Visor de reglas de asociación de Microsoft**. En SQL Server Management Studio, haga clic con el botón derecho en el modelo y seleccione **Examinar**.  
+1.  En el Diseñador de minería de datos, seleccione un modelo de asociación y, a continuación, seleccione **Examinar modelo** para abrir el modelo en el **Visor de reglas de asociación de Microsoft**. En SQL Server Management Studio, haga clic con el botón secundario en el modelo y seleccione **examinar** .  
   
 2.  En la pestaña **Reglas** , haga clic con el botón derecho en cualquier fila que represente una regla. En la pestaña **Conjuntos de elementos** , haga clic en cualquier fila que contenga un conjunto de elementos.  
   
-3.  Seleccione **obtención de detalles**y, a continuación, seleccione una de las siguientes opciones: **Columnas del modelo solo** o **del modelo y estructura de columnas**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
+3.  Seleccione **Obtener detalles**y, a continuación, seleccione una de las opciones siguientes: **Solo columnas de modelos** o **Columnas de modelo y estructura**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
   
 4.  Se abre el cuadro de diálogo **Explorar en profundidad** , que muestra los datos de los casos o de la estructura. La barra de título del cuadro de diálogo también contiene una descripción que identifica el nombre de la regla.  
   
@@ -64,14 +64,14 @@ ms.locfileid: "66082836"
   
 2.  En la **pestaña Diagrama del clúster**, haga clic con el botón derecho en un nodo que represente a un clúster. En la pestaña **Perfiles del clúster** , haga clic en cualquier lugar de un perfil de clúster o en el clúster que represente a la población total del modelo.  
   
-3.  Seleccione **obtención de detalles**y, a continuación, seleccione una de las siguientes opciones: **Columnas del modelo solo** o **del modelo y estructura de columnas**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
+3.  Seleccione **Obtener detalles**y, a continuación, seleccione una de las opciones siguientes: **Solo columnas de modelos** o **Columnas de modelo y estructura**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
   
 4.  Se abre el cuadro de diálogo **Explorar en profundidad** , que muestra los datos de los casos o de la estructura. La barra de título del cuadro de diálogo también contiene una descripción que identifica el clúster para los casos.  
   
 5.  Haga clic con el botón derecho en cualquier lugar de los resultados y seleccione **Copiar todo** para guardar los resultados en el Portapapeles. Si el modelo contiene una columna de tabla anidada, solo se pegará el nombre de dicha columna; si desea recuperar los valores de datos almacenados dentro de esta columna para cada caso, deberá crear una consulta en el contenido del modelo.  
   
-## <a name="see-also"></a>Vea también  
- [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tareas y procedimientos del visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
  [Obtención de detalles en modelos de minería de datos](drillthrough-on-mining-models.md)   
  [Obtención de detalles en estructuras de minería de datos](drillthrough-on-mining-structures.md)  
   

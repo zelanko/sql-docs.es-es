@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893536"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Usar expresiones de cubo y de subcubo
@@ -68,11 +68,11 @@ ms.locfileid: "68893536"
   
  Un identificador de subcubo aparece como *Subcube_Name*. en las descripciones de la notación de BNF para las instrucciones MDX.  
   
-## <a name="see-also"></a>Vea también  
- [Consulta de MDX básica &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
- [Generar subcubos en &#40;MDX MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
- [Instrucción &#40;Create subcube MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
- [Expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [SCOPE &#40;Instrucción, MDX&#41;](../mdx/mdx-scripting-scope.md)  
+## <a name="see-also"></a>Consulte también  
+ [Consulta MDX básica &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [Generar subcubos en MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [Instrucción CREATE subcube &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
+ [Expresiones &#40;&#41;MDX](../mdx/expressions-mdx.md)   
+ [Instrucción SCOPE &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

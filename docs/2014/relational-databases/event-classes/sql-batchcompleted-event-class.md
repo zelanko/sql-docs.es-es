@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94127112d214ba976e3b517bdf91a7d6b26b2d1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63050751"
 ---
 # <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted, clase de eventos
@@ -31,12 +31,12 @@ ms.locfileid: "63050751"
 |ApplicationName|`nvarchar`|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |ClientProcessID|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |CPU|`int`|Cantidad de tiempo de CPU (en milisegundos) que utiliza el proceso por lotes.|18|Sí|  
-|DatabaseID|`int`|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |Duration|`bigint`|Tiempo (en microsegundos) que tarda el evento.|13|Sí|  
 |EndTime|`datetime`|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como SQL:BatchStarting o SP:Starting.|15|Sí|  
 |Error|`int`|Número de error del evento.<br /><br /> 0=Aceptar<br /><br /> 1=Error<br /><br /> 2=Anular|31|Sí|  
-|EventClass|`int`|Tipo de evento = 12.|27|Sin|  
+|EventClass|`int`|Tipo de evento = 12.|27|No|  
 |EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
@@ -45,19 +45,19 @@ ms.locfileid: "63050751"
 |LoginSid|`image`|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede buscar esta información en la vista de catálogo sys.server_principals. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |NTDomainName|`nvarchar`|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|`nvarchar`|Nombre del usuario de Windows.|6|Sí|  
-|Reads|`bigint`|Número de operaciones de E/S de lectura de páginas causadas por el proceso por lotes.|16|Sí|  
-|IdSolicitud|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
+|Lecturas|`bigint`|Número de operaciones de E/S de lectura de páginas causadas por el proceso por lotes.|16|Sí|  
+|RequestID|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
 |RowCounts|`bigint`|Número de filas afectadas por un evento.|48|Sí|  
-|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|Sin|  
+|nombreDeServidor|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |TextData|`ntext`|Texto del proceso por lotes.|1|Sí|  
 |TransactionID|`bigint`|Id. de la transacción asignado por el sistema.|4|Sí|  
-|Writes|`bigint`|Número de operaciones de E/S de escritura de páginas causadas por el proceso por lotes.|17|Sí|  
+|Escrituras|`bigint`|Número de operaciones de E/S de escritura de páginas causadas por el proceso por lotes.|17|Sí|  
 |XactSequence|`bigint`|Token que describe la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

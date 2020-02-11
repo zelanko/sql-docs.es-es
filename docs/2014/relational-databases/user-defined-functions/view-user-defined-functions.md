@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211683"
 ---
 # <a name="view-user-defined-functions"></a>Ver funciones definidas por el usuario
@@ -37,7 +37,7 @@ ms.locfileid: "68211683"
   
      [Seguridad](#Security)  
   
--   **Para obtener información acerca de una función, usando:**  
+-   **Para obtener información acerca de una función, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68211683"
 ####  <a name="Permissions"></a> Permisos  
  El uso de **sys.sql_expression_dependencies** para buscar todas las dependencias de una función necesita el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en **sys.sql_expression_dependencies** para la base de datos. Las definiciones de objetos del sistema, como las que se devuelven en OBJECT_DEFINITION, son visibles de forma pública.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>Para mostrar las propiedades de una función definida por el usuario  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68211683"
      **Server**  
      Nombre de la instancia de servidor actual.  
   
-     **Usuario**  
+     **User**  
      Nombre del usuario de esta conexión.  
   
      **Fecha de creación**  
@@ -85,7 +85,7 @@ ms.locfileid: "68211683"
      **Ejecutar como**  
      Contexto de ejecución para la función.  
   
-     **Name**  
+     **Nombre**  
      Nombre de la función actual.  
   
      **Esquema**  
@@ -106,7 +106,7 @@ ms.locfileid: "68211683"
      **Identificador entre comillas**  
      Indica si el objeto se ha creado con la opción Identificador entre comillas.  
   
-     **Enlazada a un esquema**  
+     **Enlazado a esquema**  
      Indica si la función está enlazada a un esquema. Los valores son True y False. Para obtener más información sobre las funciones enlazadas a esquema, vea la sección SCHEMABINDING de [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  

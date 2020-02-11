@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831393"
 ---
 # <a name="integration-services-containers"></a>Contenedores de Integration Services
-  Los contenedores son objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que proporcionan estructura a los paquetes y servicios a las tareas. Permiten repetir flujos de control en paquetes y agrupan tareas y contenedores en unidades de trabajo significativas. Los contenedores pueden incluir otros contenedores, además de tareas.  
+  Los contenedores son objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de que proporcionan una estructura a los paquetes y servicios a las tareas. Permiten repetir flujos de control en paquetes y agrupan tareas y contenedores en unidades de trabajo significativas. Los contenedores pueden incluir otros contenedores, además de tareas.  
   
  Los paquetes usan contenedores para los siguientes fines:  
   
@@ -35,39 +35,40 @@ ms.locfileid: "62831393"
 -   Agrupar tareas y contenedores que deben completarse correctamente o no completarse como una unidad (todas o ninguna). Por ejemplo, un paquete puede agrupar tareas que eliminan y agregan filas de una tabla de base de datos, y confirmar o revertir todas las tareas si una no se completa correctamente.  
   
 ## <a name="container-types"></a>Tipos de contenedor  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona cuatro tipos de contenedores para generar paquetes. En la tabla siguiente se muestran los tipos de contenedor.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona cuatro tipos de contenedores para generar paquetes. En la tabla siguiente se muestran los tipos de contenedor.  
   
 |Contenedor|Descripción|  
 |---------------|-----------------|  
 |[Contenedor Foreach Loop](foreach-loop-container.md)|Ejecuta un flujo de control repetidamente mediante un enumerador.|  
 |[Contenedor de bucles For](for-loop-container.md)|Ejecuta un flujo de control repetidamente probando una condición.|  
-|[Contenedor de secuencias](sequence-container.md)|Agrupa tareas y contenedores en flujos de control que son subconjuntos del flujo de control del paquete.|  
-|[Contenedor de tarea](task-host-container.md)|Proporciona servicios a una tarea individual.|  
+|[contenedor de secuencias](sequence-container.md)|Agrupa tareas y contenedores en flujos de control que son subconjuntos del flujo de control del paquete.|  
+|[contenedor de tarea](task-host-container.md)|Proporciona servicios a una tarea individual.|  
   
  Los paquetes y los controladores de eventos también son tipos de contenedores. Para obtener información, vea [Paquetes de Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md) y [Controladores de eventos de Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md).  
   
 ### <a name="summary-of-container-properties"></a>Resumen de propiedades de contenedor  
  Todos los tipos de contenedor tienen un conjunto de propiedades comunes. Si se crean paquetes con las herramientas gráficas de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , en la ventana Propiedades se enumeran las siguientes propiedades de los contenedores de bucles Foreach, bucles For y secuencias. Las propiedades del contenedor del host de la tarea se configuran como parte de la configuración de la tarea que el host de la tarea encapsula. Las propiedades del host de la tarea se establecen al configurar la tarea.  
   
-|Property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
-|`DelayValidation`|Valor booleano que indica si la validación del contenedor se retrasa hasta el tiempo de ejecución. El valor predeterminado de esta propiedad es `False`.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
-|`Description`|Descripción del contenedor. La propiedad contiene una cadena, pero puede estar en blanco.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  
-|`Disable`|Valor booleano que indica si el contenedor se ejecuta. El valor predeterminado de esta propiedad es `False`.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>.|  
+|`DelayValidation`|Valor booleano que indica si la validación del contenedor se retrasa hasta el tiempo de ejecución. El valor predeterminado de esta propiedad es `False`.<br /><br /> Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
+|`Description`|Descripción del contenedor. La propiedad contiene una cadena, pero puede estar en blanco.<br /><br /> Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  
+|`Disable`|Valor booleano que indica si el contenedor se ejecuta. El valor predeterminado de esta propiedad es `False`.<br /><br /> Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>.|  
 |`DisableEventHandlers`|Valor booleano que indica si los controladores de eventos asociados al contenedor se ejecutan. El valor predeterminado de esta propiedad es `False`.|  
-|`FailPackageOnFailure`|Valor booleano que especifica si el paquete genera un error cuando se produce un error en el contenedor. El valor predeterminado de esta propiedad es `False`.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>.|  
-|`FailParentOnFailure`|Valor booleano que especifica si el contenedor primario genera un error cuando se produce un error en el contenedor. El valor predeterminado de esta propiedad es `False`.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>.|  
-|`ForcedExecutionValue`|Si `ForceExecutionValue` se configura como `True`, objeto que contiene el valor de ejecución opcional del contenedor. El valor predeterminado de esta propiedad es **0**.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>.|  
+|`FailPackageOnFailure`|Valor booleano que especifica si el paquete genera un error cuando se produce un error en el contenedor. El valor predeterminado de esta propiedad es `False`.<br /><br /> Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>.|  
+|`FailParentOnFailure`|Valor booleano que especifica si el contenedor primario genera un error cuando se produce un error en el contenedor. El valor predeterminado de esta propiedad es `False`.<br /><br /> Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>.|  
+|`ForcedExecutionValue`|Si `ForceExecutionValue` se configura como `True`, objeto que contiene el valor de ejecución opcional del contenedor. El valor predeterminado de esta propiedad es **0**.<br /><br /> Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>.|  
 |`ForcedExecutionValueType`|El tipo de datos de `ForcedExecutionValue`. El valor predeterminado de esta propiedad es `Int32`.|  
-|`ForceExecutionResult`|Valor que especifica el resultado forzado de la ejecución del paquete o contenedor. Los valores son `None`, `Success`, `Failure` y `Completion`. El valor predeterminado de esta propiedad es `None`.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
-|`ForceExecutionValue`|Valor booleano que especifica si se debería forzar a que el valor de ejecución opcional del contenedor contenga un valor concreto. El valor predeterminado de esta propiedad es `False`.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
-|`ID`|GUID del contenedor, que se asigna cuando se crea el paquete. Esta propiedad es de solo lectura.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>|  
-|`IsolationLevel`|Nivel de aislamiento de la transacción del contenedor. Los valores son `Unspecified`, `Chaos`, `ReadUncommitted`, `ReadCommitted`, `RepeatableRead`, `Serializable` y `Snapshot`. El valor predeterminado de esta propiedad es `Serializable`. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
-|`LocaleID`|Una configuración regional de Microsoft Win32. El valor predeterminado de esta propiedad es la configuración regional del sistema operativo del equipo local.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
-|`LoggingMode`|Valor que especifica el comportamiento de registro del contenedor. Los valores son `Disabled`, `Enabled` y `UseParentSetting`. El valor predeterminado de esta propiedad es `UseParentSetting`. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
-|`MaximumErrorCount`|Cantidad máxima de errores que se pueden producir antes de que un contenedor deje de ejecutarse. El valor predeterminado de esta propiedad es **1**.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>.|  
-|`Name`|Nombre del contenedor.<br /><br /> Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
-|`TransactionOption`|Participación transaccional del contenedor. Los valores son `NotSupported`, `Supported`, `Required`. El valor predeterminado de esta propiedad es `Supported`. Para obtener más información, consulta <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
+|`ForceExecutionResult`|Valor que especifica el resultado forzado de la ejecución del paquete o contenedor. Los valores son `None`, `Success`, `Failure` y `Completion`. El valor predeterminado de esta propiedad es `None`.<br /><br /> Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
+|`ForceExecutionValue`|Valor booleano que especifica si se debería forzar a que el valor de ejecución opcional del contenedor contenga un valor concreto. El valor predeterminado de esta propiedad es `False`.<br /><br /> Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
+|`ID`|GUID del contenedor, que se asigna cuando se crea el paquete. Esta propiedad es de solo lectura.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
+|`IsolationLevel`|Nivel de aislamiento de la transacción del contenedor. Los valores son `Unspecified`, `Chaos`, `ReadUncommitted`, `ReadCommitted`, `RepeatableRead`, `Serializable` y `Snapshot`. El valor predeterminado de esta propiedad es `Serializable`. Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
+|`LocaleID`|Una configuración regional de Microsoft Win32. El valor predeterminado de esta propiedad es la configuración regional del sistema operativo del equipo local.<br /><br /> Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
+|`LoggingMode`|Valor que especifica el comportamiento de registro del contenedor. Los valores son `Disabled`, `Enabled` y `UseParentSetting`. El valor predeterminado de esta propiedad es `UseParentSetting`. Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
+|`MaximumErrorCount`|Cantidad máxima de errores que se pueden producir antes de que un contenedor deje de ejecutarse. El valor predeterminado de esta propiedad es **1**.<br /><br /> Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>.|  
+|`Name`|nombre del contenedor.<br /><br /> Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
+|`TransactionOption`|Participación transaccional del contenedor. Los valores son `NotSupported`, `Supported`, `Required`. El valor predeterminado de esta propiedad es `Supported`. Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
  Para obtener información sobre todas las propiedades disponibles para los contenedores de bucles Foreach, bucles For, secuencias y host de la tarea cuando se configuran mediante programación, vea los siguientes temas de la API de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
   
@@ -83,21 +84,21 @@ ms.locfileid: "62831393"
  Los contenedores incluyen flujos de control formados por ejecutables y restricciones de precedencia, y pueden usar controladores de eventos y variables. El contenedor del host de la tarea es una excepción: puesto que este contenedor encapsula una única tarea, no utiliza las restricciones de precedencia.  
   
 ### <a name="executables"></a>Ejecutables  
- Los ejecutables hacen referencia a las tareas de nivel de contenedor y a cualquier contenedor contenido en el contenedor. Un ejecutable puede ser una de las tareas y los contenedores proporcionados por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o una tarea personalizada. Para obtener más información, consulte [Integration Services Tasks](integration-services-tasks.md) y [contenedores de Integration Services](integration-services-containers.md).  
+ Los ejecutables hacen referencia a las tareas de nivel de contenedor y a cualquier contenedor contenido en el contenedor. Un ejecutable puede ser una de las tareas y los contenedores proporcionados por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o una tarea personalizada. Para obtener más información, consulte [Integration Services Tasks](integration-services-tasks.md) and [Integration Services containers](integration-services-containers.md).  
   
 ### <a name="precedence-constraints"></a>Restricciones de precedencia  
  Las restricciones de precedencia vinculan los contenedores y las tareas del mismo contenedor principal en un flujo de control ordenado. Para obtener más información, vea [Restricciones de precedencia](precedence-constraints.md).  
   
 ### <a name="event-handlers"></a>Controladores de eventos  
- Los controladores de eventos de nivel de contenedor responden a eventos provocados por el contenedor o por los objetos que incluye. Para obtener más información, vea [Controladores de eventos de Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md).  
+ Los controladores de eventos de nivel de contenedor responden a eventos provocados por el contenedor o por los objetos que incluye. Para más información, vea [Controladores de eventos de Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md).  
   
-### <a name="variables"></a>Variables  
- Las variables que se usan en contenedores incluyen las variables del sistema de nivel de contenedor proporcionadas por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y las variables definidas por el usuario usadas por el contenedor. Para obtener más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
+### <a name="variables"></a>variables  
+ Las variables que se usan en contenedores incluyen las variables del sistema de nivel de contenedor proporcionadas por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y las variables definidas por el usuario usadas por el contenedor. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
 ## <a name="break-points"></a>Puntos de interrupción  
  Al establecer un punto de interrupción en un contenedor y si la condición de interrupción es **Salto cuando el contenedor recibe el evento OnVariableValueChanged**, defina la variable en el ámbito del contenedor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Flujo de control](control-flow.md)  
   
   

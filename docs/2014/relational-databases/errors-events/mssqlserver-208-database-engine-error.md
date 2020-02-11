@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b87a950c29cf202124e27b319eb56fb6a6e1857d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914920"
 ---
-# <a name="mssqlserver208"></a>MSSQLSERVER_208
+# <a name="mssqlserver_208"></a>MSSQLSERVER_208
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|208|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|208|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SQ_BADOBJECT|  
 |Texto del mensaje|El nombre de objeto '%.*ls' no es válido.|  
@@ -35,7 +35,7 @@ ms.locfileid: "62914920"
 ## <a name="explanation"></a>Explicación  
  No se encuentra el objeto especificado.  
   
-### <a name="possible-causes"></a>Posibles causas  
+### <a name="possible-causes"></a>Causas posibles  
  Este error puede deberse a uno de los siguientes problemas:  
   
 -   No se ha especificado correctamente el objeto.  
@@ -69,9 +69,9 @@ ms.locfileid: "62914920"
   
 -   El usuario dispone de permiso para tener acceso al objeto. Para comprobar los permisos que tiene el usuario para el objeto, use la función del sistema **Has_Perms_By_Name**.  
   
-## <a name="see-also"></a>Vea también  
- [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)   
- [Configuración de visibilidad de metadatos](../security/metadata-visibility-configuration.md)   
+## <a name="see-also"></a>Consulte también  
+ [USAR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)   
+ [Configuración de visibilidad de los metadatos](../security/metadata-visibility-configuration.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/has-perms-by-name-transact-sql)  
   
   

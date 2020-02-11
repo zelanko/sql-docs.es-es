@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7dceef4651804dabf4080d6f8b85d0597b1957b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919618"
 ---
 # <a name="dropping-an-assembly"></a>Quitar un ensamblado
@@ -43,7 +43,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   Funciones, procedimientos almacenados o desencadenadores que usan variables o parámetros del UDT creados en la base de datos con la cláusula WITH SCHEMABINDING.  
   
 ### <a name="finding-udt-dependencies"></a>Buscar dependencias UDT  
- Debe quitar primero todos los objetos dependientes y, a continuación, ejecutar la instrucción DROP TYPE. La siguiente [!INCLUDE[tsql](../../../includes/tsql-md.md)] consulta busca todas las columnas y parámetros que usan un UDT en el **AdventureWorks** base de datos.  
+ Debe quitar primero todos los objetos dependientes y, a continuación, ejecutar la instrucción DROP TYPE. La siguiente [!INCLUDE[tsql](../../../includes/tsql-md.md)] consulta busca todas las columnas y parámetros que usan un UDT en la base de datos **AdventureWorks** .  
   
 ```  
 USE Adventureworks;  
@@ -63,12 +63,12 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
     ON at.user_type_id = c.user_type_id;   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Administrar ensamblados de integración de CLR](managing-clr-integration-assemblies.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrar ensamblados de integración CLR](managing-clr-integration-assemblies.md)   
  [Modificar un ensamblado](altering-an-assembly.md)   
- [Creación de un ensamblado](creating-an-assembly.md)   
- [DROP AGGREGATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
- [DROP FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-function-transact-sql)   
+ [Crear un ensamblado](creating-an-assembly.md)   
+ [DROP Aggregate &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-aggregate-transact-sql)   
+ [FUNCIÓN DROP &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-function-transact-sql)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   
  [DROP TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-type-transact-sql)  

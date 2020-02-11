@@ -18,10 +18,10 @@ ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 693a62cd76e479dc5afa036b207bf486d09c7726
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659372"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>Propiedad ProtocolName (clase ClientNetLibInfo)
@@ -36,15 +36,15 @@ object.ProtocolName [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Objeto de la [clase ClientNetLibInfo](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) que representa información sobre la biblioteca de red del cliente.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el nombre del protocolo asociado a la biblioteca de red del cliente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

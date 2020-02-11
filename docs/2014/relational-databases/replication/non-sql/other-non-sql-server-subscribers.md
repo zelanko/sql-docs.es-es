@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021944"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Otros suscriptores que no son de SQL Server
-  Para obtener una lista de suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatibles con [!INCLUDE[msCoName](../../../includes/msconame-md.md)], vea [Non-SQL Server Subscribers](non-sql-server-subscribers.md). Este tema incluye información acerca de los requisitos para los controladores ODBC y los proveedores de OLE DB.  
+  Para obtener una lista de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suscriptores que no son [!INCLUDE[msCoName](../../../includes/msconame-md.md)]de compatibles con, vea [suscriptores que no son de SQL Server](non-sql-server-subscribers.md). Este tema incluye información acerca de los requisitos para los controladores ODBC y los proveedores de OLE DB.  
   
 ## <a name="odbc-driver-requirements"></a>Requisitos para los controladores ODBC  
  El controlador ODBC:  
@@ -40,15 +40,15 @@ ms.locfileid: "63021944"
 ## <a name="replicating-using-ole-db-interfaces"></a>Replicación con interfaces OLE DB  
  Los proveedores OLE DB deben ser compatibles con estos objetos para la replicación transaccional:  
   
--   Objeto**DataSource**  
+-   Objeto **DataSource**  
   
--   Objeto**Session**  
+-   Objeto de **sesión**  
   
--   Objeto**Command**  
+-   Objeto **Command**  
   
--   Objeto**Rowset**  
+-   Objeto **Rowset**  
   
--   Objeto**Error**  
+-   **Error** (objeto)  
   
 ### <a name="datasource-object-interfaces"></a>Interfaces del objeto DataSource  
  Para conectar con un origen de datos se requieren las siguientes interfaces:  
@@ -89,7 +89,7 @@ ms.locfileid: "63021944"
   
 -   **ICommandWithParameters**  
   
- Se necesita**IAccessor** para crear descriptores de acceso a parámetros. Si el proveedor es compatible con **IColumnRowset**, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utiliza esa interfaz para determinar si una columna es una columna de identidad.  
+ **IAccessor** es necesaria para crear descriptores de acceso de parámetros. Si el proveedor es **** compatible con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] IColumnRowset, utiliza esa interfaz para determinar si una columna es una columna de identidad.  
   
 ### <a name="rowset-object-interfaces"></a>Interfaces del objeto Rowset  
  Se requieren las siguientes interfaces:  
@@ -100,7 +100,7 @@ ms.locfileid: "63021944"
   
 -   **IColumnsInfo**  
   
- La aplicación tiene que abrir un conjunto de filas en una tabla replicada creada en la base de datos de suscripciones. Se necesita**IColumnsInfo** e **IAccessor** para tener acceso a los datos del conjunto de filas.  
+ La aplicación tiene que abrir un conjunto de filas en una tabla replicada creada en la base de datos de suscripciones. Se necesita **IColumnsInfo** e **IAccessor** para tener acceso a los datos del conjunto de filas.  
   
 ### <a name="error-object-interfaces"></a>Interfaces del objeto Error  
  Para controlar los errores, utilice las siguientes interfaces:  
@@ -113,7 +113,7 @@ ms.locfileid: "63021944"
   
  Para obtener más información acerca del proveedor OLE DB, vea la documentación que se suministra con el proveedor OLE DB.  
   
-## <a name="see-also"></a>Vea también  
- [Non-SQL Server Subscribers](non-sql-server-subscribers.md)  
+## <a name="see-also"></a>Consulte también  
+ [suscriptores que no son de SQL Server](non-sql-server-subscribers.md)  
   
   

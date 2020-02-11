@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140443"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Devolver datos de un procedimiento almacenado
@@ -71,10 +71,10 @@ GO
  Si especifica OUTPUT para un parámetro cuando llama a un procedimiento y dicho parámetro no está definido mediante OUTPUT en la definición del procedimiento, se emite un mensaje de error. No obstante, puede ejecutar un procedimiento con parámetros de salida y no especificar OUTPUT al ejecutar el procedimiento. No se devuelve ningún error, pero no podrá utilizar el valor de salida en el programa que realiza la llamada.  
   
 ### <a name="using-the-cursor-data-type-in-output-parameters"></a>Usar el tipo de datos de cursor en parámetros OUTPUT  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] pueden usar los procedimientos del `cursor` solo para los parámetros de salida de tipo de datos. Si el `cursor` se especifica el tipo de datos para un parámetro, se deben especificar palabras clave tanto el VARYING y OUTPUT para ese parámetro en la definición del procedimiento. Se puede especificar un parámetro como una salida única, pero si se especifica la palabra clave VARYING en la declaración de parámetro, el tipo de datos debe ser `cursor` y también se debe especificar la palabra clave OUTPUT.  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)]los procedimientos solo pueden `cursor` usar el tipo de datos para los parámetros de salida. Si se `cursor` especifica el tipo de datos para un parámetro, deben especificarse las palabras clave varying y output para ese parámetro en la definición del procedimiento. Un parámetro solo se puede especificar como OUTPUT, pero si se especifica la palabra clave VARYING en la declaración del parámetro, el tipo `cursor` de datos debe ser y también se debe especificar la palabra clave output.  
   
 > [!NOTE]  
->  El tipo de datos `cursor` no se puede enlazar a variables de aplicación a través de las API de bases de datos tales como OLE DB, ODBC, ADO y DB-Library. Debido a que los parámetros OUTPUT deben estar enlazados antes de que una aplicación pueda ejecutar un procedimiento, dichos procedimientos con parámetros `cursor` OUTPUT no pueden llamarse desde las API de bases de datos. Estos procedimientos solo pueden llamarse desde procesos por lotes, procedimientos o desencadenadores [!INCLUDE[tsql](../../../includes/tsql-md.md)] cuando la variable `cursor` OUTPUT esté asignada a una variable `cursor` local de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+>  El tipo de datos `cursor` no se puede enlazar a variables de aplicación a través de las API de bases de datos tales como OLE DB, ODBC, ADO y DB-Library. Debido a que los parámetros OUTPUT deben estar enlazados antes de que una aplicación pueda ejecutar un procedimiento, dichos procedimientos con parámetros `cursor` OUTPUT no pueden llamarse desde las API de bases de datos. Estos procedimientos solo pueden llamarse desde procesos por lotes, procedimientos o desencadenadores [!INCLUDE[tsql](../../../includes/tsql-md.md)] cuando la variable `cursor` OUTPUT esté asignada a una variable [!INCLUDE[tsql](../../../includes/tsql-md.md)] local de `cursor`.  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Reglas para parámetros de salida de cursor  
  Las siguientes reglas se aplican a los parámetros `cursor` OUTPUT cuando se ejecuta el procedimiento:  
@@ -104,7 +104,7 @@ GO
     >  El estado cerrado solo tiene importancia en el momento del retorno. Por ejemplo, es válido cerrar un cursor a mitad del procedimiento, volver a abrirlo posteriormente en el procedimiento y devolver el conjunto de resultados de ese cursor al proceso por lotes, procedimiento o desencadenador de llamada.  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Ejemplos de parámetros de salida de cursor  
- En el ejemplo siguiente, se crea un procedimiento que especifica un parámetro de salida, `@currency`_`cursor` utilizando el `cursor` tipo de datos. A continuación, se llama al procedimiento desde un lote.  
+ En el ejemplo siguiente, se crea un procedimiento que especifica un parámetro de salida `@currency`,`cursor` _ con `cursor` el tipo de datos. A continuación, se llama al procedimiento desde un lote.  
   
  Primero, crea el procedimiento de declaración y, luego, abre un cursor en la tabla Currency.  
   
@@ -145,7 +145,7 @@ GO
 ```  
   
 ## <a name="returning-data-using-a-return-code"></a>Devolver datos con un código de retorno  
- Un procedimiento puede devolver un valor entero, denominado código de retorno, para indicar el estado de ejecución de un procedimiento. Se especifica el código de retorno para un procedimiento mediante la instrucción RETURN. Al igual que con los parámetros OUTPUT, debe guardar el código de retorno en una variable cuando se ejecute el procedimiento a fin de usar su valor en el programa de llamada. Por ejemplo, la variable de asignación `@result` del tipo de datos `int` se usa para almacenar el código de retorno del procedimiento `my_proc`, tales como:  
+ Un procedimiento puede devolver un valor entero, denominado código de retorno, para indicar el estado de ejecución de un procedimiento. Se especifica el código de retorno para un procedimiento mediante la instrucción RETURN. Al igual que con los parámetros OUTPUT, debe guardar el código de retorno en una variable cuando se ejecute el procedimiento a fin de usar su valor en el programa de llamada. Por ejemplo, la variable `@result` de asignación de tipo `int` de datos se utiliza para almacenar el código de retorno `my_proc`del procedimiento, como:  
   
 ```  
 DECLARE @result int;  
@@ -253,12 +253,12 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [PRINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/print-transact-sql)   
  [SET @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
  [Cursores](../cursors.md)   
- [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql)   
+ [DEVOLVER &#40;&#41;de Transact-SQL](/sql/t-sql/language-elements/return-transact-sql)   
  [@@ERROR &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-transact-sql)  
   
   

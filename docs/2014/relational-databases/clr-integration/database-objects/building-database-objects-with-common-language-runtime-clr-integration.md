@@ -1,5 +1,5 @@
 ---
-title: Creación de objetos de base de datos con la integración de Common Language Runtime (CLR) | Microsoft Docs
+title: Crear objetos de base de datos con la integración de Common Language Runtime (CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919255"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Generar objetos de base de datos con la integración de Common Language Runtime (CLR)
-  Puede crear objetos de base de datos mediante el [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se conoce como una "rutina CLR". Estas rutinas incluyen:  
+  Puede crear objetos de base de datos [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el al que se hace referencia como "rutina de CLR". Estas rutinas incluyen:  
   
 -   Funciones definidas por el usuario con valores escalares (UDF escalares)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62919255"
   
  Las rutinas CLR tienen la misma estructura en código administrado. Están asignadas a los métodos público, estático (compartidos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET) de una clase. Además de las rutinas, los tipos definidos por el usuario (UDT) y las funciones de agregado definidas por el usuario también se pueden definir mediante .NET Framework. Los UDT y los agregados definidos por el usuario están asignados a las clases de .NET Framework completas.  
   
- Cada tipo de rutina de .NET Framework tiene un [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] que el [!INCLUDE[tsql](../../../includes/tsql-md.md)] equivalente se puede usar. Por ejemplo, los UDF escalares se pueden usar en cualquier expresión escalar. Un TVF se puede usar en cualquier cláusula FROM. Un procedimiento se puede invocar en una instrucción EXEC o bien, desde una aplicación cliente.  
+ Cada tipo de .NET Framework rutina tiene un [!INCLUDE[tsql](../../../includes/ssnoversion-md.md)] que se [!INCLUDE[tsql](../../../includes/tsql-md.md)] puede usar el equivalente. Por ejemplo, los UDF escalares se pueden usar en cualquier expresión escalar. Un TVF se puede usar en cualquier cláusula FROM. Un procedimiento se puede invocar en una instrucción EXEC o bien, desde una aplicación cliente.  
   
 > [!NOTE]  
 >  La ejecución de un objeto CLR (función definida por el usuario, tipo definido por el usuario o desencadenador) en el Common Language Runtime puede tener lugar en varios subprocesos (el plan paralelo), si el optimizador de consultas decide que es beneficioso. Sin embargo, si una función definida por el usuario tiene acceso a los datos, la ejecución estará en un plan de serie. Cuando se ejecuta en una versión de servidor anterior a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], si una función definida por el usuario contiene parámetros LOB o valores devueltos, la ejecución también debe estar en un plan en serie.  
@@ -71,7 +71,7 @@ ms.locfileid: "62919255"
  [Desencadenadores CLR](../../../database-engine/dev-guide/clr-triggers.md)  
  Describe cómo implementar y usar los desencadenadores CLR.  
   
-## <a name="see-also"></a>Vea también  
- [Common Language Runtime &#40;CLR&#41; Introducción a la integración](../common-language-runtime-integration-overview.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general sobre la integración de Common Language Runtime &#40;CLR&#41;](../common-language-runtime-integration-overview.md)  
   
   

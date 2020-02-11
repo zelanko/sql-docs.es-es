@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952043"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Temas de Ayuda F1 del Administrador de configuración de Reporting Services (Modo nativo de SSRS)
   Esta sección proporciona la Ayuda F1 para el Administrador de configuración de Reporting Services.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -44,7 +44,7 @@ ms.locfileid: "71952043"
   
 -   [Administrador de informes dirección URL](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
--   [Configuración del correo electrónico](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [Configuración de correo electrónico](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
 -   [Cuenta de ejecución](../../../2014/sql-server/install/execution-account-ssrs-native-mode.md)  
   
@@ -52,11 +52,11 @@ ms.locfileid: "71952043"
   
 -   [Clave de cifrado de copia de seguridad](../../../2014/sql-server/install/backup-encryption-key-ssrs-native-mode.md)  
   
--   [Restaurar la clave de cifrado](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
+-   [Restaurar clave de cifrado](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   
--   [Implementación escalada](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
+-   [Implementación escalada.](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  
   
   

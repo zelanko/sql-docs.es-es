@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cb0f104d1555b18d18df38027c240a392d2ac66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918745"
 ---
 # <a name="view-collation-information"></a>Ver información de intercalación
@@ -30,7 +30,7 @@ ms.locfileid: "62918745"
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para ver una configuración de intercalación de un servidor (instancia de SQL Server) en el Explorador de objetos**  
   
 1.  En el Explorador de objetos, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -106,12 +106,12 @@ ms.locfileid: "62918745"
     SELECT name, collation_name FROM sys.columns WHERE name = N'<insert character data type column name>';  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [sys.columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)   
+ [Sys. Columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)   
  [Prioridad de intercalación &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
- [sp_helpsort &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
+ [sp_helpsort &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
   
   

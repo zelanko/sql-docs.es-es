@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63017105"
 ---
 # <a name="change-an-operator39s-availability"></a>Cambiar la disponibilidad de un operador
@@ -51,7 +51,7 @@ ms.locfileid: "63017105"
 ####  <a name="Permissions"></a> Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden editar operadores.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-change-an-operators-availability"></a>Para cambiar la disponibilidad de un operador  
   
@@ -63,9 +63,9 @@ ms.locfileid: "63017105"
   
 4.  Haga clic con el botón derecho en el operador que desea habilitar o deshabilitar y seleccione **Propiedades**; luego, haga clic en la pestaña **General** .  
   
-5.  En el cuadro de diálogo _nombre_operador_**Propiedades** , active o desactive la casilla **Habilitado** .  
+5.  En el cuadro de diálogo**propiedades** de _operator_name_, Active o desactive la casilla **habilitado** .  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -88,6 +88,6 @@ ms.locfileid: "63017105"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_update_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql).  
+ Para obtener más información, vea [sp_update_operator &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql).  
   
   

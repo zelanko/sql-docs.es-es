@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66c32615b3fd9f417eab27f156b2645c2c89593b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63020978"
 ---
 # <a name="automatically-generate-a-set-of-join-filters-between-merge-articles-sql-server-management-studio"></a>Generar automáticamente un conjunto de filtros de combinación entre artículos de mezcla (SQL Server Management Studio)
-  Genere automáticamente un conjunto de filtros de combinación en la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
+  Genere automáticamente un conjunto de filtros de combinación en la página **filtrar filas de tabla** del Asistente para nueva publicación o en la página **filtrar filas** del cuadro de diálogo Propiedades de la **publicación \<: publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
   
 > [!NOTE]  
 >  Si genera automáticamente un conjunto de filtros de combinación en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** después de haber inicializado las suscripciones para la publicación, deberá generar una nueva instantánea y volver a inicializar todas las suscripciones una vez realizado el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Cambiar las propiedades de la publicación y de los artículos](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
@@ -30,7 +30,7 @@ ms.locfileid: "63020978"
   
 ### <a name="to-automatically-generate-a-set-of-join-filters-between-merge-articles"></a>Para generar automáticamente un conjunto de filtros de combinación entre artículos de mezcla  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Agregar** y luego en **Generar filtros automáticamente**.  
+1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**, haga clic en **Agregar** y luego en **Generar filtros automáticamente**.  
   
     > [!NOTE]  
     >  Al generar filtros automáticamente, se eliminan los filtros de fila o los filtros de combinación existentes en la publicación. Es posible agregar filtros después de haber generado automáticamente un conjunto de filtros.  
@@ -57,7 +57,7 @@ ms.locfileid: "63020978"
   
     3.  Especifique las opciones del filtro.  
   
-         Seleccione la opción que indique cómo se van a compartir los datos entre los suscriptores: **Una fila de esta tabla irá a varias suscripciones** o **una fila de esta tabla irá a una sola suscripción**. Si selecciona **Una fila de esta tabla irá a una sola suscripción**, la replicación de mezcla puede optimizar el rendimiento almacenando y procesando menos metadatos. No obstante, debe asegurarse de que los datos se particionan de forma que una fila no se pueda replicar en más de un suscriptor. Para obtener más información, vea la sección sobre cómo configurar opciones de partición en el tema [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+         Seleccione la opción que coincida con el modo en que se van a compartir los datos entre suscriptores: **Una fila de esta tabla irá a varias suscripciones** o **Una fila de esta tabla irá a una sola suscripción**. Si selecciona **Una fila de esta tabla irá a una sola suscripción**, la replicación de mezcla puede optimizar el rendimiento almacenando y procesando menos metadatos. No obstante, debe asegurarse de que los datos se particionan de forma que una fila no se pueda replicar en más de un suscriptor. Para obtener más información, vea la sección sobre cómo configurar opciones de partición en el tema [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63020978"
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>Para modificar un filtro generado automáticamente  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>** , seleccione un filtro en el panel **Tablas filtradas** y luego haga clic en **Editar**.  
+1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>**, seleccione un filtro en el panel **Tablas filtradas** y luego haga clic en **Editar**.  
   
 2.  En el cuadro de diálogo **Editar filtro** o **Editar combinación** , modifique el filtro.  
   
@@ -77,10 +77,10 @@ ms.locfileid: "63020978"
   
 ### <a name="to-delete-a-filter-that-was-automatically-generated"></a>Para eliminar un filtro generado automáticamente  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>** , seleccione un filtro en el panel **Tablas filtradas** y luego haga clic en **Eliminar**.  
+1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>**, seleccione un filtro en el panel **Tablas filtradas** y luego haga clic en **Eliminar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Join Filters](../merge/join-filters.md)   
- [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)  
+ [Filtros de fila con parámetros](../merge/parameterized-filters-parameterized-row-filters.md)  
   
   

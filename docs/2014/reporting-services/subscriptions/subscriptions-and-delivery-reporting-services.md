@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f598946ec6231d1ca5edacf1810431beb4638f88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100669"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Suscripciones y entrega (Reporting Services)
@@ -38,11 +38,11 @@ ms.locfileid: "66100669"
  Las suscripciones no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 > [!NOTE]
->  A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] puede transferir la propiedad de una suscripción mediante programación. No hay ninguna interfaz de usuario que pueda utilizar para transferir la propiedad de las suscripciones. Para obtener más información, consulte <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>y [usar PowerShell para Change y List Reporting Services Subscription Owners and Run una suscripción](manage-subscription-owners-and-run-subscription-powershell.md).  
+>  A [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] partir de, puede transferir la propiedad de una suscripción mediante programación. No hay ninguna interfaz de usuario que pueda utilizar para transferir la propiedad de las suscripciones. Para obtener más información, <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>vea y [uso de PowerShell para cambiar y enumerar Reporting Services propietarios de suscripciones y ejecutar una suscripción](manage-subscription-owners-and-run-subscription-powershell.md).  
   
  **En este tema:**  
   
--   [Suscripción y los escenarios de entrega](#bkmk_subscription_scenarios)  
+-   [Escenarios de suscripción y entrega](#bkmk_subscription_scenarios)  
   
 -   [Suscripciones estándar y controladas por datos](#bkmk_standard_and_datadriven)  
   
@@ -58,24 +58,25 @@ ms.locfileid: "66100669"
   
  **Temas de esta sección:**  
   
--   [Entrega por correo electrónico en Reporting Services](e-mail-delivery-in-reporting-services.md) Describe la configuración y el funcionamiento de la entrega de correo electrónico al servidor de informes.  
+-   [Entrega por correo electrónico en Reporting Services](e-mail-delivery-in-reporting-services.md) Describe la operación y la configuración de entrega de correo electrónico del servidor de informes.  
   
--   [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md) Describe la configuración y el funcionamiento de la entrega a recursos compartidos del servidor de informes.  
+-   [Entrega de recursos compartidos de archivos en Reporting Services](file-share-delivery-in-reporting-services.md) Describe la operación y configuración de entrega de recursos compartidos de archivos del servidor de informes.  
   
--   [SharePoint Library Delivery in Reporting Services](sharepoint-library-delivery-in-reporting-services.md) Describe la entrega de la suscripción a una biblioteca de SharePoint.  
+-   [Entrega de la biblioteca de SharePoint en Reporting Services](sharepoint-library-delivery-in-reporting-services.md) Describe la entrega de la suscripción a una biblioteca de SharePoint.  
   
--   [Suscripciones controladas por datos a informes](data-driven-subscriptions.md) Ofrece información sobre el uso de suscripciones controladas por datos para personalizar la salida de informes en tiempo de ejecución.  
+-   [Suscripciones controladas por datos](data-driven-subscriptions.md) Proporciona información sobre el uso de suscripciones controladas por datos para personalizar la salida del informe en tiempo de ejecución.  
   
--   [Creación y administración de suscripciones para servidores de informes en modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)  
+-   [Crear y administrar suscripciones para servidores de informes en modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)  
   
--   [Creación y administración de suscripciones para servidores de informes en modo de SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+-   [Crear y administrar suscripciones para servidores de informes en modo de SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
--   [Supervisión de suscripciones de Reporting Services](monitor-reporting-services-subscriptions.md)  
+-   [Supervisar suscripciones de Reporting Services](monitor-reporting-services-subscriptions.md)  
   
--   [Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](manage-subscription-owners-and-run-subscription-powershell.md)  
+-   [Use PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](manage-subscription-owners-and-run-subscription-powershell.md)  
   
-##  <a name="bkmk_subscription_scenarios"></a> Suscripción y los escenarios de entrega  
- Para cada suscripción, se pueden configurar las opciones de entrega y las opciones disponibles dependen de la extensión de entrega que seleccione. Una extensión de entrega es un módulo que admite alguna manera de distribución. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye varias extensiones de entrega y, además, la extensión de entrega puede estar disponible con proveedores de terceros.  
+##  <a name="bkmk_subscription_scenarios"></a>Escenarios de suscripción y entrega  
+ Para cada suscripción, se pueden configurar las opciones de entrega y las opciones disponibles dependen de la extensión de entrega que seleccione. Una extensión de entrega es un módulo que admite alguna manera de distribución. 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye varias extensiones de entrega y, además, la extensión de entrega puede estar disponible con proveedores de terceros.  
   
  Si es un programador, puede crear extensiones de entrega personalizadas para admitir otros escenarios. Para más información, consulte [Implementing a Delivery Extension](../extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
@@ -88,42 +89,43 @@ ms.locfileid: "66100669"
 |Cargar previamente en caché|Si tiene varias instancias de un informe con parámetros o un gran número de usuarios de informes que ven los informes, puede cargar los informes previamente en caché para reducir el tiempo de procesamiento necesario para mostrar el informe.|  
 |Informes controlados por datos|Use las suscripciones controladas por datos para personalizar la salida de informes, las opciones de entrega y la configuración de los parámetros del informe en tiempo de ejecución. La suscripción usa una consulta para obtener los valores de entrada de un origen de datos en tiempo de ejecución. Puede usar suscripciones controladas por datos para realizar una operación de combinación de correspondencia que envíe un informe a una lista de suscriptores que se determina en el momento de la suscripción.|  
   
-##  <a name="bkmk_standard_and_datadriven"></a> Suscripciones estándar y controladas por datos  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] admite dos tipos de suscripciones: **estándar** y **controladas por datos**. Las suscripciones estándar se crean y se administran por usuarios individuales. La suscripción estándar consta de valores estáticos que no pueden modificarse durante su procesamiento. Para cada suscripción estándar existe un único conjunto de opciones de presentación del informe, opciones de entrega y parámetros de informe.  
+##  <a name="bkmk_standard_and_datadriven"></a>Suscripciones estándar y controladas por datos  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]admite dos tipos de suscripciones: **estándar** y **controladas por datos**. Las suscripciones estándar se crean y se administran por usuarios individuales. La suscripción estándar consta de valores estáticos que no pueden modificarse durante su procesamiento. Para cada suscripción estándar existe un único conjunto de opciones de presentación del informe, opciones de entrega y parámetros de informe.  
   
- Las suscripciones controladas por datos obtienen información de suscripción en tiempo de ejecución consultando un origen de datos externo que proporciona los valores usados para especificar un destinatario, parámetros de informe o un formato de aplicación. Las suscripciones controladas por datos están indicadas para listas de destinatarios extensas o para ocasiones en las que se desea cambiar el resultado del informe para cada destinatario. Este tipo de suscripciones requieren conocimientos sobre la creación de consultas y el uso de los parámetros. Las personas que crean y administran estas suscripciones suelen ser los administradores del servidor de informes. Para obtener más información, vea:  
+ Las suscripciones controladas por datos obtienen información de suscripción en tiempo de ejecución consultando un origen de datos externo que proporciona los valores usados para especificar un destinatario, parámetros de informe o un formato de aplicación. Las suscripciones controladas por datos están indicadas para listas de destinatarios extensas o para ocasiones en las que se desea cambiar el resultado del informe para cada destinatario. Este tipo de suscripciones requieren conocimientos sobre la creación de consultas y el uso de los parámetros. Las personas que crean y administran estas suscripciones suelen ser los administradores del servidor de informes. Para obtener más información, vea lo siguiente:  
   
--   [Suscripciones controladas por datos a informes](data-driven-subscriptions.md)  
+-   [Suscripciones controladas por datos](data-driven-subscriptions.md)  
   
--   [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)  
+-   [Crear una suscripción controlada por datos &#40;tutorial de SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)  
   
-##  <a name="bkmk_subscription_requirements"></a> Requisitos de suscripción  
+##  <a name="bkmk_subscription_requirements"></a>Requisitos de suscripción  
  Para poder crear una suscripción a un informe, se deben cumplir los siguiente requisitos previos:  
   
 |Requisito|Descripción|  
 |-----------------|-----------------|  
 |Permisos|Debe tener acceso al informe. Para poder suscribirse a un informe, debe tener permiso para verlo.<br /><br /> La asignación de roles debe incluir la tarea "Administrar suscripciones individuales".|  
-|Credenciales almacenadas|Para crear una suscripción, el informe debe utilizar credenciales almacenadas o ninguna credencial para recuperar datos en tiempo de ejecución. No puede suscribirse a un informe configurado para usar las credenciales representadas o delegadas del usuario actual para conectarse a un origen de datos externo. Las credenciales almacenadas pueden ser una cuenta de Windows o una cuenta de usuario de base de datos. Para más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md).<br /><br /> Debe tener el permiso para ver el informe y crear suscripciones individuales. La opción**Eventos programados y entrega de informes** debe estar habilitada en el servidor de informes. Para obtener más información, vea [Crear y administrar suscripciones para servidores de informes en modo nativo](../create-manage-subscriptions-native-mode-report-servers.md).|  
+|Credenciales almacenadas|Para crear una suscripción, el informe debe utilizar credenciales almacenadas o ninguna credencial para recuperar datos en tiempo de ejecución. No puede suscribirse a un informe configurado para usar las credenciales representadas o delegadas del usuario actual para conectarse a un origen de datos externo. Las credenciales almacenadas pueden ser una cuenta de Windows o una cuenta de usuario de base de datos. Para obtener más información, vea [especificar información de credenciales y conexión para los orígenes de datos de informe](../report-data/specify-credential-and-connection-information-for-report-data-sources.md) .<br /><br /> Debe tener el permiso para ver el informe y crear suscripciones individuales. **Scheduled Events y la entrega de informes** deben estar habilitadas en el servidor de informes. Para obtener más información, vea [crear y administrar suscripciones para servidores de informes en modo nativo](../create-manage-subscriptions-native-mode-report-servers.md).|  
 |Valores dependientes de usuario en un informe|Únicamente en el caso de las suscripciones estándar, es posible crear suscripciones a informes que incluyan información de cuenta de usuario en un filtro o como texto que aparezca en el informe. En el informe, el nombre de la cuenta de usuario se especifica mediante una expresión `User!UserID` que se resuelve en el usuario actual. Cuando se crea una suscripción, se considera que el usuario actual es el que la crea.|  
 |Sin seguridad de elemento de modelo|No es posible suscribirse a un informe del Generador de informes que utilice como origen de datos un modelo si éste contiene una configuración de seguridad de elementos de modelo. Esta restricción solo se aplica a los informes que utilizan seguridad de elementos de modelo.|  
-|Valores de parámetros|Si el informe utiliza parámetros, se debe especificar un valor de parámetro con el propio informe o en la suscripción que defina. Si se han definido valores predeterminados en el informe, puede establecer el valor del parámetro para que utilice la opción predeterminada.|  
+|Valores de parámetro|Si el informe utiliza parámetros, se debe especificar un valor de parámetro con el propio informe o en la suscripción que defina. Si se han definido valores predeterminados en el informe, puede establecer el valor del parámetro para que utilice la opción predeterminada.|  
   
-##  <a name="bkmk_delivery_extensions"></a> Extensiones de entrega  
+##  <a name="bkmk_delivery_extensions"></a>Extensiones de entrega  
  Las suscripciones se procesan en el servidor de informes y se distribuyen mediante las extensiones de entrega implementadas en el servidor. De forma predeterminada, puede crear suscripciones que envían informes a una biblioteca compartida o a una dirección de correo electrónico. Si el servidor de informes está configurado para el modo integrado con SharePoint, también puede enviar un informe a una biblioteca de SharePoint.  
   
- Cuando un usuario crea una suscripción, puede elegir una de las extensiones de entrega disponibles para determinar cómo se entrega el informe. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye las siguientes extensiones de entrega.  
+ Cuando un usuario crea una suscripción, puede elegir una de las extensiones de entrega disponibles para determinar cómo se entrega el informe. 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye las siguientes extensiones de entrega.  
   
 |Extensión de entrega|Descripción|  
 |------------------------|-----------------|  
 |Recurso compartido de archivos de Windows|Entrega un informe como un archivo de aplicación estática a una carpeta compartida accesible en la red.|  
 |Correo electrónico|Entrega una notificación o un informe como datos adjuntos de correo electrónico o como vínculo de dirección URL.|  
 |Biblioteca de SharePoint|Entrega un informe como un archivo de aplicación estática a una biblioteca de SharePoint accesible desde un sitio de SharePoint. El sitio se debe integrar con un servidor de informes que se ejecuta en el modo integrado con SharePoint.|  
-|NULL|El proveedor de entrega NULL es una extensión de entrega muy especializada que se usa para cargar previamente una memoria caché con informes con parámetros listos para ver. Este método no está disponible para los usuarios en suscripciones individuales. La entrega NULL la usan los administradores en suscripciones controladas por datos para mejorar el rendimiento del servidor de informes, mediante una carga previa en la memoria caché.|  
+|Null|El proveedor de entrega NULL es una extensión de entrega muy especializada que se usa para cargar previamente una memoria caché con informes con parámetros listos para ver. Este método no está disponible para los usuarios en suscripciones individuales. La entrega NULL la usan los administradores en suscripciones controladas por datos para mejorar el rendimiento del servidor de informes, mediante una carga previa en la memoria caché.|  
   
 > [!NOTE]  
 >  La entrega de informes es una parte extensible de la arquitectura de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Otros fabricantes pueden crear extensiones de entrega personalizadas para enrutar informes a distintas ubicaciones o dispositivos. Para obtener más información acerca de las extensiones de entrega personalizadas, vea [Implementing a Delivery Extension](../extensions/delivery-extension/implementing-a-delivery-extension.md).  
   
-##  <a name="bkmk_parts_of_subscription"></a> Partes de una suscripción  
+##  <a name="bkmk_parts_of_subscription"></a>Partes de una suscripción  
  Una definición de suscripción se compone de las siguientes partes:  
   
 -   Un puntero a un informe que se puede ejecutar en modo desatendido (es decir, un informe que usa credenciales almacenadas o que no usa ninguna credencial).  
@@ -134,7 +136,7 @@ ms.locfileid: "66100669"
   
 -   Condiciones para procesar la suscripción, que se expresa como un evento.  
   
-     Normalmente, las condiciones para ejecutar un informe se basan en el tiempo. Por ejemplo, puede que desee ejecutar un informe concreto todos los martes a las 3 de la tarde de la zona horaria UTC. Sin embargo, si el informe se ejecuta como una instantánea, puede especificar que la suscripción se ejecute siempre que se actualice la instantánea.  
+     Normalmente, las condiciones para ejecutar un informe se basan en el tiempo. Por ejemplo, puede que desee ejecutar un informe concreto todos los martes a las 3 de la tarde hora UTC. Sin embargo, si el informe se ejecuta como una instantánea, puede especificar que la suscripción se ejecute siempre que se actualice la instantánea.  
   
 -   Parámetros utilizados al ejecutar el informe.  
   
@@ -142,8 +144,9 @@ ms.locfileid: "66100669"
   
  La información de suscripción se almacena con informes individuales en la base de datos del servidor de informes. No puede administrar suscripciones independientemente del informe al que estén asociadas. Tenga en cuenta que las suscripciones no se pueden ampliar para incluir descripciones, otro texto personalizado u otros elementos. Las suscripciones solo pueden contener los elementos mencionados anteriormente.  
   
-##  <a name="bkmk_subscription_processing"></a> Cómo se procesan las suscripciones  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye el procesador de entrega y programación, que proporciona funcionalidad para programar informes y entregarlos a los usuarios. El servidor de informes responde a eventos que supervisa constantemente. Cuando se produce un evento que coincide con las condiciones definidas para una suscripción, el servidor de informes la lee para determinar cómo procesar y entregar el informe. El servidor de informes solicita la extensión de entrega que se especifica en la suscripción. Con la extensión de entrega en funcionamiento, el servidor de informes extrae la información de entrega de la suscripción y la envía a la extensión de entrega para su procesamiento.  
+##  <a name="bkmk_subscription_processing"></a>Cómo se procesan las suscripciones  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye el procesador de entrega y programación, que proporciona funcionalidad para programar informes y entregarlos a los usuarios. El servidor de informes responde a eventos que supervisa constantemente. Cuando se produce un evento que coincide con las condiciones definidas para una suscripción, el servidor de informes la lee para determinar cómo procesar y entregar el informe. El servidor de informes solicita la extensión de entrega que se especifica en la suscripción. Con la extensión de entrega en funcionamiento, el servidor de informes extrae la información de entrega de la suscripción y la envía a la extensión de entrega para su procesamiento.  
   
  La extensión de entrega representa el informe en el formato definido en la suscripción y después entrega el informe o la notificación al destino especificado. Si no se puede entregar un informe, se incluye una entrada en el archivo de registro del servidor de informes. Si desea permitir los reintentos, puede configurar el servidor de informes para que vuelva a intentar la entrega si el primer intento no tiene éxito.  
   
@@ -170,11 +173,11 @@ ms.locfileid: "66100669"
   
  Un evento de actualización de instantánea utiliza la actualización programada de una instantánea de informe para desencadenar una suscripción. Puede definir una suscripción que se desencadene siempre que se actualice un informe con datos nuevos, basándose en propiedades de ejecución del informe establecidas en éste.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
+## <a name="see-also"></a>Consulte también  
+ [Crear una suscripción controlada por datos &#40;tutorial de SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Programaciones](schedules.md)   
- [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Reporting Services servidor de informes &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Crear y administrar suscripciones para servidores de informes en modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)   
- [Supervisión de suscripciones de Reporting Services](monitor-reporting-services-subscriptions.md)  
+ [Supervisar suscripciones de Reporting Services](monitor-reporting-services-subscriptions.md)  
   
   

@@ -18,27 +18,31 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d338cc5c194b29b438af7593b80aaf580c64bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62926735"
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include features y tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluyen características y herramientas que puede usar para solucionar problemas del flujo de control en [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] un paquete.  
   
--   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] admite puntos de interrupción en contenedores y tareas.  
+-   
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] admite puntos de interrupción en contenedores y tareas.  
   
--   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] proporciona informes de progreso en tiempo de ejecución.  
+-   
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] proporciona informes de progreso en tiempo de ejecución.  
   
--   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] proporciona ventanas de depuración.  
+-   
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] proporciona ventanas de depuración.  
   
 ## <a name="breakpoints"></a>Puntos de interrupción  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] proporciona el cuadro de diálogo **Establecer puntos de interrupción** , en el que puede establecer puntos de interrupción habilitando las condiciones de interrupción y especificando la cantidad de veces que se puede producir un punto de interrupción antes de que se suspenda la ejecución del paquete. Los puntos de interrupción se pueden habilitar en el nivel de paquete, o en el nivel del componente individual. Si las condiciones de interrupción se habilitan en el nivel de tarea o contenedor, aparece el icono de punto de interrupción junto a la tarea o contenedor en la superficie de diseño de la pestaña **Flujo de control** . Si las condiciones de interrupción se habilitan en el paquete, aparece el icono de punto de interrupción en la etiqueta de la pestaña **Flujo de control** .  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)]El diseñador proporciona el cuadro de diálogo **establecer puntos de interrupción** , en el que puede establecer puntos de interrupción habilitando las condiciones de interrupción y especificando el número de veces que puede producirse un punto de interrupción antes de que se suspenda la ejecución del paquete. Los puntos de interrupción se pueden habilitar en el nivel de paquete, o en el nivel del componente individual. Si las condiciones de interrupción se habilitan en el nivel de tarea o contenedor, el icono de punto de interrupción aparece junto a la tarea o contenedor en la superficie de diseño de la pestaña **flujo de control** . Si las condiciones de interrupción están habilitadas en el paquete, el icono de punto de interrupción aparece en la etiqueta de la pestaña **flujo de control** .  
   
  Cuando se alcanza un punto de interrupción, el icono de punto de interrupción cambia para ayudar a identificar el origen del punto de interrupción. Se pueden agregar, eliminar y cambiar puntos de interrupción mientras se ejecuta el paquete.  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona diez condiciones de interrupción que puede habilitar en todas las tareas y contenedores. En el cuadro de diálogo **Establecer puntos de interrupción** , puede habilitar puntos de interrupción en las siguientes condiciones:  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona diez condiciones de interrupción que puede habilitar en todas las tareas y contenedores. En el cuadro de diálogo **Establecer puntos de interrupción** , puede habilitar puntos de interrupción en las siguientes condiciones:  
   
 |Condición de interrupción|Descripción|  
 |---------------------|-----------------|  
@@ -50,7 +54,7 @@ ms.locfileid: "62926735"
 |Cuando la tarea o contenedor recibe el evento `OnTaskFailed`.|Es llamado por el host de la tarea cuando se produce un error.|  
 |Cuando la tarea o contenedor recibe el evento `OnProgress`.|Se llama para actualizar el progreso de la ejecución de la tarea.|  
 |Cuando la tarea o contenedor recibe el evento `OnQueryCancel`.|Se llama en cualquier momento durante el procesamiento de la tarea cuando puede cancelar la ejecución.|  
-|Cuando la tarea o contenedor recibe el evento `OnVariableValueChanged`.|Llamado por la biblioteca de tiempo de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] cuando cambia el valor de una variable. El parámetro RaiseChangeEvent de la variable debe establecerse en `true` para generar este evento.<br /><br /> **&#42;&#42; Advertencia &#42;&#42;** La variable asociada a este punto de interrupción se tiene que definir en el ámbito del **contenedor**. Si la variable se define en el ámbito del paquete, el punto de interrupción no se llega a tocar.|  
+|Cuando la tarea o contenedor recibe el evento `OnVariableValueChanged`.|Llamado por la biblioteca de tiempo de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] cuando cambia el valor de una variable. El RaiseChangeEvent de la variable se debe establecer en `true` para generar este evento.<br /><br /> **&#42;&#42; advertencia &#42;&#42;** La variable asociada a este punto de interrupción debe definirse en el ámbito del **contenedor** . Si la variable se define en el ámbito del paquete, el punto de interrupción no se llega a tocar.|  
 |Cuando la tarea o contenedor recibe el evento `OnCustomEvent`.|Llamado por tareas para provocar eventos personalizados definidos por la tarea.|  
   
  Además de las condiciones de interrupción disponibles para todas las tareas y contenedores, algunas tareas y contenedores incluyen condiciones de interrupción especiales para establecer puntos de interrupción. Por ejemplo, puede habilitar una condición de interrupción en el contenedor de bucles For que establezca un punto de interrupción que suspenda la ejecución al principio de cada iteración del bucle.  
@@ -67,7 +71,7 @@ ms.locfileid: "62926735"
   
 |Tipo de número de llamadas|Descripción|  
 |--------------------|-----------------|  
-|Always|La ejecución se suspende siempre cuando se alcanza el punto de interrupción.|  
+|Siempre|La ejecución se suspende siempre cuando se alcanza el punto de interrupción.|  
 |Número de llamadas igual a|La ejecución se suspende cuando el número de veces que ha ocurrido el punto de interrupción es igual al número de llamadas.|  
 |Número de llamadas mayor o igual que|La ejecución se suspende cuando el número de veces que ha ocurrido el punto de interrupción es igual a o mayor que el número de llamadas.|  
 |Múltiplo del número de llamadas|La ejecución se suspende cuando se produce un múltiplo de número de llamadas. Por ejemplo, si establece esta opción en 5, la ejecución se suspende cada cinco veces.|  
@@ -77,13 +81,13 @@ ms.locfileid: "62926735"
 -   [Depurar un paquete estableciendo puntos de interrupción en una tarea o un contenedor](../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md)  
   
 ## <a name="progress-reporting"></a>Informes de progreso  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] En el Diseñador se incluyen dos tipos de informes de progreso: la codificación en colores de la superficie de diseño de la pestaña **Flujo de control** y los mensajes de progreso de la pestaña **Progreso** .  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)]El diseñador incluye dos tipos de informes de progreso: la codificación de colores en la superficie de diseño de la pestaña **flujo de control** y los mensajes de progreso en la pestaña **progreso** .  
   
  Cuando se ejecuta un paquete, el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] muestra el progreso de la ejecución mostrando cada tarea o contenedor mediante un color que indica el estado de la ejecución. Puede saber, según el color, si el elemento está esperando para ejecutarse, si se está ejecutando actualmente, si se ha completado correctamente o si no finalizó correctamente. Una vez detenida la ejecución del paquete, desaparece el código de colores.  
   
  La siguiente tabla describe los colores utilizados para indicar el estado de la ejecución.  
   
-|Color|Estado de ejecución|  
+|Color|Estado de la ejecución|  
 |-----------|----------------------|  
 |Gris|Esperando para ejecutarse|  
 |Amarillo|En ejecución|  
@@ -97,22 +101,23 @@ ms.locfileid: "62926735"
   
  El diagrama siguiente muestra la pestaña **Progreso** .  
   
- ![Pestaña Progreso del Diseñador SSIS](../media/mw-dtsflow04.gif "Progress tab of SSIS Designer")  
+ ![Pestaña Progreso del Diseñador SSIS](../media/mw-dtsflow04.gif "Pestaña Progreso del Diseñador SSIS")  
   
 ## <a name="debug-windows"></a>Ventanas de depuración  
- [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] incluye varias ventanas que se pueden usar para trabajar con puntos de interrupción y para depurar paquetes que contienen puntos de interrupción. Para obtener más información sobre cada ventana, abra la ventana y luego presione F1 para mostrar la Ayuda correspondiente de esa ventana.  
+ 
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] incluye varias ventanas que se pueden usar para trabajar con puntos de interrupción y para depurar paquetes que contienen puntos de interrupción. Para obtener más información sobre cada ventana, abra la ventana y luego presione F1 para mostrar la Ayuda correspondiente de esa ventana.  
   
  Para abrir estas ventanas en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], haga clic en el menú **Depurar** , seleccione **Ventanas**y luego haga clic en **Puntos de interrupción**, **Salida**o **Inmediata**.  
   
  Las ventanas se describen en la siguiente tabla.  
   
-|Ventana|Descripción|  
+|Periodo|Descripción|  
 |------------|-----------------|  
 |Puntos de interrupción|Enumera los puntos de interrupción de un paquete y proporciona opciones para habilitar y eliminar puntos de interrupción.|  
-|Salida|Muestra mensajes de estado para las características en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].|  
+|Output|Muestra mensajes de estado para las características en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].|  
 |Inmediata|Se usa para depurar y evaluar expresiones e imprimir valores de variable.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas para solucionar problemas con el desarrollo de paquetes](troubleshooting-tools-for-package-development.md)  
   
   

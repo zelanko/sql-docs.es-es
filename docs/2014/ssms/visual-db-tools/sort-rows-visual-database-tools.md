@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049164"
 ---
 # <a name="sort-rows-visual-database-tools"></a>Ordenar filas (Visual Database Tools)
@@ -89,7 +89,7 @@ ms.locfileid: "63049164"
   
      Tenga en cuenta que la consulta utiliza `state` como columna de orden secundaria. De este modo, si dos estados tienen el mismo número de autores, esos estados aparecerán en orden alfabético.  
   
--   **Puede ordenar mediante el uso de datos internacionales** Es decir, puede ordenar una columna mediante el uso de convenciones de intercalación diferentes de las convenciones predeterminadas para esa columna. Por ejemplo, puede escribir una consulta que recupera todos los títulos de libros por Jaime Pati?? o. Para que los títulos aparezcan ordenados alfabéticamente, utilice una secuencia de intercalación de español en la columna de los títulos. El código SQL resultante puede presentar el siguiente aspecto:  
+-   **Puede ordenar mediante el uso de datos internacionales** Es decir, puede ordenar una columna mediante el uso de convenciones de intercalación diferentes de las convenciones predeterminadas para esa columna. Por ejemplo, puede escribir una consulta que recupere todos los títulos de libros por Jaime Pati?? aceptar. Para que los títulos aparezcan ordenados alfabéticamente, utilice una secuencia de intercalación de español en la columna de los títulos. El código SQL resultante puede presentar el siguiente aspecto:  
   
     ```  
     SELECT title  
@@ -110,8 +110,8 @@ ms.locfileid: "63049164"
          title COLLATE SQL_Spanish_Pref_CP1_CI_AS  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [Ordenar y agrupar los resultados de consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

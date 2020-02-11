@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: f2e2d696a09e5b5bb321da583efd76f580759ce6
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727668"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Información general sobre seguridad para el marco de extensibilidad en SQL Server Machine Learning Services
@@ -98,9 +98,9 @@ Las tareas en paralelo no consumen cuentas adicionales. Por ejemplo, si un usuar
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ### <a name="appcontainer-isolation-in-sql-server-2019"></a>Aislamiento del contenedor AppContainer en SQL Server 2019
 
-En SQL Server 2019, el programa de instalación ya no crea cuentas profesionales para **SQLRUserGroup**. En cambio, el aislamiento se consigue a través de contenedores [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). En tiempo de ejecución, cuando se detecta un script externo en un procedimiento almacenado o una consulta, SQL Server llama a Launchpad con una solicitud para un iniciador específico de la extensión. Launchpad invoca el entorno de runtime adecuado en un proceso bajo su identidad y crea una instancia de contenedor AppContainer para que lo contenga. Este cambio es beneficioso porque ya no se requiere la administración de cuentas y contraseñas locales. Además, en las instalaciones en las que las cuentas de usuario locales están prohibidas, la eliminación de la dependencia de la cuenta de usuario local significa comporta la posibilidad de usar esta característica.
+En SQL Server 2019, el programa de instalación ya no crea cuentas profesionales para **SQLRUserGroup**. En cambio, el aislamiento se consigue a través de contenedores [AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). En tiempo de ejecución, cuando se detecta un script externo en un procedimiento almacenado o una consulta, SQL Server llama a Launchpad con una solicitud para un iniciador específico de la extensión. Launchpad invoca el entorno de runtime adecuado en un proceso bajo su identidad y crea una instancia de AppContainer para que lo contenga. Este cambio es beneficioso porque ya no se requiere la administración de cuentas y contraseñas locales. Además, en las instalaciones en las que las cuentas de usuario locales están prohibidas, la eliminación de la dependencia de la cuenta de usuario local comporta la posibilidad de usar esta característica.
 
-Según la implementación de SQL Server, los contenedores AppContainer son un mecanismo interno. Aunque no verá ninguna evidencia física de los contenedores AppContainer en el monitor de procesos, podrá encontrarlos en las reglas de firewall de salida creadas por el programa de instalación para evitar que los procesos realicen llamadas de red. Para obtener más información, vea [Configuración de firewall para SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md).
+Según la implementación de SQL Server, los contenedores AppContainer son un mecanismo interno. Aunque no verá ninguna evidencia física de los contenedores AppContainer en el monitor de procesos, podrá encontrarlos en las reglas de firewall de salida creadas por el programa de instalación para evitar que los procesos realicen llamadas de red. Para obtener más información, vea [Configuración de firewall para SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md).
 
 > [!Note]
 > En SQL Server 2019, **SQLRUserGroup** solo tiene un miembro que ahora es la única cuenta de servicio de SQL Server Launchpad, en lugar de varias cuentas de trabajo.

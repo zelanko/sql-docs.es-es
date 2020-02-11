@@ -15,16 +15,17 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3256e0e4862923138cdf035eb15926364bc8e0a5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786301"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLMoreResults** permite que la aplicación recupere varios conjuntos de filas de resultados. Una instrucción SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] con una cláusula COMPUTE o un lote enviadoo de ODBC o instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , provocan que el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Cliente generen varios conjuntos de resultados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite la creación de un cursor de servidor para procesar los resultados en ninguno de los casos. Por consiguiente, el programador debe asegurarse de que la instrucción ODBC bloquea la tabla. El programador debe agotar los datos devueltos o cancelar la instrucción ODBC antes de procesar los datos de otras instrucciones activas en la conexión.  
+  **SQLMoreResults** permite que la aplicación recupere varios conjuntos de filas de resultados. Una instrucción SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] con una cláusula COMPUTE o un lote enviadoo de ODBC o instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , provocan que el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Cliente generen varios conjuntos de resultados. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite la creación de un cursor de servidor para procesar los resultados en ninguno de los casos. Por consiguiente, el programador debe asegurarse de que la instrucción ODBC bloquea la tabla. El programador debe agotar los datos devueltos o cancelar la instrucción ODBC antes de procesar los datos de otras instrucciones activas en la conexión.  
   
 > [!NOTE]  
 >  Una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] que contiene una cláusula COMPUTE solo se admite cuando se establece la conexión a una versión de servidor anterior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -162,8 +163,8 @@ EXIT:
     }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Función SQLMoreResults](https://go.microsoft.com/fwlink/?LinkId=59357)   
- [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQLMoreResults, función](https://go.microsoft.com/fwlink/?LinkId=59357)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

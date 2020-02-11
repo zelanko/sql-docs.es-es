@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011948"
 ---
 # <a name="create-an-application-role"></a>Crear un rol de aplicación
@@ -46,7 +46,7 @@ ms.locfileid: "63011948"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER ANY APPLICATION ROLE en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 ##### <a name="to-create-an-application-role"></a>Para crear un rol de aplicación  
   
@@ -62,14 +62,14 @@ ms.locfileid: "63011948"
   
 6.  En el cuadro **Esquema predeterminado** , determine el esquema al que pertenecerán los objetos creados por este rol especificando los nombres de objeto. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Buscar esquema**.  
   
-7.  En el cuadro **Contraseña** , escriba una contraseña para el nuevo rol. Vuelva a escribir la contraseña en el cuadro **Confirmar contraseña** .  
+7.  En el cuadro **Contraseña** , escriba una contraseña para el nuevo rol. Vuelva a escribir esa contraseña en el cuadro **Confirmar contraseña** .  
   
 8.  En **Esquemas propiedad de este rol**, seleccione o vea los esquemas que pertenecerán a este rol. Un esquema solo puede ser propiedad de otro esquema o de un rol.  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opciones adicionales  
- El **rol de aplicación - nuevo** cuadro de diálogo también proporciona opciones en dos páginas adicionales: **Elementos protegibles** y **propiedades extendidas**.  
+ En el cuadro de diálogo **Rol de aplicación - Nuevo** también se proporcionan opciones en dos páginas adicionales: **Elementos protegibles** y **Propiedades extendidas**.  
   
 -   La página **Elementos protegibles** muestra todos los elementos protegibles posibles y los permisos en esos elementos protegibles que se pueden conceder al inicio de sesión.  
   

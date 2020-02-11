@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cb31bae59d95b01279a9fa84e02cd22c8017ca14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021749"
 ---
 # <a name="publication-database"></a>Base de datos de publicaciones
@@ -32,7 +32,7 @@ ms.locfileid: "63021749"
  **Bases de datos**  
  Seleccione el nombre de la base de datos que contiene los datos o los objetos de base de datos que desea publicar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Publicar datos y objetos de base de datos](publish/publish-data-and-database-objects.md)   
  [Create a Publication](publish/create-a-publication.md)   
  [Ver y modificar las propiedades del distribuidor y del publicador](view-and-modify-distributor-and-publisher-properties.md)   

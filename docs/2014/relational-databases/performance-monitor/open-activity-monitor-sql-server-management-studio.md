@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032009"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Abrir el Monitor de actividad (SQL Server Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "63032009"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **Para establecer el intervalo de actualización utilizando:**  [SQL Server Management Studio](#Refresh)  
+-   **Para establecer el intervalo de actualización mediante:**  [SQL Server Management Studio](#Refresh)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  El Monitor de actividad ejecuta consultas en la instancia supervisada para obtener información de sus paneles de información. Cuando el intervalo de actualización se establece en menos de 10 segundos, el tiempo utilizado para ejecutar estas consultas puede afectar al rendimiento del servidor  
@@ -47,7 +47,7 @@ ms.locfileid: "63032009"
   
  Para detener (KILL) un proceso, el usuario debe ser miembro de los roles fijos de servidor sysadmin o processadmin.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>Para abrir el Monitor de actividad en SQL Server Management Studio  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63032009"
   
 4.  Para activar los cambios, cierre y vuelva a abrir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="Refresh"></a> Para establecer el intervalo de actualización del Monitor de actividad  
+###  <a name="Refresh"></a>Para establecer el intervalo de actualización del monitor de actividad  
   
 -   Abra el Monitor de actividad.  
   

@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da7d6541f7bf31920519cc7462bdfd24a5f6dc0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067696"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
-  **SQLCloseCursor** reemplaza [SQLFreeStmt](sqlfreestmt.md) con un *opción* valor de SQL_CLOSE. En el recibo de **SQLCloseCursor**, el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client descarta las filas del conjunto de resultados pendientes. Observe que los enlaces de parámetro y columna de la instrucción (si existen) quedan inalterados por **SQLCloseCursor**.  
+  **SQLCloseCursor** reemplaza a [SQLFreeStmt](sqlfreestmt.md) con un valor de *opción* de SQL_CLOSE. En el recibo de **SQLCloseCursor**, el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client descarta las filas del conjunto de resultados pendientes. Observe que los enlaces de parámetro y columna de la instrucción (si existen) quedan inalterados por **SQLCloseCursor**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   
- [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

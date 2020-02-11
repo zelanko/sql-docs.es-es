@@ -1,5 +1,5 @@
 ---
-title: Los índices y claves en el cuadro de diálogo (Visual Database Tools) | Microsoft Docs
+title: Índices y claves (cuadro de diálogo, Visual Database Tools) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015427"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Índices y claves (cuadro de diálogo, Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63015427"
  **Índice o clave Primary/Unique seleccionados**  
  Enumera los índices y las claves principales o únicas. Seleccione uno de estos elementos para ver sus propiedades en la cuadrícula que aparece a la derecha. Si la lista está vacía, no se ha definido ninguna para la tabla.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Crea un nuevo índice o una nueva clave principal o única.  
   
  **Eliminar**  
@@ -42,7 +42,7 @@ ms.locfileid: "63015427"
  **Columnas**  
  Muestra los criterios de ordenación elegidos para las columnas de la clave o el índice y proporciona acceso al cuadro de diálogo en el que se pueden definir los criterios de ordenación. Para que se muestre el cuadro de diálogo, haga clic en **Columnas** y, después, en el botón de puntos suspensivos (...) situado a la derecha del campo de propiedad.  
   
- **Is Unique**  
+ **Es único**  
  Indica si los datos especificados en el índice o en la clave deben ser únicos. Esta propiedad no está disponible en los índices XML.  
   
  **Tipo**  
@@ -51,8 +51,8 @@ ms.locfileid: "63015427"
  **Categoría Identidad**  
  Expandido, muestra los campos de propiedades de **Nombre** y **Descripción**.  
   
- **Name**  
- Muestra el nombre de la clave o el índice. Cuando se crea un nuevo índice o una nueva clave, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Este nombre se puede cambiar en cualquier momento.  
+ **Nombre**  
+ Muestra el nombre de la clave o el índice. Cuando se crea un nuevo índice o una nueva clave, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Puede cambiar el nombre en cualquier momento.  
   
  **Descripción**  
  Proporciona un espacio para describir la clave o el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y después en el botón de puntos suspensivos ( **...** ) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
@@ -60,16 +60,16 @@ ms.locfileid: "63015427"
  **Categoría Diseñador de tablas**  
  Expandido, muestra la información de **Crear como CLUSTERED**.  
   
- **Crear como CLUSTERED**  
+ **Crear como Clustered**  
  Crear una clave o un índice clúster. Solo se permite un índice clúster en una tabla. Los datos de la tabla se almacenan en el orden del índice clúster. Para más información, consulte [Crear índices clúster](../../relational-databases/indexes/indexes.md) y [Crear índices no clúster](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
  **Especificación de espacio de datos**  
- Expandido, muestra información sobre **(Tipo de espacio de datos)** , **Nombre de esquema de partición o grupo de archivo**y **Lista de columnas de particiones**.  
+ Expandido, muestra información sobre **(Tipo de espacio de datos)**, **Nombre de esquema de partición o grupo de archivo**y **Lista de columnas de particiones**.  
   
  **(Tipo de espacio de datos)**  
  Indica si este índice o esta clave pertenece a un grupo de archivos o a un esquema de partición.  
   
- **Nombre de esquema de partición o grupo de archivo**  
+ **Nombre del esquema de partición o grupo de archivos**  
  Muestra el nombre del grupo de archivos o del esquema de partición en el que se almacena.  
   
  **Lista de columnas de particiones**  
@@ -88,12 +88,12 @@ ms.locfileid: "63015427"
  **Rellenar índice**  
  Indica si se proporciona a las páginas intermedias de este índice el mismo porcentaje de espacio vacío (relleno) especificado en **Factor de relleno** cuando crecen.  
   
- **Pasar por alto claves duplicadas**  
+ **Omitir claves duplicadas**  
  Especifica qué ocurre cuando se inserta durante una operación de inserción masiva una fila cuyo valor de clave es igual al valor de una clave existente. Si se elige:  
   
--   **Sí** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mostrará una advertencia, omitirá la fila entrante incorrecta e intentará insertar las filas restantes.  
+-   **Sí** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] emite una advertencia, omite la fila entrante infractora e intenta insertar las filas restantes.  
   
--   **No** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mostrará un mensaje de error y revertirá toda la operación de inserción masiva.  
+-   **No** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] emite un mensaje de error y revierte toda la operación de inserción masiva.  
   
  **Columnas incluidas**  
  Muestra una lista separada por comas de los nombres de todas las columnas que forman la clave del índice. Las columnas de subclaves solo se pueden especificar en los índices no clúster. Esta propiedad estará oculta para los índices XML.  
@@ -101,7 +101,7 @@ ms.locfileid: "63015427"
  **Está deshabilitado**  
  Indica si este índice está deshabilitado. Se trata de una propiedad de solo lectura. Esta propiedad solo se establecerá en **Sí** si el índice se ha deshabilitado fuera de Visual Database Tools.  
   
- **Clave Es texto completo**  
+ **Clave de texto completo**  
  Especifica si este índice es una clave de texto completo. Para obtener más información sobre las claves de texto completo, vea los Libros en pantalla de SQL Server. Esta propiedad estará oculta para los índices XML.  
   
  **Bloqueos de página permitidos**  
@@ -113,8 +113,8 @@ ms.locfileid: "63015427"
  **Bloqueos de fila permitidos**  
  Especifique si se permite el bloqueo de filas en este índice. Permitir o denegar el bloqueo de fila afecta al rendimiento de la base de datos. El valor recomendado es **Sí**.  
   
-## <a name="see-also"></a>Vea también  
- [Restricciones UNIQUE y restricciones Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+## <a name="see-also"></a>Consulte también  
+ [Restricciones UNIQUE y restricciones check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Restricciones entre claves principales y claves externas](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
   
   

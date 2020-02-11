@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1f8f04d699c46c654290d1badc26de246a2d9125
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783697"
 ---
 # <a name="metadata---parameter-and-result"></a>Metadatos: parámetro y resultado
@@ -84,8 +84,8 @@ ms.locfileid: "73783697"
 |SQL_DESC_DISPLAY_SIZE|10|8, 10.. 16|16|23|19, 21..27|26, 28..34|  
 |SQL_DESC_FIXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_LENGTH|10|8, 10.. 16|16|2|19, 21..27|26, 28..34|  
-|SQL_DESC_LITERAL_PREFIX|“|“|“|“|“|“|  
-|SQL_DESC_LITERAL_SUFFIX|“|“|“|“|“|“|  
+|SQL_DESC_LITERAL_PREFIX|'|'|'|'|'|'|  
+|SQL_DESC_LITERAL_SUFFIX|'|'|'|'|'|'|  
 |SQL_DESC_LOCAL_TYPE_NAME|**date**|**time**|**smalldatetime**|**datetime**|**datetime2**|datetimeoffset|  
 |SQL_DESC_OCTET_LENGTH|6|12|4|8|16|20|  
 |SQL_DESC_PRECISION|0|0..7|0|3|0..7|0..7|  
@@ -95,7 +95,7 @@ ms.locfileid: "73783697"
 |SQL_DESC_TYPE_NAME|**date**|**time**|**smalldatetime**|**datetime**|**datetime2**|datetimeoffset|  
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|SQL_TRUE|  
   
-## <a name="see-also"></a>Vea también  
- [Metadatos &#40;ODBC&#41;](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+## <a name="see-also"></a>Consulte también  
+ [Metadatos &#40;&#41;ODBC](https://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

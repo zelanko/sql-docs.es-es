@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_set_parameter (Transact-SQL) | Microsoft Docs
+title: managed_backup. sp_set_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 838a8b0d998476a37b0dd4d30cab5041ad4276a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942033"
 ---
-# <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (Transact-SQL)
+# <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Establece el valor del parámetro del sistema de Administración inteligente especificado.  
@@ -47,31 +47,31 @@ EXEC managed_backup.sp_set_parameter
   
 ##  <a name="Arguments"></a> Argumentos  
  @parameter_name  
- Nombre del parámetro para el que desea establecer el valor. @parameter_name es nvarchar (128). Los nombres de parámetro disponibles son **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**, y **StorageOperationDebugXevent**.  
+ Nombre del parámetro para el que desea establecer el valor. @parameter_namees de tipo NVARCHAR (128). Los nombres de parámetro disponibles son **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**y **StorageOperationDebugXevent**.  
   
  @parameter_value  
- Valor del parámetro que desea establecer. @parameter el valor es nvarchar (128).  Los siguientes son pares permitidos de nombre de parámetro y valor:  
+ Valor del parámetro que desea establecer. @parameterel valor es NVARCHAR (128).  Los siguientes son pares permitidos de nombre de parámetro y valor:  
   
--   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = 'email'  
+-   @parameter_name= ' SSMBackup2WANotificationEmailIds ': @parameter_value = ' email '  
   
--   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy': @parameter_value = {'true' | 'false'}  
+-   @parameter_name= ' SSMBackup2WAEnableUserDefinedPolicy ': @parameter_value = {' true ' | ' false '}  
   
--   @parameter_name = 'SSMBackup2WADebugXevent': @parameter_value = {'true' | 'false'}  
+-   @parameter_name= ' SSMBackup2WADebugXevent ': @parameter_value = {' true ' | ' false '}  
   
--   @parameter_name = 'FileRetentionDebugXevent': @parameter_value = {'true' | 'false'}  
+-   @parameter_name= ' FileRetentionDebugXevent ': @parameter_value = {' true ' | ' false '}  
   
--   @parameter_name = 'StorageOperationDebugXevent' = {'true' | 'false'}  
+-   @parameter_name= ' StorageOperationDebugXevent ' = {' true ' | ' false '}  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  Sección opcional que describe las prácticas recomendadas que el usuario debe conocer al ejecutar la instrucción o la rutina.  
   
 ## <a name="security"></a>Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Requiere **EXECUTE** permisos **managed_backup.sp_set_parameter** procedimiento almacenado.  
+ Requiere permisos **Execute** en **managed_backup. sp_set_parameter** procedimiento almacenado.  
   
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos siguientes habilitan los eventos extendidos operativos y de depuración.  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021786"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Información de publicación, Agentes (Publicación de instantánea)
@@ -25,11 +25,11 @@ ms.locfileid: "63021786"
 ## <a name="options"></a>Opciones  
  Para obtener información más detallada y las tareas relacionadas con el Agente de instantáneas, haga clic con el botón secundario en la fila del agente y, a continuación, haga clic en una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
   
--   **Ordenar**: ordene por una o más columnas en el cuadro de diálogo **Ordenar columnas**.  
+-   **Ordenar**: ordene en una o más columnas en el cuadro de diálogo **Ordenar columnas** .  
   
--   **Elegir columnas para mostrar**: seleccione las columnas que se van a mostrar y el orden en el que lo harán en el cuadro de diálogo **Elegir columnas**.  
+-   **Elegir columnas para mostrar**: seleccione las columnas que se mostrarán y el orden en el que se mostrarán en el cuadro de diálogo **Elegir columnas** .  
   
--   **Filtro**: filtre las filas de la cuadrícula en función de los valores de columna del cuadro de diálogo **Configuración del filtro**.  
+-   **Filtro**: filtre filas en la cuadrícula basándose en los valores de columna en el cuadro de diálogo **Configuración del filtro** .  
   
 -   **Borrar filtro**: borre cualquier configuración de filtro para la cuadrícula.  
   
@@ -44,23 +44,23 @@ ms.locfileid: "63021786"
   
 -   No está en ejecución  
   
--   Completada  
+-   Completed  
   
- **Agente**  
+ **Agent**  
  Agente de instantáneas. Éste es el único agente asociado con una publicación de instantáneas. El Agente de distribución está asociado con suscripciones a esta publicación. Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Última hora de inicio**  
  Hora en la que se inició el agente por última vez.  
   
- **Duración**  
+ **Duration**  
  Tiempo durante el que se ha ejecutado el agente. Este tiempo representa el tiempo transcurrido si el agente se está ejecutando actualmente o el tiempo total de ejecución si ya finalizó la ejecución.  
   
  **Última acción**  
  La última acción realizada durante la ejecución más reciente del agente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Supervisar la replicación](monitoring-replication.md)  
   
   

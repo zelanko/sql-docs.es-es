@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922166"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restauraciones de base de datos completas (modelo de recuperación completa)
@@ -32,13 +32,13 @@ ms.locfileid: "62922166"
  Al restaurar una base de datos, especialmente en el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, debe usar una única secuencia de restauración. Una *secuencia de restauración* consta de dos o más operaciones de restauración que mueven datos en una o varias fases de restauración.  
   
 > [!IMPORTANT]  
->  Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Estas bases de datos pueden contener código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperado o provocar errores debido a la modificación del esquema o de la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
+>  Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Estas bases de datos pueden contener código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperado o provocar errores debido a la modificación del esquema o de la estructura de la base de datos física. Antes de usar una base de datos de un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos en un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
   
  **En este tema:**  
   
 -   [Restaurar una base de datos hasta el momento del error](#PointOfFailure)  
   
--   [Restaurar bases de datos a un punto de una copia de seguridad de registros](#PointWithinBackup)  
+-   [Restaurar una base de datos a un punto dentro de una copia de seguridad de registros](#PointWithinBackup)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62922166"
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> Ejemplo: recuperación hasta el momento del error (Transact-SQL)  
+###  <a name="ExampleToPoFTsql"></a> Ejemplo: recuperar hasta el momento del error (Transact-SQL)  
  En el siguiente ejemplo de [!INCLUDE[tsql](../../includes/tsql-md.md)] se muestran las opciones fundamentales en una secuencia de restauración que restaura la base de datos hasta el momento del error. En el ejemplo se crea una copia del final del registro de la base de datos. A continuación, en el ejemplo se restaura una copia de seguridad completa de la base de datos y una copia de seguridad de registros; a continuación; se restaura la copia del final del registro. En el ejemplo, se recupera la base de datos en un último paso independiente.  
   
 > [!NOTE]  
@@ -161,7 +161,7 @@ GO
   
  **Para restaurar una copia de seguridad del registro de transacciones**  
   
--   [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
+-   [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
  **Para restaurar una copia de seguridad mediante los objetos de administración de SQL Server (SMO)**  
   
@@ -175,7 +175,7 @@ GO
   
 -   [Recuperar a un número de secuencia de registro &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   

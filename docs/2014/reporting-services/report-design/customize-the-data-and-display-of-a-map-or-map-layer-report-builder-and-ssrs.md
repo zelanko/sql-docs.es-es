@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106096"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar los datos y la presentación de un mapa o una capa de mapa (Generador de informes y SSRS)
@@ -129,7 +129,7 @@ ms.locfileid: "66106096"
   
  La expresión de grupo especifica cómo se agregan los datos analíticos que tienen relación con los datos espaciales para cada elemento de mapa de la capa. De forma predeterminada, la expresión de grupo es el conjunto de campos coincidentes que se especificó para la relación entre los datos espaciales y los datos analíticos. Por ejemplo, en un mapa de burbujas que muestra las ubicaciones de las ciudades y el tamaño de la población de un país o región, los campos coincidentes incluyen el nombre de la ciudad [City] y el nombre de la región [Region] porque puede haber varias ciudades con el mismo nombre. La expresión de grupo correspondiente incluye dos campos: [City ] y [Region].  
   
- Para obtener más información, consulte [Sugerencias sobre mapas: Cómo importar archivos de forma en SQL Server y agregar datos espaciales](https://go.microsoft.com/fwlink/?LinkID=214991).  
+ Para obtener más información, vea [Sugerencias sobre mapas: cómo importar archivos de forma en SQL Server y agregar datos espaciales](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
  
   
@@ -142,7 +142,7 @@ ms.locfileid: "66106096"
   
 -   Acciones de obtención de detalles.  
   
--   Opciones de presentación.  
+-   Opciones de visualización.  
   
  Las opciones de presentación de los elementos de mapa siguen un orden de prioridad basado en la capa, el elemento de mapa, las reglas de los elementos de mapa y las opciones de invalidación de los elementos de mapa incrustados.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "66106096"
   
 -   Opciones de puntos, líneas o polígonos de cada capa. Se aplican tanto si los elementos de mapa se recuperan dinámicamente al procesar el informe como si están incrustados en la definición de informe. Por ejemplo, especifique un color de relleno para todos los elementos de una capa.  
   
--   Reglas. Puede establecer reglas para controlar el color, el tamaño, el ancho o el tipo de marcador de todos los elementos de mapa de una capa. Las reglas que puede establecer dependen del tipo de elemento de mapa.  
+-   Las reglas. Puede establecer reglas para controlar el color, el tamaño, el ancho o el tipo de marcador de todos los elementos de mapa de una capa. Las reglas que puede establecer dependen del tipo de elemento de mapa.  
   
     -   Reglas de color. Se aplican a los marcadores para los puntos, líneas y polígonos, y a los marcadores para los puntos centrales de los polígonos.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "66106096"
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md)  
   

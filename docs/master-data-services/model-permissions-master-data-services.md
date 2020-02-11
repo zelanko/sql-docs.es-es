@@ -14,10 +14,10 @@ ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5e42e54689b5b6a576a24fe57f2f9f4dcaccd1b8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728966"
 ---
 # <a name="model-permissions-master-data-services"></a>Permisos de modelo (Master Data Services)
@@ -32,17 +32,17 @@ ms.locfileid: "73728966"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
-|**Crear**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
-|**Actualizar**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
-|**Delete**|El usuario puede eliminar miembros|  
-|**Denegar**|El usuario puede denegar todo el acceso al modelo.|  
+|**A**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
+|**Update**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
+|**Eliminar**|El usuario puede eliminar miembros|  
+|**Deny**|El usuario puede denegar todo el acceso al modelo.|  
 |**Administración**|Permisos de administrador en el modelo. El permiso de administrador solo está disponible en el nivel de modelo.|  
   
- Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan permisos de Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  
+ Los permisos de lectura, creación, actualización y eliminación se pueden combinar entre sí. Cuando se asignan permisos de Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Permisos de objeto del modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Permisos del objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Permisos de entidad &#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md)   
  [Permisos de colección &#40;Master Data Services&#41;](../master-data-services/collection-permissions-master-data-services.md)  
   

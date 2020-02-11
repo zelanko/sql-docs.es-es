@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79274cf031103e50151b6e93a9daff781005abad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916177"
 ---
-# <a name="mssqlserver10520"></a>MSSQLSERVER_10520
+# <a name="mssqlserver_10520"></a>MSSQLSERVER_10520
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|10520|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|10520|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|PG_PARAM_NOT_ALLOWED|  
 |Texto del mensaje|No se puede crear la guía de plan '%.*ls' porque @type se especificó como '%ls' y se especificó un valor no NULL para el parámetro '%ls'. Este tipo requiere un valor NULL para el parámetro. Especifique NULL para el parámetro o cambie el tipo por otro que admita un valor no NULL para el parámetro.|  
@@ -38,8 +38,8 @@ ms.locfileid: "62916177"
 ## <a name="user-action"></a>Acción del usuario  
  Especifique NULL para el parámetro o cambie el tipo por otro que admita un valor no NULL para el parámetro.  
   
-## <a name="see-also"></a>Vea también  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [sp_create_plan_guide &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [Guías de plan](../performance/plan-guides.md)  
   
   

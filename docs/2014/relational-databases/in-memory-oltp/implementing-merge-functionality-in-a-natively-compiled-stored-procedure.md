@@ -1,5 +1,5 @@
 ---
-title: Implementar la funcionalidad MERGE | Microsoft Docs
+title: Implementar la funcionalidad de combinación | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0e108f70f66aef1ed88ea202ddb326bd0757c10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015926"
 ---
 # <a name="implementing-merge-functionality"></a>Implementar la funcionalidad MERGE
   Una base de datos puede necesitar realizar una inserción o una actualización, dependiendo de si una fila determinada ya existe en la base de datos.  
   
- Es posible usar el siguiente método en [!INCLUDE[tsql](../../includes/tsql-md.md)] sin hacer uso de la instrucción `MERGE`:  
+ Es posible usar el siguiente método en `MERGE` sin hacer uso de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 ```sql  
 UPDATE mytable SET col=@somevalue WHERE myPK = @parm  
@@ -46,8 +46,8 @@ IF @i = 0
    INSERT....  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Problemas de migración para los procedimientos almacenados compilados de forma nativa](migration-issues-for-natively-compiled-stored-procedures.md)   
- [Construcciones Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+ [Construcciones de Transact-SQL no admitidas en In-Memory OLTP.](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127110"
 ---
-# <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (API de procedimiento almacenado extendido)
+# <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API de procedimiento almacenado extendido)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
  Devuelve información acerca de una conexión de base de datos.  
   
@@ -55,10 +56,10 @@ len
  *srvproc*  
  Puntero que identifica una conexión a la base de datos.  
   
- *field*  
+ *campo*  
  Especifica los datos que se van a devolver en la conexión.  
   
-|Valor|Devuelve|  
+|Value|Devuelve|  
 |-----------|-------------|  
 |SRV_APPLNAME|El nombre de aplicación proporcionado por el cliente cuando estableció la conexión.|  
 |SRV_BCPFLAG|Una marca que es TRUE si el cliente está preparando una operación de copia masiva; de lo contrario, FALSE.|  
@@ -80,13 +81,13 @@ len
 |SRV_USER|El nombre del usuario de la conexión.|  
 |||  
   
- *len*  
+ *terminado*  
  Es un puntero a una variable **int** que contiene la longitud del valor *field* devuelto. Si *len* es NULL, no se devuelve la longitud de la cadena.  
   
 ## <a name="returns"></a>Devuelve  
  Un puntero a una cadena terminada en NULL que contiene el valor actual del campo especificado en la estructura de SRV_PROC. Si el campo está vacío, se devuelve un puntero válido a una cadena vacía y *len* contiene 0. Si el campo es desconocido, se devuelve NULL y *len* contiene el valor -1.  
   
 > [!IMPORTANT]  
->  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para más información sobre la revisión y las pruebas de seguridad, vea [Security Developer Center](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para más información sobre la revisión y las pruebas de seguridad, vea [Security Developer Center](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

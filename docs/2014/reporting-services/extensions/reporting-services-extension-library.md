@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d09464ce4a61903a3e9b74711482d2ce07bd0c4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62985755"
 ---
 # <a name="reporting-services-extension-library"></a>Biblioteca de extensiones de Reporting Services
-  La biblioteca de extensiones de Reporting Services es un conjunto de clases, interfaces y tipos de valores que se incluyen en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Esta biblioteca proporciona acceso a la funcionalidad del sistema y es la base sobre la que las aplicaciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] se pueden usar para extender los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+  La biblioteca de extensiones de Reporting Services es un conjunto de clases, interfaces y tipos de valores que se incluyen en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Esta biblioteca proporciona acceso a la funcionalidad del sistema y está diseñada para ser la base [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] de las aplicaciones que se pueden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usar para extender los componentes.  
   
 ## <a name="namespaces"></a>Espacios de nombres  
  La biblioteca de extensiones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona los espacios de nombres siguientes.  
@@ -37,7 +37,7 @@ ms.locfileid: "62985755"
  `Microsoft.ReportingServices.ReportRendering`  
  Contiene clases e interfaces que permiten extender las capacidades de representación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Utilizando los miembros de este espacio de nombres junto con los miembros del espacio de nombres <xref:Microsoft.ReportingServices.Interfaces>, puede construir sus propias extensiones de representación personalizadas para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Extensiones de Reporting Services](reporting-services-extensions.md)  
   
   

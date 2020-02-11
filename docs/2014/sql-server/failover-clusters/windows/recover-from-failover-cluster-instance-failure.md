@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c4da45e57342288cc23a9783709666f4c02d0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63050018"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>Recuperarse de un error en una instancia de clúster de conmutación por error
@@ -29,7 +29,7 @@ ms.locfileid: "63050018"
   
 -   [Recuperarse de un error de software](#Scenario2)  
   
-##  <a name="Scenario1"></a> Recuperarse de un error irreparable  
+##  <a name="Scenario1"></a>Recuperarse de un error irreparable  
  Siga estos pasos para recuperarse de un error irreparable. El error puede deberse, por ejemplo, a un error del controlador de disco o del sistema operativo. En este caso, el error se debe a un problema de hardware en el nodo 1 de un clúster de dos nodos.  
   
 1.  Cuando se produce un error en el nodo 1, la FCI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conmuta al nodo 2.  
@@ -46,7 +46,7 @@ ms.locfileid: "63050018"
   
 7.  Ejecute el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para agregar el nodo 1 a la FCI. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-##  <a name="Scenario2"></a> Recuperarse de un error reparable  
+##  <a name="Scenario2"></a>Recuperación de un error de reparable  
  Siga estos pasos para recuperarse de un error reparable. En este caso, el error se produce porque el nodo 1 está inactivo o sin conexión pero todavía se puede recuperar. Este error podría estar causado por un error del sistema operativo, un error de hardware o un error de la propia instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 1.  Cuando se produce un error en el nodo 1, la FCI conmuta al nodo 2.  

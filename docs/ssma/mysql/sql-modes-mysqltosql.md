@@ -1,5 +1,5 @@
 ---
-title: Modos de SQL (MySQLToSQL) | Microsoft Docs
+title: Modos SQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,69 +10,69 @@ ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2c9dbd2b42ebde4cdfea602c3ad50c4b7d100bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944658"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modos DE SQL (MySQLToSQL)
-SSMA para MySQL puede funcionar en diferentes modos de SQL y puede aplicar estos modos de forma diferente para distintos clientes.  
+SSMA para MySQL puede funcionar en diferentes modos SQL y puede aplicar estos modos de manera diferente para los distintos clientes.  
   
-Modos de definen la sintaxis SQL que debe ser compatibles con MySQL y el tipo de validación de datos comprueba que debe realizar. Esto hace más fácil de usar MySQL en entornos diferentes y usar MySQL con SQL Server.  
+Los modos definen la sintaxis SQL que debe admitir MySQL y el tipo de comprobaciones de validación de datos que debe realizar. Esto facilita el uso de MySQL en entornos diferentes y el uso de MySQL con SQL Server.  
   
-## <a name="sql-modes-grid"></a>Cuadrícula de los modos SQL:  
+## <a name="sql-modes-grid"></a>Cuadrícula modos SQL:  
   
--   Cuadrícula de modos de SQL en el nivel de raíz contiene las siguientes columnas: **Nombre de modo SQL**, **cargado modos SQL**, y **modos eficaces SQL**.  
+-   La cuadrícula modos SQL en el nivel raíz contiene las columnas siguientes: **nombre del modo SQL**, **modos SQL cargados**y **modos SQL efectivos**.  
   
--   Cuadrícula de los modos de SQL en bases de datos categoría, base de datos, tabla categoría, categoría de instrucciones, categoría de vistas, tabla, vista, funciones, procedimientos, UDF y nivel de objeto de evento contiene las siguientes columnas: **Nombre de modo SQL**, **heredan los modos SQL**, y **modos eficaces SQL**.  
+-   Cuadrícula de modos SQL en bases de datos categoría, base de datos, categoría de tabla, categoría de instrucciones, categoría de vistas, tabla, vista, funciones, procedimientos, UDF y nivel de objeto de evento contiene las columnas siguientes: **nombre del modo SQL**, **modos SQL heredados**y **modos efectivos SQL**.  
   
--   Cuadrícula de modos de SQL en el nivel de procedimiento almacenado, función almacenado y desencadenador contiene las siguientes columnas: **Nombre de modo SQL**, **modos Original de SQL**, y **modos eficaces SQL**.  
-  
-> [!NOTE]  
-> Modos de grupo se mostrará en negrita, en la columna 'Nombre de modo SQL'.  
-  
-## <a name="loaded-sql-modes"></a>Modos de SQL cargado  
-Estos son los modos de SQL, que se establecen en el nivel raíz o de sesión. Los modos de SQL una vez cargadas en la base de datos de destino no puede editarse o modificarse.  
-  
-## <a name="inherited-sql-modes"></a>Modos de SQL heredadas  
-Estos son los modos de SQL, que se heredan desde el nodo primario correspondiente.  
-  
-Excepto la categoría de funciones, procedimientos (categoría), categoría de eventos y desencadenadores, estos modos de SQL están presentes en todos los niveles (objeto de base de datos, tabla categoría, categoría de instrucciones, las vistas categoría, tabla, vista, funciones, procedimientos, UDF y eventos).  
+-   La cuadrícula modos SQL en el procedimiento almacenado, la función almacenada y el nivel de desencadenador contiene las columnas siguientes: **nombre del modo SQL**, **modos SQL originales**y **modos efectivos SQL**.  
   
 > [!NOTE]  
-> Si selecciona el **heredar de primario** casilla de verificación, heredan los modos de SQL se pueden heredar el nodo primario. De forma predeterminada, esta casilla permanece seleccionada.  
+> Los modos de grupo se mostrarán en negrita, en la columna "nombre del modo SQL".  
   
-## <a name="original-sql-modes"></a>Modos originales de SQL  
-Estos son los modos de SQL está presente sólo en función, procedimiento y desencadenador niveles.  
+## <a name="loaded-sql-modes"></a>Modos SQL cargados  
+Estos son los modos SQL, que se establecen en el nivel de sesión o raíz. Los modos SQL una vez cargados en la base de datos de destino no se pueden editar ni modificar.  
+  
+## <a name="inherited-sql-modes"></a>Modos SQL heredados  
+Estos son los modos SQL, que se heredan del nodo primario correspondiente.  
+  
+Excepto en el caso de la categoría de funciones, la categoría de procedimientos, la categoría de eventos y los desencadenadores, estos modos SQL están presentes en todos los niveles (base de datos, categoría de tabla, categoría de instrucciones, categoría de vistas, tabla, vista, funciones, procedimientos, UDF y objeto de evento).  
   
 > [!NOTE]  
-> Seleccionando la **utilizar original** comprobar cuadro, los modos de SQL que se usaron originalmente en la función correspondiente o se puede usar el procedimiento o desencadenador. De forma predeterminada, esta casilla permanece seleccionada.  
+> Al activar la casilla **heredar de primario** , los modos SQL heredados se pueden heredar del nodo primario. De forma predeterminada, esta casilla permanece activada.  
   
-## <a name="effective-sql-modes"></a>Modos de efectivo SQL  
-Modos eficaz de SQL se pueden definir en distintos niveles en la siguiente manera:  
+## <a name="original-sql-modes"></a>Modos SQL originales  
+Estos son los modos SQL presentes solo en los niveles de función, procedimiento y desencadenador.  
+  
+> [!NOTE]  
+> Al activar la casilla **usar original** , se pueden usar los modos SQL que se usaron originalmente en la función, el procedimiento o el desencadenador correspondiente. De forma predeterminada, esta casilla permanece activada.  
+  
+## <a name="effective-sql-modes"></a>Modos SQL efectivos  
+Los modos de SQL efectivos se pueden definir en distintos niveles de la siguiente manera:  
   
 -   **En el nivel de sesión:**  
   
-    1.  Todos los modos de SQL de carga se puede llamar, "Modos eficaz de SQL".  
+    1.  Se puede llamar a todos los modos SQL cargados, "modos SQL efectivos".  
   
-    2.  En este nivel, los modos SQL efectivos pueden directamente y explícitamente modificarse.  
+    2.  En este nivel, los modos SQL efectivos se pueden modificar directamente y de forma explícita.  
   
-    3.  El modo eficaz de SQL que se establece explícitamente no se refleja como modo de carga de SQL y, por último, se aplica al objeto.  
+    3.  El modo de SQL efectivo que se establece explícitamente no se refleja como modo de SQL cargado y, finalmente, se aplica al objeto.  
   
 -   **En el nivel de función o procedimiento o desencadenador:**  
   
-    1.  Todos los modos de SQL Original se puede llamar, "Modos eficaz de SQL".  
+    1.  Se puede llamar a todos los modos SQL originales, "modos SQL efectivos".  
   
-    2.  En este nivel, el modo eficaz de SQL puede explícitamente modificarse únicamente cuando el **utilizar original** casilla esté desactivada.  
+    2.  En este nivel, el modo SQL efectivo solo se puede modificar de forma explícita si la casilla **usar original** está desactivada.  
   
-    3.  El modo eficaz de SQL que se establece explícitamente no se refleja como modo Original de SQL y, por último, se aplica al objeto.  
+    3.  El modo de SQL efectivo que se establece explícitamente no se refleja como el modo SQL original y, finalmente, se aplica al objeto.  
   
--   **En los nodos que no son de nivel de función o procedimiento o desencadenador:**  
+-   **En nodos distintos del nivel de función o procedimiento o desencadenador:**  
   
-    1.  Todos los modos de SQL heredada se puede llamar, "Modos eficaz de SQL".  
+    1.  Se puede llamar a todos los modos SQL heredados, "modos SQL efectivos".  
   
-    2.  En este nivel, el modo eficaz de SQL puede explícitamente modificarse únicamente cuando el **heredar de primario** casilla esté desactivada.  
+    2.  En este nivel, el modo SQL efectivo solo se puede modificar de forma explícita cuando la casilla **heredar de elemento primario** está desactivada.  
   
-    3.  El modo eficaz de SQL que se establece explícitamente no se refleja como modo heredado de SQL y, por último, se aplica al objeto.  
+    3.  El modo de SQL efectivo que se establece explícitamente no se refleja como modo SQL heredado y, por último, se aplica al objeto.  
   

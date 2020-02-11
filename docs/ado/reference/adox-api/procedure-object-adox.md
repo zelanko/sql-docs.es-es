@@ -1,5 +1,5 @@
 ---
-title: Objeto Procedure (ADOX) | Microsoft Docs
+title: Procedure (objeto, ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,33 +16,33 @@ ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1681001dd42026c1a1fce04814b094047a475a0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965484"
 ---
 # <a name="procedure-object-adox"></a>Objeto Procedure (ADOX)
-Representa un procedimiento almacenado. Cuando se usa junto con la propiedad ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto, el **procedimiento** objeto puede utilizarse para agregar, eliminar o modificar procedimientos almacenados.  
+Representa un procedimiento almacenado. Cuando se usa junto con el objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) de ADO, el objeto de **procedimiento** se puede utilizar para agregar, eliminar o modificar procedimientos almacenados.  
   
-## <a name="remarks"></a>Comentarios  
- El **procedimiento** objeto le permite crear un procedimiento almacenado sin necesidad de conocer ni utilizar la sintaxis del proveedor "CREATE PROCEDURE".  
+## <a name="remarks"></a>Observaciones  
+ El objeto de **procedimiento** permite crear un procedimiento almacenado sin necesidad de conocer o utilizar la sintaxis de "Create procedure" del proveedor.  
   
- Con las propiedades de un **procedimiento** de objeto, puede:  
+ Con las propiedades de un objeto de **procedimiento** , puede:  
   
--   Identificar el procedimiento con el [nombre](../../../ado/reference/adox-api/name-property-adox.md) propiedad.  
+-   Identifique el procedimiento con la propiedad [Name](../../../ado/reference/adox-api/name-property-adox.md) .  
   
--   Especifique la propiedad ADO **comando** objeto que puede usarse para crear o ejecutar el procedimiento con el [comando](../../../ado/reference/adox-api/command-property-adox.md) propiedad.  
+-   Especifique el objeto **Command** de ADO que se puede utilizar para crear o ejecutar el procedimiento con la propiedad [Command](../../../ado/reference/adox-api/command-property-adox.md) .  
   
--   Devolver información de fecha con el [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) y [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) propiedades.  
+-   Devuelve información de fecha con las propiedades [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) y [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) .  
   
  Esta sección contiene el siguiente tema.  
   
 -   [Propiedades, métodos y eventos del objeto Procedure](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vea también  
- [Comando y ejemplo de las propiedades CommandText (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Colección de parámetros, ejemplo de la propiedad comando (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Procedimientos de ejemplo de método Append (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Eliminación de procedimientos de ejemplo del método (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de propiedades Command y CommandText (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
+ [Ejemplo de propiedad de comando, colección de parámetros (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
+ [Ejemplo de método Append de procedimientos (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
+ [Ejemplo de método Delete de procedimientos (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Colección de procedimientos (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

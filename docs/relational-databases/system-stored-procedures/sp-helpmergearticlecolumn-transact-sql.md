@@ -16,13 +16,13 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da2eec998176dfd46ab261fa405ecaa4b6e90044
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126441"
 ---
-# <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
+# <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve la lista de columnas del artículo de vista o tabla especificado para una publicación de combinación. Puesto que los procedimientos almacenados no tienen columnas, este procedimiento almacenado devuelve un error si se especifica un procedimiento almacenado como artículo. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
@@ -38,28 +38,28 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre de una tabla o vista que es el artículo que se recuperará información. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'`Es el nombre de una tabla o vista que es el artículo en el que se va a recuperar información. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|Identifica la columna.|  
 |**column_name**|**sysname**|Es el nombre de la columna de una tabla o vista.|  
-|**Publicado**|**bit**|Especifica si se publica el nombre de la columna.<br /><br /> **1** especifica que se publica la columna.<br /><br /> **0** especifica que no se ha publicado.|  
+|**sin**|**bit**|Especifica si se publica el nombre de la columna.<br /><br /> **1** especifica que la columna se está publicando.<br /><br /> **0** especifica que no se publica.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpmergearticlecolumn** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **replmonitor** rol fijo de base de datos en la base de datos de distribución o en la lista de acceso de publicación para la publicación puede ejecutar **sp_helpmergearticlecolumn**.  
+ Solo los miembros del rol fijo de base de datos **replmonitor** de la base de datos de distribución o de la lista de acceso a la publicación pueden ejecutar **sp_helpmergearticlecolumn**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

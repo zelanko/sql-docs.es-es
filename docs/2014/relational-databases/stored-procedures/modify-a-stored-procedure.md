@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7cbc7981817a6c62db378976fe36a4dc753c6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015886"
 ---
 # <a name="modify-a-stored-procedure"></a>Modificar un procedimiento almacenado
@@ -27,7 +27,7 @@ ms.locfileid: "63015886"
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Seguridad](#Security)  
   
--   **Para modificar un procedimiento mediante:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para modificar un procedimiento con:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63015886"
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para modificar un procedimiento en Management Studio**  
   
 1.  En el Explorador de objetos, conéctese a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
@@ -146,7 +146,7 @@ ms.locfileid: "63015886"
   
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)  
   
   

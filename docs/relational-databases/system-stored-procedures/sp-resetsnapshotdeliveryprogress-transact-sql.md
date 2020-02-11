@@ -16,13 +16,13 @@ ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc6205eb5487b89db55488bcdf36fbb036595d57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68129649"
 ---
-# <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
+# <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Restablece el proceso de entrega de instantáneas de una suscripción de extracción para poder reiniciar la entrega de instantáneas. Se ejecuta en el suscriptor de la base de datos de suscripciones.  
@@ -38,20 +38,20 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @verbose_level = ] verbose_level` Especifica la cantidad de información devuelta. *verbose_level*es **int**, su valor predeterminado es **1**. Un valor de **1** significa que el error se devuelve si no se puede obtener los bloqueos necesarios en el **MSsnapshotdeliveryprogress** tabla, y **0** significa que se devuelve ningún error.  
+`[ @verbose_level = ] verbose_level`Especifica la cantidad de información devuelta. *verbose_level*es de **tipo int**y su valor predeterminado es **1**. Un valor de **1** significa que se devuelve un error si no se pueden obtener los bloqueos necesarios en la tabla **MSsnapshotdeliveryprogress** y **0** significa que no se devuelve ningún error.  
   
-`[ @drop_table = ] 'drop_table'` Indica si se quita o trunca la tabla que contiene información sobre el progreso de la instantánea. *drop_table* es **nvarchar (5)** , su valor predeterminado es **FALSE**. que significa que la tabla se trunca. Si es True, la tabla se quita.  
+`[ @drop_table = ] 'drop_table'`Indica si se va a quitar o truncar la tabla que contiene información sobre el progreso de la instantánea. *drop_table* es de tipo **nvarchar (5)** y su valor predeterminado es **false**. que significa que la tabla se trunca. Si es True, la tabla se quita.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_resetsnapshotdeliveryprogress** quita todas las filas de la **MSsnapshotdeliveryprogress** tabla. Se quitan todos los metadatos que hayan quedado en la base de datos de suscripciones después de un progreso anterior que se haya realizado en los procesos de entrega de instantáneas.  
+## <a name="remarks"></a>Observaciones  
+ **sp_resetsnapshotdeliveryprogress** quita todas las filas de la tabla **MSsnapshotdeliveryprogress** . Se quitan todos los metadatos que hayan quedado en la base de datos de suscripciones después de un progreso anterior que se haya realizado en los procesos de entrega de instantáneas.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_resetsnapshotdeliveryprogress**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_resetsnapshotdeliveryprogress**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

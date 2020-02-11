@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629720"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Administrar una topología punto a punto (programación de la replicación con Transact-SQL)
@@ -37,10 +37,10 @@ ms.locfileid: "62629720"
   
 4.  Realice una copia masiva de los datos de la nueva tabla manualmente en todos los nodos mediante la utilidad [bcp](../../../tools/bcp-utility.md).  
   
-5.  Ejecute [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) para crear el nuevo artículo en cada nodo de la topología. Para más información, consulte [Define an Article](../publish/define-an-article.md).  
+5.  Ejecute [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) para crear el nuevo artículo en cada nodo en la topología. Para más información, consulte [Define an Article](../publish/define-an-article.md).  
   
     > [!NOTE]  
-    >  Una vez ejecutado [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), la replicación agrega automáticamente el artículo a las suscripciones de la topología.  
+    >  Una vez ejecutado [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) , la replicación agrega automáticamente el artículo a las suscripciones de la topología.  
   
 6.  Reinicie los agentes de distribución en cada nodo de la topología.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "62629720"
   
  [!code-sql[HowTo#sp_addp2particle_createarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_createarticle)]  
   
-## <a name="see-also"></a>Vea también  
- [Preguntas más frecuentes para administradores de replicación](frequently-asked-questions-for-replication-administrators.md)   
+## <a name="see-also"></a>Consulte también  
+ [Preguntas más frecuentes sobre la administración de replicación](frequently-asked-questions-for-replication-administrators.md)   
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Replicación transaccional punto a punto](../transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)  
   
   

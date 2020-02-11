@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4f23fd3d6d8208410c520676ee4e0c8bbe00fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922146"
 ---
 # <a name="backup-device-general-page"></a>Dispositivo de copia de seguridad (página General)
@@ -29,7 +29,7 @@ ms.locfileid: "62922146"
 -   [Ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 ## <a name="options"></a>Opciones  
- **Nombre de dispositivo**  
+ **Nombre del dispositivo**  
  Muestra el nombre de un dispositivo lógico de copia de seguridad existente o especifica el nombre de un dispositivo lógico de copia de seguridad nuevo.  
   
  **Cinta**  
@@ -52,7 +52,7 @@ ms.locfileid: "62922146"
     > [!IMPORTANT]  
     >  La realización de copias de seguridad de datos a través de una red está expuesta a errores; una vez completada, es recomendable comprobar la operación de copia de seguridad. Para obtener más información, vea [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las copias de seguridad de uno o varios dispositivos de copia de seguridad constituyen un solo conjunto de medios. Un *conjunto de medios* es una colección ordenada de medios de copia de seguridad, cintas o archivos de disco en la que se han escrito una o más operaciones de copia de seguridad mediante un tipo y un número fijos de dispositivos de copia de seguridad. Para obtener más información sobre los conjuntos de medios, vea [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
  El dispositivo físico de copia de seguridad correspondiente a un dispositivo lógico de copia de seguridad se inicializa cuando la primera copia de seguridad del conjunto de medios se escribe en el dispositivo lógico. Si el dispositivo físico de copia de seguridad es un archivo que aún no existe, se crea en ese momento.  
@@ -63,7 +63,7 @@ ms.locfileid: "62922146"
   
 -   [Definir un dispositivo lógico de copia de seguridad en una unidad de cinta &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [Especificar un disco o una cinta como destino de copia de seguridad &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Especifique un disco o una cinta como destino de copia de seguridad &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [Eliminar un dispositivo de copia de seguridad &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62922146"
   
 -   [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](backup-devices-sql-server.md)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211501"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar un equipo de host múltiple para el acceso a SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "68211501"
   
  Antes de continuar con este tema, debe conocer la información que se proporciona en el tema [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md). Este tema contiene información básica sobre cómo funcionan los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el firewall.  
   
- **Las suposiciones para este ejemplo son:**  
+ **Suposiciones para este ejemplo:**  
   
 -   Hay dos adaptadores de red instalados en el equipo. Algunos de los adaptadores de red pueden ser inalámbricos. Puede simular el uso de dos adaptadores de red utilizando la dirección IP de uno y la dirección IP de bucle invertido (127.0.0.1) como segundo adaptador de red.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68211501"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>Para determinar las direcciones IP disponibles en el equipo  
   
-1.  En el equipo en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, haga clic en **iniciar**, haga clic en **ejecutar**, tipo `cmd` y, a continuación, [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+1.  En el equipo en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está instalado, haga clic en **Inicio**, haga `cmd` clic en [!INCLUDE[clickOK](../../includes/clickok-md.md)] **Ejecutar**, escriba y, a continuación,.  
   
 2.  En la ventana del símbolo del sistema, escriba `ipconfig,` y presione ENTRAR para mostrar las direcciones IP disponibles en este equipo.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "68211501"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Para determinar las direcciones IP y los puertos que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  Haga clic en **Inicio**, elija **Todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], seleccione **Herramientas de configuración** y, después, haga clic en **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
+1.  Haga clic en **Inicio**, elija **Todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], seleccione **Herramientas de configuración** y, después, haga clic en **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
   
-2.  En el panel de la consola del **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , expanda **Configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Protocolos de \<nombre de instancia>** . Después, haga doble clic en **TCP/IP**.  
+2.  En ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, en el panel de la consola, expanda ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuración de red**, **protocolos de nombre \<de instancia>** y, a continuación, haga doble clic en **TCP/IP**.  
   
-3.  En el cuadro de diálogo **Propiedades de TCP/IP** , en la pestaña **Direcciones IP** , aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP configurada en el equipo.  
+3.  En el cuadro de diálogo **Propiedades de TCP/IP**, en la pestaña **Direcciones IP**, aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP configurada en el equipo.  
   
 4.  Para cualquier dirección IP, si el cuadro de diálogo **Puertos dinámicos TCP** contiene **0**, indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] escucha en los puertos dinámicos. Este ejemplo usa puertos fijos en lugar de puertos dinámicos que podrían cambiarse después de reiniciar. Por lo tanto, si el cuadro de diálogo **Puertos dinámicos TCP** contiene **0**, elimine el 0.  
   
@@ -85,13 +85,13 @@ ms.locfileid: "68211501"
   
 1.  En el equipo en el que está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inicie sesión como administrador.  
   
-2.  Haga clic en **iniciar**, haga clic en **ejecutar**, tipo `wf.msc`y haga clic en **Aceptar**.  
+2.  Haga clic en **Inicio**, haga clic `wf.msc`en **Ejecutar**, escriba y haga clic en **Aceptar**.  
   
 3.  En el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Continuar** para usar las credenciales de administrador para abrir Firewall de windows con el complemento Seguridad avanzada.  
   
 4.  En la página **Información general** , confirme que Firewall de Windows esté habilitado.  
   
-5.  En el panel izquierdo, haga clic en **Reglas de entrada**.  
+5.  En el panel izquierdo, haga clic en **reglas de entrada**.  
   
 6.  Haga clic con el botón derecho en **Reglas de entrada**y, después, haga clic en **Nueva regla** para abrir el **Asistente para nueva regla de entrada**.  
   
@@ -138,8 +138,8 @@ ms.locfileid: "68211501"
   
 9. Para configurar las otras direcciones IP en un equipo de host múltiple, repita este procedimiento con otra dirección IP y otra regla.  
   
-## <a name="see-also"></a>Vea también  
- [Servicio SQL Server Browser &#40;motor de base de datos y SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+## <a name="see-also"></a>Consulte también  
+ [Motor de base de datos de &#40;de servicio de SQL Server Browser y SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Conectarse a SQL Server a través de un servidor proxy &#40;Administrador de configuración de SQL Server&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ÁMBITO (instrucción, MDX) | Microsoft Docs
+title: SCOPE (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138279"
 ---
 # <a name="mdx-scripting---scope"></a>Scripting de MDX: SCOPE
@@ -72,18 +72,18 @@ Limited_Set ::=
  *single_tuple*  
  Una tupla sencilla.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La instrucción SCOPE determina el subcubo que se verá afectado por la ejecución de una o más de las instrucciones MDX. A menos que una instrucción MDX esté contenida en una instrucción SCOPE, el ámbito implícito de una instrucción MDX es la totalidad del cubo.  
   
 > [!NOTE]  
 >  Los miembros oculto se exponen en las instrucciones SCOPE.  
   
- Las instrucciones SCOPE crearán subcubos que exponen "agujeros" con independencia de la **MDX Compatibility** configuración. Por ejemplo, la instrucción `Scope( Customer.State.members )` puede incluir estados de países o regiones que no contienen estados, pero para los que se han insertado miembros de marcadores de posición invisibles.  
+ Las instrucciones SCOPE crearán subcubos que exponen "huecos" independientemente de la configuración de **compatibilidad de MDX** . Por ejemplo, la instrucción `Scope( Customer.State.members )` puede incluir estados de países o regiones que no contienen estados, pero para los que se han insertado miembros de marcadores de posición invisibles.  
   
  Los miembros calculados y los conjuntos con nombre creados en una instrucción SCOPE no se ven afectados por la instrucción SCOPE.  
   
 ## <a name="example"></a>Ejemplo  
- Solución de ejemplo el siguiente ejemplo, desde el script de cálculo MDX en el de Adventure Works, define el ámbito actual como fiscal quarter del año fiscal 2005 y la medida sales amount quota y, a continuación, asigna un valor a las celdas en el ámbito actual mediante el uso de la  **ParallelPeriod** función. En el ejemplo, a continuación, modifica el ámbito mediante otra instrucción SCOPE y, a continuación, realiza otra asignación mediante el [This (MDX)](../mdx/this-mdx.md) función.  
+ En el ejemplo siguiente, desde el script de cálculo MDX de la solución de ejemplo Adventure Works, se define el ámbito actual como fiscal Quarter en el año fiscal 2005 y la medida sales amount quota y, a continuación, se asigna un valor a las celdas del ámbito actual mediante la función **ParallelPeriod** . A continuación, el ejemplo modifica el ámbito mediante otra instrucción SCOPE y, a continuación, realiza otra asignación mediante la función [this (MDX)](../mdx/this-mdx.md) .  
   
 ```  
 Scope   
@@ -113,7 +113,7 @@ Scope
 End Scope ;     
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones para scripting de MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Instrucciones de scripting de MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

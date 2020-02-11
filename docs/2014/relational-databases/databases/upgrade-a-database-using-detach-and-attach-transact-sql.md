@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290454026cc87819bf9ffcf73329bb562e3dc5a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916779"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Actualizar una base de datos mediante Separar y Adjuntar (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "62916779"
   
 -   **Para actualizar una base de datos de SQL Server:**  
   
-     [Usando operaciones de separar y adjuntar](#SSMSProcedure)  
+     [Usar operaciones de separar y adjuntar](#SSMSProcedure)  
   
--   **Seguimiento:**  [Después de actualizar una base de datos de SQL Server](#FollowUp)  
+-   **Seguimiento:**  [después de actualizar una base de datos de SQL Server](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -56,11 +56,11 @@ ms.locfileid: "62916779"
     -   Si adjunta la base de datos a una instancia de servidor diferente, sin que importe la versión, debe ejecutar **sp_removedbreplication** para quitar la replicación una vez completada la operación de adjuntar. Para obtener más información, vea [sp_removedbreplication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql).  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
- Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
+ Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar una base de datos de un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos en un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Para actualizar una base de datos mediante las operaciones de separar y adjuntar  
+##  <a name="SSMSProcedure"></a>Para actualizar una base de datos mediante separar y adjuntar  
   
-1.  Separe la base de datos. Para obtener más información, vea [Separar una base de datos](detach-a-database.md)  
+1.  Separe la base de datos. Para obtener más información, vea [separar una base de datos](detach-a-database.md).  
   
 2.  También puede mover los archivos de la base de datos separada y los archivos de registro.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62916779"
     > [!NOTE]  
     >  Si intenta adjuntar la base de datos sin especificar el archivo de registro, la operación de adjuntar buscará el archivo de registro en su ubicación original. Si la copia original del registro todavía está en esa ubicación, se adjuntará esa copia. Para evitar que se utilice el archivo de registro original, especifique la ruta de acceso del nuevo archivo de registro o elimine la copia original del archivo de registro (después de copiarlo en la nueva ubicación).  
   
-3.  Adjunte los archivos copiados a la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, consulte [Attach a Database](attach-a-database.md).  
+3.  Adjunte los archivos copiados a la instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para más información, consulte [Asociar una base de datos](attach-a-database.md).  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente actualiza una copia de una base de datos de una versión anterior de SQL Server. Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] se ejecutan en una ventana del Editor de consultas que esté conectada a la instancia del servidor a la que se ha adjuntado.  
@@ -88,7 +88,7 @@ ms.locfileid: "62916779"
     > [!IMPORTANT]  
     >  En el caso de una base de datos de producción, coloque la base de datos y el registro de transacciones en discos independientes.  
   
-     Para copiar archivos a través de la red en un disco de un equipo remoto, use el nombre UNC (Convención de nomenclatura universal) de la ubicación remota. Un nombre UNC toma la forma **\\\\**_nombreDeServidor_**\\**_nombreDelRecursoCompartido_**\\**_rutaDeAcceso_**\\**_nombreDeArchivo_. De la misma forma que al escribir archivos en el disco duro local, se debe conceder a la cuenta de usuario que usa la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]los permisos necesarios para leer o escribir en archivos del disco remoto.  
+     Para copiar archivos a través de la red en un disco de un equipo remoto, use el nombre UNC (Convención de nomenclatura universal) de la ubicación remota. Un nombre UNC toma la forma ** \\ ** _ServerName_**\\**_nombreDeRecursoCompartido_**\\**_rutaDeAcceso_**\\**_nombreDeArchivo_. De la misma forma que al escribir archivos en el disco duro local, se debe conceder a la cuenta de usuario que usa la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]los permisos necesarios para leer o escribir en archivos del disco remoto.  
   
 3.  Adjunte la base de datos movida y, opcionalmente, su registro ejecutando la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62916779"
   
      En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], una base de datos recién adjuntada no es inmediatamente visible en el Explorador de objetos. Para ver la base de datos, en el Explorador de objetos, haga clic en **Ver** y, a continuación, en **Actualizar**. Cuando se expande el nodo **Bases de datos** en el Explorador de objetos, la base de datos recién adjuntada aparecerá en la lista de bases de datos.  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de actualizar una base de datos de SQL Server  
+##  <a name="FollowUp"></a>Seguimiento: después de actualizar una base de datos de SQL Server  
  Si la base de datos tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor **upgrade_option** . Si la opción de actualización se establece en importar (**upgrade_option** = 2) o en volver a generar (**upgrade_option** = 0), los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Observe también que cuando la opción de actualización se establece en importar, se vuelven a generar los índices de texto completo asociados si no se dispone de un catálogo de texto completo. Para cambiar el valor de la propiedad de servidor **upgrade_option** , use [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql).  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>Nivel de compatibilidad de la base de datos después de la actualización  
@@ -114,6 +114,7 @@ ms.locfileid: "62916779"
  Al adjuntar una base de datos a otra instancia de servidor, para que los usuarios y las aplicaciones puedan utilizarla de igual manera, puede que tenga que volver a crear algunos o todos los metadatos de la base de datos, como los inicios de sesión, los trabajos y los permisos, en la otra instancia de servidor. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ### <a name="service-master-key-and-database-master-key-encryption-changes-from-3des-to-aes"></a>La clave maestra de servicio y el cifrado de la clave maestra de la base de datos cambia de 3DES a AES  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores usan el algoritmo de cifrado AES para proteger la clave maestra de servicio (SMK) y la clave maestra de la base de datos (DMK). AES es un algoritmo de cifrado más reciente que el algoritmo 3DES empleado en versiones anteriores. La primera vez que se adjunta una base de datos o se restaura en una instancia nueva de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], aún no se ha almacenado una copia de la clave maestra de la base de datos (cifrada por la clave maestra de servicio) en el servidor. Debe usar la instrucción `OPEN MASTER KEY` para descifrar la clave maestra de la base de datos (DMK). Una vez que se ha descifrado la clave maestra de la base de datos, tiene la posibilidad de habilitar el descifrado automático en el futuro usando la instrucción `ALTER MASTER KEY REGENERATE` para proporcionar al servidor una copia de la clave maestra de la base de datos cifrada con la clave maestra de servicio (SMK). Cuando una base de datos se haya actualizado desde una versión anterior, se debe volver a generar la DMK para usar el algoritmo AES más reciente. Para obtener más información sobre cómo volver a generar la DMK, vea [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql). El tiempo necesario para volver a generar la DMK con el fin de actualizarse a AES depende del número de objetos protegidos por la DMK. Solo es necesario volver a generar la DMK una vez y no tiene ningún efecto sobre las nuevas generaciones futuras como parte de una estrategia de rotación de claves.  
+ 
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores usan el algoritmo de cifrado AES para proteger la clave maestra de servicio (SMK) y la clave maestra de la base de datos (DMK). AES es un algoritmo de cifrado más reciente que el algoritmo 3DES empleado en versiones anteriores. La primera vez que se adjunta una base de datos o se restaura en una instancia nueva de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], aún no se ha almacenado una copia de la clave maestra de la base de datos (cifrada por la clave maestra de servicio) en el servidor. Debe usar la instrucción `OPEN MASTER KEY` para descifrar la clave maestra de la base de datos (DMK). Una vez que se ha descifrado la clave maestra de la base de datos, tiene la posibilidad de habilitar el descifrado automático en el futuro usando la instrucción `ALTER MASTER KEY REGENERATE` para proporcionar al servidor una copia de la clave maestra de la base de datos cifrada con la clave maestra de servicio (SMK). Cuando una base de datos se haya actualizado desde una versión anterior, se debe volver a generar la DMK para usar el algoritmo AES más reciente. Para obtener más información sobre cómo volver a generar la DMK, vea [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql). El tiempo necesario para volver a generar la DMK con el fin de actualizarse a AES depende del número de objetos protegidos por la DMK. Solo es necesario volver a generar la DMK una vez y no tiene ningún efecto sobre las nuevas generaciones futuras como parte de una estrategia de rotación de claves.  
   
   

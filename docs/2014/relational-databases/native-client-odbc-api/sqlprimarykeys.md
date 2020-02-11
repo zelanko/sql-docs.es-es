@@ -15,28 +15,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a12392f9e70fec2fae3b7790b43f12779b8868b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046699"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
-  Una tabla puede tener una o varias columnas que pueden actuar como identificadores de fila únicos, y las tablas creadas sin una restricción PRIMARY KEY devuelven un conjunto a SQLPrimaryKeys de resultados vacío. La función ODBC [SQLSpecialColumns](sqlspecialcolumns.md) candidatos para las tablas sin claves principales del identificador de fila de los informes.  
+  Una tabla puede tener una o varias columnas que pueden actuar como identificadores de fila únicos y las tablas creadas sin una restricción PRIMAry KEY devuelven un conjunto de resultados vacío a SQLPrimaryKeys. La función ODBC [SQLSpecialColumns](sqlspecialcolumns.md) informa de los candidatos de identificador de fila para las tablas sin claves principales.  
   
- SQLPrimaryKeys devuelve SQL_SUCCESS si existen o no valores para *CatalogName*, *SchemaName*, o *TableName* parámetros. SQLFetch devuelve SQL_NO_DATA cuando se usan valores no válidos en estos parámetros.  
+ SQLPrimaryKeys devuelve SQL_SUCCESS si existen o no valores para los parámetros *nombrecatálogo*, *SchemaName*o *TableName* . SQLFetch devuelve SQL_NO_DATA si se usan valores no válidos en estos parámetros.  
   
- SQLPrimaryKeys se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar SQLPrimaryKeys en un cursor actualizable (dinámico o conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO, que indica que se ha cambiado el tipo de cursor.  
+ SQLPrimaryKeys se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar SQLPrimaryKeys en un cursor actualizable (dinámico o de conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO que indica que se ha cambiado el tipo de cursor.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el *CatalogName* parámetro: *Nombre_servidor_vinculado.nombre_catálogo*.  
+ El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el parámetro *CatalogName* : *Linked_Server_Name.Catalog_Name*.  
   
 ## <a name="sqlprimarykeys-and-table-valued-parameters"></a>SQLPrimaryKeys y parámetros con valores de tabla  
- Si el atributo de instrucción SQL_SOPT_SS_NAME_SCOPE tiene el valor SQL_SS_NAME_SCOPE_TABLE_TYPE, en lugar de su valor predeterminado de SQL_SS_NAME_SCOPE_TABLE, SQLPrimaryKeys devolverá información sobre las columnas de clave principal de tipos de tabla. Para obtener más información sobre SQL_SOPT_SS_NAME_SCOPE, vea [SQLSetStmtAttr](sqlsetstmtattr.md).  
+ Si el atributo de instrucción SQL_SOPT_SS_NAME_SCOPE tiene el valor SQL_SS_NAME_SCOPE_TABLE_TYPE, en lugar de su valor predeterminado de SQL_SS_NAME_SCOPE_TABLE, SQLPrimaryKeys devolverá información sobre las columnas de clave principal de los tipos de tabla. Para obtener más información sobre SQL_SOPT_SS_NAME_SCOPE, vea [SQLSetStmtAttr](sqlsetstmtattr.md).  
   
- Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>Vea también  
- [Función SQLPrimaryKeys](https://go.microsoft.com/fwlink/?LinkId=59361)   
- [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQLPrimaryKeys función)](https://go.microsoft.com/fwlink/?LinkId=59361)   
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

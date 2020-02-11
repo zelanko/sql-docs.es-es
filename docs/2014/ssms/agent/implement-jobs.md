@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63074030"
 ---
 # <a name="implement-jobs"></a>Implementar trabajos
@@ -33,17 +33,17 @@ ms.locfileid: "63074030"
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |Contiene información sobre cómo crear trabajos y asignar su propiedad.|[Crear trabajos](create-jobs.md)|  
-|Contiene información sobre cómo organizar trabajos en categorías.|[Organizar los trabajos](organize-jobs.md)|  
+|Contiene información sobre cómo organizar trabajos en categorías.|[organizar los trabajos](organize-jobs.md)|  
 |Contiene información acerca de los diferentes tipos de pasos de trabajo que puede crear y cómo administrarlos.|[Administrar pasos de trabajo](manage-job-steps.md)|  
 |Contiene información acerca de cómo definir cuándo se iniciarán los trabajos que se ejecutan y la frecuencia con la que deben ejecutarse.|[Crear y adjuntar programaciones a trabajos](create-and-attach-schedules-to-jobs.md)|  
 |Contiene información acerca de la ejecución manual de trabajos (sin una programación).|[Ejecutar trabajos](run-jobs.md)|  
 |Contiene información acerca de cómo se puede configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que responda a los trabajos. Por ejemplo, se puede configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que notifique a los administradores cuándo finalicen los trabajos.|[Especificar respuestas de trabajos](specify-job-responses.md)|  
 |Contiene información acerca de cómo ver los trabajos existentes, su historial cuando se han ejecutado y cómo modificarlos.|[Ver o modificar trabajos](view-or-modify-jobs.md)|  
-|Contiene información acerca de cómo eliminar trabajos.|[Eliminar trabajos](delete-jobs.md)|  
+|Contiene información acerca de cómo eliminar trabajos.|[eliminar trabajos](delete-jobs.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md)  
   
   

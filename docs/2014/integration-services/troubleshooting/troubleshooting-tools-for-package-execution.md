@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cd39b7315903335fe2370ae148579f3fe9d07abc
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637803"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Herramientas para solucionar problemas con la ejecución de paquetes
@@ -36,14 +36,14 @@ ms.locfileid: "73637803"
   
  También se pueden aplicar las siguientes sugerencias y técnicas para evitar la generación de problemas al ejecutar paquetes:  
   
--   **Ayudar a garantizar la integridad de los datos mediante el uso de transacciones**. Para obtener más información, vea [Transacciones de Integration Services](../integration-services-transactions.md).  
+-   **Ayudar a garantizar la integridad de los datos mediante el uso de transacciones**. Para más información, vea [Transacciones de Integration Services](../integration-services-transactions.md).  
   
--   **Reiniciar los paquetes desde el momento del error mediante el uso de puntos de comprobación**. Para obtener más información, consulte [Reinicio de paquetes usando puntos de control](../packages/restart-packages-by-using-checkpoints.md).  
+-   **Reiniciar los paquetes desde el momento del error mediante el uso de puntos de comprobación**. Para obtener más información, vea [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Detectar y controlar errores de paquetes mediante controladores de eventos  
  Se puede responder a los diversos eventos que generan el paquete y los objetos del paquete utilizando controladores de eventos.  
   
--   **Crear un controlador de eventos para el evento OnError**. En el controlador de eventos, puede utilizar una tarea Enviar correo para notificar sobre el error a un administrador, emplear una tarea Script y la lógica personalizada a fin de obtener información del sistema para solucionar problemas, o bien limpiar recursos temporales o salidas incompletas. Para obtener más información, vea [Controladores de eventos de Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md).  
+-   **Crear un controlador de eventos para el evento OnError**. En el controlador de eventos, puede utilizar una tarea Enviar correo para notificar sobre el error a un administrador, emplear una tarea Script y la lógica personalizada a fin de obtener información del sistema para solucionar problemas, o bien limpiar recursos temporales o salidas incompletas. Para más información, vea [Controladores de eventos de Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md).  
   
 ## <a name="troubleshoot-bad-data-by-using-error-outputs"></a>Solución de problemas de datos incorrectos mediante las salidas de error  
  Se puede utilizar la salida de error disponible en varios componentes de flujo de datos para dirigir las filas que contienen errores a un destino independiente para su análisis posterior.  
@@ -98,7 +98,7 @@ ms.locfileid: "73637803"
      Es posible establecer la propiedad `DelayValidation` para una tarea Flujo de datos, pero no para componentes individuales de flujo de datos. Se puede obtener un resultado similar estableciendo la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> para componentes individuales de flujo de datos en `false`. No obstante, cuando el valor de esta propiedad es `false`, el componente no detecta los cambios realizados en los metadatos de los orígenes de datos externos. Cuando se la establece en `true`, la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> puede ayudar a evitar problemas de bloqueo causados por bloqueos en la base de datos, en especial cuando el paquete está utilizando transacciones.  
   
 ## <a name="troubleshoot-run-time-permissions-issues"></a>Solución de problemas de permisos en tiempo de ejecución  
- Si surgen errores al intentar ejecutar paquetes implementados mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede suceder que las cuentas que utiliza el Agente no cuenten con los permisos necesarios. Para obtener información sobre cómo solucionar problemas de los paquetes que se ejecutan desde trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea el artículo [Un paquete SSIS no se ejecuta al llamar al paquete SSIS desde un paso de trabajo de Agente SQL Server](https://support.microsoft.com/kb/918760). Para más información sobre cómo ejecutar paquetes desde trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Trabajos del Agente SQL Server para paquetes](../packages/sql-server-agent-jobs-for-packages.md).  
+ Si surgen errores al intentar ejecutar paquetes implementados mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede suceder que las cuentas que utiliza el Agente no cuenten con los permisos necesarios. Para obtener información sobre cómo solucionar problemas de los paquetes que se ejecutan desde trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea el artículo [Un paquete SSIS no se ejecuta al llamar al paquete SSIS desde un paso de trabajo de Agente SQL Server](https://support.microsoft.com/kb/918760). Para más información sobre cómo ejecutar paquetes desde trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Trabajos del Agente SQL Server para paquetes](../packages/sql-server-agent-jobs-for-packages.md).  
   
  Para establecer conexión con orígenes de datos de Excel o Access, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita una cuenta que tenga permiso para leer, escribir, crear y eliminar archivos temporales en la carpeta especificada por las variables de entorno TMP y TEMP.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "73637803"
 ## <a name="troubleshoot-errors-without-a-description"></a>Solución de problemas de errores sin descripción  
  Si se encuentra un error de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que no tiene ninguna descripción asociada, puede ver la descripción en [Referencia de errores y mensajes de Integration Services](../integration-services-error-and-message-reference.md) buscando el error por su número. En este momento, la lista no incluye información sobre cómo solucionar problemas.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  

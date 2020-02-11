@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13b7f6a2e34d7819b930d919e9fd773e2c993d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63010682"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Reconciliar los cambios realizados por varios usuarios (Visual Database Tools)
@@ -58,7 +58,7 @@ ms.locfileid: "63010682"
   
      En este caso, no podrá confirmar sus cambios en la base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cuadro de diálogo Se han detectado cambios en la base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

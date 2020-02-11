@@ -14,10 +14,10 @@ ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 691d7e30fd64e99970fa22ee0f551162be945c36
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728456"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>Crear un atributo de texto (Master Data Services)
@@ -33,16 +33,16 @@ ms.locfileid: "73728456"
   
 -   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Debe existir una entidad para la que crear el atributo. Para obtener más información, consulte [Crear una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
+-   Debe existir una entidad para la que crear el atributo. Para obtener más información, vea [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
 ## <a name="attribute-information"></a>Información de atributo  
  Por cada atributo creado, se agrega una fila con siete columnas a la cuadrícula. En la siguiente tabla se describen las columnas.  
   
 |Columna|Descripción|  
 |------------|-----------------|  
-|Estado|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icon para actualizar el estado ") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icon para estado de error ") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icon para el estado correcto ") .|  
-|NOMBRE|El nombre del atributo.|  
-|Nombre para mostrar|Nombre para mostrar del atributo.|  
+|Status|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|  
+|Nombre|El nombre del atributo.|  
+|Display Name (Nombre para mostrar)|Nombre para mostrar del atributo.|  
 |Descripción|Descripción del atributo.|  
 |Ancho de píxel de la pantalla|Ancho del atributo.|  
 |Tipo y propiedades|Tipo e información sobre el tipo de datos del atributo.|  
@@ -50,13 +50,13 @@ ms.locfileid: "73728456"
   
  Cuando se hace clic en un atributo, se muestra la siguiente información.  
   
--   **Creado por:** nombre del usuario que creó el atributo.  
+-   **Creado por**: el nombre del usuario que creó el atributo.  
   
--   **El**: fecha y hora en que se creó el atributo.  
+-   El: fecha y hora **en**que se creó el atributo.  
   
--   **Actualizado por**: nombre del último usuario que actualizó el atributo.  
+-   **Actualizado por**: el nombre del usuario que actualizó el atributo por última vez.  
   
--   **El**: fecha y hora en que se actualizó el atributo por última vez.  
+-   El: fecha y hora **en**que se actualizó por última vez el atributo.  
   
 ### <a name="to-create-a-text-attribute"></a>Crear un atributo de texto  
   
@@ -90,12 +90,12 @@ ms.locfileid: "73728456"
   
 12. Si lo desea, seleccione **Habilitar seguimiento de cambios** para realizar el seguimiento de los cambios en los grupos de atributos. Para obtener más información, consulte [Agregar atributos a un grupo de seguimiento de cambios &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   
-13. Haga clic en **Guardar**.  
+13. Haga clic en **Save**(Guardar).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [Cambiar el nombre y el tipo de datos de un atributo &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [Crear un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Crear un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
+ [Cambiar el nombre de un atributo y el tipo de datos &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [Cree un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [Cree un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

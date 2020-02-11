@@ -15,39 +15,39 @@ ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990720"
 ---
 # <a name="numeric-literal-syntax"></a>Sintaxis de los literales numéricos
-Literales numéricos en ODBC, se usa la sintaxis siguiente:  
+La siguiente sintaxis se utiliza para los literales numéricos en ODBC:  
   
- *numeric-literal* ::= *signed-numeric-literal &#124; unsigned-numeric-literal*  
+ *Numeric-literal* :: = *signed-numeric-literal &#124; unsigned-Numeric-literal*  
   
- *literal numérico firmado* :: = [*sesión*] *literal numérico sin signo*  
+ *signed-Numeric-literal* :: = [*signo*] *unsigned-literal-literal*  
   
- *unsigned-numeric-literal* ::= *exact-numeric-literal &#124; approximate-numeric-literal*  
+ *unsigned-Numeric-literal* :: = *Exact-numeric-literal &#124; aproximada-Numeric-literal*  
   
- *literal numérico exacto* :: = *entero sin signo* [*período*[*entero sin signo*]]  *&#124;período entero sin signo*  
+ *Exact-Numeric-literal* :: = *unsigned-Integer* [*period*[*unsigned-Integer*]] *&#124;period sin signo-entero*  
   
- *inicio de sesión* :: = *signo &#124; signo menos*  
+ *Sign* :: = *plus-Sign &#124; signo menos*  
   
- *literal numérico aproximado* :: = *exponente mantisa E*  
+ *aproximado-Numeric-literal* :: = *mantisa E exponente*  
   
- *mantissa* ::= *exact-numeric-literal*  
+ *mantisa* :: = *Exact-Numeric-literal*  
   
- *exponent* ::= *signed-integer*  
+ *exponente* :: = *signed-Integer*  
   
- *entero firmado* :: = [*sesión*] *entero sin signo*  
+ *signed-Integer* :: = [*Sign*] *unsigned-Integer*  
   
- *entero unsigned* :: = *dígitos...*  
+ *unsigned-Integer* :: = *digit...*  
   
- *signo* :: = *+*  
+ *signo más* :: =*+*  
   
- *signo* :: = -  
+ signo *menos* :: =-  
   
- *digit* ::= 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *digit* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
- *período* :: =.
+ *period* :: =.

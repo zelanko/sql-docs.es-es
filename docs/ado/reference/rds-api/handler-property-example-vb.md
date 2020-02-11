@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de la propiedad de controlador (VB) | Microsoft Docs
+title: Ejemplo de propiedad de controlador (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,19 +15,19 @@ ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a72e393716d3d24fdb9f0f95be9faae85651696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964102"
 ---
 # <a name="handler-property-example-vb"></a>Ejemplo de la propiedad de controlador (VB)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Este ejemplo se muestra el [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto [controlador](../../../ado/reference/rds-api/handler-property-rds.md) propiedad. (Consulte [personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) para obtener más detalles.)  
+ En este ejemplo se muestra la propiedad de [controlador](../../../ado/reference/rds-api/handler-property-rds.md) de objetos [DataControl de RDS](../../../ado/reference/rds-api/datacontrol-object-rds.md) . (Consulte [Personalización de factoría](../../../ado/guide/remote-data-service/datafactory-customization.md) de datos para obtener más detalles).  
   
- Supongamos que las siguientes secciones del archivo de parámetros, Msdfmap.ini, se encuentran en el servidor:  
+ Suponga que las siguientes secciones del archivo de parámetros, MSDFMAP. ini, se encuentran en el servidor:  
   
 ```  
 [connect AuthorDataBase]  
@@ -37,7 +37,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- El código tiene el siguiente aspecto. El comando asignado a la [SQL](../../../ado/reference/rds-api/sql-property.md) coincidirá con la propiedad la ***AuthorById*** identificador y recuperará una fila por Michael O'Leary autor. El **DataControl** objeto **Recordset** propiedad se asigna a un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto únicamente como una comodidad de codificación.  
+ El código tiene un aspecto similar al siguiente. El comando que se asigna a la propiedad [SQL](../../../ado/reference/rds-api/sql-property.md) coincidirá con el identificador ***AuthorById*** y recuperará una fila para el autor Michael O'Leary. La propiedad **Recordset** del objeto **DataControl** se asigna a un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) desconectado únicamente como una comodidad de codificación.  
   
 ```  
 'BeginHandlerVB  
@@ -78,7 +78,7 @@ End Sub
 'EndHandlerVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Propiedad de controlador (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
 

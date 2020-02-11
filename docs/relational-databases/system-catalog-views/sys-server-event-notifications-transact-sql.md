@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_notifications (Transact-SQL) | Microsoft Docs
+title: Sys. server_event_notifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,24 +20,24 @@ ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e3eaa1bdfa45e0c3e0b0412b8852e134c43c3eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124989"
 ---
-# <a name="sysservereventnotifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
+# <a name="sysserver_event_notifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada objeto de notificación de eventos de nivel de servidor.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nombre de notificación de eventos de servidor. Este nombre es único en todas las notificaciones de eventos de nivel de servidor.|  
-|**object_id**|**int**|Número de identificación del objeto. Es único dentro de la **maestro** base de datos.|  
+|**Name**|**sysname**|Nombre de notificación de eventos de servidor. Este nombre es único en todas las notificaciones de eventos de nivel de servidor.|  
+|**object_id**|**int**|Número de identificación del objeto. Es único en la base de datos **maestra** .|  
 |**parent_class**|**tinyint**|Clase del elemento primario. Siempre es 100 = Servidor.|  
-|**parent_class_desc**|**nvarchar(60)**|Descripción de la clase de elemento primario. Siempre es SERVER.|  
-|**parent_id**|**int**|Es siempre 0.|  
+|**parent_class_desc**|**nvarchar (60)**|Descripción de la clase de elemento primario. Siempre es SERVER.|  
+|**parent_id**|**int**|Siempre es 0.|  
 |**create_date**|**datetime**|Fecha de creación.|  
 |**modify_date**|**datetime**|Es la fecha en que el objeto ha sido modificado por última vez mediante la instrucción ALTER.|  
 |**service_name**|**nvarchar(256)**|Nombre del servicio de destino al que se envía la notificación.|  
@@ -48,8 +48,8 @@ ms.locfileid: "68124989"
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

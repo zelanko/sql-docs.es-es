@@ -16,13 +16,13 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68137770"
 ---
-# <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
+# <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve las filas de la tabla de conflictos especificada. Este procedimiento almacenado se ejecuta en el equipo donde se almacena la tabla de conflictos.  
@@ -41,39 +41,39 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%** . Si se especifica la publicación, se devuelven todos los conflictos calificados por la publicación. Por ejemplo, si la **MSmerge_conflict_Customers** tabla tiene filas de conflicto para la **WA** y **CA** publicaciones, pasando un nombre de publicación **CA**  recupera los conflictos que pertenecen a la **CA** publicación.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **%** **tipo sysname y su**valor predeterminado es. Si se especifica la publicación, se devuelven todos los conflictos calificados por la publicación. Por ejemplo, si la tabla **MSmerge_conflict_Customers** tiene filas de conflictos para las publicaciones **wa** y **CA** , pasar un nombre de publicación **CA** recupera los conflictos que pertenecen a la publicación de la **entidad de certificación** .  
   
-`[ @conflict_table = ] 'conflict_table'` Es el nombre de la tabla de conflictos. *conflict_table* es **sysname**, no tiene ningún valor predeterminado. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, las tablas de conflictos se denominan utilizando los nombres de formato con **MSmerge_conflict\__publicación\_artículo_** , con una tabla para cada artículo publicado.  
+`[ @conflict_table = ] 'conflict_table'`Es el nombre de la tabla de conflictos. *conflict_table* es de **tipo sysname**y no tiene ningún valor predeterminado. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, las tablas de conflictos se denominan con el artículo nombres de formato con **MSmerge_conflict\_publicación\_**, con una tabla para cada artículo publicado.  
   
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, su valor predeterminado es null.  
+`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @logical_record_conflicts = ] logical_record_conflicts` Indica si el conjunto de resultados contiene información sobre los conflictos de registros lógicos. *logical_record_conflicts* es **int**, con un valor predeterminado de 0. **1** indica que se devuelve información de conflictos de registros lógicos.  
+`[ @logical_record_conflicts = ] logical_record_conflicts`Indica si el conjunto de resultados contiene información sobre conflictos de registros lógicos. *logical_record_conflicts* es de **tipo int**y su valor predeterminado es 0. **1** indica que se devuelve información de conflictos de registros lógicos.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- **sp_helpmergeconflictrows** devuelve un conjunto que consta de la estructura de tabla base y estas columnas adicionales de resultados.  
+ **sp_helpmergeconflictrows** devuelve un conjunto de resultados que consta de la estructura de la tabla base y estas columnas adicionales.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**origin_datasource**|**varchar(255)**|Origen del conflicto.|  
-|**conflict_type**|**int**|Código que indica el tipo de conflicto:<br /><br /> **1** = conflicto de actualización: El conflicto se detecta en el nivel de fila.<br /><br /> **2** = conflicto de actualización de columna: El conflicto se detecta en el nivel de columna.<br /><br /> **3** = conflicto entre actualización Delete: La eliminación gana el conflicto.<br /><br /> **4** = conflicto entre actualización Delete: La columna rowguid eliminada que pierde el conflicto se registra en esta tabla.<br /><br /> **5** = error de inserción en carga: La inserción desde el suscriptor no pudo aplicarse en el publicador.<br /><br /> **6** = error de inserción en descarga: La inserción desde el publicador no pudo aplicarse en el suscriptor.<br /><br /> **7** = error de eliminación en carga: No se pudo cargar la eliminación en el suscriptor al publicador.<br /><br /> **8** = error de eliminación en descarga: No se pudo descargar la eliminación en el publicador al suscriptor.<br /><br /> **9** = error de actualización de carga: La actualización en el suscriptor no pudo aplicarse en el publicador.<br /><br /> **10** = error de actualización de descarga: La actualización en el publicador no pudo aplicarse al suscriptor.<br /><br /> **12** = eliminación de Wins de actualización del registro lógico: El registro lógico eliminado que pierde el conflicto se registra en esta tabla.<br /><br /> **13** = actualización de inserción de conflicto de registros lógicos: Inserte un conflictos de registro lógico con una actualización.<br /><br /> **14** = conflicto de actualización de Wins de eliminación de registros lógicos: El registro lógico actualizado que pierde el conflicto se registra en esta tabla.|  
+|**origin_datasource**|**VARCHAR(255**|Origen del conflicto.|  
+|**conflict_type**|**int**|Código que indica el tipo de conflicto:<br /><br /> **1** = conflicto de actualización: el conflicto se detecta en el nivel de fila.<br /><br /> **2** = conflicto de actualización de columna: el conflicto detectado en el nivel de columna.<br /><br /> **3** = conflicto de actualización de eliminación de WINS: la eliminación gana el conflicto.<br /><br /> **4** = conflicto de actualización WINS delete: el ROWGUID eliminado que pierde el conflicto se registra en esta tabla.<br /><br /> **5** = error en la inserción de carga: no se pudo aplicar la inserción del suscriptor en el publicador.<br /><br /> **6** = error en la inserción de descarga: no se pudo aplicar la inserción del publicador en el suscriptor.<br /><br /> **7** = error al eliminar la carga: no se pudo cargar la eliminación en el suscriptor en el publicador.<br /><br /> **8** = error al eliminar la descarga: no se pudo descargar la eliminación en el publicador en el suscriptor.<br /><br /> **9** = error al cargar la actualización: no se pudo aplicar la actualización en el suscriptor en el publicador.<br /><br /> **10** = error de actualización de descarga: no se pudo aplicar la actualización en el publicador al suscriptor.<br /><br /> **12** = actualización de registro lógico WINS eliminar: el registro lógico eliminado que pierde el conflicto se registra en esta tabla.<br /><br /> **13** = conflicto del registro lógico insertar actualización: la inserción en un registro lógico entra en conflicto con una actualización.<br /><br /> **14** = conflicto de actualización de WINS de registro lógico: el registro lógico actualizado que pierde el conflicto se registra en esta tabla.|  
 |**reason_code**|**int**|Código del error, que puede depender del contexto.|  
-|**reason_text**|**varchar(720)**|Descripción del error, que puede depender del contexto.|  
+|**reason_text**|**VARCHAR (720)**|Descripción del error, que puede depender del contexto.|  
 |**pubid**|**uniqueidentifier**|Identificador de la publicación.|  
 |**MSrepl_create_time**|**datetime**|Hora en que Se ha agregado la información del conflicto.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpmergeconflictrows** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor, el **db_owner** fijo de base de datos y el **replmonitor** en la base de datos de distribución pueden ejecutar **sp_helpmergeconflictrows**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** , el rol fijo de base de datos **db_owner** y el rol **replmonitor** en la base de datos de distribución pueden ejecutar **sp_helpmergeconflictrows**.  
   
-## <a name="see-also"></a>Vea también  
- [Ver información de conflictos para publicaciones de mezcla &#40;programación de Transact-SQL de replicación&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ver información de conflictos para publicaciones de combinación &#40;la programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

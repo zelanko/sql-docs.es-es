@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 57e5ed3215391d3a1b134db471e2f4f0393f4443
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127124"
 ---
 # <a name="srv_paramstatus-extended-stored-procedure-api"></a>srv_paramstatus (API de procedimiento almacenado extendido)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
  Devuelve el estado de un parámetro de llamada a un procedimiento almacenado remoto determinado.  
   
@@ -56,9 +57,9 @@ n
  Indica el número del parámetro. El primer parámetro es número 1.  
   
 ## <a name="returns"></a>Devuelve  
- Un `int` que contiene marcas de estado para el parámetro. Actualmente, hay solo un marcador: Si el bit 0 está establecido en 1, el parámetro es un parámetro de retorno. Si no existe ningún parámetro *n* o no hay ningún procedimiento almacenado remoto, devuelve -1.  
+ Un `int` que contiene marcas de estado para el parámetro. Actualmente solo hay una marca: si el bit 0 está establecido en 1, el parámetro es un parámetro de retorno. Si no existe ningún parámetro *n* o no hay ningún procedimiento almacenado remoto, devuelve -1.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta rutina devuelve las marcas de estado de un parámetro de llamada a un procedimiento almacenado remoto.  
   
  Los parámetros contienen datos que se pasan entre los clientes y la aplicación con procedimientos almacenados remotos. El cliente puede especificar ciertos parámetros como parámetros de retorno. Estos parámetros de retorno pueden contener valores que la aplicación devuelve al cliente.  
@@ -70,7 +71,7 @@ n
 > [!IMPORTANT]  
 >  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Vea también  
- [srv_rpcparams &#40;API de procedimiento almacenado extendido&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>Consulte también  
+ [srv_rpcparams API de procedimiento almacenado extendido &#40;&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
   
   

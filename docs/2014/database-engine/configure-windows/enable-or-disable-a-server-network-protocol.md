@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 917abf00789cfca75ee6edb52ffef07832bfe981
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783039"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Habilitar o deshabilitar un protocolo de red de servidor
@@ -34,7 +34,7 @@ ms.locfileid: "72783039"
 >  Durante la instalación de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se agrega un inicio de sesión para el grupo BUILTIN\Users. Esto permite que todos los usuarios autenticados del equipo tengan acceso a la instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] como un miembro del rol public. El inicio de sesión BUILTIN\Users se pueden quitar de manera segura para restringir el acceso al [!INCLUDE[ssDE](../../includes/ssde-md.md)] a los usuarios de equipos que tienen inicios de sesión individuales o son miembros de otros grupos de Windows con inicios de sesión.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 y SSL 3.0. Si fuerza un protocolo diferente (como por ejemplo, TLS 1.1 o TLS 1.2) realizando cambios en la capa SChannel del sistema operativo, las conexiones a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podrían no funcionar como es debido.  
+>  Los proveedores de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admiten TLS 1.0 y SSL 3.0. Si fuerza un protocolo diferente (como por ejemplo, TLS 1.1 o TLS 1.2) realizando cambios en la capa SChannel del sistema operativo, las conexiones a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podrían no funcionar como es debido.  
   
  **En este tema**  
   
@@ -50,7 +50,7 @@ ms.locfileid: "72783039"
   
 1.  En el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en el panel de la consola, expanda **Configuración de red de SQL Server**.  
   
-2.  En el panel de la consola, haga clic en **Protocolos de** *\<nombre de instancia>* .  
+2.  En el panel de la consola, haga clic en **protocolos de** * \<nombre de instancia>*.  
   
 3.  En el panel de detalles, haga clic con el botón derecho en el protocolo que quiera cambiar y, después, haga clic en **Habilitar** o **Deshabilitar**.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "72783039"
   
 5.  En el panel de detalles, haga clic con el botón derecho en **SQL Server (***\<nombre de instancia>***)** y, después, haga clic en **Reiniciar** para detener y reiniciar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="PowerShellProcedure"></a> Usar SQL Server PowerShell  
+##  <a name="PowerShellProcedure"></a>Usar SQL Server PowerShell  
   
 #### <a name="to-enable-a-server-network-protocol-using-powershell"></a>Para habilitar un protocolo de red de servidor mediante PowerShell  
   
@@ -66,7 +66,7 @@ ms.locfileid: "72783039"
   
 2.  Inicie Windows PowerShell 2.0 desde la barra de tareas, o haga clic en Inicio, en Todos los programas, en Accesorios, en Windows PowerShell y, por último, en Windows PowerShell.  
   
-3.  Importe el módulo **sqlps** escribiendo `Import-Module "sqlps"`  
+3.  Importe el módulo **sqlps** escribiendo`Import-Module "sqlps"`  
   
 4.  Ejecute las siguientes instrucciones para habilitar los protocolos TCP y de canalizaciones con nombre. Reemplace `<computer_name>` por el nombre del equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si va a configurar una instancia con nombre, sustituya `MSSQLSERVER` por el nombre de la instancia.  
   

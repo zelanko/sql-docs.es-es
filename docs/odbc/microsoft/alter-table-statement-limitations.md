@@ -14,16 +14,16 @@ ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1333cd6cd5946b7a3a70152e12f4d3decfa7fed0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138433"
 ---
 # <a name="alter-table-statement-limitations"></a>Limitaciones de declaración de tabla ALTER
-Cuando el controlador de Paradox o dBASE se usa, una vez que se ha creado un índice y agrega un nuevo registro, la estructura de la tabla no se puede cambiar mediante la instrucción ALTER TABLE, a menos que se quita el índice y se elimina el contenido de la tabla.  
+Cuando se usa el controlador dBASE o Paradox, una vez que se ha creado un índice y se ha agregado un nuevo registro, la instrucción ALTER TABLE no puede cambiar la estructura de la tabla a menos que se quite el índice y se elimine el contenido de la tabla.  
   
- No se admiten las instrucciones ALTER TABLE para los controladores de Microsoft Excel o texto.  
+ No se admiten las instrucciones ALTER TABLE para los controladores de texto o de Microsoft Excel.  
   
 > [!NOTE]  
->  Cuando se usa el controlador de Paradox sin necesidad de implementar el motor de base de datos de Borland, no se admiten las instrucciones ALTER TABLE; solo se lean y anexen se permiten las instrucciones.
+>  Cuando se usa el controlador de Paradox sin implementar el Motor de base de datos de Borland, no se admiten las instrucciones ALTER TABLE. solo se permiten las instrucciones Read y Append.

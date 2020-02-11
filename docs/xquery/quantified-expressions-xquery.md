@@ -1,5 +1,5 @@
 ---
-title: Cuantificar las expresiones (XQuery) | Microsoft Docs
+title: Expresiones cuantificadas (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,10 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946375"
 ---
 # <a name="quantified-expressions-xquery"></a>Expresiones cuantificadas (XQuery)
@@ -46,9 +46,9 @@ ms.locfileid: "67946375"
 ( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
- Puede utilizar estas expresiones en una consulta para aplicar explícitamente una cuantificación existencial o universal a una expresión en una o varias secuencias. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la expresión de la cláusula `satisfies` debe dar uno de los resultados siguientes: una secuencia de nodos, una secuencia vacía o un valor booleano. El valor booleano efectivo del resultado de la expresión se utilizará en la cuantificación. La cuantificación existencial que utilice **algunos** devolverá True si al menos uno de los valores enlazados por el cuantificador tiene un resultado True en la expresión de satisfacción. La cuantificación universal que utilice **cada** debe tener True para todos los valores enlazados por el cuantificador.  
+ Puede utilizar estas expresiones en una consulta para aplicar explícitamente una cuantificación existencial o universal a una expresión en una o varias secuencias. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la expresión de la cláusula `satisfies` debe dar uno de los resultados siguientes: una secuencia de nodos, una secuencia vacía o un valor booleano. El valor booleano efectivo del resultado de la expresión se utilizará en la cuantificación. La cuantificación existencial que usa **algunos** devolverá True si al menos uno de los valores enlazados por el cuantificador tiene un resultado TRUE en la expresión de satisfacción. La cuantificación universal que usa **cada** debe tener true para todos los valores enlazados por el cuantificador.  
   
- Por ejemplo, la siguiente consulta comprueba cada \<ubicación > elemento para ver si tiene un atributo LocationID.  
+ Por ejemplo, la consulta siguiente comprueba cada \<ubicación> elemento para ver si tiene un atributo LocationID.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,13 +64,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Puesto que LocationID es un atributo necesario del \<ubicación > elemento, recibirá el resultado esperado:  
+ Dado que LocationID es un atributo necesario del \<elemento Location>, recibirá el resultado esperado:  
   
 ```  
 <Result>All work centers have Location ID</Result>   
 ```  
   
- En lugar de usar el [método query()](../t-sql/xml/query-method-xml-data-type.md), puede usar el [método value()](../t-sql/xml/value-method-xml-data-type.md) para devolver el resultado al mundo relacional, como se muestra en la siguiente consulta. La consulta devolverá True si todas las ubicaciones de centro de trabajo tienen atributos LocationID. De lo contrario, la consulta devolverá False.  
+ En lugar de utilizar el [método Query ()](../t-sql/xml/query-method-xml-data-type.md), puede utilizar el [método Value ()](../t-sql/xml/value-method-xml-data-type.md) para devolver el resultado al mundo relacional, tal como se muestra en la consulta siguiente. La consulta devolverá True si todas las ubicaciones de centro de trabajo tienen atributos LocationID. De lo contrario, la consulta devolverá False.  
   
 ```  
 SELECT Instructions.value('  
@@ -106,7 +106,7 @@ ProductModelID SmallPicturesStored
   
 -   La aserción de tipos no se admite como parte del enlazamiento de la variable en las expresiones cuantificadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones XQuery](../xquery/xquery-expressions.md)  
   
   

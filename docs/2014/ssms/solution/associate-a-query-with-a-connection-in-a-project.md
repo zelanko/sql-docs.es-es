@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a28982b3dcf8136e7981899b50aed1aa8f9904c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62955898"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Asociar una consulta a una conexión de un proyecto
@@ -31,9 +31,9 @@ ms.locfileid: "62955898"
   
 2.  En el cuadro de diálogo **Conectar al motor de base de datos** , proporcione la información de conexión. Si ésta coincide con una conexión existente, la consulta se asociará a esa conexión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de soluciones](solution-explorer.md)   
- [Cambiar la conexión asociada con una consulta](change-the-connection-associated-with-a-query.md)   
+ [Cambiar la conexión asociada a una consulta](change-the-connection-associated-with-a-query.md)   
  [Ver o cambiar las propiedades de una conexión en un proyecto](view-or-change-the-properties-of-a-connection-in-a-project.md)  
   
   

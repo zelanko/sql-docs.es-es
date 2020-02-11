@@ -17,18 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb392991afbb3707fafdb18a28cc3de53f97c78
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783198"
 ---
 # <a name="delete-a-job-category"></a>Eliminar una categoría de trabajo
-  En este tema se describe cómo eliminar una categoría de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de SQL Server.  
+  En este tema se describe cómo eliminar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una categoría de trabajo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del agente [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante o objetos de administración de SQL Server.  
   
  Las categorías de trabajo le ayudan a organizar los trabajos para poder filtrarlos y agruparlos fácilmente. Por ejemplo, puede organizar todos los trabajos de copia de seguridad de las bases de datos en la categoría Mantenimiento de bases de datos.  
 
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Al eliminar una categoría de trabajo definida por el usuario, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le solicita que vuelva a asignar los trabajos asignados a ella a otra categoría de trabajo. Solo puede eliminar categorías de trabajo definidas por el usuario.  
@@ -46,13 +46,13 @@ ms.locfileid: "72783198"
   
 3.  Haga clic con el botón derecho en la carpeta **Trabajos** y seleccione **Administrar categorías de trabajos**.  
   
-4.  En el cuadro de diálogo **Administrar categorías de trabajos**_nombre_servidor_ , seleccione la categoría de trabajo que desea eliminar.  
+4.  En el cuadro de diálogo **administrar categorías de trabajo**_SERVER_NAME_ , seleccione la categoría de trabajo que desea eliminar.  
   
 5.  Haga clic en **Eliminar**.  
   
 6.  En el cuadro de diálogo **Categorías de trabajo** , haga clic en **Sí**.  
   
-7.  En el cuadro de diálogo **Administrar categorías de trabajos**_nombre_servidor_ .  
+7.  Cierre el cuadro de diálogo **administrar categorías de trabajo**_SERVER_NAME_ .  
   
 ##  <a name="TSQL"></a> Usar Transact-SQL  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72783198"
     GO  
     ```  
   
- Para obtener más información, [vea &#40;SP_DELETE_CATEGORY Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql).  
+ Para obtener más información, vea [sp_delete_category &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql).  
 
   
 ##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  

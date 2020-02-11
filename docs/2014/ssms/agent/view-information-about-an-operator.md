@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188744"
 ---
 # <a name="view-information-about-an-operator"></a>Ver información acerca de un operador
-  En este tema se describe el modo de ver infomación acerca de un operado del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo ver información sobre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un operador del [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] agente en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
   
  **En este tema**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68188744"
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](sql-server-agent-fixed-database-roles.md).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-operator"></a>Para ver información acerca de un operador  
   
@@ -66,13 +66,13 @@ ms.locfileid: "68188744"
   
 4.  Haga clic con el botón derecho en el operador que desea ver y seleccione **Propiedades**.  
   
-     Para más información sobre las opciones disponibles que se incluyen en el cuadro de diálogo _nombre_operador_**Propiedades** , consulte:  
+     Para obtener más información sobre las opciones disponibles contenidas en el cuadro de diálogo**propiedades** de _operator_name_, vea:  
   
-    -   [Propiedades del operador y operador New &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [Propiedades del operador y nuevo operador &#40;página general&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [Propiedades del operador: Operador new &#40;página notificaciones&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [Propiedades de operador: nuevo operador &#40;página notificaciones&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [Propiedades del operador &#40;Página Historial&#41;](operator-properties-history-page.md)  
+    -   [Propiedades de operador &#40;página historial&#41;](operator-properties-history-page.md)  
   
 5.  Cuando termine, haga clic en **Aceptar**.  
   
@@ -97,6 +97,6 @@ ms.locfileid: "68188744"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_help_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql).  
+ Para obtener más información, vea [sp_help_operator &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql).  
   
   

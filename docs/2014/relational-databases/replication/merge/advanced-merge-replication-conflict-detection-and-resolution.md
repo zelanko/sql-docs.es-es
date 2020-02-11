@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63000345"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Detección y resolución de conflictos de replicación de mezcla avanzada
@@ -57,7 +57,7 @@ ms.locfileid: "63000345"
   
  Para más información, consulte [Detectar y solucionar conflictos en registros lógicos](advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Para especificar el seguimiento de conflictos y el nivel de resolución para un artículo, vea [especificar el nivel de resolución y de seguimiento de conflictos para artículos de mezcla](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
+ Para especificar el seguimiento de conflictos y el nivel de resolución para un artículo, vea [Specify the Conflict Tracking and Resolution Level for Merge Articles](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 ## <a name="conflict-resolution"></a>Resolución de conflictos  
  Una vez detectado un conflicto, el Agente de mezcla inicia el solucionador de conflictos seleccionado y lo utiliza para determinar el ganador. La fila ganadora se aplica en el publicador y en el suscriptor, y los datos de la fila perdedora se escriben en una tabla de conflictos. Los conflictos se resuelven inmediatamente después de ejecutarse el solucionador, a menos que seleccione solucionar los conflictos de forma interactiva.  
@@ -81,7 +81,7 @@ ms.locfileid: "63000345"
   
 -   Un solucionador personalizado basado en COM  
   
-     La replicación de mezcla propociona una API para escribir solucionadoes como objetos COM en lenguajes como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Para más información, consulte [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     La replicación de combinación proporciona una API para escribir solucionadores como objetos COM en lenguajes como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Para más información, consulte [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Un solucionador basado en COM proporcionado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
@@ -94,9 +94,9 @@ ms.locfileid: "63000345"
   
  Para especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos, vea  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificación de un tipo de suscripción de mezcla y la prioridad de resolución de conflictos &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Programación de replicación de [!INCLUDE[tsql](../../../includes/tsql-md.md)] y programación con Replication Management Objects (RMO): [Creación de una suscripción de extracción](../create-a-pull-subscription.md) y [Creación de una suscripción de inserción](../create-a-push-subscription.md)  
+-   Programación de replicación [!INCLUDE[tsql](../../../includes/tsql-md.md)] y programación con Replication Management Objects (RMO): [Create a Pull Subscription](../create-a-pull-subscription.md) y [Create a Push Subscription](../create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>Solucionador interactivo  
  La replicación proporciona una interfaz de usuario Solucionador interactivo que se puede utilizar junto con el solucionador de conflictos basado en prioridad predeterminado o un solucionador de artículos. Cuando se ejecuta una sincronización a petición a través del Administrador de sincronización de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, el Solucionador interactivo muestra los datos en conflicto en tiempo de ejecución y permite elegir la forma de solucionar los conflictos. Para obtener más información acerca de cómo habilitar la resolución interactiva e iniciar el Solucionador interactivo, vea [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md).  
@@ -129,9 +129,9 @@ ms.locfileid: "63000345"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Ver y resolver conflictos de datos para publicaciones de mezcla &#40;SQL Server Management Studio&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Programación de la replicación de [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../view-conflict-information-for-merge-publications.md)  
+-   Programación [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la replicación: [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../view-conflict-information-for-merge-publications.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Sincronizar datos](../synchronize-data.md)  
   
   

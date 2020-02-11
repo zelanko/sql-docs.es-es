@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065473"
 ---
-# <a name="bcpcolfmt"></a>bcp_colfmt
+# <a name="bcp_colfmt"></a>bcp_colfmt
   Especifica el formato de origen o destino de los datos de un archivo de usuario. Cuando se utiliza como formato de origen, **bcp_colfmt** especifica el formato de un archivo de datos existente utilizado como origen de datos de una copia masiva en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se utiliza como formato de destino, se crea el archivo de datos utilizando los formatos de columna especificados con **bcp_colfmt**.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -70,7 +70,7 @@ idxServerCol
  *eUserDataType*  
  Es el tipo de datos de esta columna del archivo de usuario. Si es distinto del tipo de datos de la columna correspondiente en la tabla de base de datos (*idxServerColumn*), la copia masiva convierte los datos si es posible.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo la compatibilidad con tokens de tipo de datos SQLXML y SQLUDT en el *eUserDataType* parámetro.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]incorporó la compatibilidad con los tokens de tipo de datos SQLXML y SQLUDT en el parámetro *eUserDataType* .  
   
  Los tokens de tipo de datos de *en sqlncli.h enumeran el parámetro* eUserDataType [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , no los enumeradores de tipos de datos C de ODBC. Por ejemplo, puede especificar una cadena de caracteres, tipo SQL_C_CHAR de ODBC, utilizando el tipo SQLCHARACTER específico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -126,7 +126,7 @@ idxServerCol
 ## <a name="returns"></a>Devuelve  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La función **bcp_colfmt** permite especificar el formato de archivo de usuario para las copias masivas. Para la copia masiva, un formato contiene los componentes siguientes:  
   
 -   Una asignación de las columnas de archivo de usuario a las columnas de base de datos.  
@@ -141,7 +141,7 @@ idxServerCol
   
 -   La longitud de la secuencia de bytes de terminación opcional.  
   
- Cada llamada a **bcp_colfmt** especifica el formato de una columna de archivo de usuario. Por ejemplo, para cambiar la configuración predeterminada de tres columnas de un archivo de datos de usuario de cinco columnas, primero llame a [bcp_columns](bcp-columns.md) **(5)** y, a continuación, llame a **bcp_colfmt** cinco veces, estableciendo con tres de esas llamadas el formato personalizado. Para las dos llamadas restantes, establezca *eUserDataType* en 0 y establezca *cbIndicator*, *cbUserData*y *cbUserDataTerm* en 0, SQL_VARLEN_DATA y 0, respectivamente. Este procedimiento copia las cinco columnas, tres con el formato personalizado y dos con el formato predeterminado.  
+ Cada llamada a **bcp_colfmt** especifica el formato de una columna de archivo de usuario. Por ejemplo, para cambiar la configuración predeterminada de tres columnas de un archivo de datos de usuario de cinco columnas, primero llame a [bcp_columns](bcp-columns.md)**(5)** y, a continuación, llame a **bcp_colfmt** cinco veces, estableciendo con tres de esas llamadas el formato personalizado. Para las dos llamadas restantes, establezca *eUserDataType* en 0 y establezca *cbIndicator*, *cbUserData*y *cbUserDataTerm* en 0, SQL_VARLEN_DATA y 0, respectivamente. Este procedimiento copia las cinco columnas, tres con el formato personalizado y dos con el formato predeterminado.  
   
  Para *cbIndicator*, un valor de 8 para indicar un tipo de valor grande es válido ahora. Si se especifica el prefijo para un campo cuya columna correspondiente es un nuevo tipo max, solamente se puede establecer en 8. Para obtener más información, consulte [bcp_bind](bcp-bind.md).  
   
@@ -155,12 +155,12 @@ idxServerCol
   
  La función [bcp_writefmt](bcp-writefmt.md) se puede utilizar para conservar la especificación de formato.  
   
-## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>Compatibilidad de bcp_colfmt con las características mejoradas de fecha y hora  
- Para información aboutt escribe utilizado con el *eUserDataType* parámetro para los tipos de fecha y hora, vea [cambios de copia masiva para tipos mejorada de fecha y hora &#40;OLE DB y ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## <a name="bcp_colfmt-support-for-enhanced-date-and-time-features"></a>Compatibilidad de bcp_colfmt con las características mejoradas de fecha y hora  
+ Para obtener información acerca de los tipos utilizados con el parámetro *eUserDataType* para los tipos de fecha y hora, vea [cambios de copia masiva para tipos de fecha y hora mejorados &#40;OLE DB y&#41;de ODBC ](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Para obtener más información, consulte [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, vea [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de copia masiva](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte también  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

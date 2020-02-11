@@ -18,10 +18,10 @@ ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6ed53a60bd0ef285468d71c4018ba7a4ed9cd8c6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660384"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>Propiedad MultiIpConfigurationSupport (clase ServerNetworkProtocol)
@@ -36,15 +36,15 @@ object.MultiIpConfigurationSupport [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- Objeto de la [propiedad ProtocolName (clase ServerNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md) que representa el protocolo de red utilizado por la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *objeto*  
+ Objeto de la [propiedad ProtocolName (clase ServerNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md) que representa el protocolo de red utilizado por la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]instancia de.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
- Valor booleano que especifica si el protocolo de red del servidor admite varias direcciones IP: **true** si el protocolo de red del servidor admite varias direcciones IP, o bien **false** si el valor de no admite varias direcciones IP. Protocolo de red del servidor.  
+ Valor booleano que especifica si el protocolo de red del servidor admite varias direcciones IP: **true** si el protocolo de red del servidor admite varias direcciones IP, o **false** si el protocolo de red del servidor no admite varias direcciones IP.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
- [Configuración de protocolos de red de servidor y bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

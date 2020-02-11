@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f9e53c4ae42f981b1b579294954a965ef8c376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140690"
 ---
-# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Cambiar los detalles de programación de un trabajo maestro del Agente SQL Server
+# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
   En este tema se describe cómo cambiar los detalles de la programación de una definición de trabajo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -28,7 +28,7 @@ ms.locfileid: "63140690"
   
      [Seguridad](#Security)  
   
--   **Para cambiar los detalles de la programación de una definición de trabajo mediante:**  
+-   **Para cambiar los detalles de la programación de una definición de trabajo, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63140690"
 ####  <a name="Permissions"></a> Permisos  
  A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modificar los trabajos de su propiedad. Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-change-the-scheduling-details-for-a-job-definition"></a>Para cambiar los detalles de la programación de una definición de trabajo  
   
@@ -56,7 +56,7 @@ ms.locfileid: "63140690"
   
 4.  Haga clic con el botón derecho en la programación que desea modificar y seleccione **Propiedades**.  
   
-5.  En el **Job Properties -**_job_name_ cuadro de diálogo **seleccionar una página**, seleccione **programaciones**. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: Nuevo trabajo &#40;programa página&#41;](job-properties-new-job-schedules-page.md).  
+5.  En el cuadro de diálogo **propiedades del trabajo-**_Job_name_ , en **seleccionar una página**, seleccione **programaciones**. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: nueva página programaciones de &#40;de trabajos&#41;](job-properties-new-job-schedules-page.md).  
   
 6.  Cuando termine, haga clic en **Aceptar**.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "63140690"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_update_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql).  
+ Para obtener más información, vea [sp_update_schedule &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql).  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917720"
 ---
 # <a name="database-mail-messaging-objects"></a>Objetos de mensajería de Correo electrónico de base de datos
@@ -32,7 +32,7 @@ ms.locfileid: "62917720"
   
  Estos objetos son la interfaz del Correo electrónico de base de datos en la base de datos host de correo. Hay instalados otros objetos para implementar las funciones proporcionadas por los objetos enumerados anteriormente. Sin embargo, dichos objetos están reservados para uso interno.  
   
-|NOMBRE|Tipo|Descripción|  
+|Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-allitems-transact-sql)|`View`|Enumera todos los mensajes enviados al Correo electrónico de base de datos.|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-event-log-transact-sql)|`View`|Enumera los mensajes acerca del comportamiento del [Database Mail External Program](database-mail-external-program.md).|  
@@ -49,7 +49,7 @@ ms.locfileid: "62917720"
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](database-mail.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

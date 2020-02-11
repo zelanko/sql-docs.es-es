@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b05d3b02c4fcd0d90b0b96a1a32c792537818e1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999878"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Agrupar cambios en filas relacionadas con registros lógicos
@@ -97,7 +97,7 @@ ms.locfileid: "62999878"
   
 -   No se admite la resolución de conflictos personalizada con controladores de lógica de negocios o solucionadores personalizados para los artículos incluidos en un registro lógico.  
   
--   Si se utilizan registros lógicos en una publicación que incluye filtros con parámetros, debe inicializar cada suscripción con una instantánea para su partición. Si inicializa un suscriptor con otro método, se producirá un error en el Agente de mezcla. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   Si se utilizan registros lógicos en una publicación que incluye filtros con parámetros, debe inicializar cada suscripción con una instantánea para su partición. Si inicializa un suscriptor con otro método, se producirá un error en el Agente de mezcla. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 -   Los conflictos que implican registros lógicos no se muestran en el Visor de conflictos. Para ver información acerca de estos conflictos, utilice procedimientos almacenados de replicación. Para obtener más información, vea [Ver información de conflictos para publicaciones de mezcla &#40;programación de la replicación con Transact-SQL&#41;](../view-conflict-information-for-merge-publications.md).  
   
@@ -140,7 +140,7 @@ ms.locfileid: "62999878"
   
  Si se utilizan registros lógicos, el Agente de mezcla debe procesar juntos los cambios de todo el registro lógico. Esto afecta al tiempo que tarda el Agente de mezcla en replicar las filas. Además, como el agente abre una transacción distinta para cada registro lógico, los requisitos de bloqueo pueden aumentar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de artículos para replicación de mezcla](article-options-for-merge-replication.md)  
   
   

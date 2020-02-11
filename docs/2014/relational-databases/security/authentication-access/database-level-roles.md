@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011722"
 ---
 # <a name="database-level-roles"></a>Roles de nivel de base de datos
@@ -79,29 +79,29 @@ ms.locfileid: "63011722"
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Los miembros de estos roles de base de datos pueden administrar y utilizar el recopilador de datos. Para obtener más información, consulte [Data Collection](../../data-collection/data-collection.md).|  
 |**PolicyAdministratorRole**|Los miembros del rol de base de datos **db_ PolicyAdministratorRole** pueden realizar todas las actividades de mantenimiento y configuración en las condiciones y directivas de Administración basada en directivas. Para obtener más información, vea [Administrar servidores mediante administración basada en directivas](../../policy-based-management/administer-servers-by-using-policy-based-management.md).|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|Los miembros de estos roles de base de datos pueden administrar y utilizar grupos de servidores registrados.|  
-|**dbm_monitor**|Creado en el `msdb` cuando se registra la primera base de datos en el Monitor de creación de reflejo de base de datos de la base de datos. El rol **dbm_monitor** no tiene miembros hasta que un administrador del sistema asigna usuarios al rol.|  
+|**dbm_monitor**|Se crea en `msdb` la base de datos cuando se registra la primera base de datos en monitor de creación de reflejo de la base de datos. El rol **dbm_monitor** no tiene miembros hasta que un administrador del sistema asigna usuarios al rol.|  
   
 > [!IMPORTANT]  
->  Los miembros del rol db_ssisadmin y del rol dc_admin quizá puedan elevar sus privilegios a sysadmin. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y los paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] los puede ejecutar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de sysadmin del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que ejecutan paquetes para utilizar una cuenta de proxy con privilegios limitados o agregar solo los miembros de sysadmin a los roles dc_admin y db_ssisadmin.  
+>  Los miembros del rol db_ssisadmin y del rol dc_admin quizá puedan elevar sus privilegios a sysadmin. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y los paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] los puede ejecutar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de sysadmin del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que ejecutan paquetes para utilizar una cuenta de proxy con privilegios limitados o agregar solo los miembros de sysadmin a los roles dc_admin y db_ssisadmin.  
   
 ## <a name="working-with-database-level-roles"></a>Trabajar con roles de nivel de base de datos  
  En la tabla siguiente se explican los comandos, las vistas y las funciones que se usan para trabajar con los roles de nivel de base de datos.  
   
 |Característica|Tipo|Descripción|  
 |-------------|----------|-----------------|  
-|[sp_helpdbfixedrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Metadatos|Devuelve la lista de los roles fijos de base de datos.|  
-|[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Metadatos|Muestra los permisos de un rol fijo de base de datos.|  
-|[sp_helprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprole-transact-sql)|Metadatos|Devuelve información acerca de los roles de la base de datos actual.|  
-|[sp_helprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|Metadatos|Devuelve información acerca de los miembros de un rol de la base de datos actual.|  
+|[sp_helpdbfixedrole &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Metadatos|Devuelve la lista de los roles fijos de base de datos.|  
+|[sp_dbfixedrolepermission &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Metadatos|Muestra los permisos de un rol fijo de base de datos.|  
+|[sp_helprole &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helprole-transact-sql)|Metadatos|Devuelve información acerca de los roles de la base de datos actual.|  
+|[sp_helprolemember &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|Metadatos|Devuelve información acerca de los miembros de un rol de la base de datos actual.|  
 |[sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)|Metadatos|Devuelve una fila por cada miembro de cada rol de base de datos.|  
 |[IS_MEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-member-transact-sql)|Metadatos|Indica si el usuario actual es miembro del grupo de Microsoft Windows o del rol de base de datos de SQL Server especificados.|  
-|[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Comando|Crea un rol de base de datos nuevo en la base de datos actual.|  
-|[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|Comando|Cambia el nombre de un rol de base de datos.|  
-|[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|Comando|Quita un rol de la base de datos.|  
-|[sp_addrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Comando|Crea un rol de base de datos nuevo en la base de datos actual.|  
-|[sp_droprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Comando|Quita un rol de base de datos de la base de datos actual.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Comando|Agrega un usuario de base de datos, un rol de base de datos, un inicio de sesión de Windows o un grupo de Windows a un rol de base de datos en la base de datos actual.|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|Comando|Quita una cuenta de seguridad de un rol de SQL Server de la base de datos actual.|  
+|[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Get-Help|Crea un rol de base de datos nuevo en la base de datos actual.|  
+|[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|Get-Help|Cambia el nombre de un rol de base de datos.|  
+|[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|Get-Help|Quita un rol de la base de datos.|  
+|[sp_addrole &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Get-Help|Crea un rol de base de datos nuevo en la base de datos actual.|  
+|[sp_droprole &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Get-Help|Quita un rol de base de datos de la base de datos actual.|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Get-Help|Agrega un usuario de base de datos, un rol de base de datos, un inicio de sesión de Windows o un grupo de Windows a un rol de base de datos en la base de datos actual.|  
+|[sp_droprolemember &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|Get-Help|Quita una cuenta de seguridad de un rol de SQL Server de la base de datos actual.|  
   
 ## <a name="public-database-role"></a>Rol de base de datos public  
  Todos los usuarios de una base de datos pertenecen al rol de base de datos **public** s. Cuando a un usuario no se le han concedido ni denegado permisos específicos para un objeto protegible, el usuario hereda los permisos concedidos a la **función pública** para ese objeto.  
@@ -115,6 +115,6 @@ ms.locfileid: "63011722"
   
  [Proteger SQL Server](../securing-sql-server.md)  
   
- [sp_helprotect &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprotect-transact-sql)  
+ [sp_helprotect &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helprotect-transact-sql)  
   
   

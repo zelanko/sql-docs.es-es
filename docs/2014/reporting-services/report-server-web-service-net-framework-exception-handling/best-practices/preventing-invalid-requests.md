@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dcb850ad7e99768781b225978f531ff991766924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046082"
 ---
 # <a name="preventing-invalid-requests"></a>Impedir las solicitudes no válidas
@@ -69,7 +69,7 @@ private void PublishReport()
   
  Para más información sobre los tipos de errores que se pueden evitar antes de que las solicitudes se envíen al servidor de informes, vea [Tabla de errores de SoapException](../soapexception-class/soapexception-errors-table.md). Para más información sobre cómo mejorar más el ejemplo anterior mediante bloques try/catch, vea [Using Try and Catch Blocks (Uso de bloques Try y Catch)](using-try-and-catch-blocks.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Introducción a la administración de excepciones en Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
  [Clase SoapException de Reporting Services](../soapexception-class/reporting-services-soapexception-class.md)  
   

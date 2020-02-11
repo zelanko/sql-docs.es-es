@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a6853d721a1504c3b44e733a2f2fbc6f37608be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62936450"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>Lista de columnas (cuadro de diálogo, Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "62936450"
  Este cuadro de diálogo proporciona una lista de las columnas en el objeto con valores de tabla seleccionado y propiedades básicas, como los tipos de datos y si las columnas permiten valores NULL.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Muestra el nombre de las columnas en el objeto con valores de tabla seleccionado.  
   
  **Tipo de datos**  
@@ -36,7 +36,7 @@ ms.locfileid: "62936450"
  **Propiedades del tipo de datos**  
  Muestra las propiedades del tipo de datos de cada una de las columnas del objeto con valores de tabla seleccionado. Las posibilidades son NULLABLE, IDENTITY, ROWGUID y espacio en blanco.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

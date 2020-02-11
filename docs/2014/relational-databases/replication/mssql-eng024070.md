@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023915"
 ---
-# <a name="mssqleng024070"></a>MSSQL_ENG024070
+# <a name="mssql_eng024070"></a>MSSQL_ENG024070
     
 ## <a name="message-details"></a>Detalles del mensaje  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|24070|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|24070|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
 |Texto del mensaje|El cliente no dispone de un privilegio requerido.|  
@@ -35,7 +35,7 @@ ms.locfileid: "63023915"
 ## <a name="explanation"></a>Explicación  
  Se trata de un error general que puede producirse independientemente de que se esté usando replicación o no. Para un servidor de una topología de replicación, el error suele producirse porque la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se cambia con el Administrador de control de servicios de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en lugar del Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si intenta ejecutar un trabajo de agente después de cambiar la cuenta de servicio, es posible que el trabajo no progrese y aparezca un mensaje de error similar al siguiente:  
   
- "Ejecutado como usuario: \<UserAccount>. Subsistema de instantánea de replicación: agente \<Nombreagente > no se pudo. Ejecutado como usuario: \<UserAccount>. El cliente no dispone de un privilegio requerido. Error en el paso. `[SQLSTATE 42000] (Error 14151)`  Error en el paso."  
+ "Ejecutado como usuario: \<cuentadeusuario>. Replicación: subsistema de instantánea de replicación \<: error del agente nombreagente>. Ejecutado como usuario: \<cuentadeusuario>. El cliente no dispone de un privilegio requerido. Error en el paso. `[SQLSTATE 42000] (Error 14151)`. Error en el paso."  
   
  Este problema se produce porque el Administrador de control de servicios de Windows no puede conceder los permisos necesarios a la nueva cuenta de servicio para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63023915"
   
  Como miembro de este grupo de seguridad, se conceden a la nueva cuenta los permisos necesarios para ejecutar el trabajo del agente de replicación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y eventos &#40;replicación&#41;](errors-and-events-reference-replication.md)   
  [Administrar inicios de sesión y contraseñas en la replicación](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Administrador de configuración de SQL Server](../sql-server-configuration-manager.md)  

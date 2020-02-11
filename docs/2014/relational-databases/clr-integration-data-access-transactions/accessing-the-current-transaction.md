@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920018"
 ---
 # <a name="accessing-the-current-transaction"></a>Obtener acceso a la transacción actual
@@ -43,7 +43,7 @@ ms.locfileid: "62920018"
   
 -   La función o el procedimiento administrado puede devolver un valor utilizando un parámetro de salida. El procedimiento [!INCLUDE[tsql](../../includes/tsql-md.md)] de llamada puede comprobar el valor devuelto y, si procede, ejecutar `ROLLBACK TRANSACTION`.  
   
--   La función o el procedimiento administrado puede iniciar una excepción personalizada. La llamada a [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento puede detectar la excepción producida por el procedimiento administrado o la función en un bloque try/catch y ejecutar `ROLLBACK TRANSACTION`.  
+-   La función o el procedimiento administrado puede iniciar una excepción personalizada. El procedimiento [!INCLUDE[tsql](../../includes/tsql-md.md)] de llamada puede detectar la excepción producida por el procedimiento administrado o la función en un bloque try/catch `ROLLBACK TRANSACTION`y ejecutar.  
   
 -   La función o el procedimiento administrado puede cancelar la transacción actual llamando al método `Transaction.Rollback` si se cumple una condición determinada.  
   
@@ -64,7 +64,7 @@ The context transaction which was active before entering user defined routine, t
  También se espera esta excepción y, para continuar, debe incluir un bloque try/catch alrededor de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que realiza la acción que activa el desencadenador. A pesar de las dos excepciones iniciadas, la transacción se revierte y no se confirman los cambios.  
   
 ### <a name="example"></a>Ejemplo  
- A continuación se muestra un ejemplo de una transacción que se revierte desde un procedimiento administrado mediante el uso del método `Transaction.Rollback`. Observe el bloque try/catch alrededor del método `Transaction.Rollback` en el código administrado. El script [!INCLUDE[tsql](../../includes/tsql-md.md)] crea un ensamblado y un procedimiento almacenado administrado. Tenga en cuenta que el `EXEC uspRollbackFromProc` se encapsula en un bloque try/catch, por lo que se detecta la excepción que se produce cuando completa la ejecución del procedimiento administrado.  
+ A continuación se muestra un ejemplo de una transacción que se revierte desde un procedimiento administrado mediante el uso del método `Transaction.Rollback`. Observe el bloque try/catch alrededor del método `Transaction.Rollback` en el código administrado. El script [!INCLUDE[tsql](../../includes/tsql-md.md)] crea un ensamblado y un procedimiento almacenado administrado. Tenga en cuenta que `EXEC uspRollbackFromProc` la instrucción se ajusta en un bloque try/catch, de modo que la excepción que se produce cuando se completa el procedimiento administrado finaliza la ejecución se detecta.  
   
 ```csharp  
 using System;  
@@ -200,7 +200,7 @@ DROP ASSEMBLY TestProcs;
 Go  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Integración CLR y transacciones](../native-client-ole-db-transactions/transactions.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956139"
 ---
 # <a name="change-the-default-location-for-projects"></a>Cambiar la ubicación predeterminada de los proyectos
@@ -25,9 +25,9 @@ ms.locfileid: "62956139"
   
 ### <a name="to-change-the-default-location-for-projects"></a>Para cambiar la ubicación predeterminada de los proyectos  
   
-1.  Cambie la ubicación predeterminada mediante la apertura o el almacenamiento de un archivo o un proyecto de otra ubicación. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] almacena la ubicación del proyecto abierto anteriormente y la usa para la siguiente apertura o almacenamiento de un proyecto.  
+1.  Cambie la ubicación predeterminada mediante la apertura o el almacenamiento de un archivo o un proyecto de otra ubicación. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] almacena la ubicación del proyecto abierto anteriormente y la usa para la siguiente apertura o almacenamiento de un proyecto.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de soluciones](solution-explorer.md)  
   
   

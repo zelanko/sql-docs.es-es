@@ -34,10 +34,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b1ab8545714e84c8ecf8ee6c9cb89b7b8c0d3831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922249"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Historial de copias de seguridad e información de encabezados (SQL Server)
@@ -123,14 +123,14 @@ ms.locfileid: "62922249"
 ### <a name="which-backup-set-to-restore"></a>Qué conjunto de copia de seguridad se debe restaurar  
  Puede usar información en el encabezado de copia de seguridad para identificar qué conjunto de copia de seguridad se va a restaurar. El Motor de base de datos numera cada conjunto de copia de seguridad en los medios de copia de seguridad. Esto permite identificar el conjunto de copia de seguridad que desea restaurar mediante su posición en los medios. Por ejemplo, el siguiente medio contiene tres conjuntos de copia de seguridad.  
   
- ![Medio de copia de seguridad que contiene conjuntos de copia de seguridad de SQL Server](../../database-engine/media/bnr-media-backup-sets.gif "Medio de copia de seguridad que contiene conjuntos de copia de seguridad de SQL Server")  
+ ![Medio de copia de seguridad que contiene conjuntos de copia de seguridad de SQL Server](../../database-engine/media/bnr-media-backup-sets.gif "Medio de copia de seguridad que contiene conjuntos de copia de seguridad de SQL Server")  
   
  Para restaurar un conjunto de copia de seguridad específico, especifique el número de posición de ese conjunto. Por ejemplo, para restaurar el segundo conjunto de copia de seguridad, especifique 2 como el conjunto de copia de seguridad para restaurar.  
   
 ##  <a name="CompareMediaHeaderBackupHeader"></a> Comparación de la información del encabezado de medios y del encabezado de copia de seguridad  
  En la siguiente ilustración se muestra un ejemplo de las diferencias entre ver la información del encabezado de la copia de seguridad y del encabezado del medio. Obtener el encabezado de medios requiere que se recupere solo la información del principio de la cinta. Obtener el encabezado de copia de seguridad requiere examinar la cinta completa para ver el encabezado de cada conjunto de copia de seguridad.  
   
- ![Conjunto de medios que contiene tres conjuntos de copia de seguridad de SQL Server](../../database-engine/media/bnr-media-label.gif "Conjunto de medios que contiene tres conjuntos de copia de seguridad de SQL Server")  
+ ![Conjunto de medios que contiene tres conjuntos de copia de seguridad de SQL Server](../../database-engine/media/bnr-media-label.gif "Conjunto de medios que contiene tres conjuntos de copia de seguridad de SQL Server")  
   
 > [!NOTE]  
 >  Si se utilizan conjuntos de medios con varias familias de medios, el encabezado de medios y el conjunto de copia de seguridad se escriben en todas las familias de medios. Por tanto, solo es necesario proporcionar una sola familia de medios para estas operaciones de generación de informes.  
@@ -217,7 +217,7 @@ ms.locfileid: "62922249"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](backup-devices-sql-server.md)   

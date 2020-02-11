@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Las cadenas de propiedad y cambio de contexto | Microsoft Docs'
+title: 'Tutorial: Cadenas de propiedad y cambios de contexto | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524371"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Cadenas de propiedad y cambio de contexto
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   En este tutorial se usa un escenario para ilustrar los conceptos de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relacionados con las cadenas de propiedad y el cambio de contexto de usuario.  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "62524371"
  Cada bloque de código incluido en este ejemplo se describe en línea. Para copiar el ejemplo completo, vea [Ejemplo completo](#CompleteExample) al final de este tutorial.  
   
 ## <a name="1-configure-the-environment"></a>1. Configurar el entorno  
- Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y el código siguiente para abrir la base de datos `AdventureWorks2012` y use la instrucción `CURRENT_USER` de [!INCLUDE[tsql](../includes/tsql-md.md)] para comprobar que el usuario dbo se muestra como contexto.  
+ Use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y el código siguiente para abrir la `AdventureWorks2012` base de datos y use `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] la instrucción para comprobar que el usuario DBO se muestra como contexto.  
   
 ```  
 USE AdventureWorks2012;  
@@ -80,7 +80,8 @@ GO
   
  Para obtener más información sobre la instrucción CREATE USER, consulte [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). Para obtener más información sobre la instrucción CREATE LOGIN, consulte [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
- Use el código siguiente para cambiar la propiedad del esquema `Purchasing` a la cuenta `TestManagerUser` . Esto permite que dicha cuenta use todo el acceso a las instrucciones del lenguaje de manipulación de datos (DML) (por ejemplo, los permisos `SELECT` e `INSERT` ) en los objetos que contiene. `TestManagerUser` también tiene la capacidad de crear procedimientos almacenados.  
+ Use el código siguiente para cambiar la propiedad del esquema `Purchasing` a la cuenta `TestManagerUser` . Esto permite que dicha cuenta use todo el acceso a las instrucciones del lenguaje de manipulación de datos (DML) (por ejemplo, los permisos `SELECT` e `INSERT` ) en los objetos que contiene. 
+  `TestManagerUser` también tiene la capacidad de crear procedimientos almacenados.  
   
 ```  
 /* Change owner of the Purchasing Schema to TestManagerUser */  
@@ -95,7 +96,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- Para obtener más información sobre la instrucción GRANT, consulte [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Para obtener más información sobre los procedimientos almacenados, consulte [Procedimientos almacenados &#40;motor de base de datos&#41;](stored-procedures/stored-procedures-database-engine.md). Para ver un cartel de todos los permisos del [!INCLUDE[ssDE](../includes/ssde-md.md)], vea [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142).  
+ Para obtener más información sobre la instrucción GRANT, consulte [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql). Para obtener más información sobre los procedimientos almacenados, consulte [Procedimientos almacenados &#40;motor de base de datos&#41;](stored-procedures/stored-procedures-database-engine.md). Para obtener un póster de [!INCLUDE[ssDE](../includes/ssde-md.md)] todos los permisos [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142), vea.  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Crear un procedimiento almacenado para obtener acceso a los datos  
  Para cambiar el contexto dentro de una base de datos, use la instrucción EXECUTE AS. EXECUTE AS requiere permisos IMPERSONATE.  
@@ -156,7 +157,8 @@ GO
  Para obtener más información sobre la instrucción REVERT, consulte [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql).  
   
 ## <a name="3-access-data-through-the-stored-procedure"></a>3. Obtener acceso a los datos mediante el procedimiento almacenado  
- `TestEmployeeUser` no tiene ningún permiso en los objetos de la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] aparte del inicio de sesión y los derechos asignados al rol de base de datos pública. El código siguiente devuelve un error cuando `TestEmployeeUser` intenta obtener acceso a las tablas base.  
+ 
+  `TestEmployeeUser` no tiene ningún permiso en los objetos de la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] aparte del inicio de sesión y los derechos asignados al rol de base de datos pública. El código siguiente devuelve un error cuando `TestEmployeeUser` intenta obtener acceso a las tablas base.  
   
 ```  
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
@@ -200,7 +202,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-##  <a name="CompleteExample"></a> Ejemplo completo  
+##  <a name="CompleteExample"></a>Ejemplo completo  
  En esta sección se muestra el código de ejemplo completo.  
   
 > [!NOTE]  
@@ -321,7 +323,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+## <a name="see-also"></a>Consulte también  
+ [Centro de seguridad para el Motor de base de datos de SQL Server y Azure SQL Database](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

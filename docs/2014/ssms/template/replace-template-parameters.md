@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1fa26c1bfec54e4e684bcd7e0967281a6ef3301
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63070977"
 ---
 # <a name="replace-template-parameters"></a>Reemplazar parámetros de plantilla
@@ -41,7 +41,7 @@ ms.locfileid: "63070977"
   
 3.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Reemplazar parámetros de plantilla** y modificar el script en el editor de consultas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de plantillas](template-explorer.md)   
  [Abrir una plantilla](open-a-template.md)  
   

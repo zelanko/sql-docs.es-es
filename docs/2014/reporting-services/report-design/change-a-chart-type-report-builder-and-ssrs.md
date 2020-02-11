@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e20363b7d26b2b668ca52d44615488e06573f730
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106374"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Cambiar un tipo de gráfico (Generador de informes y SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66106374"
   
 2.  En el cuadro de diálogo **Seleccionar tipo de gráfico** , seleccione un tipo de gráfico en la lista.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Medidores &#40;Generador de informes y SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  

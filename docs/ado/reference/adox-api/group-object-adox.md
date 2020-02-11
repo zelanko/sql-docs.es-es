@@ -1,5 +1,5 @@
 ---
-title: Objeto (ADOX) de grupo | Microsoft Docs
+title: Objeto Group (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,32 +16,32 @@ ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4b3de5f445ddd09bf7d069b0b93d82c6f8de978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966213"
 ---
 # <a name="group-object-adox"></a>Objeto Group (ADOX)
-Representa una cuenta de grupo que tenga permisos de acceso dentro de una base de datos protegida.  
+Representa una cuenta de grupo que tiene permisos de acceso en una base de datos protegida.  
   
-## <a name="remarks"></a>Comentarios  
- El [grupos](../../../ado/reference/adox-api/groups-collection-adox.md) colección de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) representa todas las cuentas del catálogo grupo. El **grupos** colección para un [usuario](../../../ado/reference/adox-api/user-object-adox.md) representa sólo el grupo al que pertenece el usuario.  
+## <a name="remarks"></a>Observaciones  
+ La colección de [grupos](../../../ado/reference/adox-api/groups-collection-adox.md) de un [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) representa todas las cuentas de grupo del catálogo. La colección de **grupos** para un [usuario](../../../ado/reference/adox-api/user-object-adox.md) representa solo el grupo al que pertenece el usuario.  
   
- Con las propiedades, colecciones y los métodos de un **grupo** de objeto, puede:  
+ Con las propiedades, colecciones y métodos de un objeto de **Grupo** , puede:  
   
--   Identificar el grupo con el [nombre](../../../ado/reference/adox-api/name-property-adox.md) propiedad.  
+-   Identifique el grupo con la propiedad [Name](../../../ado/reference/adox-api/name-property-adox.md) .  
   
--   Determinar si un grupo tiene de lectura, escritura o eliminación de permisos con la [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) y [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) métodos.  
+-   Determine si un grupo tiene permisos de lectura, escritura o eliminación con los métodos [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) y [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) .  
   
--   Obtener acceso a las cuentas de usuario que tienen pertenencias del grupo con el [usuarios](../../../ado/reference/adox-api/users-collection-adox.md) colección.  
+-   Obtenga acceso a las cuentas de usuario que tienen pertenencias al grupo con la colección [usuarios](../../../ado/reference/adox-api/users-collection-adox.md) .  
   
--   Obtener acceso a propiedades específicas del proveedor con el [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección.  
+-   Obtener acceso a las propiedades específicas del proveedor con la colección [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
  Esta sección contiene el siguiente tema.  
   
 -   [Propiedades, métodos y eventos del objeto Group](../../../ado/reference/adox-api/group-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Colección de grupos (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Colección de usuarios (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

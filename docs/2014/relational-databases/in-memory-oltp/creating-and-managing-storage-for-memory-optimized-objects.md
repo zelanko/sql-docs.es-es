@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63073850"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Crear y administrar el almacenamiento de objetos con optimización para memoria
@@ -32,7 +32,7 @@ ms.locfileid: "63073850"
   
  El almacenamiento de tablas optimizadas para memoria tiene los siguientes atributos clave:  
   
--   Todas las tablas optimizadas para memoria se asignan a un grupo de archivos optimizados para memoria. Este grupo de archivos se ha creado mediante el grupo de archivos filestream.  
+-   Todas las tablas optimizadas para memoria se asignan a un grupo de archivos optimizados para memoria. Este grupo de archivos se genera mediante el grupo de archivos FileStream.  
   
 -   No existen páginas y los datos se guardan como una fila.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63073850"
   
 -   A diferencia de las tablas basadas en disco, el almacenamiento de tablas optimizadas para memoria no se comprime. Al migrar una tabla basada en disco (ROW o PAGE) comprimida tabla a una tabla optimizada para memoria, debe tener en cuenta el cambio del tamaño.  
   
--   Una tabla optimizada para memoria puede ser durable o no durable. Solo deberá configurar el almacenamiento para la optimización de memoria de durable tablas.  
+-   Una tabla optimizada para memoria puede ser durable o no durable. Solo tiene que configurar el almacenamiento para las tablas de optimización de memoria duradera.  
   
  En esta sección se describen los pares de archivos de punto de comprobación y otros aspectos de cómo se almacenan los datos en tablas optimizadas para memoria.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63073850"
   
 -   [Supervisar y solucionar los problemas de la mezcla para los pares de archivos delta y de datos](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6f28abbf9871d5f4e512e9c9ee0cfb5c7ad9db59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135283"
 ---
 # <a name="localdbstopinstance-function"></a>Función LocalDBStopInstance
   Detiene la ejecución de la instancia de SQL Server Express LocalDB especificada.  
   
- **Archivo de encabezado:** sqlncli.h  
+ **Archivo de encabezado:** SQLNCLI. h  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -99,12 +99,12 @@ HRESULT LocalDBStopInstance(
  El autor de llamada de la API no es propietario de la instancia de LocalDB.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
- Error inesperado. Vea el registro de eventos para obtener detalles.  
+ Se ha producido un error inesperado. Vea el registro de eventos para obtener detalles.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información de encabezado y versión de SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

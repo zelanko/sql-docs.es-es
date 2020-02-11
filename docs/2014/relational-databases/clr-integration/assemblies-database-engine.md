@@ -1,5 +1,5 @@
 ---
-title: Ensamblados (motor de base de datos) | Microsoft Docs
+title: Ensamblados (Motor de base de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,26 +15,26 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920778"
 ---
 # <a name="assemblies-database-engine"></a>Ensamblados (motor de base de datos)
   En los temas de esta sección se ofrece información que le ayudará a comprender, diseñar e implementar ensamblados.  
   
- Los ensamblados son archivos DLL en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para implementar funciones, procedimientos almacenados, desencadenadores, agregados definidos por el usuario y tipos definidos por el usuario que se escriben en uno de los lenguajes de código administrado hospedados por el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common language runtime (CLR), en lugar de en [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Los ensamblados son archivos DLL que se utilizan [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en una instancia de para implementar funciones, procedimientos almacenados, desencadenadores, agregados definidos por el usuario y tipos definidos por el usuario que se escriben en uno de los [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] lenguajes de código administrado hospedados por el [!INCLUDE[tsql](../../../includes/tsql-md.md)]Common Language Runtime (CLR), en lugar de en.  
   
  Un ensamblado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es un objeto que hace referencia a un módulo de aplicación administrada (archivo .dll) creado en [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common Language Runtime. Un ensamblado contiene metadatos de clase y código administrado. El primer paso para crear los siguientes objetos de base de datos es cargar un ensamblado en una instancia de SQL Server:  
   
--   Funciones CLR. Para obtener más información, consulte [crear funciones CLR](../user-defined-functions/create-clr-functions.md).  
+-   Funciones CLR. Para obtener más información, vea [Create CLR Functions](../user-defined-functions/create-clr-functions.md).  
   
--   Procedimientos almacenados CLR. Para obtener más información, consulte [los procedimientos almacenados de CLR](../../database-engine/dev-guide/clr-stored-procedures.md).  
+-   Procedimientos almacenados CLR. Para obtener más información, vea [procedimientos almacenados CLR](../../database-engine/dev-guide/clr-stored-procedures.md).  
   
--   Desencadenadores CLR. Para obtener más información, consulte [crear desencadenadores CLR](../triggers/create-clr-triggers.md).  
+-   Desencadenadores CLR. Para obtener más información, vea [crear desencadenadores CLR](../triggers/create-clr-triggers.md).  
   
--   Funciones de agregado definidas por el usuario. Para obtener más información, consulte [agregados definidos por el usuario crear](../user-defined-functions/create-user-defined-aggregates.md).  
+-   Funciones de agregado definidas por el usuario. Para obtener más información, consulte [crear agregados definidos por el usuario](../user-defined-functions/create-user-defined-aggregates.md).  
   
 -   Tipos definidos por el usuario. Para obtener más información, vea [Tipos definidos por el usuario de CLR](../native-client/features/using-user-defined-types.md).  
   
@@ -54,9 +54,9 @@ ms.locfileid: "62920778"
 |-----------|-----------------|  
 |[Diseñar ensamblados](assemblies-designing.md)|Explica las consideraciones previas a la creación de un ensamblado. Se incluyen el empaquetado de los ensamblados, los permisos de acceso a código y otras restricciones.|  
 |[Implementar ensamblados](assemblies-implementing.md)|Se explica cómo crear y quitar ensamblados, cómo y cuándo se pueden modificar y cómo se recuperan los metadatos sobre los ensamblados.|  
-|[Obtener información sobre los ensamblados](assemblies-getting-information.md)|Enumera las vistas de catálogo y las funciones que se pueden utilizar para consultar metadatos sobre ensamblados.|  
+|[Obtener información acerca de los ensamblados](assemblies-getting-information.md)|Enumera las vistas de catálogo y las funciones que se pueden utilizar para consultar metadatos sobre ensamblados.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](common-language-runtime-clr-integration-programming-concepts.md)  
   
   

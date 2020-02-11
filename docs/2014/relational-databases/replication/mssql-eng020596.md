@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ddabe3e1a3a12e3aa14c5a6c641345d3236c2fe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62938494"
 ---
-# <a name="mssqleng020596"></a>MSSQL_ENG020596
+# <a name="mssql_eng020596"></a>MSSQL_ENG020596
     
 ## <a name="message-details"></a>Detalles del mensaje  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|20596|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|20596|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
 |Texto del mensaje|Solo '%1!' o los miembros de db_owner pueden quitar el agente anónimo.|  
@@ -38,7 +38,7 @@ ms.locfileid: "62938494"
 ## <a name="user-action"></a>Acción del usuario  
  Inicie sesión con las credenciales correctas y ejecute **sp_dropanonymousagent**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y eventos &#40;replicación&#41;](errors-and-events-reference-replication.md)  
   
   

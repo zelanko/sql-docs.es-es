@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab7c4496465de8297f07dd18b3aa2acf26ab305d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100498"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Cancelar trabajos del servidor de informes (Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "66100498"
 >  Esta característica no se admite en [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] con Advanced Services. La página no aparece cuando se ejecuta [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Muestra el nombre del informe. Las suscripciones se identifican con su descripción.  
   
  **Tipo**  
@@ -51,12 +51,12 @@ ms.locfileid: "66100498"
  **Estado**  
  Muestra el estado del trabajo. Los valores válidos son **Nuevo** y **En ejecución**. Estado siempre es **Nuevo** cuando comienza el trabajo. Después de 60 segundos, el estado cambia a **En ejecución**. Debe actualizar la página para que se refleje el cambio.  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Cancele un trabajo único o varios trabajos. Los trabajos se cancelan inmediatamente y no se pueden reanudar. Si cancela un trabajo por error, debe solicitar de nuevo el informe o la suscripción para iniciar un nuevo trabajo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)   
  [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Administrar un proceso en ejecución](../subscriptions/manage-a-running-process.md)  
+ [Administración de un proceso en ejecución](../subscriptions/manage-a-running-process.md)  
   
   

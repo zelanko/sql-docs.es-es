@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250130"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>Insertar y actualizar datos en una tabla (Tutorial)
-  Ahora que ha creado la tabla **Products**, ya está listo para insertar datos en la tabla mediante la instrucción INSERT. Después de insertar los datos, cambiará el contenido de una fila con una instrucción UPDATE. Utilizará la cláusula WHERE de la instrucción UPDATE para restringir la actualización a una sola fila. Las cuatro instrucciones introducirán los siguientes datos.  
+  Ahora que ha creado la tabla **Products** , ya está listo para insertar datos en la tabla mediante la instrucción INSERT. Después de insertar los datos, cambiará el contenido de una fila con una instrucción UPDATE. Utilizará la cláusula WHERE de la instrucción UPDATE para restringir la actualización a una sola fila. Las cuatro instrucciones introducirán los siguientes datos.  
   
 |ProductID|ProductName|Price|ProductDescription|  
 |---------------|-----------------|-----------|------------------------|  
@@ -29,7 +29,7 @@ ms.locfileid: "63250130"
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|,52||  
   
- La sintaxis básica es: INSERT, nombre de la tabla, lista de columnas, valores y, a continuación, una lista de los valores que se va a insertar. Los dos guiones dobles antes de cada línea indican que la línea es un comentario y el compilador ignorará el texto. En este caso, el comentario describe una variación permitida de la sintaxis.  
+ La sintaxis básica es: INSERT, nombre de tabla, lista de columnas, VALUES y, a continuación, una lista de los valores que se van a insertar. Los dos guiones dobles antes de cada línea indican que la línea es un comentario y el compilador ignorará el texto. En este caso, el comentario describe una variación permitida de la sintaxis.  
   
 ### <a name="to-insert-data-into-a-table"></a>Para insertar datos en una tabla  
   
@@ -84,9 +84,9 @@ ms.locfileid: "63250130"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Leer datos de una tabla &#40;Tutorial&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+ [Leer los datos de una tabla &#40;tutorial&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   

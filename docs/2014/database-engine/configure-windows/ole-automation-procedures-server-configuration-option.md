@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f00c238dfb32089261c51936b3937b0657c58b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782033"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>Ole Automation Procedures (opción de configuración del servidor)
@@ -30,9 +30,9 @@ ms.locfileid: "62782033"
  1  
  Los procedimientos de automatización OLE están habilitados.  
   
- Cuando los procedimientos de automatización OLE están habilitados, una llamada a **sp_OACreate** iniciará el entorno de ejecución compartido OLE.  
+ Cuando los procedimientos de OLE Automation están habilitados, una llamada a **sp_OACreate** iniciará el entorno de ejecución compartido OLE.  
   
- El valor actual de la `Ole Automation Procedures` se puede ver y cambiar mediante la opción la **sp_configure** procedimiento almacenado del sistema.  
+ El valor actual de la `Ole Automation Procedures` opción se puede ver y cambiar mediante el **sp_configure** procedimiento almacenado del sistema.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se muestra cómo se ve la configuración actual de OLE Automation Procedures.  
@@ -55,10 +55,10 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
- [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)   
+ [Configuración de Área expuesta](../../relational-databases/security/surface-area-configuration.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

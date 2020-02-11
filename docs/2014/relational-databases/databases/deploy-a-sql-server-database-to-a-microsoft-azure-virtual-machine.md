@@ -43,18 +43,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175740"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implementar una base de datos de SQL Server en una máquina virtual de Microsoft Azure
-  Use el Asistente para **implementar una base de datos de SQL Server en una máquina** virtual de Azure para implementar una base de datos desde una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina virtual (VM) de Azure. El asistente emplea una operación de copia de seguridad completa de la base de datos, por lo que siempre copia todo el esquema de la base de datos y los datos de una base de datos de usuario de SQL Server. El asistente también realiza toda la configuración de Azure VM, por lo que no se requiere ninguna configuración previa de la VM.  
+  Use el Asistente para **implementar una base de datos de SQL Server en una máquina** virtual de Azure para implementar una [!INCLUDE[ssDE](../../includes/ssde-md.md)] base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos desde una instancia del en en una máquina virtual (VM) de Azure. El asistente emplea una operación de copia de seguridad completa de la base de datos, por lo que siempre copia todo el esquema de la base de datos y los datos de una base de datos de usuario de SQL Server. El asistente también realiza toda la configuración de Azure VM, por lo que no se requiere ninguna configuración previa de la VM.  
   
  No puede usar el asistente para las copias de seguridad diferenciales porque no sobrescribirá una base de datos existente que tenga el mismo nombre de base de datos. Para reemplazar una base de datos existente en la VM, debe quitar primero la base de datos existente o cambiar el nombre de la base de datos. Si hay un conflicto de nombres entre el nombre de la base de datos para una operación de implementación en ejecución y una base de datos existente en la VM, el asistente sugerirá un nombre de base de datos anexado para la base de datos en ejecución de manera que pueda completar la operación.  
   
-##  <a name="before_you_begin"></a> Antes de empezar  
+##  <a name="before_you_begin"></a> Antes de comenzar  
  Para completar este asistente, debe poder proporcionar la siguiente información y tener esta configuración:  
   
 -   Los detalles de cuenta de Microsoft asociados con la suscripción de Azure.  
@@ -107,26 +107,26 @@ ms.locfileid: "70175740"
   
 -   SQL Server 2008 R2  
   
--   SQL Server 2012  
+-   SQL Server 2012  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  SQL Server versiones de base de datos que se ejecutan en una base de datos de máquinas virtuales de Azure se pueden implementar en:  
   
--   SQL Server 2012  
+-   SQL Server 2012  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  Si hay un conflicto de nombres entre el nombre de la base de datos para una operación de implementación en ejecución y una base de datos existente en la VM, el asistente sugerirá un nombre de base de datos anexado para la base de datos en ejecución de manera que pueda completar la operación.  
   
-###  <a name="filestream"></a> Consideraciones para implementar una base de datos habilitada para FILESTREAM en una máquina virtual de Windows Azure  
+###  <a name="filestream"></a>Consideraciones para implementar una base de datos habilitada para FILESTREAM en una máquina virtual de Azure  
  Tenga en cuenta las directrices y limitaciones siguientes al implementar las bases de datos que tienen BLOBS almacenados en objetos FILESTREAM:  
   
 -   La característica de implementación no puede implementar una base de datos habilitada para FILESTREAM en una nueva máquina virtual. Si FILESTREAM no está habilitado en la máquina virtual antes de ejecutar el asistente, la operación de restauración de la base de datos producirá un error y la operación del asistente no se podrá completar correctamente. Para implementar correctamente una base de datos que utiliza FILESTREAM, habilite FILESTREAM en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la máquina virtual host antes de iniciar el asistente. Para obtener más información, vea [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx).  
   
 -   Si la base de datos utiliza OLTP en memoria, puede implementar la base de datos en una máquina virtual de Windows Azure sin ninguna modificación en la base de datos. Para obtener más información, vea [OLTP en memoria (optimización en memoria)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
   
-###  <a name="geography"></a> Consideraciones acerca de la distribución geográfica de activos  
+###  <a name="geography"></a>Consideraciones sobre la distribución geográfica de activos  
  Observe que los activos siguientes se deben encontrar en la misma región geográfica:  
   
 -   Servicio en la nube  
@@ -137,14 +137,14 @@ ms.locfileid: "70175740"
   
  Si los activos enumerados anteriormente no se ubican conjuntamente, el asistente no se podrá completar correctamente.  
   
-###  <a name="configuration_settings"></a> Valores de configuración del asistente  
+###  <a name="configuration_settings"></a>Opciones de configuración del asistente  
  Utilice los detalles siguientes de configuración para modificar la configuración de una implementación de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina virtual de Windows Azure.  
   
--   **Ruta de acceso predeterminada del archivo de configuración** : %LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM\DeploymentSettings.xml  
+-   **Ruta de acceso predeterminada del archivo de configuración** :%LOCALAPPDATA%\SQL SERVER\DEPLOY to a SQL en wa VM\DeploymentSettings.XML  
   
 -   **Estructura de los archivos de configuración**  
   
-    -   \<DeploymentSettings>  
+    -   \<> DeploymentSettings  
   
         -   <OtherSettings  
   
@@ -152,7 +152,7 @@ ms.locfileid: "70175740"
   
             -   BackupPath="\\\\[nombre de servidor]\\[volumen]\\" \<!-- La última ruta de acceso usada para la copia de seguridad. Se usa como valor predeterminado del asistente. -->  
   
-            -   CleanupDisabled = false/> \<Asistente para!--no eliminará los archivos intermedios y los objetos de Azure (VM, CS, SA). -->  
+            -   CleanupDisabled = false/> \<!--asistente no eliminará los archivos intermedios y los objetos de Azure (VM, CS, SA). -->  
   
         -   <PublishProfile \<! -- La última información usada del perfil de publicación. -->  
   
@@ -164,7 +164,8 @@ ms.locfileid: "70175740"
   
             -   Publisher="" />  
   
-    -   \</DeploymentSettings>  
+    -   
+  \</DeploymentSettings>  
   
  **Valores del archivo de configuración**  
   
@@ -189,18 +190,18 @@ ms.locfileid: "70175740"
   
 -   **No volver a mostrar esta página.** - Active esta casilla para que la página Introducción deje de mostrarse en el futuro.  
   
--   **Siguiente** : continúa en la página **Configuración de origen** .  
+-   **Siguiente** : continúa en la página **configuración de origen** .  
   
 -   **Cancelar**: cancela la operación y cierra el asistente.  
   
 -   **Ayuda** : inicia el tema de ayuda de MSDN para el asistente.  
   
-##  <a name="Source_settings"></a> Configuración de origen  
+##  <a name="Source_settings"></a>Configuración de origen  
  Use esta página para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos que desea implementar en la máquina virtual de Azure. También especificará una ubicación temporal para que los archivos se guarden desde el equipo local antes de que se transfieran a Azure. Esta puede ser una ubicación de red compartida.  
   
  **Opciones**  
   
--   Haga clic en **conectar...** y, a continuación, especifique los detalles de conexión de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos que se va a implementar.  
+-   Haga clic en **conectar...** y, a continuación, especifique los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detalles de conexión de la instancia de que hospeda la base de datos que se va a implementar.  
   
 -   Use la lista desplegable **Seleccionar base de datos** para especificar la base de datos que implementar.  
   
@@ -219,7 +220,7 @@ ms.locfileid: "70175740"
   
 -   **Suscripción** : seleccione, escriba o pegue el identificador de suscripción de Azure que coincida con el certificado de administración del almacén de certificados local o un perfil de publicación.  
   
-##  <a name="Deployment_settings"></a> Página Configuración de implementación  
+##  <a name="Deployment_settings"></a>Página configuración de implementación  
  Use esta página para especificar el servidor de destino y proporcionar detalles sobre la nueva base de datos.  
   
  **Opciones**  
@@ -250,13 +251,13 @@ ms.locfileid: "70175740"
   
  Haga clic en **Finalizar** para cerrar el asistente.  
   
-## <a name="see-also"></a>Vea también  
- [adaptador para la nube de SQL Server](../../database-engine/cloud-adapter-for-sql-server.md)   
- [Administración del ciclo de vida de base de datos](../database-lifecycle-management.md)   
+## <a name="see-also"></a>Consulte también  
+ [Adaptador para la nube para SQL Server](../../database-engine/cloud-adapter-for-sql-server.md)   
+ [Administración del ciclo de vida de la base](../database-lifecycle-management.md)   
  [Exportar una aplicación de capa de datos](../data-tier-applications/export-a-data-tier-application.md)   
- [Importar un archivo de bacpac para crear una nueva base de datos de usuario](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
- [Copias de seguridad y restauración de bases de datos SQL de Azure](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
+ [Importar un archivo BACPAC para crear una nueva base de datos de usuario](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
+ [Copia de seguridad y restauración de Azure SQL Database](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
  [SQL Server implementación en Azure Virtual Machines](https://msdn.microsoft.com/library/dn133141.aspx)   
- [Preparación para la migración a SQL Server en Azure Virtual Machines](https://msdn.microsoft.com/library/dn133142.aspx)  
+ [Preparar la migración a SQL Server en Azure Virtual Machines](https://msdn.microsoft.com/library/dn133142.aspx)  
   
   

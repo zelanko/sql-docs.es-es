@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de código de biblioteca de cursores | Microsoft Docs
+title: Ejemplo de código de la biblioteca de cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019070"
 ---
 # <a name="cursor-library-code-example"></a>Ejemplo de código de la biblioteca de cursores
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- El ejemplo siguiente usa la biblioteca de cursores para recuperar el Id., fecha de apertura y estado de cada pedido de la tabla ORDERS. A continuación, muestra 20 filas de datos. Si el usuario actualiza estos datos, el código actualiza los búferes del conjunto de filas y ejecuta una instrucción de actualización posicionada. Por último, pide al usuario para la dirección para desplazarse y repite el proceso.  
+ En el ejemplo siguiente se usa la biblioteca de cursores para recuperar el identificador de cada pedido, la fecha de apertura y el estado de la tabla ORDERs. A continuación, muestra 20 filas de datos. Si el usuario actualiza estos datos, el código actualiza los búferes del conjunto de filas y ejecuta una instrucción UPDATE posicionada. Por último, pide al usuario la dirección de desplazamiento y repite el proceso.  
   
 ```  
 #define ROWS 20  

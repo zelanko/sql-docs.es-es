@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199449"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Realizar cambios de esquema en bases de datos de publicaciones
-  La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando se realiza cualquiera de los siguientes cambios de esquema en el objeto publicado apropiado en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , dicho cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+  La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando realice cualquiera de los siguientes cambios de esquema en el objeto publicado correspondiente en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ese cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   ALTER TABLE  
   
@@ -146,9 +146,10 @@ ms.locfileid: "68199449"
         |`hierarchyid`|Permitir cambio|Bloquear cambio|Bloquear cambio|  
         |`geography` y `geometry`|Permitir cambio|Permitir cambio<sup>1</sup>|Bloquear cambio|  
         |`filestream`|Permitir cambio|Bloquear cambio|Bloquear cambio|  
-        |`date`, `time`, `datetime2` y `datetimeoffset`.|Permitir cambio|Permitir cambio<sup>1</sup>|Bloquear cambio|  
+        |
+  `date`, `time`, `datetime2` y `datetimeoffset`|Permitir cambio|Permitir cambio<sup>1</sup>|Bloquear cambio|  
   
-         <sup>1</sup> suscriptores de SQL Server Compact convierten estos tipos de datos en el suscriptor.  
+         <sup>1</sup> SQL Server Compact los suscriptores convierten estos tipos de datos en el suscriptor.  
   
 -   En caso de error al aplicar un cambio de esquema (por ejemplo, un error que se produce por agregar una clave externa que hace referencia a una tabla que no está disponible en el suscriptor), se produce un error en la sincronización y es necesario reinicializar la suscripción.  
   
@@ -156,7 +157,7 @@ ms.locfileid: "68199449"
   
 -   La replicación de mezcla proporciona procedimientos almacenados para omitir los cambios de esquema durante la solución de problemas. Para obtener más información, vea [sp_markpendingschemachange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql) y [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [ALTER VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   

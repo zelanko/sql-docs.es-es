@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 005fe3d14a7314f7339157064b248a81044a1dfb
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401213"
 ---
 # <a name="determine-polling-frequency"></a>Determinar la frecuencia de sondeo
@@ -34,7 +34,7 @@ Un intervalo común para sondear las alertas, que también usa System Center, es
   
 El sondeo más frecuente es aceptable, pero el sondeo con demasiada frecuencia puede abarrotar la DMV [Sys. dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) .  El sondeo con demasiada frecuencia puede dificultar a los usuarios el diagnóstico de los problemas de rendimiento de las consultas cuando se despliegan rápidamente.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [Supervisión de dispositivos &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

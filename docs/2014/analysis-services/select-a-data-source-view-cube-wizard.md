@@ -1,5 +1,5 @@
 ---
-title: Seleccione una vista del origen de datos (Asistente para cubos) | Microsoft Docs
+title: Seleccionar una vista del origen de datos (Asistente para cubos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 901d8e0adc923ec5f70fbf1097cc806b30318809
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069747"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>Seleccionar una vista del origen de datos (Asistente para cubos)
@@ -29,11 +29,11 @@ ms.locfileid: "66069747"
  **Vista del origen de datos**  
  Selecciona la vista del origen de datos que se utilizará para el cubo vacío.  
   
- **Ninguno**  
+ **None**  
  Seleccione esta opción si no desea utilizar una vista del origen de datos. Esta opción es adecuada si va a generar la vista del origen de datos posteriormente, o si piensa usar el cubo únicamente con grupos de medida vinculados.  
   
-## <a name="see-also"></a>Vea también  
- [Objetos de cubo &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Objetos de cubo &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubos en modelos multidimensionales](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   

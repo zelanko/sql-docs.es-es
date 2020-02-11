@@ -17,29 +17,29 @@ ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8e6f6a7cb749ff2b22a1f7563b43ce07e060aab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911552"
 ---
 # <a name="childcount-property-ado-md"></a>Propiedad ChildCount (ADO MD)
-Indica el número de miembros para el que el actual [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objeto es el elemento primario en una jerarquía.  
+Indica el número de miembros para los que el objeto [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) actual es el elemento primario de una jerarquía.  
   
 ## <a name="return-values"></a>Valores devueltos  
- Devuelve un **largo** entero y es de solo lectura.  
+ Devuelve un entero **largo** y es de solo lectura.  
   
-## <a name="remarks"></a>Comentarios  
- Use la **ChildCount** propiedad para devolver una estimación de cuántos elementos secundarios una **miembro** tiene. Los propios elementos secundarios de un **miembro** puede devolver el [hijos](../../../ado/reference/ado-md-api/children-property-ado-md.md) propiedad.  
+## <a name="remarks"></a>Observaciones  
+ Use la propiedad **ChildCount** para devolver una estimación del número de elementos secundarios que tiene un **miembro** . Los elementos secundarios reales de un **miembro** pueden ser devueltos por la propiedad [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) .  
   
- Para **miembro** objetos desde una [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md) objeto, el número máximo de devuelto es 65536. Si el número real de elementos secundarios es mayor que 65.536, el valor devuelto será aún 65536. Por lo tanto, la aplicación debería interpretar un **ChildCount** de 65.536 como igual o mayor que 65536 secundarios.  
+ Para los objetos **miembro** de un objeto [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) , el número máximo devuelto es 65536. Si el número real de elementos secundarios supera 65536, el valor devuelto seguirá siendo 65536. Por lo tanto, la aplicación debe interpretar un valor de **ChildCount** de 65536 como igual o superior a 65536 elementos secundarios.  
   
- Para **miembro** objetos desde una [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) de objeto, utilice la colección de ADO [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad en el **elementos secundarios** colección para determinar el número exacto de elementos secundarios. Determinar el número exacto de elementos secundarios puede ser lento si el número de elementos secundarios de la colección es grande.  
+ Para los objetos de **miembro** de un objeto de [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) , use la propiedad [recuento](../../../ado/reference/ado-api/count-property-ado.md) de colecciones de ADO en la colección de **elementos secundarios** para determinar el número exacto de elementos secundarios. La determinación del número exacto de elementos secundarios puede ser lenta si el número de elementos secundarios de la colección es grande.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de miembro (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>Vea también  
- [Elementos secundarios (propiedad, ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
- [Count (propiedad, ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Propiedad Children (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
+ [Propiedad Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Colección Members (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)

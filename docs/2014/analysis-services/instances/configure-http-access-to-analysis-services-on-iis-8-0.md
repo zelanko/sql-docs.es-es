@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225400"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurar el acceso HTTP a Analysis Services en Internet Information Services (IIS) 8.0
@@ -38,7 +38,7 @@ ms.locfileid: "75225400"
   
  Este tema incluye las siguientes secciones:  
   
--   [Visión](#bkmk_overview)  
+-   [Información general](#bkmk_overview)  
   
 -   [Requisitos previos](#bkmk_prereq)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75225400"
 |IIS y Analysis Services en equipos diferentes|En esta topología, debe instalar el proveedor OLE DB para Analysis Services en el servidor web. También debe modificar el archivo msmdpump.ini para especificar la ubicación de la instancia de Analysis Services en el equipo remoto.<br /><br /> Esta topología agrega un paso de autenticación de doble salto, en el que las credenciales deben fluir del cliente al servidor web y en el servidor back-end de Analysis Services. Si especifica las credenciales de Windows y NTLM, obtendrá un error porque NTLM no permite la delegación de las credenciales de cliente en un segundo servidor. La solución más habitual es usar la autenticación básica con Capa de sockets seguros (SSL), pero esto requerirá que los usuarios proporcionen un nombre de usuario y una contraseña al acceder al directorio virtual de MSMDPUMP. Un método más sencillo podría ser habilitar Kerberos y configurar la delegación restringida de Analysis Services para que los usuarios puedan acceder a Analysis Services de un modo transparente. Para obtener información detallada, vea [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) .<br /><br /> Considere qué puertos desbloquear en Firewall de Windows. Tendrá que desbloquear los puertos en ambos servidores para permitir el acceso a la aplicación web en IIS y a Analysis Services en un servidor remoto.|  
 |Las conexiones de cliente provienen de un dominio que no es de confianza o de una conexión de la extranet|Las conexiones de cliente que provienen de un dominio que no es de confianza imponen mayores restricciones en la autenticación. De forma predeterminada, Analysis Services usa la autenticación integrada de Windows, que requiere que los usuarios estén en el mismo dominio que el servidor. Si tiene usuarios de la extranet que se conectan a IIS desde fuera del dominio, recibirán un error de conexión si el servidor está configurado para usar la configuración predeterminada.<br /><br /> Como solución alternativa, puede hacer que los usuarios de la extranet se conecten a través de una VPN con las credenciales del dominio. Sin embargo, sería mejor solución habilitar la autenticación básica y SSL en el sitio web de IIS.|  
   
-##  <a name="bkmk_prereq"></a>Requisitos previos  
+##  <a name="bkmk_prereq"></a> Requisitos previos  
  Las instrucciones de este artículo suponen que IIS ya está configurado y que ya está instalado Analysis Services. Windows Server 2012 se suministra con IIS 8.x como rol de servidor que se puede habilitar en el sistema.  
   
  **Configuración adicional en IIS 8,0**  
@@ -157,7 +157,7 @@ ms.locfileid: "75225400"
   
      ![cuadro de diálogo Agregar aplicación](../media/ssas-httpaccess-convertedapp.png "cuadro de diálogo Agregar aplicación")  
   
-4.  Haga clic en **Aceptar**. Actualice el sitio web y observe que la carpeta OLAP es ahora una aplicación en el sitio web predeterminado. Ahora se establece la ruta de acceso virtual al archivo MSMDPUMP.  
+4.  Haga clic en **OK**. Actualice el sitio web y observe que la carpeta OLAP es ahora una aplicación en el sitio web predeterminado. Ahora se establece la ruta de acceso virtual al archivo MSMDPUMP.  
   
      ![Carpeta OLAP después de la conversión de la aplicación](../media/ssas-httpaccess-convertfolderafter.png "Carpeta OLAP después de la conversión de la aplicación")  
   
@@ -297,7 +297,7 @@ ms.locfileid: "75225400"
   
  Como paso final, asegúrese de realizar las pruebas de forma más rigurosa con un equipo cliente que se ejecute en el entorno de red desde el que se vayan a originar las conexiones.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Publicación del foro (acceso http con msmdpump y autenticación básica)](https://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
  [Configurar el Firewall de Windows para permitir el acceso a Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [Autorización de acceso a objetos y operaciones &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   

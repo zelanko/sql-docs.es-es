@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242941"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editores XML (SQL Server Management Studio)
@@ -37,9 +37,9 @@ ms.locfileid: "75242941"
 |Ver|Descripción|Tipos de archivos compatibles|  
 |----------|-----------------|--------------------------|  
 |**Esquema**|Para crear y modificar visualmente esquemas XML y conjuntos de datos ADO.NET.|.xsd|  
-|**Datos**|Para modificar visualmente archivos de datos XML en una cuadrícula de datos estructurada.|.xml|  
-|**LENGUAJE**|Para editar XML; el editor de origen proporciona codificación de colores e IntelliSense, e incluye las características Palabra completa y Lista de miembros.|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
-|**All**|Muestra los planes de consulta xml creados mediante la opción SET SHOWPLAN_XML ON.|.showplan|  
+|**Data**|Para modificar visualmente archivos de datos XML en una cuadrícula de datos estructurada.|.xml|  
+|**XML**|Para editar XML; el editor de origen proporciona codificación de colores e IntelliSense, e incluye las características Palabra completa y Lista de miembros.|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
+|**ShowPlan**|Muestra los planes de consulta xml creados mediante la opción SET SHOWPLAN_XML ON.|.showplan|  
   
 ## <a name="schema-view"></a>Vista Esquema  
  La vista Esquema proporciona una representación visual de los elementos, atributos, tipos, etc., que componen los esquemas XML y los conjuntos de datos ADO.NET.  
@@ -98,13 +98,12 @@ ms.locfileid: "75242941"
  La vista XML proporciona un editor para editar XML sin formato y proporciona también IntelliSense y codificación de colores. La finalización automática de instrucciones estará disponible cuando se trabaje con archivos .xsd y .xml que dispongan de un esquema asociado. Escriba \< para iniciar una etiqueta y se le presentará una lista de elementos que son válidos en esa ubicación. Después de escribir el nombre del elemento y de presionar la BARRA ESPACIADORA, se le mostrará una lista de atributos compatibles con dicho elemento.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense no están disponibles en la barra de herramientas. Para obtener acceso a las opciones desde el Editor XML, haga clic en **IntelliSense** , en el menú **Edición**.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense no están disponibles en la barra de herramientas. Para obtener acceso a las opciones desde el Editor XML, haga clic en **IntelliSense** , en el menú **Edición**.  
   
 ## <a name="showplan-view"></a>Vista SHOWPLAN  
  Los planes de consulta pueden guardarse en formato XML cuando se crean mediante la opción SET SHOWPLAN_XML ON. Haga doble clic en un archivo con la extensión .showplan para abrir el plan de consulta.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Guardar un plan de ejecución en formato XML](../performance/save-an-execution-plan-in-xml-format.md)  
   
   

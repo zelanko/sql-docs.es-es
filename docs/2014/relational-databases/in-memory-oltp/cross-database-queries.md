@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8739a95f0676adfdbc890512aeb5246565bacdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071601"
 ---
 # <a name="cross-database-queries"></a>Consultas entre bases de datos
@@ -22,7 +22,7 @@ ms.locfileid: "63071601"
   
  Las variables de tabla no son transaccionales. Por tanto, se pueden utilizar las variables de tabla optimizada para memoria en consultas entre bases de datos y pueden así facilitar la migración de datos de una base de datos a tablas optimizadas para memoria de otra. Puede utilizar dos transacciones. En la primera transacción, inserte los datos de la tabla remota en la variable. En la segunda transacción, inserte los datos en la tabla optimizada para memoria local desde la variable.  
   
- Por ejemplo, para copiar la fila de la tabla t1 en la base de datos db1 en la tabla t2 de db2, utilizando la variable @v1 de tipo dbo.tt1, puede usar algo como:  
+ Por ejemplo, para copiar la fila de la tabla T1 de la base de datos db1 en la tabla T2 @v1 de DB2, utilizando la variable de tipo DBO. TT1, puede usar algo parecido a lo siguiente:  
   
 ```sql  
 USE db2   
@@ -33,7 +33,7 @@ INSERT dbo.t2 SELECT * FROM @v1
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Migrar a OLTP en memoria](migrating-to-in-memory-oltp.md)  
   
   

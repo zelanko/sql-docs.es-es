@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aa6753b0e49e898476f4138c5e445ea75918aa17
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244985"
 ---
 # <a name="change-font-color-size-and-style"></a>Cambiar el color, el tamaño y el estilo de la fuente
@@ -42,8 +42,8 @@ ms.locfileid: "75244985"
   
  Los valores para el color del texto y el tipo de fuente son globales para todos los tipos de elementos de texto, como comentarios, cadenas, etc.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Imprimir código y resultados](print-code-and-results.md)   
- [Codificación de colores en los editores de consultas](color-coding-in-query-editors.md)  
+ [Codificación de colores en el Editor de consultas](color-coding-in-query-editors.md)  
   
   

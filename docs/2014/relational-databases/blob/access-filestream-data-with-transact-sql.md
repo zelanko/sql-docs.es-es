@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 067f14e857addc5f43a0b17d81d554997adbc09f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010443"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Obtener acceso a datos FILESTREAM con Transact-SQL
@@ -45,7 +45,7 @@ ms.locfileid: "66010443"
   
  Cuando selecciona todos los datos de la tabla `Archive`.`dbo.Records` , los resultados son similares a los que se muestran en la tabla siguiente. Sin embargo, la columna `Id` contendrá GUID diferentes.  
   
-|Identificador|SerialNumber|Reanudar|  
+|Identificador|SerialNumber|Reanudación|  
 |--------|------------------|------------|  
 |`C871B90F-D25E-47B3-A560-7CC0CA405DAC`|`1`|`NULL`|  
 |`F8F5C314-0559-4927-8FA9-1535EE0BDF50`|`2`|`0x`|  
@@ -70,7 +70,7 @@ ms.locfileid: "66010443"
 > [!NOTE]  
 >  El recolector de elementos no utilizados de FILESTREAM quita los archivos subyacentes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Habilitar y configurar FILESTREAM](enable-and-configure-filestream.md)   
  [Evitar conflictos con operaciones de base de datos en aplicaciones FILESTREAM](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   

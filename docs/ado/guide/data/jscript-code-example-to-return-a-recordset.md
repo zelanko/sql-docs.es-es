@@ -15,14 +15,14 @@ ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924931"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>Ejemplo de código JScript para devolver un conjunto de registros
-## <a name="jscript-code-rsjs"></a>Código JScript (rs.js)  
+## <a name="jscript-code-rsjs"></a>Código JScript (RS. js)  
   
 ```  
 main();  
@@ -79,10 +79,10 @@ function alert(str)
 }  
 ```  
   
-#### <a name="try-it"></a>¡Pruébelo!  
+#### <a name="try-it"></a>¡ Pruébelo!  
   
-1.  Guarde el código anterior en un archivo de texto. Guarde el archivo como rs.js.  
+1.  Guarde el código anterior en un archivo de texto. Guarde el archivo como RS. js.  
   
-2.  Abra un símbolo del sistema y cambie al directorio donde ha guardado el archivo JScript (rs.js).  
+2.  Abra un símbolo del sistema y CD en el directorio donde ha guardado el archivo JScript (RS. js).  
   
-3.  Tipo `CScript rs.js` desde el símbolo del sistema.
+3.  Escriba `CScript rs.js` desde el símbolo del sistema.

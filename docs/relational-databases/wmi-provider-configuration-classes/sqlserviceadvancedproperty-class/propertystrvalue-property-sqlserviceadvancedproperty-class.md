@@ -18,10 +18,10 @@ ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e538a7cfb9b922bd7960fa5833f5a3c3d14da918
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660024"
 ---
 # <a name="propertystrvalue-property-sqlserviceadvancedproperty-class"></a>Propiedad PropertyStrValue (clase SqlServiceAdvancedProperty)
@@ -36,15 +36,15 @@ object.PropertyStrValue [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Objeto de la [clase SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) que representa una propiedad avanzada.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el valor de la propiedad avanzada.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

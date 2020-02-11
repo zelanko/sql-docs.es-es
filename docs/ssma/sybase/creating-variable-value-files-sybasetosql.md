@@ -1,5 +1,5 @@
 ---
-title: Creación de archivos de valor Variable (SybaseToSQL) | Microsoft Docs
+title: Crear archivos de valor variable (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2c0c76a36502d9d590b6db478efcab6feb50ba01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029389"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>Creación de archivos de valor variable (SybaseToSQL)
-Archivo de valores de variable es un archivo XML que contiene los valores de parámetro de comandos, como el nombre del servidor de origen o destino que cambian con frecuencia de la migración de un servidor a otro. Cuando se produce un gran número de migraciones de base de datos, se creará varios archivos de variable para almacenar el valor de cada servidor de origen y se hace referencia en un archivo de script maestro con el **- v** cambiar en la línea de comandos. Esto ayuda a mantener los valores estáticos en unos pocos archivos de script con los valores de variables en varios archivos de variable.  
+El archivo de valores de variable es un archivo XML que comprende los valores de parámetro de comandos como, el nombre de servidor de origen o de destino que cambian con frecuencia de una migración de servidor a otra. Cuando se produce un gran número de migraciones de base de datos, se crearán varios archivos de variables para almacenar el valor de cada servidor de origen y se hará referencia a ellos en un archivo de script maestro con el modificador **-v** en la línea de comandos. Esto ayuda a mantener valores estáticos en algunos archivos de script con los valores de variable en varios archivos de variables.  
   
 > [!NOTE]  
-> 1.  Los nombres de variable son el prefijo y sufijo con un símbolo $ (dólar). Si las variables no se asignan un valor en el archivo de valor de la variable, se producirá un error durante el análisis del archivo de script, lo que detienen el proceso de ejecución de la consola.  
-> 2.  El carácter de escape para **$** es **$$** . Si el valor de un valor estático o variable de un parámetro contiene **$** símbolos (dólar), a continuación, **$$** debe especificarse para tratarlo como un carácter en lugar de una variable.  
-> 3.  Para fines de mantenimiento, se pueden declarar variables dentro `'variable-group'` elementos para una separación lógica del usuario definen las variables.  Uso de este elemento no es obligatorio.  
+> 1.  Los nombres de variable tienen el prefijo y el sufijo con un símbolo $ (dólar). Si no se asigna un valor a las variables en el archivo de valores de variable, se producirá un error durante el análisis del archivo de script, lo que provocará que se detenga el proceso de ejecución de la consola.  
+> 2.  El carácter de escape **$** para **$$** es. Si el valor de una variable o un valor estático de un parámetro **$** contiene un símbolo (dólar) **$$** , debe especificarse para tratarlo como un carácter en lugar de una variable.  
+> 3.  En lo que respecta a la facilidad de mantenimiento, `'variable-group'` las variables se pueden declarar dentro de elementos para la separación lógica de las variables definidas por el usuario.  El uso de este elemento no es obligatorio.  
   
 **Ejemplos:**  
   
@@ -86,12 +86,12 @@ Archivo de valores de variable es un archivo XML que contiene los valores de par
 </variables>  
 ```  
   
-## <a name="variable-value-file-validation"></a>Validación de archivos de valor de la variable  
-El usuario puede validar fácilmente su archivo de valor de la variable en el archivo de definición de esquema **ConsoleScriptVariablesSchema.xsd** disponible en la carpeta "Esquemas".  
+## <a name="variable-value-file-validation"></a>Validación de archivos de valores de variables  
+El usuario puede validar fácilmente su archivo de valores de variable en el archivo de definición de esquema **ConsoleScriptVariablesSchema. xsd** disponible en la carpeta ' schemas '.  
   
-## <a name="next-step"></a>Paso siguiente  
-El siguiente paso en el funcionamiento de la consola es [crear los archivos de conexión de servidor &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
+## <a name="next-step"></a>siguiente paso  
+El siguiente paso en el funcionamiento de la consola es [la creación de los archivos de conexión del servidor &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
-## <a name="see-also"></a>Vea también  
-[Creación de los archivos del servidor (Sybasetosql)](https://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
+## <a name="see-also"></a>Consulte también  
+[Crear los archivos de servidor (Sybase)](https://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
   

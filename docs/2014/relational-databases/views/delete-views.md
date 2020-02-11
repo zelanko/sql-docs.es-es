@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7e727451fb0f9dc7a3d0726a2cb0fa2d6adf997
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196407"
 ---
 # <a name="delete-views"></a>Eliminar vistas
@@ -40,7 +40,7 @@ ms.locfileid: "68196407"
 ####  <a name="Permissions"></a> Permisos  
  Se necesita el permiso ALTER en SCHEMA o el permiso CONTROL en OBJECT.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-delete-a-view-from-a-database"></a>Para eliminar una vista de una base de datos  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68196407"
 3.  En el cuadro de diálogo **Eliminar objeto** , haga clic en **Aceptar**.  
   
     > [!IMPORTANT]  
-    >  Haga clic en **Mostrar dependencias** en el cuadro de diálogo **Eliminar objeto** para abrir el cuadro de diálogo **Dependencias de _view_name_** . Esto mostrará todos los objetos que dependen de la vista y todos los objetos de los que depende la vista.  
+    >  Haga clic en **Mostrar dependencias** en el cuadro de diálogo **eliminar objeto** para abrir el cuadro de diálogo**dependencias** _view_name_. Esto mostrará todos los objetos que dependen de la vista y todos los objetos de los que depende la vista.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

@@ -1,5 +1,5 @@
 ---
-title: Efecto de las transacciones en los cursores y las instrucciones preparadas | Microsoft Docs
+title: Efecto de las transacciones en cursores y instrucciones preparadas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,43 +18,43 @@ ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 83b693922d08f7298d0c5282fe2c7d1c20149d5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046882"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>Efecto de las transacciones en los cursores y las instrucciones preparadas
-Confirmar o revertir una transacción tiene el efecto en los cursores y los planes de acceso siguiente:  
+La confirmación o reversión de una transacción tiene el siguiente efecto en los cursores y los planes de acceso:  
   
--   Todos los cursores se cierran y se eliminan los planes de acceso para instrucciones preparadas en esa conexión.  
+-   Se cierran todos los cursores y se eliminan los planes de acceso para las instrucciones preparadas en esa conexión.  
   
--   Todos los cursores se cierran y acceso a los planes para instrucciones preparadas en esa conexión permanecen intactos.  
+-   Todos los cursores están cerrados y los planes de acceso para las instrucciones preparadas en esa conexión permanecen intactos.  
   
--   Todos los cursores permanecen abiertos y los planes de acceso para instrucciones preparadas en esa conexión permanecen intactos.  
+-   Todos los cursores permanecen abiertos y los planes de acceso para las instrucciones preparadas en esa conexión permanecen intactos.  
   
- Por ejemplo, suponga que un origen de datos comporta de la primera de esta lista, el más restrictivo de estos comportamientos. Ahora supongamos que una aplicación hace lo siguiente:  
+ Por ejemplo, supongamos que un origen de datos exhibe el primer comportamiento en esta lista, el más restrictivo de estos comportamientos. Ahora Supongamos que una aplicación hace lo siguiente:  
   
-1.  Establece el modo de confirmación a confirmación manual.  
+1.  Establece el modo de confirmación en confirmación manual.  
   
-2.  Crea un conjunto de resultados de pedidos de venta en la instrucción 1.  
+2.  Crea un conjunto de resultados de pedidos de ventas en la instrucción 1.  
   
-3.  Crea un conjunto de resultados de las líneas en un pedido de ventas en la instrucción 2, cuando el usuario resalta ese orden.  
+3.  Crea un conjunto de resultados de las líneas de un pedido de ventas en la instrucción 2, cuando el usuario resalta ese pedido.  
   
-4.  Las llamadas **SQLExecute** para ejecutar una instrucción de actualización posicionada que se ha preparado en la instrucción 3, cuando el usuario actualiza una línea.  
+4.  Llama a **SQLExecute** para ejecutar una instrucción UPDATE posicionada que se ha preparado en la instrucción 3, cuando el usuario actualiza una línea.  
   
-5.  Las llamadas **SQLEndTran** para confirmar la instrucción de actualización posicionada.  
+5.  Llama a **SQLEndTran** para confirmar la instrucción UPDATE posicionada.  
   
- Como consecuencia de comportamiento del origen de datos, la llamada a **SQLEndTran** en el paso 5 hace que para cerrar los cursores en las instrucciones 1 y 2 y eliminar el plan de acceso en todas las instrucciones. La aplicación debe ejecutar de nuevo los conjuntos de instrucciones 1 y 2 para volver a crear el resultado y reprepare la instrucción de declaración de 3.  
+ Debido al comportamiento del origen de datos, la llamada a **SQLEndTran** en el paso 5 hace que se cierren los cursores de las instrucciones 1 y 2 y se elimine el plan de acceso en todas las instrucciones. La aplicación debe volver a ejecutar las instrucciones 1 y 2 para volver a crear los conjuntos de resultados y volver a preparar la instrucción en la instrucción 3.  
   
- En el modo de confirmación automática, las funciones distintas de **SQLEndTran** confirmar las transacciones:  
+ En el modo de confirmación automática, las funciones que no sean **SQLEndTran** commit Transactions:  
   
--   **SQLExecute** o **SQLExecDirect** en el ejemplo anterior, la llamada a **SQLExecute** en el paso 4 confirma una transacción. Esto hace que el origen de datos cerrar los cursores en las instrucciones 1 y 2 y eliminar el plan de acceso a todas las instrucciones de esa conexión.  
+-   **SQLExecute** o **SQLExecDirect** en el ejemplo anterior, la llamada a **SQLExecute** en el paso 4 confirma una transacción. Esto hace que el origen de datos cierre los cursores en las instrucciones 1 y 2 y elimine el plan de acceso en todas las instrucciones de esa conexión.  
   
--   **SQLBulkOperations** o **SQLSetPos** en el ejemplo anterior, supongamos que en el paso 4 la aplicación llama a **SQLSetPos** con la opción SQL_UPDATE en instrucción 2, en lugar de ejecutar un coloca la instrucción update en la instrucción 3. Esto confirma una transacción y hace que el origen de datos cerrar los cursores en las instrucciones 1 y 2 y descarta todos los planes de acceso en esa conexión.  
+-   **SQLBulkOperations** o **SQLSetPos** en el ejemplo anterior, supongamos que en el paso 4 la aplicación llama a **SQLSetPos** con la opción SQL_UPDATE en la instrucción 2, en lugar de ejecutar una instrucción UPDATE posicionada en la instrucción 3. Esto confirma una transacción y hace que el origen de datos cierre los cursores en las instrucciones 1 y 2, y descarta todos los planes de acceso en esa conexión.  
   
--   **SQLCloseCursor** en el ejemplo anterior, suponga que cuando el usuario resalta otro pedido de ventas, la aplicación llama a **SQLCloseCursor** en instrucción 2 antes de crear un resultado de las líneas de las ventas nuevo orden. La llamada a **SQLCloseCursor** confirma la **seleccione** instrucción que se creó el conjunto de resultados de líneas y hace que el origen de datos cerrar el cursor en la instrucción 1 y, a continuación, se descarta todos los planes de acceso en el que conexión.  
+-   **SQLCloseCursor** En el ejemplo anterior, supongamos que cuando el usuario resalta un pedido de venta diferente, la aplicación llama a **SQLCloseCursor** en la instrucción 2 antes de crear un resultado de las líneas para el nuevo pedido de ventas. La llamada a **SQLCloseCursor** confirma la instrucción **Select** que creó el conjunto de resultados de las líneas y hace que el origen de datos cierre el cursor en la instrucción 1 y, a continuación, descarta todos los planes de acceso en esa conexión.  
   
- Las aplicaciones, especialmente pantalla aplicaciones basadas en el que el usuario se desplaza por el conjunto de resultados y actualizaciones o elimina las filas, deben tener cuidadas al código en torno a este comportamiento.  
+ Las aplicaciones, especialmente las aplicaciones basadas en pantalla en las que el usuario se desplaza por el conjunto de resultados y actualizan o eliminan filas, deben tener cuidado al codificar este comportamiento.  
   
- Para determinar cómo se comporta un origen de datos cuando se confirma o revierte una transacción, una aplicación llama a **SQLGetInfo** con las opciones SQL_CURSOR_COMMIT_BEHAVIOR y SQL_CURSOR_ROLLBACK_BEHAVIOR.
+ Para determinar el comportamiento de un origen de datos cuando se confirma o se revierte una transacción, una aplicación llama a **SQLGetInfo** con las opciones SQL_CURSOR_COMMIT_BEHAVIOR y SQL_CURSOR_ROLLBACK_BEHAVIOR.

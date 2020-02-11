@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_semantic_language_statistics_database (Transact-SQL) | Microsoft Docs
+title: Sys. fulltext_semantic_language_statistics_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133791"
 ---
-# <a name="sysfulltextsemanticlanguagestatisticsdatabase-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
+# <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila sobre la base de datos de estadísticas semánticas de lenguaje instalada en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,17 +36,17 @@ ms.locfileid: "68133791"
   
 ||||  
 |-|-|-|  
-|**Nombre de columna**|**Tipo**|**Descripción**|  
+|**Nombre de la columna**|**Tipo**|**Descripción**|  
 |**database_id**|**int**|Id. de la base de datos, único en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**register_date**|**datetime**|Fecha en que la base de datos se registró para el procesamiento semántico.|  
 |**registered_by**|**int**|Identificador de la entidad de seguridad de servidor que registró la base de datos para el procesamiento semántico.|  
-|**version**|**nvarchar(128)**|La última información de versión específica de la base de datos de estadísticas semánticas de lenguaje.|  
+|**Versión**|**nvarchar(128)**|La última información de versión específica de la base de datos de estadísticas semánticas de lenguaje.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Para obtener más información, vea [Instalar y configurar la búsqueda semántica](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
 ## <a name="metadata"></a>Metadatos  
- Para obtener información acerca de los idiomas que se admiten para la indización semántica, consulte la vista de catálogo [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
+ Para obtener información acerca de los idiomas que se admiten para la indización semántica, consulte la vista de catálogo [Sys. fulltext_semantic_languages &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## <a name="security"></a>Seguridad  
   
@@ -54,14 +54,14 @@ ms.locfileid: "68133791"
  La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o sobre los que el usuario tiene algún permiso.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente se muestra cómo realizar consultas **sys.fulltext_semantic_language_statistics_database** para obtener información acerca de la base de datos de estadísticas semánticas de lenguaje registrado en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En el ejemplo siguiente se muestra cómo consultar **Sys. fulltext_semantic_language_statistics_database** para obtener información sobre la base de datos de estadísticas semánticas de lenguaje [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registrada en la instancia actual de.  
   
 ```  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar y configurar la búsqueda semántica](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

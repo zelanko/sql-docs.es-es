@@ -14,10 +14,10 @@ ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727917"
 ---
 # <a name="reserved-words-master-data-services"></a>Palabras reservadas (Master Data Services)
@@ -37,22 +37,22 @@ ms.locfileid: "73727917"
   
 -   [Atributos](../master-data-services/reserved-words-master-data-services.md#attributes)  
   
--   [Miembros](../master-data-services/reserved-words-master-data-services.md#members)  
+-   [Members](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a> Modelos  
+##  <a name="models"></a>Modelos  
  Si crea un modelo con el nombre establecido en **Name** o **Code**, no seleccione **Crear entidad con el mismo nombre que el modelo** porque **Name** o **Code** no se puede usar para el nombre de una entidad.  
   
-##  <a name="entities"></a> Entidades  
+##  <a name="entities"></a>Jurídica  
  Para los nombres de entidad, no puede usar **Name** o **Code**.  
   
-##  <a name="exhierarchies"></a> Jerarquías explícitas  
+##  <a name="exhierarchies"></a>Jerarquías explícitas  
  Para los nombres de jerarquía explícita, no puede utilizar **Name** o **Code**.  
   
-##  <a name="attributes"></a> Atributos  
+##  <a name="attributes"></a>Sus  
   
--   **ID**  
+-   **SESIÓN**  
   
--   **código**  
+-   **Código**  
   
 -   **EnterUserName**  
   
@@ -76,10 +76,10 @@ ms.locfileid: "73727917"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> Miembros  
+##  <a name="members"></a>Registrados  
  Para los miembros, no puede usar **MDMMemberStatus**, **MDMUnused**o **ROOT** para el valor de atributo **Code** .  
   
-## <a name="see-also"></a>Vea también  
- [Introducción a Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
   

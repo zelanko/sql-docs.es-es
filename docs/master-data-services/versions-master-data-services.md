@@ -16,10 +16,10 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727798"
 ---
 # <a name="versions-master-data-services"></a>Versiones (Master Data Services)
@@ -68,7 +68,7 @@ ms.locfileid: "73727798"
     > [!NOTE]  
     >  Una opción de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] determina si puede copiar o no todas las versiones o únicamente aquellas que se hayan confirmado. Para crear versiones simultáneas debe configurar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para que permita copiar todas las versiones. Este valor también está disponible en la tabla Configuración del sistema. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
@@ -76,16 +76,16 @@ ms.locfileid: "73727798"
 |Bloquear una versión para que solo los administradores puedan editar sus datos.|[Bloquear una versión &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
 |Desbloquear una versión para que los usuarios puedan editar sus datos.|[Desbloquear una versión &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
 |Confirmar una versión después de validar todos los datos.|[Confirmar una versión &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
-|Crear una nueva marca para marcar una versión.|[Crear una marca de versión &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|Cambiar el nombre de una marca de versión existente.|[Cambiar el nombre de marca de una versión &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Crear una nueva marca para marcar una versión.|[Cree una marca de versión &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|Cambiar el nombre de una marca de versión existente.|[Cambiar el nombre de una marca de versión &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
 |Asignar una marca existente a una versión.|[Asignar una marca a una versión &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|Crear una nueva copia de una versión existente|[Copiar una versión &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|Crear una nueva copia de una versión existente|[Copie una versión &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
 |Eliminar una versión existente.|[Eliminar una versión &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
-|Purga los miembros eliminados temporalmente de una versión.|[Purga de miembros de versión &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
+|Purga los miembros eliminados temporalmente de una versión.|[Purgar miembros de versión &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Invertir una transacción &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [Invertir un Master Data Services de &#40;de transacciones&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
 -   [Notificaciones &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   

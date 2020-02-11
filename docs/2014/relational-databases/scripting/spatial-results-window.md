@@ -11,19 +11,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8c554959fedba58f743f1dd37d3c97554d0f00d3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243252"
 ---
 # <a name="spatial-results-window"></a>Ventana Resultados espaciales
-  La ventana **resultados espaciales** proporciona herramientas de asignación visual para ver los datos espaciales. Para ver los resultados espaciales, los resultados de la consulta deben incluir una columna espacial con datos de geometría o de geografía.  
+  La ventana **Resultados espaciales** proporciona herramientas de asignación visual para ver los datos espaciales. Para ver los resultados espaciales, los resultados de la consulta deben incluir una columna espacial con datos de geometría o de geografía.  
   
 > [!NOTE]  
 >  La ventana **Resultados espaciales** solo está disponible si los resultados se devuelven a una cuadrícula en la ventana **Resultados** . Si especifica que los resultados se deben devolver como texto, esta ventana no está disponible.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Opciones  
  **Seleccionar columna espacial**  
  Especifique la columna espacial que desea ver en las columnas espaciales de los resultados de la consulta. Solo puede seleccionarse una columna cada vez.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75243252"
   
  Esta opción no está disponible para los datos de geometría.  
   
- **General**  
+ **Zoom**  
  Ajuste la presentación del mapa en una escala exponencial.  
   
  **Mostrar líneas de cuadrícula**  
@@ -48,10 +48,10 @@ ms.locfileid: "75243252"
 > [!NOTE]  
 >  Las instancias de punto no se pueden etiquetar.  
   
-## <a name="see-also"></a>Véase también  
- [Ver datos espaciales en Explorador de objetos](view-spatial-data-in-object-explorer.md)   
- [SQL Server de &#40;de datos espaciales&#41;](../spatial/spatial-data-sql-server.md)   
- [SQL Server Management Studio de &#40;del editor de consultas de Motor de base de datos&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ver datos espaciales en el Explorador de objetos](view-spatial-data-in-object-explorer.md)   
+ [Datos espaciales &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
+ [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
  [Editores de consultas y texto &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

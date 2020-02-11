@@ -11,22 +11,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69890832"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Agrupar miembros de atributo automáticamente
-  Cuando se examina un cubo, generalmente se dimensionan los miembros de una jerarquía de atributo según los miembros de otra jerarquía de atributo. Por ejemplo, puede agrupar las ventas de cliente por ciudad, producto comprado o género. No obstante, con determinados tipos de atributo, resulta útil hacer que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cree automáticamente grupos de miembros de atributos en función de la distribución de los miembros en una jerarquía de atributo. Por ejemplo, puede hacer que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cree grupos de valores de ingresos anuales de los clientes. Al hacerlo, los usuarios que examinen la jerarquía de atributo verán los nombres y los valores de los grupos en lugar de los miembros propiamente dichos. Esto limita el número de niveles que se presentan a los usuarios, lo que puede resultar más útil para el análisis.  
+  Cuando se examina un cubo, generalmente se dimensionan los miembros de una jerarquía de atributo según los miembros de otra jerarquía de atributo. Por ejemplo, puede agrupar las ventas de cliente por ciudad, producto comprado o género. Sin embargo, con ciertos tipos de atributos, resulta útil [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crear automáticamente agrupaciones de miembros de atributos en función de la distribución de los miembros dentro de una jerarquía de atributo. Por ejemplo, puede hacer que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cree grupos de valores de ingresos anuales de los clientes. Al hacerlo, los usuarios que examinen la jerarquía de atributo verán los nombres y los valores de los grupos en lugar de los miembros propiamente dichos. Esto limita el número de niveles que se presentan a los usuarios, lo que puede resultar más útil para el análisis.  
   
  La propiedad **DiscretizationMethod** determina si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea agrupaciones, así como el tipo de agrupación que se lleva a cabo. De forma predeterminada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no realiza agrupaciones. Si habilita las agrupaciones automáticas, puede permitir que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] determine automáticamente el mejor método de agrupación en función de la estructura del atributo, o puede elegir uno de los algoritmos de agrupación de la lista siguiente para especificar el método de agrupación:  
   
  **EqualAreas**  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea intervalos de grupos de modo que la población total de los miembros de dimensión quede distribuida de forma homogénea en los grupos.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea intervalos de grupos de modo que la población total de los miembros de dimensión quede distribuida de forma homogénea en los grupos.  
   
- **Clusters**  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea grupos realizando una agrupación en clústeres unidimensionales en los valores de entrada mediante el método de agrupación en clústeres k-means con distribuciones gausianas. Esta opción solo es válida para columnas numéricas.  
+ **Clústeres**  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea grupos realizando una agrupación en clústeres unidimensionales en los valores de entrada mediante el método de agrupación en clústeres k-means con distribuciones gausianas. Esta opción solo es válida para columnas numéricas.  
   
  Una vez que haya especificado un método de agrupación, debe especificar el número de grupos mediante la propiedad **DiscretizationBucketCount** . Para obtener más información, consulte [Agrupar miembros de atributos &#40;discretización&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
@@ -48,7 +50,7 @@ ms.locfileid: "69890832"
   
      En la imagen siguiente se muestran las propiedades modificadas para **Yearly Income**.  
   
-     ![Propiedades modificadas para ingresos anuales](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Propiedades modificadas para ingresos anuales")  
+     ![Propiedades modificadas de Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Propiedades modificadas de Yearly Income")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Agrupar miembros de la jerarquía de atributo en la dimensión Employee  
   
@@ -94,7 +96,7 @@ ms.locfileid: "69890832"
   
      En la imagen siguiente se muestran las ventas dimensionadas por horas de baja por enfermedad de los empleados.  
   
-     ![Ventas con dimensiones por horas de baja por enfermedad del empleado](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Ventas con dimensiones por horas de baja por enfermedad del empleado")  
+     ![Sales con dimensión por horas de baja por enfermedad de los empleados](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Sales con dimensión por horas de baja por enfermedad de los empleados")  
   
 10. Elimine la jerarquía de atributo **Sick Leave Hours** del área de columnas del panel **Datos** .  
   
@@ -125,7 +127,7 @@ ms.locfileid: "69890832"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Ocultar y deshabilitar jerarquías de atributo](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
-## <a name="see-also"></a>Ver también  
- [Agrupar miembros de atributos &#40;discretización&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
+## <a name="see-also"></a>Consulte también  
+ [Miembros de atributo de grupo &#40;la discretización&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

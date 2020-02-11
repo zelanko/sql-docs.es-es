@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de R+T-SQL: Características de datos'
+title: 'Tutorial de R y T-SQL: características de datos'
 description: Tutorial en el que se explica cómo agregar cálculos a los procedimientos almacenados para usarlos en modelos de Machine Learning de R.
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,16 +10,16 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6970fd92fc1b655e0df66cdb548a044e3bdc746e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73725760"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Lección 2: Crear características de datos mediante R y T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
+Este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
 
 En este paso, aprenderá a crear características desde datos sin procesar mediante una función de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Después, llamaremos a esa función desde un procedimiento almacenado para crear una tabla que contiene los valores de las características.
 
@@ -39,9 +39,9 @@ El proceso general consiste en lo siguiente:
 
 - Guardar los datos de característica en una tabla
 
-## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular la distancia del trayecto con fnCalculateDistance
+## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Cálculo de la distancia del trayecto con fnCalculateDistance
 
-La función _fnCalculateDistance_ debe haberse descargado y registrado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte de la preparación de este tutorial. Dedique un minuto a revisar el código.
+La función _fnCalculateDistance_ debe haberse descargado y registrado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte de la preparación de este tutorial. Tómese un minuto para revisar el código.
   
 1. En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda **Programación**, expanda **Funciones** y, después, **Funciones escalares**.   
 

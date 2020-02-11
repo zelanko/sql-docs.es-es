@@ -21,30 +21,30 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 7eb05640fbc702d5c9b01081d462e2c9f0204457
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844467"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Contiene estadísticas para los eventos de **Conectividad** de base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], lo que proporciona información general sobre los errores y las conexiones de base de datos. Para obtener más información sobre los eventos de conectividad, vea tipos de eventos en [Sys. event_log &#40;&#41;Azure SQL Database](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+  Contiene estadísticas para [!INCLUDE[ssSDS](../../includes/sssds-md.md)] los eventos de **Conectividad** de base de datos, que proporcionan información general sobre los errores y los éxitos de conexión de base de datos. Para obtener más información sobre los eventos de conectividad, vea tipos de eventos en [Sys. event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Estadística|Tipo|Descripción|  
+|Estadísticas|Tipo|Descripción|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nombre de la base de datos.|  
-|**start_time**|**datetime2**|Fecha y hora UTC del inicio del intervalo de agregación. La hora es siempre un múltiplo de 5 minutos. Por ejemplo:<br /><br /> '2011-09-28 16:00:00'<br />' 2011-09-28 16:05:00 '<br />' 2011-09-28 16:10:00 '|  
+|**start_time**|**datetime2**|Fecha y hora UTC del inicio del intervalo de agregación. La hora es siempre un múltiplo de 5 minutos. Por ejemplo:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Fecha y hora UTC del final del intervalo de agregación. **End_time** es siempre exactamente 5 minutos después de la **start_time** correspondiente de la misma fila.|  
 |**success_count**|**int**|Número de conexiones correctas.|  
 |**total_failure_count**|**int**|Número total de conexiones con error. Se trata de la suma de **connection_failure_count**, **terminated_connection_count**y **throttled_connection_count**, y no incluye los eventos de interbloqueo.|  
 |**connection_failure_count**|**int**|Número total de errores de inicio de sesión.|  
-|**terminated_connection_count**|**int**|**_Solo se aplica a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número de conexiones terminadas.|  
-|**throttled_connection_count**|**int**|**_Solo se aplica a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número máximo de conexiones aceleradas.|  
+|**terminated_connection_count**|**int**|**_Solo es aplicable [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] para v11._**<br /><br /> Número de conexiones terminadas.|  
+|**throttled_connection_count**|**int**|**_Solo es aplicable [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] para v11._**<br /><br /> Número máximo de conexiones aceleradas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ### <a name="event-aggregation"></a>Agregación de eventos
 
@@ -79,9 +79,9 @@ start_time                    end_time
 
  Esta vista puede no incluir toda la información de conexión y de error:  
   
-- Esta vista no incluye todos los [!INCLUDE[ssSDS](../../includes/sssds-md.md)] errores de base de datos que podrían producirse, solo los especificados en tipos de evento en [Sys. event_log &#40;&#41;Azure SQL Database](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+- Esta vista no incluye todos los [!INCLUDE[ssSDS](../../includes/sssds-md.md)] errores de base de datos que podrían producirse, solo los especificados en tipos de evento en [sys. event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-- Si se produce un error del equipo en el centro de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], es posible que falte una pequeña cantidad de datos en la tabla de eventos.  
+- Si se produce un error del equipo en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] el centro de datos, es posible que falte una pequeña cantidad de datos en la tabla de eventos.  
   
 - Si se ha bloqueado una dirección IP a través de DoSGuard, los eventos de intento de conexión de esa dirección IP no pueden recopilarse y no aparecerán en esta vista.  
   
@@ -99,7 +99,7 @@ FROM sys.database_connection_stats
 WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [Solucionar problemas de conexión a Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   

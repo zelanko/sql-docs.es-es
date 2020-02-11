@@ -12,10 +12,10 @@ ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 35f5c02e7206c6a9117b31c9ca9b503fb7b6875f
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557963"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery---data-quality-services-dqs"></a>Importar dominios desde un archivo de Excel en la detección de conocimiento: Data Quality Services (DQS)
@@ -24,14 +24,14 @@ ms.locfileid: "75557963"
 
   En este tema se describe cómo importar uno o varios dominios desde un archivo de Excel a la actividad de detección de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de importación simplifica el proceso de generación del conocimiento, lo que permite ahorrar tiempo y esfuerzo. Permite a los usuarios que disponen de datos en un archivo de Excel o un archivo de texto crear una base de conocimiento con dichos datos. (Consulte [importar valores de un archivo de Excel en un dominio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) para obtener más información acerca de cómo importar valores en un dominio de una base de conocimiento existente). No se admite la exportación a un archivo de Excel.  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
  Para importar dominios desde un archivo de Excel, es necesario tener instalado Excel en el equipo en el que está instalado [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ; también se debe haber creado un archivo de Excel con valores de dominio (vea [How the import works](#How)), así como haber creado y abierto una base de conocimiento en la que importar el dominio.  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para poder importar dominios desde un archivo de Excel.  
   
 ##  <a name="Import"></a>Importar dominios desde un archivo de Excel a una base de conocimiento  
@@ -56,7 +56,7 @@ ms.locfileid: "75557963"
   
 8.  Seleccione una columna y asígnela un dominio existente, o bien cree un nuevo dominio haciendo clic en el icono **Crear un dominio** , utilice el cuadro de diálogo **Crear un dominio** para crearlo y, a continuación, asígnelo a la columna. El tipo de datos del dominio debe coincidir con el tipo de datos de la columna. Repita el proceso para todas las columnas de la hoja de cálculo.  
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
 10. En la página **Detectar** , haga clic en **Iniciar** para analizar los datos de la hoja de cálculo de Excel.  
   

@@ -1,5 +1,5 @@
 ---
-title: Matrices de parámetros de enlace | Microsoft Docs
+title: Enlazar matrices de parámetros | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 597142d41ed8d3cff26891dfdcc89398543dab43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103823"
 ---
 # <a name="binding-arrays-of-parameters"></a>Las matrices de parámetros de enlace
-Las aplicaciones que utilizan las matrices de parámetros de enlazar las matrices a los parámetros en la instrucción SQL. Hay dos estilos de enlace:  
+Las aplicaciones que usan matrices de parámetros enlazan las matrices a los parámetros de la instrucción SQL. Hay dos estilos de enlace:  
   
--   Enlazar una matriz para cada parámetro. Cada estructura de datos (matriz) contiene todos los datos de un solo parámetro. Esto se denomina *el enlace* porque se enlaza una columna de valores para un único parámetro.  
+-   Enlazar una matriz a cada parámetro. Cada estructura de datos (matriz) contiene todos los datos de un único parámetro. Esto se denomina *enlace* de modo de columna porque enlaza una columna de valores para un parámetro único.  
   
--   Definir una estructura que contenga los datos del parámetro para un conjunto completo de parámetros y enlazar una matriz de estas estructuras. Cada estructura de datos contiene los datos para una única instrucción SQL. Esto se denomina *el enlace* porque se enlaza a una fila de parámetros.  
+-   Defina una estructura que contenga los datos de parámetro para un conjunto completo de parámetros y enlace una matriz de estas estructuras. Cada estructura de datos contiene los datos de una única instrucción SQL. Esto se denomina *enlace de modo de fila* porque enlaza una fila de parámetros.  
   
- Cuando cuando la aplicación enlaza solo variables a parámetros, se llama a **SQLBindParameter** para enlazar las matrices de parámetros. La única diferencia es que las direcciones pasadas son direcciones de matriz, no solo-variable. La aplicación establece el atributo de instrucción SQL_ATTR_PARAM_BIND_TYPE para especificar si se trata de usar modo de columna (el valor predeterminado) o el enlace. Si se debe utilizar el enlace de columna o de modo de fila es principalmente una cuestión de preferencia de la aplicación. Dependiendo de cómo el procesador tiene acceso a la memoria, el enlace puede ser más rápido. Sin embargo, la diferencia es probable que sea insignificante, excepto un gran número de filas de parámetros.  
+ Como cuando la aplicación enlaza variables únicas a parámetros, llama a **SQLBindParameter** para enlazar matrices a parámetros. La única diferencia es que las direcciones que se pasan son direcciones de matriz, no direcciones de una sola variable. La aplicación establece el atributo de instrucción SQL_ATTR_PARAM_BIND_TYPE para especificar si utiliza el enlace de modo de columna (el valor predeterminado) o de modo de fila. El uso de un enlace de modo de columna o de modo de fila es, en gran medida, una cuestión de preferencia de la aplicación. Dependiendo de cómo el procesador tenga acceso a la memoria, el enlace de modo de fila podría ser más rápido. Sin embargo, es probable que la diferencia sea insignificante, excepto en el caso de un número muy grande de filas de parámetros.  
   
 ## <a name="column-wise-binding"></a>El enlace  
- Cuando se usa el enlace, una aplicación enlaza una o dos matrices para cada parámetro para el que son proporcionar datos. La primera matriz contiene los valores de datos, y la segunda matriz contiene los búferes de longitud/indicador. Cada matriz contiene tantos elementos como valores para el parámetro.  
+ Al utilizar el enlace de modo de columna, una aplicación enlaza una o dos matrices a cada parámetro para el que se van a proporcionar datos. La primera matriz contiene los valores de datos y la segunda contiene búferes de longitud/indicador. Cada matriz contiene tantos elementos como valores para el parámetro.  
   
- El enlace es el valor predeterminado. La aplicación también puede cambiar desde el enlace para el enlace estableciendo el atributo de instrucción SQL_ATTR_PARAM_BIND_TYPE. La siguiente ilustración muestra cómo el enlace funciona.  
+ El enlace de modo de columna es el valor predeterminado. La aplicación también puede cambiar de un enlace de modo de fila a un enlace de modo de columna estableciendo el atributo de instrucción SQL_ATTR_PARAM_BIND_TYPE. En la ilustración siguiente se muestra cómo funciona el enlace de modo de columna.  
   
- ![Muestra cómo columna&#45;inteligente enlace funciona](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
+ ![Muestra cómo funciona el enlace de&#45;de la columna](../../../odbc/reference/develop-app/media/pr31.gif "pr31")  
   
- Por ejemplo, el código siguiente enlaza matrices de 10 elementos para los parámetros para las columnas PartID, descripción y precio y ejecuta una instrucción para insertar 10 filas. Usa el enlace.  
+ Por ejemplo, el código siguiente enlaza matrices de 10 elementos a los parámetros de las columnas de códigos de campo, Descripción y precio, y ejecuta una instrucción para insertar 10 filas. Utiliza el enlace de modo de columna.  
   
 ```  
 #define DESC_LEN 51  
@@ -118,19 +118,19 @@ for (i = 0; i < ParamsProcessed; i++) {
 ```  
   
 ## <a name="row-wise-binding"></a>El enlace  
- Cuando se usa el enlace, una aplicación define una estructura de cada conjunto de parámetros. La estructura contiene uno o dos elementos para cada parámetro. El primer elemento contiene el valor del parámetro y el segundo elemento contiene el búfer de longitud/indicador. La aplicación, a continuación, asigna una matriz de estas estructuras, que incluye tantos elementos como hay valores para cada parámetro.  
+ Cuando se usa el enlace de modo de fila, una aplicación define una estructura para cada conjunto de parámetros. La estructura contiene uno o dos elementos para cada parámetro. El primer elemento contiene el valor del parámetro y el segundo elemento contiene el búfer de longitud/indicador. A continuación, la aplicación asigna una matriz de estas estructuras, que contiene tantos elementos como valores para cada parámetro.  
   
- La aplicación declara el tamaño de la estructura en el controlador con el atributo de instrucción SQL_ATTR_PARAM_BIND_TYPE. La aplicación enlaza las direcciones de los parámetros en la primera estructura de la matriz. Por lo tanto, el controlador puede calcular la dirección de los datos para una determinada fila y columna como  
+ La aplicación declara el tamaño de la estructura en el controlador con el atributo de instrucción SQL_ATTR_PARAM_BIND_TYPE. La aplicación enlaza las direcciones de los parámetros en la primera estructura de la matriz. Por lo tanto, el controlador puede calcular la dirección de los datos de una fila y columna determinadas como  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size) + Offset  
 ```  
   
- donde las filas se numeran del 1 al tamaño del conjunto de parámetros. El desplazamiento, si ha definido, es el valor señalado por el atributo de instrucción SQL_ATTR_PARAM_BIND_OFFSET_PTR. La siguiente ilustración muestra el modo de fila cómo funciona el enlace. Los parámetros se pueden colocar en la estructura en cualquier orden, pero se muestran en orden secuencial para mayor claridad.  
+ donde las filas se numeran de 1 al tamaño del conjunto de parámetros. El desplazamiento, si está definido, es el valor al que apunta el atributo de instrucción SQL_ATTR_PARAM_BIND_OFFSET_PTR. En la ilustración siguiente se muestra cómo funciona el enlace de modo de fila. Los parámetros se pueden colocar en la estructura en cualquier orden, pero se muestran en orden secuencial para mayor claridad.  
   
- ![Muestra cómo fila&#45;inteligente enlace funciona](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
+ ![Muestra cómo funciona el enlace de&#45;de filas](../../../odbc/reference/develop-app/media/pr32.gif "pr32")  
   
- El código siguiente crea una estructura con elementos para los valores que se va a almacenar en las columnas PartID, descripción y precio. A continuación, asigna una matriz de 10 elementos de estas estructuras y lo enlaza a los parámetros para las columnas PartID, descripción y precio, mediante el enlace. A continuación, ejecuta una instrucción para insertar 10 filas.  
+ En el código siguiente se crea una estructura con elementos para los valores que se almacenan en las columnas de código de campo, Descripción y precio. A continuación, asigna una matriz de 10 elementos de estas estructuras y la enlaza con los parámetros de las columnas de campo de campo, Descripción y precio, utilizando el enlace de modo de fila. A continuación, ejecuta una instrucción para insertar 10 filas.  
   
 ```  
 #define DESC_LEN 51  

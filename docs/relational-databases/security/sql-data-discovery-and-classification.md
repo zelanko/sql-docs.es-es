@@ -12,10 +12,10 @@ ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
 ms.openlocfilehash: 077a9a6be533ec05f9c062100d04bf02562f6066
-ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75548327"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Clasificación y detección de datos de SQL
@@ -47,7 +47,7 @@ La clasificación incluye dos atributos de metadatos:
 
 1. En SQL Server Management Studio (SSMS), conéctese a SQL Server.
 
-2. En el Explorador de objetos de SSMS, haga clic con el botón derecho en la base de datos que quiere clasificar y seleccione **Tareas** > **Detección y clasificación de datos** > **Clasificación de datos...**.
+2. En el Explorador de objetos de SSMS, haga clic con el botón derecho en la base de datos que quiere clasificar y seleccione **Tareas** > **Detección y clasificación de datos** > **Clasificación de datos...** .
 
    ![Panel de navegación][0]
 
@@ -85,7 +85,7 @@ La clasificación incluye dos atributos de metadatos:
     ![Panel de navegación][8]
 
 
-6. Para generar un informe con un resumen completo del estado de clasificación de la base de datos, haga clic en **Ver informe** en el menú superior de la ventana. (También puede generar un informe mediante SSMS. Haga clic con el botón derecho en la base de datos en la que quiera generar el informe y elija **Tareas** > **Detección y clasificación de datos** > **Generar informe...**).
+6. Para generar un informe con un resumen completo del estado de clasificación de la base de datos, haga clic en **Ver informe** en el menú superior de la ventana. (También puede generar un informe mediante SSMS. Haga clic con el botón derecho en la base de datos en la que quiera generar el informe y elija **Tareas** > **Detección y clasificación de datos** > **Generar informe...** ).
 
     ![Panel de navegación][9]
 

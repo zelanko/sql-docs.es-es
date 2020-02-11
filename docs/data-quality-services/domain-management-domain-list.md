@@ -12,10 +12,10 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251654"
 ---
 # <a name="domain-management-domain-list"></a>Administración de dominios: lista de dominios
@@ -24,11 +24,11 @@ ms.locfileid: "75251654"
 
   En este tema se describen los controles de la lista de dominios de la página **Administración de dominios** de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilice este panel para seleccionar el dominio en el que va a realizar las operaciones de administración. Este mismo panel se utiliza en todas las páginas con pestañas de la página **Administración de dominios** .  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Opciones  
   
 ### <a name="domains-list"></a>Lista de dominios  
- **Domain**  
- Esta lista muestra todos los dominios de la base de conocimiento. Las operaciones que realice en las páginas con pestañas del panel derecho también se realizarán en el dominio seleccionado en la lista. Para obtener más información, consulte  
+ **Dominio**  
+ Esta lista muestra todos los dominios de la base de conocimiento. Las operaciones que realice en las páginas con pestañas del panel derecho también se realizarán en el dominio seleccionado en la lista. Para obtener más información, vea  
   
  **Crear un dominio compuesto**  
  Crea un nuevo dominio compuesto en la base de conocimiento. Este comando muestra el cuadro de diálogo **Crear un dominio compuesto** . Este comando está disponible al hacer clic con el botón secundario en un dominio o al hacer clic en el icono situado encima de la lista de dominios. Para más información, consulte [Crear un dominio compuesto](../data-quality-services/create-a-composite-domain.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "75251654"
  **Eliminar dominio**  
  Elimina el dominio seleccionado de la base de conocimiento. Este comando muestra el cuadro de diálogo **SQL Server Data Quality Services** . Si hace clic en **Sí**, el dominio y todos sus datos se eliminarán permanentemente. Este comando está disponible al hacer clic con el botón secundario en un dominio o al hacer clic en el icono situado encima de la lista de dominios.  
   
- **Crear un dominio vinculado**  
+ **Crear dominio vinculado**  
  Crea un dominio vinculado al dominio seleccionado. Este comando muestra el cuadro de diálogo **Crear dominio** . Este comando está disponible cuando se hace clic con el botón secundario en un dominio y, a continuación, se hace clic en **Crear dominio vinculado** . El dominio al que está vinculando el nuevo dominio aparece en el cuadro de diálogo Crear dominio. El comando no está disponible para un dominio compuesto. No existe ningún comando que permita desvincular dos dominios; para hacerlo, deberá eliminar el dominio vinculado. No se puede crear un dominio vinculado a otro dominio vinculado. Para más información, consulte [Crear dominio vinculado](../data-quality-services/create-a-linked-domain.md).  
   
  Un dominio vinculado tiene los mismos valores que el dominio al que está vinculado. Solo varían el nombre y las propiedades del dominio. Si cambia una regla de dominio, un valor de dominio, una relación basada en términos o un vínculo de datos de referencia vinculado, también cambiará la regla de dominio, el valor de dominio, la relación basada en términos o el vínculo de datos de referencia del dominio vinculado. Además, si cambia un valor en el dominio vinculado, el cambio también se realizará en el dominio al que está vinculado dicho dominio.  

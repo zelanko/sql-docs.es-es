@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058564"
 ---
 # <a name="for-loop-editor"></a>Editor de bucles For
@@ -34,7 +34,7 @@ ms.locfileid: "66058564"
  **AssignExpression**  
  Opcionalmente, escriba una expresión que cambie una condición cada vez que se repita el bucle.  
   
- **Name**  
+ **Nombre**  
  Escriba un nombre único para el contenedor de bucles For. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
 > [!NOTE]  
@@ -43,7 +43,7 @@ ms.locfileid: "66058564"
  **Descripción**  
  Escriba una descripción del contenedor de bucles For.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Página Expresiones](expressions/expressions-page.md)   
  [Contenedor de bucles Para cada uno](control-flow/foreach-loop-container.md)   

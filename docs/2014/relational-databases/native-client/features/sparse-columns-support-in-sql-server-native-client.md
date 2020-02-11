@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21b79a06acd838278073dee58026269f63b0da04
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231708"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Compatibilidad con columnas dispersas en SQL Server Native Client
@@ -60,6 +60,6 @@ ms.locfileid: "75231708"
   
  Sin embargo, si se utiliza `queryout` para la exportación y hace referencia a las columnas dispersas que son miembros de la columna dispersa establecida por nombre, no puede realizar una importación directa en una tabla con estructura similar. Esto se debe a que BCP utiliza metadatos coherentes con una operación **SELECT \* ** para la importación y `column_set` no puede hacer coincidir las columnas de miembro con estos metadatos. Para importar individualmente las columnas miembro de `column_set`, debe definir una vista en la tabla que haga referencia a las columnas `column_set` deseadas y debe realizar la operación de importación mediante la vista.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Programación de SQL Server Native Client](../sql-server-native-client-programming.md)  
   

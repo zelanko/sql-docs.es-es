@@ -10,10 +10,10 @@ ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: ce7b0239168a0a85e5d0f559b042dac0562ead94
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246979"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
@@ -53,10 +53,10 @@ ms.locfileid: "75246979"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Describe cómo realizar copias de seguridad de las bases de datos de DQS y cómo restaurarlas.|[Realizar copias de seguridad y restaurar bases de datos de DQS](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
-|Describe cómo adjuntar y separar las bases de datos de DQS.|[Desasociar y adjuntar bases de datos de DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
+|Describe cómo realizar copias de seguridad de las bases de datos de DQS y cómo restaurarlas.|[Realizar copias de seguridad de bases de datos de DQS y restaurarlas](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
+|Describe cómo adjuntar y separar las bases de datos de DQS.|[Separar y adjuntar bases de datos de DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>Véase también  
- [Administración de DQS](../data-quality-services/dqs-administration.md)  
+## <a name="see-also"></a>Consulte también  
+ [dqs, administración](../data-quality-services/dqs-administration.md)  
   
   

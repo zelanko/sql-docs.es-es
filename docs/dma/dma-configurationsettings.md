@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056541"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurar las opciones de Data Migration Assistant
@@ -39,7 +39,7 @@ Asegúrese de guardar una copia del archivo de configuración original antes de 
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Número de bases de datos que se van a evaluar en paralelo
 
-Data Migration Assistant evalúa varias bases de datos en paralelo. Durante la evaluación Data Migration Assistant extrae la aplicación de capa de datos (dacpac) para comprender el esquema de la base de datos. Esta operación puede agotar el tiempo de espera si varias bases de datos en el mismo servidor se evalúan en paralelo. 
+Data Migration Assistant evalúa varias bases de datos en paralelo. Durante la evaluación Data Migration Assistant extrae la aplicación de capa de datos (dacpac) para comprender el esquema de la base de datos.Esta operación puede agotar el tiempo de espera si varias bases de datos en el mismo servidor se evalúan en paralelo. 
 
 A partir de Data Migration Assistant v 2.0, puede controlar esto estableciendo el valor de configuración parallelDatabases. El valor predeterminado es 8.
 
@@ -82,19 +82,19 @@ A partir de Data Migration Assistant v 2.0, si experimenta este problema, puede 
 Durante la evaluación, Data Migration Assistant extrae la aplicación de capa de datos (dacpac) para comprender el esquema de la base de datos. Esta operación puede producir un error en los tiempos de espera de las bases de datos extremadamente grandes o si el servidor está bajo carga. A partir de Data Migration v 1.0, puede modificar los siguientes valores de configuración para evitar errores. 
 
 > [!NOTE]
-> De forma predeterminada, se marcan como comentario toda la entrada &lt;&gt; dacfx. Quite los comentarios y, a continuación, modifique el valor según sea necesario.
+> La entrada &lt;dacfx&gt; completa está comentada de forma predeterminada. Quite los comentarios y, a continuación, modifique el valor según sea necesario.
 
 - commandTimeout
 
-   Este parámetro establece la propiedad IDbCommand. CommandTimeout en *segundos*. (Valor predeterminado = 60)
+   Este parámetro establece la propiedad IDbCommand. CommandTimeout en *segundos*.(Valor predeterminado = 60)
 
 - databaseLockTimeout
 
-   Este parámetro equivale a establecer el tiempo de [\_espera de bloqueo\_](../t-sql/statements/set-lock-timeout-transact-sql.md) tiempo de espera de tiempo de espera en *milisegundos*. (Valor predeterminado = 5000)
+   Este parámetro equivale a establecer el tiempo de [\_espera\_de bloqueo](../t-sql/statements/set-lock-timeout-transact-sql.md) en *milisegundos*.(Valor predeterminado = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Este parámetro establece el número de conexiones de grupo de conexiones SQL que se van a utilizar. (Valor predeterminado = 8)
+  Este parámetro establece el número de conexiones de grupo de conexiones SQL que se van a utilizar.(Valor predeterminado = 8)
 
 ```
 <advisorGroup>
@@ -152,6 +152,6 @@ Cada regla tiene un código de error en su título. Si no necesita reglas y dese
 </workflowSettings>
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Descargar Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)

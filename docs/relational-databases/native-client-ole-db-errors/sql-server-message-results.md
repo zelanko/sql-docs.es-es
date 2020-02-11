@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3383dcd08ed5910d949608e521b3cd23f37aace8
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790155"
 ---
 # <a name="sql-server-message-results"></a>Resultados de los mensajes de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes no generan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de filas de proveedor de OLE DB de Native Client o un recuento de filas afectadas cuando se ejecutan:  
+  Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes no generan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de filas de proveedor de OLE DB de cliente nativo ni un recuento de las filas afectadas cuando se ejecutan:  
   
 -   PRINT  
   
@@ -37,13 +37,13 @@ ms.locfileid: "73790155"
   
 -   SET STATISTICS  
   
- Estas instrucciones devuelven uno o varios mensajes informativos o hacen que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelva mensajes informativos en lugar de resultados de conjunto de filas o de recuento. Al ejecutarse correctamente, el proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Devuelve S_OK y los mensajes están disponibles para el consumidor de proveedores OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
+ Estas instrucciones devuelven uno o varios mensajes informativos o hacen que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelva mensajes informativos en lugar de resultados de conjunto de filas o de recuento. Al ejecutarse correctamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native client Devuelve S_OK y los mensajes están disponibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el consumidor del proveedor de OLE DB de Native Client.  
   
- El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB Native Client Devuelve S_OK y tiene uno o más mensajes informativos disponibles después de la ejecución de muchas instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] o la ejecución del consumidor de una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] función miembro de proveedor OLE DB de Native Client.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client Devuelve S_OK y tiene uno o más mensajes informativos disponibles después de [!INCLUDE[tsql](../../includes/tsql-md.md)] la ejecución de muchas instrucciones o la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecución del consumidor de una función miembro de proveedor de OLE DB de Native Client.  
   
- El consumidor del proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB que permite la especificación dinámica del texto de la consulta debe comprobar las interfaces de error después de cada ejecución de función miembro independientemente del valor del código de retorno, la presencia o ausencia de un IRowset devueltoo una referencia de la interfaz **IMultipleResults** , o un recuento de las filas afectadas.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor del proveedor de OLE DB de Native Client que permite la especificación dinámica del texto de la consulta debe comprobar las interfaces de error después de cada ejecución de función miembro independientemente del valor del código de retorno, la presencia o ausencia de una referencia de interfaz **IRowset** o **IMultipleResults** devuelta, o un recuento de filas afectadas.  
   
-## <a name="see-also"></a>Vea también  
- [Errores](../../relational-databases/native-client-ole-db-errors/errors.md)  
+## <a name="see-also"></a>Consulte también  
+ [Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

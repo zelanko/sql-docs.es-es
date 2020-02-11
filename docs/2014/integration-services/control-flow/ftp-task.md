@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831543"
 ---
 # <a name="ftp-task"></a>Tarea FTP
@@ -35,11 +35,11 @@ ms.locfileid: "62831543"
 > [!IMPORTANT]  
 >  El administrador de conexiones FTP solo admite la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
   
- Al tener acceso a un archivo local o un directorio local, la tarea FTP utiliza un administrador de conexiones de archivos o información de ruta de acceso almacenada en una variable. En contraste, al tener acceso a un archivo remoto o un directorio remoto, la tarea FTP utiliza una ruta especificada directamente en el servidor remoto, como se especifica en el administrador de conexiones FTP, o información de ruta almacenada en una variable. Para obtener más información, vea [Administrador de conexiones de archivos](../connection-manager/file-connection-manager.md) e [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
+ Al tener acceso a un archivo local o un directorio local, la tarea FTP utiliza un administrador de conexiones de archivos o información de ruta de acceso almacenada en una variable. En contraste, al tener acceso a un archivo remoto o un directorio remoto, la tarea FTP utiliza una ruta especificada directamente en el servidor remoto, como se especifica en el administrador de conexiones FTP, o información de ruta almacenada en una variable. Para más información, vea [Administrador de conexiones de archivos](../connection-manager/file-connection-manager.md) e [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
  Esto significa que la tarea FTP puede recibir varios archivos y eliminar varios archivos remotos, pero si utiliza un administrador de conexiones, solo puede enviar un archivo y eliminar únicamente un archivo local, porque un administrador de conexiones de archivos solo puede tener acceso a un único archivo. Para tener acceso a varios archivos locales, la tarea FTP debe utilizar una variable para proporcionar la información de ruta. Por ejemplo, una variable que contiene "C:\Prueba\\*.txt" proporciona una ruta que permite eliminar o enviar todos los archivos del directorio Prueba que tienen una extensión .txt.  
   
- Para enviar varios archivos y tener acceso a varios archivos y directorios locales, también puede ejecutar la tarea FTP varias veces incluyéndola en un contenedor de bucles Foreach. El contenedor de bucles Foreach puede recorrer los archivos de un directorio mediante el enumerador Foreach File. Para más información, consulte [Foreach Loop Container](foreach-loop-container.md).  
+ Para enviar varios archivos y tener acceso a varios archivos y directorios locales, también puede ejecutar la tarea FTP varias veces incluyéndola en un contenedor de bucles Foreach. El contenedor de bucles Foreach puede recorrer los archivos de un directorio mediante el enumerador Foreach File. Para más información, vea [Contenedor Foreach Loop](foreach-loop-container.md).  
   
  La tarea FTP admite los caracteres comodín *?* y *\** en las rutas. Esto permite que la tarea tenga acceso a varios archivos. Sin embargo, solo puede usar caracteres comodín en la parte de la ruta de acceso que especifica el nombre de archivo. Por ejemplo, C:\MiDirectorio\\*.txt es una ruta válida, pero C:\\\**\MiTexto.txt no.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62831543"
 |Eliminar archivos remotos|Elimina un archivo del servidor FTP.|  
   
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>Entradas del registro personalizadas disponibles en la tarea FTP  
- La siguiente tabla contiene las entradas del registro personalizadas para la tarea FTP. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene las entradas del registro personalizadas para la tarea FTP. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -74,9 +74,9 @@ ms.locfileid: "62831543"
   
  Para obtener más información sobre la configuración mediante programación de estas propiedades, vea <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
-## <a name="see-also"></a>Vea también  
- [Editor de la tarea FTP &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea FTP &#40;página Transferencia de archivos&#41;](../ftp-task-editor-file-transfer-page.md)   
+## <a name="see-also"></a>Consulte también  
+ [Editor de la tarea FTP &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea FTP &#40;página transferencia de archivos&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Tareas de Integration Services](integration-services-tasks.md)   
  [Flujo de control](control-flow.md)  
   

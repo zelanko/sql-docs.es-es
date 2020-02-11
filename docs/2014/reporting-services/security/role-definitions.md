@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6518a46c44a97fbb386b4479454e89a0eccb1a39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101749"
 ---
 # <a name="role-definitions"></a>Definiciones de roles
@@ -32,7 +32,8 @@ ms.locfileid: "66101749"
  Las definiciones de roles pueden ser de nivel de elemento o de nivel de sistema. Una *definición de roles de nivel de elemento* describe tareas relacionadas con elementos almacenados y administrados en un servidor de informes, como informes, carpetas y modelos. Administrar informes, Ver carpetas y Administrar suscripciones individuales son ejemplos de tareas que puede incluir en las definiciones de roles de nivel de elemento. Una *definición de roles del sistema* incluye tareas que se aplican a todo el sitio. Ver propiedades del servidor de informes es un ejemplo de tarea que puede incluir en un rol del sistema.  
   
 ## <a name="predefined-roles"></a>Roles predefinidos  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye roles predefinidos que corresponden a los distintos niveles de interacción del usuario. La lista siguiente contiene los roles predefinidos que puede utilizar:  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye roles predefinidos que corresponden a los distintos niveles de interacción del usuario. La lista siguiente contiene los roles predefinidos que puede utilizar:  
   
 -   Administrador de contenido, Publicador, Explorador, Generador de informes y Mis informes son definiciones de roles de nivel de elemento que puede utilizar al crear asignaciones de roles para tener acceso al contenido del servidor de informes.  
   
@@ -45,17 +46,17 @@ ms.locfileid: "66101749"
   
  El rol debe tener un nombre único. Asimismo, para ser válido, debe contener al menos una tarea. Para más información, consulte [Tasks and Permissions](tasks-and-permissions.md).  
   
- Para crear una definición de rol, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para más información, consulte [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
+ Para crear una definición de roles, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]use. Para más información, consulte [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md).  
   
- Una vez creada la definición de roles, puede usarla seleccionándola en una asignación de roles. Para más información, consulte [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md).  
+ Una vez creada la definición de roles, puede usarla seleccionándola en una asignación de roles. Para obtener más información, vea [conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md).  
   
 ## <a name="customize-or-delete-a-role-definition"></a>Personalizar o eliminar una definición de roles  
  Los roles predefinidos se pueden modificar o reemplazar por roles personalizados. Para modificar un rol, agregue o quite tareas de la definición de roles. No puede cambiar el nombre de un rol. Los cambios que realice en una definición de roles se aplicarán de forma inmediata a todas las asignaciones de roles que la incluyan.  
   
  Puede eliminar una definición de roles si ya no la utiliza. No se puede eliminar la definición de rol seleccionada para la característica Mis informes mientras ésta siga habilitada. Para poder eliminar la definición de rol utilizada por Mis informes, primero debe deshabilitar la característica o seleccionar una definición de rol diferente para usarla con ella.  
   
-## <a name="see-also"></a>Vea también  
- [Tasks and Permissions](tasks-and-permissions.md)   
+## <a name="see-also"></a>Consulte también  
+ [Tareas y permisos](tasks-and-permissions.md)   
  [Conceder permisos en un servidor de informes en modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
  [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md)   

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b71df1a25a9cd8480f23dc104792ad8f3e70f35
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401691"
 ---
 # <a name="syspdw_column_distribution_properties-transact-sql"></a>Sys. pdw_column_distribution_properties (Transact-SQL)
@@ -26,11 +26,11 @@ ms.locfileid: "74401691"
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|**object_id**|**Inter**|IDENTIFICADOR del objeto al que pertenece la columna.||  
-|**column_id**|**Inter**|Identificador de la columna.||  
+|**object_id**|**int**|IDENTIFICADOR del objeto al que pertenece la columna.||  
+|**column_id**|**int**|Identificador de la columna.||  
 |**distribution_ordinal**|**tinyint**|Ordinal (de base 1) dentro del conjunto de distribución.|0 = no es una columna de distribución. 1 = [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] está usando esta columna para distribuir la tabla primaria.|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

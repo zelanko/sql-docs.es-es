@@ -18,10 +18,10 @@ ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056158"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74056158"
 
   Muestra la configuración del Correo electrónico de base de datos.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,25 +39,25 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @parameter_name = ] 'parameter_name'` el nombre de la opción de configuración que se va a recuperar. Cuando se especifica, el valor de la opción de configuración se devuelve en el **\@parameter_value** parámetro de salida. Cuando no se especifica ningún **parameter_name de\@** , este procedimiento almacenado devuelve un conjunto de resultados que contiene todos los valores de configuración de correo electrónico de base de datos de la instancia.  
+`[ @parameter_name = ] 'parameter_name'`Nombre del valor de configuración que se va a recuperar. Cuando se especifica, el valor de la opción de configuración se devuelve ** \@** en el parámetro de salida parameter_value. Cuando no se especifica ningún ** \@parameter_name** , este procedimiento almacenado devuelve un conjunto de resultados que contiene todos los valores de configuración de correo electrónico de base de datos en la instancia.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Cuando no se especifica ningún **parameter_name de\@** , devuelve un conjunto de resultados con las columnas siguientes.  
+ Cuando no se especifica ningún ** \@parameter_name** , devuelve un conjunto de resultados con las columnas siguientes.  
   
 ||||  
 |-|-|-|  
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |**paramName**|**nvarchar(256)**|Nombre del parámetro de configuración.|  
 |**parámetro ParamValue**|**nvarchar(256)**|Valor del parámetro de configuración.|  
-|**description**|**nvarchar(256)**|Descripción del parámetro de configuración.|  
+|**denominación**|**nvarchar(256)**|Descripción del parámetro de configuración.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  En el procedimiento almacenado **sysmail_help_configure_sp** se enumeran los valores de configuración correo electrónico de base de datos actuales para la instancia.  
   
- Cuando se especifica un **parameter_name de\@** , pero no se proporciona ningún parámetro de salida para **\@parameter_value**, este procedimiento almacenado no genera ningún resultado.  
+ Cuando se especifica un ** \@parameter_name** , pero no se proporciona ningún parámetro de salida para ** \@parameter_value**, este procedimiento almacenado no genera ninguna salida.  
   
  El procedimiento almacenado **sysmail_help_configure_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe invocar con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
@@ -86,8 +86,8 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
- [Procedimientos &#40;almacenados de correo electrónico de base de datos TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

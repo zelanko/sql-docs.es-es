@@ -22,17 +22,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620b778069ef45deeeb5552296798736a1ebe5f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768421"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codificar y depurar la tarea Script
   Después de configurar la tarea Script en el **Editor de la tarea Script**, puede escribir el código personalizado en el entorno de desarrollo de la tarea Script.  
   
 ## <a name="script-task-development-environment"></a>Entorno de desarrollo de la tarea Script  
- La tarea Script usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) como el entorno de desarrollo del propio script.  
+ La tarea script usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] tools for Applications (VSTA) como el entorno de desarrollo del propio script.  
   
  El código de script se escribe en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Puede especificar el lenguaje de script estableciendo la propiedad **ScriptLanguage** en el **Editor de la tarea Script**. Si prefiere utilizar otro lenguaje de programación, puede desarrollar un ensamblado personalizado en el lenguaje seleccionado y utilizar su funcionalidad en el código de la tarea Script.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "62768421"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Elementos y clases de proyecto en el proyecto de la tarea Script  
  De forma predeterminada, el proyecto de la tarea Script mostrado en la ventana Explorador de proyectos de VSTA contiene un elemento único, `ScriptMain`. El elemento `ScriptMain`, a su vez, contiene una clase única, también denominada `ScriptMain`. Los elementos de código de la clase varían, dependiendo del lenguaje de programación seleccionado para la tarea Script:  
   
--   Cuando se configura la tarea Script para el [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] lenguaje de programación la `ScriptMain` clase tiene una subrutina pública, `Main`. La subrutina `ScriptMain.Main` es el método al que el módulo ejecutable llama cuando ejecuta la tarea Script.  
+-   Cuando la tarea script está configurada [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] para el lenguaje de `ScriptMain` programación, la clase tiene una subrutina pública, `Main`. La subrutina `ScriptMain.Main` es el método al que el módulo ejecutable llama cuando ejecuta la tarea Script.  
   
-     De forma predeterminada, el único código de la subrutina `Main` de un script nuevo es la línea `Dts.TaskResult = ScriptResults.Success`. Esta línea informa al módulo ejecutable que la tarea se realizó correctamente en su operación. El `Dts.TaskResult` propiedad se describe en [devolver los resultados de la tarea Script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     De forma predeterminada, el único código de la subrutina `Main` de un script nuevo es la línea `Dts.TaskResult = ScriptResults.Success`. Esta línea informa al módulo ejecutable que la tarea se realizó correctamente en su operación. La `Dts.TaskResult` propiedad se describe en [devolver los resultados de la tarea script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
 -   Cuando la tarea Script está configurada para el lenguaje de programación Visual C#, la clase `ScriptMain` tiene un método público `Main`. Se llama al método cuando se ejecuta la tarea Script.  
   
@@ -210,7 +210,7 @@ To open Help, press F1.
   
  En la tabla siguiente se enumeran los miembros públicos principales de la clase <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, que se expone al código de la tarea Script a través del objeto `Dts` global. Los temas de esta sección describen con más detalle el uso de estos miembros.  
   
-|Miembro|Finalidad|  
+|Miembro|Propósito|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|Proporciona acceso a los administradores de conexión definidos en el paquete.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|Proporciona una interfaz de eventos que permite a la tarea Script generar errores, advertencias y mensajes informativos.|  
@@ -245,9 +245,9 @@ To open Help, press F1.
   
 -   Entrada de blog, [VSTA setup and configuration troubles for SSIS 2008 and R2 installations](https://go.microsoft.com/fwlink/?LinkId=215661) (Problemas de instalación y configuración de VSTA en instalaciones de SSIS 2008 y R2), en blogs.msdn.com.  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, los artículos, los ejemplos y los vídeos más recientes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, los artículos, los ejemplos y los vídeos más recientes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)], así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Hacer referencia a otros ensamblados en soluciones de scripting](../referencing-other-assemblies-in-scripting-solutions.md)   
  [Configurar la tarea Script en el editor de la tarea Script](configuring-the-script-task-in-the-script-task-editor.md)  
   

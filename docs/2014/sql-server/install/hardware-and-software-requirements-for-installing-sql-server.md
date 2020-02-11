@@ -46,10 +46,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce6cef69abe7c2461552229363c8334ca56555b4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245664"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Requisitos de hardware y software para instalar SQL Server 2014
@@ -72,7 +72,7 @@ ms.locfileid: "75245664"
   
 -   El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala los siguientes componentes de software que el producto necesita:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Cliente nativo  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Archivos auxiliares del programa de instalación  
   
@@ -203,7 +203,7 @@ ms.locfileid: "75245664"
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise de 64 bits<br /><br /> 
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard de 64 bits<br /><br /> 
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web de 64 bits|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Business Intelligence|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter de 64 bits<br /><br /> 
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard de 64 bits<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)]R2 Essentials 64 bits<br /><br /> 
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation de 64 bits<br /><br /> 
@@ -444,7 +444,7 @@ ms.locfileid: "75245664"
   
  Los requisitos reales de disco duro dependen de la configuración del sistema y de las características que decida instalar. Para obtener una lista de las características admitidas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]las ediciones de, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). En la tabla siguiente se muestran los requisitos de espacio en disco de los componentes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] :  
   
-|**Ofrecen**|**Requisito de espacio en disco**|  
+|**Característica**|**Requisito de espacio en disco**|  
 |-----------------|--------------------------------|  
 |
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] y archivos de datos, replicación, búsqueda de texto completo y Data Quality Services|811 MB|  
@@ -470,7 +470,7 @@ ms.locfileid: "75245664"
   
     > **Nota:**  El almacenamiento SMB no se admite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para los archivos de datos de instalaciones independientes o en clúster. Use almacenamiento de conexión directa o una red de área de almacenamiento en su lugar.  
   
-    > **¡ IMPORTANTE!** El almacenamiento SMB podría estar hospedado en un servidor de archivos Windows o en un dispositivo de almacenamiento SMB de terceros. Si se utiliza un servidor de archivos Windows, la versión de Windows File Server debería ser 2008 o posterior. Para obtener más información sobre la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un recurso compartido de archivos SMB como opción de almacenamiento, vea [Instalar SQL Server con el recurso compartido de archivos SMB como opción de almacenamiento](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
+    > **IMPORTANTE:** El almacenamiento SMB podría estar hospedado en un servidor de archivos Windows o en un dispositivo de almacenamiento SMB de terceros. Si se utiliza un servidor de archivos Windows, la versión de Windows File Server debería ser 2008 o posterior. Para obtener más información sobre la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un recurso compartido de archivos SMB como opción de almacenamiento, vea [Instalar SQL Server con el recurso compartido de archivos SMB como opción de almacenamiento](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
     > **ADVERTENCIA!!!!**  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el disco local solo para instalar los archivos tempdb. Asegúrese de que la ruta de acceso especificada para los archivos de datos y de registro de tempdb es válida en **todos** los nodos del clúster. Durante la conmutación por error, si los directorios de tempdb no están disponibles en el nodo de destino de la conmutación por error, el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá ponerse en línea.  
@@ -489,7 +489,7 @@ ms.locfileid: "75245664"
   
 -   El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede crear grupos de seguridad ni suministrar cuentas de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio de solo lectura. En este escenario, se producirá un error de instalación.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Planeación de una instalación de SQL Server](planning-a-sql-server-installation.md)   
  [Consideraciones de seguridad para una instalación de SQL Server](security-considerations-for-a-sql-server-installation.md)   
  [Especificaciones de producto para SQL Server 2014](../../getting-started/sql-server-2014-product-specifications.md)  

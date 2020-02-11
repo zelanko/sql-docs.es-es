@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c3d96670edc599a1f16456b862922dc6378b1362
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245152"
 ---
 # <a name="find-and-replace"></a>Buscar y reemplazar
@@ -42,16 +42,16 @@ ms.locfileid: "75245152"
 ## <a name="replace-with"></a>Reemplazar por  
  Estos controles le permiten especificar qué debe insertarse en lugar de la cadena o expresión coincidente.  
   
- **Reemplazar por**  
+ **Replace with**  
  Para reemplazar instancias de la cadena especificada en **Buscar** por otra cadena, escriba la cadena de reemplazo en este campo. Para eliminar instancias del texto especificado en **Buscar**, deje este campo en blanco. Seleccione la lista desplegable para que se muestren los últimos 20 elementos escritos. Para incluir expresiones regulares en la cadena especificada en el cuadro **Reemplazar con** , haga clic en la casilla **Usar** y, a continuación, haga clic en **Expresiones regulares**. Este cuadro solo aparecerá si este cuadro de diálogo se abrió haciendo clic en **Reemplazo rápido**.  
   
- **Reemplazar por**  
+ **Replace with**  
  Para reemplazar instancias de la cadena especificada en el cuadro **Buscar** por otra cadena, escriba la cadena de reemplazo en este campo. Para eliminar instancias de la cadena especificada en el cuadro **Buscar** , deje este campo en blanco. Seleccione la lista desplegable para que se muestren los últimos 20 elementos escritos. Para incluir expresiones regulares en la cadena especificada en el cuadro **Reemplazar con** , haga clic en la casilla **Usar** y, a continuación, haga clic en **Expresiones regulares**.  
   
  **Generador de expresiones**  
  Este botón triangular, situado junto al cuadro **Reemplazar con** estará disponible cuando se active la casilla **Usar** en **Opciones de búsqueda**. Haga clic en este botón para mostrar una lista de caracteres comodín o expresiones regulares, en función de la opción **Usar** seleccionada. Cuando se hace clic un elemento de esta lista, se agrega a la cadena especificada en el cuadro **Reemplazar con** .  
   
- **Reemplace**  
+ **Sustituya**  
  Haga clic en este botón para reemplazar la instancia actual de la cadena especificada en el cuadro **Buscar** por la cadena especificada en el cuadro **Reemplazar con** y buscar la siguiente instancia dentro del ámbito especificado en **Buscar en**.  
   
  **Reemplazar todo**  
@@ -60,46 +60,46 @@ ms.locfileid: "75245152"
 > [!CAUTION]  
 >  Asegúrese de que **Buscar en** esté establecido de modo que solo incluya los archivos que quiere modificar.  
   
- Se muestra un aviso que incluye la opción **Mantener archivos modificados abiertos** . Para conservar la opción **Deshacer** , deberá seleccionar esta opción. **Deshacer** solo está disponible en los archivos que permanecen abiertos para su edición después de modificarlos.  
+ Se muestra un aviso que incluye la opción **Mantener archivos modificados abiertos** . Para conservar la opción **Deshacer** , deberá seleccionar esta opción. La opción**Deshacer** solo estará disponible en los archivos que permanezcan abiertos para editarlos después de haberlos modificado.  
   
  **Omitir archivo**  
  Esta opción estará disponible cuando el valor especificado en **Buscar en** incluya varios archivos. Haga clic en este botón si no desea realizar búsquedas en el archivo actual o si no desea modificarlo. La búsqueda continuará en el siguiente archivo de la lista de **Buscar en**.  
   
 ## <a name="look-in"></a>Buscar en  
- **Buscar en**  
+ **Look in**  
  Seleccione la ubicación donde debe buscarse el texto especificado en **Buscar**. Las opciones son **Documento actual**, que busca en la ventana de documento que estaba seleccionada al abrir el cuadro de diálogo, y **Todos los documentos abiertos**, que busca en todas las ventanas de documentos abiertas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="find-options"></a>Opciones de búsqueda  
  Puede expandir y contraer la sección **Opciones de búsqueda** . Pueden activarse y desactivarse las siguientes opciones.  
   
- **Coincidencia mayúscula**  
- Cuando se active esta casilla, en las ventanas Resultados de la búsqueda solo se mostrarán las instancias de la cadena especificada en **Buscar** que coincidan tanto en contenido como en el uso de mayúsculas y minúsculas. Por ejemplo, una búsqueda de "**DataObject**" con la casilla **Coincidir mayúsculas y minúsculas** activada devolverá "mi objeto", pero no "mi objeto" o "objeto".  
+ **Coincidir mayúsculas y minúsculas**  
+ Cuando se active esta casilla, en las ventanas Resultados de la búsqueda solo se mostrarán las instancias de la cadena especificada en **Buscar** que coincidan tanto en contenido como en el uso de mayúsculas y minúsculas. Por ejemplo, una búsqueda de "**MyObject**" con la casilla **Coincidir mayúsculas y minúsculas** activada devolverá "MyObject", pero no "myobject" ni "MYOBJECT".  
   
  **Solo palabras completas**  
  Cuando se active esta opción, en las ventanas Resultados de la búsqueda solo se mostrarán las instancias de la cadena especificada en **Buscar** cuyas palabras completas coincidan. Por ejemplo, una búsqueda de **MyObject** devolverá "MyObject", pero no devolverá "CMyObject" ni "MyObjectC".  
   
- **Buscar hacia arriba**  
+ **Buscar hacia atrás**  
  Busca desde la posición del cursor hacia el principio del documento.  
   
- **Buscar texto oculto**  
+ **Buscar en texto oculto**  
  Busca instancias del texto que están ocultas y texto contraído.  
   
- **Realice**  
+ **Uso**  
  Indica cómo se interpretan los caracteres especiales especificados en los cuadros de texto **Buscar** o **Reemplazar con** . Esta opción incluye **Caracteres comodín** y **Expresiones regulares**.  
   
- **Expresiones regulares**  
+ **Regular Expressions**  
  Notaciones especiales que definen patrones de texto a partir de los cuales buscar coincidencias. Para obtener una lista, vea [Buscar texto mediante expresiones regulares](search-text-with-regular-expressions.md).  
   
- **Los caracteres comodín**  
+ **Caracteres comodín**  
  Caracteres especiales, como asteriscos (`*`) y signos de interrogación de cierre (`?`), que representan uno o varios caracteres. Para obtener una lista, vea [Buscar texto con caracteres comodín](search-text-with-wildcards.md).  
   
  **Buscar siguiente**  
  Comienza a buscar el texto del cuadro **Buscar** .  
   
- **Reemplace**  
+ **Sustituya**  
  Haga clic en este botón para reemplazar la instancia actual de la cadena especificada en **Buscar** por la cadena especificada en **Reemplazar con**y buscar la siguiente instancia dentro del ámbito especificado en **Buscar en**.  
   
- **Reemplazar todo**  
+ **Replace All**  
  Elija este botón para reemplazar todas las instancias de la cadena especificada en **Buscar** por la cadena especificada en **Reemplazar con**en todos los archivos del ámbito especificado en **Buscar en**.  
   
 > [!CAUTION]  
@@ -120,5 +120,5 @@ ms.locfileid: "75245152"
  **Reemplazar en archivos**  
  Esta pestaña de la barra de herramientas cambia el cuadro de diálogo a **Reemplazar en archivos** .  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

@@ -17,10 +17,10 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728078"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permisos de hoja (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73728078"
   
  Para las entidades sin jerarquías explícitas habilitadas, la asignación de un permiso a **Hoja** es equivalente a asignar un permiso a la entidad.  
   
- **Notas:**  
+ **Apunte**  
   
 -   Los permisos de hoja solo se aplican al área funcional del **Explorador** de la interfaz de usuario.  
   
@@ -40,12 +40,12 @@ ms.locfileid: "73728078"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer miembros hoja y atributos.|  
-|**Crear**|Usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
-|**Actualizar**|El usuario puede actualizar miembros hoja y atributos.|  
-|**Delete**|El usuario puede eliminar miembros hoja.|  
-|**Denegar**|Denegar todo el acceso a los miembros hoja.|  
+|**A**|Usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
+|**Update**|El usuario puede actualizar miembros hoja y atributos.|  
+|**Eliminar**|El usuario puede eliminar miembros hoja.|  
+|**Deny**|Denegar todo el acceso a los miembros hoja.|  
   
- Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan los permisos de creación, actualización y eliminación, el permiso de lectura se asigna automáticamente.  
+ Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  
   
 ## <a name="attribute-permissions"></a>Permisos de atributo  
  Los permisos de atributo se aplican a los valores del atributo para la entidad concreta. Los usuarios que tengan únicamente permisos de atributo no pueden agregar o quitar miembros.  
@@ -53,28 +53,28 @@ ms.locfileid: "73728078"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer atributos.|  
-|**Crear**|El usuario puede asignar valores al crear miembros.|  
-|**Actualizar**|El usuario puede actualizar atributos.|  
-|**Delete**|Ningún efecto.|  
-|**Denegar**|No se muestra el atributo.<br /><br /> Nota: No puede denegar explícitamente el acceso a los atributos Name y Code.|  
+|**A**|El usuario puede asignar valores al crear miembros.|  
+|**Update**|El usuario puede actualizar atributos.|  
+|**Eliminar**|Sin efecto.|  
+|**Deny**|No se muestra el atributo.<br /><br /> Nota: No puede denegar explícitamente el acceso a los atributos Name y Code.|  
   
 ### <a name="example"></a>Ejemplo  
  Para la entidad Product, asigne el permiso **Actualizar** al atributo Subcategory. Deniegue el permiso al resto de los atributos.  
   
-|NOMBRE|Código|Subcategory (actualizar)|  
+|Nombre|Código|Subcategory (actualizar)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} bicicletas de montaña|  
-|Mountain-100|BK-M201|{5} bicicletas de montaña|  
+|Mountain-100|BK-M101|{5} Mountain Bikes|  
+|Mountain-100|BK-M201|{5} Mountain Bikes|  
   
  En el **Explorador**, puede actualizar cualquier valor de atributo en la columna Subcategory. Si no dispone del permiso para un atributo, este no se mostrará.  
   
 > [!NOTE]  
 >  En este ejemplo, Subcategory es un atributo basado en dominio, que depende de la entidad SubcategoryList. Puede seleccionar una subcategoría diferente para Mountain-100, pero no puede agregar o eliminar miembros en la entidad SubcategoryList.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
- [Permisos de objeto del modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Permisos del objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Miembros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   

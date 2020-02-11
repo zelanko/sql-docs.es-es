@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 996acc5f8e9b47af683c8d8376515f7f59e63120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770995"
 ---
 # <a name="ole-db-custom-properties"></a>Propiedades personalizadas de OLE DB
@@ -26,10 +26,10 @@ ms.locfileid: "62770995"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|Modo que se usa para tener acceso a la base de datos. Los valores posibles son **Open Rowset**, **Open Rowset from Variable**, `SQL Command`, y **comando SQL de Variable**. El valor predeterminado es **Open Rowset**.|  
+|AccessMode|Entero|Modo que se usa para tener acceso a la base de datos. Los valores posibles son **Open Rowset**, **Open Rowset from variable**, `SQL Command`y **SQL Command from variable**. El valor predeterminado es **Open Rowset**.|  
 |AlwaysUseDefaultCodePage|Boolean|Valor que indica si usar el valor de la propiedad `DefaultCodePage` para cada columna, o intentar derivar la página de códigos de la configuración regional de cada columna. El valor predeterminado de esta propiedad es `False`.|  
-|CommandTimeout|Integer|Número de segundos que tienen que transcurrir antes de que un comando supere el tiempo de espera. El valor 0 indica un tiempo infinito.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de origen de OLE DB**, pero se puede definir con el **Editor avanzado**.|  
-|DefaultCodePage|Integer|Página de códigos que se usa cuando no hay información disponible de la misma en el origen de datos.|  
+|CommandTimeout|Entero|Número de segundos que tienen que transcurrir antes de que un comando supere el tiempo de espera. El valor 0 indica un tiempo infinito.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de origen de OLE DB**, pero se puede definir con el **Editor avanzado**.|  
+|DefaultCodePage|Entero|Página de códigos que se usa cuando no hay información disponible de la misma en el origen de datos.|  
 |OpenRowset|String|Nombre del objeto de base de datos que se usa para abrir un conjunto de filas.|  
 |OpenRowsetVariable|String|Variable que contiene el objeto del objeto de base de datos que se usa para abrir un conjunto de filas.|  
 |ParameterMapping|String|Asignación de los parámetros del comando SQL a variables.|  
@@ -51,23 +51,23 @@ ms.locfileid: "62770995"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer (enumeración)|Valor que especifica cómo tiene acceso el destino a su base de datos de destino.<br /><br /> Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> `OpenRowset` (0): Proporcione el nombre de una tabla o vista.<br />`OpenRowset from Variable` (1): Proporcione el nombre de una variable que contiene el nombre de una tabla o vista.<br />`OpenRowset Using Fastload` (3): Proporcione el nombre de una tabla o vista.<br />`OpenRowset Using Fastload from Variable` (4): Proporcione el nombre de una variable que contiene el nombre de una tabla o vista.<br />`SQL Command` (2): Proporcione una instrucción SQL.|  
+|AccessMode|Integer (enumeración)|Valor que especifica cómo tiene acceso el destino a su base de datos de destino.<br /><br /> Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> `OpenRowset`(0): se proporciona el nombre de una tabla o vista.<br />`OpenRowset from Variable`(1): se proporciona el nombre de una variable que contiene el nombre de una tabla o vista.<br />`OpenRowset Using Fastload`(3): se proporciona el nombre de una tabla o vista.<br />`OpenRowset Using Fastload from Variable`(4): se proporciona el nombre de una variable que contiene el nombre de una tabla o vista.<br />`SQL Command`(2): se proporciona una instrucción SQL.|  
 |AlwaysUseDefaultCodePage|Boolean|Valor que indica si usar el valor de la propiedad `DefaultCodePage` para cada columna, o intentar derivar la página de códigos de la configuración regional de cada columna. El valor predeterminado de esta propiedad es `False`.|  
-|CommandTimeout|Integer|Número máximo de segundos que el comando SQL se puede ejecutar antes de superar el tiempo de espera. Un valor de 0 indica un tiempo infinito. El valor predeterminado de esta propiedad es 0.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de destino OLE DB**, pero se puede definir con el **Editor avanzado**.|  
-|DefaultCodePage|Integer|Página de códigos predeterminada asociada al destino OLE DB.|  
-|FastLoadKeepIdentity|Boolean|Valor que especifica si se copian los valores de identidad cuando se cargan los datos. Esta propiedad solo está disponible con una de las opciones de carga rápida. El valor predeterminado de esta propiedad es `False`. Esta propiedad se corresponde con OLE DB [IRowsetFastLoad &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) propiedad `SSPROP_FASTLOADKEEPIDENTITY`.|  
-|FastLoadKeepNulls|Boolean|Valor que especifica si se copian los valores Null cuando se cargan los datos. Esta propiedad solo está disponible con una de las opciones de carga rápida. El valor predeterminado de esta propiedad es `False`. Esta propiedad se corresponde con OLE DB [IRowsetFastLoad &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) propiedad `SSPROP_FASTLOADKEEPNULLS`.|  
-|FastLoadMaxInsertCommitSize|Integer|Valor que especifica el tamaño de lote que el destino OLE DB intenta confirmar en operaciones de carga rápida. El valor predeterminado, **0**, indica una operación de confirmación única después de que se procesen todas las filas.|  
-|FastLoadOptions|String|Colección de opciones de carga rápida. Las opciones de carga rápida incluyen el bloqueo de las tablas y la comprobación de las restricciones. Puede especificar una, ambas o ninguna. Esta propiedad se corresponde con la propiedad IRowsetFastLoad de OLE DB `SSPROP_FASTLOADOPTIONS` y acepta opciones de cadena como `CHECK_CONSTRAINTS` y `TABLOCK`.<br /><br /> Nota: Algunas opciones de esta propiedad no están disponibles en el **Editor de destino de Excel**, pero pueden definirse con el **Editor avanzado**.|  
-|OpenRowset|String|Cuando AccessMode es `OpenRowset`, el nombre de la tabla o vista que tiene acceso el destino de OLE DB.|  
-|OpenRowsetVariable|String|Cuando AccessMode es `OpenRowset from Variable`, el nombre de la variable que contiene el nombre de la tabla o vista que tiene acceso el destino de OLE DB.|  
-|SqlCommand|String|Cuando AccessMode es `SQL Command`, la instrucción de Transact-SQL que usa el destino de OLE DB para especificar las columnas de destino para los datos.|  
+|CommandTimeout|Entero|Número máximo de segundos que el comando SQL se puede ejecutar antes de superar el tiempo de espera. Un valor de 0 indica un tiempo infinito. El valor predeterminado de esta propiedad es 0.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de destino OLE DB**, pero se puede definir con el **Editor avanzado**.|  
+|DefaultCodePage|Entero|Página de códigos predeterminada asociada al destino OLE DB.|  
+|FastLoadKeepIdentity|Boolean|Valor que especifica si se copian los valores de identidad cuando se cargan los datos. Esta propiedad solo está disponible con una de las opciones de carga rápida. El valor predeterminado de esta propiedad es `False`. Esta propiedad corresponde a la propiedad `SSPROP_FASTLOADKEEPIDENTITY`OLE DB [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) .|  
+|FastLoadKeepNulls|Boolean|Valor que especifica si se copian los valores Null cuando se cargan los datos. Esta propiedad solo está disponible con una de las opciones de carga rápida. El valor predeterminado de esta propiedad es `False`. Esta propiedad corresponde a la propiedad `SSPROP_FASTLOADKEEPNULLS`OLE DB [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) .|  
+|FastLoadMaxInsertCommitSize|Entero|Valor que especifica el tamaño de lote que el destino OLE DB intenta confirmar en operaciones de carga rápida. El valor predeterminado, **0**, indica una operación de confirmación única después de que se procesen todas las filas.|  
+|FastLoadOptions|String|Colección de opciones de carga rápida. Las opciones de carga rápida incluyen el bloqueo de las tablas y la comprobación de las restricciones. Puede especificar una, ambas o ninguna. Esta propiedad corresponde a la propiedad `SSPROP_FASTLOADOPTIONS` OLE DB IRowsetFastLoad y acepta opciones de cadena como `CHECK_CONSTRAINTS` y `TABLOCK`.<br /><br /> Nota: Algunas opciones de esta propiedad no están disponibles en el **Editor de destino de Excel**, pero pueden definirse con el **Editor avanzado**.|  
+|OpenRowset|String|Cuando AccessMode es `OpenRowset`, el nombre de la tabla o vista a la que tiene acceso el OLE DB de destino.|  
+|OpenRowsetVariable|String|Cuando AccessMode es `OpenRowset from Variable`, el nombre de la variable que contiene el nombre de la tabla o vista a la que el destino de OLE DB tiene acceso.|  
+|SqlCommand|String|Cuando AccessMode es `SQL Command`, la instrucción de TRANSACT-SQL que el destino OLE DB utiliza para especificar las columnas de destino de los datos.|  
   
  La entrada y las columnas de entrada del destino de OLE DB no tienen ninguna propiedad personalizada.  
   
  Para más información, consulte [OLE DB Destination](ole-db-destination.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Common Properties](../common-properties.md)  
   
   

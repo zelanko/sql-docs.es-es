@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 45d4cd390e0369d8289ed9e58de01b7a02f752c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196749"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Restricciones entre claves principales y claves externas
@@ -29,11 +29,11 @@ ms.locfileid: "68196749"
   
  [Restricciones de clave principal](../tables/primary-and-foreign-key-constraints.md#PKeys)  
   
- [Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md#FKeys)  
+ [Restricciones Foreign Key](../tables/primary-and-foreign-key-constraints.md#FKeys)  
   
  [Tareas relacionadas](../tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> Restricciones de clave principal  
+##  <a name="PKeys"></a>Restricciones de clave principal  
  Una tabla suele tener una columna o una combinación de columnas cuyos valores identifican de forma única cada fila de la tabla. Estas columnas se denominan claves principales de la tabla y exigen la integridad de entidad de la tabla. Debido a que las restricciones de clave principal garantizan datos únicos, con frecuencia se definen en una columna de identidad.  
   
  Cuando especifica una restricción de clave principal en una tabla, [!INCLUDE[ssDE](../../includes/ssde-md.md)] exige la unicidad de los datos mediante la creación automática de un índice único para las columnas de clave principal. Este índice también permite un acceso rápido a los datos cuando se usa la clave principal en las consultas. Si se define una restricción de clave principal para más de una columna, puede haber valores duplicados dentro de la misma columna, pero cada combinación de valores de todas las columnas de la definición de la restricción de clave principal debe ser única.  
@@ -54,7 +54,7 @@ ms.locfileid: "68196749"
   
 -   Si la clave principal se define en una columna de tipo definido por el usuario CLR, la implementación del tipo debe admitir el orden binario.  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="FKeys"></a>Restricciones Foreign Key  
  Una clave externa (FK) es una columna o combinación de columnas que se usa para establecer y aplicar un vínculo entre los datos de dos tablas a fin de controlar los datos que se pueden almacenar una tabla de clave externa. En una referencia de clave externa, se crea un vínculo entre dos tablas cuando las columnas de una de ellas hacen referencia a las columnas de la otra que contienen el valor de clave principal. Esta columna se convierte en una clave externa para la segunda tabla.  
   
  Por ejemplo, la tabla **Sales.SalesOrderHeader** tiene un vínculo de clave externa a la tabla **Sales.SalesPerson** porque existe una relación lógica entre pedidos de ventas y personal de ventas. La columna **SalesPersonID** de la tabla **SalesOrderHeader** coincide con la columna de clave principal de la tabla **SalesPerson** . La columna **SalesPersonID** de la tabla **SalesOrderHeader** es la clave externa para la tabla **SalesPerson** . Al crear esta relación de clave externa, no se puede insertar un valor para **SalesPersonID** en la tabla **SalesOrderHeader** si no existe en la tabla **SalesPerson** .  
@@ -75,7 +75,8 @@ ms.locfileid: "68196749"
  Las restricciones de integridad referencial en cascada permiten definir las acciones que [!INCLUDE[ssDE](../../includes/ssde-md.md)] lleva a cabo cuando un usuario intenta eliminar o actualizar una clave a la que apuntan las claves externas existentes. Se pueden definir las acciones en cascada.  
   
  NO ACTION  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un error y se revierte la acción de eliminación o actualización de la fila de la tabla primaria.  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un error y se revierte la acción de eliminación o actualización de la fila de la tabla primaria.  
   
  CASCADE  
  Si esa fila se actualiza o elimina en la tabla primaria, las filas correspondientes se actualizan o eliminan en la tabla de referencia. CASCADE no se puede especificar si una columna `timestamp` es parte de una clave externa o de la clave con referencia. ON DELETE CASCADE no se puede especificar en una tabla que tenga un desencadenador INSTEAD OF DELETE. No se puede especificar ON UPDATE CASCADE para las tablas que tienen desencadenadores INSTEAD OF UPDATE.  

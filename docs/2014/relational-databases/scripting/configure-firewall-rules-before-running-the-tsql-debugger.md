@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245189"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurar el depurador de Transact-SQL
@@ -159,11 +159,11 @@ ms.locfileid: "75245189"
 
 * El servidor necesita comunicarse de nuevo con el cliente a través de RPC. La cuenta en la que se ejecuta SQL Server servicio debe tener permisos de autenticación en el cliente.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Depurador de Transact-SQL](transact-sql-debugger.md)   
  [Ejecutar el depurador de Transact-SQL](run-the-transact-sql-debugger.md)   
  [Recorrer el código de Transact-SQL](step-through-transact-sql-code.md)   
- [Información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
- [SQL Server Management Studio de &#40;del editor de consultas de Motor de base de datos&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Ver información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
+ [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

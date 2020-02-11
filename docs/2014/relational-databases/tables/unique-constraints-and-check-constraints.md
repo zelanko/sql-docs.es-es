@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196673"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Restricciones UNIQUE y restricciones CHECK
@@ -45,13 +45,13 @@ ms.locfileid: "68196673"
   
  Puede aplicar varias restricciones CHECK a una sola columna. También puede aplicar una sola restricción CHECK a varias columnas si se crea en el nivel de la tabla. Por ejemplo, una restricción CHECK para varias columnas se podría usar para confirmar que cualquier fila con un valor **USA** en la columna **country_region** tiene también un valor de dos caracteres en la columna **state** . Así se pueden comprobar varias condiciones en un mismo sitio.  
   
- Las restricciones CHECK son similares a las restricciones FOREIGN KEY porque controlan los valores que se colocan en una columna. La diferencia radica en cómo determinan qué valores son válidos: Restricciones FOREIGN KEY obtienen la lista de valores válidos de otra tabla, mientras que las restricciones CHECK determinan los valores válidos de una expresión lógica.  
+ Las restricciones CHECK son similares a las restricciones FOREIGN KEY porque controlan los valores que se colocan en una columna. La diferencia reside en la forma en que determinan qué valores son válidos: las restricciones FOREIGN KEY obtienen la lista de valores válidos de otra tabla, mientras que las restricciones CHECK determinan los valores válidos a partir de una expresión lógica.  
   
 > [!CAUTION]  
 >  Las restricciones que incluyen la conversión de tipos de datos implícitos o explícitos pueden impedir la correcta ejecución de determinadas operaciones. Por ejemplo, las restricciones definidas en tablas que son orígenes de un cambio de partición pueden impedir que una operación ALTER TABLE...SWITCH se realice correctamente. Evite la conversión de tipos de datos en las definiciones de las restricciones.  
   
 ### <a name="limitations-of-check-constraints"></a>Limitaciones de las restricciones CHECK  
- Las restricciones CHECK rechazan los valores que se evalúan como FALSE. Puesto que los valores nulos se evalúan como UNKNOWN, su presencia en las expresiones puede reemplazar una restricción. Por ejemplo, supongamos que una restricción en un `int` columna **MyColumn** especificando que **MyColumn** solo puede contener el valor 10 (**MyColumn = 10**). Si inserta el valor NULL en **MyColumn**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserta NULL y no devuelve un error.  
+ Las restricciones CHECK rechazan los valores que se evalúan como FALSE. Puesto que los valores nulos se evalúan como UNKNOWN, su presencia en las expresiones puede reemplazar una restricción. Por ejemplo, supongamos que coloca una restricción `int` en **una columna DataColumn especificando** que **DataColumn** solo puede contener el valor 10 (**columna = 10**). Si inserta el valor NULL en **MyColumn**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserta NULL y no devuelve un error.  
   
  Una restricción CHECK devuelve TRUE cuando la condición que está comprobando no es FALSE para ninguna fila de la tabla. Una restricción CHECK opera en el nivel de fila. Si una tabla recién creada no tiene filas, cualquier restricción CHECK en esta tabla se considerará válida. Esta situación puede generar resultados inesperados, como en el siguiente ejemplo.  
   
@@ -87,7 +87,7 @@ DELETE CheckTbl WHERE col1 = 10;
 ##  <a name="Tasks"></a> Tareas relacionadas  
   
 > [!NOTE]  
->  Si se publica la tabla para la replicación, debe modificar el esquema mediante la instrucción Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) o SMO (Objetos de administración de SQL Server). Si se modifica el esquema mediante el Diseñador de tablas o el Diseñador de diagramas de base de datos, se intentará eliminar la tabla y volver a crearla. No se pueden eliminar objetos publicados, por lo que la modificación del esquema generará un error.  
+>  Si se publica la tabla para la replicación, debe modificar el esquema mediante la instrucción Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) u Objetos de administración de SQL Server (SMO). Si se modifica el esquema mediante el Diseñador de tablas o el Diseñador de diagramas de base de datos, se intentará eliminar la tabla y volver a crearla. No se pueden eliminar objetos publicados, por lo que la modificación del esquema generará un error.  
   
 |Tarea|Tema|  
 |----------|-----------|  

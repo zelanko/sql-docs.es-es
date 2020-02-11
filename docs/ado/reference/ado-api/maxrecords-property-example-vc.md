@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de la propiedad MaxRecords (VC ++) | Microsoft Docs
+title: Ejemplo de la propiedad MaxRecords (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932246"
 ---
 # <a name="maxrecords-property-example-vc"></a>Ejemplo de la propiedad MaxRecords (VC ++)
-Este ejemplo se usa el [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propiedad para abrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que contiene los títulos más caros 10 en el ***títulos*** tabla.  
+En este ejemplo se usa la propiedad [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) para abrir un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que contiene los 10 títulos más caros en la tabla ***titles*** .  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -165,17 +165,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Títulos de diez principales por precio:**  
-**¿Pero es fácil de usar? ---22.95**  
-**Personas Phobic y no que no disfrutan de equipo: Variaciones de comportamiento---21.59**  
-**Las cebollas, los puerros y ajo: Cocinar los secretos de los mares Mediterráneo---20.95**  
+ **Los diez primeros títulos por precio:**  
+**¿Pero es fácil de utilizar? ---22,95**  
+**Individuos de equipos phobic y no phobic: variaciones de comportamiento---21,59**  
+**Cebollas, Leeks y ajos: secretos de cocina del Mediterráneo---20,95**  
 **Secretos de Silicon Valley---20,00**  
-**Guía de base de datos de un ejecutivo ocupado---19,99**  
-**Recta hablar sobre equipos---19,99**  
-**Trata de Silicon Valley gastronomía---19,99**  
-**Prolonga la privación de datos: Cuatro casos prácticos---19,99**  
-**¿Identidad (phishing), cualquier persona? ---14,99**  
-**Años cincuenta en cocinas Buckingham Palacio---11.95**   
-## <a name="see-also"></a>Vea también  
+**La guía de base de datos del ejecutivo ocupado---19,99**  
+**Hable directamente acerca de los equipos---19,99**  
+**Silicon Valley Gastronomic trata---19,99**  
+**Privación de datos prolongada: cuatro casos prácticos---19,99**  
+**Sushi, cualquiera? ---14,99**  
+**50 años en cocinas de Buckingham Palacio---11,95**   
+## <a name="see-also"></a>Consulte también  
  [Propiedad MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

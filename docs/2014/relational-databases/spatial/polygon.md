@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 15a9ea69771699cf2b845d8018dfad1d1af511d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014082"
 ---
 # <a name="polygon"></a>Polygon
@@ -29,7 +29,7 @@ ms.locfileid: "66014082"
   
  En la ilustración siguiente se muestran ejemplos de instancias de `Polygon`.  
   
- ![Ejemplos de instancias Polygon de geometry](../../database-engine/media/polygon.gif "Ejemplos de instancias Polygon de geometry")  
+ ![Ejemplos de instancias de Polygon de Geometry](../../database-engine/media/polygon.gif "Ejemplos de instancias Polygon de geometry")  
   
  Como se muestra en la ilustración:  
   
@@ -64,7 +64,8 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Como muestran `@g4` y `@g5`, una instancia aceptada de `Polygon` puede no ser una instancia de `Polygon` válida. `@g5` también muestra que una instancia de Polygon solo necesita contener un anillo con cuatro puntos cualquiera para que se acepte.  
+ Como muestran `@g4` y `@g5`, una instancia aceptada de `Polygon` puede no ser una instancia de `Polygon` válida. 
+  `@g5` también muestra que una instancia de Polygon solo necesita contener un anillo con cuatro puntos cualquiera para que se acepte.  
   
  Los ejemplos siguientes generan una excepción `System.FormatException`, porque las instancias de `Polygon` no se aceptan.  
   
@@ -73,7 +74,9 @@ DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';  
 ```  
   
- `@g1` no se acepta porque la instancia de `LineString` para el anillo exterior no contiene suficientes puntos. `@g2` no se acepta porque el punto inicial de la instancia de `LineString` del anillo exterior no es igual que el punto final. En el ejemplo siguiente hay un anillo exterior aceptable, pero el anillo interior no lo es. También en este caso se genera una excepción `System.FormatException`.  
+ 
+  `@g1` no se acepta porque la instancia de `LineString` para el anillo exterior no contiene suficientes puntos. 
+  `@g2` no se acepta porque el punto inicial de la instancia de `LineString` del anillo exterior no es igual que el punto final. En el ejemplo siguiente hay un anillo exterior aceptable, pero el anillo interior no lo es. También en este caso se genera una excepción `System.FormatException`.  
   
 ```  
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
@@ -91,7 +94,8 @@ DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g3` es válido porque los dos anillos interiores se tocan en un mismo punto y no se cruzan. El siguiente ejemplo muestra instancias de `Polygon` no válidas.  
+ 
+  `@g3` es válido porque los dos anillos interiores se tocan en un mismo punto y no se cruzan. El siguiente ejemplo muestra instancias de `Polygon` no válidas.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
@@ -103,7 +107,13 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` no es válido porque el anillo interior toca el anillo exterior en dos lugares. `@g2` no es válido porque el segundo anillo interior está dentro del interior del primer anillo interior. `@g3` no es válido porque los dos anillos interiores se tocan en varios puntos consecutivos. `@g4` no es válido porque los interiores de los dos anillos interiores se superponen. `@g5` no es válido porque el anillo exterior no es el primer anillo. `@g6` no es válido porque el anillo no tiene al menos tres puntos distintos.  
+ 
+  `@g1` no es válido porque el anillo interior toca el anillo exterior en dos lugares. 
+  `@g2` no es válido porque el segundo anillo interior está dentro del interior del primer anillo interior. 
+  `@g3` no es válido porque los dos anillos interiores se tocan en varios puntos consecutivos. 
+  `@g4` no es válido porque los interiores de los dos anillos interiores se superponen. 
+  `@g5` no es válido porque el anillo exterior no es el primer anillo. 
+  `@g6` no es válido porque el anillo no tiene al menos tres puntos distintos.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente crea una instancia sencilla de `geometry``Polygon` con un hueco y un SRID de 10.  
@@ -144,14 +154,14 @@ SELECT @g.ToString()
   
  La instancia de geometry devuelta es `Point(1 3)`.  Si el objeto `Polygon` proporcionado es `POLYGON((1 3, 1 5, 1 3, 1 3))` , entonces `MakeValid()` devolverá `LINESTRING(1 3, 1 5)`.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [STArea &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
- [STExteriorRing &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type)   
- [STNumInteriorRing &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type)   
- [STInteriorRingN &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stinteriorringn-geometry-data-type)   
+ [STExteriorRing &#40;tipo de datos Geometry&#41;](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type)   
+ [STNumInteriorRing &#40;tipo de datos Geometry&#41;](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type)   
+ [STInteriorRingN &#40;tipo de datos Geometry&#41;](/sql/t-sql/spatial-geometry/stinteriorringn-geometry-data-type)   
  [STCentroid &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
  [STPointOnSurface &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   
- [MultiPolígono](../spatial/polygon.md)   
+ [MultiPolygon](../spatial/polygon.md)   
  [Datos espaciales &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
  [STIsValid &#40;tipo de datos geography&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type)   
  [STIsValid &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)  

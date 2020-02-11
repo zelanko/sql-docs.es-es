@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6a4b56a31ede0d8e011c1a2244f5d014e185e7e5
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74318996"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>Instalación y configuración de AdventureWorks
@@ -21,7 +21,7 @@ ms.locfileid: "74318996"
 
 Vínculos de descarga e instrucciones de instalación de AdventureWorks. 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) o [Azure SQL Database](https://azure.microsoft.com/services/sql-database/). Para obtener la versión completa del ejemplo, use SQL Server Evaluation/Developer/Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Para obtener los mejores resultados, use la versión de junio de 2016 o posterior.
@@ -67,9 +67,9 @@ Siga los pasos que se indican a continuación para restaurar una copia de seguri
 1. Abra SQL Server Management Studio y conéctese a la instancia de SQL Server de destino.
 2. Haga clic con el botón secundario en el nodo **bases** de datos y seleccione **restaurar base de datos**.
 3. Seleccione **dispositivo** y haga clic en los puntos suspensivos (**...**)
-4. En el cuadro de diálogo **seleccionar dispositivos de copia de seguridad**, haga clic en **Agregar**, desplácese hasta la copia de seguridad de base de datos en el sistema de archivos del servidor y seleccione la copia de seguridad. Haga clic en **Aceptar**.
+4. En el cuadro de diálogo **seleccionar dispositivos de copia de seguridad**, haga clic en **Agregar**, desplácese hasta la copia de seguridad de base de datos en el sistema de archivos del servidor y seleccione la copia de seguridad. Haga clic en **OK**.
 5. Si es necesario, cambie la ubicación de destino de los archivos de datos y de registro, en el panel **archivos** . Tenga en cuenta que se recomienda colocar los archivos de datos y de registro en unidades diferentes.
-6. Haga clic en **Aceptar**. Se iniciará la restauración de la base de datos. Una vez completado, tendrá la base de datos AdventureWorks instalada en la instancia de SQL Server.
+6. Haga clic en **OK**. Se iniciará la restauración de la base de datos. Una vez completado, tendrá la base de datos AdventureWorks instalada en la instancia de SQL Server.
 
 Para obtener más información acerca de cómo restaurar una base de datos de SQL Server, consulte [restaurar una copia de seguridad de base de datos con SSMS](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).
 
@@ -100,6 +100,6 @@ Si aún no tiene un SQL Server en Azure, vaya al [Azure portal](https://portal.a
 1. Seleccione **crear** para crear el nuevo SQL Database, que es la copia restaurada de la base de datos AdventureWorksLT. 
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Tutoriales para SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
 [Tutoriales de SQL Server motor de base de datos](../relational-databases/database-engine-tutorials.md)

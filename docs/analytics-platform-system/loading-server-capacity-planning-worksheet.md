@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 7dded8c79495d0bdc684927f4875a93c3160c1bf
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401032"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Cargando hoja de cálculo de planeamiento de capacidad del servidor para Analytics Platform System
@@ -40,7 +40,7 @@ Imprima esta hoja de cálculo y rellénelo con sus propios requisitos.
 |CPU|Número de Sockets.|![Icono de lápiz](media/pencil-icon.png "Icono de lápiz")|Para cargar datos sin comprimir, dwloader no es una aplicación que consume mucha CPU.  Como requisito mínimo, se recomienda usar un servidor de 2 sockets fabricado recientemente.<br /><br />Para cargar datos comprimidos, necesita suficiente capacidad de CPU para descomprimir los datos antes de enviarlos a PDW. dwloader puede ejecutar 10 subprocesos activos a la vez. Si tiene previsto cargar 10 archivos comprimidos simultáneamente, se recomienda que el servidor tenga al menos una CPU de 10 núcleos o dos CPU de 6 núcleos.|  
 |RAM|GB de memoria que permite a Windows almacenar en caché los archivos durante las cargas.|![Icono de lápiz](media/pencil-icon.png "Icono de lápiz")|dwloader usa muy poca RAM en el servidor de carga. Para el rendimiento, Windows usa la memoria para almacenar en caché los archivos de carga después de leerlos desde el disco.<br /><br />Para determinar los requisitos de RAM, consulte la instalación de Windows Server y los requisitos de las aplicaciones de terceros. Se recomienda un mínimo de 32 GB si no tiene requisitos de otros orígenes.<br /><br />En el caso de los datos comprimidos, la memoria RAM más rápida es útil porque acelerará la descompresión.|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Adquisición y configuración de servidores de carga](acquire-and-configure-loading-server.md)  
 [Cargador de línea de comandos de dwloader](dwloader.md)  
   

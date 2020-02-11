@@ -10,10 +10,10 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251720"
 ---
 # <a name="data-quality-services-concepts"></a>Conceptos de Data Quality Services
@@ -46,7 +46,7 @@ ms.locfileid: "75251720"
 ##  <a name="Projects"></a>Conceptos de proyectos de calidad de datos  
  El administrador de datos realiza las operaciones de calidad de los datos (limpiar y buscar coincidencias) mediante un proyecto de calidad de datos en la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
- **Limpieza de datos**  
+ **Data Cleansing**  
   
  La limpieza de datos en DQS se realiza en función del conocimiento en una base de conocimiento de DQS. La limpieza de datos de DQS es un proceso de dos pasos:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "75251720"
   
  La supervisión de actividades muestra la situación y el estado de cada actividad realizada en un intervalo de datos, proporciona datos para cada actividad y permite a los administradores de DQS controlar una actividad. Para obtener más información, consulte [Monitor DQS Activities](../data-quality-services/monitor-dqs-activities.md).  
   
- **Configuraciones**  
+ **Configuración**  
   
  La opción de configuración le permite:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "75251720"
   
  Para obtener más información acerca de la administración de DQS, vea [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## <a name="see-also"></a>Véase también  
- [Servicios de calidad de datos](../data-quality-services/data-quality-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68199229"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinicializar una suscripción
@@ -34,7 +34,7 @@ ms.locfileid: "68199229"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Reinicializar una suscripción es un proceso con dos partes:  
   
 1.  Una o todas las suscripciones a una publicación se *marcan* para reinicializarse. Las suscripciones se marcan para reinicializarlas en el cuadro de diálogo **Reinicializar suscripciones** , disponible en la carpeta **Publicaciones locales** y en la carpeta **Suscripciones locales** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. También puede marcar suscripciones desde la pestaña **Todas las suscripciones** y el nodo de publicaciones del Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md). Al marcar una suscripción para reinicialización, tiene las siguientes opciones:  
@@ -68,7 +68,7 @@ ms.locfileid: "68199229"
   
 1.  Conéctese al suscriptor en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]y expanda el nodo de servidor.  
   
-2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Suscripciones locales** .  
+2.  Expanda la carpeta **Replicación** y, a continuación, la carpeta **Suscripciones locales**.  
   
 3.  Haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Reinicializar**.  
   
@@ -107,19 +107,19 @@ ms.locfileid: "68199229"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Para reinicializar una suscripción de extracción a una publicación transaccional  
   
-1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_reinitpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql). Especifique **@publisher** , **@publisher_db** y **@publication** . Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de distribución.  
+1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_reinitpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql). Especifique **@publisher**, **@publisher_db**y **@publication**. Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de distribución.  
   
 2.  (Opcional) Inicie el Agente de distribución en el suscriptor para sincronizar la suscripción. Para obtener más información, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>Para reinicializar una suscripción de inserción a una publicación transaccional  
   
-1.  En el publicador, ejecute [sp_reinitsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql). Especifique **@publication** , **@subscriber** y **@destination_db** . Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de distribución.  
+1.  En el publicador, ejecute [sp_reinitsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql). Especifique **@publication**, **@subscriber**y **@destination_db**. Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de distribución.  
   
 2.  (Opcional) Inicie el Agente de distribución en el distribuidor para sincronizar la suscripción. Para obtener más información, consulte [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>Para reinicializar una suscripción de extracción a una publicación de combinación  
   
-1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql). Especifique **@publisher** , **@publisher_db** y **@publication** . Para cargar los cambios del suscriptor antes de que se produzca la reinicialización, especifique un valor de `true` para **@upload_first** . Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de mezcla.  
+1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql). Especifique **@publisher**, **@publisher_db**y **@publication**. Para cargar los cambios del suscriptor antes de que se produzca la reinicialización, `true` especifique **@upload_first**un valor de para. Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de mezcla.  
   
     > [!IMPORTANT]  
     >  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  
@@ -128,7 +128,7 @@ ms.locfileid: "68199229"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>Para reinicializar una suscripción de inserción a una publicación de combinación  
   
-1.  En el publicador, ejecute [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql). Especifique **@publication** , **@subscriber** y **@subscriber_db** . Para cargar los cambios del suscriptor antes de que se produzca la reinicialización, especifique un valor de `true` para **@upload_first** . Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de distribución.  
+1.  En el publicador, ejecute [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql). Especifique **@publication**, **@subscriber**y **@subscriber_db**. Para cargar los cambios del suscriptor antes de que se produzca la reinicialización, `true` especifique **@upload_first**un valor de para. Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de distribución.  
   
     > [!IMPORTANT]  
     >  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  
@@ -137,24 +137,24 @@ ms.locfileid: "68199229"
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>Para establecer la directiva de reinicialización al crear una nueva publicación de combinación  
   
-1.  En el publicador de la base de datos de publicación, ejecute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), especificando uno de los valores siguientes para **@automatic_reinitialization_policy** :  
+1.  En el publicador de la base de datos de publicación, ejecute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), especificando uno de los valores siguientes para **@automatic_reinitialization_policy**:  
   
-    -   **1** : los cambios se cargan en el suscriptor antes de que una suscripción se reinicialice automáticamente según lo requiera un cambio a la publicación.  
+    -   **1** : los cambios se cargan desde el suscriptor antes de que una suscripción se reinicialice automáticamente según lo requiera un cambio en la publicación.  
   
-    -   **0** : los cambios en el suscriptor se descartan cuando una suscripción se reinicializa automáticamente según lo requiera un cambio a la publicación.  
+    -   **0** : los cambios en el suscriptor se descartan cuando una suscripción se reinicializa automáticamente según lo requiera un cambio en la publicación.  
   
     > [!IMPORTANT]  
     >  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  
   
-     Para más información, consulte [Create a Publication](publish/create-a-publication.md).  
+     Para obtener más información, vea [Crear una suscripción](publish/create-a-publication.md).  
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>Para cambiar la directiva de reinicialización para una publicación de combinación existente  
   
-1.  En el publicador de la base de datos de publicación, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando **automatic_reinitialization_policy** para **@property** y uno de los siguientes valores para **@value** :  
+1.  En el publicador de la base de datos de publicación, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando **automatic_reinitialization_policy** para **@property** y uno de los siguientes valores para **@value**:  
   
-    -   **1** : los cambios se cargan en el suscriptor antes de que una suscripción se reinicialice automáticamente según lo requiera un cambio a la publicación.  
+    -   **1** : los cambios se cargan desde el suscriptor antes de que una suscripción se reinicialice automáticamente según lo requiera un cambio en la publicación.  
   
-    -   **0** : los cambios en el suscriptor se descartan cuando una suscripción se reinicializa automáticamente según lo requiera un cambio a la publicación.  
+    -   **0** : los cambios en el suscriptor se descartan cuando una suscripción se reinicializa automáticamente según lo requiera un cambio en la publicación.  
   
     > [!IMPORTANT]  
     >  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  
@@ -175,7 +175,7 @@ ms.locfileid: "68199229"
     > [!NOTE]  
     >  Si este método devuelve `false`, significa que las propiedades de suscripción del paso 2 se definieron incorrectamente o que la suscripción de extracción no existe.  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A>. Este método marca la suscripción para la reinicialización.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> . Este método marca la suscripción para la reinicialización.  
   
 5.  Sincronice la suscripción de extracción. Para obtener más información, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -190,9 +190,9 @@ ms.locfileid: "68199229"
     > [!NOTE]  
     >  Si este método devuelve `false`, significa que las propiedades de suscripción del paso 2 se definieron incorrectamente o que la suscripción de inserción no existe.  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A>. Este método marca la suscripción para la reinicialización.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Este método marca la suscripción para la reinicialización.  
   
-5.  Sincronice la suscripción de inserción. Para más información, consulte [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
+5.  Sincronice la suscripción de inserción. Para obtener más información, consulte [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>Para reinicializar una suscripción de extracción a una publicación de combinación  
   
@@ -205,12 +205,12 @@ ms.locfileid: "68199229"
     > [!NOTE]  
     >  Si este método devuelve `false`, significa que las propiedades de suscripción del paso 2 se definieron incorrectamente o que la suscripción de extracción no existe.  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A>. Pase un valor de `true` para cargar cambios en el Suscriptor antes de la reinicialización o un valor de `false` para reinicializar y perder cualquier cambio pendiente en el Suscriptor. Este método marca la suscripción para la reinicialización.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> . Pase un valor de `true` para cargar cambios en el Suscriptor antes de la reinicialización o un valor de `false` para reinicializar y perder cualquier cambio pendiente en el Suscriptor. Este método marca la suscripción para la reinicialización.  
   
     > [!NOTE]  
     >  No se pueden cargar los cambios si expira la suscripción. Para más información, consulte [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
   
-5.  Sincronice la suscripción de extracción. Para más información, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
+5.  Sincronice la suscripción de extracción. Para obtener más información, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>Para reinicializar una suscripción de inserción a una publicación de combinación  
   
@@ -223,12 +223,12 @@ ms.locfileid: "68199229"
     > [!NOTE]  
     >  Si este método devuelve `false`, significa que las propiedades de suscripción del paso 2 se definieron incorrectamente o que la suscripción de inserción no existe.  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A>. Pase un valor de `true` para cargar cambios en el Suscriptor antes de la reinicialización o un valor de `false` para reinicializar y perder cualquier cambio pendiente en el Suscriptor. Este método marca la suscripción para la reinicialización.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> . Pase un valor de `true` para cargar cambios en el Suscriptor antes de la reinicialización o un valor de `false` para reinicializar y perder cualquier cambio pendiente en el Suscriptor. Este método marca la suscripción para la reinicialización.  
   
     > [!NOTE]  
     >  No se pueden cargar los cambios si expira la suscripción. Para más información, consulte [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
   
-5.  Sincronice la suscripción de inserción. Para más información, consulte [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
+5.  Sincronice la suscripción de inserción. Para obtener más información, consulte [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
 ###  <a name="PShellExample"></a> Ejemplos (RMO)  
  En este ejemplo reinicializa una suscripción de extracción para una publicación transaccional.  
@@ -243,9 +243,9 @@ ms.locfileid: "68199229"
   
  [!code-vb[HowTo#rmo_vb_ReinitMergePullSub_WithUpload](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_reinitmergepullsub_withupload)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reinicializar suscripciones](reinitialize-subscriptions.md)   
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)  
+ [Procedimientos recomendados de seguridad de replicación](security/replication-security-best-practices.md)  
   
   

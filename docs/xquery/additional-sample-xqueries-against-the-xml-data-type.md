@@ -1,5 +1,5 @@
 ---
-title: Ejemplos adicionales consultas XQuery con el tipo de datos xml | Microsoft Docs
+title: Consultas XQuery de ejemplo adicional con respecto al tipo de datos XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2284f499dce30462b468dc385944ba19f0dbb88e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986060"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>Ejemplos adicionales de consultas XQuery con el tipo de datos XML
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Los temas de esta sección ofrecen más ejemplos que muestran cómo usar las consultas XQuery con el **xml** tipo de datos:  
+  En los temas de esta sección se proporcionan ejemplos adicionales que muestran cómo usar consultas XQuery en el tipo de datos **XML** :  
   
 -   [Casos de uso generales de XQuery](../xquery/general-xquery-use-cases.md)  
   
@@ -39,8 +39,8 @@ ms.locfileid: "67986060"
   
 -   [Controlar espacios de nombres en XQuery](../xquery/handling-namespaces-in-xquery.md)  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
- [Operadores XQuery con el tipo de datos xml](../xquery/xquery-operators-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Consulte también  
+ [Funciones de XQuery con el tipo de datos XML](../xquery/xquery-functions-against-the-xml-data-type.md)   
+ [Operadores XQuery con el tipo de datos XML](../xquery/xquery-operators-against-the-xml-data-type.md)  
   
   

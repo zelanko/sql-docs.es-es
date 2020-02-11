@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4feb8e282390b4808b69493a299cbad990f1e91b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243566"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Cómo especificar un esquema de asignación anotado en un diagrama de actualización (SQLXML 4.0)
@@ -47,7 +47,7 @@ ms.locfileid: "75243566"
 ## <a name="examples"></a>Ejemplos  
  Para crear ejemplos funcionales mediante los ejemplos siguientes, debe cumplir los requisitos especificados en [requisitos para ejecutar ejemplos de SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>a. Crear un diagrama de actualización con un esquema de asignación simple  
+### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Crear un diagrama de actualización con un esquema de asignación simple  
  El siguiente esquema XSD (SampleSchema. xml) es un esquema de asignación que asigna el ** \<elemento Customer>** a la tabla sales. Customer:  
   
 ```  
@@ -231,7 +231,7 @@ ms.locfileid: "75243566"
 </Schema>  
 ```  
   
-### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>c. Insertar un registro mediante la relación de elementos primarios y secundarios y la anotación inversa especificada en el esquema XSD  
+### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. Insertar un registro mediante la relación de elementos primarios y secundarios y la anotación inversa especificada en el esquema XSD  
  En este ejemplo se muestra cómo la lógica diagrama usa la relación de elementos primarios y secundarios especificada en el XSD para procesar las actualizaciones y cómo se utiliza la anotación **inversa** . Para obtener más información sobre la anotación **inversa** , vea [especificar el atributo SQL: inverso en sql: relationship &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
  En este ejemplo se da por supuesto que las tablas siguientes se encuentran en la base de datos **tempdb** :  
@@ -326,7 +326,7 @@ ms.locfileid: "75243566"
   
      Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Consideraciones de seguridad de diagrama &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

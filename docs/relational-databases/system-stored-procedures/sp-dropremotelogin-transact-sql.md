@@ -18,20 +18,20 @@ ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933820"
 ---
-# <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
+# <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita un inicio de sesión remoto asignado a un inicio de sesión local que se utiliza para ejecutar procedimientos almacenados remotos en el servidor local que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Utilice en su lugar servidores vinculados y procedimientos almacenados de servidor vinculado.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]En su lugar, use servidores vinculados y procedimientos almacenados de servidores vinculados.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,26 +44,27 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @remoteserver = ] 'remoteserver'` Es el nombre del servidor remoto asignado al inicio de sesión remoto que se va a quitar. *remoteserver* es **sysname**, no tiene ningún valor predeterminado. *remoteserver* ya debe existir.  
+`[ @remoteserver = ] 'remoteserver'`Es el nombre del servidor remoto asignado al inicio de sesión remoto que se va a quitar. *RemoteServer* es de **tipo sysname**y no tiene ningún valor predeterminado. *RemoteServer* ya debe existir.  
   
-`[ @loginame = ] 'login'` Es el nombre de inicio de sesión opcional en el servidor local que está asociado con el servidor remoto. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión* ya debe existir si se especifica.  
+`[ @loginame = ] 'login'`Es el nombre de inicio de sesión opcional en el servidor local que está asociado con el servidor remoto. *login* es de **tipo sysname y su**valor predeterminado es NULL. el *Inicio de sesión* ya debe existir si se especifica.  
   
-`[ @remotename = ] 'remote_name'` Es el nombre opcional del inicio de sesión remoto asignado a *inicio de sesión* al iniciar sesión desde el servidor remoto. *remote_name* es **sysname**, su valor predeterminado es null.  
+`[ @remotename = ] 'remote_name'`Es el nombre opcional del inicio de sesión remoto que se asigna al *Inicio de sesión* cuando se inicia sesión desde el servidor remoto. *remote_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- Si solo *remoteserver* se especifica, se quitan todos los inicios de sesión remotos para ese servidor remoto desde el servidor local. Si *inicio de sesión* también está especificados, remotos todos los inicios de sesión de *remoteserver* inicio de sesión local asignado a específico que se quitan del servidor local. Si *remote_name* también se especifica, solo el inicio de sesión remoto de ese usuario remoto desde *remoteserver* se quita del servidor local.  
+## <a name="remarks"></a>Observaciones  
+ Si solo se especifica *RemoteServer* , se quitarán del servidor local todos los inicios de sesión remotos del servidor remoto. Si también se especifica *login* , se quitarán del servidor local todos los inicios de sesión remotos de *RemoteServer* asignados a ese inicio de sesión local específico. Si también se especifica *remote_name* , solo se quita del servidor local el inicio de sesión remoto para ese usuario remoto de *RemoteServer* .  
   
- Para agregar usuarios al servidor local, use **sp_addlogin**. Para quitar usuarios del servidor local, use **sp_droplogin**.  
+ Para agregar usuarios del servidor local, use **sp_addlogin**. Para quitar usuarios del servidor local, use **sp_droplogin**.  
   
- Los inicios de sesión remotos solo son necesarios cuando se usan versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0 y posteriores utilizan en su lugar inicios de sesión de servidores vinculados. Use **sp_addlinkedsrvlogin** y **sp_droplinkedsrvlogin** para agregar y quitar inicios de sesión del servidor vinculado.  
+ Los inicios de sesión remotos solo son necesarios cuando se usan versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0 y posteriores utilizan en su lugar inicios de sesión de servidores vinculados. Use **sp_addlinkedsrvlogin** y **sp_droplinkedsrvlogin** para agregar y quitar inicios de sesión de servidor vinculado.  
   
- **sp_dropremotelogin** no se puede ejecutar dentro de una transacción definida por el usuario.  
+ **sp_dropremotelogin** no se puede ejecutar en una transacción definida por el usuario.  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **sysadmin** o **securityadmin** roles fijos de servidor.  
+ Requiere la pertenencia a los roles fijos de servidor **sysadmin** o **securityadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -74,7 +75,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-dropping-a-login-mapping"></a>b. Quitar una asignación de inicio de sesión  
+### <a name="b-dropping-a-login-mapping"></a>B. Quitar una asignación de inicio de sesión  
  En el siguiente ejemplo se quita la entrada que asigna inicios de sesión remotos del servidor remoto `ACCOUNTS` al nombre de inicio de sesión local `Albert`.  
   
 ```sql
@@ -88,15 +89,15 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
- [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
- [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
+ [sp_addremotelogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_addserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_droplogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_helpremotelogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

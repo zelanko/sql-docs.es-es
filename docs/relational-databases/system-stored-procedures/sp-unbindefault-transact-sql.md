@@ -18,19 +18,19 @@ ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095881"
 ---
-# <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
+# <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Desenlaza o quita un valor predeterminado de una columna o de un tipo de datos alias en la base de datos actual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Se recomienda crear definiciones predeterminadas utilizando la palabra clave DEFAULT en la [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) instrucciones en su lugar.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]Se recomienda crear las definiciones predeterminadas mediante la palabra clave DEFAULT en las instrucciones [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,20 +43,21 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'object_name'` Es el nombre de la tabla y columna o el tipo de datos de alias desde el que el valor predeterminado es se va a quitar. *object_name* es **nvarchar(776)** , no tiene ningún valor predeterminado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta resolver los identificadores de dos partes en nombres de columna en primer lugar, y después en tipos de datos de alias.  
+`[ @objname = ] 'object_name'`Es el nombre de la tabla y columna, o el tipo de datos del alias del que se va a desenlazar el valor predeterminado. *object_name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta resolver los identificadores de dos partes en nombres de columna en primer lugar, y después en tipos de datos de alias.  
   
  Cuando se desenlaza un valor predeterminado de un tipo de datos alias, también se desenlaza cualquier columna de ese tipo de datos que tenga el mismo valor predeterminado. Las columnas de ese tipo de datos cuyos valores predeterminados estén directamente enlazados a ellas no se ven afectadas.  
   
 > [!NOTE]  
->  *object_name* puede contener corchetes **[]** como caracteres de identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+>  *object_name* pueden contener corchetes **[]** como caracteres de identificador delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'` Se usa solo cuando se desenlaza un valor predeterminado de un tipo de datos de alias. *futureonly_flag* es **varchar (15)** , su valor predeterminado es null. Cuando *futureonly_flag* es **futureonly**, las columnas existentes del tipo de datos no pierden el valor predeterminado especificado.  
+`[ @futureonly = ] 'futureonly_flag'`Solo se usa cuando se desenlaza un valor predeterminado de un tipo de datos de alias. *futureonly_flag* es de tipo **VARCHAR (15)** y su valor predeterminado es NULL. Cuando *futureonly_flag* es **futureonly**, las columnas existentes del tipo de datos no pierden el valor predeterminado especificado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- Para mostrar el texto de un valor predeterminado, ejecute **sp_helptext** con el nombre del valor predeterminado como parámetro.  
+## <a name="remarks"></a>Observaciones  
+ Para mostrar el texto de un valor predeterminado, ejecute **sp_helptext** con el nombre del parámetro predeterminado.  
   
 ## <a name="permissions"></a>Permisos  
  Para desenlazar un valor predeterminado de una columna de la tabla, es necesario el permiso ALTER en la tabla. Para desenlazar un valor predeterminado de un tipo de datos alias, se requiere el permiso CONTROL en el tipo o el permiso ALTER del esquema al que pertenece el tipo.  
@@ -70,22 +71,22 @@ sp_unbindefault [ @objname = ] 'object_name'
 EXEC sp_unbindefault 'employees.hiredate';  
 ```  
   
-### <a name="b-unbinding-a-default-from-an-alias-data-type"></a>b. Desenlazar un valor predeterminado de un tipo de datos alias  
+### <a name="b-unbinding-a-default-from-an-alias-data-type"></a>B. Desenlazar un valor predeterminado de un tipo de datos alias  
  En el siguiente ejemplo se desenlaza el valor predeterminado del tipo de datos alias `ssn`. Desenlaza las columnas de ese tipo existentes y futuras.  
   
 ```  
 EXEC sp_unbindefault 'ssn';  
 ```  
   
-### <a name="c-using-the-futureonlyflag"></a>C. Utilizar futureonly_flag  
+### <a name="c-using-the-futureonly_flag"></a>C. Usar el futureonly_flag  
  En el siguiente ejemplo se desenlazan futuros usos del tipo de datos alias `ssn` sin que ello afecte a las columnas `ssn` existentes.  
   
 ```  
 EXEC sp_unbindefault 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. Uso de identificadores delimitados  
- El ejemplo siguiente muestra el uso de identificadores delimitados en *object_name* parámetro.  
+### <a name="d-using-delimited-identifiers"></a>D. Usar identificadores delimitados  
+ En el ejemplo siguiente se muestra el uso de identificadores delimitados en *object_name* parámetro.  
   
 ```  
 CREATE TABLE [t.3] (c1 int); -- Notice the period as part of the table   
@@ -99,9 +100,9 @@ EXEC sp_bindefault 'default2', '[t.3].c1' ;
 EXEC sp_unbindefault '[t.3].c1';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
  [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   

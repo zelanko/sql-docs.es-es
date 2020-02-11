@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68700aaba6c335bf7fe9686961933eac5c52f8f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075369"
 ---
 # <a name="deploy-model-solutions-using-xmla"></a>Implementar soluciones de modelo mediante XMLA
@@ -33,8 +33,8 @@ ms.locfileid: "66075369"
 > [!IMPORTANT]  
 >  El script XML no incluirá la contraseña si ésta se ha especificado en la cadena de conexión para un origen de datos o por motivos de suplantación. Puesto que en este escenario la contraseña es obligatoria para el procesamiento, deberá agregarla manualmente al script XML antes de su ejecución o bien agregarla después de la ejecución del script.  
   
-## <a name="see-also"></a>Vea también  
- [Implementar soluciones con el Asistente para la implementación](deploy-model-solutions-using-the-deployment-wizard.md)   
+## <a name="see-also"></a>Consulte también  
+ [Implementar soluciones de modelo mediante el Asistente para la implementación](deploy-model-solutions-using-the-deployment-wizard.md)   
  [Sincronizar bases de datos de Analysis Services](synchronize-analysis-services-databases.md)  
   
   

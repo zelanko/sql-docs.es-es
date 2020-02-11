@@ -1,5 +1,5 @@
 ---
-title: Ver el historial del proyecto | Microsoft Docs
+title: Ver historial del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773501"
 ---
 # <a name="view-project-history"></a>Ver el historial del proyecto
@@ -34,9 +34,9 @@ ms.locfileid: "62773501"
   
 1.  En el Explorador de soluciones, seleccione el proyecto.  
   
-2.  En el **archivo** menú, elija **Control de código fuente** y haga clic en **Ver historial**.  
+2.  En el menú **archivo** , seleccione **control de código fuente** y haga clic en **Ver historial**.  
   
-3.  En el **historial de** \<proyecto > cuadro de diálogo cuadro, lleve a cabo cualquiera de las siguientes acciones:  
+3.  En el cuadro **de diálogo historial del** \<proyecto>, realice cualquiera de las siguientes acciones:  
   
     -   Ver la copia del sistema de control de código fuente de un archivo seleccionado.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "62773501"
   
     -   Exportar el informe de historial a una impresora, a un archivo o al Portapapeles.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer y recuperar información de versión](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Ver el estado de archivo](../../2014/database-engine/view-file-status.md)   
- [Recuperar archivos](../../2014/database-engine/retrieve-files.md)   
+ [Ver el estado del archivo](../../2014/database-engine/view-file-status.md)   
+ [Recuperación de archivos](../../2014/database-engine/retrieve-files.md)   
  [Comparar archivos](../../2014/database-engine/compare-files.md)  
   
   

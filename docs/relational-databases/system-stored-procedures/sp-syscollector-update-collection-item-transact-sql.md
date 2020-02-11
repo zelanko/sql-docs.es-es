@@ -19,13 +19,13 @@ ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010559"
 ---
-# <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
+# <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Se usa para modificar las propiedades de un elemento de recopilación definido por el usuario o para cambiar el nombre de un elemento de recopilación definido por el usuario.  
@@ -46,27 +46,27 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_item_id =] *collection_item_id*  
- Es el identifer único que identifica el elemento de recopilación. *collection_item_id* es **int** con un valor predeterminado es null. *collection_item_id* debe tener un valor si *nombre* es NULL.  
+ [ @collection_item_id = ] *collection_item_id*  
+ Es el identifer único que identifica el elemento de recopilación. *collection_item_id* es de **tipo int** y su valor predeterminado es NULL. *collection_item_id* debe tener un valor si *el nombre* es NULL.  
   
- [ @name =] '*nombre*'  
- Es el nombre del elemento de colección. *nombre* es **sysname** con un valor predeterminado es null. *nombre* debe tener un valor si *collection_item_id* es NULL.  
+ [ @name = ] '*nombre*'  
+ Es el nombre del elemento de colección. *Name* es de **tipo sysname y su** valor predeterminado es NULL. *el nombre* debe tener un valor si *collection_item_id* es NULL.  
   
- [ @new_name =] '*new_name*'  
- Es el nuevo nombre del elemento de recopilación. *new_name* es **sysname**, y si se utiliza, no puede ser una cadena vacía.  
+ [ @new_name = ] '*new_name*'  
+ Es el nuevo nombre del elemento de recopilación. *new_name* es de **tipo sysname**y, si se utiliza, no puede ser una cadena vacía.  
   
- *new_name* deben ser únicos. Para obtener una lista de los nombres de elementos de recopilación actuales, consulte la vista del sistema syscollector_collection_items.  
+ *new_name* debe ser único. Para obtener una lista de los nombres de elementos de recopilación actuales, consulte la vista del sistema syscollector_collection_items.  
   
- [ @frequency =] *frecuencia*  
- Es la frecuencia (en segundos) con que este elemento de recopilación recopila los datos. *frecuencia* es **int**, su valor predeterminado es 5, el valor mínimo que se pueden especificar.  
+ [ @frequency = ] *frecuencia*  
+ Es la frecuencia (en segundos) con que este elemento de recopilación recopila los datos. *Frequency* es de **tipo int**y su valor predeterminado es 5, el valor mínimo que se puede especificar.  
   
- [ @parameters =] '*parámetros*'  
- Parámetros de entrada para el elemento de recopilación. *parámetros* es **xml** con el valor predeterminado es NULL. El *parámetros* esquema debe coincidir con el esquema de parámetros del tipo de recopilador.  
+ [ @parameters = ] '*Parameters*'  
+ Parámetros de entrada para el elemento de recopilación. *Parameters* es **XML** con un valor predeterminado de NULL. El esquema de *parámetros* debe coincidir con el esquema de parámetros del tipo de recopilador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si el conjunto de recopilación se establece en modo sin almacenamiento en caché, se omite el cambio de la frecuencia porque este modo hace que la recopilación de datos y la carga se produzcan en la programación especificada para el conjunto de recopilación. Para ver el estado del conjunto de recopilación, ejecute la consulta siguiente. Reemplace `<collection_item_id>` con el identificador del elemento de recopilación que se va a actualizar.  
   
 ```  
@@ -89,7 +89,7 @@ WHERE collection_item_id = <collection_item_id>;
 -   @parameters  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes se basan en el elemento de colección creado en el ejemplo definido en [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
+ Los ejemplos siguientes se basan en el elemento de recopilación creado en el ejemplo definido en [sp_syscollector_create_collection_item &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
 ### <a name="a-changing-the-collection-frequency"></a>A. Cambiar la frecuencia de la recopilación  
  En el ejemplo siguiente se cambia la frecuencia de recopilación para el elemento de recopilación especificado.  
@@ -103,7 +103,7 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-### <a name="b-renaming-a-collection-item"></a>b. Cambiar el nombre de un elemento de recopilación  
+### <a name="b-renaming-a-collection-item"></a>B. Cambiar el nombre de un elemento de recopilación  
  En el ejemplo siguiente se cambia el nombre de un elemento de recopilación.  
   
 ```  
@@ -137,10 +137,10 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
- [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
+ [sp_syscollector_create_collection_item &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [syscollector_collection_items &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

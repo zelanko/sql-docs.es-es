@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810353"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Conectarse a otro equipo (Administrador de configuración de SQL Server)
@@ -33,11 +33,11 @@ ms.locfileid: "62810353"
   
 1.  En el menú **Inicio** , haga clic con el botón derecho en **Mi PC**y haga clic en **Administrar**.  
   
-2.  En **Administración de equipos**, haga clic con el botón derecho en **Administración del equipo (Local)** y, después, haga clic en **Conectar con otro equipo**.  
+2.  En **Administración de equipos**, haga clic con el botón secundario en **Administración del equipo (Local)** y, a continuación, haga clic en **Conectar con otro equipo**.  
   
 3.  En el cuadro de diálogo **Seleccionar equipo** , en el cuadro de texto **Otro equipo** , escriba el nombre del equipo que desea administrar y, a continuación, haga clic en **Aceptar**.  
   
-     Administración de equipos muestra los servicios que se ejecutan en el equipo remoto. El nodo de nivel superior cambia a **Administración de equipos**\<*equipoRemoto*>.  
+     Administración de equipos muestra los servicios que se ejecutan en el equipo remoto. El nodo de nivel superior cambia a **Administración de equipos** \<*equipoRemoto*>.  
   
 4.  En el árbol de consola, expanda **Servicios y aplicaciones**y, a continuación, expanda **Administrador de configuración de SQL Server** para administrar los servicios del equipo remoto.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62810353"
   
 1.  En el menú **Inicio** , haga clic en **Ejecutar**.  
   
-2.  En el **abrir** , escriba `mmc -a` para abrir el [!INCLUDE[msCoName](../../includes/msconame-md.md)] consola de administración en el modo de autor.  
+2.  En el cuadro **abrir** , escriba `mmc -a` para abrir la [!INCLUDE[msCoName](../../includes/msconame-md.md)] consola de administración de en modo de autor.  
   
 3.  En el menú **Archivo** , haga clic en **Agregar o quitar complemento**.  
   
@@ -65,14 +65,14 @@ ms.locfileid: "62810353"
   
 11. En el menú **Ventana**, haga clic en **Raíz de consola**para regresar a la primera ventana y eliminar la ventana.  
   
-12. En el **archivo** menú, haga clic en **Guardar como**y guarde el archivo en la carpeta que desee, con un nombre adecuado con la `.msc` la extensión de archivo. Cierre [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
+12. En el menú **archivo** , haga clic en **Guardar como**y guarde el archivo en la carpeta que desee, con un nombre adecuado `.msc` con la extensión de archivo. Cierre [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   
 13. Para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo de destino, haga doble clic en el archivo. Si lo desea, guarde un vínculo al archivo en el escritorio o en el menú **Inicio** .  
   
 > [!CAUTION]  
 >  Cuando utiliza el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo remoto, el nombre del equipo no es obvio y es posible que se detenga por error o que se configure el equipo equivocado. En la pestaña **Servicio** , marque la casilla **Nombre de host** para confirmar el nombre del equipo antes de modificar un servicio.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
   

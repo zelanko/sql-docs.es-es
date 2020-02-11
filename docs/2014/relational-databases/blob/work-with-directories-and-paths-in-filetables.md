@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52e486dc6cb6c3da45d590d4ba2e557c87c1a556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66009882"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Trabajar con directorios y rutas de acceso de FileTables
@@ -55,12 +55,12 @@ GO
 > [!IMPORTANT]  
 >  No puede almacenar más de 15 niveles de subdirectorios en el directorio de FileTable. Si se almacenan 15 niveles de subdirectorios, el nivel inferior no podrá contener los archivos, ya que estos archivos representarían un nivel adicional.  
   
-###  <a name="fqnlength"></a> Longitud del nombre completo de la ruta de acceso  
+###  <a name="fqnlength"></a>Longitud del nombre completo de la ruta de acceso  
   
 > [!IMPORTANT]  
 >  El sistema de archivos NTFS admite nombres de ruta de acceso con una longitud mayor que el límite de 260 caracteres del shell de Windows y la mayoría de las API de Windows. Por consiguiente, es posible que al crear archivos en la jerarquía de archivos de un objeto FileTable con Transact-SQL no pueda verlos ni abrirlos con el Explorador de Windows o muchas otras aplicaciones Windows, porque el nombre completo de la ruta de acceso supera los 260 caracteres. Sin embargo, puede seguir teniendo acceso a estos archivos mediante Transact-SQL.  
   
-##  <a name="fullpath"></a> Ruta de acceso completa a un elemento almacenado en una FileTable  
+##  <a name="fullpath"></a>La ruta de acceso completa a un elemento almacenado en una FileTable  
  La ruta de acceso completa a un archivo o directorio almacenado en una FileTable comienza con los elementos siguientes:  
   
 1.  El recurso compartido habilitado para el acceso de E/S de archivos de FILESTREAM en el nivel de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -77,7 +77,7 @@ GO
   
  Es importante tener en cuenta que la jerarquía de directorios creada en el recurso compartido de FILESTREAM en el nivel de instancia es una jerarquía de directorios virtual. Esta jerarquía se almacena en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no se representa físicamente en el sistema de archivos NTFS. Todas las operaciones que tienen acceso a los archivos y directorios situados en el recurso compartido de FILESTREAM y en las FileTables que contiene se interceptan y controlan mediante un componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incrustado en el sistema de archivos.  
   
-##  <a name="roots"></a> Semántica de los directorios raíz en los niveles de instancia, base de datos y FileTable  
+##  <a name="roots"></a>La semántica de los directorios raíz en los niveles de instancia, base de datos y FileTable  
  Esta jerarquía de directorios se ajusta a la semántica siguiente:  
   
 -   El recurso compartido de FILESTREAM en el nivel de instancia lo configura un administrador y se almacena como una propiedad del servidor. Puede cambiar el nombre de este recurso compartido a través del Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una operación de cambio de nombre no surtirá efecto hasta que se reinicie el servidor.  
@@ -90,28 +90,28 @@ GO
   
 -   No puede abrir estos directorios raíz con identificadores de archivo exclusivos.  
   
-##  <a name="is_directory"></a> Columna is_directory del esquema de la FileTable  
+##  <a name="is_directory"></a>Is_directory columna del esquema de FileTable  
  En la siguiente tabla se describe la interacción entre la columna **is_directory** y la columna **file_stream** que contiene los datos FILESTREAM de un objeto FileTable.  
   
 ||||  
 |-|-|-|  
-|*is_directory* **is_directory**|*file_stream* **is_directory**|**Comportamiento**|  
+|*is_directory* **valor**|*file_stream* **valor**|**Comportamiento**|  
 |FALSE|NULL|Esta combinación no es válida y la detectará una restricción definida por el sistema.|  
 |FALSE|\<valor>|El elemento representa un archivo.|  
 |TRUE|NULL|El elemento representa un directorio.|  
 |TRUE|\<valor>|Esta combinación no es válida y la detectará una restricción definida por el sistema.|  
   
-##  <a name="alwayson"></a> Usar nombres de red virtual (VNN) con grupos de disponibilidad AlwaysOn  
+##  <a name="alwayson"></a>Usar nombres de Virtual Network (VNN) con Grupos de disponibilidad AlwaysOn  
  Cuando la base de datos que contiene datos de FILESTREAM o FileTable pertenece a un grupo de disponibilidad AlwaysOn:  
   
 -   Las funciones FILESTREAM y FileTable aceptan o devuelven nombres de red virtual (VNN) en lugar de nombres de equipo. Para obtener más información sobre estas funciones, vea [Funciones FILESTREAM y FileTable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filestream-and-filetable-functions-transact-sql).  
   
 -   Todo acceso a los datos de FILESTREAM o FileTable a través de las API del sistema de archivos debe utilizar VNN en lugar de nombres de equipo. Para obtener más información, vea [FILESTREAM y FileTable con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-## <a name="see-also"></a>Vea también  
- [Habilitar los requisitos previos de FileTables](enable-the-prerequisites-for-filetable.md)   
- [Crear, modificar y quitar FileTables](create-alter-and-drop-filetables.md)   
- [Obtener acceso a FileTables con Transact-SQL](access-filetables-with-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Habilitar los requisitos previos para FileTable](enable-the-prerequisites-for-filetable.md)   
+ [Create, Alter y Drop FileTables](create-alter-and-drop-filetables.md)   
+ [Acceder a FileTables con Transact-SQL](access-filetables-with-transact-sql.md)   
  [Obtener acceso a FileTables con API de entrada-salida de archivo](access-filetables-with-file-input-output-apis.md)  
   
   

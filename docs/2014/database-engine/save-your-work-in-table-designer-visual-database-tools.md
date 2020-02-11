@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773693"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>Guardar el trabajo en el Diseñador de tablas (Visual Database Tools)
@@ -41,7 +41,7 @@ ms.locfileid: "62773693"
 > [!NOTE]  
 >  Para guardar los cambios realizados en todos los elementos abiertos, como las tablas, vistas y procedimientos almacenados, en el menú **Archivo** , elija **Guardar todos**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedades de la tabla &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6b06d77f562864a1b18e492d1db70563b62d4647
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728464"
 ---
 # <a name="create-an-entity-master-data-services"></a>Crear una entidad (Master Data Services)
@@ -56,7 +56,7 @@ ms.locfileid: "73728464"
     > [!TIP]
     > Si se utiliza la nomenclatura predeterminada para las tablas de almacenamiento provisional, MDS agregará automáticamente identificadores (por ejemplo, _1, _2) a los nombres de las tablas de almacenamiento provisional si existe una entidad con el mismo nombre en otro modelo.
   
-7.  En el campo **Tipo de registro de transacciones**, elija el tipo de registro de transacciones de la lista desplegable.  
+7.  En el campo **Tipo de registro de transacciones** , elija el tipo de registro de transacciones de la lista desplegable.  
   
      Para obtener información, consulte [Cambio del tipo de registro de transacciones de entidad &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
@@ -64,39 +64,39 @@ ms.locfileid: "73728464"
   
 9. Opcional. Active la casilla **Habilitar compresión de datos** . La compresión de fila está activada de forma predeterminada. Para obtener más información, consulte [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
-10. Haga clic en **Guardar**.  
+10. Haga clic en **Save**(Guardar).  
   
 ## <a name="grid-columns"></a>Columnas de la cuadrícula  
  Por cada entidad creada, se agrega una fila con trece columnas a la cuadrícula. Las columnas son las siguientes.  
   
-|NOMBRE|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|Estado|El estado de la entidad. Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la entidad se está actualizando.<br /><br /> ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icon para actualizar el estado ")<br /><br /> Si se producen errores al crear o editar una entidad, se muestra la imagen siguiente.<br /><br /> ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icon para estado de error ")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icon para el estado correcto ")|  
-|NOMBRE|El nombre de la entidad.|  
+|Status|El estado de la entidad. Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la entidad se está actualizando.<br /><br /> ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización")<br /><br /> Si se producen errores al crear o editar una entidad, se muestra la imagen siguiente.<br /><br /> ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto")|  
+|Nombre|El nombre de la entidad.|  
 |Descripción|La descripción de la entidad.|  
 |Tabla de ensayo|El nombre de prefijo de la tabla que se usa para almacenar datos.|  
 |Tipo de registro de transacciones|El tipo de registro de transacciones de la entidad.|  
 |Creación automática de código|Especifica si está habilitada la creación automática de código.|  
-|Compresión de datos|Especifica si está habilitada la compresión de datos para la entidad.|  
+|Data Compression|Especifica si está habilitada la compresión de datos para la entidad.|  
 |Es destino de sincronización|Especifica si la entidad es el destino de una relación de sincronización.|  
 |Está habilitada la jerarquía|Especifica si la entidad está habilitada para jerarquías explícitas. Esta columna muestra Sí si se ha creado al menos una jerarquía explícita para la entidad.|  
 |Creado por|Nombre del usuario que creó la entidad.|  
 |Creada el|Fecha y hora en que se creó la entidad.|  
 |Actualizada por|Nombre del usuario que actualizó la entidad por última vez.|  
-|Actualizada el|Fecha y hora en que se actualizó la entidad por última vez.|  
+|Updated On|Fecha y hora en que se actualizó la entidad por última vez.|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
   
--   [Crear un atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
+-   [Cree un atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
--   [Crear un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+-   [Cree un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
--   [Crear un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
+-   [Cree un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Jerarquías explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Edición de una entidad &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
+ [Editar un Master Data Services de &#40;de entidad&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
  [Eliminar una entidad &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)  
   
   

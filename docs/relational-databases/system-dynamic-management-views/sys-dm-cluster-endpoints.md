@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: b6ec5de74d2da2a94c25ef121abc0157348554d5
-ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74947080"
 ---
 # <a name="sysdm_cluster_endpoints-transact-sql"></a>Sys. dm_cluster_endpoints (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "74947080"
 
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|nombre|`sysname`|Nombre del servicio expuesto externamente en un clúster de macrodatos de SQL. Identificador único para el extremo. Clave para esta vista. No admite valores NULL. |  
+|name|`sysname`|Nombre del servicio expuesto externamente en un clúster de macrodatos de SQL. Identificador único para el extremo. Clave para esta vista. No admite valores NULL. |  
 |description|`nvarchar(4000)`|Descripción del servicio. No admite valores NULL. |
 |endpoint|`sysname`|Dirección URL del extremo o atributo de conexión. No admite valores NULL. |
 |protocol_desc|`sysname`|Descripción del Protocolo de extremo |
@@ -40,6 +40,6 @@ ms.locfileid: "74947080"
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.
 
-## <a name="see-also"></a>Véase también
+## <a name="see-also"></a>Consulte también
 
 [¿Qué [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]son ](../../big-data-cluster/big-data-cluster-overview.md)?

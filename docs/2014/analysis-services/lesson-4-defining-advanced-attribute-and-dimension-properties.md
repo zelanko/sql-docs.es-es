@@ -1,5 +1,5 @@
 ---
-title: 'Lección 4: Definir propiedades avanzadas de atributos y dimensiones | Microsoft Docs'
+title: 'Lección 4: definir propiedades de dimensiones y atributos avanzados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493995"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lección 4: Definición de propiedades de dimensiones y de atributos avanzados
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lección 4: Definir propiedades de dimensiones y de atributos avanzados
   En esta lección, aprenderá a utilizar algunas de las propiedades avanzadas de atributos, jerarquías de atributos y propiedades de dimensiones.  
   
 > [!NOTE]  
@@ -29,10 +29,10 @@ ms.locfileid: "69493995"
  En esta tarea, abrirá, revisará e implementará una versión modificada del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , que tiene varios grupos de medidas y dimensiones adicionales.  
   
  [Definir propiedades de atributo primario en una jerarquía de elementos primarios y secundarios](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
- En esta tarea, definirá los nombres de nivel de una dimensión primaria-secundaria y especificará si deben mostrarse los datos relacionados con los miembros primarios. Para obtener más información, vea jerarquía de elementos primarios y [secundarios](multidimensional-models/parent-child-dimension.md) en jerarquías de elementos primarios y [secundarios](multidimensional-models/parent-child-dimension-attributes.md).  
+ En esta tarea, definirá los nombres de nivel de una dimensión primaria-secundaria y especificará si deben mostrarse los datos relacionados con los miembros primarios. Para obtener más información, vea jerarquía de elementos [primarios y secundarios](multidimensional-models/parent-child-dimension.md) en jerarquías de elementos [primarios y secundarios](multidimensional-models/parent-child-dimension-attributes.md).  
   
  [Agrupar miembros de atributo automáticamente](lesson-4-3-automatically-grouping-attribute-members.md)  
- En esta tarea, debe crear automáticamente agrupaciones de miembros de atributos basadas en la distribución de miembros de la jerarquía de atributo. Para más información, vea [Agrupar miembros de atributos &#40;Discretización&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
+ En esta tarea, debe crear automáticamente agrupaciones de miembros de atributos basadas en la distribución de miembros de la jerarquía de atributo. Para obtener más información, vea [miembros de atributo de grupo &#40;&#41;de discretización ](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
  [Ocultar y deshabilitar jerarquías de atributo](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  En esta tarea, se muestra cómo y cuándo deshabilitar u ocultar jerarquías de atributo.  
@@ -47,11 +47,11 @@ ms.locfileid: "69493995"
  En esta tarea, debe configurar las propiedades UnknownMember y UnknownMemberName para controlar las condiciones de error causadas por los miembros de dimensión con valor NULL.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 5: Definir relaciones entre dimensiones y grupos de medida](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Lección 5: definir relaciones entre dimensiones y grupos de medida](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenario de Analysis Services tutorial](analysis-services-tutorial-scenario.md)   
- [Tutorial de Adventure Works &#40;para el modelado multidimensional&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Modelo multidimensional &#40;tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

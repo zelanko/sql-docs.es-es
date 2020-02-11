@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1a78aac96c0f0362c36367511035d8e4544b2017
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762837"
 ---
-# <a name="mssqlserver7937"></a>MSSQLSERVER_7937
+# <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7937|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7937|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|Texto del mensaje|Error de tabla: Directorio de FileStream para la columna C_ID del Id. de objeto ID O_ID, ID. de partición PN_ID de Id. de índice no se encontró.|  
+|Texto del mensaje|Error de tabla: no se encontró el directorio de FileStream para el Id. de columna C_ID del Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID.|  
   
 ## <a name="explanation"></a>Explicación  
  La columna especificada existe en una partición; sin embargo, no se ha encontrado su directorio de FILESTREAM correspondiente en el espacio de datos de FILESTREAM.  

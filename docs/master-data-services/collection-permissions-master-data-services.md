@@ -14,10 +14,10 @@ ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b55d028e90869f6b21d51348b97411fb6c965eb9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729640"
 ---
 # <a name="collection-permissions-master-data-services"></a>Permisos de colección (Master Data Services)
@@ -32,16 +32,16 @@ ms.locfileid: "73729640"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer los miembros de las colecciones y los atributos de los miembros.|  
-|**Crear**|El usuario puede crear miembros de colecciones y asignar valores de atributos.|  
-|**Actualizar**|El usuario puede actualizar los miembros de las colecciones, así como los atributos y relaciones.|  
-|**Delete**|El usuario puede eliminar miembros de colecciones.|  
-|**Denegar**|Denegar todo el acceso a los miembros de las colecciones.|  
+|**A**|El usuario puede crear miembros de colecciones y asignar valores de atributos.|  
+|**Update**|El usuario puede actualizar los miembros de las colecciones, así como los atributos y relaciones.|  
+|**Eliminar**|El usuario puede eliminar miembros de colecciones.|  
+|**Deny**|Denegar todo el acceso a los miembros de las colecciones.|  
   
- Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan los permisos de creación, actualización y eliminación, el permiso de lectura se asigna automáticamente.  
+ Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Colecciones &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
- [Permisos de objeto del modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+ [Permisos del objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

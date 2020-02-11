@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a9415e7258216c975dd066995bf347deca1d623
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253200"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Solucionar problemas en una instalación de Reporting Services
@@ -128,7 +128,7 @@ ms.locfileid: "75253200"
   
  **Nota:** Si el **Shell de administración de SharePoint 2013** está abierto cuando se completa una de las soluciones alternativas, cierre y vuelva a abrir el shell de administración de.  
   
- Para obtener más información, consulte los temas siguientes:  
+ Para obtener más información, vea lo siguiente:  
   
 -   [Dónde encontrar el complemento de Reporting Services para productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -207,7 +207,7 @@ ms.locfileid: "75253200"
         > [!NOTE]  
         >  Reemplace \<el *directorio .net 2,0 Framework*> por la ruta de acceso física de los archivos .NET Framework \<2,0 y reemplace el *directorio bin del servidor de informes*> por la ruta de acceso física de los archivos bin del servidor de informes.  
   
-3.  Reinicie el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+3.  Reinicie el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Para comprobar que los pasos funcionaron, abra un explorador web y navegue a la dirección URL del Administrador de informes o del servidor de informes. A continuación, abra el Monitor de rendimiento para comprobar que los contadores funcionan.  
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264781"
 ---
 # <a name="custom-report-items"></a>Elementos de informe personalizados
@@ -44,13 +44,13 @@ ms.locfileid: "63264781"
  [Creación de un componente de tiempo de diseño de elemento de informe personalizado](creating-a-custom-report-item-design-time-component.md)  
  Describe cómo crear un componente de tiempo de diseño de elementos de informe personalizado.  
   
- [Cómo: Implementar un elemento de informe personalizado](how-to-deploy-a-custom-report-item.md)  
+ [Implementación de un elemento de informe personalizado](how-to-deploy-a-custom-report-item.md)  
  Describe cómo implementar un elemento de informe personalizado.  
   
  [Bibliotecas de clases de elemento de informe personalizado](custom-report-item-class-libraries.md)  
  Describe las clases de infraestructuras de los elementos de informe personalizados y las clases contenedoras administradas en el espacio de nombres `Microsoft.ReportDesigner`.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia técnica &#40;SSRS&#41;](../technical-reference-ssrs.md)  
   
   

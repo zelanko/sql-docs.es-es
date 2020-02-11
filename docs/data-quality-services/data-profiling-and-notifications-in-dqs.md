@@ -10,10 +10,10 @@ ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: bb763d2212bd8dcb09b6088467e97aa702d15012
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251749"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Generación de perfiles de datos y notificaciones de DQS
@@ -72,7 +72,7 @@ ms.locfileid: "75251749"
   
 -   [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md)  
   
--   [Ejecutar un proyecto de búsqueda de coincidencias](../data-quality-services/run-a-matching-project.md)  
+-   [Ejecutar un proyecto de coincidencia](../data-quality-services/run-a-matching-project.md)  
   
 ##  <a name="Monitoring"></a>Generación de perfiles de datos en la supervisión de actividades  
  La información sobre la generación de perfiles para las actividades Detección de conocimiento, Directiva de coincidencia, Coincidencia y Limpieza no solo está disponible en las páginas de actividades de Data Quality Client, sino también en la supervisión de actividades. La supervisión de la actividad le proporciona información general sobre las actividades actuales y las anteriores. Además de las propiedades y los procesos de cálculo relacionados con las actividades, también puede ver la información sobre la generación de perfiles generada para cada actividad en una ubicación. Seleccione una actividad en la tabla de actividades para mostrar los resultados de la generación de perfiles en una tabla que aparecerá debajo. También puede exportar los resultados de la generación de perfiles. Para obtener más información, consulte [DQS Administration](../data-quality-services/dqs-administration.md).  
@@ -94,12 +94,12 @@ ms.locfileid: "75251749"
   
 -   [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md)  
   
--   [Ejecutar un proyecto de búsqueda de coincidencias](../data-quality-services/run-a-matching-project.md)  
+-   [Ejecutar un proyecto de coincidencia](../data-quality-services/run-a-matching-project.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Describe cómo habilitar o deshabilitar las notificaciones en DQS.|[Habilitar o deshabilitar las notificaciones de generación de perfiles en DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
+|Describe cómo habilitar o deshabilitar las notificaciones en DQS.|[Habilitar o deshabilitar notificaciones de generación de perfiles en DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   
   

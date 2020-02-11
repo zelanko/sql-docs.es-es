@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011952"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Conceder un permiso a una entidad de seguridad
@@ -50,7 +50,7 @@ ms.locfileid: "63011952"
 ####  <a name="Permissions"></a> Permisos  
  El otorgante de permisos (o la entidad de seguridad especificada con la opción AS) debe tener asignado el mismo permiso con GRANT OPTION o un permiso superior que implique el permiso que se va a conceder. Los miembros del rol fijo de servidor **sysadmin** pueden conceder cualquier permiso.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-grant-permission-to-a-principal"></a>Para conceder un permiso a una entidad de seguridad  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63011952"
   
 4.  Haga clic con el botón derecho en un procedimiento almacenado y seleccione **Propiedades**.  
   
-5.  En el **propiedades del procedimiento almacenado -** _stored_procedure_name_ cuadro de diálogo Seleccionar una página, seleccione **permisos**. Utilice esta página para agregar usuarios o roles al procedimiento almacenado y especificar los permisos que los usuarios o los roles tienen.  
+5.  En el cuadro de diálogo **propiedades del procedimiento almacenado-**_stored_procedure_name_ , en seleccionar una página, seleccione **permisos**. Utilice esta página para agregar usuarios o roles al procedimiento almacenado y especificar los permisos que los usuarios o los roles tienen.  
   
 6.  Cuando termine, haga clic en **Aceptar**.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "63011952"
   
  Para obtener más información, vea [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql) y [GRANT &#40;permisos de objeto de Transact-SQL&#41;](/sql/t-sql/statements/grant-object-permissions-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Entidades de seguridad &#40;motor de base de datos&#41;](principals-database-engine.md)  
   
   

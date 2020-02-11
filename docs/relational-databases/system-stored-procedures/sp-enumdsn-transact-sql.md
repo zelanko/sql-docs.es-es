@@ -16,13 +16,13 @@ ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d84d366483cd5a887eb299b0f8d9208998e835c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124588"
 ---
-# <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
+# <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una lista de todos los nombres de orígenes de datos ODBC y OLE DB definidos de un servidor que se ejecuta en una cuenta de usuario específica de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Este procedimiento almacenado se ejecuta en el publicador de cualquier base de datos.  
@@ -41,23 +41,23 @@ sp_enumdsn
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre del origen de datos**|**sysname**|Nombre del origen de datos.|  
-|**Descripción**|**varchar(255)**|Descripción del origen de datos.|  
-|**Tipo**|**int**|Tipo del origen de datos.<br /><br /> **1** = DSN DE ODBC<br /><br /> **3** = origen de datos OLE DB|  
-|**Nombre del proveedor**|**varchar(255)**|Nombre del proveedor OLE DB. El valor es NULL para DSN de ODBC.|  
+|**Descripción**|**VARCHAR(255**|Descripción del origen de datos.|  
+|**Tipo**|**int**|Tipo del origen de datos.<br /><br /> **1** = DSN ODBC<br /><br /> **3** = OLE DB origen de datos|  
+|**Nombre del proveedor**|**VARCHAR(255**|Nombre del proveedor OLE DB. El valor es NULL para DSN de ODBC.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cada [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio tiene un contexto de usuario. Un contexto de usuario es un conjunto de entradas del Registro que incluye las definiciones de los orígenes de datos ODBC del usuario. El nombre de usuario con el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el contexto de usuario.  
   
  Por ejemplo, si el servidor se está ejecutando en el contexto de usuario de la cuenta del sistema, todos los nombres de origen de datos (DSN) obtenidos serán DSN del sistema asociados a la cuenta de sistema. Si el servidor se ejecuta con una cuenta de usuario privada, solo se devolverán los DSN definidos para esa cuenta.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_enumdsn**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_enumdsn**.  
   
-## <a name="see-also"></a>Vea también  
- [sp_dsninfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_dsninfo &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

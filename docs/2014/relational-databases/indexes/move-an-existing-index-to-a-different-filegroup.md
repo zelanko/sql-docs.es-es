@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63036241"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover un índice existente a un grupo de archivos diferente
@@ -34,7 +34,7 @@ ms.locfileid: "63036241"
   
      [Seguridad](#Security)  
   
--   **Para mover un índice existente a un grupo de archivos diferente, usando:**  
+-   **Para trasladar un índice existente a un grupo de archivos diferente, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63036241"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>Para mover un índice existente a un grupo de archivos diferente usando el Diseñador de tablas  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63036241"
   
 3.  Haga clic con el botón derecho en la tabla que contiene el índice que quiere mover y seleccione **Diseño**.  
   
-4.  En el menú **Diseñador de tablas** , haga clic en **Índices o claves**.  
+4.  En el menú **Diseñador de tablas** , haga clic en **índices o claves**.  
   
 5.  Seleccione el índice que desea mover.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63036241"
   
 8.  Haga clic en **Cerrar**.  
   
-9. En el menú **Archivo** , seleccione **Guardar**_nombre_tabla_.  
+9. En el menú **archivo** , seleccione **Guardar**_TABLE_NAME_.  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>Para mover un índice existente a un grupo de archivos distinto en el Explorador de objetos  
   
@@ -97,14 +97,14 @@ ms.locfileid: "63036241"
   
      En equipos multiprocesador que usan [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede configurar el número de procesadores que desea usar para ejecutar la instrucción de índice; para ello, especifique un valor máximo de grado de paralelismo. La característica Operaciones indizadas en paralelo no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Para obtener más información sobre las operaciones indexadas en paralelo, vea [Configurar operaciones de índice en paralelo](configure-parallel-index-operations.md).  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
  La información siguiente está disponible en la página **Almacenamiento** del cuadro de diálogo **Propiedades del índice -** _nombre_índice_:  
   
- **Grupo de archivos**  
+ **Prima**  
  Almacena el índice en el grupo de archivos especificado. En la lista solo se muestran los grupos de archivos (fila) estándar. La selección de lista predeterminada es el grupo de archivos PRIMARY de la base de datos.  
   
- **Grupo de archivos de flujo de archivos**  
+ **Grupo de archivos FileStream**  
  Especifica el grupo de archivos para los datos FILESTREAM. En esta lista solo se muestran los grupos de archivos FILESTREAM. La selección de lista predeterminada es el grupo de archivos PRIMARY FILESTREAM.  
   
  **Esquema de partición**  
@@ -112,30 +112,30 @@ ms.locfileid: "63036241"
   
  La opción de esquema de partición no estará disponible si no hay ningún esquema de partición en la base de datos.  
   
- **Esquema de partición Filestream**  
+ **Esquema de partición de FileStream**  
  Especifica el esquema de partición de los datos FILESTREAM. El esquema de partición debe ser simétrico al esquema especificado en la opción **Esquema de partición** .  
   
  Si no tiene particiones, el campo está en blanco.  
   
- **Parámetro del esquema de partición**  
+ **Parámetro de esquema de partición**  
  Muestra el nombre de la columna que participa en el esquema de partición.  
   
- **Columna de la tabla**  
+ **Columna de tabla**  
  Seleccione la tabla o vista que se asignará al esquema de partición.  
   
- **Tipo de datos de la columna**  
+ **Tipo de datos de columna**  
  Muestra información de tipo de datos de la columna.  
   
 > [!NOTE]  
 >  Si la columna de tabla es una columna calculada, **Tipo de datos de la columna** mostrará "columna calculada".  
   
- **Permitir procesamiento en línea de instrucciones DML al mover el índice**  
+ **Permitir el procesamiento en línea de instrucciones DML al mover el índice**  
  Permite a los usuarios obtener acceso a los datos de la tabla subyacente o del índice clúster, así como a todos los índices no clúster asociados durante las operaciones de índice.  
   
 > [!NOTE]  
 >  Esta opción no estará disponible para los índices XML ni cuando el índice sea un índice clúster deshabilitado.  
   
- **Establecer grado máximo de paralelismo**  
+ **Establecer el grado máximo de paralelismo**  
  Limita el número de procesadores que se van a utilizar durante la ejecución de planes paralelos. El valor predeterminado es 0, que utiliza el número real de CPU disponibles. Si el valor se establece en 1, se suprime la generación de planes paralelos; si el valor se establece en un número mayor que 1, se restringe el número máximo de procesadores que se utilizan en la ejecución de una única consulta. Esta opción solo está disponible si el cuadro de diálogo está en los estados **Volver a generar** o **Volver a crear** .  
   
 > [!NOTE]  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21d79e84ca30283eab6fe788be940f712b2cd41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108202"
 ---
 # <a name="new-folder-page-report-manager"></a>Página Nueva carpeta (Administrador de informes)
@@ -34,18 +34,18 @@ ms.locfileid: "66108202"
 2.  En la barra de herramientas, haga clic en **Nueva carpeta**.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
- Especifique el nombre de la carpeta. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ / * \< > | "o / al especificar un nombre.  
+ **Nombre**  
+ Especifique el nombre de la carpeta. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios en blanco y algunos símbolos. No use los caracteres ; ? : \@ & = +, $/* \< > | "o/al especificar un nombre.  
   
  **Descripción**  
  Escriba una descripción del contenido de la carpeta. La descripción aparece en la página Contenido de aquellos usuarios que tengan permiso de acceso a la carpeta.  
   
-## <a name="see-also"></a>Vea también  
- [Crear, eliminar o modificar una carpeta &#40;el Administrador de informes&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
- [Página de propiedades generales, carpetas &#40;el Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
+## <a name="see-also"></a>Consulte también  
+ [Crear, eliminar o modificar una carpeta &#40;Administrador de informes&#41;](report-server/create-delete-or-modify-a-folder-report-manager.md)   
+ [Página de propiedades generales, carpetas &#40;Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenido &#40;página del Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
- [Página de propiedades generales, carpetas &#40;el Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
+ [Administrador de informes de &#40;de página de contenido&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Administrador de informes la ayuda F1](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Página de propiedades generales, carpetas &#40;Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)  
   
   

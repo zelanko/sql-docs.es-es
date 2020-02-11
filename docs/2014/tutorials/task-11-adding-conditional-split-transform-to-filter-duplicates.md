@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 11: Agregar Conditional Split transformación para filtrar duplicados | Microsoft Docs'
+title: 'Tarea 11: agregar la transformación división condicional para filtrar duplicados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,36 +11,36 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 71b050e49440764d355d4658607600c135741f50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65476750"
 ---
-# <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>Tarea 11: Adición de la transformación División condicional para filtrar duplicados
+# <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>Tarea 11: agregar la transformación División condicional para filtrar duplicados
   En esta tarea, agregará la transformación División condicional al flujo de datos. Esta transformación ayuda a filtrar duplicados del conjunto de registros de entrada. La transformación Agrupación aproximada agrupa los registros que son coincidentes y elige uno de ellos como registro dinámico. Todos los registros de un grupo tienen el mismo valor _key_out. El registro dinámica del grupo tiene el mismo valor de _key_in que de _key_out. Los demás registros del grupo tienen valores diferentes para _key_in y _key_out. Por tanto, cuando se filtra mediante la condición _key_in==_key_out, solo se obtiene la fila dinámica del grupo.  
   
-1.  Arrastrar y colocar **división condicional** transformar de **común** sección la **cuadro de herramientas de SSIS** a la **de flujo de datos** ficha.  
+1.  Arrastre y coloque la transformación **división condicional** desde la sección **común** del **cuadro de herramientas de SSIS** hasta la pestaña flujo de **datos** .  
   
-2.  Haga clic en **transformación División condicional** en el **de flujo de datos** ficha y haga clic en **cambiar el nombre**. Tipo **filtrar duplicados** y presione **ENTRAR**.  
+2.  Haga clic con el botón secundario en **transformación división condicional** en la pestaña **flujo de datos** y haga clic en **cambiar nombre**. Escriba **filtrar duplicados** y presione **entrar**.  
   
-3.  Conectar **agrupar proveedores con Id. coincidentes** a **filtrar duplicados**.  
+3.  Conectar **proveedores de grupos con identificadores coincidentes** para **filtrar duplicados**.  
   
-4.  Haga doble clic en **filtrar duplicados** para iniciar el **Editor de transformación División condicional** cuadro de diálogo.  
+4.  Haga doble clic en **filtrar duplicados** para iniciar el cuadro de diálogo **Editor de transformación división condicional** .  
   
 5.  Expanda **columnas** en el panel superior izquierdo.  
   
-6.  Arrastrar y colocar **_key_in** a la **condición** columna.  
+6.  Arrastre y coloque **_key_in** a la columna **condición** .  
   
-7.  Tipo == (igual que) junto a **_key_in** y arrastre y coloque **_key_out**.  
+7.  Type = = (es igual a) junto a **_key_in** y arrastrar y colocar **_key_out**.  
   
-8.  Haga clic en **caso 1** en el **nombre de salida** columna, escriba **registros únicos**y presione **ENTRAR**.  
+8.  Haga clic en el **caso 1** en la columna **nombre de salida** , escriba **Registros únicos**y presione **entrar**.  
   
-     ![Editor de transformación División condicional](../../2014/tutorials/media/et-addingconditionalsplittransformtofilterduplicates.jpg "Editor de transformación División condicional")  
+     ![División condicional, editor de transformación](../../2014/tutorials/media/et-addingconditionalsplittransformtofilterduplicates.jpg "División condicional, editor de transformación")  
   
-9. Haga clic en **Aceptar** para cerrar el **Editor de transformación División condicional** cuadro de diálogo.  
+9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor de transformación división condicional** .  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 12: Agregar transformación columna derivada para agregar columnas necesarias en MDS](../../2014/tutorials/task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md)  
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 12: agregar la transformación Columna derivada para agregar las columnas necesarias en MDS](../../2014/tutorials/task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md)  
   
   

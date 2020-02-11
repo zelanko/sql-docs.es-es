@@ -1,5 +1,5 @@
 ---
-title: Atributo de cuadro de diálogo traducción de datos (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo traducción de datos de atributos (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063066"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Traducción de datos de atributos (Analysis Services - Datos multidimensionales)
@@ -52,18 +52,18 @@ ms.locfileid: "66063066"
 > [!NOTE]  
 >  Si selecciona esta opción, se deshabilitarán las opciones **Distinguir mayúsculas de minúsculas**, **Distinguir acentos**, **Distinguir kana**y **Distinguir ancho** .  
   
- **Distingue mayúsculas de minúsculas**  
+ **Distinguir mayúsculas de minúsculas**  
  Seleccione esta opción para ordenar y comparar datos según las reglas de los diccionarios del idioma o alfabeto asociado y distinguir letras mayúsculas de minúsculas.  
   
- Si no selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que las mayúsculas y las minúsculas son versiones de letras iguales. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no define si el orden de las letras minúsculas es inferior o superior en relación con mayúscula las letras si **distingue mayúsculas de minúsculas** no está seleccionada.  
+ Si no selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que las mayúsculas y las minúsculas son versiones de letras iguales. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]no define si el orden de las letras minúsculas es inferior o superior al de las letras mayúsculas cuando no se selecciona distinguir mayúsculas de **minúsculas** .  
   
- **Distinguir acentos**  
+ **distinguen acentos**  
  Seleccione esta opción para ordenar y comparar datos según las reglas de los diccionarios del idioma o alfabeto asociado y distinguir los caracteres acentuados de los no acentuados. Por ejemplo, 'a' no es igual a 'á'.  
   
  Si no está seleccionada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que las letras con y sin acentos son iguales.  
   
- **Distinguir Kana**  
- Seleccione esta opción para ordenar y comparar datos según las reglas de diccionario proporcionadas para el idioma o alfabeto asociado y distinguir entre los dos tipos de caracteres kana japoneses: Hiragana y Katakana.  
+ **Distinguir kana**  
+ Seleccione esta opción para ordenar y comparar datos según las reglas de los diccionarios del idioma o alfabeto asociado y distinguir los dos tipos de caracteres kana japoneses: hiragana y katakana.  
   
  Si no está seleccionada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que los caracteres hiragana y katakana son iguales.  
   
@@ -72,8 +72,8 @@ ms.locfileid: "66063066"
   
  Si no está seleccionada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que la representación de un byte y la de dos bytes del mismo carácter son iguales.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Detalles de traducción &#40;pestaña traducciones, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Detalles de traducción &#40;pestaña traducciones, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

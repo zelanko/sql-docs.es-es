@@ -1,5 +1,5 @@
 ---
-title: El generador de informes las opciones de cuadro de diálogo de configuración (generador de informes) | Microsoft Docs
+title: Cuadro de diálogo Opciones de Generador de informes, configuración (Generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107615"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Cuadro de diálogo Opciones del Generador de informes, Configuración (Generador de informes)
-  Haga clic en el **Report Builder** botón y, a continuación, haga clic en **opciones** para establecer las opciones para mostrar archivos recientes y las conexiones. También puede cambiar el servidor de informes predeterminado o agregar uno si no lo tiene predeterminado.  
+  Haga clic en el botón **generador de informes** y, a continuación, haga clic en **Opciones** para establecer las opciones para mostrar archivos y conexiones recientes. También puede cambiar el servidor de informes predeterminado o agregar uno si no lo tiene predeterminado.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Usar este servidor de informes o sitio de SharePoint de forma predeterminada**  
@@ -45,7 +45,7 @@ ms.locfileid: "66107615"
  **Borrar todas las listas de elementos recientes**  
  Borre las listas actuales de sitios y servidores recientes, de conjuntos de datos compartidos, de conexiones a orígenes de datos compartidos y de documentos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

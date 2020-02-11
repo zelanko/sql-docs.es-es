@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_io_cluster_valid_path_names (Transact-SQL) | Microsoft Docs
+title: Sys. dm_io_cluster_valid_path_names (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,28 +23,28 @@ ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff2348efe62929bdfbe03b4c92b5d411f57c2b99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900358"
 ---
-# <a name="sysdmioclustervalidpathnames-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
+# <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información sobre todos los discos compartidos válidos, incluidos los volúmenes compartidos en clúster, para una instancia de clúster de conmutación por error de SQL Server. Si la instancia no está en clúster, se devuelve un conjunto de filas vacío.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**ruta_acceso**|**Nvarchar (512)**|Punto de montaje del volumen o ruta de acceso de unidad que se puede usar como directorio raíz de los archivos de base de datos y de registro. No admite valores NULL.|  
+|**path_name**|**Nvarchar (512)**|Punto de montaje del volumen o ruta de acceso de unidad que se puede usar como directorio raíz de los archivos de base de datos y de registro. No admite valores NULL.|  
 |**cluster_owner_node**|**Nvarchar (64)**|Propietario actual de la unidad. Para los volúmenes compartidos en clúster (CSV), el propietario es el nodo que hospeda el servidor de metadatos. No admite valores NULL.|  
-|**is_cluster_shared_volume**|**Bit**|Devuelve 1 si la unidad en la que se encuentra esta ruta de acceso es un volumen compartido en clúster; de lo contrario, devuelve 0.|  
+|**is_cluster_shared_volume**|**Poco**|Devuelve 1 si la unidad en la que se encuentra esta ruta de acceso es un volumen compartido en clúster; de lo contrario, devuelve 0.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Una instancia de clúster de conmutación por error (FCI) de SQL Server debe usar almacenamiento compartido entre todos los nodos de FCI para el almacenamiento de archivos de datos y de registro. Los discos que se muestran en esta vista son los que se encuentran en el grupo de recursos de clúster asociado a la instancia y son los únicos discos que se pueden usar para el almacenamiento de archivos de datos o de registro.  
   
 > [!NOTE]  
->  Esta vista reemplazará [sys.dm_io_cluster_shared_drives &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md) en una versión futura.  
+>  Esta vista reemplazará [Sys. dm_io_cluster_shared_drives &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md) en una versión futura.  
   
 ## <a name="permissions"></a>Permisos  
  El usuario debe tener permiso VIEW SERVER STATE para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -56,9 +56,9 @@ ms.locfileid: "67900358"
 SELECT * FROM sys.dm_io_cluster_valid_path_names;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sys.dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
- [sys.dm_io_cluster_shared_drives &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Sys. dm_os_cluster_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
+ [Sys. dm_io_cluster_shared_drives &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

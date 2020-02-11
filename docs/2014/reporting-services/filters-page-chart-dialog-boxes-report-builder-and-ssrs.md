@@ -1,5 +1,5 @@
 ---
-title: Página filtros, cuadros de diálogo de gráfico (generador de informes y SSRS) | Microsoft Docs
+title: Cuadros de diálogo de gráfico, página filtros (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,23 +18,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268ca47f33e8e2514b297c2bb2a30eb77b7a8f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109137"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Cuadros de diálogo de Gráfico, página Filtros (Generador de informes y SSRS)
   Haga clic en **Filtros** en  
   
--   el cuadro de diálogo**Propiedades del grupo de categorías** para filtrar los puntos de datos de una serie que ha sido agrupada por categoría.  
+-   Cuadro de diálogo **propiedades del grupo de categorías** para filtrar los puntos de datos de una serie que se ha agrupado por categoría.  
   
--   El cuadro de diálogo**Chart Properties** para definir las opciones de filtrado para el gráfico.  
+-   Cuadro de diálogo **propiedades del gráfico** para definir las opciones de filtrado para el gráfico.  
   
--   El cuadro de diálogo**Propiedades del grupo de series** para limitar el número de series del grupo seleccionado.  
+-   Cuadro de diálogo **propiedades del grupo de series** para limitar el número de series del grupo seleccionado.  
   
 ## <a name="options"></a>Opciones  
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic en esta opción para agregar una nueva cláusula de filtro a la lista.  
   
  **Eliminar**  
@@ -46,23 +46,23 @@ ms.locfileid: "66109137"
  **Flecha abajo**  
  Haga clic en esta opción para mover el filtro seleccionado hacia abajo en la lista.  
   
- **Expresión**  
- Escriba o elija la expresión a la que desea aplicar un filtro. Haga clic en el botón Expresión (**fx**) para editar la expresión.  
+ **Expression**  
+ Escriba o elija la expresión a la que desea aplicar un filtro. Haga clic en el botón expresión (**FX**) para editar la expresión.  
   
- **Data type**  
+ **Tipo de datos**  
  Elija el tipo de datos para **Valor**. Si es posible, elija un tipo de datos que coincida con el tipo de datos de **Expresión**.  
   
  Los valores de **Expresión** y de **Valor** deben devolver el mismo tipo de datos. Por ejemplo, si **Expresión** se establece en un campo que tiene el tipo de datos System.Int32 y **Valor** se establece en 7, en la lista desplegable, elija **Integer**.  
   
  Si la opción de tipos de datos que necesita no está en la lista desplegable, escriba una expresión que convierta el valor al tipo de datos correcto. Para más información, vea [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
- **Operador**  
+ **Operator**  
  Elija el operador que se va a utilizar para comparar la expresión y el valor.  
   
  **Valor**  
  Escriba la expresión o el valor respecto al cual se va a evaluar la expresión de **Expresión**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   

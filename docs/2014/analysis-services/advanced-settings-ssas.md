@@ -1,5 +1,5 @@
 ---
-title: (SSAS) de la configuración avanzada | Microsoft Docs
+title: Configuración avanzada (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ac2ff0a1617e2228d6b7b5f2651380b3a08ea17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062731"
 ---
 # <a name="advanced-settings-ssas"></a>Configuración avanzada (SSAS)
@@ -27,7 +27,7 @@ ms.locfileid: "66062731"
 |||  
 |-|-|  
 |Término|Definición|  
-|**Codificación**|Especifique el tipo de codificación para usar: ANSI o Unicode.<br /><br /> El valor **Unicode** corresponde a la codificación UTF-16.|  
+|**Encoding**|Especifique el tipo de codificación que va a usar: ANSI o Unicode.<br /><br /> El valor **Unicode** corresponde a la codificación UTF-16.|  
 |**Configuración regional**|Especifique la configuración regional, que proporciona información específica del idioma para la ordenación y los formatos de fecha y hora.|  
   
   

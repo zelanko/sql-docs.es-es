@@ -14,13 +14,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 408b6b605e14fd5e7aa52cd0df7fba13b225c20c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064831"
 ---
 # <a name="feature-reference-database-engine"></a>Referencia de características (motor de base de datos)
+  
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] incluye varias herramientas y aplicaciones que se pueden usar para crear, administrar y ver objetos y datos de la base de datos. Hay además herramientas que pueden utilizarse para supervisar y solucionar problemas de rendimiento del servidor y de la base de datos, así como para habilitar y deshabilitar características, servicios y protocolos de red. En esta sección, se proporcionan temas específicos en los que se describen los cuadros de diálogo de estas herramientas y aplicaciones.  
   
  Para obtener acceso a un tema de la interfaz de usuario mientras se ejecuta la herramienta o la aplicación, presione F1 o haga clic en Ayuda con el cuadro de diálogo, la página web o el asistente abierto.  

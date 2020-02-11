@@ -1,5 +1,5 @@
 ---
-title: 'Procedimientos: Implementar un elemento de informe personalizado | Microsoft Docs'
+title: Cómo implementar un elemento de informe personalizado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265079"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>Procedimientos: Implementación de un elemento de informe personalizado
+# <a name="how-to-deploy-a-custom-report-item"></a>Cómo implementar un elemento de informe personalizado
   Para implementar un elemento de informe personalizado en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe modificar los archivos de configuración del servidor de informes y copiar los ensamblados de componentes en tiempo de diseño y en tiempo de ejecución a las carpetas de aplicación correspondientes para el Diseñador de informes y el servidor de informes.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Para implementar un elemento de informe personalizado  
@@ -65,7 +65,7 @@ ms.locfileid: "63265079"
   
 5.  Copie el DLL de componente de tiempo de diseño de elemento de informe en el directorio %Archivos de programa%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivos de configuración de Reporting Services](../report-server/reporting-services-configuration-files.md)   
  [Bibliotecas de clases de elemento de informe personalizado](custom-report-item-class-libraries.md)  
   

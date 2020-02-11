@@ -1,5 +1,5 @@
 ---
-title: Almacenar en caché las opciones de actualización (Administrador de informes) | Microsoft Docs
+title: Opciones de actualización de caché (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109921"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Opciones de actualización de memoria caché (Administrador de informes)
@@ -31,7 +31,7 @@ ms.locfileid: "66109921"
   
 2.  Mantenga el mouse sobre el informe o el conjunto de datos compartido, y haga clic en la flecha de lista desplegable.  
   
-3.  En la lista desplegable, haga clic en **Administrar**. Se abre la página **Propiedades generales** .  
+3.  En la lista desplegable, haga clic en **Administrar**. Se abre la página de **propiedades general** .  
   
 4.  Haga clic en la pestaña **Plan de actualización de caché** .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66109921"
  **Nuevo plan de actualización de caché**  
  Haga clic para crear un nuevo plan de actualización que se usará en las opciones de actualización de caché actuales.  
   
- **Editar**  
+ **Edición**  
  Seleccione esta opción para modificar el plan de actualización actual.  
   
 ## <a name="cache-refresh-plan-options"></a>Opciones del plan de actualización de caché  
@@ -62,25 +62,25 @@ ms.locfileid: "66109921"
  **Programación específica del elemento**  
  Seleccione esta opción para crear una programación que se use solo en este informe.  
   
- **Configurar**  
+ **Configuración**  
  Haga clic para abrir la página Programación, que se usa para especificar información de frecuencia.  
   
- Para obtener más información, consulte [nueva programación: Editar programación página &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
+ Para obtener más información, vea [nueva programación: editar página de programación &#40;Administrador de informes&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
   
  **Programación compartida**  
  Seleccione esta opción para seleccionar una programación existente.  
   
  Para obtener más información, consulte [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md).  
   
- **@\<** *Parámetro* **>**  
+ **@\<***Parámetro* de**>**  
  Especifique una combinación de valores de parámetros. Esta sección solo aparece si el conjunto de datos actual o el informe tienen parámetros.  
   
  Vea [Especificar los parámetros](#Parameters) en la sección siguiente.  
   
- **Usar el valor predeterminado**  
+ **Usar valor predeterminado**  
  Seleccione esta opción para usar el valor predeterminado predefinido para este parámetro.  
   
-##  <a name="Parameters"></a> Especificación de parámetros  
+##  <a name="Parameters"></a>Especificar parámetros  
  Para crear un plan de actualización de caché, cada informe o parámetro de conjunto de datos compartido debe tener un valor. Si el informe o el elemento de conjunto de datos compartido no tienen un valor predeterminado especificado en la definición, debe especificar uno. Si existe un valor predeterminado, no es necesario proporcionarlo aquí. Si proporciona un valor, este invalida el predeterminado.  
   
  Para especificar varias combinaciones de valores de parámetros, cree un plan de actualización de caché independiente para cada combinación.  
@@ -90,15 +90,15 @@ ms.locfileid: "66109921"
 ### <a name="shared-dataset-parameters"></a>Parámetros de los conjuntos de datos compartidos  
  En un conjunto de datos compartido, la siguiente información se deriva de la definición del mismo:  
   
--   **Nombre** : especifica el nombre del parámetro de consulta.  
+-   **Nombre** de Especifica el nombre del parámetro de consulta.  
   
--   **Tipo** : especifica el tipo de datos de un parámetro de consulta. Dado que este tipo de datos es desconocido hasta que el proveedor de datos procesa la consulta del conjunto de datos, la validación del tipo de datos no puede producirse hasta que se procesa el conjunto de datos compartido.  
+-   **Tipo** de Especifica el tipo de datos del parámetro de consulta. Dado que este tipo de datos es desconocido hasta que el proveedor de datos procesa la consulta del conjunto de datos, la validación del tipo de datos no puede producirse hasta que se procesa el conjunto de datos compartido.  
   
--   **Aceptación de valores NULL** : especifica si NULL es un valor válido.  
+-   **Acepta valores NULL** Especifica si NULL es un valor válido.  
   
--   **ReadOnly** : especifica si este parámetro se marca como de solo lectura en la definición del conjunto de datos compartido. Los parámetros de solo lectura no aparecen en la lista de parámetros para las opciones de actualización de caché y deben tener un valor predeterminado especificado como parte de la definición del conjunto de datos compartido.  
+-   **Solo lectura** Especifica si este parámetro está marcado como de solo lectura en la definición del conjunto de los recursos compartidos. Los parámetros de solo lectura no aparecen en la lista de parámetros para las opciones de actualización de caché y deben tener un valor predeterminado especificado como parte de la definición del conjunto de datos compartido.  
   
--   **DefaultValues** : los valores predeterminados que se hayan especificado en la definición del conjunto de datos compartido. Los parámetros de consulta pueden tener varios valores. Para invalidar los valores predeterminados, escriba los nuevos valores en las áreas de mensajes del cuadro de texto.  
+-   **Defaultvalues:** Valores predeterminados que se han especificado en la definición del conjunto de los recursos compartidos. Los parámetros de consulta pueden tener varios valores. Para invalidar los valores predeterminados, escriba los nuevos valores en las áreas de mensajes del cuadro de texto.  
   
  Si la definición del conjunto de datos compartido especifica la opción **Omitir de la consulta** para un parámetro, no necesita proporcionar un valor predeterminado. Esta marca indica que el parámetro del conjunto de datos no se utiliza en la consulta. Por ejemplo, el parámetro aparece en la definición del conjunto de datos compartido porque es un parámetro de informe que solo se utiliza en el filtro del conjunto de datos.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66109921"
   
  Los parámetros deben cumplir los requisitos especificados en las propiedades de parámetro en el servidor de informes. Por ejemplo, si la propiedad AllowBlank es false para un parámetro de informe, una cadena vacía no es un valor válido.  
   
- Para ver o cambiar las opciones de los parámetros de informe, debe modificar los parámetros de informe en el informe o independientemente en el servidor de informes. Para obtener más información, consulte [concepto de parámetros de informe &#40;generador de informes y SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+ Para ver o cambiar las opciones de los parámetros de informe, debe modificar los parámetros de informe en el informe o independientemente en el servidor de informes. Para obtener más información, vea el [concepto de parámetros de informe &#40;generador de informes y SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
   
 ## <a name="conditions-that-cause-a-cache-refresh-plan-to-be-inactive"></a>Condiciones que ocasionan que un plan de actualización de caché esté inactivo  
  Las siguientes condiciones pueden hacer que un plan de actualización de caché de un informe o un conjunto de datos compartido se convierta en inactivo.  
@@ -127,10 +127,10 @@ ms.locfileid: "66109921"
   
 -   Active o desactive la opción de solo lectura para un parámetro de consulta del conjunto de datos asociado al plan de actualización y, a continuación, guarde la nueva definición en el servidor de informes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de nivel de elemento](security/tasks-and-permissions-item-level-tasks.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Administrador de informes la ayuda F1](../../2014/reporting-services/report-manager-f1-help.md)   
  [Informes almacenados en caché &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Administración de conjuntos de datos compartidos](report-data/manage-shared-datasets.md)  
   

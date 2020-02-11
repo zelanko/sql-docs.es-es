@@ -1,5 +1,5 @@
 ---
-title: Instalar el servidor de informes de modo nativo de servicios de informes | Microsoft Docs
+title: Instalar Reporting Services servidor de informes en modo nativo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a54650403458eec09826b51f1528a844e48791
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108810"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Instalar el servidor de informes en modo nativo de Reporting Services
@@ -26,23 +26,23 @@ ms.locfileid: "66108810"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo|  
   
-##  <a name="bkmk_top"></a> En este tema  
+##  <a name="bkmk_top"></a>En este tema  
   
--   [¿Qué es la configuración predeterminada?](#bkmk_whatisdefaultconfiguration)  
+-   [¿Cuál es la configuración predeterminada?](#bkmk_whatisdefaultconfiguration)  
   
--   [Cuándo se debe instalar la configuración predeterminada para el modo nativo](#bkmk_whentoinstalldefaultconfig)  
+-   [Cuándo instalar la configuración predeterminada para el modo nativo](#bkmk_whentoinstalldefaultconfig)  
   
 -   [Requisitos](#bkmk_requirements)  
   
--   [Reservas de dirección URL predeterminada](#bkmk_defaultURLreservations)  
+-   [Reservas de direcciones URL predeterminadas](#bkmk_defaultURLreservations)  
   
--   [Instalar el modo nativo mediante el Asistente para la instalación de SQL Server](#bkmk_installwithwizard)  
+-   [Instalación del modo nativo con el Asistente para la instalación de SQL Server](#bkmk_installwithwizard)  
   
 -   [Instalar el modo nativo mediante la línea de comandos](#bkmk_commandline)  
   
-##  <a name="bkmk_whatisdefaultconfiguration"></a> ¿Qué es la configuración predeterminada?  
+##  <a name="bkmk_whatisdefaultconfiguration"></a>¿Cuál es la configuración predeterminada?  
  El programa de instalación instala las siguientes características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] al seleccionar la configuración predeterminada para la opción en modo nativo:  
   
 -   El Servicio del servidor de informes (que incluye el servicio web del servidor de informes, la aplicación de procesamiento en segundo plano y el Administrador de informes)  
@@ -69,21 +69,21 @@ ms.locfileid: "66108810"
   
  El programa de instalación no configura la cuenta de ejecución desatendida, el correo electrónico del servidor de informes, la copia de seguridad de las claves de cifrado ni una implementación escalada. Puede usar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar estas propiedades. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
-##  <a name="bkmk_whentoinstalldefaultconfig"></a> Cuándo se debe instalar la configuración predeterminada para el modo nativo  
+##  <a name="bkmk_whentoinstalldefaultconfig"></a>Cuándo instalar la configuración predeterminada para el modo nativo  
  Una configuración predeterminada instala [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en un estado operativo para que se pueda utilizar el servidor de informes inmediatamente una vez finalizada la instalación. Especifique este modo si desea ahorrar pasos eliminando las tareas de configuración necesarias que de otro modo tendría que realizar en la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Instalar la configuración predeterminada no garantiza que el servidor de informes vaya a funcionar una vez finalizada la instalación. Las direcciones URL predeterminadas podrían no registrarse cuando el servicio se inicie. Siempre pruebe la instalación para comprobar que el servicio se inicia y se ejecuta como debería.  
   
-##  <a name="bkmk_requirements"></a> Requisitos  
+##  <a name="bkmk_requirements"></a>Satisfacer  
  La opción de configuración predeterminada usa los valores predeterminados con el fin de establecer la configuración básica necesaria para hacer que un servidor de informes esté operativo. Tiene los requisitos siguientes:  
   
 -   El hardware debe cumplir los requisitos mínimos de hardware y software para ejecutar Microsoft SQL Server. Para obtener más información, vea [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] se deben instalar juntos en la misma instancia. La instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] hospeda la base de datos del servidor de informes que el programa de instalación crea y configura.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] deben instalarse juntos en la misma instancia. La instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] hospeda la base de datos del servidor de informes que el programa de instalación crea y configura.  
   
 -   La cuenta de usuario utilizada para ejecutar el programa de instalación debe ser miembro del grupo local de administradores y tener permiso para obtener acceso y crear las bases de datos en la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda las bases de datos del servidor de informes.  
   
--   El programa de instalación debe poder utilizar los valores predeterminados para reservar las direcciones URL que proporcionan acceso al servidor de informes y al Administrador de informes. Estos valores son el puerto 80, un carácter comodín seguro y los nombres de directorios virtuales con el formato **ReportServer_\<***nombre_instancia***>** y **Reports_\<***nombre_instancia***>** .  
+-   El programa de instalación debe poder utilizar los valores predeterminados para reservar las direcciones URL que proporcionan acceso al servidor de informes y al Administrador de informes. Estos valores son el puerto 80, un carácter comodín seguro y los nombres de directorios virtuales con el formato **ReportServer_\<***nombre_instancia***>** y **Reports_\<***nombre_instancia***>**.  
   
 -   El programa de instalación debe poder utilizar los valores predeterminados para crear las bases de datos del servidor de informes. Estos valores son **ReportServer** y **ReportServerTempDB**. Si tiene bases de datos de una instalación anterior, el programa de instalación se bloqueará porque no puede configurar el servidor de informes en la configuración predeterminada del modo nativo. Debe cambiar el nombre, mover o eliminar las bases de datos para desbloquear la instalación.  
   
@@ -91,36 +91,36 @@ ms.locfileid: "66108810"
   
  No intente reconfigurar el equipo solo para permitir que continúe una instalación predeterminada. Si lo hace, podrían necesitarse varias horas de trabajo, lo que elimina en efecto el ahorro de tiempo que la opción de instalación proporciona. La solución mejor es instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de solo archivos y, a continuación, configurar el servidor de informes para utilizar valores concretos.  
   
-##  <a name="bkmk_defaultURLreservations"></a> Reservas de dirección URL predeterminada  
+##  <a name="bkmk_defaultURLreservations"></a>Reservas de direcciones URL predeterminadas  
  Las reservas de direcciones URL están compuestas de un prefijo, un nombre de host, un puerto y un directorio virtual:  
   
 |Parte|Descripción|  
 |----------|-----------------|  
 |Prefijo|El prefijo predeterminado es HTTP. Si instaló anteriormente un certificado de Capa de sockets seguros (SSL), el programa de instalación intentará crear reservas de direcciones URL que usen el prefijo HTTPS.|  
-|Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes aceptará cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelve en el equipo, incluidos http://\<nombreDeEquipo > / reportserver, http://localhost/reportserver , o http://\< direcciónIP > / ReportServer.|  
-|Puerto|El puerto predeterminado es 80. Tenga en cuenta que si utiliza cualquier puerto distinto del 80, tendrá que agregarlo explícitamente a la dirección URL cuando abra una aplicación web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una ventana del explorador.|  
-|Directorio virtual|De forma predeterminada, los directorios virtuales se crean en el formato de ReportServer_\<*instance_name*> para el servicio Web del servidor de informes y Reports_\<*instance_name*> Administrador de informes. Para el servicio web del servidor de informes, el nombre del directorio virtual predeterminado es **reportserver**. Para el Administrador de informes, el directorio virtual predeterminado es **reports**.|  
+|Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes aceptará cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelva en el equipo, incluido http://\<COMPUTERNAME>/ReportServer, http://localhost/reportservero http://\<IPAddress>/ReportServer.|  
+|Port|El puerto predeterminado es 80. Tenga en cuenta que si utiliza cualquier puerto distinto del 80, tendrá que agregarlo explícitamente a la dirección URL cuando abra una aplicación web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una ventana del explorador.|  
+|Directorio virtual|De forma predeterminada, los directorios virtuales se crean en el formato\<de ReportServer_*instance_name*> para el servicio Web del servidor\<de informes*y Reports_ instance_name> para* administrador de informes. Para el servicio web del servidor de informes, el nombre del directorio virtual predeterminado es **reportserver**. Para el Administrador de informes, el directorio virtual predeterminado es **reports**.|  
   
  Un ejemplo de cadena de dirección URL completa podría ser el siguiente:  
   
--   http://+:80/reportserver , proporciona acceso al servidor de informes.  
+-   http://+:80/reportserver, proporciona acceso al servidor de informes.  
   
--   http://+:80/reports , proporciona acceso al administrador de informes.  
+-   http://+:80/reports, proporciona acceso a Administrador de informes.  
   
-##  <a name="bkmk_installwithwizard"></a> Instalar el modo nativo mediante el Asistente para la instalación de SQL Server  
+##  <a name="bkmk_installwithwizard"></a>Instalación del modo nativo con el Asistente para la instalación de SQL Server  
  En la lista siguiente se describen los pasos y las opciones específicos de  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se seleccionan en el Asistente para la instalación de SQL Server. En la lista no se describe cada página que aparece en el asistente para la instalación, solo las páginas relacionadas con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que forman parte de una instalación de modo nativo.  
   
-1.  En la página **Rol de instalación** , seleccione **Instalación de características de SQL Server**.  
+1.  En la página **rol de instalación** , seleccione **SQL Server instalación de características**.  
   
      ![Instalación de la característica de SQL Server para el rol de instalación](../../../2014/sql-server/install/media/rs-setuprole.gif "Instalación de la característica de SQL Server para el rol de instalación")  
   
 2.  En la página **Selección de características** , seleccione lo siguiente:  
   
-    -   **Servicios de Motor de base de datos**, a menos que ya esté instalada anteriormente una instancia del motor de base de datos.  
+    -   **Motor de base de datos Services**, a menos que ya esté instalada una instancia del motor de base de datos.  
   
-    -   **Reporting Services: nativo**.  
+    -   **Reporting Services-Native**.  
   
-    -   **Herramientas de administración - básica**. Las herramientas de administración no se requieren pero se recomiendan a menos que tenga otra instalación de herramientas de administración. La opción de configuración predeterminado dará como resultado un servidor de informes funciona, pero es posible que desee cambiar las opciones de configuración en una fecha posterior. Algunas opciones, como "Mis informes" se administran a través de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
+    -   **Herramientas de administración-básica**. Las herramientas de administración no se requieren pero se recomiendan a menos que tenga otra instalación de herramientas de administración. La opción de configuración predeterminada producirá un servidor de informes en funcionamiento, pero es posible que desee cambiar las opciones de configuración en un momento posterior. Algunas opciones, como "Mis informes", se administran mediante[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
      ![Selección del modo nativo de SSRS en Selección de características](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "Selección del modo nativo de SSRS en Selección de características")  
   
@@ -136,15 +136,15 @@ ms.locfileid: "66108810"
   
     -   Abra el explorador con privilegios de administrador y conéctese al Administrador de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , por ejemplo `http://loclahost/Reports`.  
   
-    -   Abra el explorador con privilegios de administrador y conéctese a la página del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo,  `http://loclahost/ReportServer`  
+    -   Abra el explorador con privilegios de administrador y conéctese a la página del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por ejemplo: `http://loclahost/ReportServer`  
   
  Para obtener más información, consulte la sección Nativo de los dos temas siguientes:  
   
  [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
- [Solución de problemas en una instalación de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
+ [Solucionar problemas en una instalación de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   
-##  <a name="bkmk_commandline"></a> Instalar el modo nativo mediante la línea de comandos  
+##  <a name="bkmk_commandline"></a>Instalación del modo nativo con la línea de comandos  
  El ejemplo siguiente incluye el Servicio [!INCLUDE[ssDE](../../includes/ssde-md.md)] porque se requiere para una configuración predeterminada.  
   
 ```  
@@ -153,19 +153,19 @@ setup /q /ACTION=install /FEATURES=SQL,RS,TOOLS /INSTANCENAME=MSSQLSERVER /SQLSY
 SERVICE" /RSSVCSTARTUPTYPE="Manual" /RSINSTALLMODE="DefaultNativeMode"  
 ```  
   
- Para obtener más información y ejemplos, vea [símbolo instalación de Reporting Services SharePoint Mode y modo nativo](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md) y [instalar SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+ Para obtener más información y ejemplos, vea [instalación del símbolo del sistema de Reporting Services modo de SharePoint y modo nativo](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md) e [instalar SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) .  
   
-## <a name="see-also"></a>Vea también  
- [Solucionar problemas en una instalación de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
- [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
+## <a name="see-also"></a>Consulte también  
+ [Solucionar problemas de una instalación de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
+ [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Instalación de solo archivos &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
- [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Configurar una conexión a la base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [&#40;de instalación de solo archivos Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
+ [Inicializar un servidor de informes &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [Configurar conexiones SSL en un servidor de informes en modo nativo](../security/configure-ssl-connections-on-a-native-mode-report-server.md)   
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Inicio rápido de instalación de SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
+ [Instalación del tutorial de SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

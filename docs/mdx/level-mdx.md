@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b419cbb05aa616f163f5878bda83c9d68203575d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905660"
 ---
 # <a name="level-mdx"></a>Level (MDX)
@@ -32,7 +32,7 @@ Member_Expression.Level
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un miembro.  
   
 ### <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se usa el **nivel** función para devolver todos los meses del cubo Adventure Works.  
+ En el ejemplo siguiente se usa la función **LEVEL** para devolver todos los meses del cubo Adventure Works.  
   
 ```  
 SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,  
@@ -40,7 +40,7 @@ SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,
 FROM [Adventure Works]  
 ```  
   
- En el ejemplo siguiente se usa el **nivel** función para devolver el nombre del nivel para el All-Purpose Bike Stand en la jerarquía de atributo Model Name del cubo Adventure Works.  
+ En el ejemplo siguiente se usa la función **LEVEL** para devolver el nombre del nivel para el stand de la bicicleta para todo propósito en la jerarquía de atributo de nombre del modelo del cubo Adventure Works.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -49,7 +49,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

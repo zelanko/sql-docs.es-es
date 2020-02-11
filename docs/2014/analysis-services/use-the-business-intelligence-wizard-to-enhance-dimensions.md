@@ -1,5 +1,5 @@
 ---
-title: Usar el Asistente de Business Intelligence para mejorar dimensiones | Microsoft Docs
+title: Usar el Asistente de Business Intelligence para mejorar las dimensiones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 331820704691d86ab06c1a46934f7aca6154e1cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065506"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>Usar el Asistente de Business Intelligence para mejorar dimensiones
@@ -34,9 +34,9 @@ ms.locfileid: "66065506"
   
 -   [Habilitar reescritura en la dimensión](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Definir dimensiones de base de datos](multidimensional-models/define-database-dimensions.md)   
- [Referencia de las propiedades de los atributos de dimensión](multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Referencia de propiedades de atributo de dimensión](multidimensional-models/dimension-attribute-properties-reference.md)   
  [Crear jerarquías definidas por el usuario](multidimensional-models/user-defined-hierarchies-create.md)   
  [Definir relaciones de atributo](multidimensional-models/attribute-relationships-define.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  

@@ -18,13 +18,13 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67898409"
 ---
-# <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
+# <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información sobre usuarios y grupos de Windows.  
@@ -41,12 +41,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @acctname = ] 'account_name'` Es el nombre de un usuario de Windows o grupo que se le concedido acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* es **sysname**, su valor predeterminado es null. Si *account_name* no se especifica, todos los grupos de Windows y los usuarios de Windows que se han explícitamente permiso de inicio de sesión se notifican. *account_name* debe ser un nombre completo. Por ejemplo, 'ADVWKS4\macraes' o 'BUILTIN\Administrators'.  
+`[ @acctname = ] 'account_name'`Es el nombre de un usuario o grupo de Windows al que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se ha concedido acceso a. *account_name* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *account_name* , se indicarán todos los grupos de Windows y los usuarios de Windows a los que se haya concedido explícitamente permiso de inicio de sesión. *account_name* debe ser completo. Por ejemplo, 'ADVWKS4\macraes' o 'BUILTIN\Administrators'.  
   
- **'all'**  |  **"members"**  
- Especifica si se presenta información de todas las rutas de acceso a permisos de la cuenta o si se presenta información de los miembros del grupo de Windows. **\@opción** es **varchar (10)** , su valor predeterminado es null. A menos que **todas** se especifica, se muestra solo la primera ruta de permisos.  
+ **' All '** | **' miembros '**  
+ Especifica si se presenta información de todas las rutas de acceso a permisos de la cuenta o si se presenta información de los miembros del grupo de Windows. Option es de tipo **VARCHAR (10)** y su valor predeterminado es NULL. ** \@** A menos que se especifique **All** , solo se muestra la primera ruta de acceso de permisos.  
   
-`[ @privilege = ] variable_name` Es un parámetro de salida que devuelve el nivel de privilegio de la cuenta de Windows especificada. *variable_name* es **varchar (10)** , su valor predeterminado es 'Not wanted'. El nivel de privilegio devuelto es **usuario**, **admin**, o **null**.  
+`[ @privilege = ] variable_name`Es un parámetro de salida que devuelve el nivel de privilegios de la cuenta de Windows especificada. *variable_name* es de tipo **VARCHAR (10)** y su valor predeterminado es ' no se desea '. El nivel de privilegio devuelto es **User**, **admin**o **null**.  
   
  OUTPUT  
  Cuando se especifica, coloca *variable_name* en el parámetro de salida.  
@@ -56,39 +56,40 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre de cuenta**|**sysname**|Nombre completo de la cuenta de Windows.|  
-|**type**|**char(8)**|Tipo de cuenta de Windows. Los valores válidos son **usuario** o **grupo**.|  
-|**privilege**|**char(9)**|Privilegio de acceso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores válidos son **admin**, **usuario**, o **null**.|  
-|**nombre de inicio de sesión asignado**|**sysname**|Cuentas de usuario que tienen privilegio de usuario, **asigna el nombre de inicio de sesión** muestra el nombre de inicio de sesión asignado que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta usar al iniciar sesión con esta cuenta mediante el uso de las reglas de asociación con el nombre de dominio agregado antes.|  
-|**ruta de acceso de permiso**|**sysname**|Pertenencia al grupo que permite que la cuenta tenga acceso.|  
+|**nombre de cuenta**|**sysname**|Nombre completo de la cuenta de Windows.|  
+|**automáticamente**|**Char (8)**|Tipo de cuenta de Windows. Los valores válidos son **User** o **Group**.|  
+|**privilegia**|**Char (9)**|Privilegio de acceso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores válidos son **admin**, **User**o **null**.|  
+|**mapped login name**|**sysname**|En el caso de las cuentas de usuario que tienen privilegios de usuario, nombre de inicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **sesión asignado** muestra el nombre de inicio de sesión asignado que intenta usar al iniciar sesión con esta cuenta mediante las reglas asignadas con el nombre de dominio agregado antes.|  
+|**permission path**|**sysname**|Pertenencia al grupo que permite que la cuenta tenga acceso.|  
   
-## <a name="remarks"></a>Comentarios  
- Si *account_name* se especifica, **xp_logininfo** notifica el nivel de privilegios más alto del grupo o usuario de Windows especificado. Si un usuario de Windows tiene acceso como administrador del sistema y como usuario del dominio, se le notificará como administrador del sistema. Si el usuario es miembro de varios grupos de Windows del mismo nivel de privilegio, solo se le notificará en el grupo al que se concediera primero acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Observaciones  
+ Si se especifica *account_name* , **xp_logininfo** notifica el nivel de privilegios más alto del usuario o grupo de Windows especificado. Si un usuario de Windows tiene acceso como administrador del sistema y como usuario del dominio, se le notificará como administrador del sistema. Si el usuario es miembro de varios grupos de Windows del mismo nivel de privilegio, solo se le notificará en el grupo al que se concediera primero acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Si *account_name* es un usuario de Windows o grupo que no está asociado con válido un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión, se devuelve un conjunto de resultados vacío. Si *account_name* no se puede identificar como un usuario válido de Windows o un grupo, se devuelve un mensaje de error.  
+ Si *account_name* es un grupo o usuario de Windows válido que no está asociado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un inicio de sesión, se devuelve un conjunto de resultados vacío. Si no se puede identificar *account_name* como un usuario o grupo de Windows válido, se devuelve un mensaje de error.  
   
- Si *account_name* y **todas** son especificado, se devuelven todas las rutas de permisos para el usuario de Windows o grupo. Si *account_name* es un miembro de varios grupos, que ha concedido acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se devuelven varias filas. El **admin** se devuelven las filas del privilegio antes el **usuario** filas del privilegio y, dentro de un privilegio de nivel de filas devueltas en el orden en que el correspondiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se crearon inicios de sesión.  
+ Si se especifican *account_name* y **All** , se devuelven todas las rutas de acceso de permisos para el usuario o grupo de Windows. Si *account_name* es un miembro de varios grupos, se devuelven varias filas a las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]que se les ha concedido acceso a. Las filas con privilegios de **Administrador** se devuelven antes que las filas de privilegios de **usuario** y, dentro de una fila de nivel de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] privilegios, se devuelven en el orden en que se crearon los inicios de sesión correspondientes.  
   
- Si *account_name* y **miembros** son especificado, se devuelve una lista de los miembros del siguiente nivel del grupo. Si *account_name* es un grupo local, la lista puede incluir usuarios locales, los usuarios del dominio y grupos. Si *account_name* es una cuenta de dominio, la lista se compone de los usuarios del dominio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe conectarse al controlador de dominio para recuperar la información de pertenencia a grupos. Si el servidor no puede contactar con el controlador de dominio, no se obtendrá ninguna información.  
+ Si se especifican *account_name* y **miembros** , se devuelve una lista de los miembros de nivel siguiente del grupo. Si *account_name* es un grupo local, la lista puede incluir usuarios locales, usuarios del dominio y grupos. Si *account_name* es una cuenta de dominio, la lista está formada por usuarios del dominio. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe conectarse al controlador de dominio para recuperar la información de pertenencia a grupos. Si el servidor no puede contactar con el controlador de dominio, no se obtendrá ninguna información.  
   
- **xp_logininfo** sólo devuelve información de grupos globales de Active Directory, los grupos universales no.  
+ **xp_logininfo** solo devuelve información de Active Directory grupos globales, no de grupos universales.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere la pertenencia a la **sysadmin** fijo de servidor o la pertenencia a la **pública** rol fijo de base de datos en el **maestro** base de datos con permiso de ejecución.  
+ Requiere la pertenencia al rol fijo de servidor **sysadmin** o la pertenencia al rol fijo de base de datos **Public** en la base de datos **maestra** con el permiso Execute concedido.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente muestra información sobre la `BUILTIN\Administrators` grupo de Windows.  
+ En el ejemplo siguiente se muestra información `BUILTIN\Administrators` sobre el grupo de Windows.  
   
 ```  
 EXEC xp_logininfo 'BUILTIN\Administrators';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_denylogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [sp_grantlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_revokelogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados extendidos generales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Nueva programación: Editar programación página (Administrador de informes) | Microsoft Docs'
+title: 'Nueva programación: editar página de programación (Administrador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea1eed70c3eac8bac1c4141628e72ce0af8099c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108149"
 ---
-# <a name="new-schedule-edit-schedule-page-report-manager"></a>Nueva programación: Editar página de programación (Administrador de informes)
+# <a name="new-schedule-edit-schedule-page-report-manager"></a>Nueva programación: editar página de programación (Administrador de informes)
   Utilice la página Nueva programación/Editar programación para crear una programación para un informe. Las programaciones se usan con las suscripciones para actualizar los informes almacenados en caché y para crear instantáneas como elementos independientes o en un historial de informes.  
   
 > [!NOTE]  
 >  Esta característica no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Solo se pueden crear programaciones para los informes que se puedan ejecutar en modo desatendido. Para ejecutar un informe en modo desatendido, es necesario almacenar las credenciales del origen de datos de informe en la base de datos del servidor de informes. Para obtener más información, consulte [página de propiedades de orígenes de datos &#40;el Administrador de informes&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
+ Solo se pueden crear programaciones para los informes que se puedan ejecutar en modo desatendido. Para ejecutar un informe en modo desatendido, es necesario almacenar las credenciales del origen de datos de informe en la base de datos del servidor de informes. Para obtener más información, vea [Página de propiedades orígenes de datos &#40;Administrador de informes&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md).  
   
  Una sola programación no admite todas las combinaciones de frecuencias. Por ejemplo, si desea ejecutar un informe todos los viernes a las 12:00 p. m. y a las 4:00 p. m. debe crear dos programaciones diarias que especifiquen una fecha de ejecución en viernes, una con las 12:00 p. m. como hora de inicio y otra con las 4:00 p. m. como hora de inicio.  
   
@@ -76,22 +76,22 @@ ms.locfileid: "66108149"
  **Detalles de programación**  
  Seleccione las opciones que determinen cuándo se ejecuta un informe y con qué frecuencia. Las opciones de frecuencia están organizadas por niveles. El primer conjunto de opciones especifica una categoría de frecuencia (horaria, diaria, semanal, etc.). El segundo conjunto de opciones que aparece se basa en la selección inicial.  
   
--   **Hora** define una programación que se ejecuta a intervalos de horas. Use la sección **Fechas de inicio y fin** para especificar el día en el que se va a ejecutar la programación.  
+-   La **hora** define una programación que se ejecuta a intervalos de una hora. Use la sección **Fechas de inicio y fin** para especificar el día en el que se va a ejecutar la programación.  
   
--   **Día** define una programación que se ejecuta en los días seleccionados a una hora específica. Puede especificar los días de las maneras siguientes: Cada \< *día*>, todos los días laborables y cada \< *número*> días. Al elegir un método se anulan los demás, aunque los demás días aparezcan seleccionados.  
+-   **Día** define una programación que se ejecuta en los días seleccionados a una hora concreta. Los días se pueden especificar de las maneras siguientes: \<todos los *días>, cada día de* la semana y cada \< *número*> día. Al elegir un método se anulan los demás, aunque los demás días aparezcan seleccionados.  
   
--   **Semana** define una programación que se ejecuta en intervalos semanales a una hora específica. El intervalo puede ser una semana completa (por ejemplo, cada dos semanas) o días de una semana.  
+-   **Semana** define una programación que se ejecuta a intervalos semanales a una hora específica. El intervalo puede ser una semana completa (por ejemplo, cada dos semanas) o días de una semana.  
   
--   **Mes** define una programación que se ejecuta mensualmente. En un mes, se puede elegir un día basándose en un modelo (por ejemplo, el último domingo de cada mes) o fechas específicas del calendario (como 1 y 15 para indicar los días uno y quince de cada mes). Puede utilizar comas y guiones para especificar varios días e intervalos; por ejemplo, 1, 5, 7-12, 21.  
+-   **Month** define una programación que se ejecuta mensualmente. En un mes, se puede elegir un día basándose en un modelo (por ejemplo, el último domingo de cada mes) o fechas específicas del calendario (como 1 y 15 para indicar los días uno y quince de cada mes). Puede utilizar comas y guiones para especificar varios días e intervalos; por ejemplo, 1, 5, 7-12, 21.  
   
--   **Una vez** define una programación que se ejecuta una sola vez. Use la sección **Fechas de inicio y fin** para especificar el día en el que se va a ejecutar la programación. Esta programación deja de tener validez en cuanto se procesa.  
+-   **Una vez** define una programación que se ejecuta solo una vez. Use la sección **Fechas de inicio y fin** para especificar el día en el que se va a ejecutar la programación. Esta programación deja de tener validez en cuanto se procesa.  
   
- **Fechas de inicio y finalización**  
+ **Fechas de inicio y fin**  
  Especifique una fecha de inicio que determine cuándo entra en vigor la programación y una fecha de finalización que determine cuándo expira.  
   
  Cuando las programaciones dejan de tener validez, no se notifica. Después de la fecha de finalización, ya no vuelven a ejecutarse. Las programaciones expiradas no se eliminan. Las programaciones solo se pueden eliminar manualmente. De esta manera, si decide seguir utilizándola, puede ampliar la fecha de finalización.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Crear, modificar y eliminar programaciones](subscriptions/create-modify-and-delete-schedules.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  

@@ -1,5 +1,5 @@
 ---
-title: Configurar las propiedades de comportamiento de tabla de informes de Power View (SSAS Tabular) | Microsoft Docs
+title: Configurar las propiedades de comportamiento de las tablas para informes de Power View (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6ade5a39c974af7a87bb33aab6da490e0c3ae0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066837"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurar las propiedades de comportamiento de las tablas para informes de Power View (SSAS tabular)
   Si va a utilizar un modelo tabular como modelo de datos para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], puede establecer las propiedades del comportamiento de las tablas que exponen filas de detalles en un nivel más específico. El establecimiento de las propiedades del comportamiento de las tablas cambia el comportamiento de agrupación de las filas de detalle y genera una mejor colocación predeterminada de la información de identificación (como nombres, carnets con fotografía o imágenes de logotipo) en diseños de mosaicos, tarjetas y gráficos.  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] se diferencia de otras aplicaciones de informes en que agrupará automáticamente los elementos durante el diseño de informe, evaluando las columnas que se han colocado en la lista de campos del informe con el formato de presentación que se está utilizando. En la mayoría de los casos, la agrupación predeterminada genera un resultado óptimo. Pero en algunas tablas, normalmente aquellas que contienen datos detallados, el comportamiento de agrupación predeterminada agrupará a veces filas que no deberían estarlo. Para estas tablas, puede establecer propiedades que cambien la forma de evaluar los grupos.  
+ 
+  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] se diferencia de otras aplicaciones de informes en que agrupará automáticamente los elementos durante el diseño de informe, evaluando las columnas que se han colocado en la lista de campos del informe con el formato de presentación que se está utilizando. En la mayoría de los casos, la agrupación predeterminada genera un resultado óptimo. Pero en algunas tablas, normalmente aquellas que contienen datos detallados, el comportamiento de agrupación predeterminada agrupará a veces filas que no deberían estarlo. Para estas tablas, puede establecer propiedades que cambien la forma de evaluar los grupos.  
   
  El establecimiento de las propiedades de comportamiento de las tablas se recomienda para las tablas donde las filas individuales tengan un interés primordial, como los registros de empleado o de cliente. En cambio, entre las tablas que no se benefician de estas propiedades están aquellas que actúan como tabla de búsqueda (por ejemplo, las tablas de fechas, las de categorías de producto o las de departamentos, donde la tabla consta de un número relativamente reducido de filas y de columnas), o las tablas de resumen que contienen filas que solo ofrecen interés cuando se resumen (por ejemplo, los datos del censo que se acumulan por sexo, edad o ubicación geográfica). En las tablas de resumen y de búsqueda, el comportamiento de agrupación predeterminada genera el mejor resultado.  
   
@@ -31,16 +32,16 @@ ms.locfileid: "66066837"
   
  Las propiedades del comportamiento de las tablas son:  
   
--   **Identificador de fila** : especifica una columna que contiene solo valores únicos, lo que permite utilizar esa columna como clave interna de agrupación.  
+-   **Identificador de fila** ) también especifica una columna que contiene solo valores únicos, lo que permite utilizar esa columna como clave interna de agrupación.  
   
--   **Mantener filas únicas** : especifica qué columnas proporcionan valores que se tienen que tratar como únicos, aunque estén duplicados (por ejemplo, nombre y apellidos de empleado, para los casos en que dos o varios empleados compartan el mismo nombre).  
+-   **Mantener filas únicas** ) también especifica qué columnas proporcionan valores que se deben tratar como únicos aunque estén duplicados (por ejemplo, el nombre y el apellido de un empleado, en los casos en que dos o más empleados compartan el mismo nombre).  
   
--   **Etiqueta predeterminada** : especifica qué columna proporciona un nombre para mostrar que representará los datos de fila (por ejemplo, el nombre de empleado en un registro de empleado).  
+-   **Etiqueta predeterminada** ) también especifica qué columna proporciona un nombre para mostrar que representará los datos de fila (por ejemplo, el nombre de empleado en un registro de empleado).  
   
--   **Imagen predeterminada** : especifica qué columna proporciona una imagen que representará los datos de fila (por ejemplo, un carnet con fotografía en un registro del empleado).  
+-   **Imagen predeterminada** ) también especifica qué columna proporciona una imagen que representa los datos de fila (por ejemplo, un identificador de fotografía en un registro de empleado).  
   
 > [!NOTE]  
->  Consulte la siguiente sección para enfocar las optimizaciones de diseño desde el punto de vista de un formato de presentación determinado:  [Optimizar diseños específicos](#bkmk_optimizeforlayout).  
+>  En la sección siguiente puede ver un enfoque de las optimizaciones de diseño desde el punto de vista de un formato de presentación determinado:  [Optimizar diseños específicos](#bkmk_optimizeforlayout).  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>Abrir el cuadro de diálogo de comportamiento de la tabla  
   
@@ -51,11 +52,11 @@ ms.locfileid: "66066837"
 3.  En el cuadro de diálogo **Comportamiento de la tabla** , establezca el **Identificador de tabla**y después especifique otras propiedades en este cuadro de diálogo.  
   
 ## <a name="setting-the-row-identifier-property"></a>Establecer la propiedad Identificador de fila  
- En la tabla, el identificador de fila especifica una columna única que contiene solo valores únicos y ningún valor en blanco. La propiedad de identificador de fila se utiliza para cambiar la agrupación de forma que un grupo no se basa en la composición de campos de una fila, sino en una columna fija que siempre se usa para identificar de forma única una fila, independientemente de los campos usados en un diseño de informe determinado.  
+ En la tabla, el identificador de fila especifica una columna única que contiene solo valores únicos y ningún valor en blanco. La propiedad identificador de fila se utiliza para cambiar la agrupación, por lo que un grupo no se basa en la composición de campos de una fila, sino en una columna fija que siempre se usa para identificar de forma única una fila, independientemente de los campos utilizados en un diseño de informe determinado.  
   
  El establecimiento de esta propiedad cambia el comportamiento de agrupación predeterminada de una agrupación dinámica basada en las columnas presentes en el lienzo a un comportamiento fijo de agrupación que resume basándose en el identificador de fila. El cambio del comportamiento de agrupación predeterminada es pertinente para los diseños de informe como, por ejemplo, una matriz, que en caso contrario agruparía (o mostraría subtotales) para cada columna de la fila.  
   
- En [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], establecer un identificador de fila habilita las siguientes propiedades adicionales: **Mantener filas únicas** propiedad **etiqueta predeterminada** propiedad, y **imagen predeterminada** propiedad.  
+ En [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], el establecimiento de un identificador de fila habilita las siguientes propiedades adicionales: **Mantener filas únicas** , **Etiqueta predeterminada** e **Imagen predeterminada** .  
   
  También puede utilizar **Identificador de tabla** como una propiedad independiente para habilitar:  
   
@@ -86,13 +87,13 @@ ms.locfileid: "66066837"
 > [!NOTE]  
 >  Las imágenes se pueden extraer de direcciones URL en un archivo de imagen de un servidor web o como datos binarios insertados en el libro. Si la imagen se basa en una dirección URL, asegúrese también de establecer la columna como tipo de imagen para que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] recupere la imagen en lugar de mostrar la dirección URL como datos de texto en el informe.  
   
-##  <a name="bkmk_optimizeforlayout"></a> Optimizar diseños específicos  
+##  <a name="bkmk_optimizeforlayout"></a>Optimizar diseños específicos  
  Esta sección describe el efecto de establecer las propiedades del comportamiento de las tablas desde el punto de vista de un formato de presentación determinado y las características de los datos. Si intenta ajustar el diseño de un informe de matriz, por ejemplo, puede utilizar esta información para comprender cómo mejorar una presentación de matriz mediante propiedades de comportamiento de tablas en el modelo.  
   
 ### <a name="images-are-missing"></a>Faltan imágenes  
  Las propiedades que establezca en el modelo determinan si las imágenes se visualizarán en un informe o se representarán como valores de texto en el informe.  
   
- ![Direcciones URL de imagen aparecen como texto en un informe](../media/ssas-rptprop-noimageurl.gif "direcciones URL de imagen aparecen como texto en un informe")  
+ ![Las direcciones URL de imagen aparecen como texto en un informe](../media/ssas-rptprop-noimageurl.gif "Las direcciones URL de imagen aparecen como texto en un informe")  
   
  De forma predeterminada, el texto del modelo se interpreta como texto en el informe. Si una columna de texto es una dirección URL a una imagen del informe, recuerde establecer la propiedad **Dirección URL de la imagen** de modo que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] recupere el archivo de imagen. En las imágenes binarias, recuerde establecer la propiedad **Identificador de tabla** .  
   
@@ -101,37 +102,37 @@ ms.locfileid: "66066837"
   
  Sin embargo, considere otro ejemplo en el que tal vez desee que aparezcan varias instancias de una fila, ya que las filas subyacentes contienen, de hecho, datos sobre entidades distintas. En este ejemplo, suponga que tiene dos clientes con el mismo nombre, **Jon Yang**. Si se usa el comportamiento de agrupación predeterminada, en el informe solo aparecerá una instancia de **Jon Yang** . Además, dado que en la lista solo aparece una instancia, la medida **Ingresos anuales** será la suma de ese valor para ambos clientes.  
   
- ![Grupo predeterminado consolida 2 en 1](../media/ssas-jonyang-norowid.gif "grupo predeterminado consolida 2 en 1")  
+ ![El grupo predeterminado consolida 2 en 1](../media/ssas-jonyang-norowid.gif "El grupo predeterminado consolida 2 en 1")  
   
  Para cambiar el comportamiento de agrupación predeterminada, establezca las propiedades **Identificador de tabla** y **Mantener filas únicas** . En **Mantener filas únicas**, elija la columna Apellido para que este valor se repita para una fila, aunque ya aparezca en otra. Después de cambiar las propiedades y volver a publicar el libro, puede crear el mismo informe, solo que en esta ocasión verá los de clientes llamados **Jon Yang**con los **Ingresos anuales** correctamente asignados a cada uno de ellos.  
   
- ![Fila de datos que contienen duplicados según el Id. de fila](../media/ssas-jonyang.gif "la fila de datos que contienen duplicados según el Id. de fila")  
+ ![Datos de fila que contienen duplicados según el identificador de fila](../media/ssas-jonyang.gif "Datos de fila que contienen duplicados según el identificador de fila")  
   
 ### <a name="matrix-layout-is-too-crowded"></a>El diseño de la matriz está demasiado amontonado  
  Cuando se muestra una tabla de detalles en una matriz, la agrupación predeterminada proporciona un valor resumido para cada columna. Dependiendo de los objetivos que tenga, podría haber más resúmenes de lo que le gustaría. Para cambiar este comportamiento, puede establecer **Identificador de tabla**. No será necesario establecer más propiedades adicionales; el identificador de fila es suficiente para cambiar la agrupación de forma que los resúmenes que se calculen para cada fila se basen en su identificador único de fila.  
   
  Compare estas imágenes de antes y después que muestran cómo el establecimiento de esta propiedad afecta al diseño de una matriz.  
   
- **Antes: Agrupación predeterminada basada en los campos de matriz**  
+ **Before: agrupación predeterminada basada en los campos de la matriz**  
   
- ![Diseño de la matriz se agrupa según el identificador de fila](../media/ssas-rptprop-matrixrowid.gif "diseño de la matriz se agrupa según el identificador de fila")  
+ ![Diseño de matriz agrupado por identificador de fila](../media/ssas-rptprop-matrixrowid.gif "Diseño de matriz agrupado por identificador de fila")  
   
- **Después de: Agrupación según el identificador de fila**  
+ **Después: agrupación en identificador de fila**  
   
- ![Diseño de la matriz se agrupa según el identificador de fila](../media/ssas-rptprop-matrixrowid.gif "diseño de la matriz se agrupa según el identificador de fila")  
+ ![Diseño de matriz agrupado por identificador de fila](../media/ssas-rptprop-matrixrowid.gif "Diseño de matriz agrupado por identificador de fila")  
   
 ### <a name="chart-showing-too-many-items-and-levels-on-the-axis"></a>Gráfico que muestra demasiados elementos y niveles en el eje  
  Los informes de gráfico que muestran datos detallados deben utilizar el identificador de fila como eje. Sin un identificador de fila, el eje es indeterminado, lo que produce un diseño basado en suposiciones que puede que no tenga sentido. Para cambiar este comportamiento, puede establecer **Identificador de tabla**. No será necesario establecer más propiedades adicionales; el identificador de fila es suficiente para cambiar la agrupación de forma que los resúmenes que se calculen para cada fila se basen en su identificador único de fila.  
   
  Compare estas imágenes de antes y después que muestran cómo el establecimiento de esta propiedad afecta al diseño de un gráfico. Es el mismo informe, con los mismos campos y presentación. La única diferencia consiste es que la imagen inferior muestra un informe después de haberse establecido **Identificador de tabla** en la tabla de elementos.  
   
- **Antes: Agrupación predeterminada basada en los campos de un gráfico**  
+ **Antes: agrupación predeterminada basada en los campos de un gráfico**  
   
- ![Gráfico basado en agrupación predeterminado en el nivel de campo](../media/ssas-rptprop-chartfieldgroup.gif "gráfico basado en agrupación predeterminado en el nivel de campo")  
+ ![Gráfico basado en agrupación predeterminado en nivel de campo](../media/ssas-rptprop-chartfieldgroup.gif "Gráfico basado en agrupación predeterminado en nivel de campo")  
   
- **Después de: Agrupación según el identificador de fila (identificador de fila se convierte en el eje)**  
+ **Después: agrupación en identificador de fila (el identificador de fila se convierte en el eje)**  
   
- ![Gráfico basado en agrupación de identificador de fila](../media/ssas-rptprop-chartrowid.gif "gráfico basado en agrupación de identificador de fila")  
+ ![Gráfico basado en agrupación de identificador de fila](../media/ssas-rptprop-chartrowid.gif "Gráfico basado en agrupación de identificador de fila")  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  Después de haber evaluado las tablas del modelo y establecer las propiedades del comportamiento de las tablas para que las que contengan filas de detalles aparezcan siempre como elementos individuales, puede optimizar aún más el modelo mediante propiedades o configuraciones adicionales.  

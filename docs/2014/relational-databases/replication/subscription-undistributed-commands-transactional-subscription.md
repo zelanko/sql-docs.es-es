@@ -1,5 +1,5 @@
 ---
-title: Suscripción, comandos sin distribuir (suscripción transaccional, SQL Server 2005 y versiones posterior) | Microsoft Docs
+title: Suscripción, comandos sin distribuir (suscripción transaccional, SQL Server 2005 y versiones posteriores) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a1f957c417c5c63766dfbffa923edd6935d1eb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151479"
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription-sql-server-2005-and-later"></a>Suscripción, Comandos sin distribuir (Suscripción transaccional, SQL Server 2005 y posteriores)
@@ -29,7 +29,7 @@ ms.locfileid: "63151479"
  **Tiempo estimado para aplicar estos comandos según las últimas operaciones**  
  Cantidad estimada de tiempo para entregar comandos al suscriptor. Si este valor es superior al tiempo necesario para generar y aplicar una instantánea en el suscriptor, considere la posibilidad de volver a reinicializar el suscriptor. Para obtener más información, vea [Reinicializar suscripciones](reinitialize-subscriptions.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
  [Supervisar el rendimiento con el Monitor de replicación](monitor/monitor-performance-with-replication-monitor.md)   
  [Supervisar la replicación](monitoring-replication.md)  

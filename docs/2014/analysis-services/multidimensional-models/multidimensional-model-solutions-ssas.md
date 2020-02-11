@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 703080418566b761741575c69fb6be6a7572988e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073570"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>Soluciones de modelos multidimensionales (SSAS)
@@ -28,7 +28,7 @@ ms.locfileid: "66073570"
  [Bases de datos de modelos multidimensionales &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
  Describe cómo definir una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- [Orígenes de datos admitidos &#40;SSAS Multidimensional&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [Orígenes de datos admitidos &#40;&#41;de SSAS multidimensionales](supported-data-sources-ssas-multidimensional.md)  
  Describe cómo definir objetos de origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)  
@@ -44,6 +44,6 @@ ms.locfileid: "66073570"
  Describe cómo diseñar los objetos de base de datos multidimensionales sin un esquema relacional existente.  
   
  [Extensiones de personalización de Analysis Services](extending-olap/analysis-services-personalization-extensions.md)  
- Describe cómo diseñar extensiones de personalización para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ Describe cómo diseñar extensiones de personalización [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]para.  
   
   

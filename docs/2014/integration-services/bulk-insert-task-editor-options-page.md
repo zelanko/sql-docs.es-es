@@ -1,5 +1,5 @@
 ---
-title: Editor de la tarea de inserción (página Opciones) de forma masiva | Microsoft Docs
+title: Editor de la tarea inserción masiva (página Opciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061189"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Editor de la tarea Inserción masiva (página Opciones)
-  Use la página **Opciones** del cuadro de diálogo **Editor de la tarea Inserción masiva** para establecer las propiedades de la operación de inserción masiva. La tarea Inserción masiva copia gran cantidad de datos en una tabla o vista de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  Use la página **Opciones** del cuadro de diálogo **Editor de la tarea Inserción masiva** para establecer las propiedades de la operación de inserción masiva. La tarea inserción masiva copia grandes cantidades de datos en una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tabla o vista.  
   
  Para más información sobre las inserciones masivas, vea [Tarea Inserción masiva](control-flow/bulk-insert-task.md) y [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66061189"
  **CodePage**  
  Especifique la página de códigos de los datos incluidos en el archivo de datos.  
   
- **DataFileType**  
+ **Especific**  
  Especifique el valor del tipo de datos que desea utilizar en la operación de carga.  
   
  **BatchSize**  
@@ -52,7 +52,7 @@ ms.locfileid: "66061189"
 |**Activar desencadenadores**|Seleccione esta opción para activar desencadenadores de inserción, actualización o eliminación en la tabla.|  
   
  **SortedData**  
- Especifique la cláusula ORDER BY en la instrucción de inserción masiva. El nombre de columna que proporcione debe ser una columna válida de la tabla de destino. De manera predeterminada, es `false`. Significa que los datos están ordenados mediante una cláusula ORDER BY.  
+ Especifique la cláusula ORDER BY en la instrucción de inserción masiva. El nombre de columna que proporcione debe ser una columna válida de la tabla de destino. El valor predeterminado es `false`. Significa que los datos están ordenados mediante una cláusula ORDER BY.  
   
  **MaxErrors**  
  Especifique el número máximo de errores que pueden producirse antes de que se cancele la operación de inserción masiva. El valor 0 indica que se permite un número infinito de errores.  
@@ -60,10 +60,10 @@ ms.locfileid: "66061189"
 > [!NOTE]  
 >  Cada fila que no pueda importarse con la operación de carga masiva se contabilizará como un error.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de la tarea Inserción masiva &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea Inserción masiva &#40;página Conexión&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Editor de la tarea inserción masiva &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea inserción masiva &#40;página de conexión&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Página Expresiones](expressions/expressions-page.md)   
  [Flujo de control](control-flow/control-flow.md)  
   

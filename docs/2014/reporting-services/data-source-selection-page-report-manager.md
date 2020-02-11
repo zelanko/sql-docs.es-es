@@ -1,5 +1,5 @@
 ---
-title: Origen de datos de la página de selección (Administrador de informes) | Microsoft Docs
+title: Página selección de origen de datos (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109438"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Selección de origen de datos (página del Administrador de informes)
@@ -36,20 +36,20 @@ ms.locfileid: "66109438"
 5.  En el panel de propiedades, seleccione **Un origen de datos compartido** y, a continuación, haga clic en **Examinar**.  
   
 ## <a name="options"></a>Opciones  
- **Ubicación**  
+ **Location**  
  Especifique la ruta de acceso completa al elemento de origen de datos compartido, empezando por el nombre de la carpeta raíz. Puede escribir el nombre de la ruta de acceso o utilizar la vista de árbol para navegar hasta el origen de datos compartido que desee.  
   
  **Vista de árbol**  
  Muestra la estructura de carpetas del espacio de nombres del servidor de informes. Haga clic en un elemento de origen de datos compartido para agregar la ruta de acceso completa al campo **Ubicación** .  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Haga clic en Aceptar para copiar la selección de origen de datos en la página de propiedades Orígenes de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar orígenes de datos de informe](report-data/manage-report-data-sources.md)   
- [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Orígenes de datos &#40;página de propiedades del Administrador de informes&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
- [Nuevo origen de datos &#40;página del Administrador de informes&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
+ [Especificar información de credenciales y conexión para los orígenes de datos de informe](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Página de propiedades orígenes de datos &#40;Administrador de informes&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
+ [Nueva página de origen de datos &#40;Administrador de informes&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

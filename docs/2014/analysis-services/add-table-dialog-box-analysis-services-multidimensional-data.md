@@ -1,5 +1,5 @@
 ---
-title: Agregar cuadro de diálogo de tabla (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo Agregar tabla (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b429f115eff1692495e1ded58fb6afadc6e5ee8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062812"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Agregar tabla (Analysis Services - Datos multidimensionales)
@@ -33,12 +33,12 @@ ms.locfileid: "66062812"
 |**Funciones**|Use la pestaña **Funciones** para mostrar y seleccionar la función o procedimiento almacenado que desea agregar.|  
 |**Sinónimos**|Use la pestaña **Sinónimos** para mostrar y seleccionar el sinónimo que desea agregar.|  
 |**Actualizar**|Haga clic para volver a cargar todas las pestañas en el cuadro de diálogo.|  
-|**Agregar**|Haga clic para agregar el elemento seleccionado. **Nota:**  Esta opción está habilitada sólo si se selecciona un elemento.|  
+|**Add (Agregar)**|Haga clic para agregar el elemento seleccionado. **Nota:**  Esta opción solo se habilita si se selecciona un elemento.|  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Crear o editar el cuadro de diálogo de consulta con nombre &#40;Analysis Services - datos multidimensionales&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
- [Crear el cuadro de diálogo de consulta de sondeo &#40;Analysis Services - datos multidimensionales&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   
- [Crear el cuadro de diálogo de consulta de procesamiento &#40;Analysis Services - datos multidimensionales&#41;](create-processing-query-dialog-box-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Cuadro de diálogo crear o editar consulta con nombre &#40;Analysis Services-datos multidimensionales&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
+ [Cuadro de diálogo Crear consulta de sondeo &#40;Analysis Services de datos multidimensionales&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   
+ [Cuadro de diálogo Crear consulta de procesamiento &#40;Analysis Services de datos multidimensionales&#41;](create-processing-query-dialog-box-analysis-services-multidimensional-data.md)  
   
   

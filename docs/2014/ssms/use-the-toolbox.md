@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280668"
 ---
 # <a name="use-the-toolbox"></a>Utilizar el cuadro de herramientas
@@ -42,7 +42,7 @@ ms.locfileid: "63280668"
 |Cambiar la posición de un elemento en una pestaña expandida del cuadro de herramientas|Arrastre el elemento a la nueva ubicación y suelte el botón del mouse.|  
 |Cambiar el nombre a un elemento del cuadro de herramientas|Haga clic con el botón derecho en el elemento del cuadro de herramientas y haga clic en **Cambiar nombre de elemento** en el menú contextual.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Elementos generales de la interfaz de usuario](general-user-interface-elements.md)  
   
   

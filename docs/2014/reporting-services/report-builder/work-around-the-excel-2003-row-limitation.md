@@ -1,5 +1,5 @@
 ---
-title: Evitar la limitación de filas de Excel | Microsoft Docs
+title: Solucionar el límite de filas de Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f01e85a0a93ef1f2a14b2b01b4180143153865
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107547"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Solución alternativa de la limitación de filas de Excel
@@ -26,7 +26,7 @@ ms.locfileid: "66107547"
   
 1.  Abra el informe en [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] o en el Administrador de informes.  
   
-2.  Haga clic con el botón derecho en la fila Datos de la tabla y, después, haga clic en **Agregar grupo** > **Grupo primario** para agregar un grupo de tablas externo.  
+2.  Haga clic con el botón secundario en la fila de datos de la tabla y, a continuación, haga clic en **Agregar** > grupo**primario** para agregar un grupo de tablas externo.  
   
      ![Seleccionar el grupo primario](../media/datarow-selectparentgroup.png "Seleccionar el grupo primario")  
   

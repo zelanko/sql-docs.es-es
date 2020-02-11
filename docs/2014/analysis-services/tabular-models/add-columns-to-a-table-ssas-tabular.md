@@ -1,5 +1,5 @@
 ---
-title: Agregar columnas a una tabla (SSAS Tabular) | Microsoft Docs
+title: Agregar columnas a una tabla (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067767"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>Agregar columnas a una tabla (SSAS tabular)
@@ -40,7 +40,7 @@ ms.locfileid: "66067767"
 2.  En el cuadro de diálogo **Editar propiedades de tabla** , en la ventana de vista previa de la tabla, seleccione la columna de origen que desee agregar y haga clic en Aceptar. Las columnas que ya están incluidas en la definición de tabla aparecen seleccionadas.  
   
 ## <a name="add-a-calculated-column"></a>Agregar una columna calculada  
- En una columna calculada, la fórmula DAX se usa para definir un valor para cada fila. Por ejemplo, puede crear una columna calculada con una fórmula simple () =1 que agregue el valor 1 a cada fila. Las columnas calculadas también pueden tener fórmulas más complejas que calculen los valores basándose en otros datos del modelo. Las columnas calculadas se tratan con más detalle en otros temas. Para más información, vea [Columnas calculadas &#40;SSAS tabular&#41;](ssas-calculated-columns.md).  
+ En una columna calculada, la fórmula DAX se usa para definir un valor para cada fila. Por ejemplo, puede crear una columna calculada con una fórmula simple () =1 que agregue el valor 1 a cada fila. Las columnas calculadas también pueden tener fórmulas más complejas que calculen los valores basándose en otros datos del modelo. Las columnas calculadas se tratan con más detalle en otros temas. Para más información, vea [Calculated Columns &#40;SSAS Tabular&#41;](ssas-calculated-columns.md).  
   
 #### <a name="to-create-a-calculated-column"></a>Para crear una columna calculada  
   
@@ -61,8 +61,8 @@ ms.locfileid: "66067767"
   
 2.  Haga clic en la celda superior, escriba un nombre y, a continuación, presione ENTRAR.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cuadro de diálogo Editar propiedades de tabla &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [Cambiar las asignaciones de filtros de tabla, columna o fila &#40;SSAS tabular&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [Cambiar las asignaciones de filtro de tabla, columna o fila &#40;SSAS tabular&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

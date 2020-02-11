@@ -1,5 +1,5 @@
 ---
-title: Vincular un informe a un modelo como informe Click-through | Microsoft Docs
+title: Vincular un informe a un modelo como informe click-through | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45b7695a9cd259d10155036ce1f9367a71e2fe72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108369"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Vincular un informe a un modelo como informe click-through
@@ -31,7 +31,7 @@ ms.locfileid: "66108369"
   
 1.  Abra [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 6.0 o posterior.  
   
-2.  En la barra de direcciones del explorador web, escriba la dirección URL del Administrador de informes. De forma predeterminada, la dirección URL es http://\<*ComputerName*> / reports.  
+2.  En la barra de direcciones del explorador web, escriba la dirección URL del Administrador de informes. De forma predeterminada, la dirección URL\<es http://*ComputerName*>/Reports.  
   
 ### <a name="to-create-a-customized-clickthrough-report"></a>Para crear un informe click-through personalizado  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66108369"
   
 5.  Para mostrar el informe personalizado cuando se hace clic en una sola instancia de la entidad seleccionada, haga clic en el botón **Examinar** del informe de una sola instancia.  
   
-     -o bien-  
+     O bien  
   
      Para mostrar el informe personalizado cuando se hace clic en varias instancias de la entidad seleccionada, haga clic en el botón **Examinar** del informe de varias instancias.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66108369"
   
 7.  Haga clic en **Aplicar**.  
   
-## <a name="see-also"></a>Vea también  
- [Informes Click-through &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)  
+## <a name="see-also"></a>Consulte también  
+ [Informes click-through &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)  
   
   

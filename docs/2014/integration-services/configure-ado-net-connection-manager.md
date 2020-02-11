@@ -1,5 +1,5 @@
 ---
-title: Configurar el Administrador de conexiones ADO.NET | Microsoft Docs
+title: Configurar el administrador de conexiones de ADO.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060836"
 ---
 # <a name="configure-adonet-connection-manager"></a>Configurar el administrador de conexiones ADO.NET
@@ -33,13 +33,13 @@ ms.locfileid: "66060836"
  **Propiedades de conexión de datos**  
  Vea las propiedades y los valores de la conexión de datos ADO.NET seleccionada.  
   
- **Nueva**  
+ **Nuevo**  
  Cree una conexión de datos ADO.NET mediante el cuadro de diálogo **Administrador de conexiones** .  
   
  **Eliminar**  
  Seleccione una conexión y elimínela con el botón **Eliminar** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

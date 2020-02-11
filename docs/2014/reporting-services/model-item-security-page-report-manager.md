@@ -1,5 +1,5 @@
 ---
-title: Página de seguridad (Administrador de informes) del elemento de modelo | Microsoft Docs
+title: Página seguridad de elemento de modelo (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108229"
 ---
 # <a name="model-item-security-page-report-manager"></a>Página Seguridad de elemento de modelo (Administrador de informes)
@@ -35,7 +35,7 @@ ms.locfileid: "66108229"
   
 -   Carpetas o entidades  
   
--   Campos  
+-   Fields  
   
  Inicialmente, el permiso para tener acceso a los elementos de modelo se hereda a través de las asignaciones de roles que se establecen en el propio modelo. Un usuario que tiene permiso para ver un modelo de una carpeta en el Administrador de informes puede ver todos los elementos del modelo.  
   
@@ -61,19 +61,19 @@ ms.locfileid: "66108229"
 4.  Seleccione la pestaña **Seguridad de elemento de modelo** .  
   
 ## <a name="options"></a>Opciones  
- **Proteger elementos de modelo individuales independientemente para este modelo**  
+ **Proteger cada uno de los elementos de modelo de forma independiente para este modelo**  
  Haga clic en esta casilla para habilitar la seguridad de elemento de modelo.  
   
- **Especifique la seguridad para elementos de modelo individuales en el modo**  
+ **Especifique la seguridad para los distintos elementos existentes en el modelo**  
  Muestra todos los elementos de un modelo. Puede navegar por el espacio de nombres del modelo para seleccionar el elemento que desea proteger. Solo puede seleccionar un elemento cada vez. Asegúrese de crear la primera asignación de roles en el nodo raíz antes de continuar con otras entidades y carpetas.  
   
  **Heredar permisos del elemento primario**  
  Haga clic en esta opción para heredar la configuración de seguridad del elemento primario.  
   
  **Asignar permiso de lectura a los usuarios y grupos siguientes (separados con puntos y coma)**  
- Haga clic en esta opción para especificar la cuenta de usuario o grupo para la que define el acceso. Si va a utilizar la seguridad predeterminada, las cuentas de usuario y grupo son las cuentas de dominio de Windows. Especifique las cuentas con este formato:  *\<dominio >\\< cuenta\>* .  
+ Haga clic en esta opción para especificar la cuenta de usuario o grupo para la que define el acceso. Si va a utilizar la seguridad predeterminada, las cuentas de usuario y grupo son las cuentas de dominio de Windows. Especifique las cuentas con este formato: * \<>\\ de dominio<\>cuenta*.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servidor de informes en Management Studio (Ayuda F1)](tools/report-server-in-management-studio-f1-help.md)  
   
   

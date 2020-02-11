@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63312621"
 ---
 # <a name="set-the-startup-options"></a>Establecer las opciones de inicio
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se puede configurar para abrir la superficie de diseño con la configuración que prefiera al iniciar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Configurar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para que se abra con la configuración deseada puede ahorrarle tiempo.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]se puede configurar para abrir la superficie de diseño a la configuración preferida [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] cuando se inicia. Configurar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para que se abra con la configuración deseada puede ahorrarle tiempo.  
   
 ## <a name="configuring-startup-options"></a>Configurar las opciones de inicio  
   
@@ -28,13 +28,13 @@ ms.locfileid: "63312621"
   
 2.  Expanda **Entorno**y, a continuación, haga clic en **Inicio**. En la lista **Al iniciar** , revise las opciones siguientes:  
   
-    -   **Abrir el Explorador de objetos**. Ésta es la opción predeterminada.  
+    -   **Abra explorador de objetos**. Ésta es la opción predeterminada.  
   
-    -   **Abrir nueva ventana de consulta**.  
+    -   **Abra una nueva ventana de consulta**.  
   
-    -   **Abrir el Explorador de objetos y una nueva ventana de consulta**.  
+    -   **Abra explorador de objetos y una nueva consulta**.  
   
-    -   **Abrir el Explorador de objetos y el Monitor de actividad**.  
+    -   **Abra explorador de objetos y el monitor de actividad**.  
   
     -   **Abrir entorno vacío**.  
   

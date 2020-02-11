@@ -1,5 +1,5 @@
 ---
-title: Agregar un registro de contadores de rendimiento del flujo de datos | Microsoft Docs
+title: Agregar un registro para los contadores de rendimiento del flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062058"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Agregar un registro para los contadores de rendimiento del flujo de datos
@@ -35,7 +35,7 @@ ms.locfileid: "66062058"
   
 3.  En el cuadro de diálogo **Rendimiento** , expanda **Registros y alertas de rendimiento**, haga clic con el botón derecho en **Registros de contador**y, después, haga clic en **Nueva configuración de registro**. Escriba el nombre del registro. Por ejemplo, escriba **miRegistro**.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 5.  En el cuadro de diálogo **miRegistro** , haga clic en **Agregar contadores**.  
   
@@ -57,13 +57,13 @@ ms.locfileid: "66062058"
   
 12. Para agregar más contadores, repita los pasos 5 a 10.  
   
-13. Haga clic en **Aceptar**.  
+13. Haga clic en **OK**.  
   
     > [!NOTE]  
     >  Debe iniciar el servicio Registros y alertas de rendimiento con una cuenta local o de dominio que sea miembro del grupo Administradores.  
   
-## <a name="see-also"></a>Vea también  
- [Performance Counters](performance/performance-counters.md)   
+## <a name="see-also"></a>Consulte también  
+ [Contadores de rendimiento](performance/performance-counters.md)   
  [Ver entradas del registro en la ventana Registrar eventos](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
   
   

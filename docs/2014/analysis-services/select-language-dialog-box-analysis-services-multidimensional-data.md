@@ -1,5 +1,5 @@
 ---
-title: Seleccione el cuadro de diálogo de idioma (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo Seleccionar idioma (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbe0f137f029fb364adafd6f3959c7e22984b73f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069509"
 ---
 # <a name="select-language-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Seleccionar idioma (Analysis Services - Datos multidimensionales)
@@ -31,12 +31,12 @@ ms.locfileid: "66069509"
 -   Haga clic con el botón derecho en el panel **Detalles de la traducción** de la pestaña **Traducciones** del **Diseñador de dimensiones** y seleccione **Nueva traducción**.  
   
 ## <a name="options"></a>Opciones  
- **Seleccione un idioma para la nueva traducción.**  
+ **Seleccione el idioma de la nueva traducción.**  
  Seleccione el idioma de la nueva traducción en la lista de idiomas disponibles. No se mostrarán en la lista los idiomas ya seleccionados.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Traducciones &#40;Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [Detalles de traducción &#40;pestaña traducciones, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Traducciones &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Detalles de traducción &#40;pestaña traducciones, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

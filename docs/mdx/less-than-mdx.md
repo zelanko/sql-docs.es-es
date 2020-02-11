@@ -1,5 +1,5 @@
 ---
-title: '&lt; (Menor que) (MDX) | Microsoft Docs'
+title: '&lt;(Menor que) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 70a22115250fd525e4451a5aa110fa4bb61da306
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905702"
 ---
-# <a name="lt-less-than-mdx"></a>&lt; (Menor que) (MDX)
+# <a name="lt-less-than-mdx"></a>&lt;(Menor que) MDX
 
 
   Realiza una operación de comparación que determina si el valor de una expresión multidimensional (MDX) es menor que el valor de otra expresión MDX.  
@@ -34,9 +34,9 @@ MDX_Expression < MDX_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Un valor booleano basado en las condiciones siguientes:  
   
--   **True** si ambos parámetros son no null y el primer parámetro tiene un valor que es menor que el valor del segundo parámetro.  
+-   **true** si ambos parámetros son no NULL y el primer parámetro tiene un valor que es menor que el valor del segundo parámetro.  
   
--   **false** si ambos parámetros son no null y el primer parámetro tiene un valor que es igual o mayor que el valor del segundo parámetro.  
+-   es **false** si ambos parámetros son no NULL y el primer parámetro tiene un valor igual o mayor que el valor del segundo parámetro.  
   
 -   valor NULL si uno de los parámetros (o ambos) se evalúa en un valor NULL.  
   
@@ -60,7 +60,7 @@ WHERE
     ([Measures].[LowGPM])  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

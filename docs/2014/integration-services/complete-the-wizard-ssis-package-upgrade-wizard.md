@@ -1,5 +1,5 @@
 ---
-title: Complete el Asistente (Asistente actualización del paquete SSIS) | Microsoft Docs
+title: Finalización del asistente (Asistente para actualización del paquete SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 57fbbf1702109546037fe91872a7a983bc5713bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060926"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>Finalización del asistente (Asistente para actualización del paquete SSIS)
@@ -30,7 +30,7 @@ ms.locfileid: "66060926"
  **Resumen de opciones**  
  Revise las opciones de actualización que ha seleccionado en el asistente. Para cambiar alguna opción, haga clic en **Atrás** para volver a las páginas anteriores del asistente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Actualizar paquetes de Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

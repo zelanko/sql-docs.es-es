@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068900"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurar las propiedades de servidor en Analysis Services
@@ -32,15 +32,15 @@ ms.locfileid: "66068900"
   
  Este tema contiene las siguientes secciones:  
   
- [Configurar las propiedades de servidor (instancia)](#bkmk_config)  
+ [Configurar las propiedades del servidor (instancia)](#bkmk_config)  
   
  [Referencia de propiedades de servidor](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a> Configurar las propiedades de servidor (instancia)  
+##  <a name="bkmk_config"></a>Configurar las propiedades del servidor (instancia)  
  Las páginas de propiedades de SQL Server Management Studio contienen un subconjunto de las propiedades disponibles, que muestran solo las propiedades que es más probable que haya que modificar. El conjunto completo de propiedades se puede encontrar en el archivo msmdsrv.ini.  
   
 > [!NOTE]  
->  Este tema no documenta las propiedades de configuración de implementación de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obtener más información acerca de la configuración de implementación, consulte [especificar la configuración de implementación de la solución](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
+>  Este tema no documenta las propiedades de configuración de implementación de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obtener más información sobre la configuración de implementación, vea [especificar valores de configuración para la implementación de soluciones](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>Ver o establecer propiedades de configuración de Management Studio  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66068900"
   
 4.  Después de guardar el archivo, debe reiniciar el servicio.  
   
-##  <a name="bkmk_ref"></a> Referencia de las propiedades de servidor  
+##  <a name="bkmk_ref"></a>Referencia de propiedades de servidor  
  Las propiedades de configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] son importantes para ajustar bien el sistema. Por ejemplo, para hacer que el comportamiento del registro de consultas sea coherente con los requisitos, puede establecer las propiedades relevantes.  
   
  En los siguientes temas se explican las diversas propiedades de configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
@@ -83,7 +83,7 @@ ms.locfileid: "66068900"
 |[Propiedades de minería de datos](data-mining-properties.md)|Las propiedades de minería de datos controlan qué algoritmos de minería de datos están habilitados y cuáles no. De manera predeterminada, todos los algoritmos están habilitados.|  
 |DSO|DSO ya no es compatible. Se omiten las propiedades de DSO.|  
 |[Propiedades de características](feature-properties.md)|Las propiedades de características corresponden a las características del producto, la mayor parte de ellas avanzadas, incluidas las propiedades que controlan los vínculos entre las instancias de servidor.|  
-|[Propiedades de Filestore](filestore-properties.md)|Las propiedades de almacén de archivos solamente sirven para uso avanzado. Incluyen valores de configuración avanzada de la administración de memoria.|  
+|[Filestore, propiedades](filestore-properties.md)|Las propiedades de almacén de archivos solamente sirven para uso avanzado. Incluyen valores de configuración avanzada de la administración de memoria.|  
 |[Propiedades del administrador de bloqueos](lock-manager-properties.md)|Las propiedades del administrador de bloqueos definen los comportamientos del servidor relativos a bloqueos y tiempos de espera. La mayoría de estas propiedades solo sirven para uso avanzado.|  
 |[Propiedades de registro](log-properties.md)|Las propiedades del registro controlan si los eventos inician la sesión en el servidor, dónde y cómo. Esto incluye el registro de errores, el registro de excepciones, la caja negra SQL, el registro de consultas y los seguimientos.|  
 |[Propiedades de memoria](memory-properties.md)|Las propiedades de memoria controlan la forma en la que el servidor utiliza la memoria. Son fundamentalmente para uso avanzado.|  
@@ -92,8 +92,8 @@ ms.locfileid: "66068900"
 |[Propiedades de seguridad](security-properties.md)|La sección de seguridad contiene propiedades básicas y avanzadas que definen permisos de acceso. Esto incluye valores de configuración relacionados con administradores y usuarios.|  
 |[Propiedades de grupos de subprocesos](thread-pool-properties.md)|Las propiedades de grupo de subprocesos controlan cuántos subprocesos crea el servidor. Se trata fundamentalmente de propiedades avanzadas.|  
   
-## <a name="see-also"></a>Vea también  
- [Administración de una instancia de Analysis Services](../instances/analysis-services-instance-management.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administración de instancias de Analysis Services](../instances/analysis-services-instance-management.md)   
  [Especificar la configuración para la implementación de soluciones](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 952043d5d001fe4fe65e6dd1aa7bb2001290429e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110072"
 ---
 # <a name="optimizing-the-neworg-table"></a>Optimizar la tabla NewOrg
-  El **NewOrd** tabla que creó en el [rellenar una tabla con datos jerárquicos existentes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) tarea contiene toda la información de empleado y representa la estructura jerárquica mediante un `hierarchyid`tipo de datos. Esta tarea agrega los nuevos índices que admiten las búsquedas en la columna `hierarchyid`.  
+  La tabla **NewOrd** que ha creado en la tarea [rellenar una tabla con datos jerárquicos existentes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) contiene toda la información del empleado y representa la estructura jerárquica mediante un `hierarchyid` tipo de datos. Esta tarea agrega los nuevos índices que admiten las búsquedas en la columna `hierarchyid`.  
   
 ## <a name="clustered-index"></a>Índice agrupado  
- El `hierarchyid` columna (**OrgNode**) es la clave principal para el **NewOrg** tabla. Al crear la tabla, contenía un índice agrupado denominado **PK_NewOrg_OrgNode** para exigir la singularidad de la columna **OrgNode** . Este índice clúster también admite una búsqueda con prioridad a la profundidad de la tabla.  
+ La `hierarchyid` columna (**OrgNode**) es la clave principal de la tabla **NewOrg** . Al crear la tabla, contenía un índice agrupado denominado **PK_NewOrg_OrgNode** para exigir la singularidad de la columna **OrgNode** . Este índice clúster también admite una búsqueda con prioridad a la profundidad de la tabla.  
   
 ## <a name="nonclustered-index"></a>Índice no agrupado  
  Este paso crea dos índices no clúster que admiten búsquedas típicas.  
@@ -71,7 +71,7 @@ ms.locfileid: "66110072"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     Índice de prioridad de profundidad: Los registros de empleados se almacenan junto a su administrador.  
+     Índice con prioridad a la profundidad: los registros del empleado se almacenan junto a su administrador.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66110072"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **EmployeeID**-índice con prioridad: Las filas se almacenan en **EmployeeID** secuencia.  
+     Índice inicial de **EmployeeID**: las filas se almacenan en la secuencia **EmployeeID** .  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -159,6 +159,6 @@ ms.locfileid: "66110072"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Resumen: Convertir una tabla en una estructura jerárquica](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+ [Resumen: Conversión de una tabla en una estructura jerárquica](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   

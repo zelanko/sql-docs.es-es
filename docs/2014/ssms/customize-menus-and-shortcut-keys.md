@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245790"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar los menús y los métodos abreviados de teclado
@@ -55,7 +55,7 @@ ms.locfileid: "63245790"
   
 1.  Haga clic en el botón en la barra de herramientas.  
   
-2.  En el cuadro de diálogo **Personalizar**, en la pestaña **Comandos**, haga clic en **Modificar selección**.  
+2.  En el cuadro de diálogo **Personalizar** , en la pestaña **Comandos** , haga clic en **Modificar selección**.  
   
 3.  En el cuadro **Nombre** del menú contextual, escriba un nombre para el botón de la barra de herramientas con una Y comercial (&) delante de la letra que vaya a ser la tecla de aceleración.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63245790"
   
 2.  Haga clic en el comando del menú.  
   
-3.  En el cuadro de diálogo **Personalizar**, haga clic en **Modificar selección**.  
+3.  En el cuadro de diálogo **Personalizar** , haga clic en **Modificar selección**.  
   
 4.  En el cuadro **Nombre** del menú contextual, escriba un nombre para el comando del menú con una Y comercial (&) delante de la letra que vaya a ser la tecla de aceleración.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "63245790"
   
 4.  Vaya a la lista **Controles** mediante la tecla TAB y use las teclas de flecha para seleccionar el botón que desea cambiar.  
   
-5.  Presione **ALT+M** para seleccionar **Modificar selección**.  
+5.  Presione **ALT+M**para seleccionar **Modificar selección**.  
   
 6.  Vaya al cuadro **Nombre** del menú contextual mediante la tecla TAB, escriba un nombre para el botón de la barra de herramientas con una Y comercial (&) delante de la letra que vaya a ser la tecla de aceleración.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "63245790"
 > [!NOTE]  
 >  Algunos comandos solo están disponibles cuando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] está mostrando el contenido pertinente. Si no está disponible ninguno de los comandos del menú, el elemento de menú no estará disponible.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Métodos abreviados de teclado de SQL Server Management Studio](sql-server-management-studio-keyboard-shortcuts.md)  
   
   

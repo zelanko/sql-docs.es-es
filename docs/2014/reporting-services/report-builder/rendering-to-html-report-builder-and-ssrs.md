@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107719"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Representar en HTML (Generador de informes y SSRS)
@@ -26,15 +26,15 @@ ms.locfileid: "66107719"
   
  En algunos escenarios, los parámetros de informe se pueden utilizar para iniciar ataques de inserción de script al representar los informes en HTML. Para obtener más información sobre cómo proteger informes, vea [Proteger informes y recursos](../security/secure-reports-and-resources.md).  
   
- Para obtener más información sobre los exploradores, vea [planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
+ Para obtener más información acerca de los exploradores, consulte [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> Representación en MHTML  
+##  <a name="RenderingMHTML"></a>Representación en MHTML  
  La extensión de representación en HTML también puede representar informes en MHTML (Encapsulación MIME de documentos HTML agregados). MHTML extiende HTML para incrustar objetos codificados, como imágenes, en el documento HTML. Con la extensión de representación en MHTML, puede incrustar en un único archivo recursos tales como imágenes, documentos u otros archivos binarios como estructuras MIME incluidas en el informe HTML. Los informes MHTML también resultan útiles para incrustarlos en mensajes de correo electrónico porque todos los recursos se incluyen en el informe. Aunque la extensión de representación en HTML es la que en realidad representa el MHTML, esta funcionalidad también se denomina extensión de representación en MHTML.  
   
-##  <a name="BrowserSupport"></a> Compatibilidad con exploradores  
+##  <a name="BrowserSupport"></a>Compatibilidad con exploradores  
  Esta extensión de representación admite las versiones siguientes de los exploradores:  
   
 -   Internet Explorer 5.5 y versiones posteriores  
@@ -45,7 +45,7 @@ ms.locfileid: "66107719"
   
  Debido a los distintos comportamientos de los exploradores, el informe representado puede variar ligeramente de un explorador a otro. Por ejemplo, el cuadro de texto contiene una propiedad denominada WritingMode. Esta propiedad no es compatible con Firefox.  
   
-##  <a name="HTMLSpecificRenderingRules"></a> Reglas de representación específicas de HTML  
+##  <a name="HTMLSpecificRenderingRules"></a>Reglas de representación específicas de HTML  
  Durante la representación se aplican las siguientes reglas específicas de HTML:  
   
 -   El representador genera una estructura de tabla HTML en la que se alojarán todos los elementos existentes en cada colección `ReportItems`, si hubiera más de uno.  
@@ -80,7 +80,7 @@ ms.locfileid: "66107719"
 ### <a name="hyperlinks-and-drillthrough"></a>Hipervínculos y obtención de detalles  
  Los hipervínculos y los vínculos de obtención de detalles se representan como hipervínculos en los elementos de informe que usan las etiquetas de delimitador HTML (\<a>) alrededor del elemento en el que están definidas.  
   
-### <a name="search"></a>Buscar  
+### <a name="search"></a>Search  
  La característica Buscar permite a los usuarios buscar una cadena de texto dentro del informe.  
   
  El control ReportViewer de formularios Web Forms proporciona funcionalidad adicional de búsqueda.  
@@ -88,7 +88,7 @@ ms.locfileid: "66107719"
 ##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
  Para cambiar algunos valores de configuración predeterminados para este representador, incluido el modo de representación, solo tiene que cambiar la configuración de la información del dispositivo. Para más información, consulte [HTML Device Information Settings](../html-device-information-settings.md).  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   

@@ -1,5 +1,5 @@
 ---
-title: Imagen, cuadro de texto, rectángulo, línea (Ayuda F1) | Microsoft Docs
+title: Imagen, cuadro de texto, rectángulo, línea (ayuda F1) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4ef2ab45fbace1fb94c7935fcd2e3d5ca4471a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108978"
 ---
 # <a name="image-text-box-rectangle-line-f1-help"></a>Imagen, Cuadro de texto, Rectángulo, Línea (Ayuda F1)
@@ -22,7 +22,7 @@ ms.locfileid: "66108978"
   
  Para obtener acceso a estos temas desde el cuadro de diálogo **Propiedades del informe** , haga clic en **Ayuda**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Imágenes, cuadros de texto rectángulos y líneas &#40;Generador de informes y SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

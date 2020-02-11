@@ -1,5 +1,5 @@
 ---
-title: Cubo de cuadro de diálogo de selección (generador de informes) | Microsoft Docs
+title: Cuadro de diálogo Selección de cubo (Generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 007740fbbf7a01139a7b3c1a679e1737d2f29a7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109583"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>Selección de cubo (cuadro de diálogo del Generador de informes)
   Use el cuadro de diálogo **Selección de cubo** para seleccionar otro cubo como origen de datos para un informe. Al seleccionar otro cubo, es posible que la consulta deje de ser válida.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Generador de informes ayuda para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+ [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Diseñadores de consultas &#40;Generador de informes&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
   
   

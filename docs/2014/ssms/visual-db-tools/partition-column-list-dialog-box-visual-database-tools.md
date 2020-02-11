@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280374"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Lista de columnas de particiones (cuadro de diálogo, Visual Database Tools)
@@ -28,10 +28,10 @@ ms.locfileid: "63280374"
  Tipo de datos  
  Muestra los tipos de datos de las columnas definidas en el esquema de partición.  
   
- columna  
+ Columna  
  Proporciona una lista desplegable en la que se puede elegir la columna a la que se va a aplicar la función de partición.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedades de la tabla &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

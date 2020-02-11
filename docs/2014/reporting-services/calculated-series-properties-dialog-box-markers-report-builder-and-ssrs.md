@@ -1,5 +1,5 @@
 ---
-title: Calcula el cuadro de diálogo Propiedades de serie, marcadores (generador de informes y SSRS) | Microsoft Docs
+title: Cuadro de diálogo Propiedades de la serie calculada, marcadores (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109888"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de la serie calculada, Marcadores (Generador de informes y SSRS)
-  Seleccione **Marcadores** en el cuadro de diálogo **Propiedades de la serie calculada** para definir cómo se muestran los marcadores en cada punto de datos de una serie. Los marcadores solo están disponibles para los ciertos tipos de gráficos. Los tipos de gráficos siguientes admiten marcadores: Área, de barras, columnas, líneas, Polar y dispersión. Para obtener más información sobre las características de gráficos, vea [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  
+  Seleccione **Marcadores** en el cuadro de diálogo **Propiedades de la serie calculada** para definir cómo se muestran los marcadores en cada punto de datos de una serie. Los marcadores solo están disponibles para los ciertos tipos de gráficos. Los tipos de gráficos siguientes admiten marcadores: Áreas, Barras, Columnas, Líneas, Polar y Dispersión. Para obtener más información sobre las características de gráficos, vea [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opciones  
  **Tipo de marcador**  
@@ -33,18 +33,18 @@ ms.locfileid: "66109888"
  **Color del marcador**  
  Seleccione el color de los marcadores que se van a mostrar en los puntos de datos.  
   
- **Ancho del borde de marcador**  
+ **Ancho del borde del marcador**  
  Seleccione el ancho del borde de los marcadores que se van a mostrar en los puntos de datos.  
   
- **Color del borde de marcador**  
+ **Color del borde del marcador**  
  Seleccione el color del borde de los marcadores que se van a mostrar en los puntos de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Definir los colores de un gráfico mediante una paleta &#40;Generador de informes y SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [Trazar datos en un eje secundario &#40;generador de informes y SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
+ [Trazar datos en un eje secundario &#40;Generador de informes y SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Agregar una media móvil a un gráfico &#40;Generador de informes y SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   

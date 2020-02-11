@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062029"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>agregar un controlador de eventos a un paquete
@@ -38,7 +38,7 @@ ms.locfileid: "66062029"
   
 3.  Haga clic en la pestaña **Controladores de eventos** .  
   
-     ![Captura de pantalla de la superficie de diseño con el controlador de eventos](media/eventhandlers.gif "Screenshot of design surface with event handler")  
+     ![Captura de pantalla de la superficie de diseño con el controlador de eventos](media/eventhandlers.gif "Captura de pantalla de la superficie de diseño con el controlador de eventos")  
   
      La creación del flujo de control y de los flujos de datos en un controlador de eventos se asemeja a la creación del flujo de control y de los flujos de datos en un paquete. Para obtener más información, consulte [Control Flow](control-flow/control-flow.md) y [Data Flow](data-flow/data-flow.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66062029"
   
 9. En el menú **Archivo** , haga clic en **Guardar los elementos seleccionados** para guardar el paquete.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
  [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   

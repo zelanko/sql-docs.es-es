@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_child_instances (Transact-SQL) | Microsoft Docs
+title: Sys. dm_os_child_instances (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -21,26 +21,26 @@ ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 59a58348f5428f568f40d28b4e83bc6bc040647c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900237"
 ---
-# <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
+# <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila por cada instancia de usuario creada a partir de la instancia del servidor primario.  
   
 > **IMPORTANTE:** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- La información devuelta de **sys.dm_os_child_instances** puede utilizarse para determinar el estado de cada instancia de usuario (heart_beat) y obtener el nombre de canalización (instance_pipe_name) que puede usarse para crear una conexión con el usuario Instancia mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o SQLCmd. Solo se puede conectar con una instancia de usuario después de que la inicie un proceso externo, como por ejemplo una aplicación cliente. Las herramientas de administración de SQL no pueden iniciar instancias de usuario.  
+ La información devuelta por **Sys. dm_os_child_instances** se puede utilizar para determinar el estado de cada instancia de usuario (heart_beat) y para obtener el nombre de canalización (instance_pipe_name) que se puede utilizar para crear una conexión a [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] la instancia de usuario mediante o SQLCmd. Solo se puede conectar con una instancia de usuario después de que la inicie un proceso externo, como por ejemplo una aplicación cliente. Las herramientas de administración de SQL no pueden iniciar instancias de usuario.  
   
-> **NOTA:** Las instancias de usuario son una característica de [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] solo.  
+> **Nota:** Las instancias de usuario son solo [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] una característica de.  
 > 
-> **Tenga en cuenta** para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_child_instances**.  
+> **Nota:** Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_os_child_instances**.  
   
-|columna|Data type|Descripción|  
+|Columna|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
 |**owning_principal_name**|**nvarchar(256)**|Nombre del usuario para el que se creó esta instancia.|  
 |owning_principal_sid|nvarchar(256)|SID (identificador de seguridad) de la entidad de seguridad que posee esta instancia de usuario. Coincide con el identificador SID de Windows.|  
@@ -48,18 +48,18 @@ ms.locfileid: "67900237"
 |**instance_name**|**nvarchar(128)**|Nombre de esta instancia de usuario.|  
 |**instance_pipe_name**|**nvarchar(260)**|Cuando se crea una instancia de usuario, se crea una canalización con nombre para que las aplicaciones se conecten a ella. Este nombre se puede utilizar en una cadena de conexión para conectarse a esta instancia de usuario.|  
 |**os_process_id**|**Int**|Número del proceso de Windows para esta instancia de usuario.|  
-|**os_process_creation_date**|**Fecha y hora**|Fecha y hora de la última vez que se inició el proceso de esta instancia de usuario.|  
-|**heart_beat**|**nvarchar(5)**|Estado actual de esta instancia de usuario; puede ser ALIVE o DEAD.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
+|**os_process_creation_date**|**DateTime**|Fecha y hora de la última vez que se inició el proceso de esta instancia de usuario.|  
+|**heart_beat**|**tipo**|Estado actual de esta instancia de usuario; puede ser ALIVE o DEAD.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
-## <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de la vista de administración dinámica, consulte [funciones y vistas de administración dinámica &#40;Transact-SQL&#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+## <a name="remarks"></a>Observaciones  
+ Para obtener más información acerca de la vista de administración dinámica, vea [funciones y vistas de administración dinámica &#40;&#41;de Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) en los libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
- [Instancias de usuario para que no son administradores](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
+## <a name="see-also"></a>Consulte también  
+ [Instancias de usuario para usuarios que no son administradores](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo nueva medida (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo nueva medida (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07970f55cea06e319ed937aa3937d49bc45363b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072341"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Nueva medida (Analysis Services - Datos multidimensionales)
@@ -29,7 +29,7 @@ ms.locfileid: "66072341"
 -   Hacer clic con el botón derecho en un grupo de medida o en una medida del panel **Medidas** , en la pestaña **Estructura de cubo** del Diseñador de cubos, y seleccionar **Nueva medida** en el menú contextual.  
   
 ## <a name="options"></a>Opciones  
- **Usage**  
+ **Uso**  
  Permite seleccionar la función de agregación que va a usar la nueva medida.  
   
  **Tabla de origen**  
@@ -41,8 +41,8 @@ ms.locfileid: "66072341"
  **Mostrar todas las columnas**  
  Seleccione esta opción para mostrar todas las columnas de la tabla de hechos para el grupo de medida en el que se creará la nueva medida. Si no se selecciona esta opción, **Columna de origen** mostrará únicamente las columnas numéricas que no se usan como claves principales lógicas y que no intervienen en las relaciones.  
   
-## <a name="see-also"></a>Vea también  
- [Estructura de cubo &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Estructura de cubo &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

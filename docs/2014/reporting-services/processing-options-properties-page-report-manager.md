@@ -1,5 +1,5 @@
 ---
-title: Opciones de procesamiento de la página de propiedades (Administrador de informes) | Microsoft Docs
+title: Página de propiedades opciones de procesamiento (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108043"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Página de propiedades Opciones de procesamiento (Administrador de informes)
@@ -55,12 +55,12 @@ ms.locfileid: "66108043"
   
  Seleccione la opción relacionada de **Crea una instantánea de informe cuando hace clic en el botón Aplicar de esta página** para crear una instantánea de informes al hacer clic en Aplicar. Esto genera la instantánea de informe de forma inmediata para que esté disponible antes de la hora de inicio programada.  
   
- **Tiempo de espera de ejecución de informes**  
+ **Tiempo de espera de ejecución de informe**  
  Especifique si el procesamiento del informe debe terminar después de que hayan transcurrido un número de segundos concreto. Si elige el valor predeterminado, para este informe se utilizará el valor de tiempo de espera especificado en la página Configuración del sitio.  
   
  Este valor se aplica al procesamiento de informes en un servidor de informes. No establece un tiempo de espera para el procesamiento de datos en el servidor de bases de datos que proporciona los datos para el informe. Sin embargo, el valor especificado debe ser el suficiente para completar el procesamiento de datos y el procesamiento de informes. El contador de procesamiento del informe empieza cuando se selecciona el informe y termina cuando éste se abre.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer las propiedades del procesamiento de informes](report-server/set-report-processing-properties.md)   
  [Informes almacenados en caché &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Crear, modificar y eliminar programaciones](subscriptions/create-modify-and-delete-schedules.md)   

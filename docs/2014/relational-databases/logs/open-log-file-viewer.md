@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144507"
 ---
 # <a name="open-log-file-viewer"></a>Abrir el Visor de archivos de registro
@@ -54,7 +54,7 @@ ms.locfileid: "63144507"
   
 1.  En el Explorador de objetos, expanda **Administración**.  
   
-2.  Realice una de las acciones siguientes:  
+2.  Realice cualquiera de las siguientes acciones:  
   
     -   Haga clic con el botón derecho en **Registros de SQL Server**, seleccione **Ver**y, después, haga clic en **Registro de SQL Server** o **Registro de Windows y SQL Server**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "63144507"
   
      Los registros son **Recopilación de auditoría** y **Windows NT**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Visor de archivos de registro](log-file-viewer.md)   
  [SQL Server Audit &#40;motor de base de datos&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [Ver archivos del registro sin conexión](view-offline-log-files.md)  

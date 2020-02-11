@@ -1,5 +1,5 @@
 ---
-title: Particiones (SSAS Tabular) | Microsoft Docs
+title: Particiones (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066899"
 ---
 # <a name="partitions-ssas-tabular"></a>Particiones (SSAS tabular)
@@ -22,7 +22,7 @@ ms.locfileid: "66066899"
   
  Secciones de este tema:  
   
--   [Ventajas](#bkmk_benefits)  
+-   [Privilegios](#bkmk_benefits)  
   
 -   [Tareas relacionadas](#bkmk_related_tasks)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66066899"
  Mediante una mayor división de una tabla en particiones lógicas, puede determinar de forma selectiva qué datos se procesan de cada partición, y cuándo y cómo se procesan. Cuando se implementa un modelo, el procesamiento de las particiones se puede completar manualmente mediante el cuadro de diálogo Particiones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o mediante un script que ejecute un comando Procesar.  
   
 ### <a name="partitions-in-the-model-workspace-database"></a>Particiones en la base de datos del área de trabajo del modelo  
- Con el Administrador de partición de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], puede crear nuevas particiones, y editar, combinar y eliminar particiones existentes. Administrador de particiones proporciona dos modos para seleccionar tablas, filas y columnas de una partición: Modo de vista previa de tabla y el modo de consulta SQL. Todas las particiones se definen mediante una consulta SQL; sin embargo, con el modo de vista previa de tabla, puede obtener una vista previa y seleccionar los datos que desea incluir en la partición. La consulta SQL se crea y se valida automáticamente. Dado que el modo de vista previa de la tabla es la misma vista previa que aparece en el cuadro de diálogo Editar propiedades de tabla y en la página de vista previa del Asistente para la importación de tablas, el número máximo de filas de la vista previa es de 50.  
+ Con el Administrador de partición de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], puede crear nuevas particiones, y editar, combinar y eliminar particiones existentes. El Administrador de particiones proporciona dos modos para seleccionar las tablas, las filas y las columnas de una partición: el modo de vista previa de la tabla y el modo de consulta SQL. Todas las particiones se definen mediante una consulta SQL; sin embargo, con el modo de vista previa de tabla, puede obtener una vista previa y seleccionar los datos que desea incluir en la partición. La consulta SQL se crea y se valida automáticamente. Dado que el modo de vista previa de la tabla es la misma vista previa que aparece en el cuadro de diálogo Editar propiedades de tabla y en la página de vista previa del Asistente para la importación de tablas, el número máximo de filas de la vista previa es de 50.  
   
 ### <a name="partitions-in-a-deployed-model-database"></a>Particiones en una base de datos del modelo implementada  
  Cuando se implementa un modelo, las particiones de la base de datos del modelo implementada aparecen como objetos de base de datos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puede crear, modificar, combinar y eliminar particiones de un modelo implementado con el cuadro de diálogo Particiones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Administrar particiones para un modelo implementado en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] queda fuera del ámbito de este tema. Para obtener información sobre cómo administrar particiones en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vea [Crear y administrar particiones de modelos tabulares &#40;SSAS tabular&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
@@ -49,10 +49,10 @@ ms.locfileid: "66066899"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Crear y administrar particiones en la base de datos del área de trabajo &#40;SSAS tabular&#41;](workspace-database-ssas-tabular.md)|Describe cómo crear y administrar las particiones de la base de datos del área de trabajo del modelo con el Administrador de particiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
-|[Procesar particiones en la base de datos del área de trabajo &#40;Tabular de SSAS&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|Describe cómo procesar (actualizar) particiones en la base de datos del área de trabajo del modelo.|  
+|[Procesar particiones en la base de datos del área de trabajo &#40;SSAS tabular&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|Describe cómo procesar (actualizar) particiones en la base de datos del área de trabajo del modelo.|  
   
-## <a name="see-also"></a>Vea también  
- [Modo DirectQuery &#40;SSAS tabular&#41;](directquery-mode-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [Modo DirectQuery &#40;&#41;tabular de SSAS](directquery-mode-ssas-tabular.md)   
  [Procesar datos &#40;SSAS tabular&#41;](../process-data-ssas-tabular.md)  
   
   

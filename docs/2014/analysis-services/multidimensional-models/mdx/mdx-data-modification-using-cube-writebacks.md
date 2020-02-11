@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074214"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Usar reescrituras de cubos (MDX)
@@ -41,7 +41,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
  Podría decirse que la instrucción UPDATE CUBE es una subrutina que genera una serie de operaciones de reescritura individuales en celdas atómicas. Todas estas operaciones de reescritura individuales se acumulan después en la suma especificada.  
   
 > [!NOTE]  
->  Si las celdas actualizadas no se superponen, se puede utilizar la propiedad de la cadena de conexión `Update Isolation Level` para mejorar el rendimiento de UPDATE CUBE. Para obtener más información, consulta <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
+>  Si las celdas actualizadas no se superponen, se puede utilizar la propiedad de la cadena de conexión `Update Isolation Level` para mejorar el rendimiento de UPDATE CUBE. Para más información, consulte <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
   
 ## <a name="example"></a>Ejemplo  
  Puede probar UPDATE CUBE con el grupo de medida Sales Targets del cubo Adventure Works. Este grupo de medida consta de las medidas agregadas mediante SUM, que es un requisito de UPDATE CUBE.  
@@ -116,7 +116,7 @@ USE_EQUAL_ALLOCATION
   
 -   Cambiar la granularidad de dimensión de una dimensión incluida en la reescritura.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Modificar datos &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
   
   

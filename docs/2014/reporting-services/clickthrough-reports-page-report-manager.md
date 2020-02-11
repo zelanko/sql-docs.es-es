@@ -1,5 +1,5 @@
 ---
-title: Informes Click-through página (Administrador de informes) | Microsoft Docs
+title: Página de informes click-through (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109795"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Página (Administrador de informes) Informes click-through
@@ -50,13 +50,13 @@ ms.locfileid: "66109795"
  **Jerarquía de elementos de modelo**  
  Muestra las entidades, las carpetas y los elementos del espacio de nombres de modelo para el que puede proporcionar un informe personalizado.  
   
- **Informe de instancia única**  
+ **Informe de una sola instancia**  
  Especifica el informe personalizado que se va a utilizar cuando la navegación del usuario requiere una vista de datos de instancia única. Haga clic en el botón Examinar para seleccionar el informe que desea utilizar.  
   
- **Informe de varias instancias**  
+ **Informes de varias instancias**  
  Especifica el informe personalizado que se va a utilizar cuando la navegación del usuario requiere una vista de datos de varias instancias. Haga clic en el botón Examinar para seleccionar el informe que desea utilizar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Publicar informes](../../2014/reporting-services/publish-reports.md)  
   
   

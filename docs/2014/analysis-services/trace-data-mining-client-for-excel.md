@@ -14,20 +14,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 576cb395f7f488eec8ebf28ab5bc7f226cb81809
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065893"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Seguimiento (Cliente de minería de datos para Excel)
-  ![Botón seguimiento](media/misc-trace.gif "botón seguimiento")  
+  ![Botón Seguimiento](media/misc-trace.gif "Botón Seguimiento")  
   
  El cuadro de diálogo **Seguimiento** le ayuda a supervisar las instrucciones que se envían a la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que está usando para la minería de datos. Después de crear una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todas las interacciones entre el cliente y el servidor se registran en el panel **Seguimiento** , incluidas las instrucciones que crean estructuras, agregan modelos de minería de datos y realizan predicciones, así como algunos mensajes que devuelve el servidor.  
   
  Dependiendo de la acción que se solicita, la instrucción puede ser una consulta de definición de datos o una consulta de manipulación de datos de Extensiones de Minería de Datos (DMX), un paquete de Analysis Services Scripting Language (ASSL), o una llamada a un procedimiento almacenado de Analysis Services. Sin embargo, no se muestran resultados numéricos ni valores de datos reales.  
   
- **Seguimiento** solo supervisa la conexión actual; el contenido del cuadro de diálogo **Seguimiento** no se guarda.  
+ **Seguimiento** solo supervisa la conexión actual y el contenido del cuadro de diálogo **seguimiento** no se almacena.  
   
 ## <a name="options"></a>Opciones  
  Panel Seguimiento  
@@ -43,7 +43,7 @@ ms.locfileid: "66065893"
   
  Anule la selección de esta opción si desea guardar los modelos o las estructuras en un servidor de Analysis Services.  
   
- **Nota** : la capacidad de usar objetos temporales sólo está disponible cuando se usan las Herramientas de análisis de tabla para Excel. Las Plantillas de minería de datos para Visio y el Cliente de minería de datos para Excel requieren que las estructuras y los modelos se almacenen en el servidor.  
+ **Nota:** La capacidad de usar objetos temporales solo está disponible cuando se usan las herramientas de análisis de tabla para Excel. Las Plantillas de minería de datos para Visio y el Cliente de minería de datos para Excel requieren que las estructuras y los modelos se almacenen en el servidor.  
   
 ## <a name="tracing-temporary-structures-and-models"></a>Estructuras y modelos temporales de seguimiento  
  Si usa las Herramientas de análisis de tabla que, de forma predeterminada, crean estructuras y modelos temporales, se supervisará la actividad entre el servidor y el cliente, pero los modelos o las estructuras que cree no se guardarán en el servidor.  
@@ -63,7 +63,7 @@ ms.locfileid: "66065893"
 ## <a name="understanding-statements-in-the-tracer"></a>Descripción de las instrucciones de seguimiento  
  DMX es un lenguaje que puede usar para crear modelos de minería de datos en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]y trabajar con ellos. Puede usar DMX para crear la estructura de nuevos modelos de minería de datos, para entrenar esos modelos, y para explorar, administrar y realizar predicciones con ellos. DMX se compone de instrucciones de lenguaje de definición de datos (DDL), instrucciones de lenguaje de manipulación de datos (DML), y funciones y operadores.  
   
- Una discusión completa de las instrucciones DMX y su sintaxis queda fuera del ámbito de este tema. Sin embargo, puede usar la información del panel **Seguimiento** para buscar información detallada sobre el comportamiento de una instrucción DMX. Los Complementos de minería de datos para Excel también le permiten compilar instrucciones DMX complejas e interactuar con un servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obtener más información, consulte [consulta &#40;complementos de minería de datos de SQL Server&#41;](query-sql-server-data-mining-add-ins.md).  
+ Una discusión completa de las instrucciones DMX y su sintaxis queda fuera del ámbito de este tema. Sin embargo, puede usar la información del panel **Seguimiento** para buscar información detallada sobre el comportamiento de una instrucción DMX. Los Complementos de minería de datos para Excel también le permiten compilar instrucciones DMX complejas e interactuar con un servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obtener más información, vea [&#40;de consultas SQL Server complementos de minería de datos&#41;](query-sql-server-data-mining-add-ins.md).  
   
 > [!NOTE]  
 >  Muchas instrucciones DMX tienen parámetros. Para los tipos simples, los valores de los parámetros aparecen bajo la instrucción. Sin embargo, para los tipos complejos, solo se indica el tipo de parámetro.  

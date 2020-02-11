@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aeb0c6c47a9203a7124fbe5d9f4739c52ae430d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63246241"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>Propiedades de Agente SQL Server (página Avanzadas)
-  Utilice esta página para ver y modificar las propiedades avanzadas del servicio del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilice esta página para ver y modificar las propiedades avanzadas del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente.  
   
 ## <a name="options"></a>Opciones  
- **Reenvío de eventos de SQL Server**  
+ **Reenvío de eventos SQL Server**  
  Las opciones de esta categoría activan y configuran el reenvío de eventos.  
   
  **Reenviar eventos a otro servidor**  
@@ -33,7 +33,8 @@ ms.locfileid: "63246241"
  Seleccione el nombre del servidor al que se reenvían los eventos.  
   
  **Eventos no controlados**  
- Solo reenvía eventos no controlados al servidor especificado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo reenvía eventos a los que no responde ninguna alerta.  
+ Solo reenvía eventos no controlados al servidor especificado. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo reenvía eventos a los que no responde ninguna alerta.  
   
  **Todos los eventos**  
  Reenvía todos los eventos. Cuando una alerta de la instancia local responde al evento, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reenvía el evento y procesa la alerta.  
@@ -47,13 +48,13 @@ ms.locfileid: "63246241"
  **Definir condición de CPU inactiva**  
  Define las condiciones en las que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que la CPU está inactiva.  
   
- **El promedio de uso de la CPU baja de**  
+ **El promedio de uso de la CPU cae por debajo**  
  Porcentaje de uso de CPU por debajo del cual se considera inactiva la CPU.  
   
- **Y permanece por debajo durante**  
+ **Y permanece por debajo de este nivel para**  
  Cantidad de tiempo que el promedio de uso de la CPU debe situarse por debajo del nivel especificado antes de que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecute trabajos en la programación de CPU inactiva.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear y adjuntar programaciones a trabajos](create-and-attach-schedules-to-jobs.md)   
  [Administrar eventos](manage-events.md)  
   

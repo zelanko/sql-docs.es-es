@@ -1,5 +1,5 @@
 ---
-title: Escriba el cuadro de diálogo de credenciales de origen de datos | Microsoft Docs
+title: Cuadro de diálogo escribir credenciales de origen de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e7fa4658b0a784b854023975234218d1a58f936c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109236"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>Escribir credenciales de origen de datos (cuadro de diálogo)
-  Use el cuadro de diálogo **Escribir credenciales de origen de datos** para proporcionar las credenciales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necesarias para recuperar datos del origen de datos.  
+  Utilice el cuadro de diálogo **escribir credenciales de origen** de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] datos para proporcionar las credenciales para poder recuperar datos del origen de datos.  
   
 ## <a name="options"></a>Opciones  
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Escriba el nombre de usuario con el que iniciar sesión en el origen de datos.  
   
  **Contraseña**  
  Escriba la contraseña con la que iniciar sesión en el origen de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Diseñador de informes (Ayuda F1)](tools/report-designer-f1-help.md)  
   

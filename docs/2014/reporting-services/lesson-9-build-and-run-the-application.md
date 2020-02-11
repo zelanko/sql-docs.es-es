@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 321075631a48570a80e8294f992e8ddb17d50bd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108382"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Lección 9: Generación y ejecución de la aplicación
+# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
   Después de crear un filtro para los datos de la tabla de datos, el paso siguiente consiste en generar y ejecutar la aplicación del sitio Web.  
   
 ### <a name="to-build-and-run-the-application"></a>Para generar y ejecutar la aplicación  
@@ -34,7 +34,7 @@ ms.locfileid: "66108382"
   
 4.  Haga clic en el icono, **Volver al informe primario**, en la barra de herramientas de **ReportViewer** para navegar de nuevo al informe **Primario** .  
   
-     ![explorar en SSRS a través del uso de ReportViewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "profundizar ssrs a través del uso de ReportViewer")  
+     ![obtención de detalles de SSRS mediante ReportViewer](../../2014/tutorials/media/ssrs-drillthrough-report.png "obtención de detalles de SSRS mediante ReportViewer")  
   
 5.  Cierre el explorador para salir.  
   

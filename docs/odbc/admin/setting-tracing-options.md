@@ -1,5 +1,5 @@
 ---
-title: Establecer opciones de seguimiento | Microsoft Docs
+title: Estableciendo opciones de seguimiento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,52 +15,52 @@ ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13e8caf9f3a9643f8063d6227258245a603f1665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901635"
 ---
 # <a name="setting-tracing-options"></a>Establecer las opciones de seguimiento
-El **seguimiento** pestaña de la **Administrador de orígenes de datos ODBC** cuadro de diálogo le permite configurar la forma en que se realiza un seguimiento de llamadas a funciones ODBC.  
+La pestaña **seguimiento** del cuadro de diálogo **Administrador de orígenes de datos ODBC** le permite configurar la forma en que se realiza el seguimiento de las llamadas a funciones ODBC.  
   
 ## <a name="how-tracing-works"></a>Cómo funciona el seguimiento  
- Al iniciar el seguimiento de la **seguimiento** ficha, el Administrador de controladores registrará todas las llamadas de función ODBC para todos posteriormente ejecutan las aplicaciones. No se registran las llamadas a funciones ODBC desde aplicaciones que se ejecutan antes de inicia el seguimiento. Llamadas a funciones ODBC se registran en un archivo de registro que especifique.  
+ Al iniciar el seguimiento desde la pestaña **seguimiento** , el administrador de controladores registrará todas las llamadas a funciones ODBC para todas las aplicaciones que se ejecuten posteriormente. No se registran las llamadas a funciones ODBC desde aplicaciones que se ejecutan antes de iniciar el seguimiento. Las llamadas a funciones ODBC se registran en un archivo de registro que especifique.  
   
- Se detiene la traza solo después de hacer clic **Detener traza ahora**. Recuerde que aunque el seguimiento está activado, el archivo de registro continúa aumentando y que esto afecta al rendimiento de todas las aplicaciones de ODBC.  
+ La traza se detiene solo después de hacer clic en **detener seguimiento ahora**. Recuerde que mientras el seguimiento está activado, el archivo de registro continúa aumentando y esto afecta al rendimiento de todas las aplicaciones ODBC.  
   
- Para obtener más información acerca del seguimiento, vea [seguimiento](../../odbc/reference/develop-app/tracing.md).  
+ Para obtener más información sobre el seguimiento, vea [seguimiento](../../odbc/reference/develop-app/tracing.md).  
   
 ### <a name="changes-in-odbc-tracing"></a>Cambios en el seguimiento de ODBC  
- Antes de MDAC 2.7 Service Pack 2, seguimiento de ODBC solo se permite que se produzca en una base de todo el equipo, en el que seguimiento captura expuesto los detalles sobre todas las aplicaciones ODBC que se ejecutan en ninguna identidad. Esto incluye el seguimiento de actividad relacionada con ODBC que pudieran producirse en los procesos creados o ejecutar en nombre de otras cuentas de usuario locales y las entidades de seguridad integradas, como el servicio Local y servicio de red.  
+ Antes de MDAC 2,7 SP2, el seguimiento de ODBC solo podía realizarse en todo el equipo, en el que seguimiento captura los detalles expuestos sobre todas las aplicaciones ODBC que se ejecutan bajo cualquier identidad. Esto incluye el seguimiento de la actividad relacionada con ODBC que se puede producir para los procesos creados o ejecutados en nombre de otras cuentas de usuario locales y entidades de seguridad integradas, como el servicio local y el servicio de red.  
   
- De forma predeterminada, el seguimiento ahora utiliza el modo por el usuario ODBC. Sin embargo, si es un administrador local, puede habilitar todavía a seguimiento de todo el equipo mediante el Administrador de orígenes de datos ODBC.  
+ De forma predeterminada, el seguimiento de ODBC ahora usa el modo por usuario. Sin embargo, si es un administrador local, todavía puede habilitar el seguimiento en todo el equipo mediante el administrador de orígenes de datos ODBC.  
   
  Para configurar el modo de seguimiento de ODBC:  
   
-1.  Si es necesario, inicie sesión con una cuenta que tiene pertenencia en el grupo de administradores locales.  
+1.  Si es necesario, inicie sesión con una cuenta que tenga la pertenencia al grupo de administradores locales.  
   
-2.  En Herramientas administrativas, abra el Administrador de orígenes de datos ODBC.  
+2.  En herramientas administrativas, abra el administrador de orígenes de datos ODBC.  
   
-3.  Haga clic en el **seguimiento** ficha.  
+3.  Haga clic en la pestaña **seguimiento** .  
   
-4.  Configurar el modo de seguimiento mediante la **seguimiento de todo el equipo para todas las identidades de usuario** casilla de verificación:  
+4.  Configure el modo de seguimiento mediante la casilla **seguimiento en todo el equipo para todas las identidades de usuario** :  
   
-5.  Para habilitar el seguimiento de todo el equipo, active la casilla de verificación.  
+5.  Para habilitar el seguimiento en todo el equipo, active la casilla.  
   
-6.  Para volver a seguimiento por el usuario, desactive la casilla de verificación.  
+6.  Para volver a la traza por usuario, desactive la casilla.  
   
 7.  Haga clic en **Aplicar**.  
   
 > [!NOTE]  
->  Si ya ha iniciado el seguimiento en un modo, deberá detener el seguimiento y cambiar al modo para el modo de cambiar correctamente.  
+>  Si ya ha iniciado el seguimiento en un modo, tendrá que detener el seguimiento y cambiar al otro modo para que el modo se cambie correctamente.  
   
 > [!IMPORTANT]  
->  Seguimiento de todo el equipo sólo debe habilitarse cuando sea necesario; en caso contrario, se debe dejar desactivada.  
+>  La traza en todo el equipo solo se debe habilitar cuando sea necesario; de lo contrario, se debe dejar desactivado.  
   
-## <a name="visual-studio-analyzer-tracing"></a>Seguimiento del analizador de Visual Studio  
+## <a name="visual-studio-analyzer-tracing"></a>Seguimiento de Visual Studio Analyzer  
   
 > [!IMPORTANT]  
->  Compatibilidad con Visual Studio Analyzer se quitó a partir de Windows 8 (Visual Studio Analyzer sólo se incluyó en versiones anteriores de Visual Studio.). Para conocer una alternativa mecanismo de solución de problemas, use el seguimiento BID.  
+>  Se quitó la compatibilidad con Visual Studio Analyzer a partir de Windows 8 (Visual Studio Analyzer solo se incluía en versiones anteriores de Visual Studio). Para un mecanismo de solución de problemas alternativo, use el seguimiento de PUJAs.  
   
- Seguimiento del analizador de Visual Studio® proporciona rendimiento y la información de depuración sobre la capa ODBC. Se desencadena todos los eventos de salida en la interfaz de nivel superior para presentar una imagen tan precisa como sea posible en cuanto a tiempo invertido en componentes de ODBC. Seguimiento del analizador de Visual Studio requiere que cualquier origen de eventos para registrar cuando se configura el origen. Para obtener más información sobre este tipo de seguimiento, consulte la documentación de Visual Studio.
+ El seguimiento del analizador de® de Visual Studio proporciona información sobre el rendimiento y la depuración sobre el nivel ODBC. Todos los eventos salientes se activarán en la interfaz de nivel superior para presentar una imagen lo más precisa posible con respecto al tiempo empleado en los componentes ODBC. El seguimiento de Visual Studio Analyzer requiere que se registre cualquier origen de eventos cuando se configura el origen. Para obtener más información sobre este tipo de seguimiento, vea la documentación de Visual Studio.

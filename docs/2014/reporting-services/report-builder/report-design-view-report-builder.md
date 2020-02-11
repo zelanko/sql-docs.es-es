@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 65f569214a2cd1bb1ce811fd2117fdc6fb432501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107685"
 ---
 # <a name="report-design-view-report-builder"></a>Vista de diseño de informe (Generador de informes)
@@ -33,35 +33,35 @@ ms.locfileid: "66107685"
   
  ![ReportDesignView](../media/reportdesignview.gif "ReportDesignView")  
   
-##  <a name="Ribbon"></a> Cinta de opciones  
+##  <a name="Ribbon"></a>La cinta de opciones  
  La cinta de opciones está diseñada para ayudarle a buscar rápidamente los comandos que necesita para completar una tarea. Los comandos están organizados en grupos lógicos, que se recopilan juntos en las pestañas. Cada pestaña se relaciona con un tipo de actividad; por ejemplo, insertar los elementos de informe o dar formato al texto.  
   
- En la vista de diseño del informe, la cinta de opciones se divide en las siguientes pestañas: Inicio, insertar y vista. Si no encuentra una tarea en la cinta de opciones, algunos grupos de la cinta de opciones tienen un cuadro de diálogo relacionado que puede abrir haciendo clic en la flecha en el lado inferior derecho del grupo. No puede minimizar o eliminar la cinta de opciones ni reemplazarla con barras de herramientas y menús.  
+ En la vista de diseño del informe, la cinta de opciones se divide en las pestañas siguientes: Inicio, Insertar y Vista. Si no encuentra una tarea en la cinta de opciones, algunos grupos de la cinta de opciones tienen un cuadro de diálogo relacionado que puede abrir haciendo clic en la flecha en el lado inferior derecho del grupo. No puede minimizar o eliminar la cinta de opciones ni reemplazarla con barras de herramientas y menús.  
   
- En modo de ejecución, la cinta de opciones tiene solo una pestaña, **ejecutar**.  
+ En el modo de ejecución, la cinta de opciones solo tiene una pestaña, **Ejecutar**.  
   
 ### <a name="home-tab"></a>Pestaña Inicio  
- La pestaña Inicio es una colección de comandos de uso frecuente, centrados en la apariencia de los elementos dentro del informe. En la pestaña Inicio, puede tener acceso a los comandos ejecutar, fuente, párrafo, borde, número y diseño. Al hacer clic en un elemento en la pestaña, cambia el elemento seleccionado en la superficie de diseño. Al hacer clic en **ejecutar**, el informe se representa en HTML para que pueda ver cómo aparecerá el contenido del informe cuando publica y vea la pestaña ejecutar en lugar de la pestaña Inicio. La pestaña Inicio es la pestaña predeterminada que se muestra al crear un informe.  
+ La pestaña Inicio es una colección de comandos de uso frecuente, centrados en la apariencia de los elementos dentro del informe. En la pestaña Inicio, puede tener acceso a los comandos ejecutar, fuente, párrafo, borde, número y diseño. Al hacer clic en un elemento en la pestaña, cambia el elemento seleccionado en la superficie de diseño. Al hacer clic en **Ejecutar**, el informe se representa en HTML para que pueda ver cómo aparecerá el contenido del informe cuando se publique y verá la pestaña ejecutar en lugar de la pestaña Inicio. La pestaña Inicio es la pestaña predeterminada que se muestra cuando se crea un informe por primera vez.  
   
 ### <a name="insert-tab"></a>Pestaña Insertar  
  La pestaña Insertar es una colección de comandos usados con frecuencia para agregar elementos al informe. En la pestaña Insertar, puede usar un los asistentes para agregar una tabla, una matriz, un gráfico o un mapa. También puede agregar estos elementos sin usar un asistente, y agregar otros elementos de informe como minigráficos, indicadores, cuadros de texto, imágenes, líneas, rectángulos, subinformes, encabezados del informe y pies de página.  
   
- Al hacer clic en **elementos de informe** en la instrucción Insert ficha abre la Galería de elementos de informe. Puede buscar elementos de informe guardados en un servidor de informes. Para más información, vea [Elementos de informe &#40;Generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
+ Al hacer clic en **elementos de informe** en la pestaña insertar, se abre la galería de elementos de informe. Puede buscar elementos de informe guardados en un servidor de informes. Para más información, vea [Elementos de informe &#40;Generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
  Después de insertar un elemento, el Generador de informes vuelve a cambiar automáticamente a la pestaña Inicio.  
   
 ### <a name="view-tab"></a>Pestaña Vista  
  La pestaña Vista es una colección de comandos que controlan lo que se muestra dentro de la ventana del Generador de informes. Puede cambiar las opciones de presentación de la regla y los paneles Agrupar, Datos de informe y Propiedades.  
   
-### <a name="run-tab"></a>Pestaña Ejecutar  
- Al hacer clic en **ejecutar** en la pestaña Inicio, ejecutar una vista previa del informe en el Visor HTML y vea la pestaña ejecutar en lugar de la pestaña Inicio.  
+### <a name="run-tab"></a>Pestaña Run (Ejecutar)  
+ Al hacer clic en **Ejecutar** en la pestaña Inicio, se ejecuta una vista previa del informe en el visor HTML y se muestra la pestaña ejecutar en lugar de la pestaña Inicio.  
   
- La pestaña Ejecutar contiene una colección de comandos que puede usar una vez representado el informe. Puede imprimir el informe, navegar por las páginas del informe, exportar el informe a otro formato de archivo, ver el mapa del documento o los parámetros (si el informe los tiene) y buscar elementos dentro del informe. Para obtener más información, consulte [vista previa del informe en modo de ejecución](#RunMode).  
+ La pestaña Ejecutar contiene una colección de comandos que puede usar una vez representado el informe. Puede imprimir el informe, navegar por las páginas del informe, exportar el informe a otro formato de archivo, ver el mapa del documento o los parámetros (si el informe los tiene) y buscar elementos dentro del informe. Para obtener más información, vea obtener [una vista previa del informe en modo de ejecución](#RunMode).  
   
- Para volver a la vista de diseño de informes en el **ejecutar** , haga clic **diseño**.  
+ Para volver a la vista de diseño del informe, en la pestaña **Ejecutar** , haga clic en **diseño**.  
   
   
-##  <a name="RptDesignSurface"></a> Superficie de diseño del informe  
+##  <a name="RptDesignSurface"></a>Superficie de diseño del informe  
  La superficie de diseño de informe del Generador de informes es el área de trabajo principal para diseñar informes. Para colocar en su informe los elementos de informe, como regiones de datos, subinformes, cuadros de texto, imágenes, rectángulos y líneas, agréguelos desde la cinta de opciones o la galería de elementos de informe a la superficie de diseño. Ahí puede agregar grupos, expresiones, parámetros, filtros, acciones, visibilidad y formato a sus elementos de informe.  
   
  También puede cambiar lo siguiente:  
@@ -70,7 +70,7 @@ ms.locfileid: "66107685"
   
 -   Las propiedades del encabezado y el pie de página, como el borde y el color de relleno, haciendo clic con el botón derecho en el área blanca de la superficie de diseño en el área de encabezado o de pie de página, fuera de cualquier elemento de informe, y haciendo clic en **Propiedades de encabezado** o **Propiedades de pie de página**.  
   
--   Las propiedades del propio informe, como la configuración de página, haciendo clic en el área azul que rodea la superficie de diseño y haga clic en **propiedades del informe**.  
+-   Las propiedades del propio informe, como la configuración de página, haciendo clic con el botón secundario en el área azul que rodea a la superficie de diseño y haciendo clic en **propiedades del informe**.  
   
 -   Las propiedades de los elementos de informe, haciendo clic con el botón derecho en ellos y, después, haciendo clic en **Propiedades**.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66107685"
 >  Para mostrar la regla, en la pestaña **Ver** active la casilla **Regla**.  
   
   
-##  <a name="ReptDataPane"></a> The Report Data Pane  
+##  <a name="ReptDataPane"></a>Panel datos de informe  
  En el panel Datos de informe, podrá definir los recursos y los datos de informe que necesita para un informe antes de diseñarlo. Por ejemplo, puede agregar orígenes de datos, conjuntos de datos, campos calculados, parámetros de informe e imágenes al panel Datos de informe.  
   
  Cuando agregue elementos al panel Datos de informe, arrástrelos hasta la superficie de diseño para controlar dónde aparecerán en el informe.  
@@ -113,7 +113,7 @@ ms.locfileid: "66107685"
 -   [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
-##  <a name="ReptPartGallery"></a> Galería de elementos de informe  
+##  <a name="ReptPartGallery"></a>Galería de elementos de informe  
  La manera más fácil de crear un informe es encontrar un elemento de informe existente, como una tabla o un gráfico, en el servidor de informes o en un servidor de informes integrado en un sitio de SharePoint. Puede buscar elementos de informe en la galería de elementos de informe para agregarlos a un informe. Puede filtrar los elementos de informe por el nombre completo o solo parte de él, quién lo ha creado, quién lo ha modificado por última vez, cuándo se modificó por última vez, dónde está almacenado, o bien el tipo de elemento de informe. Por ejemplo, podría buscar todos los gráficos creados la semana pasada por uno de sus colaboradores.  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ ms.locfileid: "66107685"
  Puede ver los resultados de la búsqueda como miniaturas o como lista, y ordenar los resultados de la búsqueda por nombre, fechas de creación y modificación, y autor. Para más información, vea [Elementos de informe &#40;Generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
   
-##  <a name="PropertiesPane"></a> Panel Propiedades (Generador de informes)  
+##  <a name="PropertiesPane"></a>Panel Propiedades (Generador de informes)  
  Todos los elementos de un informe, como el cuerpo mismo del informe, las regiones de datos, las imágenes y los cuadros de texto, tienen propiedades asociadas. Por ejemplo, la propiedad BorderColor de un cuadro de texto muestra el valor de color del borde del cuadro de texto y la propiedad PageSize del informe muestra el tamaño de página del informe.  
   
  Estas propiedades se muestran en el panel de propiedades. Las propiedades del panel cambian en función del elemento de informe que seleccione.  
@@ -143,36 +143,36 @@ ms.locfileid: "66107685"
  En función de la propiedad, puede establecer un valor de propiedad desde una lista desplegable, escribir el valor o hacer clic en `<Expression>` para crear una expresión.  
   
 ### <a name="changing-the-properties-pane-view"></a>Cambiar la vista del panel de propiedades  
- De manera predeterminada, las propiedades que se muestran en el panel de propiedades se organizan en amplias categorías como Acción, Borde, Relleno, Fuente y General. Cada una de esas categorías cuenta con un conjunto de propiedades asociadas. Por ejemplo, las siguientes propiedades se muestran dentro de la categoría fuente: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight y TextDecoration. Si lo prefiere, puede ordenar alfabéticamente todas las propiedades enumeradas en el panel. De esta manera se quitan las categorías y se enumeran todas las propiedades en orden alfabético independientemente de la categoría.  
+ De manera predeterminada, las propiedades que se muestran en el panel de propiedades se organizan en amplias categorías como Acción, Borde, Relleno, Fuente y General. Cada una de esas categorías cuenta con un conjunto de propiedades asociadas. Por ejemplo, las siguientes propiedades se enumeran dentro de la categoría Fuente: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight y TextDecoration. Si lo prefiere, puede ordenar alfabéticamente todas las propiedades enumeradas en el panel. De esta manera se quitan las categorías y se enumeran todas las propiedades en orden alfabético independientemente de la categoría.  
   
- El panel de propiedades tiene tres botones en la parte superior: Categoría, Alfabetización y Páginas de propiedades. Haga clic en los botones de categoría y alfabetización para cambiar entre las diferentes vistas del panel de propiedades. Haga clic en el botón de **páginas de propiedades** para abrir el cuadro de diálogo de propiedades de un elemento de informe seleccionado.  
+ El panel de propiedades tiene tres botones en la parte superior correspondientes a las opciones de categoría, alfabetización y páginas de propiedades. Haga clic en los botones de categoría y alfabetización para cambiar entre las diferentes vistas del panel de propiedades. Haga clic en el botón de **páginas de propiedades** para abrir el cuadro de diálogo de propiedades de un elemento de informe seleccionado.  
   
   
-##  <a name="GroupPane"></a> Panel Agrupación (Generador de informes)  
- Los grupos se utilizan para organizar los datos del informe en una jerarquía visual y calcular los totales. Puede ver los grupos de filas y columnas dentro de una región de datos en la superficie de diseño y también en el Panel de agrupación. El panel Agrupación tiene dos paneles: Grupos de filas y Grupos de columnas. Al seleccionar una región de datos, el panel Agrupación muestra todos los grupos dentro de dicha región de datos como una lista jerárquica: los grupos secundarios aparecen con sangría aplicada bajo los grupos principales.  
+##  <a name="GroupPane"></a>Panel de agrupación (Generador de informes)  
+ Los grupos se utilizan para organizar los datos del informe en una jerarquía visual y calcular los totales. Puede ver los grupos de filas y columnas dentro de una región de datos en la superficie de diseño y también en el Panel de agrupación. El Panel de agrupación tiene dos paneles: Grupos de filas y Grupos de columnas. Al seleccionar una región de datos, el Panel de agrupación muestra todos los grupos dentro de una región de datos como una lista jerárquica: los grupos secundarios aparecen con sangría aplicada bajo los grupos primarios.  
   
- ![Panel de agrupación para grupos de filas y columnas anidadas](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para grupos de filas y columnas anidadas")  
+ ![Panel de agrupación para la fila anidada y grupos de columnas](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para la fila anidada y grupos de columnas")  
   
  Para crear grupos, arrastre los campos desde el panel Datos de informe y suéltelos en la superficie de diseño o en el Panel de agrupación. En el Panel de agrupación, puede agregar grupos primarios, adyacentes o secundarios, cambiar propiedades de grupo y eliminar grupos.  
   
- El panel de agrupación se muestra de forma predeterminada, pero puede cerrar el panel desactivando la casilla de verificación del panel de agrupación en la pestaña de vista. El panel de agrupación no está disponible para las regiones de datos Gráfico o Medidor.  
+ El panel de agrupación se muestra de forma predeterminada, pero puede cerrar el panel desactivando la casilla panel de agrupación en la pestaña ver. El panel de agrupación no está disponible para las regiones de datos de gráfico o medidor.  
   
  Para obtener más información, vea [Panel de agrupación &#40;Generador de informes&#41;](../report-design/grouping-pane-report-builder.md) y [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   
   
-##  <a name="RunMode"></a> Vista previa del informe en modo de ejecución  
- En la vista de diseño del informe, no se trabaja con los datos reales, sino con una representación de los datos que viene indicada por el nombre de campo o de expresión. Cuando quiera ver los datos reales mostrados en el contexto del informe que diseñó, puede ejecutar el informe para obtener una vista previa de los datos desde la base de datos subyacente mostrada en el diseño del informe. Cambiar entre el diseño y la ejecución del informe le permite ajustar su diseño y ver los resultados de forma inmediata. Para obtener una vista previa del informe, haga clic en **ejecutar** en el **vistas** grupo en la cinta de opciones.  
+##  <a name="RunMode"></a>Obtener una vista previa del informe en modo de ejecución  
+ En la vista de diseño del informe, no se trabaja con los datos reales, sino con una representación de los datos que viene indicada por el nombre de campo o de expresión. Cuando quiera ver los datos reales mostrados en el contexto del informe que diseñó, puede ejecutar el informe para obtener una vista previa de los datos desde la base de datos subyacente mostrada en el diseño del informe. Cambiar entre el diseño y la ejecución del informe le permite ajustar su diseño y ver los resultados de forma inmediata. Para obtener una vista previa del informe, haga clic en **Ejecutar** en el grupo **vistas** de la cinta de opciones.  
   
  Al hacer clic en **Ejecutar**, el Generador de informes se conecta con los orígenes de datos del informe, almacena en memoria caché los datos del equipo, combina los datos y el diseño y, a continuación, representa el informe en el Visor HTML. Puede ejecutar el informe con la frecuencia que desee mientras continúa diseñándolo. Cuando esté satisfecho con el informe, puede guardarlo en el servidor de informes, donde podrán verlo otros usuarios que tengan los permisos adecuados.  
   
 ### <a name="running-a-report-with-parameters"></a>Ejecutar un informe con parámetros  
- Al ejecutar su informe, se procesa automáticamente. Si el informe contiene parámetros, todos ellos deben tener los valores predeterminados antes de que el informe se pueda ejecutar automáticamente. Si un parámetro no tiene un valor predeterminado, al ejecutar el informe necesita elegir un valor para ese parámetro y, a continuación, hacer clic en **Ver informe** en la pestaña Ejecutar. Para obtener más información, vea [Report Parameters &#40;Report Builder and Report Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Al ejecutar su informe, se procesa automáticamente. Si el informe contiene parámetros, todos ellos deben tener los valores predeterminados antes de que el informe se pueda ejecutar automáticamente. Si un parámetro no tiene un valor predeterminado, al ejecutar el informe debe elegir un valor para el parámetro y, a continuación, hacer clic en **Ver informe** en la pestaña ejecutar. Para obtener más información, vea [parámetros de informe &#40;generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="print-preview"></a>Vista previa de impresión  
- La vista previa de un informe en modo de ejecución se parece a un informe generado en HTML. La vista previa no es HTML, pero el diseño y la paginación del informe son similares a la salida con formato HTML. Para cambiar la vista de manera que represente un informe impreso, cambie al modo de vista previa de impresión. Haga clic en el botón **Vista previa de impresión** en la pestaña **Ejecutar** . El informe se mostrará como si estuviera en una página física. Esta vista se asemeja a la salida que se obtiene mediante las extensiones de representación en imágenes y en PDF. La vista previa de impresión no es un archivo de imagen ni un archivo PDF, pero el diseño y la paginación del informe son similares al resultado de estos formatos.  
+ La vista previa de un informe en modo de ejecución se parece a un informe generado en HTML. La vista previa no es HTML, pero el diseño y la paginación del informe son similares a la salida con formato HTML. Para cambiar la vista de manera que represente un informe impreso, cambie al modo de vista previa de impresión. Haga clic en el botón **vista previa de impresión** en la pestaña **Ejecutar** . El informe se mostrará como si estuviera en una página física. Esta vista se asemeja a la salida que se obtiene mediante las extensiones de representación en imágenes y en PDF. La vista previa de impresión no es un archivo de imagen ni un archivo PDF, pero el diseño y la paginación del informe son similares al resultado de estos formatos.  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Generador de informes en SQL Server 2014](report-builder-in-sql-server-2016.md)  
   

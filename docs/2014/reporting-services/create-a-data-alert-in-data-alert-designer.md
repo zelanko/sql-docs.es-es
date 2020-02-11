@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2b54bbbd6b989890c1d31a545c95117c4b6cbe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109706"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
@@ -40,7 +40,7 @@ ms.locfileid: "66109706"
      Se abre el Diseñador de alertas de datos y en él se muestra una tabla con las 100 primeras filas de la primera fuente de distribución de datos generada por el informe.  
   
     > [!NOTE]  
-    >  Si no ve la opción **Nueva alerta de datos** , el servicio de alertas no está configurado en el sitio de SharePoint o la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no incluye alertas de datos. Para más información, vea [Aplicaciones de servicio y servicio de SharePoint de Reporting Services](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).  
+    >  Si no ve la opción **Nueva alerta de datos** , el servicio de alertas no está configurado en el sitio de SharePoint o la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no incluye alertas de datos. Para obtener más información, vea [Aplicaciones de servicio y servicio de SharePoint de Reporting Services](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).  
     >   
     >  Si la opción **Nueva alerta de datos** aparece atenuada, el origen de datos del informe está configurado para utilizar las credenciales de seguridad integradas o para solicitar credenciales. Para que la opción **Nueva alerta de datos** esté disponible, debe actualizar el origen de datos de modo que use las credenciales almacenadas o no use credenciales.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66109706"
   
 10. Escriba el valor de comparación.  
   
-11. De manera opcional, vuelva a hacer clic en los puntos suspensivos **(...)** .  
+11. De manera opcional, vuelva a hacer clic en los puntos suspensivos **(...)**.  
   
      Los puntos suspensivos **(...)** aparecen en la línea que contiene la primera cláusula.  
   
@@ -109,13 +109,13 @@ ms.locfileid: "66109706"
   
 20. Si lo desea, en el cuadro de texto **Asunto** , actualice la línea de asunto del mensaje de alerta.  
   
-     El asunto predeterminado es **Alerta de datos para \<nombre de alerta>** .  
+     El asunto predeterminado es **Alerta de datos para \<nombre de alerta>**.  
   
 21. Si lo desea, en el cuadro de texto **Descripción** , escriba una descripción del mensaje de alerta.  
   
-22. Haga clic en **Guardar**.  
+22. Haga clic en **Save**(Guardar).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diseñador de alertas de datos](../../2014/reporting-services/data-alert-designer.md)   
  [Administrador de alertas de datos para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Alertas de datos de Reporting Services](../ssms/agent/alerts.md)  

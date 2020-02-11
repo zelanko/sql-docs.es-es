@@ -1,5 +1,5 @@
 ---
-title: Habilitar y deshabilitar el espacio aislado de RDL | Microsoft Docs
+title: Habilitar y deshabilitar espacio seguro para RDL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109224"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Habilitar y deshabilitar el espacio seguro para RDL
@@ -28,16 +28,16 @@ ms.locfileid: "66109224"
   
  Cuando se habilita el espacio aislado de RDL, se deshabilitan las siguientes características:  
   
--   Código personalizado en el elemento **\<Code>** de una definición de informe.  
+-   Código personalizado en el ** \<** elemento de>de código de una definición de informe.  
   
 -   Modo de compatibilidad con versiones anteriores de RDL para los elementos de informe personalizados de [!INCLUDE[ssRSversion2005](../includes/ssrsversion2005-md.md)] .  
   
 -   Parámetros con nombre en expresiones.  
   
- En este tema se describe cada elemento en el <`RDLSandboxing`> elemento en el archivo RSReportServer.Config. Para más información sobre cómo modificar este archivo, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Un registro de seguimiento del servidor guarda la actividad relacionada con la característica de espacio aislado de RDL. Para más información sobre los registros de seguimiento, vea [Registro de seguimiento del servicio del servidor de informes](report-server/report-server-service-trace-log.md).  
+ En este tema se describe cada elemento del `RDLSandboxing` elemento <> en el archivo Rsreportserver. config. Para más información sobre cómo modificar este archivo, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Un registro de seguimiento del servidor guarda la actividad relacionada con la característica de espacio aislado de RDL. Para más información sobre los registros de seguimiento, vea [Registro de seguimiento del servicio del servidor de informes](report-server/report-server-service-trace-log.md).  
   
-## <a name="example-configuration"></a>Ejemplo de configuración  
- El ejemplo siguiente muestra la configuración y los valores de ejemplo para el <`RDLSandboxing`> elemento en el archivo RSReportServer.Config.  
+## <a name="example-configuration"></a>Configuración de ejemplo  
+ En el ejemplo siguiente se muestra la configuración y los valores de `RDLSandboxing` ejemplo para el elemento <> en el archivo Rsreportserver. config.  
   
 ```  
 <RDLSandboxing>  
@@ -56,22 +56,22 @@ ms.locfileid: "66109224"
 </RDLSandboxing>  
 ```  
   
-## <a name="configuration-settings"></a>Parámetros de configuración  
+## <a name="configuration-settings"></a>Valores de configuración  
  La siguiente tabla proporciona información acerca de los parámetros de configuración. Los parámetros se presentan en el orden en que aparecen en el archivo de configuración.  
   
-|Parámetro|Descripción|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
-|**MaxExpressionLength**|Número máximo de caracteres permitido en expresiones RDL.<br /><br /> Predeterminado: 1000|  
-|**MaxResourceSize**|Número máximo de KB permitido para un recurso externo.<br /><br /> Predeterminado: 100|  
-|**MaxStringResultLength**|Número máximo de caracteres permitido en un valor de devolución para una expresión RDL.<br /><br /> Predeterminado: 1000|  
-|**MaxArrayResultLength**|Número máximo de elementos permitido en un valor de devolución de matriz para una expresión RDL.<br /><br /> Predeterminado: 100|  
+|**MaxExpressionLength**|Número máximo de caracteres permitido en expresiones RDL.<br /><br /> Valor predeterminado: 1000|  
+|**MaxResourceSize**|Número máximo de KB permitido para un recurso externo.<br /><br /> Valor predeterminado: 100|  
+|**MaxStringResultLength**|Número máximo de caracteres permitido en un valor de devolución para una expresión RDL.<br /><br /> Valor predeterminado: 1000|  
+|**MaxArrayResultLength**|Número máximo de elementos permitido en un valor de devolución de matriz para una expresión RDL.<br /><br /> Valor predeterminado: 100|  
 |**Tipos**|Lista de los miembros que se permitirán en las expresiones RDL.|  
 |**Allow**|Tipo o conjunto de tipos que se permitirán en las expresiones RDL.|  
 |**Espacio de nombres**|Atributo de **Allow** que es el espacio de nombres que contiene uno o varios tipos que se aplican a Value. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
-|`AllowNew`|Atributo booleano de **Allow** que controla si se permite que las nuevas instancias del tipo se creen en expresiones RDL o en un elemento **\<Class>** de RDL.<br /><br /> Nota: Cuando `RDLSandboxing` está habilitada, no se pueden crear nuevas matrices en expresiones RDL, independientemente de la configuración `AllowNew`.|  
+|`AllowNew`|Atributo booleano de **Allow** que controla si se permite que las nuevas instancias del tipo se creen en expresiones RDL o en un elemento **\<Class>** de RDL.<br /><br /> Nota: cuando `RDLSandboxing` está habilitado, no se pueden crear nuevas matrices en expresiones RDL, independientemente de la configuración `AllowNew`de.|  
 |**Valor**|Valor de **Allow** que es el nombre del tipo que se permitirá en las expresiones RDL. El valor **\*** indica que se permiten todos los tipos del espacio de nombres. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
-|**Miembros**|Para la lista de tipos que se incluyen en el elemento **\<Types>** , la lista de nombres de miembro que no se permiten en las expresiones RDL.|  
-|**Denegar**|Nombre de un miembro que no se permite en expresiones RDL. Esta propiedad no distingue entre mayúsculas y minúsculas.<br /><br /> Nota: Cuando se especifica **Deny** para un miembro, no se permite ningún miembro con este nombre para todos los tipos.|  
+|**Members**|Para la lista de tipos que se incluyen en los ** \<tipos>** elemento, la lista de nombres de miembro que no se permiten en las expresiones RDL.|  
+|**Deny**|Nombre de un miembro que no se permite en expresiones RDL. Esta propiedad no distingue entre mayúsculas y minúsculas.<br /><br /> Nota: Cuando se especifica **Deny** para un miembro, no se permite ningún miembro con este nombre para todos los tipos.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Trabajar con expresiones cuando se habilita el espacio aislado de RDL  
  Puede modificar la característica de espacio aislado de RDL para administrar los recursos que usa una explorador de las siguientes formas:  
@@ -98,7 +98,7 @@ ms.locfileid: "66109224"
   
 -   El [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] `New` método.  
   
--   El elemento **\<Classes>** en la definición del informe.  
+-   Las ** \<clases>** elemento de la definición de informe.  
   
 -   Miembros que ha agregado a la lista de bloqueados para un tipo de la lista de permitidos.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66109224"
   
  Para habilitar un miembro de un tipo pero denegar un miembro con el mismo nombre de otro tipo, debe realizar las siguientes operaciones:  
   
--   Agregar un elemento **\<Deny>** para el nombre de miembro.  
+-   Agregue un ** \<elemento denegar>** para el nombre del miembro.  
   
 -   Crear un miembro de proxy con otro nombre en una clase de un ensamblado personalizado para el miembro que desea habilitar.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "66109224"
   
  Para agregar funciones de [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue los tipos correspondientes del espacio de nombres Microsoft.VisualBasic a la lista de permitidos.  
   
- Para agregar palabras clave de tipo de [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue el tipo CLR correspondiente a la lista de permitidos. Por ejemplo, para usar el [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] palabra clave de .NET Framework `Integer`, agregue el siguiente fragmento XML para el  **\<RDLSandboxing >** elemento:  
+ Para agregar palabras clave de tipo de [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue el tipo CLR correspondiente a la lista de permitidos. Por ejemplo, para usar la [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] palabra clave `Integer`.NET Framework, agregue el siguiente fragmento XML al elemento ** \<>RDLSandboxing** :  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -134,7 +134,7 @@ ms.locfileid: "66109224"
   
  Al agregar un tipo de un ensamblado personalizado a la lista de permitidos no se concede permiso de ejecución de forma explícita en el ensamblado. Debe modificar de forma específica el archivo de seguridad de acceso del código y proporcionar el permiso de ejecución en el ensamblado. Para más información, consulte [Code Access Security in Reporting Services](extensions/secure-development/code-access-security-in-reporting-services.md).  
   
-#### <a name="maintaining-the-deny-list-of-members"></a>Mantener la \<Deny > lista de miembros  
+#### <a name="maintaining-the-deny-list-of-members"></a>Mantenimiento de \<la lista de miembros de denegación>  
  Al agregar un nuevo tipo a la lista de permitidos, use la siguiente lista para determinar cuándo tendrá que actualizar la lista de miembros bloqueados:  
   
 -   Al actualizar un ensamblado personalizado con una versión que introduce nuevos tipos.  
@@ -148,7 +148,7 @@ ms.locfileid: "66109224"
 -   Al actualizar un servidor de informes para administrar un esquema RDL posterior, porque se pueden haber agregado nuevos miembros a los tipos RDL.  
   
 ### <a name="working-with-operators-and-new"></a>Trabajar con operadores y New  
- De forma predeterminada, los operadores del lenguaje [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework siempre están permitidos, excepto para `New`. El `New` operador se controla mediante el `AllowNew` atributo el  **\<permitir >** elemento. Otros operadores de lenguaje, como el operador de descriptor de acceso de colección predeterminado `!` y [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework, como las macros de conversión `CInt`, siempre están permitidos.  
+ De forma predeterminada, los operadores del lenguaje [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework siempre están permitidos, excepto para `New`. El `New` operador está controlado por el `AllowNew` atributo del elemento ** \<allow>** . Siempre se permiten otros operadores de lenguaje, como el operador `!` de [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] descriptor de acceso de `CInt`colección predeterminado y las macros de conversión de .NET Framework.  
   
  No se admite la adición de operadores a la lista de bloqueados, incluidos los operadores personalizados. Para excluir los operadores de un tipo, debe realizar las siguientes operaciones:  
   
@@ -164,7 +164,7 @@ ms.locfileid: "66109224"
   
 -   Agregar la clase a la lista de permitidos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivo de configuración RSReportServer](report-server/rsreportserver-config-configuration-file.md)   
  [Registro de seguimiento del servicio del servidor de informes](report-server/report-server-service-trace-log.md)  
   

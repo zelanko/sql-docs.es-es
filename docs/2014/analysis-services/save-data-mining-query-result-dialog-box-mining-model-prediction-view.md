@@ -1,5 +1,5 @@
 ---
-title: Guardar los datos de minería de datos de cuadro de diálogo resultado de consulta (vista predicción de modelo de minería de datos) | Microsoft Docs
+title: Cuadro de diálogo Guardar resultado de consulta de minería de datos (vista predicción de modelo de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070019"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Guardar resultado de consulta de minería de datos (cuadro de diálogo de la vista Predicción de modelo de minería de datos)
@@ -27,10 +27,10 @@ ms.locfileid: "66070019"
  La tabla nueva se creará en la base de datos que haya definido el origen de datos.  
   
 ## <a name="options"></a>Opciones  
- **Origen de datos**  
+ **Data Source** (Origen de datos)  
  Seleccione un origen de datos del proyecto actual. Si no existe el origen de datos correcto, haga clic en **Nuevo** para crear un nuevo origen de datos.  
   
- **Nueva**  
+ **Nuevo**  
  Abre el **Asistente para orígenes de datos**.  
   
  **Nombre de tabla**  
@@ -49,14 +49,14 @@ ms.locfileid: "66070019"
   
  Si varias columnas tienen el mismo nombre (por ejemplo, es posible que varias columnas derivadas tengan el nombre de columna predeterminado **Expresión**), será preciso crear un alias para cada columna con un nombre duplicado. Si las columnas no tienen nombres únicos, se producirá un error cuando el diseñador intente guardar los resultados en SQL Server, porque las columnas de una tabla deben tener nombres únicos.  
   
- **Agregar a la DSV**  
+ **Agregar a vista del origen de datos**  
  (Opcional) Seleccione una vista del origen de datos que contenga el proyecto si desea agregar la tabla a un origen de datos existente.  
   
- Esta opción es útil si desea conservar todas las tablas relacionadas para un modelo, como datos de entrenamiento, datos de origen de predicción y consulta los resultados de mismo origen de datos.  
+ Esta opción es útil si desea conservar todas las tablas relacionadas para un modelo, como los datos de entrenamiento, los datos de origen de la predicción y los resultados de la consulta, en el mismo origen de datos.  
   
-## <a name="see-also"></a>Vea también  
- [Generador de consultas de predicción &#40;Minería de datos&#41;](prediction-query-builder-data-mining.md)   
- [Interfaces de consultas de minería de datos](data-mining/data-mining-query-tools.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
+## <a name="see-also"></a>Consulte también  
+ [Predicción Generador de consultas &#40;de minería de datos&#41;](prediction-query-builder-data-mining.md)   
+ [Interfaces de consulta de minería de datos](data-mining/data-mining-query-tools.md)   
+ [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

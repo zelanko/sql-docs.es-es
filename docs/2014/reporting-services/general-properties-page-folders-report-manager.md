@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901ed097b1a1f689a854d60e0df9b541403fdc76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109131"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Página de propiedades generales, carpetas (Administrador de informes)
   Use la página de propiedades General de carpetas para ver y establecer las propiedades de las carpetas que cree. En la parte superior de la página, aparece información sobre quién creó o modificó la carpeta y cuándo se modificó en la página Propiedades generales.  
   
- Las propiedades de carpeta también incluyen opciones de seguridad. Para obtener más información acerca de la seguridad de carpeta, consulte [proteger carpetas](security/secure-folders.md).  
+ Las propiedades de carpeta también incluyen opciones de seguridad. Para obtener más información acerca de la seguridad de las carpetas, vea [proteger carpetas](security/secure-folders.md).  
   
  Las carpetas que tienen una finalidad específica, como Inicio, Mis informes y Carpetas de usuarios, no se pueden mover en el espacio de nombres del servidor de informes y su nombre no puede cambiarse. La página de propiedades General no está disponible para estas carpetas.  
   
@@ -34,8 +34,8 @@ ms.locfileid: "66109131"
 2.  En el título de la carpeta, en la barra de herramientas, haga clic en **Configuración de carpeta**.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
- Especifique un nombre para la carpeta. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ * \< > | "o / al especificar un nombre.  
+ **Nombre**  
+ Especifique un nombre para la carpeta. El nombre debe incluir al menos un carácter alfanumérico. También puede incluir espacios y algunos símbolos. No use los caracteres ; ? : \@ & = +, $ * \< > | "o/al especificar un nombre.  
   
  **Descripción**  
  Escriba una descripción del contenido de la carpeta. Esta descripción se mostrará en la página Contenido para los usuarios que tengan permisos de acceso a la carpeta.  
@@ -49,10 +49,10 @@ ms.locfileid: "66109131"
  **Eliminar**  
  Haga clic para quitar la carpeta y su contenido.  
   
- **Mover**  
+ **Move**  
  Haga clic para cambiar de posición un informe o una carpeta dentro del espacio de nombres del servidor de informes. Al hacer clic en este botón, se abre la página Mover elementos, que permite buscar una nueva ubicación de carpeta.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   

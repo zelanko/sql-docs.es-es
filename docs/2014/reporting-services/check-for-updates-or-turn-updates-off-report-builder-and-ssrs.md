@@ -1,5 +1,5 @@
 ---
-title: Comprobación de actualizaciones o desactivar actualizaciones (generador de informes y SSRS) | Microsoft Docs
+title: Buscar actualizaciones o desactivar las actualizaciones (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109873"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Buscar o desactivar actualizaciones (Generador de informes y SSRS)
@@ -24,22 +24,22 @@ ms.locfileid: "66109873"
   
 ### <a name="to-turn-on-and-off-report-part-updates"></a>Para activar y desactivar las actualizaciones de elementos de informe  
   
-1.  Haga clic en el botón Generador de informes y, a continuación, haga clic en **opciones**.  
+1.  Haga clic en el botón Generador de informes y, a continuación, haga clic en **Opciones**.  
   
-2.  En el **opciones** cuadro de diálogo el **recursos** ficha, active o desactive el **Mostrar actualizaciones de elementos de informe en Mis informes** casilla de verificación.  
+2.  En el cuadro de diálogo **Opciones** , en la pestaña **recursos** , Active o desactive la casilla **Mostrar actualizaciones de elementos de informe en mis informes** .  
   
 > [!NOTE]  
 >  Se trata de una opción de usuario. Estará deshabilitada en todos los informes que abra.  
   
 ### <a name="to-check-for-updates"></a>Para comprobar si hay actualizaciones  
   
--   Haga clic en la superficie de diseño fuera del informe o en el cuerpo del informe y haga clic en **buscar actualizaciones**.  
+-   Haga clic con el botón secundario en la superficie de diseño fuera del informe o en el cuerpo del informe y haga clic en **Buscar actualizaciones**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Elementos de informe &#40;Generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [Publicar y volver a publicar elementos de informe &#40;generador de informes y SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
- [Buscar elementos de informe y establecer una carpeta predeterminada &#40;generador de informes y SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
- [Solucionar problemas de elementos de informe &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Publicar y volver a publicar elementos de informe &#40;Generador de informes y SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
+ [Buscar elementos de informe y establecer una carpeta predeterminada &#40;Generador de informes y SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
+ [Solucionar problemas de elementos de informe &#40;Generador de informes y SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Elementos de informe y conjuntos de datos en el Generador de informes](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

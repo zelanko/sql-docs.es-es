@@ -1,5 +1,5 @@
 ---
-title: Editor de formulario de acción (pestaña acciones, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Editor de formulario de acción (pestaña acciones, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062958"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de acción (pestaña Acciones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel del Editor de Formulario de acción de la pestaña **Acciones** del Diseñador de cubos para crear y modificar acciones estándar.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Escriba el nombre de la acción.  
   
  **Destino de la acción**  
@@ -32,11 +32,11 @@ ms.locfileid: "66062958"
  **Tipo de destino**  
  Seleccione el tipo de objeto al que desea asociar la acción. El servidor devolverá al cliente solo aquellas acciones que se aplican al objeto del tipo especificado. La acción estará disponible para el cliente si se cumple la **Condición** y si se seleccionan los objetos especificados en la siguiente tabla.  
   
-|Valor|Objeto seleccionado|  
+|Value|Objeto seleccionado|  
 |-----------|---------------------|  
 |Miembros del atributo|Se seleccionará un miembro de un nivel según el atributo del **Objeto de destino**.|  
 |Celdas|Se seleccionará el conjunto con nombre en **Objeto de destino** . Seleccione **Todas las celdas** para seleccionar todas las celdas del cubo.|  
-|Cube|Se seleccionará el cubo en **Objeto de destino** . Seleccione CURRENTCUBE para utilizar el cubo actual.<br /><br /> Nota: Usa CurrentCube, obtendrá proporciona una portabilidad adicional en aquellos casos en que se cambie el nombre de cubo o copie la acción a otros cubos. Se recomienda utilizar CURRENTCUBE para representar el cubo actual.|  
+|Cube|Se seleccionará el cubo en **Objeto de destino** . Seleccione CURRENTCUBE para utilizar el cubo actual.<br /><br /> Nota: Si usa CURRENTCUBE, obtendrá una portabilidad adicional en aquellos casos en que se cambie el nombre del cubo o se copie la acción a otros cubos. Se recomienda utilizar CURRENTCUBE para representar el cubo actual.|  
 |miembros de dimensión|Se seleccionará un miembro de la dimensión en **Objeto de destino** .|  
 |Hierarchy|Se seleccionará la jerarquía en **Objeto de destino** .|  
 |Miembros de la jerarquía|Se seleccionará un miembro de la jerarquía en **Objeto de destino** .|  
@@ -57,13 +57,13 @@ ms.locfileid: "66062958"
  **Tipo**  
  Seleccione el tipo de acción que desea realizar durante la ejecución de la acción. Están disponibles los siguientes tipos de acciones:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Dataset|Devuelve una instrucción de Expresiones multidimensionales (MDX) que representa un conjunto de datos multidimensionales que se ejecutarán y se mostrarán en la aplicación cliente.|  
 |Propietario|Devuelve una cadena del propietario que pueden interpretar las aplicaciones cliente asociadas a la configuración **Aplicación** para esta acción.|  
 |Conjunto de filas|Devuelve una instrucción de Expresiones multidimensionales (MDX) que representa un conjunto de filas tabular que se ejecutará y se mostrará en la aplicación cliente.|  
 |.|Devuelve una cadena de comandos que se ejecutará en la aplicación cliente.|  
-|Dirección URL|Devuelve una cadena del localizador uniforme de recursos (URL) que abrirá la aplicación cliente, por lo general, con un explorador de Internet.|  
+|URL|Devuelve una cadena del localizador uniforme de recursos (URL) que abrirá la aplicación cliente, por lo general, con un explorador de Internet.|  
   
  Para más información sobre los tipos de acción, vea [Acciones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
@@ -81,10 +81,10 @@ ms.locfileid: "66062958"
   
  En la siguiente tabla se describen las configuraciones disponibles.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|Lote|La acción debe ejecutarse como parte de una operación de lote o una tarea de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interactiva|La acción se ejecuta cuando el usuario invoca la acción.|  
+|Batch|La acción debe ejecutarse como parte de una operación de lote o una tarea de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
+|Interactive|La acción se ejecuta cuando el usuario invoca la acción.|  
 |Al abrir|La acción se ejecuta cuando se abre el cubo por primera vez.|  
   
  **Aplicación**  
@@ -108,12 +108,12 @@ ms.locfileid: "66062958"
   
  Seleccione **True** para indicar que **Título** contiene una expresión MDX que devuelve una cadena que representa un título que se mostrará para la acción en la aplicación cliente. La expresión MDX debe resolverse antes de devolver la acción a la aplicación cliente.  
   
-## <a name="see-also"></a>Vea también  
- [Acciones &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Barra de herramientas &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Organizador de acciones &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
- [Herramientas de cálculo &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulario de acción de obtención de detalles &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Editor de formulario de acción de informe &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Acciones &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Barra de herramientas &#40;pestaña acciones, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [Organizador de acciones &#40;pestaña acciones, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
+ [Herramientas de cálculo &#40;pestaña acciones, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulario de acción de obtención de detalles &#40;pestaña acciones, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Editor de formulario de acción de informe &#40;pestaña acciones, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md)  
   
   

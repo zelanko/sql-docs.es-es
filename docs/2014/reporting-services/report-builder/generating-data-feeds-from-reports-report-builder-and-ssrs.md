@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d7afc644d96c895164aa954cc4813762cc4ef32d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107834"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generar fuentes de distribución de datos a partir de informes (Generador de informes y SSRS)
-  La extensión de representación de Atom de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] genera un documento de servicio de Atom que enumera las fuentes de distribución de datos disponibles en un informe y las fuentes de distribución de datos de las regiones de datos de un informe. Esta extensión se usa para generar las fuentes de distribución de datos compatibles con Atom que son legibles y se pueden intercambiar con las aplicaciones que pueden usar las fuentes de distribución de datos generadas en los informes. Por ejemplo, puede utilizar la extensión de representación Atom para las fuentes de distribución de datos generadas que después puede utilizar en el cliente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+  La extensión de representación de Atom de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] genera un documento de servicio de Atom que enumera las fuentes de distribución de datos disponibles en un informe y las fuentes de distribución de datos de las regiones de datos de un informe. Esta extensión se usa para generar las fuentes de distribución de datos compatibles con Atom que son legibles y se pueden intercambiar con las aplicaciones que pueden usar las fuentes de distribución de datos generadas en los informes. Por ejemplo, puede usar la extensión de representación de Atom para las fuentes de datos generadas que se pueden usar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en el cliente.  
   
  El documento de servicio Atom enumera al menos una fuente de distribución de datos de cada región de datos de un informe. Según el tipo de región de datos y los datos que esta muestra, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] podría generar varias fuentes de distribución de datos a partir de una región de datos. Por ejemplo, una matriz o gráfico pueden proporcionar varias fuentes de distribución de datos. Cuando la extensión de representación Atom crea el documento de servicio Atom, se crea un identificador único para cada fuente de distribución de datos y el identificador se usa en la dirección URL para tener acceso al contenido de la fuente de distribución de datos.  
   
@@ -32,16 +32,16 @@ ms.locfileid: "66107834"
   
  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportDataAsDataFeeds"></a> Informes como fuentes de distribución de datos  
+##  <a name="ReportDataAsDataFeeds"></a>Informes como fuentes de datos  
  Puede exportar un informe de producción como una fuente de distribución de datos o puede crear un informe cuyo propósito principal sea proporcionar datos, en forma de fuentes de distribución de datos, a las aplicaciones. Utilizar los informes como una fuente de distribución de datos ofrece una manera adicional de proporcionar datos a las aplicaciones cuando estos no son fáciles de usar a través de los proveedores de datos del cliente, o cuando se prefiera ocultar la complejidad del origen de datos y facilitar la utilización de los datos. Otro ventaja del uso de los datos de informe como una fuente de distribución de datos es que se puede utilizar características de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] como el Administrador de informes, la seguridad, la programación y las instantáneas de informe para administrar los informes que proporcionan las fuentes de distribución de datos.  
   
  Para sacar el máximo partido de la extensión de representación de Atom, debe saber cómo se representa el informe en las fuentes de distribución de datos. Si usa los informes existentes, poder predecir qué fuentes de distribución de datos generarán los informes resulta útil; si va a crear el informe específicamente para usarlo como fuente de distribución de datos, ser capaz de incluir los datos y ajustar el diseño del informe para sacar el máximo provecho de las fuentes de distribución de datos es también de gran valor.  
   
- Para más información, vea [Generar fuentes de distribución de datos a partir de un informe &#40;Generador de informes y SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [generar fuentes de datos a partir de un informe &#40;generador de informes y SSRS&#41;](generate-data-feeds-from-a-report-report-builder-and-ssrs.md).  
   
 
   
-##  <a name="AtomServiceDocument"></a> Documento de servicio de Atom (archivo .atomsvc)  
+##  <a name="AtomServiceDocument"></a>Documento de servicio de Atom (archivo. atomsvc)  
  En un documento de servicio de Atom se especifica una conexión a una o varias fuentes de distribución de datos. Como mínimo, la conexión es una dirección URL simple al servicio de datos que genera la fuente.  
   
  Al representar los datos del informe utilizando la extensión de representación de Atom, el documento de servicio de Atom enumera las fuentes de distribución de datos disponibles para un informe. El documento enumera al menos una fuente de distribución de datos para cada región de datos del informe. Las tablas y medidores generan solo una fuente de distribución de datos cada uno, pero las matrices, listas y gráficos podían generar varias en función de los datos que muestren.  
@@ -56,13 +56,13 @@ ms.locfileid: "66107834"
   
  ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- En el documento de servicio de Atom generado con este informe se incluyen dos fuentes de distribución de datos, una para cada una de las columnas dinámicas del mismo nivel: Territory y Year. El diagrama siguiente muestra el contenido de cada fuente de distribución de datos.  
+ El documento de servicio de Atom generado con este informe incluye dos fuentes de distribución de datos, una para cada una de las columnas dinámicas del mismo nivel: Territory y Year. El diagrama siguiente muestra el contenido de cada fuente de distribución de datos.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
 
   
-##  <a name="DataFeeds"></a> Fuentes de distribución de datos  
+##  <a name="DataFeeds"></a>Fuentes de datos  
  La fuente de distribución de datos es un archivo XML que tiene un formato tabular coherente que no cambia con el tiempo y datos variables que pueden ser diferentes cada vez que se ejecuta el informe. Las fuentes de distribución de datos que genera [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] están en el mismo formato que las generadas por ADO.NET Data Services.  
   
  Una fuente de distribución de datos contiene dos secciones: encabezado y datos. La especificación de Atom define los elementos en cada sección. El encabezado incluye información como el esquema de codificación de caracteres para utilizar con las fuentes de distribución de datos.  
@@ -79,13 +79,13 @@ ms.locfileid: "66107834"
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>Sección de datos  
- La sección de datos de las fuentes de distribución de datos contiene uno <`entry`> (elemento) para cada fila del conjunto de filas planas generado por la extensión de representación de Atom.  
+ La sección de datos de las fuentes de datos contiene `entry` un <> elemento para cada fila del conjunto de filas planas generado por la extensión de representación de Atom.  
   
  El diagrama siguiente muestra un informe que utiliza grupos y totales.  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- El siguiente XML muestra un <`entry`> elemento de ese informe en una fuente de datos. Tenga en cuenta que el <`entry`> elemento incluye los totales de ventas y pedidos para el grupo y los totales de ventas y pedidos de todos los grupos. El <`entry`> elemento incluye todos los valores en el informe.  
+ En el XML siguiente se muestra `entry` un <elemento> de ese informe en una fuente de distribución de datos. Observe que el elemento `entry` <> incluye los totales de ventas y pedidos del grupo y los totales de ventas y pedidos de todos los grupos. El elemento `entry` <> incluye todos los valores del informe.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -114,11 +114,11 @@ ms.locfileid: "66107834"
   
  Las filas de datos de las regiones de datos anidadas suelen ser anchas, sobre todo si las tablas anidadas y las matrices incluyen grupos y totales. Podría encontrar de utilidad exportar el informe a una fuente de distribución de datos y ver esta para comprobar que los datos generados son lo que esperaba.  
   
- Cuando la extensión de representación Atom crea el documento de servicio Atom, se crea un identificador único para la fuente de distribución de datos y el identificador se usa en la dirección URL para ver el contenido de la misma. El documento de servicio de Atom de ejemplo mostrado anteriormente, incluye la dirección URL <http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1>". La dirección URL identifica el informe (resumen de ventas de producto), el formato de representación de Atom (ATOM) y el nombre de la fuente de distribución de datos (xAx0x1).  
+ Cuando la extensión de representación Atom crea el documento de servicio Atom, se crea un identificador único para la fuente de distribución de datos y el identificador se usa en la dirección URL para ver el contenido de la misma. El documento de servicio de Atom de ejemplo, mostrado anteriormente, <http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1>incluye la dirección URL ". La dirección URL identifica el informe (resumen de ventas de producto), el formato de representación de Atom (ATOM) y el nombre de la fuente de distribución de datos (xAx0x1).  
   
  Los nombres de los elementos de informe tienen como valor predeterminado los nombres de los elementos de lenguaje RDL (Report Definition Language) de los elementos de informe y, a menudo, no son intuitivos ni fáciles recordar. Por ejemplo, el nombre predeterminado de la primera matriz colocada en un informe es Tablix 1. Las fuentes de distribución de datos usan estos nombres.  
   
- Para que le resulte más fácil trabajar con la fuente de distribución de datos, puede usar la propiedad DataElementName de la región de datos para proporcionar nombres descriptivos. Si proporciona un valor para DataElementName los datos de fuente de distribución <`d`> le uso es, en lugar del nombre de región de datos de forma predeterminada. Por ejemplo, si el nombre predeterminado de una región de datos es Tablix1 y DataElementName establece SalesByTerritoryYear, a continuación, el <`d`> en los datos de fuente usará SalesByTerritoryYear. Si las regiones de datos tienen dos fuentes de distribución de datos como el informe de matriz descrito anteriormente, los nombres utilizados en las fuentes de distribución de datos son SalesByTerritoryYear _Territory y SalesByTerritoryYear _Year.  
+ Para que le resulte más fácil trabajar con la fuente de distribución de datos, puede usar la propiedad DataElementName de la región de datos para proporcionar nombres descriptivos. Si proporciona un valor para DataElementName el subelemento de fuente de distribución `d` de datos <> usará en lugar del nombre predeterminado de la región de datos. Por ejemplo, si el nombre predeterminado de una región de datos es Tablix1 y DataElementName establece SalesByTerritoryYear, el `d`> de <de la fuente de distribución de datos usa SalesByTerritoryYear. Si las regiones de datos tienen dos fuentes de distribución de datos como el informe de matriz descrito anteriormente, los nombres utilizados en las fuentes de distribución de datos son SalesByTerritoryYear _Territory y SalesByTerritoryYear _Year.  
   
  Si compara los datos mostrados en el informe y los de las fuentes de distribución de datos, podría observar algunas diferencias. Los informes suelen mostrar datos de fecha y hora, y datos con formato numérico, mientras que la fuente de distribución de datos contiene datos sin formato.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66107834"
   
 
   
-##  <a name="FlatteningReportData"></a> Quitar información de estructura jerárquica a los datos del informe  
+##  <a name="FlatteningReportData"></a>Alisar datos de informe  
  El representador de Atom proporciona los datos del informe en forma de conjuntos de filas planas en un formato XML. Las reglas para quitar información de estructura jerárquica de las tablas de datos son las mismas que las del procesador de CSV con pocas excepciones:  
   
 -   La información de estructura jerárquica de los elementos del ámbito se quitan hasta el nivel de detalle. A diferencia del representador de CSV, los cuadros de texto en el nivel superior aparecen en cada entrada escrita en la fuente de distribución de datos.  
@@ -149,7 +149,7 @@ ms.locfileid: "66107834"
   
 
   
-##  <a name="AtomRendering"></a> Reglas de representación de Atom  
+##  <a name="AtomRendering"></a>Reglas de representación de Atom  
  La extensión de representación de Atom omite la información siguiente al representar una fuente de distribución de datos:  
   
 -   Formato y diseño  
@@ -174,16 +174,16 @@ ms.locfileid: "66107834"
   
 |Elemento|Comportamiento de la representación|  
 |----------|------------------------|  
-|Table|Realiza la representación mediante la expansión de la tabla y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila. No se admiten informes detallados.|  
-|Matriz|Realiza la representación mediante la expansión de la matriz y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila.|  
-|Lista|Representa un registro para cada instancia o fila de detalle de la lista.|  
+|Tabla|Realiza la representación mediante la expansión de la tabla y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila. No se admiten informes detallados.|  
+|Matrix|Realiza la representación mediante la expansión de la matriz y la creación de una fila y una columna para cada fila y columna del nivel máximo de detalle. Las filas y columnas de subtotal no tienen encabezados de columna ni de fila.|  
+|List|Representa un registro para cada instancia o fila de detalle de la lista.|  
 |Subinforme|El elemento primario se repite en todas las instancias del contenido.|  
 |Gráfico|Representa un registro con todas las etiquetas de gráfico de cada valor de gráfico. Las etiquetas de las series y las categorías de las jerarquías se quitan y se incluyen en la fila de un valor de gráfico.|  
 |Barra de datos|Se representa como un gráfico. Normalmente, una barra de datos no incluye jerarquías ni etiquetas.|  
 |Minigráfico|Se representa como un gráfico. Normalmente, un minigráfico no incluye jerarquías ni etiquetas.|  
-|Medidor|Se representa como un único registro con los valores máximo y mínimo de la escala lineal, los valores inicial y final del intervalo, y el valor del puntero.|  
+|Indicador|Se representa como un único registro con los valores máximo y mínimo de la escala lineal, los valores inicial y final del intervalo, y el valor del puntero.|  
 |Indicador|Se representa como un único registro con el nombre del estado activo, los estados disponibles y el valor de los datos.|  
-|Mapa|Genera una fuente de distribución de datos para cada región de datos del mapa. Si varias capas de mapa utilizan la misma región de datos, las fuentes de distribución de datos los incluyen a todos. Las fuentes de distribución de datos incluyen un registro con las etiquetas y valores para cada miembro de mapa de la capa de mapa.|  
+|Map|Genera una fuente de distribución de datos para cada región de datos del mapa. Si varias capas de mapa utilizan la misma región de datos, las fuentes de distribución de datos los incluyen a todos. Las fuentes de distribución de datos incluyen un registro con las etiquetas y valores para cada miembro de mapa de la capa de mapa.|  
   
 
   
@@ -192,8 +192,8 @@ ms.locfileid: "66107834"
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Exportar a un archivo CSV &#40;Generador de informes y SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
- [Exportar informes &#40;generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
+ [Exportar informes &#40;Generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

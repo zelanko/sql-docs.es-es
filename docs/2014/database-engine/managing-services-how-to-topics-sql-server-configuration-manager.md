@@ -1,5 +1,5 @@
 ---
-title: Administración de servicios de temas de procedimientos (Administrador de configuración de SQL Server) | Microsoft Docs
+title: Temas de procedimientos de administración de servicios (Administrador de configuración de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e376b59404b6666a142c66cb96265fd66076ea3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064638"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>Temas de procedimientos de administración de servicios (Administrador de configuración de SQL Server)
@@ -26,15 +26,15 @@ ms.locfileid: "66064638"
   
 -   [Conectarse a otro equipo &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-connect-to-another-computer.md)  
   
--   [Configurar una instancia de SQL Server para que se inicie automáticamente &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
+-   [Establecer una instancia de SQL Server para que se inicie automáticamente &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   
--   [Evitar el inicio automático de una instancia de SQL Server &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
+-   [Impedir el inicio automático de una instancia de SQL Server &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
--   [Cambiar la cuenta de inicio del servicio para SQL Server &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-change-the-service-startup-account.md)  
+-   [Cambie la cuenta de inicio del servicio SQL Server &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-change-the-service-startup-account.md)  
   
--   [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-configure-server-startup-options.md)  
+-   [Configurar las opciones de inicio del servidor &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-configure-server-startup-options.md)  
   
--   [Cambiar la contraseña de las cuentas que usa SQL Server &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+-   [Cambiar la contraseña de las cuentas utilizadas por SQL Server &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
 -   [Configurar registros de errores de SQL Server](configure-windows/scm-services-configure-sql-server-error-logs.md)  
   

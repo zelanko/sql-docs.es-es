@@ -1,5 +1,5 @@
 ---
-title: Soluciones de modelos tabulares (SSAS Tabular) | Microsoft Docs
+title: Soluciones de modelos tabulares (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,43 +11,43 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 675d15f2d2c20ecb18b03cd5fa85684befeddff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067900"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>Soluciones de modelos tabulares (SSAS tabular)
   En los temas de esta sección se proporciona información sobre la creación de modelos tabulares usando el diseñador de modelos tabulares de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Diseñador de modelos tabulares &#40;Tabular de SSAS&#41;](tabular-model-designer-ssas-tabular.md)  
+ [Diseñador de modelos tabulares &#40;&#41;tabular de SSAS](tabular-model-designer-ssas-tabular.md)  
   
- [Base de datos de área de trabajo &#40;SSAS tabular&#41;](tabular-models/workspace-database-ssas-tabular.md)  
+ [Base de datos del área de trabajo &#40;SSAS tabular&#41;](tabular-models/workspace-database-ssas-tabular.md)  
   
- [Nivel de compatibilidad &#40;SSAS Tabular SP1&#41;](tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
+ [Nivel de compatibilidad &#40;SSAS tabular SP1&#41;](tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
- [Proyectos de modelos tabulares &#40;SSAS tabular&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)  
+ [Proyectos de modelos tabulares &#40;&#41;tabular de SSAS](tabular-models/tabular-model-projects-ssas-tabular.md)  
   
- [Propiedades &#40;SSAS tabular&#41;](tabular-models/properties-ssas-tabular.md)  
+ [Propiedades &#40;&#41;tabular de SSAS](tabular-models/properties-ssas-tabular.md)  
   
  [Orígenes de datos &#40;SSAS tabular&#41;](data-sources-ssas-tabular.md)  
   
- [Modo DirectQuery &#40;SSAS tabular&#41;](tabular-models/directquery-mode-ssas-tabular.md)  
+ [Modo DirectQuery &#40;&#41;tabular de SSAS](tabular-models/directquery-mode-ssas-tabular.md)  
   
- [Definir tablas y columnas &#40;SSAS tabular&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [Tablas y columnas &#40;SSAS tabular&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
- [Relaciones &#40;SSAS tabular&#41;](tabular-models/relationships-ssas-tabular.md)  
+ [Relaciones &#40;&#41;tabular de SSAS](tabular-models/relationships-ssas-tabular.md)  
   
- [Cálculos &#40;SSAS tabular&#41;](tabular-models/calculations-ssas-tabular.md)  
+ [Cálculos &#40;&#41;tabular de SSAS](tabular-models/calculations-ssas-tabular.md)  
   
- [Medidas &#40;SSAS tabular&#41;](tabular-models/measures-ssas-tabular.md)  
+ [Medidas &#40;&#41;tabular de SSAS](tabular-models/measures-ssas-tabular.md)  
   
- [KPI &#40;SSAS tabular&#41;](tabular-models/kpis-ssas-tabular.md)  
+ [KPI &#40;&#41;tabular de SSAS](tabular-models/kpis-ssas-tabular.md)  
   
- [Jerarquías &#40;SSAS tabular&#41;](tabular-models/hierarchies-ssas-tabular.md)  
+ [Jerarquías &#40;&#41;tabular de SSAS](tabular-models/hierarchies-ssas-tabular.md)  
   
- [Particiones &#40;SSAS tabular&#41;](tabular-models/partitions-ssas-tabular.md)  
+ [Particiones &#40;&#41;tabular de SSAS](tabular-models/partitions-ssas-tabular.md)  
   
  [Perspectivas &#40;SSAS tabular&#41;](tabular-models/perspectives-ssas-tabular.md)  
   

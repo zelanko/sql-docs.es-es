@@ -1,5 +1,5 @@
 ---
-title: Configurar el acceso de DirectQuery para una base de datos de modelo Tabular o en memoria | Microsoft Docs
+title: Configurar el acceso in-Memory o DirectQuery para una base de datos de modelo tabular | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55a1a296e6a7b2a2155dea590be9321b22e73451
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067193"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>Configurar el acceso In-Memory o DirectQuery para una base de datos modelo tabular
   En este tema se describe cómo cambiar las propiedades de conexión de un modelo tabular que ya se haya implementado, para habilitar el uso del modelo en el modo Direct Query.  
   
- Para obtener más información acerca de estas propiedades y configuración para los escenarios más comunes, consulte [escenarios de implementación de DirectQuery &#40;Tabular de SSAS&#41;](../directquery-deployment-scenarios-ssas-tabular.md).  
+ Para obtener más información sobre estas propiedades y la configuración de los escenarios más comunes, vea [escenarios de implementación de DirectQuery &#40;&#41;tabular de SSAS ](../directquery-deployment-scenarios-ssas-tabular.md).  
   
 ## <a name="requirements"></a>Requisitos  
  Habilitar el uso del modo Direct Query en un modelo tabular es un proceso de varias fases. Debe:  
@@ -41,7 +41,7 @@ ms.locfileid: "66067193"
   
 1.  En SQL Server Management Studio, abra la instancia en la que se implementó el modelo.  
   
-2.  En el Explorador de objetos, haga clic en el nombre de la base de datos modelo y seleccione **propiedades**.  
+2.  En Explorador de objetos, haga clic con el botón secundario en el nombre de la base de datos modelo y seleccione **propiedades**.  
   
 3.  Busque la propiedad **DirectQueryMode**. Para habilitar el uso del origen de datos relacional, esta propiedad se debe establecer en uno de estos valores:  
   

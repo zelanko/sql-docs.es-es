@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e5eb03cabe655b4b1dc1da6735b9b4ef68c05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107250"
 ---
 # <a name="manage-report-data-sources"></a>Administrar orígenes de datos de informe
@@ -39,10 +39,10 @@ ms.locfileid: "66107250"
   
  Observe que la modificación de consultas no forma parte de la administración de conexiones de origen de datos. Para modificar una consulta de un informe o modelo, debe utilizar una herramienta de creación y realizar los cambios en la definición del modelo o del informe.  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Propiedades administradas: Tipo de origen de datos, las cadenas de conexión y credenciales  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>Propiedades administradas: Tipo de origen de datos, Cadenas de conexión y Credenciales  
  Las propiedades de origen de datos que puede administrar en un servidor de informes son:  
   
-|Property|Descripción|Cómo administrarla|  
+|Propiedad|Descripción|Cómo administrarla|  
 |--------------|-----------------|----------------------|  
 |Tipo de origen de datos|Determina qué extensión de procesamiento de datos del servidor de informes se ha de utilizar en los datos externos. Algunos ejemplos de procesadores de datos son SQL Server, Analysis Services y Oracle.|El tipo de origen de datos es una propiedad administrada porque es configurable. Sin embargo, si va a crear un nuevo origen de datos compartido, solo debe configurar un tipo de origen de datos.<br /><br /> No cambie el tipo de origen de datos en las páginas de propiedades de un modelo o informe publicado, ya que, si lo hace, invalidará la conexión casi con seguridad. No es probable que las estructuras de datos requeridas por un informe o un modelo sean idénticas en una plataforma de datos diferente.|  
 |Cadena de conexión|Establece la conexión inicial a un origen de datos externo. Un informe puede utilizar cadenas de conexión dinámica o estática.<br /><br /> Una *cadena de conexión estática* es un conjunto de valores que el informe utiliza siempre para conectarse al mismo origen de datos cada vez que se ejecuta.<br /><br /> Una *cadena de conexión dinámica* es una expresión que se genera en el informe y que permite al usuario seleccionar qué origen de datos ha de utilizar en tiempo de ejecución. Se deben generar la expresión y la lista de selección de orígenes de datos en el informe al crearlo en el Diseñador de informes.|Cambiar una cadena de conexión es útil si mueve un origen de datos a otro equipo, o si ha creado los informes con datos de prueba pero desea implementarlos con una base de datos de producción.<br /><br /> Puede administrar una cadena de conexión estática reemplazando la cadena original por otra diferente.<br /><br /> Para administrar una cadena de conexión dinámica en el Administrador de informes o en un sitio de SharePoint, está limitado a reemplazarla por una estática. No puede modificar la propia expresión, ni cambiar la lista de selección de orígenes de datos. Para cambiar la expresión o la lista de valores válidos, debe modificar la definición de informe y volver a publicarla en el servidor de informes. Para más información, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).|  
@@ -61,11 +61,11 @@ ms.locfileid: "66107250"
   
 |Tarea|Herramienta|Vínculo|  
 |----------|----------|----------|  
-|Ver ejemplos de cadenas de conexión.||[Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
+|Ver ejemplos de cadenas de conexión.||[Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Elegir un enfoque para obtener las credenciales para conectarse a un origen de datos.||[Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md)|  
 |Agregar propiedades de conexión de origen de datos a un archivo de definición de informe (.rdl).|Diseñador de informes|[Crear un origen de datos incrustado o compartido &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
 |Agregar y establecer un vínculo con un archivo origen de datos compartido (.rds) en el proyecto de informe.|Diseñador de informes|[Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)|  
-|Crear una lista predefinida de orígenes de datos que los usuarios pueden seleccionar en tiempo de ejecución. Cuando un usuario solicita un informe, el informe proporciona una lista de orígenes de datos. El usuario debe seleccionar qué origen de datos ha de utilizar antes de ejecutar el informe. Para agregar una lista de selección de orígenes de datos a un informe, ha de utilizar una expresión.<br /><br /> Esto se conoce como conexión dinámica de origen de datos.|Diseñador de informes|[Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
+|Crear una lista predefinida de orígenes de datos que los usuarios pueden seleccionar en tiempo de ejecución. Cuando un usuario solicita un informe, el informe proporciona una lista de orígenes de datos. El usuario debe seleccionar qué origen de datos ha de utilizar antes de ejecutar el informe. Para agregar una lista de selección de orígenes de datos a un informe, ha de utilizar una expresión.<br /><br /> Esto se conoce como conexión dinámica de origen de datos.|Diseñador de informes|[Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Crear un elemento de origen de datos compartido en un servidor de informes.|Administrador de informes|[Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
 |Almacenar credenciales como requisito previo para crear suscripciones o instantáneas de informe.|Administrador de informes|[Almacenamiento de las credenciales en un origen de datos de Reporting Services](store-credentials-in-a-reporting-services-data-source.md)|  
 |Modificar las propiedades de conexión de origen de datos en un informe publicado.|Administrador de informes|[Configurar propiedades de origen de datos para un informe &#40;Administrador de informes&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
@@ -75,10 +75,10 @@ ms.locfileid: "66107250"
 > [!NOTE]  
 >  Administrar las conexiones de un origen de datos con los orígenes de datos de informe no equivale a administrar la conexión del servidor de informes con la base de datos del servidor de informes. Para más información sobre la conexión de un servidor de informes con su almacén de datos interno, vea [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
-## <a name="see-also"></a>Vea también  
- [Enlazar un informe o un modelo con un origen de datos compartido &#40;SSRS&#41;](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Enlazar un informe o un modelo a un origen de datos compartido &#40;SSRS&#41;](bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Almacenamiento de las credenciales en un origen de datos de Reporting Services](store-credentials-in-a-reporting-services-data-source.md)   
+ [Almacenar credenciales en un origen de datos de Reporting Services](store-credentials-in-a-reporting-services-data-source.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  

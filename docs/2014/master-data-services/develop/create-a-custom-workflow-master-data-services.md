@@ -11,13 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58a542c8cbe72c420797f34280c2fb7422b82207
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479553"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Crear un flujo de trabajo personalizado (Master Data Services)
+  
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utiliza reglas de negocio para crear soluciones básicas de flujo de trabajo, como actualizar y validar datos automáticamente, y enviar notificaciones por correo electrónico en función de las condiciones que especifique. Cuando requiera un procesamiento más complejo que el que proporcionan las acciones de flujo de trabajo integradas, puede usar un flujo de trabajo personalizado. Un flujo de trabajo personalizado es un ensamblado de .NET creado por usted. Cuando se llama a su ensamblado de flujo de trabajo, el código puede realizar cualquier acción que requiera la situación. Por ejemplo, si su flujo de trabajo requiere un procesamiento de eventos más complejos, como aprobaciones de varios niveles o árboles de decisiones complejos, puede configurar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para que inicie un flujo de trabajo personalizado que analice los datos y determine dónde enviarlos para su aprobación.  
   
 ## <a name="how-custom-workflows-are-processed"></a>Cómo se procesan los flujos de trabajo personalizados  
@@ -25,7 +26,8 @@ ms.locfileid: "65479553"
   
 1.  Para validar una entidad que inicia un flujo de trabajo se usa [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].  
   
-2.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] envía los miembros que satisfacen las condiciones de la regla de negocio a una cola de Service Broker en la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+2.  
+  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] envía los miembros que satisfacen las condiciones de la regla de negocio a una cola de Service Broker en la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 3.  A intervalos regulares, el servicio de integración de flujos de trabajo MDS de SQL Server llama a un procedimiento almacenado en la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
@@ -34,7 +36,7 @@ ms.locfileid: "65479553"
 5.  El servicio de integración de flujos de trabajo MDS de SQL Server enruta los datos al ensamblado controlador del flujo de trabajo.  
   
 > [!NOTE]  
->  Nota: Servicio de integración de flujo de trabajo MDS de SQL Server está diseñado para desencadenar procesos simples. Si su código personalizado requiere un procesamiento complejo, realice el procesamiento en un subproceso distinto o fuera del proceso de flujo de trabajo.  
+>  Nota: el servicio de integración de flujos de trabajo MDS de SQL Server está diseñado para desencadenar procesos simples. Si su código personalizado requiere un procesamiento complejo, realice el procesamiento en un subproceso distinto o fuera del proceso de flujo de trabajo.  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>Configurar Master Data Services para flujos de trabajo personalizados  
  Crear un flujo de trabajo personalizado requiere escribir código personalizado y configurar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para que pase los datos del flujo de trabajo al controlador de flujo de trabajo. Para habilitar el procesamiento del flujo de trabajo personalizado, siga estos pasos:  
@@ -60,7 +62,7 @@ ms.locfileid: "65479553"
   
 3.  Agregue "using Microsoft.MasterDataServices.Core.Workflow;" al archivo de código de C#.  
   
-4.  Herede de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> en la declaración de clase. La declaración de clase debe ser similar a: ' public class WorkflowTester: IWorkflowTypeExtender'.  
+4.  Herede de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> en la declaración de clase. La declaración de clase debe ser similar a: "public class WorkflowTester : IWorkflowTypeExtender".  
   
 5.  Implemente la interfaz <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. El servicio de integración de flujos de trabajo MDS de SQL Server llama al método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> para iniciar el flujo de trabajo.  
   
@@ -87,7 +89,9 @@ ms.locfileid: "65479553"
     </setting>  
     ```  
   
-     El texto interno de la etiqueta \<value> tiene el formato \<Etiqueta del flujo de trabajo>=\<nombre del tipo de flujo de trabajo calificado del ensamblado>. \<Etiqueta del flujo de trabajo> es el nombre que se usa para identificar el ensamblado controlador del flujo de trabajo al crear una regla de negocio en [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. \<nombre del tipo de flujo de trabajo calificado del ensamblado> es el nombre de la clase de flujo de trabajo calificado para el espacio de nombres, seguido de una coma y del nombre para mostrar del ensamblado. Si su ensamblado tiene un nombre seguro, tendrá que incluir también la información de versión y su PublicKeyToken. Puede incluir varias etiquetas \<setting> si ha creado varios controladores de flujo de trabajo para distintos tipos de flujos de trabajo.  
+     El texto interno de la etiqueta \<value> tiene el formato \<Etiqueta del flujo de trabajo>=\<nombre del tipo de flujo de trabajo calificado del ensamblado>. 
+  \<Etiqueta del flujo de trabajo> es el nombre que se usa para identificar el ensamblado controlador del flujo de trabajo al crear una regla de negocio en [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. 
+  \<nombre del tipo de flujo de trabajo calificado del ensamblado> es el nombre de la clase de flujo de trabajo calificado para el espacio de nombres, seguido de una coma y del nombre para mostrar del ensamblado. Si su ensamblado tiene un nombre seguro, tendrá que incluir también la información de versión y su PublicKeyToken. Puede incluir varias etiquetas \<setting> si ha creado varios controladores de flujo de trabajo para distintos tipos de flujos de trabajo.  
   
 > [!NOTE]  
 >  En función de la configuración del servidor, puede que aparezca un error "Acceso denegado" al intentar guardar el archivo Microsoft.MasterDataServices.Workflow.exe.config. En tal caso, deshabilite temporalmente Control de cuentas de usuario (UAC) en el servidor. Para ello, abra el Panel de control y haga clic en **Sistema y seguridad**. En **Centro de actividades**, haga clic en **Cambiar configuración de Control de cuentas de usuario**. En el cuadro de diálogo **Configuración del Control de cuentas de usuario**, desplace la barra hasta abajo para no recibir nunca ninguna notificación. Reinicie su equipo y repita el procedimiento anterior para editar el archivo de configuración. Después de guardar el archivo, restaure la configuración de UAC al nivel predeterminado.  
@@ -141,15 +145,15 @@ ms.locfileid: "65479553"
   
 1.  Utilice el complemento Servicios para detener el servicio.  
   
-2.  Abra un símbolo del sistema, navegue hasta la ubicación del servicio y ejecutar el servicio en modo de consola, escriba: Microsoft.MasterDataServices.Workflow.exe -console.  
+2.  Abra un símbolo del sistema, vaya a la ubicación del servicio y ejecute el servicio en modo de consola especificando: Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  En [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], actualice el miembro y aplique de nuevo las reglas de negocio. En la ventana de la consola se muestran registros detallados.  
   
 ### <a name="view-the-service-broker-queue"></a>Examinar la cola de Service Broker  
  La cola de Service Broker que contiene los datos maestros pasados como parte del flujo de trabajo es: mdm.microsoft/mdm/queue/externalaction. Las colas se encuentran en el **Explorador de objetos** de SQL Management Studio bajo el nodo Service Broker de la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Tenga en cuenta que si el servicio borró la cola correctamente, la cola estará vacía.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo de flujo de trabajo personalizado &#40;Master Data Services&#41;](create-a-custom-workflow-example.md)   
- [Descripción del código XML de flujo de trabajo personalizado &#40;Master Data Services&#41;](create-a-custom-workflow-xml-description.md)  
+ [Descripción XML de flujo de trabajo personalizado &#40;Master Data Services&#41;](create-a-custom-workflow-xml-description.md)  
   
   

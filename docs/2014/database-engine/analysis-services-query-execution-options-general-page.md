@@ -1,5 +1,5 @@
 ---
-title: Opciones (página General) de ejecución de consultas de Analysis Services | Microsoft Docs
+title: Analysis Services las opciones de ejecución de consulta (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b2d8d7b20a7a3a5230d8441eb1f72f19e978eb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065298"
 ---
 # <a name="analysis-services-query-execution-options-general-page"></a>Opciones de ejecución de consultas de Analysis Services (página General)
@@ -25,7 +25,7 @@ ms.locfileid: "66065298"
  **Tiempo de espera de ejecución**  
  Indica el número de segundos de espera antes de cancelar la consulta. El valor 0 indica una espera infinita o que no hay tiempo de espera.  
   
- **Valores predeterminados**  
+ **Restablecer valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
   

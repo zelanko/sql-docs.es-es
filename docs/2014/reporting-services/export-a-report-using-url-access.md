@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69f340855e37ffde49aec0af096c094a142659d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109190"
 ---
 # <a name="export-a-report-using-url-access"></a>Exportar un informe mediante el acceso URL
-  Opcionalmente, puede especificar el formato en el que se va a representar un informe de utilizando el *rs: Format* parámetro. Por ejemplo, para obtener una copia PDF de un informe directamente desde un servidor de informes en modo nativo:  
+  Opcionalmente, puede especificar el formato en el que se representará un informe mediante el parámetro *RS: Format* . Por ejemplo, para obtener una copia PDF de un informe directamente desde un servidor de informes en modo nativo:  
   
 ```  
 http://myrshost/ReportServer?/myreport&rs:Format=PDF  
@@ -37,7 +37,7 @@ http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport
   
  Si no incluye el parámetro *Format* como parte de la dirección URL, el servidor de informes detecta el explorador y representa el informe en el formato HTML adecuado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Acceso URL &#40;SSRS&#41;](url-access-ssrs.md)   
  [Referencia de parámetros de acceso URL](url-access-parameter-reference.md)  
   

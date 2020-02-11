@@ -1,5 +1,5 @@
 ---
-title: Agregar nuevo cuadro de diálogo destino | Microsoft Docs
+title: Cuadro de diálogo Agregar nuevo destino | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa37f7c80f2aa3c371ad823bb7c22ee2ad4819ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061859"
 ---
 # <a name="add-new-destination-dialog-box"></a>Agregar nuevo destino, cuadro de diálogo
@@ -26,11 +26,11 @@ ms.locfileid: "66061859"
 |Opción|Descripción|  
 |------------|-----------------|  
 |Tipos|Seleccione el tipo de destino al que desea conectarse.|  
-|Administradores de conexión|Seleccione un administrador de conexiones existente o haga clic en **\<Nuevo>** para crear uno.|  
+|Administradores de conexión|Seleccione un administrador de conexiones existente o haga clic en ** \<nuevo>** para crear un nuevo administrador de conexiones.|  
 |Mostrar solo elementos instalados|Especifique si desea ver solo los destinos instalados.|  
 |Aceptar|Haga clic para guardar los cambios y a abrir los cuadros de diálogo siguientes para configurar opciones adicionales.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar un destino mediante el Asistente de destinos](data-flow/destination-assistant.md)  
   
   

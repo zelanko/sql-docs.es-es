@@ -1,5 +1,5 @@
 ---
-title: Agregar puntos vacíos al gráfico (generador de informes y SSRS) | Microsoft Docs
+title: Agregar puntos vacíos al gráfico (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c79d4824c7df4709c571d5d46476fd89f3cbe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106606"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>Agregar puntos vacíos al gráfico (Generador de informes y SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "66106606"
   
     2.  Establezca la propiedad EmptyPointValue. Para insertar puntos vacíos en el promedio de los puntos de datos anterior y siguiente, seleccione **Promedio**. Para insertar puntos vacíos en la posición cero, seleccione **Cero**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Agregar quiebres de escala a un gráfico &#40;Generador de informes y SSRS&#41;](add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   

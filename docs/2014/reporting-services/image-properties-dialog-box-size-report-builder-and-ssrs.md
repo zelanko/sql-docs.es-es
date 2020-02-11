@@ -1,5 +1,5 @@
 ---
-title: Imagen de cuadro de diálogo de propiedades, tamaño (generador de informes y SSRS) | Microsoft Docs
+title: Cuadro de diálogo Propiedades de la imagen, tamaño (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108990"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades de la imagen, Tamaño (Generador de informes y SSRS)
@@ -33,23 +33,23 @@ ms.locfileid: "66108990"
  **Ajustar de forma proporcional**  
  Elija esta opción para ajustar el tamaño de la imagen al alto y al ancho de la celda o del cuadro de texto.  
   
- **Clip**  
+ **Secuencia**  
  Elija esta opción para mostrar una imagen desde la esquina superior izquierda hasta ocupar el alto y el ancho de la celda o del cuadro de texto. Los bordes de la imagen pueden reducir o aumentar su tamaño para ajustarse a la imagen. Si la imagen es más grande que la celda o el cuadro de texto, solo se mostrará una parte de la misma.  
   
- **Left**  
+ **Salido**  
  Especifique el relleno (o espacio) que hay entre el borde izquierdo de una celda o un cuadro de texto y el valor mostrado dentro de la celda.  
   
- **Right**  
+ **Correcta**  
  Especifique el relleno (o espacio) que hay entre el borde inferior de una celda o un cuadro de texto y el valor mostrado dentro de la celda.  
   
- **Top**  
+ **Arriba**  
  Especifique el relleno (o espacio) que hay entre el borde inferior de una celda o un cuadro de texto y el valor mostrado dentro de la celda.  
   
- **parte inferior**  
+ **Inferior**  
  Especifique el relleno (o espacio) que hay entre el borde inferior de una celda o un cuadro de texto y el valor mostrado dentro de la celda.  
   
-## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo de propiedades General de la imagen &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo Propiedades de la imagen, general &#40;Generador de informes y SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Imágenes &#40;Generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  

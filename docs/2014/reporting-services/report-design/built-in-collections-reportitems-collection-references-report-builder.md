@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60b081b96ae54885a6f1968706903b13fb7505a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106388"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Usar referencias a la colección ReportItems (Generador de informes y SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66106388"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Usar la propiedad Value de ReportItems  
- Los elementos de la `ReportItems` colección solo tienen una propiedad: Value. El valor de un elemento de `ReportItems` puede usarse para mostrar o calcular datos de otro campo del informe. Para acceder al valor del cuadro de texto actual, puede usar el valor global integrado Me.Value o simplemente Value de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . En las funciones de informe, como First y las funciones de agregado, use la sintaxis completa.  
+ Los elementos de la colección `ReportItems` solo tienen una propiedad: Value. El valor de un elemento de `ReportItems` puede usarse para mostrar o calcular datos de otro campo del informe. Para acceder al valor del cuadro de texto actual, puede usar el valor global integrado Me.Value o simplemente Value de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . En las funciones de informe, como First y las funciones de agregado, use la sintaxis completa.  
   
  Por ejemplo:  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66106388"
   
      `=ReportItems!Textbox1.Value`  
   
--   Esta expresión, ubicada en un `ReportItem` propiedad de Color del cuadro de texto muestra el texto en negro cuando el valor es > 0; en caso contrario, el valor se muestra en rojo:  
+-   Esta expresión, situada en una `ReportItem` propiedad de color de cuadro de texto, muestra el texto en negro cuando el valor es > 0; de lo contrario, el valor se muestra en rojo:  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66106388"
   
  Por ejemplo, un cuadro de texto de una fila que está en un grupo primario no debe contener ninguna expresión que haga referencia al nombre de un cuadro de texto de una fila de un grupo secundario. Este tipo de expresión no se resuelve como un valor del informe porque el cuadro de texto de la fila secundaria está fuera del ámbito. Para más información, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   

@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Propiedades de meridiano de mapa, etiquetas de mapa | Microsoft Docs
+title: Cuadro de diálogo Propiedades de meridiano de mapa, etiquetas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e6a94ff3a40a4c2287f9870222c94ec22e611a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108268"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Cuadro de diálogo Propiedades de meridiano de mapa, Etiquetas
-  Use la **MapMeridian propiedades** cuadro de diálogo para cambiar las opciones de etiqueta de la cuadrícula vertical en la ventanilla del mapa. Un meridiano representa el valor siguiente en función del sistema de coordenadas especificado para la ventanilla:  
+  Use el cuadro de diálogo **propiedades de MapMeridian** para cambiar las opciones de etiqueta de la cuadrícula vertical en la ventanilla de mapa. Un meridiano representa el valor siguiente en función del sistema de coordenadas especificado para la ventanilla:  
   
 -   **Planar**. Coordenada Y.  
   
@@ -36,20 +36,20 @@ ms.locfileid: "66108268"
  **Mostrar etiquetas**  
  Seleccione esta opción para mostrar etiquetas para los meridianos.  
   
- **Placement**  
+ **Ubicación**  
  Seleccione una ubicación para mostrar las etiquetas en relación con la parte superior, central e inferior de la ventanilla. La posición predeterminada es **Cerca**.  
   
--   **Cerca** Muestra las etiquetas en el borde izquierdo.  
+-   **Near** Mostrar etiquetas en el borde izquierdo.  
   
--   **Un cuarto** Muestra las etiquetas a medio camino entre el borde izquierdo y el centro.  
+-   **Un trimestre** Muestra las etiquetas a medio camino entre el borde izquierdo y el centro.  
   
--   **Centro** Muestra las etiquetas en el centro.  
+-   **Centro** de Mostrar etiquetas en el centro.  
   
--   **Tres cuartos** Muestra las etiquetas a medio camino entre el centro y el borde derecho.  
+-   **Tres trimestres** Muestra las etiquetas a medio camino entre el centro y el borde derecho.  
   
--   **Lejos** Muestra las etiquetas en el borde derecho.  
+-   **Lejos** Mostrar etiquetas en el borde derecho.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Mapas &#40;Generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  
   
   

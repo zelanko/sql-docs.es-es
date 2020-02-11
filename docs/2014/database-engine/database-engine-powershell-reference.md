@@ -11,17 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed2e407b724f57d6ded518b864e3b1d78b4c489e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064964"
 ---
 # <a name="database-engine-powershell-reference"></a>Referencia del motor de base de datos de PowerShell
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] incluye un conjunto de cmdlets de Windows PowerShell 2.0 para realizar acciones comunes en [!INCLUDE[ssDE](../includes/ssde-md.md)]. Además, las expresiones de consulta y los nombres de recursos uniformes (URN) pueden convertirse en rutas acceso de SQL Server PowerShell o usarse para especificar uno o más objetos en [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 ## <a name="database-engine-cmdlets"></a>Cmdlets del motor de base de datos  
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] incluye relativamente pocos cmdlets para [!INCLUDE[ssDE](../includes/ssde-md.md)]. La mayoría de los scripts de PowerShell que funcionan con [!INCLUDE[ssDE](../includes/ssde-md.md)] usan el proveedor de SQL Server PowerShell y los modelos de objetos de administración. Para más información, consulte [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md).  
+ 
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] incluye relativamente pocos cmdlets para [!INCLUDE[ssDE](../includes/ssde-md.md)]. La mayoría de los scripts de PowerShell que funcionan con [!INCLUDE[ssDE](../includes/ssde-md.md)] usan el proveedor de SQL Server PowerShell y los modelos de objetos de administración. Para más información, consulte [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md).  
   
  Para obtener información sobre cómo obtener ayuda para los cmdlets de SQL Server en un entorno de Windows PowerShell, vea [Get Help SQL Server PowerShell](../powershell/sql-server-powershell.md).  
   
@@ -30,7 +32,7 @@ ms.locfileid: "66064964"
   
 |Descripción|Cmdlet|  
 |-----------------|------------|  
-|Ejecuta scripts Transact-SQL y XQuery como, por ejemplo, los scripts que se pueden ejecutar con la utilidad `sqlcmd`.|[Cmdlet Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
+|Ejecuta scripts Transact-SQL y XQuery como, por ejemplo, los scripts que se pueden ejecutar con la utilidad `sqlcmd`.|[cmdlet Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
 |Evalúa si un objeto de motor de base de datos cumple una directiva de administración basada en directivas.|[cmdlet Invoke-PolicyEvaluation](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
   
 ### <a name="information-about-other-cmdlets"></a>Información sobre otros cmdlets  
@@ -41,7 +43,7 @@ ms.locfileid: "66064964"
 ## <a name="query-expressions-and-unique-resource-names"></a>Expresiones de consulta y nombres de recursos únicos  
  Las expresiones de consulta son cadenas que usan una sintaxis similar a XPath para especificar un conjunto de criterios que enumeran uno o más objetos de una jerarquía del modelo de objetos. Un nombre de recurso único (URN) es un tipo específico de cadena de expresión de consulta que identifica exclusivamente un objeto único. Para más información, consulte [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  
   
   

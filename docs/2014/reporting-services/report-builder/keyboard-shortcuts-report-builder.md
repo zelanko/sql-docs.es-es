@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107780"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Métodos abreviados de teclado (Generador de informes)
@@ -34,14 +34,14 @@ ms.locfileid: "66107780"
   
 |Descripción|Combinación de teclas|  
 |-----------------|---------------------|  
-|Abrir el menú Generador de informes.|ALT+F|  
+|Abrir el menú Generador de informes.|ALT + F|  
 |Crear un informe.|CTRL+N|  
 |Abra un informe.|CTRL+O|  
 |Guardar un informe.|CTRL+S, ALT+S|  
 |Moverse entre las áreas del Generador de informes, como Cinta de opciones, superficie de diseño, Panel de agrupación, Panel de propiedades y Panel de datos.|F6, MAYÚS+F6|  
 |Ir a la Cinta de opciones.|ALT|  
-|Ir a la pestaña Inicio de la Cinta de opciones.|ALT+H|  
-|Ir a la pestaña Insertar de la Cinta de opciones.|ALT+I|  
+|Ir a la pestaña Inicio de la Cinta de opciones.|ALT + H|  
+|Ir a la pestaña Insertar de la Cinta de opciones.|Alt+I|  
 |Ir a la pestaña Vista de la Cinta de opciones.|ALT+V|  
 |Activar las líneas de división entre áreas, como la línea existente entre el Panel de agrupación y la superficie de diseño.|TAB|  
 |Mover las líneas de división entre las áreas.|Cualquier tecla de dirección. Utilice las flechas ARRIBA y ABAJO para mover la línea que hay entre el Panel de agrupación y la superficie de diseño. Use las flechas DERECHA e IZQUIERDA para mover la línea que hay entre el panel Datos de informe y la superficie de diseño.|  
@@ -91,7 +91,7 @@ ms.locfileid: "66107780"
 |Alejar un área de vista del mapa cuando una ventanilla de mapa está seleccionada.|CTRL+Signo menos (-)|  
 |Modo Acelerador para realizar una panorámica y ampliar el área de vista del mapa cuando una ventanilla de mapa está seleccionada.|CTRL+Clic con el botón primario|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Generador de informes en SQL Server 2014](report-builder-in-sql-server-2016.md)   
  [Vista de diseño de informe &#40;Generador de informes&#41;](report-design-view-report-builder.md)   
  [Glosario &#40;Generador de informes&#41;](glossary-report-builder.md)  

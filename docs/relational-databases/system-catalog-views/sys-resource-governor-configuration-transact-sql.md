@@ -20,10 +20,10 @@ ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e4068d9763460995335fe5adbd6684ecb70d8b7
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982617"
 ---
 # <a name="sysresource_governor_configuration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
@@ -31,13 +31,13 @@ ms.locfileid: "73982617"
 
   Devuelve el estado del regulador de recursos almacenado.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |classifier_function_id|**int**|El Id. de la función clasificadora tal y como se almacena en los metadatos. No admite valores NULL.<br /><br /> **Nota:** Esta función se usa para clasificar nuevas sesiones y usa reglas para enrutar la carga de trabajo al grupo de cargas de trabajo adecuado. Para obtener más información, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
 |is_enabled|**bit**|Indica el estado actual del regulador de recursos:<br /><br /> 0 = Resource Governor no está habilitado.<br /><br /> 1 = Resource Governor está habilitada.<br /><br /> No admite valores NULL.|  
 |max_outstanding_io_per_volume|**int**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Número máximo de operaciones de E/S pendientes por volumen.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  La vista de catálogo muestra la configuración del regulador de recursos tal y como se almacena en los metadatos. Para ver la configuración en memoria, utilice la vista de administración dinámica correspondiente.  
   
 ## <a name="permissions"></a>Permisos  
@@ -65,10 +65,10 @@ sys.dm_resource_governor_configuration;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Resource Governor vistas &#40;de catálogo de Transact&#41; -SQL](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Resource Governor vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
+ [Sys. dm_resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)  
   
   

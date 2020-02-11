@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727455"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensiones habilitadas para escritura
@@ -28,9 +28,10 @@ ms.locfileid: "62727455"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- Los datos de una dimensión son normalmente de solo lectura. Con todo, en ciertos casos, puede interesarle habilitar una dimensión para escritura. Al habilitar para escritura una dimensión en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los usuarios empresariales pueden modificar el contenido de la dimensión y observar el efecto inmediato de los cambios realizados en las jerarquías de la dimensión. Es posible habilitar para escritura cualquier dimensión basada en una sola tabla. En una dimensión habilitada para escritura, los usuarios empresariales y los administradores pueden cambiar, mover, agregar y eliminar los miembros de atributo de la dimensión. Estas actualizaciones se denominan de forma colectiva *reescritura de dimensión*.  
+ Los datos de una dimensión son normalmente de solo lectura. Con todo, en ciertos casos, puede interesarle habilitar una dimensión para escritura. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], al habilitar una dimensión para escritura, los usuarios empresariales pueden modificar el contenido de la dimensión y ver el efecto inmediato de los cambios en las jerarquías de la dimensión. Es posible habilitar para escritura cualquier dimensión basada en una sola tabla. En una dimensión habilitada para escritura, los usuarios empresariales y los administradores pueden cambiar, mover, agregar y eliminar los miembros de atributo de la dimensión. Estas actualizaciones se denominan de forma colectiva *reescritura de dimensión*.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la reescritura en la dimensión en todos los atributos de dimensión y, además, cualquier miembro de una dimensión puede modificarse. En un cubo o partición habilitados para escritura, las actualizaciones se almacenan en una tabla de reescritura separada de las tablas de origen del cubo. Sin embargo, para una dimensión habilitada para escritura, las actualizaciones se registran directamente en la tabla de la dimensión. Además, si la dimensión habilitada para escritura está incluida en un cubo con varias particiones en las que algunos o todos sus orígenes de datos tienen copias de la tabla de dimensión, solo se actualizará la tabla de dimensión original durante el proceso de reescritura.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la reescritura en la dimensión en todos los atributos de dimensión y, además, cualquier miembro de una dimensión puede modificarse. En un cubo o partición habilitados para escritura, las actualizaciones se almacenan en una tabla de reescritura separada de las tablas de origen del cubo. Sin embargo, para una dimensión habilitada para escritura, las actualizaciones se registran directamente en la tabla de la dimensión. Además, si la dimensión habilitada para escritura está incluida en un cubo con varias particiones en las que algunos o todos sus orígenes de datos tienen copias de la tabla de dimensión, solo se actualizará la tabla de dimensión original durante el proceso de reescritura.  
   
  Las dimensiones y cubos habilitados para escritura tienen características distintas pero complementarias. Una dimensión habilitada para escritura permite a los usuarios empresariales actualizar miembros, mientras que un cubo habilitado para escritura les permite actualizar los valores de las celdas. Aunque son complementarias, no es necesario que utilice estas dos características conjuntamente. Para que la reescritura en la dimensión tenga lugar, no es necesario que una dimensión esté incluida en un cubo. Una dimensión habilitada para escritura también puede estar incluida en un cubo que no esté habilitado para escritura. Para habilitar las dimensiones y los cubos para escritura y para mantener su seguridad se utilizan procedimientos distintos.  
   
@@ -59,9 +60,9 @@ ms.locfileid: "62727455"
   
  Los usuarios y los grupos incluidos en el rol Administrador pueden actualizar los miembros de atributo de una dimensión habilitada para escritura aunque la dimensión no esté incluida en un cubo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedades de la dimensión de base de datos](database-dimension-properties.md)   
  [Particiones habilitadas para escritura](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

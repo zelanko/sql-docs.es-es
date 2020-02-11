@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056705"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>Editor de destino de procesamiento de particiones (página Administrador de conexiones)
@@ -33,7 +33,7 @@ ms.locfileid: "66056705"
  **Connection manager**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nueva**  
+ **Nuevo**  
  Permite crear una conexión con el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** .  
   
  **Lista de particiones disponibles**  
@@ -42,15 +42,15 @@ ms.locfileid: "66056705"
  **Método de procesamiento**  
  Seleccione el método de procesamiento. El valor predeterminado de esta opción es **Completa**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |Agregar (incremental)|Realiza un procesamiento incremental de la partición.|  
 |Completo|Realiza un procesamiento completo de la partición.|  
 |Solo datos|Realiza un procesamiento de actualización de la partición.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de destino de procesamiento de particiones &#40;página Asignaciones&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
- [Editor de destino de procesamiento de particiones &#40;página Avanzadas&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [&#40;página asignaciones del editor de destino de procesamiento de particiones&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
+ [Editor de destino de procesamiento de particiones &#40;página avanzadas&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

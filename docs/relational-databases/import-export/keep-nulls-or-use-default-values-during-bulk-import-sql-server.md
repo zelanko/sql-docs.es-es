@@ -22,10 +22,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055953"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Mantenimiento de valores NULL o predeterminados durante la importación en bloque (SQL Server)
@@ -42,7 +42,7 @@ Por el contrario, una instrucción INSERT normal mantiene el valor NULL en lugar
 ## Mantener valores NULL<a name="keep_nulls"></a>  
 Los siguientes calificadores especifican que un campo vacío del archivo de datos mantiene su valor NULL durante la operación de importación masiva, en lugar de heredar un valor predeterminado (si existe) para las columnas de la tabla.  De manera predeterminada, para [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), cualquier columna no especificada en la operación de carga masiva se establece como NULL.
   
-|Comando|Qualifier|Tipo de calificador|  
+|Get-Help|Qualifier|Tipo de calificador|  
 |-------------|---------------|--------------------|  
 |BCP|-k|Switch|  
 |BULK INSERT|KEEPNULLS\*|Argumento|  

@@ -1,5 +1,5 @@
 ---
-title: Acerca de los controladores y orígenes de datos | Microsoft Docs
+title: Acerca de los controladores y los orígenes de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,23 +13,23 @@ ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e9b7229882b3b7f94e6b059e04c6496bde09641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938043"
 ---
 # <a name="about-drivers-and-data-sources"></a>Acerca de controladores y orígenes de datos
-*Controladores* son los componentes que procesan las solicitudes ODBC y devuelvan datos a la aplicación. Si es necesario, los controladores de modificar la solicitud de la aplicación en un formato que entienda el origen de datos. Debe usar el programa de instalación del controlador para agregar o eliminar un controlador desde su equipo.  
+Los *Controladores* son los componentes que procesan las solicitudes ODBC y devuelven datos a la aplicación. Si es necesario, los controladores modifican la solicitud de una aplicación en un formulario comprensible para el origen de datos. Debe usar el programa de instalación del controlador para agregar o eliminar un controlador del equipo.  
   
- *Orígenes de datos* son las bases de datos o tiene acceso a un controlador de archivos y se identifican mediante un nombre de origen de datos (DSN). Use el Administrador de orígenes de datos ODBC para agregar, configurar y eliminar orígenes de datos del sistema. Se describen los tipos de orígenes de datos que se pueden usar en la tabla siguiente.  
+ Los *orígenes de datos* son las bases de datos o los archivos a los que tiene acceso un controlador y se identifican mediante un nombre de origen de datos (DSN). Use el administrador de orígenes de datos ODBC para agregar, configurar y eliminar orígenes de datos del sistema. En la tabla siguiente se describen los tipos de orígenes de datos que se pueden utilizar.  
   
 |Origen de datos|Descripción|  
 |-----------------|-----------------|  
-|Usuario|DSN de usuario locales en un equipo y pueden usarse únicamente por el usuario actual. Se registran en el subárbol del registro HKEY_CURRENT_USER.|  
-|Sistema|Los DSN del sistema son locales en un equipo en lugar de dedicado a un usuario. El sistema o cualquier usuario con privilegios puede usar un origen de datos configurado con un DSN de sistema. Los DSN del sistema se registran en el subárbol del registro HKEY_LOCAL_MACHINE.|  
-|Archivo|DSN de archivo son orígenes basados en archivos que se pueden compartir entre todos los usuarios que tienen instalados los mismos controladores y, por tanto, tienen acceso a la base de datos. Estos orígenes de datos no necesitan estar dedicados a un usuario ni ser local en un equipo. Nombres de origen de datos de archivo no identifica las entradas de registro dedicado; en su lugar, se identifican por un nombre de archivo con extensión .dsn.|  
+|Usuario|Los DSN de usuario son locales para un equipo y solo los puede usar el usuario actual. Se registran en el subárbol del registro de HKEY_CURRENT_USER.|  
+|Sistema|Los DSN del sistema son locales para un equipo en lugar de dedicarse a un usuario. El sistema o cualquier usuario con privilegios puede usar un origen de datos configurado con un DSN de sistema. Los DSN del sistema se registran en el subárbol del registro de HKEY_LOCAL_MACHINE.|  
+|Archivo|Los DSN de archivo son orígenes basados en archivos que se pueden compartir entre todos los usuarios que tienen instalados los mismos controladores y, por tanto, tienen acceso a la base de datos. Estos orígenes de datos no tienen por qué estar dedicados a un usuario ni ser locales en un equipo. Los nombres de los orígenes de datos de archivo no se identifican mediante entradas del registro dedicadas; en su lugar, se identifican mediante un nombre de archivo con la extensión. DSN.|  
   
- Orígenes de datos de usuario y del sistema se conocen colectivamente como *máquina* orígenes de datos porque son locales en un equipo.  
+ Los orígenes de datos del sistema y del usuario se conocen colectivamente como orígenes de datos de *equipo* porque son locales en un equipo.  
   
- Cada uno de estos orígenes de datos tiene una pestaña el **Administrador de orígenes de datos ODBC** cuadro de diálogo. Para obtener más información sobre los orígenes de datos, vea [Orígenes de datos](../../odbc/reference/data-sources.md).
+ Cada uno de estos orígenes de datos tiene una pestaña en el cuadro de diálogo **Administrador de orígenes de datos ODBC** . Para obtener más información sobre los orígenes de datos, vea [Orígenes de datos](../../odbc/reference/data-sources.md).

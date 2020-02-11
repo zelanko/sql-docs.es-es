@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196537"
 ---
 # <a name="create-nested-triggers"></a>Crear desencadenadores anidados
@@ -184,7 +184,7 @@ Paul                           Alice                          0
   
 -   [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [Establecer la opción de configuración del servidor Desencadenadores anidados](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

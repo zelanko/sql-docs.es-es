@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243181"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Usar la utilidad sqlcmd
@@ -69,7 +69,7 @@ ms.locfileid: "75243181"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     o  
+     or  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -222,7 +222,7 @@ ms.locfileid: "75243181"
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-running-a-script-by-using-sqlcmd"></a>a. Ejecutar un script con sqlcmd  
+### <a name="a-running-a-script-by-using-sqlcmd"></a>A. Ejecutar un script con sqlcmd  
  Inicie el Bloc de notas y escriba las siguientes instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
  `USE AdventureWorks2012;`  
@@ -280,7 +280,7 @@ ms.locfileid: "75243181"
   
  `2> GO`  
   
-### <a name="c-using-sqlcmd-to-execute-a-stored-procedure"></a>c. Usar sqlcmd para ejecutar un procedimiento almacenado  
+### <a name="c-using-sqlcmd-to-execute-a-stored-procedure"></a>C. Usar sqlcmd para ejecutar un procedimiento almacenado  
  En el ejemplo siguiente se muestra cómo ejecutar un procedimiento almacenado con `sqlcmd`. Cree el siguiente procedimiento almacenado.  
   
  `USE AdventureWorks2012;`  
@@ -566,11 +566,11 @@ SQLCMD -E -N -C
   
  Si el proveedor especifica `ForceProtocolEncryption = True` se habilita el cifrado aun cuando `Encrypt=No` en la cadena de conexión.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)   
  [Usar SQLCMD con variables de script](sqlcmd-use-with-scripting-variables.md)   
  [Editar scripts SQLCMD con el editor de consultas](edit-sqlcmd-scripts-with-query-editor.md)   
  [Administrar pasos de trabajo](../../ssms/agent/manage-job-steps.md)   
- [Crear un paso de trabajo de CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)  
+ [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   

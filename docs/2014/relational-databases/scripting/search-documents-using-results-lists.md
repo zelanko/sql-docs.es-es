@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03fa961955b963f0149fbfcd2dbdfc379bb8a7cf
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243310"
 ---
 # <a name="search-documents-using-results-lists"></a>Buscar en documentos mediante las listas de resultados
@@ -53,19 +53,19 @@ ms.locfileid: "75243310"
   
 5.  Haga clic en **Reemplazar** para reemplazar el texto de búsqueda con el texto del cuadro **Reemplazar con** . Puede omitir una coincidencia específica si hace clic en **Buscar siguiente** o un archivo entero si hace clic en **Omitir archivo**.  
   
-     \-de  
+     \- O bien  
   
      Elija **Reemplazar todo** para reemplazar todas las coincidencias de búsqueda con el texto del cuadro **Reemplazar con** . Si desea deshacer algunos de los reemplazos en otro momento, seleccione **Mantener los archivos modificados abiertos después de Reemplazar todo** .  
   
     > [!NOTE]  
-    >  **Reemplazar todo** reemplaza todas las coincidencias de la búsqueda, incluidas las de los archivos que se han omitido con **Omitir archivo** o **Buscar siguiente**. Solo es posible utilizar **Deshacer** en los reemplazos realizados en archivos que permanecen abiertos tras la operación de reemplazo.  
+    >  **Reemplazar todo** reemplaza todas las coincidencias de la búsqueda, incluidas aquellas que se encuentran en archivos que se han omitido mediante **Omitir archivo** o **Buscar siguiente**. Solo es posible utilizar **Deshacer** en los reemplazos realizados en archivos que permanecen abiertos tras la operación de reemplazo.  
   
  La información de reemplazo aparece de forma predeterminada en la ventana Resultados de la búsqueda 1. Puede examinar los reemplazos si hace doble clic en cada entrada de la ventana Resultados de la búsqueda 1.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Buscar y reemplazar](search-and-replace.md)   
  [Buscar documentos de forma interactiva](search-documents-interactively.md)   
  [Buscar texto con caracteres comodín](search-text-with-wildcards.md)   
- [Buscar texto con expresiones regulares](search-text-with-regular-expressions.md)  
+ [Buscar texto mediante expresiones regulares](search-text-with-regular-expressions.md)  
   
   

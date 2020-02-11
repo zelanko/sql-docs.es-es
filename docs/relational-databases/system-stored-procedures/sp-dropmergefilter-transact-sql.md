@@ -16,16 +16,16 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b952fcd8145a2cf5392308b21d593e8c377761f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933967"
 ---
-# <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
+# <a name="sp_dropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Quita un filtro de mezcla. **sp_dropmergefilter** quita todas las columnas de filtro de combinación definidas en el filtro de mezcla que se va a quitar. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
+  Quita un filtro de mezcla. **sp_dropmergefilter** quita todas las columnas de filtro de mezcla definidas en el filtro de mezcla que se va a quitar. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,38 +39,38 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @filtername = ] 'filtername'` Es el nombre del filtro que se va a quitar. *filtername* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @filtername = ] 'filtername'`Es el nombre del filtro que se va a quitar. *filtername* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Habilita o deshabilita la capacidad de invalidar una instantánea. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Habilita o deshabilita la posibilidad de invalidar una instantánea. *force_invalidate_snapshot* es un **bit**, con un valor predeterminado de **0**.  
   
- **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la instantánea no es válido.  
+ **0** especifica que los cambios en el artículo de mezcla no hacen que la instantánea no sea válida.  
   
- **1** significa que los cambios en el artículo de mezcla puede invalidar la instantánea no es válido. Si es así, un valor de **1** concede permiso para la nueva instantánea que se produzca.  
+ **1** significa que los cambios en el artículo de mezcla pueden hacer que la instantánea no sea válida. En ese caso, el valor **1** concede permiso para que se produzca la nueva instantánea.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Habilita o deshabilita la capacidad de marcar una suscripción como no válido. *force_reinit_subscription* es un **bit**, su valor predeterminado es **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription`Habilita o deshabilita la capacidad de marcar una suscripción como no válida. *force_reinit_subscription* es un **bit**, con un valor predeterminado de **0**.  
   
- **0** especifica que los cambios realizados en el filtro de artículo de mezcla no invalidarán las suscripciones no es válido.  
+ **0** especifica que los cambios en el filtro de artículo de mezcla no hacen que las suscripciones no sean válidas.  
   
- **1** significa que los cambios en el filtro de artículo de mezcla hacen que las suscripciones no es válido.  
+ **1** significa que los cambios en el filtro de artículo de mezcla hacen que las suscripciones no sean válidas.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_dropmergefilter** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_dropmergefilter**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_dropmergefilter**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_changemergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [sp_addmergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_changemergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

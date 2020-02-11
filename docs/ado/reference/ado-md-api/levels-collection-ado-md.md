@@ -1,5 +1,5 @@
 ---
-title: Los niveles de recopilación (ADO MD) | Microsoft Docs
+title: Colección de niveles (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,29 +17,29 @@ ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68b0f56de12ade676024933c3cfdbfd834f5cc46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949570"
 ---
 # <a name="levels-collection-ado-md"></a>Colección de niveles (ADO MD)
-Contiene el [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) objetos que componen una jerarquía.  
+Contiene los objetos de [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) que componen una jerarquía.  
   
-## <a name="remarks"></a>Comentarios  
- **Los niveles de** es una colección de ADO estándar. Mediante el uso de las propiedades y métodos de una colección, puede hacer lo siguiente:  
+## <a name="remarks"></a>Observaciones  
+ **Levels** es una colección estándar de ADO. Mediante el uso de las propiedades y los métodos de una colección, puede hacer lo siguiente:  
   
--   Obtener el número de objetos de la colección con el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad.  
+-   Obtiene el número de objetos de la colección con la propiedad [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Devolver un objeto de la colección con el valor predeterminado [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad.  
+-   Devuelve un objeto de la colección con la propiedad de [elemento](../../../ado/reference/ado-api/item-property-ado.md) predeterminada.  
   
--   Actualizar los objetos de la colección del proveedor con el [actualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método.  
+-   Actualice los objetos de la colección desde el proveedor con el método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
  Esta sección contiene el siguiente tema.  
   
 -   [Propiedades, métodos y eventos](../../../ado/reference/ado-md-api/levels-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo de catálogo (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Objeto Hierarchy (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
  [Objeto Level (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

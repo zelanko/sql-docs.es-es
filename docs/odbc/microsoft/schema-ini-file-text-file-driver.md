@@ -1,5 +1,5 @@
 ---
-title: Archivo Schema.ini (controlador de archivo de texto) | Microsoft Docs
+title: Archivo Schema. ini (controlador de archivo de texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,117 +14,117 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd95329c91c69af38b1ffc7951191498fcc40479
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987948"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Archivo Schema.ini (controlador de archivo de texto)
-Cuando se usa el controlador de texto, el formato del archivo de texto se determina mediante el uso de un archivo de información de esquema. El archivo de información de esquema es siempre denominado Schema.ini y siempre se mantiene en el mismo directorio que el origen de datos de texto. El archivo de información de esquema proporciona la IISAM con información sobre el formato general del archivo, el nombre de columna y la información de tipo de datos y varias otras características de datos. Un archivo Schema.ini siempre es necesario para tener acceso a datos de longitud fija. Debe usar un archivo Schema.ini cuando la tabla de texto contiene la fecha y hora, moneda, o datos Decimal o siempre que desee más control sobre la administración de los datos en la tabla.  
+Cuando se utiliza el controlador de texto, el formato del archivo de texto se determina mediante un archivo de información de esquema. El archivo de información de esquema siempre se denomina Schema. ini y siempre se mantiene en el mismo directorio que el origen de datos de texto. El archivo de información de esquema proporciona información sobre el formato general del archivo, el nombre de la columna y la información del tipo de datos, y otras características de datos. Siempre se necesita un archivo Schema. ini para tener acceso a los datos de longitud fija. Debe utilizar un archivo Schema. ini cuando la tabla de texto contenga datos de fecha y hora, moneda o decimales, o bien, en cualquier momento en el que desee tener más control sobre el control de los datos de la tabla.  
   
 > [!NOTE]  
->  El texto de ISAM obtendrá los valores iniciales desde el registro, pero no desde Schema.ini. El mismo formato de archivo predeterminado se aplica a todas las tablas de datos de texto nuevo. Todos los archivos creados por la instrucción CREATE TABLE heredan esos mismos valores de formato predeterminado, que se establecen mediante la selección de valores de formato de archivo en el **Definir formato de texto** cuadro de diálogo con \<predeterminado > elegido en el  **Las tablas** lista. Si los valores del registro difieren de los valores de Schema.ini, se sobrescribirán los valores en el registro por los valores de Schema.ini.  
+>  El texto ISAM obtendrá los valores iniciales del registro, no de Schema. ini. El mismo formato de archivo predeterminado se aplica a todas las tablas de datos de texto nuevas. Todos los archivos creados por la instrucción CREATE TABLE heredan los mismos valores de formato predeterminados, que se establecen seleccionando valores de formato de archivo en el cuadro \<de diálogo **definir formato de texto** con> predeterminados seleccionado en la lista **tablas** . Si los valores del registro difieren de los valores de Schema. ini, los valores del registro se sobrescribirán con los valores de Schema. ini.  
   
-## <a name="understanding-schemaini-files"></a>Descripción de los archivos de Schema.ini  
- Archivos de Schema.ini proporcionan información acerca de los registros en un archivo de texto del esquema. Cada entrada Schema.ini especifica uno de cinco características de la tabla:  
+## <a name="understanding-schemaini-files"></a>Descripción de los archivos Schema. ini  
+ Los archivos Schema. ini proporcionan información de esquema sobre los registros de un archivo de texto. Cada entrada de Schema. ini especifica una de las cinco características de la tabla:  
   
--   El nombre de archivo de texto  
+-   Nombre del archivo de texto  
   
 -   El formato de archivo  
   
--   Los nombres de campo, ancho y tipos  
+-   Nombres de campo, anchos y tipos  
   
 -   El juego de caracteres  
   
 -   Conversiones de tipos de datos especiales  
   
- Las secciones siguientes tratan estas características.  
+ En las secciones siguientes se describen estas características.  
   
-## <a name="specifying-the-file-name"></a>Especifica el nombre de archivo  
- La primera entrada de Schema.ini siempre es el nombre del archivo de origen de texto entre corchetes. El ejemplo siguiente muestra la entrada para el archivo Sample.txt:  
+## <a name="specifying-the-file-name"></a>Especificar el nombre de archivo  
+ La primera entrada en Schema. ini es siempre el nombre del archivo de origen de texto entre corchetes. En el ejemplo siguiente se muestra la entrada del archivo Sample. txt:  
   
 ```  
 [Sample.txt]  
 ```  
   
-## <a name="specifying-the-file-format"></a>Especifica el formato de archivo  
- El **formato** opción en Schema.ini especifica el formato del archivo de texto. El IISAM de texto puede leer el formato automáticamente desde archivos más delimitados por caracteres. Puede usar cualquier carácter individual como un delimitador en el archivo, excepto las comillas dobles ("). El **formato** configuración de Schema.ini reemplaza la configuración en el registro de Windows, el archivo por archivo. La tabla siguiente enumeran los valores válidos para el **formato** opción.  
+## <a name="specifying-the-file-format"></a>Especificar el formato de archivo  
+ La opción **Format** en Schema. ini especifica el formato del archivo de texto. El IISAM de texto puede leer el formato automáticamente de la mayoría de los archivos delimitados por caracteres. Puede usar cualquier carácter individual como delimitador en el archivo, excepto las comillas dobles ("). La configuración de **formato** en Schema. ini reemplaza la configuración del registro de Windows, archivo por archivo. En la tabla siguiente se enumeran los valores válidos para la opción **Format** .  
   
-|Especificador de formato|Formato de tabla|En la instrucción Schema.ini Format|  
+|Especificador de formato|Formato de tabla|Schema. ini (instrucción)|  
 |----------------------|------------------|---------------------------------|  
-|**Delimitado por tabulaciones**|Campos en el archivo están delimitados por tabulaciones.|Formato = TabDelimited|  
-|**COMAS**|Campos en el archivo están delimitados por comas (valores separados por comas).|Formato = CSVDelimited|  
-|**Personalizado**|Campos en el archivo se delimitan mediante cualquier carácter que se elija para introducir en el cuadro de diálogo. Todos excepto las comillas dobles (") se permiten, incluidos en blanco.|Formato = delimitado (*carácter personalizado*)<br /><br /> -o bien-<br /><br /> Sin delimitador especificado:<br /><br /> Formato = delimitado (de)|  
-|**Longitud fija**|Son campos en el archivo de longitud fija.|Format=FixedLength|  
+|**Delimitado por tabulaciones**|Los campos del archivo están delimitados por tabulaciones.|Formato = TabDelimited|  
+|**Separado por CSV**|Los campos del archivo se delimitan mediante comas (valores separados por comas).|Formato = CSVDelimited|  
+|**Delimitado personalizado**|Los campos del archivo están delimitados por cualquier carácter que elija para escribir en el cuadro de diálogo. Se permiten todas las comillas dobles ("), incluidas las en blanco.|Formato = delimitado (*carácter personalizado*)<br /><br /> O bien<br /><br /> Sin ningún delimitador especificado:<br /><br /> Formato = delimitado ()|  
+|**Longitud fija**|Los campos del archivo tienen una longitud fija.|Format = FixedLength|  
   
 ## <a name="specifying-the-fields"></a>Especificar los campos  
- Puede especificar los nombres de campo en un archivo de texto delimitado por el carácter de dos maneras:  
+ Puede especificar los nombres de campo en un archivo de texto delimitado por caracteres de dos maneras:  
   
--   Incluya los nombres de campo en la primera fila de la tabla y establezca **ColNameHeader** a **es True.**  
+-   Incluya los nombres de campo en la primera fila de la tabla y establezca **ColNameHeader** en **true.**  
   
--   Especifique cada columna por número y designar el tipo de datos y el nombre de columna.  
+-   Especifique cada columna por número y designe el nombre y el tipo de datos de la columna.  
   
- Debe especificar cada columna por número y designar el nombre de columna, tipo de datos y ancho para los archivos de longitud fija.  
+ Debe especificar cada columna por número y designar el nombre de columna, el tipo de datos y el ancho de los archivos de longitud fija.  
   
 > [!NOTE]  
->  El **ColNameHeader** en invalidaciones Schema.ini el **FirstRowHasNames** configuración en el registro de Windows, el archivo por archivo.  
+>  El valor de **ColNameHeader** en Schema. ini invalida el valor de **FirstRowHasNames** en el registro de Windows, archivo por archivo.  
   
- También se pueden determinar los tipos de datos de los campos. Use la **MaxScanRows** opción para indicar cuántas filas se deben examinar para determinar los tipos de columna. Si establece **MaxScanRows** en 0, se analiza todo el archivo. El **MaxScanRows** configuración de Schema.ini reemplaza la configuración en el registro de Windows, el archivo por archivo.  
+ También se pueden determinar los tipos de datos de los campos. Use la opción **MaxScanRows** para indicar el número de filas que se deben examinar al determinar los tipos de columna. Si establece **MaxScanRows** en 0, se analiza el archivo completo. El valor de **MaxScanRows** en Schema. ini reemplaza la configuración del registro de Windows, archivo por archivo.  
   
- La entrada siguiente indica que Microsoft Jet debe utilizar los datos en la primera fila de la tabla para determinar los nombres de campo y debe examinar todo el archivo para determinar los datos de tipos que se usan:  
+ La entrada siguiente indica que Microsoft Jet debe utilizar los datos de la primera fila de la tabla para determinar los nombres de campo y debe examinar todo el archivo para determinar los tipos de datos utilizados:  
   
 ```  
 ColNameHeader=True  
 MaxScanRows=0  
 ```  
   
- La entrada siguiente designa los campos de una tabla utilizando el número de columna (**Col**_n_) opción, que es opcional para archivos delimitados por caracteres y es necesario para los archivos de longitud fija. El ejemplo muestra las entradas de Schema.ini para dos campos, un campo de texto CustomerNumber de 10 caracteres y un campo de texto de 30 caracteres CustomerName:  
+ La entrada siguiente designa los campos de una tabla mediante la opción de número de columna (**col**_n_), que es opcional para los archivos delimitados por caracteres y es necesario para los archivos de longitud fija. En el ejemplo se muestran las entradas de Schema. ini para dos campos, un campo de texto de NúmeroCliente de 10 caracteres y un campo de texto de CustomerName de 30 caracteres:  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- La sintaxis de **Col**_n_ es:  
+ La sintaxis de **col**_n_ es:  
   
 ```  
   
 n=ColumnNametype [#]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- En la tabla siguiente describe cada parte de la **Col**_n_ entrada.  
+## <a name="remarks"></a>Observaciones  
+ En la tabla siguiente se describe cada una de las partes de la entrada de **col**_n_ .  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|*ColumnName*|El nombre de la columna de texto. Si el nombre de columna contiene espacios incrustados, debe encerrarlo entre comillas dobles.|  
-|*type*|Tipos de datos son los siguientes:<br /><br /> **Tipos de datos Microsoft Jet**<br /><br /> Bit<br /><br /> Byte<br /><br /> Breve<br /><br /> long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> Memorándum<br /><br /> **Tipos de datos ODBC** Char (igual que el texto)<br /><br /> Float (igual que Double)<br /><br /> Entero (igual que Short)<br /><br /> LongChar (igual que Memo)<br /><br /> Fecha *formato de fecha*|  
-|**Width**|El valor de cadena literal `Width`. Indica que el número siguiente designa el ancho de la columna (opcional para archivos delimitados por caracteres; necesario para los archivos de longitud fija).|  
-|*#*|El valor entero que designa el ancho de la columna (obligatorio si **ancho** se especifica).|  
+|*ColumnName*|Nombre de texto de la columna. Si el nombre de la columna contiene espacios incrustados, debe encerrarlo entre comillas dobles.|  
+|*automáticamente*|Los tipos de datos son los siguientes:<br /><br /> **Tipos de datos de Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Breve<br /><br /> long<br /><br /> Moneda<br /><br /> Single<br /><br /> DOUBLE<br /><br /> DateTime<br /><br /> Texto<br /><br /> Memorándum<br /><br /> **Tipos de datos de ODBC** Char (igual que texto)<br /><br /> Float (igual que Double)<br /><br /> Entero (igual que corto)<br /><br /> LongChar (igual que Memo)<br /><br /> *Formato de fecha* de fecha|  
+|**Width**|Valor `Width`de cadena literal. Indica que el número siguiente designa el ancho de la columna (opcional para los archivos delimitados por caracteres; se requiere para los archivos de longitud fija).|  
+|*#*|Valor entero que designa el ancho de la columna (es obligatorio si se especifica **width** ).|  
   
 ## <a name="selecting-a-character-set"></a>Seleccionar un juego de caracteres  
- Puede seleccionar entre dos conjuntos de caracteres: ANSI y OEM. El **CharacterSet** configuración de Schema.ini reemplaza la configuración en el registro de Windows, el archivo por archivo. El ejemplo siguiente muestra la entrada de Schema.ini que establece el juego de caracteres que ANSI:  
+ Puede seleccionar entre dos conjuntos de caracteres: ANSI y OEM. El valor de **characterSet** en Schema. ini reemplaza la configuración del registro de Windows, archivo por archivo. En el ejemplo siguiente se muestra la entrada Schema. ini que establece el juego de caracteres en ANSI:  
   
 ```  
 CharacterSet=ANSI  
 ```  
   
-## <a name="specifying-data-type-formats-and-conversions"></a>Especificar formatos de tipo de datos y conversiones  
- El archivo Schema.ini contiene varias opciones que puede usar para especificar cómo se puede convertir o muestra los datos. La tabla siguiente muestra cada una de estas opciones.  
+## <a name="specifying-data-type-formats-and-conversions"></a>Especificar formatos y conversiones de tipos de datos  
+ El archivo Schema. ini contiene varias opciones que puede usar para especificar cómo se convierten o muestran los datos. En la tabla siguiente se muestra cada una de estas opciones.  
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**DateTimeFormat**|Puede establecerse en una cadena de formato que indica las fechas y horas. Debe especificar esta entrada si se administran todos los campos de fecha y hora en la importación y exportación con el mismo formato. Todos los formatos de Microsoft Jet excepto a. M. y p. M. se admiten. Si no hay ninguna cadena de formato, se usan las opciones de imagen y la hora de fecha corta de Panel de Control de Windows.|  
-|**DecimalSymbol**|Puede establecerse en cualquier carácter individual que se usa para separar el entero de la parte fraccionaria de un número.|  
+|**DateTimeFormat**|Se puede establecer en una cadena de formato que indique fechas y horas. Debe especificar esta entrada si todos los campos de fecha y hora de la importación o exportación se controlan con el mismo formato. Todos los formatos de Microsoft Jet excepto la mañana cono p.m. se admiten. Si no hay ninguna cadena de formato, se usan las opciones de fecha y hora cortas del panel de control de Windows.|  
+|**DecimalSymbol**|Se puede establecer en cualquier carácter individual que se utilice para separar el entero de la parte fraccionaria de un número.|  
 |**NumberDigits**|Indica el número de dígitos decimales en la parte fraccionaria de un número.|  
-|**NumberLeadingZeros**|Especifica si un valor decimal inferior a 1 y -más de 1 debe contener ceros; Este valor puede ser cualquiera (sin ceros) False o True.|  
-|**CurrencySymbol**|Indica el símbolo de moneda que se puede usar para los valores de moneda en el archivo de texto. Algunos ejemplos son el signo de dólar ($) y minería de datos.|  
-|**CurrencyPosFormat**|Se puede establecer en cualquiera de los siguientes valores:<br /><br /> -Prefijo de símbolo de moneda sin separación ($1)<br />-Sufijo de símbolo de moneda sin separación (1$)<br />-Prefijo de símbolo de moneda con separación de un carácter ($ 1)<br />-Sufijo con separación de un carácter de símbolo de moneda (1 $)|  
-|**CurrencyDigits**|Especifica el número de dígitos utilizados para la parte fraccionaria de un importe de divisa.|  
-|**CurrencyNegFormat**|Puede presentar uno de los siguientes valores:<br /><br /> -   ($1)<br />-   -$1<br />-   $-1<br />-$1:<br />-   (1$)<br />--1$<br />-1$<br />-$- de 1<br />--1 $<br />--$ 1<br />-$- de 1<br />-$ 1:<br />-$ -1<br />-1 $<br />-   ($ 1)<br />-   (1 $)<br /><br /> En este ejemplo se muestra el signo de dólar, pero se debe reemplazar con los valores adecuados **CurrencySymbol** valor en el programa real.|  
-|**CurrencyThousandSymbol**|Indica el símbolo de carácter único que puede usarse para separar los valores de moneda en el archivo de texto miles.|  
-|**CurrencyDecimalSymbol**|Puede establecerse en cualquier carácter individual que se usa para separar la totalidad de la parte fraccionaria de un importe de divisa.|  
+|**NumberLeadingZeros**|Especifica si un valor decimal menor que 1 y mayor que-1 debe contener ceros a la izquierda; Este valor puede ser false (sin ceros a la izquierda) o true.|  
+|**CurrencySymbol**|Indica el símbolo de moneda que se puede utilizar para los valores de divisa en el archivo de texto. Entre los ejemplos se incluyen el signo de dólar ($) y DM.|  
+|**CurrencyPosFormat**|Se puede establecer en cualquiera de los siguientes valores:<br /><br /> -Prefijo de símbolo de moneda sin separación ($1)<br />-Sufijo de símbolo de moneda sin separación ($1)<br />-Prefijo de símbolo de moneda con separación de un carácter ($1)<br />-Sufijo de símbolo de moneda con separación de caracteres ($1)|  
+|**CurrencyDigits**|Especifica el número de dígitos que se usan para la parte fraccionaria de una cantidad de moneda.|  
+|**CurrencyNegFormat**|Puede ser uno de los siguientes valores:<br /><br /> -($1)<br />--$1<br />-$-1<br />-$1-<br />-($1)<br />--$1<br />-1-$<br />-$1-<br />--$1<br />--$1<br />-$1-<br />-$1-<br />-$-1<br />-1-$<br />-($1)<br />-($1)<br /><br /> Este ejemplo muestra el signo de dólar, pero debe reemplazarlo por el valor de **CurrencySymbol** adecuado en el programa real.|  
+|**CurrencyThousandSymbol**|Indica el símbolo de un solo carácter que se puede usar para separar los valores de divisa en el archivo de texto por miles.|  
+|**CurrencyDecimalSymbol**|Se puede establecer en cualquier carácter individual que se utilice para separar el conjunto de la parte fraccionaria de una cantidad de moneda.|  
   
 > [!NOTE]  
->  Si se omite una entrada, se usa el valor predeterminado en el Panel de Control de Windows.
+>  Si omite una entrada, se utiliza el valor predeterminado en el panel de control de Windows.

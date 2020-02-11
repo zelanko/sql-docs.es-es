@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 63c877d9b9275ef482591f6345715569a25c5e2a
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67285014"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Supervisar y solucionar problemas de uso de memoria
@@ -23,7 +23,7 @@ ms.locfileid: "67285014"
  En este tema se trata la supervisión del uso de memoria de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .  
   
   
-##  <a name="bkmk_CreateDB"></a> Crear una base de datos de ejemplo con tablas optimizadas para memoria  
+##  <a name="bkmk_CreateDB"></a>Crear una base de datos de ejemplo con tablas optimizadas para memoria  
  Puede omitir esta sección si ya tiene una base de datos con tablas optimizadas para memoria.  
   
  En los pasos siguientes se crea una base de datos con tres tablas optimizadas para memoria que puede usar en el resto de este tema. En el ejemplo, asignamos la base de datos a un grupo de recursos de servidor de modo que pueda controlar cuánta memoria pueden utilizar las tablas optimizadas para memoria.  
@@ -113,7 +113,8 @@ ms.locfileid: "67285014"
 ##  <a name="monitoring-memory-usage"></a>Supervisar el uso de la memoria  
   
 ###  <a name="using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Uso de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] se envía con informes estándar integrados para supervisar la memoria que han usado las tablas en memoria. Puede obtener acceso a estos informes mediante el Explorador de objetos como se describe [aquí](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). También puede utilizar el explorador de objetos para supervisar la memoria utilizada por las tablas optimizadas para memoria individuales.  
+ 
+  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] se envía con informes estándar integrados para supervisar la memoria que han usado las tablas en memoria. Puede obtener acceso a estos informes mediante el Explorador de objetos como se describe [aquí](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). También puede utilizar el explorador de objetos para supervisar la memoria utilizada por las tablas optimizadas para memoria individuales.  
   
 #### <a name="consumption-at-the-database-level"></a>Consumo en el nivel de base de datos  
  Puede supervisar el uso de memoria en el nivel de base de datos como se indica a continuación.  
@@ -122,7 +123,7 @@ ms.locfileid: "67285014"
   
 2.  En el Explorador de objetos, haga clic con el botón secundario en la base de datos en la que desee los informes.  
   
-3.  En el menú contextual, seleccione **Informes** -> **Standard Informes** -> **Uso de memoria por los objetos con optimización para memoria**.  
+3.  En el menú contextual, **** -> seleccione informes**estándar informes** -> **uso de memoria por objetos con optimización para memoria**  
   
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
@@ -157,7 +158,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- Para obtener más información, consulte [sys.dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=sql-server-2016).  
+ Para obtener más información, vea [Sys. dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=sql-server-2016).  
   
 #### <a name="memory-consumption-by-internal-system-structures"></a>Uso de memoria de las estructuras de sistema internas  
  Los objetos del sistema también usan memoria, por ejemplo, las estructuras transaccionales, los búferes de archivos delta y de datos, las estructuras de recolección de elementos no utilizados, etcétera. Puede encontrar la memoria usada para estos objetos del sistema consultando `sys.dm_xtp_system_memory_consumers` como se muestra aquí.  
@@ -230,9 +231,9 @@ memory_object_address pages_ in_bytes bytes_used type
 0x00000001F813E040    16842752            NULL       MEMOBJ_XTPBLOCKALLOC  
 ```  
   
- Para obtener más información, consulte [sys.dm_os_memory_objects (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql).  
+ Para obtener más información, vea [Sys. dm_os_memory_objects (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql).  
   
-#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>Memoria usada por el motor de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] en la instancia  
+#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>Memoria usada por el motor de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] en la instancia  
  La memoria asignada al motor de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] y a los objetos optimizados para memoria se administra de la misma forma que cualquier otro consumidor de memoria dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los distribuidores de tipo MEMORYCLERK_XTP tienen en cuenta toda la memoria asignada al motor de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] . Use la consulta siguiente para encontrar toda la memoria usada por el motor de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .  
   
 ```sql  
@@ -256,7 +257,7 @@ MEMORYCLERK_XTP      DB_ID_5    0              1358
 MEMORYCLERK_XTP      Default    64             0  
 ```  
   
- Para obtener más información, consulte [sys.dm_os_memory_clerks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql).  
+ Para obtener más información, vea [Sys. dm_os_memory_clerks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql).  
   
 ##   <a name="managing-memory-consumed-by-memory-optimized-objects"></a>Administrar la memoria utilizada por los objetos optimizados para memoria  
  Puede controlar la memoria total que han usado las tablas optimizadas para memoria enlazándola a un grupo de recursos con nombre como se describe en el tema [Enlazar una base de datos con tablas optimizadas para memoria a un grupo de recursos de servidor](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  
@@ -268,9 +269,9 @@ MEMORYCLERK_XTP      Default    64             0
   
 2.  Determinar en qué medida aumenta el consumo de memoria y cuánto espacio queda. Mediante la supervisión periódica del consumo de memoria, puede saber cuánto aumenta el uso de memoria. Por ejemplo, si ha asignado la base de datos a un grupo de recursos de servidor con nombre, puede supervisar el contador de rendimiento Memoria usada (KB) para ver cómo aumenta el uso de memoria.  
   
-3.  Tome medidas para mitigar los posibles problemas de memoria. Para obtener más información, consulte [resolver problemas de memoria insuficiente](resolve-out-of-memory-issues.md).  
+3.  Tome medidas para mitigar los posibles problemas de memoria. Para obtener más información, vea [resolver problemas de memoria insuficiente](resolve-out-of-memory-issues.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Cambiar MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo existente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)
   

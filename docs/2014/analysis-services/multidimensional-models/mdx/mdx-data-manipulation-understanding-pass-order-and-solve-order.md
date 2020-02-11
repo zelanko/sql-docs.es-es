@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229429"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Descripción de orden de paso y orden de resolución (MDX)
@@ -164,7 +164,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- o  
+ or  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  
@@ -213,7 +213,7 @@ FROM [Adventure Works]
 ## <a name="additional-considerations"></a>Consideraciones adicionales  
  El orden de resolución puede ser un aspecto muy complicado, especialmente en cubos con un gran número de dimensiones que tienen miembros calculados, fórmulas de resúmenes personalizados o celdas calculadas. Cuando [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] evalúa una consulta MDX, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tiene en cuenta los valores del orden de resolución de todos los elementos implicados en un paso determinado, incluidas las dimensiones del cubo especificado en la consulta MDX.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [&#41;CalculationCurrentPass &#40;MDX](/sql/mdx/calculationcurrentpass-mdx)   
  [&#41;CalculationPassValue &#40;MDX](/sql/mdx/calculationpassvalue-mdx)   
  [Instrucción CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   

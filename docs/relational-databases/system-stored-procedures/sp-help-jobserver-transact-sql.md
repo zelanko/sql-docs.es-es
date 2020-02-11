@@ -18,13 +18,13 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a1a2ce1208dcf359bb0586c3de1fe294644e3a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054881"
 ---
-# <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
+# <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información acerca del servidor para un trabajo dado.  
@@ -42,36 +42,36 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` El número de identificación del trabajo que se va a devolver información. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id`Número de identificación del trabajo del que se va a devolver información. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` El nombre del trabajo que se va a devolver información. *job_name* es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'`Nombre del trabajo del que se va a devolver información. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
+>  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @show_last_run_details = ] show_last_run_details` Es si la información de última ejecución forma parte del conjunto de resultados. *show_last_run_details* es **tinyint**, su valor predeterminado es **0**. **0** no incluye información de última ejecución, y **1** does.  
+`[ @show_last_run_details = ] show_last_run_details`Indica si la información de ejecución de la última ejecución forma parte del conjunto de resultados. *show_last_run_details* es de **tinyint**y su valor predeterminado es **0**. **0** no incluye información de última ejecución y **1** sí.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Número de identificación del servidor de destino.|  
-|**server_name**|**nvarchar(30)**|Nombre de equipo del servidor de destino.|  
+|**server_name**|**nvarchar(30**|Nombre de equipo del servidor de destino.|  
 |**enlist_date**|**datetime**|Fecha de alta del servidor de destino en el servidor maestro.|  
 |**last_poll_date**|**datetime**|Fecha en que el servidor de destino sondeó por última vez el servidor maestro.|  
   
  Si **sp_help_jobserver** se ejecuta con *show_last_run_details* establecido en **1**, el conjunto de resultados tiene estas columnas adicionales.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**last_run_date**|**int**|Fecha del inicio de la última ejecución del trabajo en este servidor de destino.|  
 |**last_run_time**|**int**|Hora del inicio de la última ejecución del trabajo en este servidor de destino|  
 |**last_run_duration**|**int**|Duración del trabajo en su última ejecución en este servidor de destino (en segundos)|  
 |**last_outcome_message**|**nvarchar(1024)**|Describe el último resultado del trabajo.|  
-|**last_run_outcome**|**int**|Resultado del trabajo la última vez que se ejecutó en este servidor:<br /><br /> **0** = error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **3** = cancelado<br /><br /> **5** = desconocido|  
+|**last_run_outcome**|**int**|Resultado del trabajo la última vez que se ejecutó en este servidor:<br /><br /> **0** = error<br /><br /> **1** = correcto<br /><br /> **3** = cancelado<br /><br /> **5** = desconocido|  
   
 ## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
@@ -84,7 +84,7 @@ sp_help_jobserver
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Los miembros de **SQLAgentUserRole** solo se puede ver la información de los trabajos que les pertenecen.  
+ Los miembros de **SQLAgentUserRole** solo pueden ver información de los trabajos que les pertenecen.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se devuelve información acerca del trabajo `NightlyBackups`, incluida la información sobre la última ejecución.  
@@ -99,9 +99,9 @@ EXEC dbo.sp_help_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_jobserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_delete_jobserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

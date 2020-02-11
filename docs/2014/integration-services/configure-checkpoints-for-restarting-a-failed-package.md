@@ -1,5 +1,5 @@
 ---
-title: Configurar los puntos de comprobación para reiniciar un paquete con error | Microsoft Docs
+title: Configurar puntos de comprobación para reiniciar un paquete con errores | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060768"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurar puntos de comprobación para reiniciar un paquete con error
@@ -28,7 +28,7 @@ ms.locfileid: "66060768"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene el paquete que desea configurar.  
   
-2.  En el **Explorador de soluciones**, haga doble clic en el paquete para abrirlo.  
+2.  En **Explorador de soluciones**, haga doble clic en el paquete para abrirlo.  
   
 3.  Haga clic en la pestaña **Flujo de control** .  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66060768"
   
     -   Establezca la propiedad FailPackageOnFailure en `True` para cada tarea y contenedor seleccionados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reiniciar paquetes de usando puntos de comprobación](packages/restart-packages-by-using-checkpoints.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de propiedades de conjunto de datos, filtros (generador de informes) | Microsoft Docs
+title: Cuadro de diálogo Propiedades del conjunto de propiedades, filtros (Generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01d9c5b6ae0e69febd45008bf0aa7b6c3b5a83d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109377"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Filtros (Generador de informes)
@@ -26,10 +26,10 @@ ms.locfileid: "66109377"
   
  Los filtros para un conjunto de datos incrustado solo afectan al informe en el que se definen.  
   
- Para más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Opciones  
- **Agregar**  
+ **Add (Agregar)**  
  Agrega una nueva cláusula de filtro a la lista.  
   
  **Eliminar**  
@@ -41,26 +41,26 @@ ms.locfileid: "66109377"
  **Flecha abajo**  
  Mueve el filtro seleccionado hacia abajo en la lista.  
   
- **Expresión**  
- Escriba o elija la expresión a la que desea aplicar un filtro. Haga clic en el botón Expresión (**fx**) para editar la expresión.  
+ **Expression**  
+ Escriba o elija la expresión a la que desea aplicar un filtro. Haga clic en el botón expresión (**FX**) para editar la expresión.  
   
- **Data type**  
+ **Tipo de datos**  
  Elija el tipo de datos para **Valor**. Si es posible, elija un tipo de datos que coincida con el tipo de datos de **Expresión**.  
   
  Los valores de **Expresión** y de **Valor** deben devolver el mismo tipo de datos. Por ejemplo, si **Expresión** se establece en un campo que tiene el tipo de datos System.Int32 y **Valor** se establece en 7, en la lista desplegable, elija **Integer**.  
   
  Si la opción de tipos de datos que necesita no está en la lista desplegable, escriba una expresión que convierta el valor al tipo de datos correcto. Para más información, vea [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
- **Operador**  
+ **Operator**  
  Elija el operador que se va a utilizar para comparar la expresión y el valor.  
   
  **Valor**  
- Escriba la expresión o el valor que se debe usar al evaluar la expresión especificada en el cuadro **Expresión** . Haga clic en el botón Expresión (**fx**) para editar la expresión.  
+ Escriba la expresión o el valor que se debe usar al evaluar la expresión especificada en el cuadro **Expresión** . Haga clic en el botón expresión (**FX**) para editar la expresión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Agregar un filtro a un conjunto de datos &#40;generador de informes y SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
+ [Agregar un filtro a un conjunto de &#40;Generador de informes y SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

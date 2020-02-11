@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049141"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Cuadro de diálogo Índices espaciales (Visual Database Tools)
@@ -28,7 +28,7 @@ ms.locfileid: "63049141"
  **Índice espacial seleccionado**  
  Enumera los índices espaciales existentes. Seleccione un índice para mostrar sus propiedades. Si la lista está vacía, no se han definido índices espaciales para la tabla.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Crea un nuevo índice espacial.  
   
  **Eliminar**  
@@ -85,7 +85,7 @@ ms.locfileid: "63049141"
  Expandido, muestra los campos de propiedades **Nombre** y **Descripción** .  
   
  **(Nombre)**  
- Muestra el nombre del índice espacial. Cuando se crea un nuevo índice, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Este nombre se puede cambiar en cualquier momento.  
+ Muestra el nombre del índice espacial. Cuando se crea un nuevo índice, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Puede cambiar el nombre en cualquier momento.  
   
  **Descripción**  
  Describe el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y después en el botón de puntos suspensivos ( **...** ) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
@@ -115,7 +115,7 @@ ms.locfileid: "63049141"
  **Bloqueos de fila permitidos**  
  Especifica si se permite el bloqueo de filas en este índice. Permitir o denegar el bloqueo de fila afecta al rendimiento de la base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   

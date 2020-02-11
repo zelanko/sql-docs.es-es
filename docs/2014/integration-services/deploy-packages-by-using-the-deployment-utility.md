@@ -1,5 +1,5 @@
 ---
-title: Implementar los paquetes mediante la utilidad de implementación | Microsoft Docs
+title: Implementar paquetes mediante la utilidad de implementación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059622"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Implementar los paquetes mediante la utilidad de implementación
@@ -64,7 +64,7 @@ ms.locfileid: "66059622"
   
 8.  Si elige validar los paquetes después de la instalación, vea los resultados de la validación de los paquetes implementados.  
   
-## <a name="see-also"></a>Vea también  
- [Implementación del paquete &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
+## <a name="see-also"></a>Consulte también  
+ [Implementación de paquetes &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Las vistas y los campos de ejemplo de colecciones (VB) | Microsoft Docs
+title: Ejemplo de colecciones y campos de vistas (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16145ad1dd52a6ad535c9a51a64f410a85e12e18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964824"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Ejemplo de colecciones de vistas y campos (VB)
-El código siguiente muestra cómo usar el [comando](../../../ado/reference/adox-api/command-property-adox.md) propiedad y el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto que se va a recuperar la información de campo de la vista.  
+En el código siguiente se muestra cómo utilizar la propiedad de [comando](../../../ado/reference/adox-api/command-property-adox.md) y el objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para recuperar la información de campo de la vista.  
   
 ```  
 ' BeginViewFieldsVB  
@@ -77,9 +77,9 @@ End Sub
 ' EndViewFieldsVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ActiveConnection (propiedad, ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Comando (propiedad, ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [Command (propiedad, ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
+ [Objeto de vista (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Colección de vistas (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

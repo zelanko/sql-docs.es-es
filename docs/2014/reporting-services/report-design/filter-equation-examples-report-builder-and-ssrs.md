@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb56fdfd6d59884ac60b587748cf1f663fa3042d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105907"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>Ejemplos de ecuaciones de filtro (Generador de informes y SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66105907"
 ## <a name="filter-examples"></a>Ejemplos de filtros  
  En la tabla siguiente, se muestran ejemplos de ecuaciones de filtro que usan tipos de datos y operadores diferentes. El elemento de informe para el que se define un filtro determina el ámbito de la comparación. Por ejemplo, para un filtro definido en un conjunto de datos, **TOP % 10** es el 10 por ciento de los valores más altos del conjunto de datos; para un filtro definido en un grupo, **TOP% 10** es el 10 por ciento de los valores más altos del grupo.  
   
-|Expresión simple|Tipo de datos|Operador|Valor|Descripción|  
+|Expresión simple|Tipo de datos|Operator|Value|Descripción|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|`Integer`|`>`|`7`|Incluye valores de datos que son mayores que 7.|  
 |`[SUM(Quantity)]`|`Integer`|`TOP N`|`10`|Incluye los 10 valores de datos más altos.|  
@@ -40,7 +40,7 @@ ms.locfileid: "66105907"
 |`[Territory]`|`Text`|`LIKE`|`%o%th*`|Todos los nombres de territorios que incluyen North y South al principio del nombre.|  
 |`=LEFT(Fields!Subcat.Value,1)`|`Text`|`IN`|`B, C, T`|Todos los valores de subcategoría que comienzan con las letras B, C o T.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   

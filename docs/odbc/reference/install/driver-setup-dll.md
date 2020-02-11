@@ -1,5 +1,5 @@
 ---
-title: DLL de instalación de controlador | Microsoft Docs
+title: DLL de instalación del controlador | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,28 +15,28 @@ ms.assetid: 49bab021-81fa-402e-b7a4-a5214f1fadc4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df91638f91091940e00e7a6a19d0fd6cb700f85f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094162"
 ---
 # <a name="driver-setup-dll"></a>DLL de instalación del controlador
 > [!NOTE]  
->  Desde Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo Windows. ODBC explícitamente sólo debe instalar en versiones anteriores de Windows.  
+>  A partir de Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo Windows. Solo debe instalar explícitamente ODBC en versiones anteriores de Windows.  
   
- La configuración del controlador de archivo DLL contiene la **ConfigDriver** y **ConfigDSN** funciones. **ConfigDriver** lleva a cabo tareas de instalación específicos del controlador, como escribir la información específica del controlador en el registro. **ConfigDSN** mantiene información específica del controlador acerca de los orígenes de datos en el registro. Para obtener una descripción completa de estas funciones, vea [referencia de API de DLL de instalación](../../../odbc/reference/syntax/setup-dll-api-reference.md).  
+ El archivo DLL de instalación del controlador contiene las funciones **ConfigDriver** y **ConfigDSN** . **ConfigDriver** realiza tareas de instalación específicas del controlador, como la entrada de información específica del controlador en el registro. **ConfigDSN** mantiene información específica del controlador sobre los orígenes de datos en el registro. Para obtener una descripción completa de estas funciones, vea referencia de la [API de dll de configuración](../../../odbc/reference/syntax/setup-dll-api-reference.md).  
   
- **ConfigDSN** llama a las funciones siguientes en el archivo DLL para mantener la información de origen de datos en el registro del instalador:  
+ **ConfigDSN** llama a las siguientes funciones en el archivo DLL del instalador para mantener la información del origen de datos en el registro:  
   
--   **SQLWriteDSNToIni**. Agregar un origen de datos.  
+-   **SQLWriteDSNToIni**. Agregue un origen de datos.  
   
 -   **SQLRemoveDSNFromIni**. Eliminar un origen de datos.  
   
--   **SQLWritePrivateProfileString**. Escribir un valor específico del controlador en una subclave de especificación del origen de datos.  
+-   **SQLWritePrivateProfileString**. Escriba un valor específico del controlador en una subclave de especificación de origen de datos.  
   
--   **SQLGetPrivateProfileString**. Leer un valor específico del controlador de una subclave de especificación del origen de datos.  
+-   **SQLGetPrivateProfileString**. Leer un valor específico del controlador de una subclave de especificación de origen de datos.  
   
--   **SQLGetTranslator**. Solicitar al usuario una opción y el nombre del traductor. Esta función llama a **ConfigTranslator** en el traductor de DLL de instalación.  
+-   **SQLGetTranslator**. Pida al usuario un nombre y una opción de traductor. Esta función llama a **ConfigTranslator** en el archivo dll de instalación de Translator.  
   
- La configuración del controlador de archivo DLL está escrito por el programador del controlador. Puede ser parte del controlador de archivo DLL o un archivo DLL independiente.
+ El archivo DLL de instalación del controlador está escrito por el desarrollador del controlador. Puede formar parte de la DLL del controlador o de un archivo DLL independiente.

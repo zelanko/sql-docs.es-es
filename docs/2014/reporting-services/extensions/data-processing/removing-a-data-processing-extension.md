@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f5dfd3a6a7615fa3fd91c917bba6dbf0808f0f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63163974"
 ---
 # <a name="removing-a-data-processing-extension"></a>Quitar una extensión de procesamiento de datos
   Para quitar una extensión de procesamiento de datos, basta con quitar el elemento **Extension** de la extensión de procesamiento de datos del archivo de configuración. Si ha realizado entradas para un servidor de informes así como para el Diseñador de informes, quite el elemento **Extension** de los archivos RSReportServer.config y RSReportDesigner.config. Después de quitar la información de configuración, la extensión de procesamiento de datos ya no estará disponible en el componente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Extensiones de Reporting Services](../reporting-services-extensions.md)   
  [Implementar una extensión de procesamiento de datos](implementing-a-data-processing-extension.md)   
  [Biblioteca de extensiones de Reporting Services](../reporting-services-extension-library.md)  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917012"
 ---
 # <a name="shrink-a-database"></a>Reducir una base de datos
@@ -61,13 +61,13 @@ ms.locfileid: "62917012"
 ####  <a name="Permissions"></a> Permisos  
  Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-shrink-a-database"></a>Para reducir una base de datos  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
   
-2.  Expanda **Bases de datos**y, después, haga clic con el botón derecho en la base de datos que quiera reducir.  
+2.  Expanda **bases**de datos y, a continuación, haga clic con el botón secundario en la base de datos que desea reducir.  
   
 3.  Seleccione **Tareas**y **Reducir**, y haga clic en **Base de datos**.  
   
@@ -77,16 +77,16 @@ ms.locfileid: "62917012"
      **Espacio asignado actualmente**  
      Muestra el total de espacio utilizado y no utilizado de la base de datos seleccionada.  
   
-     **Espacio disponible**  
+     **Espacio libre disponible**  
      Muestra la suma del espacio disponible en los archivos de datos y de registro de la base de datos seleccionada.  
   
      **Reorganizar archivos antes de liberar espacio no utilizado**  
      Seleccionar esta opción equivale a ejecutar DBCC SHRINKDATABASE y especificar una opción de porcentaje de destino. Desactivar esta opción equivale a ejecutar DBCC SHRINKDATABASE con la opción TRUNCATEONLY. De forma predeterminada, esta opción no está activada cuando se abre el cuadro de diálogo. Si se selecciona se esta opción, el usuario debe especificar una opción de porcentaje de destino.  
   
-     **Cantidad máxima de espacio disponible en los archivos tras la reducción**  
+     **Espacio libre máximo en los archivos tras la reducción**  
      Especifique el porcentaje máximo de espacio disponible que se va a dejar en los archivos de base de datos después de reducirla. Los valores válidos están comprendidos entre 0 y 99.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -100,15 +100,15 @@ ms.locfileid: "62917012"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de reducir una base de datos  
+##  <a name="FollowUp"></a>Seguimiento: después de reducir una base de datos  
  Los datos que se mueven para reducir un archivo se pueden dispersar en cualquier ubicación disponible en el archivo. Esto produce la fragmentación de índices y puede reducir el rendimiento de las consultas que buscan un intervalo del índice. Para eliminar la fragmentación, considere la posibilidad de volver a generar los índices en el archivo después de la reducción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reducir un archivo](shrink-a-file.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
- [DBCC SHRINKFILE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
+ [DBCC SHRINKFILE &#40;&#41;de Transact-SQL](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [Archivos y grupos de archivos de base de datos](database-files-and-filegroups.md)  
   
   

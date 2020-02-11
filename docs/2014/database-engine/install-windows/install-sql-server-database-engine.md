@@ -1,5 +1,5 @@
 ---
-title: Sobre el motor de base de datos SQL Server | Microsoft Docs
+title: Acerca del Motor de base de datos de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779366"
 ---
 # <a name="about-the-sql-server-database-engine"></a>Acerca del motor de base de datos de SQL Server
   El componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es el servicio principal para almacenar, procesar y proteger los datos. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] proporciona un acceso controlado y un procesamiento de transacciones rápido para cumplir los requisitos de las aplicaciones consumidoras de datos más exigentes de su empresa.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite hasta 50 instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en un solo equipo. Para crear una típica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalación, consulte [instalar SQL Server 2014 desde el Asistente para instalación &#40;instalación&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]admite hasta 50 instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en un único equipo. Para crear una instalación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] típica, consulte instalación [de SQL Server 2014 desde el Asistente para la instalación &#40;&#41;de instalación ](install-sql-server-from-the-installation-wizard-setup.md).  
   
- **Importante** : en las instalaciones locales, debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura y ejecución para dicho recurso.  
+ **Importante** En las instalaciones locales, debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura y ejecución para dicho recurso.  
   
- Las siguientes características se instalan al seleccionar **Motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** en la página Componentes para instalar del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Las siguientes características se instalan al seleccionar ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor de base de datos** en la página componentes para instalar del asistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la instalación de:  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -56,13 +56,13 @@ ms.locfileid: "62779366"
 -   Componentes de documentación  
   
 > [!NOTE]  
->  De forma predeterminada, las bases de datos y el código de ejemplo no se instalan como parte del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para instalar las bases de datos y el código de ejemplo, vea el [sitio web de CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
+>  De forma predeterminada, las bases de datos y el código de ejemplo no se instalan como parte del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para instalar las bases de datos y el código de ejemplo, vea el [sitio web de CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
-## <a name="see-also"></a>Vea también  
- [Características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+## <a name="see-also"></a>Consulte también  
+ [Características admitidas por las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Ediciones y componentes de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)   
- [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
+ [Planeación de una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Soluciones de alta disponibilidad &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Actualización a SQL Server 2014 mediante el Asistente para instalación &#40;el programa de instalación&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Actualice a SQL Server 2014 mediante el Asistente para la instalación &#40;la instalación&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

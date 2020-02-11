@@ -1,5 +1,5 @@
 ---
-title: Cambiar el nombre de cuadro de diálogo de instancia (Analysis Services) | Microsoft Docs
+title: Cambiar nombre de instancia (cuadro de diálogo) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f5196f8dd60dae731b7173730648d809438c262
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070373"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>Cambiar nombre de instancia (cuadro de diálogo de Analysis Services)
@@ -26,12 +26,12 @@ ms.locfileid: "66070373"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Para cambiar el nombre de instancia de**|Seleccione la instancia cuyo nombre se cambiará.|  
-|**Nuevo nombre de instancia**|Escriba el nombre de instancia que desee. No incluya el nombre del servidor. Es decir, en lugar de escribir \<nombre del servidor >\\< nombre de instancia\>, escriba solo \<nombre de instancia >.<br /><br /> Si desea que la instancia cuyo nombre va a cambiar sea la instancia predeterminada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , deje el nombre en blanco.|  
-|**Nombre de usuario**|Muestra la cuenta que el servicio utilizará al iniciarse. El nombre de usuario no puede modificarse.|  
+|**Instancia cuyo nombre se cambiará**|Seleccione la instancia cuyo nombre se cambiará.|  
+|**Nuevo nombre de instancia**|Escriba el nombre de instancia que desee. No incluya el nombre del servidor. Es decir, en lugar de escribir \<el nombre de \\ servidor><\>nombre de instancia \<, escriba solo el nombre de instancia>.<br /><br /> Si desea que la instancia cuyo nombre va a cambiar sea la instancia predeterminada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , deje el nombre en blanco.|  
+|**Nombre**|Muestra la cuenta que el servicio utilizará al iniciarse. El nombre de usuario no puede modificarse.|  
 |**Contraseña**|Escriba la contraseña de la cuenta del servicio.|  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

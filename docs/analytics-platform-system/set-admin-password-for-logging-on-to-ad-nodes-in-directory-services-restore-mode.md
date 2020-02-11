@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400336"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Establecimiento de la contraseña de administrador para iniciar sesión en los nodos de AD en Modo de restauración de servicios de directorio (DSRM)-Analytics Platform System
@@ -39,6 +39,6 @@ Modo de restauración de servicios de directorio (DSRM) es un modo de arranque p
 > [!NOTE]  
 > Si el Active Directory Domain Services o la máquina virtual se daña para una máquina virtual de AD específica, la ejecución de **ReplaceVM** para la máquina virtual de ad afectada es la acción correctiva recomendada. Póngase en contacto con CSS para obtener ayuda.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Restablecimiento de contraseña &#40;el sistema de plataforma de análisis&#41;](password-reset.md)  
   

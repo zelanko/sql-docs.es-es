@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637787"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Niveles de aislamiento de transacciones en tablas con optimización para memoria
@@ -39,7 +39,7 @@ ms.locfileid: "73637787"
   
 -   Usar explícitamente una sugerencia de nivel de aislamiento mayor para tener acceso a la tabla optimizada para memoria (por ejemplo, WITH (SNAPSHOT)).  
   
--   Especificar la opción `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, que establecerá el nivel de aislamiento de las tablas optimizadas para memoria en SNAPSHOT (como si incluyera sugerencias WITH(SNAPSHOT) en cada tabla optimizada para memoria). Para obtener más información acerca de `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, vea [opciones &#40;de ALTER DATABASE set&#41;de Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+-   Especificar la opción `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, que establecerá el nivel de aislamiento de las tablas optimizadas para memoria en SNAPSHOT (como si incluyera sugerencias WITH(SNAPSHOT) en cada tabla optimizada para memoria). Para obtener más información `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`acerca de, vea [Opciones de ALTER DATABASE Set &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  O bien, si el nivel de aislamiento de la sesión es READ COMMITTED, puede utilizar transacciones de confirmación automática.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73637787"
  En el caso de las tablas basadas en disco, la mayor parte de las garantías del nivel de aislamiento se implementan utilizando el bloqueo, lo que evita conflictos durante el mismo. En las tablas optimizadas para memoria, las garantías se aplican a través de un mecanismo de detección de conflictos, que evita la necesidad de usar bloqueos. La excepción es el aislamiento SNAPSHOT en tablas basadas en disco. Esto se implementa de forma similar al aislamiento SNAPSHOT en las tablas optimizadas para memoria usando un mecanismo de detección de conflictos.  
   
  SNAPSHOT  
- Este nivel de aislamiento especifica que los datos leídos por cualquier instrucción de una transacción serán la versión coherente, desde el punto de vista transaccional, de los datos existentes al comienzo de la transacción. La transacción únicamente puede reconocer las modificaciones de datos confirmadas antes del comienzo de la misma. Las instrucciones que se ejecuten en la transacción actual no verán las modificaciones de datos efectuadas por otras transacciones después del inicio de la transacción actual. Las instrucciones de una transacción obtienen una instantánea de los datos confirmados tal como se encontraban al comienzo de la transacción.  
+ Este nivel de aislamiento especifica que los datos leídos por cualquier instrucción de una transacción serán la versión coherente, desde el punto de vista transaccional, de los datos existentes al comienzo de la transacción. La transacción únicamente puede reconocer las modificaciones de datos confirmadas antes del comienzo de la misma. Las modificaciones de datos realizadas por otras transacciones después del inicio de la transacción actual no son visibles para las instrucciones que se ejecutan en la transacción actual. Las instrucciones de una transacción obtienen una instantánea de los datos confirmados tal como se encontraban al comienzo de la transacción.  
   
  Las operaciones de escritura (actualizaciones, inserciones y eliminaciones) siempre se aíslan completamente de otras transacciones. Por tanto, las operaciones de escritura en una transacción SNAPSHOT pueden entrar en conflicto con las operaciones de escritura realizadas por otras transacciones. Cuando la transacción actual intenta actualizar o eliminar una fila que ha sido actualizada o eliminada por otra transacción que se confirmó una vez iniciada la transacción actual, la transacción finaliza con el mensaje de error siguiente.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "73637787"
   
  Error 41325. La transacción actual no pudo confirmarse debido a un error serializable de validación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Descripción de las transacciones en tablas optimizadas para memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Directrices para los niveles de aislamiento de transacción con tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [Instrucciones para la lógica de reintento de transacciones en tablas optimizadas para memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
+ [Directrices para los niveles de aislamiento de transacción con tablas con optimización para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [Instrucciones para la lógica de reintento de transacciones en tablas con optimización para memoria](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

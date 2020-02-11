@@ -11,10 +11,10 @@ ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6c434e2cdc64616b5abbdf07ca4df428fce2edca
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728859"
 ---
 # <a name="validation-statuses-master-data-services"></a>Estados de validación (Master Data Services)
@@ -23,7 +23,7 @@ ms.locfileid: "73728859"
 
   En el área funcional **Administración de versiones** , en la página **Validar versión** , se pueden dar los siguientes estados.  
   
-|Estado|Descripción|  
+|Status|Descripción|  
 |------------|-----------------|  
 |Esperando la validación|Todos los miembros que se acaben de crear que esperen ser validados.|  
 |Esperando la revalidación|Miembros existentes que estén esperando ser validados.|  
@@ -31,7 +31,7 @@ ms.locfileid: "73728859"
 |Error de validación|Miembros con error de validación en las reglas de negocios.|  
 |Esperando la revalidación de los miembros dependientes|Miembros consolidados actualizados que esperen ser validados junto con los miembros secundarios.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Validar una versión con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Versiones &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   

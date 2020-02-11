@@ -18,16 +18,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833710"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>administrador de conexiones de varios archivos planos
   Un administrador de conexiones de varios archivos planos permite a un paquete obtener acceso a datos de varios archivos planos. Por ejemplo, un origen de archivos planos puede utilizar un administrador de conexiones para varios archivos planos cuando la tarea Flujo de datos se encuentra en un contenedor de bucles, como el contenedor de bucles For. En cada bucle del contenedor, el origen de archivos planos carga los datos del siguiente nombre de archivo que proporciona el administrador de conexiones de varios archivos planos.  
   
- Cuando se agrega un administrador de conexiones de varios archivos planos a un paquete, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea una conexión de administrador que se resuelve como una conexión de varios archivos planos en tiempo de ejecución, Establece las propiedades en el Administrador de conexiones de varios archivos planos, y Agrega el Administrador de conexiones de varios archivos planos a la `Connections` recopilación del paquete.  
+ Cuando se agrega un administrador de conexiones de varios archivos planos a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquete, crea un administrador de conexiones que se resuelve en una conexión de varios archivos planos en tiempo de ejecución, establece las propiedades en el administrador de conexiones de varios archivos planos y agrega el administrador `Connections` de conexiones de varios archivos planos a la colección del paquete.  
   
  La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `MULTIFLATFILE`.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "62833710"
   
  Si el administrador de conexiones de varios archivos planos hace referencia a varios archivos, las rutas de los archivos se separan con la barra vertical (|). La propiedad `ConnectionString` del administrador de conexiones tiene el formato siguiente:  
   
- \<*ruta de acceso*>|\<*ruta de acceso*>  
+ \<**>|\<*ruta de* acceso>  
   
- También puede especificar varios archivos mediante caracteres comodín. Por ejemplo, para hacer referencia unidad de todos los archivos de texto en C, el valor de la `ConnectionString` propiedad se puede establecer en C:\\*.txt.  
+ También puede especificar varios archivos mediante caracteres comodín. Por ejemplo, para hacer referencia a todos los archivos de texto de la unidad C, el `ConnectionString` valor de la propiedad se puede establecer\\en C: *. txt.  
   
  Si un administrador de conexiones de varios archivos planos hace referencia a varios archivos, todos los archivos deben tener el mismo formato.  
   
- De forma predeterminada, el administrador de conexiones de varios archivos planos establece la longitud de las columnas de cadena en 50 caracteres. En el cuadro de diálogo **Editor del administrador de conexiones de varios archivos planos** , puede evaluar datos de muestra y automáticamente cambiar el tamaño de la longitud de esas columnas para evitar el truncamiento de datos o un ancho de columna excesivo. A menos que cambie el tamaño de la longitud de la columna en un origen de archivo plano o una transformación, la longitud de columna permanece invariable en todo el flujo de datos. Si estas columnas se asignan a columnas de destino más estrechas, aparecen mensajes de advertencia en la interfaz de usuario, y en tiempo de ejecución, se pueden generar errores debido al truncamiento de datos. Puede cambiar el tamaño de las columnas para que sean compatibles con las columnas de destino en el administrador de conexiones de archivos planos, el origen de archivo plano o una transformación. Para modificar la longitud de columnas de salida, establezca el `Length` propiedad de la columna de salida en el **propiedades de entrada y salida** pestaña en el **Editor avanzado** cuadro de diálogo.  
+ De forma predeterminada, el administrador de conexiones de varios archivos planos establece la longitud de las columnas de cadena en 50 caracteres. En el cuadro de diálogo **Editor del administrador de conexiones de varios archivos planos** , puede evaluar datos de muestra y automáticamente cambiar el tamaño de la longitud de esas columnas para evitar el truncamiento de datos o un ancho de columna excesivo. A menos que cambie el tamaño de la longitud de la columna en un origen de archivo plano o una transformación, la longitud de columna permanece invariable en todo el flujo de datos. Si estas columnas se asignan a columnas de destino más estrechas, aparecen mensajes de advertencia en la interfaz de usuario, y en tiempo de ejecución, se pueden generar errores debido al truncamiento de datos. Puede cambiar el tamaño de las columnas para que sean compatibles con las columnas de destino en el administrador de conexiones de archivos planos, el origen de archivo plano o una transformación. Para modificar la longitud de las columnas de salida, establezca `Length` la propiedad de la columna de salida en la pestaña **propiedades de entrada y salida** del cuadro de diálogo **editor avanzado** .  
   
  Si actualiza las longitudes de columna en el administrador de conexiones de varios archivos planos una vez que ya ha agregado y configurado el origen de archivo plano que utiliza el administrador de conexiones, no tiene que cambiar manualmente el tamaño de las columnas de salida en el origen de archivo plano. Cuando abre el cuadro de diálogo **Origen de archivo plano** , el origen de archivo plano proporciona una opción para sincronizar los metadatos de columna.  
   
@@ -62,17 +62,17 @@ ms.locfileid: "62833710"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor del administrador de conexiones de varios archivos planos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor del administrador de conexiones de varios archivos planos &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor del administrador de conexiones de varios archivos planos &#40;página Columnas&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [&#40;página columnas del editor del administrador de conexiones de varios archivos planos&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Editor del administrador de conexiones de varios archivos planos &#40;página Avanzadas&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Editor del administrador de conexiones de varios archivos planos &#40;página avanzadas&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [Editor del administrador de conexiones de varios archivos planos &#40;página Vista previa&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [Editor del administrador de conexiones de varios archivos planos &#40;página de vista previa&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
  Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Origen de archivo plano](../data-flow/flat-file-source.md)   
  [Destino de archivo plano](../data-flow/flat-file-destination.md)   
  [Conexiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  

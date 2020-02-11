@@ -1,5 +1,5 @@
 ---
-title: Resumen de funciones DLL de traducción | Microsoft Docs
+title: Resumen de la función de DLL de traducción | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: 76436acc-e6b8-42ec-a4bf-0edea65d0286
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c84528779cf39a08218bff9ba045f49db5f61f8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039364"
 ---
 # <a name="translation-dll-function-summary"></a>Resumen de funciones DLL de traducción
-En la tabla siguiente se describe las funciones DLL de traducción. Para obtener más información sobre la sintaxis y semántica para cada función, vea [referencia de funciones DLL de traducción](../../../odbc/reference/syntax/translation-dll-api-reference.md).  
+En la tabla siguiente se describen las funciones de DLL de traducción. Para obtener más información sobre la sintaxis y la semántica de cada función, vea referencia de funciones de la [dll de traducción](../../../odbc/reference/syntax/translation-dll-api-reference.md).  
   
-|Tarea|Nombre de función|Finalidad|  
+|Tarea|Nombre de función|Propósito|  
 |----------|-------------------|-------------|  
-|Traducción de datos|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Convierte todos los datos que fluyen desde el origen de datos para el controlador.|  
-||[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Convierte todos los datos que fluyen desde el controlador para el origen de datos.|
+|Traducir datos|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Convierte todos los datos que fluyen desde el origen de datos al controlador.|  
+||[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Convierte todos los datos que fluyen del controlador al origen de datos.|

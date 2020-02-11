@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076262"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Crear y administrar una partición remota (Analysis Services)
@@ -27,14 +27,15 @@ ms.locfileid: "66076262"
   
  Una base de datos secundaria dedicada puede almacenar particiones remotas para una y solo una base de datos maestra, pero la base de datos maestra puede usar varias bases de datos secundarias, siempre y cuando todas las bases de datos secundarias estén en la misma instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Las dimensiones de una base de datos dedicada a las particiones remotas se crean como dimensiones vinculadas.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para poder crear una partición remota, deben cumplirse las siguientes condiciones:  
   
 -   Debe tener una segunda instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y una base de datos dedicada para almacenar las particiones. La base de datos secundaria se usa para un único fin: proporciona almacenamiento para las particiones remotas de una base de datos maestra.  
   
 -   Ambas instancias del servidor deben ser de la misma versión. Ambas bases de datos deben ser del mismo nivel funcional.  
   
--   Ambas instancias deben estar configuradas para conexiones TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no admite la creación de particiones remotas mediante el protocolo HTTP.  
+-   Ambas instancias deben estar configuradas para conexiones TCP. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no admite la creación de particiones remotas mediante el protocolo HTTP.  
   
 -   Se debe establecer la configuración de firewall de ambos equipos para que acepten conexiones externas. Para obtener más información sobre la configuración de firewall, vea [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -45,7 +46,7 @@ ms.locfileid: "66076262"
 -   Debe asegurarse de que el plan de recuperación ante desastres contempla la copia de seguridad y la restauración de las particiones remotas. El uso de particiones remotas puede complicar las operaciones de copia de seguridad y restauración. No olvide probar el plan exhaustivamente para asegurarse de que puede restaurar los datos necesarios.  
   
 ## <a name="configure-remote-partitions"></a>Configurar particiones remotas  
- Dos equipos diferentes que ejecutan una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deben crear cada uno una organización de particiones remotas que designe un equipo como servidor principal y el otro equipo como servidor subordinado.  
+ Dos equipos independientes que ejecutan una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] son los necesarios para crear una organización de particiones remotas que designe un equipo como servidor maestro y el otro equipo como servidor subordinado.  
   
  En el procedimiento siguiente se da por supuesto que tiene dos instancias de servidor, con una base de datos de cubo implementada en el servidor maestro. En este procedimiento, la base de datos de cubo se denomina db-master. La base de datos de almacenamiento que contiene particiones remotas se denomina db-storage.  
   
@@ -56,31 +57,31 @@ ms.locfileid: "66076262"
   
 #### <a name="specify-valid-server-names-for-cube-deployment-in-ssdt"></a>Especificar nombres de servidor válidos para la implementación del cubo (en SSDT)  
   
-1.  En el servidor maestro: En el Explorador de soluciones, haga clic en el nombre de la solución y seleccione **propiedades**. En el cuadro de diálogo **Propiedades** , haga clic en **Propiedades de configuración**, haga clic en **Implementación**y, a continuación, haga clic en **Servidor** ; después, establezca el nombre del servidor maestro.  
+1.  En el servidor maestro: en el Explorador de soluciones, haga clic con el botón derecho en el nombre de la solución y seleccione **Propiedades**. En el cuadro de diálogo **Propiedades** , haga clic en **Propiedades de configuración**, haga clic en **Implementación**y, a continuación, haga clic en **Servidor** ; después, establezca el nombre del servidor maestro.  
   
-2.  En el servidor subordinado: En el Explorador de soluciones, haga clic en el nombre de la solución y seleccione **propiedades**. En el cuadro de diálogo **Propiedades** , haga clic en **Propiedades de configuración**, haga clic en **Implementación**y, a continuación, haga clic en **Servidor** ; después, establezca el nombre del servidor subordinado.  
+2.  En el servidor subordinado: en el Explorador de soluciones, haga clic con el botón derecho en el nombre de la solución y seleccione **Propiedades**. En el cuadro de diálogo **Propiedades** , haga clic en **Propiedades de configuración**, haga clic en **Implementación**y, a continuación, haga clic en **Servidor** ; después, establezca el nombre del servidor subordinado.  
   
 #### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>Crear e implementar una base de datos secundaria (en SSDT)  
   
-1.  En el servidor subordinado: Cree un nuevo proyecto de Analysis Services para la base de datos de almacenamiento.  
+1.  En el servidor subordinado: cree un nuevo proyecto de Analysis Services para la base de datos de almacenamiento.  
   
-2.  En el servidor subordinado: En el Explorador de soluciones, cree un nuevo origen de datos que apunta a la base de datos de cubo, db-master. Use el proveedor **Proveedor Microsoft OLE DB/OLE DB nativo para Analysis Services 11.0**.  
+2.  En el servidor subordinado: en el Explorador de soluciones, cree un nuevo origen de datos que apunte a la base de datos de cubo, db-master. Use el proveedor **Proveedor Microsoft OLE DB/OLE DB nativo para Analysis Services 11.0**.  
   
-3.  En el servidor subordinado: Implementar la solución.  
+3.  En el servidor subordinado: implemente la solución.  
   
 #### <a name="enable-features-in-ssms"></a>Habilitar características (en SSMS)  
   
-1.  En el servidor subordinado: En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic en su conectado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el Explorador de objetos de instancia y seleccione **propiedades**. Establezca **Feature\LinkToOtherInstanceEnabled** y **Feature\LinkFromOtherInstanceEnabled** en **True**.  
+1.  En el servidor subordinado: en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la instancia conectada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el Explorador de objetos y seleccione **Propiedades**. Establezca **Feature\LinkToOtherInstanceEnabled** y **Feature\LinkFromOtherInstanceEnabled** en **True**.  
   
-2.  En el servidor subordinado: Reinicie el servidor haciendo clic en el nombre del servidor en el Explorador de objetos y seleccionando **reiniciar**.  
+2.  En el servidor subordinado: haga clic con el botón derecho en el nombre del servidor en el Explorador de objetos y seleccione **Reiniciar**para reiniciar el servidor.  
   
-3.  En el servidor maestro: En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic en su conectado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el Explorador de objetos de instancia y seleccione **propiedades**. Establezca **Feature\LinkToOtherInstanceEnabled** y **Feature\LinkFromOtherInstanceEnabled** en **True**.  
+3.  En el servidor maestro: en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la instancia conectada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el Explorador de objetos y seleccione **Propiedades**. Establezca **Feature\LinkToOtherInstanceEnabled** y **Feature\LinkFromOtherInstanceEnabled** en **True**.  
   
-4.  En el servidor maestro: Para reiniciar el servidor, haga clic en el nombre del servidor en el Explorador de objetos y seleccione **reiniciar**.  
+4.  En el servidor maestro: para reiniciar el servidor, haga clic con el botón derecho en el nombre del servidor en el Explorador de objetos y seleccione **Reiniciar**.  
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>Establecer la propiedad de base de datos MasterDataSourceID en el servidor remoto (en SSMS)  
   
-1.  En el servidor subordinado: Haga clic en el almacenamiento de base de datos, almacenamiento de base de datos, seleccione **base de datos de secuencia de comandos como** | **ALTER To** | **nueva ventana del Editor de consultas**.  
+1.  En el servidor subordinado: haga clic con el botón derecho en la base de datos de almacenamiento, dB-Storage, seleccione **incluir la base de datos** | en el editor**de** | **consultas nuevo**.  
   
 2.  Agregue **MasterDataSourceID** al código XMLA y especifique después el identificador de la base de datos de cubo, db-master, como valor. El XMLA debe ser similar a lo siguiente.  
   
@@ -110,28 +111,29 @@ ms.locfileid: "66076262"
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>Configurar la partición remota (en SSDT)  
   
-1.  En el servidor maestro: Abra el cubo del Diseñador de cubos y haga clic en **particiones** ficha. Expanda el grupo de medida. Haga clic en **Nueva partición** si el grupo de medida ya está configurado para varias particiones o haga clic en el botón Examinar (. . ) en la columna Origen para editar la partición existente.  
+1.  En el servidor maestro: Abra el cubo en el diseñador de cubos y haga clic en la pestaña **particiones** . Expanda el grupo de medida. Haga clic en **Nueva partición** si el grupo de medida ya está configurado para varias particiones o haga clic en el botón Examinar (. . ) en la columna Origen para editar la partición existente.  
   
 2.  En el Asistente para particiones, en **Especificar información de origen**, seleccione la vista del origen de datos y la tabla de hechos originales.  
   
 3.  Si se usa un enlace de consultas, proporcione una cláusula WHERE que segmente los datos para la nueva partición que va a crear.  
   
-4.  En **Ubicaciones de procesamiento y almacenamiento**, en **Procesando ubicación**, elija **Origen de datos remoto de Analysis Services** y haga clic en **Nuevo** para crear un nuevo origen de datos que señale la base de datos subordinada, db-storage.  
+4.  En **Ubicaciones de procesamiento y almacenamiento**, bajo **Procesando ubicación**, elija **Origen de datos remoto de Analysis Services** y haga clic en **Nuevo** para crear un nuevo origen de datos que apunte a la base de datos subordinada, db-storage.  
   
     > [!NOTE]  
     >  Si obtiene un error que indica que el origen de datos no existe en la colección, debe abrir el proyecto de la base de datos de almacenamiento, db-storage, y crear un origen de datos que apunte a la base de datos maestra, db-master.  
   
-5.  En el servidor maestro: Haga clic en el nombre del cubo en el Explorador de soluciones, seleccione **proceso** y procese totalmente el cubo.  
+5.  En el servidor maestro: haga clic con el botón derecho en el nombre del cubo en el Explorador de soluciones, seleccione **Procesar** y procese totalmente el cubo.  
   
 ## <a name="administering-remote-partitions"></a>Administrar particiones remotas  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite tanto el procesamiento paralelo como el procesamiento secuencial de las particiones remotas. La base de datos maestra, en la que se definieron las particiones, coordina las transacciones entre todas las instancias que participan en el procesamiento de las particiones de un cubo. A continuación se envían informes de procesamiento a todas las instancias que procesaron una partición.  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite tanto el procesamiento paralelo como el procesamiento secuencial de las particiones remotas. La base de datos maestra, en la que se definieron las particiones, coordina las transacciones entre todas las instancias que participan en el procesamiento de las particiones de un cubo. A continuación se envían informes de procesamiento a todas las instancias que procesaron una partición.  
   
  Un cubo que contenga particiones remotas puede administrarse junto con sus particiones en una sola instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Sin embargo, los metadatos de la partición remota solo se pueden ver y actualizar en la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en que se definieron la partición y su cubo primario. La partición remota no se puede ver ni actualizar en la instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 > [!NOTE]  
 >  Aunque las bases de datos dedicadas al almacenamiento de particiones remotas no se exponen a los conjuntos de filas de esquema, las aplicaciones que usan Objetos de administración de análisis (AMO) pueden seguir detectando una base de datos dedicada mediante el uso del comando Discover de XML for Analysis. Cualquier comando CREATE o DELETE que se envíe directamente a una base de datos dedicada mediante un cliente TCP o HTTP se ejecutará correctamente, pero el servidor devolverá una advertencia que indica que la acción puede dañar la base de datos estrechamente administrada.  
   
-## <a name="see-also"></a>Vea también  
- [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Particiones &#40;Analysis Services de datos multidimensionales&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

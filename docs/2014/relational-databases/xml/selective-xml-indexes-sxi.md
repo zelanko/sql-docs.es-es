@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679826"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Índices XML selectivos (SXI)
@@ -123,7 +123,7 @@ FOR
   
 -   Indizar nodos con tipos XS binarios: por ejemplo, base64Binary y hexBinary.  
   
--   Especificar los nodos para indizar con expresiones XPath que contienen el carácter comodín `*` al final, por ejemplo, `/a/b/c/*`, `/a//b/*`o `/a/b/*:c`.  
+-   Especificar los nodos para indizar con expresiones Xpath que contienen el carácter comodín `*` al final. Por ejemplo,  `/a/b/c/*`, `/a//b/*`o `/a/b/*:c`.  
   
 -   Indizar cualquier eje distinto de secundario, atributo o descendiente. El caso `//<step>` se permite como un caso especial.  
   
@@ -201,7 +201,7 @@ FOR
   
 |||  
 |-|-|  
-|**Tarea**|**Tema**|  
+|**Task**|**Tema.**|  
 |Especificar las rutas de acceso del nodo que desea indizar y las sugerencias opcionales de optimización cuando cree o modifique un índice XML selectivo.|[Especificar rutas de acceso y sugerencias de optimización para índices XML selectivos](specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
 |Crear, modificar o quitar un índice XML selectivo.|[Crear, modificar y quitar índices XML selectivos](create-alter-and-drop-selective-xml-indexes.md)|  
 |Crear, modificar o quitar un índice XML selectivo secundario.|[Crear, modificar y quitar índices XML selectivos secundarios](create-alter-and-drop-secondary-selective-xml-indexes.md)|  

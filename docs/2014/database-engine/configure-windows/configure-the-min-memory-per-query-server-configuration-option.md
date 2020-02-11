@@ -16,14 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dfee7265529419aecf2b05831503ed134b93f525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787065"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Configurar la opción de configuración del servidor Memoria mínima por consulta
-  En este tema se describe cómo configurar el `min memory per query` opción de configuración de servidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. El `min memory per query` opción especifica la cantidad mínima de memoria (en kilobytes) que se asignará para la ejecución de una consulta. Por ejemplo, si `min memory per query` está establecido en 2048 KB, garantiza que la consulta para obtener al menos esa cantidad de memoria total. El valor predeterminado es 1.024 KB. El valor mínimo es 512 KB y el valor máximo es 2 147 483 647 KB (2 GB).  
+  En este tema se describe cómo configurar `min memory per query` la opción de configuración [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del servidor [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en [!INCLUDE[tsql](../../includes/tsql-md.md)]mediante o. La `min memory per query` opción especifica la cantidad mínima de memoria (en kilobytes) que se asignará para la ejecución de una consulta. Por ejemplo, si `min memory per query` se establece en 2.048 KB, se garantiza que la consulta obtiene al menos esa cantidad total de memoria. El valor predeterminado es 1.024 KB. El valor mínimo es 512 KB y el valor máximo es 2 147 483 647 KB (2 GB).  
   
  **En este tema**  
   
@@ -41,13 +41,13 @@ ms.locfileid: "62787065"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Después de configurar la opción de memoria mínima por consulta](#FollowUp)  
+-   **Seguimiento:**  [después de configurar la opción de memoria mínima por consulta](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   El valor especificado en min memory per query tiene prioridad sobre la opción [index create memory](configure-the-index-create-memory-server-configuration-option.md). Si cambia ambas opciones y el valor de index create memory es inferior al de min memory per query, aparecerá un mensaje de advertencia, pero se establecerá el valor. Durante la ejecución de la consulta recibirá otra advertencia similar.  
+-   La cantidad de memoria mínima por consulta tiene prioridad sobre la [opción de memoria para creación de índices](configure-the-index-create-memory-server-configuration-option.md). Si cambia ambas opciones y el valor de index create memory es inferior al de min memory per query, aparecerá un mensaje de advertencia, pero se establecerá el valor. Durante la ejecución de la consulta recibirá otra advertencia similar.  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62787065"
 ####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-min-memory-per-query-option"></a>Para configurar la opción de memoria mínima por consulta  
   
@@ -94,13 +94,13 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de memoria mínima por consulta  
+##  <a name="FollowUp"></a>Seguimiento: después de configurar la opción de memoria mínima por consulta  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
- [Configure the index create memory Server Configuration Option](configure-the-index-create-memory-server-configuration-option.md)  
+ [Establecer la opción de configuración del servidor Memoria para creación de índices](configure-the-index-create-memory-server-configuration-option.md)  
   
   

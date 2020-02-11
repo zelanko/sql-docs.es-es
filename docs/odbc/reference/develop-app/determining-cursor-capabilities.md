@@ -1,5 +1,5 @@
 ---
-title: Determinar las capacidades del Cursor | Microsoft Docs
+title: Determinar las capacidades del cursor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14715e40cd99f3f1a03c2ae19e825705a8376e30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039999"
 ---
 # <a name="determining-cursor-capabilities"></a>Determinar las capacidades del Cursor
-Las cuatro opciones siguientes en **SQLGetInfo** describen qué tipos de cursores se admiten y cuáles son sus funciones:  
+Las cuatro opciones siguientes de **SQLGetInfo** describen qué tipos de cursores se admiten y cuáles son sus capacidades:  
   
 -   SQL_CURSOR_SENSITIVITY. Indica si un cursor es sensible a los cambios realizados por otro cursor.  
   
--   SQL_SCROLL_OPTIONS. Enumera los tipos de cursor compatibles (solo avance, estáticos, controlado por, dinámicos o mixtos). Todos los orígenes de datos deben admitir cursores de solo avance.  
+-   SQL_SCROLL_OPTIONS. Enumera los tipos de cursor admitidos (solo avance, estático, controlado por conjunto de claves, dinámico o mixto). Todos los orígenes de datos deben admitir cursores de solo avance.  
   
--   SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 (según el tipo del cursor). Enumera los tipos de fetch admitidos por cursores desplazables. Los bits del valor devuelto corresponden a los tipos de captura en **SQLFetchScroll**.  
+-   SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 (dependiendo del tipo de cursor). Enumera los tipos de captura que admiten los cursores desplazables. Los bits del valor devuelto corresponden a los tipos de captura en **SQLFetchScroll**.  
   
--   SQL_KEYSET_CURSOR_ATTRIBUTES2 o SQL_STATIC_CURSOR_ATTRIBUTES2 (según el tipo del cursor). Indica si pueden detectar los cursores estáticos y controlados por sus propias actualizaciones, eliminaciones e inserciones.  
+-   SQL_KEYSET_CURSOR_ATTRIBUTES2 o SQL_STATIC_CURSOR_ATTRIBUTES2 (dependiendo del tipo de cursor). Muestra si los cursores estáticos y los controlados por conjunto de claves pueden detectar sus propias actualizaciones, eliminaciones e inserciones.  
   
- Una aplicación puede determinar las capacidades del cursor en tiempo de ejecución mediante una llamada a **SQLGetInfo** con estas opciones. Normalmente, esto se hace por aplicaciones genéricas. Las capacidades del cursor también se pueden determinar durante el desarrollo de aplicaciones y su uso codificado de forma rígida en la aplicación. Esto normalmente se realiza mediante aplicaciones verticales y personalizadas, pero también puede realizarse por aplicaciones genéricas que utiliza una implementación de cursor de cliente, como la biblioteca de cursores ODBC.
+ Una aplicación puede determinar las capacidades del cursor en tiempo de ejecución mediante una llamada a **SQLGetInfo** con estas opciones. Esto lo suelen hacer las aplicaciones genéricas. También se pueden determinar las capacidades de cursor durante el desarrollo de la aplicación y su uso codificado de forma rígida en la aplicación. Esto se realiza normalmente mediante aplicaciones verticales y personalizadas, pero también se puede hacer mediante aplicaciones genéricas que usan una implementación de cursor del lado cliente, como la biblioteca de cursores ODBC.

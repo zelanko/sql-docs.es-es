@@ -1,5 +1,5 @@
 ---
-title: Subclaves de la especificación de controlador | Microsoft Docs
+title: Subclaves de especificación de controlador | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,45 +16,45 @@ ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8f5523c54286ed2e7cc554745dc269599115793e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094174"
 ---
 # <a name="driver-specification-subkeys"></a>Subclaves de la especificación del controlador
-Cada controlador mostrado en la subclave de controladores ODBC tiene una subclave de su propio. Esta subclave tiene el mismo nombre que el valor correspondiente en la subclave de controladores ODBC. Las rutas de acceso completas del controlador y el controlador de archivos DLL, los valores de las palabras clave de controlador devueltos por la instalación de la lista de los valores bajo esta subclave **SQLDrivers**y el recuento de uso. Los formatos de los valores son como se muestra en la tabla siguiente.  
+Cada controlador incluido en la subclave controladores ODBC tiene una subclave propia. Esta subclave tiene el mismo nombre que el valor correspondiente en la subclave controladores ODBC. Los valores de esta subclave enumeran las rutas de acceso completas de los archivos dll de instalación del controlador y del controlador, los valores de las palabras clave del controlador devuelto por **SQLDrivers**y el recuento de uso. Los formatos de los valores son los que se muestran en la tabla siguiente.  
   
-|NOMBRE|Tipo de datos|Datos|  
+|Nombre|Tipo de datos|data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&#124;**N**} {**Y**&#124;**N**} {**Y**&#124;**N**}|  
-|CreateDSN|REG_SZ|*driver-description*|  
-|Controlador|REG_SZ|*driver-DLL-path*|  
-|DriverODBCVer|REG_SZ|*nn.nn*|  
-|FileExtns|REG_SZ|**\*.** *archivo extension1*[ **,\*.** *archivo extension2*]...|  
+|ConnectFunctions|REG_SZ|{**Y**&#124;**n**} {**y**&#124;**n**} {**y**&#124;**n**}|  
+|CreateDSN|REG_SZ|*controlador: Descripción*|  
+|Controlador|REG_SZ|*Driver-DLL-path*|  
+|DriverODBCVer|REG_SZ|*NN. NN*|  
+|FileExtns|REG_SZ|**\*.** *archivo-extension1*[**,\*.** *archivo-extension2*] ...|  
 |FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|Programa de instalación|REG_SZ|*setup-DLL-path*|  
+|Instalación|REG_SZ|*Setup-DLL-path*|  
 |SQLLevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|UsageCount|REG_DWORD|*Recuento*|  
+|UsageCount|REG_DWORD|*contabiliza*|  
   
- El uso de cada palabra clave se muestra en la tabla siguiente.  
+ En la tabla siguiente se muestra el uso de cada palabra clave.  
   
 |Palabra clave|Uso|  
 |-------------|-----------|  
-|**APILevel**|Un número que indica ODBC compatible con el controlador de nivel de conformidad con la interfaz:<br /><br /> 0 = Ninguno<br /><br /> 1 = 1 nivel compatibles<br /><br /> 2 = nivel 2 admitidas<br /><br /> Debe ser el mismo que el valor devuelto para la opción SQL_ODBC_INTERFACE_CONFORMANCE en **SQLGetInfo**.|  
-|**CreateDSN**|El nombre de uno o varios orígenes de datos cuando el controlador está instalado. La información del sistema debe incluir una sección de especificación de origen de datos para cada origen de datos que se muestran con el **CreateDSN** palabra clave. Estas secciones no deben incluir el **controlador** palabra clave, ya que esto se especifica en la sección de la especificación de controlador, pero debe incluir información suficiente para que el **ConfigDSN** función en el controlador archivo DLL para crear una especificación de origen de datos sin mostrar ningún cuadro de diálogo de configuración. Para el formato de una sección de especificación del origen de datos, vea [subclaves de especificación del origen de datos](../../../odbc/reference/install/data-source-specification-subkeys.md).|  
-|**ConnectFunctions**|Una cadena de tres caracteres que indica si el controlador admite **SQLConnect**, **SQLDriverConnect**, y **SQLBrowseConnect**. Si el controlador admite **SQLConnect**, el primer carácter es "Y"; en caso contrario, es "N". Si el controlador admite **SQLDriverConnect**, el segundo carácter es "Y"; en caso contrario, es "N". Si el controlador admite **SQLBrowseConnect**, el tercer carácter es "Y"; en caso contrario, es "N". Por ejemplo, si un controlador es compatible con **SQLConnect** y **SQLDriverConnect** pero no **SQLBrowseConnect**, la cadena de tres caracteres es "YYN".|  
-|**DriverODBCVer**|Una cadena de caracteres con la versión de ODBC que admite el controlador. Es la versión del formulario *nn.nn*, donde los dos primeros dígitos son la versión principal y los dos dígitos son la versión secundaria. Para la versión de ODBC que se describe en este manual, el controlador debe devolver "03.00".<br /><br /> Debe ser el mismo que el valor devuelto para la opción SQL_DRIVER_ODBC_VER en **SQLGetInfo**.|  
-|**FileExtns**|Para los controladores basados en archivos, una lista separada por comas de extensiones de los archivos puede usar el controlador. Por ejemplo, podría especificar un controlador de dBASE \*.dbf y un controlador de archivo de texto con formato podrían especificar \*.txt,\*.csv. Para obtener un ejemplo de cómo una aplicación puede utilizar esta información, consulte el **FileUsage** palabra clave.|  
-|**FileUsage**|Un número que indica el modo en que un controlador basado en archivos trata directamente los archivos en un origen de datos.<br /><br /> 0 = el controlador no es un controlador basado en archivos. Por ejemplo, un controlador ORACLE es un controlador basados en DBMS.<br /><br /> 1 = un controlador basado en archivos trata los archivos en un origen de datos como tablas. Por ejemplo, un controlador de Xbase trata cada archivo Xbase como una tabla.<br /><br /> 2 = un controlador basado en archivos trata los archivos en un origen de datos como un catálogo. Por ejemplo, un controlador de Microsoft® Access trata cada archivo de Microsoft Access como una base de datos completa.<br /><br /> Una aplicación puede utilizar esto para determinar cómo seleccionarán los usuarios los datos. Por ejemplo, los usuarios de Xbase y Paradox suelen pensar de datos tal como se almacena en archivos, mientras que los usuarios ORACLE y Microsoft Access generalmente se considera datos tal como se almacena en tablas.<br /><br /> Cuando un usuario selecciona **abrir archivo de datos** desde el **archivo** menú, una aplicación podría mostrar el **Windows File Open** cuadro de diálogo común. La lista de tipos de archivo utilizaría las extensiones de archivo especificadas con el **FileExtns** palabra clave para los controladores que especifican un **FileUsage** valor 1 y "Y" como el segundo carácter del valor de la  **ConnectFunctions** palabra clave. Después de que el usuario selecciona un archivo, se llamaría la aplicación **SQLDriverConnect** con el **controlador** palabra clave y, a continuación, ejecute un **seleccione \* FROM *nombre de tabla***   instrucción.<br /><br /> Cuando el usuario selecciona **importar datos** desde el **archivo** menú, una aplicación podría mostrar una lista de descripciones de los controladores que especifican un **FileUsage** el valor de 0 o 2 y "S" como el segundo carácter del valor de la **ConnectFunctions** palabra clave. Después de que el usuario selecciona un controlador, se llamaría la aplicación **SQLDriverConnect** con el **controlador** palabra clave y, después, mostrar un personalizado **Seleccionar tabla** cuadro de diálogo.|  
-|**SQLLevel**|Un número que indica el controlador admitida la gramática de SQL-92:<br /><br /> 0 = la entrada de SQL-92<br /><br /> 1 = transitorias FIPS127-2<br /><br /> 2 = intermedio SQL-92<br /><br /> 3 = completo de SQL-92<br /><br /> Debe ser el mismo que el valor devuelto para la opción SQL_SQL_CONFORMANCE en **SQLGetInfo**.|  
+|**APILevel**|Un número que indica el nivel de conformidad de la interfaz ODBC admitido por el controlador:<br /><br /> 0 = Ninguno<br /><br /> 1 = se admite el nivel 1<br /><br /> 2 = nivel 2 admitido<br /><br /> Debe ser el mismo que el valor devuelto para la opción SQL_ODBC_INTERFACE_CONFORMANCE en **SQLGetInfo**.|  
+|**CreateDSN**|Nombre de uno o más orígenes de datos que se van a crear al instalar el controlador. La información del sistema debe incluir una sección especificación de origen de datos para cada origen de datos que aparece con la palabra clave **CreateDSN** . Estas secciones no deben incluir la palabra clave **driver** , porque se especifica en la sección especificación de controladores, pero debe incluir información suficiente para la función **ConfigDSN** en el archivo dll de instalación del controlador para crear una especificación de origen de datos sin mostrar ningún cuadro de diálogo. Para obtener información sobre el formato de una especificación de origen de datos, vea [subclaves de especificación de origen de datos](../../../odbc/reference/install/data-source-specification-subkeys.md).|  
+|**ConnectFunctions**|Una cadena de tres caracteres que indica si el controlador admite **SQLConnect**, **SQLDriverConnect**y **SQLBrowseConnect**. Si el controlador admite **SQLConnect**, el primer carácter es "Y". de lo contrario, es "N". Si el controlador admite **SQLDriverConnect**, el segundo carácter es "Y". de lo contrario, es "N". Si el controlador admite **SQLBrowseConnect**, el tercer carácter es "Y". de lo contrario, es "N". Por ejemplo, si un controlador admite **SQLConnect** y **SQLDriverConnect** pero no **SQLBrowseConnect**, la cadena de tres caracteres es "YYN".|  
+|**DriverODBCVer**|Cadena de caracteres con la versión de ODBC que admite el controlador. La versión tiene el formato *NN. NN*, donde los dos primeros dígitos son la versión principal y los dos dígitos siguientes son la versión secundaria. Para la versión de ODBC que se describe en este manual, el controlador debe devolver "03,00".<br /><br /> Debe ser el mismo que el valor devuelto para la opción SQL_DRIVER_ODBC_VER en **SQLGetInfo**.|  
+|**FileExtns**|En el caso de los controladores basados en archivos, es una lista separada por comas de las extensiones de los archivos que el controlador puede usar. Por ejemplo, un controlador dBASE podría especificar \*. DBF y un controlador de archivo de texto con \*formato podría especificar\*. txt,. csv. Para obtener un ejemplo de cómo una aplicación puede usar esta información, vea la palabra clave **FileUsage** .|  
+|**FileUsage**|Número que indica cómo un controlador basado en archivos trata directamente los archivos de un origen de datos.<br /><br /> 0 = el controlador no es un controlador basado en archivos. Por ejemplo, un controlador de ORACLE es un controlador basado en DBMS.<br /><br /> 1 = un controlador basado en archivos trata los archivos de un origen de datos como tablas. Por ejemplo, un controlador xBase trata cada archivo xBase como una tabla.<br /><br /> 2 = un controlador basado en archivos trata los archivos de un origen de datos como un catálogo. Por ejemplo, un controlador de Microsoft® Access trata cada archivo de Microsoft Access como una base de datos completa.<br /><br /> Una aplicación podría usar esta información para determinar cómo seleccionarán los usuarios los datos. Por ejemplo, los usuarios de xBase y Paradox suelen pensar en los datos tal como se almacenan en archivos, mientras que los usuarios de ORACLE y Microsoft Access suelen pensar en los datos almacenados en las tablas.<br /><br /> Cuando un usuario selecciona **Abrir archivo de datos** en el menú **archivo** , una aplicación podría mostrar el cuadro de diálogo Abrir común de **archivos de Windows** . La lista de tipos de archivo usaría las extensiones de archivo especificadas con la palabra clave **FileExtns** para los controladores que especifican un valor **FileUsage** de 1 y "Y" como segundo carácter del valor de la palabra clave **ConnectFunctions** . Una vez que el usuario selecciona un archivo, la aplicación llamará a **SQLDriverConnect** con la palabra clave **driver** y, a continuación, ejecutará una instrucción **SELECT \* from *TABLE-Name* ** .<br /><br /> Cuando el usuario selecciona **importar datos** desde el menú **archivo** , una aplicación puede mostrar una lista de descripciones de los controladores que especifican un valor **FileUsage** de 0 o 2 y "y" como segundo carácter del valor de la palabra clave **ConnectFunctions** . Una vez que el usuario selecciona un controlador, la aplicación llamaría a **SQLDriverConnect** con la palabra clave **driver** y, a continuación, mostraría un cuadro de diálogo **seleccionar tabla** personalizada.|  
+|**SQLLevel**|Un número que indica la gramática de SQL-92 admitida por el controlador:<br /><br /> 0 = entrada SQL-92<br /><br /> 1 = FIPS127-2 transición<br /><br /> 2 = SQL-92 intermedio<br /><br /> 3 = SQL-92 Full<br /><br /> Debe ser el mismo que el valor devuelto para la opción SQL_SQL_CONFORMANCE en **SQLGetInfo**.|  
   
- Para obtener información sobre recuentos de uso, consulte [recuento de uso](../../../odbc/reference/install/usage-counting.md) anteriormente en esta sección.  
+ Para obtener información acerca de los recuentos de uso, consulte [recuento de uso](../../../odbc/reference/install/usage-counting.md) anteriormente en esta sección.  
   
- Las aplicaciones no deben establecer el recuento de uso. ODBC mantendrá este número.  
+ Las aplicaciones no deben establecer el recuento de uso. ODBC mantendrá este recuento.  
   
- Por ejemplo, supongamos que un controlador de archivos de texto con formato tiene un controlador de archivo DLL denominado Text.dll, un programa de instalación de controlador independiente DLL denominado Txtsetup.dll y se ha instalado los tres veces. Si el controlador admite el nivel de conformidad de la API de nivel 1, es compatible con el nivel de conformidad de gramática mínima de SQL, trata los archivos como tablas y puede utilizar archivos con las extensiones .txt y. csv, los valores bajo la subclave texto podrían ser como sigue:  
+ Por ejemplo, supongamos que un controlador para archivos de texto con formato tiene una DLL de controlador denominada text. dll, una DLL de instalación de controladores independiente denominada Txtsetup. dll y se ha instalado tres veces. Si el controlador es compatible con el nivel de conformidad de la API de nivel 1, admite el nivel mínimo de cumplimiento de la gramática de SQL, trata los archivos como tablas y puede usar archivos con las extensiones. txt y. csv, los valores de la subclave de texto pueden ser los siguientes:  
   
 ```  
 APILevel : REG_SZ : 1  

@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c2818c322749672c514cd9d392b61b580d40e88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869907"
 ---
-# <a name="mssqlserver14420"></a>MSSQLSERVER_14420
+# <a name="mssqlserver_14420"></a>MSSQLSERVER_14420
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|14420|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|14420|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SQLErrorNum14420|  
 |Texto del mensaje|La base de datos principal de trasvase de registros %s.%s tiene un umbral de copia de seguridad de %d minutos y no ha realizado una operación de copia de seguridad del registro durante %d minutos. Compruebe la información del registro de agente y del monitor de trasvase de registros.|  
@@ -57,11 +57,11 @@ ms.locfileid: "62869907"
     > [!NOTE]  
     >  El hecho de que existan diferentes zonas horarias en las dos instancias de servidor no debería causar problemas.  
   
-## <a name="see-also"></a>Vea también  
- [log_shipping_monitor_primary &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-monitor-primary-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [log_shipping_monitor_primary &#40;&#41;de Transact-SQL](/sql/relational-databases/system-tables/log-shipping-monitor-primary-transact-sql)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_help_log_shipping_monitor_primary &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql)   
- [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
+ [sp_help_log_shipping_monitor_primary &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql)   
+ [sp_refresh_log_shipping_monitor &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento de tabla de esquema (DTA) | Microsoft Docs
+title: Table (DTA, elemento de Schema) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138787"
 ---
 # <a name="table-element-for-schema-dta"></a>Table (DTA, elemento de Schema)
@@ -35,7 +35,7 @@ ms.locfileid: "63138787"
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
-|Attribute|Descripción|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |`NumberOfRows`|Opcional. Entero que permite simular tablas de diferentes tamaños.|  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63138787"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|**Tipo y longitud de los datos**|**string**, entre 1 y 255 caracteres.|  
+|**Tipo y longitud de los datos**|**cadena**, entre 1 y 255 caracteres.|  
 |**Valor predeterminado**|Ninguno.|  
 |**Repetición**|Opcional. Presenta tantas tablas como sea necesario para la carga de trabajo.|  
   
@@ -52,15 +52,15 @@ ms.locfileid: "63138787"
 |Relación|Elementos|  
 |------------------|--------------|  
 |**Elemento primario**|[Schema &#40;DTA, elemento de Database&#41;](schema-element-for-database-dta.md)|  
-|**Elementos secundarios**|[Elemento Name de Table &#40;DTA&#41;](name-element-for-table-dta.md)|  
+|**Elementos secundarios**|[Elemento Name de la tabla &#40;DTA&#41;](name-element-for-table-dta.md)|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si no se especifica un elemento `Table`, el Asistente para la optimización de motor de base de datos asumirá que todas las tablas de la base de datos especificada se pueden optimizar.  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso, vea [Server &#40;DTA, elemento&#41;](server-element-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

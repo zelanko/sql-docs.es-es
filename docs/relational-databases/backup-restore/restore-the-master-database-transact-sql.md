@@ -13,10 +13,10 @@ ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6ce115a0df8ca77b37a78234247174ca9f2dd006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041468"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurar la base de datos maestra (Transact-SQL)
@@ -28,16 +28,16 @@ ms.locfileid: "68041468"
   
 1.  Inicie la instancia de servidor en modo de usuario único.  
   
-     Para obtener más información sobre cómo especificar el parámetro de inicio de usuario único ( **-m**), vea [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server &#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
+     Para obtener más información sobre cómo especificar el parámetro de inicio de usuario único ( **-m**), vea [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
 2.  Para restaurar una copia de seguridad de base de datos completa de **maestra**, use la siguiente instrucción [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
-     `RESTORE DATABASE master FROM`  *<dispositivo_de_copia_de_seguridad>*  `WITH REPLACE`  
+     `RESTORE DATABASE master FROM`  *<backup_device>*  `WITH REPLACE`  
   
      La opción REPLACE indica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que restaure la base de datos especificada incluso cuando ya exista otra con el mismo nombre. La base de datos existente, si existe, se elimina. En el modo de usuario único, es recomendable introducir la instrucción RESTORE DATABASE en la [utilidad sqlcmd](../../tools/sqlcmd-utility.md). Para obtener más información, vea [Usar la utilidad sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md).  
   
     > [!IMPORTANT]  
-    >  Después de que la base de datos **maestra** se haya restaurado, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se cierra y finaliza el proceso **sqlcmd** . Antes de reiniciar la instancia de servidor, quite el parámetro de inicio de usuario único. Para obtener más información, vea [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server &#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
+    >  Después de que la base de datos **maestra** se haya restaurado, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se cierra y finaliza el proceso **sqlcmd** . Antes de reiniciar la instancia de servidor, quite el parámetro de inicio de usuario único. Para obtener más información, vea [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
 3.  Reinicie la instancia del servidor y continúe con otros pasos de la recuperación, por ejemplo, restaurando otras bases de datos, adjuntando bases de datos y corrigiendo incoherencias de los usuarios.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68041468"
 2> GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Restauraciones de base de datos completas &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac41915ab4b94f1b074874228a14f5ab6363604c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229346"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>Configurar o reparar PowerPivot para SharePoint 2013 (Herramienta de configuración de PowerPivot)
@@ -108,7 +108,7 @@ ms.locfileid: "75229346"
   
  En la tabla siguiente se describen los valores usados para configurar el servidor.  
   
-|Page|Valor de entrada|Origen|Descripción|  
+|Página|Valor de entrada|Source|Descripción|  
 |----------|-----------------|------------|-----------------|  
 |**Configurar o reparar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint**|Cuenta predeterminada|Usuario actual|La cuenta predeterminada es una cuenta de usuario de Windows de dominio que se emplea para aprovisionar servicios compartidos en la granja. Se usa para aprovisionar lo siguiente:<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]aplicación de servicio<br />Servicio de almacenamiento seguro<br />Excel Services<br />La identidad del grupo de aplicaciones web<br />El administrador de la colección de sitios<br />La cuenta de la actualización de datos desatendida de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> De forma predeterminada, usa la cuenta de dominio del usuario actual. Se recomienda que reemplace el valor predeterminado a menos que esté configurando un servidor con fines de evaluación y no de producción. Podrá cambiar las identidades de servicio posteriormente, utilizando Administración central. Opcionalmente, en la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , especifique cuentas dedicadas para lo siguiente:<br /><br /> Aplicación Web, mediante la página **crear aplicación web predeterminada** (suponiendo que la herramienta está creando una aplicación web para la granja de servidores).<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]cuenta de actualización de datos desatendida, mediante la página **crear cuenta desatendida para la actualización de datos** de esta herramienta.|  
 ||Servidor de bases de datos|Instancia con nombre local de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , si está disponible|Si una instancia del motor de base de datos se ha instalado como una instancia con nombre de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , la herramienta rellena el campo del servidor de bases de datos con este nombre de instancia. Si no ha instalado el motor de base de datos, este campo está vacío.<br /><br /> El **servidor de base de datos** es un parámetro necesario. Puede ser cualquier versión o edición de SQL Server que se admita en granjas de servidores de SharePoint.|  
@@ -192,7 +192,7 @@ ms.locfileid: "75229346"
  Puede agregar sitios de confianza en Excel Services para cambiar los permisos y la configuración de los sitios que proporcionan libros de Excel y datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obtener más información, consulte [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ### <a name="build-a-includessgeminiincludesssgemini-mdmd-workbook"></a>Crear un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]  
- Una vez instalados los componentes de servidor en una granja, puede crear su primer libro de Excel 2013 que usa datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] incrustados y, a continuación, publicarlo en una biblioteca de SharePoint. O bien, puede cargar o publicar un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de ejemplo para comprobar el acceso a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en SharePoint. Para obtener más información, consulte los temas siguientes:  
+ Una vez instalados los componentes de servidor en una granja, puede crear su primer libro de Excel 2013 que usa datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] incrustados y, a continuación, publicarlo en una biblioteca de SharePoint. O bien, puede cargar o publicar un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de ejemplo para comprobar el acceso a datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en SharePoint. Para obtener más información, vea lo siguiente:  
 
 -   [Novedades de PowerPivot en Excel 2013](https://www.microsoft.com/microsoft-365/blog/2012/12/13/introduction-to-powerpivot-in-excel-2013/).  
   
@@ -204,7 +204,7 @@ ms.locfileid: "75229346"
 ## <a name="additional-resources"></a>Recursos adicionales  
  La ![configuración de SharePoint](../media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint") [envía comentarios e información de contacto a través de Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Instalar o desinstalar el complemento de PowerPivot para SharePoint &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Herramientas de configuración de PowerPivot](power-pivot-configuration-tools.md)   
  [Administración y configuración del servidor de PowerPivot en administración central](power-pivot-server-administration-and-configuration-in-central-administration.md)   

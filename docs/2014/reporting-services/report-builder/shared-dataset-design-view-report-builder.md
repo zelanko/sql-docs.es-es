@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1589f171fd8d402572408186a10b3e6f4ac97982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107587"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Vista de diseño de conjunto de datos compartidos (Generador de informes)
@@ -22,16 +22,16 @@ ms.locfileid: "66107587"
   
  ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- Para obtener más información sobre cómo trabajar con datos en un informe, vea [agregar datos a un informe &#40;generador de informes y SSRS&#41;](../report-data/report-datasets-ssrs.md).  
+ Para obtener más información sobre cómo trabajar con datos en un informe, vea [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
-##  <a name="Ribbon"></a> Cinta de opciones  
- La cinta de opciones le ayuda a buscar rápidamente los comandos que necesita para completar una tarea. Los comandos están organizados en los siguientes grupos lógicos: Conexión, conjunto de datos y Diseñador de consultas.  
+##  <a name="Ribbon"></a>La cinta de opciones  
+ La cinta de opciones le ayuda a buscar rápidamente los comandos que necesita para completar una tarea. Los comandos se organizan en los siguientes grupos lógicos: Conexión, Conjunto de datos y Diseñador de consultas.  
   
 ### <a name="connection"></a>Conexión  
  Utilice el botón **Seleccionar** del grupo Conexión para seleccionar un origen de datos compartido en el informe o vaya a un origen de datos compartido en el servidor de informes.  
   
 > [!NOTE]  
->  Un conjunto de datos compartido debe basarse en un origen de datos compartido. Si el origen de datos que necesita no está disponible, debe crear uno en el servidor de informes. Para obtener más información, consulte [crear, eliminar o modificar un origen de datos compartido &#40;el Administrador de informes&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md) en la documentación de Reporting Services en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [libros](https://go.microsoft.com/fwlink/?linkid=121312).  
+>  Un conjunto de datos compartido debe basarse en un origen de datos compartido. Si el origen de datos que necesita no está disponible, debe crear uno en el servidor de informes. Para obtener más información, vea [crear, eliminar o modificar un origen de datos compartido &#40;administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md) en la documentación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Reporting Services en los [libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312)de.  
   
  Para obtener más información, consulte [Conexiones de datos, orígenes de datos y cadenas de conexión](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
@@ -52,27 +52,27 @@ ms.locfileid: "66107587"
   
  Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
- Para obtener más información acerca de los planes de actualización de caché, consulte [conjuntos de datos de caché compartido &#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md) en la documentación de Reporting Services en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [libros](https://go.microsoft.com/fwlink/?linkid=121312).  
+ Para obtener más información sobre los planes de actualización de caché, vea [almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md) en la documentación de Reporting Services en los [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312)de.  
   
 ### <a name="query-designer"></a>Diseñador de consultas  
  Utilice la barra de herramientas del diseñador de consultas como ayuda para crear una consulta que especifique qué datos deben recuperarse de la conexión de datos. La barra de herramientas que ve depende del diseñador de consultas que está asociado al tipo de origen de datos de la conexión de datos.  
   
- Para obtener más información, vea el tema que se corresponde con el tipo de origen de datos en [agregar datos de orígenes de datos externos &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) y [diseñadores de consultas &#40;Report Builder&#41; ](../query-designers-report-builder.md) .  
+ Para obtener más información, vea el tema correspondiente al tipo de origen de datos en [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](../report-data/add-data-from-external-data-sources-ssrs.md) y [diseñadores de consultas &#40;generador de informes&#41;](../query-designers-report-builder.md).  
   
 
   
-##  <a name="DesignSurface"></a> Superficie del Diseñador de consultas  
+##  <a name="DesignSurface"></a>La superficie del diseñador de consultas  
  Un diseñador de consultas le ayuda a crear una consulta con la sintaxis que requiera el origen de datos externo.  
   
  Algunos tipos de origen de datos proporcionan un diseñador gráfico de consultas que puede utilizar para explorar los metadatos en un origen de datos externo. Puede arrastrar interactivamente los nombres del panel de metadatos hasta la superficie de diseño de la consulta o seleccionar de forma interactiva los nombres que desea utilizar.  
   
  Algunos tipos de origen de datos admiten un diseñador de consultas basado en texto que se puede usar para pegar consultas creadas con otras herramientas, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Cada tipo de origen de datos tiene requisitos concretos para la consulta que funcionarán con el origen de datos externo. Para obtener más información, vea el tema que se corresponde con el tipo de origen de datos en [agregar datos de orígenes de datos externos &#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md) y [orígenes de datos admitidos por Reporting Services &#40;SSRS&#41; ](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación de Reporting Services en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [libros](https://go.microsoft.com/fwlink/?linkid=121312).  
+ Cada tipo de origen de datos tiene requisitos concretos para la consulta que funcionarán con el origen de datos externo. Para obtener más información, vea el tema correspondiente al tipo de origen de datos en [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](../report-data/add-data-from-external-data-sources-ssrs.md) y [orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la documentación de Reporting Services en los [libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312)de.  
   
 
   
-##  <a name="Results"></a> Ver los resultados de la consulta  
+##  <a name="Results"></a>Ver los resultados de la consulta  
  En la vista de diseño del conjunto de datos compartido, se crean consultas que recuperarán datos de la conexión de datos cuando se procesen los informes.  
   
  Ejecute la consulta para ver los datos del ejemplo de la conexión de datos a fin de comprobar que la consulta devuelve el tipo de datos que espera. Las columnas del conjunto de resultados proceden de los metadatos de los esquemas de datos de la conexión de datos. Los nombres de columna se convierten en la colección de campos de conjunto de datos. Los valores de los datos que ve en el conjunto de resultados de la consulta son los datos del tiempo de diseño. Cuando se guarda el conjunto de datos como una definición de conjunto de datos compartido en el servidor de informes, solo se guarda el texto de consulta. Los datos del conjunto de resultados de la consulta no se guardan.  
@@ -86,17 +86,17 @@ ms.locfileid: "66107587"
   
  Si un informe contiene parámetros, todos ellos deben tener valores predeterminados para que el informe se pueda ejecutar automáticamente. Si un parámetro no tiene un valor predeterminado, tendrá que elegir un valor al ejecutar el informe y, a continuación, hacer clic en **Ver informe** en la pestaña **Ejecutar** .  
   
- Para obtener más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
+ Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 
   
-##  <a name="Save"></a> Guardar el conjunto de datos compartido  
+##  <a name="Save"></a>Guardar el conjunto de los recursos compartidos  
  Para guardar la consulta creada, en el botón **Generador de informes** , haga clic en **Guardar** o en **Guardar como**. Navegue hasta la carpeta que corresponda del servidor de informes y guarde la definición del conjunto de datos compartido. El conjunto de datos compartido no estará disponible para otros usuarios hasta que no se guarde en el servidor de informes.  
   
 
   
-## <a name="see-also"></a>Vea también  
- [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   

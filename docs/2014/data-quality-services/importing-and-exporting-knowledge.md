@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2cc9c9576a6ae2f70f2d54d48471339ec07d0e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480533"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importar y exportar conocimiento
@@ -40,7 +40,7 @@ ms.locfileid: "65480533"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Compilar una base de conocimiento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
+|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Crear una base de conocimiento](../../2014/data-quality-services/building-a-knowledge-base.md)|  
 |Crear un dominio individual y agregarle conocimiento.|[Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md)|  
 |Crear un dominio compuesto y agregarle conocimiento.|[Administrar un dominio compuesto](../../2014/data-quality-services/managing-a-composite-domain.md)|  
   

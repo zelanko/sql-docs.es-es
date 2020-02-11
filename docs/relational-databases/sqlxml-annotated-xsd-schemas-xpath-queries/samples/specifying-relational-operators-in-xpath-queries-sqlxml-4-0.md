@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1961cc90c303e789c4bfbb847cea5e0eb80049ff
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252553"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Especificar operadores relacionales en consultas XPath (SQLXML 4.0)
@@ -29,7 +29,7 @@ ms.locfileid: "75252553"
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-specify-relational-operator"></a>a. Especificar un operador relacional  
+### <a name="a-specify-relational-operator"></a>A. Especificar un operador relacional  
  Esta consulta XPath devuelve los elementos secundarios del elemento ** \<Customer>** donde el valor del atributo **CustomerID** es "1" y donde cualquier ** \<orden secundario>** elementos contiene un ** \<valor de OrderDetail>** secundario con un atributo **OrderQty** con un valor mayor que 3:  
   
 ```  

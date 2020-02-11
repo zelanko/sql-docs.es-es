@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494024"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Crear un origen de datos (Tutorial básico de minería de datos)
-  Un *origen de datos* es una conexión de datos que se guarda y administra en el proyecto y se [!INCLUDE[msCoName](../includes/msconame-md.md)] implementa en la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de datos. El origen de datos contiene los nombres del servidor y la base de datos donde residen los datos de origen, además de otras propiedades de conexión necesarias.  
+  Un *origen de datos* es una conexión de datos que se guarda y administra en el proyecto y se [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] implementa en la base de datos. El origen de datos contiene los nombres del servidor y la base de datos donde residen los datos de origen, además de otras propiedades de conexión necesarias.  
   
 > [!IMPORTANT]  
 >  El nombre de la base de datos es [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Si aún no ha instalado esta base de datos, vea la página bases de datos de [ejemplo de Microsoft SQL](https://go.microsoft.com/fwlink/?LinkId=88417) .  
@@ -27,7 +27,7 @@ ms.locfileid: "69494024"
   
 1.  En **Explorador de soluciones**, haga clic con el botón secundario en la carpeta **orígenes de datos** y seleccione **nuevo origen de datos**.  
   
-2.  En la página **éste es el Asistente para orígenes de datos** , haga clic en **siguiente**.  
+2.  En la página inicial del **Asistente para orígenes de datos**, haga clic en **Siguiente**.  
   
 3.  En la página **seleccionar cómo definir la conexión** , haga clic en **nuevo** para agregar una conexión a [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] la base de datos.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "69494024"
   
 8.  Haga clic en **Next**.  
   
-9. En la página **información** de suplantación, haga clic en **usar la cuenta de servicio**y, a continuación, haga clic en **siguiente**.  
+9. En la página **información de suplantación** , haga clic en **usar la cuenta de servicio**y, a continuación, haga clic en **siguiente**.  
   
      En la página **finalización del asistente** , observe que, de forma predeterminada, el origen de datos se denomina Adventure Works DW 2012.  
   
@@ -55,14 +55,14 @@ ms.locfileid: "69494024"
      El nuevo origen de datos, Adventure Works DW 2012, aparece en la carpeta **orígenes de datos** de explorador de soluciones.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Crear una vista &#40;del origen de datos tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
+ [Crear una vista del origen de datos &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>Tarea anterior de la lección  
- [Creación de un tutorial &#40;básico de minería de datos de Analysis Services Project&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
+ [Crear un proyecto de Analysis Services &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear un origen de datos &#40;SSAS multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [Definir un origen de datos](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Establezca las opciones de suplantación &#40;SSAS - multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
+ [Establecer opciones de suplantación &#40;SSAS-&#41;multidimensional](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

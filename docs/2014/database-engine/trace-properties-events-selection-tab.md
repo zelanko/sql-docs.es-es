@@ -1,5 +1,5 @@
 ---
-title: Propiedades seguimiento (pestaña selección de eventos) | Microsoft Docs
+title: Propiedades de seguimiento (pestaña selección de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089579"
 ---
 # <a name="trace-properties-events-selection-tab"></a>Propiedades de seguimiento (pestaña Selección de eventos)
   Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades de seguimiento** para ver o especificar columnas de datos y eventos de seguimiento.  
   
 ## <a name="options"></a>Opciones  
- Columna**Eventos**  
- Especifique los eventos de seguimiento seleccionando o desactivando la casilla de la columna de eventos. Los**eventos** se organizan por categoría. Las clases de evento especificadas en la plantilla se seleccionan automáticamente. Para obtener más información, consulte [Referencia de las clase de eventos de SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Columna **eventos**  
+ Especifique los eventos de seguimiento seleccionando o desactivando la casilla de la columna de eventos. **Los eventos** se organizan por categoría de eventos. Las clases de evento especificadas en la plantilla se seleccionan automáticamente. Para obtener más información, consulte [Referencia de las clase de eventos de SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Columnas de datos  
  Especifique las columnas de datos de seguimiento activando la casilla que se corresponda con el evento y la columna de datos necesarios. Todas las columnas de eventos importantes se activan de manera predeterminada en cada evento incluido en el seguimiento.  
@@ -45,11 +45,11 @@ ms.locfileid: "66089579"
  **Organizar columnas**  
  Cambia el orden de las columnas del seguimiento y agrupa los resultados en una o más columnas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Especificar eventos y columnas de datos para un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
- [Organizar las columnas mostradas en un seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
- [Filtrar eventos en un seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
- [Ver información de un filtro &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
+ [Organizar las columnas mostradas en un SQL Server Profiler de seguimiento &#40;&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
+ [Filtrar eventos en un SQL Server Profiler de seguimiento &#40;&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
+ [Ver información de filtro &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [Modificar un filtro &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  

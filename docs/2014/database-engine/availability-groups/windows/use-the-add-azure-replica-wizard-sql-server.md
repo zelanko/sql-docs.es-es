@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175995"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Usar el Asistente para agregar réplica de Azure (SQL Server)
@@ -28,10 +28,10 @@ ms.locfileid: "70175995"
   
      [Seguridad](#Security)  
   
--   **Para agregar una réplica con:**  [Asistente Agregar réplica de Microsoft Azure (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Para agregar una réplica mediante:**  [Asistente para agregar réplica de Azure (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
- Si nunca ha agregado ninguna réplica de disponibilidad a un grupo de disponibilidad, vea las secciones "instancias del servidor" y "grupos y réplicas de disponibilidad" en [requisitos previos, restricciones y recomendaciones &#40;para&#41;obtener grupos de disponibilidad AlwaysOn SQL Server](prereqs-restrictions-recommendations-always-on-availability.md).  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+ Si nunca ha agregado ninguna réplica de disponibilidad a un grupo de disponibilidad, vea las secciones "instancias del servidor" y "grupos y réplicas de disponibilidad" en [requisitos previos, restricciones y recomendaciones para obtener Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -45,7 +45,7 @@ ms.locfileid: "70175995"
   
 -   **Requisitos previos para usar la sincronización de datos inicial completa** Deberá especificar un recurso compartido de red para que el asistente cree copias de seguridad y pueda tener acceso a estas. Para la réplica principal, la cuenta usada para iniciar el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] debe tener permisos del sistema de archivos de lectura y escritura en un recurso compartido de red. Para las réplicas secundarias, la cuenta debe tener permiso de lectura en el recurso compartido de red.  
   
-     Si no puede utilizar el asistente para realizar la sincronización de datos inicial completa, debe preparar las bases de datos secundarias manualmente. Puede hacerlo antes o después de ejecutar el asistente. Para obtener más información, vea [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+     Si no puede utilizar el asistente para realizar la sincronización de datos inicial completa, debe preparar las bases de datos secundarias manualmente. Puede hacerlo antes o después de ejecutar el asistente. Para obtener más información, vea [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -69,13 +69,13 @@ ms.locfileid: "70175995"
   
 4.  Especifique los valores de configuración para la máquina virtual de Azure que hospedará la nueva réplica secundaria:  
   
-     imagen  
+     Imagen  
      Nombre de la imagen de SQL Server que se va a usar para la máquina virtual de Azure  
   
      Tamaño de VM  
      Tamaño de la máquina virtual de Azure  
   
-     Nombre de VM  
+     Nombre de la máquina virtual  
      Nombre DNS de la máquina virtual de Azure  
   
      Nombre de usuario de VM  
@@ -90,10 +90,10 @@ ms.locfileid: "70175995"
      Subred de la red virtual  
      Subred de la red virtual en la que estará la máquina virtual de Azure  
   
-     Dominio  
+     Domain  
      Dominio de Active Directory (AD) para combinar la máquina virtual de Azure  
   
-     Nombre de usuario del dominio  
+     Nombre de usuario de dominio  
      Nombre de usuario de AD que se usa para combinar la máquina virtual de Azure con el dominio  
   
      Contraseña  
@@ -109,9 +109,9 @@ ms.locfileid: "70175995"
   
 -   [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
- [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41; ](prereqs-restrictions-recommendations-always-on-availability.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Requisitos previos, restricciones y recomendaciones para el SQL Server de &#40;de Grupos de disponibilidad AlwaysOn&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

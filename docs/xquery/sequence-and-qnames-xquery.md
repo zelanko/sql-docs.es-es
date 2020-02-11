@@ -1,5 +1,5 @@
 ---
-title: Secuencia y QName (XQuery) | Microsoft Docs
+title: Sequence y QNames (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fbb20c9e14c4e76b8862a23e8d758fcbba94da7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946346"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Secuencia y QName (XQuery)
@@ -52,7 +52,7 @@ WHERE ProductModelID=7;
   
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <step1> Step 1 description goes here </step1>  
@@ -101,7 +101,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  Cada identificador de una expresión XQuery es un elemento QName. Un elemento QName se compone de un prefijo de espacio de nombres y un nombre local. En esta implementación, los nombres de variables de las expresiones XQuery son elementos QName y no pueden tener prefijos.  
   
- Considere el siguiente ejemplo en el que se especifica una consulta contra una sin tipo **xml** variable:  
+ Considere el siguiente ejemplo en el que se especifica una consulta en una variable **XML** sin tipo:  
   
 ```  
 DECLARE @x xml;  
@@ -111,7 +111,7 @@ SELECT @x.query('/Root/a');
   
  En la expresión (`/Root/a`), `Root` y `a` son elementos QName.  
   
- En el ejemplo siguiente, se especifica una consulta contra un tipo **xml** columna. La consulta recorre en iteración todos \<paso > elementos en la primera ubicación de centro de trabajo.  
+ En el ejemplo siguiente, se especifica una consulta en una columna **XML** con tipo. La consulta recorre en iteración todos los \<elementos> del paso en la primera ubicación centro.  
   
 ```  
 SELECT Instructions.query('  
@@ -126,7 +126,9 @@ WHERE ProductModelID=7;
   
  En la expresión de la consulta, tenga en cuenta lo siguiente:  
   
--   `AWMI root`, `AWMI:Location`, `AWMI:step` y `$Step` son elementos QName. `AWMI` es un prefijo, y `root`, `Location` y `Step` son nombres locales.  
+-   
+  `AWMI root`, `AWMI:Location`, `AWMI:step` y `$Step` son elementos QName. 
+  `AWMI` es un prefijo, y `root`, `Location` y `Step` son nombres locales.  
   
 -   La variable `$step` es un elemento QName y no tiene prefijo.  
   
@@ -140,15 +142,15 @@ WHERE ProductModelID=7;
 |fn|http://www.w3.org/2004/07/xpath-functions|  
 |(sin prefijo)|`urn:schemas-microsoft-com:xml-sql`|  
 |sqltypes|https://schemas.microsoft.com/sqlserver/2004/sqltypes|  
-|xml|`http://www.w3.org/XML/1998/namespace`|  
+|Xml|`http://www.w3.org/XML/1998/namespace`|  
 |(sin prefijo)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- Cada base de datos se crea tiene la **sys** colección de esquemas XML. Estos esquemas se reservan para que estén accesibles desde cualquier otra colección de esquemas XML creada por el usuario.  
+ Cada base de datos que se crea tiene la colección de esquemas XML **Sys** . Estos esquemas se reservan para que estén accesibles desde cualquier otra colección de esquemas XML creada por el usuario.  
   
 > [!NOTE]  
->  Esta implementación no admite la `local` prefijo como se describe en la especificación de XQuery en http://www.w3.org/2004/07/xquery-local-functions.  
+>  Esta implementación no admite el `local` prefijo tal y como se describe en la http://www.w3.org/2004/07/xquery-local-functionsespecificación de XQuery en.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos básicos de XQuery](../xquery/xquery-basics.md)  
   
   

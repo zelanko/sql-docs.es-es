@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 56a9c380b8cc88202cdcb4c4dca54aab2d1fa4a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102395"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>Cargar un archivo o un informe (Administrador de informes)
@@ -42,15 +42,15 @@ ms.locfileid: "66102395"
   
 4.  Haga clic en **Examinar** para seleccionar el archivo que se va a cargar. Se puede cargar un archivo de definición de informe, una imagen, un documento o cualquier archivo que desee que esté disponible en un servidor de informes.  
   
-5.  Escriba el nombre del nuevo elemento. Un nombre de elemento puede incluir espacios, pero no puede incluir caracteres reservados: : \@ & = + , $ / * \< > |.  
+5.  Escriba el nombre del nuevo elemento. Un nombre de elemento puede incluir espacios, pero no puede incluir caracteres reservados: : \@ & = +, $/* \< > |.  
   
 6.  Si desea reemplazar un elemento existente por el nuevo elemento, seleccione **Sobrescribir elemento si existe**.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Contenido &#40;página del Administrador de informes&#41;](../contents-page-report-manager.md)   
+ [Administrador de informes de &#40;de página de contenido&#41;](../contents-page-report-manager.md)   
  [Página Cargar archivo &#40;Administrador de informes&#41;](../upload-file-page-report-manager.md)   
  [Cargar archivos a una carpeta](../report-server/upload-files-to-a-folder.md)  
   

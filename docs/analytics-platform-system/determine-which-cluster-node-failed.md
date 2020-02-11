@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 68ebdb7f17ddee311644e11c48eaa4b586beac74
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401206"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Determinar en qué nodo de clúster se produjo un error en Analytics Platform System
 En este tema se describe cómo determinar el nombre del nodo del sistema de plataforma de análisis (APS) que produjo un error después de que se ha producido una conmutación por error de clúster y se ha generado una alerta de conmutación por error de clúster. Como parte de la solución de problemas de una conmutación por error de clúster, debe determinar el nombre del nodo con errores antes de ponerse en contacto con Microsoft para ayudar a resolver el problema.  
   
-## <a name="Background"></a>General  
+## <a name="Background"></a>Información previa  
 Para lograr una alta disponibilidad en PDW de SQL Server, el nodo de control y los nodos de proceso se configuran como componentes activos o pasivos de los clústeres de conmutación por error de Windows. Cuando un servidor activo no responde a las solicitudes críticas del sistema, el servidor pasivo conmuta por error y realiza las funciones del servidor en el que se produjo el error.  
   
 Después de una conmutación por error de clúster, cuando PDW de SQL Server informes sobre el estado del nodo, el servidor pasivo tiene un estado de error. Sin embargo, no es obvio en qué servidor o nodo se produjo un error, especialmente si el servidor en el que se produjo el error todavía está en línea. Para solucionar el error del clúster, debe determinar el nombre del nodo que conmute por error.  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 00021ea9c23de80f6b025963543af2cf4be2f572
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905680"
 ---
 # <a name="lt-less-than-or-equal-to-mdx"></a>&lt;= (Menor o igual que) (MDX)
@@ -34,9 +34,9 @@ MDX_Expression <= MDX_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Un valor booleano basado en las condiciones siguientes:  
   
--   t**rue** si ambos parámetros son no null y el primer parámetro tiene un valor que sea menor o igual que el valor del segundo parámetro.  
+-   t**Rue** si ambos parámetros son no NULL y el primer parámetro tiene un valor que es menor o igual que el valor del segundo parámetro.  
   
--   f**alse** si ambos parámetros son no null y el primer parámetro tiene un valor que superior al valor del segundo parámetro.  
+-   f**alse** si ambos parámetros son no NULL y el primer parámetro tiene un valor que es mayor que el valor del segundo parámetro.  
   
 -   valor NULL si uno de los parámetros (o ambos) se evalúa en un valor NULL.  
   
@@ -60,7 +60,7 @@ WHERE
     ([Measures].[LowGPM])  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 27ae90e05784c18d85f84daa9955818d3133ad07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046509"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Compatibilidad con tipos de parámetros con valores de tablas de OLE DB
   En este tema se describe la compatibilidad de tipos OLE DB para parámetros con valores de tabla.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>Objeto de conjunto de filas de parámetro con valores de tabla  
- Puede crear un objeto de conjunto de filas especializado para parámetros con valores de tabla. Cree el objeto de conjunto de filas de parámetro con valores de tabla mediante ITableDefinitionWithConstraints::CreateTableWithConstraints o IOpenRowset:: OpenRowset. Para hacerlo, establezca el miembro *eKind* del parámetro *pTableID* en DBKIND_GUID_NAME y suministre CLSID_ROWSET_INMEMORY como miembro de *guid*. El nombre del tipo de servidor para el parámetro con valores de tabla debe especificarse en el *pwszName* miembro de *pTableID* al usar IOpenRowset:: OpenRowset. El objeto de conjunto de filas de parámetro con valores de tabla se comporta como un objeto normal de proveedor OLE DB de SQL Server Native Client.  
+ Puede crear un objeto de conjunto de filas especializado para parámetros con valores de tabla. Cree el objeto de conjunto de filas del parámetro con valores de tabla mediante ITableDefinitionWithConstraints:: CreateTableWithConstraints o IOpenRowset:: OpenRowset. Para hacerlo, establezca el miembro *eKind* del parámetro *pTableID* en DBKIND_GUID_NAME y suministre CLSID_ROWSET_INMEMORY como miembro de *guid*. El nombre de tipo de servidor para el parámetro con valores de tabla debe especificarse en el miembro *pwszName* de *PTableID* al usar IOpenRowset:: OPENROWSET. El objeto de conjunto de filas de parámetro con valores de tabla se comporta como un objeto normal de proveedor OLE DB de SQL Server Native Client.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -42,7 +42,7 @@ CoType RowsetTVP
 };  
 ```  
   
-## <a name="dbtypetable"></a>DBTYPE_TABLE  
+## <a name="dbtype_table"></a>DBTYPE_TABLE  
  DBTYPE_TABLE es un nuevo tipo que representa un tipo de tabla. Este tipo especifica los parámetros con valores de tabla de varias interfaces OLE DB donde se requiere un DBTYPE.  
   
 ```  
@@ -54,12 +54,12 @@ CoType RowsetTVP
  No se admiten conversiones a DBTYPE_TABLE ni desde DBTYPE_TABLE para cualquier otro tipo. IConvertType::CanConvert devolverá S_FALSE si no se permite la conversión para cualquier solicitud de conversión que no sea de DBTYPE_TABLE a DBTYPE_TABLE. Para ello, se da por supuesto el uso de DBCONVERTFLAGS_PARAMETER en el objeto Command.  
   
 ## <a name="methods"></a>Métodos  
- Para obtener información acerca de los métodos de OLE DB que admiten parámetros con valores de tabla, vea [OLE DB Table-Valued parámetro de tipo de compatibilidad con &#40;métodos&#41;](ole-db-table-valued-parameter-type-support-methods.md).  
+ Para obtener información acerca de los métodos de OLE DB que admiten parámetros con valores de tabla, vea [OLE DB compatibilidad con tipos de parámetro con valores de tabla &#40;&#41;](ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Propiedades  
- Para obtener información acerca de las propiedades de OLE DB que admiten parámetros con valores de tabla, vea [OLE DB Table-Valued parámetro de tipo de compatibilidad con &#40;propiedades&#41;](ole-db-table-valued-parameter-type-support-properties.md).  
+ Para obtener información sobre OLE DB propiedades que admiten parámetros con valores de tabla, vea [OLE DB compatibilidad con tipos de parámetro con valores de tabla &#40;propiedades&#41;](ole-db-table-valued-parameter-type-support-properties.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Parámetros con valores de tabla &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [Usar parámetros con valores de tabla &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

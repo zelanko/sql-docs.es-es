@@ -1,5 +1,5 @@
 ---
-title: Procedimientos almacenados compilados de forma nativa admiten construcciones | Microsoft Docs
+title: Construcciones admitidas en procedimientos almacenados compilados de forma nativa | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155716"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Construcciones admitidas en procedimientos almacenados compilados de forma nativa
-  En este tema contiene una lista de características admitidas en procedimientos almacenados compilados de forma nativa ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
+  Este tema contiene una lista de características admitidas para los procedimientos almacenados compilados de forma nativa ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
   
 -   [Programación en procedimientos almacenados compilados de forma nativa](#pncsp)  
   
@@ -30,7 +30,7 @@ ms.locfileid: "63155716"
   
 -   [Auditoría](#auditing)  
   
--   [Tabla, consulta y las sugerencias de combinación](#tqh)  
+-   [Sugerencias de tablas, consultas y combinaciones](#tqh)  
   
 -   [Limitaciones de ordenación](#los)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63155716"
   
  Para obtener información completa sobre las construcciones no admitidas y sobre cómo evitar algunas de las características no admitidas en los procedimientos almacenados compilados de forma nativa, vea [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Para obtener más información sobre las características no compatibles, vea [Construcciones Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
-##  <a name="pncsp"></a> Programación en procedimientos almacenados compilados de forma nativa  
+##  <a name="pncsp"></a>Programación en procedimientos almacenados compilados de forma nativa  
  Se admite lo siguiente:  
   
 -   BEGIN ATOMIC (en el nivel externo del procedimiento almacenado), LANGUAGE, ISOLATION LEVEL, DATEFORMAT y DATEFIRST.  
@@ -66,7 +66,7 @@ ms.locfileid: "63155716"
 ##  <a name="so"></a> Operadores admitidos  
  Se admiten los siguientes operadores.  
   
--   [Operadores de comparación &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/comparison-operators-transact-sql) (por ejemplo, >, \<, > =, y < =) se admiten en instrucciones condicionales (IF, mientras).  
+-   Los [operadores de comparación &#40;&#41;de Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (por ejemplo \<, >,, >= y <=) se admiten en los condicionales (si, while).  
   
 -   Operadores unarios (+, -).  
   
@@ -78,16 +78,16 @@ ms.locfileid: "63155716"
   
 -   Operadores ~, &, | y ^ bit a bit  
   
-##  <a name="bfncsp"></a> Funciones integradas en procedimientos almacenados compilados de forma nativa  
+##  <a name="bfncsp"></a>Funciones integradas en procedimientos almacenados compilados de forma nativa  
  Se admiten las funciones siguientes en restricciones DEFAULT de tablas optimizadas para memoria y procedimientos almacenados compilados de forma nativa.  
   
--   Funciones matemáticas: ACOS, ASIN, ATAN, ATN2, COS, COT, grados, EXP, LOG, LOG10, PI, POWER, radianes, RAND, SIN, SQRT, SQUARE y TAN  
+-   Funciones matemáticas: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANES, RAND, SIN, SQRT, SQUARE y TAN  
   
--   Funciones de fecha: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, día, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME y YEAR.  
+-   Funciones de fecha: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME y YEAR.  
   
 -   Funciones de cadena: LEN, LTRIM, RTRIM y SUBSTRING  
   
--   Función IDENTITY: SCOPE_IDENTITY  
+-   Función de identidad: SCOPE_IDENTITY  
   
 -   Funciones NULL: ISNULL  
   
@@ -99,7 +99,7 @@ ms.locfileid: "63155716"
   
 -   Funciones del sistema: @@rowcount. Las instrucciones de los procedimientos almacenados compilados de forma nativa actualizan @@rowcount y puede usar @@rowcount en un procedimiento almacenado compilado de forma nativa para determinar el número de filas afectadas por la última instrucción ejecutada dentro de ese procedimiento almacenado compilado de forma nativa. Pero @@rowcount se restablece en 0 al principio y al final de la ejecución de un procedimiento almacenado compilado de forma nativa.  
   
-##  <a name="qsancsp"></a> Área expuesta de consulta en procedimientos almacenados compilados de forma nativa  
+##  <a name="qsancsp"></a>Área expuesta de consulta en procedimientos almacenados compilados de forma nativa  
  Se admite lo siguiente:  
   
 -   BETWEEN  
@@ -108,19 +108,19 @@ ms.locfileid: "63155716"
   
 -   CROSS JOIN y INNER JOIN, solo se admiten con consultas SELECT.  
   
--   Se admiten las expresiones en la lista de selección y [donde &#40;Transact-SQL&#41; ](/sql/t-sql/queries/where-transact-sql) cláusula si usan un operador admitido. Consulte [Operadores admitidos](#so) para ver la lista de los operadores que se admiten actualmente.  
+-   Las expresiones se admiten en la lista de selección y [donde &#40;cláusula de Transact-SQL&#41;](/sql/t-sql/queries/where-transact-sql) si usan un operador admitido. Consulte [Operadores admitidos](#so) para ver la lista de los operadores que se admiten actualmente.  
   
 -   Predicado de filtro IS [NOT] NULL  
   
--   DESDE \<tabla optimizada en memoria >  
+-   DESDE \<la tabla con optimización para memoria>  
   
--   [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) se admite, junto con las funciones de agregado AVG, COUNT, COUNT_BIG, MIN, MAX y SUM. MIN o MAX no se admiten para los tipos nvarchar, char, varchar, varchar, varbinary y binary. [Cláusula ORDER BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql) es compatible con [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) si una expresión en la lista ORDER BY aparece literalmente en la lista GROUP BY. Por ejemplo, se admite GROUP BY a + b ORDER BY a + b pero no GROUP BY a, b ORDER BY a + b.  
+-   Se admite [GROUP BY &#40;&#41;de Transact-SQL](/sql/t-sql/queries/select-group-by-transact-sql) , junto con las funciones de agregado AVG, COUNT, COUNT_BIG, min, Max y sum. MIN o MAX no se admiten para los tipos nvarchar, char, varchar, varchar, varbinary y binary. La [cláusula order by &#40;Transact-sql&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) es compatible con [Group by &#40;transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql) si una expresión de la lista order by aparece literalmente en la lista Group by. Por ejemplo, se admite GROUP BY a + b ORDER BY a + b pero no GROUP BY a, b ORDER BY a + b.  
   
 -   HAVING, sujeto a las mismas limitaciones de expresión que la cláusula WHERE.  
   
 -   INSERT VALUES (una fila por instrucción) e INSERT SELECT  
   
--   ORDENAR POR <sup>1</sup>  
+-   ORDENAR por <sup>1</sup>  
   
 -   Predicados que no hacen referencia a una columna.  
   
@@ -130,15 +130,16 @@ ms.locfileid: "63155716"
   
 -   Asignación de variable de la lista de selección.  
   
--   WHERE... y  
+-   DÓNDE... ETC  
   
- <sup>1</sup> ORDER BY y TOP se admiten en procedimientos almacenados compilados de forma nativa, con algunas restricciones:  
+ <sup>1</sup> order by y Top se admiten en procedimientos almacenados compilados de forma nativa, con algunas restricciones:  
   
 -   No hay compatibilidad con `DISTINCT` en la cláusula `SELECT` ni `ORDER BY`.  
   
 -   No hay compatibilidad con `WITH TIES` ni `PERCENT` en la cláusula `TOP`.  
   
--   `TOP` combinada con `ORDER BY` no admite más de 8.192 elementos cuando se utiliza una constante en la cláusula `TOP`. Este límite puede reducirse en caso de que la consulta contenga combinaciones o funciones de agregado. (Por ejemplo, con una combinación (dos tablas), el límite es de 4.096 filas. Con dos combinaciones (tres tablas), el límite es de 2.730 filas).  
+-   
+  `TOP` combinada con `ORDER BY` no admite más de 8.192 elementos cuando se utiliza una constante en la cláusula `TOP`. Este límite puede reducirse en caso de que la consulta contenga combinaciones o funciones de agregado. (Por ejemplo, con una combinación (dos tablas), el límite es de 4.096 filas. Con dos combinaciones (tres tablas), el límite es de 2.730 filas).  
   
      Puede obtener más de 8.192 resultados si almacena el número de filas en una variable:  
   
@@ -156,7 +157,7 @@ ms.locfileid: "63155716"
   
  Para obtener más información sobre la auditoría, vea [Crear una especificación de auditoría de servidor y de auditoría de base de datos](../security/auditing/create-a-server-audit-and-database-audit-specification.md)  
   
-##  <a name="tqh"></a> Tabla, consulta y las sugerencias de combinación  
+##  <a name="tqh"></a>Sugerencias de tabla, consulta y combinación  
  Se admite lo siguiente:  
   
 -   Las sugerencias INDEX, FORCESCAN y FORCESEEK, ya sea en la sintaxis de sugerencias de tabla o en la [cláusula OPTION &#40;Transact-SQL&#41;](/sql/t-sql/queries/option-clause-transact-sql) de la consulta.  
@@ -167,18 +168,18 @@ ms.locfileid: "63155716"
   
 -   OPTIMIZE FOR  
   
- Para obtener más información, consulte [sugerencias &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql).  
+ Para obtener más información, vea [sugerencias &#40;&#41;de Transact-SQL ](/sql/t-sql/queries/hints-transact-sql).  
   
 ##  <a name="los"></a> Limitaciones de ordenación  
  Puede ordenar más de 8000 filas en una consulta que use [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Pero sin la [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) puede ordenar hasta 8000 filas (si hay combinaciones, menos filas).  
   
- Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas obtendrá el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento  *\<NombreDeProcedimiento >* , línea  *\<lineNumber >* el operador TOP puede devolver un máximo de 8192 filas;  *\<número >* se solicitó.**  
+ Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas obtendrá el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento *\<<nombreDeProcedimiento>* , línea *\<númeroDeLínea>* El operador TOP puede devolver un máximo de 8192 filas; el número solicitado es *\<número>* .**  
   
  Si no tiene una cláusula TOP, puede ordenar cualquier número de filas con ORDER BY.  
   
  Si no utiliza una cláusula ORDER BY, puede utilizar un valor entero con el operador TOP.  
   
- Ejemplo con TOP N = 8192: Compila  
+ Ejemplo con TOP n = 8192: se compila  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -191,7 +192,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- Ejemplo con TOP N > 8192: No se puede compilar.  
+ Ejemplo con TOP N > 8192: error al compilar.  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -206,7 +207,7 @@ GO
   
  La limitación de 8192 filas solo se aplica a `TOP N` donde `N` es una constante, como en los ejemplos anteriores.  Si necesita un número `N` mayor que 8192 puede asignar el valor a una variable y utilizar esa variable con `TOP`.  
   
- Ejemplo de uso de una variable: Compila  
+ Ejemplo usando una variable: se compila  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -220,7 +221,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Limitaciones para las filas devueltas:** Hay dos casos en los que pueden reducir el número de filas que pueden ser devueltos por el operador TOP:  
+ **Limitaciones para las filas devueltas:** hay dos casos en los que se puede reducir el número de filas que puede devolver el operador TOP:  
   
 -   Usar JOIN en la consulta.  El efecto de JOIN en la limitación depende del plan de consulta.  
   
@@ -228,7 +229,7 @@ GO
   
  La fórmula para calcular un N máximo de peor caso admitido en TOP N es: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)   
  [Problemas de migración para los procedimientos almacenados compilados de forma nativa](migration-issues-for-natively-compiled-stored-procedures.md)  
   

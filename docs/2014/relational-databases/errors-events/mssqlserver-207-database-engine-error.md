@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62915055"
 ---
-# <a name="mssqlserver207"></a>MSSQLSERVER_207
+# <a name="mssqlserver_207"></a>MSSQLSERVER_207
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|207|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|207|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SQ_BADCOL|  
 |Texto del mensaje|El nombre de columna '%.*ls' no es válido.|  
@@ -53,7 +53,7 @@ ms.locfileid: "62915055"
   
     1.  FROM  
   
-    2.  ON  
+    2.  ACTIVAR  
   
     3.  JOIN  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62915055"
   
     10. ORDER BY  
   
-    11. ARRIBA  
+    11. TOP  
   
      Puesto que un alias de columna no se define hasta que se procesa la cláusula SELECT, no se conoce el nombre de alias cuando se procesa la cláusula GROUP BY.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "62915055"
   
 -   La cláusula WHEN NOT MATCHED BY SOURCE de la instrucción MERGE hace referencia a un valor al que se puede tener acceso. Modifique la instrucción MERGE para que la tabla de origen devuelva al menos una fila en la cláusula WHEN NOT MATCHED BY SOURCE. Por ejemplo, puede que tenga que agregar o revisar la condición de búsqueda especificada para la cláusula. De manera alternativa, puede modificar la cláusula para que especifique un valor que no haga referencia a la tabla de origen. Por ejemplo, `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)   
  [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   

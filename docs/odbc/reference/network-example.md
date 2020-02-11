@@ -13,13 +13,13 @@ ms.assetid: e14ae90f-87b3-4bcf-b69a-1773e2c2a1c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3454fab31de20a7d72f99a50c7dd3781ea2bc2be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937986"
 ---
 # <a name="network-example"></a>Ejemplo de red
-En esta ilustración se muestra cómo cada una de las configuraciones anteriores podría aparecer en una única red.  
+En esta ilustración se muestra cómo podría aparecer cada una de las configuraciones anteriores en una sola red.  
   
  ![Varias configuraciones en una única red](../../odbc/reference/media/pr08.gif "pr08")

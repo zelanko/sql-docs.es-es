@@ -1,5 +1,5 @@
 ---
-title: Resincronizar comando propiedad dinámicos (ADO) | Microsoft Docs
+title: Propiedad de comando Resync-dinámica (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,26 +14,26 @@ ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917146"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resincronizar comando propiedad dinámicos (ADO)
-Especifica la cadena de un comando proporcionado por el usuario que la [Resync](../../../ado/reference/ado-api/resync-method.md) problemas del método para actualizar los datos en la tabla mencionada en el [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) propiedad dinámica.  
+Especifica una cadena de comandos proporcionada por el usuario que el método [Resync](../../../ado/reference/ado-api/resync-method.md) emite para actualizar los datos de la tabla denominada en la propiedad dinámica de [tabla única](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un **cadena** valor que es una cadena de comandos.  
+ Establece o devuelve un valor de **cadena** que es una cadena de comando.  
   
-## <a name="remarks"></a>Comentarios  
- El [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto es el resultado de una operación de combinación que se ejecuta en varias tablas base. Dependen de las filas afectadas las *AffectRecords* parámetro de la [Resync](../../../ado/reference/ado-api/resync-method.md) método. El estándar **Resync** método se ejecuta si la [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) y **resincronizar comando** no se establecen propiedades.  
+## <a name="remarks"></a>Observaciones  
+ El objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) es el resultado de una operación de combinación ejecutada en varias tablas base. Las filas afectadas dependen del parámetro *AffectRecords* del método [Resync](../../../ado/reference/ado-api/resync-method.md) . El método de **resincronización** estándar se ejecuta si no se establecen las propiedades de [tabla única](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) y **comando de resincronización** .  
   
- La cadena de comandos de la **resincronizar comando** propiedad es un procedimiento almacenado que identifica la fila que se va a actualizar o un comando con parámetros y devuelve una sola fila que contiene el mismo número y orden de las columnas como la fila sea actualizar. La cadena de comandos contiene un parámetro para cada columna de clave principal en el **Unique Table**; en caso contrario, se devuelve un error de tiempo de ejecución. Los parámetros se rellenan automáticamente con los valores de clave principal de la fila que se va a actualizar.  
+ La cadena de comando de la propiedad de **comando Resync** es un procedimiento almacenado o comando con parámetros que identifica de forma única la fila que se está actualizando y devuelve una sola fila que contiene el mismo número y orden de columnas que la fila que se va a actualizar. La cadena de comandos contiene un parámetro para cada columna de clave principal de la **tabla única**; de lo contrario, se devuelve un error en tiempo de ejecución. Los parámetros se rellenan automáticamente con los valores de clave principal de la fila que se va a actualizar.  
   
- Estos son dos ejemplos basados en SQL:  
+ A continuación se muestran dos ejemplos basados en SQL:  
   
- 1\) el **Recordset** se define mediante un comando:  
+ 1\) el **conjunto de registros** se define mediante un comando:  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -42,7 +42,7 @@ SELECT * FROM Customers JOIN Orders ON
    ORDER BY CustomerID  
 ```  
   
- El **resincronizar comando** propiedad está establecida en:  
+ La propiedad de **comando Resync** está establecida en:  
   
 ```  
 "SELECT * FROM   
@@ -52,9 +52,9 @@ SELECT * FROM Customers JOIN Orders ON
 WHERE Orders.OrderID = ?"  
 ```  
   
- El **Unique Table** es *pedidos* y su clave principal, *OrderID*, tiene parámetros. La Subselección proporciona una manera sencilla de asegurarse de que el mismo número y orden de las columnas se devuelven como, por el comando original mediante programación.  
+ La **tabla única** es *Orders* y su clave principal, *OrderID*, tiene parámetros. La subselección proporciona una manera sencilla de asegurarse mediante programación de que el mismo número y orden de las columnas se devuelven como en el comando original.  
   
- 2\) el **Recordset** se define mediante un procedimiento almacenado:  
+ 2\) el **conjunto de registros** se define mediante un procedimiento almacenado:  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   
@@ -63,7 +63,7 @@ Customers.CustomerID = Orders.CustomerID
 WHERE Customers.CustomerID = @CustomerID  
 ```  
   
- El **Resync** método debería ejecutar el siguiente procedimiento almacenado:  
+ El método **Resync** debe ejecutar el siguiente procedimiento almacenado:  
   
 ```  
 CREATE PROC CustordersResync @ordid int AS   
@@ -72,15 +72,15 @@ Customers.CustomerID = Orders.CustomerID
 WHERE Orders.ordid  = @ordid  
 ```  
   
- El **resincronizar comando** propiedad está establecida en:  
+ La propiedad de **comando Resync** está establecida en:  
   
 ```  
 "{call CustordersResync (?)}"  
 ```  
   
- Una vez más, el **Unique Table** es *pedidos* y su clave principal, *OrderID*, tiene parámetros.  
+ Una vez más, la **tabla única** es *Orders* y su clave principal, *OrderID*, tiene parámetros.  
   
- **Resincronizar comando** se anexa una propiedad dinámica a la **Recordset** objeto [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección cuando el [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad está establecida en **adUseClient**.  
+ El **comando Resync** es una propiedad dinámica anexada a la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) del objeto de **conjunto de registros** cuando la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) está establecida en **adUseClient**.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

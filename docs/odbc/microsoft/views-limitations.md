@@ -14,11 +14,11 @@ ms.assetid: 1be24fce-0653-43a0-9cda-3496694c3ace
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b799fd96a8c4aa60466aaa56804b29f16759b02e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087943"
 ---
 # <a name="views-limitations"></a>Limitaciones de vistas
-No admite el dBASE, controladores de Microsoft Excel, Paradox o texto.
+No es compatible con los controladores de dBASE, Microsoft Excel, Paradox o Text.

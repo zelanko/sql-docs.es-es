@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modelo&gt;. SAMPLE_CASES (DMX) | Microsoft Docs
+title: Seleccione del &lt;modelo&gt;. SAMPLE_CASES (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0838c688b0518bf1fc7ed6c5d65c3ef03d0a7aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928316"
 ---
-# <a name="select-from-ltmodelgtsamplecases-dmx"></a>SELECT FROM &lt;modelo&gt;. SAMPLE_CASES (DMX)
+# <a name="select-from-ltmodelgtsample_cases-dmx"></a>Seleccione del &lt;modelo&gt;. SAMPLE_CASES (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Devuelve ejemplos de casos que son representativos de los casos que se emplean para entrenar el modelo de minería de datos.  
   
- Para poder utilizar esta instrucción, debe habilitar la obtención de detalles al crear el modelo de minería de datos. Para obtener más información acerca de cómo habilitar la obtención de detalles, consulte [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md), y [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
+ Para poder utilizar esta instrucción, debe habilitar la obtención de detalles al crear el modelo de minería de datos. Para obtener más información acerca de cómo habilitar la obtención de detalles, vea [Create Mining MODEL &#40;dmx&#41;](../dmx/create-mining-model-dmx.md), [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)y [ALTER Mining Structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,26 +43,26 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  *lista de condiciones*  
  Opcional. Condiciones para restringir los valores que devuelve la lista de columnas.  
   
- *expression*  
+ *Expresiones*  
  Opcional. Expresión que devuelve un valor escalar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Pueden generarse casos de ejemplo que podrían no existir en los datos de entrenamiento. El caso devuelto es representativo del nodo de contenido especificado.  
   
- Aunque el [!INCLUDE[msCoName](../includes/msconame-md.md)] es el único algoritmo de clústeres de secuencia [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo que admite el uso de SELECT FROM \<modelo >. SAMPLE_CASES, algoritmos de terceros también podrían admitirlo.  
+ Aunque el [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de clústeres de secuencia es [!INCLUDE[msCoName](../includes/msconame-md.md)] el único algoritmo que admite el \<uso de Select from Model>. SAMPLE_CASES, los algoritmos de terceros también pueden admitirlo.  
   
 ## <a name="examples"></a>Ejemplos  
- En el siguiente ejemplo se devuelven casos de ejemplo que sirven para entrenar el modelo de minería de datos Target Mail. Mediante el [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md) funcionando en el **donde** cláusula devuelve exclusivamente casos asociados con el nodo '000000003'. La cadena de nodo se encuentra en la columna NODE_UNIQUE_NAME del conjunto de filas de esquema.  
+ En el siguiente ejemplo se devuelven casos de ejemplo que sirven para entrenar el modelo de minería de datos Target Mail. El uso de la función [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) en la cláusula **Where** solo devuelve los casos que están asociados al nodo ' 000000003 '. La cadena de nodo se encuentra en la columna NODE_UNIQUE_NAME del conjunto de filas de esquema.  
   
 ```  
 Select * from [Sequence Clustering].SAMPLE_Cases  
 WHERE IsInNode('000000003')  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
+## <a name="see-also"></a>Consulte también  
+ [SELECCIONE &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

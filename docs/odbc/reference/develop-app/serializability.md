@@ -1,5 +1,5 @@
 ---
-title: Seriabilidad | Microsoft Docs
+title: Serializabilidad | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 49552e7333d8cac2b55a9ae6e8dd7a41ff4c5955
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094333"
 ---
 # <a name="serializability"></a>La posibilidad de serializar
-Idealmente, deberían ser transacciones *serializable*. Las transacciones se dice que ser serializable si los resultados de ejecutar al mismo tiempo las transacciones son los mismos que los resultados de su ejecución en serie: es decir, una tras otra. No es importante qué transacción se ejecuta en primer lugar, solo que el resultado no refleja cualquier combinación de las transacciones.  
+Idealmente, las transacciones deben ser *serializables*. Se dice que las transacciones son serializables si los resultados de ejecutar transacciones simultáneamente son los mismos que los resultados de ejecutarlas en serie, es decir, una tras otra. No es importante que la transacción se ejecute en primer lugar, solo que el resultado no refleja ninguna combinación de las transacciones.  
   
- Por ejemplo, suponga que la transacción A multiplica los valores de datos por 2 y la transacción B agrega 1 a valores de datos. Ahora suponga que hay dos valores de datos: 0 y 10. Si estas transacciones se ejecutan una tras otra, los nuevos valores será 1 y 21 Si una transacción se ejecuta en primer lugar, o 2 y 22 si la transacción B se ejecuta primera. Pero ¿qué ocurre si el orden en que se ejecutan las dos transacciones es diferente para cada valor? Si la transacción A se ejecuta primera en el primer valor y la transacción B se ejecutan primeros en el segundo valor, los nuevos valores son 1 y 22. Si se invierte este orden, los nuevos valores son 2 y 21. Las transacciones son serializables si 1, 21 y 2, 22 se muestran los resultados solo es posibles. Las transacciones no son serializable si 22, 1 o 2, 21 es un resultado.  
+ Por ejemplo, supongamos que la transacción A multiplica los valores de datos por 2 y la transacción B suma 1 a los valores de datos. Supongamos ahora que hay dos valores de datos: 0 y 10. Si estas transacciones se ejecutan una tras otra, los nuevos valores serán 1 y 21 si la transacción A se ejecuta primero, o 2 y 22 si la transacción B se ejecuta primero. Pero, ¿qué ocurre si el orden en el que se ejecutan las dos transacciones es diferente para cada valor? Si la transacción A se ejecuta primero en el primer valor y la transacción B se ejecuta primero en el segundo valor, los nuevos valores son 1 y 22. Si se revierte este orden, los nuevos valores son 2 y 21. Las transacciones son serializables si 1, 21 y 2, 22 son los únicos resultados posibles. Las transacciones no se pueden serializar si 1, 22 o 2, 21 es un resultado posible.  
   
- Entonces, ¿por qué seriabilidad es deseable? En otras palabras, ¿por qué es importante que aparece una transacción finaliza antes de que comience la siguiente transacción? Considere el siguiente problema. Un vendedor está entrando en pedidos al mismo tiempo que un empleado envía las facturas. Suponga que el vendedor entra en un orden de la compañía X, pero no confirma todavía está hablando con al representante del vendedor de la empresa X. El distribuidor y solicita una lista de todos los pedidos abiertos detecta el orden de la compañía X y los envía una factura. Ahora el representante de la compañía X decide que desean cambiar su orden, por lo que cambia el vendedor, antes de confirmar la transacción. X de la compañía obtiene una factura incorrecta.  
+ ¿Por qué es conveniente la serialización? En otras palabras, ¿por qué es importante que parezca que una transacción finaliza antes de que se inicie la siguiente transacción? Tenga en cuenta el siguiente problema. Un vendedor está introduciendo pedidos al mismo tiempo que un funcionario envía facturas. Supongamos que el vendedor introduce un pedido de la empresa X pero no lo confirma; el vendedor todavía está hablando con el representante de la empresa X. El funcionario solicita una lista de todos los pedidos abiertos y detecta el pedido de la empresa X y les envía una factura. Ahora, el representante de la empresa X decide que desea cambiar su orden, por lo que el responsable de ventas lo cambia antes de confirmar la transacción. La empresa X obtiene una factura incorrecta.  
   
- Si las transacciones del vendedor y del distribuidor son serializables, nunca habría producido este problema. Transacción del vendedor habría terminado antes de inicia la transacción del distribuidor, en cuyo caso habría enviado el distribuidor de la factura correcta o habría terminado de transacciones del distribuidor antes de iniciar transacciones del vendedor, en cuyo caso el distribuidor no habría envía una factura a la compañía X en absoluto.
+ Si las transacciones del vendedor y del funcionario fueran serializables, este problema nunca se habría producido. La transacción del vendedor habría finalizado antes de que se iniciara la transacción del funcionario, en cuyo caso el funcionario habría enviado la factura correcta o la transacción del funcionario hubiera finalizado antes de que se iniciara la transacción del vendedor, en cuyo caso el el funcionario no habría enviado ninguna factura a la empresa X.

@@ -1,5 +1,5 @@
 ---
-title: Tipos de marcador | Microsoft Docs
+title: Tipos de marcadores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb8f5848ef9fdffab8592215fdcc5406b24319c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118782"
 ---
 # <a name="bookmark-types"></a>Tipos de marcador
-Todos los marcadores de ODBC *3.x* son marcadores de longitud variable. Esto permite que una clave principal o un índice único asociado a una tabla que se usará como un marcador. El marcador también puede ser un valor de 32 bits, que se utilizaba en ODBC *2.x*. Para especificar que se usa un marcador con un cursor, una ODBC *3.x* aplicación establece el atributo de instrucción SQL_ATTR_USE_BOOKMARK en SQL_UB_VARIABLE. Automáticamente se usa un marcador de longitud variable.  
+Todos los marcadores de ODBC *3. x* son marcadores de longitud variable. Esto permite usar una clave principal o un índice único asociado a una tabla como marcador. El marcador también puede ser un valor de 32 bits, como se usó en ODBC *2. x*. Para especificar que un marcador se utiliza con un cursor, una aplicación ODBC *3. x* establece el atributo de instrucción SQL_ATTR_USE_BOOKMARK en SQL_UB_VARIABLE. Se usa automáticamente un marcador de longitud variable.  
   
- Una aplicación puede llamar a **SQLColAttribute** con el *FieldIdentifier* establecido en SQL_DESC_OCTET_LENGTH para obtener la longitud del marcador. Dado un marcador de longitud variable puede ser un valor de tipo long, una aplicación no debe enlazar a la columna 0, a menos que se usará el marcador para muchas de las filas del conjunto de filas.  
+ Una aplicación puede llamar a **SQLColAttribute** con el argumento *FieldIdentifier* establecido en SQL_DESC_OCTET_LENGTH para obtener la longitud del marcador. Dado que un marcador de longitud variable puede ser un valor Long, una aplicación no debe enlazarse a la columna 0 a menos que vaya a usar el marcador para muchas de las filas del conjunto de filas.  
   
- Marcadores de longitud fija se admiten únicamente por compatibilidad con versiones anteriores. Si un ODBC *2.x* la aplicación funciona con un ODBC *3.x* controlador llama a **SQLSetStmtOption** para establecer SQL_USE_BOOKMARKS SQL_UB_ON, se asigna en el Administrador de controladores a SQL_ UB_VARIABLE. Se utiliza un marcador de longitud variable, incluso si se rellenan sólo de 32 bits del mismo. Si un controlador es compatible con marcadores de longitud fija, lo será compatible con marcadores de longitud variable. Si un ODBC *3.x* la aplicación funciona con un ODBC *2.x* controlador llama a **SQLSetStmtAttr** para establecer SQL_ATTR_USE_BOOKMARKS SQL_UB_VARIABLE, se asigna en el controlador Se usa el administrador para SQL_UB_ON y un marcador de longitud fija de 32 bits. El atributo de instrucción SQL_ATTR_FETCH_BOOKMARK_PTR, a continuación, debe apuntar a un marcador de 32 bits. Si los marcadores que se utilizan son más de 32 bits, por ejemplo, cuando se usan claves principales como marcadores, el cursor debe asignar los valores reales a valores de 32 bits. Por ejemplo, se podría compilar una tabla hash de ellos. Cuando un ODBC *3.x* la aplicación funciona con un ODBC *2.x* controlador enlaza un marcador, la longitud del búfer debe ser 4.
+ Los marcadores de longitud fija solo se admiten para la compatibilidad con versiones anteriores. Si una aplicación ODBC *2. x* que trabaja con un controlador ODBC *3. x* llama a **SQLSetStmtOption** para establecer SQL_USE_BOOKMARKS en SQL_UB_ON, se asigna en el administrador de controladores para SQL_UB_VARIABLE. Se utiliza un marcador de longitud variable, incluso si solo se rellenan 32 bits. Si un controlador admite marcadores de longitud fija, será compatible con marcadores de longitud variable. Si una aplicación ODBC *3. x* que trabaja con un controlador ODBC *2. x* llama a **SQLSetStmtAttr** para establecer SQL_ATTR_USE_BOOKMARKS en SQL_UB_VARIABLE, se asigna en el administrador de controladores a SQL_UB_ON y se utiliza un marcador de longitud fija de 32 bits. El atributo de instrucción SQL_ATTR_FETCH_BOOKMARK_PTR debe apuntar a un marcador de 32 bits. Si los marcadores utilizados tienen más de 32 bits, como cuando se usan claves principales como marcadores, el cursor debe asignar los valores reales a valores de 32 bits. Por ejemplo, podría crear una tabla hash de ellos. Cuando una aplicación ODBC *3. x* que trabaja con un controlador ODBC *2. x* enlaza un marcador, la longitud del búfer debe ser 4.

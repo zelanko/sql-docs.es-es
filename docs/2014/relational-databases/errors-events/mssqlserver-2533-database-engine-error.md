@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b1882c04d4aacd76b59cb952781205edac84012
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914823"
 ---
-# <a name="mssqlserver2533"></a>MSSQLSERVER_2533
+# <a name="mssqlserver_2533"></a>MSSQLSERVER_2533
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2533|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2533|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_PAGE_WAS_NOT_SEEN|  
-|Texto del mensaje|Error de tabla: Page P_ID asignada al objeto ID O_ID, ID. de partición PN_ID de Id. de índice, no se encontró la unidad de asignación A_ID (tipo TYPE). La página puede no ser válida o puede tener un Id. de unidad de asignación incorrecto en el encabezado.|  
+|Texto del mensaje|Error de tabla: no se vio la página P_ID asignada al Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID, Id. de unidad de asignación A_ID (tipo TYPE). La página puede no ser válida o puede tener un Id. de unidad de asignación incorrecto en el encabezado.|  
   
 ## <a name="explanation"></a>Explicación  
  Se ha asignado una página al Id. de unidad de asignación, *A_ID*, pero este Id. de unidad de asignación no se encuentra en el encabezado de la página. El encabezado tiene un identificador de unidad de asignación diferente. Si dicho identificador en el encabezado de la página corresponde a un objeto válido, la página puede tener un error de coincidencia MSSQLEngine_2534.  
@@ -61,7 +61,7 @@ ms.locfileid: "62914823"
 > [!CAUTION]  
 >  Esta reparación puede causar la pérdida de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [MSSQLSERVER_2534](mssqlserver-2534-database-engine-error.md)  
   
   

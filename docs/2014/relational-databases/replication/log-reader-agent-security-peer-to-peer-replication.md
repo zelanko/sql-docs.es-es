@@ -13,20 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6bcf7d78fd550404f81f9cc303414303ad82504
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63000358"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>Seguridad del Agente de registro del LOG (replicación punto a punto)
-  La página **Seguridad del Agente de registro del LOG** permite especificar las cuentas bajo las cuales el Agente de registro del LOG de cada nodo del mismo nivel se ejecuta y establece conexiones. Para obtener información sobre los permisos requeridos por los agentes y las prácticas recomendadas que se aplican a la seguridad de replicación, vea [Modelo de seguridad del Agente de replicación](security/replication-agent-security-model.md) y [Prácticas recomendadas de seguridad de replicación](security/replication-security-best-practices.md).  
+  La página **agente de registro del log Security** le permite especificar las cuentas con las que se ejecuta el agente de registro del log de cada elemento del mismo nivel y realiza las conexiones. Para obtener información sobre los permisos requeridos por los agentes y las prácticas recomendadas que se aplican a la seguridad de replicación, consulte [Modelo de seguridad del Agente de replicación](security/replication-agent-security-model.md) y [Prácticas recomendadas de seguridad de replicación](security/replication-security-best-practices.md).  
   
 > [!NOTE]  
->  Existe un Agente de registro del LOG para cada base de datos que se publica utilizando la replicación transaccional. Si el Agente de registro del LOG para una base de datos ya ha sido configurado (ya sea para una publicación en una ejecución anterior de este asistente o para otra publicación transaccional en la misma base de datos), no se pueden cambiar las credenciales que el agente utiliza en este asistente. Si especifica credenciales nuevas, se omitirán. Para cambiar las credenciales, utilice el cuadro de diálogo **Propiedades de la publicación** . Para más información, consulte [View and Modify Replication Security Settings](security/view-and-modify-replication-security-settings.md).  
+>  Existe un Agente de registro del LOG para cada base de datos que se publica utilizando la replicación transaccional. Si el Agente de registro del LOG para una base de datos ya ha sido configurado (ya sea para una publicación en una ejecución anterior de este asistente o para otra publicación transaccional en la misma base de datos), no se pueden cambiar las credenciales que el agente utiliza en este asistente. Si especifica credenciales nuevas, se omitirán. Para cambiar las credenciales, utilice el cuadro de diálogo **Propiedades de la publicación** . Para obtener más información, vea [ver y modificar la configuración de seguridad](security/view-and-modify-replication-security-settings.md)de la replicación.  
   
 ## <a name="options"></a>Opciones  
- Haga clic en el botón de propiedades ( **...** ) en la fila de cada nodo del mismo nivel para obtener acceso al cuadro de diálogo **Seguridad del Agente de registro del LOG** . Haga clic en **Ayuda** en el cuadro de diálogo **Seguridad del Agente de registro del LOG** que se inicia para obtener más información acerca de los permisos requeridos para las cuentas que utilizan los agentes.  
+ Haga clic en el botón de propiedades (**...**) en la fila de cada nodo del mismo nivel para obtener acceso al cuadro de diálogo **Seguridad del Agente de registro del LOG** . Haga clic en **Ayuda** en el cuadro de diálogo **Seguridad del Agente de registro del LOG** que se inicia para obtener más información acerca de los permisos requeridos para las cuentas que utilizan los agentes.  
   
  Una vez que se ha especificado la configuración en el cuadro de diálogo, se muestra la información de conexión para el suscriptor en la cuadrícula.  
   
@@ -37,12 +37,13 @@ ms.locfileid: "63000358"
  Base de datos que actúa como base de datos de publicaciones y base de datos de suscripciones en cada nodo del mismo nivel.  
   
  **Conexión al distribuidor**  
- Contexto en el que se realiza la conexión al distribuidor. La conexión local con el distribuidor siempre se establece usando el contexto de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente, de modo que este campo siempre mostrará **Suplantar '\<dominio>\\<inicioDeSesión\>'** o **Suplantar '\<equipo>\\<inicioDeSesión\>'** .  
+ Contexto en el que se realiza la conexión al distribuidor. La conexión local con el distribuidor siempre se establece usando el contexto de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente, de modo que este campo siempre mostrará **Suplantar '\<dominio>\\<inicioDeSesión\>'** o **Suplantar '\<equipo>\\<inicioDeSesión\>'**.  
   
  **Conexión al publicador**  
- Contexto bajo el cual se establece la conexión al publicador. La conexión al publicador se puede establecer utilizando un inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o utilizando el contexto de la cuenta de Windows bajo la que se ejecuta el agente. En el campo se muestra uno de los siguientes: **Usar inicio de sesión "\<Inicio de sesión>"** , **Suplantar "\<Dominio>\\<Inicio de sesión\>"** o **Suplantar "\<Equipo>\\<Inicio de sesión\>"** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
+ Contexto bajo el cual se establece la conexión al publicador. La conexión al publicador se puede realizar con un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión de o con el contexto de la cuenta de Windows con la que se ejecuta el agente. El campo muestra una de las opciones siguientes: **Usar inicio de sesión '\<inicioDeSesión>'**, **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<Equipo>\\<inicioDeSesión>\>'**. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)  
   

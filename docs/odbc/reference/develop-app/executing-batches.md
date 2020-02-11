@@ -1,5 +1,5 @@
 ---
-title: Ejecución de lotes | Microsoft Docs
+title: Ejecutar lotes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84d3cf65284d767d437987c8ff2b21793466106e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901268"
 ---
 # <a name="executing-batches"></a>Ejecución de lotes
-Antes de que una aplicación ejecuta un lote de instrucciones, en primer lugar debe comprobar si son compatibles. Para ello, la aplicación llama a **SQLGetInfo** con las opciones SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS y SQL_PARAM_ARRAY_SELECTS. La primera opción devuelve si generadora de recuento de filas y resultado de la generación de conjunto de instrucciones son compatibles con lotes explícitos y procedimientos, mientras que las dos últimas opciones devuelven información acerca de la disponibilidad de los recuentos de filas y el resultado se establece en parámetros ejecución.  
+Antes de que una aplicación ejecute un lote de instrucciones, primero debe comprobar si se admiten. Para ello, la aplicación llama a **SQLGetInfo** con las opciones SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS y SQL_PARAM_ARRAY_SELECTS. La primera opción devuelve si las instrucciones de generación de recuento de filas y de generación de conjuntos de resultados se admiten en lotes y procedimientos explícitos, mientras que las dos últimas opciones devuelven información sobre la disponibilidad de los recuentos de filas y conjuntos de resultados en parámetros. remota.  
   
- Lotes de instrucciones se ejecutan a través de **SQLExecute** o **SQLExecDirect**. Por ejemplo, la llamada siguiente ejecuta un lote de instrucciones para abrir un nuevo pedido de ventas explícito.  
+ Los lotes de instrucciones se ejecutan a través de **SQLExecute** o **SQLExecDirect**. Por ejemplo, la siguiente llamada ejecuta un lote explícito de instrucciones para abrir un nuevo pedido de ventas.  
   
 ```  
 SQLCHAR *BatchStmt =  
@@ -37,9 +37,9 @@ SQLCHAR *BatchStmt =
 SQLExecDirect(hstmt, BatchStmt, SQL_NTS);  
 ```  
   
- Cuando un lote de generan instrucciones se ejecuta, devuelve uno o más recuentos de filas o conjuntos de resultados. Para obtener información acerca de cómo recuperar estas, consulte [varios resultados](../../../odbc/reference/develop-app/multiple-results.md).  
+ Cuando se ejecuta un lote de instrucciones que generan resultados, devuelve uno o más recuentos de filas o conjuntos de resultados. Para obtener información sobre cómo recuperarlos, vea [varios resultados](../../../odbc/reference/develop-app/multiple-results.md).  
   
- Si un lote de instrucciones incluye marcadores de parámetros, estos se numeran en sentido ascendente de parámetro estén en cualquier otra instrucción. Por ejemplo, el siguiente lote de instrucciones tiene parámetros que se numeran del 1 al 21; los de la primera **insertar** instrucción están numerados 1 a 5 y aquellos en los últimos **insertar** instrucción están numerados 18 al 21.  
+ Si un lote de instrucciones incluye marcadores de parámetros, se numeran al aumentar el orden de los parámetros, ya que se encuentran en cualquier otra instrucción. Por ejemplo, el siguiente lote de instrucciones tiene parámetros numerados del 1 al 21; los de la primera instrucción **Insert** se numeran del 1 al 5 y los de la última instrucción **Insert** se numeran del 18 al 21.  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -50,4 +50,4 @@ INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);
 INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);  
 ```  
   
- Para obtener más información acerca de los parámetros, vea [parámetros de la instrucción](../../../odbc/reference/develop-app/statement-parameters.md), más adelante en esta sección.
+ Para obtener más información sobre los parámetros, vea [parámetros de instrucción](../../../odbc/reference/develop-app/statement-parameters.md), más adelante en esta sección.

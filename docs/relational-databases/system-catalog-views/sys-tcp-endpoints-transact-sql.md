@@ -1,5 +1,5 @@
 ---
-title: Sys.tcp_endpoints (Transact-SQL) | Microsoft Docs
+title: Sys. tcp_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,27 +20,27 @@ ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7e4b711a7d36e7677f6f32b87ff4c696db231730
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68116732"
 ---
-# <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
+# <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una fila por cada extremo TCP que haya en el sistema. Los puntos de conexión que se describen mediante **sys.tcp_endpoints** proporcionar un objeto conceda y revoque el privilegio de conexión. La información que se muestra sobre puertos y direcciones IP no se utiliza para configurar los protocolos y es posible que no coincida con la configuración real del protocolo. Para ver y configurar protocolos, utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Contiene una fila por cada extremo TCP que haya en el sistema. Los extremos descritos por **Sys. tcp_endpoints** proporcionan un objeto para conceder y revocar el privilegio de conexión. La información que se muestra sobre puertos y direcciones IP no se utiliza para configurar los protocolos y es posible que no coincida con la configuración real del protocolo. Para ver y configurar protocolos, utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**< columnas heredadas >**||Hereda columnas de [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**port**|int|Número de puerto en el que escucha el extremo. No admite valores NULL.|  
+|**< columnas heredadas>**||Hereda columnas de [Sys. endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**casilla**|int|Número de puerto en el que escucha el extremo. No admite valores NULL.|  
 |**is_dynamic_port**|bit|1 = El número de puerto se asignó dinámicamente.<br /><br /> No admite valores NULL.|  
-|**ip_address**|**nvarchar(45)**|Dirección IP de escucha según se especifica en la cláusula LISTENER_IP. Acepta valores NULL.|  
+|**ip_address**|**nvarchar (45)**|Dirección IP de escucha según se especifica en la cláusula LISTENER_IP. Acepta valores NULL.|  
   
-## <a name="remarks"></a>Comentarios  
- Ejecute la siguiente consulta para reunir información sobre los extremos y las conexiones. Los extremos sin conexiones actuales o sin conexiones TCP aparecerán con valores NULL. Agregar el **donde** cláusula `WHERE des.session_id = @@SPID` para devolver información sobre la conexión actual.  
+## <a name="remarks"></a>Observaciones  
+ Ejecute la siguiente consulta para reunir información sobre los extremos y las conexiones. Los extremos sin conexiones actuales o sin conexiones TCP aparecerán con valores NULL. Agregue la **** cláusula `WHERE des.session_id = @@SPID` Where para devolver información sobre la conexión actual.  
   
 ```  
 SELECT des.login_name, des.host_name, program_name,  dec.net_transport, des.login_time,   
@@ -58,7 +58,7 @@ LEFT JOIN sys.dm_exec_connections AS dec
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Vistas de catálogo de extremos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   

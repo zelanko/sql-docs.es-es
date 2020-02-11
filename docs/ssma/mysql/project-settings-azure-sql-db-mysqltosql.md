@@ -10,35 +10,35 @@ ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e4cf080d7a3bcb2d121a58a57be9f3fd41a4c18a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67908818"
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>Configuración del proyecto (Azure SQL DB) (MySQLToSQL)
-La configuración del proyecto de SQL Azure le permite configurar el sufijo de la base de datos de SQL Azure que desea agregar en el cuadro de diálogo de conexión y también permite implementar el mecanismo de latidos de conexión de SQL Azure.  
+La configuración del proyecto SQL Azure permite configurar el sufijo de la base de datos SQL Azure que se va a agregar en el cuadro de diálogo de conexión y también permitir la implementación del mecanismo de latido en SQL Azure conexión.  
   
-El panel de SQL Azure está disponible en el **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo.  
+El panel SQL Azure está disponible en los cuadros de diálogo **configuración del proyecto** y **configuración predeterminada del proyecto** .  
   
--   Utilice el cuadro de diálogo de configuración del proyecto para establecer las opciones de configuración para el proyecto actual. Para obtener acceso a la configuración de SQL Azure, en el **herramientas** menú, seleccione **configuración del proyecto**, haga clic en **General** en la parte inferior del panel izquierdo y a continuación, seleccione **SQL Azure**.  
+-   Utilice el cuadro de diálogo Configuración del proyecto para establecer las opciones de configuración del proyecto actual. Para obtener acceso a la configuración de SQL Azure, en el menú **herramientas** , seleccione **configuración del proyecto**, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, seleccione **SQL Azure**.  
   
--   Utilice el cuadro de diálogo Configuración de proyecto predeterminada para establecer las opciones de configuración para todos los proyectos. Para obtener acceso a la configuración de SQL Azure, en el **herramientas** menú, seleccione **DefaultProject configuración**, seleccione el tipo de proyecto de migración como de SQL Azure desde **versión de destino de migración** drop hasta el acceso a la configuración en el panel de SQL Azure, haga clic en **General** en la parte inferior del panel izquierdo y a continuación, seleccione **SQL Azure**.  
+-   Utilice el cuadro de diálogo Configuración predeterminada del proyecto para establecer las opciones de configuración de todos los proyectos. Para obtener acceso a la configuración de SQL Azure, en el menú **herramientas** , seleccione **configuración de DefaultProject**, seleccione tipo de proyecto de migración como SQL Azure de la lista desplegable de versiones de **destino de migración** para acceder a la configuración en SQL Azure panel, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, seleccione **SQL Azure**.  
   
 ## <a name="options"></a>Opciones  
   
 ## <a name="connectivity"></a>Conectividad  
-**Intervalo de latidos**  
+**Intervalo entre latidos**  
   
-Especifica un intervalo de tiempo que se usará para el mecanismo de latidos para mantener activa en la conexión de SQL Azure "minutos: formato de segundos.  
+Especifica un intervalo de tiempo que se va a usar para que el mecanismo de latido mantenga el SQL Azure conexión activa en formato "minutos: segundos".  
   
-**Valor predeterminado**:' 4:45 '  
+**Valor predeterminado**: ' 4:45 '  
   
-El valor debe especificarse en estoy: formato de ss (por ejemplo, ' 4:45 ' o ' 0:50 ').  
+El valor debe especificarse en formato "m:SS" (por ejemplo, "4:45" o "0:50").  
   
-**Sufijo del servidor de SQL Azure**  
+**Sufijo de servidor SQL Azure**  
   
-Especifica el sufijo del servidor de SQL Azure  
+Especifica el sufijo del servidor SQL Azure  
   
-**Valor predeterminado**: 'database.windows.net'.  
+**Valor predeterminado**: ' Database.Windows.net '.  
   

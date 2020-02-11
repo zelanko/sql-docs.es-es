@@ -1,5 +1,5 @@
 ---
-title: Proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory | Microsoft Docs
+title: Proveedor de Microsoft OLE DB para el servicio Microsoft Active Directory | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,26 +16,26 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926679"
 ---
-# <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory
-El proveedor de Interfaces de servicio de Active Directory (ADSI) permite ADO para conectarse a servicios de directorio heterogéneos a través de ADSI. Esto proporciona a las aplicaciones ADO acceso de solo lectura a los servicios de directorio de Microsoft Windows NT 4.0 y Microsoft Windows 2000, además de cualquier servicio de directorio compatible con LDAP y servicios de directorio Novell. ADSI se basa en un modelo de proveedor, por lo que si hay un nuevo proveedor proporcionar acceso a otro directorio, la aplicación ADO podrán acceder a él sin problemas. El proveedor ADSI es de subprocesamiento libre y está habilitado para Unicode.  
+# <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Proveedor de Microsoft OLE DB para el servicio Microsoft Active Directory
+El proveedor de interfaces de servicio Active Directory (ADSI) permite a ADO conectarse a servicios de directorio heterogéneos a través de ADSI. Esto proporciona a las aplicaciones ADO acceso de solo lectura a los servicios de directorio Microsoft Windows NT 4,0 y Microsoft Windows 2000, además de cualquier servicio de directorio compatible con LDAP y servicios de directorio de Novell. ADSI se basa en un modelo de proveedor, de modo que si hay un nuevo proveedor que concede acceso a otro directorio, la aplicación ADO podrá tener acceso a él sin problemas. El proveedor ADSI es de subprocesamiento libre y está habilitado para Unicode.  
   
 ## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión  
- Para conectarse a este proveedor, establezca el **proveedor** argumento de la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad al siguiente:  
+ Para conectarse a este proveedor, establezca el argumento de **proveedor** de la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) en lo siguiente:  
   
 ```vb
 ADSDSOObject  
 ```  
   
- Leer el [proveedor](../../../ado/reference/ado-api/provider-property-ado.md) propiedad devolverá también esta cadena.  
+ La lectura de la propiedad [Provider](../../../ado/reference/ado-api/provider-property-ado.md) también devolverá esta cadena.  
   
 ## <a name="typical-connection-string"></a>Cadena de conexión típica  
- Una cadena de conexión típica para este proveedor es como sigue:  
+ Una cadena de conexión típica para este proveedor es la siguiente:  
   
 ```vb
 "Provider=ADSDSOObject;User ID=MyUserID;Password=MyPassword;"  
@@ -45,26 +45,26 @@ ADSDSOObject
   
 |Palabra clave|Descripción|  
 |-------------|-----------------|  
-|**Proveedor**|Especifica el proveedor OLE DB para servicios de Active Directory.|  
+|**Proveedor**|Especifica el proveedor de OLE DB para Active Directory servicio.|  
 |**Id. de usuario**|Especifica el nombre de usuario. Si se omite esta palabra clave, se usa el inicio de sesión actual.|  
 |**Contraseña**|Especifica la contraseña del usuario. Si se omite esta palabra clave. A continuación, se usa el inicio de sesión actual.|  
   
 > [!NOTE]
->  Si se conecta a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar **Trusted_Connection = yes** o **Integrated Security = SSPI** en lugar de Id. de usuario y contraseña información de la cadena de conexión.  
+>  Si se va a conectar a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar **Trusted_Connection = Yes** o **Integrated Security = SSPI** en lugar de la información de identificador de usuario y contraseña en la cadena de conexión.  
   
 ## <a name="command-text"></a>Texto de comando  
- Una cadena de texto de comando de cuatro partes es reconocida por el proveedor en la sintaxis siguiente:  
+ El proveedor reconoce una cadena de texto de comando de cuatro partes en la siguiente sintaxis:  
   
 ```vb
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|*Root*|Indica el **ADsPath** objeto desde el que se va a iniciar la búsqueda (es decir, la raíz de la búsqueda).|  
+|*Root*|Indica el objeto **ADsPath** desde el que se va a iniciar la búsqueda (es decir, la raíz de la búsqueda).|  
 |*Filter*|Indica el filtro de búsqueda en el formato RFC 1960.|  
-|*Atributos*|Indica una lista delimitada por comas de atributos que se va a devolver.|  
-|*Ámbito*|Opcional. Un **cadena** que especifica el ámbito de la búsqueda. Puede ser uno de los valores siguientes:<br /><br /> -Base - busca sólo el objeto base (raíz de la búsqueda).<br />-OneLevel - sólo un nivel de búsqueda.<br />-Subárbol - Buscar todo el subárbol.|  
+|*Atributos*|Indica una lista delimitada por comas de atributos que se van a devolver.|  
+|*Ámbito*|Opcional. **Cadena** que especifica el ámbito de la búsqueda. Puede ser uno de los siguientes:<br /><br /> -Base: busca solo el objeto base (raíz de la búsqueda).<br />-OneLevel: busca solo un nivel.<br />-Subárbol: busca en todo el subárbol.|  
   
  Por ejemplo:  
   
@@ -72,24 +72,24 @@ ADSDSOObject
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
- El proveedor también admite la SELECT de SQL para el texto del comando. Por ejemplo:  
+ El proveedor también admite la selección de SQL para el texto del comando. Por ejemplo:  
   
 ```vb
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
 objectClass='user' AND objectCategory='Person'"  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- El proveedor no acepta llamadas a procedimientos almacenados ni los nombres de tabla simple (por ejemplo, el [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) siempre será propiedad **adCmdText**). Consulte la documentación de Active Directory Service Interfaces para obtener una descripción más completa de los elementos de texto de comando.  
+## <a name="remarks"></a>Observaciones  
+ El proveedor no acepta llamadas a procedimientos almacenados ni nombres de tabla simples (por ejemplo, la propiedad [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) siempre será **adCmdText**). Consulte la documentación sobre las interfaces de servicio de Active Directory para obtener una descripción más detallada de los elementos de texto de comando.  
   
 ## <a name="recordset-behavior"></a>Comportamiento del conjunto de registros  
- Las tablas siguientes enumeran las características disponibles en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto abierto mediante el uso de este proveedor. Solo el tipo de cursor estático (**adOpenStatic**) está disponible.  
+ En las tablas siguientes se enumeran las características disponibles en un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) abierto con este proveedor. Solo está disponible el tipo de cursor estático (**adOpenStatic**).  
   
- Para obtener más información acerca de **Recordset** comportamiento para la configuración del proveedor, ejecute el [admite](../../../ado/reference/ado-api/supports-method.md) método y enumerar los [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección de la  **Conjunto de registros** para determinar si están presentes las propiedades dinámicas específicas del proveedor.  
+ Para obtener más información sobre el comportamiento del **conjunto de registros** para la configuración del proveedor, ejecute el método [Supports](../../../ado/reference/ado-api/supports-method.md) y enumere la colección [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) del **conjunto de registros** para determinar si las propiedades dinámicas específicas del proveedor están presentes.  
   
- **Disponibilidad de las propiedades de conjunto de registros ADO estándar:**  
+ **Disponibilidad de propiedades de conjunto de registros de ADO estándar:**  
   
-|Property|Disponibilidad|  
+|Propiedad|Disponibilidad|  
 |--------------|------------------|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|lectura/escritura|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|lectura/escritura|  
@@ -109,40 +109,40 @@ objectClass='user' AND objectCategory='Person'"
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lectura/escritura|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|solo lectura|  
 |[Origen](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lectura/escritura|  
-|[Estado](../../../ado/reference/ado-api/state-property-ado.md)|solo lectura|  
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|solo lectura|  
 |[Estado](../../../ado/reference/ado-api/status-property-ado-recordset.md)|solo lectura|  
   
- **Disponibilidad de los métodos de conjunto de registros ADO estándar:**  
+ **Disponibilidad de métodos de conjunto de registros de ADO estándar:**  
   
-|Método|¿Está disponible?|  
+|Método|Disponible?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Sin|  
+|[AgregarNuevo](../../../ado/reference/ado-api/addnew-method-ado.md)|No|  
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|No|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sin|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|  
 |[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|  
-|[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|  
-|[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sin|  
+|[Cercanos](../../../ado/reference/ado-api/close-method-ado.md)|Sí|  
+|[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|  
-|[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Sí|  
+|[Move](../../../ado/reference/ado-api/move-method-ado.md)|Sí|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Sí|  
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|  
-|[Nueva consulta](../../../ado/reference/ado-api/requery-method.md)|Sí|  
-|[Resincronización](../../../ado/reference/ado-api/resync-method.md)|Sí|  
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|  
+|[Resincronizar](../../../ado/reference/ado-api/resync-method.md)|Sí|  
 |[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|No|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|  
   
- Para obtener más información acerca de ADSI y los detalles del proveedor, consulte la documentación de Active Directory Service Interfaces o visite la página Web de ADSI.  
+ Para obtener más información acerca de ADSI y los detalles del proveedor, consulte la documentación sobre las interfaces del servicio Active Directory o visite la Página Web de ADSI.  
   
-## <a name="see-also"></a>Vea también  
- [Propiedad CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [Propiedad ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Proveedor (propiedad, ADO)](../../../ado/reference/ado-api/provider-property-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [CommandType (propiedad, ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
+ [ConnectionString (propiedad, ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
+ [Colección Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
+ [Provider (propiedad, ADO)](../../../ado/reference/ado-api/provider-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Método Supports](../../../ado/reference/ado-api/supports-method.md)

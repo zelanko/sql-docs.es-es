@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5d243ef273badd182066fcc42484fa95fa13461
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107486"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>Agregar, editar y actualizar campos en el panel Datos de informe (Generador de informes y SSRS)
@@ -89,9 +89,9 @@ ms.locfileid: "66107486"
   
      En el servidor de informes, la consulta del conjunto de datos compartido se ejecuta y devuelve la colección de campos actual.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)   
+ [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](report-datasets-ssrs.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Diseñadores de consultas de Reporting Services](../reporting-services-query-designers.md)   
  [Diseñadores de consultas &#40;Generador de informes&#41;](../query-designers-report-builder.md)  

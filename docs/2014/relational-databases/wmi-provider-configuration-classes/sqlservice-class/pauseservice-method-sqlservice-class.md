@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f4b9667f9d0018920885d4fdf7e5fce3b5a47311
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061843"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>Método PauseService (clase SqlService)
@@ -38,15 +38,15 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
+ *objeto*  
  Objeto de la [clase SqlService](sqlservice-class.md) que representa el servicio.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor unit32 que es igual a 0 si se detuvo el servicio correctamente, igual a 1 si no se admite la solicitud e igual a cualquier otro número para indicar que hubo un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

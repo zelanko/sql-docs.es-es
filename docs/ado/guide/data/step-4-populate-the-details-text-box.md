@@ -1,5 +1,5 @@
 ---
-title: 'Paso 4: Rellenar el cuadro de texto de información | Microsoft Docs'
+title: 'Paso 4: rellenar el cuadro de texto de detalles | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924064"
 ---
-# <a name="step-4-populate-the-details-text-box"></a>Paso 4: Relleno del cuadro de texto de detalles
-Para rellenar el cuadro de texto de detalles, cree una subrutina nueva denominada **recFields** e inserte el código siguiente:  
+# <a name="step-4-populate-the-details-text-box"></a>Paso 4: Rellenar el cuadro de texto de detalles
+Para rellenar el cuadro de texto detalles, cree una nueva subrutina denominada **recFields** e inserte el código siguiente:  
   
 ```  
 Sub recFields(r As Record, l As ListBox, t As TextBox)  
@@ -44,8 +44,8 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- Este código rellena `lstDetails` con los campos y valores del registro simple pasado a `recFields`. Si el recurso es un archivo de texto, se abre un Stream de texto desde el registro de recursos. El código determina si el juego de caracteres ASCII y copia el contenido de Stream en `txtDetails`.  
+ Este código se rellena `lstDetails` con los campos y valores del registro simple que se pasa `recFields`a. Si el recurso es un archivo de texto, se abre una secuencia de texto desde el registro de recursos. El código determina si el juego de caracteres es ASCII y copia el contenido de `txtDetails`la secuencia en.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenario de publicación en Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Paso 3: Rellenar el cuadro de lista de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

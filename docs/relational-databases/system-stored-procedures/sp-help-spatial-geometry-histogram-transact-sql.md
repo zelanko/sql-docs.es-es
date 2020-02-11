@@ -18,13 +18,13 @@ ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 640d292dfbef7adae9fc99b53cb3b450f698b651
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085121"
 ---
-# <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
+# <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Facilita la introducción de los parámetros del cuadro de límite y de la cuadrícula para un índice espacial.  
@@ -44,43 +44,43 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tabname = ] 'tabname'` Es el nombre completo o incompleto de la tabla para la que se ha especificado el índice espacial.  
+`[ @tabname = ] 'tabname'`Es el nombre completo o no completo de la tabla para la que se ha especificado el índice espacial.  
   
- Se requieren comillas únicamente si se especifica una tabla certificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *TabName* es **sysname**, no tiene ningún valor predeterminado.  
+ Se requieren comillas únicamente si se especifica una tabla certificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *tabname* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @colname = ] 'colname'` Es el nombre de la columna espacial especificada. *colname* es un **sysname**, no tiene ningún valor predeterminado.  
+`[ @colname = ] 'colname'`Es el nombre de la columna espacial especificada. *colname* es un **sysname**y no tiene ningún valor predeterminado.  
   
-`[ @resolution = ] 'resolution'` Es la resolución del cuadro de límite. Los valores válidos van del 10 al 5000. *resolución* es un **tinyint**, no tiene ningún valor predeterminado.  
+`[ @resolution = ] 'resolution'`Es la resolución del cuadro de límite. Los valores válidos van del 10 al 5000. la *resolución* es de **tinyint**y no tiene ningún valor predeterminado.  
   
-`[ @xmin = ] 'xmin'` Es la propiedad de cuadro de límite X mínimo. *XMIN* es un **float**, no tiene ningún valor predeterminado.  
+`[ @xmin = ] 'xmin'`Es la propiedad del cuadro de límite X mínimo. *xmin* es de **tipo float**y no tiene ningún valor predeterminado.  
   
-`[ @ymin = ] 'ymin'` Es la propiedad del cuadro de límite mínimo. *YMIN* es un **float**, no tiene ningún valor predeterminado.  
+`[ @ymin = ] 'ymin'`Es la propiedad del cuadro de límite Y mínimo. *YMIN* es de **tipo float**y no tiene ningún valor predeterminado.  
   
-`[ @xmax = ] 'xmax'` Es la propiedad del cuadro de límite X máximo. *XMAX* es un **float**, no tiene ningún valor predeterminado.  
+`[ @xmax = ] 'xmax'`Es la propiedad del cuadro de límite X máximo. *Xmax* es de **tipo float**y no tiene ningún valor predeterminado.  
   
-`[ @ymax = ] 'ymax'` Es la propiedad del cuadro de límite Y máximo. *YMAX* es un **float**, no tiene ningún valor predeterminado.  
+`[ @ymax = ] 'ymax'`Es la propiedad del cuadro de límite Y máximo. *YMAX* es de **tipo float**y no tiene ningún valor predeterminado.  
   
-`[ @sample = ] 'sample'` Es el porcentaje de la tabla que se utiliza. Los valores válidos son de 0 a 100. *ejemplo* es un **float**. Valor predeterminado es 100.  
+`[ @sample = ] 'sample'`Es el porcentaje de la tabla que se utiliza. Los valores válidos son de 0 a 100. el *ejemplo* es **float**. El valor predeterminado es 100.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Se devuelve un valor de tabla. En la siguiente cuadrícula se describe el contenido de la columna de la tabla.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Representa el identificador único de cada celda, el recuento empieza por 1.|  
-|**cell**|**geometry**|Es un polígono rectangular que representa cada celda. La forma de la celda es idéntica a la de la celda usada para los índices espaciales.|  
-|**row_count**|**bigint**|Indica el número de objetos espaciales que tocan la celda o que están contenidos en ella.|  
+|**móvil**|**geometry**|Es un polígono rectangular que representa cada celda. La forma de la celda es idéntica a la de la celda usada para los índices espaciales.|  
+|**row_count**|**BIGINT**|Indica el número de objetos espaciales que tocan la celda o que están contenidos en ella.|  
   
 ## <a name="permissions"></a>Permisos  
- Usuario debe ser un miembro de la **pública** rol. Requiere el permiso READ ACCESS en el servidor y el objeto.  
+ El usuario debe ser miembro del rol **Public** . Requiere el permiso READ ACCESS en el servidor y el objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La pestaña Resultados espaciales de SSMS muestra una representación gráfica de los resultados. Puede consultar los resultados en la ventana espacial para obtener un número aproximado de elementos de resultados. Los objetos de la tabla pueden ocupar más de una celda. Por tanto, la suma de las celdas puede ser mayor que el número de objetos reales.  
   
- Puede que se agregue una fila adicional al conjunto de resultados que contiene el número de objetos situados fuera del cuadro de límite o que están en contacto con el borde de dicho cuadro. El **cellid** de esta fila es 0 y el **celda** de esta fila contiene un **LineString** que representa el rectángulo de selección. Esta fila representa todo el espacio fuera del cuadro de límite.  
+ Puede que se agregue una fila adicional al conjunto de resultados que contiene el número de objetos situados fuera del cuadro de límite o que están en contacto con el borde de dicho cuadro. El valor de **CellID** de esta fila es 0 y la **celda** de esta fila contiene una **LineString** que representa el rectángulo de selección. Esta fila representa todo el espacio fuera del cuadro de límite.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente se crea una tabla de ejemplo y, a continuación, llama a **sp_help_spatial_geometry_histogram** en la tabla.  
+ En el ejemplo siguiente se crea una tabla de ejemplo y, a continuación, se llama a **sp_help_spatial_geometry_histogram** en la tabla.  
   
  `USE AdventureWorksDW2012`  
   
@@ -146,7 +146,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
   
  `GO`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de índice espacial &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

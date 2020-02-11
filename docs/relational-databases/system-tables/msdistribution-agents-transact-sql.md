@@ -18,57 +18,57 @@ ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907413"
 ---
-# <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
+# <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MSdistribution_agents** tabla contiene una fila por cada agente de distribución que se ejecuta en el distribuidor local. Esta tabla se almacena en la base de datos de distribución.  
+  La tabla **MSdistribution_agents** contiene una fila por cada agente de distribución que se ejecuta en el distribuidor local. Esta tabla se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Id. del Agente de distribución.|  
-|**name**|**nvarchar(100)**|Nombre del Agente de distribución.|  
+|**sesión**|**int**|Id. del Agente de distribución.|  
+|**Name**|**nvarchar(100**|Nombre del Agente de distribución.|  
 |**publisher_database_id**|**int**|El Id. de la base de datos del publicador.|  
-|**publisher_id**|**smallint**|El ID. del publicador.|  
+|**publisher_id**|**smallint**|IDENTIFICADOR del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
-|**publicación**|**sysname**|Nombre de la publicación.|  
+|**publicaciones**|**sysname**|Nombre de la publicación.|  
 |**subscriber_id**|**smallint**|Id. del suscriptor, que solo utilizan los agentes conocidos. En el caso de los agentes anónimos, esta columna está reservada.|  
-|**subscriber_db**|**sysname**|El nombre de la base de datos de suscripción.|  
-|**subscription_type**|**int**|El tipo de suscripción:<br /><br /> **0** = inserción.<br /><br /> **1** = extracción.<br /><br /> **2** = anónima.|  
+|**subscriber_db**|**sysname**|El nombre de la base de datos de suscripciones.|  
+|**subscription_type**|**int**|El tipo de suscripción:<br /><br /> **0** = extracción.<br /><br /> **1** = extracción.<br /><br /> **2** = anónimo.|  
 |**local_job**|**bit**|Indica si hay un trabajo del Agente SQL Server en el distribuidor local.|  
-|**job_id**|**binary (16)**|El número de identificación del trabajo.|  
-|**subscription_guid**|**binary (16)**|Id. de las suscripciones de este agente.|  
-|**profile_id**|**int**|El identificador de configuración de la [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabla.|  
+|**job_id**|**binario (16)**|El número de identificación del trabajo.|  
+|**subscription_guid**|**binario (16)**|Id. de las suscripciones de este agente.|  
+|**profile_id**|**int**|El ID. de configuración de la [MSagent_profiles &#40;tabla de&#41;de Transact-SQL](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) .|  
 |**anonymous_subid**|**uniqueidentifier**|Id. de un agente anónimo.|  
 |**subscriber_name**|**sysname**|Nombre del suscriptor, que solo utilizan los agentes anónimos.|  
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|Fecha y hora de creación del Agente de distribución o de mezcla.|  
-|**queue_id**|**sysname**|Identificador que se utiliza para localizar la cola de suscripciones de actualización en cola. Para las suscripciones que no sean en cola, el valor es NULL. Para las publicaciones basadas en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server, el valor es un GUID que identifica de forma única la cola que se va a utilizar en la suscripción. Para las publicaciones en cola basada en SQL Server, la columna contiene el valor **SQL**.<br /><br /> Nota: Uso de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server ha quedado desusado y ya no se admite.|  
+|**queue_id**|**sysname**|Identificador que se utiliza para localizar la cola de suscripciones de actualización en cola. Para las suscripciones que no sean en cola, el valor es NULL. Para las publicaciones basadas en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server, el valor es un GUID que identifica de forma única la cola que se va a utilizar en la suscripción. En el caso de las publicaciones de cola basadas en SQL Server, la columna contiene el valor **SQL**.<br /><br /> Nota: el [!INCLUDE[msCoName](../../includes/msconame-md.md)] uso de Message Queue Server ha quedado desusado y ya no se admite.|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**offload_enabled**|**bit**|Indica si el agente puede activarse de manera remota.<br /><br /> **0** especifica que el agente no puede activarse de forma remota.<br /><br /> **1** especifica que el agente se activará de forma remota y en el equipo remoto especificado en el *offload_server* propiedad.|  
+|**offload_enabled**|**bit**|Indica si el agente puede activarse de manera remota.<br /><br /> **0** especifica que no se puede activar el agente de forma remota.<br /><br /> **1** especifica que el agente se activará de forma remota y en el equipo remoto especificado en la propiedad *offload_server* .|  
 |**offload_server**|**sysname**|Nombre de red del servidor que se va a utilizar en la activación remota del agente.|  
 |**dts_package_name**|**sysname**|Nombre del paquete DTS. Por ejemplo, para un paquete denominado **DTSPub_Package**, especifique `@dts_package_name = N'DTSPub_Package'`.|  
-|**dts_package_password**|**nvarchar(524)**|Contraseña del paquete.|  
-|**dts_package_location**|**int**|La ubicación del paquete. La ubicación del paquete puede ser **distribuidor** o **suscriptor**.|  
-|**sid**|**varbinary(85)**|Número de identificación de seguridad (SID) del Agente de distribución o del Agente de mezcla durante su primera ejecución.|  
+|**dts_package_password**|**nvarchar (524)**|Contraseña del paquete.|  
+|**dts_package_location**|**int**|La ubicación del paquete. La ubicación del paquete puede ser **Distributor** o **Subscriber**.|  
+|**Junction**|**varbinary(85)**|Número de identificación de seguridad (SID) del Agente de distribución o del Agente de mezcla durante su primera ejecución.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**subscriber_security_mode**|**smallint**|Modo de seguridad utilizado por el agente cuando se conecta al suscriptor, que puede ser uno de los siguientes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de SQL Server<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
+|**subscriber_security_mode**|**smallint**|Modo de seguridad utilizado por el agente cuando se conecta al suscriptor, que puede ser uno de los siguientes:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server autenticación de<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
 |**subscriber_login**|**sysname**|Inicio de sesión que se utilizará en la conexión con el suscriptor.|  
-|**subscriber_password**|**nvarchar(524)**|Es el valor cifrado de la contraseña utilizada al conectarse al suscriptor.|  
+|**subscriber_password**|**nvarchar (524)**|Es el valor cifrado de la contraseña utilizada al conectarse al suscriptor.|  
 |**reset_partial_snapshot_progress**|**bit**|Indica si se descartará una instantánea descargada parcialmente para que todo el proceso de instantánea pueda empezar de nuevo.|  
-|**job_step_uid**|**uniqueidentifier**|El identificador único del trabajo del Agente SQL Server se encargan de que el agente se inicia.|  
-|**flujos de suscripción**|**tinyint**|Establece el número de conexiones permitidas por Agente de distribución para aplicar lotes de cambios en paralelo en un suscriptor. Se admite un intervalo de valores de 1 a 64.|  
-|**memory_optimized**|**bit**|1 indica que el suscriptor puede utilizarse para tablas optimizadas para memoria.|  
+|**job_step_uid**|**uniqueidentifier**|Id. exclusivo del paso de trabajo del Agente SQL Server en el que se ha iniciado el agente.|  
+|**subscriptionstreams**|**tinyint**|Establece el número de conexiones permitidas por Agente de distribución para aplicar lotes de cambios en paralelo en un suscriptor. Se admite un intervalo de valores de 1 a 64.|  
+|**memory_optimized**|**bit**|1 indica que el suscriptor se puede usar para las tablas optimizadas para memoria.|  
 |**job_login**|**sysname**||  
-|**job_password**|**nvarchar(524)**||  
+|**job_password**|**nvarchar (524)**||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

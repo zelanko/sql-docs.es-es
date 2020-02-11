@@ -14,29 +14,29 @@ ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ecec6116ee16f4affa615518a690d2c665648464
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091243"
 ---
 # <a name="sqlbindparam-mapping"></a>Asignación de SQLBindParam
-**SQLBindParam** no realmente se puede llamar en desuso porque no existe en ODBC; sin embargo, todavía representa funcionalidad duplicada: debe exportarlo porque ISO y abierto compatible con grupo de aplicaciones lo va a usar el Administrador de controladores. Dado que **SQLBindParameter** contiene toda la funcionalidad de **SQLBindParam**, **SQLBindParam** se asignará en la parte superior de **SQLBindParameter** (cuando el controlador subyacente es un ODBC *3.x* controlador). Un ODBC *3.x* no es necesario implementar controladores **SQLBindParam**.  
+**SQLBindParam** no se puede llamar realmente en desuso porque nunca estaba en ODBC. sin embargo, sigue representando la funcionalidad duplicada: el administrador de controladores debe exportarla porque ISO y las aplicaciones compatibles con el grupo abierto la usarán. Dado que **SQLBindParameter** contiene toda la funcionalidad **de SQLBindParam**, **SQLBindParam** se asignará en **SQLBindParameter** (cuando el controlador subyacente sea un controlador ODBC *3. x* ). No es necesario que un controlador ODBC *3. x* implemente **SQLBindParam**.  
   
-## <a name="remarks"></a>Comentarios  
- Cuando la llamada siguiente a **SQLBindParam** se realiza:  
+## <a name="remarks"></a>Observaciones  
+ Cuando se realiza la siguiente llamada a **SQLBindParam** :  
   
 ```  
 SQLBindParam(   StatementHandle,    ParameterNumber,    ValueType,    ParameterType,    ColumnSize,    DecimalDigits,    ParameterValuePtr,    StrLen_or_IndPtr)  
 ```  
   
- las llamadas del Administrador de controladores **SQLBindParameter** en el controlador como sigue:  
+ el administrador de controladores llama a **SQLBindParameter** en el controlador de la siguiente manera:  
   
 ```  
 SQLBindParameter(   StatementHandle,    ParameterNumber,    SQL_PARAM_INPUT,    ValueType,    ParameterType,    ColumnSize,    DecimalDigits,    ParameterValuePtr,    BufferLength,    StrLen_or_IndPtr)  
 ```  
   
- Consulte [información ODBC 64-Bit](../../../odbc/reference/odbc-64-bit-information.md), si la aplicación se ejecutará en un sistema operativo de 64 bits.  
+ Consulte la [información de ODBC 64](../../../odbc/reference/odbc-64-bit-information.md)bits, si la aplicación se ejecutará en un sistema operativo de 64 bits.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)

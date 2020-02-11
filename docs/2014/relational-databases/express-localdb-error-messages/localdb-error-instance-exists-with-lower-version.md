@@ -11,21 +11,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3bc344e3e23ce965a2057628e4662ebe41508d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990930"
 ---
-# <a name="localdberrorinstanceexistswithlowerversion"></a>LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION
+# <a name="localdb_error_instance_exists_with_lower_version"></a>LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|258|  
-|Origen del evento|SQL Server Local Database Runtime 12.0|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|258|  
+|Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
 |Texto del mensaje|No se puede crear la instancia de Local Database con la versión especificada. Ya existe una instancia con el mismo nombre, pero tiene una versión anterior a la versión especificada.|  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126593"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Panel Diagrama (Visual Database Tools)
@@ -53,7 +53,7 @@ ms.locfileid: "63126593"
   
 |Icono|Tipo de objeto|  
 |----------|-----------------|  
-|![Icono de Visual Database Tools](../../database-engine/media//dv3wbi1.gif "Icono de Visual Database Tools")|Table|  
+|![Icono de Visual Database Tools](../../database-engine/media//dv3wbi1.gif "Icono de Visual Database Tools")|Tabla|  
 |![Icono de Visual Database Tools](../../database-engine/media//dv3wbi2.gif "Icono de Visual Database Tools")|Consulta o vista|  
 |![Icono de Visual Database Tools](../../database-engine/media//dv3wbi3.gif "Icono de Visual Database Tools")|Tabla vinculada|  
 |![Icono de Visual Database Tools](../../database-engine/media//dvudficon.gif "Icono de Visual Database Tools")|Función definida por el usuario|  
@@ -95,8 +95,8 @@ ms.locfileid: "63126593"
 |![Icono de Visual Database Tools](../../database-engine/media//dv3wbin.gif "Icono de Visual Database Tools")|Combinación uno a varios|  
 |![Icono de Visual Database Tools](../../database-engine/media//dv3wbio.gif "Icono de Visual Database Tools")|El Diseñador de consultas y vistas no puede determinar el tipo de combinación|  
   
-## <a name="see-also"></a>Vea también  
- [Diseñar temas de procedimientos de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Panel criterios &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)  
   

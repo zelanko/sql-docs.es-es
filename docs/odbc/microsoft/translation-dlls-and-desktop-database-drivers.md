@@ -1,5 +1,5 @@
 ---
-title: Archivos DLL de traducción y el escritorio en controladores de base de datos | Microsoft Docs
+title: Archivos dll de traducción y controladores de base de datos de escritorio | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 09ebe734-39a0-4af0-a39b-1d5479f69635
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5222d7956cbf7ffe678cc339778c60659ed90260
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67912420"
 ---
 # <a name="translation-dlls-and-desktop-database-drivers"></a>Archivos DLL de traducción y controladores de escritorio de la base de datos

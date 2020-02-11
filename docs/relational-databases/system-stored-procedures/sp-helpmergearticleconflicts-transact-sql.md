@@ -16,13 +16,13 @@ ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 85e75e1ce52866eb04b3c410f021db8de392239a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122325"
 ---
-# <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
+# <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve los artículos de la publicación que tienen conflictos. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicaciones o en el suscriptor de la base de datos de suscripciones de mezcla.  
@@ -39,35 +39,35 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación de combinación. *publicación* es **sysname**, su valor predeterminado es **%** , que devuelve todos los artículos de la base de datos que tienen conflictos.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación de combinación. *Publication* es de **tipo sysname**y su **%** valor predeterminado es, que devuelve todos los artículos de la base de datos que tienen conflictos.  
   
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publisher* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, su valor predeterminado es null.  
+`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**article**|**sysname**|Nombre del artículo.|  
+|**ARTICLE**|**sysname**|Nombre del artículo.|  
 |**source_owner**|**sysname**|Propietario del objeto de origen.|  
-|**source_object**|**nvarchar(386)**|Nombre del objeto de origen.|  
+|**source_object**|**nvarchar (386)**|Nombre del objeto de origen.|  
 |**conflict_table**|**nvarchar(258)**|Nombre de la tabla que almacena los conflictos de inserción o actualización.|  
 |**guidcolname**|**sysname**|Nombre de la propiedad RowGuidCol para el objeto de origen.|  
 |**centralized_conflicts**|**int**|Indica si los registros de conflictos se almacenan en el publicador dado.|  
   
- Si el artículo tiene únicamente los conflictos de eliminación y no **conflict_table** filas, el nombre de la **conflict_table** en el resultado de conjunto es NULL.  
+ Si el artículo solo tiene conflictos de eliminación y no **conflict_table** filas, el nombre del **conflict_table** en el conjunto de resultados es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpmergearticleconflicts** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor y el **db_owner** rol fijo de base de datos se puede ejecutar **sp_helpmergearticleconflicts**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** y del rol fijo de base de datos **db_owner** pueden ejecutar **sp_helpmergearticleconflicts**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

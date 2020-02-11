@@ -14,14 +14,14 @@ ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 928ac3b1d3cd753ded0bcf4337f10a654c9a3dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924825"
 ---
 # <a name="named-commands"></a>Comandos con nombre
-[Crear y ejecutar un comando Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md) muestra una forma de ejecutar un comando. Hay otra forma: puede que sea un comando con nombre y, a continuación, llame a este con el nombre de comando directamente en el **conexión** objeto (asignado a la **ActiveConnection** propiedad de la **comando** objeto). Nomenclatura de un comando significa asignar un nombre a la **nombre** propiedad de un **comando** objeto. Por ejemplo,  
+[La creación y ejecución de un comando simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md) muestra una manera de ejecutar un comando. Hay otra manera: puede convertirla en un comando con nombre y, a continuación, llamar a este comando con nombre directamente en el objeto de **conexión** (asignado a la propiedad **ActiveConnection** del objeto **Command** ). El nombre de un comando significa asignar un nombre a la propiedad **Name** de un objeto **Command** . Por ejemplo,  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -29,9 +29,9 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- El comando con nombre actúa como si fuese un "método personalizado" en el **conexión** objeto. El resultado del comando se devuelve como un parámetro de salida de este "método personalizado".  
+ El comando con nombre actúa como si fuera un "método personalizado" en el objeto de **conexión** . El resultado del comando se devuelve como un parámetro out de este "método personalizado".  
   
- El ejemplo siguiente ilustra esta característica.  
+ En el ejemplo siguiente se muestra esta característica.  
   
 ```  
 'BeginNamedCmd  
@@ -89,5 +89,5 @@ ErrHandler:
 'EndNamedCmd  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

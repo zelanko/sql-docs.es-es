@@ -1,5 +1,5 @@
 ---
-title: Ordenar el ejemplo de la propiedad (VC ++) | Microsoft Docs
+title: Ejemplo de la propiedad de ordenación (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930967"
 ---
 # <a name="sort-property-example-vc"></a>Ejemplo de la propiedad Sort (VC ++)
-Este ejemplo se usa el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [ordenación](../../../ado/reference/ado-api/sort-property.md) propiedad volver a ordenar las filas de una **Recordset** derivado de la ***autores*** tabla de el **Pubs** base de datos. Una rutina de la utilidad secundaria imprime cada fila.  
+En este ejemplo se usa la propiedad [Sort](../../../ado/reference/ado-api/sort-property.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para reordenar las filas de un **conjunto de registros** derivado de la tabla ***authors*** de la base de datos **pubs** . Una rutina de utilidad secundaria imprime cada fila.  
   
 ```  
 // SortPropertyExample.cpp  
@@ -132,6 +132,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propiedad de ordenación](../../../ado/reference/ado-api/sort-property.md)

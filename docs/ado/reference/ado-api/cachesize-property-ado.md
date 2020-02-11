@@ -1,5 +1,5 @@
 ---
-title: La propiedad CacheSize (ADO) | Microsoft Docs
+title: Propiedad CacheSize (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,38 +16,38 @@ ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6b33ef7eb4bae796fa2b2da59a7b1dc805d739e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920332"
 ---
 # <a name="cachesize-property-ado"></a>Propiedad CacheSize (ADO)
-Indica el número de registros desde un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto que se almacenan en caché localmente en memoria.  
+Indica el número de registros de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que se almacenan en caché localmente en la memoria.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un **largo** valor que debe ser mayor que 0. El valor predeterminado es 1.  
+ Establece o devuelve un valor **Long** que debe ser mayor que 0. El valor predeterminado es 1.  
   
-## <a name="remarks"></a>Comentarios  
- Use la **CacheSize** propiedad para controlar el número de registros que para recuperar de una vez en la memoria local desde el proveedor. Por ejemplo, si la **CacheSize** es 10, después de abrir primero la **Recordset** objeto, el proveedor recupera los 10 primeros registros en la memoria local. Conforme se desplaza por la **Recordset** objeto, el proveedor devuelve los datos desde el búfer de memoria local. Tan pronto como se mueve más allá del último registro en la memoria caché, el proveedor recupera los 10 siguientes registros del origen de datos en la memoria caché.  
+## <a name="remarks"></a>Observaciones  
+ Utilice la propiedad **CacheSize** para controlar el número de registros que se van a recuperar de una vez en la memoria local desde el proveedor. Por ejemplo, si el **CacheSize** es 10, después de abrir primero el objeto de **conjunto de registros** , el proveedor recupera los primeros 10 registros en la memoria local. A medida que se desplaza por el objeto de **conjunto de registros** , el proveedor devuelve los datos del búfer de memoria local. En cuanto se desplaza por encima del último registro de la memoria caché, el proveedor recupera los 10 registros siguientes del origen de datos en la memoria caché.  
   
 > [!NOTE]
->  **CacheSize** se basa en el **número máximo de filas abierto** propiedad específica del proveedor (en el **propiedades** colección de la **Recordset** objeto). No puede establecer **CacheSize** en un valor mayor que **número máximo de filas abierto**. Para modificar el número de filas que se puede abrir el proveedor, establezca **número máximo de filas abierto**.  
+>  **CacheSize** se basa en la propiedad específica del proveedor de **filas abiertas máximas** (en la colección **Properties** del objeto **Recordset** ). No se puede establecer **CacheSize** en un valor mayor que el **máximo de filas abiertas**. Para modificar el número de filas que puede abrir el proveedor, establezca máximo de **filas abiertas**.  
   
- El valor de **CacheSize** se puede ajustar durante la vigencia de la **Recordset** objeto, pero al cambiar este valor solo afecta al número de registros en la memoria caché después de recuperaciones posteriores desde el origen de datos. Cambiar el valor de propiedad por sí solo no cambiará el contenido actual de la memoria caché.  
+ El valor de **CacheSize** se puede ajustar durante la vida del objeto de **conjunto de registros** , pero el cambio de este valor solo afecta al número de registros de la memoria caché después de las recuperaciones posteriores del origen de datos. Si se cambia el valor de propiedad por sí solo, no se cambiará el contenido actual de la memoria caché.  
   
- Si hay menos registros que se recuperan de **CacheSize** especifica, el proveedor devuelve los registros restantes y se produce ningún error.  
+ Si hay menos registros para recuperar que el **CacheSize** especifica, el proveedor devuelve los registros restantes y no se produce ningún error.  
   
- Un **CacheSize** valor de cero no se permite y devuelve un error.  
+ No se permite un valor **CacheSize** de cero y devuelve un error.  
   
- Registros recuperados de la memoria caché no reflejan los cambios simultáneos realizados por otros usuarios a los datos de origen. Para forzar una actualización de todos los datos almacenados en caché, use el [Resync](../../../ado/reference/ado-api/resync-method.md) método.  
+ Los registros recuperados de la memoria caché no reflejan los cambios simultáneos que otros usuarios han realizado en los datos de origen. Para forzar una actualización de todos los datos en caché, use el método [Resync](../../../ado/reference/ado-api/resync-method.md) .  
   
- Si **CacheSize** se establece en un valor mayor que uno, los métodos de navegación ([mover](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext y MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) puede dar lugar a la navegación a un Eliminar registro, si se produce una eliminación después de haber recuperaron los registros. Después de la operación de captura inicial, las eliminaciones posteriores no se reflejarán en la caché de datos hasta que intente obtener acceso a un valor de datos de una fila eliminada. Sin embargo, establecer **CacheSize** a uno se elimina este problema ya que no se pueden capturar las filas eliminadas.  
+ Si **CacheSize** se establece en un valor mayor que uno, los métodos de navegación ([Move](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext y MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) pueden dar lugar a la navegación a un registro eliminado, en caso de que se produzca la eliminación una vez recuperados los registros. Después de la captura inicial, las eliminaciones posteriores no se reflejarán en la memoria caché de datos hasta que intente obtener acceso a un valor de datos de una fila eliminada. Sin embargo, si se establece **CacheSize** en uno, se elimina este problema, ya que las filas eliminadas no se pueden capturar.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo de la propiedad CacheSize (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
- [Ejemplo de la propiedad CacheSize (VC ++)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
+ [Ejemplo de la propiedad CacheSize (VC + +)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
  [Ejemplo de la propiedad CacheSize (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)

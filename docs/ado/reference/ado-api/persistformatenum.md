@@ -1,5 +1,5 @@
 ---
-title: Más | Microsoft Docs
+title: PersistFormatEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,24 +16,24 @@ ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a26fd370e80cb288ee62b0fc53ed6670300172e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917611"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
-Especifica el formato en el que se va a guardar un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Especifica el formato en el que se va a guardar un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|**adPersistADTG**|0|Indica el formato Advanced Data TableGram (ADTG) de Microsoft.|  
-|**adPersistADO**|1|Indica que se usará el formato de lenguaje de marcado Extensible (XML) de ADO. Este valor es el mismo que adPersistXML y es incluye por compatibilidad con versiones anteriores.|  
-|**adPersistXML**|1|Indica el formato de lenguaje de marcado Extensible (XML).|  
-|**adPersistProviderSpecific**|2|Indica que el proveedor se conservará el **Recordset** mediante su propio formato.|  
+|**adPersistADTG**|0|Indica el formato de Microsoft Advanced Data TableGram (ADTG).|  
+|**adPersistADO**|1|Indica que se utilizará el propio formato de lenguaje de marcado extensible (XML) de ADO. Este valor es el mismo que el de adPersistXML y se incluye por compatibilidad con versiones anteriores.|  
+|**adPersistXML**|1|Indica el formato lenguaje de marcado extensible (XML).|  
+|**adPersistProviderSpecific**|2|Indica que el proveedor conservará el **conjunto de registros** con su propio formato.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
+ Paquete: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  

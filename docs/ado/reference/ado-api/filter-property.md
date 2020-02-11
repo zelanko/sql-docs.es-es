@@ -16,83 +16,83 @@ ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918636"
 ---
 # <a name="filter-property"></a>Propiedad Filter
-Indica un filtro para los datos en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Indica un filtro para los datos de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos
 
-Establece o devuelve un **Variant** valor, que puede contener uno de los siguientes elementos:  
+Establece o devuelve un valor **Variant** , que puede contener uno de los siguientes elementos:  
   
--   **Cadena de criterios:** Una cadena formada por uno o más cláusulas concatenadas con **AND** o **OR** operadores.  
+-   **Cadena de criterios:** Cadena formada por una o varias cláusulas individuales concatenadas con operadores **and** u **or** .  
   
--   **Matriz de marcadores:** Matriz de marcador único valores que señalan a los registros en el **Recordset** objeto.  
+-   **Matriz de marcadores:** Matriz de valores de marcador únicos que apuntan a los registros del objeto de **conjunto de registros** .  
   
--   Un [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) valor.  
+-   Un valor de [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) .  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Use la **filtro** propiedad para ocultar selectivamente los registros en un **Recordset** objeto. El filtrado **Recordset** se convierte en el cursor actual. Otras propiedades que devuelven valores según actual **cursor** se ven afectados, como [propiedad AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [propiedad AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [ Propiedad RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md), y [PageCount (propiedad, ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Establecer el **filtro** propiedad en un valor específico de nuevo el registro actual mueve al primer registro que satisface el nuevo valor.
+Utilice la propiedad **Filter** para filtrar de forma selectiva los registros de un objeto de **conjunto de registros** . El conjunto de **registros** filtrado se convierte en el cursor actual. Otras propiedades que devuelven valores basados en el **cursor** actual se ven afectadas, como la [propiedad AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), la [propiedad AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), la [propiedad RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)y la [propiedad PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Al establecer la propiedad **Filter** en un valor nuevo específico, se mueve el registro actual al primer registro que satisface el nuevo valor.
   
-La cadena de criterios se compone de las cláusulas en el formulario *NombreCampo-Operador-valor* (por ejemplo, `"LastName = 'Smith'"`). Puede crear cláusulas compuestas concatenando cláusulas individuales con **AND** (por ejemplo, `"LastName = 'Smith' AND FirstName = 'John'"`) o **OR** (por ejemplo, `"LastName = 'Smith' OR LastName = 'Jones'"`). Para las cadenas de criterios, Use las siguientes directrices:
+La cadena de criterios se compone de cláusulas con el formato *FieldName-Operator-Value* (por ejemplo, `"LastName = 'Smith'"`). Puede crear cláusulas compuestas mediante la concatenación de cláusulas individuales con **y** ( `"LastName = 'Smith' AND FirstName = 'John'"`por ejemplo,) o **o** ( `"LastName = 'Smith' OR LastName = 'Jones'"`por ejemplo,). En el caso de las cadenas de criterios, use las siguientes directrices:
 
--   *FieldName* debe ser un nombre de campo válido de la **Recordset**. Si el nombre del campo contiene espacios, debe incluir el nombre entre corchetes.  
+-   *FieldName* debe ser un nombre de campo válido del **conjunto de registros**. Si el nombre del campo contiene espacios, debe escribir el nombre entre corchetes.  
   
--   Operador debe ser uno de los siguientes: \<, >, \<=, > =, <>, =, o **como**.  
+-   El operador debe ser uno de los siguientes \<:, > \<, =, >=,  <>, = o **like**.  
   
--   Valor es el valor con el que se compararán los valores de campo (por ejemplo, "Smith", 24/8/95 #, 12.345 o 50,00 dólares). Use comillas simples con cadenas y símbolos de libra esterlina (#) con fechas. Puede usar para números, puntos decimales, signos de dólar y notación científica. Si es operador **como**, valor puede usar caracteres comodín. Solo el asterisco (*) y el signo de porcentaje (%) se permiten caracteres comodín y deben ser el último carácter de la cadena. el valor no puede ser Null.  
+-   Valor es el valor con el que se comparan los valores de campo (por ejemplo, ' Smith ', #8/24/95 #, 12,345 o $50,00). Use comillas simples con cadenas y signos de almohadilla (#) con fechas. En el caso de los números, puede usar separadores decimales, signos de dólar y notación científica. Si el operador es **like**, Value puede usar caracteres comodín. Solo el asterisco (*) y el signo de porcentaje (%) se permiten caracteres comodín y deben ser el último carácter de la cadena. Value cannot be null.  
   
 > [!NOTE]
->  Para incluir las comillas simples (') en el valor de filtro, utilice dos comillas simples para representar una. Por ejemplo, debe ser la cadena de criterios para filtrar por o ' Malley, `"col1 = 'O''Malley'"`. Para incluir las comillas simples al principio y al final del valor de filtro, escriba la cadena con signos de número (#). Por ejemplo, para filtrar por '1', debe ser la cadena de criterios `"col1 = #'1'#"`.  
+>  Para incluir comillas simples (') en el valor de filtro, utilice dos comillas simples para representar una. Por ejemplo, para filtrar por O'Malley, la cadena de criterios `"col1 = 'O''Malley'"`debe ser. Para incluir comillas simples al principio y al final del valor de filtro, incluya la cadena entre signos de almohadilla (#). Por ejemplo, para filtrar por ' 1 ', la cadena de criterios `"col1 = #'1'#"`debe ser.  
   
--   No hay ninguna preferencia entre AND y o. Las cláusulas se pueden agrupar entre paréntesis. Sin embargo, no se puede agrupar cláusulas unidas mediante OR y, a continuación, unir el grupo a otra cláusula mediante AND, como se muestra en el siguiente fragmento de código:  
+-   No hay ninguna prioridad entre AND y OR. Las cláusulas se pueden agrupar entre paréntesis. Sin embargo, no puede agrupar las cláusulas Unidas por o y, a continuación, unir el grupo a otra cláusula con y, como en el siguiente fragmento de código:  
  `(LastName = 'Smith' OR LastName = 'Jones') AND FirstName = 'John'`  
   
--   En su lugar, se crea este filtro como  
+-   En su lugar, crearía este filtro como  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   En un **como** cláusula, puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **como** puede usar un carácter comodín solo al final del patrón. Por ejemplo: `LastName Like 'Smit*'`.  
+-   En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **like** , solo puede usar un carácter comodín al final del patrón. Por ejemplo, `LastName Like 'Smit*'`.  
   
- Las constantes de filtro que sea más fácil resolver conflictos de registros individuales durante el modo de actualización por lotes, ya que permite ver, por ejemplo, los registros que se vieron afectados durante la última [método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) llamada al método.  
+ Las constantes de filtro facilitan la resolución de conflictos de registros individuales durante el modo de actualización por lotes, ya que permiten ver, por ejemplo, solo los registros que se vieron afectados durante la última llamada al método del [método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) .  
   
-Establecer el **filtro** propia propiedad puede producir un error debido a un conflicto con los datos subyacentes. Por ejemplo, este error puede ocurrir cuando otro usuario ya se ha eliminado un registro. En tal caso, el proveedor devuelve advertencias a la [colección de errores (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md) colección, pero no detiene la ejecución del programa. Se produce un error en tiempo de ejecución solo si hay conflictos en todos los registros solicitados. Use la [propiedad Status (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md) propiedad para localizar los registros con conflictos.  
+Puede producirse un error en la configuración de la propiedad de **filtro** debido a un conflicto con los datos subyacentes. Por ejemplo, este error puede producirse cuando otro usuario ya ha eliminado un registro. En tal caso, el proveedor devuelve advertencias a la colección de [errores (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md) , pero no detiene la ejecución del programa. Un error en tiempo de ejecución solo se produce si hay conflictos en todos los registros solicitados. Utilice la propiedad [status (conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md) para buscar registros con conflictos.  
   
-Establecer el **filtro** propiedad en una cadena de longitud cero ("") tiene el mismo efecto que usar el **adFilterNone** constante.
+Establecer la propiedad **Filter** en una cadena de longitud cero ("") tiene el mismo efecto que el uso de la constante **adFilterNone** .
   
-Cada vez que el **filtro** propiedad está establecida, la posición actual del registro se mueve al primer registro en el subconjunto filtrado de registros en el **Recordset**. De forma similar, cuando el **filtro** propiedad está desactivada, la posición actual del registro se mueve al primer registro en el **Recordset**.
+Siempre que se establece la propiedad **Filter** , la posición del registro actual se mueve al primer registro del subconjunto filtrado de registros del **conjunto**de registros. Del mismo modo, cuando se borra la propiedad **Filter** , la posición del registro actual se mueve al primer registro del **conjunto de registros**.
 
-Suponga que un **Recordset** se filtra en función de un campo de algún tipo de variante, como el tipo sql_variant. Un error (DISP_E_TYPEMISMATCH o 80020005) se produce cuando no coinciden con los subtipos de los valores de campo y el filtro utilizados en la cadena de criterios. Por ejemplo, supongamos que:
+Supongamos que un **conjunto de registros** se filtra en función de un campo de un tipo Variant, como el tipo sql_variant. Se produce un error (DISP_E_TYPEMISMATCH o 80020005) cuando no coinciden los subtipos del campo y los valores de filtro utilizados en la cadena de criterios. Por ejemplo, supongamos que:
 
-- Un **Recordset** objeto (rs) contiene una columna (C) del tipo sql_variant.
-- Y un campo de esta columna se ha asignado un valor de 1 del tipo I4. Se establece la cadena de criterios en `rs.Filter = "C='A'"` en el campo.
+- Un objeto de **conjunto de registros** (RS) contiene una columna (C) del tipo sql_variant.
+- Y se ha asignado a un campo de esta columna el valor 1 del tipo I4. La cadena de criterios se establece `rs.Filter = "C='A'"` en en el campo.
 
-Esta configuración produce el error durante el tiempo de ejecución. Sin embargo, `rs.Filter = "C=2"` aplicado en el mismo campo no producirá ningún error. Y el campo se filtra en el conjunto de registros actual.
+Esta configuración genera el error durante el tiempo de ejecución. Sin embargo `rs.Filter = "C=2"` , si se aplica en el mismo campo, no se producirá ningún error. Y se filtra el campo del conjunto de registros actual.
 
-Consulte la [propiedad marcador (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md) propiedad para obtener una explicación de los valores de marcador desde la que puede crear una matriz que se usará con la propiedad de filtro.
+Vea la propiedad [Bookmark (propiedad de ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md) para obtener una explicación de los valores de marcador desde los que puede crear una matriz que se va a usar con la propiedad Filter.
 
-Solo los filtros en forma de cadenas de criterios afectan al contenido de un persistente **Recordset**. Un ejemplo de una cadena de criterios es `OrderDate > '12/31/1999'`. Los filtros creados con una matriz de marcadores o mediante un valor de la **FilterGroupEnum**, no afectan al contenido de conservados **Recordset**. Estas reglas se aplican a los conjuntos de registros creados con cursores del lado cliente o servidor.
+Solo los filtros en forma de cadenas de criterios afectan al contenido de un **conjunto de registros**guardado. Un ejemplo de una cadena de criterios `OrderDate > '12/31/1999'`es. Los filtros creados con una matriz de marcadores o el uso de un valor de **FilterGroupEnum**no afectan al contenido del **conjunto de registros**guardado. Estas reglas se aplican a los conjuntos de registros creados con cursores del lado cliente o del lado servidor.
   
 > [!NOTE]
->  Al aplicar la marca adFilterPendingRecords a un filtrado y modificar **Recordset** en el modo de actualización por lotes, el resultante **Recordset** está vacío si el filtrado se basa en el campo de clave de un tabla única clave y la modificación se ha realizado en los valores de campo de clave. El resultante **Recordset** estará vacío si se cumple una de las instrucciones siguientes:  
+>  Al aplicar la marca adFilterPendingRecords a un **conjunto de registros** filtrado y modificado en el modo de actualización por lotes, el **conjunto de registros** resultante está vacío si el filtrado se basó en el campo clave de una tabla con una sola clave y la modificación se realizó en los valores del campo de clave. El conjunto de **registros** resultante no estará vacío si se cumple alguna de las siguientes instrucciones:  
   
--   El filtrado se basaba en los campos que no son de clave en una tabla única clave.  
+-   El filtrado se basó en campos que no son de clave en una tabla con una sola clave.  
   
--   El filtrado se basaba en todos los campos de una tabla con varias claves.  
+-   El filtrado se basó en cualquier campo de una tabla con varias claves.  
   
--   Se han realizado modificaciones en los campos que no son de clave en una tabla única clave.  
+-   Las modificaciones se realizaron en campos que no son de clave en una tabla con una sola clave.  
   
 -   Se han realizado modificaciones en los campos de una tabla con varias claves.  
   
-En la tabla siguiente se resume los efectos de **adFilterPendingRecords** diferentes combinaciones de filtrado y modificaciones. La columna izquierda muestra las posibles modificaciones. Se pueden realizar modificaciones en cualquiera de los campos no clave, en el campo de clave en una tabla con una clave única o en cualquiera de los campos de clave en una tabla con varias claves. La fila superior muestra el criterio de filtrado. El filtrado puede basarse en cualquiera de los campos no clave, el campo de clave en una tabla con una clave única, o cualquiera de los campos de clave en una tabla con varias claves. Las celdas de intersección muestran los resultados. Un **+** signo significa que se aplica **adFilterPendingRecords** da como resultado un valor no vacío **Recordset**. Un **-** vacío significa que el signo menos **Recordset**.  
+En la tabla siguiente se resumen los efectos de **adFilterPendingRecords** en diferentes combinaciones de filtrado y modificaciones. En la columna izquierda se muestran las posibles modificaciones. Las modificaciones se pueden realizar en cualquiera de los campos sin clave, en el campo clave de una tabla con una sola clave o en cualquiera de los campos clave de una tabla con varias claves. La fila superior muestra el criterio de filtrado. El filtrado puede basarse en cualquiera de los campos sin clave, en el campo clave de una tabla con una sola clave o en cualquiera de los campos clave de una tabla con varias claves. Las celdas de intersección muestran los resultados. Un **+** signo más significa que la aplicación de **adFilterPendingRecords** da como resultado un **conjunto de registros**no vacío. Un **-** signo menos significa un **conjunto de registros**vacío.  
   
-||No son claves|Clave única|Varias claves|
+||No claves|Clave única|Varias claves|
 |-|--------------|----------------|-------------------|
-|**No son claves**|+|+|+|
+|**No claves**|+|+|+|
 |**Clave única**|+|-|N/D|
 |**Varias claves**|+|N/D|+|
 |||||
@@ -101,9 +101,9 @@ En la tabla siguiente se resume los efectos de **adFilterPendingRecords** difere
 
 [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Ejemplo Filter y RecordCount propiedades (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
-[ejemplo Filter y RecordCount propiedades (VC ++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)
-[Clear (método) (ADO)](../../../ado/reference/ado-api/clear-method-ado.md) 
- [(ADO) de propiedad dinámica optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+[Ejemplo de las propiedades Filter y RecordCount (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
+[Filter y RecordCount de ejemplo (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)
+[Clear (método) (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)
+[Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

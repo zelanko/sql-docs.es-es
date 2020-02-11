@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 056c200ec6b73cb7cf11ee4b3acf35bc331110b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204672"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Tablas y columnas (cuadro de diálogo, Visual Database Tools)
@@ -44,7 +44,7 @@ ms.locfileid: "63204672"
 > [!NOTE]  
 >  Las columnas que elija para la clave externa deben tener el mismo tipo de datos que las columnas principales correspondientes. Debe haber un número igual de columnas en cada una de las claves. Por ejemplo, si la clave principal de la tabla en el lado principal de la relación se compone de dos columnas, necesitará hacer coincidir cada una de esas columnas con una columna de la tabla del lado de la clave externa de la relación.  
   
-## <a name="see-also"></a>Vea también  
- [Crear relaciones de claves externas](../../relational-databases/tables/create-foreign-key-relationships.md)  
+## <a name="see-also"></a>Consulte también  
+ [Crear relaciones de clave externa](../../relational-databases/tables/create-foreign-key-relationships.md)  
   
   

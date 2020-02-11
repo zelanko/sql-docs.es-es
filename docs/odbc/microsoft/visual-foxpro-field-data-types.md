@@ -1,5 +1,5 @@
 ---
-title: Tipos de datos de campo Visual FoxPro | Microsoft Docs
+title: Tipos de datos de campo de Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 217058bf328677bf375d346ae7201c6eb81efa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087953"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Tipos de datos de campo de Visual FoxPro
-En la tabla siguiente se enumera los valores para el *FieldType* argumento en ALTER TABLE y CREATE TABLE e indica si *nFieldWidth* y *nPrecision* argumentos son Obligatorio.  
+En la tabla siguiente se muestran los valores para el argumento *FieldType* en alter table y CREATE TABLE e indica si son necesarios los argumentos *nFieldWidth* y *nPrecision* .  
   
 |*FieldType*|*NFieldWidth*|*nPrecision*|Descripción|  
 |-----------------|-------------------|------------------|-----------------|  
-|b|-|d|Double|  
-|C|N|-|Campo de caracteres de ancho *n*|  
+|B|-|d|DOUBLE|  
+|C|N|-|Campo de carácter de ancho *n*|  
 |D|-|-|Date|  
-|F|N|d|Flotante a un campo numérico de ancho *n* con *d.* posiciones decimales|  
+|F|N|d|Campo numérico flotante de ancho *n* con posiciones decimales de *d*|  
 |G|-|-|General|  
 |I|-|-|Entero|  
-|L|-|-|Lógico|  
+|L|-|-|Lógicos|  
 |M|-|-|Memorándum|  
-|N|N|d|Campo numérico de ancho *n* con *d.* posiciones decimales|  
+|N|N|d|Campo numérico de ancho *n* con posiciones decimales de *d*|  
 |T|-|-|DateTime|  
-|Y|-|-|Currency|
+|Y|-|-|Moneda|

@@ -1,5 +1,5 @@
 ---
-title: Estado de ejemplo de la propiedad (VC ++) | Microsoft Docs
+title: Ejemplo de la propiedad State (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dad78c3754fb55aa83c50d467920a611db277f13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930847"
 ---
 # <a name="state-property-example-vc"></a>Ejemplo de la propiedad State (VC ++)
-Este ejemplo se usa el [estado](../../../ado/reference/ado-api/state-property-ado.md) propiedad para mostrar un mensaje mientras se están abriendo conexiones asincrónicas y se están ejecutando los comandos asincrónicos.  
+En este ejemplo se usa la propiedad [State](../../../ado/reference/ado-api/state-property-ado.md) para mostrar un mensaje mientras se abren las conexiones asincrónicas y se ejecutan los comandos asincrónicos.  
   
 ```  
 // BeginStateCpp.cpp  
@@ -135,5 +135,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: Mediante el atributo de cadena de conexión ExtendedAnsiSQL | Microsoft Docs
+title: Usar el atributo de cadena de conexión ExtendedAnsiSQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 92675c30-9100-43ae-aa35-041f3006a54f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdd80ab8f23e0c940130ad058155f032572bea08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088012"
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>Con el atributo de cadena de conexión ExtendedAnsiSQL (controlador de Access)
-Jet 4.0 tiene varias características nuevas que no están habilitadas de forma predeterminada en los controladores de base de datos de escritorio ODBC versión 4.0. Para aprovechar las ventajas de estas nuevas características, una aplicación tendrá que establecer un nuevo atributo de conexión, agregue un nuevo atributo a la cadena de conexión o establezca el atributo en un DSN. El atributo se denomina ExtendedAnsiSQL y se aplica solo a la base de datos de escritorio Microsoft ODBC Drivers 4.0 y versiones posteriores.  
+Jet 4,0 tiene varias características nuevas que no están habilitadas de forma predeterminada en la versión 4,0 de los controladores de base de datos de escritorio ODBC. Para aprovechar estas nuevas características, una aplicación tendrá que establecer un nuevo atributo de conexión, agregar un nuevo atributo a la cadena de conexión o establecer el atributo en un DSN. El atributo se denomina ExtendedAnsiSQL y solo pertenece a los controladores 4,0 y posteriores de la base de datos de escritorio ODBC de Microsoft.  
   
  Esta sección contiene los temas siguientes.  
   
@@ -32,6 +32,6 @@ Jet 4.0 tiene varias características nuevas que no están habilitadas de forma 
   
 -   [Creación y eliminación de vistas y procedimientos con ExtendedAnsiSQL](../../odbc/microsoft/creating-and-dropping-views-and-procedures-using-extendedansisql.md)  
   
--   [Habilita la detección de truncamiento de datos utilizando ExtendedAnsiSQL](../../odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md)  
+-   [Detección de truncamiento de datos habilitada mediante ExtendedAnsiSQL](../../odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md)  
   
--   [Jet 4.0 utiliza la lista de palabras reservadas de SQL-92 cuando establece ExtendedAnsiSQL](../../odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md)
+-   [Jet 4,0 usa la lista de palabras reservadas de SQL-92 cuando se establece ExtendedAnsiSQL](../../odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md)

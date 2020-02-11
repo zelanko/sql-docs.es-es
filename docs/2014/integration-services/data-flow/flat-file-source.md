@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902481"
 ---
 # <a name="flat-file-source"></a>origen de archivo plano
@@ -44,7 +44,7 @@ ms.locfileid: "62902481"
   
  Las columnas de salida en la salida del origen de archivo plano incluyen la propiedad FastParse. FastParse indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona, o las rutinas de análisis estándar que sí distinguen la configuración regional. Para obtener más información, consulte [Fast Parse](../fast-parse.md) y [Standard Parse](../standard-parse.md).  
   
- Las columnas de salida también incluyen la propiedad UseBinaryFormat. Esta propiedad se usa para implementar en archivos la compatibilidad con datos binarios, como los datos con formato decimal. De forma predeterminada se establece UseBinaryFormat en `false`. Si desea usar un formato binario, establezca UseBinaryFormat en `true` y el tipo de datos en la columna de salida a `DT_BYTES`. Al hacer esto, el origen de archivos planos omite la conversión de los datos y los pasa a la columna de salida tal y como están. A continuación, se puede usar una transformación como Columna derivada o Conversión de datos para convertir los datos `DT_BYTES` en otro tipo de datos; también se puede escribir un script personalizado en una transformación de script para interpretar los datos. Por último, también se puede escribir un componente de flujo de datos personalizado que interprete los datos. Para obtener más información acerca de los tipos de datos se puede convertir `DT_BYTES` para ver [Cast &#40;expresión de SSIS&#41;](../expressions/cast-ssis-expression.md).  
+ Las columnas de salida también incluyen la propiedad UseBinaryFormat. Esta propiedad se usa para implementar en archivos la compatibilidad con datos binarios, como los datos con formato decimal. De forma predeterminada, UseBinaryFormat se `false`establece en. Si desea utilizar un formato binario, establezca UseBinaryFormat en `true` y el tipo de datos de la columna de salida `DT_BYTES`en. Al hacer esto, el origen de archivos planos omite la conversión de los datos y los pasa a la columna de salida tal y como están. A continuación, se puede usar una transformación como Columna derivada o Conversión de datos para convertir los datos `DT_BYTES` en otro tipo de datos; también se puede escribir un script personalizado en una transformación de script para interpretar los datos. Por último, también se puede escribir un componente de flujo de datos personalizado que interprete los datos. Para obtener más información sobre los tipos de datos a `DT_BYTES` los que se puede convertir, consulte [Cast &#40;SSIS Expression&#41;](../expressions/cast-ssis-expression.md).  
   
  Este origen utiliza un administrador de conexiones de archivos planos para tener acceso al archivo de texto. Si establece las propiedades del administrador de conexiones de archivos planos, puede proporcionar información sobre el archivo y cada columna que contiene, y especificar cómo debe controlar el origen de archivo plano los datos del archivo de texto. Por ejemplo, puede especificar los caracteres que delimitan columnas y filas en el archivo, así como el tipo de datos y la longitud de cada columna. Para más información, consulte [Flat File Connection Manager](../connection-manager/file-connection-manager.md).  
   
@@ -57,9 +57,9 @@ ms.locfileid: "62902481"
   
 -   [Editor de origen de archivos planos &#40;página Administrador de conexiones&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [Editor de origen de archivos planos &#40;página Columnas&#41;](../flat-file-source-editor-columns-page.md)  
+-   [Página &#40;columnas del editor de origen de archivos planos&#41;](../flat-file-source-editor-columns-page.md)  
   
--   [Editor de origen de archivos planos &#40;página Salida de error&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [Editor de origen de archivos planos &#40;página salida de error&#41;](../flat-file-source-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62902481"
 ## <a name="related-tasks"></a>Related Tasks  
  Para obtener más detalles sobre cómo establecer las propiedades de un componente de flujo de datos, vea [Establecer las propiedades de un componente de flujo de datos](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Destino de archivo plano](flat-file-destination.md)   
  [Flujo de datos](data-flow.md)  
   

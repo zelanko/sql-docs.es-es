@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63017588"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
@@ -28,7 +28,7 @@ ms.locfileid: "63017588"
   
      [Seguridad](#Security)  
   
--   **Para realizar cambios en los pasos de un trabajo maestro del Agente SQL Server mediante:**  
+-   **Para realizar cambios en los pasos de un trabajo maestro de Agente SQL Server, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63017588"
 ####  <a name="Permissions"></a> Permisos  
  A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modificar los trabajos de su propiedad. Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-make-changes-to-the-steps-of-a-sql-server-agent-master-job"></a>Para realizar cambios en los pasos de un trabajo maestro del Agente SQL Server  
   
@@ -56,13 +56,13 @@ ms.locfileid: "63017588"
   
 4.  Haga clic con el botón derecho en el trabajo del que quiera modificar los pasos y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo **Propiedades del trabajo-** _nombre_de_trabajo_, en **Seleccionar una página**, seleccione **Pasos**.  
+5.  En el cuadro de diálogo **propiedades del trabajo-**_Job_name_ , en **seleccionar una página**, seleccione **pasos**.  
   
-6.  Haga clic en **editar** para abrir el **Job Step Properties –** _nombre_de_paso_de_trabajo_ cuadro de diálogo. Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, vea [propiedades de paso de trabajo: Nuevo paso de trabajo &#40;página General&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) y [propiedades de paso de trabajo: Nuevo paso de trabajo &#40;página avanzadas&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  Haga clic en **Editar** para abrir el cuadro **de diálogo Propiedades de paso de trabajo-**_job_step_name_ . Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, vea [propiedades de paso de trabajo: nuevo paso de trabajo &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md) y [propiedades de paso de trabajo: nuevo paso de trabajo &#40;página avanzadas&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   
-8.  En el **Job Properties -** _job_name_ cuadro de diálogo, haga clic en **Aceptar**.  
+8.  En el cuadro de diálogo **propiedades del trabajo-**_job_name_ , haga clic en **Aceptar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -87,6 +87,6 @@ ms.locfileid: "63017588"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_update_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql).  
+ Para obtener más información, vea [sp_update_jobstep &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql).  
   
   

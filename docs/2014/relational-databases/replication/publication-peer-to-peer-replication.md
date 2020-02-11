@@ -13,23 +13,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021627"
 ---
 # <a name="publication-peer-to-peer-replication"></a>Publicación (replicación punto a punto)
   La página **Publicación** muestra las publicaciones transaccionales habilitadas para la replicación punto a punto. Las publicaciones se habilitan en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación** .  
   
 ## <a name="options"></a>Opciones  
- **publicador**  
+ **Publicador**  
  Muestra el servidor al que está conectado. Para conectar con otro servidor, seleccione **Buscar publicador de SQL Server**.  
   
  **Bases de datos y publicaciones**  
  Muestra todas las bases de datos del servidor que contienen al menos una publicación habilitada para la replicación punto a punto. Seleccione una publicación para continuar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)  
   

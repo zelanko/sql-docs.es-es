@@ -16,29 +16,29 @@ ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69bce043f7c5ce72de37e6e085e57baccd8c4864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920355"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 Especifica un marcador que indica dónde debe comenzar la operación.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adBookmarkCurrent**|0|Comienza en el registro actual.|  
 |**adBookmarkFirst**|1|Comienza en el primer registro.|  
-|**adBookmarkLast**|2|Se inicia en el último registro.|  
+|**adBookmarkLast**|2|Comienza en el último registro.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
+ Paquete: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  
-|AdoEnums.Bookmark.CURRENT|  
-|AdoEnums.Bookmark.FIRST|  
-|AdoEnums.Bookmark.LAST|  
+|AdoEnums. Bookmark. CURRENT|  
+|AdoEnums. Bookmark. FIRST|  
+|AdoEnums. Bookmark. LAST|  
   
 ## <a name="applies-to"></a>Se aplica a  
   

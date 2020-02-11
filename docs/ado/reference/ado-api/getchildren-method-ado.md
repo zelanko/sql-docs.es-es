@@ -17,14 +17,14 @@ ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84f1a2f7a80e17571f1b8ad3e63db640fb58dc19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932503"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren (método) (ADO)
-Devuelve un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) cuyas filas representan los elementos secundarios de una colección [registro](../../../ado/reference/ado-api/record-object-ado.md).  
+Devuelve un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) cuyas filas representan los elementos secundarios de un [registro](../../../ado/reference/ado-api/record-object-ado.md)de la colección.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,10 +34,10 @@ Set recordset = record.GetChildren
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un **Recordset** para el que cada fila representa un elemento secundario del elemento actual del objeto **registro** objeto. Por ejemplo, los elementos secundarios de un **registro** que representa un directorio serían los archivos y subdirectorios contenidos en el directorio primario.  
+ Objeto de **conjunto de registros** para el que cada fila representa un elemento secundario del objeto de **registro** actual. Por ejemplo, los elementos secundarios de un **registro** que representa un directorio serían los archivos y subdirectorios contenidos en el directorio primario.  
   
-## <a name="remarks"></a>Comentarios  
- El proveedor determina qué columnas hay en el valor devuelto **Recordset**. Por ejemplo, un proveedor de código fuente de documentos siempre devuelve un recurso **Recordset**.  
+## <a name="remarks"></a>Observaciones  
+ El proveedor determina qué columnas existen en el **conjunto de registros**devuelto. Por ejemplo, un proveedor de origen de documento siempre devuelve un **conjunto de registros**de recursos.  
   
 ## <a name="applies-to"></a>Se aplica a  
   

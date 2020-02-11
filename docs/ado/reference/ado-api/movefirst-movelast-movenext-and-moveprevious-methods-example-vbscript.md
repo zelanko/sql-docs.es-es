@@ -1,5 +1,5 @@
 ---
-title: Mover puntero de registro de ejemplo de conjunto de registros (VBScript) | Microsoft Docs
+title: Ejemplo del puntero de movimiento de registro del conjunto de registros (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,16 +18,16 @@ ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9da7517ece0961e5139df4be44ddf575c41c9abe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918123"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst, MoveLast, MoveNext y MovePrevious métodos ejemplo (VBScript)
-Este ejemplo se usa el [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), y [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) métodos para mover el puntero de registro de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basándose en el comando proporcionado.  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>Ejemplo de los métodos MoveFirst, MoveLast, MoveNext y MovePrevious (VBScript)
+En este ejemplo se usan los métodos [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)y [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) para trasladar el puntero de registro de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) basándose en el comando proporcionado.  
   
- Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **MoveFirstVBS.asp**. Puede ver el resultado en cualquier explorador.  
+ Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **MoveFirstVBS. asp**. Puede ver el resultado en cualquier explorador.  
   
 ```  
 <!-- BeginMoveFirstVBS -->  
@@ -183,6 +183,6 @@ Este ejemplo se usa el [MoveFirst](../../../ado/reference/ado-api/movefirst-move
 <!-- EndMoveFirstVBS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [MoveFirst, MoveLast, MoveNext y MovePrevious métodos (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Métodos MoveFirst, MoveLast, MoveNext y MovePrevious (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

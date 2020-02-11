@@ -13,55 +13,55 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923132"
 ---
 # <a name="working-with-multidimensional-data"></a>Trabajo con datos multidimensionales
-Un *cellset* es el resultado de una consulta de datos multidimensionales. Consta de una colección de ejes, normalmente no más de cuatro ejes y normalmente sólo dos o tres. Un *eje* es una colección de miembros de una o varias dimensiones, que se usa para buscar o filtrar valores específicos de un cubo.  
+Un conjunto de *celdas* es el resultado de una consulta en datos multidimensionales. Consta de una colección de ejes, normalmente no más de cuatro ejes y, normalmente, solo dos o tres. Un *eje* es una colección de miembros de una o más dimensiones, que se utiliza para buscar o filtrar valores específicos de un cubo.  
   
- Un *posición* es un punto de un eje. Para un eje que consta de una sola dimensión, estas posiciones son un subconjunto de los miembros de dimensión. Si un eje consta de más de una dimensión, cada posición es una entidad compuesta, que tiene *n* partes where *n* es el número de dimensiones orientadas a lo largo del eje. Cada parte de la posición es un miembro de una dimensión constituyente.  
+ Una *posición* es un punto a lo largo de un eje. En el caso de un eje que conste de una sola dimensión, estas posiciones son un subconjunto de los miembros de la dimensión. Si un eje se compone de más de una dimensión, cada posición es una entidad compuesta, que tiene *n* partes, donde *n* es el número de dimensiones orientadas a lo largo de ese eje. Cada parte de la posición es un miembro de una dimensión constitutiva.  
   
- Por ejemplo, si las dimensiones de geografía y producto de un cubo que contiene los datos de ventas se orientan a lo largo del eje x de un conjunto de celdas, una posición a lo largo de este eje puede contener a los miembros "EE" y "Equipos". En este ejemplo, para determinar una posición a lo largo del eje x requiere que los miembros de cada dimensión se orientan a lo largo del eje.  
+ Por ejemplo, si las dimensiones geografía y producto de un cubo que contiene datos de ventas se orientan a lo largo del eje x de un objeto Cellset, una posición a lo largo de este eje puede contener los miembros "EE. UU." y "equipos". En este ejemplo, la determinación de una posición a lo largo del eje x requiere que los miembros de cada dimensión estén orientados a lo largo del eje.  
   
- Un *celda* es un objeto situado en la intersección de coordenadas del eje. Cada celda tiene varias piezas de información asociada con él, incluidos los propios datos, una cadena con formato (el formulario que se puede mostrar de los datos de celda) y el valor ordinal de la celda. (Cada celda es un valor ordinal único en el conjunto de celdas. El valor ordinal de la primera celda en el conjunto de celdas es cero, mientras que la celda situada en la segunda fila de un conjunto de celdas con ocho columnas tendría un valor ordinal de ocho.)  
+ Una *celda* es un objeto situado en la intersección de coordenadas del eje. Cada celda tiene varias partes de información asociadas, incluidos los propios datos, una cadena con formato (la forma que se pueda mostrar de los datos de la celda) y el valor ordinal de la celda. (Cada celda es un valor ordinal único en el Cellset. El valor ordinal de la primera celda del Cellset es cero, mientras que la celda situada más a la izquierda de la segunda fila de un Cellset con ocho columnas tendría un valor ordinal de ocho.  
   
- Por ejemplo, un cubo tiene las seis dimensiones siguientes (tenga en cuenta que este esquema de cubo difiere ligeramente el ejemplo proporcionado [información general de esquemas y datos multidimensionales](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
+ Por ejemplo, un cubo tiene las seis dimensiones siguientes (tenga en cuenta que este esquema de cubo difiere ligeramente del ejemplo dado en [información general de esquemas y datos multidimensionales](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
   
--   Empleado de ventas  
+-   Vendedor  
   
--   Zona geográfica (jerarquía natural) - continentes, países, Estados etc.  
+-   Geografía (jerarquía natural): continentes, países, Estados, etc.  
   
--   Trimestres de trimestres, meses, días  
+-   Trimestres-trimestres, meses, días  
   
 -   Years  
   
--   Medidas: ventas, CambioPorcentual, VentasPresupuestadas  
+-   Measures-sales, PercentChange, BudgetedSales  
   
 -   Productos  
   
- El siguiente conjunto de celdas representa las ventas de 1991 para todos los productos:  
+ El siguiente Cellset representa las ventas de 1991 para todos los productos:  
   
 > [!NOTE]
->  Los valores de celda en el ejemplo pueden verse como pares ordenados de ordinales de posición del eje donde el primer dígito representa la posición del eje x y el segundo dígito de la posición del eje y.  
+>  Los valores de celda del ejemplo se pueden ver como pares ordenados de los ordinales de posición del eje, donde el primer dígito representa la posición del eje x y el segundo dígito de la posición del eje y.  
   
- Las características de este conjunto de celdas son los siguientes:  
+ Las características de este Cellset son las siguientes:  
   
--   Dimensiones de eje: Trimestres, vendedor, Geography  
+-   Dimensiones del eje: trimestres, vendedor, geografía  
   
--   Dimensiones de filtro: Las medidas, años, productos  
+-   Dimensiones de filtro: medidas, años, productos  
   
--   Dos ejes: COLUMNA (x, o eje 0) y fila (y o eje 1)  
+-   Dos ejes: columna (x, o eje 0) y fila (y o eje 1)  
   
--   eje x: dos dimensiones anidadas, vendedor y Geography  
+-   eje x: dos dimensiones anidadas, vendedor y geografía  
   
--   eje y: Dimensión trimestres  
+-   eje y: dimensión Quarters  
   
- El eje x tiene dos dimensiones anidadas: Vendedor y Geography. Desde la ubicación geográfica, se seleccionan los cuatro miembros: Seattle, Boston, sur de EE. UU. y Japón. De vendedor se seleccionan dos miembros: Valentine y Nash. Esto da como resultado un total de ocho posiciones en este eje (8 = 4 * 2).  
+ El eje x tiene dos dimensiones anidadas: vendedor y geografía. Desde la geografía, se seleccionan cuatro miembros: Seattle, Boston, EE. UU., sur y Japón. Se seleccionan dos miembros de vendedor: San Valentín y Nash. Esto produce un total de ocho posiciones en este eje (8 = 4 * 2).  
   
- Cada coordenada se representa como una posición con dos miembros: uno de la dimensión de empleado de ventas y otro de la dimensión Geography:  
+ Cada coordenada se representa como una posición con dos miembros: uno de la dimensión Salesperson y otro de la dimensión Geography:  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
@@ -69,17 +69,17 @@ Un *cellset* es el resultado de una consulta de datos multidimensionales. Consta
 (Nash, Japan)  
 ```  
   
- El eje y sólo tiene una dimensión, que contiene las ocho posiciones siguientes:  
+ El eje y solo tiene una dimensión, que contiene las ocho posiciones siguientes:  
   
 ```console
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- Conjuntos de celdas, las celdas, ejes y posiciones se representan en ADO MD mediante los objetos correspondientes: [Conjunto de celdas](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md), y [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ Celdas, celdas, ejes y posiciones se representan en ADO MD por los objetos correspondientes: [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [AXIS](../../../ado/reference/ado-md-api/axis-object-ado-md.md)y [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
   
-## <a name="see-also"></a>Vea también  
- [Modelo de objetos ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Información general de esquemas y datos multidimensionales](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Modelo de objetos de ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
+ [Información general de los esquemas y datos multidimensionales](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Programar con ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [Uso de ADO con ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)

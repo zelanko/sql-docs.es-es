@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a05605ca5c2b35b0a5e35c8228a2a144f20d7905
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900195"
 ---
 # <a name="multicast-transformation"></a>Multidifusión, transformación
@@ -43,7 +43,7 @@ ms.locfileid: "62900195"
 ## <a name="related-tasks"></a>Related Tasks  
  Para más información sobre cómo establecer las propiedades de este componente, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Flujo de datos](../data-flow.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.http_endpoints (Transact-SQL) | Microsoft Docs
+title: Sys. http_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,21 +20,21 @@ ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 41ca717399a3cd86f2137de6ae474d89e3eb819e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122733"
 ---
-# <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
+# <a name="syshttp_endpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una fila para cada extremo creado en el servidor que utiliza el protocolo HTTP.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**< columnas heredadas >**||Hereda columnas de [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**site**|**nvarchar(128)**|Nombre del equipo host del sitio según se especifica en la opción SITE =.|  
+|**< columnas heredadas>**||Hereda columnas de [Sys. endpoints &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**visitante**|**nvarchar(128)**|Nombre del equipo host del sitio según se especifica en la opción SITE =.|  
 |**url_path**|**nvarchar(4000)**|Parte solo de la ruta de la URL para este extremo HTTP según se especifica en la opción PATH=.|  
 |**is_clear_port_enabled**|**bit**|1 = Puerto libre habilitado con la opción PORT = CLEAR.|  
 |**clear_port**|**int**|Número de puerto especificado con la opción CLEAR PORT =.<br /><br /> NULL = Sin especificar.|  
@@ -53,7 +53,7 @@ ms.locfileid: "68122733"
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Vistas de catálogo de extremos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   

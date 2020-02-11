@@ -1,5 +1,5 @@
 ---
-title: Actualización de ejemplo del método (VC ++) | Microsoft Docs
+title: Ejemplo del método Refresh (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58bc25f41171e4258347522efe7a02f2620cfd82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917274"
 ---
 # <a name="refresh-method-example-vc"></a>Actualización de ejemplo del método (VC ++)
-En este ejemplo se muestra cómo utilizar el [actualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método para actualizar la [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección para un procedimiento almacenado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
+En este ejemplo se muestra cómo usar el método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) para actualizar la colección de [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) para un objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) de procedimiento almacenado.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -224,7 +224,7 @@ void PrintComError(_com_error &e) {
 25  
 ```  
   
-## <a name="sample-output"></a>Salida del ejemplo  
+## <a name="sample-output"></a>Salida de muestra  
   
 ```  
 Authors with 25 percent royalty  
@@ -233,7 +233,7 @@ Authors with 25 percent royalty
   899-46-2035, Anne Ringer  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Colección de parámetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Command (objeto) (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Parameters (colección) (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Actualizar (método, ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

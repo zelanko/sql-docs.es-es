@@ -16,10 +16,10 @@ ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7030f26cb95b78a3cd2dde8520876f13acc4bc46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091203"
 ---
 # <a name="localdbgetversioninfo-function"></a>Función LocalDBGetVersionInfo
@@ -49,7 +49,7 @@ typedef struct _LocalDBVersionInfo
   
 ```  
   
- **Archivo de encabezado:** sqlncli.h  
+ **Archivo de encabezado:** SQLNCLI. h  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -66,7 +66,7 @@ HRESULT LocalDBGetVersionInfo(
  [Output] El búfer en el que se almacena información sobre la versión de LocalDB.  
   
  *dwVersionInfoSize*  
- [Entrada] Contiene el tamaño de la *VersionInfo* búfer.  
+ Entradas Contiene el tamaño del búfer *versionInfo* .  
   
 ## <a name="returns"></a>Devuelve  
  S_OK  
@@ -82,14 +82,14 @@ HRESULT LocalDBGetVersionInfo(
  La versión de LocalDB especificada no existe.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
- Error inesperado. Vea el registro de eventos para obtener detalles.  
+ Se ha producido un error inesperado. Vea el registro de eventos para obtener detalles.  
   
 ## <a name="details"></a>Detalles  
- La lógica subyacente en la introducción de la **struct** argumento de tamaño (*lpVersionInfoSize*) consiste en habilitar la API que devuelva distintas versiones de la **LocalDBVersionInfostruct**, eficaz Habilitar compatibilidad con versiones anteriores y posteriores.  
+ La lógica que subyace a la introducción del argumento de tamaño de **estructura** (*lpVersionInfoSize*) es permitir que la API devuelva distintas versiones de **LocalDBVersionInfostruct**, con lo que se habilita la compatibilidad con versiones anteriores y posteriores.  
   
- Si el **struct** argumento de tamaño (*lpVersionInfoSize*) coincide con el tamaño de una versión conocida de la **LocalDBVersionInfostruct**, esa versión de la  **struct** se devuelve. De lo contrario, se devuelve LOCALDB_ERROR_INVALID_PARAMETER.  
+ Si el argumento de tamaño de **estructura** (*lpVersionInfoSize*) coincide con el tamaño de una versión conocida de **LocalDBVersionInfostruct**, se devuelve esa versión de la **estructura** . De lo contrario, se devuelve LOCALDB_ERROR_INVALID_PARAMETER.  
   
- Un ejemplo típico de **LocalDBGetVersionInfo** uso de la API tiene este aspecto:  
+ Un ejemplo típico de uso de la API de **LocalDBGetVersionInfo** tiene el siguiente aspecto:  
   
 ```  
 LocalDBVersionInfo vi;  
@@ -97,10 +97,10 @@ LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));
   
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información de encabezado y versión de SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

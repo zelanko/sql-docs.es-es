@@ -24,25 +24,25 @@ ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 24e3d4c87f3bc461a339a6cb635d64f20dc73e20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106164"
 ---
 # <a name="descriptor-handles"></a>Identificadores de descriptor
-Un *descriptor* es una colección de metadatos que describen los parámetros de una instrucción SQL o las columnas del conjunto de resultados, tal como se muestra la aplicación o controlador (también conocido como el *implementación*). Por lo tanto, puede rellenar un descriptor de cualquiera de las cuatro funciones:  
+Un *descriptor* es una colección de metadatos que describe los parámetros de una instrucción SQL o las columnas de un conjunto de resultados, tal como la muestra la aplicación o el controlador (también conocido como *implementación*). Por lo tanto, un descriptor puede rellenar cualquiera de los cuatro roles siguientes:  
   
--   **Descriptor de parámetro de la aplicación (APD).** Contiene información acerca de los búferes de la aplicación enlazada a los parámetros en una instrucción SQL, como sus direcciones, las longitudes y tipos de datos C.  
+-   **Descriptor de parámetros de aplicación (APD).** Contiene información acerca de los búferes de aplicación enlazados a los parámetros de una instrucción SQL, como sus direcciones, longitudes y tipos de datos de C.  
   
--   **Descriptor de parámetro de implementación (IPD).** Contiene información sobre los parámetros en una instrucción SQL, como sus tipos de datos SQL, las longitudes y nulabilidad.  
+-   **Descriptor de parámetros de implementación (IPD).** Contiene información sobre los parámetros de una instrucción SQL, como sus tipos de datos SQL, longitudes y nulabilidad.  
   
--   **Descriptor de fila de la aplicación (descartar).** Contiene información acerca de los búferes de aplicación enlazadas a las columnas en un conjunto de resultados, como sus direcciones, las longitudes y tipos de datos C.  
+-   **Descriptor de fila de aplicación (ARD).** Contiene información acerca de los búferes de aplicación enlazados a las columnas de un conjunto de resultados, como sus direcciones, longitudes y tipos de datos de C.  
   
--   **Descriptor de fila de implementación (IRD).** Contiene información acerca de las columnas en un conjunto de resultados, como sus tipos de datos SQL, las longitudes y nulabilidad.  
+-   **Descriptor de fila de implementación (IRD).** Contiene información sobre las columnas de un conjunto de resultados, como sus tipos de datos SQL, longitudes y nulabilidad.  
   
- Los descriptores de cuatro (cada rol relleno uno) se asignan automáticamente cuando se asigna a una instrucción. Estos se conocen como *asigna automáticamente los descriptores de* y siempre están asociadas con esa instrucción. Las aplicaciones también pueden asignar los descriptores con **SQLAllocHandle**. Estos se conocen como *asigna explícitamente los descriptores de*. Que se asignan en una conexión y se pueden asociar con una o varias instrucciones en esa conexión para cumplir la función de un APD o descartar en esas instrucciones.  
+ Cuando se asigna una instrucción, se asignan automáticamente cuatro descriptores (uno que rellenan cada rol). Estos se conocen como *descriptores asignados automáticamente* y siempre se asocian a esa instrucción. Las aplicaciones también pueden asignar descriptores con **SQLAllocHandle**. Estos se conocen como *descriptores asignados explícitamente*. Se asignan en una conexión y se pueden asociar a una o varias instrucciones de esa conexión para cumplir el rol de APD o ARD en esas instrucciones.  
   
- Mayoría de las operaciones en ODBC puede realizarse sin uso explícito de descriptores de la aplicación. Sin embargo, los descriptores de proporcionan un acceso directo conveniente para algunas operaciones. Por ejemplo, suponga que una aplicación que desea insertar los datos de dos conjuntos diferentes de los búferes. Para usar el primer conjunto de búferes, llamaría a repetidamente **SQLBindParameter** para enlazarlos a los parámetros de un **insertar** instrucción y, a continuación, ejecute la instrucción. Para usar el segundo conjunto de búferes, debería repetir este proceso. Como alternativa, podría configurar enlaces para el primer conjunto de búferes en un descriptor y el segundo conjunto de búferes en otro descriptor. Para cambiar entre los conjuntos de enlaces, la aplicación llamaría simplemente **SQLSetStmtAttr** y asociar el descriptor correcto con la instrucción como el APD.  
+ La mayoría de las operaciones de ODBC se pueden realizar sin el uso explícito de los descriptores de la aplicación. Sin embargo, los descriptores proporcionan un acceso directo cómodo para algunas operaciones. Por ejemplo, supongamos que una aplicación desea insertar datos de dos conjuntos diferentes de búferes. Para usar el primer conjunto de búferes, llamaría repetidamente a **SQLBindParameter** para enlazarlos a los parámetros en una instrucción **Insert** y, a continuación, ejecutar la instrucción. Para usar el segundo conjunto de búferes, se repetiría este proceso. Como alternativa, podría configurar enlaces al primer conjunto de búferes de un descriptor y al segundo conjunto de búferes de otro descriptor. Para cambiar entre los conjuntos de enlaces, la aplicación simplemente llamaría a **SQLSetStmtAttr** y asociara el descriptor correcto con la instrucción como APD.  
   
- Para obtener más información acerca de los descriptores, consulte [tipos de descriptores](../../../odbc/reference/develop-app/types-of-descriptors.md).
+ Para obtener más información acerca de los descriptores, vea [tipos de descriptores](../../../odbc/reference/develop-app/types-of-descriptors.md).

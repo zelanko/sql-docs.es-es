@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900336"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Búsqueda aproximada, transformación
@@ -51,7 +51,7 @@ ms.locfileid: "62900336"
   
  Esta transformación tiene una entrada y una salida.  
   
- Para la coincidencia aproximada, solo se pueden utilizar columnas de entrada con tipos de datos `DT_WSTR` y `DT_STR`. Para la búsqueda exacta se puede utilizar cualquier tipo de datos DTS, excepto `DT_TEXT`, `DT_NTEXT`y `DT_IMAGE`. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con DTS `DT_WSTR` tipo de datos a una columna con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` tipo de datos, pero no que se puede combinar una columna con el `DT_WSTR` tipo de datos a una columna con el `int` tipo de datos.  
+ Para la coincidencia aproximada, solo se pueden utilizar columnas de entrada con tipos de datos `DT_WSTR` y `DT_STR`. Para la búsqueda exacta se puede utilizar cualquier tipo de datos DTS, excepto `DT_TEXT`, `DT_NTEXT`y `DT_IMAGE`. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con el tipo de datos `DT_WSTR` DTS en una columna con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` tipo de datos, pero no es válido combinar una columna con `DT_WSTR` el tipo de datos en una columna `int` con el tipo de datos.  
   
  Puede personalizar esta transformación, especificando la cantidad máxima de memoria, el algoritmo de comparación de filas y el almacenamiento en caché de índices y tablas de referencia que utiliza la transformación.  
   
@@ -109,12 +109,12 @@ ms.locfileid: "62900336"
 >  Dado que la opción **Mantener el índice almacenado** requiere la integración con CLR, esta característica solo funciona al seleccionar una tabla de referencia en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde se habilite la integración con CLR.  
   
 ## <a name="row-comparison"></a>Comparar filas  
- Al configurar la transformación Búsqueda aproximada, puede especificar el algoritmo de comparación que utiliza la transformación para localizar los registros que coinciden en la tabla de referencia. Si establece la propiedad Exhaustive en `True`, la transformación compara cada fila de la entrada con todas las filas de la tabla de referencia. Este algoritmo de comparación puede producir resultados más exactos, pero es probable que la transformación sea más lenta, a menos que la tabla de referencia tenga un número de filas reducido. Si la propiedad Exhaustive se establece en `True`, tabla de referencia completa se carga en memoria. Para evitar problemas de rendimiento, es conveniente establecer la propiedad Exhaustive en `True` durante el desarrollo de paquetes únicamente.  
+ Al configurar la transformación Búsqueda aproximada, puede especificar el algoritmo de comparación que utiliza la transformación para localizar los registros que coinciden en la tabla de referencia. Si establece la propiedad exhaustiva en `True`, la transformación compara cada fila de la entrada con cada fila de la tabla de referencia. Este algoritmo de comparación puede producir resultados más exactos, pero es probable que la transformación sea más lenta, a menos que la tabla de referencia tenga un número de filas reducido. Si la propiedad exhaustiva está establecida en `True`, toda la tabla de referencia se carga en la memoria. Para evitar problemas de rendimiento, es aconsejable establecer la propiedad exhaustiva en `True` solo durante el desarrollo de paquetes.  
   
- Si se establece la propiedad Exhaustive en `False`, la transformación Búsqueda aproximada devuelve solo coincidencias que tienen al menos un token indizado o una subcadena (la subcadena se denomina un *q-grama*) en común con el registro de entrada. Para maximizar la eficacia de las búsquedas, solamente se indiza un subconjunto de los tokens de cada fila de la tabla en la estructura de índice invertido que utiliza la transformación Búsqueda aproximada para localizar coincidencias. Cuando el conjunto de datos de entrada es pequeño, puede establecer Exhaustive en `True` para evitar que falten las coincidencias para el que no existen tokens comunes en la tabla de índice.  
+ Si la propiedad exhaustiva está establecida en `False`, la transformación búsqueda aproximada devuelve solo las coincidencias que tienen al menos un token indizado o una subcadena (la subcadena se denomina *q-Gram*) en común con el registro de entrada. Para maximizar la eficacia de las búsquedas, solamente se indiza un subconjunto de los tokens de cada fila de la tabla en la estructura de índice invertido que utiliza la transformación Búsqueda aproximada para localizar coincidencias. Cuando el conjunto de datos de entrada es pequeño, puede establecer `True` exhaustivo en para evitar que falten coincidencias para las que no existen tokens comunes en la tabla de índice.  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>Almacenar en caché índices y tablas de referencia  
- Al configurar la transformación Búsqueda aproximada, puede especificar si la transformación almacenará parcialmente en caché el índice y la tabla de referencia antes de que la transformación realice su trabajo. Si establece la propiedad WarmCaches en `True`, la tabla de referencia y el índice se cargan en memoria. Si la entrada tiene muchas filas, establecer la propiedad WarmCaches en `True` puede mejorar el rendimiento de la transformación. Cuando el número de filas de entrada es pequeño, establecer la propiedad WarmCaches en `False` puede hacer que la reutilización de un índice grande con mayor rapidez.  
+ Al configurar la transformación Búsqueda aproximada, puede especificar si la transformación almacenará parcialmente en caché el índice y la tabla de referencia antes de que la transformación realice su trabajo. Si establece la propiedad WarmCaches en `True`, el índice y la tabla de referencia se cargan en la memoria. Cuando la entrada tiene muchas filas, el establecimiento de la propiedad `True` WarmCaches en puede mejorar el rendimiento de la transformación. Cuando el número de filas de entrada es pequeño, el establecimiento de la `False` propiedad WarmCaches en puede hacer que la reutilización de un índice grande sea más rápida.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tablas e índices temporales  
  En tiempo de ejecución, la transformación Búsqueda aproximada crea objetos temporales, como tablas e índices, en la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la que se conecta la transformación. El tamaño de estas tablas e índices temporales es proporcional al número de filas y tokens de la tabla de referencia y al número de tokens que crea la transformación Búsqueda aproximada; por lo tanto, podría consumir una cantidad importante de espacio en disco. La transformación también consulta estas tablas temporales. Por lo tanto, debe considerar la posibilidad de conectar la transformación Búsqueda aproximada a una instancia de la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no sea de producción, en especial si el servidor de producción tiene un espacio en disco disponible limitado.  
@@ -126,24 +126,24 @@ ms.locfileid: "62900336"
   
  Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Búsqueda aproximada** , haga clic en uno de los temas siguientes:  
   
--   [Editor de transformación Búsqueda aproximada &#40;pestaña Tabla de referencia&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor de transformación búsqueda aproximada &#40;pestaña tabla de referencia&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Editor de transformación Búsqueda aproximada &#40;pestaña Columnas&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [Editor de transformación Búsqueda aproximada &#40;pestaña Avanzadas&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [Editor de transformación búsqueda aproximada &#40;pestaña avanzadas&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Para obtener más detalles sobre cómo establecer las propiedades de un componente de flujo de datos, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Vea también  
- [Transformación Búsqueda](lookup-transformation.md)   
- [Transformación Agrupación aproximada](fuzzy-grouping-transformation.md)   
+## <a name="see-also"></a>Consulte también  
+ [Transformación búsqueda](lookup-transformation.md)   
+ [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  
   
   

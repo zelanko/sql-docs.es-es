@@ -18,16 +18,16 @@ ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091909"
 ---
-# <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
+# <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Las llamadas del **sqlmaint** utilidad con una cadena que contiene **sqlmaint**conmutadores. El **sqlmaint** utilidad realiza un conjunto de operaciones de mantenimiento en una o varias bases de datos.  
+  Llama a la utilidad **SQLMAINT** con una cadena que contiene los modificadores **SQLMAINT**. La utilidad **SQLMAINT** realiza un conjunto de operaciones de mantenimiento en una o varias bases de datos.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -43,15 +43,15 @@ xp_sqlmaint 'switch_string'
   
 ## <a name="arguments"></a>Argumentos  
  **'** *switch_string* **'**  
- Es una cadena que contiene el **sqlmaint** modificadores de la utilidad. Los modificadores y sus valores tienen que estar separados por un espacio.  
+ Es una cadena que contiene los modificadores de la utilidad **SQLMAINT** . Los modificadores y sus valores tienen que estar separados por un espacio.  
   
- ¿El **-?** no es válido para el conmutador **xp_sqlmaint**.  
+ El **** el modificador no es válido para **xp_sqlmaint**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- Ninguno. Devuelve un error si el **sqlmaint** utilidad se produce un error.  
+ Ninguno. Devuelve un error si se produce un error en la utilidad **SQLMAINT** .  
   
-## <a name="remarks"></a>Comentarios  
- Si se llama a este procedimiento por el usuario ha iniciado sesión con autenticación de SQL Server, el **- U "***login_id***"** y **-P "***contraseña***"** modificadores se anteponen a *switch_string* antes de la ejecución. Si el usuario ha iniciado sesión con autenticación de Windows, *switch_string* se pasa sin cambios a **sqlmaint**.  
+## <a name="remarks"></a>Observaciones  
+ Si un usuario que ha iniciado sesión con SQL Server autenticación llama a este procedimiento, los modificadores **-U "***login_id***"** y **-P "***contraseña***"** se anteponen a *switch_string* antes de la ejecución. Si el usuario ha iniciado sesión con la autenticación de Windows, *switch_string* se pasa sin cambiar a **SQLMAINT**.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
@@ -70,8 +70,8 @@ EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
 The command(s) executed successfully.  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sqlmaint, utilidad](../../tools/sqlmaint-utility.md)   
+## <a name="see-also"></a>Consulte también  
+ [SQLMAINT (utilidad)](../../tools/sqlmaint-utility.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

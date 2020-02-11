@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999565"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Ejecutar lógica de negocios durante la sincronización de mezcla
@@ -29,7 +29,7 @@ ms.locfileid: "62999565"
   
 -   Referencia de la interfaz de programación de aplicaciones (API): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   Instrucciones para implementar un controlador de lógica de negocios: [Implementar un controlador de lógica de negocios para un artículo de mezcla](../implement-a-business-logic-handler-for-a-merge-article.md)  
+-   Instrucciones sobre cómo implementar un controlador de lógica de negocios: [Implement a Business Logic Handler for a Merge Article](../implement-a-business-logic-handler-for-a-merge-article.md) (Implementar un controlador de lógica de negocios para un artículo de mezcla)  
   
 ## <a name="uses-for-business-logic-handlers"></a>Usos de los controladores de lógica de negocios  
  El proceso de sincronización de mezcla puede invocar controladores de lógica de negocios para que lleven a cabo las siguientes acciones:  
@@ -59,7 +59,7 @@ ms.locfileid: "62999565"
      Esto es útil para aplicaciones que deben suplantar operaciones o valores de datos específicos. Por ejemplo, una aplicación podría transformar la eliminación de una fila en una actualización especial que establezca la columna **estado** de la fila en el valor "eliminado" y después realice un seguimiento de la identidad del cliente que lleva a cabo la eliminación. Esto podría ser útil con fines de auditoría o flujo de trabajo.  
   
 ### <a name="custom-conflict-resolution"></a>Resolución personalizada de conflictos  
- La replicación de mezcla permite la detección y resolución de conflictos, y permite al usuario aceptar una estrategia de resolución predeterminada o elegir la resolución personalizada de los conflictos. Para más información, consulte [Detección y resolución de conflictos de replicación de mezcla avanzada](advanced-merge-replication-conflict-detection-and-resolution.md). Se puede invocar el controlador de lógica de negocios durante el procesamiento de cambios de datos que produzcan conflictos y realizar una de estas dos acciones:  
+ La replicación de mezcla permite la detección y resolución de conflictos, y permite al usuario aceptar una estrategia de resolución predeterminada o elegir la resolución personalizada de los conflictos. Para obtener más información, vea [detección y resolución de conflictos de replicación de mezcla avanzada](advanced-merge-replication-conflict-detection-and-resolution.md). Se puede invocar el controlador de lógica de negocios durante el procesamiento de cambios de datos que produzcan conflictos y realizar una de estas dos acciones:  
   
 -   Aceptar la resolución predeterminada  
   
@@ -89,10 +89,10 @@ ms.locfileid: "62999565"
   
 -   Un servidor con Internet Information Services (IIS), si se utiliza la sincronización web. Utilice una suscripción de extracción sincronizada con la sincronización web y el controlador de lógica de negocios se ejecutará en el servidor IIS.  
   
-## <a name="see-also"></a>Vea también  
- [Merge Replication](merge-replication.md)  (Replicación de mezcla)  
+## <a name="see-also"></a>Consulte también  
+ [Replicación de mezcla](merge-replication.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)   
- [Synchronize Data](../synchronize-data.md)  (Sincronizar datos)  
- [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)  
+ [Sincronizar datos](../synchronize-data.md)   
+ [Sincronización web para la replicación de mezcla](../web-synchronization-for-merge-replication.md)  
   
   

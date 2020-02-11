@@ -1,5 +1,5 @@
 ---
-title: sys.index_columns (Transact-SQL) | Microsoft Docs
+title: Sys. index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -21,28 +21,28 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e20bd7ecc783e0449a1deaa21c9f3db6e07abbc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122669"
 ---
-# <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
+# <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contiene una fila por cada columna que forma parte de un **sys.indexes** índice o tabla no ordenada (montón).  
+  Contiene una fila por cada columna que forma parte de un índice **Sys. Indexes** o una tabla no ordenada (montón).  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Id. del objeto en el que se define el índice.|  
 |**index_id**|**int**|Id. del índice en el que se define la columna.|  
-|**index_column_id**|**int**|Id. de la columna de índice. **index_column_id** es exclusivo solo dentro **index_id**.|  
-|**column_id**|**int**|Identificador de la columna en **object_id**.<br /><br /> 0 = Identificador de fila (RID) en un índice no clúster.<br /><br /> **column_id** es exclusivo solo dentro **object_id**.|  
-|**key_ordinal**|**tinyint**|Ordinal (de base 1) en el conjunto de columnas de clave.<br /><br /> 0 = No es una columna de clave; es un índice XML, un índice de almacén de columnas o un índice espacial.<br /><br /> Nota: Un índice XML o espacial no puede ser una clave ya que las columnas subyacentes no son comparables, lo que significa que no se puede ordenar sus valores.|  
+|**index_column_id**|**int**|Id. de la columna de índice. **index_column_id** es único solo dentro de **index_id**.|  
+|**column_id**|**int**|IDENTIFICADOR de la columna en **object_id**.<br /><br /> 0 = Identificador de fila (RID) en un índice no clúster.<br /><br /> **column_id** es único solo dentro de **object_id**.|  
+|**key_ordinal**|**tinyint**|Ordinal (de base 1) en el conjunto de columnas de clave.<br /><br /> 0 = No es una columna de clave; es un índice XML, un índice de almacén de columnas o un índice espacial.<br /><br /> Nota: un índice XML o espacial no puede ser una clave porque las columnas subyacentes no son comparables, lo que significa que sus valores no se pueden ordenar.|  
 |**partition_ordinal**|**tinyint**|Ordinal (de base 1) en el conjunto de columnas de partición. Un índice de almacén de columnas en clúster puede tener como máximo 1 columna de particionamiento.<br /><br /> 0 = No es una columna de partición.|  
 |**is_descending_key**|**bit**|1 = El orden de la columna de clave de índice es descendente.<br /><br /> 0 = La columna de clave de índice tiene una dirección de orden ascendente, o bien la columna es parte de un índice de almacén de columnas o hash.|  
-|**is_included_column**|**bit**|1 = La columna es una columna sin clave que se agrega al índice utilizando la cláusula CREATE INDEX INCLUDE, o bien la columna forma parte de un índice de almacén de columnas.<br /><br /> 0 = La columna no es una columna incluida.<br /><br /> No se muestran las columnas agregadas implícitamente porque forman parte de la clave de agrupación en clústeres en **sys.index_columns**.<br /><br /> Las columnas agregadas implícitamente porque son una columna de partición se devuelven como 0.| 
-|**column_store_order_ordinal**</br> Se aplica a: Azure SQL Data Warehouse (versión preliminar)|**tinyint**|Ordinal (basado en 1) dentro de conjunto de columnas de orden de un índice agrupado ordenada.|
+|**is_included_column**|**bit**|1 = La columna es una columna sin clave que se agrega al índice utilizando la cláusula CREATE INDEX INCLUDE, o bien la columna forma parte de un índice de almacén de columnas.<br /><br /> 0 = La columna no es una columna incluida.<br /><br /> Las columnas agregadas implícitamente porque forman parte de la clave de agrupación en clústeres no aparecen en **Sys. index_columns**.<br /><br /> Las columnas agregadas implícitamente porque son una columna de partición se devuelven como 0.| 
+|**column_store_order_ordinal**</br> Se aplica a: Azure SQL Data Warehouse (versión preliminar)|**tinyint**|Ordinal (de base 1) dentro del conjunto de columnas de orden de un índice de almacén de columnas agrupado ordenado.|
   
 ## <a name="permissions"></a>Permisos
 
@@ -83,13 +83,13 @@ IX_BillOfMaterials_UnitMeasureCode                         UnitMeasureCode    1 
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Preguntas frecuentes sobre consultas del catálogo de sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

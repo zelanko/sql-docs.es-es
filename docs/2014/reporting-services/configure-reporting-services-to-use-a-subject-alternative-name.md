@@ -1,5 +1,5 @@
 ---
-title: Configurar Reporting Services para usar un nombre alternativo del asunto | Microsoft Docs
+title: Configurar Reporting Services para usar un nombre alternativo del firmante | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39cb8593351e97c47fff38ae2d1b6f2b326f49b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109740"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configuración de Reporting Services para utilizar un nombre alternativo del asunto
@@ -22,7 +22,7 @@ ms.locfileid: "66109740"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Modo nativo|  
   
  Las instrucciones son válidas para la dirección URL del servicio de generación de informes y para la dirección URL del servicio web.  
   
@@ -123,10 +123,10 @@ ms.locfileid: "66109740"
   
 10. En la página **Estado del servidor de informes** del Administrador de configuración de Reporting Services, haga clic en **Detener** y, a continuación, haga clic en **Iniciar** para reiniciar el servidor de informes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivo de configuración RSReportServer](report-server/rsreportserver-config-configuration-file.md)   
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Modifique un archivo de configuración de Reporting Services &#40;RSreportserver. config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

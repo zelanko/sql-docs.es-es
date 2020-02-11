@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920684"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Copias de seguridad de registros de transacciones (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "62920684"
   
  **En este tema:**  
   
--   [Cómo funciona una secuencia de copias de seguridad del registro](#LogBackupSequence)  
+-   [Cómo funciona una secuencia de copias de seguridad de registros](#LogBackupSequence)  
   
 -   [Recomendaciones](#Recommendations)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62920684"
   
 -   [Contenido relacionado](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a> Cómo funciona una secuencia de copias de seguridad del registro  
+##  <a name="LogBackupSequence"></a>Cómo funciona una secuencia de copias de seguridad de registros  
  La secuencia de las copias de seguridad del registro de transacciones ( *cadena de registros* ) es independiente de las copias de seguridad de los datos. Por ejemplo, suponga la siguiente secuencia de eventos.  
   
 |Time|Evento|  
@@ -70,7 +70,7 @@ ms.locfileid: "62920684"
 ##  <a name="RelatedContent"></a> Contenido relacionado  
  Ninguno.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [El registro de transacciones &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Copias del final del registro &#40;SQL Server&#41;](tail-log-backups-sql-server.md)   

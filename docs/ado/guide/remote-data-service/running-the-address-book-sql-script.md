@@ -1,5 +1,5 @@
 ---
-title: Ejecutar el Script SQL de libreta de direcciones | Microsoft Docs
+title: Ejecutando el script SQL de la libreta de direcciones | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,19 +14,19 @@ ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5adc631a3c3f7a66c02f9ebfe541fa5e923deb0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922238"
 ---
 # <a name="running-the-address-book-sql-script"></a>Ejecución del script de SQL de la libreta de direcciones
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Debe usar la utilidad de línea de comandos del analizador de ISQL/consultas o el Administrador corporativo de SQL Server para ejecutar el script SQL incluye (Sampleemp.sql) que:  
+ Debe usar la utilidad de línea de comandos ISQL/Query Analyzer o el administrador de SQL Server Enterprise para ejecutar el script SQL incluido (Sampleemp. SQL) que:  
   
--   Crea una nueva base de datos, AddrBookDB, en el dispositivo predeterminado.  
+-   Crea una base de datos nueva, AddrBookDB, en el dispositivo predeterminado.  
   
 -   Se conecta a la base de datos, AddrBookDB.  
   
@@ -34,41 +34,41 @@ ms.locfileid: "67922238"
   
 -   Rellena la tabla con datos de ejemplo.  
   
--   Se ejecuta una instrucción SELECT simple para comprobar el rellenado de la tabla de base de datos.  
+-   Ejecuta una instrucción SELECT simple para comprobar el rellenado de la tabla de base de datos.  
   
--   Configura una cuenta de usuario denominada "adcdemo" con la contraseña "adcdemo."  
+-   Configura una cuenta de usuario denominada "adcdemo" con la contraseña "adcdemo".  
   
-#### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-65"></a>Para ejecutar el script Sampleemp.sql en Microsoft SQL Server 6.5  
+#### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-65"></a>Para ejecutar el script Sampleemp. SQL en Microsoft SQL Server 6,5  
   
-1.  Haga clic en **iniciar**, apunte a **programas**y, a continuación, elija **Microsoft SQL Server 6.5**. Haga clic en **Administrador corporativo de SQL**.  
+1.  Haga clic en **Inicio**, elija **programas**y, a continuación, seleccione **Microsoft SQL Server 6,5**. Haga clic en **Administrador corporativo de SQL**.  
   
-2.  Desde el **herramientas** menú, haga clic en **herramienta de consulta SQL**.  
+2.  En el menú **herramientas** , haga clic en **herramienta de consulta SQL**.  
   
-3.  Haga clic en **carga SQL Script** y vaya a c:\Platform SDK\Samples\DataAccess\RDS\AddressBook.  
+3.  Haga clic en **cargar script SQL** y vaya a c:\Platform SDK\Samples\DataAccess\RDS\AddressBook.  
   
-4.  Seleccione el archivo Sampleemp.sql. Haga clic en **Abrir**.  
+4.  Seleccione el archivo Sampleemp. SQL. Haga clic en **Abrir**.  
   
-5.  Haga clic en el **Ejecutar consulta** botón (la flecha verde en la barra de herramientas).  
+5.  Haga clic en el botón **Ejecutar consulta** (la flecha verde en la barra de herramientas).  
   
-6.  Una vez que se ejecuta, cierre el **consulta** y **Enterprise Manager** windows.  
+6.  Una vez ejecutada, cierre las ventanas **consulta** y **Administrador corporativo** .  
   
-#### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-70"></a>Para ejecutar el script Sampleemp.sql en Microsoft SQL Server 7.0  
+#### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-70"></a>Para ejecutar el script Sampleemp. SQL en Microsoft SQL Server 7,0  
   
-1.  Haga clic en **iniciar**, apunte a **programas**y, a continuación, elija **Microsoft SQL Server 7.0**. Haga clic en **Enterprise Manager**.  
+1.  Haga clic en **Inicio**, elija **programas**y, a continuación, seleccione **Microsoft SQL Server 7,0**. Haga clic en **Administrador corporativo**.  
   
-2.  Asegúrese de que está seleccionado el servidor SQL Server que desea usar en la lista de servidores registrados en el Administrador corporativo.  
+2.  Asegúrese de que la SQL Server que desea usar está seleccionada en la lista de servidores registrados en el Administrador corporativo.  
   
-3.  Desde el **herramientas** menú, haga clic en **analizador de consultas de SQL Server**.  
+3.  En el menú **herramientas** , haga clic en **SQL Server analizador de consultas**.  
   
-4.  Haga clic en el **carga SQL Script** botón (Abrir carpeta en la barra de herramientas) y busque c:\Platform SDK\Samples\DataAccess\RDS\AddressBook.  
+4.  Haga clic en el botón **cargar script SQL** (abrir carpeta en la barra de herramientas) y vaya a c:\Platform SDK\Samples\DataAccess\RDS\AddressBook.  
   
-5.  Seleccione el archivo Sampleemp.sql. Haga clic en **Abrir**.  
+5.  Seleccione el archivo Sampleemp. SQL. Haga clic en **Abrir**.  
   
-6.  Haga clic en el **Ejecutar consulta** botón (la flecha verde en la barra de herramientas) o **F5**.  
+6.  Haga clic en el botón **Ejecutar consulta** (la flecha verde en la barra de herramientas) o **F5**.  
   
-7.  Una vez que se ejecuta, cierre el **consulta**, **analizador de consultas**, y **Enterprise Manager** windows.  
+7.  Una vez ejecutada, cierre las ventanas **consulta**, **analizador de consultas**y **Administrador corporativo** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecución de la aplicación de ejemplo de la libreta de direcciones](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
 
 

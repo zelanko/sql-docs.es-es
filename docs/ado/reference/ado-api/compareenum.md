@@ -16,36 +16,36 @@ ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c109f90fc023b6fbfeda01c8b4404c42a822c40a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919552"
 ---
 # <a name="compareenum"></a>CompareEnum
 Especifica la posición relativa de dos registros representados por sus marcadores.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adCompareEqual**|1|Indica que los marcadores son iguales.|  
 |**adCompareGreaterThan**|2|Indica que el primer marcador está después del segundo.|  
-|**adCompareLessThan**|0|Indica que el primer marcador está antes que el segundo.|  
+|**adCompareLessThan**|0|Indica que el primer marcador es anterior al segundo.|  
 |**adCompareNotComparable**|4|Indica que no se pueden comparar los marcadores.|  
-|**adCompareNotEqual**|3|Indica que los marcadores no son iguales y no ordenada.|  
+|**adCompareNotEqual**|3|Indica que los marcadores no son iguales y no están ordenados.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
+ Paquete: **com. ms. wfc. Data**  
   
 |Constante|  
 |--------------|  
-|AdoEnums.Compare.EQUAL|  
-|AdoEnums.Compare.GREATERTHAN|  
-|AdoEnums.Compare.LESSTHAN|  
-|AdoEnums.Compare.NOTCOMPARABLE|  
-|AdoEnums.Compare.NOTEQUAL|  
+|AdoEnums. Compare. igual|  
+|AdoEnums. Compare. GREATERTHAN|  
+|AdoEnums. Compare. LESSTHAN|  
+|AdoEnums. Compare. NOTCOMPARABLE|  
+|AdoEnums. Compare. NOTEQUAL|  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Método CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Método CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)

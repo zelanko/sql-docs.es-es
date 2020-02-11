@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_current_xevent_settings (Transact-SQL) | Microsoft Docs
+title: managed_backup. fn_get_current_xevent_settings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4133f8bb64d5d7e2e2b511c2128b9ddbca1fa550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910242"
 ---
-# <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (Transact-SQL)
+# <a name="managed_backupfn_get_current_xevent_settings-transact-sql"></a>managed_backup. fn_get_current_xevent_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada tipo de evento extendido compatible con Administración inteligente.  
@@ -48,16 +48,16 @@ smart_admin.fn_get_current_xevent_settings ()
 ## <a name="table-returned"></a>Tabla devuelta  
  Los canales de administración, análisis y operativos de Eventos extendidos son necesarios, están habilitados de manera predeterminada y no son configurables.  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|Tipo de evento extendido|  
-|is_configurable|NVARCHAR(128)|Se establece en **True** si el evento es configurable, lo contrario, establece en **False**.|  
+|is_configurable|NVARCHAR(128)|Este valor se establece en **true** si el evento es configurable; de lo contrario, se establece en **false**.|  
 |is_enabled|NVARCHAR(128)|Se establece en True si el evento está habilitado y en False si no lo está. Utilice smart_admin.sp_set_parameter para habilitar eventos de depuración.|  
   
 ## <a name="security"></a>Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Requiere **seleccione** permisos en la función.  
+ Requiere permisos **Select** en la función.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve todos los eventos extendidos con su estado actual.  

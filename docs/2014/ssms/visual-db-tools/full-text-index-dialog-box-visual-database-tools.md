@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028422"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Índice de texto completo (cuadro de diálogo, Visual Database Tools)
@@ -32,7 +32,7 @@ ms.locfileid: "63028422"
  **Índice de texto completo seleccionado**  
  Muestra los índices de texto completo existentes. Seleccione un índice para mostrar sus propiedades en la cuadrícula situada a la derecha. Si la lista está vacía, no se han definido relaciones de texto completo para la tabla.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Crea un nuevo índice de texto completo.  
   
  **Eliminar**  
@@ -53,7 +53,7 @@ ms.locfileid: "63028422"
  **Categoría Identidad**  
  Expandido, muestra el campo de nombre de este índice.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre especificado por el sistema para este índice de texto completo.  
   
  **Categoría Diseñador de tablas**  
@@ -87,13 +87,13 @@ ms.locfileid: "63028422"
  Muestra la fecha y la hora en que se va a iniciar el siguiente rastreo.  
   
  **Tipo de rastreo actual o último**  
- Muestra el número de errores del rastreo actual o del más reciente: Completo, Incremental, Actualización o Autopropagación.  
+ Muestra el tipo al que pertenece el rastreo actual o el más reciente: Completo, Incremental, Actualización o Autopropagación.  
   
  **Nombre de índice único**  
  Muestra una lista con todos los nombres de las columnas de esta base de datos que tienen índices únicos de una sola columna. Estas columnas se pueden utilizar para crear un índice de texto completo.  
   
-## <a name="see-also"></a>Vea también  
- [Use el Asistente para indización de texto completo](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
+## <a name="see-also"></a>Consulte también  
+ [Usar el Asistente para indización de texto completo](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
   

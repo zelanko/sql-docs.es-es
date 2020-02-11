@@ -1,5 +1,5 @@
 ---
-title: Copia de seguridad y restauración de las tablas (Transact-SQL) | Microsoft Docs
+title: Tablas de copia de seguridad y restauración (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b70edcd7a8dec126816af944ed81516cb260f40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091892"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>Tablas de copias de seguridad y restauración (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "68091892"
  Contiene una fila por cada transacción marcada que se ha confirmado.  
   
  [restorefile](../../relational-databases/system-tables/restorefile-transact-sql.md)  
- Contiene una fila por cada archivo restaurado. Estos incluyen los archivos restaurados indirectamente por nombre de grupo de archivos.  
+ Contiene una fila por cada archivo restaurado. Estos archivos de inclusión se restauran indirectamente por nombre de grupo de archivos.  
   
  [restorefilegroup](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)  
  Contiene una fila por cada grupo de archivos restaurado.  

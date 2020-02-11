@@ -1,5 +1,5 @@
 ---
-title: Convertir datos a un tipo de datos diferente mediante la transformación conversión de datos | Microsoft Docs
+title: Convertir datos en un tipo de datos diferente mediante la transformación conversión de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 13faac66894298c4d08cd40a1eab9d3d823fd0ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900875"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>Convertir datos en un tipo de datos diferente mediante la transformación Conversión de datos
@@ -49,11 +49,11 @@ ms.locfileid: "62900875"
   
 10. Para configurar la salida de error, haga clic en **Configurar la salida de errores**. Para obtener más información, vea [Configurar una salida de error en un componente de flujo de datos](../../configure-an-error-output-in-a-data-flow-component.md).  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
 12. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Data Conversion Transformation](data-conversion-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)   
  [Rutas de Integration Services](../integration-services-paths.md)   

@@ -1,5 +1,5 @@
 ---
-title: Consideraciones sobre la programación de controlador de dBASE | Microsoft Docs
+title: Consideraciones de programación del controlador dBASE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dac34e8b3559b4d77aec411fd636ac7850932a4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096406"
 ---
 # <a name="dbase-driver-programming-considerations"></a>Consideraciones sobre la programación de controlador de dBASE
@@ -34,4 +34,4 @@ Esta sección contiene los temas siguientes.
 -   [Otros detalles de programación del controlador de dBASE](../../odbc/microsoft/other-dbase-driver-programming-details.md)  
   
 > [!NOTE]  
->  Acceso a archivos de dBASE ISAM a través de los controladores de base de datos ODBC Desktop requiere la instalación del motor de base de datos de Borland.
+>  El acceso a los archivos ISAM dBASE a través de los controladores de base de datos de escritorio ODBC requiere la instalación del motor de base de datos de Borland.

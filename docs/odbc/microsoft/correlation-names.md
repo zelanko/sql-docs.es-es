@@ -14,14 +14,14 @@ ms.assetid: 76c36c6f-f8e1-4ece-a77b-611dde3bdd8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 535c169123923cdb36c355e098f6e0c55ebb9d56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127308"
 ---
 # <a name="correlation-names"></a>Nombres de correlación
-Nombres de correlación son totalmente compatibles, incluidos dentro de la lista de tabla. Por ejemplo, en la siguiente cadena, E1 es el nombre de correlación para la tabla denominada Emp:  
+Los nombres de correlación son totalmente compatibles, incluido en la lista de tablas. Por ejemplo, en la siguiente cadena, E1 es el nombre de correlación de la tabla denominada EMP:  
   
 ```  
 SELECT * FROM Emp E1   

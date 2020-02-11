@@ -1,5 +1,5 @@
 ---
-title: TopSum (MDX) | Microsoft Docs
+title: TopS (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5bbcfe52e62757ea00427eb9fd6ed979eb8d32e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097390"
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
@@ -37,11 +37,11 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX (Expresiones multidimensionales) que devuelve una medida.  
   
-## <a name="remarks"></a>Comentarios  
- El **TopSum** función calcula la suma de una medida especificada evaluada sobre un conjunto especificado, ordenando el conjunto en orden descendente. A continuación, la función devuelve los elementos con los valores más altos cuyo total de la expresión numérica especificada sea al menos el valor especificado. Esta función devuelve el subconjunto más pequeño de un conjunto cuyo total acumulado es al menos el valor especificado. Los elementos devueltos se ordenan de mayor a menor.  
+## <a name="remarks"></a>Observaciones  
+ La función **topse** calcula la suma de una medida especificada evaluada sobre un conjunto especificado, ordenando el conjunto en orden descendente. A continuación, la función devuelve los elementos con los valores más altos cuyo total de la expresión numérica especificada sea al menos el valor especificado. Esta función devuelve el subconjunto más pequeño de un conjunto cuyo total acumulado es al menos el valor especificado. Los elementos devueltos se ordenan de mayor a menor.  
   
 > [!IMPORTANT]  
->  Al igual que el [BottomSum](../mdx/bottomsum-mdx.md) función, el **TopSum** siempre rompe la jerarquía.  
+>  Al igual que la función [BottomSum](../mdx/bottomsum-mdx.md) , la función de **topsing** siempre rompe la jerarquía.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve, para la categoría Bike, el conjunto más pequeño de miembros del nivel City de la jerarquía Geography de la dimensión Geography cuyo total acumulado mediante la medida Reseller Sales Amount sea al menos la suma de 6.000.000 (empezando con los miembros de este conjunto que tengan la cifra de ventas más alta).  
@@ -57,7 +57,7 @@ FROM [Adventure Works]
 WHERE([Product].[Product Categories].Bikes)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

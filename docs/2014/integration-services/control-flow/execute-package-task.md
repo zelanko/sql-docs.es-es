@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284953"
 ---
 # <a name="execute-package-task"></a>Tarea Ejecutar paquete
@@ -44,7 +44,7 @@ ms.locfileid: "67284953"
  La tarea Ejecutar paquete puede ejecutar paquetes secundarios incluidos en el mismo proyecto que contiene el paquete primario. Para seleccionar un paquete secundario del proyecto, establezca la propiedad **ReferenceType** en **Referencia de proyecto**y, a continuación, establezca la propiedad **PackageNameFromProjectReference** .  
   
 > [!NOTE]  
->  La opción **ReferenceType** es de solo lectura y se establece en **Referencia externa** si el proyecto que contiene el paquete no se ha convertido al modelo de implementación del proyecto. Para más información sobre la conversión, vea [Implementación de paquetes en el servidor de Integration Services](../deploy-projects-to-integration-services-server.md).  
+>  La opción **ReferenceType** es de solo lectura y se establece en **Referencia externa** si el proyecto que contiene el paquete no se ha convertido al modelo de implementación de proyectos. Para más información sobre la conversión, vea [Implementación de paquetes en el servidor de Integration Services](../deploy-projects-to-integration-services-server.md).  
   
  La tarea Ejecutar paquete además puede ejecutar paquetes almacenados en la base de datos msdb de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y paquetes almacenados en el sistema de archivos. La tarea usa un administrador de conexiones OLE DB para conectar con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un administrador de conexiones de archivos para tener acceso al sistema de archivos. Para obtener más información, vea [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md) y [Flat File Connection Manager](../connection-manager/flat-file-connection-manager.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67284953"
   
  Sin embargo, a veces puede desearse que el paquete primario y los paquetes secundarios no completen su ejecución como una unidad. También es posible que no desee agregar la sobrecarga de otro proceso. Por ejemplo, si se produce un error en un proceso secundario y el procesamiento posterior del proceso primario del paquete depende de que el proceso secundario se complete correctamente, el paquete secundario deberá ejecutarse en el proceso del paquete primario.  
   
- De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea Ejecutar paquete se establece en `False`, y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en `True`, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si establece la propiedad en `True`, no se podrá depurar el paquete si realizó únicamente una instalación de herramientas; deberá instalar el producto. Debe instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [Instalar Integration Services](../install-windows/install-integration-services.md)  
+ De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea ejecutar paquete se establece `False`en y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en `True`, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si establece la propiedad en `True`, no se podrá depurar el paquete si realizó únicamente una instalación de herramientas; deberá instalar el producto. Debe instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [Instalar Integration Services](../install-windows/install-integration-services.md)  
   
 ## <a name="extending-transactions"></a>Extender transacciones  
  La transacción utilizada por el paquete primario puede ampliarse al paquete secundario; por tanto, puede confirmarse o revertirse el trabajo realizado por ambos paquetes. Por ejemplo, las inserciones en la base de datos realizadas por el paquete primario pueden confirmarse o revertirse en función de las inserciones en la base de datos realizadas por el paquete secundario y viceversa. Para obtener más información, vea [Inherited Transactions](../inherited-transactions.md).  
@@ -97,14 +97,14 @@ ms.locfileid: "67284953"
  Para más información, vea [Usar los valores de variables y parámetros en un paquete secundario](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Obtener acceso a variables de paquetes primarios  
- Los paquetes secundarios pueden tener acceso a variables de paquetes primarios mediante la tarea Script. Al escribir el nombre de la variable del paquete primario en la página **Script** del **Editor de la tarea Script**, no incluya **Usuario:** en el nombre de la variable. De lo contrario, el paquete secundario no podrá encontrar la variable al ejecutar el paquete primario. Para obtener más información sobre el uso de la tarea Script para tener acceso a variables del paquete principal, consulte esta entrada de blog, [SSIS: Obtener acceso a variables en un paquete primario](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/).  
+ Los paquetes secundarios pueden tener acceso a variables de paquetes primarios mediante la tarea Script. Al escribir el nombre de la variable del paquete primario en la página **Script** del **Editor de la tarea Script**, no incluya **Usuario:** en el nombre de la variable. De lo contrario, el paquete secundario no podrá encontrar la variable al ejecutar el paquete primario. Para obtener más información sobre el uso de la tarea script para tener acceso a las variables de paquete primario, vea esta entrada de blog, [SSIS: obtener acceso a variables en un paquete primario](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/).  
   
 ## <a name="configuring-the-execute-package-task"></a>Configurar la tarea Ejecutar paquete  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Execute Package Task Editor](../execute-package-task-editor.md)  
+-   [Editor de la tarea Ejecutar paquete](../execute-package-task-editor.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -114,6 +114,6 @@ ms.locfileid: "67284953"
   
 ## <a name="related-content"></a>Contenido relacionado  
 
-Entrada de blog, [SSIS: Obtener acceso a variables en un paquete primario](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), en andyleonard.blog. 
+Entrada de blog, [SSIS: acceso a variables en un paquete primario](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), en andyleonard. blog. 
   
   

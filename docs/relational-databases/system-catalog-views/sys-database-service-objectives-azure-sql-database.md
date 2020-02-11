@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 465416e87966ba3a80c8e98394c0b1f2009f591b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844462"
 ---
-# <a name="sysdatabase_service_objectives-azure-sql-database"></a>Sys. database_service_objectives (Azure SQL Database)
+# <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-Devuelve la edición (nivel de servicio), el objetivo de servicio (nivel de precios) y el nombre del grupo elástico, si existe, para una base de datos SQL de Azure o una Azure SQL Data Warehouse. Si ha iniciado sesión en la base de datos maestra de un servidor de Azure SQL Database, devuelve información acerca de todas las bases de datos. Por Azure SQL Data Warehouse, debe estar conectado a la base de datos maestra.  
+Devuelve la edición (nivel de servicio), el objetivo de servicio (nivel de precios) y el nombre del grupo elástico, si existe, para una base de datos SQL de Azure o una Azure SQL Data Warehouse. Si inició sesión en la base de datos maestra en un servidor de Azure SQL Database, devuelve información sobre todas las bases de datos. Para Azure SQL Data Warehouse, debe estar conectado a la base de datos maestra.  
   
   
  Para obtener información sobre los precios, consulte [Opciones y rendimiento de SQL Database: SQL Database precios](https://azure.microsoft.com/pricing/details/sql-database/) y [SQL Data Warehouse precios](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
@@ -35,10 +35,10 @@ Devuelve la edición (nivel de servicio), el objetivo de servicio (nivel de prec
   
  La vista sys. database_service_objectives contiene las columnas siguientes.  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|database_id|int|IDENTIFICADOR de la base de datos, único dentro de una instancia de Azure SQL Database Server. Se combina con [Sys. Databases de &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|edición|sysname|El nivel de servicio para la base de datos o el almacenamiento de datos: **básico**, **estándar**, **Premium** o **almacenamiento de datos**.|  
+|database_id|int|IDENTIFICADOR de la base de datos, único dentro de una instancia de Azure SQL Database Server. Se combina con [Sys. databases &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|edition|sysname|El nivel de servicio para la base de datos o el almacenamiento de datos: **básico**, **estándar**, **Premium** o **almacenamiento de datos**.|  
 |service_objective|sysname|El plan de tarifa de la base de datos. Si la base de datos está en un grupo elástico, devuelve **ElasticPool**.<br /><br /> En el nivel **básico** , devuelve **Basic**.<br /><br /> Una **sola base de datos en un nivel de servicio estándar** devuelve uno de los siguientes: S0, S1, S2, S3, S4, S6, S7, S9 o S12.<br /><br /> **Una sola base de datos en un nivel Premium** devuelve lo siguiente: P1, P2, P4, P6, P11 o p15.<br /><br /> **SQL Data Warehouse** devuelve DW100 a DW30000c.<br /><br /> Para más información, consulte bases de datos [únicas](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [grupos elásticos](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [almacenamientos de datos](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/) .|  
 |elastic_pool_name|sysname|Nombre del [Grupo elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) al que pertenece la base de datos. Devuelve **null** si la base de datos es una sola base de datos o una warehoue de datos.|  
   

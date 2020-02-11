@@ -1,5 +1,5 @@
 ---
-title: Cambiar las conexiones de Control de código fuente | Microsoft Docs
+title: Cambiar las conexiones del control de código fuente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812794"
 ---
 # <a name="change-source-control-connections"></a>Cambiar las conexiones del control de código fuente
@@ -31,11 +31,11 @@ ms.locfileid: "62812794"
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>Para abrir la interfaz de usuario del control de código fuente desde el entorno de Visual Studio  
   
-1.  En el **archivo** menú, elija **Control de código fuente**y, a continuación, haga clic en **iniciar Microsoft Visual SourceSafe**.  
+1.  En el menú **archivo** , seleccione **control de código fuente**y, a continuación, haga clic en **iniciar Microsoft Visual SourceSafe**.  
   
-## <a name="see-also"></a>Vea también  
- [Fundamentos del Control de código fuente](../../2014/database-engine/source-control-basics.md)   
- [Establecer opciones de Control de código fuente](../../2014/database-engine/set-source-control-options.md)   
+## <a name="see-also"></a>Consulte también  
+ [Aspectos básicos del control de código fuente](../../2014/database-engine/source-control-basics.md)   
+ [Establecer opciones de control de código fuente](../../2014/database-engine/set-source-control-options.md)   
  [Excluir archivos desde el control de código fuente](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

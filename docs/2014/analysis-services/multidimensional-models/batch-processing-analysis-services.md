@@ -1,5 +1,5 @@
 ---
-title: Lote de procesamiento (Analysis Services) | Microsoft Docs
+title: Procesamiento por lotes (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076938"
 ---
 # <a name="batch-processing-analysis-services"></a>Procesamiento por lotes (Analysis Services)
@@ -26,13 +26,13 @@ ms.locfileid: "66076938"
   
  Los procedimientos de este tema muestran los pasos para procesar completamente dimensiones y particiones. El procesamiento por lotes también puede incluir otras opciones de procesamiento, como el procesamiento incremental. Para que estos procedimientos funcionen correctamente, debe usar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente que contenga al menos dos dimensiones y una partición.  
   
- En este tema se incluyen las secciones siguientes:  
+ Este tema incluye las siguientes secciones:  
   
  [Procesamiento por lotes en SQL Server Data Tools](#bkmk_ssdt)  
   
- [Procesamiento por lotes con XMLA en Management Studio](#bkmk_xmla)  
+ [Procesamiento por lotes mediante XMLA en Management Studio](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a> Procesamiento por lotes en SQL Server Data Tools  
+##  <a name="bkmk_ssdt"></a>Procesamiento por lotes en SQL Server Data Tools  
  Para poder procesar objetos en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], se debe implementar el proyecto que contiene los objetos. Para más información, vea [Implementar proyectos de Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md).  
   
 1.  Abra [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -53,13 +53,13 @@ ms.locfileid: "66076938"
   
 9. En **Opciones de procesamiento**, marque la siguiente configuración:  
   
-    -   La opción**Orden de procesamiento** establecida en **Secuenciales**y la opción **Modo de transacción** establecida en **Una transacción**.  
+    -   El **orden de procesamiento** se establece en **secuencial**y el **modo de transacción** se establece en **una transacción**.  
   
-    -   La opción**Opción de tabla de reescritura** establecida en **Utilizar existente**.  
+    -   La **opción de tabla de reescritura** está establecida en **usar existente**.  
   
     -   En **Objetos afectados**, active la casilla **Procesar objetos afectados** .  
   
-10. Haga clic en la pestaña **Errores de clave de dimensión** . Compruebe que la opción **Utilizar la configuración de error predeterminada** esté activada.  
+10. Haga clic en la pestaña **errores de clave de dimensión** . Compruebe que esté seleccionada la **opción usar configuración de error predeterminada** .  
   
 11. Haga clic en **Aceptar** para cerrar la pantalla **Cambiar configuración** .  
   
@@ -69,12 +69,12 @@ ms.locfileid: "66076938"
   
 14. Haga clic en **Cerrar** en la pantalla **Procesar objetos** .  
   
-##  <a name="bkmk_xmla"></a> Procesamiento por lotes con XMLA en Management Studio  
+##  <a name="bkmk_xmla"></a>Procesamiento por lotes mediante XMLA en Management Studio  
  Puede crear un script XMLA que realice el procesamiento por lotes. Comience por generar un script XMLA en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para cada objeto y, a continuación combínelos en una única consulta XMLA que puede ejecutar interactivamente o en una tarea programada.  
   
  Para obtener enstrucciones paso a paso, vea **Ejemplo 2** en [Schedule SSAS Admenistrative Tasks with SQL Server Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md).  
   
-## <a name="see-also"></a>Vea también  
- [Procesamiento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Procesamiento de objetos del modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
   
   

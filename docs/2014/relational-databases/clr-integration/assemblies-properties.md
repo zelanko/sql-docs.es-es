@@ -1,5 +1,5 @@
 ---
-title: Propiedades del ensamblado (página General) | Microsoft Docs
+title: Propiedades del ensamblado (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919290"
 ---
 # <a name="assembly-properties-general-page"></a>Propiedades del ensamblado (página General)
@@ -30,12 +30,12 @@ ms.locfileid: "62919290"
  Escriba el nombre del propietario o del esquema, o bien selecciónelo en la lista.  
   
  **Conjunto de permisos**  
- Establece el nivel de seguridad del ensamblado. Se proporcionan tres niveles de seguridad: **Seguro**, **acceso externo**, y **Unsafe** acceso.  
+ Establece el nivel de seguridad del ensamblado. Se proporcionan tres niveles de seguridad: **Safe**, **external Access**y **Unsafe** Access.  
   
- **Ruta de acceso al ensamblado**  
+ **Ruta al ensamblado**  
  Escriba la ruta de acceso al archivo de ensamblado.  
   
- **Examinar**  
+ **Browse**  
  Navegue hasta el ensamblado que desee agregar. Haga clic en **examinar** si no desea escribir la ruta de acceso al archivo de ensamblado.  
   
 ## <a name="additional-properties-grid"></a>Propiedades adicionales (cuadrícula)  
@@ -43,12 +43,12 @@ ms.locfileid: "62919290"
  Muestra la fecha de creación o registro del ensamblado.  
   
  **Nombre seguro**  
- Muestra **True** si el ensamblado se ha firmado digitalmente, **False** si no lo ha firmado digitalmente.  
+ Muestra **true** si el ensamblado está firmado digitalmente, **false** si no se ha firmado digitalmente.  
   
  **Versión**  
  Muestra el número de versión del ensamblado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   
   

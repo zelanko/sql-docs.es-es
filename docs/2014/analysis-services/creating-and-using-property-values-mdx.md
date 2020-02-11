@@ -1,5 +1,5 @@
 ---
-title: Creación y uso de los valores de propiedad (MDX) | Microsoft Docs
+title: Crear y usar valores de propiedad (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086690"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>Crear y usar los valores de propiedad (MDX)
@@ -37,7 +37,7 @@ ms.locfileid: "66086690"
   
  Para más información sobre las propiedades de celda y cómo usarlas, vea [Usar las propiedades de celda &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

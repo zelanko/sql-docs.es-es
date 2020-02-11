@@ -1,5 +1,5 @@
 ---
-title: Nuevo o editar el registro del servidor (pestaña General) (SSIS) | Microsoft Docs
+title: Nuevo o editar el registro de servidor (pestaña general) (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774177"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>Nuevo o Editar propiedades de registro de servidor (pestaña General de SSIS)
@@ -34,7 +34,7 @@ ms.locfileid: "62774177"
  **Autenticación**  
  El modo de autenticación de Windows permite al usuario conectarse mediante una cuenta de usuario de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Esta opción no está disponible en esta versión.  
   
  **Contraseña**  
@@ -49,7 +49,7 @@ ms.locfileid: "62774177"
  **Descripción del servidor registrado**  
  Escriba una descripción opcional del servidor.  
   
- **Prueba**  
+ **Muestre**  
  Haga clic para probar la conexión al servidor seleccionado en **Nombre del servidor**.  
   
  **Guardar**  

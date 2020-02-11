@@ -1,5 +1,5 @@
 ---
-title: Da como resultado de la página (asistentes del grupo de disponibilidad AlwaysOn) | Microsoft Docs
+title: Página resultados (asistentes para grupos de disponibilidad AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789016"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>Página Resultados (asistentes para grupos de disponibilidad AlwaysOn)
@@ -28,7 +28,7 @@ ms.locfileid: "62789016"
 ##  <a name="PageOptions"></a> Opciones de la página Resultados  
  La cuadrícula **Resumen** contiene las columnas siguientes:  
   
- **Name**  
+ **Nombre**  
  Muestra una frase que describe una operación específica.  
   
  **Resultado**  
@@ -37,7 +37,7 @@ ms.locfileid: "62789016"
 |Resultado|Descripción|  
 |------------|-----------------|  
 |**Error**|Indica que se produjo un error en el paso de la validación. Haga clic en el vínculo para ver el mensaje de error.|  
-|**Correcto**|Indica que el paso de la validación se completó correctamente.|  
+|**Success**|Indica que el paso de la validación se completó correctamente.|  
   
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "62789016"
   
 
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

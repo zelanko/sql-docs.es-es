@@ -14,17 +14,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9dbc755d5ee95b74991b249bc037fb6fc5a9f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806707"
 ---
 # <a name="maintenance-plan-subplan-properties"></a>Plan de mantenimiento (Propiedades del subplán)
   Use el cuadro de diálogo **Plan de mantenimiento (Propiedades del subplán)** para especificar un nombre, descripción y programación de un subplán del plan de mantenimiento. Haga clic en **Propiedades del subplán** en la pestaña **Diseño** del plan de mantenimiento o haga doble clic en un subplán en la cuadrícula del diseñador para mostrar este cuadro de diálogo.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Escriba un nombre para el subplán. El nombre tiene un límite de 128 caracteres.  
   
  **Descripción**  
@@ -33,7 +33,7 @@ ms.locfileid: "62806707"
  **Programación**  
  Haga clic en el icono de programación para especificar el momento en que debe ejecutarse el subplán o haga clic en el icono de programación con una x en rojo para quitar la programación del subplán existente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Planes de mantenimiento](maintenance-plans.md)  
   
   

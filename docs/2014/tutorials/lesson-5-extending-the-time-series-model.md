@@ -1,5 +1,5 @@
 ---
-title: 'Lección 5: Ampliación de la serie temporal de modelo | Microsoft Docs'
+title: 'Lección 5: ampliar el modelo de serie temporal | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62822107"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Lección 5: Extensión del modelo de serie temporal
+# <a name="lesson-5-extending-the-time-series-model"></a>Lección 5: Extender el modelo de serie temporal
   En [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise, es posible agregar datos nuevos a un modelo de serie temporal e incorporarlos automáticamente al mismo. Los nuevos datos se agregan a un modelo de minería de datos de serie temporal de una de estas dos maneras:  
   
 -   Usando una instrucción PREDICTION JOIN  para unir los datos de un origen externo a los datos de entrenamiento.  
@@ -26,7 +26,7 @@ ms.locfileid: "62822107"
   
  Por ejemplo, suponga que entrenó el modelo de minería de datos con los datos de ventas existentes hace algunos meses. Al conseguir ventas nuevas, podría desear actualizar las predicciones de ventas para incorporar los datos nuevos. Puede hacer esto en un paso, proporcionando las nuevas cifras de ventas como datos de entrada y generando predicciones nuevas basadas en el conjunto de datos compuesto.  
   
-## <a name="making-predictions-with-extendmodelcases"></a>Realizar predicciones con EXTEND_MODEL_CASES  
+## <a name="making-predictions-with-extend_model_cases"></a>Realizar predicciones con EXTEND_MODEL_CASES  
  A continuación se muestran ejemplos genéricos de una predicción de serie temporal que usa EXTEND_MODEL_CASES. El primer ejemplo permite especificar el número de predicciones a partir del último estadio temporal del modelo original:  
   
 ```  
@@ -49,7 +49,7 @@ PREDICTION JOIN <source query>
   
 #### <a name="to-create-a-singleton-prediction-query-on-a-time-series-model"></a>Para crear una consulta de predicción singleton en un modelo de serie temporal  
   
-1.  En **Explorador de objetos**, haga clic en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], apunte a **nueva consulta**y, a continuación, haga clic en **DMX**.  
+1.  En **Explorador de objetos**, haga clic con el botón secundario [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]en la instancia de, seleccione **nueva consulta**y, a continuación, haga clic en **DMX**.  
   
      Se abre el Editor de consultas, que contiene una consulta nueva en blanco.  
   
@@ -138,15 +138,15 @@ PREDICTION JOIN <source query>
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-7.  En el **archivo** menú, haga clic en **guardar DMXQuery1.dmx como**.  
+7.  En el menú **archivo** , haga clic en **Guardar DMXQuery1. DMX como**.  
   
-8.  En el **Guardar como** cuadro de diálogo, desplácese a la carpeta correspondiente y asigne el nombre `Singleton_TimeSeries_Query.dmx`.  
+8.  En el cuadro de diálogo **Guardar como** , vaya a la carpeta correspondiente y asigne el nombre `Singleton_TimeSeries_Query.dmx`al archivo.  
   
-9. En la barra de herramientas, haga clic en el **Execute** botón.  
+9. En la barra de herramientas, haga clic en el botón **Ejecutar** .  
   
      La consulta devuelve predicciones de la cantidad de ventas de la bicicleta M200 en las regiones de Europa y Pacífico.  
   
-## <a name="understanding-prediction-start-with-extendmodelcases"></a>Descripción del inicio de la predicción con EXTEND_MODEL_CASES  
+## <a name="understanding-prediction-start-with-extend_model_cases"></a>Descripción del inicio de la predicción con EXTEND_MODEL_CASES  
  Ahora que ha creado predicciones basadas en el modelo original, puede comparar con datos nuevos los resultados para ver cómo afecta a las predicciones la actualización de los datos de ventas. Antes, revise el código recién creado y observe lo siguiente:  
   
 -   Proporcionó datos nuevos solo para la región de Europa.  
@@ -167,7 +167,7 @@ PREDICTION JOIN <source query>
 |M200 Europe|11/25/2008 12:00:00 AM|56|68|  
 |M200 Europe|12/25/2008 12:00:00 AM|74|89|  
   
- **Producto y región: M200 Pacífico**  
+ **Producto y región: M200 Pacific**  
   
 |||||  
 |-|-|-|-|  
@@ -192,7 +192,7 @@ PREDICTION JOIN <source query>
   
 -   Solicite predicciones para cuatro intervalos de tiempo, donde el punto inicial es el intervalo de tiempo 3 y el punto final es el intervalo de tiempo 6.  
   
- En otras palabras, si los datos nuevos contienen n intervalos de tiempo y solicita predicciones para los pasos de tiempo 1 a n, las predicciones coincidirán con el mismo período que los nuevos datos. Para obtener nuevas predicciones de un período de tiempo que no cubren los datos, debe iniciar las predicciones en el intervalo de tiempo n+1 tras la nueva serie de datos o asegurarse de que solicita intervalos de tiempo adicionales.  
+ En otras palabras, si los datos nuevos contienen n intervalos de tiempo y solicita predicciones para los pasos temporales 1 a n, las predicciones coincidirán con el mismo período que los datos nuevos. Para obtener nuevas predicciones de un período de tiempo que no cubren los datos, debe iniciar las predicciones en el intervalo de tiempo n+1 tras la nueva serie de datos o asegurarse de que solicita intervalos de tiempo adicionales.  
   
 > [!NOTE]  
 >  Si agrega nuevos datos, no puede realizar predicciones históricas.  
@@ -229,11 +229,11 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europe|11/25/2008 12:00:00 AM|68|  
 |M200 Europe|12/25/2008 12:00:00 AM|89|  
   
-## <a name="making-predictions-with-replacemodelcases"></a>Realizar predicciones con REPLACE_MODEL_CASES  
- La sustitución de los casos del modelo resulta útil si desear entrenar un modelo en un conjunto de casos y, a continuación, aplicar ese modelo a una serie de datos diferente. Un tutorial detallado sobre este escenario se presenta en [lección 2: Generar un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+## <a name="making-predictions-with-replace_model_cases"></a>Realizar predicciones con REPLACE_MODEL_CASES  
+ La sustitución de los casos del modelo resulta útil si desear entrenar un modelo en un conjunto de casos y, a continuación, aplicar ese modelo a una serie de datos diferente. Un tutorial detallado de este escenario se presenta en la [Lección 2: generar un escenario de previsión &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplos de consultas de modelos de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [&#41;PredictTimeSeries &#40;DMX](/sql/dmx/predicttimeseries-dmx)  
   
   

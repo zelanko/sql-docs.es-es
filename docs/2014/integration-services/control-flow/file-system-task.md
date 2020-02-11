@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831750"
 ---
 # <a name="file-system-task"></a>Tarea Sistema de archivos
@@ -35,14 +35,14 @@ ms.locfileid: "62831750"
 |---------------|-----------------|  
 |Copiar directorio|Copia una carpeta de una ubicación a otra.|  
 |Copiar archivo|Copia un archivo de una ubicación a otra.|  
-|Crear directorio|Crea una carpeta en una ubicación especificada.|  
+|Creación del directorio|Crea una carpeta en una ubicación especificada.|  
 |Eliminar directorio|Elimina una carpeta de una ubicación especificada.|  
 |Eliminar contenido de directorio|Elimina todos los archivos y carpetas de una carpeta.|  
 |Eliminar archivo|Elimina un archivo de una ubicación especificada.|  
 |Mover directorio|Mueve una carpeta de una ubicación a otra.|  
 |Mover archivo|Mueve un archivo de una ubicación a otra.|  
 |Cambiar nombre de archivo|Cambia el nombre de un archivo de una ubicación especificada.|  
-|Establecer atributos|Establece atributos de archivos y carpetas. Estos atributos son Archivar, Oculto, Normal, Solo lectura y Sistema. El atributo Normal indica que no hay atributos establecidos; no se puede combinar con otros atributos. Todos los demás atributos se pueden usar en combinación.|  
+|Definir atributos|Establece atributos de archivos y carpetas. Estos atributos son Archivar, Oculto, Normal, Solo lectura y Sistema. El atributo Normal indica que no hay atributos establecidos; no se puede combinar con otros atributos. Todos los demás atributos se pueden usar en combinación.|  
   
  La tarea Sistema de archivos trabaja con un solo archivo o directorio. Por consiguiente, esta tarea no admite el uso de caracteres comodín para realizar la misma operación en varios archivos. Para hacer que la tarea Sistema de archivos realice una determinada operación sobre varios archivos o directorios, coloque la tarea Sistema de archivos en un contenedor de bucles Foreach, como se describe en los pasos siguientes.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62831750"
 -   **Agregue y configure una tarea Sistema de archivos** Agregue una tarea Sistema de archivos al contenedor de bucles Foreach. En la página **General** del Editor de la tarea sistema de archivos, establezca la propiedad **SourceVariable** o **DestinationVariable** en la variable que ha definido en el contenedor de bucles Foreach.  
   
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>Entradas del registro personalizadas disponibles en la tarea Sistema de archivos  
- La siguiente tabla contiene las entradas de registro personalizadas para la tarea Sistema de archivos. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene las entradas de registro personalizadas para la tarea Sistema de archivos. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -62,7 +62,7 @@ ms.locfileid: "62831750"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea los temas siguientes:  
   
--   [Editor de la tarea Sistema de archivos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea sistema de archivos &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -75,9 +75,10 @@ ms.locfileid: "62831750"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye una tarea que descarga y carga archivos de datos, y administra directorios en servidores. Para más información, consulte [FTP Task](ftp-task.md).  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye una tarea que descarga y carga archivos de datos, y administra directorios en servidores. Para más información, consulte [FTP Task](ftp-task.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](integration-services-tasks.md)   
  [Flujo de control](control-flow.md)  
   

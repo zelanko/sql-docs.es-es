@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - opciones de herramientas (página de opciones generales) | Microsoft Docs
+title: SQL Server Profiler-Tools-Options (página Opciones generales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9da36f49927acd2a313bcb9f8647655731006d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089622"
 ---
-# <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - opciones de herramientas (página de opciones generales)
+# <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler-herramientas-opciones (página Opciones generales)
   Utilice el cuadro de diálogo **Opciones generales** para ver o especificar las siguientes opciones.  
   
 ## <a name="options"></a>Opciones  
@@ -42,11 +42,11 @@ ms.locfileid: "66089622"
 > [!NOTE]  
 >  Si activa o desactiva esta casilla se cambia el formato de presentación de las columnas de hora como **Hora de inicio** y **Hora de finalización**. Pero no cambia los parámetros del valor **DateTime** dentro de los eventos de lenguaje o las llamadas a procedimientos remotos (RPC).  
   
- **Mostrar valores en la columna Duración en microsegundos**  
+ **Mostrar valores en la columna duración en microsegundos**  
  Muestra los valores en microsegundos en la columna de datos **Duración** de los seguimientos. De manera predeterminada, la columna **Duración** muestra los valores en milisegundos.  
   
 ### <a name="tracing-options"></a>Opciones de traza  
- **Iniciar la traza inmediatamente tras realizar la conexión**  
+ **Iniciar el seguimiento inmediatamente después de establecer la conexión**  
  Inicia un seguimiento con la plantilla predeterminada en cuanto se establece una conexión.  
   
  **Actualizar definición de seguimiento cuando cambie la versión del proveedor**  
@@ -59,8 +59,9 @@ ms.locfileid: "66089622"
  **Preguntar antes de cargar archivos de sustitución incremental**  
  Cuando se abre un archivo de seguimiento, el [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pregunta antes de agregar un archivo de sustitución incremental.  
   
- **No cargar nunca los archivos siguientes de sustitución incremental**  
- [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] no carga archivos de sustitución incremental.  
+ **No cargar nunca los archivos de sustitución incremental posteriores**  
+ 
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] no carga archivos de sustitución incremental.  
   
 ### <a name="replay-options"></a>Opciones de reproducción  
  **Número predeterminado de subprocesos de reproducción**  
@@ -72,7 +73,7 @@ ms.locfileid: "66089622"
  **Intervalo de sondeo del monitor de estado predeterminado (seg.)**  
  Especifique el intervalo de sondeo del monitor de estado durante la reproducción en segundos. El valor predeterminado es 60 segundos. Este valor permite al usuario configurar la frecuencia con que el monitor de estado sondea los candidatos para terminar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar un seguimiento automáticamente después de conectarse a un servidor &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [Establecer los valores predeterminados de presentación de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [Reproducir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   

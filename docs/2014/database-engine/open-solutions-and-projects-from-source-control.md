@@ -1,5 +1,5 @@
 ---
-title: Abrir soluciones y proyectos de Control de código fuente | Microsoft Docs
+title: Abrir soluciones y proyectos desde el control de código fuente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774788"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Abrir soluciones y proyectos desde el control de código fuente
-  Puede usar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para abrir una solución o proyecto directamente desde el control de código fuente. Al abrir una solución desde el control de código fuente, el entorno de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] recupera automáticamente la última versión de la solución y la copia en la ubicación que especifique.  
+  Puede utilizar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para abrir una solución o un proyecto directamente desde el control de código fuente. Al abrir una solución desde el control de código fuente, el entorno de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] recupera automáticamente la última versión de la solución y la copia en la ubicación que especifique.  
   
- Si no dispone de una copia local de una solución, debe abrirla desde el control de código fuente para poder realizar operaciones de control de código fuente en ella. Una vez que haya recuperado una copia local de la solución, no es necesario volver a abrirlo desde el control de código fuente; puede abrir la copia local y usar comandos de control de fuente estándar, tales como **obtener última versión** o **desproteger**, para realizar la operación deseada.  
+ Si no dispone de una copia local de una solución, debe abrirla desde el control de código fuente para poder realizar operaciones de control de código fuente en ella. Después de recuperar una copia local de la solución, no es necesario volver a abrirla desde el control de código fuente; puede abrir la copia local y utilizar los comandos estándar de control de código fuente, como **obtener la última versión** o **Desproteger**, para realizar la operación deseada.  
   
  En la tabla siguiente se describen los temas de esta sección.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62774788"
 |[Abrir soluciones desde el control de código fuente](../../2014/database-engine/open-solutions-from-source-control.md)|Explica cómo utilizar el entorno de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para abrir soluciones directamente desde el control de código fuente.|  
 |[Abrir proyectos desde el control de código fuente](../../2014/database-engine/open-projects-from-source-control.md)|Explica cómo abrir un proyecto desde el control de código fuente para desproteger y modificar los archivos de ese proyecto.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar soluciones y proyectos al control de código fuente](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
   
   

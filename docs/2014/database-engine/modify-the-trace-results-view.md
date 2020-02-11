@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089435"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificar la vista de resultados del seguimiento
@@ -22,7 +22,7 @@ ms.locfileid: "66089435"
   
 1.  [Agregar o quitar columnas](#AddRemoveColumns)  
   
-2.  [Crear, editar o eliminar columnas combinadas](#ChangeColumns)  
+2.  [Crear, modificar o eliminar columnas combinadas](#ChangeColumns)  
   
 3.  [Ordenar los resultados](#SortResults)  
   
@@ -34,14 +34,14 @@ ms.locfileid: "66089435"
   
 7.  [Buscar texto en columnas](#Search)  
   
-8.  [Cambiar la configuración de pantalla](#ChangeDisplay)  
+8.  [Cambiar la configuración de presentación](#ChangeDisplay)  
   
-##  <a name="AddRemoveColumns"></a> Agregar o quitar columnas  
+##  <a name="AddRemoveColumns"></a>Agregar o quitar columnas  
   
 1.  Abra un archivo .XEL para ver los resultados de seguimiento.  
   
     > [!NOTE]  
-    >  También puede hacer clic con el botón secundario en el nombre de la sesión, y seleccionar **Observar datos en directo**.  
+    >  También puede hacer clic con el botón secundario en el nombre de la sesión y, a continuación, seleccionar **observar datos en directo**.  
   
 2.  En la ventana de resultados de seguimiento, haga clic con el botón secundario del mouse en el encabezado de columna y, a continuación, seleccione **Elegir columnas**.  
   
@@ -54,16 +54,16 @@ ms.locfileid: "66089435"
   
 4.  En la sección **Columnas seleccionadas** , para cambiar la presentación del orden de columnas, haga clic en **Subir** o **Bajar** respectivamente. No puede mover varias filas.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
-##  <a name="ChangeColumns"></a> Crear, editar o eliminar columnas combinadas  
+##  <a name="ChangeColumns"></a>Crear, editar o eliminar columnas combinadas  
   
 #### <a name="to-create-merged-columns"></a>Para crear columnas combinadas  
   
 1.  Abra un archivo .XEL para ver los resultados de seguimiento.  
   
     > [!NOTE]  
-    >  También puede hacer clic con el botón secundario en el nombre de la sesión, y seleccionar **Observar datos en directo**.  
+    >  También puede hacer clic con el botón secundario en el nombre de la sesión y, a continuación, seleccionar **observar datos en directo**.  
   
 2.  En la ventana de resultados de seguimiento, haga clic con el botón secundario en el encabezado de columna y, a continuación, haga clic en **Elegir columnas**.  
   
@@ -76,14 +76,14 @@ ms.locfileid: "66089435"
     > [!NOTE]  
     >  Los eventos extendidos solo permiten combinar hasta cinco columnas.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 #### <a name="to-edit-merged-columns"></a>Para editar columnas combinadas  
   
 1.  Abra un archivo .XEL para ver los resultados de seguimiento.  
   
     > [!NOTE]  
-    >  También puede hacer clic con el botón secundario en el nombre de la sesión, y seleccionar **Observar datos en directo**.  
+    >  También puede hacer clic con el botón secundario en el nombre de la sesión y, a continuación, seleccionar **observar datos en directo**.  
   
 2.  En la ventana de resultados de seguimiento, haga clic con el botón secundario en el encabezado de columna y, a continuación, haga clic en **Elegir columnas**.  
   
@@ -98,26 +98,26 @@ ms.locfileid: "66089435"
 1.  Abra un archivo .XEL para ver los resultados de seguimiento.  
   
     > [!NOTE]  
-    >  También puede hacer clic con el botón secundario en el nombre de la sesión, y seleccionar **Observar datos en directo**.  
+    >  También puede hacer clic con el botón secundario en el nombre de la sesión y, a continuación, seleccionar **observar datos en directo**.  
   
 2.  En la ventana de resultados de seguimiento, haga clic con el botón secundario en el encabezado de columna y, a continuación, haga clic en **Elegir columnas**.  
   
 3.  En el cuadro de diálogo **Elegir columnas** , seleccione el nombre de la columna combinada que desee eliminar y, a continuación, haga clic en **Eliminar**.  
   
-##  <a name="SortResults"></a> Ordenar los resultados  
+##  <a name="SortResults"></a>Ordenar los resultados  
   
 #### <a name="to-sort-the-results-in-ascending-or-descending-order"></a>Para ordenar los resultados en orden ascendente o descendente  
   
 -   Abra un archivo .XEL para ver los resultados de seguimiento.  
   
     > [!NOTE]  
-    >  También puede hacer clic con el botón secundario del mouse en el nombre de la sesión, seleccionar **Observar datos en directo**y, a continuación, hacer clic en el botón **Detener fuente de distribución de datos** de la barra de herramientas.  
+    >  También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **observar datos en directo**y, a continuación, hacer clic en el botón **detener fuente** de distribución de datos de la barra de herramientas.  
   
 -   En la ventana de resultados de seguimiento, haga clic con el botón secundario del mouse en el encabezado de columna que desea ordenar. Haga clic **Orden ascendente** o en **Orden descendente** para ordenar la columna en orden ascendente o descendente respectivamente.  
   
      Si ha agrupado las columnas, al ordenar la columna, solo se ordenarán los datos que contiene el grupo.  
   
-##  <a name="GroupResults"></a> Agrupar resultados  
+##  <a name="GroupResults"></a>Agrupar resultados  
   
 #### <a name="to-group-the-results-by-a-single-column"></a>Para agrupar los resultados por una única columna  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66089435"
 1.  Abra un archivo .XEL para ver los resultados de seguimiento.  
   
     > [!NOTE]  
-    >  También puede hacer clic con el botón secundario del mouse en el nombre de la sesión, seleccionar **Observar datos en directo**y, a continuación, hacer clic en el botón **Detener fuente de distribución de datos** de la barra de herramientas.  
+    >  También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **observar datos en directo**y, a continuación, hacer clic en el botón **detener fuente** de distribución de datos de la barra de herramientas.  
   
 2.  Haga clic en el botón **Agrupación** en la barra de herramientas de eventos extendidos.  
   
@@ -143,9 +143,9 @@ ms.locfileid: "66089435"
   
      Para quitar las columnas de la agrupación, en el cuadro **Columnas agrupadas en** , seleccione las columnas que desea quitar y, a continuación, haga clic en la flecha izquierda.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
-##  <a name="AggregateResults"></a> Agregar los resultados  
+##  <a name="AggregateResults"></a>Resultados agregados  
  Los eventos extendidos admiten cinco funciones de agregación:  
   
 -   Sum  
@@ -154,7 +154,7 @@ ms.locfileid: "66089435"
   
 -   Max  
   
--   Promedio  
+-   Average  
   
 -   Count  
   
@@ -165,7 +165,7 @@ ms.locfileid: "66089435"
 1.  Abra un archivo .XEL para ver los resultados de seguimiento.  
   
     > [!NOTE]  
-    >  También puede hacer clic con el botón secundario del mouse en el nombre de la sesión, seleccionar **Observar datos en directo**y, a continuación, hacer clic en el botón **Detener fuente de distribución de datos** de la barra de herramientas.  
+    >  También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **observar datos en directo**y, a continuación, hacer clic en el botón **detener fuente** de distribución de datos de la barra de herramientas.  
   
     > [!NOTE]  
     >  La agregación se ejecuta en un grupo, de modo que debe agrupar los resultados para realizar la agregación.  
@@ -182,9 +182,9 @@ ms.locfileid: "66089435"
   
 6.  Seleccione la opción **En orden descendente** para clasificar el resultado de la agregación en orden descendente.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
-##  <a name="Filter"></a> Filtrar los resultados  
+##  <a name="Filter"></a>Filtrar resultados  
  Puede aplicar filtros para reducir los resultados de seguimiento que se muestran en la ventana de seguimiento. El filtro de visualización incluye un filtro horario y un filtro avanzado. Puede utilizar el filtro horario para filtrar el resultado de seguimiento por la marca de tiempo del evento y utilizar el filtro avanzado para crear condiciones de filtro mediante los campos de evento y las acciones. Hay una relación de AND lógico entre el filtro horario y el filtro avanzado.  
   
 #### <a name="to-create-a-filter"></a>Para crear un filtro  
@@ -192,13 +192,13 @@ ms.locfileid: "66089435"
 1.  Abra un archivo .XEL para ver los resultados de seguimiento.  
   
     > [!NOTE]  
-    >  También puede hacer clic con el botón secundario en el nombre de la sesión, y seleccionar **Observar datos en directo**.  
+    >  También puede hacer clic con el botón secundario en el nombre de la sesión y, a continuación, seleccionar **observar datos en directo**.  
   
 2.  En la ventana de resultados de seguimiento, seleccione los resultados que desee filtrar, y a continuación, en la barra de herramientas Eventos extendidos, haga clic en el botón **Filtros** .  
   
 3.  En el cuadro de diálogo **Filtros** , seleccione **Establecer filtro de tiempo** para establecer el filtro horario arrastrando las barras deslizantes para establecer la escala de tiempo. Tenga en cuenta que al mover las barras deslizantes, el cuadro horario muestra el valor de tiempo en consecuencia. También puede especificar el tiempo en los cuadros horarios o seleccionarlo en la lista desplegable. Tenga en cuenta que al especificar el tiempo, el control deslizante horario de la izquierda se moverá en consecuencia.  
   
-4.  En la sección **Filtros adicionales** , aplique sus criterios de filtro y, a continuación, haga clic en **Aplicar**. Cuando acabe de crear el filtro, haga clic en **Aceptar**.  
+4.  En la sección **filtros adicionales** , aplique los criterios de filtro y, a continuación, haga clic en **aplicar**. Cuando acabe de crear el filtro, haga clic en **Aceptar**.  
   
  Un caso especial es cuando un campo de evento tiene el mismo nombre que una acción. Por ejemplo, session_id. Hay varios eventos que contienen un campo session_id y, además, podría agregarse la acción session_id. Estos dos fragmentos de información se recopilan, pero la cuadrícula de presentación del generador de perfiles Eventos extendidos usa la lógica siguiente.  
   
@@ -210,12 +210,12 @@ ms.locfileid: "66089435"
   
 -   Si no existe ni la acción ni el campo, se muestra NULL.  
   
-##  <a name="Search"></a> Buscar texto en columnas  
+##  <a name="Search"></a>Buscar texto en columnas  
   
 1.  Abra un archivo .XEL para ver los resultados de seguimiento.  
   
     > [!NOTE]  
-    >  También puede hacer clic con el botón secundario en el nombre de la sesión, y seleccionar **Observar datos en directo**.  
+    >  También puede hacer clic con el botón secundario en el nombre de la sesión y, a continuación, seleccionar **observar datos en directo**.  
   
 2.  En la barra de herramientas de eventos extendidos, haga clic en el botón **Buscar** .  
   
@@ -225,25 +225,25 @@ ms.locfileid: "66089435"
   
 4.  En el cuadro **Buscar en** , seleccione la ubicación en la que desea buscar el texto especificado en la lista desplegable. Utilice las siguientes opciones para buscar:  
   
-    -   **Columnas de la tabla**. Utilice esta opción para buscar en todas las columnas visibles en la ventana de seguimiento.  
+    -   **Columnas**de la tabla. Utilice esta opción para buscar en todas las columnas visibles en la ventana de seguimiento.  
   
-    -   **Detalles**. Utilice esta opción para buscar todas las columnas (promocionadas y no promocionadas) en la ventana de seguimiento que se seleccionaron antes de abrir el **buscar en eventos extendidos** cuadro de diálogo.  
+    -   **Detalles**. Utilice esta opción para buscar en todas las columnas (promocionadas y no promocionadas) en la ventana de seguimiento que se seleccionaron antes de abrir el cuadro **de diálogo Buscar en eventos extendidos** .  
   
-    -   **\<Nombre de columna de evento >** . Utilice esta opción para buscar en una columna de evento concreta de la lista desplegable.  
+    -   **Nombre de columna de evento>. \< ** Utilice esta opción para buscar en una columna de evento concreta de la lista desplegable.  
   
 5.  Utilice las siguientes opciones para especificar cómo desea definir la búsqueda:  
   
-    1.  **Coincidir mayúsculas y minúsculas**. Utilice esta opción para mostrar los resultados de búsqueda del texto que escribió en el cuadro **Buscar** que coincidan tanto en contenido como en el uso de mayúsculas y minúsculas.  
+    1.  **Coincidencia de mayúsculas y minúsculas**. Utilice esta opción para mostrar los resultados de la búsqueda del texto que escribió en el cuadro **Buscar** y que coincidan tanto con el contenido como con el uso de mayúsculas y minúsculas.  
   
-    2.  **Solo palabras completas**. Utilice esta opción para mostrar solo los resultados de búsqueda del texto especificado cuyas palabras completas coincidan.  
+    2.  Solo **palabras completas**. Utilice esta opción para mostrar solo los resultados de búsqueda del texto especificado cuyas palabras completas coincidan.  
   
-    3.  **Buscar hacia atrás**. Utilice esta opción para buscar desde la ubicación del cursor hasta el principio de los resultados.  
+    3.  **Buscar hacia arriba**. Utilice esta opción para buscar desde la ubicación del cursor hasta el principio de los resultados.  
   
     4.  **Use**. Utilice esta opción para interpretar los caracteres especiales y las expresiones regulares que escribió en el cuadro **Buscar** . Los caracteres especiales incluyen los caracteres comodín (*) y (?) para representar uno o más caracteres. Las expresiones regulares son notaciones especiales utilizadas para definir patrones de texto de búsqueda.  
   
 6.  Haga clic en **Buscar siguiente** para buscar siguiente el texto que escribió en el cuadro **Buscar** .  
   
-##  <a name="ChangeDisplay"></a> Cambiar la configuración de pantalla  
+##  <a name="ChangeDisplay"></a>Cambiar la configuración de pantalla  
  Puede guardar la información de columna (orden de columna, columna de combinación y ancho de columna) y la información de filtro de un resultado de seguimiento en un archivo de configuración de presentación de eventos extendidos (archivo .viewsetting). Después de guardar el archivo, puede aplicarlo a los resultados de seguimiento para cambiar la vista.  
   
 #### <a name="to-change-the-display-settings"></a>Para cambiar la configuración de presentación  
@@ -251,7 +251,7 @@ ms.locfileid: "66089435"
 1.  Abra un archivo .XEL para ver los resultados de seguimiento.  
   
     > [!NOTE]  
-    >  También puede hacer clic con el botón secundario en el nombre de la sesión, y seleccionar **Observar datos en directo**.  
+    >  También puede hacer clic con el botón secundario en el nombre de la sesión y, a continuación, seleccionar **observar datos en directo**.  
   
 2.  En la ventana de resultados de seguimiento, en la barra de herramientas o el menú de eventos extendidos, seleccione **Opciones de presentación**.  
   
@@ -259,8 +259,8 @@ ms.locfileid: "66089435"
   
     -   **Guardar como**. Guarde la información de filtro y columnas del resultado de un seguimiento en un archivo .viewsetting.  
   
-    -   **Abrir**. Abra un archivo .viewsetting existente.  
+    -   **Abra**. Abra un archivo .viewsetting existente.  
   
-    -   **Abrir reciente**. Abra un archivo .viewsetting guardado recientemente.  
+    -   **Abrir recientes**. Abra un archivo .viewsetting guardado recientemente.  
   
   

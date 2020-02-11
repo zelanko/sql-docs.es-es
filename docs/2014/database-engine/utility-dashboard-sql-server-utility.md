@@ -1,5 +1,5 @@
 ---
-title: Panel de la utilidad (utilidad de SQL Server) | Microsoft Docs
+title: Panel de la utilidad (Utilidad de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773817"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Panel de la utilidad (utilidad de SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "62773817"
   
  Para crear una vista filtrada de una instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o una aplicación de nivel de datos, haga clic en el vínculo de una categoría de utilización al lado de su indicador deslizante en el panel de la utilidad. Por ejemplo, si hace clic en **CPU de instancia sobreutilizada** en el panel **Contenido del explorador de la utilidad** , SSMS crea una vista de lista filtrada de instancias administradas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cuya CPU está sobreutilizada en función de los valores de directiva actuales.  
   
- Observe que, al hacer clic en un vínculo de una categoría de utilización, se agrega **(filtrado)** al nodo correspondiente en el panel de navegación del explorador de la utilidad; es decir, **Instancias administradas** se etiqueta **Instancias administradas (filtrado)** . Para ver la configuración del filtro, haga clic con el botón derecho en el nodo en el panel de navegación y seleccione **Filtro**y, después, haga clic en **Configuración del filtro**. Para borrar la configuración del filtro, haga clic con el botón derecho en el nodo en el panel de navegación, seleccione **Filtro** y, después, haga clic en **Quitar filtro**.  
+ Observe que, al hacer clic en un vínculo de una categoría de utilización, se agrega **(filtrado)** al nodo correspondiente en el panel de navegación del explorador de la utilidad; es decir, **Instancias administradas** se etiqueta **Instancias administradas (filtrado)**. Para ver la configuración del filtro, haga clic con el botón derecho en el nodo en el panel de navegación y seleccione **Filtro**y, después, haga clic en **Configuración del filtro**. Para borrar la configuración del filtro, haga clic con el botón derecho en el nodo en el panel de navegación, seleccione **Filtro** y, después, haga clic en **Quitar filtro**.  
   
  Para obtener más información sobre cómo ver el estado de mantenimiento de instancias individuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o para ver o cambiar la configuración de la directiva, vea [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md).  
   
@@ -102,9 +102,9 @@ ms.locfileid: "62773817"
  Utilización del almacenamiento de la utilidad  
  En la parte inferior derecha del panel, el gráfico circular sobre la utilización de almacenamiento muestra la proporción de espacio utilizado en comparación con el espacio disponible en los volúmenes de los equipos que contienen instancias administradas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los datos de esta presentación se actualizan cada 15 minutos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Utilizar el explorador de Utilidad para administrar la utilidad de SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [Inscribir una instancia de SQL Server &#40;utilidad de SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
+ [Inscriba una instancia de SQL Server &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [Modificar una definición de la directiva de mantenimiento de recursos &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Propiedades del catálogo de texto completo (página de programación de llenado) | Microsoft Docs
+title: Propiedades del catálogo de texto completo (página programación de llenado) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778827"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Propiedades del catálogo de texto completo (página Programación de llenado)
@@ -25,7 +25,7 @@ ms.locfileid: "62778827"
 ## <a name="schedules-grid"></a>Programaciones (cuadrícula)  
  Cada fila representa una operación programada para llenar o volver a llenar el catálogo.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la programación.  
   
  **Tipo de rellenado**  
@@ -37,16 +37,16 @@ ms.locfileid: "62778827"
  **Descripción**  
  Descripción de la operación programada.  
   
- **Nueva**  
+ **Nuevo**  
  Haga clic en este botón para crear una nueva programación de indización. Este botón abre el cuadro de diálogo **Nueva programación de catálogo de indización de texto completo** .  
   
- **Editar**  
+ **Edición**  
  Haga clic en este botón para editar la programación de llenado seleccionada.  
   
  **Eliminar**  
  Haga clic en este botón para quitar la programación de llenado seleccionada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

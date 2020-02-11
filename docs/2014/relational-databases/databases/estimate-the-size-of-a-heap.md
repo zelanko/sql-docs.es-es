@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916749"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar el tamaño de un montón
@@ -57,7 +57,7 @@ ms.locfileid: "62916749"
      Los bytes agregados a ***Max_Var_Size*** son para el seguimiento de cada columna de longitud variable. En esta fórmula se supone que todas las columnas de longitud variable están llenas al 100%. Si prevé que se va a usar un porcentaje inferior del espacio de almacenamiento de columnas de longitud variable, puede ajustar el valor de ***Max_Var_Size*** en función de ese porcentaje para obtener una estimación más precisa del tamaño global de la tabla.  
   
     > [!NOTE]  
-    >  Puede combinar las columnas `varchar`, `nvarchar`, `varbinary` o `sql_variant` que hagan que el ancho total definido para la tabla sea superior a 8.060 bytes. La longitud de cada una de estas columnas debe ajustarse al límite de 8.000 bytes para un `varchar`, `nvarchar,``varbinary`, o `sql_variant` columna. Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla.  
+    >  Puede combinar las columnas `varchar`, `nvarchar`, `varbinary` o `sql_variant` que hagan que el ancho total definido para la tabla sea superior a 8.060 bytes. La longitud de cada una de estas columnas todavía debe estar comprendida en el límite de 8.000 bytes para `varchar`una `nvarchar,``varbinary`columna, `sql_variant` o. Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla.  
   
      Si no hay columnas de longitud variable, establezca ***Variable_Data_Size*** en 0.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62916749"
   
 7.  Calcule el número de páginas necesarias para almacenar todas las filas:  
   
-     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
+     ***Num_Pages***    = ***Num_Rows ***  / ***Rows_Per_Page***  
   
      El número de páginas estimado debe redondearse hacia arriba a la página completa más cercana.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62916749"
   
  En este cálculo no se tiene en cuenta lo siguiente:  
   
--   Particiones  
+-   Creación de particiones  
   
      La sobrecarga de espacio de la creación de particiones es mínima, pero resulta difícil de calcular. No es importante incluirla.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62916749"
   
 -   Valores de objetos grandes (LOB)  
   
-     El algoritmo para determinar exactamente la cantidad de espacio se usará para almacenar los tipos de datos LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, **ntextxml**, y `image` valores es complejo. Basta con agregar solamente el tamaño medio de los valores de LOB que se esperan y agregarlo al tamaño total del montón.  
+     El algoritmo para determinar exactamente la cantidad de espacio que se utilizará para almacenar los tipos `varchar(max)`de `varbinary(max)`datos `nvarchar(max)`LOB `text`,,,, `image` **ntextxml**y los valores es complejo. Basta con agregar solamente el tamaño medio de los valores de LOB que se esperan y agregarlo al tamaño total del montón.  
   
 -   Compresión  
   
@@ -105,13 +105,13 @@ ms.locfileid: "62916749"
   
      Para obtener información sobre los requisitos de espacio de las columnas dispersas, vea [Use Sparse Columns](../tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Montones &#40;tablas sin índices agrupados&#41;](../indexes/heaps-tables-without-clustered-indexes.md)   
  [Índices agrupados y no agrupados descritos](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [Crear índices clúster](../indexes/create-clustered-indexes.md)   
  [Crear índices no clúster](../indexes/create-nonclustered-indexes.md)   
  [Calcular el tamaño de una tabla](estimate-the-size-of-a-table.md)   
- [Estimar el tamaño de un índice clúster](estimate-the-size-of-a-clustered-index.md)   
+ [Estimar el tamaño de un índice agrupado](estimate-the-size-of-a-clustered-index.md)   
  [Estimar el tamaño de un índice no clúster](estimate-the-size-of-a-nonclustered-index.md)   
  [Estimar el tamaño de una base de datos](estimate-the-size-of-a-database.md)  
   

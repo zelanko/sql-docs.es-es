@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761681"
 ---
 # <a name="understanding-database-engine-errors"></a>Descripción de errores del motor de base de datos
-  En la tabla siguiente se describen los atributos de los errores mostrados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
+  Los errores generados [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] por tienen los atributos descritos en la tabla siguiente.  
   
-|Attribute|Descripción|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |Número de error|Cada mensaje de error tiene un número de error único.|  
 |Cadena de mensaje de error|El mensaje de error contiene información de diagnóstico acerca de la causa del error. Muchos mensajes de error tienen variables de sustitución en las que se inserta información como, por ejemplo, el nombre del objeto que genera el error.|  
-|Severity|La gravedad indica la importancia del error. Los errores que tienen una gravedad baja, como 1 o 2, son mensajes informativos o advertencias de bajo nivel. Los errores que tienen una gravedad alta indican problemas que deben ser atendidos tan pronto como sea posible. Para obtener más información sobre los niveles de gravedad, vea [Niveles de gravedad de error del motor de base de datos](database-engine-error-severities.md).|  
+|severity|La gravedad indica la importancia del error. Los errores que tienen una gravedad baja, como 1 o 2, son mensajes informativos o advertencias de bajo nivel. Los errores que tienen una gravedad alta indican problemas que deben ser atendidos tan pronto como sea posible. Para obtener más información sobre los niveles de gravedad, vea [Niveles de gravedad de error del motor de base de datos](database-engine-error-severities.md).|  
 |State|Algunos mensajes de error se pueden generar en varios puntos del código de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, el error 1105 se puede generar bajo diferentes condiciones. Cada condición específica bajo la que se genera un error asigna un código de estado único.<br /><br /> Cuando vea bases de datos que contengan información sobre problemas conocidos como, por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, puede utilizar el número de estado para determinar si el problema registrado es el mismo que el error con el que se ha encontrado. Por ejemplo, si un artículo de Knowledge Base describe un error 1105 que tiene un estado 2 y el mensaje de error 1105 que ha recibido tenía un estado 3, el error tendrá probablemente una causa diferente a la explicada en el artículo.<br /><br /> Un ingeniero de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] también puede utilizar el código de estado de un error para localizar la ubicación del código fuente donde se ha generado el código de error. Esta información puede proporcionar ideas adicionales sobre cómo diagnosticar el problema.|  
 |Nombre del procedimiento|Nombre del procedimiento almacenado o desencadenador en que se ha producido el error.|  
 |Número de línea|Indica qué instrucción de un lote, procedimiento almacenado, desencadenador o función ha generado el error.|  
@@ -56,7 +56,7 @@ SELECT
   
  Para obtener más información, vea [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
  [RAISERROR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/raiserror-transact-sql)   
  [@@ERROR &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-transact-sql)   

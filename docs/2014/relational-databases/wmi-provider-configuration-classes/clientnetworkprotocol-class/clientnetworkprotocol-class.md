@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 10a63e84fcad55b6dfaec286d0d47b686d395f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62693522"
 ---
 # <a name="clientnetworkprotocol-class"></a>Clase ClientNetworkProtocol
-  El [clase ClientNetworkProtocol](clientnetworkprotocol-class.md) representa protocolos de red instalados en una instancia de cliente que permite la comunicación con una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a través de una red.  
+  La [clase ClientNetworkProtocol](clientnetworkprotocol-class.md) representa los protocolos de red instalados en una instancia de cliente que permite la comunicación [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con una instancia de a través de una red.  
   
- Con el [clase ClientNetworkProtocol](clientnetworkprotocol-class.md), puede realizar las siguientes tareas:  
+ Con la [clase ClientNetworkProtocol](clientnetworkprotocol-class.md), puede realizar las siguientes tareas:  
   
 -   Establecer un valor de índice para seleccionar un protocolo de red del cliente de la lista de protocolos.  
   

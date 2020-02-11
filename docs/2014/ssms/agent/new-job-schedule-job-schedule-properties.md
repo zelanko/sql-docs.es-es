@@ -1,5 +1,5 @@
 ---
-title: 'Nueva programación de trabajo: Propiedades de programación del trabajo | Microsoft Docs'
+title: 'Nueva programación de trabajo: propiedades de programación del trabajo | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704626"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>Nueva programación de trabajo: Propiedades de programación del trabajo
   Utilice esta página para ver y cambiar las propiedades de la programación.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Escriba un nuevo nombre de la programación.  
   
  **Trabajos en programación**  
@@ -37,7 +37,7 @@ ms.locfileid: "62704626"
  Seleccione esta opción para habilitar o deshabilitar la programación.  
   
 ## <a name="recurring-schedule-types-options"></a>Opciones de tipos de programación periódica  
- **Sucede**  
+ **Se produce**  
  Seleccione el intervalo con el que se repite la programación.  
   
  **Se repite cada**  
@@ -46,7 +46,7 @@ ms.locfileid: "62704626"
  **Lunes**  
  Configure el trabajo para que tenga lugar el lunes. Solo está disponible para las programaciones de periodicidad semanal.  
   
- **Martes**  
+ **Jueves**  
  Configure el trabajo para que tenga lugar el martes. Solo está disponible para las programaciones de periodicidad semanal.  
   
  **Miércoles**  
@@ -64,16 +64,16 @@ ms.locfileid: "62704626"
  **Domingo**  
  Configure el trabajo para que tenga lugar el domingo. Solo está disponible para las programaciones de periodicidad semanal.  
   
- **Day**  
+ **Diariamente**  
  Seleccione el día del mes en el que se ejecutará la programación. Solo está disponible para las programaciones de periodicidad mensual.  
   
  **de cada**  
  Seleccione el número de meses entre las repeticiones de la programación. Solo está disponible para las programaciones de periodicidad mensual.  
   
- **El**  
+ **El parámetro**  
  Especifique una programación para un día determinado de la semana, en un semana determinada del mes. Solo está disponible para las programaciones de periodicidad mensual.  
   
- **Sucede una vez a las**  
+ **Se produce una vez a las**  
  Establezca la hora para que el trabajo se produzca diariamente.  
   
  **Sucede cada**  
@@ -95,8 +95,8 @@ ms.locfileid: "62704626"
  **Time**  
  Seleccione la hora de ejecución del trabajo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear y adjuntar programaciones a trabajos](create-and-attach-schedules-to-jobs.md)   
- [Programar un trabajo](schedule-a-job.md)  
+ [Schedule a Job](schedule-a-job.md)  
   
   

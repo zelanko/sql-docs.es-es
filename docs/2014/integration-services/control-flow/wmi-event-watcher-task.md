@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829503"
 ---
 # <a name="wmi-event-watcher-task"></a>Tarea Monitor de eventos WMI
@@ -56,7 +56,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ```  
   
 ## <a name="custom-logging-messages-available-on-the-wmi-event-watcher-task"></a>Mensajes de registro personalizados disponibles en la tarea Monitor de eventos WMI  
- La siguiente tabla contiene las entradas del registro personalizadas para la tarea Monitor de eventos WMI. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene las entradas del registro personalizadas para la tarea Monitor de eventos WMI. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -75,9 +75,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   Definir de qué manera la tarea responde ante el evento. La tarea se puede configurar para realizarse correctamente o generar un error, según el evento, o la tarea puede supervisar el evento nuevamente.  
   
--   Especificar la acción realizada por la tarea cuando se agota el tiempo de espera de la consulta WMI. Puede registrar el tiempo de espera y el estado después del tiempo de espera, o activar un evento personalizado de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , que indique que se agotó el tiempo de espera del evento WMI y que registre el tiempo de espera y el estado del tiempo de espera.  
+-   Especifica la acción que realiza la tarea cuando se agota el tiempo de espera de la consulta de WMI. Puede registrar el tiempo de espera y el estado después del tiempo de espera, o bien generar un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] evento personalizado, que indica que el evento WMI agotó el tiempo de espera y registra el estado del tiempo de espera y el tiempo de espera.  
   
--   Definir de qué manera la tarea responde ante el tiempo de espera. La tarea se puede configurar para realizarse correctamente o presentar un error, o la tarea puede detectar el evento nuevamente.  
+-   Defina el modo en que la tarea responde al tiempo de espera. La tarea se puede configurar para que se realice correctamente o se produzca un error, o bien la tarea solo puede ver el evento de nuevo.  
   
 -   Especificar la cantidad de veces que la tarea supervisa el evento.  
   
@@ -91,9 +91,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea Monitor de eventos WMI &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea monitor de eventos WMI &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea Monitor de eventos WMI &#40;página Opciones WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [Editor de la tarea monitor de eventos WMI &#40;página Opciones WMI&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

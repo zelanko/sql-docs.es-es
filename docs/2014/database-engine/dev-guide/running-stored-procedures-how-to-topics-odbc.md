@@ -1,5 +1,5 @@
 ---
-title: Temas de procedimientos almacenados (ODBC) de ejecución | Microsoft Docs
+title: Temas de procedimientos de ejecución de procedimientos almacenados (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c40d064da4cd518e77d724a2ea38217124d6b8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781759"
 ---
 # <a name="running-stored-procedures-how-to-topics-odbc"></a>Temas de procedimientos de ejecución de procedimientos almacenados (ODBC)
@@ -24,11 +24,11 @@ ms.locfileid: "62781759"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Llamar a procedimientos almacenados &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
+-   [Llamar a procedimientos almacenados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
 -   [Procesar códigos de retorno y parámetros de salida &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

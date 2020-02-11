@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bfcd8337105766d91e097d35201d749c86ca840e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769041"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Not lógico) (expresión de SSIS)
@@ -41,10 +41,10 @@ ms.locfileid: "62769041"
 ## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## <a name="remarks"></a>Comentarios  
- La siguiente tabla muestra el resultado de la operación de publicación.  
+## <a name="remarks"></a>Observaciones  
+ La siguiente tabla muestra el resultado de la .  
   
-|Expresión booleana original|Después de aplicar ! como operador|  
+|Expresión booleana original|Después de aplicar ! como operator|  
 |---------------------------------|------------------------------------|  
 |TRUE|FALSE|  
 |NULL|NULL|  
@@ -63,7 +63,7 @@ ms.locfileid: "62769041"
 !(@MonthNumber != MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Precedencia y capacidad de asociación de operadores](operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md)  
   

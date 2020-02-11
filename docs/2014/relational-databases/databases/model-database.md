@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916951"
 ---
 # <a name="model-database"></a>Base de datos model
@@ -49,51 +49,51 @@ ms.locfileid: "62916951"
   
 |Opción de base de datos|Valor predeterminado|Se puede modificar|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|Sí|  
-|ANSI_NULL_DEFAULT|OFF|Sí|  
-|ANSI_NULLS|OFF|Sí|  
-|ANSI_PADDING|OFF|Sí|  
-|ANSI_WARNINGS|OFF|Sí|  
-|ARITHABORT|OFF|Sí|  
-|AUTO_CLOSE|OFF|Sí|  
-|AUTO_CREATE_STATISTICS|ON|Sí|  
-|AUTO_SHRINK|OFF|Sí|  
-|AUTO_UPDATE_STATISTICS|ON|Sí|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|Sin|  
-|CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
+|ALLOW_SNAPSHOT_ISOLATION|Apagado|Sí|  
+|ANSI_NULL_DEFAULT|Apagado|Sí|  
+|ANSI_NULLS|Apagado|Sí|  
+|ANSI_PADDING|Apagado|Sí|  
+|ANSI_WARNINGS|Apagado|Sí|  
+|ARITHABORT|Apagado|Sí|  
+|AUTO_CLOSE|Apagado|Sí|  
+|AUTO_CREATE_STATISTICS|ACTIVAR|Sí|  
+|AUTO_SHRINK|Apagado|Sí|  
+|AUTO_UPDATE_STATISTICS|ACTIVAR|Sí|  
+|AUTO_UPDATE_STATISTICS_ASYNC|Apagado|Sí|  
+|CHANGE_TRACKING|Apagado|No|  
+|CONCAT_NULL_YIELDS_NULL|Apagado|Sí|  
+|CURSOR_CLOSE_ON_COMMIT|Apagado|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
 |Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sí<br /><br /> Sí|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
-|DB_CHAINING|OFF|Sin|  
-|ENCRYPTION|OFF|No|  
-|NUMERIC_ROUNDABORT|OFF|Sí|  
+|DATE_CORRELATION_OPTIMIZATION|Apagado|Sí|  
+|DB_CHAINING|Apagado|No|  
+|ENCRYPTION|Apagado|No|  
+|NUMERIC_ROUNDABORT|Apagado|Sí|  
 |PAGE_VERIFY|CHECKSUM|Sí|  
 |PARAMETERIZATION|SIMPLE|Sí|  
-|QUOTED_IDENTIFIER|OFF|Sí|  
-|READ_COMMITTED_SNAPSHOT|OFF|Sí|  
-|RECOVERY|Depende de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition<sup>1</sup>|Sí|  
-|RECURSIVE_TRIGGERS|OFF|Sí|  
+|QUOTED_IDENTIFIER|Apagado|Sí|  
+|READ_COMMITTED_SNAPSHOT|Apagado|Sí|  
+|RECOVERY|Depende de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la edición<sup>1</sup>|Sí|  
+|RECURSIVE_TRIGGERS|Apagado|Sí|  
 |Opciones de Service Broker|DISABLE_BROKER|No|  
-|TRUSTWORTHY|OFF|Sin|  
+|TRUSTWORTHY|Apagado|No|  
   
- <sup>1</sup> para comprobar el modelo de recuperación actual de la base de datos, vea [ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) o [sys.databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup> para comprobar el modelo de recuperación actual de la base de datos, vea [ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) o [Sys. Databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
  Para obtener una descripción de estas opciones de la base de datos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restricciones  
  Las siguientes operaciones no se pueden realizar en la base de datos **modelo** :  
   
 -   Agregar archivos o grupos de archivos.  
   
 -   Cambiar intercalaciones. La intercalación predeterminada es la intercalación de servidor.  
   
--   Cambiar el propietario de la base de datos. **model** es propiedad de **sa**.  
+-   Cambiar el propietario de la base de datos. el **modelo** es propiedad de **SA**.  
   
 -   Eliminar la base de datos.  
   
--   Eliminar el usuario **guest** de la base de datos.  
+-   Quitar el usuario **Guest** de la base de datos.  
   
 -   Habilitar el mecanismo de captura de cambios en los datos.  
   

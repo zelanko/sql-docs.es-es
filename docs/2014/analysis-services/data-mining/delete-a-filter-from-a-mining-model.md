@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084729"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Eliminar un filtro de un modelo de minería de datos
@@ -32,13 +32,13 @@ ms.locfileid: "66084729"
   
 3.  Seleccione el modelo y haga clic con el botón secundario del mouse para abrir el menú contextual.  
   
-     -o bien-  
+     O bien  
   
      Seleccione el modelo. En el menú **Minería de datos** , seleccione **Establecer filtro de modelos**.  
   
 4.  En el cuadro de diálogo **Filtro del modelo** , haga clic con el botón derecho en la fila de la cuadrícula que contiene la condición que quiere eliminar.  
   
-5.  Seleccione **Eliminar**.  
+5.  Seleccione **eliminar**.  
   
 ### <a name="to-clear-the-filter-on-a-mining-model-in-the-filter-editor-dialog-box"></a>Para borrar el filtro de un modelo de minería de datos en el cuadro de diálogo Editor de filtros  
   
@@ -54,13 +54,13 @@ ms.locfileid: "66084729"
   
 1.  En el Explorador de soluciones, haga clic en el modelo de minería de datos que contiene el filtro.  
   
-2.  En el **propiedades** ventana, haga clic en el texto del filtro en el `Filter` propiedad y seleccione **seleccionar todo**.  
+2.  En la ventana **propiedades** , haga clic con el botón secundario en el `Filter` texto del filtro en la propiedad y seleccione **seleccionar todo**.  
   
 3.  Presione la tecla Retroceso o Suprimir.  
   
-## <a name="see-also"></a>Vea también  
- [Obtener detalles de datos de caso a partir de un modelo de minería de datos](drill-through-to-case-data-from-a-mining-model.md)   
- [Tareas y procedimientos de los modelos de minería de datos](mining-model-tasks-and-how-tos.md)   
- [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Obtener detalles de los datos de los casos de un modelo de minería de datos](drill-through-to-case-data-from-a-mining-model.md)   
+ [Tareas y procedimientos del modelo de minería de datos](mining-model-tasks-and-how-tos.md)   
+ [Filtros para modelos de minería de datos &#40;Analysis Services-minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
   
   

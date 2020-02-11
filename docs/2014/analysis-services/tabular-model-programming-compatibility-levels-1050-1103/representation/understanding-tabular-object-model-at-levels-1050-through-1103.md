@@ -11,36 +11,36 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dcfd16ae7e49392c9ba0a001ea8d205c4fa88d1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62795346"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Descripción del modelo de objetos tabulares
-  Un modelo tabular es una representación lógica de tablas, relaciones, jerarquías, perspectivas, medidas y rendimiento clave. En esta sección se presenta la implementación interna mediante AMO. Consulte [desarrollar con objetos de administración de análisis &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) si aún no ha usado AMO antes.  
+  Un modelo tabular es una representación lógica de tablas, relaciones, jerarquías, perspectivas, medidas y rendimiento clave. En esta sección se presenta la implementación interna mediante AMO. Consulte [desarrollo con Objetos de administración de análisis &#40;amo&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) si no ha usado amo antes.  
   
  El método empleado es de arriba abajo: todos los objetos pertinentes del modelo tabular se asignan de forma lógica a objetos de AMO y se explica la interacción o el flujo de trabajo necesario. Hay un ejemplo de código fuente para crear un modelo tabular con AMO, AMO a tabular, disponible en Codeplex. Nota importante sobre el código del ejemplo: se proporciona únicamente como apoyo a los conceptos lógicos explicados aquí y no se debe usar en un entorno de producción. El ejemplo se proporciona sin soporte técnico o garantía.  
   
 ## <a name="database-representation"></a>Representación de la base de datos  
  Una base de datos proporciona el objeto contenedor para el modelo tabular. Todos los objetos de un modelo tabular se encuentran en la base de datos. Por lo que respecta a los objetos de AMO, la representación de una base de datos tiene una relación de asignación uno a uno con <xref:Microsoft.AnalysisServices.Database> y no se necesitan otros objetos principales de AMO. Es importante tener en cuenta que esto no significa que todos los objetos contenidos en el objeto de base de datos de AMO se puedan usar para realizar el modelado.  
   
- Consulte [representación de la base de datos&#40;Tabular&#41; ](database-representation-tabular.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de la base de datos.  
+ Vea [representación de la base de datos&#40;tabular&#41;](database-representation-tabular.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de la base de datos.  
   
 ## <a name="connection-representation"></a>Representación de conexión  
  Una conexión establece la relación entre los datos que se van a incluir en una solución de modelo tabular y el propio modelo. En cuanto a los objetos de AMO, una conexión tiene una relación de asignación uno a uno con <xref:Microsoft.AnalysisServices.DataSource> y no se necesitan otros objetos principales de AMO. Es importante tener en cuenta que esto no significa que todos los objetos contenidos en el objeto de origen de datos de AMO se puedan usar para realizar el modelado.  
   
- Consulte [representación de conexión &#40;Tabular&#41; ](connection-representation-tabular.md) para obtener una explicación detallada sobre cómo crear y manipular la representación del origen de datos.  
+ Consulte [representación de la conexión &#40;tabular&#41;](connection-representation-tabular.md) para obtener una explicación detallada sobre cómo crear y manipular la representación del origen de datos.  
   
 ## <a name="table-representation"></a>Representación de tabla  
  Las tablas son objetos de base de datos que contienen los datos de la base de datos. En términos de objetos de AMO, una tabla tiene una relación de asignación uno a varios. Una tabla se representa mediante el uso de los siguientes objetos de AMO: <xref:Microsoft.AnalysisServices.DataSourceView>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.CubeDimension>, <xref:Microsoft.AnalysisServices.MeasureGroup> y <xref:Microsoft.AnalysisServices.Partition> son los objetos necesarios principales. No obstante, es importante tener en cuenta que esto no significa que todos los objetos incluidos en los objetos de AMO mencionados anteriormente se puedan usar al realizar el modelado.  
   
- Consulte [representación de tablas &#40;Tabular&#41; ](tables-representation-tabular.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de tabla.  
+ Consulte [representación de tablas &#40;&#41;tabular](tables-representation-tabular.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de la tabla.  
   
 ### <a name="calculated-column-representation"></a>Representación de la columna calculada  
  Las columnas calculadas son expresiones evaluadas que generan una columna en una tabla, donde un nuevo valor se calcula y se almacena en cada fila de la tabla. En términos de objetos de AMO, una columna calculada tiene una relación de asignación uno a varios. Una columna calculada se representa mediante el uso de los siguientes objetos de AMO: <xref:Microsoft.AnalysisServices.Dimension> y <xref:Microsoft.AnalysisServices.MeasureGroup> son los objetos principales necesarios. Es importante tener en cuenta que esto no significa que todos los objetos contenidos en los objetos de AMO mencionados anteriormente se puedan usar para realizar el modelado.  
   
- Consulte [representación de la columna calculada &#40;Tabular&#41; ](tables-calculated-column-representation.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de la columna calculada.  
+ Para obtener una explicación detallada sobre cómo crear y manipular la representación de la columna calculada, consulte [representación de columna calculada &#40;tabla&#41;](tables-calculated-column-representation.md) .  
   
 ### <a name="calculated-measure-representation"></a>Representación de la medida calculada  
  Las medidas calculadas son expresiones almacenadas que se evalúan a petición una vez implementado el modelo. En términos de objetos de AMO, una medida calculada tiene una relación de asignación uno a varios. Una columna calculada se representa mediante el uso de los siguientes objetos de AMO: <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> y <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> son los objetos principales necesarios. Es importante tener en cuenta que esto no significa que todos los objetos contenidos en los objetos de AMO mencionados anteriormente se puedan usar para realizar el modelado.  
@@ -48,25 +48,25 @@ ms.locfileid: "62795346"
 > [!NOTE]  
 >  Los objetos <xref:Microsoft.AnalysisServices.Measure> no tienen relación con las medidas calculadas en los modelos tabulares y no se admiten en dichos modelos.  
   
- Consulte [representación de la medida calculada &#40;Tabular&#41; ](tables-calculated-measure-representation.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de la medida calculada.  
+ Vea [representación de la medida calculada &#40;&#41;tabular](tables-calculated-measure-representation.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de la medida calculada.  
   
 ### <a name="hierarchy-representation"></a>Representación de jerarquía  
  Las jerarquías son un mecanismo para proporcionar una experiencia de resumen y exploración en profundidad más completa al usuario final. Por lo que respecta a los objetos de AMO, las representaciones de jerarquías tienen una relación de asignación uno a uno con <xref:Microsoft.AnalysisServices.Hierarchy> y no se necesitan otros objetos principales de AMO. Es importante tener en cuenta que esto no significa que todos los objetos contenidos en el objeto de base de datos de AMO se puedan usar para realizar el modelado tabular.  
   
- Consulte [representación de jerarquía &#40;Tabular&#41; ](tables-hierarchy-representation.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de jerarquía.  
+ Consulte [representación de jerarquía &#40;&#41;tabular](tables-hierarchy-representation.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de la jerarquía.  
   
-### <a name="key-performance-indicator--kpi--representation"></a>La clave de rendimiento de representación de KPI - indicadores  
+### <a name="key-performance-indicator--kpi--representation"></a>Indicador clave de rendimiento: KPI-representación  
  Los KPI se usan para medir el rendimiento de un valor, definido por una medida base, con respecto a un valor de destino. En términos de objetos de AMO, una representación de KPI tiene una relación de asignación uno a varios. Un KPI se representa mediante el uso de los siguientes objetos de AMO: <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> y <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A> son los objetos principales necesarios.  Es importante tener en cuenta que esto no significa que todos los objetos contenidos en los objetos de AMO mencionados anteriormente se puedan usar para realizar el modelado.  
   
 > [!NOTE]  
 >  Además, existe una distinción importante, los objetos de <xref:Microsoft.AnalysisServices.Kpi> no tienen relación con los KPI de los modelos tabulares. Y no se admiten en los modelos tabulares.  
   
- Consulte [representación de indicadores clave de rendimiento &#40;Tabular&#41; ](tables-key-performance-indicator-representation.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de KPI.  
+ Consulte [representación del indicador clave de rendimiento &#40;&#41;tabular](tables-key-performance-indicator-representation.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de KPI.  
   
 ### <a name="partition-representation"></a>Representación de partición  
  A efectos operativos, una tabla se puede dividir en distintos subconjuntos de filas que, al combinarse, forman la tabla. Cada uno de esos subconjuntos es una partición de la tabla. Por lo que respecta a los objetos de AMO, las representaciones de particiones tienen una relación de asignación uno a uno con <xref:Microsoft.AnalysisServices.Partition> y no se necesitan otros objetos principales de AMO. Es importante tener en cuenta que esto no significa que todos los objetos contenidos en el objeto de base de datos de AMO se puedan usar para realizar el modelado.  
   
- Consulte [representación de partición &#40;Tabular&#41; ](tables-partition-representation.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de partición.  
+ Consulte [representación de particiones &#40;tabular&#41;](tables-partition-representation.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de la partición.  
   
 ## <a name="relationship-representation"></a>Representación de relaciones  
  Una relación es una conexión entre dos tablas de datos. La relación establece cómo se deben relacionar los datos de las dos tablas.  
@@ -75,12 +75,12 @@ ms.locfileid: "62795346"
   
  Por lo que respecta a los objetos de AMO, todas las relaciones inactivas tienen una representación de una relación de asignación uno a uno con <xref:Microsoft.AnalysisServices.Relationship> y no se necesitan otros objetos principales de AMO. Para la relación activa, existen otros requisitos y también se necesita una asignación a <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>. Es importante tener en cuenta que esto no significa que todos los objetos contenidos en la relación AMO o en el objeto referenceMeasureGroupDimension se puedan usar para realizar el modelado.  
   
- Consulte [representación de relaciones &#40;Tabular&#41; ](relationship-representation-tabular.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de relación.  
+ Vea [representación de relación &#40;&#41;tabular](relationship-representation-tabular.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de la relación.  
   
 ## <a name="perspective-representation"></a>Representación de perspectiva  
  Una perspectiva es un mecanismo para simplificar o centrar el modo. Por lo que respecta a los objetos de AMO, las representaciones de relaciones tienen una relación de asignación uno a uno con <xref:Microsoft.AnalysisServices.Perspective> y no se necesitan otros objetos principales de AMO. Es importante tener en cuenta que esto no significa que todos los objetos contenidos en el objeto de perspectiva de AMO se puedan usar para realizar el modelado tabular.  
   
- Consulte [representación de perspectiva &#40;Tabular&#41; ](perspective-representation-tabular.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de perspectiva.  
+ Consulte [representación de perspectiva &#40;&#41;tabular](perspective-representation-tabular.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de perspectiva.  
   
 > [!WARNING]  
 >  Las perspectivas no son un mecanismo de seguridad. Se podrá tener acceso a los objetos que están fuera de la perspectiva mediante otras interfaces.  

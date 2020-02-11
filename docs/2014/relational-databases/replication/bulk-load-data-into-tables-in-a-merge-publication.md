@@ -1,5 +1,5 @@
 ---
-title: Carga masiva de datos en tablas en una publicación de mezcla (programación de replicación Transact-SQL) | Microsoft Docs
+title: Cargar datos de forma masiva en tablas en una publicación de combinación (programación de la replicación con Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09e535057fcf573dfa189b7e5fdc0e0df06e5d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721767"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication-replication-transact-sql-programming"></a>Realizar una carga masiva de datos en tablas de una publicación de mezcla (programación de la replicación con Transact-SQL)
@@ -34,6 +34,6 @@ ms.locfileid: "62721767"
   
     -   Ejecute la copia masiva mediante la opción de FIRE_TRIGGERS.  
   
-    -   En la base de datos en la que se insertaron los datos, ejecute [sp_addtabletocontents &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql). Especifique el nombre de tabla en el que los datos se insertaron para **@table_name** .  
+    -   En la base de datos en la que se insertaron los datos, ejecute [sp_addtabletocontents &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql). Especifique el nombre de **@table_name**la tabla en la que se insertaron los datos.  
   
   

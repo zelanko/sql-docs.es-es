@@ -13,14 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831635"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
-  La generación de perfiles de datos y la limpieza no son aptos para la aplicación de un proceso automatizado en sus primeras etapas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el resultado de la tarea de generación de perfiles de datos normalmente requiere un análisis visual y un criterio humano para determinar si las infracciones detectadas son significativas o excesivas. Incluso después de reconocer la existencia de problemas relacionados con la calidad de los datos, sigue siendo necesario disponer de un plan minuciosamente diseñado que indique el mejor método para la limpieza.  
+  La generación de perfiles de datos y la limpieza no son aptos para la aplicación de un proceso automatizado en sus primeras etapas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el resultado de la tarea de generación de perfiles de datos normalmente requiere un análisis visual y un criterio humano para determinar si las infracciones indicadas son significativas o excesivas. Incluso después de reconocer la existencia de problemas relacionados con la calidad de los datos, sigue siendo necesario disponer de un plan minuciosamente diseñado que indique el mejor método para la limpieza.  
   
  Sin embargo, una vez establecidos los criterios para la calidad de los datos, es posible que desee automatizar el análisis y la limpieza periódicos del origen de datos. Considere estos escenarios:  
   
@@ -45,12 +45,12 @@ ms.locfileid: "62831635"
   
  Al incorporar la tarea de generación de perfiles de datos al flujo de trabajo de un paquete, tenga en cuenta estas dos características de dicha tarea:  
   
--   **Resultado de la tarea**. La tarea de generación de perfiles de datos escribe su resultado en un archivo o en una variable de paquete en el formato XML, de acuerdo con el esquema DataProfile.xsd. Por lo tanto, si desea usar los resultados del perfil en el flujo de trabajo condicional del paquete, debe realizar una consulta en los resultados XML. Para ello, puede usar el lenguaje para consultas Xpath. Para estudiar la estructura de estos resultados XML, puede abrir un archivo de resultados de ejemplo o el propio esquema. Para abrir el archivo de resultados o el esquema, puede usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], otro editor XML o un editor de texto, como el Bloc de notas.  
+-   **Resultado**de la tarea. La tarea de generación de perfiles de datos escribe su resultado en un archivo o en una variable de paquete en el formato XML, de acuerdo con el esquema DataProfile.xsd. Por lo tanto, si desea usar los resultados del perfil en el flujo de trabajo condicional del paquete, debe realizar una consulta en los resultados XML. Para ello, puede usar el lenguaje para consultas Xpath. Para estudiar la estructura de estos resultados XML, puede abrir un archivo de resultados de ejemplo o el propio esquema. Para abrir el archivo de salida o el esquema, puede [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]usar, otro editor XML o un editor de texto, como el Bloc de notas.  
   
     > [!NOTE]  
     >  Algunos de los resultados del perfil que se muestran en el Visor de perfil de datos son valores calculados que no se encuentran directamente en la salida. Por ejemplo, la salida del perfil de proporción de columnas nulas contiene el número total de filas y el número de filas que contienen valores NULL. Para obtener la proporción de columnas nulas, debe usar estos dos valores con objeto de calcular el porcentaje de filas que contienen valores NULL.  
   
--   **Entrada de la tarea**. La tarea de generación de perfiles de datos obtiene su entrada de tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por lo tanto, si desea generar perfiles de datos que ya se han cargado y transformado en el flujo de datos, debe guardar en tablas de ensayo los datos que están en la memoria.  
+-   **Entrada de tarea**. La tarea de generación de perfiles de datos obtiene su entrada de tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por lo tanto, si desea generar perfiles de datos que ya se han cargado y transformado en el flujo de datos, debe guardar en tablas de ensayo los datos que están en la memoria.  
   
  En las siguientes secciones se aplica este flujo de trabajo general a la generación de perfiles de datos que proceden directamente de un origen de datos externo o que han sido transformados por la tarea Flujo de datos. En dichas secciones también se muestra cómo controlar los requisitos de entrada y salida de la tarea Flujo de datos.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62831635"
   
     -   Escriba el nombre, `ProfileConnectionName`, para una de las variables y establezca el tipo de esta variable en **cadena**.  
   
-    -   Escriba el nombre, `AddressLine2NullRatio`, para la otra variable y establezca el tipo de esta variable en **doble**.  
+    -   Escriba el nombre, `AddressLine2NullRatio`, para la otra variable y establezca el tipo de esta variable en **Double**.  
   
 ### <a name="configure-the-data-profiling-task"></a>Configurar la tarea de generación de perfiles de datos  
  La tarea de generación de perfiles de datos se debe configurar de la siguiente manera:  
@@ -142,9 +142,9 @@ ms.locfileid: "62831635"
   
 4.  En la página **Script** , seleccione el lenguaje de programación que prefiera. A continuación, ponga las dos variables de paquete a disposición del script:  
   
-    1.  Para `ReadOnlyVariables`, seleccione `ProfileConnectionName`.  
+    1.  En `ReadOnlyVariables`, seleccione `ProfileConnectionName`.  
   
-    2.  Para **ReadWriteVariables**, seleccione `AddressLine2NullRatio`.  
+    2.  En **** el caso de `AddressLine2NullRatio`ReadWriteVariables, seleccione.  
   
 5.  Seleccione **Editar script** para abrir el entorno de desarrollo de script.  
   
@@ -327,8 +327,8 @@ ms.locfileid: "62831635"
   
 7.  En las restricciones de precedencia que conectan la tarea Script a las bifurcaciones de nivel inferior del flujo de trabajo, escriba expresiones que usen los valores de las variables para dirigir el flujo de trabajo.  
   
-## <a name="see-also"></a>Vea también  
- [Configuración de la Tarea de generación de perfiles de datos](data-profiling-task.md)   
+## <a name="see-also"></a>Consulte también  
+ [Configuración de la tarea de generación de perfiles de datos](data-profiling-task.md)   
  [Visor de perfil de datos](data-profile-viewer.md)  
   
   

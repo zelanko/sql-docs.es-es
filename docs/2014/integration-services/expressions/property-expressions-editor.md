@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7539ae9426bfe480f7dbbe25ea1c3724815295e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768791"
 ---
 # <a name="property-expressions-editor"></a>Editor de expresiones de propiedad
@@ -28,7 +28,7 @@ ms.locfileid: "62768791"
  **Propiedad**  
  Seleccione un objeto de propiedad de la lista.  
   
- **Expresión**  
+ **Expression**  
  Escriba un literal o una expresión para actualizar el valor de la propiedad.  
   
 > [!NOTE]  
@@ -40,7 +40,7 @@ ms.locfileid: "62768791"
  **Eliminar**  
  Seleccione una propiedad y, después, haga clic en **Eliminar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Página Expresiones](expressions-page.md)   
  [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Variables del sistema](../system-variables.md)   

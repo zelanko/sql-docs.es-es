@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 403e0af44fc1db7efaf674d02ed0e3b94e81a5b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916879"
 ---
 # <a name="estimate-the-size-of-a-table"></a>Calcular el tamaño de una tabla
@@ -41,10 +41,10 @@ ms.locfileid: "62916879"
   
 3.  Sumar los valores calculados en los pasos 1 y 2.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Estimar el tamaño de una base de datos](estimate-the-size-of-a-database.md)   
  [Estimar el tamaño de un montón](estimate-the-size-of-a-heap.md)   
  [Estimar el tamaño de un índice agrupado](estimate-the-size-of-a-clustered-index.md)   
- [Estimar el tamaño de un índice no agrupado](estimate-the-size-of-a-nonclustered-index.md)  
+ [Estimar el tamaño de un índice no clúster](estimate-the-size-of-a-nonclustered-index.md)  
   
   

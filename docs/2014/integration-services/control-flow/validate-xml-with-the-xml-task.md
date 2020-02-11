@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829594"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -25,14 +25,14 @@ ms.locfileid: "62829594"
   
  La siguiente captura de pantalla muestra el **Editor de la tarea XML** con la configuración necesaria para la validación de XML con la salida de error completa.  
   
- ![Propiedades de la tarea XML en el Editor de la tarea XML](../media/xmltaskproperties.jpg "XML task properties in the XML Task Editor")  
+ ![Propiedades de la tarea XML en el editor de la tarea XML](../media/xmltaskproperties.jpg "Propiedades de la tarea XML en el editor de la tarea XML")  
   
- Antes de que la propiedad `ValidationDetails` estuviera disponible, la validación de XML efectuada mediante la tarea XML solo devolvía un resultado true o false, sin información sobre errores o sus ubicaciones. Ahora, al establecer `ValidationDetails` en true, la salida de archivo contiene información detallada sobre cada error, incluido el número de línea y la posición. Puede usar esta información para comprender, buscar y corregir errores en documentos XML.  
+ Antes de que la propiedad `ValidationDetails` estuviera disponible, la validación de XML efectuada mediante la tarea XML solo devolvía un resultado true o false, sin información sobre errores o sus ubicaciones. Ahora, cuando se establece `ValidationDetails` en true, el archivo de salida contiene información detallada sobre cada uno de los errores, incluido el número de línea y la posición. Puede usar esta información para comprender, buscar y corregir errores en documentos XML.  
   
  La funcionalidad de validación de XML se escala fácilmente en el caso de documentos XML grandes y un gran número de errores. Puesto que el propio archivo de salida está en formato XML, puede consultar y analizar la salida. Por ejemplo, si la salida contiene un gran número de errores, puede agruparlos mediante una consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] , como se describe en este tema.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introdujo la `ValidationDetails` propiedad [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. También está disponible en la propiedad [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y en SQL Server 2016.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) ha introducido `ValidationDetails` la propiedad [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] en Service Pack 2. La propiedad también está disponible en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y en SQL Server 2016.  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Ejemplo de salida de un archivo XML que no es válido  
  Este es un ejemplo de archivo de salida con los resultados de validación de un archivo XML válido.  
@@ -116,10 +116,10 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  Este es el resultado de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] de la segunda consulta de ejemplo que se muestra en el texto anterior.  
   
- ![Consulta para agrupar errores de XML en Management Studio](../media/queryforxmlerrors.jpg "Query to group XML errors in Management Studio")  
+ ![Consulta para agrupar errores XML en Management Studio](../media/queryforxmlerrors.jpg "Consulta para agrupar errores XML en Management Studio")  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tarea XML](xml-task.md)   
- [Editor de la tarea XML &#40;página General&#41;](../xml-task-editor-general-page.md)  
+ [Editor de la tarea XML &#40;página general&#41;](../xml-task-editor-general-page.md)  
   
   

@@ -15,17 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745885"
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizar una suscripción de inserción
-  En este tema se describe cómo sincronizar una suscripción de inserción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicación](agents/replication-agents-overview.md)o Replication Management Objects (RMO).  
+  En este tema se describe cómo sincronizar una suscripción [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de extracción [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en mediante, [agentes de replicación](agents/replication-agents-overview.md)o Replication Management Objects (RMO).  
   
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  El Agente de distribución (para las instantáneas y la replicación transaccional) o el Agente de mezcla (para la replicación de mezcla) sincronizan las suscripciones. Los agentes pueden ejecutarse continuamente, a petición o según una programación. Para más información sobre la configuración de las programaciones de sincronización, vea [Especificar programaciones de sincronización](specify-synchronization-schedules.md).  
   
  Sincronice una suscripción a petición en las carpetas **Publicaciones locales** y **Suscripciones locales** en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y the **Todas las suscripciones** del Monitor de replicación. Las suscripciones a publicaciones de Oracle no se pueden sincronizar a petición desde el suscriptor. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "62745885"
   
 4.  Haga clic con el botón derecho en la suscripción que desea sincronizar y, a continuación, haga clic en **Ver estado de sincronización**.  
   
-5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>**, haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada** .  
+5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>**, haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
   
 6.  Haga clic en **Cerrar**.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "62745885"
   
 2.  Expanda la carpeta **Replicación** y, a continuación, la carpeta **Suscripciones locales**.  
   
-3.  Haga clic con el botón secundario en la suscripción que desea sincronizar y, a continuación, haga clic en **Ver estado de sincronización**.  
+3.  Haga clic con el botón derecho en la suscripción que desea sincronizar y, a continuación, haga clic en **Ver estado de sincronización**.  
   
-4.  Se muestra un mensaje acerca del establecimiento de una conexión con el distribuidor. Haga clic en **Aceptar**.  
+4.  Se muestra un mensaje acerca del establecimiento de una conexión con el distribuidor. Haga clic en **OK**.  
   
-5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>**, haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada** .  
+5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>**, haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
   
 6.  Haga clic en **Cerrar**.  
   
@@ -68,20 +68,20 @@ ms.locfileid: "62745885"
   
 4.  Para ver el progreso de la sincronización, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Ver detalles**.  
   
-##  <a name="ReplProg"></a> Usar agentes de replicación  
+##  <a name="ReplProg"></a>Usar agentes de replicación  
  Se pueden sincronizar las suscripciones de inserción mediante programación y a petición invocando el archivo ejecutable de agente de replicación adecuado del símbolo del sistema. El archivo ejecutable de agente de replicación que se invoca dependerá del tipo de publicación a la que pertenece la suscripción de inserción.  
   
 #### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>Para iniciar el Agente de distribución para sincronizar una suscripción de inserción con una publicación transaccional  
   
 1.  Desde el símbolo del sistema o en un archivo por lotes, ejecute **distrib.exe**. Especifique los argumentos de la línea de comandos siguientes:  
   
-    -   **-Publisher**  
+    -   **-Publicador**  
   
     -   **-PublisherDB**  
   
-    -   **-Distributor**  
+    -   **-Distribuidor**  
   
-    -   **-Subscriber**  
+    -   **-Suscriptor**  
   
     -   **-SubscriberDB**  
   
@@ -114,15 +114,15 @@ ms.locfileid: "62745885"
   
 1.  Desde el símbolo del sistema o en un archivo por lotes, ejecute **replmerg.exe**. Especifique los argumentos de la línea de comandos siguientes:  
   
-    -   **-Publisher**  
+    -   **-Publicador**  
   
     -   **-PublisherDB**  
   
-    -   **-Publication**  
+    -   **-Publicación**  
   
-    -   **-Distributor**  
+    -   **-Distribuidor**  
   
-    -   **-Subscriber**  
+    -   **-Suscriptor**  
   
     -   **-SubscriberDB**  
   
@@ -151,7 +151,7 @@ ms.locfileid: "62745885"
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-###  <a name="TsqlExample"></a> Ejemplos (agentes de replicación)  
+###  <a name="TsqlExample"></a>Ejemplos (agentes de replicación)  
  El ejemplo siguiente inicia el Agente de distribución para sincronizar una suscripción de inserción.  
   
  
@@ -270,8 +270,8 @@ REM -- The following command must be supplied without line breaks.
   
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos de los Replication Management Objects (RMO)](concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>Consulte también  
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
  [Sincronizar datos](synchronize-data.md)   
  [Procedimientos recomendados de seguridad de replicación](security/replication-security-best-practices.md)  
   

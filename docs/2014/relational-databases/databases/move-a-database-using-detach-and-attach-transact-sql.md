@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917101"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Mover una base de datos mediante Separar y Adjuntar (Transact-SQL)
@@ -46,12 +46,12 @@ ms.locfileid: "62917101"
     > [!NOTE]  
     >  Si intenta adjuntar la base de datos sin especificar el archivo de registro, la operación de adjuntar buscará el archivo de registro en su ubicación original. Si aún hay una copia del registro en la ubicación original, se adjunta esa copia. Para evitar que se utilice el archivo de registro original, especifique la ruta de acceso del nuevo archivo de registro o elimine la copia original del archivo de registro (después de copiarlo en la nueva ubicación).  
   
-3.  Adjunte los archivos copiados. Para más información, consulte [Attach a Database](attach-a-database.md).  
+3.  Adjunte los archivos copiados. Para más información, consulte [Asociar una base de datos](attach-a-database.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se crea una copia de la [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instrucciones se ejecutan en una ventana del Editor de consultas que está conectada a la instancia del servidor al que está conectada.  
+ En el ejemplo siguiente se crea una copia [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] de las instrucciones que se ejecutan en una ventana del editor de consultas que está conectada a la instancia del servidor a la que está asociada.  
   
-1.  Desasociar la [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instrucciones:  
+1.  Desasocie [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] las instrucciones:  
   
     ```  
     USE master;  
@@ -60,7 +60,7 @@ ms.locfileid: "62917101"
     GO  
     ```  
   
-2.  Con el método que prefiera, copie los archivos de base de datos (AdventureWorks208R2_Data.mdf y AdventureWorks208R2_log) en: C:\MySQLServer\AdventureWorks208R2_Data.mdf y C:\MySQLServer\AdventureWorks208R2_Log.ldf, respectivamente.  
+2.  Mediante el método que elija, copie los archivos de la base de datos (AdventureWorks208R2_Data.mdf y AdventureWorks208R2_log) a: C:\MySQLServer\AdventureWorks208R2_Data.mdf y C:\MySQLServer\AdventureWorks208R2_Log.ldf, respectivamente.  
   
     > [!IMPORTANT]  
     >  En el caso de una base de datos de producción, coloque la base de datos y el registro de transacciones en discos independientes.  
@@ -81,7 +81,7 @@ ms.locfileid: "62917101"
   
      En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], una base de datos recién adjuntada no es inmediatamente visible en el Explorador de objetos. Para ver la base de datos, en el Explorador de objetos, haga clic en **Ver** y, a continuación, en **Actualizar**. Cuando se expande el nodo **Bases de datos** en el Explorador de objetos, la base de datos recién adjuntada aparecerá en la lista de bases de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)  
   
   

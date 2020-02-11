@@ -13,22 +13,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828232"
 ---
 # <a name="cdc-splitter"></a>Divisor CDC
   El divisor CDC divide un único flujo de filas de un flujo de datos de origen de CDC en varios flujos de datos para las operaciones de inserción, actualización y eliminación. El flujo de datos se divide según la columna obligatoria `__$operation` y sus valores estándar en las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-|Valor de la operación|Salida|Descripción|  
+|Valor de la operación|Output|Descripción|  
 |------------------------|------------|-----------------|  
-|1|DELETE|Fila eliminada|  
-|2|Insert|Fila insertada (no está disponible cuando se usa el modo CDC **Neto con combinación** )|  
-|3|Update|Fila antes de la actualización (disponible solo cuando se usa el modo CDC **Todo con los valores antiguos** )|  
-|4|Update|Fila después de la actualización (sigue a la de antes de la actualización)|  
-|5|Update|Fila de mezcla (solo disponible cuando se usa el modo CDC **Neto con combinación** )|  
+|1|Eliminar|Fila eliminada|  
+|2|Insertar|Fila insertada (no está disponible cuando se usa el modo CDC **Neto con combinación** )|  
+|3|Actualizar|Fila antes de la actualización (disponible solo cuando se usa el modo CDC **Todo con los valores antiguos** )|  
+|4|Actualizar|Fila después de la actualización (sigue a la de antes de la actualización)|  
+|5|Actualizar|Fila de mezcla (solo disponible cuando se usa el modo CDC **Neto con combinación** )|  
 |Otros|Error||  
   
  Puede usar el divisor para conectarse a los resultados predefinidos de INSERT, UPDATE, DELETE y UPDATE para un procesamiento posterior.  
@@ -40,9 +40,9 @@ ms.locfileid: "62828232"
   
  La salida de error del componente incluye las columnas de salida siguientes:  
   
--   **Código de error**: establézcalo en 1.  
+-   **Código de error**: se establece en 1.  
   
--   **Columna de error**: la columna de origen que produce el error (para los errores de conversión).  
+-   **Columna de error**: columna de origen que produce el error (para los errores de conversión).  
   
 -   **Columnas de fila de error**: las columnas de entrada de la fila que produjo el error.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62828232"
   
 -   En la pantalla **Flujo de datos** del proyecto de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] , haga clic con el botón secundario en el divisor CDC y seleccione **Mostrar editor avanzado**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Dirigir el flujo CDC según el tipo de cambio](direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
   

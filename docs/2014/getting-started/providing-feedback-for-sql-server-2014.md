@@ -1,5 +1,5 @@
 ---
-title: Comentarios sobre SQL Server 2014 | Microsoft Docs
+title: Proporcionar comentarios para SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -23,13 +23,14 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772283"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Comentarios sobre SQL Server 2014
+  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] agradece que dedique parte de su tiempo a ayudarnos a mejorar nuestros productos y documentación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Puede transmitirnos sus sugerencias e informes de errores sobre las características e interfaz de usuario del producto, presentarnos sus comentarios acerca de la documentación y, si lo desea, enviarnos de manera automática sus informes de errores y datos de uso a [!INCLUDE[msCoName](../includes/msconame-md.md)] para su estudio. En el presente documento se describen las tres opciones para transmitirnos sus comentarios.  
   
 ## <a name="submitting-feedback-about-the-product"></a>Enviar comentarios acerca del producto  
@@ -37,7 +38,7 @@ ms.locfileid: "62772283"
   
  Puede encontrar la página de comentarios [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de muchas maneras.  
   
--   Vaya a la [página web](https://go.microsoft.com/fwlink/?linkid=34178) de comentarios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connect.  
+-   Vaya a la [!INCLUDE[msCoName](../includes/msconame-md.md)]página web[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de comentarios de [ de ](https://go.microsoft.com/fwlink/?linkid=34178) Connect.  
   
 -   En la barra de herramientas Ayuda de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], haga clic en el botón **Enviar comentarios** o seleccione el comando **Comunidad/Enviar comentarios**.  
   
@@ -49,13 +50,15 @@ ms.locfileid: "62772283"
   
 -   Obtenga acceso a la ayuda desde la utilidad.  
   
--   Seleccione el **ayuda** casilla de verificación en la **las barras de herramientas** pestaña de la **herramientas/Personalizar...**  comando.  
+-   Active la casilla **ayuda** en la pestaña **barras de herramientas** del comando **herramientas/personalizar..** ..  
   
 ## <a name="automatic-error-and-usage-reporting"></a>Informes automáticos de errores y usos  
- Puede habilitar determinadas características para notificar errores de manera automática y enviar información acerca de cómo utiliza el software y los servicios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[msCoName](../includes/msconame-md.md)] utiliza esta información para mejorar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Toda los datos se consideran información confidencial.  
+ Puede habilitar determinadas características para notificar errores de manera automática y enviar información acerca de cómo utiliza el software y los servicios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] utiliza esta información para mejorar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Toda los datos se consideran información confidencial.  
   
 ### <a name="managing-automatic-usage-reporting"></a>Administrar el informe de errores automático  
- La elaboración automática de informes le permite tomar decisiones sobre la recopilación y envío de datos a [!INCLUDE[msCoName](../includes/msconame-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza dos canalizaciones para informar sobre los datos de uso. Ambas canalizaciones informan sobre datos similares, pero informan de los datos de uso en diferentes programas y se activan y desactivan de manera independiente. La activación o desactivación de una canalización mediante uno de los programas que la utiliza también detiene o inicia la recopilación de datos de otros programas con los que comparten la misma canalización.  
+ La elaboración automática de informes le permite tomar decisiones sobre la recopilación y envío de datos a [!INCLUDE[msCoName](../includes/msconame-md.md)]. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza dos canalizaciones para informar sobre los datos de uso. Ambas canalizaciones informan sobre datos similares, pero informan de los datos de uso en diferentes programas y se activan y desactivan de manera independiente. La activación o desactivación de una canalización mediante uno de los programas que la utiliza también detiene o inicia la recopilación de datos de otros programas con los que comparten la misma canalización.  
   
 -   Una canalización se utiliza para informar de datos de uso de la totalidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], excepto para el componente Libros en pantalla y algunos de los elementos de la interfaz de usuario basados en [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio en las herramientas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Después de la instalación, también puede desactivar (o activar) esta canalización. Para ello, en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra un proyecto basado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y después en el menú **Ayuda**, seleccione **Opciones de comentarios del cliente**. Este comando no aparecerá hasta que haya abierto un proyecto basado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

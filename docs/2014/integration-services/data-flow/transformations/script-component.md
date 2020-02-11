@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770695"
 ---
 # <a name="script-component"></a>Componente de script
@@ -56,7 +56,7 @@ ms.locfileid: "62770695"
  En el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , el componente de script tiene dos modos: modo de diseño de metadatos y modo de diseño de código. En el modo de diseño de metadatos, se pueden agregar y modificar las entradas y salidas de componente de script, pero no se puede escribir código. Una vez configuradas todas las entradas y salidas, se cambia al modo de diseño de código para escribir el script. El componente de script genera automáticamente código base a partir de los metadatos de entradas y salidas. Si cambia los metadatos después de que el componente de script genere el código de base, es posible que su código ya no pueda compilarse porque el código base actualizado puede ser incompatible con su código.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>Escribir el script que el componente utiliza  
- El componente de script usa [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools para aplicaciones (VSTA) como entorno para escribir los scripts. Puede tener acceso a VSTA en el **Editor de transformación Script**. Para obtener más información, vea [Editor de transformación Script &#40;página Script&#41;](../../script-transformation-editor-script-page.md).  
+ El componente de script [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] utiliza Tools para aplicaciones (VSTA) como el entorno en el que se escriben los scripts. Puede tener acceso a VSTA en el **Editor de transformación Script**. Para obtener más información, vea [Editor de transformación Script &#40;página Script&#41;](../../script-transformation-editor-script-page.md).  
   
  El componente de script proporciona un proyecto de VSTA que incluye una clase autogenerada, llamada ScriptMain, que representa los metadatos del componente. Por ejemplo, si el componente de script se usa como una transformación que tiene tres salidas, ScriptMain incluye un método para cada salida. ScriptMain es el punto de entrada al script.  
   
@@ -90,13 +90,13 @@ ms.locfileid: "62770695"
 ### <a name="configuring-the-script-component-in-the-designer"></a>Configurar el componente de script en el Diseñador  
  Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de transformación Script** , haga clic en uno de los siguientes temas:  
   
--   [Editor de transformación Script &#40;página Columnas de entrada&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [Editor de transformación script &#40;página columnas de entrada&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [Editor de transformación Script &#40;página Entradas y salidas&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [Editor de transformación script &#40;página entradas y salidas&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [Editor de transformación Script &#40;página Script&#41;](../../script-transformation-editor-script-page.md)  
+-   [Editor de transformación script &#40;página script&#41;](../../script-transformation-editor-script-page.md)  
   
--   [Editor de transformación Script &#40;página Administradores de conexión&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [Editor de transformación script &#40;página administradores de conexión&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  Para obtener más información sobre cómo establecer estas propiedades en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , haga clic en el siguiente tema:  
   

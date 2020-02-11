@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 998d42d262e3f980b4b35ed82b26904399d6b33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809386"
 ---
 # <a name="server-properties-advanced-page"></a>Propiedades del servidor (página Avanzadas)
@@ -34,7 +34,7 @@ ms.locfileid: "62809386"
  **Nivel de acceso de FILESTREAM**  
  Muestra el nivel actual de compatibilidad con FILESTREAM en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para cambiar el nivel de acceso, seleccione uno de los valores siguientes:  
   
- **Deshabilitado**  
+ **Deshabilitada**  
  Los datos de objeto binario grande (BLOB) no pueden almacenarse en el sistema de archivos. Este es el valor predeterminado.  
   
  **Acceso Transact-SQL habilitado**  
@@ -76,10 +76,10 @@ ms.locfileid: "62809386"
   
  Si un catálogo de texto completo no está disponible, se vuelven a generar los índices de texto completo asociados. Esta opción solo está disponible para bases de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
- **Volver a generar**  
+ **Recompilación**  
  Los catálogos de texto completo se vuelven a generar con los separadores de palabras nuevos y mejorados. La regeneración de los índices puede llevar cierto tiempo y, después de la actualización, podría ser necesaria una cantidad significativa de CPU y de memoria.  
   
- **Restablecer**  
+ **Reset**  
  Los catálogos de texto completo se restablecen. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Los archivos de catálogo de texto completo se quitan, pero los metadatos de los catálogos de texto completo y los índices de texto completo se conservan. Después de actualizarse, todos los índices de texto completo quedan deshabilitados para el seguimiento de cambios y los rastreos no se inician de forma automática. El catálogo permanecerá vacío hasta que se emita manualmente un rellenado completo después de que se complete la actualización.  
   
  Para obtener más información sobre cómo elegir la opción de actualización de texto completo, vea [Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
@@ -100,7 +100,7 @@ ms.locfileid: "62809386"
   
  Por ejemplo, el valor predeterminado 2049 indica que la fecha escrita como "14/3/49" se interpretará como 14 de marzo de 2049 y la fecha escrita como "14/3/50", como 14 de marzo de 1950. Para más información, consulte [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
-## <a name="network"></a>red  
+## <a name="network"></a>Red  
  **Tamaño de paquete de red**  
  Establece el tamaño de paquete (en bytes) que se utiliza en toda la red. El valor predeterminado es 4.096 bytes. Si una aplicación realiza operaciones de copia masiva, o bien envía o recibe una gran cantidad de datos de `text` o `image`, el uso de paquetes de un tamaño superior al predeterminado puede mejorar la eficacia, ya que tiene como resultado un número menor de operaciones de lectura y escritura en la red. Si una aplicación envía y recibe pequeñas cantidades de información, puede establecer un tamaño de 512 bytes para cada paquete, lo que es suficiente para la mayor parte de las transferencias de datos. Para más información, consulte [Establecer la opción de configuración del servidor Tamaño de paquete de red](configure-the-network-packet-size-server-configuration-option.md).  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62809386"
  **Espera de consulta**  
  Especifica el tiempo en segundos (de 0 a 2.147.483.647) que espera una consulta para utilizar los recursos antes de agotarse el tiempo de espera. Si se utiliza el valor predeterminado -1, el tiempo de espera calculado será 25 veces el costo estimado de la consulta. Para más información, consulte [Establecer la opción de configuración del servidor Espera de consulta](configure-the-query-wait-server-configuration-option.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

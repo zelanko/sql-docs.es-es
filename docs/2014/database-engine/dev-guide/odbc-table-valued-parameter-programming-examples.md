@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de programación de parámetro con valores de tabla ODBC | Microsoft Docs
+title: Ejemplos de programación de parámetros con valores de tabla de ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 93a664baaa81a56e45a54aa36c5f4e8e57375124
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780856"
 ---
 # <a name="odbc-table-valued-parameter-programming-examples"></a>Ejemplos de programación de parámetros con valores de tabla ODBC
-  En esta sección se describe cómo realizar tareas comunes con ODBC y parámetros con valores de tabla. Para obtener otro ejemplo que muestra los parámetros con valores de tabla, vea [usar parámetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+  En esta sección se describe cómo realizar tareas comunes con ODBC y parámetros con valores de tabla. Para ver otro ejemplo en el que se muestran los parámetros con valores de tabla, vea [usar parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Enviar datos como un parámetro con valores de tabla con todos los valores de memoria &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)  
+-   [Enviar datos como un parámetro con valores de tabla con todos los valores en memoria &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md)  
   
 -   [Enviar datos como un parámetro con valores de tabla usando datos en ejecución &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

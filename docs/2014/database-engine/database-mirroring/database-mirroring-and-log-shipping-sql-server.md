@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807479"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Crear reflejo de la base de datos y trasvase de registros (SQL Server)
@@ -61,9 +61,9 @@ ms.locfileid: "62807479"
  Si se utiliza un monitor de trasvase de registros local, no son necesarias consideraciones especiales para admitir este escenario. Para obtener información acerca de cómo utilizar una instancia de supervisión remota con este escenario, vea "Impacto de la creación de reflejo de la base de datos en una instancia de supervisión remota", más adelante en este tema.  
   
 ## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>Conmutación por error de la base de datos principal a la base de datos reflejada  
- En la siguiente ilustración se muestra el funcionamiento conjunto del trasvase de registros y la creación de reflejo de la base de datos cuando la creación de reflejo se ejecuta en el modo de alta seguridad con conmutación automática por error. Inicialmente, **Server_A** es el servidor principal para la creación de reflejo y el servidor principal del trasvase de registros. **Server_B** es el servidor reflejado y además está configurado como servidor principal, que actualmente está inactivo. **Server_C** y **Server_D** son servidores secundarios de trasvase de registros. Para ofrecer la máxima disponibilidad de la sesión de trasvase de registros, la ubicación de copias de seguridad se encuentra en un directorio de recurso compartido en un equipo host independiente.  
+ En la siguiente ilustración se muestra el funcionamiento conjunto del trasvase de registros y la creación de reflejo de la base de datos cuando la creación de reflejo se ejecuta en el modo de alta seguridad con conmutación automática por error. Inicialmente, **Server_A** es el servidor principal para la creación de reflejo y el servidor principal del trasvase de registros. **Server_B** es el servidor reflejado y también se configura como servidor principal, que actualmente está inactivo. **Server_C** y **Server_D** son servidores secundarios de trasvase de registros. Para ofrecer la máxima disponibilidad de la sesión de trasvase de registros, la ubicación de copias de seguridad se encuentra en un directorio de recurso compartido en un equipo host independiente.  
   
- ![Combinar el trasvase de registros y la creación de reflejo de la base de datos](../media/logshipping-and-dbm-automatic-failover.gif "Combinar el trasvase de registros y la creación de reflejo de la base de datos")  
+ ![Trasvase de registros y creación de reflejo de base de datos](../media/logshipping-and-dbm-automatic-failover.gif "Trasvase de registros y creación de reflejo de base de datos")  
   
  Tras una conmutación por error de la creación de reflejo, el nombre del servidor principal definido en el servidor secundario no se modifica. .  
   

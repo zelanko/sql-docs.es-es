@@ -1,5 +1,5 @@
 ---
-title: General (Diseñador de la base de datos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: General (diseñador de bases de datos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081085"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>General (Diseñador de bases de datos) (Analysis Services - Datos multidimensionales)
-  Use la pestaña **General** para cambiar las propiedades de una base de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+  Use la pestaña **General** para cambiar las propiedades de una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- **Para mostrar la ficha General**  
+ **Para mostrar la pestaña General**  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66081085"
  **Lenguaje**  
  Seleccione el idioma de la transacción especificada.  
   
- Para agregar una nueva traducción a la cuadrícula, haga clic en  **\<agregar nueva traducción >** .  
+ Para agregar una nueva traducción a la cuadrícula, haga clic en ** \<agregar nueva traducción>**.  
   
  **Título traducido**  
  Escriba el título de la base de datos en el idioma adecuado para la traducción. Si lo deja en blanco, se utilizará el título predeterminado para la base de datos.  
@@ -64,10 +64,10 @@ ms.locfileid: "66081085"
   
  Esta sección contiene una cuadrícula con las siguientes columnas:  
   
- **Name**  
+ **Nombre**  
  Escriba el nombre del tipo de cuenta.  
   
- Para agregar un nuevo tipo de cuenta, haga clic en  **\<Agregar nuevo tipo de cuenta >** .  
+ Para agregar un nuevo tipo de cuenta, haga clic en ** \<agregar nuevo tipo de cuenta>**.  
   
  **Alias**  
  Establece el nombre predeterminado del tipo de cuenta que usará el Asistente de Business Intelligence. Si se deja esta columna vacía, se utilizará el valor predeterminado de la columna **Nombre** .  
@@ -75,9 +75,9 @@ ms.locfileid: "66081085"
  **Función de agregación**  
  Seleccione la función de agregación que se utilizará para el tipo de cuenta seleccionado.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Bases de datos modelo multidimensionales &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
- [Advertencias &#40;Diseñador de la base de datos&#41; &#40;Analysis Services - datos multidimensionales&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Bases de datos de modelos multidimensionales &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
+ [ADVERTENCIAS &#40;diseñador de bases de datos&#41; &#40;Analysis Services de datos multidimensionales&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

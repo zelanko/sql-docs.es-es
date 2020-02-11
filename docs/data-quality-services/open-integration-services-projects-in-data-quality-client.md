@@ -12,10 +12,10 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a070f5a279cdddfb78d3188c210faf43661d5516
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557850"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Abrir proyectos de Integration Services en Data Quality Client
@@ -24,9 +24,9 @@ ms.locfileid: "75557850"
 
   El componente de limpieza de DQS en Integration Services le permite ejecutar un proyecto de limpieza en modo por lotes. Sin embargo, en ocasiones es posible que desee revisar los resultados de la limpieza en un paquete de Integration Services de forma parecida a como se hace en la pestaña **Administrar y ver resultados** de una actividad de limpieza en un proyecto de calidad de datos de DQS. DQS le permite abrir proyectos de Integration Services en la pantalla [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] Abrir proyecto **de** como si fuera cualquier otro proyecto de calidad de datos, así como disfrutar de una experiencia interactiva de limpieza de los resultados de limpieza en ellos.  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="LimitationsRestrictions"></a>Limitaciones y restricciones  
+###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
   
 -   En la pantalla **Abrir proyecto** de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]solo están disponibles los proyectos de Integration Services que están completos. Los proyectos con errores o en ejecución no están disponibles en la pantalla **Abrir proyecto** .  
   
@@ -34,12 +34,12 @@ ms.locfileid: "75557850"
   
 -   No es posible eliminar un proyecto de Integration Services bloqueado desde [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Para poder eliminarlo, primero debe desbloquearlo.  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
  Para ver y abrir en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]un proyecto de Integration Services que contiene un paquete con un componente de limpieza de DQS, primero debe haber completado correctamente su ejecución.  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_kb_operator en la base de datos DQS_MAIN para abrir un proyecto de Integration Services.  
   
   
@@ -64,7 +64,7 @@ ms.locfileid: "75557850"
 6.  Una vez exportados los datos, haga clic en **Finalizar** para cerrar el proyecto de Integration Services.  
 
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Transformación limpieza de DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Proyectos de Integration Services (SSIS)](../integration-services/integration-services-ssis-projects-and-solutions.md)  
   

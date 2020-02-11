@@ -17,10 +17,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 38eeb94dad960af3dc0f15921dbba717e819c828
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252030"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
@@ -28,7 +28,7 @@ ms.locfileid: "72252030"
 
 Genera un valor de predicción para una entrada determinada que consta de un modelo de aprendizaje automático almacenado en un formato binario en una base de datos de SQL Server.
 
-Proporciona puntuación en los modelos de aprendizaje automático de R y Python casi en tiempo real. `sp_rxPredict` es un procedimiento almacenado que se proporciona como un contenedor para la función `rxPredict` R en [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) y [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), y la función [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) de Python en [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) y [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Está escrito en C++ y está optimizado específicamente para las operaciones de puntuación.
+Proporciona puntuación en los modelos de aprendizaje automático de R y Python casi en tiempo real. `sp_rxPredict`es un procedimiento almacenado que se proporciona como un contenedor `rxPredict` para la función de R en [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) y [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), y la función [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) de Python en [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) y [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Está escrito en C++ y está optimizado específicamente para las operaciones de puntuación.
 
 Aunque el modelo se debe crear mediante R o Python, una vez que se serializa y se almacena en un formato binario en una instancia del motor de base de datos de destino, se puede usar desde esa instancia del motor de base de datos aunque no esté instalada la integración de R o Python. Para obtener más información, vea [puntuación en tiempo real con sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
 
@@ -53,20 +53,20 @@ Una consulta SQL válida
 Se devuelve una columna de puntuación, así como todas las columnas de paso a través del origen de datos de entrada.
 Se pueden devolver columnas de puntuación adicionales, como el intervalo de confianza, si el algoritmo admite la generación de estos valores.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Para habilitar el uso del procedimiento almacenado, SQLCLR debe estar habilitado en la instancia.
 
 > [!NOTE]
 > Hay implicaciones de seguridad para enabing esta opción. Use una implementación alternativa, como la función de [PREdicción de Transact-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017) , si SQLCLR no se puede habilitar en el servidor.
 
-El usuario necesita el permiso `EXECUTE` en la base de datos.
+El usuario necesita `EXECUTE` el permiso en la base de datos.
 
 ### <a name="supported-algorithms"></a>Algoritmos admitidos
 
-Para crear y entrenar el modelo, use uno de los algoritmos admitidos para R o Python, proporcionado por [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017), [SQL Server 2016 R Server (independiente)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016), [SQL Server 2017 Machine Learning Services (R o Python)](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017)o [SQL Server 2017 Servidor (independiente) (R o Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017).
+Para crear y entrenar el modelo, use uno de los algoritmos admitidos para R o Python, proporcionado por [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017), [SQL Server 2016 R Server (independiente)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016), [SQL Server 2017 Machine Learning Services (r o python)](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017)o [SQL Server servidor 2017 (independiente) (r o Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017).
 
-#### <a name="r-revoscaler-models"></a>R: Modelos RevoScaleR
+#### <a name="r-revoscaler-models"></a>R: modelos RevoScaleR
 
   + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)
@@ -74,7 +74,7 @@ Para crear y entrenar el modelo, use uno de los algoritmos admitidos para R o Py
   + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
   + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
 
-#### <a name="r-microsoftml-models"></a>R: Modelos MicrosoftML
+#### <a name="r-microsoftml-models"></a>R: modelos MicrosoftML
 
   + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
@@ -83,11 +83,11 @@ Para crear y entrenar el modelo, use uno de los algoritmos admitidos para R o Py
   + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
   + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
-#### <a name="r-transformations-supplied-by-microsoftml"></a>R: Transformaciones proporcionadas por MicrosoftML
+#### <a name="r-transformations-supplied-by-microsoftml"></a>R: transformaciones proporcionadas por MicrosoftML
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [cantidades](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
@@ -109,18 +109,18 @@ Para crear y entrenar el modelo, use uno de los algoritmos admitidos para R o Py
   + [rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
   + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
 
-#### <a name="python-transformations-supplied-by-microsoftml"></a>Python Transformaciones proporcionadas por microsoftml
+#### <a name="python-transformations-supplied-by-microsoftml"></a>Python: transformaciones proporcionadas por microsoftml
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
+  + [cantidades](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
-### <a name="unsupported-model-types"></a>Tipos de modelo no admitidos
+### <a name="unsupported-model-types"></a>Tipos de modelos no admitidos
 
 No se admiten los siguientes tipos de modelo:
 
-+ Modelos que usan los algoritmos `rxGlm` o `rxNaiveBayes` en RevoScaleR
++ Modelos que usan `rxGlm` los `rxNaiveBayes` algoritmos o en RevoScaleR
 + Modelos PMML en R
 + Modelos creados con otras bibliotecas de terceros 
 
@@ -135,9 +135,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-Además de ser una consulta SQL válida, los datos de entrada de *\@inputData* deben incluir columnas compatibles con las columnas del modelo almacenado.
+Además de ser una consulta SQL válida, los datos de entrada de * \@inputData* deben incluir columnas compatibles con las columnas del modelo almacenado.
 
-`sp_rxPredict` solo admite los siguientes tipos de columna .NET: Double, Float, Short, ushort, Long, ulong y String. Es posible que tenga que filtrar los tipos no admitidos en los datos de entrada antes de usarlo para la puntuación en tiempo real. 
+`sp_rxPredict`solo admite los siguientes tipos de columna de .NET: Double, Float, Short, ushort, Long, ulong y String. Es posible que tenga que filtrar los tipos no admitidos en los datos de entrada antes de usarlo para la puntuación en tiempo real. 
 
-  Para obtener información sobre los tipos SQL correspondientes, consulte [asignación de tipos de SQL-CLR](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) o [asignación de datos de parámetros CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
+  Para obtener información sobre los tipos de SQL correspondientes, vea [Asignación de tipos de SQL-CLR](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) o [Asignación de datos de parámetros de CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).
 

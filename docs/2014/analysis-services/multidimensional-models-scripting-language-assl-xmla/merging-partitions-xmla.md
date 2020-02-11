@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702041"
 ---
 # <a name="merging-partitions-xmla"></a>Mezclar particiones (XMLA)
-  Si las particiones tienen el mismo diseño de agregaciones y la estructura, puede combinar la partición mediante la [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) comando XML for Analysis (XMLA). Combinar particiones es una acción importante que se debe realizar cuando se administran particiones, sobre todo aquellas particiones que contienen datos históricos con particiones por fecha.  
+  Si las particiones tienen el mismo diseño y estructura de agregaciones, puede combinar la partición mediante el comando [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) en XML for Analysis (XMLA). Combinar particiones es una acción importante que se debe realizar cuando se administran particiones, sobre todo aquellas particiones que contienen datos históricos con particiones por fecha.  
   
  Por ejemplo, un cubo financiero puede usar dos particiones:  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62702041"
  Ambas particiones usan valores de almacenamiento diferentes, pero utilizan el mismo diseño de agregaciones. En lugar de procesar el cubo a través de años de datos históricos al final del año, puede usar en su lugar el comando `MergePartitions` para combinar la partición del año en curso en la partición de años anteriores. Con ello se conservan los datos de agregación sin tener que realizar un proceso completo del cubo que puede requerir mucho tiempo.  
   
 ## <a name="specifying-partitions-to-merge"></a>Especificar particiones para combinar  
- Cuando el `MergePartitions` comando se ejecuta, los datos de agregación almacenados en las particiones de origen especificadas en el [origen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) propiedad se agrega a la partición de destino especificada en el [destino](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) propiedad.  
+ Cuando se `MergePartitions` ejecuta el comando, los datos de agregación almacenados en las particiones de origen especificadas en la propiedad de [origen](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) se agregan a la partición de destino especificada en la propiedad de [destino](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) .  
   
 > [!NOTE]  
 >  La propiedad `Source` puede contener más de una referencia de objeto de partición. Sin embargo, la propiedad `Target` no puede.  
@@ -46,7 +46,7 @@ ms.locfileid: "62702041"
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="description"></a>Descripción  
- El ejemplo siguiente combina todas las particiones de la **Customer Counts** grupo de medida de la **Adventure Works** del cubo en el **Adventure Works DW** ejemplo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la base de datos la **Customers_2004** partición.  
+ En el ejemplo siguiente se combinan todas las particiones del grupo de medida **Customer Counts** del cubo **Adventure Works** de la base de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de ejemplo **Adventure Works DW** en la partición **Customers_2004** .  
   
 ### <a name="code"></a>Código  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62702041"
 </MergePartitions>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Desarrollo con XMLA en Analysis Services](developing-with-xmla-in-analysis-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Desarrollar con XMLA en Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

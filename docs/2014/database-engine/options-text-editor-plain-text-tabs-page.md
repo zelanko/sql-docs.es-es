@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (Editor de texto: texto sin formato - página de tabulaciones) | Microsoft Docs'
+title: Opciones (editor de texto-texto sin formato-página tabulaciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089860"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Editor de texto - Texto sin formato - Página Pestañas)
@@ -26,16 +26,16 @@ ms.locfileid: "66089860"
  Las opciones del Editor de texto sin formato también se pueden establecer en el cuadro de diálogo **Todos los idiomas General** . Si usa los cuadros de diálogos **Todos los lenguajes** con el fin de establecer diferentes opciones para los demás editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como los editores MDX o DMX, debe restablecer las opciones del Editor de texto sin formato mediante este cuadro de diálogo.  
   
 ## <a name="indenting"></a>Sangrías  
- **Ninguno**  
+ **None**  
  No aplica ninguna sangría a la nueva línea que se crea al presionar ENTRAR. El cursor se coloca en la primera columna de la nueva línea.  
   
- **Block**  
+ **Sin**  
  Aplica una sangría a la nueva línea que se crea al presionar ENTRAR a la misma distancia a la que se creó la sangría de la línea anterior.  
   
- **Smart**  
+ **Automática**  
  El editor de texto simple no admite este tipo de formato.  
   
-## <a name="tabs"></a>Tabulaciones  
+## <a name="tabs"></a>Pestañas  
  **Tamaño de tabulación**  
  Establece la distancia en espacios entre las tabulaciones. El valor predeterminado es cuatro espacios.  
   

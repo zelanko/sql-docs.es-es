@@ -1,5 +1,5 @@
 ---
-title: Opciones (página texto) de los resultados de consulta | Microsoft Docs
+title: Resultados de opciones de consulta (página texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d96384a4a4f4adbb52855a45f1bc00d3aadd85d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088984"
 ---
 # <a name="query-options-results-text-page"></a>Resultados de Opciones de consulta (página Texto)
@@ -37,10 +37,10 @@ ms.locfileid: "66088984"
  **Alinear a la derecha los valores numéricos**  
  Active esta casilla para alinear los valores numéricos a la derecha de la columna. Esto puede ser de ayuda a la hora de revisar números con un número fijo de posiciones decimales.  
   
- **Descartar resultados tras la ejecución**  
+ **Descartar resultado tras ejecutar la consulta**  
  Si descarta los resultados de la consulta después de que la pantalla los reciba, liberará memoria.  
   
- **Mostrar resultados en otra pestaña**  
+ **Mostrar los resultados en una pestaña independiente**  
  Active esta casilla para mostrar el conjunto de resultados en una nueva ventana de documento, en lugar de en la parte inferior de la ventana de documento de la consulta.  
   
  **Cambiar a la pestaña de resultados tras ejecutar la consulta**  
@@ -49,7 +49,7 @@ ms.locfileid: "66088984"
  **Número máximo de caracteres mostrados en cada columna**  
  El valor predeterminado es 256. Aumente este valor para poder mostrar conjuntos de resultados mayores sin truncamientos.  
   
- **Valores predeterminados**  
+ **Restablecer valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
 ## <a name="saving-a-text-result-set-with-headers"></a>Guardar un conjunto de resultados de texto con encabezados  

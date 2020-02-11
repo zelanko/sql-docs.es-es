@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f567c92632e99bef38fc1a6eb7a0179929f467c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871217"
 ---
 # <a name="shrink-a-file"></a>Reducir un archivo
@@ -62,7 +62,7 @@ ms.locfileid: "62871217"
 ####  <a name="Permissions"></a> Permisos  
  Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-shrink-a-data-or-log-file"></a>Para reducir un archivo de datos o de registro  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62871217"
   
      Si activa esta opción, los datos se mueven del archivo especificado a otros archivos del grupo de archivos. A continuación, el archivo vacío puede eliminarse. Esta opción equivale a ejecutar DBCC SHRINKFILE con la opción EMPTYFILE.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62871217"
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql)   
  [Reducir una base de datos](shrink-a-database.md)   
  [Eliminar archivos de datos o de registro de una base de datos](delete-data-or-log-files-from-a-database.md)   

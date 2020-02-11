@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a492aee19d6b09cb7d227b34648f1ea35d1d95d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762089"
 ---
 # <a name="database-identifiers"></a>Identificadores de base de datos
-  El nombre de un objeto de base de datos se conoce como su identificador. Cualquier elemento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede tener un identificador. Servidores, bases de datos y objetos de bases de datos, como tablas, vistas, columnas, índices, desencadenadores, procedimientos, restricciones, reglas, etc. pueden tener identificadores. Se requiere que la mayor parte de los objetos tengan identificadores; pero para ciertos objetos, como las restricciones, son opcionales.  
+  El nombre de un objeto de base de datos se conoce como su identificador. Todo en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede tener un identificador. Servidores, bases de datos y objetos de bases de datos, como tablas, vistas, columnas, índices, desencadenadores, procedimientos, restricciones, reglas, etc. pueden tener identificadores. Se requiere que la mayor parte de los objetos tengan identificadores; pero para ciertos objetos, como las restricciones, son opcionales.  
   
  El identificador de un objeto se crea cuando se define el objeto. A continuación, el identificador se utiliza para hacer referencia al objeto. Por ejemplo, la instrucción siguiente crea una tabla con el identificador `TableX`y dos columnas con los identificadores `KeyCol` y `Description`:  
   
@@ -96,7 +96,8 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
   
     -   El signo de arroba, dólar ($), número o subrayado.  
   
-3.  El identificador no debe ser una palabra reservada de [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reserva las versiones en mayúsculas y minúsculas de las palabras reservadas. Cuando se utilizan en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , los identificadores que no cumplan estas reglas deben aparecer delimitados por comillas dobles o corchetes. Las palabras reservadas dependen del nivel de compatibilidad de la base de datos. Este nivel se puede establecer mediante la instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) .  
+3.  El identificador no debe ser una palabra reservada de [!INCLUDE[tsql](../../includes/tsql-md.md)] . 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reserva las versiones en mayúsculas y minúsculas de las palabras reservadas. Cuando se utilizan en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , los identificadores que no cumplan estas reglas deben aparecer delimitados por comillas dobles o corchetes. Las palabras reservadas dependen del nivel de compatibilidad de la base de datos. Este nivel se puede establecer mediante la instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) .  
   
 4.  No se permiten los caracteres especiales o los espacios incrustados.  
   
@@ -107,7 +108,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 > [!NOTE]  
 >  Algunas reglas de formato de los identificadores normales dependen del nivel de compatibilidad de la base de datos. Este nivel se puede establecer mediante [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql)   

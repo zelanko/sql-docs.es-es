@@ -24,14 +24,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874081"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Acceso a datos de objetos de base de datos de CLR
-  Una rutina de common language runtime (CLR) puede acceder fácilmente a los datos almacenados en la instancia de [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] en que se ejecuta, así como los datos almacenados en instancias remotas. El contexto del usuario en el que se ejecuta el código, determina los datos concretos a los que la rutina puede tener acceso. Acceso a datos desde dentro de un objeto de base de datos CLR mediante el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datos de cliente administrado y las aplicaciones de nivel intermedio. Debido a esto, puede aprovechar sus conocimientos de ADO.NET y `SqlClient` en aplicaciones cliente y de nivel medio.  
+  Una rutina Common Language Runtime (CLR) puede acceder fácilmente a los datos almacenados en la [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] instancia de en la que se ejecuta, así como a los datos almacenados en instancias remotas. El contexto del usuario en el que se ejecuta el código, determina los datos concretos a los que la rutina puede tener acceso. Obtener acceso a los datos desde un objeto de base de datos CLR mediante el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de datos de .NET Framework para los datos de las aplicaciones cliente administradas y de nivel intermedio. Debido a esto, puede aprovechar sus conocimientos de ADO.NET y `SqlClient` en aplicaciones cliente y de nivel medio.  
   
 > [!NOTE]  
 >  De forma predeterminada, los métodos de tipo definido por el usuario y funciones definidas por el usuario no pueden tener acceso a datos. Debe establecer la propiedad `DataAccess` de `SqlMethodAttribute` o `SqlFunctionAttribute` en `DataAccessKind.Read` para habilitar el acceso a datos de solo lectura desde métodos de tipo definido por el usuario (UDT) o funciones definidas por el usuario. Las operaciones de modificación de datos o las funciones definidas por el usuario no se permiten desde los UDT y, si se intentan producen excepciones en tiempo de ejecución.  

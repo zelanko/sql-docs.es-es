@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827155"
 ---
 # <a name="error-handling-in-data"></a>Control de errores en los datos
@@ -44,7 +44,7 @@ ms.locfileid: "62827155"
   
  El siguiente diagrama muestra un flujo de datos simple que incluye una salida de error.  
   
- ![Flujo de datos con salida de error](../media/mw-dts-11.gif "Data flow with error output")  
+ ![Flujo de datos con salida de error](../media/mw-dts-11.gif "Flujo de datos con salida de error")  
   
  Además de las columnas de datos, la salida de error incluye las columnas **ErrorCode** y **ErrorColumn** . La columna **ErrorCode** identifica el error y la columna **ErrorColumn** contiene el identificador de linaje de la columna de error. Para ver los metadatos de estas columnas, haga clic en la ruta que conecta la salida de error al siguiente componente en el flujo de datos. En algunas circunstancias, el valor de la columna **ErrorColumn** se establece en cero. Esto ocurre cuando la condición de error afecta a toda la fila en lugar de a una única columna. Un ejemplo es cuando se produce un error de búsqueda en la transformación Búsqueda.  
   
@@ -68,13 +68,13 @@ ms.locfileid: "62827155"
 ## <a name="adding-the-error-description"></a>Agregar la descripción del error  
  De forma predeterminada, una salida de error proporciona el código de error numérico y generalmente contiene el identificador de la columna en la que ocurrió el error. Puede utilizar el componente de script para incluir la descripción del error en una columna adicional mediante el uso de una única línea del script para llamar al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> de la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
- El componente de script se puede agregar al segmento de error del flujo de datos en cualquier componente de nivel inferior de los componentes de flujo de datos cuyos errores desea capturar, pero generalmente se ubica inmediatamente antes de las filas de error escritas para un destino. De esta manera, el script solo busca descripciones para filas de error escritas. Por ejemplo, el segmento de error del flujo de datos puede corregir algunos errores y no escribir esas filas para un destino de error. Para obtener más información, consulte [mejorar una salida de Error con el componente de Script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+ El componente de script se puede agregar al segmento de error del flujo de datos en cualquier componente de nivel inferior de los componentes de flujo de datos cuyos errores desea capturar, pero generalmente se ubica inmediatamente antes de las filas de error escritas para un destino. De esta manera, el script solo busca descripciones para filas de error escritas. Por ejemplo, el segmento de error del flujo de datos puede corregir algunos errores y no escribir esas filas para un destino de error. Para obtener más información, vea [mejorar una salida de error con el componente de script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
 ### <a name="to-configure-an-error-output"></a>Para configurar una salida de error  
   
 -   [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Flujo de datos](data-flow.md)   
  [Transformar datos con transformaciones](transformations/transform-data-with-transformations.md)   
  [Conectar componentes con rutas de acceso](../connect-components-with-paths.md)   

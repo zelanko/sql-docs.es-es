@@ -1,5 +1,5 @@
 ---
-title: Eliminar un origen de datos (ODBC) | Documentos de Microsoft
+title: Eliminar un origen de datos (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,27 +13,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff882caf0ce5d9ef7d2e9f059daed89ed4b50d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126108"
 ---
 # <a name="delete-a-data-source-odbc"></a>Eliminar un origen de datos (ODBC)
-  Puede eliminar un origen de datos con el Administrador de ODBC, mediante programación (utilizando [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), o mediante la eliminación de un archivo (si se trata de un nombre de origen de datos de archivo).  
+  Puede eliminar un origen de datos mediante el administrador ODBC, mediante programación (mediante [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)) o eliminando un archivo (si es un nombre de origen de datos de archivo).  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Para eliminar un origen de datos mediante el Administrador ODBC  
   
-1.  En **Panel de Control**, abra **herramientas administrativas**y, a continuación, haga doble clic en **orígenes de datos (ODBC)** . Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema.  
+1.  En el **Panel de control**, Abra **herramientas administrativas**y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema.  
   
-2.  Haga clic en el **DSN de usuario**, **DSN de sistema**, o **DSN de archivo** ficha.  
+2.  Haga clic en la pestaña **DSN de usuario**, **DSN de sistema**o DSN de **archivo** .  
   
 3.  Haga clic en el origen de datos para eliminarlo.  
   
-4.  Haga clic en **quitar**y, a continuación, confirme la eliminación.  
+4.  Haga clic en **quitar**y confirme la eliminación.  
   
 ## <a name="example"></a>Ejemplo  
- Para eliminar mediante programación un origen de datos, llame a [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) mediante ODBC_REMOVE_DSN u ODBC_REMOVE_SYS_DSN como segundo parámetro.  
+ Para eliminar un origen de datos mediante programación, llame a [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) utilizando ODBC_REMOVE_DSN o ODBC_REMOVE_SYS_DSN como segundo parámetro.  
   
  El ejemplo siguiente se muestra cómo se puede eliminar un origen de datos mediante programación.  
   
@@ -54,7 +54,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de configuración del controlador ODBC de SQL Server](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   
   

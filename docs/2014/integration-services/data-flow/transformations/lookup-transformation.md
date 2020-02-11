@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900291"
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
@@ -74,7 +74,7 @@ ms.locfileid: "62900291"
 -   Resultado no coincidente. El resultado no coincidente administra las filas de la entrada que no coinciden como mínimo con una entrada del conjunto de datos de referencia. Si configura la transformación Búsqueda para que trate como errores las filas sin entradas coincidentes, las filas se redirigirán a la salida de errores. En los demás casos, la transformación redirigiría dichas filas al resultado no coincidente.  
   
     > [!NOTE]  
-    >  En [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], la transformación Búsqueda solo tenía un resultado. Para obtener más información sobre cómo ejecutar una transformación de búsqueda que se creó en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], consulte [actualizar transformaciones de búsqueda](../../../sql-server/install/upgrade-lookup-transformations.md).  
+    >  En [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], la transformación Búsqueda solo tenía un resultado. Para obtener más información sobre cómo ejecutar una transformación búsqueda creada en, vea [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]actualización de [transformaciones de búsqueda](../../../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Resultado de errores  
   
@@ -85,9 +85,9 @@ ms.locfileid: "62900291"
   
  A continuación se describen otras ventajas relacionadas con guardar la memoria caché en un archivo:  
   
--   ***El archivo caché se puede compartir entre varios paquetes. Para más información, vea***   [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***Compartir el archivo caché entre varios paquetes. Para obtener más información, vea***  [implementar una transformación de búsqueda en el modo de caché completa mediante el administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
--   El archivo caché se puede implementar con un paquete. ***De esta forma, podrá utilizar los datos en varios equipos.*** Para obtener información, vea [Cómo crear e implementar una memoria caché para la transformación Búsqueda](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
+-   El archivo caché se puede implementar con un paquete. ***Después, puede usar los datos en varios equipos.*** Para obtener información, vea [Cómo crear e implementar una memoria caché para la transformación Búsqueda](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
 -   Usar el origen de archivo sin formato para leer datos del archivo caché. A continuación, puede utilizar otros componentes de flujo de datos para transformar o mover los datos. Para más información, consulte [Raw File Source](../raw-file-source.md).  
   
@@ -114,14 +114,15 @@ ms.locfileid: "62900291"
   
      Esta opción de almacenamiento en caché es compatible con la opción sin almacenamiento en caché disponible para la transformación Búsqueda en [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)].  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] difieren en el modo en que comparan cadenas. Si la transformación Búsqueda se configura para cargar el conjunto de datos de referencia en la memoria caché antes de que se ejecute la transformación Búsqueda, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] lleva a cabo la comparación de búsqueda en la memoria caché. En caso contrario, la operación de búsqueda utiliza una instrucción SQL con parámetros y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realiza la comparación de búsqueda. Por lo tanto, es posible que la transformación Búsqueda devuelva un número de coincidencias diferentes a partir de la misma tabla de búsqueda, en función del tipo de caché.  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] difieren en el modo en que comparan cadenas. Si la transformación Búsqueda se configura para cargar el conjunto de datos de referencia en la memoria caché antes de que se ejecute la transformación Búsqueda, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] lleva a cabo la comparación de búsqueda en la memoria caché. En caso contrario, la operación de búsqueda utiliza una instrucción SQL con parámetros y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realiza la comparación de búsqueda. Por lo tanto, es posible que la transformación Búsqueda devuelva un número de coincidencias diferentes a partir de la misma tabla de búsqueda, en función del tipo de caché.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación. Para obtener información detallada, vea los siguientes temas.  
   
 -   [Implementar una búsqueda en modo No hay caché o Caché parcial](implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implementación de una transformación Búsqueda en el modo Caché completa con el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
 -   [Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
@@ -129,19 +130,19 @@ ms.locfileid: "62900291"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Vídeo [ Cómo implementar una transformación Búsqueda en modo de memoria caché completa](https://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
+-   Vídeo, [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
   
 -   Entrada de blog, [Prácticas recomendadas para utilizar los modos de caché de la transformación Búsqueda](https://go.microsoft.com/fwlink/?LinkId=146623)(en inglés), en blogs.msdn.com  
   
--   Entrada de blog, [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782) (Patrón de búsqueda: falta de distinción entre mayúsculas y minúsculas), en blogs.msdn.com  
+-   Entrada de blog, [Patrón de búsqueda: sin distinción de mayúsculas y minúsculas](https://go.microsoft.com/fwlink/?LinkId=157782), en blogs.msdn.com  
   
 -   Ejemplo, [Transformación de búsqueda](https://go.microsoft.com/fwlink/?LinkId=267528), en msftisprodsamples.codeplex.com.  
   
      Para obtener información acerca de cómo instalar muestras de producto y bases de datos de ejemplo de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , vea [Ejemplos del producto SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
-## <a name="see-also"></a>Vea también  
- [Transformación Búsqueda aproximada](fuzzy-lookup-transformation.md)   
- [Transformación Búsqueda de términos](term-lookup-transformation.md)   
+## <a name="see-also"></a>Consulte también  
+ [Transformación búsqueda aproximada](fuzzy-lookup-transformation.md)   
+ [Transformación búsqueda de términos](term-lookup-transformation.md)   
  [Flujo de datos](../data-flow.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  
   

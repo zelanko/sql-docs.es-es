@@ -1,5 +1,5 @@
 ---
-title: Implementar desde SQL Server Data Tools (SSAS Tabular) | Microsoft Docs
+title: Implementar desde SQL Server Data Tools (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067298"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Implementar con SQL Server Data Tools (SSAS tabular)
@@ -24,20 +24,20 @@ ms.locfileid: "66067298"
   
  Secciones de este tema:  
   
--   [Configurar las propiedades Opciones de implementación y Servidor de implementación](#bkmk_deploy)  
+-   [Configurar las propiedades opciones de implementación y servidor de implementación](#bkmk_deploy)  
   
 -   [Implementar una solución de modelo tabular](#bkmk_deploy_proc)  
   
--   [Estado de la implementación](#bkmk_deploy_status)  
+-   [Estado de implementación](#bkmk_deploy_status)  
   
-##  <a name="bkmk_deploy"></a> Configurar las propiedades Opciones de implementación y Servidor de implementación  
- Antes de implementar la solución de modelo tabular, primero debe especificar las propiedades Opciones de implementación y Servidor de implementación. Para obtener más información sobre las propiedades y la configuración de la implementación, vea [Tabular Model Solution Deployment &#40;SSAS Tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md).  
+##  <a name="bkmk_deploy"></a>Configurar las propiedades opciones de implementación y servidor de implementación  
+ Antes de implementar la solución de modelo tabular, primero debe especificar las propiedades Opciones de implementación y Servidor de implementación. Para obtener más información sobre las propiedades y la configuración de la implementación, vea [Implementación de soluciones de modelos tabulares &#40;SSAS tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md).  
   
 #### <a name="to-configure-deployment-options-and-deployment-server-properties"></a>Para configurar las propiedades Opciones de implementación y Servidor de implementación  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y, después, haga clic en **Propiedades**.  
   
-2.  En el  **\<nombre del proyecto > propiedades** cuadro de diálogo, en **opciones de implementación**, especificar valores de propiedades si difiere de la configuración predeterminada.  
+2.  En el cuadro de diálogo ** \<nombre del proyecto> propiedades** , en **Opciones de implementación**, especifique la configuración de las propiedades si difiere de la predeterminada.  
   
     > [!NOTE]  
     >  Para los modelos en modo de almacenamiento en caché, el **Modo de consulta** siempre es **In-Memory**.  
@@ -50,15 +50,15 @@ ms.locfileid: "66067298"
 > [!NOTE]  
 >  También puede especificar el valor de la propiedad Servidor de implementación predeterminado de modo que los proyectos que se creen se implementen automáticamente en el servidor especificado. Para obtener más información, vea [Configurar las propiedades predeterminadas de modelado de datos y de implementación &#40;SSAS tabular&#41;](properties-ssas-tabular.md).  
   
-##  <a name="bkmk_deploy_proc"></a> Implementar una solución de modelo tabular  
+##  <a name="bkmk_deploy_proc"></a>Implementar una solución de modelo tabular  
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Para implementar una solución de modelo tabular  
   
--   En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en el **compilar** menú, haga clic en **implementar \<nombre del proyecto >** .  
+-   En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en el menú **compilar** , haga clic en ** \<implementar nombre de proyecto>**.  
   
      Aparecerá el cuadro de diálogo **Implementar** e indicará el estado de la implementación de los metadatos y del procesamiento (a menos que se haya establecido la propiedad Opción de procesamiento en No procesar) de cada tabla incluida en el modelo. Una vez completado el proceso de implementación, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para conectarse a la instancia de Analysis Services y comprobar que se ha creado el nuevo objeto de base de datos de modelo, o use una aplicación cliente de informes para conectarse al modelo implementado.  
   
-##  <a name="bkmk_deploy_status"></a> Estado de la implementación  
+##  <a name="bkmk_deploy_status"></a>Estado de implementación  
  El cuadro de diálogo **Implementar** permite supervisar el progreso de una operación de implementación. Una operación de implementación también se puede detener.  
   
  **Estado**  
@@ -70,7 +70,7 @@ ms.locfileid: "66067298"
  **Detener implementación**  
  Haga clic en esta opción para detener la operación de implementación. Esta opción resulta útil si la operación de implementación tarda demasiado o hay demasiados errores.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementación de soluciones de modelos tabulares &#40;SSAS tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
  [Configurar las propiedades predeterminadas de modelado de datos y de implementación &#40;SSAS tabular&#41;](properties-ssas-tabular.md)  
   

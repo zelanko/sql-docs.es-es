@@ -1,5 +1,5 @@
 ---
-title: Administración de los ensamblados de modelos multidimensionales | Microsoft Docs
+title: Administración de ensamblados de modelos multidimensionales | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073524"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Administración de ensamblados de modelos multidimensionales
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona gran cantidad de funciones intrínsecas que se pueden usar con los lenguajes MDX (Expresiones multidimensionales) y DMX (Extensiones de minería de datos), y que están diseñadas para realizar multitud de tareas, desde cálculos estadísticos estándar hasta recorridos por los miembros de una jerarquía. No obstante, al igual que con cualquier otro producto complejo, existe siempre la necesidad de ampliar la funcionalidad.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una gran cantidad de funciones intrínsecas para su uso con los lenguajes de expresiones multidimensionales (MDX) y extensiones de minería de datos (DMX), diseñadas para lograr todo, desde cálculos estadísticos estándar hasta el recorrido de miembros en una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] jerarquía. No obstante, al igual que con cualquier otro producto complejo, existe siempre la necesidad de ampliar la funcionalidad.  
   
  Por lo tanto, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite agregar ensamblados a una instancia o base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Los ensamblados permiten crear funciones externas definidas por el usuario mediante cualquier lenguaje CLR (Common Language Runtime), como por ejemplo Microsoft Visual Basic .NET o Microsoft Visual C#. También puede utilizar lenguajes de automatización COM (Modelo de objetos componentes), como Microsoft Visual Basic o Microsoft Visual C++.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66073524"
   
  Las especificaciones de seguridad incluyen el conjunto de permisos y la suplantación que se usa para ejecutar el ensamblado.  
   
-## <a name="calling-user-defined-functions"></a>funciones definidas por el usuario, llamar  
+## <a name="calling-user-defined-functions"></a>Llamar a funciones definidas por el usuario  
  La llamada a una función definida por el usuario en un ensamblado se realiza de la misma forma que la llamada a una función intrínseca, salvo que se deba utilizar un nombre completo. Por ejemplo, una función definida por el usuario que devuelva un tipo esperado por MDX se incluye en una consulta MDX, como se muestra en el siguiente ejemplo:  
   
 ```  
@@ -69,22 +69,23 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Para llamar a una función definida por el usuario desde un ensamblado CLR, la función definida por el usuario estará precedida por el nombre del ensamblado, el nombre de clase completo y el nombre de procedimiento, como se muestra a continuación:  
   
- *nombreDeEnsamblado*.*nombreDeClaseCompleto*.*nombreDeProcedimiento*(*Argumento1*, *Argumento2*…)  
+ *AssemblyName*. *FullClassName*. *Nombreprocedimiento*(*argumento1*, *Argument2*,...)  
   
  Por razones de compatibilidad con versiones anteriores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], se acepta también la siguiente sintaxis:  
   
- *nombreDeEnsamblado*!*nombreDeClaseCompleto*!*nombreDeProcedimiento*(*Argumento1*, *Argumento2*…)  
+ *AssemblyName*! *FullClassName*! *Nombreprocedimiento*(*argumento1*, *Argument2*,...)  
   
  Si una biblioteca COM admite varias interfaces, también se puede utilizar el Id. de interfaz para resolver el nombre de procedimiento, como se muestra a continuación:  
   
- *nombreDeEnsamblado*!*idDeInterfaz*!*nombreDeProcedimiento*(*Argumento1*, *Argumento2*…)  
+ *AssemblyName*! *InterfaceID*! *Nombreprocedimiento*(*argumento1*, *Argument2*,...)  
   
 ## <a name="security"></a>Seguridad  
  La seguridad de los ensamblados depende del modelo de seguridad de .NET Framework, que es un modelo de seguridad de acceso del código. .NET Framework admite un mecanismo de seguridad de acceso del código que presupone que el tiempo de ejecución puede hospedar código de plena confianza y código parcialmente de confianza. Los recursos protegidos por la seguridad de acceso del código de .NET Framework se suelen empaquetar mediante código administrado que solicita el permiso correspondiente antes de permitir el acceso al recurso. La solicitud de permiso solo se satisface si todos los que llaman (en el nivel de ensamblado) de la pila de llamadas tienen el permiso correspondiente para el recurso.  
   
  En el caso de los ensamblados, el permiso de ejecución se pasa con la propiedad `PermissionSet` del objeto `Assembly`. Los permisos que recibe el código administrado vienen determinados por la directiva de seguridad activa. Existen tres niveles de directiva activos en un entorno que no esté hospedado en[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : organización, equipo y usuario. La lista real de permisos que el código recibe queda determinada por la intersección de los permisos obtenidos por estos tres niveles.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un nivel de directiva de seguridad de nivel de host a la biblioteca CLR mientras lo hospeda; esta directiva es un nivel de directiva adicional por debajo de los tres niveles de directiva que siempre están activos. Esta directiva se establece para cada dominio de aplicación creado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un nivel de directiva de seguridad de nivel de host a la biblioteca CLR mientras lo hospeda; esta directiva es un nivel de directiva adicional por debajo de los tres niveles de directiva que siempre están activos. Esta directiva se establece para cada dominio de aplicación creado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  La directiva de nivel de host de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es una combinación de la directiva fija de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para ensamblados de sistema y de la directiva especificada por el usuario para ensamblados de usuario. La parte especificada por el usuario de la directiva de host de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende del propietario de ensamblado que especifique uno de los tres depósitos de permisos para cada ensamblado:  
   
@@ -105,15 +106,16 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   Si hay un EXECUTE AS intermedio que ha cambiado el contexto del llamador original, se producirá un error al intentar obtener acceso al recurso externo.  
   
- La propiedad `ImpersonationMode` se puede establecer en `ImpersonateCurrentUser` o `ImpersonateAnonymous`. La configuración predeterminada, `ImpersonateCurrentUser`, ejecuta un ensamblado en la cuenta de inicio de sesión en red del usuario actual. Si el `ImpersonateAnonymous` es usar la configuración, el contexto de ejecución es corresponde a la cuenta de usuario de inicio de sesión de Windows IUSER_*servername* en el servidor. Se trata de la cuenta de invitado para Internet, que tiene privilegios limitados en el servidor. Un ensamblado que se ejecute en este contexto solamente podrá tener acceso a recursos limitados del servidor local.  
+ La propiedad `ImpersonationMode` se puede establecer en `ImpersonateCurrentUser` o `ImpersonateAnonymous`. La configuración predeterminada, `ImpersonateCurrentUser`, ejecuta un ensamblado en la cuenta de inicio de sesión en red del usuario actual. Si se `ImpersonateAnonymous` usa la configuración, el contexto de ejecución corresponde a la cuenta de usuario de inicio de sesión de Windows IUSER_*ServerName* en el servidor. Se trata de la cuenta de invitado para Internet, que tiene privilegios limitados en el servidor. Un ensamblado que se ejecute en este contexto solamente podrá tener acceso a recursos limitados del servidor local.  
   
 ### <a name="application-domains"></a>Dominios de aplicación  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no ofrece dominios de aplicación directamente. Dado que un conjunto de ensamblados se ejecuta en el mismo dominio de aplicación, los dominios de aplicación podrán descubrirse entre ellos en el tiempo de ejecución mediante el espacio de nombres `System.Reflection` de .NET Framework o de alguna otra forma, y podrán realizar en ellos llamadas enlazadas en tiempo de ejecución. Tales llamadas estarán sujetas a las comprobaciones de permiso utilizadas por la seguridad basada en autorizaciones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no ofrece dominios de aplicación directamente. Dado que un conjunto de ensamblados se ejecuta en el mismo dominio de aplicación, los dominios de aplicación podrán descubrirse entre ellos en el tiempo de ejecución mediante el espacio de nombres `System.Reflection` de .NET Framework o de alguna otra forma, y podrán realizar en ellos llamadas enlazadas en tiempo de ejecución. Tales llamadas estarán sujetas a las comprobaciones de permiso utilizadas por la seguridad basada en autorizaciones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  No debe confiarse en la búsqueda de ensamblados en el mismo dominio de aplicación, porque la implementación define el límite del dominio de aplicación y los ensamblados que van en cada dominio.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar la seguridad para procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+## <a name="see-also"></a>Consulte también  
+ [Establecer la seguridad de los procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [Definir procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

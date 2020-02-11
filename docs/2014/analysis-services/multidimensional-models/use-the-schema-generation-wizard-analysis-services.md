@@ -1,5 +1,5 @@
 ---
-title: Utilice el Asistente para generación de esquemas (Analysis Services) | Microsoft Docs
+title: Usar el Asistente para generar esquemas (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e434493813f0237533ca2e50ff089974f3556f34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072648"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Usar el Asistente para generar esquemas (Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "66072648"
   
 -   Inicie el asistente desde el Asistente para dimensiones haciendo clic en la casilla **Generar el esquema ahora** en la última página del asistente.  
   
-## <a name="step-1-specify-targets"></a>Paso 1: Especificar destinos  
+## <a name="step-1-specify-targets"></a>Paso 1: especificar los destinos  
  Debe especificar la vista del origen de datos (DSV) en que desea que el Asistente para generar esquemas genere el esquema para la base de datos del área de asunto. Aunque puede seleccionar una DSV existente, lo habitual es crear una nueva basada en un origen de datos. El origen de datos se puede crear en función de una conexión nueva o una existente, o bien basándose en otro objeto. El Asistente para generar esquemas crea el esquema para la base de datos del área de asunto en la base de datos a la que se hace referencia en el origen de datos, así como en la vista del origen de datos. El Asistente para generar esquemas no crea la propia base de datos del área de asunto; lo que hace es crear el esquema relacional para que los cubos y las dimensiones sean compatibles con la base de datos existente que se especifique.  
   
  Cuando el Asistente para generar esquemas crea los objetos subyacentes, enlaza las dimensiones y los cubos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a las tablas y las columnas generadas mediante enlaces con estilo de vista del origen de datos.  
@@ -40,7 +40,7 @@ ms.locfileid: "66072648"
 > [!NOTE]  
 >  Para cancelar el enlace entre las dimensiones y los cubos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de los objetos generados previamente, elimine la vista del origen de datos a la que están enlazados los cubos y las dimensiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y, a continuación, defina una nueva vista del origen de datos para los cubos y las dimensiones mediante el Asistente para generar esquemas.  
   
-## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Paso 3: Especificar opciones de esquema para la base de datos del área de asunto  
+## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Paso 3: especificar opciones de esquema para la base de datos del área de asunto  
  El Asistente para generar esquemas proporciona una serie de opciones para definir el esquema que se genera para la base de datos del área de asunto. Estas opciones se pueden especificar en la página **Opciones de esquema de la base de datos del área de asunto** del asistente.  
   
 ### <a name="specifying-the-schema-owner"></a>Especificar el propietario del esquema  
@@ -56,7 +56,7 @@ ms.locfileid: "66072648"
 ### <a name="preserving-data-for-incremental-generation"></a>Conservar datos para la generación incremental  
  De forma predeterminada, el Asistente para generar esquemas trata de conservar los datos cuando se vuelve a generar el esquema de una base de datos. Si el Asistente para generar esquemas tiene que eliminar alguna fila debido a un cambio en el esquema, se muestra una advertencia antes de hacerlo. Por ejemplo, es posible que haya que eliminar filas para resolver problemas de integridad referencial por haber quitado una dimensión o porque haya cambiado un tipo de datos al modificar un atributo de dimensión. Para conservar los datos cuando se vuelve a generar el esquema de la base de datos, seleccione **Mantener los datos al volver a generar**.  
   
-## <a name="step-4-specify-naming-conventions"></a>Paso 4: Especificar convenciones de nomenclatura  
+## <a name="step-4-specify-naming-conventions"></a>Paso 4: especificar convenciones de nomenclatura  
  En la página **Especificar convenciones de nomenclatura** del Asistente para generar esquemas, puede definir las convenciones de nomenclatura que usará el asistente a la hora de crear ciertos objetos de la base de datos del área de asunto. Para obtener más información sobre las opciones disponibles en la página **Especificar convenciones de nomenclatura**, vea [Especificar convenciones de nomenclatura &#40;Asistente para generar esquemas&#41; &#40;Analysis Services - Datos multidimensionales&#41;](../specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md).  
   
   

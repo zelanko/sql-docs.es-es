@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736358"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copiar columnas de una tabla a otra (motor de base de datos)
@@ -47,7 +47,7 @@ ms.locfileid: "62736358"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Para copiar definiciones de columna de una tabla a otra  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62736358"
      Si va a copiar datos dentro de una tabla, puede agregar la tabla de origen como tabla de destino.  
   
     > [!NOTE]  
-    >  El**Diseñador de consultas** no puede determinar con antelación las tablas y las vistas que se pueden actualizar. Por tanto, la lista de tablas del cuadro de diálogo **Elegir tabla de destino para Insertar resultados** mostrará todas las tablas y las vistas disponibles en la conexión de datos que está consultando, incluidas aquellas en las que no puede copiar filas.  
+    >  El **Diseñador de consultas** no puede determinar con antelación las tablas y vistas que se pueden actualizar. Por tanto, la lista de tablas del cuadro de diálogo **Elegir tabla de destino para Insertar resultados** mostrará todas las tablas y las vistas disponibles en la conexión de datos que está consultando, incluidas aquellas en las que no puede copiar filas.  
   
 5.  Haga clic con el botón secundario en el cuerpo del panel Diagrama y, en el menú contextual, haga clic en **Agregar tabla a diagrama**.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "62736358"
   
      Si no especifica ninguna condición de búsqueda, se copiarán todas las filas de la tabla de origen en la tabla de destino.  
   
-10. Si desea copiar información de resumen, especifique opciones de **Agrupar por** . Para obtener más información, vea [Resumir o agregar los valores de todas las filas de una tabla &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md).  
+10. Si desea copiar información de Resumen, especifique opciones **de agrupar por** . Para obtener más información, vea [Resumir o agregar los valores de todas las filas de una tabla &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md).  
   
 11. Haga clic en el botón **Ejecutar SQL** para ejecutar la consulta.  
   
-     Cuando se ejecuta una consulta de inserción de resultados, los resultados no se incluyen en el [panel Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). En su lugar, aparece un mensaje que indica cuántas filas se han copiado.  
+     Al ejecutar una consulta de inserción de resultados, los resultados no se muestran en el [Panel de resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). En su lugar, aparece un mensaje que indica cuántas filas se han copiado.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

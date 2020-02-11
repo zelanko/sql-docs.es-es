@@ -1,5 +1,5 @@
 ---
-title: Especifica el tipo de datos y el tipo de contenido (Tutorial de minería de datos básicos) | Microsoft Docs
+title: Especificar el tipo de datos y el tipo de contenido (tutorial básico de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720046"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Especificar el tipo de datos y el tipo de contenido (Tutorial básico de minería de datos)
@@ -22,46 +22,46 @@ ms.locfileid: "62720046"
   
 #### <a name="review-and-modify-content-type-and-data-type-for-each-column"></a>Revisar y modificar el tipo de contenido y el tipo de datos de cada columna  
   
-1.  En el **contenido y el tipo de datos de columnas especificar** página, haga clic en **detectar** para ejecutar un algoritmo que determine los datos predeterminados y tipos de contenido para cada columna.  
+1.  En la página **especificar el contenido y el tipo de datos de las columnas** , haga clic en **detectar** para ejecutar un algoritmo que determine los datos y los tipos de contenido predeterminados para cada columna.  
   
-2.  Revise las entradas de la **tipo de contenido** y **tipo de datos** columnas y cámbielas si es necesario, para asegurarse de que la configuración es los mismos que los que figuran en la tabla siguiente.  
+2.  Revise las entradas de las columnas tipo de **contenido** y **tipo de datos** y cámbielas si es necesario para asegurarse de que la configuración sea la misma que la que se muestra en la tabla siguiente.  
   
-     Normalmente, el asistente detectará números y asignará un tipo de datos numérico adecuado, pero hay varias situaciones en las que podría desear tratar un número como texto. Por ejemplo, el **GeographyKey** deben tratarse como texto, ya que no sería apropiado realizar operaciones matemáticas con este identificador.  
+     Normalmente, el asistente detectará números y asignará un tipo de datos numérico adecuado, pero hay varias situaciones en las que podría desear tratar un número como texto. Por ejemplo, el **GeographyKey** se debe tratar como texto, porque no sería apropiado realizar operaciones matemáticas en este identificador.  
   
-    |columna|Tipo de contenido|Tipo de datos|  
+    |Columna|Tipo de contenido|Tipo de datos|  
     |------------|------------------|---------------|  
-    |**Línea de dirección 1**|**Discretos**|**Texto**|  
-    |**Línea 2 de dirección**|**Discretos**|**Texto**|  
-    |**Edad**|**continua**|**Long**|  
-    |**Bike Buyer**|**Discretos**|**Long**|  
-    |**Commute Distance**|**Discretos**|**Texto**|  
-    |**CustomerKey**|**Key**|**Long**|  
-    |**DateLastPurchase**|**continua**|**Date**|  
-    |**Email Address**|**Discretos**|**Texto**|  
-    |**English Education**|**Discretos**|**Texto**|  
-    |**English Occupation**|**Discretos**|**Texto**|  
-    |**FirstName**|**Discretos**|**Texto**|  
-    |**Sexo**|**Discretos**|**Texto**|  
-    |**Clave geográfica**|**Discretos**|**Texto**|  
-    |**House Owner Flag**|**Discretos**|**Texto**|  
-    |**Last Name**|**Discretos**|**Texto**|  
-    |**Marital Status**|**Discretos**|**Texto**|  
-    |**Number Cars Owned**|**Discretos**|**Long**|  
-    |**Number Children At Home**|**Discretos**|**Long**|  
-    |**Region**|**Discretos**|**Texto**|  
-    |**Total Children**|**Discretos**|**Long**|  
-    |**Yearly Income**|**continua**|**Doble**|  
+    |**Dirección línea1**|**Discrete**|**Negrita**|  
+    |**Dirección línea2**|**Discrete**|**Negrita**|  
+    |**Antig**|**Continuo**|**long**|  
+    |**Bike Buyer**|**Discrete**|**long**|  
+    |**Commute Distance**|**Discrete**|**Negrita**|  
+    |**CustomerKey**|**Clave**|**long**|  
+    |**DateLastPurchase**|**Continuo**|**Date**|  
+    |**Dirección de correo electrónico**|**Discrete**|**Negrita**|  
+    |**English Education**|**Discrete**|**Negrita**|  
+    |**English Occupation**|**Discrete**|**Negrita**|  
+    |**Nombre**|**Discrete**|**Negrita**|  
+    |**Mujer**|**Discrete**|**Negrita**|  
+    |**Geography Key**|**Discrete**|**Negrita**|  
+    |**Marca de propietario de la casa**|**Discrete**|**Negrita**|  
+    |**Apellidos**|**Discrete**|**Negrita**|  
+    |**Marital Status**|**Discrete**|**Negrita**|  
+    |**Número de automóviles propiedad**|**Discrete**|**long**|  
+    |**Número de hijos en casa**|**Discrete**|**long**|  
+    |**Region**|**Discrete**|**Negrita**|  
+    |**Total Children**|**Discrete**|**long**|  
+    |**Yearly Income**|**Continuo**|**Hace**|  
   
-3.  Haga clic en **Siguiente**.  
+3.  Haga clic en **Next**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Especificar un conjunto de datos de prueba para la estructura &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md)  
+ [Especificar un conjunto de datos de prueba para la estructura &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>Tarea anterior de la lección  
- [Creación de una estructura de modelo de minería de datos de distribución de correo directo &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
+ [Crear una estructura de modelo de minería de datos de destino &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tipos de contenido &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [Tipos de datos &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+ [Tipos de datos &#40;&#41;de minería de datos](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

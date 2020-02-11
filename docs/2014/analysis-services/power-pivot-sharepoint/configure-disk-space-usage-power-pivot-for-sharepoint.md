@@ -1,5 +1,5 @@
 ---
-title: Configurar el uso de espacio en disco (PowerPivot para SharePoint) | Microsoft Docs
+title: Configurar el uso del espacio en disco (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071809"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurar el uso del espacio en disco (PowerPivot para SharePoint)
@@ -42,7 +42,7 @@ ms.locfileid: "66071809"
   
  La carpeta de copia de seguridad proporciona un almacenamiento común en caché para cualquier base de datos PowerPivot que se cargue en la memoria en el equipo local. Si tiene varias aplicaciones de servicio PowerPivot definidas en la granja, cualquiera de ellas puede utilizar el servidor local para cargar y almacenar después en la memoria caché los datos PowerPivot. Tanto la carga de datos como el almacenamiento en caché son operaciones de servidor de Analysis Services. Por tanto, el uso total de espacio en disco se administra en las instancias de Analysis Services, en la carpeta de copia de seguridad. La configuración que limita el uso del espacio en disco se establece así en la instancia de SQL Server Analysis Services que se ejecuta en un servidor de aplicaciones de SharePoint.  
   
- La memoria caché solo contiene las bases de datos PowerPivot. Las bases de datos PowerPivot se almacenan en varios archivos en una sola carpeta primaria (la carpeta de copia de seguridad). Dado que las bases de datos PowerPivot están destinadas para usarse como datos internos en un libro de Excel, los nombres de base de datos se basan en los GUID en lugar de ser descriptivos. Una carpeta de GUID en  **\<Nombredeaplicacióndeservicio >** es la carpeta principal de una base de datos de PowerPivot. A medida que las bases de datos PowerPivot se cargan en el servidor, se crean carpetas adicionales para cada una.  
+ La memoria caché solo contiene las bases de datos PowerPivot. Las bases de datos PowerPivot se almacenan en varios archivos en una sola carpeta primaria (la carpeta de copia de seguridad). Dado que las bases de datos PowerPivot están destinadas para usarse como datos internos en un libro de Excel, los nombres de base de datos se basan en los GUID en lugar de ser descriptivos. Una carpeta GUID en ** \<nombredeaplicacióndeservicio>** es la carpeta principal de una base de datos PowerPivot. A medida que las bases de datos PowerPivot se cargan en el servidor, se crean carpetas adicionales para cada una.  
   
  Dado que los datos PowerPivot se pueden cargar en una instancia de Analysis Services en una granja, los mismos datos podrían almacenarse también en memoria caché en varios equipos de la granja. Esta práctica favorece el rendimiento sobre el uso del espacio en disco pero, como contrapartida, los usuarios consiguen un acceso más rápido a los datos si ya están disponibles en el disco.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "66071809"
   
  En el nivel de sistema, puede crear alertas de correo electrónico que notifiquen que hay poco espacio en disco. Microsoft System Center incluye una característica de alerta por correo electrónico. Para configurar las alertas, también puede utilizar un script de PowerShell, el Administrador de recursos del servidor de archivos o el Programador de tareas. Los vínculos siguientes proporcionan información útil para configurar notificaciones sobre la existencia de poco espacio en disco:  
   
--   [Novedades en el Administrador de recursos del servidor de archivos](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
+-   [Novedades de administrador de recursos de servidor de archivos](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
   
--   [Guía paso a paso del Administrador de recursos del servidor de archivos para Windows Server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Servidor de archivos administrador de recursos guía paso a paso para Windows server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
   
--   [Establecer alertas de espacio en disco insuficiente en Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Establecer alertas de poco espacio en disco en Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>Limitar el espacio en disco utilizado para almacenar archivos en memoria caché  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66071809"
   
 3.  En Uso de disco, establezca un valor (en gigas) para **Espacio total en disco** para configurar un límite superior en la cantidad de espacio usado para el almacenamiento en caché. El valor predeterminado es 0, lo que permite que Analysis Services use todo el espacio en disco disponible.  
   
-4.  Uso de disco, en el **eliminar almacenadas en caché las bases de datos en las últimas ' n ' horas** , especifique los criterios de último uso para vaciar la memoria caché cuando el espacio de disco es el límite máximo.  
+4.  En uso de disco, en la configuración **eliminar las bases de datos almacenadas en caché en las últimas ' n ' horas** , especifique los criterios usados por última vez para vaciar la memoria caché cuando el espacio en disco sea el límite máximo.  
   
      El valor predeterminado es 4 horas, lo que significa que todas las bases de datos que han estado inactivas durante cuatro horas o más se eliminan del sistema de archivos. Las bases de datos que están inactivas pero siguen en memoria se descargan y se eliminan del sistema de archivos.  
   
@@ -80,20 +80,20 @@ ms.locfileid: "66071809"
   
 4.  En la sección Caché de disco, puede especificar cuánto tiempo permanece en memoria una base de datos inactiva para atender las nuevas solicitudes (de forma predeterminada, 48 horas) y cuánto tiempo se queda en caché (de forma predeterminada, 120 horas).  
   
-     **Mantener base de datos inactiva en memoria** especifica cuánto tiempo permanece en memoria una base de datos inactiva para atender nuevas solicitudes de esos datos. Una base de datos activa se mantiene siempre en memoria mientras que se esté consultando, pero una vez que deja de estar activa, el sistema la mantendrá en memoria durante un período de tiempo adicional por si hay más solicitudes de esos datos.  
+     **Mantener una base de datos inactiva en memoria** especifica cuánto tiempo permanece en la memoria una base de datos inactiva para atender nuevas solicitudes de esos datos. Una base de datos activa se mantiene siempre en memoria mientras que se esté consultando, pero una vez que deja de estar activa, el sistema la mantendrá en memoria durante un período de tiempo adicional por si hay más solicitudes de esos datos.  
   
      Dado que las bases de datos PowerPivot se almacenan en caché primero y después se cargan en memoria, los archivos de base de datos utilizan el espacio en disco inmediatamente. Sin embargo, mientras la base de datos está activa (y durante las 48 horas posteriores), todas las solicitudes se dirigen en primer lugar a la base de datos en memoria, omitiendo la base de datos en caché. Después de 48 horas de inactividad, el archivo se descarga de la memoria, pero permanece en la memoria caché donde puede volver a cargarse rápidamente si la instancia del servidor local PowerPivot intercepta una nueva solicitud de conexión de esos datos. Las solicitudes de conexión a una base de datos inactiva se sirven desde la memoria caché en lugar de desde la biblioteca de contenido, reduciendo el efecto en las bases de datos de contenido.  
   
      Es importante tener en cuenta que la biblioteca de contenido es la única ubicación permanente para las bases de datos PowerPivot. Se usan copias en caché solo si la base de datos de la biblioteca es la misma que la copia en el disco.  
   
-     **Mantener base de datos inactiva en caché** especifica cuánto tiempo se conserva una base de datos inactiva en el sistema de archivos una vez descargado de la memoria. El trabajo de limpieza usa este valor para determinar qué archivos eliminar. El trabajo de limpieza elimina del disco todas las bases de datos PowerPivot que están inactivas durante 168 horas (48 horas en memoria y 120 horas en caché).  
+     **Mantener base de datos inactiva en caché** especifica cuánto tiempo permanece una base de datos inactiva en el sistema de archivos después de que se haya descargado de la memoria. El trabajo de limpieza usa este valor para determinar qué archivos eliminar. El trabajo de limpieza elimina del disco todas las bases de datos PowerPivot que están inactivas durante 168 horas (48 horas en memoria y 120 horas en caché).  
   
 5.  Haga clic en **Aceptar** para guardar los cambios.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Una instalación de PowerPivot para SharePoint proporciona reglas de estado para que pueda realizar una acción correctora cuando se detecten problemas en el estado, la configuración o la disponibilidad del servidor. Algunas de estas reglas utilizan la configuración para determinar las condiciones en las que se desencadenan las reglas de estado. Si va a optimizar activamente el rendimiento del servidor, puede que también desee consultar estos valores para garantizar que los predeterminados son la mejor opción para el sistema. Para obtener más información, consulte [reglas de mantenimiento de PowerPivot - configurar](configure-power-pivot-health-rules.md).  
+ Una instalación de PowerPivot para SharePoint proporciona reglas de estado para que pueda realizar una acción correctora cuando se detecten problemas en el estado, la configuración o la disponibilidad del servidor. Algunas de estas reglas utilizan la configuración para determinar las condiciones en las que se desencadenan las reglas de estado. Si va a optimizar activamente el rendimiento del servidor, puede que también desee consultar estos valores para garantizar que los predeterminados son la mejor opción para el sistema. Para obtener más información, vea [reglas de estado de PowerPivot: configurar](configure-power-pivot-health-rules.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración y configuración del servidor PowerPivot en Administración central](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

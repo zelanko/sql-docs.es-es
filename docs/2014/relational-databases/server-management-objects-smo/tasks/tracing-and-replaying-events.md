@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62724796"
 ---
 # <a name="tracing-and-replaying-events"></a>Seguimiento y reproducción de eventos
@@ -51,7 +51,7 @@ ms.locfileid: "62724796"
   
 -   Reproducir archivos o tablas de seguimiento.  
   
- Los datos de seguimiento desde el `Trace` y `Replay` objetos se pueden usar la aplicación SMO o se pueden examinar manualmente utilizando [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Los datos de seguimiento también son compatibles con los procedimientos almacenados de [SQL Trace](../../sql-trace/sql-trace.md) que también proporcionan funciones de seguimiento.  
+ La aplicación SMO puede utilizar `Trace` los `Replay` datos de seguimiento de los objetos y, o bien se puede examinar manualmente mediante [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Los datos de seguimiento también son compatibles con los procedimientos almacenados de [SQL Trace](../../sql-trace/sql-trace.md) que también proporcionan funciones de seguimiento.  
   
  Los objetos de seguimiento de SMO residen en el espacio de nombres <xref:Microsoft.SqlServer.Management.Trace>, que requiere una referencia al archivo Microsoft.SQLServer.ConnectionInfo.dll.  
   

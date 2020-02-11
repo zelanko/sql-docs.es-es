@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f5d2045601f72c3536fbf2d4e469eb5eb20fbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071252"
 ---
 # <a name="powerpivot-data-access"></a>Acceso a datos PowerPivot
@@ -28,7 +28,7 @@ ms.locfileid: "66071252"
   
  En una granja de servidores de SharePoint, Excel Services utiliza el proveedor OLE DB MSOLAP local para conectarse a datos PowerPivot. El proveedor envía la solicitud de conexión a un servidor PowerPivot para SharePoint en la granja. Ese servidor carga los datos, ejecuta la consulta y devuelve el conjunto de resultados.  
   
-##  <a name="queryproc"></a> Consultar datos PowerPivot en SharePoint  
+##  <a name="queryproc"></a>Consultar datos PowerPivot en SharePoint  
  Al ver un libro PowerPivot de una biblioteca de SharePoint, los datos PowerPivot que están dentro del libro se detectan, extraen y procesan de forma independiente en las instancias de servidor de Analysis Services dentro de la granja, mientras Excel Services representa el nivel de presentación. Puede ver el libro procesado totalmente en una ventana del explorador o en una aplicación de escritorio de Excel 2010 que tenga el complemento de PowerPivot.  
   
  El siguiente diagrama muestra cómo se mueve a través de la granja una solicitud para el procesamiento de las consultas. Dado que los datos PowerPivot forman parte de un libro de Excel 2010, cuando un usuario abre un libro de Excel de una biblioteca de SharePoint e interactúa con una tabla dinámica o con un gráfico dinámico que contiene datos PowerPivot, se produce una solicitud para el procesamiento de consultas.  
@@ -39,8 +39,8 @@ ms.locfileid: "66071252"
   
  No todos los datos de un libro PowerPivot se administran en PowerPivot para SharePoint. Excel Services procesa las tablas y los datos de la celda en una hoja de cálculo. El servicio PowerPivot administra únicamente las tablas dinámicas, los gráficos dinámicos y las segmentaciones que tienen que ver con los datos PowerPivot para SharePoint.  
   
-## <a name="see-also"></a>Vea también  
- [Conectar a Analysis Services](../instances/connect-to-analysis-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Conectarse a Analysis Services](../instances/connect-to-analysis-services.md)   
  [Acceso a datos de modelos tabulares](../tabular-models/tabular-model-data-access.md)  
   
   

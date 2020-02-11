@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005907"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
@@ -41,17 +41,17 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  Expresión de cadena válida que suele ser el nombre del miembro actual (CurrentMember.Name) de cada tupla del conjunto especificado.  
   
- *Delimitador*  
+ *Delimiter*  
  Delimitador válido expresado como expresión de cadena.  
   
-## <a name="remarks"></a>Comentarios  
- Si se especifica un segundo conjunto, la **generar** función devuelve un conjunto generado al aplicar las tuplas del segundo conjunto a cada tupla del primer conjunto y, a continuación, combinar los conjuntos resultantes mediante unión. Si **todas** se especifica, la función conserva los duplicados en el conjunto resultante.  
+## <a name="remarks"></a>Observaciones  
+ Si se especifica un segundo conjunto, la función **Generate** devuelve un conjunto generado aplicando las tuplas del segundo conjunto a cada tupla del primer conjunto y combinando después los conjuntos resultantes por Unión. Si se especifica **All** , la función conserva los duplicados en el conjunto resultante.  
   
- Si se especifica una expresión de cadena, el **generar** función devuelve una cadena generada al evaluar la expresión de cadena especificada con cada tupla del primer conjunto y, a continuación, concatenar los resultados. De forma opcional, la cadena se puede delimitar al separar cada resultado de la cadena concatenada resultante.  
+ Si se especifica una expresión de cadena, la función **Generate** devuelve una cadena generada mediante la evaluación de la expresión de cadena especificada en cada tupla del primer conjunto y, a continuación, la concatenación de los resultados. De forma opcional, la cadena se puede delimitar al separar cada resultado de la cadena concatenada resultante.  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="set"></a>Establecer  
+### <a name="set"></a>Set  
  En el ejemplo siguiente, la consulta devuelve un conjunto que contiene cuatro veces la medida Internet Sales Amount, porque hay cuatro miembros en el conjunto [Date].[Calendar Year].[Calendar Year].MEMBERS:  
   
 ```  
@@ -72,7 +72,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- El uso práctico más común de **generar** está establecido evaluar un complejo expresión, como TopCount, a lo largo de un conjunto de miembros. La consulta de ejemplo siguiente muestra los 10 productos más vendidos de cada año natural (Calendar Year) en filas:  
+ El uso práctico más común de **Generating** es evaluar una expresión de conjunto compleja, como topcount, en un conjunto de miembros. La consulta de ejemplo siguiente muestra los 10 productos más vendidos de cada año natural (Calendar Year) en filas:  
   
 ```  
 SELECT   
@@ -89,7 +89,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
- Tenga en cuenta que los distintos productos 10 se muestran para cada año y que el uso de **generar** es la única manera de obtener este resultado. Basta con unir de forma cruzada los años naturales para que el conjunto de los 10 productos más vendidos muestre los 10 productos más vendidos de todo el tiempo, repetidos para cada año, tal y como se muestra en el ejemplo siguiente:  
+ Tenga en cuenta que se muestran otros 10 superiores para cada año y que el uso de **Generate** es la única manera de obtener este resultado. Basta con unir de forma cruzada los años naturales para que el conjunto de los 10 productos más vendidos muestre los 10 productos más vendidos de todo el tiempo, repetidos para cada año, tal y como se muestra en el ejemplo siguiente:  
   
 ```  
 SELECT   
@@ -104,8 +104,8 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>Cadena  
- El ejemplo siguiente muestra el uso de **generar** para devolver una cadena:  
+### <a name="string"></a>String  
+ En el ejemplo siguiente se muestra el uso de **Generate** para devolver una cadena:  
   
 ```  
 WITH   
@@ -124,9 +124,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Este formulario de la **generar** función puede ser útil al depurar cálculos, puesto que permite devolver una cadena que muestra los nombres de todos los miembros de un conjunto. Esto podría ser más fácil de leer que la representación MDX estricta de un conjunto que el [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) función devuelve.  
+>  Esta forma de la función **Generate** puede ser útil al depurar cálculos, ya que permite devolver una cadena que muestra los nombres de todos los miembros de un conjunto. Esto puede ser más fácil de leer que la representación MDX estricta de un conjunto que devuelve [SetToStr &#40;función&#41;MDX](../mdx/settostr-mdx.md) .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

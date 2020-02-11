@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793924"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
@@ -49,7 +49,7 @@ ms.locfileid: "67793924"
  En los siguientes escenarios se ilustran los usos típicos de la replicación punto a punto.  
   
 ### <a name="topology-that-has-two-participating-databases"></a>Topología en la que participan dos bases de datos  
- ![Replicación punto a punto: dos nodos](../media/repl-multinode-01.gif "Replicación punto a punto: dos nodos")  
+ ![Replicación punto a punto, dos nodos](../media/repl-multinode-01.gif "Replicación punto a punto, dos nodos")  
   
  En las ilustraciones anteriores se muestran dos bases de datos participantes, con tráfico de usuario dirigido a las bases de datos a través de un servidor de aplicaciones. Esta configuración se puede usar en varias aplicaciones, desde sitios web hasta aplicaciones de grupos de trabajo, y proporciona las siguientes ventajas:  
   
@@ -61,22 +61,22 @@ ms.locfileid: "67793924"
   
 -   En la izquierda, las actualizaciones se particionan entre los dos servidores. Si la base de datos contiene un catálogo de productos, podría, por ejemplo, hacer que una aplicación personalizada dirija las actualizaciones al nodo **A** para los nombres de productos que empiecen con la letra A hasta la M y que dirija las actualizaciones al nodo **B** para los nombres de productos que empiecen con la letra N hasta la Z. Más tarde, las actualizaciones se replican en el otro nodo.  
   
--   A la derecha, todas las actualizaciones se dirigen al nodo **B**. Desde ahí, las actualizaciones se replican en el nodo **A**. Si **B** se encuentra en modo sin conexión (por ejemplo, por motivos de mantenimiento), el servidor de aplicaciones puede dirigir toda la actividad a **A**. Cuando **B** vuelve a estar en línea, las actualizaciones pueden pasar a él, y el servidor de aplicaciones puede mover todas las actualizaciones de vuelta al nodo **B** o seguir dirigiéndolas al nodo **A**.  
+-   A la derecha, todas las actualizaciones se dirigen al nodo **B**. A partir de ahí, las actualizaciones se replican en **el nodo a**. Si **B** está sin conexión (por ejemplo, para mantenimiento), el servidor de aplicaciones puede dirigir toda la **actividad a.** Cuando **B** vuelve a estar en línea, las actualizaciones pueden fluir a él y el **servidor de aplicaciones**puede mover todas las actualizaciones de vuelta a **B** o seguir dirigiendo a.  
   
  La replicación punto a punto puede admitir este método, pero el ejemplo de actualización centralizada de la derecha también se utiliza frecuentemente con la replicación transaccional estándar.  
   
 ### <a name="topologies-that-have-three-or-more-participating-databases"></a>Topología en la que participan tres o más bases de datos  
- ![Replicación punto a punto en ubicaciones dispersas](../media/repl-multinode-02.gif "Replicación punto a punto en ubicaciones dispersas")  
+ ![Replicación punto a punto a ubicaciones dispersas](../media/repl-multinode-02.gif "Replicación punto a punto a ubicaciones dispersas")  
   
  En la ilustración anterior se muestran tres bases de datos participantes que proporcionan datos para una organización de soporte de software internacional, con oficinas en Los Ángeles, Londres y Taipei. Los ingenieros de soporte de cada oficina reciben llamadas de clientes e incluyen y actualizan la información de las llamadas de los clientes. Las zonas horarias de las tres oficinas tienen una diferencia de ocho horas, por lo que no se superponen en la jornada laboral. Cuando la oficina de Taipei cierra, se abre la oficina de Londres. Si hay una llamada en curso cuando se cierra una oficina, la llamada se transfiere a un representante de la siguiente oficina abierta.  
   
  Cada ubicación tiene una base de datos y un servidor de aplicaciones, que los ingenieros de soporte utilizan para incluir y actualizar la información de las llamadas de los clientes. La topología se particiona por tiempo. Por consiguiente, las actualizaciones solo se producen en el nodo que está abierto; a continuación, las actualizaciones pasan al resto de bases de datos participantes. Esta topología proporciona las siguientes ventajas:  
   
--   Independencia sin aislamiento: cada oficina puede insertar, actualizar o eliminar datos de forma independiente, pero también puede compartirlos porque se replican en el resto de bases de datos participantes.  
+-   Independencia sin aislamiento: cada oficina puede insertar, actualizar o eliminar datos de forma independiente, pero también puede compartir los datos porque se replican en el resto de bases de datos participantes.  
   
 -   Alta disponibilidad en caso de error o para permitir el mantenimiento en una o más de las bases de datos participantes.  
   
-     ![Replicación punto a punto: tres y cuatro nodos](../media/repl-multinode-04.gif "Replicación punto a punto: tres y cuatro nodos")  
+     ![Replicación punto a punto, tres y cuatro nodos](../media/repl-multinode-04.gif "Replicación punto a punto, tres y cuatro nodos")  
   
  La ilustración anterior muestra la adición de un nodo a la topología de tres nodos. Se podría agregar un nodo en este escenario por las razones siguientes:  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67793924"
   
     -   Los nombres de objeto, esquema de objeto y nombres de publicación deberían ser idénticos.  
   
-    -   Las publicaciones deben permitir la replicación de los cambios de esquema. (Este es un valor de **1** para la propiedad de publicación **replicate_ddl**, que es el valor predeterminado). Para obtener más información, vea [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
+    -   Las publicaciones deben permitir la replicación de los cambios de esquema. (Se trata de un valor de **1** para la propiedad de publicación **replicate_ddl**, que es la configuración predeterminada). Para obtener más información, vea [realizar cambios de esquema en bases de datos de publicaciones](../publish/make-schema-changes-on-publication-databases.md).  
   
     -   No se admite el filtrado de filas y columnas.  
   
@@ -137,19 +137,19 @@ ms.locfileid: "67793924"
   
 -   El parámetro **-SubscriptionStreams** del Agente de distribución y el parámetro **-MaxCmdsInTran**del Agente de registro del LOG.  
   
--   Las propiedades del artículo  **\@destination_owner** y  **\@destination_table**.  
+-   Las propiedades ** \@** del artículo destination_owner y ** \@destination_table**.  
 
 -   La replicación transaccional punto a punto no admite la creación de una suscripción transaccional unidireccional para una publicación punto a punto.
   
  Las siguientes propiedades requieren consideraciones especiales:  
   
--   La propiedad de publicación  **\@allow_initialize_from_backup** requiere un valor de `true`.  
+-   La propiedad ** \@** de publicación allow_initialize_from_backup requiere un valor `true`de.  
   
--   La propiedad de artículo  **\@replicate_ddl** requiere un valor de `true`;  **\@identityrangemanagementoption** requiere un valor de `manual`; y  **\@estado** requiere que la opción **24** se establece.  
+-   La propiedad ** \@** del artículo replicate_ddl requiere un valor `true`de; identityrangemanagementoption requiere un valor de `manual`; ** \@** and ** \@status** requiere que se establezca la opción **24** .  
   
--   El valor de las propiedades de artículo  **\@ins_cmd**,  **\@del_cmd**, y  **\@upd_cmd** no puede establecerse en `SQL`.  
+-   El valor de las propiedades ** \@** del artículo ins_cmd, ** \@del_cmd**y ** \@upd_cmd** no se puede `SQL`establecer en.  
   
--   La propiedad de suscripción  **\@sync_type** requiere un valor de `none` o `automatic`.  
+-   La propiedad `none` `automatic` ** \@** de suscripción sync_type requiere un valor de o.  
   
 ### <a name="maintenance-considerations"></a>Consideraciones de mantenimiento  
  Las acciones siguientes exigen que se detenga el sistema. Esto significa que hay que detener la actividad de las tablas publicadas en todos los nodos y asegurarse de que cada nodo haya recibido todos los cambios de los demás nodos.  
@@ -168,9 +168,9 @@ ms.locfileid: "67793924"
   
 -   No puede reinicializar las suscripciones en una topología punto a punto. Si tiene que asegurarse de que un nodo tiene una copia nueva de los datos, restaure una copia de seguridad en el nodo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
+ [Estrategias para realizar copias de seguridad y restaurar la replicación transaccional y de instantáneas](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [Tipos de publicaciones para la replicación transaccional](transactional-replication.md)  
   
   

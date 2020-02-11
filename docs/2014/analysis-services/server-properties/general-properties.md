@@ -39,16 +39,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069031"
 ---
 # <a name="general-properties"></a>Propiedades generales
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor descritas en las siguientes tablas. En este tema se documentan las propiedades de servidor en el archivo msmdsrv.ini que no se incluyen de otro modo en una sección concreta, como Seguridad, Red o ThreadPool. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Se aplica a:** Modo de servidor multidimensional y Tabular, a menos que se indique lo contrario  
+ **Se aplica a:** Modo de servidor multidimensional y tabular, a menos que se indique lo contrario  
   
 ## <a name="non-specific-category"></a>Categoría no específica  
  `AdminTimeout`  
@@ -60,7 +61,7 @@ ms.locfileid: "66069031"
  Propiedad de cadena que especifica en una lista delimitada las carpetas que se pueden examinar al guardar, abrir y buscar archivos en los cuadros de diálogo de Analysis Services. La cuenta de servicio de Analysis Services debe tener permisos de lectura y escritura en cualquiera de las carpetas que agregue a la lista.  
   
  `BackupDir`  
- Una propiedad de cadena que identifica el nombre del directorio donde se almacenan los archivos de copia de seguridad de forma predeterminada, en caso de que no se especifica una ruta de acceso como parte del comando de copia de seguridad.  
+ Propiedad de cadena que identifica el nombre del directorio en el que se almacenan los archivos de copia de seguridad de forma predeterminada, en caso de que no se especifique una ruta de acceso como parte del comando de copia de seguridad.  
   
  `CollationName`  
  Propiedad de cadena que identifica la intercalación del servidor. Para más información, vea [Idiomas e intercalaciones &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md).  
@@ -76,12 +77,14 @@ ms.locfileid: "66069031"
  `CoordinatorCancelCount`  
  Una propiedad de entero de 32 bits con signo que define la frecuencia con la que el servidor debería comprobar si se ha producido un evento Cancel (según el recuento interno de iteraciones). Disminuya este número para comprobar Cancel más frecuentemente, a expensas del rendimiento general.  
   
- `CoordinatorCancelCount` se omite en modo de servidor tabular.  
+ 
+  `CoordinatorCancelCount` se omite en modo de servidor tabular.  
   
  `CoordinatorExecutionMode`  
  Una propiedad de entero de 32 bits con signo que define el máximo de operaciones paralelas que intentará realizar el servidor, incluidas las operaciones de consulta y procesamiento. Cero (0) indica que el servidor decidirá, según un algoritmo interno. Un número positivo indica el máximo de operaciones en total. Un número negativo, con el signo invertido, indica el máximo de operaciones por procesador.  
   
- `CoordinatorExecutionMode` se omite en modo de servidor tabular.  
+ 
+  `CoordinatorExecutionMode` se omite en modo de servidor tabular.  
   
  El valor predeterminado para esta propiedad es -4, que indica que el servidor está limitado a 4 operaciones paralelas por procesador. Para obtener más información acerca de esta propiedad, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
@@ -95,11 +98,11 @@ ms.locfileid: "66069031"
  Una propiedad de cadena que identifica el nombre del directorio en el que se almacenan los datos.  
   
  `DeploymentMode`  
- Determina el contexto operativo de una instancia de servidor de Analysis Services. Esta propiedad se denomina 'modo de servidor"en los cuadros de diálogo, mensajes y documentación. Esta propiedad la configura el programa de instalación de SQL Server en función del modo de servidor que se seleccione al instalar Analysis Services. Esta propiedad debe considerarse interna únicamente y siempre se usa el valor especificado por el programa de instalación.  
+ Determina el contexto operativo de una instancia de servidor de Analysis Services. Esta propiedad se denomina ' modo de servidor ' en los cuadros de diálogo, los mensajes y la documentación. Esta propiedad la configura el programa de instalación de SQL Server en función del modo de servidor que se seleccione al instalar Analysis Services. Esta propiedad debe considerarse interna únicamente y siempre se usa el valor especificado por el programa de instalación.  
   
  Los valores válidos de esta propiedad incluyen los siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0|Este es el valor predeterminado. Especifica el modo multidimensional, utilizado para dar servicio a las bases de datos multidimensionales que usan el almacenamiento MOLAP, HOLAP y ROLAP, así como a los modelos de minería de datos.|  
 |1|Especifica las instancias de Analysis Services que se instalaron como parte de una implementación de PowerPivot para SharePoint. No cambie la propiedad del modo de implementación de la instancia de Analysis Services que forma parte de una instalación de PowerPivot para SharePoint. Los datos PowerPivot dejarán de ejecutarse en el servidor si cambia el modo.|  
@@ -131,7 +134,8 @@ ms.locfileid: "66069031"
  Para obtener más información acerca de esta propiedad, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` se aplica a los comandos de procesamiento de cubos y a las operaciones de reescritura.  
+>  
+  `ForceCommitTimeout` se aplica a los comandos de procesamiento de cubos y a las operaciones de reescritura.  
   
  `IdleConnectionTimeout`  
  Propiedad de entero que especifica un tiempo de espera, en segundos, para las conexiones que están inactivas.  
@@ -153,7 +157,7 @@ ms.locfileid: "66069031"
  Una propiedad de cadena que identifica el nombre del directorio que contiene los registros del servidor. Esta propiedad solo se aplica cuando se utilizan archivos de disco para realizar el registro, a diferencia de cuando se utilizan tablas de base de datos (comportamiento predeterminado).  
   
  `MaxIdleSessionTimeout`  
- Propiedad de entero que define el tiempo de espera máximo de una sesión inactiva, en segundos. El valor predeterminado es cero (0), lo que indica que nunca se agota el tiempo de espera de las sesiones. Sin embargo, las sesiones inactivas se quitarán si el servidor sufre restricciones de recursos.  
+ Propiedad de entero que define el tiempo de espera máximo de una sesión inactiva, en segundos. El valor predeterminado es cero (0), lo que indica que nunca se agota el tiempo de espera de las sesiones. Sin embargo, las sesiones inactivas se quitarán si el servidor está bajo restricciones de recursos.  
   
  `MinIdleSessionTimeout`  
  Propiedad de entero que define el tiempo mínimo, en segundos, que las sesiones inactivas tardarán en agotar el tiempo de espera. El valor predeterminado es 2700 segundos. Después de que expire este tiempo, el servidor puede finalizar la sesión inactiva, pero solo lo hará a medida que se necesite memoria.  
@@ -161,7 +165,7 @@ ms.locfileid: "66069031"
  `Port`  
  Propiedad de entero que define el número de puerto en el que el servidor escuchará las conexiones de los clientes. Si no está establecida, el servidor encontrará de forma dinámica el primer puerto no usado.  
   
- El valor predeterminado para esta propiedad es cero (0), que a su vez establece el valor predeterminado en el puerto 2383. Para obtener más información acerca de la configuración de puertos, vea [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ El valor predeterminado para esta propiedad es cero (0), que a su vez establece el valor predeterminado en el puerto 2383. Para obtener más información acerca de la configuración de puertos, vea [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  `ServerTimeout`  
  Entero que define el tiempo de espera, en segundos, para las consultas. El valor predeterminado es de 3600 segundos (o 60 minutos). El valor cero (0) especifica que no se agotará el tiempo de espera de las consultas.  
@@ -176,7 +180,7 @@ ms.locfileid: "66069031"
  `StatisticsStoreSize`  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

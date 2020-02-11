@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_dms_cores (Transact-SQL) | Microsoft Docs
+title: Sys. dm_pdw_dms_cores (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,26 +13,26 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 76a154639a71b22bfe3f119233f3abbcd329f7c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899526"
 ---
-# <a name="sysdmpdwdmscores-transact-sql"></a>sys.dm_pdw_dms_cores (Transact-SQL)
+# <a name="sysdm_pdw_dms_cores-transact-sql"></a>Sys. dm_pdw_dms_cores (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contiene información sobre todos los servicios DMS, que se ejecutan en los nodos de proceso del dispositivo. Muestra una fila por cada instancia de servicio, que actualmente se encuentra una fila por cada nodo.  
+  Contiene información sobre todos los servicios de DMS que se ejecutan en los nodos de proceso del dispositivo. Muestra una fila por cada instancia de servicio, que actualmente es una fila por nodo.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|dms_core_id|**int**|Identificador numérico único asociado a este centro DMS.<br /><br /> Clave para esta vista.|Se establece en el pdw_node_id del nodo que se está ejecutando este core DMS.|  
-|pdw_node_id|**int**|Identificador del nodo en el que se está ejecutando este servicio DMS.|Consulte node_id en [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|status|**nvarchar(32)**|Estado actual del servicio DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|dms_core_id|**int**|Identificador numérico único asociado a este núcleo de DMS.<br /><br /> Clave para esta vista.|Establezca en el pdw_node_id del nodo en el que se está ejecutando este núcleo de DMS.|  
+|pdw_node_id|**int**|IDENTIFICADOR del nodo en el que se está ejecutando este servicio DMS.|Vea node_id en [Sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
+|status|**nvarchar (32)**|Estado actual del servicio DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
   
- Para obtener información sobre el número máximo de filas retenidas por esta vista, consulte la sección de metadatos en el [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) tema.  
+ Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección de metadatos en el tema [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de almacenamiento de datos en paralelo y SQL Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

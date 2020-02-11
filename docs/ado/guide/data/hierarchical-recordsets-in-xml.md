@@ -13,23 +13,23 @@ ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17ed6f29442bc55f81d0ef83bfd19473a99e9a95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925107"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Conjuntos de registros jerárquicos en XML
-ADO permite la persistencia de los objetos de conjunto de registros jerárquicos en XML. Con objetos de conjunto de registros jerárquicos, el valor de un campo en el conjunto de registros principal es otro conjunto de registros. Estos campos se representan como elementos secundarios en la secuencia XML en lugar de un atributo.  
+ADO permite la persistencia de objetos de conjunto de registros jerárquicos en XML. Con los objetos de conjunto de registros jerárquicos, el valor de un campo del conjunto de registros primario es otro conjunto de registros. Estos campos se representan como elementos secundarios en la secuencia XML en lugar de un atributo.  
   
-## <a name="remarks"></a>Comentarios  
- El ejemplo siguiente muestra este caso:  
+## <a name="remarks"></a>Observaciones  
+ En el ejemplo siguiente se muestra este caso:  
   
 ```  
 Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select stor_id, ord_num, ord_date, qty from sales} AS rsSales RELATE stor_id TO stor_id)", "Provider=MSDataShape;DSN=pubs;Integrated Security=SSPI;"  
 ```  
   
- Este es el formato XML del conjunto de registros persistentes:  
+ A continuación se encuentra el formato XML del conjunto de registros guardado:  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"     xmlns:rs="urn:schemas-microsoft-com:rowset"   
@@ -104,25 +104,25 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 </xml>   
 ```  
   
- El orden exacto de las columnas de conjunto de registros principal no es evidente cuando se conserva de esta manera. Cualquier campo en el elemento primario puede contener a un conjunto de registros secundarios. El proveedor de persistencia conserva todas las columnas escalares como atributos y luego todas las "columnas" Recordset secundarias como elementos secundarios de la fila primaria. La posición ordinal del campo en el elemento primario puede obtenerse Recordset echando un vistazo a la definición de esquema del conjunto de registros. Cada campo tiene una propiedad de OLE DB, rs: number, definida en el espacio de nombres del esquema de conjunto de registros que contiene el número ordinal para ese campo.  
+ El orden exacto de las columnas en el conjunto de registros primario no es obvio cuando se conserva de esta manera. Cualquier campo del elemento primario puede contener un conjunto de registros secundario. El proveedor de persistencia conserva todas las columnas escalares primero como atributos y, a continuación, conserva todas las "columnas" del conjunto de registros secundario como elementos secundarios de la fila primaria. La posición ordinal del campo en el conjunto de registros primario se puede obtener examinando la definición de esquema del conjunto de registros. Cada campo tiene una propiedad OLE DB, RS: Number, definida en el espacio de nombres del esquema de conjunto de registros que contiene el número ordinal de ese campo.  
   
- Los nombres de todos los campos del conjunto de registros secundario se concatenan con el nombre del campo en el conjunto de registros que contiene a este elemento secundario del primario. Esto es para asegurarse de que no hay ninguna colisión de nombre en casos donde primarios y secundarios de conjuntos de registros de ambas contienen un campo que se obtiene de dos tablas diferentes pero con nombre singular.  
+ Los nombres de todos los campos del conjunto de registros secundario se concatenan con el nombre del campo en el conjunto de registros primario que contiene este elemento secundario. Esto es para asegurarse de que no hay conflictos de nombres en los casos en los que los conjuntos de registros primarios y secundarios contienen un campo que se obtiene de dos tablas diferentes, pero se denomina singularmente.  
   
- Al guardar los conjuntos de registros jerárquicos en XML, debe tener en cuenta las restricciones siguientes en ADO:  
+ Al guardar conjuntos de registros jerárquicos en XML, debe tener en cuenta las siguientes restricciones en ADO:  
   
--   No se pueden conservar un conjunto de registros jerárquico con actualizaciones pendientes en XML.  
+-   Un conjunto de registros jerárquico con actualizaciones pendientes no se puede almacenar en XML.  
   
--   Un conjunto de registros jerárquico creado con un comando de forma con parámetros no puede conservarse (en formato XML o ADTG).  
+-   Un conjunto de registros jerárquico creado con un comando de forma con parámetros no puede ser persistente (en formato XML o ADTG).  
   
--   Actualmente, ADO guarda la relación entre el elemento primario y secundario conjuntos de registros como un objeto binario grande (BLOB). Etiquetas XML para describir esta relación aún no se han definido en el espacio de nombres del esquema de conjunto de filas.  
+-   ADO actualmente guarda la relación entre los conjuntos de registros primarios y secundarios como un objeto binario grande (BLOB). Las etiquetas XML para describir esta relación todavía no se han definido en el espacio de nombres del esquema del conjunto de filas.  
   
--   Cuando se guarda un conjunto de registros jerárquico, secundarios de todos los conjuntos de registros se guardan con él. Si el conjunto de registros actual es un elemento secundario de otro conjunto de registros, no se guarda su elemento primario. Todos los secundarios se guardan los conjuntos de registros que componen el subárbol del conjunto de registros actual.  
+-   Cuando se guarda un conjunto de registros jerárquico, se guardan todos los conjuntos de registros secundarios junto con él. Si el conjunto de registros actual es un elemento secundario de otro conjunto de registros, no se guarda su elemento primario. Se guardan todos los conjuntos de registros secundarios que forman el subárbol del conjunto de registros actual.  
   
- Cuando un conjunto de registros jerárquico se vuelve a abrir desde su formato XML persistente, debe tener en cuenta las siguientes limitaciones:  
+ Cuando se vuelve a abrir un conjunto de registros jerárquico desde su formato almacenado en XML, debe tener en cuenta las siguientes limitaciones:  
   
--   Si el registro secundario contiene registros para el que no hay ningún registro primario correspondiente, estas filas no se escriben en la representación XML del conjunto de registros jerárquicos. Por lo tanto, estas filas se perderán cuando se vuelve a abrir el conjunto de registros desde su ubicación persistente.  
+-   Si el registro secundario contiene registros para los que no hay registros primarios correspondientes, estas filas no se escriben en la representación XML del conjunto de registros jerárquico. Por lo tanto, estas filas se perderán cuando se vuelva a abrir el conjunto de registros desde su ubicación persistente.  
   
--   Si un registro secundario tiene referencias a más de un registro primario, en el conjunto de registros, volver a abrir el conjunto de registros secundarios pueden contener los registros duplicados. Sin embargo, estos duplicados solo será visibles si el usuario trabaja directamente con el conjunto de filas secundario subyacente. Si un capítulo se usa para navegar por el elemento secundario de conjunto de registros (es decir, la única forma de navegar a través de ADO), los duplicados no son visibles.  
+-   Si un registro secundario tiene referencias a más de un registro primario, al volver a abrir el conjunto de registros, el conjunto de registros secundario puede contener registros duplicados. Sin embargo, estos duplicados solo estarán visibles si el usuario trabaja directamente con el conjunto de filas secundario subyacente. Si un capítulo se utiliza para navegar por el conjunto de registros secundario (es decir, la única manera de navegar por ADO), los duplicados no estarán visibles.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

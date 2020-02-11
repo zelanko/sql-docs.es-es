@@ -1,5 +1,5 @@
 ---
-title: Union (MDX) | Microsoft Docs
+title: Unión (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 170e3764795e1bb6db3fc9589ecf1fe486078633
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097297"
 ---
-# <a name="union--mdx"></a>Union (MDX)
+# <a name="union--mdx"></a>Unión (MDX)
 
 
   Devuelve un conjunto generado por la unión de dos conjuntos que, opcionalmente, conserva miembros duplicados.  
@@ -35,17 +35,17 @@ Alternate syntax 2
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expresión de conjunto 1*  
+ *Establecer expresión 1*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Expresión de conjunto 2*  
+ *Establecer expresión 2*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Comentarios  
- Esta función devuelve la unión de dos o más conjuntos especificados. Con la sintaxis estándar y con la sintaxis alternativa 1, los duplicados se eliminan de forma predeterminada. Con la sintaxis estándar, mediante el **todas** marca conserva los duplicados del conjunto combinado. Se eliminan los duplicados de la cola del conjunto. Con la sintaxis alternativa 2, siempre se conservan los duplicados.  
+## <a name="remarks"></a>Observaciones  
+ Esta función devuelve la Unión de dos o más conjuntos especificados. Con la sintaxis estándar y con la sintaxis alternativa 1, los duplicados se eliminan de forma predeterminada. Con la sintaxis estándar, el uso de la marca **All** mantiene los duplicados en el conjunto combinado. Se eliminan los duplicados de la cola del conjunto. Con la sintaxis alternativa 2, siempre se conservan los duplicados.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes muestran el comportamiento de la **unión** funcione con cada sintaxis.  
+ En los siguientes ejemplos se muestra el comportamiento de la función **Union** con cada sintaxis.  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>Sintaxis estándar, eliminación de duplicados  
   
@@ -94,8 +94,8 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [+ &#40;Unión&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
+## <a name="see-also"></a>Consulte también  
+ [+ &#40;Union&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

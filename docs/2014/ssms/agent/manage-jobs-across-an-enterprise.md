@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188173"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>Administrar trabajos en una empresa
-  Si realiza cambios en definiciones de trabajos multiservidor fuera del [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], deberá exponer los cambios en la lista de descarga para que los servidores de destino puedan volver a descargar el trabajo actualizado. Para asegurarse de que los servidores de destino tienen las definiciones de trabajos actuales, exponga una instrucción INSERT después de actualizar el trabajo multiservidor, como se explica a continuación:  
+  Si realiza cambios en definiciones de trabajos multiservidor fuera [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de, debe publicar los cambios en la lista de descarga para que los servidores de destino puedan volver a descargar el trabajo actualizado. Para asegurarse de que los servidores de destino tienen las definiciones de trabajos actuales, exponga una instrucción INSERT después de actualizar el trabajo multiservidor, como se explica a continuación:  
   
 ```  
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
@@ -38,9 +38,9 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [sp_delete_jobstep (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)  
   
--   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_detach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql)  
+-   [sp_detach_schedule &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql)  
   
     > [!NOTE]  
     >  No es necesario llamar a **sp_post_msx_operation** después de llamar a **sp_update_job** o **sp_delete_job**, ya que estos procedimientos almacenados exponen automáticamente los cambios necesarios en la lista de descarga.  
@@ -53,7 +53,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [Objetos de administración de SQL Server (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **Para modificar los servidores de destino para un trabajo**  
+ **Para cambiar los servidores de destino de un trabajo**  
   
 -   [SQL Server Management Studio](modify-the-target-servers-for-a-job.md)  
   
@@ -61,7 +61,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [Objetos de administración de SQL Server (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **Para modificar la ubicación de un servidor de destino**  
+ **Para cambiar la ubicación de un servidor de destino**  
   
 -   [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
@@ -81,7 +81,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar eventos](manage-events.md)  
   
   

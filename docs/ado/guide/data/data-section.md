@@ -13,36 +13,36 @@ ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925641"
 ---
 # <a name="data-section"></a>Sección de datos
-La sección de datos define los datos del conjunto de filas junto con el pendiente actualizaciones, inserciones o eliminaciones. La sección de datos puede contener cero o más filas. Solo puede contener datos de un conjunto de filas donde la fila se define el esquema. Además, como se indicó antes, se pueden omitir columnas sin datos. Si se utiliza un atributo o un subelemento en la sección de datos y esa construcción no se ha definido en la sección de esquema, se omite en modo silencioso.  
+La sección de datos define los datos del conjunto de filas junto con las actualizaciones, inserciones o eliminaciones pendientes. La sección de datos puede contener cero o más filas. Solo puede contener datos de un conjunto de filas donde la fila esté definida por el esquema. Además, como se indicó antes, se pueden omitir las columnas sin datos. Si se utiliza un atributo o subelemento en la sección de datos y esa construcción no se ha definido en la sección de esquema, se pasa por alto de forma silenciosa.  
   
-## <a name="string"></a>Cadena  
- Los caracteres XML reservados en datos de texto deben reemplazarse por las entidades de caracteres apropiado. Por ejemplo, en el nombre de la empresa "De Joe garaje", una comilla simple debe sustituirse por una entidad. La fila real sería similar al siguiente:  
+## <a name="string"></a>String  
+ Los caracteres XML reservados en los datos de texto deben reemplazarse por las entidades de caracteres apropiadas. Por ejemplo, en el nombre de la empresa "garaje de Joe", la comilla simple debe reemplazarse por una entidad. La fila real sería similar a la siguiente:  
   
 ```  
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- Los caracteres siguientes están reservados en XML y debe reemplazarse por las entidades de caracteres: {"," &,\<, >}.  
+ Los caracteres siguientes están reservados en XML y deben reemplazarse por entidades de caracteres: {', ', &\<,, >}.  
   
 ## <a name="binary"></a>Binary  
- Datos binarios están bin.hex codificado (es decir, un byte se asigna a dos caracteres, un carácter por nibble).  
+ Los datos binarios son bin. hex codificado (es decir, un byte se asigna a dos caracteres, un carácter por recorte).  
   
 ## <a name="datetime"></a>DateTime  
- El formato VT_DATE variant no es directamente compatible con tipos de datos XML. El formato correcto para las fechas con el componente de fecha y de hora es aaaa-mm-ddThh.  
+ El formato de la variante VT_DATE no es compatible directamente con los tipos de datos de datos XML. El formato correcto para las fechas con un componente de datos y de hora es aaaa-mm-ddThh: mm: SS.  
   
- Para obtener más información acerca de los formatos de fecha especificados mediante XML, vea el [especificación W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  
+ Para obtener más información sobre los formatos de fecha especificados por XML, vea la [especificación de datos XML del consorcio W3C](https://go.microsoft.com/fwlink/?LinkId=5692).  
   
- Cuando la especificación de datos XML define dos tipos de datos equivalentes (por ejemplo, i4 == int), ADO se escribe el nombre descriptivo pero lee ambos.  
+ Cuando la especificación de datos XML define dos tipos de datos equivalentes (por ejemplo, I4 = = int), ADO escribirá el nombre descriptivo, pero leerá en ambos.  
   
 ## <a name="managing-pending-changes"></a>Administrar cambios pendientes  
- Se puede abrir un conjunto de registros de inmediato o modo de actualización por lotes. Cuando se abren en modo de actualización por lotes con cursores de cliente, todos los cambios realizados en el conjunto de registros están en un estado pendiente hasta que se llama al método UpdateBatch. Los cambios pendientes también se conservan cuando se guarda el conjunto de registros. En XML, se representan mediante el uso de los elementos de "actualización" definidos en urn: schemas-microsoft-Rowset. Además, si se puede actualizar un conjunto de filas, la propiedad actualizable debe establecerse en true en la definición de la fila. Por ejemplo, para definir que la tabla de distribuidores contiene cambios pendientes, la definición de fila podría parecerse Buscar siguiente.  
+ Un conjunto de registros se puede abrir en modo de actualización inmediata o por lotes. Cuando se abren en modo de actualización por lotes con cursores de cliente, todos los cambios realizados en el conjunto de registros están en estado pendiente hasta que se llama al método UpdateBatch. Los cambios pendientes también se conservan cuando se guarda el conjunto de registros. En XML, se representan mediante el uso de los elementos "Update" definidos en urn: schemas-microsoft-com: RowSet. Además, si se puede actualizar un conjunto de filas, la propiedad actualizable debe establecerse en true en la definición de la fila. Por ejemplo, para definir que la tabla Shippers contiene cambios pendientes, la definición de la fila tendría un aspecto similar al siguiente.  
   
 ```  
 <s:ElementType name="row" content="eltOnly" updatable="true">  
@@ -53,9 +53,9 @@ La sección de datos define los datos del conjunto de filas junto con el pendien
 </s:ElementType>  
 ```  
   
- Esto indica al proveedor de persistencia para los datos de superficie para que ADO puede construir un objeto de conjunto de registros actualizable.  
+ Esto indica al proveedor de persistencia que muestre los datos para que ADO pueda construir un objeto de conjunto de registros actualizable.  
   
- Los datos de ejemplo siguiente muestran cómo buscar las inserciones, cambios y eliminaciones en el archivo almacenado.  
+ Los datos de ejemplo siguientes muestran cómo las inserciones, cambios y eliminaciones se buscan en el archivo guardado.  
   
 ```  
 <rs:data>  
@@ -82,7 +82,7 @@ La sección de datos define los datos del conjunto de filas junto con el pendien
 </rs:data>  
 ```  
   
- Una actualización siempre contiene los datos de fila originales todo seguidos por los datos de la fila modificada. La fila modificada puede contener todas las columnas o solo aquellas columnas que han cambiado realmente. En el ejemplo anterior, no se cambia la fila 2 de remitente, y solo la columna Phone ha cambiado los valores para el remitente 3 y, por tanto, es la única columna que se incluyen en la fila modificada. Las filas insertadas para los transportistas 12, 13 y 14 son por lotes juntos en una sola rs: Insertar etiqueta. Tenga en cuenta que las filas eliminadas pueden también se pueden agrupar, aunque esto no se muestra en el ejemplo anterior.  
+ Una actualización siempre contiene los datos de fila originales completos seguidos de los datos de fila modificados. La fila modificada puede contener todas las columnas o solo las columnas que realmente han cambiado. En el ejemplo anterior, no se cambia la fila del remitente 2 y solo la columna Phone ha cambiado los valores para el remitente 3 y, por lo tanto, la única columna incluida en la fila modificada. Las filas insertadas para los distribuidores 12, 13 y 14 se agrupan por lotes en una etiqueta RS: INSERT. Tenga en cuenta que las filas eliminadas también se pueden agrupar por lotes, aunque esto no se muestra en el ejemplo anterior.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

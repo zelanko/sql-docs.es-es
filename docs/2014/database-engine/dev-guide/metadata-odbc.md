@@ -1,5 +1,5 @@
 ---
-title: Metadata (ODBC) | Microsoft Docs
+title: Metadatos (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48f2fde8280a4b309c43e292bda452091d46ee02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781235"
 ---
 # <a name="metadata-odbc"></a>Metadatos (ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "62781235"
  [Metadatos de catálogo](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)  
  Describe los metadatos de columna devueltos por `SQLColumns` y `SQLProcedureColumns`, así como los metadatos de tipo de datos devueltos por `SQLGetTypeInfo`.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

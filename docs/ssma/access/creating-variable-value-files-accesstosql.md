@@ -1,5 +1,5 @@
 ---
-title: Creación de archivos de valor Variable (AccessToSQL) | Microsoft Docs
+title: Crear archivos de valor variable (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
@@ -10,19 +10,19 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006595"
 ---
-# <a name="creating-variable-value-files-accesstosql"></a>Creación de archivos de valor Variable (AccessToSQL)
-Un archivo de valores de Variable es un archivo XML que contiene los valores de parámetro de comandos (por ejemplo, el nombre de servidor de origen o destino) que cambian con frecuencia a través de migraciones de servidor. Cuando se produce un gran número de migraciones de base de datos, se crean varios archivos de variable para almacenar el valor de cada servidor de origen y se hace referencia en un archivo de script maestro con el **- v** cambiar en la línea de comandos. Este comportamiento ayuda a mantener los valores estáticos en unos pocos archivos de script con los valores de variables en varios archivos de variable.  
+# <a name="creating-variable-value-files-accesstosql"></a>Crear archivos de valor variable (AccessToSQL)
+Un archivo de valores de variable es un archivo XML que contiene los valores de los parámetros de los comandos (como el nombre del servidor de origen o de destino) que cambian con frecuencia en las migraciones del servidor. Cuando se produce un gran número de migraciones de base de datos, se crean y se hace referencia a varios archivos de variables para almacenar el valor de cada servidor de origen en un archivo de script maestro con el modificador **-v** en la línea de comandos. Este comportamiento ayuda a mantener valores estáticos en algunos archivos de script con los valores de variable en varios archivos de variables.  
   
 > [!NOTE]  
-> -  Los nombres de variable son el prefijo y sufijo con un símbolo $ (dólar). Si una variable no se asigna un valor en el archivo de valor de la variable, producirá un error durante el análisis del archivo de script, lo detienen el proceso de ejecución de la consola.  
-> -  El carácter de escape para **$** es **$$** . Si el valor de un valor estático o variable de un parámetro contiene un **$** símbolos (dólar), a continuación, **$$** debe especificarse para tratarlo como un carácter en lugar de una variable.  
-> -  Para fines de mantenimiento, se pueden declarar variables dentro `'variable-group'` elementos para una separación lógica de las variables definidas por el usuario.  Uso de este elemento no es obligatorio.  
+> -  Los nombres de variable tienen el prefijo y el sufijo con un símbolo $ (dólar). Si no se asigna un valor a una variable en el archivo de valores de variable, se producirá un error durante el análisis del archivo de script, lo que provocará que se detenga el proceso de ejecución de la consola.  
+> -  El carácter de escape **$** para **$$** es. Si el valor de una variable o un valor estático de un parámetro contiene **$** un símbolo (dólar), **$$** debe especificarse para tratarlo como un carácter en lugar de una variable.  
+> -  En lo que respecta a la facilidad de mantenimiento, `'variable-group'` las variables se pueden declarar dentro de elementos para la separación lógica de las variables definidas por el usuario.  El uso de este elemento no es obligatorio.  
   
 **Ejemplos:**  
   
@@ -87,12 +87,12 @@ Un archivo de valores de Variable es un archivo XML que contiene los valores de 
 </variables>  
 ```  
   
-## <a name="variable-value-file-validation"></a>Validación de archivos de valor de la variable  
-El usuario puede validar fácilmente su archivo de valor de la variable en el archivo de definición de esquema **ConsoleScriptVariablesSchema.xsd** disponible en la carpeta "Esquemas".  
+## <a name="variable-value-file-validation"></a>Validación de archivos de valores de variables  
+El usuario puede validar fácilmente su archivo de valores de variable en el archivo de definición de esquema **ConsoleScriptVariablesSchema. xsd** disponible en la carpeta ' schemas '.  
   
 ## <a name="next-step"></a>Paso siguiente  
-El siguiente paso en el funcionamiento de la consola es [crear los archivos de conexión de servidor &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+El siguiente paso en el funcionamiento de la consola es [la creación de los archivos de conexión del servidor &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>Vea también  
-[Creación de los archivos de conexión de servidor (acceso)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
+## <a name="see-also"></a>Consulte también  
+[Crear los archivos de conexión del servidor (acceso)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

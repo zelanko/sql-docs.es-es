@@ -15,10 +15,10 @@ ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1ff59241067ad08e0acf738a34d59c59f837abfe
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728314"
 ---
 # <a name="delete-model-object-permissions-master-data-services"></a>Eliminar permisos de objeto de modelo (Master Data Services)
@@ -54,10 +54,10 @@ ms.locfileid: "73728314"
   
 8.  Haga clic en el nodo de árbol y, en el menú contextual, haga clic en **Borrar acceso**.  
   
-9. Haga clic en **Guardar**.  
+9. Haga clic en **Save**(Guardar).  
   
-## <a name="see-also"></a>Vea también  
- [Permisos de objeto del modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Permisos del objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

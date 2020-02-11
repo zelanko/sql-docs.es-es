@@ -1,5 +1,5 @@
 ---
-title: Ejemplo ActualSize y DefinedSize propiedades (VC ++) | Microsoft Docs
+title: Ejemplo de propiedades ActualSize y DefinedSize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 340f471215e9f8ec8bf4f0feaabec5cce559a9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921470"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vc"></a>Ejemplo ActualSize y DefinedSize propiedades (VC ++)
-Este ejemplo se usa el [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) y [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propiedades para mostrar el tamaño definido y el tamaño real de un campo.  
+# <a name="actualsize-and-definedsize-properties-example-vc"></a>Ejemplo de propiedades ActualSize y DefinedSize (VC + +)
+En este ejemplo se usan las propiedades [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) y [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) para mostrar el tamaño definido y el tamaño real de un campo.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -128,24 +128,24 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **Nombre de Store: Eric los libros de lectura**  
+ **Nombre del almacén: Eric The Read Books**  
 **Tamaño definido: 40**  
 **Tamaño real: 19**  
-**Nombre de Store: De Barnum**  
+**Nombre del almacén: Barnum**  
 **Tamaño definido: 40**  
 **Tamaño real: 8**  
-**Nombre de Store: Noticias y pimientos**  
+**Nombre del almacén: Noticias & cerveza**  
 **Tamaño definido: 40**  
 **Tamaño real: 12**  
-**Nombre de Store: Doc-U-Mat: Los libros en pantalla y ropa de calidad**  
+**Nombre del almacén: doc-U-paspartú: ropa y libros de calidad**  
 **Tamaño definido: 40**  
 **Tamaño real: 36**  
-**Nombre de Store: Faríngea Bookshop**  
+**Nombre del almacén: Fricative Bookshop**  
 **Tamaño definido: 40**  
 **Tamaño real: 18**  
-**Nombre de Store: Bookbeat**  
+**Nombre del almacén: Bookbeat**  
 **Tamaño definido: 40**  
 **Tamaño real: 8**   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [Propiedad DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)

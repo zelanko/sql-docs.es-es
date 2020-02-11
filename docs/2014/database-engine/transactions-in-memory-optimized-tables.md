@@ -1,5 +1,5 @@
 ---
-title: Las transacciones en tablas optimizadas para memoria | Microsoft Docs
+title: Transacciones en tablas con optimización para memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843112"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transacciones en tablas con optimización para memoria
   La versión de las filas de las tablas basadas en disco (con el aislamiento de instantánea o READ_COMMITTED_SNAPSHOT) proporciona una forma de control de simultaneidad optimista. Los lectores y los escritores no se bloquean entre sí. Con las tablas optimizadas para memoria, los escritores no bloquean a los escritores. Con las versiones de fila de las tablas basadas en disco, una transacción cierra la fila y se bloquean las transacciones simultáneas que intentan actualizar la fila. Con las tablas optimizadas para memoria, no hay bloqueos. En su lugar, si dos transacciones intentan actualizar la misma fila, se produciría un conflicto de escritura/escritura (error 41302).  
   
- A diferencia de las tablas basadas en disco, las tablas optimizadas para memoria permiten un control de simultaneidad optimista con los mayores niveles de aislamiento, REPEATABLE READ y SERIALIZABLE. Los bloqueos no se adoptan para exigir los niveles de aislamiento. En su lugar, al final de la transacción, la validación garantiza las suposiciones de seriabilidad o de lectura repetible. Si las suposiciones se infringen, la transacción se termina. Para obtener más información, vea [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md).  
+ A diferencia de las tablas basadas en disco, las tablas optimizadas para memoria permiten un control de simultaneidad optimista con los mayores niveles de aislamiento, REPEATABLE READ y SERIALIZABLE. Los bloqueos no se adoptan para exigir los niveles de aislamiento. En su lugar, al final de la transacción, la validación garantiza las suposiciones de seriabilidad o de lectura repetible. Si las suposiciones se infringen, la transacción se termina. Para obtener más información, consulte [Transaction Isolation Levels](../../2014/database-engine/transaction-isolation-levels.md).  
   
  La semántica de transacciones importantes para las tablas optimizadas para memoria es:  
   
@@ -50,7 +50,8 @@ ms.locfileid: "62843112"
  Además, si una transacción (TxA) lee filas que otra transacción (TxB) ha insertado o modificado y está en proceso de confirmación, se supondrá de forma optimista la confirmación de la otra transacción, en lugar de esperar a que la confirmación se produzca. En este caso, la transacción TxA tendrá una dependencia de confirmación de la transacción TxB.  
   
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>Detección de conflictos, validación y comprobaciones de las dependencias de confirmación  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta conflictos entre las operaciones simultáneas, así como las infracciones del nivel de aislamiento y condenará una de las transacciones en conflicto. Esta transacción tendrá que volver a intentarse. (Para obtener más información, vea [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)).  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta conflictos entre las operaciones simultáneas, así como las infracciones del nivel de aislamiento y condenará una de las transacciones en conflicto. Esta transacción tendrá que volver a intentarse. (Para obtener más información, vea [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)).  
   
  El sistema supone de forma optimista que no hay conflictos ni infracciones de aislamiento de transacciones. Los conflictos que puedan provocar incoherencias en la base de datos o puedan infringir el aislamiento de la transacción, se detectan y se termina la transacción.  
   
@@ -70,7 +71,7 @@ ms.locfileid: "62843112"
 ### <a name="transaction-lifetime"></a>Período de duración de las transacciones  
  Los errores enumerados en la tabla anterior pueden producirse en varios momentos durante una transacción. La ilustración siguiente muestra las fases de una transacción que tiene acceso a tablas optimizadas para memoria.  
   
- ![Duración de una transacción. ](../../2014/database-engine/media/hekaton-transactions.gif "Duración de una transacción.")  
+ ![Duración de una transacción.](../../2014/database-engine/media/hekaton-transactions.gif "Duración de una transacción.")  
 Duración de una transacción que tiene acceso a tablas optimizadas para memoria.  
   
 #### <a name="regular-processing"></a>Procesamiento normal  
@@ -82,7 +83,7 @@ Duración de una transacción que tiene acceso a tablas optimizadas para memoria
   
  Este error destruye la transacción (incluso si XACT_ABORT está en OFF), lo que significa que la transacción se revertirá cuando la sesión de usuario finaliza. Las transacciones condenadas no se puede confirmar y solo admiten operaciones de lectura que no escriben en el registro y no tienen acceso a las tablas optimizadas para memoria.  
   
-#####  <a name="cd"></a> Confirmar las dependencias  
+#####  <a name="cd"></a>Dependencias de confirmación  
  Durante el procesamiento normal, una transacción puede leer las filas escritas por otras transacciones que están en la fase de confirmación o validación, pero aún no se hayan confirmado. Las filas están visibles porque la hora de finalización lógica de las transacciones se ha asignado al inicio de la fase de validación.  
   
  Si una transacción lee estas filas no confirmadas, realizará una dependencia de confirmación en esa transacción. Esto tiene dos implicaciones principales:  
@@ -131,7 +132,7 @@ Duración de una transacción que tiene acceso a tablas optimizadas para memoria
   
 -   Las tablas con optimización para memoria no admiten bloqueos. Los bloqueos explícitos con sugerencias de bloqueo (como TABLOCK, XLOCK, ROWLOCK) no se admiten con las tablas optimizadas para memoria.  
   
-## <a name="see-also"></a>Vea también  
- [Descripción de las transacciones en tablas optimizadas para memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
+## <a name="see-also"></a>Consulte también  
+ [Descripción de las transacciones en tablas con optimización para memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
   

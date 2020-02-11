@@ -1,5 +1,5 @@
 ---
-title: Cálculos (SSAS Tabular) | Microsoft Docs
+title: Cálculos (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9412d01809402dfa23c116c93c80e0ab32bee747
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284914"
 ---
 # <a name="calculations-ssas-tabular"></a>Cálculos (SSAS tabular)
@@ -24,9 +24,9 @@ ms.locfileid: "67284914"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Descripción de DAX en modelos tabulares &#40;SSAS tabular&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|Describe el lenguaje de fórmulas Expresiones de análisis de datos (DAX) que se utiliza para crear cálculos para columnas calculadas, medidas y filtros de fila en modelos tabulares.|  
+|[Descripción de DAX en los modelos tabulares &#40;SSAS tabular&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|Describe el lenguaje de fórmulas Expresiones de análisis de datos (DAX) que se utiliza para crear cálculos para columnas calculadas, medidas y filtros de fila en modelos tabulares.|  
 |[Compatibilidad de las fórmulas en el modo DirectQuery](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|Se describen las diferencias, se enumeran las funciones que no se admiten en el modo DirectQuery y se enumeran las funciones que sí se admiten pero pueden devolver resultados distintos.|  
-|[Expresiones de análisis de datos &#40;DAX&#41; referencia](/dax/data-analysis-expressions-dax-reference)|En esta sección se proporcionan descripciones detalladas de sintaxis, operadores, y funciones de DAX.|  
+|[Expresiones de análisis de datos &#40;referencia de&#41; DAX](/dax/data-analysis-expressions-dax-reference)|En esta sección se proporcionan descripciones detalladas de sintaxis, operadores, y funciones de DAX.|  
   
 > [!NOTE]  
 >  En esta sección no se proporcionan las tareas paso a paso para crear cálculos. Dado que los cálculos se especifican en columnas calculadas, medidas y filtros de fila (en roles), se proporcionan instrucciones sobre dónde crear fórmulas DAX en las tareas relacionadas con esas características. Para obtener más información, vea [Crear una columna calculada &#40;SSAS tabular&#41;](ssas-calculated-columns-create-a-calculated-column.md), [Crear y administrar medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md) y [Crear y administrar roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md).  

@@ -18,16 +18,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c0e935cc3d5264a1d2f5569b62db416d85b0427
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103378"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Archivos de registro y orígenes de Reporting Services
   Los servidores de informes y los entornos de servidor de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] admiten diversos destinos de archivos registro para registrar información sobre las operaciones y el estado del servidor. Hay dos categorías básicas de registro: registro de ejecución y registro de seguimiento. El registro de ejecución incluye información sobre las estadísticas de ejecución de informes, auditoría, diagnóstico de rendimiento y optimización. El registro de seguimiento es información sobre los mensajes de error y diagnósticos generales.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] | Modo nativo de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Modo de SharePoint | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo nativo  
   
  La tabla siguiente incluye vínculos a información adicional acerca de cada registro, incluida su ubicación y cómo ver su contenido.  
   
@@ -39,12 +39,12 @@ ms.locfileid: "66103378"
 |[Registro HTTP del servidor de informes](report-server-http-log.md)|El archivo de registro de HTTP contiene un registro de todas las solicitudes HTTP y respuestas controladas por el servicio web del servidor de informes y el Administrador de informes.|  
 |[Registro de aplicación Windows](windows-application-log.md)|El registro de aplicación de Microsoft Windows contiene información sobre los eventos del servidor de informes.|  
 |Registros de rendimiento de Windows|Los registros de rendimiento de Windows contienen datos sobre el rendimiento del servidor de informes. Puede crear registros de rendimiento y después elegir contadores que establezcan los datos que se recopilarán. Para más información, consulte [Supervisar el rendimiento del servidor de informes](monitoring-report-server-performance.md).|  
-|Archivos de registro del programa de instalación|Los archivos de registros se crean también durante la instalación. Si el programa de instalación no se completa o lo hace con advertencias u otros mensajes, puede consultar los archivos de registro para solucionar el problema. Para obtener más información, vea [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).|  
-|Registros IIS|Archivos de registro creados por Microsoft Internet Information Services (IIS). Para obtener más información, consulte [cómo habilitar el registro en Internet Information Services (IIS)](https://support.microsoft.com/kb/313437).|  
+|Archivos de registro del programa de instalación|Los archivos de registros se crean también durante la instalación. Si el programa de instalación no se completa o lo hace con advertencias u otros mensajes, puede consultar los archivos de registro para solucionar el problema. Para obtener más información, vea [ver y leer archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).|  
+|Registros IIS|Archivos de registro creados por Microsoft Internet Information Services (IIS). Para obtener más información, vea [Cómo habilitar el registro en Internet Information Services (IIS)](https://support.microsoft.com/kb/313437).|  
 |Vídeo|Vea un breve vídeo que muestra el uso de Microsoft Power Query para ver archivos de registro de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .<br /><br /> ![ver un vídeo sobre los registros de Power Query y SSRS](../media/generic-video-thumbnail.png "ver un vídeo sobre los registros de Power Query y SSRS")|  
   
-## <a name="see-also"></a>Vea también  
- [Servidor de informes de Reporting Services &#40;modo nativo&#41;](reporting-services-report-server-native-mode.md)   
+## <a name="see-also"></a>Consulte también  
+ [Reporting Services servidor de informes &#40;modo nativo&#41;](reporting-services-report-server-native-mode.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

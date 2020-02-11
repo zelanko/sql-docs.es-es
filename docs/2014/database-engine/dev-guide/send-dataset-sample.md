@@ -11,19 +11,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637734"
 ---
 # <a name="send-dataset-sample"></a>Ejemplo de envío de conjunto de datos
-  El ejemplo Send `DataSet` muestra cómo devolver un `DataSet` basado en ADO.NET dentro de un procedimiento almacenado basado en Common Language Runtime (CLR) del servidor como un conjunto de resultados para el cliente. Esto resulta útil, por ejemplo, cuando dicho procedimiento almacenado rellena un `DataSet` con los resultados de una consulta y, después, manipula los datos incluidos en ese `DataSet`. También es útil si el procedimiento almacenado crea y rellena un `DataSet` desde el principio. El ejemplo está compuesto por dos clases, `DataSetUtilities` y `TestSendDataSet`. El método `SendDataSet` de la clase `DataSetUtilities` implementa un modo general de transmitir el contenido de una instancia de un `DataSet` al cliente. El método `DoTest` definido en la clase `TestSendDataSet` comprueba que el método `SendDataSet` funciona creando un `DataSet` que rellena con datos del procedimiento almacenado de Transact-SQL `uspGetTwoBOMTestData`. `uspGetTwoBOMTestData` ejecuta el procedimiento almacenado de Transact-SQL `uspGetBillOfMaterials` dos veces para consultar de forma recursiva la lista de materiales de dos productos especificados como parámetros en el procedimiento almacenado `usp_GetTwoBOMTestData`. Generalmente, después de rellenar el conjunto de datos, los datos se modificarían antes de invocar a `SendDataSet` para entregar al cliente los datos del conjunto de datos en forma de conjunto de resultados. Para simplificar, este ejemplo devuelve los datos sin modificar.  
+  El ejemplo Send `DataSet` muestra cómo devolver un `DataSet` basado en ADO.NET dentro de un procedimiento almacenado basado en Common Language Runtime (CLR) del servidor como un conjunto de resultados para el cliente. Esto resulta útil, por ejemplo, cuando dicho procedimiento almacenado rellena un `DataSet` con los resultados de una consulta y, después, manipula los datos incluidos en ese `DataSet`. También es útil si el procedimiento almacenado crea y rellena un `DataSet` desde el principio. El ejemplo está compuesto por dos clases, `DataSetUtilities` y `TestSendDataSet`. El método `SendDataSet` de la clase `DataSetUtilities` implementa un modo general de transmitir el contenido de una instancia de un `DataSet` al cliente. El método `DoTest` definido en la clase `TestSendDataSet` comprueba que el método `SendDataSet` funciona creando un `DataSet` que rellena con datos del procedimiento almacenado de Transact-SQL `uspGetTwoBOMTestData`. 
+  `uspGetTwoBOMTestData` ejecuta el procedimiento almacenado de Transact-SQL `uspGetBillOfMaterials` dos veces para consultar de forma recursiva la lista de materiales de dos productos especificados como parámetros en el procedimiento almacenado `usp_GetTwoBOMTestData`. Generalmente, después de rellenar el conjunto de datos, los datos se modificarían antes de invocar a `SendDataSet` para entregar al cliente los datos del conjunto de datos en forma de conjunto de resultados. Para simplificar, este ejemplo devuelve los datos sin modificar.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -88,7 +90,7 @@ ms.locfileid: "73637734"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>Código muestra  
+## <a name="sample-code"></a>Código de ejemplo  
  A continuación se muestran las listas de código para este ejemplo.  
   
  C#  
@@ -593,7 +595,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenarios de uso y ejemplos para la integración de Common Language Runtime &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ca32cdc72bb5c062be4c3745d3f742f39753afa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830409"
 ---
 # <a name="select-objects-to-transfer"></a>Seleccionar objetos para transferir
@@ -26,7 +26,7 @@ ms.locfileid: "62830409"
   
  Para elegir objetos específicos para transferirlos, active la casilla de la primera columna correspondiente a la fila de la cuadrícula en la que se especifica el objeto.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../integration-services-error-and-message-reference.md)   
  [Editor de la tarea Transferir trabajos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)   
  [Editor de la tarea Transferir inicios de sesión &#40;página Inicios de sesión&#41;](../transfer-logins-task-editor-logins-page.md)   

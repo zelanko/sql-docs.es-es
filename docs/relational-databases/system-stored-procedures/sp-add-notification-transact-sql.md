@@ -18,13 +18,13 @@ ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 60bb289f0fd6d7b7dd1034630929998d32cc59d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68115062"
 ---
-# <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
+# <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Establece una notificación para una alerta.  
@@ -40,13 +40,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @alert_name = ] 'alert'` La alerta para esta notificación. *alerta* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @alert_name = ] 'alert'`La alerta de esta notificación. la *alerta* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @operator_name = ] 'operator'` El operador para recibir una notificación cuando se produzca la alerta. *operador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @operator_name = ] 'operator'`Operador al que se va a notificar cuando se produzca la alerta. *Operator* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @notification_method = ] notification_method` El método por el que se va a notificar al operador. *notification_method* es **tinyint**, no tiene ningún valor predeterminado. *notification_method* puede ser uno o varios de estos valores, combinados con un **OR** operador lógico.  
+`[ @notification_method = ] notification_method`Método por el que se notifica al operador. *notification_method* es de **tinyint**y no tiene ningún valor predeterminado. *notification_method* puede ser uno o varios de estos valores combinados con un operador lógico **or** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Correo electrónico|  
 |**2**|Buscapersonas|  
@@ -58,22 +58,23 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- **sp_add_notification** se debe ejecutar desde la **msdb** base de datos.  
+## <a name="remarks"></a>Observaciones  
+ **sp_add_notification** se debe ejecutar desde la base de datos **msdb** .  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona una sencilla forma gráfica de administrar todo el sistema de alertas. Se recomienda utilizar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para configurar la infraestructura de alertas.  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona una sencilla forma gráfica de administrar todo el sistema de alertas. Se recomienda utilizar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para configurar la infraestructura de alertas.  
   
  Para enviar una notificación como respuesta a una alerta, primero debe configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el envío de correo.  
   
  Si se produce algún error al enviar un mensaje de correo electrónico o una notificación por buscapersonas, el error se comunica en el registro de errores de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_add_notification**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_add_notification**.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se agrega una notificación de correo electrónico para la alerta especificada (`Test Alert`).  
   
-> **NOTA:** En este ejemplo se da por supuesto que `Test Alert` ya existe y que `François Ajenstat` es un nombre de operador válido.  
+> **Nota:** En este ejemplo se `Test Alert` da por supuesto que `François Ajenstat` ya existe y que es un nombre de operador válido.  
   
 ```  
 USE msdb ;  
@@ -86,11 +87,11 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
- [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
- [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_delete_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_help_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [sp_update_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -13,17 +13,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3c1785e927bf2d2b90322c90f2adace4555047af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101541"
 ---
 # <a name="system-level-tasks"></a>Tareas de nivel de sistema
   Una tarea de nivel de sistema es una colección de permisos relativos a las operaciones correspondientes al sitio del servidor de informes en general. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] también incluye tareas de nivel de elemento que corresponden a elementos específicos. Para obtener más información, vea [Tareas de nivel de elemento](tasks-and-permissions-item-level-tasks.md). Para obtener más información acerca de tareas y permisos en general, vea [Tasks and Permissions](tasks-and-permissions.md).  
   
 > [!NOTE]  
->  Si trabaja con estas tareas mediante programación, debe utilizar métodos que admitan tareas de nivel de sistema. Para obtener más información, vea <xref:ReportService2010.ReportingService2010.ListTasks%2A> y <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  
+>  Si trabaja con estas tareas mediante programación, debe utilizar métodos que admitan tareas de nivel de sistema. Para más información, vea <xref:ReportService2010.ReportingService2010.ListTasks%2A> y <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  
   
 ## <a name="permissions-in-system-level-tasks"></a>Permisos en tareas de nivel de sistema  
  La siguiente tabla identifica la colección de permisos para cada tarea del sistema. Los permisos se incluyen con fin informativo únicamente, para proporcionar una descripción más exacta de la funcionalidad disponible con cada tarea.  
@@ -31,8 +31,8 @@ ms.locfileid: "66101541"
 |Tarea|Permisos|  
 |----------|-----------------|  
 |Ejecutar definiciones de informe|Ejecutar definiciones de informe (el nombre del permiso y la tarea es el mismo)|  
-|Generar eventos|Generar eventos|  
-|Administrar trabajos|Leer propiedades del sistema<br /><br /> Actualizar propiedades del sistema|  
+|Generación de eventos|Generar eventos|  
+|Trabajos de administración|Leer propiedades del sistema<br /><br /> Actualizar propiedades del sistema|  
 |Administrar propiedades del servidor de informes|Leer propiedades del sistema<br /><br /> Actualizar propiedades del sistema|  
 |Administrar roles|Crear roles<br /><br /> Eliminar roles<br /><br /> Leer propiedades de roles<br /><br /> Actualizar propiedades de roles|  
 |Administrar programaciones compartidas|Crear programaciones|  
@@ -40,7 +40,7 @@ ms.locfileid: "66101541"
 |Ver propiedades del servidor de informes|Leer propiedades del sistema|  
 |Ver programaciones compartidas|Leer programaciones|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Concesión de permisos en un servidor de informes en modo nativo](granting-permissions-on-a-native-mode-report-server.md)  
   
   

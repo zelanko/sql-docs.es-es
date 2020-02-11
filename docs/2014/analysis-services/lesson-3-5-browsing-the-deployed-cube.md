@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493984"
 ---
 # <a name="browsing-the-deployed-cube"></a>Examinar el cubo implementado
@@ -22,7 +22,7 @@ ms.locfileid: "69493984"
   
 ### <a name="to-browse-the-deployed-cube"></a>Para examinar el cubo implementado  
   
-1.  Para cambiar al Diseñador de cubos de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga doble clic en el cubo **Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]** en la carpeta **Cubos** del Explorador de soluciones.  
+1.  Para cambiar al diseñador de cubos de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga doble clic en el ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo tutorial** de en la carpeta **cubos** del explorador de soluciones.  
   
 2.  Abra la pestaña **Explorador** y haga clic en el botón **Volver a conectar** de la barra de herramientas del diseñador.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "69493984"
   
      De este modo, se muestran las ventas realizadas por Internet por región y por línea de productos en el mes de febrero de 2006, como se muestra en la imagen siguiente.  
   
-     ![Ventas por Internet por región y por línea de producto](../../2014/tutorials/media/l3-cube-browser-finish.gif "Ventas por Internet por región y por línea de producto")  
+     ![Internet Sales por línea de productos y región](../../2014/tutorials/media/l3-cube-browser-finish.gif "Internet Sales por línea de productos y región")  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 4: Definir propiedades avanzadas de atributos y dimensiones](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Lección 4: Definir propiedades de dimensiones y de atributos avanzados](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

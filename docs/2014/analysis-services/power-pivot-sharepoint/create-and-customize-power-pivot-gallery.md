@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f29ddee8456149ca16dd886935138b0cc915f42d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229296"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Crear y personalizar la Galería de PowerPivot
@@ -24,7 +24,7 @@ ms.locfileid: "75229296"
   
 -   [Requisitos previos](#prereq)  
   
--   [Visión](#overview)  
+-   [Información general](#overview)  
   
 -   [Crear la Galería de PowerPivot](#createlib)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "75229296"
   
 -   [Cambiar a la vista de teatro o a la vista de Galería](#switch)  
   
-##  <a name="prereq"></a>Requisitos previos  
+##  <a name="prereq"></a> Requisitos previos  
   
 -   Debe tener Silverlight. Silverlight se puede descargar e instalar a través de Microsoft Update. Si ve una biblioteca de la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mediante un explorador que no tenga Silverlight, haga clic en el vínculo de la página para instalarlo. Debe cerrar el explorador y volver a abrirlo tras instalarlo.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "75229296"
   
 3.  En Administrar vistas, en Vista actual, seleccione la vista que desee utilizar en la lista. Las vistas prediseñadas incluyen la Vista de galería, la Vista de teatro y la Vista de carrusel. O bien, puede elegir Todos los documentos si desea mover, eliminar o administrar los documentos de la biblioteca.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Solucionar problemas de una instalación de PowerPivot para SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
  [Usar la galería de PowerPivot](use-power-pivot-gallery.md)   
  [Crear una ubicación de confianza para los sitios de PowerPivot en administración central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   

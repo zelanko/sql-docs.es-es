@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a860db611154f9f7a130ee6be90dd43a96b50af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510423"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>agregar un informe personalizado a Management Studio
@@ -67,10 +67,10 @@ ms.locfileid: "62510423"
   
     2.  Ajuste el número de **Mostrar archivos de la lista de archivos recientes**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Informes personalizados en Management Studio](custom-reports-in-management-studio.md)   
- [Usar informes personalizados con propiedades de nodo del explorador de objetos](use-custom-reports-with-object-explorer-node-properties.md)   
- [Anular la supresión de advertencias de ejecutar informe personalizado](unsuppress-run-custom-report-warnings.md)   
+ [Usar informes personalizados con propiedades de nodo de Explorador de objetos](use-custom-reports-with-object-explorer-node-properties.md)   
+ [No suprimir advertencias de ejecutar informe personalizado](unsuppress-run-custom-report-warnings.md)   
  [Reporting Services &#40;SSRS&#41;](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

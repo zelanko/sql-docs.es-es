@@ -14,19 +14,19 @@ ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a21af2a2067498a3ec495013554b70d6a86455a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125573"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField y SQLSetDescRec (biblioteca de cursores)
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- Este tema describe el uso de la **SQLSetDescField** y **SQLSetDescRec** funciones en la biblioteca de cursores. Para obtener información general acerca de estas funciones, vea [función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) y [función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
+ En este tema se describe el uso de las funciones **SQLSetDescField** y **SQLSetDescRec** en la biblioteca de cursores. Para obtener información general sobre estas funciones, vea [función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) y [función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
   
- La biblioteca de cursores ejecuta **SQLSetDescField** cuando se llama para devolver el valor de los campos de conjunto de columnas de marcadores:  
+ La biblioteca de cursores ejecuta **SQLSetDescField** cuando se llama para devolver el valor de los campos establecidos para las columnas de marcador:  
   
  SQL_DESC_DATA_PTR  
   
@@ -52,16 +52,16 @@ ms.locfileid: "68125573"
   
  SQL_DESC_NULLABLE  
   
- La biblioteca de cursores ejecuta las llamadas a **SQLSetDescRec** para una columna de marcador.  
+ La biblioteca de cursores ejecuta llamadas a **SQLSetDescRec** para una columna de marcador.  
   
- Cuando se trabaja con un ODBC *2.x* controlador, la biblioteca de cursores devuelve SQLSTATE HY090 (longitud de búfer o cadena no válida) cuando **SQLSetDescField** o **SQLSetDescRec** se denomina Para establecer el campo SQL_DESC_OCTET_LENGTH para el registro de marcador de un descartar a un valor no es igual a 4. Cuando se trabaja con un ODBC *3.x* controlador, la biblioteca de cursores permite que el búfer de cualquier tamaño.  
+ Cuando se trabaja con un controlador ODBC *2. x* , la biblioteca de cursores devuelve SQLSTATE HY090 (cadena o longitud de búfer no válida) cuando se llama a **SQLSetDescField** o **SQLSetDescRec** para establecer el SQL_DESC_OCTET_LENGTH campo para el registro de marcador de un ARD en un valor distinto de 4. Cuando se trabaja con un controlador ODBC *3. x* , la biblioteca de cursores permite que el búfer tenga cualquier tamaño.  
   
- La biblioteca de cursores ejecuta **SQLSetDescField** cuando se llama para devolver el valor del campo SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE o SQL_DESC_ROW_STATUS_PTR. Estos campos se pueden devolver para cualquier fila, no solo la fila del marcador.  
+ La biblioteca de cursores ejecuta **SQLSetDescField** cuando se llama para devolver el valor del campo SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE o SQL_DESC_ROW_STATUS_PTR. Estos campos se pueden devolver para cualquier fila, no solo para la fila del marcador.  
   
- La biblioteca de cursores no se ejecuta **SQLSetDescField** para cambiar cualquier campo de descriptor que no sea de los campos mencionados anteriormente. Si una aplicación llama a **SQLSetDescField** para establecer cualquier otro campo mientras se carga la biblioteca de cursores, la llamada se pasa al controlador.  
+ La biblioteca de cursores no ejecuta **SQLSetDescField** para cambiar ningún campo de descriptor que no sea los campos mencionados anteriormente. Si una aplicación llama a **SQLSetDescField** para establecer cualquier otro campo mientras se carga la biblioteca de cursores, la llamada se pasa al controlador.  
   
- La biblioteca de cursores admite el cambio de forma dinámica los campos SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR de cualquier fila de un descriptor de fila de la aplicación (después de llamar a **SQLExtendedFetch**, **SQLFetch**, o **SQLFetchScroll**). El campo SQL_DESC_OCTET_LENGTH_PTR puede cambiarse a un puntero nulo solo a desenlazar el búfer de longitud para una columna.  
+ La biblioteca de cursores permite cambiar dinámicamente los campos SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR de cualquier fila de un descriptor de fila de aplicación (después de una llamada a **SQLExtendedFetch**, **SQLFetch**o **SQLFetchScroll**). El campo SQL_DESC_OCTET_LENGTH_PTR se puede cambiar a un puntero nulo solo para desenlazar el búfer de longitud de una columna.  
   
- La biblioteca de cursores no se admite cambiar el campo SQL_DESC_BIND_TYPE en APD o descartar cuando se abre un cursor. El campo SQL_DESC_BIND_TYPE puede cambiarse después de que se cierra el cursor y antes de que se abre un nuevo cursor. Los únicos campos de descriptor que la biblioteca de cursores admite el cambio cuando se abre un cursor son SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR y SQL_DESC_ROWS_PROCESSED_ PTR.  
+ La biblioteca de cursores no admite el cambio del campo de SQL_DESC_BIND_TYPE en un APD o ARD cuando un cursor está abierto. El campo SQL_DESC_BIND_TYPE solo se puede cambiar después de cerrar el cursor y antes de abrir un nuevo cursor. Los únicos campos descriptores que la biblioteca de cursores admite cambiar cuando un cursor está abierto son SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR y SQL_DESC_ROWS_PROCESSED_ Anota.  
   
- La biblioteca de cursores no permite modificar el campo SQL_DESC_COUNT de la descartar después **SQLExtendedFetch** o **SQLFetchScroll** se ha llamado y antes de que se ha cerrado el cursor.
+ La biblioteca de cursores no admite la modificación del campo de SQL_DESC_COUNT de ARD después de llamar a **SQLExtendedFetch** o **SQLFetchScroll** y antes de que se haya cerrado el cursor.

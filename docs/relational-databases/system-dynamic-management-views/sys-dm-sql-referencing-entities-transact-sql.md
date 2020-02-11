@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982342"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
@@ -36,13 +36,13 @@ ms.locfileid: "73982342"
   
 -   Entidades enlazadas o no a un esquema.  
   
--   Desencadenadores DLL de nivel de base de datos  
+-   Desencadenadores DLL de nivel de base de datos   
   
--   Desencadenadores DDL de nivel de servidor  
+-   Desencadenadores DDL de nivel de servidor   
   
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,27 +60,27 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *schema_name.referenced*_*entity_name*  
+ *schema_name. referenciado*_*entity_name*  
  Es el nombre de la entidad a la que se hace referencia.  
   
  *schema_name* es necesario excepto cuando se PARTITION_FUNCTION la clase a la que se hace referencia.  
   
  *schema_name. referenced_entity_name* es **nvarchar**.  
   
- *< referenced_class >* :: = {Object | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
+ *<referenced_class>* :: = {Object | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  Es la clase de la entidad a la que se hace referencia. Solo se puede especificar una clase por instrucción.  
   
- *< referenced_class >* es **nvarchar**(60).  
+ *<referenced_class>* es **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |referencing_schema_name|**sysname**|Esquema al que pertenece la entidad que hace la referencia. Acepta valores NULL.<br /><br /> NULL para desencadenadores DDL de nivel de base de datos y nivel de servidor.|  
 |referencing_entity_name|**sysname**|Nombre de la entidad que hace la referencia. No admite valores NULL.|  
 |referencing_id|**int**|Identificador de la entidad que hace la referencia. No admite valores NULL.|  
-|referencing_class|**tinyint**|Clase de la entidad que hace la referencia. No admite valores NULL.<br /><br /> 1 = Objeto<br /><br /> 12 = Desencadenador DLL de nivel de base de datos<br /><br /> 13 = Desencadenador DDL de nivel de servidor|  
-|referencing_class_desc|**nvarchar(60)**|Descripción de la clase de la entidad de referencia.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class|**tinyint**|Clase de la entidad que hace la referencia. No admite valores NULL.<br /><br /> 1 = Objeto<br /><br /> 12 = Desencadenador DLL de nivel de base de datos <br /><br /> 13 = Desencadenador DDL de nivel de servidor |  
+|referencing_class_desc|**nvarchar (60)**|Descripción de la clase de la entidad de referencia.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|Indica que la resolución del identificador de la entidad a la que se hace referencia se realiza en tiempo de ejecución porque depende del esquema del autor de la llamada.<br /><br /> 1 = La entidad que hace la referencia tiene el potencial para hacer referencia a la entidad; sin embargo, la resolución del identificador de la entidad depende del autor de la llamada y no se puede determinar. Esto solo se produce para las referencias no enlazadas a un esquema a un procedimiento almacenado, un procedimiento almacenado extendido o una función definida por el usuario llamada en una instrucción EXECUTE.<br /><br /> 0 = La entidad a la que se hace referencia no depende del autor de la llamada.|  
   
 ## <a name="exceptions"></a>Excepciones  
@@ -96,16 +96,16 @@ sys.dm_sql_referencing_entities (
   
  Devuelve un error si la entidad especificada a la que se hace referencia es un procedimiento almacenado numerado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  La tabla siguiente enumera los tipos de entidades para las que se crea y mantiene la información de dependencia. La información de dependencia no se crea ni mantiene para reglas, valores predeterminados, tablas temporales, procedimientos almacenados temporales u objetos del sistema.  
   
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  
 |-----------------|------------------------|-----------------------|  
 |Tabla|Sí*|Sí|  
 |Ver|Sí|Sí|  
-|Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sí|Sí|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)]procedimiento almacenado * *|Sí|Sí|  
 |procedimiento almacenado CLR|No|Sí|  
-|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)]función definida por el usuario|Sí|Sí|  
 |Función CLR definida por el usuario|No|Sí|  
 |Desencadenador CLR (DML y DDL)|No|No|  
 |Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
@@ -118,7 +118,7 @@ sys.dm_sql_referencing_entities (
 |Colección de esquemas XML|No|Sí|  
 |Función de partición|No|Sí|  
   
- \* se realiza un seguimiento de una tabla como una entidad de referencia solo cuando hace referencia a un módulo [!INCLUDE[tsql](../../includes/tsql-md.md)], a un tipo definido por el usuario o a una colección de esquemas XML en la definición de una columna calculada, una restricción CHECK o una restricción DEFAULT.  
+ \*Se realiza un seguimiento de una tabla como una entidad de referencia solo cuando [!INCLUDE[tsql](../../includes/tsql-md.md)] hace referencia a un módulo, un tipo definido por el usuario o una colección de esquemas XML en la definición de una columna calculada, una restricción check o una restricción default.  
   
  ** No se realiza el seguimiento de los procedimientos almacenados numerados con un valor entero mayor que 1 como la entidad que hace referencia ni como la entidad a la que se hace referencia.  
   
@@ -153,8 +153,8 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>b. Devolver las entidades que hacen referencia a un tipo determinado  
- El ejemplo siguiente devuelve las entidades que hacen referencia al tipo de alias `dbo.Flag`. El conjunto de resultados muestra que dos procedimientos almacenados utilizan este tipo. El tipo de `dbo.Flag` también se usa en la definición de varias columnas en la tabla de `HumanResources.Employee`; sin embargo, dado que el tipo no está en la definición de una columna calculada, una restricción CHECK o una restricción DEFAULT de la tabla, no se devuelve ninguna fila para la tabla `HumanResources.Employee`.  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Devolver las entidades que hacen referencia a un tipo determinado  
+ El ejemplo siguiente devuelve las entidades que hacen referencia al tipo de alias `dbo.Flag`. El conjunto de resultados muestra que dos procedimientos almacenados utilizan este tipo. El `dbo.Flag` tipo también se utiliza en la definición de varias columnas de la `HumanResources.Employee` tabla; sin embargo, dado que el tipo no está en la definición de una columna calculada, una restricción CHECK o una restricción DEFAULT de la tabla, no se devuelve `HumanResources.Employee` ninguna fila para la tabla.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -174,8 +174,8 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>Vea también  
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Sys. dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

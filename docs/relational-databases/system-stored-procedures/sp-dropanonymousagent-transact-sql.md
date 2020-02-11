@@ -16,13 +16,13 @@ ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: 7e82023ed750c77d87a2536debfb5fceb7321db4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911953"
 ---
-# <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
+# <a name="sp_dropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -37,22 +37,22 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @subid = ] sub_id` Es el identificador global de una suscripción anónima. *sub_id* es **uniqueidentifier**, no tiene ningún valor predeterminado. Este identificador se puede recuperar en el suscriptor mediante **sp_helppullsubscription**. El valor de la **subid** campo del conjunto de resultados devuelto es este identificador global.  
+`[ @subid = ] sub_id`Es el identificador global de una suscripción anónima. *sub_id* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado. Este identificador se puede recuperar en el suscriptor mediante **sp_helppullsubscription**. El valor del campo **subid** del conjunto de resultados devuelto es este identificador global.  
   
-`[ @type = ] type` Es el tipo de suscripción. *tipo* es **int**, no tiene ningún valor predeterminado. Los valores válidos son **1** o **2**. Especificar **1**, si la replicación de instantáneas o replicación transaccional con el agente de distribución. Especificar **2**, si utiliza el agente de mezcla de replicación de mezcla.  
+`[ @type = ] type`Es el tipo de suscripción. el *tipo* es **int**y no tiene ningún valor predeterminado. Los valores válidos son **1** o **2**. Especifique **1**, si la replicación de instantáneas o la replicación transaccional utilizan el agente de distribución. Especifique **2**, si la replicación de mezcla utiliza el agente de mezcla.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_dropanonymousagent** se utiliza en todos los tipos de replicación.  
   
  Este procedimiento almacenado solo se utiliza para quitar agentes de suscripción anónima y no se puede utilizar para quitar suscripciones conocidas.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **db_owner** rol fijo de base de datos en la base de datos de distribución puede ejecutar **sp_dropanonymousagent**.  
+ Solo los miembros del rol fijo de base de datos **db_owner** en la base de datos de distribución pueden ejecutar **sp_dropanonymousagent**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

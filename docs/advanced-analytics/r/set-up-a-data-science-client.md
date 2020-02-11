@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 643de4d56692687b7c88b88c712fb1cc478eb0a1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0a31afef0924e4eda2b2eb9fbe5d27f7f4ab9f51
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727380"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200401"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configuración de un cliente de ciencia de datos para el desarrollo de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Los paquetes de Microsoft R están disponibles en varios productos y servicios.
   + En el panel de control, haga clic en **Sistema y seguridad** > **Sistema** > **Configuración avanzada del sistema** > **Variables de entorno**.
   + Cree una nueva variable del sistema denominada **MKL_CBWR**, con un valor establecido en **Automático**.
 
-## <a name="2---locate-executables"></a>2\. Búsqueda de los archivos ejecutables
+## <a name="2---locate-executables"></a>2 - Buscar los archivos ejecutables
 
 Busque y enumere el contenido de la carpeta de instalación para confirmar que se ha instalado R.exe, RGUI y otros paquetes. 
 
@@ -83,7 +83,7 @@ Al instalar R con SQL Server, obtendrá las mismas herramientas de R habituales
    ![Información de versión al cargar R](../install/media/rclient-rgui-r-prompt.png "Abrir un símbolo del sistema de R")
 
 
-## <a name="4---get-sql-permissions"></a>4\. Obtención de los permisos SQL
+## <a name="4---get-sql-permissions"></a>4 - Obtener permisos SQL
 
 En R Client, el procesamiento de R se limita a dos subprocesos y datos en memoria. Para el procesamiento escalable con varios núcleos y conjuntos de datos grandes, puede desplazar la ejecución (denominada *contexto de proceso*) a los conjuntos de datos y la potencia de proceso de una instancia de SQL Server remota. Este es el enfoque recomendado para la integración de clientes con una instancia de SQL Server de producción y necesitará permisos e información de conexión para que funcione.
 
@@ -218,7 +218,7 @@ Al volver a abrir RStudio, el motor de R predeterminado es el archivo ejecutable
 
 Si aún no tiene un IDE preferido para R, se recomienda **Herramientas de R para Visual Studio**.
 
-+ [Descarga de Herramientas de R para Visual Studio (RTVS)](https://visualstudio.microsoft.com/vs/features/rtvs/)
++ [Descarga de Herramientas de R para Visual Studio (RTVS)](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)
 + [Instrucciones de instalación](https://docs.microsoft.com/visualstudio/rtvs/installing-r-tools-for-visual-studio): RTVS está disponible en varias versiones de Visual Studio.
 + [Introducción a Herramientas de R para Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/getting-started-with-r)
 

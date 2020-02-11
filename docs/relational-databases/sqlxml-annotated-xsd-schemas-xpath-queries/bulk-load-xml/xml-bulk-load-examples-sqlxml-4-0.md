@@ -33,10 +33,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f70e66a02637b65e96cccc6001c9702d5253d5cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257375"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Ejemplos de carga masiva XML (SQLXML 4.0)
@@ -112,7 +112,7 @@ Function ValidateFile(strXmlFile,strUrn,strXsdFile)
 End Function  
 ```  
   
-## <a name="a-bulk-loading-xml-in-a-table"></a>a. Cargar XML de forma masiva en una tabla  
+## <a name="a-bulk-loading-xml-in-a-table"></a>A. Cargar XML de forma masiva en una tabla  
  En este ejemplo se establece una conexión con la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia de que se especifica en la propiedad ConnectionString (mi Server). En el ejemplo también se especifica la propiedad ErrorLogFile. Por lo tanto, la salida de error se guarda en el archivo especificado ("C:\error.log"), aunque es posible cambiar esta ubicación por otra distinta. Observe también que el método Execute tiene como parámetros el archivo de esquema de asignación (SampleSchema. xml) y el archivo de datos XML (SampleXMLData. xml). Cuando se ejecuta la carga masiva, la tabla Cust que ha creado en la base de datos **tempdb** contendrá nuevos registros basados en el contenido del archivo de datos XML.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Para probar una carga masiva del ejemplo  
@@ -331,7 +331,7 @@ End Function
 </Schema>  
 ```  
   
-## <a name="c-using-chain-relationships-in-the-schema-to-bulk-load-xml"></a>c. Usar las relaciones de cadena del esquema para cargar XML de forma masiva  
+## <a name="c-using-chain-relationships-in-the-schema-to-bulk-load-xml"></a>C. Usar las relaciones de cadena del esquema para cargar XML de forma masiva  
  En este ejemplo se muestra la forma en que la carga masiva XML usa la relación M:N especificada en el esquema de asignación para cargar datos en una tabla que representa una relación M:N.  
   
  Por ejemplo, fíjese en este esquema XSD:  

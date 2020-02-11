@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245721"
 ---
 # <a name="target-servers-target-server-status-tab"></a>Servidores de destino (pestaña Estado de servidor de destino)
@@ -29,7 +29,7 @@ ms.locfileid: "63245721"
  **Hora local**  
  Muestra la fecha y la hora del servidor de destino en la zona horaria local de dicho servidor.  
   
- **Sondeo más reciente**  
+ **Último sondeo**  
  Presenta la fecha y hora local en que el servidor de destino sondeó por última vez al servidor principal.  
   
  **Instrucciones no leídas**  
@@ -47,13 +47,13 @@ ms.locfileid: "63245721"
  **Exponer instrucciones**  
  Expone instrucciones en los servidores de destino seleccionados.  
   
- **Habilitar actualización automática**  
+ **Habilitar la actualización automática**  
  Seleccione esta opción para actualizar automáticamente la información mostrada.  
   
  **Actualizar cada**  
  Especifica la frecuencia de actualización de la información de esta página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración automatizada en una empresa](automated-administration-across-an-enterprise.md)  
   
   

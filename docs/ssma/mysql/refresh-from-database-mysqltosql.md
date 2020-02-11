@@ -10,36 +10,36 @@ ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5acc3153d7305f404c5fc6a0478b83cc0c98bad6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066704"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Actualizar desde la base de datos (MySQLToSQL)
-El **actualizar desde la base de datos** cuadro de diálogo le permite seleccionar los objetos que desea actualizar desde la base de datos MySQL. Las filas en el cuadro de diálogo están codificados con colores según el estado de los metadatos:  
+El cuadro de diálogo **actualizar desde base de datos** permite seleccionar los objetos que se van a actualizar desde la base de datos MySQL. Las filas del cuadro de diálogo están codificadas por colores en función del estado de los metadatos:  
   
--   Si los metadatos del objeto ha cambiado localmente y en la base de datos MySQL, la fila está en azul.  
+-   Si los metadatos del objeto han cambiado localmente y en la base de datos MySQL, la fila es azul.  
   
--   Si los metadatos del objeto ha cambiado en la base de datos MySQL, pero no en SSMA, la fila está en amarilla.  
+-   Si los metadatos del objeto han cambiado en la base de datos MySQL pero no en SSMA, la fila es amarilla.  
   
--   Si los metadatos del objeto ha cambiado localmente, pero no en la base de datos MySQL, la fila es verde.  
+-   Si los metadatos del objeto han cambiado localmente, pero no en la base de datos MySQL, la fila es verde.  
   
--   Si el objeto es nuevo en la base de datos MySQL, la fila es de color fucsia.  
+-   Si el objeto es nuevo en la base de datos MySQL, la fila es de color rosa.  
   
-Puede especificar la configuración de actualización de objeto predeterminado en el **configuración del proyecto** cuadro de diálogo. Para obtener más información, consulte [configuración del proyecto &#40;sincronización&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+Puede especificar la configuración de actualización de objetos predeterminada en el cuadro de diálogo **configuración del proyecto** . Para obtener más información, vea [configuración del proyecto &#40;Synchronization&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
-Para tener acceso a la **actualizar desde la base de datos** contextual de un objeto en el Explorador de metadatos de MySQL y haga clic en cuadro de diálogo **actualizar desde la base de datos**.  
+Para tener acceso al cuadro **de diálogo actualizar desde base** de datos, haga clic con el botón secundario en un objeto en el explorador de metadatos MySQL y haga clic en **actualizar desde base de**datos.  
   
 ## <a name="options"></a>Opciones  
   
 |||  
 |-|-|  
 |**Término**|**Definición**|  
-|**Contraer (-)**|Contraer todos los grupos de objetos para ocultar objetos individuales.|  
-|**Expandir (+)**|Expandir todos los grupos de objeto para mostrar los objetos individuales.|  
-|**Mostrar u ocultar objetos iguales**|Oculta los objetos de la lista si los metadatos del objeto son el mismo en la base de datos MySQL y de SSMA.|  
-|**Actualizar desde la base de datos (botón de flecha)**|Utilice el botón de flecha para especificar que se deben actualizar los metadatos de los objetos seleccionados en SSMA.|  
-|**Hacer no actualizar desde la base de datos (X botón)**|Use el botón X para especificar que no se deben actualizar los metadatos de los objetos seleccionados en SSMA.|  
-|**Leyenda**|Muestra un **leyenda** cuadro de diálogo. La leyenda contiene la asignación entre los Estados de los metadatos y los colores de la fila.<br /><br />Para mantener la **leyenda** cuadro de diálogo en la parte superior de la **actualizar desde la base de datos** cuadro de diálogo, seleccione el **mostrar en la parte superior** casilla de verificación.|  
+|**Contraer (-)**|Contrae todos los grupos de objetos para ocultar objetos individuales.|  
+|**Expandir (+)**|Expanda todos los grupos de objetos para mostrar objetos individuales.|  
+|**Ocultar/mostrar objetos iguales**|Oculta los objetos de la lista si los metadatos del objeto son los mismos en la base de datos MySQL y en SSMA.|  
+|**Actualizar desde base de datos (botón de flecha)**|Use el botón de flecha para especificar que los metadatos de los objetos seleccionados se deben actualizar en SSMA.|  
+|**No actualizar desde base de datos (botón X)**|Use el botón X para especificar que los metadatos de los objetos seleccionados no se deben actualizar en SSMA.|  
+|**Leyenda**|Muestra un cuadro de diálogo de **leyenda** . La leyenda contiene la asignación entre los colores de fila y los Estados de los metadatos.<br /><br />Para mantener el cuadro de diálogo **leyenda** en la parte superior del cuadro de diálogo **actualizar desde la base de datos** , active la casilla **Mostrar en la parte superior** .|  
   

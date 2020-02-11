@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3e97899fb58049b04860a564b3769feb13217fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101524"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes
@@ -32,7 +32,7 @@ ms.locfileid: "66101524"
 |Nivel del permiso|Abreviatura|  
 |----------------------|------------------|  
 |Control total|**F**|  
-|Contribuir|**C**|  
+|Contribuciones|**C**|  
 |Visitante|**V**|  
   
  Los permisos que no afectan a un servidor de informes no se muestran en esta referencia. Todos los permisos de personalización se excluyen de este artículo de referencia. Aunque puede incluir elementos del servidor de informes en un sitio web personalizado, el servidor de informes no controla directamente las operaciones o solicitudes de personalización.  
@@ -72,7 +72,7 @@ ms.locfileid: "66101524"
 |Utilizar interfaces remotas|Usar las interfaces de SOAP, Web DAV o SharePoint Designer para tener acceso al sitio web.|X|X|X|Se usa para llamar al extremo proxy de dirección URL del servidor de informes.|  
 |Abrir|Abrir un sitio web, una lista o una carpeta para obtener acceso a los elementos incluidos en dicho contenedor.|X|X|X|Leer programaciones y propiedades de elementos.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Concesión de permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

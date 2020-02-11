@@ -13,21 +13,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4fe2f4f387dfbdf7a10ed34a5415f5f2b0d27353
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092538"
 ---
 # <a name="reporting-services-parameters"></a>Parámetros de Reporting Services
-  Para analizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe especificar una instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y proporcionan información sobre cómo conectarse a esa instancia.  
+  Para analizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe especificar una instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y proporcionar información sobre cómo conectarse a esa instancia.  
   
 ## <a name="options"></a>Opciones  
  **Nombre de instancia de Reporting Services**  
  Seleccione una instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la lista.  
   
-## <a name="see-also"></a>Vea también  
- [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Actualización del Asistente para la referencia de la interfaz de usuario](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
+## <a name="see-also"></a>Consulte también  
+ [Trabajar con el asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [Referencia de la interfaz de usuario del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

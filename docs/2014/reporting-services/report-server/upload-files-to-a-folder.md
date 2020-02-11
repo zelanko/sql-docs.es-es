@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5751941cb8912c527798c9aff5aaac1b46767fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103079"
 ---
 # <a name="upload-files-to-a-folder"></a>Cargar archivos a una carpeta
@@ -35,7 +35,8 @@ ms.locfileid: "66103079"
 > [!NOTE]  
 >  No se pueden cargar archivos de origen de datos de informes (.rds) para crear un origen de datos compartido. Los archivos .rds solo se utilizan en el Diseñador de informes. No puede proporcionar el contenido para un elemento de origen de datos compartido que se defina y administre mediante el Administrador de informes. Como alternativa a la carga, se puede escribir un script que cree un origen de datos compartido basado en un archivo .rds.  
   
- [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]determina el tamaño de archivo máximo para los elementos cargados. De manera predeterminada, el tamaño máximo es de 4 megabytes (MB).  
+ 
+  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]determina el tamaño de archivo máximo para los elementos cargados. De manera predeterminada, el tamaño máximo es de 4 megabytes (MB).  
   
  Visualmente, los archivos que se cargan a la base de datos del servidor de informes aparecen representados en la jerarquía de carpetas con los siguientes iconos.  
   
@@ -45,23 +46,23 @@ Icono de informe
  ![Icono de modelo](../media/model-icon.gif "Icono de modelo")  
 Icono de modelo de informe  
   
- ![Icono de recurso genérico](../media/hlp-16file.gif "Icono de recurso genérico")  
+ ![icono de recurso genérico](../media/hlp-16file.gif "Icono de recurso genérico")  
 Icono de recurso genérico  
   
  Al cargar un archivo, éste se sitúa siempre en la carpeta seleccionada. Puede navegar en primer lugar hasta la carpeta en la que desea hospedar el elemento o bien puede cargar el archivo y moverlo después a la ubicación final.  
   
  Para cargar un archivo, use el Administrador de informes. Podrá cargar archivos a un servidor de informes dependiendo de qué tareas formen parte de su asignación de roles. Si utiliza la seguridad predeterminada, solo los administradores locales podrán agregar elementos a un servidor de informes. Si está habilitado el rol Mis informes, cada usuario que disponga de una carpeta Mis informes tendrá permiso para cargar archivos a esa carpeta. Si utiliza asignaciones de roles personalizados, deberán incluir las tareas compatibles con la administración de carpetas.  
   
-|Para|Incluya estas tareas|  
+|Para hacer esto|Incluya estas tareas|  
 |----------------|-------------------------|  
 |Cargar un archivo .rdl a una carpeta|Administrar informes|  
 |Cargar cualquier archivo como objeto binario|Administrar recursos|  
 |Ver el contenido de una carpeta|Ver recursos, Ver informes|  
   
-## <a name="see-also"></a>Vea también  
- [Administrador de informes &#40;modo nativo de SSRS&#41;]... / informe manager ssrs native mode.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrador de informes &#40;modo nativo de SSRS&#41;].. /report-manager-ssrs-native-mode.md)   
  [Conceder permisos en un servidor de informes en modo nativo](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tareas y permisos](../security/tasks-and-permissions.md)   
- [Cargar un archivo o un informe &#40;Administrador de informes&#41;](../reports/upload-a-file-or-report-report-manager.md)  
+ [Cargar un archivo o informe &#40;Administrador de informes&#41;](../reports/upload-a-file-or-report-report-manager.md)  
   
   

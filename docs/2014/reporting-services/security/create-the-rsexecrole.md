@@ -13,14 +13,15 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3a6bc5ecbd1c59a5dc03f9c28d36d2816e6a8d92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102031"
 ---
 # <a name="create-the-rsexecrole"></a>Crear el RSExecRole
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza un rol de base de datos predefinido denominado `RSExecRole` para conceder permisos de servidor de informes a la base de datos del servidor de informes. El `RSExecRole` rol se crea automáticamente con la base de datos del servidor de informes. Por lo general, nunca se debe modificar el rol ni asignar otros usuarios al mismo. Sin embargo, cuando se mueve una base de datos del servidor de informes a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)], must re-create the role in the Master and MSDB system databases.  
+  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza un rol de base de datos predefinido denominado `RSExecRole` para conceder permisos de servidor de informes a la base de datos del servidor de informes. El `RSExecRole` rol se crea automáticamente con la base de datos del servidor de informes. Por lo general, nunca se debe modificar el rol ni asignar otros usuarios al mismo. Sin embargo, cuando se mueve una base de datos del servidor de informes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]a un nuevo o a uno diferente, se debe volver a crear el rol en las bases de datos de sistema maestra y msdb.  
   
  Usando estas instrucciones realizará los siguientes pasos:  
   
@@ -31,7 +32,7 @@ ms.locfileid: "66102031"
 > [!NOTE]  
 >  Las instrucciones de este tema están destinadas a los usuarios que no desean ejecutar un script o escribir código WMI para proporcionar la base de datos del servidor de informes. Si administra una implementación grande y va a mover las bases de datos habitualmente, debe escribir un script para automatizar estos pasos. Para más información, vea [Obtener acceso al proveedor WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
   
-## <a name="before-you-start"></a>Antes de empezar  
+## <a name="before-you-start"></a>Antes de comenzar  
   
 -   Realice una copia de seguridad de las claves de cifrado para poder restaurarlas después de mover la base de datos. Este paso no afecta directamente a la capacidad personal para crear y proporcionar el rol `RSExecRole`, pero se debe disponer de una copia de seguridad de las claves para comprobar el trabajo. Para obtener más información, vea [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
@@ -44,11 +45,12 @@ ms.locfileid: "66102031"
  Las instrucciones para crear manualmente el rol `RSExecRole` están destinadas a utilizarse en el contexto de migración de una instalación del servidor de informes. Las tareas importantes como realizar una copia de seguridad y mover la base de datos del servidor de informes no se tratan en este tema, pero se incluyen en la documentación del motor de base de datos.  
   
 ## <a name="create-rsexecrole-in-master"></a>Crear RSExecRole en la base de datos maestra  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza procedimientos almacenados extendidos para que el servicio Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admita las operaciones programadas. En los pasos siguientes se explica cómo conceder permisos de ejecución para los procedimientos al rol `RSExecRole`.  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza procedimientos almacenados extendidos para que el servicio Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admita las operaciones programadas. En los pasos siguientes se explica cómo conceder permisos de ejecución para los procedimientos al rol `RSExecRole`.  
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Para crear el rol RSExecRole en la base de datos del sistema maestra mediante Management Studio  
   
-1.  Inicie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y conéctese a una instancia de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] que hospede la base de datos del servidor de informes.  
+1.  Inicie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y conéctese a [!INCLUDE[ssDE](../../../includes/ssde-md.md)] la instancia de que hospeda la base de datos del servidor de informes.  
   
 2.  Abra **Bases de datos**.  
   
@@ -62,21 +64,21 @@ ms.locfileid: "66102031"
   
 7.  Haga clic con el botón derecho en **Roles de base de datos**y seleccione **Nuevo rol de la base de datos**. Aparece la página General.  
   
-8.  En **nombre de rol**, tipo `RSExecRole`.  
+8.  En **nombre de rol**, `RSExecRole`escriba.  
   
-9. En **Propietario**, escriba **DBO**.  
+9. En **propietario**, escriba **DBO**.  
   
 10. Haga clic en **Elementos protegibles**.  
   
 11. Haga clic en **Buscar**. Aparece el cuadro de diálogo **Agregar objetos** . La opción **Especificar objetos** está seleccionada de forma predeterminada.  
   
-12. Haga clic en **Aceptar**. Aparece el cuadro de diálogo **Seleccionar objetos** .  
+12. Haga clic en **OK**. Aparece el cuadro de diálogo **Seleccionar objetos** .  
   
 13. Haga clic en **Tipos de objeto**.  
   
 14. Haga clic en **Procedimientos almacenados extendidos**.  
   
-15. Haga clic en **Aceptar**.  
+15. Haga clic en **OK**.  
   
 16. Haga clic en **Examinar**.  
   
@@ -92,7 +94,8 @@ ms.locfileid: "66102031"
   
 19. En la fila **Ejecutar** , en la columna **Conceder** , haga clic en la casilla y, a continuación, haga clic en **Aceptar**.  
   
-20. Repita este paso con cada uno de los procedimientos almacenados restantes. `RSExecRole` debe tener concedidos permisos de ejecución para los tres procedimientos almacenados.  
+20. Repita este paso con cada uno de los procedimientos almacenados restantes. 
+  `RSExecRole` debe tener concedidos permisos de ejecución para los tres procedimientos almacenados.  
   
  ![Página Propiedades del rol de la base de datos](../media/rsexecroledbproperties.gif "Página Propiedades del rol de la base de datos")  
   
@@ -111,21 +114,21 @@ ms.locfileid: "66102031"
   
 5.  Haga clic con el botón derecho en **Roles de base de datos**y seleccione **Nuevo rol de la base de datos**. Aparece la página General.  
   
-6.  En el nombre de rol, escriba `RSExecRole`.  
+6.  En nombre de rol, `RSExecRole`escriba.  
   
-7.  En Propietario, escriba **DBO**.  
+7.  En propietario, escriba **DBO**.  
   
 8.  Haga clic en **Elementos protegibles**.  
   
 9. Haga clic en **Agregar**. Aparece el cuadro de diálogo **Agregar objetos** . La opción **Especificar objetos** está seleccionada de forma predeterminada.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 11. Haga clic en **Tipos de objeto**.  
   
 12. Haga clic en **Procedimientos almacenados**.  
   
-13. Haga clic en **Aceptar**.  
+13. Haga clic en **OK**.  
   
 14. Haga clic en **Examinar**.  
   
@@ -161,13 +164,13 @@ ms.locfileid: "66102031"
   
 20. En la pestaña Elementos protegibles, haga clic en **Agregar** de nuevo. Aparece el cuadro de diálogo **Agregar objetos** . La opción **Especificar objetos** está seleccionada de forma predeterminada.  
   
-21. Haga clic en **Aceptar**.  
+21. Haga clic en **OK**.  
   
 22. Haga clic en **Tipos de objeto**.  
   
 23. Haga clic en **Tablas**.  
   
-24. Haga clic en **Aceptar**.  
+24. Haga clic en **OK**.  
   
 25. Haga clic en **Examinar**.  
   
@@ -186,7 +189,7 @@ ms.locfileid: "66102031"
 30. Repita este procedimiento con la tabla sysjobs. Se deben conceder al rol RSExecRole permisos de selección para ambas tablas.  
   
 ## <a name="move-the-report-server-database"></a>Mover la base de datos del servidor de informes  
- Después de crear los roles, puede mover la base de datos del servidor de informes a una instancia nueva de SQL Server. Para más información, vea [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
+ Después de crear los roles, puede mover la base de datos del servidor de informes a una instancia nueva de SQL Server. Para más información, vea [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
  Si va a actualizar [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], puede hacerlo antes o después de mover la base de datos.  
   
@@ -209,7 +212,7 @@ ms.locfileid: "66102031"
   
 6.  Haga clic en **Probar conexión**.  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En Base de datos, seleccione la base de datos del servidor de informes.  
   
@@ -227,10 +230,10 @@ ms.locfileid: "66102031"
   
 15. Haga clic en el vínculo para abrir el Administrador de informes. Debe ver los elementos del servidor de informes de la base de datos del servidor de informes.  
   
-## <a name="see-also"></a>Vea también  
- [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+## <a name="see-also"></a>Consulte también  
+ [Mover las bases de datos del servidor de informes a otro equipo &#40;el modo nativo de SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Crear una base de datos del servidor de informes en modo nativo &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.sysdepends (Transact-SQL) | Microsoft Docs
+title: Sys. sysdepends (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: f9c182cb-386f-4e72-859f-9f1115b389f9
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5d928926294bb3e80f860a535a266b5c106e3f18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053499"
 ---
 # <a name="syssysdepends-transact-sql"></a>sys.sysdepends (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "68053499"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Id. de objeto.|  
+|**sesión**|**int**|Identificador de objeto.|  
 |**depid**|**int**|Id. del objeto dependiente.|  
-|**number**|**smallint**|Número de procedimiento.|  
+|**número**|**smallint**|Número de procedimiento.|  
 |**depnumber**|**smallint**|Número del procedimiento dependiente.|  
-|**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**estatus**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**deptype**|**tinyint**|Identifica el tipo de objeto dependiente:<br /><br /> 0 = Objeto o columna (solo referencias no enlazadas a esquemas)<br /><br /> 0 = Objeto o columna (referencias enlazadas a esquemas)|  
 |**depdbid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**depsiteid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -49,10 +49,10 @@ ms.locfileid: "68053499"
 |**resultobj**|**bit**|1 = Se está actualizando el objeto.<br /><br /> 0 = No.|  
 |**readobj**|**bit**|1 = Se está leyendo el objeto.<br /><br /> 0 = No.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Vistas de compatibilidad &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [sp_depends &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-depends-transact-sql.md)   
- [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
+ [sp_depends &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-depends-transact-sql.md)   
+ [Sys. sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

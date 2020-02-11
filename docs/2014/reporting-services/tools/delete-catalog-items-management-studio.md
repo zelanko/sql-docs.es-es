@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bacb9387a4026fbf6a41f0b5d9cdd0b77594da97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100386"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Eliminar elementos del catálogo (Management Studio)
@@ -29,7 +29,7 @@ ms.locfileid: "66100386"
  No puede deshacer una operación de eliminación. Si desea recuperar un elemento eliminado, debe volver a crearlo o restaurar una copia de seguridad de la base de datos de servidor de informes.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Especifica el nombre del elemento que va a eliminar.  
   
  **Tipo**  
@@ -44,9 +44,9 @@ ms.locfileid: "66100386"
  **Error**  
  Muestra un código de error si se produce un error al eliminar un elemento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eliminar un elemento &#40;Management Studio&#41;](delete-an-item-management-studio.md)   
  [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)   
- [Crear, modificar y eliminar programaciones](../subscriptions/create-modify-and-delete-schedules.md)  
+ [Creación, modificación y eliminación de programaciones](../subscriptions/create-modify-and-delete-schedules.md)  
   
   

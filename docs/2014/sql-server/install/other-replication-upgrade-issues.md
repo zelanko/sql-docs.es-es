@@ -18,17 +18,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093643"
 ---
 # <a name="other-replication-upgrade-issues"></a>Otros problemas de actualización de replicación
   En este tema se analiza una serie de problemas de actualización que el Asesor de actualizaciones no notifica.  
   
 ## <a name="versions-supported"></a>Versiones admitidas  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la actualización de bases de datos replicadas de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No es necesario detener la actividad en otros nodos mientras se actualiza un nodo. Asegúrese de cumplir las reglas relativas a las versiones admitidas en una topología.  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la actualización de bases de datos replicadas de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No es necesario detener la actividad en otros nodos mientras se actualiza un nodo. Asegúrese de cumplir las reglas relativas a las versiones admitidas en una topología.  
   
  Cuando se usa la replicación entre versiones diferentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], normalmente se está limitado por las funciones de la versión más antigua que se está usando.  
   
@@ -49,11 +50,11 @@ ms.locfileid: "66093643"
   
 -   Todos los controles ActiveX están marcados como no seguros para scriptings e inicialización.  
   
--   Se ha quitado el control ActiveX de instantáneas. Puede crear y administrar instantáneas utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o mediante programación usando procedimientos almacenados de replicación. Para obtener más información, vea los temas "Cómo: Crear y aplicar la instantánea inicial ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) "y" Cómo: Crear la instantánea inicial (programación de replicación Transact-SQL) "en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+-   Se ha quitado el control ActiveX de instantáneas. Puede crear y administrar instantáneas utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o mediante programación usando procedimientos almacenados de replicación. Para obtener más información, vea los temas "Cómo crear y aplicar la instantánea inicial ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])" y "Cómo crear la instantánea inicial (programación de la replicación con Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   El control ActiveX de distribución y el control ActiveX de mezcla han quedado desusados. Se proporciona una funcionalidad similar para las aplicaciones de código administrado mediante Replication Management Objects (RMO). Para obtener más información, vea "Sincronizar suscripciones (Programación con RMO)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Problemas de actualización de replicación](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
   

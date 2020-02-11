@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa98b9f760485b80f4fa4ac74f3b8008dc3bbec3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099377"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Causa y resolución de errores de Reporting Services
@@ -26,17 +26,17 @@ ms.locfileid: "66099377"
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Error|de mensaje|  
+|Error|Message|  
 |-----------|-------------|  
-|[rsAccessedDenied - Error de Reporting Services](rsaccesseddenied-reporting-services-error.md)|Los permisos otorgados al usuario 'miDominio\miCuenta' son insuficientes para realizar esta operación. (rsAccessDenied) (ReportingServicesLibrary).|  
-|[rsInternalError - Error de Reporting Services](rsinternalerror-reporting-services-error.md)|Error interno en el servidor de informes. Vea el registro de errores para obtener más detalles.|  
-|[rsModelGenerationError - Error de Reporting Services](rsmodelgenerationerror-reporting-services-error.md)|Error al generar el modelo. (rsModelGenerationError) (ReportingServicesLibrary) %1.|  
-|[rsProcessingError - Error de Reporting Services](rsprocessingerror-reporting-services-error.md)|Error al procesar el informe.|  
-|[rsServerConfigurationError - Error de Reporting Services](rsserverconfigurationerror-reporting-services-error.md)|El servidor de informes ha encontrado un error de configuración.|  
-|[rrRenderingError - Error de Reporting Services](rrrenderingerror-reporting-services-error.md)|Error durante la representación del informe. (rrRenderingError) %1.|  
+|[rsAccessedDenied: error de Reporting Services](rsaccesseddenied-reporting-services-error.md)|Los permisos otorgados al usuario 'miDominio\miCuenta' son insuficientes para realizar esta operación. (rsAccessDenied) (ReportingServicesLibrary).|  
+|[rsInternalError: error de Reporting Services](rsinternalerror-reporting-services-error.md)|Error interno en el servidor de informes. Vea el registro de errores para obtener más detalles.|  
+|[rsModelGenerationError: error de Reporting Services](rsmodelgenerationerror-reporting-services-error.md)|Error al generar el modelo. (rsModelGenerationError) (ReportingServicesLibrary) %1.|  
+|[rsProcessingError: error de Reporting Services](rsprocessingerror-reporting-services-error.md)|Error al procesar el informe.|  
+|[rsServerConfigurationError: error de Reporting Services](rsserverconfigurationerror-reporting-services-error.md)|El servidor de informes ha encontrado un error de configuración.|  
+|[rrRenderingError: error de Reporting Services](rrrenderingerror-reporting-services-error.md)|Error durante la representación del informe. (rrRenderingError) %1.|  
 |[Servicio Servidor de informes de Windows &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|El servicio Servidor de informes de Windows (MSSQLSERVER) no se puede conectar a la base de datos del servidor de informes.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivos de registro y orígenes de Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](errors-and-events-reference-reporting-services.md)  
   

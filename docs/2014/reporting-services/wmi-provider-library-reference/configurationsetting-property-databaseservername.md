@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d11822d656b9faa83cad15fde69ba95dffbe9df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097714"
 ---
-# <a name="databaseservername-property-wmi-msreportserverconfigurationsetting"></a>Propiedad DatabaseServerName (MSReportServer_ConfigurationSetting de WMI)
+# <a name="databaseservername-property-wmi-msreportserver_configurationsetting"></a>Propiedad DatabaseServerName (MSReportServer_ConfigurationSetting de WMI)
   Especifica el nombre del servidor en el que está instalada la base de datos del servidor de informes. Lectura/escritura  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -45,9 +45,9 @@ public string DatabaseServerName;
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

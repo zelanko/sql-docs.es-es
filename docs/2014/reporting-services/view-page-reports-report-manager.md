@@ -1,5 +1,5 @@
 ---
-title: Ver la página, los informes (Administrador de informes) | Microsoft Docs
+title: Página ver, informes (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098740"
 ---
 # <a name="view-page-reports-report-manager"></a>Ver la página, informes (Administrador de informes)
@@ -29,7 +29,8 @@ Barra de herramientas de informe
  No todas las características de informe está disponibles en todos los formatos de exportación. Si exporta un informe HTML a otro formato, tenga en cuenta que quizás aprecie algunas diferencias de apariencia. Asimismo, si el informe incluye características interactivas, como hipervínculos, marcadores o mapas de documento, puede que esas características no estén disponibles o no funcionen igual en el nuevo formato.  
   
 ## <a name="generating-data-feeds-from-report-data"></a>Generar fuentes de distribución de datos a partir de datos de informe  
- Puede generar las fuentes de los datos a partir de informes. La extensión de representación de Atom de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] genera dos documentos compatibles con Atom: un documento de servicio de Atom que enumera las fuentes de distribución de datos que proporciona el informe y las fuentes de distribución de datos que contienen los datos del informe. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] genera fuentes de distribución de datos en un formato normalizado compatible con Atom 1.0 que lo pueden leer y compartir aplicaciones que consumen fuentes de distribución de datos compatibles con Atom. Por ejemplo, el cliente de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] puede consumir fuentes de distribución de datos que se generan a partir de informes.  
+ Puede generar las fuentes de los datos a partir de informes. La extensión de representación de Atom de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] genera dos documentos compatibles con Atom: un documento de servicio de Atom que enumera las fuentes de distribución de datos que proporciona el informe y las fuentes de distribución de datos que contienen los datos del informe. 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] genera fuentes de distribución de datos en un formato normalizado compatible con Atom 1.0 que lo pueden leer y compartir aplicaciones que consumen fuentes de distribución de datos compatibles con Atom. Por ejemplo, el cliente de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] puede consumir fuentes de distribución de datos que se generan a partir de informes.  
   
 ## <a name="running-parameterized-reports"></a>Ejecutar informes parametrizados  
  Un informe con parámetros es un informe que contiene campos de entrada y un botón **Ver informe** . Para ver un informe con parámetros, es posible que deba suministrar los valores que se utilizan para ejecutar el informe.  
@@ -37,7 +38,7 @@ Barra de herramientas de informe
 > [!NOTE]  
 >  Las instantáneas de ejecución de informes y algunos formatos de exportación no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   

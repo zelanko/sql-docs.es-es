@@ -26,10 +26,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a05c9dccabcf9b937ebd67fb264022761b1ca249
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098705"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>Ver o eliminar el historial de informes (Administrador de informes)
@@ -41,7 +41,7 @@ ms.locfileid: "66098705"
   
 2.  En el Administrador de informes, navegue hasta la página **Contenido** . Navegue al informe del que desea crear o ver instantáneas de historial y haga clic en él para abrirlo.  
   
-3.  Haga clic en la pestaña **Historial** . Las instantáneas del historial se muestran en el **cuando ejecute** columna.  
+3.  Haga clic en la pestaña **historial** . Las instantáneas del historial se muestran en la columna **cuando se ejecuta** .  
   
 4.  Para ver la instantánea de historial, haga clic en ella.  
   
@@ -49,15 +49,15 @@ ms.locfileid: "66098705"
   
 1.  En el Administrador de informes, navegue hasta la página **Contenido** . Navegue al informe del que desea crear instantáneas de historial y haga clic en él para abrirlo.  
   
-2.  Haga clic en la pestaña **Historial** . Las instantáneas del historial se muestran en el **cuando ejecute** columna.  
+2.  Haga clic en la pestaña **historial** . Las instantáneas del historial se muestran en la columna **cuando se ejecuta** .  
   
 3.  Active la casilla situada junto a la instantánea del historial que desea eliminar y, a continuación, haga clic en **eliminar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agregar una instantánea al historial de informes &#40;Administrador de informes&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Página Historial del informe &#40;el Administrador de informes&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
+ [&#40;de la página historial de informes Administrador de informes&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [Establecer las propiedades del procesamiento de informes](report-server/set-report-processing-properties.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Creación, modificación y eliminación de instantáneas del historial de informes](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
+ [Crear, modificar y eliminar instantáneas del historial de informes](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
   
   

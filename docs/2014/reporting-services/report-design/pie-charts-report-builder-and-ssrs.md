@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105493"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Gráficos circulares (Generador de informes y SSRS)
@@ -29,15 +29,15 @@ ms.locfileid: "66105493"
   
 ## <a name="variations"></a>Variaciones  
   
--   **Círculo seccionado**: gráfico circular cuyos sectores están separados del centro del círculo. Además del gráfico circular seccionado, en el que todos los sectores están separados, también puede crear un gráfico de sectores seccionados, en el que hay un solo sector separado.  
+-   **Gráfico circular Seccionado**. gráfico circular cuyos sectores están separados del centro del círculo. Además del gráfico circular seccionado, en el que todos los sectores están separados, también puede crear un gráfico de sectores seccionados, en el que hay un solo sector separado.  
   
--   **Anillos**: gráfico circular con un espacio abierto en el centro.  
+-   Gráficos de **anillos**. gráfico circular con un espacio abierto en el centro.  
   
--   **Anillo seccionado**: gráfico de anillos donde todos los sectores están separados del centro del anillo.  
+-   **Anillo seccionado**. gráfico de anillos donde todos los sectores están separados del centro del anillo.  
   
--   **Circular 3D**: gráfico circular al que se ha aplicado un estilo 3D.  
+-   **gráfico circular 3D**. gráfico circular al que se ha aplicado un estilo 3D.  
   
--   **Círculo seccionado 3D**: gráfico circular seccionado al que se ha aplicado un estilo 3D.  
+-   **gráfico circular Seccionado 3D**. gráfico circular seccionado al que se ha aplicado un estilo 3D.  
   
 ## <a name="data-considerations-for-display-on-a-pie-chart"></a>Consideraciones sobre los datos para la presentación en un gráfico circular  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66105493"
   
 -   Los valores Null, los valores vacíos y los valores negativos no tienen ningún efecto a la hora de calcular las proporciones. Por esta razón, estos valores no se muestran en un gráfico circular. Si desea indicar visualmente estos tipos de valores en el gráfico, cambie el gráfico circular por otro tipo de gráfico.  
   
--   Si va a definir sus propios colores en un gráfico circular con una paleta personalizada, asegúrese de que dispone de colores suficientes para mostrar cada punto de datos con su propio color. Para más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
+-   Si va a definir sus propios colores en un gráfico circular con una paleta personalizada, asegúrese de que dispone de colores suficientes para mostrar cada punto de datos con su propio color. Para obtener más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
 -   A diferencia de la mayoría de los tipos de gráficos, un gráfico circular muestra los puntos de datos, y no las series individuales, en su leyenda.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66105493"
   
 -   Recopilar los sectores pequeños en un gráfico circular suplementario. El segundo gráfico circular no se muestra en el diseñador. En su lugar, durante el procesamiento del informe, el gráfico calcula si es necesario mostrar un segundo gráfico circular, basándose en los valores de los puntos de datos. En ese caso, los valores se agregan en otro gráfico circular.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Mostrar las etiquetas de los puntos de datos fuera de un gráfico circular &#40;Generador de informes y SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Recopilar segmentos pequeños en un gráfico circular &#40;Generador de informes y SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Mostrar valores de porcentaje en un gráfico circular &#40;Generador de informes y SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 747a811d1d355bd182b18f4c29f2d1bf9354fa55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103026"
 ---
 # <a name="windows-application-log"></a>Registro de aplicación Windows
@@ -41,13 +41,13 @@ ms.locfileid: "66103026"
   
 |Tipo de evento|Descripción|  
 |----------------|-----------------|  
-|Información|Evento que describe una operación correcta (por ejemplo, cuándo se inicia el servicio del servidor de informes).|  
+|Information|Evento que describe una operación correcta (por ejemplo, cuándo se inicia el servicio del servidor de informes).|  
 |Advertencia|Evento que indica un problema potencial (por ejemplo, poco espacio en disco).|  
 |Error|Evento que describe un problema considerable (por ejemplo, no se inició el servicio).|  
 |Auditoría de aciertos|Evento de seguridad que describe un inicio de sesión correcto.|  
 |Auditoría de errores|Evento que se registra cuando se produce un error al intentar iniciar una sesión.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivos de registro y orígenes de Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

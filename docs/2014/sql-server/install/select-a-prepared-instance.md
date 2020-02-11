@@ -1,5 +1,5 @@
 ---
-title: Seleccione una instancia preparada | Microsoft Docs
+title: Seleccionar una instancia preparada | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4df53093cf7d7dff00a8a5e16fb4bef58442213
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092388"
 ---
 # <a name="select-a-prepared-instance"></a>Seleccionar una instancia preparada
@@ -27,7 +27,7 @@ ms.locfileid: "66092388"
  **Seleccione un identificador de instancia**  
  La lista incluye todas las instancias preparadas que puede completar en el equipo en el que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Seleccione una instancia preparada que desee completar.  
   
- **Instancias instaladas.**  
+ **Instancias instaladas**  
  Incluye las instancias instaladas, preparadas y completadas.  
   
   

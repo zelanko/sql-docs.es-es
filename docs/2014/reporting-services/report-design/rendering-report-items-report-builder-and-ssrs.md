@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105353"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Representar elementos de informe (Generador de informes y SSRS)
@@ -79,11 +79,11 @@ ms.locfileid: "66105353"
   
      Los encabezados tienen prioridad sobre los pies de página. Los grupos repetidos internos tienen prioridad sobre los grupos externos. Los elementos en los que se establece la propiedad `RepeatWith` y que están más cerca de la región de datos de destino tienen prioridad sobre los elementos situados más lejos de dicha región.  
   
--   Elementos de informe pequeños, como cuadros de texto o rectángulos, con una propiedad KeepTogether explícita establecida en `true`.  
+-   Elementos de informe pequeños, como cuadros de texto o rectángulos, con una propiedad KeepTogether explícita establecida `true`en.  
   
--   Elementos de informe de gran tamaño, como subinformes o un miembro de tablix que no sean más interno, con una propiedad KeepTogether explícita establecida en `true`.  
+-   Elementos de informe de gran tamaño, como subinformes o un miembro de Tablix no interno, con una propiedad KeepTogether explícita `true`establecida en.  
   
--   Regiones de datos Tablix con una propiedad KeepTogether explícita establecida en `true`.  
+-   Las regiones de datos Tablix con una propiedad KeepTogether explícita `true`establecida en.  
   
 ### <a name="subreports"></a>Subinformes  
  Un subinforme se representa como un rectángulo que contiene otro informe definido en un archivo de informe .rdl independiente. El archivo de subinforme se debe publicar en un servidor de informes para que el informe primario pueda tener acceso a él.  
@@ -104,7 +104,7 @@ ms.locfileid: "66105353"
   
  Para más información sobre los subinformes, vea [Subinformes &#40;Generador de informes y SSRS&#41;](subreports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   

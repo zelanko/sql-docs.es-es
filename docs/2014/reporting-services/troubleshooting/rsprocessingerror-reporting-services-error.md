@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099140"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Error de Reporting Services
@@ -25,16 +25,16 @@ ms.locfileid: "66099140"
   
 |||  
 |-|-|  
-|Nombre del producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Identificador del evento|rsProcessingError|  
-|Origen del evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
+|Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Id. de evento|rsProcessingError|  
+|Origen de eventos|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings.resources|  
 |Componente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texto del mensaje|Error al procesar el informe.|  
   
 ## <a name="explanation"></a>Explicación  
  Se encontraron uno o varios errores al publicar, procesar, obtener una vista previa localmente, ver desde el servidor de informes, o crear una suscripción para un informe. Este mensaje de error indica que se ha detectado, como mínimo, un error.  
   
-### <a name="possible-causes"></a>Posibles causas  
+### <a name="possible-causes"></a>Causas posibles  
  Las causas posibles incluyen:  
   
 -   Se ha producido un error de procesamiento en el servidor de informes.  
@@ -53,9 +53,9 @@ ms.locfileid: "66099140"
   
 -   No se pudo cargar un ensamblado personalizado o un ensamblado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que estaba implementado incorrectamente.  
   
--   Un parámetro que tiene la propiedad que acepta valores NULL en `False` ha detectado un valor null en el parámetro.  
+-   Un parámetro que tiene la propiedad que acepta valores NULL `False` establecida en ha detectado un valor null en el parámetro.  
   
--   Una expresión para la propiedad Hidden de una región de datos contiene un error: Referencia de objeto no establecida como una instancia de un objeto.  
+-   Una expresión para la propiedad Hidden de una región de datos contiene un error: Referencia de objeto no definida a una instancia de un objeto.  
   
 -   Una expresión incluía una llamada de función no válida o un error de sintaxis.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66099140"
  Los parámetros de varios valores no pueden ser NULL. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>No se puede procesar el informe principal con subinforme  
- La misma versión del procesador de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] debe procesar un informe con subinformes. Al actualizar los informes a la versión actual del esquema de definición de informe, el informe principal y los subinformes pueden actualizarse o no al mismo tiempo. Si la versión no es compatible entre un informe y sus subinformes, se muestra el mensaje siguiente: "No se pudo procesar subinforme."  
+ La misma versión del procesador de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] debe procesar un informe con subinformes. Al actualizar los informes a la versión actual del esquema de definición de informe, el informe principal y los subinformes pueden actualizarse o no al mismo tiempo. Si la versión no es compatible entre un informe y sus subinformes, se muestra el mensaje siguiente: "No se pudo procesar el subinforme".  
   
  Debe cambiar el informe principal o los subinformes para que todos los informes se puedan procesar con la misma versión del procesador de informes. Para obtener información sobre los motivos por los que no se puede actualizar un informe, vea [Actualizar informes](../install-windows/upgrade-reports.md).  
   
@@ -117,18 +117,18 @@ ms.locfileid: "66099140"
   
  Para las funciones de agregado que calculan totales acumulados (`Previous`, `RunningValue` o `RowNumber`), se puede especificar un parámetro de ámbito que sea un nombre de grupo de filas o de grupo de columnas, pero no ambos. Esto se aplica al mensaje de error siguiente:  
   
--   `Previous`, `RunningValue` o `RowNumber` utilizadas en las celdas de datos de las funciones de agregado el  *\<tipo de elemento de informe >* ' *\<el nombre del elemento de informe >* ' hacen referencia a los ámbitos de agrupación en las columnas y filas de la  *\<tipo de elemento de informe >* . Los parámetros de ámbito de todos los `Previous`, `RunningValue` y `RowNumber` agregar funciones dentro de un  *\<tipo de elemento de informe >* puede hacer referencia a las agrupaciones de filas o agrupaciones de columnas de datos, pero no ambos.  
+-   `Previous``RunningValue` o `RowNumber` las funciones de agregado utilizadas en las celdas de datos del * \<tipo de elemento de informe>* '*\<nombre del elemento de informe>*' hacen referencia a los ámbitos de agrupación de las columnas y filas del * \<tipo de elemento de informe>*. Los parámetros de ámbito de `Previous`todas `RunningValue` las `RowNumber` funciones de agregado de un * \<tipo de elemento de informe>* pueden hacer referencia a agrupaciones de filas o agrupaciones de columnas de datos, pero no a ambos.  
   
  Para más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) y [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>Ámbito del conjunto de datos predeterminado para un cuadro de texto de nivel superior  
  No utilice un ámbito predeterminado para un cuadro de texto agregado a la superficie de diseño del informe cuando éste tenga más de un conjunto de datos. Utilice una expresión que incluya el nombre del conjunto de datos como ámbito, y una función de agregado. Por ejemplo, `=First(Fields!FieldName.Value, "DataSet2")`.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
  [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
- [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](../report-data/report-datasets-ssrs.md)   
+ [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Filtros de uso frecuente &#40;Generador de informes y SSRS&#41;](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   

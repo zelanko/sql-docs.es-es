@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be4fd9dc72a32c65465e3d226850eb18a494e783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103057"
 ---
 # <a name="update-a-resource-report-manager"></a>Actualizar un recurso (Administrador de informes)
@@ -43,10 +43,10 @@ ms.locfileid: "66103057"
   
  Si el recurso que está actualizando contiene una imagen que se utiliza en un informe, debe actualizar el informe para ver la imagen actualizada.  
   
-## <a name="see-also"></a>Vea también  
- [Contenido &#40;página del Administrador de informes&#41;](../contents-page-report-manager.md)   
- [Cargar archivo &#40;página del Administrador de informes&#41;](../upload-file-page-report-manager.md)   
- [Cargar archivos a una carpeta](upload-files-to-a-folder.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrador de informes de &#40;de página de contenido&#41;](../contents-page-report-manager.md)   
+ [Página Cargar archivo &#40;Administrador de informes&#41;](../upload-file-page-report-manager.md)   
+ [Cargar archivos en una carpeta](upload-files-to-a-folder.md)   
  [Administrador de informes (Ayuda F1)](../report-manager-f1-help.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Selección de características (desinstalar) | Microsoft Docs
+title: Selección de características (Desinstalar) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c5159e9a29da96ca1364658c8dcc3290cb799c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095238"
 ---
 # <a name="feature-selection-uninstall"></a>Selección de características (Desinstalar)
-  Usar la selección de características - desinstalar página para seleccionar características para quitar de la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Use la página selección de características-desinstalar para seleccionar las características que se van a quitar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de la instancia especificada de.  
   
 ## <a name="options"></a>Opciones  
  Puede seleccionar cualquier combinación de características.  

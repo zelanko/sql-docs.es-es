@@ -1,5 +1,5 @@
 ---
-title: Seleccione el cuadro de diálogo Color (generador de informes y SSRS) | Microsoft Docs
+title: Cuadro de diálogo Seleccionar color (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101382"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Seleccionar color (Generador de informes y SSRS)
@@ -29,11 +29,11 @@ ms.locfileid: "66101382"
  **Selector de colores**  
  Elija una de las tres opciones para especificar cómo desea seleccionar los colores:  
   
--   **Selector - Círculo de colores:** elija un color con los valores HSB (matiz/saturación/luminosidad).  
+-   **Selector-círculo de colores** Elija un color con los valores de color Hue/saturación/luminosidad (HSB).  
   
--   **Selector - Cuadrado de colores:** elija un color con los valores RGB (rojo/verde/azul).  
+-   **Selector-cuadrado de colores** Elija un color con los valores de color rojo, verde y azul (RGB).  
   
--   **Paleta - Colores estándar:** elija un color de una lista predefinida de valores de color.  
+-   **Paleta-colores estándar** Elija un color de una lista predefinida de valores de color.  
   
  **Círculo de colores**  
  Se usa para los colores HSB porque los valores HSB se asignan a un sistema de coordenadas cilíndrico. El matiz es el color propiamente dicho, la saturación es la pureza del color y la luminosidad es su luminosidad u oscuridad relativa.  
@@ -45,8 +45,8 @@ ms.locfileid: "66101382"
   
  Cuando se elige un color, el centro del cuadrado determina el color. Use el control deslizante de color para cambiar la gama del color elegido. Las coordenadas x e y representan los otros dos colores. Por ejemplo, si elige el color verde, el control deslizante muestra la gama de valores de verde, y las coordenadas x e y representan los valores para el rojo y el azul, respectivamente.  
   
- **Paleta de colores estándar**  
- Uso de colores con nombre desde el [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` enumeración.  
+ **Color de la paleta estándar**  
+ Se usa para los colores con [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] `KnownColor` nombre de la enumeración.  
   
  **Sistema de colores**  
  Especifique si desea colores RGB o HSB. Esta opción cambia la presentación para mostrar valores RGB o HSB que se actualizan interactivamente cuando se utiliza un círculo o un cuadrado de colores para el **Selector de colores**.  
@@ -59,13 +59,13 @@ ms.locfileid: "66101382"
  **Verde**  
  El valor decimal para la parte verde del color RGB. Use el cuadro de número para cambiar el valor o escriba un valor entre 0 y 255.  
   
- **Blue**  
+ **Azul**  
  El valor decimal para la parte azul del color RGB. Use el cuadro de número para cambiar el valor o escriba un valor entre 0 y 255.  
   
- **Alpha**  
+ **Alfa**  
  El valor decimal para alfa o la transparencia del color. Cuando este valor está habilitado, puede usar el control deslizante para ajustar el grado de transparencia que desee.  
   
- **Matiz**  
+ **Hue**  
  El valor decimal para el matiz del color HSB. Use el cuadro de número para cambiar el valor o escriba un valor entre 0 y 255.  
   
  **Saturación**  
@@ -77,7 +77,7 @@ ms.locfileid: "66101382"
  **Ejemplo de color**  
  Muestra el color actual en la mitad izquierda del panel e interactivamente muestra el nuevo color que se está eligiendo en la mitad derecha del panel. Si no hay ningún color predeterminado, la mitad izquierda del panel es blanca. La mayoría de las propiedades RDL no tienen ningún color predeterminado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   

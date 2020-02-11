@@ -18,19 +18,19 @@ ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 00ba2f254d2ff676eab7c93bb6d0cca7c4ae0901
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053185"
 ---
-# <a name="spdenylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
+# <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Evita que un usuario o un grupo de Windows se conecte a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilice [ALTER login](../../t-sql/statements/alter-login-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,28 +42,28 @@ sp_denylogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login_ '` Es el nombre de un grupo o usuario de Windows. *inicio de sesión* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @loginame = ] 'login_ '`Es el nombre de un usuario o grupo de Windows. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_denylogin** deniega el permiso CONNECT SQL a la entidad de seguridad de nivel de servidor asignada al usuario de Windows especificado o el grupo de Windows. Si la entidad de seguridad de servidor no existe, se creará. La nueva entidad de seguridad que estarán visible en el [sys.server_principals &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista de catálogo.  
+## <a name="remarks"></a>Observaciones  
+ **sp_denylogin** deniega el permiso Connect SQL a la entidad de seguridad de nivel de servidor asignada al usuario de Windows o grupo de Windows especificado. Si la entidad de seguridad de servidor no existe, se creará. La nueva entidad de seguridad estará visible en la vista de catálogo [Sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) .  
   
- **sp_denylogin** no se puede ejecutar dentro de una transacción definida por el usuario.  
+ **sp_denylogin** no se puede ejecutar en una transacción definida por el usuario.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente muestra cómo usar **sp_denylogin** para evitar que el usuario de Windows `CORPORATE\GeorgeV` de conectarse al servidor.  
+ En el ejemplo siguiente se muestra cómo usar **sp_denylogin** para impedir que `CORPORATE\GeorgeV` el usuario de Windows se conecte al servidor.  
   
 ```  
 EXEC sp_denylogin 'CORPORATE\GeorgeV';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_grantlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

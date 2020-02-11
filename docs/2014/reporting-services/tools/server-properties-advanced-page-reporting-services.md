@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099654"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propiedades del servidor (página de opciones avanzadas) - Reporting Services
@@ -32,10 +32,10 @@ ms.locfileid: "66099654"
  El nombre del rol que se usa al crear directivas de seguridad en las carpetas Mis informes del usuario. El valor predeterminado es `My Reports Role`.  
   
  **EnableClientPrinting**  
- Determina si el control ActiveX RSClientPrint está disponible para descargarlo del servidor de informes. Los valores válidos son `true` y `false`. El valor predeterminado es `true`. Para más información sobre opciones de configuración adicionales necesarias para este control, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Determina si el control ActiveX RSClientPrint está disponible para descargarlo del servidor de informes. Los valores válidos `true` son `false`y. El valor predeterminado es `true`. Para más información sobre opciones de configuración adicionales necesarias para este control, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
  **EnableExecutionLogging**  
- Indica si el registro de ejecución de informes está habilitado. El valor predeterminado es `true`. Para obtener más información sobre el registro de ejecución del servidor de informes, vea [registro de ejecución del servidor de informes y la vista ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
+ Indica si el registro de ejecución de informes está habilitado. El valor predeterminado es `true`. Para obtener más información acerca del registro de ejecución del servidor de informes, vea [registro de ejecución del servidor de informes y la vista ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
  Número de días que mantener la información de ejecución de informes en el registro de ejecución. Los valores válidos de esta propiedad son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1` no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es `60`.  
@@ -46,7 +46,7 @@ ms.locfileid: "66099654"
  **SharePointIntegratedMode**  
  Ésta es una propiedad de solo lectura que indica el modo de servidor. Si este valor es False, el servidor de informes se ejecuta en modo nativo.  
   
- **SiteName**  
+ **Nombresitio**  
  El nombre del sitio del servidor de informes mostrado en el título de la página de Administrador de informes. El valor predeterminado es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Esta propiedad puede ser una cadena vacía. La longitud máxima es de 8000 caracteres.  
   
  **StoredParametersLifetime**  
@@ -59,16 +59,16 @@ ms.locfileid: "66099654"
  Indica si el servidor de informes debería usar cookies de sesión al comunicarse con exploradores cliente. El valor predeterminado es `true`.  
   
  **ExternalImagesTimeout**  
- Determina el período de tiempo dentro del cual se debe recuperar un archivo de imagen externo antes de que se agote el tiempo de espera de la conexión. El valor predeterminado es `600` segundos.  
+ Determina el período de tiempo dentro del cual se debe recuperar un archivo de imagen externo antes de que se agote el tiempo de espera de la conexión. El valor predeterminado `600` es segundos.  
   
  **SnapshotCompression**  
  Define la manera en la que se comprimen las instantáneas. El valor predeterminado es `SQL`. Los valores válidos son los siguientes:  
   
- **SQL =** las instantáneas se comprimen cuando se almacenan en la base de datos del servidor de informes. Éste es el comportamiento actual.  
+ **SQL =** Las instantáneas se comprimen cuando se almacenan en la base de datos del servidor de informes. Éste es el comportamiento actual.  
   
- **None =** no se comprimen las instantáneas.  
+ **None** = no se comprimen las instantáneas.  
   
- **All =** las instantáneas se comprimen para todas las opciones de almacenamiento, entre las que se incluyen la base de datos del servidor de informes o el sistema de archivos.  
+ **Todo =** Las instantáneas se comprimen para todas las opciones de almacenamiento, entre las que se incluyen la base de datos del servidor de informes o el sistema de archivos.  
   
  **SystemReportTimeout**  
  El valor de tiempo de espera de procesamiento de informes predeterminado, en segundos, para todos los informes administrados en el espacio de nombres del servidor de informes. Este valor se puede invalidar en el nivel de informe. Si se establece esta propiedad, el servidor de informes intenta detener el procesamiento de un informe cuando ha expirado el tiempo especificado. Los valores válidos son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1`, no se agota el tiempo de los informes del espacio de nombres durante el procesamiento. El valor predeterminado es `1800`.  
@@ -77,11 +77,13 @@ ms.locfileid: "66099654"
  Número máximo de instantáneas almacenadas para un informe. Los valores válidos son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1`, no hay ningún límite de instantáneas.  
   
  **EnableIntegratedSecurity**  
- Determina si se admite la seguridad integrada de Windows para las conexiones de origen de datos del informe. De manera predeterminada, es `True`. Los valores válidos son los siguientes:  
+ Determina si se admite la seguridad integrada de Windows para las conexiones de origen de datos del informe. El valor predeterminado es `True`. Los valores válidos son los siguientes:  
   
- `True` = la seguridad integrada de Windows está habilitada.  
+ 
+  `True` = la seguridad integrada de Windows está habilitada.  
   
- `False` = la seguridad integrada de Windows no está habilitada. No se ejecutarán los orígenes de datos de informes que se configuran para usar la seguridad integrada de Windows.  
+ 
+  `False` = la seguridad integrada de Windows no está habilitada. No se ejecutarán los orígenes de datos de informes que se configuran para usar la seguridad integrada de Windows.  
   
  `EnableLoadReportDefinition`  
  Seleccione esta opción para especificar si los usuarios pueden realizar la ejecución de notificaciones ad hoc desde un informe del Generador de informes. Al establecer esta opción, se determina el valor de la propiedad `EnableLoadReportDefinition` en el servidor de informes.  
@@ -100,18 +102,18 @@ ms.locfileid: "66099654"
  Especifica el número de entradas de datos en memoria caché que pueden estar activas en una sesión de edición de informes. El número predeterminado es 5.  
   
  **EditSessionTimeout**  
- Especifica el número de segundos tras los cuales se agotará el tiempo de espera para una sesión de edición de informes. El valor predeterminado es de 7200 segundos (2 horas).  
+ Especifica el número de segundos hasta que se agota el tiempo de espera de una sesión de edición de informe. El valor predeterminado es 7200 segundos (2 horas).  
   
  **EnableTestConnectionDetailedErrors**  
  Indica si se han enviado al equipo cliente los mensajes de error detallados cuando los usuarios prueban las conexiones a orígenes de datos mediante el servidor de informes. El valor predeterminado es `true`. Si la opción se establece en `false`, solo se enviarán mensajes de error genéricos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Propiedades de Reporting Services](../report-server-web-service/net-framework/reporting-services-properties.md)   
  [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)   
  [Propiedades del sistema del servidor de informes](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
- [Script para tareas administrativas y de implementación](script-deployment-and-administrative-tasks.md)   
+ [Crear script de tareas administrativas y de implementación](script-deployment-and-administrative-tasks.md)   
  [Habilitar y deshabilitar Mis informes](../report-server/enable-and-disable-my-reports.md)  
   
   

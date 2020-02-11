@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 156c17d7dae5c4de07033a96f2e936448d8d02ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096501"
 ---
 # <a name="cluster-disk-selection"></a>Selección de disco en clúster
   Utilice la página **Selección de disco de clúster** del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para seleccionar el recurso de disco de clúster compartido para el clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El disco de clúster es donde se colocarán los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Un disco de clúster compartido no es un requisito para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] las instalaciones de clúster. Servidor de archivos SMB es un almacenamiento admitido para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] conmutación por error de las instalaciones de clúster y puede especificarse mediante la **motor de base de datos - directorios de datos** página antes de completar la instalación.  
+ Un disco de clúster compartido no es un requisito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para las instalaciones de clústeres. Un servidor de archivos SMB es un almacenamiento admitido para las instalaciones de clústeres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] conmutación por error y se puede especificar mediante la página **directorios de datos de motor de base de datos** antes de completar la instalación.  
   
 > [!WARNING]  
 >  Si ha seleccionado Analysis Services para que se instale, debe especificar un disco de clúster compartido.  

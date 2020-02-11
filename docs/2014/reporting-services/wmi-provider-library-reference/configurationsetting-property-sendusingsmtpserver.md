@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: db9ed11f79ccb21a7317b6c1b59c8dc012aed299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097516"
 ---
-# <a name="sendusingsmtpserver-property-wmi-msreportserverconfigurationsetting"></a>Propiedad SendUsingSMTPServer (MSReportServer_ConfigurationSetting de WMI)
+# <a name="sendusingsmtpserver-property-wmi-msreportserver_configurationsetting"></a>Propiedad SendUsingSMTPServer (MSReportServer_ConfigurationSetting de WMI)
   Especifica si el elemento `SendUsing` de la configuración del correo electrónico para el servidor de informes se ha establecido en `true`.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -45,9 +45,9 @@ public Boolean SendUsingSMTPServer;
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

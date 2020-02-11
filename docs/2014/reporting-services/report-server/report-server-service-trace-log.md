@@ -16,29 +16,29 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d69b2a3eeb28d5fe23eb6674c8a0ca0ee7628a75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103409"
 ---
 # <a name="report-server-service-trace-log"></a>Registro de seguimiento del servicio del servidor de informes
   El registro de seguimiento del servidor de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] es un archivo de texto ASCII que contiene información detallada de las operaciones del servicio del servidor de informes, incluidas las operaciones realizadas por el servicio web del servidor de informes, el Administrador de informes y el procesamiento en segundo plano. El archivo de registro de seguimiento incluye información redundante que contienen otros archivos de registro, así como información adicional que no está disponible en ningún otro archivo. La información del registro de seguimiento resulta útil si se está depurando una aplicación que incluye un servidor de informes o se investiga un problema específico que se incluyó en el registro de eventos o de ejecución.  
   
 > [!NOTE]  
->  En versiones anteriores, hubo varios archivos de registro de seguimiento, uno para cada aplicación. Los siguientes archivos están desusados y ya no se crean en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ni en las versiones posteriores. ReportServerWebApp_ *\<timestamp >* . log, ReportServer_ *\<timestamp >* .log y ReportServerService_main_ *\< marca de tiempo >* . log.  
+>  En versiones anteriores, hubo varios archivos de registro de seguimiento, uno para cada aplicación. Los archivos siguientes están obsoletos y ya no se crean en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores: ReportServerWebApp_*\<timestamp>*. log, ReportServer_*\<timestamp>*. log y ReportServerService_main_*\<timestamp>*. log.  
   
  **En este tema:**  
   
 -   [¿Dónde están los archivos de registro del servidor de informes?](#bkmk_view_log)  
   
--   [Configuración de seguimiento](#bkmk_trace_configuration_settings)  
+-   [Opciones de configuración de seguimiento](#bkmk_trace_configuration_settings)  
   
--   [Agregar opción de configuración personalizada para especificar una ubicación de archivo de volcado de memoria](#bkmk_add_custom)  
+-   [Agregar la opción de configuración personalizada para especificar la ubicación de un archivo de volcado](#bkmk_add_custom)  
   
 -   [Campos del archivo de registro](#bkmk_log_file_fields)  
   
-##  <a name="bkmk_view_log"></a> ¿Dónde están los archivos de registro del servidor de informes?  
+##  <a name="bkmk_view_log"></a>¿Dónde están los archivos de registro del servidor de informes?  
  Los archivos de registro de seguimiento `ReportServerService_<timestamp>.log` y se encuentran en la siguiente carpeta:  
   
  `C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles`  
@@ -49,10 +49,10 @@ ms.locfileid: "66103409"
   
  ![ver un vídeo sobre los registros de Power Query y SSRS](../media/generic-video-thumbnail.png "ver un vídeo sobre los registros de Power Query y SSRS")  
   
-##  <a name="bkmk_trace_configuration_settings"></a> Configuración de seguimiento  
- El comportamiento del registro de seguimiento se administra en el archivo de configuración **ReportingServicesrService.exe.config**. El archivo de configuración se encuentra en la ruta de la carpeta siguiente:  
+##  <a name="bkmk_trace_configuration_settings"></a>Opciones de configuración de seguimiento  
+ El comportamiento del registro de seguimiento se administra en el archivo de configuración **ReportingServicesrService. exe. config**. El archivo de configuración se encuentra en la siguiente ruta de acceso de la carpeta:  
   
- `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`  
+ `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`.  
   
  El ejemplo siguiente muestra la estructura XML de la configuración de `RStrace`. El valor de `DefaultTraceSwitch` determina el tipo de información agregada al registro. Excepto para el atributo `Components`, los valores de `RStrace` son los mismos en todos los archivos de configuración.  
   
@@ -75,17 +75,24 @@ ms.locfileid: "66103409"
   
  En la tabla siguiente se proporciona información acerca de cada parámetro.  
   
-|Parámetro|Descripción|  
+|Configuración|Descripción|  
 |-------------|-----------------|  
 |`RStrace`|Especifica espacios de nombres utilizados para errores y traza.|  
 |`DefaultTraceSwitch`|Especifica el nivel de información que se incluye en el registro de seguimiento de ReportServerService. Cada nivel incluye la información proporcionada para todos los niveles inferiores. No se recomienda deshabilitar la traza. Los valores válidos son:<br /><br /> 0= Deshabilita el seguimiento. El archivo de registro ReportServerService está habilitado de forma predeterminada. Para desactivarlo, establezca el nivel de seguimiento en 0.<br /><br /> 1= Excepciones y reinicios<br /><br /> 2= Excepciones, reinicios y advertencias<br /><br /> 3= Excepciones, reinicios, advertencias y mensajes de estado (predeterminado)<br /><br /> 4= Modo detallado|  
-|**FileName**|Especifica la primera parte del nombre del archivo de registro. El valor especificado en `Prefix` completa el resto del nombre.|  
+|**Extensión**|Especifica la primera parte del nombre del archivo de registro. El valor especificado en `Prefix` completa el resto del nombre.|  
 |**FileSizeLimitMb**|Especifica un límite superior para el tamaño del registro de seguimiento. El tamaño del archivo se indica en megabytes. Los valores válidos son de 0 a un número entero definido como máximo. El valor predeterminado es 32. Si especifica 0 o un número negativo, el servidor de informes trata el valor como 1.<br /><br /> Puede controlar el tamaño de archivo si establece niveles de seguimiento (de 0 a 4) para controlar cuánto contenido debe registrarse. También puede especificar los componentes a los que se realizó el seguimiento. Si se alcanza el valor máximo del archivo de registro antes de la fecha de expiración de 14 días, las entradas nuevas reemplazarán a las más antiguas.|  
 |**KeepFilesForDays**|Especifica los días tras los que se elimina un archivo de registro de seguimiento. Los valores válidos son de 0 a un número entero definido como máximo. El valor predeterminado es 14. Si especifica 0 o un número negativo, el servidor de informes trata el valor como 1.|  
 |`Prefix`|Especifica un valor generado que distingue una instancia de registro de otra. De manera predeterminada, se anexan valores de marca de tiempo a los nombres de los archivos de registro de seguimiento. Este valor se establece en " tid, time ". No modifique este parámetro.|  
 |**TraceListeners**|Especifica un destino de salida para el contenido del registro de seguimiento. Se pueden especificar varios destinos separados por comas. Los valores válidos son:<br /><br /> DebugWindow<br /><br /> File (predeterminado)<br /><br /> StdOut|  
 |**TraceFileMode**|Especifica si los registros de seguimiento incluyen datos de un período de 24 horas. Es recomendable tener un único registro de seguimiento para cada componente y día. Este valor se establece en "Unique (default)". No modifique este valor.|  
-|`Components`|Especifica los componentes para los cuales se genera la información de registro de seguimiento y el nivel de seguimiento en este formato.<br /><br /> \<categoría de componente>:\<tracelevel><br /><br /> Las categorías de componentes se pueden establecer en:<br />`All` se utiliza para realizar un seguimiento de la actividad general del servidor de informes para todos los procesos que no están divididos en las categorías específicas.<br />`RunningJobs` se utiliza para realizar un seguimiento de una operación de suscripción o informe en curso.<br />`SemanticQueryEngine` se utiliza para realizar un seguimiento de una consulta semántica procesada cuando un usuario realiza una exploración de datos ad hoc en un informe basado en modelo.<br />`SemanticModelGenerator` se utiliza para realizar un seguimiento de generación de modelos.<br />`http` se utiliza para habilitar el archivo de registro HTTP del servidor de informes. Para obtener más información, vea [Report Server HTTP Log](report-server-http-log.md).<br /><br /> <br /><br /> Los valores válidos del nivel de seguimiento son:<br /><br /> 0= Deshabilita la traza<br /><br /> 1= Excepciones y reinicios<br /><br /> 2= Excepciones, reinicios y advertencias<br /><br /> 3= Excepciones, reinicios, advertencias y mensajes de estado (predeterminado)<br /><br /> 4= Modo detallado<br /><br /> El valor predeterminado del servidor de informes es "todo:3"<br /><br /> Puede especificar todos o algunos de los componentes (`all`, `RunningJobs`, `SemanticQueryEngine`, `SemanticModelGenerator`). Si no desea generar información para un componente específico, puede deshabilitar el seguimiento para el mismo (por ejemplo, "SemanticModelGenerator:0"). No deshabilite el seguimiento para `all`.<br /><br /> Si no anexa un nivel de seguimiento al componente, se utiliza el valor especificado para `DefaultTraceSwitch`. Por ejemplo, si especifica "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos los componentes utilizan el nivel de seguimiento predeterminado.<br /><br /> Puede establecer "SemanticQueryEngine:4" si desea ver las instrucciones Transact-SQL generadas para cada consulta semántica. Las instrucciones Transact-SQL se registran en el registro de seguimiento. El ejemplo siguiente muestra el valor de configuración que agrega las instrucciones Transact-SQL al registro:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
+|`Components`|Especifica los componentes para los cuales se genera la información de registro de seguimiento y el nivel de seguimiento en este formato.<br /><br /> 
+  \<categoría de componente>:\<tracelevel><br /><br /> Las categorías de componentes se pueden establecer en:<br />
+  `All` se utiliza para realizar un seguimiento de la actividad general del servidor de informes para todos los procesos que no están divididos en las categorías específicas.<br />
+  `RunningJobs` se utiliza para realizar un seguimiento de una operación de suscripción o informe en curso.<br />
+  `SemanticQueryEngine` se utiliza para realizar un seguimiento de una consulta semántica procesada cuando un usuario realiza una exploración de datos ad hoc en un informe basado en modelo.<br />
+  `SemanticModelGenerator` se utiliza para realizar un seguimiento de generación de modelos.<br />
+  `http` se utiliza para habilitar el archivo de registro HTTP del servidor de informes. Para obtener más información, vea [Report Server HTTP Log](report-server-http-log.md).<br /><br /> <br /><br /> Los valores válidos del nivel de seguimiento son:<br /><br /> 0= Deshabilita la traza<br /><br /> 1= Excepciones y reinicios<br /><br /> 2= Excepciones, reinicios y advertencias<br /><br /> 3= Excepciones, reinicios, advertencias y mensajes de estado (predeterminado)<br /><br /> 4= Modo detallado<br /><br /> El valor predeterminado del servidor de informes es "todo:3"<br /><br /> Puede especificar todos o algunos de los componentes (`all`, `RunningJobs`, `SemanticQueryEngine`, `SemanticModelGenerator`). Si no desea generar información para un componente específico, puede deshabilitar el seguimiento para el mismo (por ejemplo, "SemanticModelGenerator:0"). No deshabilite el seguimiento para `all`.<br /><br /> Si no anexa un nivel de seguimiento al componente, se utiliza el valor especificado para `DefaultTraceSwitch`. Por ejemplo, si especifica "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos los componentes utilizan el nivel de seguimiento predeterminado.<br /><br /> Puede establecer "SemanticQueryEngine:4" si desea ver las instrucciones Transact-SQL generadas para cada consulta semántica. Las instrucciones Transact-SQL se registran en el registro de seguimiento. El ejemplo siguiente muestra el valor de configuración que agrega las instrucciones Transact-SQL al registro:<br /><br /> 
+  \<add name="Components" value="all,SemanticQueryEngine:4" />|  
   
 ##  <a name="bkmk_add_custom"></a> Agregar un valor de configuración personalizado para especificar una ubicación del archivo de volcado  
  Puede agregar una configuración personalizada para establecer la ubicación que utiliza la herramienta Dr. Watson para Windows para almacenar archivos de volcado. El valor predeterminado es `Directory`. El ejemplo siguiente muestra cómo se especifica esta configuración en la sección `RStrace`:  
@@ -115,7 +122,7 @@ ms.locfileid: "66103409"
   
  Puede revisar los registros de información de registro para determinar si se ha llevado a cabo la entrega de un informe, quién lo recibió y cuántos intentos de entrega se realizaron. Los registros de seguimiento también incluyen información sobre la actividad de ejecución de informes y las variables de entorno que están en vigor durante el procesamiento de informes. Además, incluyen los errores y las excepciones. Por ejemplo, puede encontrar errores de tiempo de espera de informes (indicados como una entrada `ThreadAbortExceptions`).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivos de registro y orígenes de Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

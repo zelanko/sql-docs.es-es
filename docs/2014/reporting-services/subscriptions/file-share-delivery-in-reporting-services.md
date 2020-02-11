@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100909"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega a recursos compartidos de archivos en Reporting Services
@@ -27,7 +27,7 @@ ms.locfileid: "66100909"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo de SharePoint|  
   
  En este tema:  
   
@@ -39,10 +39,10 @@ ms.locfileid: "66100909"
   
 -   [Opciones de archivo](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> Características de los informes que se entregan a una carpeta compartida  
+##  <a name="bkmk_Characteristics"></a>Características de un informe que se entrega en una carpeta compartida  
  A diferencia de los informes que se hospedan y administran en un servidor de informes, los informes que se entregan a una carpeta compartida son archivos estáticos. Las características interactivas que se hayan definido para el informe no funcionarán para los informes almacenados como archivos en el sistema de archivos. Las características interactivas aparecen representadas como elementos estáticos. Por ejemplo, si entrega un informe de matriz, el archivo resultante muestra la vista de nivel superior del informe; no se pueden expandir las filas ni las columnas para ver datos complementarios. Si el informe incluye gráficos, se utiliza la presentación predeterminada. Si el informe se vincula a otro informe, el vínculo se representa como texto estático. Si desea conservar las características interactivas de un informe entregado, utilice la entrega por correo electrónico. Para más información, vea [Entrega por correo electrónico en Reporting Services](e-mail-delivery-in-reporting-services.md).  
   
-##  <a name="bkmk_target_folders"></a> Carpetas de destino  
+##  <a name="bkmk_target_folders"></a>Carpetas de destino  
  Cuando defina una suscripción que utilice entrega a recursos compartidos de archivos, debe especificar una carpeta existente como la carpeta de destino. El servidor de informes no crea carpetas en el sistema de archivos. La carpeta que especifique debe ser accesible a través de una conexión de red.  
   
  Compruebe que los usuarios que van a ver los informes en la carpeta compartida tengan permiso de lectura.  
@@ -55,21 +55,21 @@ ms.locfileid: "66100909"
   
  Cuando cree la carpeta, tenga en cuenta los límites de conexión que necesita. El servidor de informes requiere dos conexiones, pero deben incluirse las suficientes para otros usuarios que deseen abrir informes en la carpeta compartida.  
   
-##  <a name="bkmk_file_formats"></a> Formatos de archivo  
+##  <a name="bkmk_file_formats"></a>Formatos de archivo  
  Los informes se pueden representar en diversos formatos de archivo, como HTML o Excel. Para guardar el informe en un formato de archivo específico, seleccione ese formato de representación en el momento en que cree su suscripción. Por ejemplo, si elige **Excel** , se guardará el informe como archivo de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] . Aunque puede elegir cualquier formato de representación compatible, algunos formatos funcionan mejor que otros al representar un archivo.  
   
  Para la entrega a recursos compartidos de archivos, elija un formato que entregue el informe como único archivo y que incluya todas las imágenes y el contenido relacionado en el informe. Entre los formatos adecuados se encuentran archivo web, PDF, TIFF y Excel. Evite HTML 4.0. Si su informe incluye imágenes, los formatos HTML 4.0 no las incluirán en el archivo.  
   
-##  <a name="bkmk_file_options"></a> Opciones de archivo  
+##  <a name="bkmk_file_options"></a>Opciones de archivo  
  Al crear una suscripción, puede elegir opciones que determinen cómo se crea el nombre del archivo y si se sustituye por versiones más recientes con el tiempo. Un nombre de archivo completo tiene tres partes: un nombre, una extensión y texto o un número que se anexa al archivo para crear un nombre de archivo exclusivo. Las opciones de sobrescritura determinan si el texto o el número se suman al nombre de archivo.  
   
  El nombre de archivo se basa en el nombre del informe, aunque es posible proporcionar un nombre personalizado en la suscripción. La extensión es opcional, pero si se especifica, el servidor de informes creará una extensión que corresponda al formato de representación.  
   
  Se pueden especificar opciones de sobrescritura a fin de volver a utilizar el mismo nombre de archivo para cada entrega de informe o para crear un archivo nuevo. Para sobrescribir el archivo, debe utilizar el mismo nombre de archivo y la misma extensión.  
   
- Un método alternativo para crear archivos exclusivos para cada entrega consiste en incluir una marca de tiempo en el nombre del archivo. Para ello, agregue el `@timestamp` variable para el nombre de archivo (por ejemplo, *CompanySales@timestamp* ). De este modo, el nombre del archivo será exclusivo por definición, por lo que no se sobrescribirá nunca.  
+ Un método alternativo para crear archivos exclusivos para cada entrega consiste en incluir una marca de tiempo en el nombre del archivo. Para ello, agregue la variable `@timestamp` al nombre del archivo (por ejemplo, *CompanySales@timestamp*). De este modo, el nombre del archivo será exclusivo por definición, por lo que no se sobrescribirá nunca.  
   
-## <a name="see-also"></a>Vea también  
- [Crear, modificar y eliminar suscripciones estándares &#40;Reporting Services en modo nativo&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  
+## <a name="see-also"></a>Consulte también  
+ [Crear, modificar y eliminar suscripciones estándar &#40;Reporting Services en modo nativo&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
   

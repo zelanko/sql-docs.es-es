@@ -1,5 +1,5 @@
 ---
-title: Establecer parámetros en un informe publicado (Reporting Services en modo integrado de SharePoint) | Microsoft Docs
+title: Establecer parámetros en un informe publicado (Reporting Services en el modo integrado de SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: da71b511a65758483a9bf207dbe54a484f4f1b26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105016"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>Establecer parámetros en un informe publicado (Reporting Services en el modo integrado de SharePoint)
@@ -49,7 +49,7 @@ ms.locfileid: "66105016"
   
      Es posible especificar una combinación de valores que no proporcione el resultado esperado. Puede ser necesario que el autor modifique el informe si no está obteniendo la información que necesita.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 ### <a name="to-set-parameter-properties"></a>Para establecer las propiedades de parámetros  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66105016"
   
 7.  Haga clic en **Aplicar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   

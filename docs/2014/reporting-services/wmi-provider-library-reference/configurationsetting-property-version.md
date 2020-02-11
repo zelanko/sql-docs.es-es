@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85aefb7b34ccd5e74debefafcaf0637e526d78bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097402"
 ---
-# <a name="version-property--wmi-msreportserverconfigurationsetting"></a>Propiedad de versión (WMI MSReportServer_ConfigurationSetting)
+# <a name="version-property--wmi-msreportserver_configurationsetting"></a>Propiedad de versión (WMI MSReportServer_ConfigurationSetting)
   Devuelve la versión del servidor de informes en formato Major.Minor.Build.Revision. Solo lectura.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,15 +33,16 @@ public string Version;
 ```  
   
 ## <a name="property-value"></a>Valor de la propiedad  
- `string` que contiene la versión del servidor de informes.  
+ 
+  `string` que contiene la versión del servidor de informes.  
   
 ## <a name="example-code"></a>Código de ejemplo  
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Espacio de nombres:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Miembros de MSReportServer_Instance](msreportserver-instance-members.md)  
+## <a name="see-also"></a>Consulte también  
+ [Miembros MSReportServer_Instance](msreportserver-instance-members.md)  
   
   

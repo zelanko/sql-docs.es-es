@@ -14,33 +14,33 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057210"
 ---
 # <a name="reserved-keywords"></a>Palabras clave reservadas
-Las siguientes palabras están reservadas para su uso en llamadas a funciones de ODBC. Estas palabras no restringen la gramática mínima de SQL; Sin embargo, para garantizar la compatibilidad con controladores que admiten la gramática básica de SQL, las aplicaciones deben evitar el uso de cualquiera de estas palabras clave. El número**definir** valor SQL_ODBC_KEYWORDS contiene una lista separada por comas de estas palabras clave.  
+Las siguientes palabras están reservadas para su uso en llamadas a funciones de ODBC. Estas palabras no restringen la gramática de SQL mínima; sin embargo, para garantizar la compatibilidad con los controladores que admiten la gramática básica de SQL, las aplicaciones deben evitar el uso de cualquiera de estas palabras clave. El valor de #**define** SQL_ODBC_KEYWORDS contiene una lista separada por comas de estas palabras clave.  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|ACTION|ISOLATION|  
+|ACCIÓN|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
 |ALLOCATE|LAST|  
 |ALTER|LEADING|  
-|Y|LEFT|  
+|y|LEFT|  
 |ANY|LEVEL|  
 |ARE|LIKE|  
 |AS|LOCAL|  
 |ASC|LOWER|  
 |ASSERTION|MATCH|  
-|AT|MAX|  
-|AUTHORIZATION|MIN|  
-|AVG|MINUTE|  
+|AT|MÁX|  
+|AUTHORIZATION|MÍN|  
+|MEDIA|MINUTE|  
 |BEGIN|MODULE|  
 |BETWEEN|MONTH|  
 |BIT|NAMES|  
@@ -48,7 +48,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|No|  
+|CASCADED|NO|  
 |CASE|Ninguno|  
 |CAST|NOT|  
 |CATALOG|NULL|  
@@ -56,19 +56,19 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |CHAR_LENGTH|NUMERIC|  
 |CHARACTER|OCTET_LENGTH|  
 |CHARACTER_LENGTH|OF|  
-|CHECK|ON|  
+|CHECK|ACTIVAR|  
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|OR|  
+|COLLATION|O BIEN|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|SUPERPOSICIONES|  
+|CONNECTION|SE superpone|  
 |CONSTRAINT|PAD|  
-|CONSTRAINTS|PARTIAL|  
+|RESTRICCIONES|PARTIAL|  
 |CONTINUE|PASCAL|  
-|CONVERT|POSICIÓN|  
+|CONVERT|LOCALIZACIÓN|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
@@ -78,7 +78,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -88,15 +88,15 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|SUPRIMIR|SECOND|  
+|Delete|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|SIZE|  
+|DISTINCT|TAMAÑO|  
 |DOMAIN|SMALLINT|  
-|Double|SOME|  
+|DOUBLE|SOME|  
 |DROP|SPACE|  
 |ELSE|SQL|  
 |END|SQLCA|  
@@ -111,7 +111,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|TIMESTAMP|  
+|FIRST|timestamp|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
@@ -123,13 +123,13 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |GLOBAL|TRUE|  
 |GO|UNION|  
 |GOTO|UNIQUE|  
-|GRANT|UNKNOWN|  
+|GRANT|DESCONOCIDO|  
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|User|  
+|IDENTIDAD|USER|  
 |IMMEDIATE|USING|  
-|IN|Value|  
+|IN|VALOR|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  
@@ -137,7 +137,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |INNER|WHEN|  
 |INPUT|WHENEVER|  
 |INSENSITIVE|WHERE|  
-|INSERT|por|  
+|INSERT|WITH|  
 |INT|WORK|  
 |INTEGER|WRITE|  
 |INTERSECT|YEAR|  

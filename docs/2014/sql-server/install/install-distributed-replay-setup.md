@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094630"
 ---
 # <a name="install-distributed-replay-setup"></a>Instalar Distributed Replay (programa de instalación)
@@ -35,7 +35,7 @@ ms.locfileid: "66094630"
 > [!NOTE]  
 >  Para quitar o cambiar las características de Distributed Replay, utilice la ventana **Programas y características** de Windows en el **Panel de control**. Seleccione [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en la ventana **Desinstalar o cambiar un programa** y, a continuación, haga clic en **Quitar** para abrir el Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . En la página **Seleccionar características** , compruebe las características de Distributed Replay que desea quitar.  
   
- **Requisitos previos:**  
+ **Requisitos previos**  
   
 -   Asegúrese de que los equipos que desea utilizar cumplan los requisitos que se describen en el tema [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  
   
@@ -52,17 +52,19 @@ ms.locfileid: "66094630"
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Herramientas  
   
-     \- O BIEN  
+     \-De  
   
-     \<Directorio de características compartidas\Tools\\(directorio de características compartidas alternativo proporcionado por el usuario)  
+     
+  \<Directorio de características compartidas\Tools\\(directorio de características compartidas alternativo proporcionado por el usuario)  
   
 -   En un sistema de 64 bits:  
   
-     C:\Program Files\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \120\Tools  
+     C:\Archivos de programa[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86) \120\Tools\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
-     \- O BIEN  
+     \-De  
   
-     \<Directorio de características compartidas (x86)>\Tools\\(directorio de características compartidas (x86) alternativo proporcionado por el usuario)  
+     
+  \<Directorio de características compartidas (x86)>\Tools\\(directorio de características compartidas (x86) alternativo proporcionado por el usuario)  
   
 ### <a name="to-install-distributed-replay-features"></a>Para instalar las características de Distributed Replay  
   
@@ -70,9 +72,9 @@ ms.locfileid: "66094630"
   
 2.  La página **Reglas auxiliares del programa de instalación** identifica los problemas que pueden producirse en la instalación de los archivos auxiliares del programa de instalación de SQL Server. Debe corregir los errores debidos a esos problemas antes de continuar con la instalación.  
   
-3.  En la página **Clave del producto** , seleccione un botón de opción para indicar si está instalando una edición gratuita de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o una versión de producción del producto con una clave de PID. Para obtener más información, consulte [ediciones y componentes de SQL Server 2014](../editions-and-components-of-sql-server-2016.md).  
+3.  En la página **Clave del producto** , seleccione un botón de opción para indicar si está instalando una edición gratuita de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o una versión de producción del producto con una clave de PID. Para obtener más información, vea [ediciones y componentes de SQL Server 2014](../editions-and-components-of-sql-server-2016.md).  
   
-4.  En la página **Términos de licencia** , lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+4.  En la página **términos de licencia** , lea el contrato de licencia y, a continuación, active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 5.  En la página **Archivos auxiliares del programa de instalación** , haga clic en **Instalar** para instalar o actualizar los archivos auxiliares del programa de instalación para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -86,7 +88,7 @@ ms.locfileid: "66094630"
   
     -   Para instalar el servicio de cliente, seleccione **Distributed Replay Client**.  
   
-     **Importante**: Al configurar Distributed Replay controller, puede especificar una o varias cuentas de usuario que se usará para ejecutar servicios de Distributed Replay client. La lista siguiente es una relación de las cuentas admitidas:  
+     **Importante**: al configurar el controlador de Distributed Replay, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios de cliente de Distributed Replay. La lista siguiente es una relación de las cuentas admitidas:  
   
     -   Cuenta de usuario de dominio  
   
@@ -100,11 +102,11 @@ ms.locfileid: "66094630"
   
      No se aceptan cuentas de grupo (locales o de dominio) y otras cuentas integradas (como Todos).  
   
-8.  Si lo desea, haga clic en el botón de puntos suspensivos (...) para cambiar la ruta de acceso del directorio de características compartidas.  
+8.  Opcionalmente, haga clic en el botón de puntos suspensivos (…) para cambiar la ruta de acceso al directorio de características compartidas.  
   
-    1.  En equipos de 32 bits, la ruta de instalación predeterminada es **C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    1.  En equipos de 32 bits, la ruta de instalación predeterminada es **c:\Archivos\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** de programa  
   
-    2.  En equipos de 64 bits, la ruta de instalación predeterminada es **C:\Archivos de programa (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
+    2.  En equipos de 64 bits, la ruta de instalación predeterminada es C:\Archivos de programa **(\\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] x86)** .  
   
 9. Cuando termine, haga clic en **Siguiente**.  
   
@@ -116,7 +118,7 @@ ms.locfileid: "66094630"
   
 13. En la página **Reglas de configuración de instalación** , el Comprobador de configuración del sistema ejecutará uno o varios conjuntos de reglas para validar la configuración del equipo con las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que haya especificado.  
   
-14. En la página **Preparado para instalar el programa** , haga clic en **Instalar**.  
+14. En la página **Preparado para instalar el programa**, haga clic en **Instalar**.  
   
     > [!IMPORTANT]  
     >  Después de instalar Distributed Replay, debe crear las reglas de firewall en los equipos cliente y de controlador, y conceder a cada equipo cliente permisos en el servidor de destino. Para obtener más información, vea [Completar los pasos posteriores a la instalación](../../tools/distributed-replay/complete-the-post-installation-steps.md).  
@@ -130,11 +132,11 @@ ms.locfileid: "66094630"
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Debe disponer de permisos administrativos para instalar cualquiera de las características de Distributed Replay. Solo un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con permisos sysadmin puede agregar las cuentas del servicio de cliente al rol de servidor sysadmin del servidor de prueba. Para obtener más información sobre las consideraciones de seguridad de Distributed Replay, vea [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-## <a name="see-also"></a>Vea también  
- [Características compatibles con las ediciones de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+## <a name="see-also"></a>Consulte también  
+ [Características admitidas por las ediciones de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md)   
- [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Requisitos de Distributed Replay](../../tools/sql-server-profiler/replay-requirements.md)   
+ [Opciones de la línea de comandos de la herramienta de administración &#40;Distributed Replay utilidad&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

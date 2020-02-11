@@ -1,5 +1,5 @@
 ---
-title: Configuración - directorios de datos de Analysis Services | Microsoft Docs
+title: 'Configuración de Analysis Services: directorios de datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 4ff1cd03eb260d892c22c36285fa07d912994510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096809"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Configuración de Analysis Services - Directorios de datos
@@ -24,10 +24,10 @@ ms.locfileid: "66096809"
   
 |Descripción|Directorio predeterminado|Recomendaciones|  
 |-----------------|-----------------------|---------------------|  
-|Directorio raíz de datos|C:\Program Files\Microsoft SQL Server\MSAS12. \<Iddeinstancia > \OLAP\Data\|asegurarse de que la carpeta \Archivos de \Program files\Microsoft SQL Server\ está protegida con permisos limitados. El rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, en muchas configuraciones, del rendimiento del espacio de almacenamiento en el que se ubica el directorio de datos. Coloque este directorio en el almacenamiento asociado al sistema cuyo rendimiento sea máximo. En las instalaciones del clúster de conmutación por error, asegúrese de que los directorios de datos están ubicados en el disco compartido.|  
-|Directorio de archivos de registro|C:\Program Files\Microsoft SQL Server\MSAS12. \<Iddeinstancia > \OLAP\Log\|es el directorio para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] los archivos de registro e incluye el Registro FlightRecorder. Si incrementa la duración de la Caja negra SQL, asegúrese de que el directorio del registro tenga espacio suficiente.|  
-|Directorio temporal|C:\Program Files\Microsoft SQL Server\MSAS12. \<Iddeinstancia > \OLAP\Temp\|colocar el directorio Temp en el subsistema de almacenamiento de alto rendimiento.|  
-|Directorio de copia de seguridad|C:\Program Files\Microsoft SQL Server\MSAS12. \<Iddeinstancia > \OLAP\Backup\|es el directorio para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] predeterminado de los archivos de copia de seguridad. En las instalaciones de PowerPivot para SharePoint, es también donde los Servicios del sistema de PowerPivot almacenan en caché los archivos de datos PowerPivot.<br /><br /> Asegúrese de que se han establecido los permisos adecuados para evitar la pérdida de datos y de que el grupo de usuarios del servicio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiene los permisos apropiados para escribir en el directorio de copia de seguridad. No se permite usar una unidad asignada para los directorios de copia de seguridad.|  
+|Directorio raíz de datos|C:\Archivos de Programa\microsoft SQL Server\MSAS12. \<InstanceID> \olap\data\|Asegúrese de que la carpeta \Archivos de programa\Microsoft SQL Server \ esté protegida con permisos limitados. El rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, en muchas configuraciones, del rendimiento del espacio de almacenamiento en el que se ubica el directorio de datos. Coloque este directorio en el almacenamiento asociado al sistema cuyo rendimiento sea máximo. En las instalaciones del clúster de conmutación por error, asegúrese de que los directorios de datos están ubicados en el disco compartido.|  
+|Directorio de archivos de registro|C:\Archivos de Programa\microsoft SQL Server\MSAS12. \<InstanceID> \olap\log\|este es el directorio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] los archivos de registro e incluye el registro FlightRecorder. Si incrementa la duración de la Caja negra SQL, asegúrese de que el directorio del registro tenga espacio suficiente.|  
+|Directorio temporal|C:\Archivos de Programa\microsoft SQL Server\MSAS12. \<InstanceID> \olap\temp\|Coloque el directorio Temp en el subsistema de almacenamiento de alto rendimiento.|  
+|Directorio de copia de seguridad|C:\Archivos de Programa\microsoft SQL Server\MSAS12. \<InstanceID> \olap\backup\|este es el directorio para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] los archivos de copia de seguridad predeterminados. En las instalaciones de PowerPivot para SharePoint, es también donde los Servicios del sistema de PowerPivot almacenan en caché los archivos de datos PowerPivot.<br /><br /> Asegúrese de que se han establecido los permisos adecuados para evitar la pérdida de datos y de que el grupo de usuarios del servicio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiene los permisos apropiados para escribir en el directorio de copia de seguridad. No se permite usar una unidad asignada para los directorios de copia de seguridad.|  
   
 ## <a name="notes"></a>Notas  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66096809"
   
     -   En un directorio que contiene archivos del sistema  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)  
   
   

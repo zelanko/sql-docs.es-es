@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102133"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar la autenticación de Windows en el servidor de informes
@@ -32,9 +32,9 @@ ms.locfileid: "66102133"
     > [!IMPORTANT]  
     >  Al utilizar `RSWindowsNegotiate`, se producirá un error de autenticación Kerberos si configuró el servicio del servidor de informes para ejecutarse en una cuenta de usuario de dominio y no registró un nombre de la entidad de seguridad del servicio (SPN) para la cuenta. Para obtener más información, vea [Resolver los errores de autenticación Kerberos al conectarse a un servidor de informes](#proxyfirewallRSWindowsNegotiate) en este tema.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] se debe configurar para la autenticación de Windows. De forma predeterminada, los archivos Web.config para el servicio Web del servidor de informes y el Administrador de informes incluyen el \<modo de autenticación = "Windows" > configuración. Si lo cambia a \<authentication mode="Forms">, se producirá un error en la autenticación de Windows para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] se debe configurar para la autenticación de Windows. De forma predeterminada, los archivos Web. config para el servicio Web del servidor de informes y \<administrador de informes incluyen la configuración del modo de autenticación = "Windows" >. Si lo cambia a \<authentication mode="Forms">, se producirá un error en la autenticación de Windows para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
--   Los archivos Web.config para el servicio Web del servidor de informes y el Administrador de informes debe tener \<identity impersonate = "true" / >.  
+-   Los archivos Web. config para el servicio Web del servidor de informes y Administrador de informes \<deben tener Identity Impersonate = "true"/>.  
   
 -   La aplicación cliente o el explorador deben admitir la seguridad integrada de Windows.  
   
@@ -45,7 +45,8 @@ ms.locfileid: "66102133"
  Las instrucciones siguientes están pensadas para un servidor de informes en modo nativo. Si el servidor de informes se implementa en modo integrado de SharePoint, se deben utilizar los valores de autenticación predeterminados que especifican la seguridad integrada de Windows. El servidor de informes utiliza las características internas de la extensión de autenticación de Windows predeterminada para admitir los servidores de informes en modo integrado de SharePoint.  
   
 ## <a name="extended-protection-for-authentication"></a>Protección ampliada para la autenticación  
- A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], se admite la protección ampliada para autenticación. La característica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el uso del enlace de canal y del enlace de servicio para mejorar la protección de la autenticación. Las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tienen que usarse con un sistema operativo que admita la protección ampliada. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para la protección extendida viene determinada por la configuración del archivo RSReportServer.config. El archivo puede actualizarse modificando el archivo o usando las API WMI. Para más información, consulte [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
+ A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], se admite la protección ampliada para autenticación. La característica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el uso del enlace de canal y del enlace de servicio para mejorar la protección de la autenticación. Las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tienen que usarse con un sistema operativo que admita la protección ampliada. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para la protección extendida viene determinada por la configuración del archivo RSReportServer.config. El archivo puede actualizarse modificando el archivo o usando las API WMI. Para obtener más información, vea [protección ampliada para la autenticación con Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Para configurar un servidor de informes para usar la seguridad integrada de Windows  
   
@@ -76,7 +77,7 @@ ms.locfileid: "66102133"
           <EnableAuthPersistence>true</EnableAuthPersistence>  
     ```  
   
-     \</Authentication>  
+     \<>/Authentication  
   
      La tercera estructura XML especifica todos los paquetes de seguridad que se utilizan en la seguridad integrada de Windows:  
   
@@ -96,7 +97,7 @@ ms.locfileid: "66102133"
           </AuthenticationTypes>  
     ```  
   
-4.  Péguela sobre las entradas existentes para <`Authentication`>.  
+4.  Péguelo en las entradas existentes para <`Authentication`>.  
   
      Observe que no puede utilizar `Custom` con los tipos `RSWindows`.  
   
@@ -113,7 +114,7 @@ ms.locfileid: "66102133"
   
 8.  Reinicie el servidor de informes para borrar las sesiones que estén abiertas en ese momento.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Resolver errores de autenticación Kerberos al conectarse a un servidor de informes  
+##  <a name="proxyfirewallRSWindowsNegotiate"></a>Resolver errores de autenticación Kerberos al conectarse a un servidor de informes  
  En un servidor de informes que esté configurado para usar la autenticación Kerberos o Negotiate, se producirá un error en una conexión de cliente con el servidor de informes si hay un error de autenticación Kerberos. Se producen errores de autenticación Kerberos cuando:  
   
 -   El servicio del servidor de informes se ejecuta como una cuenta de usuario de dominio de Windows y no se registró un nombre de la entidad de seguridad del servicio (SPN) para la cuenta.  
@@ -124,7 +125,7 @@ ms.locfileid: "66102133"
   
  Puede detectar el error si habilitó el registro de Kerberos. Otro síntoma del error es que se solicitan varias veces las credenciales y, a continuación, aparece una ventana del explorador vacía.  
   
- Puede confirmar que se está produciendo un error de autenticación de Kerberos eliminando < `RSWindowsNegotiate` / > del archivo de configuración y volver a intentar realizar la conexión.  
+ Puede confirmar que se está produciendo un error de autenticación de Kerberos quitando < `RSWindowsNegotiate` /> del archivo de configuración y reintentando la conexión.  
   
  Después de confirmar el problema, puede abordarlo de las maneras siguientes:  
   
@@ -175,7 +176,7 @@ ms.locfileid: "66102133"
 <RSWindowsExtendedProtectionScenario>Proxy</RSWindowsExtendedProtectionScenario>  
 ```  
   
- Para obtener más información, vea [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+ Para obtener más información, vea [protección ampliada para la autenticación con Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
   
 #### <a name="how-the-browser-chooses-negotiated-kerberos-or-negotiated-ntlm"></a>Cómo el explorador elige Kerberos negociado o NTLM negociado  
  Cuando se utiliza Internet Explorer para conectarse al servidor de informes, se especifica Kerberos negociado o NTLM negociado en el encabezado de autenticación. NTLM se utiliza en lugar de Kerberos cuando:  
@@ -204,12 +205,12 @@ ms.locfileid: "66102133"
   
 -   Para obtener información adicional con respecto a Kerberos y los servidores de informes, vea [Implementar una solución de Business Intelligence con SharePoint, Reporting Services y servidor de supervisión de PerformancePoint con Kerberos.](https://go.microsoft.com/fwlink/?LinkID=177751)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Autenticación con el servidor de informes](authentication-with-the-report-server.md)   
  [Conceder permisos en un servidor de informes en modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
  [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Configurar la autenticación básica en el servidor de informes](configure-basic-authentication-on-the-report-server.md)   
  [Configurar la autenticación de formularios o personalizada en el servidor de informes](configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
+ [Protección ampliada para la autenticación con Reporting Services](extended-protection-for-authentication-with-reporting-services.md)  
   
   

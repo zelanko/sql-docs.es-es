@@ -1,5 +1,5 @@
 ---
-title: Método GenerateDatabaseCreationScript (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
+title: Método GenerateDatabaseCreationScript (MSReportServer_ConfigurationSetting WMI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf33e467e54fda5c29d81e3437730f0ce9547cad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098509"
 ---
-# <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseCreationScript (MSReportServer_ConfigurationSetting de WMI)
+# <a name="generatedatabasecreationscript-method-wmi-msreportserver_configurationsetting"></a>Método GenerateDatabaseCreationScript (MSReportServer_ConfigurationSetting de WMI)
   Genera un script SQL que se puede utilizar para crear una base de datos del servidor de informes.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,28 +42,28 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ```  
   
 ## <a name="parameters"></a>Parámetros  
- *Databasename*  
+ *DatabaseName*  
  Cadena que contiene el nombre de la base de datos del servidor de informes que se va a crear.  
   
- *Lcid*  
+ *LCID*  
  Valor usado para la localización de nombres de roles.  
   
  *IsSharePointMode*  
  Indica si se desea crear la base de datos en modo nativo o en modo de SharePoint.  
   
 > [!IMPORTANT]  
->  A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode* = `True` no se admite porque en el modo de SharePoint, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es el servicio compartido de SharePoint y no esté controlado por el proveedor de WMI. Este parámetro siempre debe establecerse en `False`.  
+>  A partir [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]de, *IsSharePointMode* = `True` no se admite porque en modo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint es un servicio compartido de SharePoint y no está controlado por el proveedor WMI. Este parámetro siempre debe establecerse en `False`.  
   
- *Script*  
+ *Manuscrit*  
  [out] Cadena que contiene el script SQL generado.  
   
- *HRESULT*  
+ *VALOR*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Este método genera un script SQL que crea bases de datos del servidor de informes para la versión del servidor de informes al que se está conectado actualmente.  
   
  El valor proporcionado en el parámetro *DatabaseName* debe cumplir las convenciones de nomenclatura de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -75,9 +75,9 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
  El script generado admite [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

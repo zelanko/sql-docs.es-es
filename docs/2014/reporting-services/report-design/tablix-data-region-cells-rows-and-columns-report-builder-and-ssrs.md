@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104648"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS)
-  Para controlar el modo en que las filas y columnas de una región de datos Tablix muestran los datos en un informe, debe entender cómo especificar las filas y columnas para los datos de detalle, los datos de grupo, las etiquetas y los totales. En muchos casos, puede usar las estructuras predeterminadas de una tabla, matriz o lista para mostrar los datos. Para obtener más información, consulte [tablas &#40;generador de informes y SSRS&#41;](tables-report-builder-and-ssrs.md), [Matrices &#40;generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), o [enumera &#40;el generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+  Para controlar el modo en que las filas y columnas de una región de datos Tablix muestran los datos en un informe, debe entender cómo especificar las filas y columnas para los datos de detalle, los datos de grupo, las etiquetas y los totales. En muchos casos, puede usar las estructuras predeterminadas de una tabla, matriz o lista para mostrar los datos. Para obtener más información, vea [tables &#40;generador de informes and ssrs&#41;](tables-report-builder-and-ssrs.md), [matrices &#40;Generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), o enumera &#40;generador de informes [y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  Una región de datos Tablix muestra los datos detallados en filas y columnas de detalles, y los datos agrupados en filas y columnas de grupo. Al agregar grupos de filas y de columnas a una región de datos Tablix, las filas y las columnas en las que van a mostrarse los datos se agregan automáticamente. Puede agregar y quitar manualmente filas y columnas para personalizar una región de datos Tablix y controlar cómo se muestran los datos en el informe.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66104648"
 |![Identificador de fila con 3 líneas paralelas para la fila de detalles](../media/rs-icontablix-detailsrow.gif "Identificador de fila con 3 líneas paralelas para la fila de detalles")|Solo el grupo de detalles en la jerarquía de grupos de filas|  
 |![Identificador de fila con fila de detalles y un grupo exterior](../media/rs-icontablix-groupwithdetails.gif "Identificador de fila con fila de detalles y un grupo exterior")|Un grupo exterior y el grupo de detalles secundario|  
 |![Dos corchetes en paralelo muestran los grupos anidados](../media/rs-icontablix-nestedgroupnodetails.gif "Dos corchetes en paralelo muestran los grupos anidados")|Un grupo exterior y un grupo interno; ningún grupo de detalles|  
-|![Dos corchetes y tres líneas apiladas para anidados y detalles](../media/rs-icontablix-nestedgroupwithdetails.gif "Dos corchetes y tres líneas apiladas para anidados y detalles")|Un grupo exterior, un grupo interno y el grupo de detalles secundario|  
+|![2 corchetes & 3 líneas apiladas para los detalles de & anidados](../media/rs-icontablix-nestedgroupwithdetails.gif "Dos corchetes y tres líneas apiladas para anidados y detalles")|Un grupo exterior, un grupo interno y el grupo de detalles secundario|  
 |![Un grupo externo con una fila de pie, un grupo interno](../media/rs-icontablix-nestedgroupwithparentfooter.gif "Un grupo externo con una fila de pie, un grupo interno")|Un grupo exterior con una fila de pie para los totales y un grupo interno|  
 |![corchete de grupo externo, corchete de grupo interno, detalles](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "corchete de grupo externo, corchete de grupo interno, detalles")|Un grupo exterior con una fila de pie para los totales, un grupo interno con una fila de pie para los totales y una fila de detalles|  
 |![encabezado y pie primario, y también grupo secundario](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "encabezado y pie primario, y también grupo secundario")|Un grupo exterior con un encabezado para las etiquetas y un pie para los totales, y un grupo interno; ningún grupo de detalles|  
@@ -62,12 +62,12 @@ ms.locfileid: "66104648"
 ### <a name="total-rows"></a>Filas de totales  
  Después de agregar grupos de filas y de columnas, puede agregar una fila para mostrar los totales para las columnas y una columna para mostrar los totales para las filas. En la ilustración siguiente se muestra una matriz con grupos de filas y de columnas, y una fila y una columna de totales.  
   
- ![Región de datos Tablix](../media/rs-tablixparts.gif "Región de datos Tablix")  
+ ![región de datos Tablix](../media/rs-tablixparts.gif "Regiones de datos Tablix")  
   
 ### <a name="grouping-pane"></a>Panel de agrupación  
  El Panel de agrupación muestra los grupos de filas y de columnas para la región de datos Tablix seleccionada actualmente en la superficie de diseño. En la ilustración siguiente se muestra el Panel de agrupación para esta región de datos Tablix.  
   
- ![Panel de agrupación para grupos de filas y columnas anidadas](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para grupos de filas y columnas anidadas")  
+ ![Panel de agrupación para la fila anidada y grupos de columnas](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para la fila anidada y grupos de columnas")  
   
  El panel Grupos de filas muestra el grupo primario Category y el grupo secundario Subcat. El panel Grupos de columnas muestra el grupo primario Geography y el grupo secundario CountryRegion, así como el grupo Year, que es un grupo adyacente al grupo Geography. Al seleccionar el grupo Subcat en el panel Grupos de filas, la barra de grupo adquiere un sombreado naranja más oscuro y la celda de miembro del grupo de filas correspondiente se selecciona en la superficie de diseño.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66104648"
  Las celdas del área del cuerpo del Tablix pueden mostrar datos detallados cuando la celda está en una fila o columna de detalles, y datos de grupo agregados cuando la celda está en una fila o columna de grupo. El ámbito para los datos de una celda es la intersección del grupo de filas y el grupo de columnas más interiores a los que pertenece la celda.  
   
 > [!NOTE]  
->  Los datos reales que se muestran para cada celda son la expresión evaluada para el elemento de informe incluido en la celda, que generalmente es un cuadro de texto. En una celda que pertenece a una fila o columna de detalles, la expresión tiene como valor predeterminado los datos detallados (por ejemplo, **[LineTotal]** ). En una celda que no pertenece a una fila o columna de detalles, la expresión tiene como valor predeterminado una función de agregado (por ejemplo, **Sum[LineTotal]** ). Si una expresión no especifica una función de agregado aunque la celda pertenezca a una fila o columna de grupo, se muestra el primer valor del grupo. Para más información sobre los agregados, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  Los datos reales que se muestran para cada celda son la expresión evaluada para el elemento de informe incluido en la celda, que generalmente es un cuadro de texto. En una celda que pertenece a una fila o columna de detalles, la expresión tiene como valor predeterminado los datos detallados (por ejemplo, **[LineTotal]**). En una celda que no pertenece a una fila o columna de detalles, la expresión tiene como valor predeterminado una función de agregado (por ejemplo, **Sum[LineTotal]**). Si una expresión no especifica una función de agregado aunque la celda pertenezca a una fila o columna de grupo, se muestra el primer valor del grupo. Para más información sobre los agregados, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>Combinar y dividir celdas  
  Dentro de un área de Tablix, puede combinar juntas varias celdas adyacentes. Por ejemplo, puede crear celdas para etiquetas que abarcan varias columnas o filas.  
@@ -119,7 +119,7 @@ ms.locfileid: "66104648"
   
  Puede dividir una celda combinada con anterioridad. Las celdas se pueden dividir horizontalmente por columnas o verticalmente por filas. Para dividir una celda en un bloque de celdas, primero divida horizontalmente la celda y, a continuación, divídala verticalmente tantas veces como sea necesario.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
   
   

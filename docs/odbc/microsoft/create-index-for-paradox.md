@@ -1,5 +1,5 @@
 ---
-title: CREAR el índice de Paradox | Microsoft Docs
+title: CREAR índice para Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,62 +14,62 @@ ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 331613676b748453a56da1e41fe85f04a7715038
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081939"
 ---
 # <a name="create-index-for-paradox"></a>CREAR el índice de Paradox
-La sintaxis de la instrucción CREATE INDEX para el controlador de Paradox ODBC es:  
+La sintaxis de la instrucción CREATE INDEX para el controlador ODBC Paradox es la siguiente:  
   
- **CREAR** [**UNIQUE**] **índice** *nombre de índice*  
+ **Create** [**Unique**] **index** *index-Name*  
   
- **ON** *nombre de tabla*  
+ **En** *nombre de tabla*  
   
  **(** *identificador de columna* [**ASC**]  
   
- [ **,** *identificador de columna* [**ASC**]...] **)**  
+ [**,** *identificador de columna* [**ASC**]...] **)**  
   
- El controlador de Paradox ODBC no admite la **DESC** palabra clave en la gramática de SQL de ODBC para la instrucción CREATE INDEX. El *nombre-tabla* argumento puede especificar la ruta de acceso completa de la tabla.  
+ El controlador ODBC Paradox no admite la palabra clave **DESC** en la gramática SQL de ODBC para la instrucción CREATE index. El argumento de *nombre de tabla* puede especificar la ruta de acceso completa de la tabla.  
   
- Si la palabra clave **UNIQUE** se especifica, el controlador ODBC Paradox creará un índice único. El primer índice único se crea como un índice principal. Se trata de un archivo de clave de Paradox principal denominado *nombre-tabla*. PX. Índices principales son las siguientes restricciones:  
+ Si se especifica la palabra clave **Unique** , el controlador ODBC de Paradox creará un índice único. El primer índice único se crea como índice principal. Se trata de un archivo de clave principal *de Paradox denominado Table-Name*. Píxeles. Los índices principales están sujetos a las siguientes restricciones:  
   
--   El índice principal debe crearse antes de que todas las filas se agregan a la tabla.  
+-   El índice principal debe crearse antes de que se agreguen filas a la tabla.  
   
--   En las primeras columnas de "n" en una tabla, se debe definir un índice principal.  
+-   Un índice principal debe definirse en las primeras "n" columnas de una tabla.  
   
--   Se permite un solo índice principal por tabla.  
+-   Solo se permite un índice principal por tabla.  
   
--   Una tabla no se puede actualizar el controlador de Paradox si un índice principal no está definido en la tabla. (Tenga en cuenta que esto no es cierto para una tabla vacía, que se puede actualizar incluso si no está definido un índice único en la tabla.)  
+-   Un controlador de Paradox no puede actualizar una tabla si no se ha definido un índice principal en la tabla. (Tenga en cuenta que esto no es cierto para una tabla vacía, que se puede actualizar aunque no se haya definido un índice único en la tabla).  
   
--   El *nombre del índice* argumento para un índice principal debe ser el mismo que el nombre de base de la tabla, según sea necesario Paradox.  
+-   El argumento de *nombre de índice* de un índice principal debe ser el mismo que el nombre base de la tabla, tal como requiere Paradox.  
   
- Si la palabra clave **UNIQUE** es se omite, el controlador de Paradox ODBC creará un índice no único. Esto consta de dos archivos de índice secundario de Paradox denominados *nombre-tabla*. X*nn* y *nombre-tabla*. Y*nn*, donde *nn* es el número de la columna en la tabla. Índices no únicos están sujetos a las restricciones siguientes:  
+ Si se omite la palabra clave **Unique** , el controlador ODBC de Paradox creará un índice no único. Consta de dos archivos de índice secundarios de Paradox denominados *nombre de tabla*. X*nn* y *nombre de tabla*. Y*nn*, donde *nn* es el número de la columna de la tabla. Los índices no únicos están sujetos a las siguientes restricciones:  
   
--   Antes de poder crear un índice no único para una tabla, debe existir un índice principal de esa tabla.  
+-   Antes de que se pueda crear un índice no único para una tabla, debe existir un índice principal para esa tabla.  
   
--   Para Paradox 3. *x*, *nombre del índice* argumento para todos los índices que no sea un índice principal (que no es único o) debe ser el mismo que el nombre de columna. Para Paradox 4. *x* y 5. *x*, puede ser el nombre de ese índice, pero no tiene que ser el mismo que el nombre de columna.  
+-   Para Paradox 3. *x*, el argumento de *nombre de índice* de cualquier índice que no sea un índice principal (único o no único) debe ser el mismo que el nombre de la columna. Para Paradox 4. *x* y 5. *x*, el nombre de este tipo de índice puede ser, pero no tiene que ser igual que el nombre de la columna.  
   
--   Puede especificarse una única columna para un índice no único.  
+-   Solo se puede especificar una columna para un índice no único.  
   
- No se puede agregar columnas una vez que se ha definido un índice en una tabla. Si la primera columna de la lista de argumentos de una instrucción CREATE TABLE crea un índice, una segunda columna no puede incluirse en la lista de argumentos.  
+ No se pueden agregar columnas una vez que se ha definido un índice en una tabla. Si la primera columna de la lista de argumentos de una instrucción CREATE TABLE crea un índice, no se puede incluir una segunda columna en la lista de argumentos.  
   
- Por ejemplo, para usar el número de pedido de ventas y las columnas numéricas de línea como el índice único en la tabla SO_LINES, use la instrucción:  
+ Por ejemplo, para usar las columnas número de pedido de ventas y número de línea como índice único en la tabla SO_LINES, use la instrucción:  
   
 ```  
 CREATE UNIQUE INDEX SO_LINES  
  ON SO_LINES (SONum, LineNum)  
 ```  
   
- Para usar la columna de número de parte como un índice no único en la tabla SO_LINES, use la instrucción:  
+ Para usar la columna de número de pieza como índice no único en la tabla SO_LINES, use la instrucción:  
   
 ```  
 CREATE INDEX PartNum  
  ON SO_LINES (PartNum)  
 ```  
   
- Tenga en cuenta que cuando se realizan dos instrucciones CREATE INDEX, la primera instrucción siempre creará un índice principal con el mismo nombre que la tabla y la segunda instrucción siempre creará un índice no único con el mismo nombre que la columna. Estos índices se denominará así incluso si se especifican nombres diferentes en las instrucciones CREATE INDEX e incluso si el índice está etiquetado UNIQUE en la segunda instrucción CREATE INDEX.  
+ Tenga en cuenta que, cuando se realizan dos instrucciones CREATE INDEX, la primera instrucción creará siempre un índice principal con el mismo nombre que la tabla y la segunda instrucción siempre creará un índice no único con el mismo nombre que la columna. Estos índices se denominarán de esta manera incluso si se especifican nombres diferentes en las instrucciones CREATE INDEX e incluso si el índice tiene la etiqueta UNIQUE en la segunda instrucción CREATE INDEX.  
   
 > [!NOTE]  
->  Cuando utilice el controlador de Paradox sin necesidad de implementar el motor de base de datos de Borland, solo lectura y en anexos se permiten las instrucciones.
+>  Cuando se usa el controlador de Paradox sin implementar el Motor de base de datos de Borland, solo se permiten las instrucciones Read y Append.

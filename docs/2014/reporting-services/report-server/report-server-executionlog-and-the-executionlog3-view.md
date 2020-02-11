@@ -1,5 +1,5 @@
 ---
-title: Informe de registro de ejecución del servidor y la vista ExecutionLog3 | Microsoft Docs
+title: Registro de ejecución del servidor de informes y vista ExecutionLog3 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103473"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Registro de ejecución del servidor de informes y la vista ExecutionLog3
@@ -61,7 +61,7 @@ ms.locfileid: "66103473"
   
 4.  Seleccione **Habilitar el registro de la ejecución** en la sección **Registro** .  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
  **Para habilitar el registro detallado:**  
   
@@ -108,7 +108,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  La siguiente tabla describe los datos que se capturan en el registro de ejecución de informes  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |InstanceName|Nombre de la instancia de servidor de informes que procesó la solicitud. Si el entorno tiene más de un servidor de informes, puede analizar la distribución de InstanceName para supervisar y determinar si el equilibrador de carga de red distribuye las solicitudes entre los servidores de informes como se esperaba.|  
 |ItemPath|Ruta de acceso donde se almacena un informe o un elemento de informe.|  
@@ -117,14 +117,14 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RequestType|Valores posibles:<br />**Interactive**<br />**Suscripción**<br /><br /> <br /><br /> El análisis de los datos de registro filtrados por RequestType=Subscription y ordenados por TimeStart pueden revelar los periodos de mucho uso de suscripciones y puede indicar la conveniencia de modificar algunas de las suscripciones de informe a un momento diferente.|  
 |Formato|Formato de representación.|  
 |Parámetros|Valores de parámetros utilizados para la ejecución de un informe.|  
-|ItemAction|Valores posibles:<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Ejecutar**<br /><br /> **RenderEdit**|  
+|ItemAction|Valores posibles:<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Ejecut**<br /><br /> **RenderEdit**|  
 |TimeStart|Horas de inicio y detención que indican la duración del procesamiento de un informe.|  
 |TimeEnd||  
 |TimeDataRetrieval|Número de milisegundos empleados en recuperar los datos.|  
 |TimeProcessing|Número de milisegundos empleados en procesar el informe.|  
 |TimeRendering|Número de milisegundos empleados en representar el informe.|  
-|`Source`|Origen de la ejecución del informe. Valores posibles:<br /><br /> **Live**<br /><br /> **Cache**: Indica una ejecución almacenada en caché, por ejemplo, conjunto de datos en directo no se ejecutan las consultas.<br /><br /> **Snapshot**<br /><br /> **Historial**<br /><br /> **AdHoc** : Indica un informe generado dinámicamente en función del modelo informe detallado o un informe de generador de informes que se muestra una vista previa en un cliente que use el servidor de informes para el procesamiento y representación.<br /><br /> **Sesión**: Indica una solicitud de seguimiento en una sesión que ya se ha establecido.  Por ejemplo, la solicitud inicial es ver la página 1 y la solicitud de seguimiento es exportar a Excel con el estado actual de la sesión.<br /><br /> **Rdce**:  Indica una extensión de personalización de definición de informe. Las extensiones personalizadas de RDCE pueden personalizar dinámicamente una definición de informe antes de que se pase al motor de procesamiento en el momento de la ejecución de informes.|  
-|Estado|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
+|Source|Origen de la ejecución del informe. Valores posibles:<br /><br /> **En vivo**<br /><br /> **Cache**: indica una ejecución almacenada en caché; por ejemplo, no se ejecutan consultas de conjunto de los conjuntos de los mismos.<br /><br /> **Archivos**<br /><br /> **Historial**<br /><br /> **Adhoc** : indica un informe detallado basado en un modelo de informe generado dinámicamente, o un informe generador de informes que se muestra como vista previa en un cliente mediante el servidor de informes para su procesamiento y representación.<br /><br /> **Sesión**: indica una solicitud de seguimiento en una sesión ya establecida.  Por ejemplo, la solicitud inicial es ver la página 1 y la solicitud de seguimiento es exportar a Excel con el estado actual de la sesión.<br /><br /> **Rdce**: indica una extensión de personalización de definición de informe. Las extensiones personalizadas de RDCE pueden personalizar dinámicamente una definición de informe antes de que se pase al motor de procesamiento en el momento de la ejecución de informes.|  
+|Status|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
 |AdditionalInfo|Un contenedor de propiedades XML que incluye información adicional sobre la ejecución. El contenido puede ser diferente para cada fila.|  
@@ -222,13 +222,13 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- El siguiente describe algunas de las propiedades que verá en el campo AdditionalInfo:  
+ A continuación se describen algunas de las propiedades que verá en el campo AdditionalInfo:  
   
--   **ProcessingEngine**: 1=SQL Server 2005, 2=Nuevo motor de procesamiento a petición. Si una mayoría de los informes sigue mostrando el valor 1, puede investigar cómo reajustarlos para que usen el motor de procesamiento a petición más reciente y más eficaz.  
+-   **ProcessingEngine**: 1 = SQL Server 2005, 2 = el nuevo motor de procesamiento a petición. Si una mayoría de los informes sigue mostrando el valor 1, puede investigar cómo reajustarlos para que usen el motor de procesamiento a petición más reciente y más eficaz.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**: Número de milisegundos empleados en realizar operaciones relacionadas con la escala en el motor de procesamiento. Un valor de 0 indica que no se empleó ningún tiempo adicional en las operaciones de escala y 0 también indica que la solicitud no estaba bajo presión de memoria.  
+-   **ScalabilityTime**: el número de milisegundos empleados en realizar operaciones relacionadas con la escala en el motor de procesamiento. Un valor de 0 indica que no se empleó ningún tiempo adicional en las operaciones de escala y 0 también indica que la solicitud no estaba bajo presión de memoria.  
   
     ```  
     <ScalabilityTime>  
@@ -236,7 +236,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**: Una estimación de la cantidad máxima de memoria, en kilobytes, que utiliza cada componente durante una solicitud determinada.  
+-   **EstimatedMemoryUsageKB**: una estimación de la cantidad máxima de memoria, en kilobytes, consumida por cada componente durante una solicitud determinada.  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -244,7 +244,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**: Los tipos de extensiones de datos u orígenes de datos usados en el informe. El número es un recuento del número de repeticiones del origen de datos concreto.  
+-   **Extension**: los tipos de extensiones de datos u orígenes de datos usados en el informe. El número es un recuento del número de repeticiones del origen de datos concreto.  
   
     ```  
     <DataExtension>  
@@ -252,7 +252,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**es el valor en milisegundos. Estos datos se pueden utilizar para diagnosticar problemas de rendimiento. El tiempo necesario para recuperar imágenes desde un servidor web externo puede ralentizar la ejecución de informes global. Se ha agregado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **ExternalImages** El valor está en milisegundos. Estos datos se pueden utilizar para diagnosticar problemas de rendimiento. El tiempo necesario para recuperar imágenes desde un servidor web externo puede ralentizar la ejecución de informes global. Agregado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <ExternalImages>  
@@ -262,7 +262,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **Las conexiones**: Una estructura de varios niveles. Se ha agregado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **Conexiones**: una estructura de varios niveles. Agregado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
     ```  
     <Connections>  
@@ -307,7 +307,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  La siguiente tabla describe los datos que se capturan en el registro de ejecución de informes  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |InstanceName|Nombre de la instancia de servidor de informes que procesó la solicitud.|  
 |ReportPath|La estructura de ruta de acceso al informe.  Por ejemplo, un informe denominado "test" que está en la carpeta raíz en el Administrador de informes, tendría un ReportPath de "/test".<br /><br /> Un informe denominado "test" guardado en la carpeta "samples" en el Administrador de informes, tendrá un ReportPath de "/Samples/test/".|  
@@ -322,8 +322,8 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|Número de milisegundos dedicados a recuperar los datos, procesar el informe y representarlo.|  
 |TimeProcessing||  
 |TimeRendering||  
-|`Source`|Origen de la ejecución del informe (1=Activo, 2=Caché, 3=Instantánea, 4=Historial).|  
-|Estado|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
+|Source|Origen de la ejecución del informe (1=Activo, 2=Caché, 3=Instantánea, 4=Historial).|  
+|Status|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
 |AdditionalInfo|Un contenedor de propiedades XML que incluye información adicional sobre la ejecución.|  
@@ -339,7 +339,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  La siguiente tabla describe los datos que se capturan en el registro de ejecución de informes  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |InstanceName|Nombre de la instancia de servidor de informes que procesó la solicitud.|  
 |ReportID|Identificador del informe.|  
@@ -352,12 +352,12 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|Número de milisegundos dedicados a recuperar los datos, procesar el informe y representarlo.|  
 |TimeProcessing||  
 |TimeRendering||  
-|`Source`|Origen de la ejecución del informe. Valores posibles: (1 = activo, 2 = caché, 3 = instantánea, 4 = historial, 5 = Adhoc, 6 = sesión, 7 = RDCE).|  
-|Estado|Valores posibles: rsSuccess, rsProcessingAborted o un código de error. Si aparecen varios errores, solo se registra el primero.|  
+|Source|Origen de la ejecución del informe. Valores posibles: (1=Activo, 2=Caché, 3=Instantánea, 4=Historial, 5=Adhoc, 6=Sesión, 7=RDCE).|  
+|Status|Valores posibles: rsSuccess, rsProcessingAborted o un código de error. Si aparecen varios errores, solo se registra el primero.|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Activar eventos de Reporting Services para el registro de seguimiento de SharePoint &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Archivos de registro y orígenes de Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  

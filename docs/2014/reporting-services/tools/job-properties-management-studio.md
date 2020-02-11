@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f00250011f3c325ca39c3c040e5252b804182d86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100220"
 ---
 # <a name="job-properties-management-studio"></a>Propiedades del trabajo (Management Studio)
@@ -67,9 +67,9 @@ ms.locfileid: "66100220"
  **Nombre de usuario**  
  Para los procesos iniciados por un usuario, esta columna muestra el nombre del usuario. Para los trabajos del sistema, éste es el nombre del servidor de informes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)   
  [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Administrar un proceso en ejecución](../subscriptions/manage-a-running-process.md)  
+ [Administración de un proceso en ejecución](../subscriptions/manage-a-running-process.md)  
   
   

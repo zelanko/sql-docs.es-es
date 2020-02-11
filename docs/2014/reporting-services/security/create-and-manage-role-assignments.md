@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101996"
 ---
 # <a name="create-and-manage-role-assignments"></a>Crear y administrar asignaciones de roles
@@ -41,7 +41,7 @@ ms.locfileid: "66101996"
   
  Debe ser miembro del grupo local Administradores del equipo del servidor de informes para crear una asignación de roles. Puede delegar esa responsabilidad asignando otros usuarios al rol **Administrador de contenido** .  
   
- Para más información, vea [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md).  
+ Para obtener más información, vea [conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md).  
   
 ## <a name="creating-a-system-level-role-assignment"></a>Crear una asignación de roles de nivel de sistema  
  Para crear o administrar una asignación de roles de nivel de sistema, utilice el Administrador de informes y abra la página de Configuración del sitio.  
@@ -62,7 +62,7 @@ ms.locfileid: "66101996"
 ## <a name="deleting-a-role-assignment"></a>Eliminar una asignación de roles  
  Puede eliminar asignaciones de roles activando la casilla de cada asignación que desee eliminar y haciendo clic en **Eliminar**. También puede eliminarlas haciendo clic en **Volver a la seguridad del elemento primario**. Cuando haga clic en este botón, las asignaciones de roles existentes para el elemento se eliminarán y se usarán en su lugar las que se proporcionan a través de un elemento primario.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md)   
  [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](role-assignments-modify-or-delete.md)   
  [Asignaciones de roles](role-assignments.md)   

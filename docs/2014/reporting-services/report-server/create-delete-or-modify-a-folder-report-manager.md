@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef4aa341c8f89afbd099cd26fc8352425e6ac8ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103916"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Crear, eliminar o modificar una carpeta (Administrador de informes)
@@ -35,13 +35,13 @@ ms.locfileid: "66103916"
   
      Se abre la página **Nueva carpeta** .  
   
-3.  Escriba el nombre de la carpeta. Puede incluir espacios, pero no caracteres reservados que se utilicen para la codificación de direcciones URL: ; ? : \@ & = + , $ / * \< > |. No se puede escribir una serie de nombres de carpetas para crear varias carpetas al mismo tiempo.  
+3.  Escriba el nombre de la carpeta. Puede incluir espacios, pero no caracteres reservados que se utilicen para la codificación de direcciones URL: ; ? : \@ & = +, $/* \< > |. No se puede escribir una serie de nombres de carpetas para crear varias carpetas al mismo tiempo.  
   
 4.  Si lo desea, escriba una descripción.  
   
 5.  Seleccione **Ocultar en la vista de lista** si no desea mostrar la carpeta en la vista predeterminada de la página **Contenido** . La carpeta estará visible para los usuarios solo cuando hagan clic en **Mostrar detalles** en la página **Contenido** .  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ### <a name="to-delete-a-folder"></a>Para eliminar una carpeta  
   
@@ -71,11 +71,11 @@ ms.locfileid: "66103916"
   
 6.  O bien, haga clic en **Eliminar**para quitar la carpeta y su contenido.  
   
-7.  Haga clic en **Aplicar** para guardar los cambios.  
+7.  Haga clic en **Apply** (Aplicar) para guardar los cambios.  
   
-## <a name="see-also"></a>Vea también  
- [Página Nueva carpeta &#40;Administrador de informes&#41;](../new-folder-page-report-manager.md)   
- [Contenido &#40;página del Administrador de informes&#41;](../contents-page-report-manager.md)   
+## <a name="see-also"></a>Consulte también  
+ [Página nueva carpeta &#40;Administrador de informes&#41;](../new-folder-page-report-manager.md)   
+ [Administrador de informes de &#40;de página de contenido&#41;](../contents-page-report-manager.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

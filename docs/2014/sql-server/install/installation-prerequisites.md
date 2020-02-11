@@ -16,18 +16,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98f7dd23615cf86e4c20a84eae6bc39ff6489bc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094349"
 ---
-# <a name="installation-prerequisites"></a>Requisitos previos de la instalación
+# <a name="installation-prerequisites"></a>Requisitos previos de instalación
   Para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se instale correctamente, son necesarios los siguientes componentes de software en el equipo de instalación. Los instalará el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versión 4.0 para todas las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+-   
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versión 4.0 para todas las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
--   Archivos auxiliares del programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Archivos auxiliares del programa de instalación  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98d013126fe1db1b8101d5ae451f658546f6d1f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099739"
 ---
 # <a name="schedule-properties-general-page"></a>Propiedades de la programación (página General)
@@ -32,7 +32,7 @@ ms.locfileid: "66099739"
 >  Esta característica no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y esta página no aparece cuando se ejecuta una edición que no tiene esta característica. Para una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Especifica el nombre de la programación compartida.  
   
  **Empezar a ejecutar esta programación el**  
@@ -59,7 +59,7 @@ ms.locfileid: "66099739"
  **Una vez**  
  Especifica una programación que se ejecuta solamente una vez, en una fecha y hora específicas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)   
  [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Crear, modificar y eliminar programaciones](../subscriptions/create-modify-and-delete-schedules.md)   

@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a658eeca1646488212ee8ecdf48c99818e3f9e6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106284"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a la leyenda de un gráfico (Generador de informes y SSRS)
@@ -76,10 +76,10 @@ ms.locfileid: "66106284"
 ## <a name="formatting-the-legend-text"></a>Dar formato al texto de la leyenda  
  Puede cambiar la fuente, el tamaño, el estilo y el color del texto de la leyenda en la página **Fuente** del cuadro de diálogo **Propiedades de la leyenda** .  
   
- De forma predeterminada, el texto de la leyenda no se optimiza para que quepa en el área de la leyenda. Para hacer que el texto de leyenda se ajuste automáticamente el espacio asignado, establezca la propiedad AutoFitTextDisabled `False` y establecer un tamaño de fuente mínimo para la propiedad MinFontSize al tamaño de fuente mínimo que cree que sea presentable y permita la de la leyenda optimización.  
+ De forma predeterminada, el texto de la leyenda no se optimiza para que quepa en el área de la leyenda. Para que el texto de la leyenda se ajuste automáticamente al espacio asignado, establezca la propiedad `False` AutoFitTextDisabled en y establezca un tamaño de fuente mínimo para la propiedad MinFontSize en el tamaño de fuente más bajo que cree que se va a mostrar y siga permitiendo la optimización de la leyenda.  
   
-## <a name="see-also"></a>Vea también  
- [Cuadro de diálogo de Propiedades de la leyenda, General &#40;Generador de informes y SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo Propiedades de la leyenda, general &#40;Generador de informes y SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Cambiar el texto de un elemento de leyenda &#40;Generador de informes y SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   

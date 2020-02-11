@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4bb06da4582b5b93f027ac49c8b761705ad4b22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105687"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Imágenes, cuadros de texto rectángulos y líneas (Generador de informes y SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66105687"
  [Imágenes &#40;Generador de informes y SSRS&#41;](images-report-builder-and-ssrs.md)  
  Las imágenes muestran los datos de imagen binarios de un informe. Debe proporcionar el origen para la imagen. El origen puede ser una referencia de URL a una imagen almacenada en un servidor web, una referencia a datos de imagen incrustados o una referencia a datos de imagen binarios de una base de datos. El Generador de informes y el Diseñador de informes admiten archivos .bmp, .jpeg, .gif y .png.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  
   
   

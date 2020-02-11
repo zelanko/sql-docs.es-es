@@ -1,5 +1,5 @@
 ---
-title: Nueva columna de salida de sp_helptrigger podría afectar las aplicaciones | Microsoft Docs
+title: La nueva columna en la salida de sp_helptrigger puede afectar a las aplicaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33d47c858a03766260e8ed8c098fef79e9e4a82f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093739"
 ---
-# <a name="new-column-in-output-of-sphelptrigger-may-impact-applications"></a>La nueva columna de la salida de sp_helptrigger podría afectar a las aplicaciones
-  procedimiento almacenado de trigger_schemaias la última columna del conjunto de resultados devuelto por el sistema sp_helptrigger.  
+# <a name="new-column-in-output-of-sp_helptrigger-may-impact-applications"></a>La nueva columna de la salida de sp_helptrigger podría afectar a las aplicaciones
+  trigger_schemaias la última columna del conjunto de resultados devuelto por el procedimiento almacenado del sistema sp_helptrigger.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Para obtener más información acerca de los desencadenadores definidos en una tabla determinada, consulte la vista de catálogo sys.triggers.  
+>  
+  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Para obtener más información acerca de los desencadenadores definidos en una tabla determinada, consulte la vista de catálogo sys.triggers.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -31,8 +32,8 @@ ms.locfileid: "66093739"
 ## <a name="corrective-action"></a>Acción correctora  
  Revise el uso de sp_helptrigger en las aplicaciones. Puede que tenga que modificar las aplicaciones para que se ajusten a la columna adicional. O bien, puede utilizar en su lugar la vista de catálogo sys.triggers.  
   
-## <a name="see-also"></a>Vea también  
- [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte también  
+ [Problemas de actualización Motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server el asesor de actualizaciones de 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

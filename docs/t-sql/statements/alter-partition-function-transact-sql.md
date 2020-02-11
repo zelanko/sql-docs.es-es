@@ -26,10 +26,10 @@ ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c2418bedb172464002fd640a50c8b57f3daca712
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071254"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
@@ -75,7 +75,7 @@ Quita una partición y combina cualquier valor que exista en la partición en un
 > [!NOTE]  
 >  Limitaciones con el índice de almacén de columnas: no se pueden combinar dos particiones no vacías que contengan un índice de almacén de columnas. Tendrá que quitar o deshabilitar el índice de almacén de columnas antes de realizar esta operación.  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
 Mantenga siempre las particiones vacías en ambos extremos del rango de partición. Mantenga las particiones en ambos extremos para garantizar que la división y la combinación de particiones no realizan ningún movimiento de datos. La división de particiones se produce al principio y la combinación de particiones, al final. Evite dividir o combinar particiones con datos. Dividir o combinar particiones con datos puede ser ineficaz, ya que puede multiplicar por cuatro la generación de registros y causar bloqueos graves.  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  

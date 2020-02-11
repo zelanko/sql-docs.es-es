@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df28762c61f548b47c4da4a31fe1d1fd42fbf65a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105510"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Representación y diseño de páginas (Generador de informes y SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66105510"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="PageLayout"></a> Diseño de página y elementos de informe  
+##  <a name="PageLayout"></a>Diseño de página y elementos de informe  
  Los elementos de informe son elementos de diseño que están asociados a distintos tipos de datos de informe. Tabla, matriz, lista, gráfico y medidor son elementos de informe de la región de datos, cada uno de los cuales establece un vínculo a un conjunto de datos de informe. Cuando se procesa el informe, la región de datos se expande a lo ancho y hacia abajo por la página del informe para mostrar datos. Otros elementos de informe establecen un vínculo a un solo elemento y lo muestran. Un elemento de informe **Imagen** establece un vínculo a una imagen. Un elemento de informe **Cuadro de texto** contiene texto simple como un título o una expresión que puede incluir referencias a campos integrados, parámetros de informe o campos del conjunto de datos. Los elementos de informe **Línea** y **Rectángulo** proporcionan elementos gráficos simples en la página de informe. El **Rectángulo** también puede ser un contenedor para otros elementos de informe. Un informe puede contener subinformes.  
   
  Con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede colocar elementos de informe en cualquier parte de la superficie de diseño. Puede colocar y ampliar o reducir interactivamente la forma inicial del elemento de informe usando las líneas de ajuste y cambiando los controladores de tamaño. Puede colocar regiones de datos con conjuntos de datos distintos o incluso los mismos datos en formatos diferentes, uno al lado de otro. Cuando se coloca un elemento de informe en la superficie de diseño, tiene un tamaño y una forma predeterminados y una relación inicial con todos los demás elementos de informe. Puede colocar muchos elementos de informe en otros para crear diseños de informe más complejos. Por ejemplo, gráficos o imágenes en celdas de tabla, tablas en celdas de tabla, y varias imágenes en un rectángulo. Además de proporcionar al informe la organización y la apariencia deseadas, la colocación de elementos de informe en contenedores tales como rectángulos ayuda a controlar la forma en que los elementos de informe se muestran en la página del informe.  
@@ -48,16 +48,16 @@ ms.locfileid: "66105510"
 ##  <a name="RenderingExtensions"></a> Representadores  
  Reporting Services incluye un conjunto de representadores, denominados también extensiones de representación, que puede utilizar para exportar los informes a diferentes formatos. Hay tres tipos de representadores:  
   
--   **Representadores de datos** : los representadores de datos quitan todo el formato e información de diseño del informe y muestran solo los datos. El archivo resultante se puede usar para importar los datos del informe sin formato en otro tipo de archivo, como Excel; en otra base de datos; en un mensaje de datos XML o en una aplicación personalizada. Las representaciones de datos disponibles son: CSV y XML.  
+-   **Representadores de datos** : los representadores de datos quitan todo el formato e información de diseño del informe y muestran solo los datos. El archivo resultante se puede usar para importar los datos del informe sin formato en otro tipo de archivo, como Excel; en otra base de datos; en un mensaje de datos XML o en una aplicación personalizada. Los datos disponibles se representan como CSV y XML.  
   
     > [!NOTE]  
     >  Aunque no permite la exportación directa a un formato diferente, la representación de Atom genera los archivos de datos de los informes.  
   
--   **Representadores de saltos de página automáticos** Los representadores de saltos de página automáticos mantienen el diseño y el formato de los informes. El archivo resultante se optimiza para la visualización y la entrega basada en la presentación en pantalla, como en una página web. Los representadores de saltos de página automáticos disponibles son: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] palabra, archivo Web (MHTML) y el código HTML.  
+-   **Representadores de saltos de página automáticos** Los representadores de saltos de página automáticos mantienen el diseño y el formato de los informes. El archivo resultante se optimiza para la visualización y la entrega basada en la presentación en pantalla, como en una página web. Los representadores de saltos de página automáticos disponibles son los siguientes: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, MHTML (archivo web) y HTML.  
   
--   **Representadores de saltos de página manuales** Los representadores de saltos de página manuales mantienen el diseño y el formato de los informes. El archivo resultante se optimiza para que su aspecto no varíe al imprimirlo o para ver el informe en pantalla con formato de libro. Se admiten los representadores de saltos de página manuales disponibles: TIFF y PDF.  
+-   **Representadores de saltos de página manuales** Los representadores de saltos de página manuales mantienen el diseño y el formato de los informes. El archivo resultante se optimiza para que su aspecto no varíe al imprimirlo o para ver el informe en pantalla con formato de libro. Los representadores de saltos de página manuales disponibles que se admiten son TIFF y PDF.  
   
- Cuando se obtiene una vista previa de un informe en el Generador de informes o el Diseñador de informes o se ejecuta un informe en el Administrador de informes, siempre se representa primero en HTML. Después de ejecutar el informe, puede exportarlo a otros formatos de archivo. Para obtener más información, consulte [exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
+ Cuando se obtiene una vista previa de un informe en el Generador de informes o el Diseñador de informes o se ejecuta un informe en el Administrador de informes, siempre se representa primero en HTML. Después de ejecutar el informe, puede exportarlo a otros formatos de archivo. Para obtener más información, vea [exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
   
@@ -119,8 +119,8 @@ ms.locfileid: "66105510"
   
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Exportar informes &#40;generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [Exportar informes &#40;Generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

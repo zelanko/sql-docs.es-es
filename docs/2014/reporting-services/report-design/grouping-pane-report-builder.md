@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b8d19d1f1fc33bfcd90f7cd801b2256a88859c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105729"
 ---
 # <a name="grouping-pane-report-builder"></a>Panel de agrupación (Generador de informes)
@@ -31,9 +31,9 @@ ms.locfileid: "66105729"
   
  El Panel de agrupación admite los modos siguientes:  
   
--   **Predeterminado.** use el modo predeterminado para agregar, modificar o eliminar grupos. Puede agregar grupos primarios, secundarios y de detalles arrastrando campos desde el panel Datos de informe e insertándolos en la jerarquía de grupos. Para agregar un grupo adyacente, debe usar el acceso directo **Agregar grupo** . Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+-   **Predeterminada.** use el modo predeterminado para agregar, modificar o eliminar grupos. Puede agregar grupos primarios, secundarios y de detalles arrastrando campos desde el panel Datos de informe e insertándolos en la jerarquía de grupos. Para agregar un grupo adyacente, debe usar el acceso directo **Agregar grupo** . Para obtener más información, vea [Agregar o eliminar un grupo en una región de datos &#40;generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
--   **Avanzado**: use el **modo avanzado** para ver todos los miembros de los grupos de filas y de columnas, así como para establecer propiedades en miembros estáticos. Al crear grupos o agregar totales, se establecen automáticamente las propiedades que controlan cómo representa la región de datos Tablix las filas y las columnas en cada página del informe. Para ajustar manualmente estas propiedades, debe establecerlas en el miembro de Tablix. Para más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
+-   **Opciones avanzadas**. use el **modo avanzado** para ver todos los miembros de los grupos de filas y de columnas, así como para establecer propiedades en miembros estáticos. Al crear grupos o agregar totales, se establecen automáticamente las propiedades que controlan cómo representa la región de datos Tablix las filas y las columnas en cada página del informe. Para ajustar manualmente estas propiedades, debe establecerlas en el miembro de Tablix. Para más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
 ## <a name="default-mode"></a>Modo predeterminado  
  En el modo predeterminado, los paneles Grupos de filas y Grupos de columnas muestran una vista jerárquica para todos los grupos primarios, secundarios y adyacentes. Los grupos secundarios aparecen con una sangría debajo de sus grupos primarios. Los grupos adyacentes aparecen en el mismo nivel de sangría que sus grupos relacionados. La ilustración siguiente muestra una región de datos Tablix con grupos de filas anidados y grupos de columnas anidados y adyacentes.  
@@ -42,7 +42,7 @@ ms.locfileid: "66105729"
   
  El panel Agrupación muestra los grupos de filas y de columnas correspondientes. En la ilustración siguiente, el grupo basado en subcategorías se ha seleccionado en el panel Grupos de filas, y la celda de agrupamiento [Subcat] está seleccionada en la región de datos Tablix:  
   
- ![Panel de agrupación para grupos de filas y columnas anidadas](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para grupos de filas y columnas anidadas")  
+ ![Panel de agrupación para la fila anidada y grupos de columnas](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para la fila anidada y grupos de columnas")  
   
  En el panel Grupos de filas, el grupo basado en subcategorías es un grupo secundario del grupo basado en categorías. En el panel Grupos de columnas, el grupo de país/región es un grupo secundario del grupo de geografía. El grupo de años y los grupos de país/región son grupos adyacentes.  
   
@@ -56,30 +56,30 @@ ms.locfileid: "66105729"
   
  En la mayoría de los casos, las propiedades que controlan la presentación de los grupos de columnas y de filas estáticas y dinámicas se establecen automáticamente al crear un grupo o agregar totales. Para modificar los valores predeterminados, debe seleccionar el miembro del grupo en el panel Grupos de filas o Grupos de columnas y, a continuación, cambiar los valores de las propiedades en la ventana Propiedades. Están disponibles las propiedades siguientes:  
   
--   **FixedData**: booleano. Para encabezados de columnas y de filas externas. Inmoviliza el área de grupo de filas al desplazarse verticalmente o el área de grupo de columnas al desplazarse horizontalmente en un representador, como HTML.  
+-   **FixedData**. booleano. Para encabezados de columnas y de filas externas. Inmoviliza el área de grupo de filas al desplazarse verticalmente o el área de grupo de columnas al desplazarse horizontalmente en un representador, como HTML.  
   
--   **HideIfNoRows**: booleano. Solo para miembros estáticos. Si se establece, se omiten Hidden y ToggleItem. Oculte este miembro si la región de datos Tablix no contiene filas de datos.  
+-   **Hideifnorows:**. booleano. Solo para miembros estáticos. Si se establece, se omiten Hidden y ToggleItem. Oculte este miembro si la región de datos Tablix no contiene filas de datos.  
   
--   **KeepTogether**: booleano. Indica que todo el miembro de Tablix y cualquiera de los miembros anidados deben mantenerse juntos en una página, si es posible.  
+-   **Mantenerjuntosr**. booleano. Indica que todo el miembro de Tablix y cualquiera de los miembros anidados deben mantenerse juntos en una página, si es posible.  
   
--   `KeepWithGroup` booleano. Solo para miembros de fila estáticos. Siempre que sea posible, mantenga esta fila con el siguiente miembro dinámico relacionado anterior o posterior, si no está oculto. Para mantener un encabezado de fila con su grupo asociado, establezca KeepWithGroup en **After**.  
+-   `KeepWithGroup`. booleano. Solo para miembros de fila estáticos. Siempre que sea posible, mantenga esta fila con el siguiente miembro dinámico relacionado anterior o posterior, si no está oculto. Para mantener un encabezado de fila con su grupo asociado, establezca KeepWithGroup en **After**.  
   
--   `RepeatOnNewPage` booleano. Solo para miembros de fila estáticos y siempre que KeepWithGroup no sea None. Siempre que sea posible, repita esta fila estática en todas las páginas que tengan al menos una instancia del miembro dinámico especificado por KeepWithGroup. Para mantener un encabezado de fila con su grupo asociado, establezca RepeatOnNewPage en **True**.  
+-   `RepeatOnNewPage`. booleano. Solo para miembros de fila estáticos y siempre que KeepWithGroup no sea None. Siempre que sea posible, repita esta fila estática en todas las páginas que tengan al menos una instancia del miembro dinámico especificado por KeepWithGroup. Para mantener un encabezado de fila con su grupo asociado, establezca RepeatOnNewPage en **True**.  
   
--   `Hidden` booleano. Indica si la fila o la columna debe estar oculta inicialmente.  
+-   `Hidden`. booleano. Indica si la fila o la columna debe estar oculta inicialmente.  
   
--   **ToggleItem** Cadena. Nombre del cuadro de texto al que se va a agregar la imagen de alternancia. El cuadro de texto debe estar en el mismo ámbito de grupo o en un ámbito contenedor.  
+-   **ToggleItem.** String. Nombre del cuadro de texto al que se va a agregar la imagen de alternancia. El cuadro de texto debe estar en el mismo ámbito de grupo o en un ámbito contenedor.  
   
  Para más información, vea [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md), [Mostrar encabezados y pies de página con un grupo &#40;Generador de informes y SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md) y [Mostrar encabezados de fila y de columna en varias páginas &#40;Generador de informes y SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
   
  No todos los miembros estáticos tienen un encabezado que corresponde a una celda de la superficie de diseño. En el panel Agrupación, la convención siguiente indica si un miembro estático no tiene ningún encabezado:  
   
--   **Static** : indica un miembro estático con una celda de encabezado.  
+-   **Estática** Indica un miembro estático con una celda de encabezado.  
   
--   **(Static)** : indica un miembro estático sin celda de encabezado, lo que se denomina miembro estático oculto.  
+-   **(Estático)** Indica un miembro estático sin celda de encabezado, lo que se conoce como static oculto.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+## <a name="see-also"></a>Consulte también  
+ [Generador de informes ayuda para cuadros de diálogo, paneles y asistentes](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

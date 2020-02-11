@@ -1,5 +1,5 @@
 ---
-title: Búsqueda de texto completo ha cambiado desde SQL Server 2008 | Microsoft Docs
+title: La búsqueda de texto completo ha cambiado desde SQL Server 2008 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59591056d107e8cc53863ca537dc57aaba7f6d26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095144"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>La búsqueda de texto completo ha cambiado desde SQL Server 2008
-  El Asesor de actualizaciones detectó que la búsqueda de texto completo va a ser actualizada. Muchas opciones y valores de configuración de la búsqueda de texto completo han cambiado. Por consiguiente, al actualizar a la búsqueda de texto completo de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , es posible que sea necesario modificar algunos valores.  
+  El Asesor de actualizaciones detectó que la búsqueda de texto completo va a ser actualizada. Muchas opciones y valores de configuración de la búsqueda de texto completo han cambiado. Por consiguiente, al actualizar a la búsqueda de texto completo de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], es posible que sea necesario modificar algunos valores.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

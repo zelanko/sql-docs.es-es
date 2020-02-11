@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103585"
 ---
 # <a name="preload-the-cache-report-manager"></a>Cargar previamente la memoria caché (Administrador de informes)
@@ -25,7 +25,7 @@ ms.locfileid: "66103585"
   
  Puede cargar previamente la memoria caché para un informe de dos maneras:  
   
-1.  Cree un plan de actualización de caché para el informe. Éste es el método preferido.  
+1.  Cree un plan de actualización de caché para el informe. Este es el método preferido.  
   
 2.  Utilice una suscripción controlada por datos para cargar previamente la memoria caché con instancias de informes con parámetros. Esa era la única manera de cargar previamente la memoria caché en las versiones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] anteriores a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Para más información, vea [Informes almacenados en caché &#40;SSRS&#41;](caching-reports-ssrs.md).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66103585"
     data source=<servername>; initial catalog=Subscribers  
     ```  
   
-8.  Haga clic en **Siguiente**.  
+8.  Haga clic en **Next**.  
   
 9. Especifique la consulta o el comando que recupera los datos de los suscriptores. Si lo desea, puede incrementar el período de tiempo de espera en el caso de consultas que tarden bastante tiempo en procesarse. Por ejemplo:  
   
@@ -113,15 +113,15 @@ ms.locfileid: "66103585"
   
 17. Elija una de las dos opciones de caché siguientes y configure la expiración como se indica a continuación:  
   
-    -   Para lograr que la copia en caché expire después de un período de tiempo concreto, haga clic en **Almacenar en caché una copia temporal del informe. La copia expirará después de un número determinado de minutos.** Escriba el número de minutos para la expiración del informe.  
+    -   Para lograr que la copia en caché expire después de un período de tiempo concreto, haga clic en **Almacenar en caché una copia temporal del informe. La copia del informe expira después de un número determinado de minutos.** Escriba el número de minutos para la expiración del informe.  
   
-    -   Para lograr que la copia en caché expire según una programación, haga clic en **Guardar en caché una copia temporal del informe. La copia del informe debe expirar según la siguiente programación.** Haga clic en **Configurar**o seleccione una programación compartida para establecer una programación para la expiración del informe.  
+    -   Para lograr que la copia en caché expire siguiendo una programación, haga clic en **Guardar en caché una copia temporal del informe. La copia del informe debe caducar según la siguiente programación.** Haga clic en **Configurar**o seleccione una programación compartida para establecer una programación para la expiración del informe.  
   
 18. Haga clic en **Aplicar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
- [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Crear una suscripción controlada por datos &#40;tutorial de SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Rendimiento, instantáneas, almacenamiento en caché &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
  [Establecer las propiedades del procesamiento de informes](set-report-processing-properties.md)   
  [Informes almacenados en caché &#40;SSRS&#41;](caching-reports-ssrs.md)  

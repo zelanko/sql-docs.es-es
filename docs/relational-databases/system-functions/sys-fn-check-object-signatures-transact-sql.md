@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_check_object_signatures (Transact-SQL) | Microsoft Docs
+title: Sys. fn_check_object_signatures (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046308"
 ---
-# <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
+# <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Devuelve una lista de todos los objetos que se pueden firmar e indica si una clave asimétrica o certificado especificados firman un objeto. Si la clave asimétrica o certificado especificados firman el objeto, también devuelve si la firma del objeto es válida.  
@@ -45,30 +45,30 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- {'\@*clase*'}  
+ {'\@*Class*'}  
  Identifica el tipo de huella digital que se proporciona:  
   
 -   'certificado'  
   
 -   'clave asimétrica'  
   
- \@*clase* es **sysname**.  
+ \@la *clase* es de **tipo sysname**.  
   
  { \@ *huella digital* }  
- El valor hash SHA-1 del certificado o GUID de la clave asimétrica con el que se cifra la clave. \@*huella digital* es **varbinary(20)** .  
+ El valor hash SHA-1 del certificado o GUID de la clave asimétrica con el que se cifra la clave. \@la *huella digital* es **varbinary (20)**.  
   
 ## <a name="tables-returned"></a>Tablas devueltas  
- La tabla siguiente enumeran las columnas que **fn_check_object_signatures** devuelve.  
+ En la tabla siguiente se enumeran las columnas que **fn_check_object_signatures** devuelve.  
   
-|columna|Type|Descripción|  
+|Columna|Tipo|Descripción|  
 |------------|----------|-----------------|  
-|type|**nvarchar(120)**|Devuelve la descripción del tipo o ensamblado.|  
+|type|**nvarchar (120)**|Devuelve la descripción del tipo o ensamblado.|  
 |entity_id|**int**|Devuelve el identificador de objeto del objeto que se está evaluando.|  
 |is_signed|**int**|Devuelve 0 cuando la huella digital proporcionada no firma el objeto. Devuelve 1 cuando la huella digital proporcionada firma el objeto.|  
 |is_signature_valid|**int**|Cuando el valor de is_signed es 1, devuelve 0 si la firma no es válida. Devuelve 1 cuando la firma es válida.<br /><br /> Cuando el valor de is_signed es 0, siempre devuelve 0.|  
   
-## <a name="remarks"></a>Comentarios  
- Use **fn_check_object_signatures** para confirmar que los usuarios malintencionados no alterado los objetos.  
+## <a name="remarks"></a>Observaciones  
+ Utilice **fn_check_object_signatures** para confirmar que los usuarios malintencionados no han manipulado objetos.  
   
 ## <a name="permissions"></a>Permisos  
  Se requiere VIEW DEFINITION sobre el certificado o la clave asimétrica.  
@@ -91,7 +91,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [IS_OBJECTSIGNED &#40;&#41;de Transact-SQL](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

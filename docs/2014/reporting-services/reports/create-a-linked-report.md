@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0df6a3bdb6f542b02b62ccf4aa6614da290551f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102694"
 ---
 # <a name="create-a-linked-report"></a>Crear un informe vinculado
@@ -34,18 +34,20 @@ ms.locfileid: "66102694"
   
 2.  Escriba un nombre para el nuevo informe vinculado. Si lo desea, escriba una descripción.  
   
-3.  Para guardar el informe en una carpeta diferente, haga clic en **Cambiar ubicación**. Haga clic en la carpeta que desee utilizar o escriba el nombre de la carpeta en el cuadro **Ubicación** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Si no selecciona una carpeta distinta, el informe vinculado se creará en la carpeta actual (donde está almacenado el informe en que se basa).  
+3.  Para guardar el informe en una carpeta diferente, haga clic en **Cambiar ubicación**. Haga clic en la carpeta que desee utilizar o escriba el nombre de la carpeta en el cuadro **Ubicación** . 
+  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Si no selecciona una carpeta distinta, el informe vinculado se creará en la carpeta actual (donde está almacenado el informe en que se basa).  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Se abre el informe vinculado.  
+4.  
+  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Se abre el informe vinculado.  
   
      El icono de un informe vinculado es distinto de otros elementos administrados por un servidor de informes. El siguiente icono distingue los informes vinculados:  
   
      ![Icono de informe vinculado](../media/hlp-16linked.gif "Icono de informe vinculado")  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Abrir y cerrar un informe &#40;Administrador de informes&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [Nuevo informe vinculado &#40;página del Administrador de informes&#41;](../new-linked-report-page-report-manager.md)   
- [Elegir página de ubicación del elemento &#40;Administrador de informes&#41;](../choose-item-location-page-report-manager.md)   
+ [Página nuevo informe vinculado &#40;Administrador de informes&#41;](../new-linked-report-page-report-manager.md)   
+ [Página elegir Ubicación del elemento &#40;Administrador de informes&#41;](../choose-item-location-page-report-manager.md)   
  [Página de propiedades generales, informes &#40;Administrador de informes&#41;](../general-properties-page-reports-report-manager.md)   
  [Conceptos de Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)  

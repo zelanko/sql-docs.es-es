@@ -1,5 +1,5 @@
 ---
-title: Guardar informes en el equipo (generador de informes) | Microsoft Docs
+title: Guardar informes en el equipo (Generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102310"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Guardar informes en el equipo (Generador de informes)
@@ -27,7 +27,7 @@ ms.locfileid: "66102310"
     > [!NOTE]  
     >  Si vuelve a guardar un informe, automáticamente se guarda en su ubicación anterior. Utilice la opción **Guardar como** para cambiar la ubicación.  
   
-2.  Si lo desea, haga clic en **Desktop**, **Mis documentos**, o **Mi PC** para guardar el informe en una de esas carpetas.  
+2.  Opcionalmente, haga clic en **escritorio**, **mis documentos**o **mi PC** para guardar el informe en una de esas carpetas.  
   
 3.  Busque la ubicación del equipo en la que desea guardar el informe. En **Nombre**, escriba el nombre del informe.  
   
@@ -39,13 +39,13 @@ ms.locfileid: "66102310"
   
 2.  Busque la ubicación del equipo en la que desea guardar el informe.  
   
-3.  En **Nombre**, escriba el nombre del informe. Si lo desea, haga clic en **Desktop**, **Mis documentos**, o **Mi PC** para guardar el informe en una de esas carpetas.  
+3.  En **Nombre**, escriba el nombre del informe. Opcionalmente, haga clic en **escritorio**, **mis documentos**o **mi PC** para guardar el informe en una de esas carpetas.  
   
 4.  En **Elementos de tipo**, seleccione el tipo de elemento de informe que está guardando. El tipo para los informes es Informes (*.rdl).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Exportar informes &#40;generador de informes y SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [Exportar informes &#40;Generador de informes y SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [Guardar informes &#40;Generador de informes&#41;](report-builder/saving-reports-report-builder.md)   
  [Exportar un informe como otro tipo de archivo &#40;Generador de informes y SSRS&#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   

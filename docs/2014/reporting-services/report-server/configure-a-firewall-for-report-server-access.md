@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104162"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurar un firewall para el acceso al servidor de informes
@@ -29,10 +29,10 @@ ms.locfileid: "66104162"
   
  Si está teniendo acceso a las bases de datos relacionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en equipos externos, o si la base de datos del servidor de informes se encuentra en una instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] externa, debe abrir el puerto 1433 y 1434 del equipo externo. Para obtener más información, vea [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre la configuración predeterminada de Firewall de Windows y una descripción de los puertos TCP que afectan al [!INCLUDE[ssDE](../../includes/ssde-md.md)], a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="prerequisites"></a>Requisitos previos  
- En estas instrucciones se supone que ya configuró la cuenta de servicio, creó la base de datos del servidor de informes y configuró direcciones URL para el servicio web del servidor de informes y el Administrador de informes. Para obtener más información, vea [Administrar un servidor de informes en modo nativo de Reporting Services](manage-a-reporting-services-native-mode-report-server.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ En estas instrucciones se supone que ya configuró la cuenta de servicio, creó la base de datos del servidor de informes y configuró direcciones URL para el servicio web del servidor de informes y el Administrador de informes. Para más información, vea [Administrar un servidor de informes en modo nativo de Reporting Services](manage-a-reporting-services-native-mode-report-server.md).  
   
- También debería haber comprobado que el servidor de informes es accesible a través de una conexión del explorador web local a la instancia del servidor de informes local. Con este paso se establece que tiene una instalación activa. Debería comprobar que la instalación está configurada correctamente antes de empezar a abrir los puertos. Para completar este paso en Windows Server 2008, debe haber agregado también el sitio del servidor de informes a Sitios de confianza. Para obtener más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ También debería haber comprobado que el servidor de informes es accesible a través de una conexión del explorador web local a la instancia del servidor de informes local. Con este paso se establece que tiene una instalación activa. Debería comprobar que la instalación está configurada correctamente antes de empezar a abrir los puertos. Para completar este paso en Windows Server 2008, debe haber agregado también el sitio del servidor de informes a Sitios de confianza. Para más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ## <a name="opening-ports-in-windows-firewall"></a>Abrir puertos en Firewall de Windows  
  Cada versión del Firewall de Windows tiene instrucciones distintas.  
@@ -45,51 +45,51 @@ ms.locfileid: "66104162"
   
 3.  Haga clic en **Reglas de entrada**  
   
-4.  Haga clic en **Nueva regla** en la ventana **Acciones****.**  
+4.  Haga clic en **nueva regla** en la ventana **acciones** **.**  
   
 5.  Haga clic en **Puerto** en la sección **Regla de entrada.**  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 7.  En la página **Protocolos y puertos** , haga clic en **TCP**.  
   
 8.  Seleccione **Puertos locales específicos** y escriba un valor de **80**.  
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
 10. En la página **Acción** , haga clic en **Permitir la conexión**.  
   
-11. Haga clic en **Siguiente**.  
+11. Haga clic en **Next**.  
   
 12. En la página **Perfil** , haga clic en las opciones adecuadas para su entorno.  
   
-13. Haga clic en **Siguiente**.  
+13. Haga clic en **Next**.  
   
-14. En la página **Nombre** , escriba un nombre de**ReportServer (TCP en el puerto 80)**.  
+14. En la página **Nombre** , escriba un nombre de**ReportServer (TCP en el puerto 80)** .  
   
-15. Haga clic en **Finalizar**.  
+15. Haga clic en **Finalizar**  
   
 16. Reinicie el equipo.  
   
 #### <a name="to-open-port-80-on-windows-vista-or-windows-server-2008"></a>Para abrir el puerto 80 en Windows Vista o Windows Server 2008  
   
-1.  Desde el **iniciar** menú, haga clic en **Panel de Control**, haga clic en **seguridad**y, a continuación, haga clic en **Windows Firewall**.  
+1.  En el menú **Inicio** , haga clic en **Panel de control**, haga clic en **seguridad**y, a continuación, haga clic en firewall de **Windows**.  
   
-2.  Haga clic en **permitir un programa a través de Firewall de Windows**.  
+2.  Haga clic en **Permitir un programa a través del Firewall de Windows**.  
   
 3.  Haga clic en **Continuar**.  
   
-4.  En la ficha excepciones, haga clic en **agregar puerto**.  
+4.  En la pestaña excepciones, haga clic en **Agregar puerto**.  
   
 5.  En nombre, escriba **ReportServer (TCP en el puerto 80)**.  
   
-6.  En el número de puerto, escriba **80**.  
+6.  En número de puerto, escriba **80**.  
   
-7.  Compruebe que **TCP** está seleccionada.  
+7.  Compruebe que **TCP** está seleccionado.  
   
 8.  Haga clic en **Cambiar ámbito**.  
   
-9. Haga clic en **sólo mi red (subred)** y, a continuación, haga clic en **Aceptar**.  
+9. Haga clic en **mi red (subred) solamente**y, a continuación, haga clic en **Aceptar**.  
   
 10. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66104162"
   
  También puede comprobar que el puerto se abre correctamente iniciando el Administrador de informes en un equipo diferente. Para más información, vea [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   

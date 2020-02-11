@@ -1,5 +1,5 @@
 ---
-title: Secuencias de Escape de fecha, hora y marca de tiempo | Microsoft Docs
+title: Secuencias de escape de fecha, hora y marca de tiempo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a6d7a35d0697d1dcbda8f9f64b7ac5a32307d5c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051140"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Secuencias de escape de fecha, hora y marca de tiempo
-ODBC define secuencias de escape para fecha, hora y marca de tiempo literales. La sintaxis de estas secuencias de escape es como sigue:  
+ODBC define secuencias de escape para los literales de fecha, hora y marca de tiempo. La sintaxis de estas secuencias de escape es la siguiente:  
   
 ```  
   
@@ -32,7 +32,7 @@ ODBC define secuencias de escape para fecha, hora y marca de tiempo literales. L
 {ts 'value'}  
 ```  
   
- En la notación de BNF, la sintaxis es como sigue:  
+ En la notación BNF, la sintaxis es la siguiente:  
   
 ```  
   
@@ -52,5 +52,5 @@ timestamp-separator ::=
      (The blank character)years-value ::= digit digit digit digitmonths-value ::= digit digitdays-value ::= digit digithours-value ::= digit digitminutes-value ::= digit digitseconds-value ::= digit digit[.digit...]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- Si los tipos de datos de fecha, hora y marca de tiempo son compatibles con el origen de datos, se admiten las secuencias de escape literal de fecha, hora y marca de tiempo. Una aplicación debe llamar a **SQLGetTypeInfo** para determinar si se admiten estos tipos de datos.
+## <a name="remarks"></a>Observaciones  
+ Las secuencias de escape de fecha, hora y marca de tiempo se admiten si el origen de datos admite los tipos de datos de fecha, hora y marca de tiempo. Una aplicación debe llamar a **SQLGetTypeInfo** para determinar si se admiten estos tipos de datos.

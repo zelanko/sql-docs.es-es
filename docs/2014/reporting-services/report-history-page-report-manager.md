@@ -1,5 +1,5 @@
 ---
-title: Informe Historial de página (Administrador de informes) | Microsoft Docs
+title: Página historial de informes (Administrador de informes) | Microsoft Docs
 ms.prod: sql-server-2014
 ms.technology: reporting-services-native
 ms.topic: conceptual
@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104479"
 ---
 # <a name="report-history-page-report-manager"></a>Historial del informe (página del Administrador de informes)
@@ -54,9 +54,9 @@ Puede hacer clic en una instantánea del historial de un informe para verla. Las
  **Tamaño**  
  Muestra el tamaño de la definición del informe y los datos que contiene. Este valor indica el espacio que ocupan la definición y los datos del informe en la base de datos del servidor de informes. En realidad, el informe representado, que incluye el formato, tiene un tamaño mayor. El tamaño total, indicado entre paréntesis, suma los tamaños de todas las instantáneas del historial del informe actual.  
   
-## <a name="see-also"></a>Vea también  
- [Ver o eliminar el historial del informe &#40;el Administrador de informes&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ver o eliminar el historial de informes &#40;Administrador de informes&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
  [Agregar una instantánea al historial de informes &#40;Administrador de informes&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Página de propiedades generales, informes &#40;Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
- [Página de propiedades Opciones de instantánea &#40;el Administrador de informes&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)
+ [Administrador de informes la ayuda F1](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Página de propiedades opciones de instantánea &#40;Administrador de informes&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

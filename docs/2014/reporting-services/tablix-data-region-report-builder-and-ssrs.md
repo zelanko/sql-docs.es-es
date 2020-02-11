@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aeb149fe1de94e9942352ca620f26311e252b477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100629"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Región de datos Tablix (Generador de informes y SSRS)
@@ -62,7 +62,7 @@ ms.locfileid: "66100629"
   
  Las celdas del área de esquina de Tablix se crean automáticamente al definir los grupos de filas y de columnas. Las celdas de esta área pueden mostrar etiquetas, o puede combinar las celdas y crear un título.  
   
- Para obtener más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41](report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-static-and-dynamic-rows-and-columns"></a>Descripción de las filas y columnas estáticas y dinámicas  
  Una región de datos Tablix organiza las celdas en filas y columnas que están asociadas a grupos. Las estructuras de grupo para los grupos de filas y las columnas son idénticas. Este ejemplo utiliza los grupos de filas, pero puede aplicar los mismos conceptos a grupos de columna.  
@@ -77,7 +77,7 @@ ms.locfileid: "66100629"
   
  La característica Agregar total crea automáticamente una fila fuera del grupo actual en la que mostrar valores cuyo ámbito es el grupo. También puede agregar filas estáticas y dinámicas manualmente. Los indicadores visuales le ayudan a entender qué filas son estáticas y qué filas son dinámicas. Para más información, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Controlar la presentación de la región de datos Tablix en una página de informe &#40;Generador de informes y SSRS&#41;](report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
  [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   

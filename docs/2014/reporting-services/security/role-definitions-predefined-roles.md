@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f9f6eff58d5d9c536dd6c6c9f40d389bab1532e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101790"
 ---
 # <a name="predefined-roles"></a>Roles predefinidos
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se instala junto con roles predefinidos que puede usar para conceder acceso a operaciones del servidor de informes. Cada rol predefinido describe una recopilación de tareas relacionadas. Puede asignar grupos y cuentas de usuario a los roles predefinidos para proporcionar acceso inmediato a las operaciones del servidor de informes.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]instala con roles predefinidos que puede usar para conceder acceso a las operaciones del servidor de informes. Cada rol predefinido describe una recopilación de tareas relacionadas. Puede asignar grupos y cuentas de usuario a los roles predefinidos para proporcionar acceso inmediato a las operaciones del servidor de informes.  
   
 ## <a name="how-to-use-predefined-roles"></a>Cómo usar los roles predefinidos  
   
@@ -30,41 +30,41 @@ ms.locfileid: "66101790"
   
 2.  Identifique qué usuarios y grupos requieren acceso al servidor de informes y en qué nivel. A la mayoría de los usuarios se les debería asignar el rol **Explorador** o el rol **Generador de informes** . A un pequeño número de usuarios se les debería asignar el rol **Publicador** . A el rol **Administrador de contenido**conviene asignar muy pocos usuarios.  
   
-3.  Cuando esté preparado para asignar cuentas de usuario y de grupo a roles concretos, use el Administrador de informes. Para obtener más información, vea [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md)conviene asignar muy pocos usuarios.  
+3.  Cuando esté preparado para asignar cuentas de usuario y de grupo a roles concretos, use el Administrador de informes. Para obtener más información, vea [conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md).  
   
-##  <a name="bkmk_rolelist"></a> Definiciones de roles predefinidos  
+##  <a name="bkmk_rolelist"></a>Definiciones de roles predefinidos  
  Los roles predefinidos se definen de acuerdo con las tareas que admiten. Puede modificar estos roles o reemplazarlos por roles personalizados.  
   
- El*ámbito* define los límites dentro de los cuales se usan los roles. Los roles de nivel de elemento proporcionan diversos niveles de acceso a los elementos del servidor de informes y a las operaciones que afectan a esos elementos. Los roles de nivel de elemento se definen en el nodo raíz (Inicio), así como en todos los elementos de la jerarquía de carpetas del servidor de informes. Los roles de nivel de sistema autorizan el acceso en el nivel de sitio. Los roles de nivel de elemento y de nivel de sistema se excluyen mutuamente, pero se utilizan juntos para proporcionar permisos completos al contenido y a las operaciones del servidor de informes.  
+ El *ámbito* define los límites dentro de los cuales se usan los roles. Los roles de nivel de elemento proporcionan diversos niveles de acceso a los elementos del servidor de informes y a las operaciones que afectan a esos elementos. Los roles de nivel de elemento se definen en el nodo raíz (Inicio), así como en todos los elementos de la jerarquía de carpetas del servidor de informes. Los roles de nivel de sistema autorizan el acceso en el nivel de sitio. Los roles de nivel de elemento y de nivel de sistema se excluyen mutuamente, pero se utilizan juntos para proporcionar permisos completos al contenido y a las operaciones del servidor de informes.  
   
  En la tabla siguiente se describen los roles predefinidos, su ámbito y el modo de usarlos.  
   
-|Rol predefinido|ámbito|Descripción|  
+|Rol predefinido|Ámbito|Descripción|  
 |---------------------|-----------|-----------------|  
-|[Rol Administrador de contenido](#bkmk_content)|Elemento|Incluye todas las tareas de nivel de elemento. Los usuarios que se asignan a este rol tienen permiso total para administrar el contenido del servidor de informes, así como capacidad para conceder permisos a otros usuarios y definir la estructura de carpetas para almacenar informes y otros elementos.|  
-|[Rol Publicador](#bkmk_publisher)|Elemento|Los usuarios que se asignan a este rol pueden agregar elementos a un servidor de informes, así como crear y administrar las carpetas que contienen esos elementos.|  
-|[Rol Explorador](#bkmk_browser)|Elemento|Los usuarios que se asignan a este rol pueden ejecutar informes, suscribirse a informes y navegar por la estructura de carpetas.|  
-|[Rol Generador de informes](#bkmk_reportbuilder)|Elemento|Los usuarios que se asignan a este rol pueden crear y editar informes en el Generador de informes.|  
-|[Rol Mis informes](#bkmk_myreports)|Elemento|Los usuarios que se asignan a este rol pueden administrar un área de trabajo personal para almacenar y utilizar informes y otros elementos.|  
-|[Rol Administrador del sistema](#bkmk_systemadministrator)|Sistema|Los usuarios que se asignan a este rol pueden habilitar características y establecer valores predeterminados, establecer la seguridad de todo el sitio, crear definiciones de roles en Management Studio y administrar trabajos.|  
-|[Rol Usuario del sistema](#bkmk_systemuser)|Sistema|Los usuarios que se asignan a este rol pueden ver información básica sobre el servidor de informes, como la información de programación en una programación compartida.|  
+|[Rol administrador de contenido](#bkmk_content)|Elemento|Incluye todas las tareas de nivel de elemento. Los usuarios que se asignan a este rol tienen permiso total para administrar el contenido del servidor de informes, así como capacidad para conceder permisos a otros usuarios y definir la estructura de carpetas para almacenar informes y otros elementos.|  
+|[Rol de publicador](#bkmk_publisher)|Elemento|Los usuarios que se asignan a este rol pueden agregar elementos a un servidor de informes, así como crear y administrar las carpetas que contienen esos elementos.|  
+|[Rol explorador](#bkmk_browser)|Elemento|Los usuarios que se asignan a este rol pueden ejecutar informes, suscribirse a informes y navegar por la estructura de carpetas.|  
+|[Rol de Generador de informes](#bkmk_reportbuilder)|Elemento|Los usuarios que se asignan a este rol pueden crear y editar informes en el Generador de informes.|  
+|[Rol de Mis informes](#bkmk_myreports)|Elemento|Los usuarios que se asignan a este rol pueden administrar un área de trabajo personal para almacenar y utilizar informes y otros elementos.|  
+|[Rol de administrador del sistema](#bkmk_systemadministrator)|Sistema|Los usuarios que se asignan a este rol pueden habilitar características y establecer valores predeterminados, establecer la seguridad de todo el sitio, crear definiciones de roles en Management Studio y administrar trabajos.|  
+|[Rol de usuario del sistema](#bkmk_systemuser)|Sistema|Los usuarios que se asignan a este rol pueden ver información básica sobre el servidor de informes, como la información de programación en una programación compartida.|  
   
-##  <a name="bkmk_content"></a> Rol Administrador de contenido  
+##  <a name="bkmk_content"></a>Rol administrador de contenido  
  El rol **Administrador de contenido** es un rol predefinido que incluye tareas que le resultarán útiles a un usuario que administre informes y contenido web, pero que no cree necesariamente informes ni administre un servidor web o una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un administrador de contenido implementa informes, administra modelos de informe y conexiones a orígenes de datos, y toma decisiones sobre cómo se utilizan los informes. De manera predeterminada, todas las tareas de nivel de elemento están seleccionadas para la definición del rol **Administrador de contenido** .  
   
  El rol **Administrador de contenido** se suele utilizar con el rol **Administrador del sistema** . En conjunto, las dos definiciones de roles proporcionan un conjunto completo de tareas para los usuarios que necesitan acceso completo a todos los elementos de un servidor de informes. Aunque el rol **Administrador de contenido** proporciona acceso completo a informes, modelos de informes, carpetas y otros elementos dentro de la jerarquía de carpetas, no proporciona acceso a los elementos de nivel de sitio u operaciones. Las tareas como la creación y la administración de programaciones compartidas, el establecimiento de propiedades del servidor y la administración de definiciones de rol son tareas de nivel de sistema incluidas en el rol **Administrador del sistema** . Por esta razón, recomendamos que cree una segunda asignación de rol en el nivel de sitio que proporcione acceso a las programaciones compartidas.  
   
 ### <a name="content-manager-tasks"></a>Tareas del Administrador de contenido  
- La siguiente tabla muestra las tareas que se incluyen en el rol **Administrador de contenido** .  
+ En la tabla siguiente se enumeran las tareas que se incluyen en el rol **Administrador de contenido** .  
   
 |Tarea|Descripción|  
 |----------|-----------------|  
 |Usar informes|Permite leer definiciones de informes.|  
 |Crear informes vinculados|Crear informes vinculados que se basen en un informe no vinculado.|  
 |Administrar todas las suscripciones|Ver, modificar y eliminar cualquier suscripción para informes e informes vinculados, independientemente de quién sea su propietario. Esta tarea también permite crear suscripciones controladas por datos.|  
-|Administrar orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades de un origen de datos.|  
+|Administración de orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades de un origen de datos.|  
 |Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.|  
-|Administrar modelos|Crear, ver y eliminar modelos; ver y modificar propiedades de modelos.|  
+|Administración de modelos|Crear, ver y eliminar modelos; ver y modificar propiedades de modelos.|  
 |Administrar suscripciones individuales|Crear, ver, modificar y eliminar suscripciones de usuarios a informes e informes vinculados.|  
 |Administrar historial de informe|Crear, ver y eliminar el historial del informe, ver propiedades del historial del informe; ver y modificar la configuración que determina los límites del historial de instantáneas y cómo funciona el almacenamiento en caché.|  
 |Administrar informes|Agregue y elimine informes, modifique parámetros de informes, vea y modifique propiedades de informes, vea y modifique orígenes de datos que proporcionen contenido al informe, vea y modifique definiciones de informe y establezca directivas de seguridad de nivel de informe.|  
@@ -81,7 +81,7 @@ ms.locfileid: "66101790"
   
  El rol **Administrador de contenido** se usa en la seguridad predeterminada. Para más información, vea [Using Default Security](role-definitions-predefined-roles.md).  
   
-##  <a name="bkmk_publisher"></a> Rol Publicador  
+##  <a name="bkmk_publisher"></a>Rol Publicador  
  El rol **Publicador** es una definición de rol integrada que incluye tareas que permiten a los usuarios agregar contenido a un servidor de informes. Este rol ya está predefinido para mayor comodidad. Se utiliza en el momento en que se crean asignaciones de roles que la incluyan. Este rol está destinado a usuarios que crean informes o modelos en el Diseñador de informes o en el Diseñador de modelos y, después, publican estos elementos en un servidor de informes.  
   
 > [!CAUTION]  
@@ -92,15 +92,15 @@ ms.locfileid: "66101790"
  Para reducir el riesgo de que los usuarios ejecuten scripts malintencionados sin ser conscientes de ello, limite el número de usuarios que tienen permiso para publicar contenido y asegúrese de que los usuarios publican únicamente documentos e informes que procedan de fuentes de confianza. Si no está seguro de si una definición de informe es segura para su publicación, debe abrir el archivo .rdl en un editor de texto y buscar etiquetas de script. El script malintencionado puede estar oculto en expresiones y direcciones URL (por ejemplo, una dirección URL en una acción de navegación).  
   
 ### <a name="publisher-tasks"></a>Tareas de Publicador  
- La siguiente tabla muestra las tareas que se incluyen en el rol **Publicador** .  
+ En la tabla siguiente se enumeran las tareas que se incluyen en el rol **publicador** .  
   
 |Tarea|Descripción|  
 |----------|-----------------|  
 |Crear informes vinculados|Cree informes vinculados y publíquelos en una carpeta del servidor de informes.|  
-|Administrar orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades de un origen de datos.|  
+|Administración de orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades de un origen de datos.|  
 |Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.|  
 |Administrar informes|Agregue y elimine informes, modifique parámetros de informes, vea y modifique propiedades de informes, vea y modifique orígenes de datos que proporcionen contenido al informe, vea y modifique definiciones de informe.|  
-|Administrar modelos|Cree, vea y elimine modelos de informe; vea y modifique propiedades de modelos de informe.|  
+|Administración de modelos|Cree, vea y elimine modelos de informe; vea y modifique propiedades de modelos de informe.|  
 |Administrar recursos|Cree, modifique y elimine recursos; vea y modifique propiedades de recursos.|  
   
 ### <a name="customizing-the-publisher-role"></a>Personalizar el rol Publicador  
@@ -108,7 +108,7 @@ ms.locfileid: "66101790"
   
  Como mínimo, los usuarios que publican informes desde el Diseñador de informes necesitan la tarea "Administrar informes" para poder agregar un informe al servidor de informes. Si el usuario debe publicar informes que utilicen orígenes de datos compartidos o archivos externos, también debe incluir "Administrar orígenes de datos" y "Administrar recursos". Por otra parte, si el usuario también necesita crear una carpeta como parte del proceso de publicación, debe incluir 'Administrar carpetas'.  
   
-##  <a name="bkmk_browser"></a> Rol Explorador  
+##  <a name="bkmk_browser"></a>Rol explorador  
  El rol **Explorador** es un rol predefinido que incluye tareas útiles para un usuario que vea informes, pero que no los cree ni administre necesariamente. Este rol proporciona capacidades básicas para el uso convencional de un servidor de informes. Sin estas tareas, a los usuarios les puede resultar difícil utilizar un servidor de informes.  
   
  El rol **Explorador** debería utilizarse con el rol **Usuario del sistema** . En conjunto, las dos definiciones de roles proporcionan un conjunto completo de tareas para los usuarios que interactúan con los elementos de un servidor de informes. Aunque el rol **Explorador** proporciona acceso de vista a informes, modelos de informes, carpetas y otros elementos dentro de la jerarquía de carpetas, no proporciona acceso a los elementos de nivel de sitio como programaciones compartidas, que son útiles cuando se crean suscripciones. Por esta razón, recomendamos que cree una segunda asignación de rol en el nivel de sitio que proporcione acceso a las programaciones compartidas.  
@@ -129,7 +129,7 @@ ms.locfileid: "66101790"
   
  Como mínimo, estE rol debe admitir las tareas "Ver informes" y "Ver carpetas" para permitir la visualización y la navegación por carpetas. No debería quitar la tarea "Ver carpetas" a no ser que desee eliminar la navegación por carpetas. Igualmente, no debería quitar la tarea "Ver informes" a no ser que desee impedir que los usuarios los vean. Estos tipos de modificaciones indican la necesidad de una definición de rol personalizada que se aplique selectivamente a un grupo de usuarios específico.  
   
-##  <a name="bkmk_reportbuilder"></a> Rol Generador de informes  
+##  <a name="bkmk_reportbuilder"></a>Rol de Generador de informes  
  El rol **Generador de informes** es un rol predefinido que incluye tareas para cargar informes en el Generador de informes, y para ver la jerarquía de carpetas y navegar por ella. Para crear y modificar informes en el Generador de informes, debe tener también una asignación de roles del sistema que incluya la tarea "Ejecutar definiciones de informe", necesaria para procesar informes localmente en el Generador de informes.  
   
 ### <a name="report-builder-tasks"></a>Tareas del Generador de informes  
@@ -149,19 +149,19 @@ ms.locfileid: "66101790"
   
  La tarea más importante de esta definición de rol es "Usar informes", que permite a un usuario cargar una definición de informe desde el servidor de informes a una instancia local del Generador de informes. Si no desea admitir esta tarea, puede eliminar esta definición de rol y usar el rol **Explorador** para admitir el acceso general al servidor de informes.  
   
-##  <a name="bkmk_myreports"></a> Rol Mis informes  
+##  <a name="bkmk_myreports"></a>Rol de Mis informes  
  El rol **Mis informes** es un rol predefinido que incluye un conjunto de tareas útiles para los usuarios de la característica Mis informes. Esta definición de rol incluye tareas que conceden permisos administrativos a los usuarios sobre la carpeta Mis informes de su propiedad.  
   
  Aunque puede elegir otro rol para utilizarlo con la característica Mis informes, es recomendable que elija uno que se utilice exclusivamente para la seguridad de Mis informes. Para obtener más información, vea [Proteger Mis informes](secure-my-reports.md).  
   
 ### <a name="my-reports-tasks"></a>Tareas de Mis informes  
- En la siguiente tabla se muestran las tareas que se incluyen en el rol **Mis informes** .  
+ En la tabla siguiente se enumeran las tareas que se incluyen en el rol **mis informes** .  
   
 |Tarea|Descripción|  
 |----------|-----------------|  
 |Crear informes vinculados|Cree informes vinculados que se basen en informes almacenados en la carpeta Mis informes del usuario.|  
 |Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.|  
-|Administrar orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades de un origen de datos.|  
+|Administración de orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades de un origen de datos.|  
 |Administrar suscripciones individuales|Cree, vea, modifique y elimine suscripciones para informes e informes vinculados.|  
 |Administrar informes|Agregue y elimine informes, modifique parámetros de informes, vea y modifique propiedades de informes, vea y modifique orígenes de datos que proporcionen contenido al informe, vea y modifique definiciones de informe y establezca directivas de seguridad de nivel de informe.|  
 |Administrar recursos|Cree, modifique y elimine recursos; vea y modifique propiedades de recursos.|  
@@ -175,7 +175,7 @@ ms.locfileid: "66101790"
   
  Aunque la tarea 'Establecer la seguridad de elementos individuales' no forma parte de la definición predeterminada del rol, puede agregar esta tarea al rol **Mis informes** para que los usuarios puedan personalizar la configuración de seguridad de las subcarpetas e informes.  
   
-##  <a name="bkmk_systemadministrator"></a> Rol Administrador del sistema  
+##  <a name="bkmk_systemadministrator"></a>Rol de administrador del sistema  
  El rol **Administrador del sistema** es un rol predefinido que incluye tareas útiles para un administrador de servidor de informes con responsabilidad global sobre el servidor, pero no necesariamente sobre su contenido.  
   
  Para crear una asignación de roles que incluya este rol, utilice la página Configuración del sitio del Administrador de informes o utilice los comandos que aparecen al hacer clic con el botón secundario en el nodo del servidor de informes en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -183,12 +183,12 @@ ms.locfileid: "66101790"
  El rol **Administrador del sistema** no transmite el mismo conjunto completo de permisos que un administrador local puede tener en un equipo. En lugar de ello, el rol **Administrador del sistema** incluye operaciones que se realizan en el nivel de sitio y no en el nivel de elemento. Para los usuarios que requieren acceso tanto a las operaciones de todo el sitio como a los elementos almacenados en el servidor de informes, cree una segunda asignación de roles en la carpeta Inicio que incluya el rol **Administrador de contenido** . En conjunto, las dos definiciones de roles proporcionan un conjunto completo de tareas para los usuarios que necesitan acceso completo a todos los elementos de un servidor de informes.  
   
 ### <a name="system-administrator-tasks"></a>Tareas de Administrador del sistema  
- La siguiente tabla muestra las tareas que se incluyen en el rol **Administrador del sistema** .  
+ En la tabla siguiente se enumeran las tareas que se incluyen en el rol **Administrador del sistema** .  
   
 |Tarea|Descripción|  
 |----------|-----------------|  
 |Ejecutar definiciones de informe|Inicie la ejecución de la definición del informe sin publicarlo en un servidor de informes.|  
-|Administrar trabajos|Vea y cancele trabajos que se estén ejecutando. Para obtener más información, vea [Administrar un proceso en ejecución](../subscriptions/manage-a-running-process.md).|  
+|Trabajos de administración|Vea y cancele trabajos que se estén ejecutando. Para obtener más información, vea [administrar un proceso en ejecución](../subscriptions/manage-a-running-process.md).|  
 |Administrar propiedades del servidor de informes|Vea y modifique propiedades que se apliquen al servidor de informes y a elementos administrados por el servidor de informes.<br /><br /> Esta tarea permite cambiar el nombre del Administrador de informes, habilitar Mis informes y establecer los valores predeterminados del historial del informe.|  
 |Administrar roles|Cree, vea, modifique y elimine definiciones de roles.<br /><br /> Los miembros del rol **Administrador del sistema** pueden utilizar la página Configuración del sitio para administrar roles.|  
 |Administrar programaciones compartidas|Cree, vea, modifique y elimine programaciones compartidas que sirven para ejecutar o actualizar informes.|  
@@ -196,24 +196,24 @@ ms.locfileid: "66101790"
   
  El rol **Administrador del sistema** se utiliza en la seguridad predeterminada. Para más información, vea [Using Default Security](role-definitions-predefined-roles.md).  
   
-##  <a name="bkmk_systemuser"></a> Rol Usuario del sistema  
- El rol **Usuario del sistema** es un rol predefinido que incluye tareas que permiten a los usuarios ver información básica sobre el servidor de informes. También incluye compatibilidad para la carga de un informe en el Generador de informes. El Generador de informes es una aplicación cliente que puede procesar un informe independientemente de un servidor de informes. La tarea "Ejecutar definiciones de informe" está pensada para utilizarse con el Generador de informes. Si no utiliza el Generador de informes, puede quitar esta tarea del rol **Usuario del sistema** . La siguiente tabla muestra las tareas que se incluyen en la definición de roles **Usuario del sistema** .  
+##  <a name="bkmk_systemuser"></a>Rol de usuario del sistema  
+ El rol **Usuario del sistema** es un rol predefinido que incluye tareas que permiten a los usuarios ver información básica sobre el servidor de informes. También incluye compatibilidad para la carga de un informe en el Generador de informes. El Generador de informes es una aplicación cliente que puede procesar un informe independientemente de un servidor de informes. La tarea "Ejecutar definiciones de informe" está pensada para utilizarse con el Generador de informes. Si no utiliza el Generador de informes, puede quitar esta tarea del rol **Usuario del sistema** . En la tabla siguiente se enumeran las tareas que se incluyen en la definición de roles de **usuario del sistema** .  
   
 ### <a name="system-user-tasks"></a>Tareas de Usuario del sistema  
   
 |Tarea|Descripción|  
 |----------|-----------------|  
 |Ejecutar definiciones de informe|Ejecute un informe sin publicarlo en un servidor de informes.|  
-|Ver propiedades del servidor de informes|Vea las propiedades correspondientes al servidor de informes, como el nombre de aplicación, si está habilitado Mis informes y los valores predeterminados del historial del informe.<br /><br /> Si quita esta tarea del rol **Usuario del sistema** , la página Configuración del sitio no estará disponible. Además, el título de la aplicación no aparecerá en la parte superior de todas las páginas. De forma predeterminada, el título para Administrador de informes es "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]".|  
+|Ver propiedades del servidor de informes|Vea las propiedades correspondientes al servidor de informes, como el nombre de aplicación, si está habilitado Mis informes y los valores predeterminados del historial del informe.<br /><br /> Si quita esta tarea del rol **Usuario del sistema** , la página Configuración del sitio no estará disponible. Además, el título de la aplicación no aparecerá en la parte superior de todas las páginas. De forma predeterminada, el título de Administrador de informes es[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]"."|  
 |Ver programaciones compartidas|Vea programaciones compartidas que sirven para ejecutar o actualizar informes.<br /><br /> Si quita esta tarea del rol **Usuario del sistema** , los usuarios no podrán seleccionar programaciones compartidas para usarlas con suscripciones y otras operaciones programadas.|  
   
  El rol **Usuario del sistema** se puede utilizar para complementar la seguridad predeterminada. Puede incluir el rol en nuevas asignaciones de roles que amplíen el acceso al servidor de informes para usuarios de informes. Para obtener más información, consulte [Conceder permisos en un servidor de informes en modo nativo](granting-permissions-on-a-native-mode-report-server.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](grant-user-access-to-a-report-server.md)   
  [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](role-assignments-modify-or-delete.md)   
- [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)   
+ [Conceder permisos en un servidor de informes en modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
  [Tareas y permisos](tasks-and-permissions.md)  
   
   

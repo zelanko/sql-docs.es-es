@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 80215f23b2544a442600a97112f3d0e2650f55e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103965"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurar la memoria disponible para las aplicaciones del servidor de informes
@@ -26,7 +26,8 @@ ms.locfileid: "66103965"
  En este tema se describe la configuración que puede especificar y la manera en la que el servidor responde cuando la presión de memoria se convierte en un factor en las solicitudes de procesamiento.  
   
 ## <a name="memory-management-policies"></a>Directivas de administración de memoria  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] responde a las restricciones de recursos del sistema ajustando la cantidad de memoria que se asigna a aplicaciones concretas y tipos de solicitudes de procesamiento. Entre las aplicaciones que se ejecutan en el servicio del servidor de informes y que están sujetas a la administración de memoria se incluyen:  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] responde a las restricciones de recursos del sistema ajustando la cantidad de memoria que se asigna a aplicaciones concretas y tipos de solicitudes de procesamiento. Entre las aplicaciones que se ejecutan en el servicio del servidor de informes y que están sujetas a la administración de memoria se incluyen:  
   
 -   El Administrador de informes, que es una aplicación front-end web para el servidor de informes.  
   
@@ -40,9 +41,9 @@ ms.locfileid: "66103965"
   
 |Presión de memoria|Respuesta del servidor|  
 |---------------------|---------------------|  
-|Baja|Las solicitudes actuales continúan en proceso. Casi siempre se aceptan las nuevas solicitudes. A las solicitudes que se dirigen a la aplicación de procesamiento de fondo se les proporciona una prioridad menor que a las solicitudes dirigidas al servicio web del servidor de informes.|  
-|Media|Las solicitudes actuales continúan en proceso. Se podrían aceptar las nuevas solicitudes. A las solicitudes que se dirigen a la aplicación de procesamiento de fondo se les proporciona una prioridad menor que a las solicitudes dirigidas al servicio web del servidor de informes. Se reducen las asignaciones de memoria para las tres aplicaciones de servidor, con reducciones relativamente mayores al procesamiento de fondo para liberar más memoria para solicitudes de servicio web.|  
-|Alta|Se reduce aún más la asignación de memoria. Se deniegan las aplicaciones de servidor que solicitan más memoria. Las solicitudes actuales disminuyen y tardan más tiempo en completarse. No se aceptan nuevas solicitudes. El servidor de informes intercambia archivos de datos en memoria al disco.<br /><br /> Si las restricciones de memoria se vuelven graves y no hay ninguna memoria disponible para controlar las nuevas solicitudes, el servidor de informes devolverá un error no disponible de servidor HTTP 503 mientras se completan las solicitudes actuales. En algunos casos, los dominios de aplicación se podrían reciclar para reducir la presión de memoria inmediatamente.|  
+|Bajo|Las solicitudes actuales continúan en proceso. Casi siempre se aceptan las nuevas solicitudes. A las solicitudes que se dirigen a la aplicación de procesamiento de fondo se les proporciona una prioridad menor que a las solicitudes dirigidas al servicio web del servidor de informes.|  
+|Mediano|Las solicitudes actuales continúan en proceso. Se podrían aceptar las nuevas solicitudes. A las solicitudes que se dirigen a la aplicación de procesamiento de fondo se les proporciona una prioridad menor que a las solicitudes dirigidas al servicio web del servidor de informes. Se reducen las asignaciones de memoria para las tres aplicaciones de servidor, con reducciones relativamente mayores al procesamiento de fondo para liberar más memoria para solicitudes de servicio web.|  
+|Alto|Se reduce aún más la asignación de memoria. Se deniegan las aplicaciones de servidor que solicitan más memoria. Las solicitudes actuales disminuyen y tardan más tiempo en completarse. No se aceptan nuevas solicitudes. El servidor de informes intercambia archivos de datos en memoria al disco.<br /><br /> Si las restricciones de memoria se vuelven graves y no hay ninguna memoria disponible para controlar las nuevas solicitudes, el servidor de informes devolverá un error no disponible de servidor HTTP 503 mientras se completan las solicitudes actuales. En algunos casos, los dominios de aplicación se podrían reciclar para reducir la presión de memoria inmediatamente.|  
   
  Aunque no puede personalizar las respuestas del servidor de informes a los diferentes escenarios de presión de memoria, puede especificar la configuración que define los límites que separan las respuestas de presión de memoria alta, media y baja.  
   
@@ -54,9 +55,11 @@ ms.locfileid: "66103965"
 ## <a name="configuration-settings-for-memory-management"></a>Valores de configuración para la administración de memoria  
  Entre los valores de configuración que controlan la asignación de memoria para el servidor de informes se incluyen `WorkingSetMaximum`, `WorkingSetMinimum`, `MemorySafetyMargin` y `MemoryThreshold`.  
   
--   `WorkingSetMaximum` y `WorkingSetMinimum` definen el intervalo de memoria disponible. Puede configurar estos valores para establecer un intervalo de memoria disponible para las aplicaciones del servidor de informes. Esto puede resultar útil si está hospedando varias aplicaciones en el mismo equipo y determina que el servidor de informes está usando una cantidad desproporcionada de recursos del sistema en relación con otras aplicaciones del mismo equipo.  
+-   
+  `WorkingSetMaximum` y `WorkingSetMinimum` definen el intervalo de memoria disponible. Puede configurar estos valores para establecer un intervalo de memoria disponible para las aplicaciones del servidor de informes. Esto puede resultar útil si está hospedando varias aplicaciones en el mismo equipo y determina que el servidor de informes está usando una cantidad desproporcionada de recursos del sistema en relación con otras aplicaciones del mismo equipo.  
   
--   `MemorySafetyMargin` y `MemoryThreshold` establecen los límites para los niveles bajo, medio, y alto de presión de memoria. Para cada estado, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adopta acciones correctoras para asegurarse de que el procesamiento de informe y otras solicitudes se controlan adecuadamente en relación con la cantidad de memoria disponible en el equipo. Puede especificar los valores de configuración que determinan la delineación entre los niveles de presión bajo, alto y medio.  
+-   
+  `MemorySafetyMargin` y `MemoryThreshold` establecen los límites para los niveles bajo, medio, y alto de presión de memoria. Para cada estado, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adopta acciones correctoras para asegurarse de que el procesamiento de informe y otras solicitudes se controlan adecuadamente en relación con la cantidad de memoria disponible en el equipo. Puede especificar los valores de configuración que determinan la delineación entre los niveles de presión bajo, alto y medio.  
   
      Aunque puede cambiar los valores de configuración, al hacerlo no se mejorará el rendimiento del procesamiento de informes. El cambio de los valores de configuración solamente resulta útil si se quitan las solicitudes antes de completarlas. La mejor manera de mejorar el rendimiento del servidor es implementar el servidor de informes o las aplicaciones del servidor de informes individuales en equipos dedicados.  
   
@@ -87,12 +90,13 @@ ms.locfileid: "66103965"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>Acerca de los valores de configuración de memoria de ASP.NET  
- Aunque el servicio web del servidor de informes y el Administrador de informes son aplicaciones de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], ninguna aplicación responde a los valores de configuración de memoria que especifica en la sección `processModel` de machine.config para aplicaciones de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] que se ejecutan en el modo de compatibilidad de IIS 5.0. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] lee solamente los valores de configuración de la memoria del archivo RSReportServer.config.  
+ Aunque el servicio web del servidor de informes y el Administrador de informes son aplicaciones de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], ninguna aplicación responde a los valores de configuración de memoria que especifica en la sección `processModel` de machine.config para aplicaciones de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] que se ejecutan en el modo de compatibilidad de IIS 5.0. 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] lee solamente los valores de configuración de la memoria del archivo RSReportServer.config.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivo de configuración RSReportServer](rsreportserver-config-configuration-file.md)   
  [Archivo de configuración RSReportServer](rsreportserver-config-configuration-file.md)   
- [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md)  
+ [Modifique un archivo de configuración de Reporting Services &#40;RSreportserver. config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Dominios de aplicación para las aplicaciones del servidor de informes](application-domains-for-report-server-applications.md)  
   
   

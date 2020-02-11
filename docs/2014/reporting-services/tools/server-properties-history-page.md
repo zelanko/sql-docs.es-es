@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ce48c964ec756668aa12566c494d9ae9a1e5372
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099574"
 ---
 # <a name="server-properties-history-page"></a>Propiedades del servidor (página Historial)
@@ -26,18 +26,18 @@ ms.locfileid: "66099574"
   
  Las instantáneas del historial de informes están almacenadas en la base de datos del servidor de informes. Si mantiene un número ilimitado de instantáneas, asegúrese de comprobar periódicamente el tamaño de la base de datos para asegurarse de que no crece demasiado rápido ni consume demasiado espacio en disco.  
   
- Para abrir esta página, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a una instancia del servidor de informes, haga clic con el botón secundario en el nombre del servidor de informes y seleccione **Propiedades**. Haga clic en **Historial** para abrir esta página.  
+ Para abrir esta página, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a una instancia del servidor de informes, haga clic con el botón derecho en el nombre del servidor de informes y seleccione **Propiedades**. Haga clic en **Historial** para abrir esta página.  
   
 ## <a name="options"></a>Opciones  
- **Conservar un número ilimitado de instantáneas en el historial de informe**  
+ **Conservar un número ilimitado de instantáneas en el historial de informes**  
  Conserve todas las instantáneas del historial de informes. Para reducir el tamaño del historial de informe, debe eliminar las instantáneas manualmente.  
   
- **Limitar las copias del historial de informe**  
+ **Limitar las copias del historial del informe**  
  Conserve un número fijo de instantáneas del historial de informes. Cuando se alcanza el límite, las copias más antiguas se eliminan del historial de informe para dejar sitio para las nuevas.  
   
  Si posteriormente limita el historial del informe, cuando el historial del informe existente exceda el límite especificado, el servidor de informes lo reducirá según el nuevo límite. Las instantáneas de informe más antiguas son las que se eliminan primero. Si el historial del informe está vacío o por debajo del límite, se agregan nuevas instantáneas de informe. Cuando se alcanza el límite, se elimina la instantánea del informe más antigua cuando se agrega una nueva.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
  [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Servidor de informes en Management Studio (Ayuda F1)](report-server-in-management-studio-f1-help.md)  

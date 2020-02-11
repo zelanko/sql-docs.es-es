@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099785"
 ---
 # <a name="schedule-properties-reports-page"></a>Propiedades de la programación (página Informes)
@@ -33,14 +33,14 @@ ms.locfileid: "66099785"
  **Carpeta**  
  Especifica la ruta de acceso del informe.  
   
- **Informe**  
+ **Report**  
  Especifica el nombre del informe que utiliza la programación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear, modificar y eliminar programaciones](../subscriptions/create-modify-and-delete-schedules.md)   
  [Programaciones](../subscriptions/schedules.md)   
  [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)   
  [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Configurar las propiedades generales de un informe &#40;el Administrador de informes&#41;](../configure-general-properties-for-a-report-report-manager.md)  
+ [Configurar las propiedades generales de un informe &#40;Administrador de informes&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   
   

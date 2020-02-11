@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c6599a087efa16a1fa83a37e1a26b362b971cbc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096455"
 ---
 # <a name="cluster-resource-group"></a>Grupo de recursos de clúster
@@ -29,7 +29,7 @@ ms.locfileid: "66096455"
   
 -   Escriba el nombre del grupo que desea crear. Tenga en cuenta que el nombre "Available storage" no es un nombre de grupo válido.  
   
-## <a name="see-also"></a>Vea también  
- [Cómo: Crear un nuevo clúster de conmutación por error SQL Server](https://go.microsoft.com/fwlink/?LinkId=190960)  
+## <a name="see-also"></a>Consulte también  
+ [Crear un nuevo clúster de conmutación por error de SQL Server](https://go.microsoft.com/fwlink/?LinkId=190960)  
   
   

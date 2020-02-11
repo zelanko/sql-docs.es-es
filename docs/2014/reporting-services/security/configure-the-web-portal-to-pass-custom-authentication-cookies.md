@@ -1,5 +1,5 @@
 ---
-title: Configurar el Administrador de informes para pasar Cookies de autenticación personalizada | Microsoft Docs
+title: Configurar Administrador de informes para pasar cookies de autenticación personalizadas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 34f637ee2d0a8235f21167df78178c4de9292c8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102048"
 ---
 # <a name="configure-report-manager-to-pass-custom-authentication-cookies"></a>Configurar el Administrador de informes para pasar cookies de autenticación personalizada
   Si está utilizando una extensión de autenticación personalizada, debe configurar el Administrador de informes para transmitir cookies de autenticación personalizada. De lo contrario, el Administrador de informes solamente transmitirá cookies por medio de solicitudes HTTP específicas del servidor de informes. Si desea transmitir cookies adicionales, debe modificar el archivo RSReportServer.Config.  
   
 ## <a name="modifying-the-rsreportserverconfig-file"></a>Modificar el archivo RSReportServer.Config  
- Puede permitir que el Administrador de informes para transmitir cookies adicionales mediante el servidor de informes si agrega un <`PassThroughCookies`> elemento a los valores de configuración del Administrador de informes en el archivo RSReportServer.config. La transmisión de cookies adicionales resulta útil en una solución de autenticación de inicio de sesión único que requiera no solo las cookies de autenticación del servidor de informes, sino también cookies de un sistema de autenticación de otro proveedor.  
+ Puede habilitar Administrador de informes para transmitir cookies adicionales a través del servidor de informes agregando un `PassThroughCookies` elemento <> a las opciones de configuración de administrador de informes en el archivo Rsreportserver. config. La transmisión de cookies adicionales resulta útil en una solución de autenticación de inicio de sesión único que requiera no solo las cookies de autenticación del servidor de informes, sino también cookies de un sistema de autenticación de otro proveedor.  
   
  Para permitir que se transmitan cookies adicionales mediante solicitudes HTTP al usar el Administrador de informes, configure los elementos siguientes en el archivo RSReportServer.config:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66102048"
 </UI>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Autenticación con el servidor de informes](authentication-with-the-report-server.md)   
  [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  [Información general de extensiones de seguridad](../extensions/security-extension/security-extensions-overview.md)   

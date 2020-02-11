@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094289"
 ---
 # <a name="installation-type"></a>Tipo de instalación
@@ -29,8 +29,8 @@ ms.locfileid: "66094289"
   
      Si selecciona la opción para agregar características a una instancia existente, use la lista desplegable para elegir la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea actualizar.  
   
- Solo se pueden agregar las características admitidas de SysPrep -[!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-para una imagen preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Otras características que no admita SysPrep se pueden agregar después de que se haya completado la instancia preparada.  
+ Solo puede Agregar las características admitidas de SysPrep[!INCLUDE[ssDE](../../includes/ssde-md.md)] ( [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y) a una imagen preparada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Otras características que no admita SysPrep se pueden agregar después de que se haya completado la instancia preparada.  
   
- **Nota** No puede agregar características a una instancia en clúster de conmutación por error una vez instalada. Para agregar características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un clúster de conmutación por error existente, debe realizar una nueva instalación para instalar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **Nota:** No se pueden agregar características a una instancia de clúster de conmutación por error una vez instalada. Para agregar características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un clúster de conmutación por error existente, debe realizar una nueva instalación para instalar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

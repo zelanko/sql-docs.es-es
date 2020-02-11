@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101963"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>Modificar o eliminar una asignación de roles (Administrador de informes)
@@ -62,10 +62,10 @@ ms.locfileid: "66101963"
   
 6.  Para eliminar una asignación de rol, active la casilla situada junto al nombre de usuario o grupo y, a continuación, haga clic en **Eliminar**.  
   
-## <a name="see-also"></a>Vea también  
- (crear-y-administrar-rol-assignments.md)   
+## <a name="see-also"></a>Consulte también  
+ (create-and-manage-role-assignments.md)   
  [Asignaciones de roles](role-assignments.md)   
- [Página Configuración del sitio &#40;Administrador de informes&#41;](../site-settings-page-report-manager.md)   
- [Nueva asignación de roles de sistema: Editar página de asignaciones de roles de sistema &#40;el Administrador de informes&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [&#40;Administrador de informes página Configuración del sitio&#41;](../site-settings-page-report-manager.md)   
+ [Nuevas asignaciones de roles del sistema: página Editar asignaciones de roles del sistema &#40;Administrador de informes&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

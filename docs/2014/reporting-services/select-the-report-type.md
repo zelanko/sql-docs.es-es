@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bcb4a2b4a542409e34eddac45b446cbff15c2821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101426"
 ---
 # <a name="select-the-report-type"></a>Seleccionar el tipo de informe
@@ -28,12 +28,12 @@ ms.locfileid: "66101426"
   
  Las páginas siguientes del asistente proporcionan opciones para definir la tabla.  
   
- **Matriz**  
+ **Matrix**  
  Cree un informe que contiene una matriz. Una matriz es una región de datos donde los datos se organizan en columnas y filas. Las matrices ofrecen funcionalidad similar a la de las tablas de referencias cruzadas (crosstab) y las tablas dinámicas. A diferencia de las tablas, que contienen un conjunto estático de columnas, las columnas de las matrices pueden ser dinámicas.  
   
  Las páginas siguientes del asistente proporcionan opciones para definir la matriz.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tablas &#40;Generador de informes y SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Generador de informes y SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [Ayuda del Asistente para informes](../../2014/reporting-services/report-wizard-help.md)  

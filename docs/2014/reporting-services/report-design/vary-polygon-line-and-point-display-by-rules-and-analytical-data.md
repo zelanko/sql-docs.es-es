@@ -1,5 +1,5 @@
 ---
-title: Variar polígono, línea, presentación y puntos usando reglas y datos analíticos (generador de informes y SSRS) | Microsoft Docs
+title: Variar la presentación de polígonos, líneas y puntos mediante reglas y datos analíticos (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 17739424bd8963e5b84bf430f84027829366c940
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104619"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos (Generador de informes y SSRS)
@@ -100,7 +100,7 @@ ms.locfileid: "66104619"
 ##  <a name="Distribution"></a> Descripción de las opciones de distribución  
  Para crear una distribución de valores, puede dividir los datos en intervalos. Especifique el tipo de distribución, el número de subintervalos y los valores mínimo y máximo del intervalo.  
   
- En la lista siguiente, suponga que tiene tres elementos de mapa y seis valores analíticos relacionados que estar comprendido entre 1 y 9999 con los siguientes valores: 1, 10, 200, 2000, 4777, 8999.  
+ En la lista siguiente, suponga que tiene tres elementos de mapa y seis valores analíticos relacionados que van de 1 a 9999 con los valores siguientes: 1, 10, 200, 2000, 4777 y 8999.  
   
 -   **EqualInterval** . Cree intervalos que dividan los datos en intervalos de rangos iguales. En el ejemplo, los tres intervalos serían 0-2999, 3000-5999, 6000-8999. Subintervalo 1: 1, 10, 200, 500. Subintervalo 2: 4777. Subintervalo 3: 8999. Este método no tiene en cuenta cómo se distribuyen los datos. Los valores muy grandes o muy pequeños pueden sesgar los resultados de la distribución.  
   
@@ -108,14 +108,14 @@ ms.locfileid: "66104619"
   
 -   **Óptimo** . Cree intervalos que ajusten automáticamente la distribución para crear subintervalos equilibrados. El algoritmo determina el número de subintervalos.  
   
--   **Personalizado.** Especifique su propio número de intervalos para controlar la distribución de valores. Para los datos de ejemplo, puede especificar intervalos de 3: 1-2, 3-8, 9.  
+-   **Personalizado.** Especifique su propio número de intervalos para controlar la distribución de valores. En los datos de ejemplo, puede especificar tres intervalos: 1-2, 3-8, 9.  
   
  Las reglas utilizan los valores de distribución para variar los valores de presentación de los elementos de mapa.  
   
 ##  <a name="Legends"></a> Descripción de las leyendas y sus elementos  
  Las reglas que se especifican para cada capa crean automáticamente los elementos de leyenda. Las opciones de regla controlan cuántos elementos se crean y en qué leyenda aparecen. De forma predeterminada, todos los elementos de todas las reglas se agregan a la primera leyenda. Para retirar los elementos de la primera leyenda, cree tantas leyendas adicionales como sean necesarias y, para cada regla, especifique la leyenda que se utilizará para mostrar los elementos que sean resultado de la regla. Para ocultar los elementos en función de una regla, especifique un nombre de leyenda en blanco.  
   
- Para controlar dónde aparece una leyenda, utilice el cuadro de diálogo Propiedades de la leyenda a fin de especificar una posición en relación a la ventanilla del mapa. Para más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
+ Para controlar dónde aparece una leyenda, utilice el cuadro de diálogo Propiedades de la leyenda a fin de especificar una posición en relación a la ventanilla del mapa. Para obtener más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
  Las leyendas se expanden automáticamente para mostrar el título o el texto. Para dar formato al texto de los elementos de leyenda, use palabras clave y formatos personalizados de leyenda de mapa. Para obtener más información, vea [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
@@ -128,7 +128,7 @@ ms.locfileid: "66104619"
 |`#TOVALUE`|Muestra el valor numérico real del campo de datos.|10000|  
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Muestra los valores numéricos reales del principio y el fin del intervalo.|10 - 790|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

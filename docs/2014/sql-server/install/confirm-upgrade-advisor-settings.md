@@ -17,27 +17,27 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2384dd7c53c95d460cb1b749472abb2c9010f2c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096068"
 ---
 # <a name="confirm-upgrade-advisor-settings"></a>Confirmar la configuración del Asesor de actualizaciones
-  En esta página, puede revisar las opciones y los parámetros del Asistente para análisis del Asesor de actualizaciones que ha especificado. Después de revisar las opciones y parámetros, haga clic en **ejecutar** para iniciar el análisis.  
+  En esta página, puede revisar las opciones y los parámetros del Asistente para análisis del Asesor de actualizaciones que ha especificado. Después de revisar las opciones y los parámetros, haga clic en **Ejecutar** para iniciar el análisis.  
   
 ## <a name="options"></a>Opciones  
- **Asistente para la configuración de actualización**  
+ **Configuración del Asesor de actualizaciones**  
  Puede revisar toda la información y los parámetros que seleccionó para cada componente, así como los parámetros que se aplican a lo largo de todo el Asesor de actualizaciones. A continuación se muestra una lista con las opciones para la generación de informes, incluido el directorio de salida.  
   
  **Enviar informes a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Estos informes pueden contener información personal.**  
- Al seleccionar esta opción envía su análisis a la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] team. Esta información se utilizará para mejorar las futuras versiones.  
+ Al seleccionar esta opción se envía el análisis al [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equipo. Esta información se utilizará para mejorar las futuras versiones.  
   
  **Ver la declaración de privacidad.**  
  Haga clic en este vínculo para leer la Directiva de privacidad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en Internet.  
   
-## <a name="see-also"></a>Vea también  
- [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Actualización del Asistente para la referencia de la interfaz de usuario](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
+## <a name="see-also"></a>Consulte también  
+ [Trabajar con el asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [Referencia de la interfaz de usuario del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

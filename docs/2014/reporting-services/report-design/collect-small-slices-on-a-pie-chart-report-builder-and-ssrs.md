@@ -11,22 +11,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 517f5c5dddd809ee71037a95d04109a005968132
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106222"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Recopilar segmentos pequeños en un gráfico circular (Generador de informes y SSRS)
   Si los gráficos circulares muestran demasiados puntos de datos, pueden parecer desordenados. Para resolver este problema, puede mostrar como un único sector en el gráfico circular todos los datos que estén por debajo de un determinado valor.  
   
- Para recopilar sectores pequeños en un solo sector, en primer lugar debe decidir si el umbral de recopilación de sectores pequeños será un porcentaje del gráfico circular o un valor fijo. A continuación, establezca las propiedades CollectedThreshold y CollectedThresholdUsePercent. Establezca la propiedad CollectedThreshold como el porcentaje del gráfico de un valor que debe quedarse por debajo para que se realice la recopilación o el valor de datos del umbral real de la colección. Establezca la propiedad CollectedThresholdUsePercent en `True` para usar un porcentaje o `False` para usar un valor real.  
+ Para recopilar sectores pequeños en un solo sector, en primer lugar debe decidir si el umbral de recopilación de sectores pequeños será un porcentaje del gráfico circular o un valor fijo. A continuación, establezca las propiedades CollectedThreshold y CollectedThresholdUsePercent. Establezca la propiedad CollectedThreshold como el porcentaje del gráfico de un valor que debe quedarse por debajo para que se realice la recopilación o el valor de datos del umbral real de la colección. Establezca la propiedad CollectedThresholdUsePercent en `True` para utilizar un porcentaje o `False` para usar un valor real.  
   
  También puede recopilar sectores pequeños en un segundo gráfico circular al que se llamará desde un sector recopilado del primer gráfico circular. El segundo gráfico circular se dibuja a la derecha del gráfico circular original.  
   
  En los gráficos de embudo y en los piramidales, no es posible combinar varios sectores en uno solo.  
   
- Un ejemplo de este gráfico está disponible como informe de ejemplo. Para más información acerca de cómo descargar este y otros informes de ejemplo, consulte el tema sobre [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][informes de ejemplo del Generador de informes y el Diseñador de informes](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Un ejemplo de este gráfico está disponible como informe de ejemplo. Para obtener más información acerca de cómo descargar este informe de ejemplo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]y otros, vea [generador de informes y diseñador de informes informes de ejemplo](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 ### <a name="to-collect-small-slices-into-a-single-slice-on-a-pie-chart"></a>Para recopilar sectores pequeños en un solo sector de un gráfico circular  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66106222"
          Establezca la propiedad CollectedThreshold en **10**.  
   
         > [!NOTE]  
-        >  Si establece CollectedStyle en **SingleSlice**, CollectedThreshold en un valor mayor que **100**, y CollectedThresholdUsePercent es `True`, el gráfico iniciará una excepción porque no es posible calcular un porcentaje. Para resolver este problema, establezca CollectedThreshold en un valor menor que **100**.  
+        >  Si establece CollectedStyle en **SingleSlice**, CollectedThreshold en un valor mayor que **100**y CollectedThresholdUsePercent es `True`, el gráfico producirá una excepción porque no puede calcular un porcentaje. Para resolver este problema, establezca CollectedThreshold en un valor menor que **100**.  
   
     -   **Por valor de datos.** Por ejemplo, para recopilar en un solo sector cualquier sector del gráfico circular que esté por debajo de 5000:  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66106222"
   
 2.  Establezca la propiedad CollectedStyle en **CollectedPie**.  
   
-3.  Establezca la propiedad CollectedThreshold en un valor que represente el umbral de recopilación de los sectores pequeños en un solo sector. Cuando se establece la propiedad CollectedStyle en **CollectedPie**, la propiedad Collectedthresholdusepercent siempre se establece en `True`, y el umbral de recopilación siempre se mide como porcentaje.  
+3.  Establezca la propiedad CollectedThreshold en un valor que represente el umbral de recopilación de los sectores pequeños en un solo sector. Cuando la propiedad CollectedStyle se establece en **CollectedPie**, CollectedThresholdUsePercentproperty siempre se establece `True`en y el umbral recopilado siempre se mide en porcentaje.  
   
 4.  (Opcional) Establezca las propiedades CollectedColor, CollectedLabel, CollectedLegendText y CollectedToolTip. El resto de las propiedades denominadas "Collected" no se aplican al gráfico circular recopilado.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66106222"
 > [!NOTE]  
 >  No puede dar formato al gráfico circular secundario. Por esta razón, a la hora de recopilar sectores del gráfico circular se recomienda el uso del primer enfoque.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Gráficos circulares &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Mostrar las etiquetas de los puntos de datos fuera de un gráfico circular &#40;Generador de informes y SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

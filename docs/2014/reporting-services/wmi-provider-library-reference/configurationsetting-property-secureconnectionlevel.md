@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5d1b3bccc8a7fee3899fa21208d83a718a33f5fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097556"
 ---
-# <a name="secureconnectionlevel-property-wmi-msreportserverconfigurationsetting"></a>Propiedad SecureConnectionLevel (WMI MSReportServer_ConfigurationSetting)
+# <a name="secureconnectionlevel-property-wmi-msreportserver_configurationsetting"></a>Propiedad SecureConnectionLevel (WMI MSReportServer_ConfigurationSetting)
   Devuelve el nivel de conexión segura especificado en el archivo RSReportServer.config. Solo lectura.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,15 +39,15 @@ public Integer SecureConnectionLevel;
 ```  
   
 ## <a name="property-values"></a>Valores de propiedad  
- Un `Integer` valor que representa el nivel de conexión segura. Los valores devueltos indican que el SSL está configurado o no. Un valor mayor o igual que 1 indica que SSL está activado. El valor 0 indica que SSL está desactivado.  
+ `Integer` Valor que representa el nivel de conexión segura. Los valores devueltos indican que el SSL está configurado o no. Un valor mayor o igual que 1 indica que SSL está activado. El valor 0 indica que SSL está desactivado.  
   
 ## <a name="example-code"></a>Código de ejemplo  
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

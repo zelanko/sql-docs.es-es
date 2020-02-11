@@ -10,10 +10,10 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 46ca0fe453548cab780d1e2b32c6a8d98a32de11
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251765"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
@@ -96,16 +96,16 @@ ms.locfileid: "75251765"
   
  Al exportar datos limpios en la página **Exportar** en el asistente para el proyecto de calidad de datos, se especifica si desea que los datos limpios se exporten en el formato estandarizado; para ello, se activa la casilla **Estandarizar salida** . De forma predeterminada, los datos limpios se exportan en el formato estandarizado, es decir, la casilla está activada. Para más información sobre cómo exportar los datos limpios, vea [Limpiar datos mediante el conocimiento de DQS &#40;interno&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md).  
   
-##  <a name="Related"></a>Tareas relacionadas  
+##  <a name="Related"></a> Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Describe cómo configurar los umbrales para la actividad de limpieza.|[Configurar los valores de umbral para la limpieza y la búsqueda de coincidencias](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|Describe cómo configurar los umbrales para la actividad de limpieza.|[Configurar los valores de umbral para la limpieza y coincidencia](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |Describe cómo limpiar los datos mediante conocimiento generado en DQS.|[Limpiar datos mediante el conocimiento de&#41; interno de DQS &#40;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
 |Describe cómo limpiar datos con conocimiento desde un servicio de datos de referencia.|[Limpiar datos con datos de referencia &#40;información de&#41; externa](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Describe cómo limpiar un dominio compuesto.|[Limpiar datos en un dominio compuesto](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Proyectos de calidad de datos &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Coincidencia de datos](../data-quality-services/data-matching.md)  
   

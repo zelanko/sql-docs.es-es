@@ -20,13 +20,13 @@ ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6215824f230001cb9d7add20d32c85780a65ede6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098815"
 ---
-# <a name="triggernestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
+# <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve el número de desencadenadores que se han ejecutado para la instrucción que ha activado el desencadenador. TRIGGER_NESTLEVEL se utiliza en desencadenadores DML y DDL para determinar el nivel actual de anidamiento.  
@@ -50,7 +50,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
  **'** *trigger_event_category* **'**  
  Especifica si se aplica TRIGGER_NESTLEVEL a desencadenadores DML o DDL. Especifique **DML** para desencadenadores DML. Especifique **DDL** para desencadenadores DDL. Si se especifica *trigger_event_category*, *trigger_type* también debe especificarse. Tenga en cuenta que solo se puede especificar **AFTER** con **DDL**, ya que los desencadenadores DDL solo pueden ser desencadenadores AFTER.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Cuando no se especifica ningún parámetro, TRIGGER_NESTLEVEL devuelve el número total de desencadenadores de la pila de llamadas. Esto incluye el propio desencadenador. La omisión de los parámetros puede darse cuando un desencadenador ejecuta comandos que causan la activación de otro desencadenador o de una serie de desencadenadores.  
   
  Para devolver el número total de desencadenadores en la pila de llamadas para un tipo de desencadenador y una categoría de eventos determinados, especifique *object_id* = 0.  

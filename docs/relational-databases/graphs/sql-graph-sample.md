@@ -1,6 +1,6 @@
 ---
-title: Ejemplo de base de datos SQL Graph | Microsoft Docs
-description: Un ejemplo rápido que le ayudarán a empezar a trabajar con la nueva sintaxis que se introdujo en la base de datos SQL graph.
+title: Ejemplo de base de datos de SQL Graph | Microsoft Docs
+description: Un ejemplo rápido que le ayudará a empezar a trabajar con la nueva sintaxis introducida en la base de datos de SQL Graph.
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,24 +16,24 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68035871"
 ---
-# <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Crear una base de datos del gráfico y ejecutar algunas consultas mediante Transact-SQL de coincidencia de patrones
+# <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Crear una base de datos de grafos y ejecutar algunas consultas de coincidencia de patrones mediante T-SQL
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Este ejemplo proporciona un [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script para crear una base de datos de gráfico con los nodos y bordes y, a continuación, usar la nueva cláusula de coincidencia para algunos patrones de coincidencia y desplazarse por el gráfico. Este script de ejemplo funcionará en ambas bases de datos SQL Azure y [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+En este ejemplo se [!INCLUDE[tsql-md](../../includes/tsql-md.md)] proporciona un script para crear una base de datos de grafos con nodos y bordes y, a continuación, usar la nueva cláusula Match para que coincida con algunos patrones y recorrer el gráfico. Este script de ejemplo funcionará en Azure SQL Database y[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>Esquema de ejemplo
 
-Este ejemplo crea un esquema de gráfico, tal como se ha explicado en la figura 1, para una red social hipotética que tiene nodos de personas, restaurantes y ciudad. Estos nodos están conectados entre sí mediante sus amigos, me gusta, bordes LivesIn y LocatedIn.
+En este ejemplo se crea un esquema de gráfico, como se muestra en la figura 1, para una red social hipotética que tiene los nodos People, restaurante y City. Estos nodos se conectan entre sí mediante el uso de amigos, me gusta, viven y se encuentran en los bordes.
 
-![las tablas Person-ciudades-restaurantes](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "ejemplo de base de datos de Sql graph")  
-Figura 1: Esquema de ejemplo con restaurante, ciudad, nodos de la persona y LivesIn, LocatedIn, bordes "Me gusta".
+![persona-ciudades-restaurantes-tablas](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Ejemplo de base de datos de SQL Graph")  
+Figura 1: esquema de ejemplo con los nodos restaurante, ciudad, persona y vive, ubicado, me gustan los bordes.
 
 ## <a name="sample-script"></a>Script de ejemplo
 
@@ -141,8 +141,8 @@ FROM Person, likes, Restaurant, livesIn, City, locatedIn
 WHERE MATCH (Person-(likes)->Restaurant-(locatedIn)->City AND Person-(livesIn)->City);
 ```
 
-## <a name="clean-up"></a>Limpiar  
-Limpiar el esquema y la base de datos creada para el ejemplo.
+## <a name="clean-up"></a>Limpieza  
+Limpie el esquema y la base de datos creados para el ejemplo.
 
 ```
 USE graphdemo;
@@ -163,10 +163,10 @@ go
 ```
 
 ## <a name="script-explanation"></a>Explicación del script  
-Este script usa la nueva sintaxis de Transact-SQL para crear tablas perimetrales y de nodo. Se muestra cómo insertar datos en tablas perimetrales y de nodo mediante `INSERT` instrucción y también se muestra cómo usar `MATCH` cláusula de coincidencia de patrones y la navegación.
+Este script usa la nueva sintaxis de T-SQL para crear tablas de nodos y perimetrales. Muestra cómo insertar datos en tablas de nodo y perimetrales `INSERT` mediante la instrucción y también muestra cómo `MATCH` utilizar la cláusula para la búsqueda y la coincidencia de patrones.
 
-|Comando    |Notas
+|Get-Help    |Notas
 |---  |---  |
-|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Crear tabla de nodo o borde de gráfico  |
-|[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Insertar en una tabla de nodo o perimetral  |
-|[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |Usar a MATCH para coincidir con un patrón o desplazarse por el gráfico  |
+|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Crear nodo de gráfico o tabla perimetral  |
+|[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Insertar en un nodo o una tabla perimetral  |
+|[COINCIDENCIA &#40;&#41;de Transact-SQL](../../t-sql/queries/match-sql-graph.md)  |Usar MATCH para que coincida con un patrón o atravesar el gráfico  |

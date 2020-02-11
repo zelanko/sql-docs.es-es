@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196466"
 ---
 # <a name="delete-user-defined-functions"></a>Eliminar funciones definidas por el usuario
@@ -47,7 +47,7 @@ ms.locfileid: "68196466"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en el esquema al que pertenece la función o el permiso CONTROL en la función.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-delete-a-user-defined-function"></a>Para eliminar un perfil definido por la función  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68196466"
 5.  En el cuadro de diálogo **Eliminar objeto** , haga clic en **Aceptar**.  
   
     > [!IMPORTANT]  
-    >  Haga clic en **Mostrar dependencias** en el cuadro de diálogo **Eliminar objeto** para abrir el cuadro de diálogo **Dependencias de _nombre_función_** . De este modo, mostrará todos los objetos que dependen de la función y todos los objetos de los que la función depende.  
+    >  Haga clic en **Mostrar dependencias** en el cuadro de diálogo **eliminar objeto** para abrir el cuadro de diálogo**dependencias** _function_name_. De este modo, mostrará todos los objetos que dependen de la función y todos los objetos de los que la función depende.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

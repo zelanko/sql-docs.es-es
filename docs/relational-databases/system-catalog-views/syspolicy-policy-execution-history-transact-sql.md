@@ -18,34 +18,34 @@ ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dc0b47ce2723215d03886f7dfc5dab3f121e617
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68121113"
 ---
-# <a name="syspolicypolicyexecutionhistory-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
+# <a name="syspolicy_policy_execution_history-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra el momento en que se ejecutaron las directivas, el resultado de cada ejecución y detalles sobre errores, si se produjo alguno. En la tabla siguiente se describen las columnas de la vista de syspolicy_policy_execution_history.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|history_id|**bigint**|Identificador de este registro. Cada registro indica una directiva y el momento en que se inició.|  
+|history_id|**BIGINT**|Identificador de este registro. Cada registro indica una directiva y el momento en que se inició.|  
 |policy_id|**int**|Identificador de la directiva.|  
 |start_date|**datetime**|Fecha y hora en que intentó ejecutarse esta directiva.|  
 |end_date|**datetime**|Momento en que terminó de ejecutarse esta directiva.|  
-|resultado|**bit**|Corrección o error de la directiva. 0 = error, 1 = correcto.|  
+|result|**bit**|Corrección o error de la directiva. 0 = error, 1 = correcto.|  
 |exception_message|**nvarchar(max)**|Mensaje generado por la excepción, si se produjo alguna.|  
 |excepción|**nvarchar(max)**|Descripción de la excepción, si se produjo alguna.|  
   
-## <a name="remarks"></a>Comentarios  
- El [syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md) vista contiene los detalles relacionados sobre los objetivos de la directiva y las expresiones de condición probadas.  
+## <a name="remarks"></a>Observaciones  
+ La vista [syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md) contiene información relacionada con los destinos de la Directiva y las expresiones de condición probadas.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

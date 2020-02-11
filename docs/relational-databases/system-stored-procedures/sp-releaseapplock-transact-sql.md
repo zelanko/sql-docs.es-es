@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075627"
 ---
-# <a name="spreleaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
+# <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Libera un bloqueo en un recurso de aplicación.  
@@ -43,24 +43,24 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @Resource=] '*resource_name*'  
- Es un nombre de recurso de bloqueo especificado por la aplicación cliente. La aplicación debe garantizar que el recurso es único. El nombre especificado se convierte internamente mediante un algoritmo hash en un valor que puede almacenarse en el administrador de bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* es **nvarchar (255)** no tiene ningún valor predeterminado. *resource_name* es en comparación, el binario, por tanto, distingue mayúsculas de minúsculas, independientemente de la configuración de intercalación de la base de datos actual.  
+ [ @Resource= ] '*resource_name*'  
+ Es un nombre de recurso de bloqueo especificado por la aplicación cliente. La aplicación debe garantizar que el recurso es único. El nombre especificado se convierte internamente mediante un algoritmo hash en un valor que puede almacenarse en el administrador de bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado. *resource_name* se comparan con binarios, por lo que distingue mayúsculas de minúsculas, independientemente de la configuración de intercalación de la base de datos actual.  
   
- [ @LockOwner=] '*lock_owner*'  
- Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)** . El valor puede ser **Transaction** (predeterminado) o **Session**. Cuando el *lock_owner* valor es **transacciones**, de manera predeterminada o especificándolo explícitamente, sp_getapplock debe ejecutarse desde dentro de una transacción.  
+ [ @LockOwner= ] '*lock_owner*'  
+ Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar (32)**. El valor puede ser **Transaction** (predeterminado) o **Session**. Cuando el valor de *lock_owner* es **Transaction**, de forma predeterminada o se especifica explícitamente, sp_getapplock debe ejecutarse desde una transacción.  
   
- [ @DbPrincipal=] '*database_principal*'  
- Es el usuario, el rol o el rol de aplicación que tiene permisos para un objeto de una base de datos. El autor de la llamada de la función debe ser miembro de *database_principal*, de dbo o del rol fijo de base de datos db_owner para poder llamar a la función correctamente. El valor predeterminado es public.  
+ [ @DbPrincipal= ] '*database_principal*'  
+ Es el usuario, el rol o el rol de aplicación que tiene permisos para un objeto de una base de datos. El autor de la llamada de la función debe ser miembro de *database_principal*, DBO o el rol fijo de base de datos db_owner para poder llamar a la función correctamente. El valor predeterminado es public.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  \>= 0 (correcto) o < 0 (error)  
   
-|Valor|Resultado|  
+|Value|Resultado|  
 |-----------|------------|  
 |0|El bloqueo se ha liberado correctamente.|  
 |-999|Indica un error de validación de parámetros u otro error de llamada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si una aplicación llama a sp_getapplock varias veces para el mismo recurso de bloqueo, es necesario llamar a sp_releaseapplock el mismo número de veces para liberar el bloqueo.  
   
  Los bloqueos se liberan si el servidor se cierra por cualquier razón.  
@@ -80,9 +80,9 @@ EXEC sp_releaseapplock @DbPrincipal = 'dbo', @Resource = 'Form1';
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [APPLOCK_MODE &#40;&#41;de Transact-SQL](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;&#41;de Transact-SQL](../../t-sql/functions/applock-test-transact-sql.md)   
+ [sp_getapplock &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
   

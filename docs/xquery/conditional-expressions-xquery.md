@@ -20,16 +20,16 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039009"
 ---
 # <a name="conditional-expressions-xquery"></a>Expresiones condicionales (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery admite lo siguiente condicional **if-then-else** instrucción:  
+  XQuery admite la siguiente instrucción **if-then-else** condicional:  
   
 ```  
 if (<expression1>)  
@@ -53,9 +53,9 @@ else
   
 -   La expresión de prueba se debe escribir entre paréntesis.  
   
--   El **else** expresión es necesaria. Si no la necesita, puede devolver " ( ) ", tal como se ilustra en los ejemplos de este tema.  
+-   La expresión **else** es obligatoria. Si no la necesita, puede devolver " ( ) ", tal como se ilustra en los ejemplos de este tema.  
   
- Por ejemplo, se especifica la consulta siguiente contra la **xml** variable de tipo. El **si** condición prueba el valor de la variable SQL (@v) dentro de la expresión XQuery mediante el uso de la [:variable()](../xquery/xquery-extension-functions-sql-variable.md) función de extensión. Si el valor de la variable es "FirstName", devuelve el <`FirstName`> elemento. De lo contrario, devuelve el <`LastName`> elemento.  
+ Por ejemplo, la siguiente consulta se especifica en la variable de tipo **XML** . La condición **If** prueba el valor de la variable SQL (@v) dentro de la expresión XQuery mediante la función de extensión [SQL: variable ()](../xquery/xquery-extension-functions-sql-variable.md) . Si el valor de la variable es "FirstName", devuelve el `FirstName` elemento <>. De lo contrario, devuelve el `LastName` elemento <>.  
   
 ```  
 declare @x xml  
@@ -74,13 +74,13 @@ if ( sql:variable("@v")="FirstName" ) then
 ')  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <FirstName>fname</FirstName>  
 ```  
   
- La consulta siguiente recupera las dos primeras descripciones de características de la descripción del catálogo de productos de un modelo de producto determinado. Si hay más características en el documento, agrega un <`there-is-more`> elemento con contenido vacío.  
+ La consulta siguiente recupera las dos primeras descripciones de características de la descripción del catálogo de productos de un modelo de producto determinado. Si hay más características en el documento, agrega una <`there-is-more` elemento> con contenido vacío.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -104,9 +104,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- En la consulta anterior, la condición en la **si** expresión comprueba si hay más de dos elementos secundarios de <`Features`>. Si éste es el caso, devuelve el elemento `\<there-is-more/>` en el resultado.  
+ En la consulta anterior, la condición de la expresión **If** comprueba si hay más de dos elementos secundarios en <`Features`>. Si éste es el caso, devuelve el elemento `\<there-is-more/>` en el resultado.  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
@@ -122,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- En la consulta siguiente, un <`Location`> se devuelve el elemento con un atributo LocationID si la ubicación del centro de trabajo no especifica las horas de instalación.  
+ En la consulta siguiente, se devuelve `Location` un <elemento> con un atributo LocationID si la ubicación del centro de trabajo no especifica las horas de instalación.  
   
 ```  
 SELECT Instructions.query('  
@@ -141,7 +141,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <WorkCenterLocation LocationID="30" />  
@@ -149,7 +149,7 @@ where ProductModelID=7
 <WorkCenterLocation LocationID="60" />  
 ```  
   
- Esta consulta se puede escribir sin la **si** cláusula, tal como se muestra en el ejemplo siguiente:  
+ Esta consulta se puede escribir sin la cláusula **If** , tal como se muestra en el ejemplo siguiente:  
   
 ```  
 SELECT Instructions.query('  
@@ -164,7 +164,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones XQuery](../xquery/xquery-expressions.md)  
   
   

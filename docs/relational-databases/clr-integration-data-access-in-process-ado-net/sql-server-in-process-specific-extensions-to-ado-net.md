@@ -19,10 +19,10 @@ ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f3c1729d216a1456551da3699c286385694e558a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258168"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>Extensiones específicas en proceso de SQL Server a ADO.NET
@@ -33,13 +33,13 @@ ms.locfileid: "75258168"
  [Objeto SqlContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  
  Esta clase proporciona acceso a las demás extensiones abstrayendo el contexto de llamador de una rutina de SQL Server que ejecuta el código administrado en proceso.  
   
- [SqlPipe (objeto)](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
+ [SqlPipe, objetos](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
  Esta clase contiene rutinas para enviar resultados tabulares y mensajes al cliente.  
   
  [Objeto SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)  
  Esta clase proporciona información sobre el contexto en el que se ejecuta un desencadenador.  
   
- [Objeto SqlDataRecord](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)  
+ [SqlDataRecord, objeto](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)  
  La clase SqlDataRecord representa una única fila de datos, junto con sus metadatos relacionados, y permite que los procedimientos almacenados devuelvan al cliente conjuntos de resultados personalizados.  
   
   

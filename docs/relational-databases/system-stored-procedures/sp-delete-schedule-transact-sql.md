@@ -18,13 +18,13 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7a2a4e8a7cf58f8c4519d15ae46e2b278fcd1383
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008961"
 ---
-# <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
+# <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elimina una programación.  
@@ -40,15 +40,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @schedule_id = ] schedule_id` El número de identificación de la programación que se va a eliminar. *schedule_id* es **int**, su valor predeterminado es null.  
+`[ @schedule_id = ] schedule_id`El número de identificación de la programación que se va a eliminar. *schedule_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-> **NOTA:** Cualquier *schedule_id* o *schedule_name* debe especificarse, pero no se pueden especificar ambos.  
+> **Nota:** Se debe especificar *schedule_id* o *schedule_name* , pero no se pueden especificar ambos.  
   
-`[ @schedule_name = ] 'schedule_name'` El nombre de la programación que se va a eliminar. *schedule_name* es **sysname**, su valor predeterminado es null.  
+`[ @schedule_name = ] 'schedule_name'`Nombre de la programación que se va a eliminar. *schedule_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-> **NOTA:** Cualquier *schedule_id* o *schedule_name* debe especificarse, pero no se pueden especificar ambos.  
+> **Nota:** Se debe especificar *schedule_id* o *schedule_name* , pero no se pueden especificar ambos.  
   
-`[ @force_delete = ] force_delete` Especifica si el procedimiento debe generar un error si la programación está adjunta a un trabajo. *Force_delete* es de tipo bit, su valor predeterminado es **0**. Cuando *force_delete* es **0**, el procedimiento almacenado produce un error si la programación está adjunta a un trabajo. Cuando *force_delete* es **1**, se eliminó el programa independientemente de si la programación está adjunta a un trabajo.  
+`[ @force_delete = ] force_delete`Especifica si el procedimiento debe generar un error si la programación está adjunta a un trabajo. *Force_delete* es de bit y su valor predeterminado es **0**. Cuando *force_delete* es **0**, el procedimiento almacenado genera un error si la programación está adjunta a un trabajo. Cuando *force_delete* es **1**, la programación se elimina independientemente de si la programación está adjunta a un trabajo.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -56,8 +56,8 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- De manera predeterminada, una programación no se puede eliminar si está adjunta a un trabajo. Para eliminar una programación que se adjunta a un trabajo, especifique un valor de **1** para *force_delete*. La eliminación de una programación no detiene los trabajos actualmente en ejecución.  
+## <a name="remarks"></a>Observaciones  
+ De manera predeterminada, una programación no se puede eliminar si está adjunta a un trabajo. Para eliminar una programación adjunta a un trabajo, especifique un valor de **1** para *force_delete*. La eliminación de una programación no detiene los trabajos actualmente en ejecución.  
   
 ## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
@@ -68,11 +68,11 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 -   **SQLAgentOperatorRole**  
   
- Observe que el propietario del trabajo puede adjuntar un trabajo a una programación y separar un trabajo de una programación sin tener que ser asimismo el propietario de la programación. Sin embargo, una programación no se puede eliminar si la separación la dejase sin trabajos, a menos que el llamador sea propietario de la programación.  
+ Observe que el propietario del trabajo puede adjuntar un trabajo a una programación y separar un trabajo de una programación sin tener que ser asimismo el propietario de la programación. Sin embargo, no se puede eliminar una programación si la desasociación la dejaría sin trabajos, a menos que el autor de la llamada sea el propietario de la programación.  
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo los miembros de la **sysadmin** pueden eliminar una programación de trabajo que pertenece a otro usuario.  
+ Solo los miembros del rol **sysadmin** pueden eliminar una programación de trabajo que sea propiedad de otro usuario.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -88,7 +88,7 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-### <a name="b-deleting-a-schedule-attached-to-a-job"></a>b. Eliminar una programación adjunta a un trabajo  
+### <a name="b-deleting-a-schedule-attached-to-a-job"></a>B. Eliminar una programación adjunta a un trabajo  
  En el ejemplo siguiente se elimina la programación `RunOnce`, independientemente de si está adjunta a un trabajo.  
   
 ```  
@@ -101,8 +101,8 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar trabajos](../../ssms/agent/implement-jobs.md)   
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

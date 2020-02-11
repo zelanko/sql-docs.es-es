@@ -35,10 +35,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: caf6c6bc9e9807b042baf365c3a1efbe9d2b74c5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252500"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertar datos con diagramas de actualización XML (SQLXML 4.0)
@@ -92,7 +92,7 @@ ms.locfileid: "75252500"
   
 -   La mayoría de los ejemplos usan la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]. Todas las actualizaciones se aplican a las tablas de esta base de datos.  
   
-### <a name="a-inserting-a-record-by-using-an-updategram"></a>a. Insertar un registro usando un diagrama de actualización  
+### <a name="a-inserting-a-record-by-using-an-updategram"></a>A. Insertar un registro usando un diagrama de actualización  
  Este diagrama de actualización centrado en atributos inserta un registro en la tabla HumanResources.Employee de la base de datos [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)].  
   
  En este ejemplo, el diagrama de actualización no especifica ningún esquema de asignación. Por lo tanto, el diagrama de actualización usa la asignación predeterminada, en la que el nombre de elemento se asigna a un nombre de tabla y los atributos o elementos secundarios se asignan a columnas de dicha tabla.  
@@ -209,7 +209,7 @@ ms.locfileid: "75252500"
 </ROOT>  
 ```  
   
-### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>c. Trabajar con caracteres de SQL Server válidos que no son válidos en XML  
+### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>C. Trabajar con caracteres de SQL Server válidos que no son válidos en XML  
  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los nombres de tabla pueden incluir un espacio, como la tabla Order Details de la base de datos Northwind. Sin embargo, esto no es válido en caracteres XML que son [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificadores válidos, pero los identificadores XML no válidos se pueden codificar mediante ' __xHHHH\_\_' como valor de codificación, donde HHHH representa el código UCS-2 hexadecimal de cuatro dígitos para el carácter en el orden más significativo en primer lugar.  
   
 > [!NOTE]  
@@ -727,7 +727,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Consideraciones de seguridad de diagrama &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

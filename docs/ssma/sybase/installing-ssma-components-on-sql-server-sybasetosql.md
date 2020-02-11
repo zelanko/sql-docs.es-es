@@ -10,62 +10,62 @@ ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1fbc3a8f74b21bd5a53bdd874b5c41ef522e29f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029010"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Instalación de componentes de SSMA en SQL Server (SybaseToSQL)
-Además de instalar SSMA para usar la migración de datos del lado servidor, también debe instalar los componentes en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos componentes incluyen el módulo de extensión SSMA, que admite la migración de datos y proveedores de Sybase para habilitar la conectividad de servidor a servidor.  
+Además de instalar SSMA, para usar la migración de datos del lado servidor, también debe instalar los componentes en el equipo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ejecuta. Estos componentes incluyen el paquete de extensión SSMA, que admite la migración de datos y los proveedores de Sybase para habilitar la conectividad de servidor a servidor.  
   
-## <a name="ssma-for-sybase-extension-pack"></a>SSMA para Sybase extensión Pack  
-Las bases de datos, agrega el paquete de extensiones SSMA **sysdb** y **ssmatesterdb_syb**, a la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El **sysdb** base de datos contiene las tablas y procedimientos almacenados que son necesarios para migrar los datos. El **ssmatester_syb** base de datos contiene el esquema **ssma_sybase_utilities**, en la que se crean los objetos (tablas, desencadenadores, vistas) utilizados por el componente de evaluador SSMA.  
+## <a name="ssma-for-sybase-extension-pack"></a>SSMA para el paquete de extensiones de Sybase  
+El paquete de extensión SSMA agrega las bases de datos, **sysdb** y **ssmatesterdb_syb**, a la instancia especificada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. La base de datos **sysdb** contiene las tablas y los procedimientos almacenados necesarios para migrar los datos. La base de datos de **ssmatester_syb** contiene el esquema **ssma_sybase_utilities**, en el que se crean los objetos (tablas, desencadenadores, vistas) utilizados por el componente de evaluador SSMA.  
   
-Además, al migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA crea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los trabajos del agente cuando se usa el motor de migración de datos de lado servidor para migrar los datos.  
+Además, al migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA crea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajos del agente cuando se usa el motor de migración de datos del lado servidor para migrar los datos.  
   
-### <a name="installing-the-extension-pack"></a>Instalar el paquete de extensiones  
-Puede instalar el paquete de extensiones de cualquier momento antes de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+### <a name="installing-the-extension-pack"></a>Instalación del paquete de extensión  
+Puede instalar el paquete de extensión en cualquier momento antes de migrar los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]datos a.  
   
 > [!IMPORTANT]  
-> Para instalar el módulo de extensión, debe ser miembro del rol de servidor sysadmin en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Para instalar el paquete de extensión, debe ser miembro del rol de servidor sysadmin en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-**Para instalar el paquete de extensiones**  
+**Para instalar el paquete de extensión**  
   
-1.  Copie SSMA para Sybase extensión Pack. *n*. Install.exe, donde *n* es el número de compilación, en el equipo que se está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Copie SSMA para el paquete de extensión de Sybase. *n*. Instale. exe, donde *n* es el número de compilación, en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-2.  Haga doble clic en SSMA para Sybase extensión Pack. *n*. Install.exe.  
+2.  Haga doble clic en SSMA para el paquete de extensiones de Sybase. *n*. Instale. exe.  
   
 3.  En la página de bienvenida, haga clic en **siguiente**.  
   
-4.  En la página Contrato de licencia de usuario final, lea el contrato de licencia. Si está de acuerdo, seleccione el **acepto los términos del contrato de licencia** casilla de verificación y, a continuación, haga clic en **siguiente**.  
+4.  En la página contrato de licencia para el usuario final, lea el contrato de licencia. Si está de acuerdo, active la casilla acepto **los términos del contrato de licencia** y, a continuación, haga clic en **siguiente**.  
   
-5.  En la página Elegir tipo de instalación, haga clic en **típica**.  
+5.  En la página elegir tipo de instalación, haga clic en **típica**.  
   
-6.  En la página Listo para instalar, haga clic en **instalar**.  
+6.  En la página listo para instalar, haga clic en **instalar**.  
   
-7.  En el completado de la página del primer paso de instalación, haga clic en **siguiente**.  
+7.  En la página finalización del primer paso de la instalación, haga clic en **siguiente**.  
   
-    Aparecerá un cuadro de diálogo, en el que se seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la instalación del paquete de extensión.  
+    Aparecerá un nuevo cuadro de diálogo en el que podrá seleccionar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la instalación del paquete de extensión.  
   
-8.  Seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde va a migrar bases de datos de ASE y, a continuación, haga clic en **siguiente**.  
+8.  Seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde va a migrar las bases de datos de ase y, a continuación, haga clic en **siguiente**.  
   
-    La instancia predeterminada tiene el mismo nombre que el equipo. Se seguirán las instancias con nombre por una barra diagonal inversa y el nombre de instancia.  
+    La instancia predeterminada tiene el mismo nombre que el equipo. Las instancias con nombre van seguidas de una barra diagonal inversa y el nombre de la instancia.  
   
 9. En la página parámetros de conexión, seleccione el método de autenticación y, a continuación, haga clic en **siguiente**.  
   
-    Autenticación de Windows usará las credenciales de Windows para intentar iniciar sesión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si selecciona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, debe escribir un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombre de inicio de sesión y la contraseña.  
+    La autenticación de Windows utilizará las credenciales de Windows para intentar iniciar sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la instancia de. Si selecciona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, debe escribir un nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión y una contraseña.  
   
-10. En la página Administrar servidor, seleccione **instalar base de datos de utilidades** *n*, donde *n* es el número de versión y, a continuación, haga clic en **siguiente**.  
+10. En la página Manage Server (administrar servidor), seleccione **install Utilities Database** *n*, donde *n* es el número de versión y, a continuación, haga clic en **siguiente**.  
   
-    El **sysdb** se crea la base de datos y los procedimientos almacenados se crean en esa base de datos.  
+    Se crea la base de datos **sysdb** y se crean los procedimientos almacenados en esa base de datos.  
   
-    Si **instalar base de datos de evaluador** está activada la opción de la herramienta de comprobación **ssmatesterdb_syb** se creará la base de datos.  
+    Si la opción **instalar base de datos de prueba** está activada, se creará la base de datos del comprobador **ssmatesterdb_syb** .  
   
-11. Para instalar las utilidades a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione **volver a instancias**y, a continuación, haga clic en **siguiente**. O bien, para salir del asistente, haga clic en **salir**.  
+11. Para instalar las utilidades en otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione **volver a instancias**y, a continuación, haga clic en **siguiente**. O bien, para salir del asistente, haga clic en **salir**.  
   
-### <a name="sql-server-database-objects"></a>Objetos de base de datos SQL Server  
-Después de instalar el paquete de extensiones, tendrá un vea un **ssma_syb.bcp_migration_packages** de tabla en la **sysdb** base de datos. También verá los siguientes procedimientos almacenados:  
+### <a name="sql-server-database-objects"></a>SQL Server objetos de base de datos  
+Después de instalar el paquete de extensión, verá una tabla **ssma_syb. bcp_migration_packages** en la base de datos **sysdb** . También verá los siguientes procedimientos almacenados:  
   
 -   **bcp_clean_migration_data**  
   
@@ -87,26 +87,26 @@ Después de instalar el paquete de extensiones, tendrá un vea un **ssma_syb.bcp
   
 -   **stop_agent_process**  
   
-Cada vez que migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente. Estos trabajos se denominan **{GUID} del paquete de migración de datos de ssma_syb**y son visibles en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nodo de agente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en la carpeta Jobs.  
+Cada vez que se migran datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente. Estos trabajos se denominan **ssma_syb paquete de migración de datos {GUID}** y se pueden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ver en el [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] nodo agente de en la carpeta trabajos.  
   
 ## <a name="sybase-providers"></a>Proveedores de Sybase  
-Al migrar datos desde el ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure, la migración de datos directamente entre el ASE y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure. No se pasa a través de SSMA porque esto podría ralentizar la migración de datos.  
+Al migrar datos desde ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure, los datos se migran directamente entre ase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure. No pasa por SSMA, ya que esto ralentizaría la migración de datos.  
   
-### <a name="installing-the-sybase-providers"></a>Instalar a los proveedores de Sybase  
-Las instrucciones siguientes proporcionan los pasos de instalación básica para instalar proveedores de Sybase. Las instrucciones exactas variarán dependiendo de la versión del programa de instalación de Sybase.  
+### <a name="installing-the-sybase-providers"></a>Instalación de los proveedores de Sybase  
+Las instrucciones siguientes proporcionan los pasos de instalación básica para instalar proveedores de Sybase. Las instrucciones exactas variarán en función de la versión del programa de instalación de Sybase.  
   
 > [!IMPORTANT]  
-> Antes de ejecutar el programa de instalación, compruebe que no están infringiendo los contratos de licencia.  
+> Antes de ejecutar el programa de instalación, compruebe que no está infringiendo los contratos de licencia.  
   
 1.  Ejecute el programa de instalación de Sybase ASE.  
   
 2.  Seleccione instalación personalizada.  
   
-3.  En la página Selección de características, seleccione los proveedores de datos ODBC, OLE DB y ADO.NET.  
+3.  En la página selección de características, seleccione los proveedores de datos ODBC, OLE DB y ADO.NET.  
   
-4.  Compruebe las características seleccionadas y, a continuación, haga clic en **finalizar** para instalar el proveedor de datos.  
+4.  Compruebe las características seleccionadas y, a continuación, haga clic en **Finalizar** para instalar el proveedor de datos.  
   
-## <a name="see-also"></a>Vea también  
-[Instalación de SSMA para Sybase cliente &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
-[Migrar bases de datos de Sybase ASE a SQL Server: base de datos SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>Consulte también  
+[Instalación de SSMA para el cliente de Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
+[Migración de bases de datos de Sybase ASE a SQL Server: Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

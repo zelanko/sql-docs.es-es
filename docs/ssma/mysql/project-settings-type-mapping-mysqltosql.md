@@ -10,20 +10,20 @@ ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138327"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Configuración del proyecto (asignación de tipo) (MySQLToSQL)
-La configuración del proyecto de asignación de tipos le permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA.  
+La configuración del proyecto de asignación de tipos permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA.  
 
-Asignación de tipos está disponible en los cuadros de diálogo Configuración del proyecto y la configuración predeterminada del proyecto:  
+La asignación de tipos está disponible en los cuadros de diálogo Configuración del proyecto y configuración predeterminada del proyecto:  
   
--   Utilice el cuadro de diálogo de configuración del proyecto para establecer las opciones de configuración para el proyecto actual. Para obtener acceso a la configuración de asignación de tipo, en el menú Herramientas, seleccione la configuración del proyecto y, a continuación, haga clic en asignación de tipos en el panel izquierdo.  
+-   Utilice el cuadro de diálogo Configuración del proyecto para establecer las opciones de configuración del proyecto actual. Para obtener acceso a la configuración de asignación de tipos, en el menú herramientas, seleccione Configuración del proyecto y, a continuación, haga clic en tipo de asignación en el panel izquierdo.  
   
--   Utilice el cuadro de diálogo Configuración de proyecto predeterminada para establecer las opciones de configuración para todos los proyectos. Para tener acceso a la asignación de tipo configuración, en el menú Herramientas, seleccione la configuración predeterminada del proyecto, tipo de proyecto de migración select para los que es necesaria para ver o cambiar de configuración **versión de destino de migración** lista desplegable y, a continuación, haga clic en el tipo Asignación en el panel izquierdo.  
+-   Utilice el cuadro de diálogo Configuración predeterminada del proyecto para establecer las opciones de configuración de todos los proyectos. Para obtener acceso a la configuración de asignación de tipos, en el menú herramientas, seleccione Configuración predeterminada del proyecto, seleccione tipo de proyecto de migración para el que se deben ver los valores de/Changed en la lista desplegable de la **versión de destino** de la migración y, a continuación, haga clic en tipo de asignación en el panel izquierdo.  
   
 ## <a name="options"></a>Opciones  
   
@@ -31,74 +31,74 @@ Asignación de tipos está disponible en los cuadros de diálogo Configuración 
 Es el tipo de datos MySQL, que debe asignarse al tipo de datos de la base de datos de destino.  
   
 ##### <a name="target-type"></a>Tipo de destino  
-Escriba los datos de la base de datos de destino para el tipo de datos de MySQL especificado.  
+El tipo de datos de la base de datos de destino para el tipo de datos MySQL especificado.  
   
-##### <a name="add"></a>Agregar  
-Haga clic para agregar un tipo de datos a la lista de asignación.  
+##### <a name="add"></a>Sumar  
+Haga clic para agregar un tipo de datos a la lista de asignaciones.  
   
 ##### <a name="edit"></a>Editar  
-Haga clic para editar el tipo de datos seleccionado en la lista de asignación.  
+Haga clic en esta opción para modificar el tipo de datos seleccionado en la lista asignación.  
   
-##### <a name="remove"></a>Quitar  
-Haga clic para quitar la asignación de tipos de datos seleccionados de la lista de asignación.  
+##### <a name="remove"></a>Remove  
+Haga clic en esta opción para quitar la asignación de tipos de datos seleccionada de la lista de asignaciones.  
   
 ##### <a name="reset-to-default"></a>Valores predeterminados  
-Haga clic para restablecer la lista de asignación de tipo para los valores predeterminados SSMA.  
+Haga clic en esta opción para restablecer la lista asignación de tipos a los valores predeterminados de SSMA.  
   
 ## <a name="type-mappings"></a>Asignaciones de tipos  
-La siguiente tabla muestra las asignaciones predeterminadas entre tipos de datos de origen y destino  
+En la tabla siguiente se muestra la asignación predeterminada entre los tipos de datos de origen y de destino.  
   
 |||  
 |-|-|  
-|**Tipo de datos de MySQL**|**Tipo de datos SQL Server**|  
+|**Tipo de datos MySQL**|**Tipo de datos de SQL Server**|  
 |bigint|bigint|  
-|bigint [*.. 255]|bigint|  
+|BIGINT [*.. 255]|bigint|  
 |binary|binario [1]|  
-|archivo binario [de 0.. 1]|binario [1]|  
-|binario [2..255]|binario [*]|  
+|binario [0.. 1]|binario [1]|  
+|binario [2.. 255]|binario [*]|  
 |bit|binario [1]|  
-|bit[0..8]|binario [1]|  
-|bit[17..24]|binario [3]|  
-|bit[25..32]|binario [4]|  
-|bit[33..40]|binario [5]|  
-|bit[41..48]|binario [6]|  
-|bit[49..56]|binario [7]|  
-|bit[57..64]|binario [8]|  
-|bit[9..16]|binario [2]|  
+|bit [0.. 8]|binario [1]|  
+|bit [17.. 24]|binario [3]|  
+|bit [25.. 32]|binario [4]|  
+|bit [33.. 40]|binario [5]|  
+|bit [41.. 48]|binario [6]|  
+|bit [49.. 56]|binario [7]|  
+|bit [57... 64]|binario [8]|  
+|bit [9.. 16]|binario [2]|  
 |blob|varbinary(max)|  
-|BLOB [de 0.. 1]|varbinary [1]|  
-|blob[2..8000]|varbinary [*]|  
-|blob[8001..*]|varbinary(max)|  
-|booleano|bit|  
-|booleano|bit|  
+|BLOB [0.. 1]|varbinary [1]|  
+|BLOB [2.. 8000]|varbinary [*]|  
+|BLOB [8001.. *]|varbinary(max)|  
+|bool|bit|  
+|boolean|bit|  
 |char|nchar [1]|  
-|bytes de char|binario [1]|  
-|bytes del carácter [de 0.. 1]|binario [1]|  
-|bytes de Char [2..255]|binario [*]|  
-|char [de 0.. 1]|nchar [1]|  
-|Char [2..255]|nchar [*]|  
+|byte Char|binario [1]|  
+|char Byte [0.. 1]|binario [1]|  
+|char Byte [2.. 255]|binario [*]|  
+|Char [0.. 1]|nchar [1]|  
+|Char [2.. 255]|nchar [*]|  
 |character|nchar [1]|  
-|caracteres distintos de [0.. 1]|nvarchar [1]|  
-|carácter variable [2..255]|nvarchar|  
-|carácter [de 0.. 1]|nchar [1]|  
-|caracteres [2..255]|nchar [*]|  
+|variable de carácter [0.. 1]|nvarchar [1]|  
+|carácter variable [2.. 255]|NVARCHAR|  
+|carácter [0.. 1]|nchar [1]|  
+|carácter [2.. 255]|nchar [*]|  
 |date|date|  
 |datetime|datetime2 [0]|  
-|dec|decimal|  
-|DEC [*.. 65]|decimal[*][0]|  
-|DEC [*.. 65] [\*... 30]|decimal [*] [\*]|  
-|decimal|decimal|  
-|decimal [*.. 65]|decimal[*][0]|  
-|decimal [*.. 65] [\*... 30]|decimal [*] [\*]|  
-|Doble|float[53]|  
-|double precision|float[53]|  
-|doble precisión [*.. 255] [\*... 30]|numérico [*] [\*]|  
-|Double [*.. 255] [\*... 30]|numérico [*] [\*]|  
-|se ha corregido|numeric|  
-|se ha corregido [*.. 65] [\*... 30]|numérico [*] [\*]|  
-|float|float[24]|  
-|float [*.. 255] [\*... 30]|numérico [*] [\*]|  
-|float [*.. 53]|float[53]|  
+|dec|Decimal|  
+|Dec [*.. 65]|decimal [*] [0]|  
+|Dec [*.. 65] [\*.. 30|decimal [*] [\*]|  
+|Decimal|Decimal|  
+|decimal [*.. 65]|decimal [*] [0]|  
+|decimal [*.. 65] [\*.. 30|decimal [*] [\*]|  
+|double|Float [53]|  
+|double precision|Float [53]|  
+|precisión doble [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|Double [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|fijo|NUMERIC|  
+|corregido [*.. 65] [\*.. 30|Numeric [*] [\*]|  
+|FLOAT|Float [24]|  
+|Float [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|Float [*.. 53]|Float [53]|  
 |int|int|  
 |int [*.. 255]|int|  
 |integer|int|  
@@ -107,102 +107,102 @@ La siguiente tabla muestra las asignaciones predeterminadas entre tipos de datos
 |longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
 |mediumint|int|  
-|mediumint [*.. 255]|int|  
+|mediumint[*.. 255]|int|  
 |mediumtext|nvarchar(max)|  
 |carácter nacional|nchar [1]|  
-|carácter nacional [de 0.. 1]|nchar [1]|  
-|carácter nacional [2..255]|nchar [*]|  
+|National Char [0.. 1]|nchar [1]|  
+|National Char [2.. 255]|nchar [*]|  
 |carácter nacional|nchar [1]|  
-|national character varying de|nvarchar [1]|  
-|carácter nacional distintos [de 0.. 1]|nvarchar [1]|  
-|carácter nacional varying [2..4000]|nvarchar [*]|  
-|national character varying de [4001.. *]|nvarchar(max)|  
-|carácter nacional [de 0.. 1]|nchar [1]|  
-|carácter nacional [2..255]|nchar [*]|  
-|varchar nacional|nvarchar [1]|  
-|varchar nacional [de 0.. 1]|nvarchar [1]|  
-|National varchar [2..4000]|nvarchar [*]|  
-|National varchar [4001.. *]|nvarchar(max)|  
-|nchar|nchar [1]|  
-|nchar varchar|nvarchar [1]|  
-|nchar varchar [de 0.. 1]|nvarchar [1]|  
-|nchar varchar [2..4000]|nvarchar [*]|  
-|nchar varchar [4001.. *]|nvarchar(max)|  
-|nchar [de 0.. 1]|nchar [1]|  
-|nchar [2..255]|nchar [*]|  
-|numeric|numeric|  
-|numérico [*.. 65]|numérico [*] [0]|  
-|numérico [*.. 65] [\*... 30]|numérico [*] [\*]|  
-|nvarchar|nvarchar [1]|  
-|nvarchar [de 0.. 1]|nvarchar [1]|  
-|nvarchar [2..4000]|nvarchar [*]|  
+|variable de carácter nacional|nvarchar [1]|  
+|carácter nacional variable [0.. 1]|nvarchar [1]|  
+|carácter nacional variable [2.. 4000]|nvarchar [*]|  
+|carácter nacional variable [4001.. *]|nvarchar(max)|  
+|carácter nacional [0.. 1]|nchar [1]|  
+|carácter nacional [2.. 255]|nchar [*]|  
+|VARCHAR nacional|nvarchar [1]|  
+|National VARCHAR [0.. 1]|nvarchar [1]|  
+|National VARCHAR [2.. 4000]|nvarchar [*]|  
+|National VARCHAR [4001.. *]|nvarchar(max)|  
+|NCHAR|nchar [1]|  
+|nchar VARCHAR|nvarchar [1]|  
+|nchar VARCHAR [0.. 1]|nvarchar [1]|  
+|nchar VARCHAR [2.. 4000]|nvarchar [*]|  
+|nchar VARCHAR [4001.. *]|nvarchar(max)|  
+|nchar [0.. 1]|nchar [1]|  
+|nchar [2.. 255]|nchar [*]|  
+|NUMERIC|NUMERIC|  
+|Numeric [*.. 65]|Numeric [*] [0]|  
+|Numeric [*.. 65] [\*.. 30|Numeric [*] [\*]|  
+|NVARCHAR|nvarchar [1]|  
+|nvarchar [0.. 1]|nvarchar [1]|  
+|nvarchar [2.. 4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
-|real|float[53]|  
-|real [*.. 255] [\*... 30]|numérico [*] [\*]|  
+|real|Float [53]|  
+|real [*.. 255] [\*.. 30|Numeric [*] [\*]|  
 |serial|bigint|  
 |smallint|smallint|  
 |smallint [*.. 255]|smallint|  
 |text|nvarchar(max)|  
-|text[0..1]|nvarchar [1]|  
-|texto [2..4000]|nvarchar [*]|  
-|text[4001..*]|nvarchar(max)|  
+|texto [0.. 1]|nvarchar [1]|  
+|texto [2.. 4000]|nvarchar [*]|  
+|texto [4001.. *]|nvarchar(max)|  
 |time|time|  
 |timestamp|datetime|  
 |tinyblob|varbinary [255]|  
 |tinyint|smallint|  
 |tinyint [*.. 255]|smallint|  
 |tinytext|nvarchar [255]|  
-|bigint sin signo|bigint|  
-|bigint sin signo [*.. 255]|bigint|  
-|dec sin signo|decimal|  
-|dec sin signo [*.. 65]|decimal[*][0]|  
-|dec sin signo [*.. 65] [\*... 30]|decimal [*] [\*]|  
-|decimal sin signo|decimal|  
-|decimal sin signo [*.. 65]|decimal[*][0]|  
-|decimal sin signo [*.. 65] [\*... 30]|decimal [*] [\*]|  
-|doble sin signo|float[53]|  
-|sin signo de precisión doble|float[53]|  
-|sin signo de precisión doble [*.. 255] [\*... 30]|numérico [*] [\*]|  
-|unsigned double [*.. 255] [\*... 30]|numérico [*] [\*]|  
-|unsigned fijo|numeric|  
-|unsigned fijo [*.. 65] [\*... 30]|numérico [*] [\*]|  
-|float sin signo|float[24]|  
-|float sin signo [*.. 255] [\*... 30]|numérico [*] [\*]|  
-|float sin signo [*.. 53]|float[53]|  
+|BIGINT sin signo|bigint|  
+|BIGINT sin signo [*.. 255]|bigint|  
+|sin signo Dec|Decimal|  
+|sin signo Dec [*.. 65]|decimal [*] [0]|  
+|sin signo Dec [*.. 65] [\*.. 30|decimal [*] [\*]|  
+|decimal sin signo|Decimal|  
+|decimal sin signo [*.. 65]|decimal [*] [0]|  
+|decimal sin signo [*.. 65] [\*.. 30|decimal [*] [\*]|  
+|unsigned Double|Float [53]|  
+|doble precisión sin signo|Float [53]|  
+|doble precisión sin signo [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|Double sin signo [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|Fixed sin signo|NUMERIC|  
+|sin signo fijo [*.. 65] [\*.. 30|Numeric [*] [\*]|  
+|unsigned Float|Float [24]|  
+|unsigned Float [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|unsigned Float [*.. 53]|Float [53]|  
 |unsigned int|bigint|  
-|int sin signo [*.. 255]|bigint|  
+|unsigned int [*.. 255]|bigint|  
 |entero sin signo|bigint|  
 |entero sin signo [*.. 255]|bigint|  
-|mediumint sin signo|int|  
-|mediumint sin signo [*.. 255]|int|  
-|numérico sin signo|numeric|  
-|numérico sin signo [*.. 65]|numérico [*] [0]|  
-|numérico sin signo [*.. 65] [\*... 30]|numérico [*] [\*]|  
-|real sin signo|float[53]|  
-|unsigned real [*.. 255 [[\*... 30]|numérico [*] [\*]|  
+|unsigned MEDIUMINT|int|  
+|unsigned MEDIUMINT [*.. 255]|int|  
+|numérico sin signo|NUMERIC|  
+|numérico sin signo [*.. 65]|Numeric [*] [0]|  
+|numérico sin signo [*.. 65] [\*.. 30|Numeric [*] [\*]|  
+|real sin signo|Float [53]|  
+|real sin signo [*.. 255 [[\*.. 30|Numeric [*] [\*]|  
 |smallint sin signo|int|  
 |smallint sin signo [*.. 255]|int|  
 |tinyint sin signo|tinyint|  
-|tinyint sin signo [*.. 255]|tinyint|  
-|varbinary [de 0.. 1]|varbinary [1]|  
-|varbinary [2..8000]|varbinary [*]|  
+|unsigned tinyint [*.. 255]|tinyint|  
+|varbinary [0.. 1]|varbinary [1]|  
+|varbinary [2.. 8000]|varbinary [*]|  
 |varbinary [8001.. *]|varbinary(max)|  
-|varchar [de 0.. 1]|nvarchar [1]|  
-|varchar [2..4000]|nvarchar [*]|  
-|varchar[4001..*]|nvarchar(max)|  
+|VARCHAR [0.. 1]|nvarchar [1]|  
+|VARCHAR [2.. 4000]|nvarchar [*]|  
+|VARCHAR [4001.. *]|nvarchar(max)|  
 |year|smallint|  
-|año [2..2]|smallint|  
-|año [4..4]|smallint|  
+|año [2.. 2]|smallint|  
+|año [4... 4]|smallint|  
   
-##### <a name="add"></a>Agregar  
-Haga clic para agregar un tipo de datos a la lista de asignación.  
+##### <a name="add"></a>Sumar  
+Haga clic para agregar un tipo de datos a la lista de asignaciones.  
   
 ##### <a name="edit"></a>Editar  
-Haga clic para editar un tipo de datos en la lista de asignación.  
+Haga clic para editar un tipo de datos en la lista asignación.  
   
-##### <a name="remove"></a>Quitar  
-Haga clic para quitar la asignación de tipos de datos seleccionados de la lista de asignación.  
+##### <a name="remove"></a>Remove  
+Haga clic en esta opción para quitar la asignación de tipos de datos seleccionada de la lista de asignaciones.  
   
 ##### <a name="reset-to-default"></a>Valores predeterminados  
-Haga clic para restablecer todas las asignaciones de tipo de datos a los valores predeterminados SSMA.  
+Haga clic para restablecer todas las asignaciones de tipos de datos a los valores predeterminados de SSMA.  
   

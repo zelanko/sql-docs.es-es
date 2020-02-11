@@ -15,15 +15,16 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e82705236ec04c5618a4b43526078a6c218ceef9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72908681"
 ---
 # <a name="deploying-clr-database-objects"></a>Implementar objetos de base de datos de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La implementación es el proceso mediante el cual se distribuye una aplicación o módulo finalizados para su instalación y ejecución en otro equipo. Con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, puede desarrollar objetos de base de datos de Common Language Runtime (CLR) e implementarlos en un servidor de prueba. Los objetos de base de datos administrados también pueden compilarse con los archivos de redistribución de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework en lugar de Visual Studio. Una vez compilados, los ensamblados que contienen objetos de base de datos de CLR pueden implementarse en un servidor de prueba mediante instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o Visual Studio. Tenga en cuenta que Visual Studio .NET 2003 no puede utilizarse para programar o implementar la integración CLR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye .NET Framework preinstalado y Visual Studio .NET 2003 no puede utilizar los ensamblados de .NET Framework 2.0.  
+  La implementación es el proceso mediante el cual se distribuye una aplicación o módulo finalizados para su instalación y ejecución en otro equipo. Con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, puede desarrollar objetos de base de datos de Common Language Runtime (CLR) e implementarlos en un servidor de prueba. Los objetos de base de datos administrados también pueden compilarse con los archivos de redistribución de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework en lugar de Visual Studio. Una vez compilados, los ensamblados que contienen objetos de base de datos de CLR pueden implementarse en un servidor de prueba mediante instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o Visual Studio. Tenga en cuenta que Visual Studio .NET 2003 no puede utilizarse para programar o implementar la integración CLR. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye .NET Framework preinstalado y Visual Studio .NET 2003 no puede utilizar los ensamblados de .NET Framework 2.0.  
   
  Una vez que los métodos CLR se han probado y comprobado en el servidor de prueba, pueden distribuirse a los servidores de producción a través de un script de implementación. El script de implementación puede generarse manualmente o utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (vea el procedimiento posteriormente en este tema).  
   
@@ -39,7 +40,7 @@ ms.locfileid: "72908681"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Para implementar el ensamblado mediante Visual Studio  
   
-1.  Para compilar el proyecto, seleccione **Compilar** \<nombre de proyecto > en el menú **compilar** .  
+1.  Para compilar el proyecto, seleccione **compilar** \<nombre del proyecto> en el menú **compilar** .  
   
 2.  Resuelva todos los errores y advertencias de generación antes de implementar el ensamblado en el servidor de prueba.  
   
@@ -57,7 +58,7 @@ ms.locfileid: "72908681"
   
  `vbc /target:library C:\helloworld.vb`  
   
- Estos comandos inician el C# compilador Visual o Visual Basic mediante la opción **/target** para especificar la compilación de un archivo dll de biblioteca.  
+ Estos comandos inician el compilador de Visual C# o Visual Basic mediante la opción **/target** para especificar la compilación de un archivo dll de biblioteca.  
   
 1.  Resuelva todos los errores y advertencias de generación antes de implementar el ensamblado en el servidor de prueba.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "72908681"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  Después, debe crear el procedimiento, función, agregado, tipo definido por el usuario o desencadenador en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el ensamblado **HelloWorld** contiene un método denominado **HelloWorld** en la clase **Procedures** , se puede Agregar el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] a la consulta para crear un procedimiento llamado **Hello** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Después, debe crear el procedimiento, función, agregado, tipo definido por el usuario o desencadenador en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el ensamblado **HelloWorld** contiene un método denominado **HelloWorld** en la clase **Procedures** , [!INCLUDE[tsql](../../includes/tsql-md.md)] se puede agregar lo siguiente a la consulta para crear un procedimiento llamado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Hello** in.  
   
  `CREATE PROCEDURE hello`  
   
@@ -75,7 +76,7 @@ ms.locfileid: "72908681"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Para obtener más información sobre cómo crear los diferentes tipos de objetos de base de datos administrados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [funciones CLR definidas por](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)el usuario, [agregados definidos por el](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)usuario CLR, [tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procedimientos almacenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)y [CLR Desencadenadores](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ Para obtener más información sobre cómo crear los diferentes tipos de objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]base de datos administrados en, vea [funciones CLR definidas por](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)el usuario, [agregados definidos por el](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)usuario CLR, [tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [procedimientos almacenados](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)CLR y [desencadenadores CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Implementar el ensamblado en servidores de producción  
  Una vez probados y comprobados los objetos de base de datos de CLR en el servidor de prueba, pueden distribuirse a los servidores de producción. Para obtener más información sobre la depuración de objetos de base de datos administrados, vea [depurar objetos de base de datos CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
@@ -86,7 +87,7 @@ ms.locfileid: "72908681"
   
 1.  Abra [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y conéctese a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde esté registrado el ensamblado administrado o el objeto de base de datos que va a implementarse.  
   
-2.  En el **Explorador de objetos**, expanda el **nombre del servidor de\<** y los árboles de **bases de datos** . Haga clic con el botón secundario en la base de datos donde está registrado el objeto de base de datos administrado, seleccione **tareas**y, a continuación, seleccione **generar scripts**. Se abrirá el Asistente para script.  
+2.  En el **Explorador de objetos**, expanda el ** \<nombre del servidor>** y árboles de **bases de datos** . Haga clic con el botón secundario en la base de datos donde está registrado el objeto de base de datos administrado, seleccione **tareas**y, a continuación, seleccione **generar scripts**. Se abrirá el Asistente para script.  
   
 3.  Seleccione la base de datos en el cuadro de lista y haga clic en **siguiente**.  
   
@@ -94,9 +95,9 @@ ms.locfileid: "72908681"
   
 5.  En el panel **elegir tipos de objeto** , elija el tipo de objeto de base de datos que se va a implementar. Haga clic en **Next**.  
   
-6.  Para cada tipo de objeto seleccionado en el panel **elegir tipos de objeto** , se muestra un panel de **> tipo de \<** . En este panel, puede elegir entre todas las instancias de ese tipo de objeto de base de datos registradas en la base de datos especificada. Seleccione uno o más objetos y haga clic en **siguiente**.  
+6.  Para cada tipo de objeto seleccionado en el panel **elegir tipos de objeto** , se muestra un panel ** \<elegir tipo>** . En este panel, puede elegir entre todas las instancias de ese tipo de objeto de base de datos registradas en la base de datos especificada. Seleccione uno o más objetos y haga clic en **siguiente**.  
   
-7.  El panel **Opciones de salida** aparece cuando se han seleccionado todos los tipos de objetos de base de datos deseados. Seleccione **script a archivo** y especifique una ruta de acceso de archivo para el script. Seleccione **Siguiente**. Revise sus selecciones y haga clic en **Finalizar**. El script de implementación se guardará en la ruta de acceso de archivo especificada.  
+7.  El panel **Opciones de salida** aparece cuando se han seleccionado todos los tipos de objetos de base de datos deseados. Seleccione **script a archivo** y especifique una ruta de acceso de archivo para el script. Seleccione **Next** (Siguiente). Revise sus selecciones y haga clic en **Finalizar**. El script de implementación se guardará en la ruta de acceso de archivo especificada.  
   
 ## <a name="post-deployment-scripts"></a>Scripts posteriores a la implementación  
  Puede ejecutar un script posterior a la implementación.  
@@ -105,7 +106,7 @@ ms.locfileid: "72908681"
   
  Cuando haga clic en Implementar, Visual Studio ejecutará este script tras la implementación del proyecto.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

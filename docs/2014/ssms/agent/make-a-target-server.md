@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 744ebc5411e626c083676440502489029e888a28
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798187"
 ---
 # <a name="make-a-target-server"></a>Establecer un servidor de destino
@@ -35,7 +35,7 @@ ms.locfileid: "72798187"
   
      [Seguridad](#Security)  
   
--   **Para establecer un servidor de destino, usando**  
+-   **Para establecer un servidor de destino, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,12 +43,12 @@ ms.locfileid: "72798187"
   
      [SMO](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  Los trabajos distribuidos que tienen pasos asociados a un proxy se ejecutan bajo el contexto de la cuenta de proxy en el servidor de destino. Para que se descarguen del servidor maestro al de destino los pasos de trabajo asociados con un proxy, asegúrese de que se cumplen las condiciones siguientes:  
   
--   La subclave del registro del servidor maestro **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) se establece en 1 (true). De forma predeterminada, esta subclave está establecida en 0 (false).  
+-   La subclave del registro del servidor maestro **\\\<HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server*instance_name*> \sql Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) está establecida en 1 (true). De forma predeterminada, esta subclave está establecida en 0 (false).  
   
 -   Existe una cuenta de proxy en el servidor de destino que tiene el mismo nombre que la cuenta de proxy del servidor maestro bajo el que se ejecuta el paso de trabajo.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72798187"
   
 #### <a name="to-make-a-target-server"></a>Para establecer un servidor de destino  
   
-1.  En el **Explorador de objetos** , conéctese a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
+1.  En **Explorador de objetos,** Conéctese a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
   
 2.  Haga clic con el botón derecho en **Agente SQL Server**, seleccione **Administración de multiservidor**y, luego, haga clic en **Establecer como destino**. El **Asistente para establecer servidor de destino** le guiará en el proceso de establecimiento de un servidor de destino.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "72798187"
   
 4.  En la página **Credenciales de inicio de sesión del servidor maestro** , cree un nuevo inicio de sesión en el servidor de destino, si es necesario.  
   
-     **Cree un nuevo inicio de sesión, si es necesario, y asígnele derechos para el servidor maestro**  
+     **Cree un nuevo inicio de sesión, si es necesario, y asígnele derechos para el servidor maestro.**  
      Crea un nuevo inicio de sesión en el servidor de destino si el inicio de sesión especificado ya no existe.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
@@ -92,7 +92,7 @@ ms.locfileid: "72798187"
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-2.  Desde la barra Estándar, haga clic en **Nueva consulta**.  
+2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se da de alta el servidor actual en el servidor maestro AdventureWorks1. La ubicación del servidor actual es Building 21, Room 309, Rack 5.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "72798187"
     GO;  
     ```  
   
-     Para obtener más información, [vea &#40;SP_MSX_ENLIST Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
+     Para obtener más información, vea [sp_msx_enlist &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a>Usar Objetos de administración de SQL Server (SMO)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administración automatizada en una empresa](automated-administration-across-an-enterprise.md)  

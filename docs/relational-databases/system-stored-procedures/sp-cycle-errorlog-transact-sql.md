@@ -18,13 +18,13 @@ ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c15a36678bf0bd1ff5fc933eb79bff96b6780b60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108344"
 ---
-# <a name="spcycleerrorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
+# <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cierra el archivo del registro de errores actual y continúa el ciclo de números de extensión de registro de errores, como ocurre al reiniciar el servidor. El nuevo registro de errores contiene información de versión y de copyright, y una línea que indica que se ha creado un nuevo registro.  
@@ -44,11 +44,11 @@ sp_cycle_errorlog
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- Cada vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está iniciado, el registro de errores actual cambia a **errorlog.1**; **errorlog.1** se convierte en **errorlog.2**, **errorlog.2** se convierte en **errorlog.3**, y así sucesivamente. **sp_cycle_errorlog** permite ciclo de archivos de registro de errores sin tener que detener e iniciar el servidor.  
+## <a name="remarks"></a>Observaciones  
+ Cada vez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se inicia, se cambia el nombre del registro de errores actual a **ErrorLog. 1**; **ErrorLog. 1** se convierte en **ErrorLog. 2**, **ErrorLog. 2** se convierte en **ErrorLog. 3**, etc. **sp_cycle_errorlog** permite recorrer los archivos de registro de errores sin tener que detener e iniciar el servidor.  
   
 ## <a name="permissions"></a>Permisos  
- Permisos de ejecución de **sp_cycle_errorlog** están restringidos a los miembros de la **sysadmin** rol fijo de servidor.  
+ Los permisos de ejecución para **sp_cycle_errorlog** están restringidos a los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se recorre el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -58,8 +58,8 @@ EXEC sp_cycle_errorlog ;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_cycle_agent_errorlog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md)  
+ [sp_cycle_agent_errorlog &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cycle-agent-errorlog-transact-sql.md)  
   
   

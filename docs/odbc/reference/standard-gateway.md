@@ -18,13 +18,13 @@ ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8120f3cda584240b0b58ed5d6758621b18fe44d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070478"
 ---
 # <a name="standard-gateway"></a>Puerta de enlace estándar
-Un *puerta de enlace* es un componente de software que hace que un sistema DBMS sea similar a otro. Es decir, la puerta de enlace acepta la interfaz de programación, la gramática de SQL y un DBMS único protocolo de flujo de datos y lo traduce a la interfaz de programación, gramática de SQL, y protocolo del DBMS ocultado la secuencia de datos. Por ejemplo, las aplicaciones escritas para usar Microsoft® SQL Server™ también pueden acceder a datos de DB2 a través de la puerta de enlace de Micro Decisionware DB2; Este producto hace que DB2 sea similar a SQL Server. Cuando se usan las puertas de enlace, otra puerta de enlace debe estar escrita para cada base de datos de destino.  
+Una *puerta de enlace* es un elemento de software que hace que un DBMS tenga el mismo aspecto que otro. Es decir, la puerta de enlace acepta la interfaz de programación, la gramática de SQL y el protocolo de flujo de datos de un solo DBMS y lo traduce a la interfaz de programación, la gramática de SQL y el protocolo de flujo de datos del DBMS oculto. Por ejemplo, las aplicaciones escritas para usar Microsoft® SQL Server™ también pueden acceder a los datos de DB2 a través de la puerta de enlace DB2 de micro decisionware; Este producto hace que DB2 tenga el siguiente aspecto SQL Server. Cuando se usan puertas de enlace, se debe escribir una puerta de enlace diferente para cada base de datos de destino.  
   
- Aunque las puertas de enlace están limitados por las diferencias arquitectónicas entre DBMS, son un buen candidato para la estandarización. ¿Sin embargo, si todos los DBMS son estandarizar en la interfaz de programación, gramática de SQL y datos de protocolo de secuencia de un DBMS único, cuyo DBMS es elegirse como el estándar? Ciertamente ningún proveedor DBMS comercial es probable que acepta estandarizar en productos de la competencia. Y si se ha desarrollado una interfaz de programación estándar, la gramática SQL y protocolo de transmisión de datos, no es necesaria ninguna puerta de enlace.
+ Aunque las puertas de enlace están limitadas por las diferencias arquitectónicas entre los DBMS, son un buen candidato para la normalización. Sin embargo, si todos los DBMS están normalizados en la interfaz de programación, la gramática de SQL y el protocolo de flujo de datos de un solo DBMS, cuyo DBMS debe elegirse como el estándar? Sin duda, no es probable que ningún proveedor de DBMS comercial acepte la estandarización en el producto de un competidor. Y si se desarrollan una interfaz de programación estándar, la gramática de SQL y el protocolo de flujo de datos, no se necesita ninguna puerta de enlace.

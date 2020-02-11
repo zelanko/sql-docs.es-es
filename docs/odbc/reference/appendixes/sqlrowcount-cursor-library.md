@@ -13,20 +13,20 @@ ms.assetid: 781cf5a5-325e-4523-8633-d96d9e98277c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be902866cfcf98a10af2c3741926de8b7541bb79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125595"
 ---
 # <a name="sqlrowcount-cursor-library"></a>SQLRowCount (biblioteca de cursores)
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- Este tema describe el uso de la **SQLRowCount** función en la biblioteca de cursores. Para obtener información general sobre **SQLRowCount**, consulte [función SQLRowCount](../../../odbc/reference/syntax/sqlrowcount-function.md).  
+ En este tema se describe el uso de la función **SQLRowCount** en la biblioteca de cursores. Para obtener información general sobre **SQLRowCount**, consulte la [función SQLRowCount](../../../odbc/reference/syntax/sqlrowcount-function.md).  
   
- Cuando una aplicación llama **SQLRowCount** con la instrucción asociada con el cursor, la biblioteca de cursores devuelve el número de filas de datos que ha recuperado desde el controlador.  
+ Cuando una aplicación llama a **SQLRowCount** con la instrucción asociada al cursor, la biblioteca de cursores devuelve el número de filas de datos que ha recuperado del controlador.  
   
- Cuando una aplicación llama **SQLRowCount** con la instrucción asociada con una actualización posicionada o una instrucción delete, la biblioteca de cursores devuelve el número de filas afectadas por la instrucción.  
+ Cuando una aplicación llama a **SQLRowCount** con la instrucción asociada a una instrucción UPDATE o DELETE posicionada, la biblioteca de cursores devuelve el número de filas afectadas por la instrucción.  
   
- Cuando una aplicación llama **SQLRowCount** después de un **seleccione** la biblioteca de cursores de instrucción, devuelve -1.
+ Cuando una aplicación llama a **SQLRowCount** después de una instrucción **Select** , la biblioteca de cursores devuelve-1.

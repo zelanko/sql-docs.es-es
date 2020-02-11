@@ -15,10 +15,10 @@ ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 280149ccb0e94b1ca7bcca75616ec5353f41e62b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255692"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpiar datos mediante el conocimiento de DQS (interno)
@@ -31,7 +31,7 @@ ms.locfileid: "75255692"
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Es necesario especificar valores de umbral apropiados para la actividad de limpieza. Para obtener más información acerca de cómo hacerlo, vea [Configurar los valores de umbral para la limpieza y coincidencia](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
@@ -39,9 +39,9 @@ ms.locfileid: "75255692"
   
 -   Si los datos de origen implicados en el proceso de limpieza están en un archivo de Excel, es necesario tener instalado Microsoft Excel en el equipo de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . De lo contrario, no podrá seleccionar dicho archivo en la fase de asignación. Los archivos creados por Microsoft Excel pueden tener la extensión .xlsx, .xls o .csv. Si se utiliza la versión de 64 bits de Excel, solo se admitirán los archivos de Excel 2003 (.xls); los archivos de Excel 2007 o 2010 (.xlsx) no son compatibles. Si utiliza la versión de 64 bits de Excel 2007 o 2010, guarde el archivo como un archivo .xls o .csv, o instale una versión de 32 bits de Excel en su lugar.  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_kb_operator en la base de datos DQS_MAIN para realizar la limpieza de datos.  
   
 ##  <a name="Create"></a>Crear un proyecto de calidad de datos de limpieza  
@@ -105,7 +105,7 @@ ms.locfileid: "75255692"
   
  En función del nivel de confianza, los valores se muestran en las cinco pestañas siguientes:  
   
-|Tabulador|Descripción|  
+|Pestaña|Descripción|  
 |---------|-----------------|  
 |**Posibles**|Muestra los valores de dominio para los que DQS detectó sugerencias con un nivel de confianza mayor que el *umbral de sugerencia automática* , pero inferior al *umbral de corrección automática* .<br /><br /> Los valores sugeridos se muestran en la columna **Corregir a** junto al valor original. Haga clic en el botón de opción de la columna **Aprobar** o **Rechazar** junto a un valor de la cuadrícula superior para aceptar o rechazar la sugerencia para todas las instancias de dicho valor. En este caso, el valor aceptado se desplaza a la pestaña **Corregido** y el valor rechazado se desplaza a la pestaña **No válido** .|  
 |**Nuevo**|Muestra el dominio válido para el que DQS no tiene suficiente información y, por tanto, no se puede asignar a ninguna otra pestaña. Además, esta pestaña también contiene valores con un nivel de confianza inferior al *umbral de sugerencia automática* , pero lo suficientemente alto como para marcarlos como válidos.<br /><br /> Si cree que el valor es correcto, haga clic en el botón de opción de la columna **Aprobar** . En caso contrario, haga clic en el botón de opción de la columna **Rechazar** . El valor aceptado se desplaza a la pestaña **correcto** y el valor rechazado se desplaza a la pestaña **no válido** . También puede escribir manualmente el valor correcto como sustituto del valor original en la columna **corregir a** en el valor y, a continuación, hacer clic en el botón de opción de la columna **aprobar** para aceptar el cambio. En este caso, el valor se desplaza a la pestaña **Corregido** .|  

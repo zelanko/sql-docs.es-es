@@ -1,5 +1,5 @@
 ---
-title: sys.identity_columns (Transact-SQL) | Microsoft Docs
+title: Sys. identity_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,22 +21,22 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49684671c25ea83fa7554bec7f80d0b16c30d4eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122720"
 ---
-# <a name="sysidentitycolumns-transact-sql"></a>sys.identity_columns (Transact-SQL)
+# <a name="sysidentity_columns-transact-sql"></a>sys.identity_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contiene una fila por cada columna que es una columna de identidad.  
   
- El **sys.identity_columns** vista hereda las filas de la **sys.columns** vista. El **sys.identity_columns** vista devuelve las columnas de la **sys.columns** vista, más el **seed_value**, **increment_value**, **last_value**, y **is_not_for_replication** columnas. Para obtener más información, vea [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
+ La vista **Sys. identity_columns** hereda filas de la vista **Sys. Columns** . La **vista sys. identity_columns** devuelve las columnas de la vista **Sys. Columns** , además de las columnas **seed_value**, **increment_value**, **last_value**y **is_not_for_replication** . Para obtener más información, vea [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**\<las columnas que se heredan de sys.columns >**||El **sys.identity_columns** vista devuelve todas las columnas de la **sys.columns** vista. También devuelve las columnas adicionales descritas a continuación. Para obtener una descripción de las columnas que el **sys.identity_columns** vista se hereda de **sys.columns**, consulte [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).|  
+|**\<columnas heredadas de sys. Columns>**||La vista **Sys. identity_columns** devuelve todas las columnas de la vista **Sys. Columns** . También devuelve las columnas adicionales descritas a continuación. Para obtener una descripción de las columnas que la vista **Sys. identity_columns** hereda de **Sys. Columns**, vea [Sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).|  
 |**seed_value**|**sql_variant**|Valor de inicialización de esta columna de identidad. El tipo de datos del valor de inicialización es el mismo que el de la propia columna.|  
 |**increment_value**|**sql_variant**|Valor de incremento de esta columna de identidad. El tipo de datos del valor de inicialización es el mismo que el de la propia columna.|  
 |**last_value**|**sql_variant**|Último valor generado para esta columna de identidad. El tipo de datos del valor de inicialización es el mismo que el de la propia columna.|  
@@ -48,9 +48,9 @@ ms.locfileid: "68122720"
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Preguntas frecuentes sobre consultas del catálogo de sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
+ [Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 84d5ab0caa22c6f35f3e7b790dbfb3348df8ceb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999967"
 ---
 # <a name="dimensions-mdx"></a>Dimensions (MDX)
@@ -38,16 +38,16 @@ Dimensions(Hierarchy_Name)
  *Hierarchy_Name*  
  Expresión de cadena válida que especifica un nombre de jerarquía.  
   
-## <a name="remarks"></a>Comentarios  
- Si se especifica un número de jerarquía, el **dimensiones** función devuelve una jerarquía cuya posición de base cero dentro del cubo es especifica el número de jerarquía.  
+## <a name="remarks"></a>Observaciones  
+ Si se especifica un número de jerarquía, la función **Dimensions** devuelve una jerarquía cuya posición de base cero dentro del cubo es el número de jerarquía especificado.  
   
- Si se especifica un nombre de jerarquía, el **dimensiones** función devuelve la jerarquía especificada. Normalmente, se utiliza esta versión de cadena de la **dimensiones** función con funciones definidas por el usuario.  
+ Si se especifica un nombre de jerarquía, la función **Dimensions** devuelve la jerarquía especificada. Normalmente, se usa esta versión de cadena de la función **Dimensions** con funciones definidas por el usuario.  
   
 > [!NOTE]  
->  El **medidas** dimensión se representa siempre por `Dimensions(0)`.  
+>  La dimensión **Measures** siempre está representada por `Dimensions(0)`.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes usan la **dimensiones** función para devolver el nombre, el número de niveles y el recuento de miembros de una jerarquía especificada, mediante una expresión numérica y una expresión de cadena.  
+ En los ejemplos siguientes se usa la función **Dimensions** para devolver el nombre, el recuento de niveles y el recuento de miembros de una jerarquía especificada, utilizando una expresión numérica y una expresión de cadena.  
   
 ```  
 WITH MEMBER Measures.x AS Dimensions  
@@ -78,7 +78,7 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

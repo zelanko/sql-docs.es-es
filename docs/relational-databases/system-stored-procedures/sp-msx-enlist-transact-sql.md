@@ -18,19 +18,19 @@ ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 905ec9c26fe84ceaf1230665c3ff13e2e7ffe9f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108031"
 ---
-# <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
+# <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Agrega el servidor actual a la lista de servidores disponibles en el servidor maestro.  
   
 > [!CAUTION]  
->  El **sp_msx_enlist** procedimiento almacenado modifica el registro. No se recomienda la modificación manual del Registro porque los cambios inapropiados o incorrectos pueden causar graves problemas de configuración en el sistema. Por tanto, solo los usuarios experimentados deben utilizar el programa Editor del Registro para modificar el Registro. Para obtener más información, consulte la documentación de Microsoft Windows.  
+>  El **sp_msx_enlist** procedimiento almacenado edita el registro. No se recomienda la modificación manual del Registro porque los cambios inapropiados o incorrectos pueden causar graves problemas de configuración en el sistema. Por tanto, solo los usuarios experimentados deben utilizar el programa Editor del Registro para modificar el Registro. Para obtener más información, consulte la documentación de Microsoft Windows.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +43,9 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @msx_server_name = ] 'msx_server'` El nombre del servidor de administración multiservidor (maestro). *msx_server* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @msx_server_name = ] 'msx_server'`Nombre del servidor de administración multiservidor (maestra). *msx_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @location = ] 'location'` La ubicación del servidor de destino para agregar. *ubicación* es **nvarchar (100)** , su valor predeterminado es null.  
+`[ @location = ] 'location'`Ubicación del servidor de destino que se va a agregar. *Location* es de tipo **nvarchar (100)** y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -68,9 +68,9 @@ EXEC dbo.sp_msx_enlist N'AdventureWorks1',
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_msx_defect &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [xp_cmdshell &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
+ [xp_cmdshell &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  
   
   

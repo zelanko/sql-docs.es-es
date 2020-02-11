@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ccbf276057e5fb67cea9a0520f39e8b002eb4cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753897"
 ---
 # <a name="accessing-native-code-from-a-clr-udf"></a>Acceso a código nativo desde una UDF de CLR
   Este ejemplo muestra cómo invocar una función en código C++ nativo (no administrado) desde una función definida por el usuario en un ensamblado, en la base de datos.  
   
- En este ejemplo, el directorio de trabajo debe ser `c:\test`.  
+ En este ejemplo, el directorio de trabajo debe `c:\test`ser.  
   
  Primero compile el código C++:  
   
@@ -102,7 +102,7 @@ EXEC SleepProc 5
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenarios de uso y ejemplos para la integración de Common Language Runtime &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

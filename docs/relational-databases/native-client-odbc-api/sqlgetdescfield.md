@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 08d6a42d7b078fce5e50c16712dfb97897148e23
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786528"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
@@ -31,22 +31,22 @@ ms.locfileid: "73786528"
  Al igual que los atributos recuperados con SQLColAttribute, los campos de descriptor que notifican atributos de nivel de fila (como SQL_CA_SS_COMPUTE_ID) se notifican para todas las columnas del conjunto de resultados.  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField y parámetros con valores de tabla  
- SQLGetDescField se puede usar para obtener valores para atributos extendidos de parámetros con valores de tabla y columnas de parámetros con valores de tabla. Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros &#40;con&#41;valores de tabla ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ SQLGetDescField se puede usar para obtener valores para atributos extendidos de parámetros con valores de tabla y columnas de parámetros con valores de tabla. Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>SQLGetDescField admite las características mejoradas de fecha y hora  
  Para obtener información sobre los campos de descriptor disponibles con los nuevos tipos de fecha y hora, vea [Parameter and Result Metadata](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Para obtener más información, vea [mejoras &#40;de fecha y&#41;hora ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, vea [mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQLGetDescField puede devolver **SQL_C_SS_TIME2** (para tipos de **hora** ) o **SQL_C_SS_TIMESTAMPOFFSET** (para **DateTimeOffset**) en lugar de **SQL_C_BINARY**, si la aplicación usa ODBC 3,8.  
+ A partir [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]de, SQLGetDescField puede devolver **SQL_C_SS_TIME2** (para tipos de **hora** ) o **SQL_C_SS_TIMESTAMPOFFSET** (para **DateTimeOffset**) en lugar de **SQL_C_BINARY**, si la aplicación usa ODBC 3,8.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField admite UDT CLR grandes  
- **SQLGetDescField** admite los tipos definidos por el usuario CLR grandes (UDT). Para obtener más información, vea [ &#40;tipos CLR grandes definidos por el&#41;usuario ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLGetDescField** admite tipos definidos por el usuario (UDT) CLR grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>SQLGetDescField admite columnas dispersas  
  SQLGetDescField se puede usar para consultar el nuevo campo IRD SQL_CA_SS_IS_COLUMN_SET para determinar si una columna es una columna **COLUMN_SET** .  
   
- Para obtener más información, consulte [compatibilidad con &#40;columnas&#41;dispersas ODBC](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Para obtener más información, consulte [compatibilidad con columnas Dispersas &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -153,8 +153,8 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## <a name="see-also"></a>Vea también  
-   de la [función SQLGetDescField](https://go.microsoft.com/fwlink/?LinkId=59351)  
- [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQLGetDescField función)](https://go.microsoft.com/fwlink/?LinkId=59351)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

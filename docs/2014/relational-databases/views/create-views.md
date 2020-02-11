@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211667"
 ---
 # <a name="create-views"></a>Crear vistas
@@ -54,7 +54,7 @@ ms.locfileid: "68211667"
 ####  <a name="Permissions"></a> Permisos  
  Se necesita el permiso CREATE VIEW en la base de datos y el permiso ALTER en el esquema en que se crea la vista.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-view-by-using-the-query-and-view-designer"></a>Para crear una vista mediante el Diseñador de consultas y vistas  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68211667"
   
 2.  Haga clic con el botón derecho en la carpeta **Vistas** y después haga clic en **Nueva vista...** .  
   
-3.  En el cuadro de diálogo **Agregar tabla**, seleccione el elemento o elementos que desea incluir en la nueva vista desde una de las siguientes pestañas: Tablas, Vistas, Funciones y Sinónimos.  
+3.  En el cuadro de diálogo **Agregar tabla** , seleccione el elemento o elementos que desea incluir en la nueva vista desde una de las siguientes pestañas: Tablas, Vistas, Funciones y Sinónimos.  
   
 4.  Haga clic en **Agregar**y, a continuación, en **Cerrar**.  
   

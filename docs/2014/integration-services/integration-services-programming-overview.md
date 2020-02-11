@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf90de7f1ebcadbc65b6f2ee7eaaacb6d52e0e1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683621"
 ---
 # <a name="integration-services-programming-overview"></a>Información general sobre la programación de Integration Services
@@ -68,7 +68,7 @@ ms.locfileid: "74683621"
 ## <a name="commonly-used-assemblies"></a>Ensamblados de uso frecuente  
  En la tabla siguiente se enumeran los ensamblados que se suelen usar al programar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
   
-|Ensamblado|Descripción|  
+|Assembly|Descripción|  
 |--------------|-----------------|  
 |Microsoft.SqlServer.ManagedDTS.dll|Contiene el motor en tiempo de ejecución administrado.|  
 |Microsoft.SqlServer.RuntimeWrapper.dll|Contiene el ensamblado de interoperabilidad primario (PIA), o contenedor, para el motor en tiempo de ejecución nativo.|  

@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ba2cef1cfb95319cbe0aff827cb251ff7e2317c2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893612"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
-  Devuelve el conjunto de tuplas del primer conjunto especificado que existe con una o más tuplas del segundo conjunto especificado. Esta función realiza manualmente lo que Autoexist realiza automáticamente. Para obtener más información acerca de autoexists, consulte [conceptos &#40;clave&#41;en MDX Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
+  Devuelve el conjunto de tuplas del primer conjunto especificado que existe con una o más tuplas del segundo conjunto especificado. Esta función realiza manualmente lo que Autoexist realiza automáticamente. Para obtener más información acerca de autoexists, consulte [conceptos clave en MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
- Si se proporciona \<el nombre de grupo de medida opcional >, la función devuelve tuplas que existen con una o más tuplas del segundo conjunto y las tuplas que tienen asociadas filas en la tabla de hechos del grupo de medida especificado.  
+ Si se proporciona \<el nombre de grupo de medida opcional>, la función devuelve tuplas que existen con una o más tuplas del segundo conjunto y las tuplas que tienen asociadas filas en la tabla de hechos del grupo de medida especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +39,7 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  *MeasureGroupName*  
  Expresión de cadena válida que especifica un nombre de grupo de medida.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 1.  Las filas del grupo de medida con medidas que contengan valores NULL contribuyen a **EXISTS** cuando se especifica el argumento MeasureGroupName. Esta es la diferencia entre esta forma de EXISTS y la función NonEmpty: Si la propiedad NullProcessing de estas medidas está establecida en preserve, esto significa que las medidas mostrarán valores NULL cuando las consultas se ejecuten en esa parte del cubo. NonEmpty siempre quitará las tuplas de un conjunto que tengan valores de medida null, mientras que EXISTS con el argumento MeasureGroupName no filtrará las tuplas que tengan asociadas filas de grupo de medida, aunque los valores de medida sean null.  
   
@@ -92,11 +92,11 @@ EXISTS(
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX &#40;de Crossjoin&#41;](../mdx/crossjoin-mdx.md)   
- [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
- [MDX no &#40;vacío&#41;](../mdx/nonempty-mdx.md)   
- [IsEmpty &#40;(MDX)&#41;](../mdx/isempty-mdx.md)  
+ [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
+ [NonEmptyCrossjoin &#40;&#41;MDX](../mdx/nonemptycrossjoin-mdx.md)   
+ [&#41;MDX no vacío &#40;](../mdx/nonempty-mdx.md)   
+ [IsEmpty &#40;&#41;MDX](../mdx/isempty-mdx.md)  
   
   

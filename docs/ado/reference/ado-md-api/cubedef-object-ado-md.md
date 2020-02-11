@@ -16,48 +16,48 @@ ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61795a8cb10fb0b469f89012d52dfb4723aa0a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949794"
 ---
 # <a name="cubedef-object-ado-md"></a>Objeto CubeDef (ADO MD)
-Representa un cubo de un esquema multidimensional, que contiene un conjunto de dimensiones relacionadas.  
+Representa un cubo de un esquema multidimensional que contiene un conjunto de dimensiones relacionadas.  
   
-## <a name="remarks"></a>Comentarios  
- Con las colecciones y propiedades de un **CubeDef** objeto, puede hacer lo siguiente:  
+## <a name="remarks"></a>Observaciones  
+ Con las colecciones y las propiedades de un objeto **CubeDef** , puede hacer lo siguiente:  
   
--   Identificar un **CubeDef** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) propiedad.  
+-   Identifique un **CubeDef** con la propiedad [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) .  
   
--   Devolver una cadena que describe el cubo con la [descripción](../../../ado/reference/ado-md-api/description-property-ado-md.md) propiedad.  
+-   Devuelve una cadena que describe el cubo con la propiedad [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) .  
   
--   Devolver las dimensiones que conforman el cubo con la [dimensiones](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md) colección.  
+-   Devuelve las dimensiones que componen el cubo con la colección de [dimensiones](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md) .  
   
--   Obtener información adicional sobre el **CubeDef** con el estándar de ADO [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección.  
+-   Obtenga información adicional sobre el **CubeDef** con la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) de ADO estándar.  
   
- El **propiedades** colección contiene las propiedades proporcionadas por el proveedor. En la tabla siguiente se enumera las propiedades que podrían estar disponibles. La lista de propiedades reales puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista completa de las propiedades disponibles.  
+ La colección **Properties** contiene propiedades proporcionadas por el proveedor. En la tabla siguiente se enumeran las propiedades que pueden estar disponibles. La lista de propiedades real puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista más completa de las propiedades disponibles.  
   
-|NOMBRE|Descripción|  
+|Nombre|Descripción|  
 |----------|-----------------|  
-|CatalogName|El nombre del catálogo al que pertenece este cubo.|  
+|CatalogName|Nombre del catálogo al que pertenece este cubo.|  
 |CreatedOn|Fecha y hora de creación del cubo.|  
 |CubeGUID|GUID del cubo.|  
 |CubeName|Nombre del cubo.|  
 |CubeType|El tipo de cubo.|  
-|DataUpdatedBy|Id. de usuario de la persona que realiza la última actualización de datos.|  
-|Descripción|Descripción del cubo.|  
-|LastSchemaUpdate|Fecha y hora de última actualización del esquema.|  
-|SchemaName|El nombre del esquema al que pertenece este cubo.|  
-|SchemaUpdatedBy|Id. de usuario de la persona que realiza la última actualización del esquema.|  
+|DataUpdatedBy|IDENTIFICADOR de usuario de la persona que realiza la última actualización de datos.|  
+|Descripción|Una descripción significativa del cubo.|  
+|LastSchemaUpdate|Fecha y hora de la última actualización del esquema.|  
+|SchemaName|Nombre del esquema al que pertenece este cubo.|  
+|SchemaUpdatedBy|IDENTIFICADOR de usuario de la persona que realiza la última actualización del esquema.|  
   
  Esta sección contiene el siguiente tema.  
   
 -   [Propiedades, métodos y eventos](../../../ado/reference/ado-md-api/cubedef-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo de CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [Objeto Catalog (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
  [Colección CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
- [Colección Dimensions (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
+ [Colección de dimensiones (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

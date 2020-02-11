@@ -18,13 +18,13 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68702781"
 ---
-# <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
+# <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   El esquema **dbo** de la base de datos actual.  
   
-`[ @qualifier = ] 'qualifier'`Es el nombre del calificador del procedimiento. el calificador es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (_calificador_ **.** _esquema_ de **.** _nombre_. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el calificador representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+`[ @qualifier = ] 'qualifier'`Es el nombre del calificador del procedimiento. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (_calificador_**.** _esquema_**.** _nombre_. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el *calificador* representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
 `[ @fUsePattern = ] 'fUsePattern'`Determina si el carácter de subrayado (_), porcentaje (%) o corchetes []) se interpreta como caracteres comodín. *fUsePattern* es de **bit**y su valor predeterminado es 1.  
   
@@ -68,18 +68,20 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Nombre del calificador del procedimiento. Esta columna puede ser NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nombre del propietario del procedimiento. Esta columna siempre devuelve un valor.|  
-|**PROCEDURE_NAME**|**nvarchar(134)**|Nombre del procedimiento. Esta columna siempre devuelve un valor.|  
-|**NUM_INPUT_PARAMS**|**int**|Reservado para uso futuro.|  
-|**NUM_OUTPUT_PARAMS**|**int**|Reservado para uso futuro.|  
-|**NUM_RESULT_SETS**|**int**|Reservado para uso futuro.|  
-|**SECCIÓN**|**varchar(254)**|Descripción del procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
-|**PROCEDURE_TYPE**|**smallint**|Tipo de procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve 2.0. Este valor puede ser uno de los siguientes:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
+|**PROCEDURE_NAME**|**nvarchar (134)**|Nombre del procedimiento. Esta columna siempre devuelve un valor.|  
+|**NUM_INPUT_PARAMS**|**int**|Reservado para su uso en el futuro:|  
+|**NUM_OUTPUT_PARAMS**|**int**|Reservado para su uso en el futuro:|  
+|**NUM_RESULT_SETS**|**int**|Reservado para su uso en el futuro:|  
+|**SECCIÓN**|**VARCHAR (254)**|Descripción del procedimiento. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
+|**PROCEDURE_TYPE**|**smallint**|Tipo de procedimiento. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve 2.0. Este valor puede ser uno de los siguientes:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para obtener la máxima interoperatividad, el cliente de la puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL (los caracteres de comodín % y _).  
   
  La información de permisos acerca del acceso de ejecución del usuario actual para un procedimiento almacenado específico no se comprueba necesariamente, por lo tanto, el acceso no está garantizado. Observe que solo se utilizan los nombres en tres partes. Esto significa que solo se devolverán los procedimientos almacenados locales, y no los remotos (que precisan nombres de cuatro partes), cuando se ejecuten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el atributo de servidor ACCESSIBLE_SPROC es Y en el conjunto de resultados de **sp_server_info**, solo se devuelven los procedimientos almacenados que puede ejecutar el usuario actual.  
@@ -100,7 +102,7 @@ GO
 EXEC sp_stored_procedures;  
 ```  
   
-### <a name="b-returning-a-single-stored-procedure"></a>b. Devolver un solo procedimiento almacenado  
+### <a name="b-returning-a-single-stored-procedure"></a>B. Devolver un solo procedimiento almacenado  
  En el ejemplo siguiente se devuelve un conjunto de resultados para el procedimiento almacenado `uspLogError`.  
   
 ```  
@@ -109,8 +111,8 @@ GO
 sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos &#40;almacenados de catálogo de TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Procedimientos almacenados de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

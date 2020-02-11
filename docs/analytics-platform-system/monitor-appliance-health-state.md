@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400991"
 ---
 # <a name="monitor-appliance-health-state"></a>Supervisar el estado de mantenimiento del dispositivo
@@ -90,7 +90,7 @@ La columna **[Update_time]** muestra la última vez que los agentes de mantenimi
 > [!CAUTION]  
 > Asegúrese de investigar el problema cuando un componente no se ha sondeado durante 5 minutos o más. podría haber una alerta que indique un problema con los latidos de software.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [Supervisión de dispositivos &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

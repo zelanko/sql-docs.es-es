@@ -17,16 +17,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8109678c3e9695b842eb57b976da9e653afd737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106658"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>Agregar código a un informe (SSRS)
   Si lo desea, puede llamar a su propio código personalizado en cualquier expresión. Puede proporcionar el código de estas dos formas:  
   
--   Incrustando el código escrito en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] directamente en el informe. Si el código hace referencia a un ensamblado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que no es <xref:System.Math> ni <xref:System.Convert>, debe agregar la referencia al informe. Para más información, vea [Agregar una referencia de ensamblado a un informe &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md). Para más información sobre otras referencias que puede usar desde el código, vea [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+-   Incrustando el código escrito en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] directamente en el informe. Si el código hace referencia a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] un que no <xref:System.Math> es <xref:System.Convert>o, debe agregar la referencia al informe. Para más información, vea [Agregar una referencia de ensamblado a un informe &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md). Para más información sobre otras referencias que puede usar desde el código, vea [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 -   Proporcionando un ensamblado de código personalizado usando [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Si proporciona un ensamblado personalizado, debe instalarlo tanto en el equipo donde crea el informe como en el servidor de informes donde ve el informe. Para más información, consulte [Using Custom Assemblies with Reports](../custom-assemblies/using-custom-assemblies-with-reports.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66106658"
   
 1.  En la vista **Diseño** , haga clic con el botón derecho en la superficie de diseño fuera del borde del informe y, después, haga clic en **Propiedades del informe**.  
   
-2.  Haga clic en **Código**.  
+2.  Haga clic en **código**.  
   
 3.  En **Código personalizado**, escriba el código. Los errores en el código generan advertencias al ejecutar el informe. En el ejemplo siguiente se crea una función personalizada denominada `ChangeWord` que reemplaza la palabra "`Bike`" por "`Bicycle`".  
   
@@ -57,8 +57,8 @@ ms.locfileid: "66106658"
   
      Si agrega esta expresión a una celda de tabla que muestre valores de categoría, cada vez que la palabra "Bike" aparezca en el campo de conjunto de datos para esa fila, el valor de la celda de tabla muestra en su lugar la palabra "Bicycle".  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades del informe (cuadro de diálogo), Código](../report-properties-dialog-box-code.md)   
+## <a name="see-also"></a>Consulte también  
+ [Propiedades del informe (cuadro de diálogo), código](../report-properties-dialog-box-code.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Usar referencias a la colección de parámetros &#40;Generador de informes y SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
   

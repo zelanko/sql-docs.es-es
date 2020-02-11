@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638169"
 ---
 # <a name="columns-with-a-name"></a>Columnas con nombre
@@ -33,7 +33,7 @@ ms.locfileid: "62638169"
 -   Una columna tiene un nombre distinto.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>El nombre de la columna empieza por \@  
- Si el nombre de columna se inicia con una arroba (\@) y no tiene una barra diagonal (/), un atributo de la <`row`> se crea el elemento que tiene el valor de columna correspondiente. Por ejemplo, la consulta siguiente devuelve un conjunto de filas con dos columnas (\@PmId y Name). En el XML resultante, se agrega un atributo **PmId** al elemento <`row`> correspondiente y se le asigna un valor de ProductModelID.  
+ Si el nombre de columna comienza con un signo de\@arroba () y no contiene una barra diagonal (/), se crea un atributo `row` del <> elemento que tiene el valor de columna correspondiente. Por ejemplo, la consulta siguiente devuelve un conjunto de filas con dos columnas (\@PmId y Name). En el XML resultante, se agrega un atributo **PmId** al elemento <`row`> correspondiente y se le asigna un valor de ProductModelID.  
   
 ```  
   
@@ -46,7 +46,7 @@ go
   
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <row PmId="7">  
@@ -66,7 +66,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>El nombre de la columna no empieza por \@  
- Si el nombre de columna no empieza por un signo de arroba (\@), no es una de las pruebas de nodo XPath y no contiene una barra diagonal (/), un elemento XML que es un subelemento del elemento de fila, <`row`> de forma predeterminada, se crea.  
+ Si el nombre de la columna no empieza con un signo de\@arroba (), no es una de las pruebas de nodo XPath y no contiene una barra diagonal (/), se crea un elemento XML que es un subelemento del elemento row `row` <> de forma predeterminada.  
   
  La consulta siguiente especifica el nombre de la columna, el resultado. Por tanto, se agrega un elemento secundario <`result`> al elemento <`row`>.  
   
@@ -75,7 +75,7 @@ SELECT 2+2 as result
 for xml PATH  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <row>  
@@ -98,7 +98,7 @@ FOR XML PATH
 go  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <row>  
@@ -128,7 +128,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Los nombres de columna se utilizan como una ruta de acceso en la creación de XML en el modo PATH. El nombre de columna que contiene los valores de Id. de empleados empieza por '\@'. Por lo tanto, un atributo **EmpID**, se agrega a la <`row`> elemento. Todas las demás columnas incluyen una barra diagonal ('/') en el nombre de columna que indica la jerarquía. El XML resultante tendrá el elemento secundario <`EmpName`> debajo del elemento <`row`>, y el elemento secundario <`EmpName`> tendrá los elementos secundarios <`First`>, <`Middle`> y <`Last`>.  
+ Los nombres de columna se utilizan como una ruta de acceso en la creación de XML en el modo PATH. El nombre de columna que contiene los valores de ID. de\@empleado comienza por ' '. Por lo tanto, se agrega un atributo, **empid**, al elemento `row` <>. Todas las demás columnas incluyen una barra diagonal ('/') en el nombre de columna que indica la jerarquía. El XML resultante tendrá el elemento secundario <`EmpName`> debajo del elemento <`row`>, y el elemento secundario <`EmpName`> tendrá los elementos secundarios <`First`>, <`Middle`> y <`Last`>.  
   
 ```  
 <row EmpID="1">  
@@ -152,7 +152,7 @@ AND    E.EmployeeID=1
 FOR XML PATH, ELEMENTS XSINIL  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
@@ -184,7 +184,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <row EmpID="1">  
@@ -222,7 +222,7 @@ FOR XML PATH
   
  Como resultado, la consulta crea dos elementos <`EmpName`>. El primer elemento <`EmpName`> tiene el elemento secundario <`FirstName`> y el segundo elemento <`EmpName`> tiene los elementos secundarios <`MiddleName`> y <`LastName`>.  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <row EmpID="1">  
@@ -239,7 +239,7 @@ FOR XML PATH
 </row>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo PATH con FOR XML](use-path-mode-with-for-xml.md)  
   
   

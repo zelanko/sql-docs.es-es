@@ -1,5 +1,5 @@
 ---
-title: Catálogo de eventos, métodos y propiedades del objeto | Microsoft Docs
+title: Propiedades, métodos y eventos del objeto de catálogo | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,15 +13,15 @@ ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32321406d6de6aad4674bdea6ea9a5c086369259
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967049"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Catalog
-## <a name="propertiescollections"></a>Propiedades y colecciones  
- [Propiedad ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)  
+## <a name="propertiescollections"></a>Propiedades/colecciones  
+ [ActiveConnection (propiedad)](../../../ado/reference/adox-api/activeconnection-property-adox.md)  
   
  [Colección de grupos](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
@@ -29,19 +29,19 @@ ms.locfileid: "67967049"
   
  [Colección de tablas](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
- [Colección de usuarios](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Recopilación de usuarios](../../../ado/reference/adox-api/users-collection-adox.md)  
   
  [Colección de vistas](../../../ado/reference/adox-api/views-collection-adox.md)  
   
 ## <a name="methods"></a>Métodos  
- [Crear método](../../../ado/reference/adox-api/create-method-adox.md)  
+ [Create (método)](../../../ado/reference/adox-api/create-method-adox.md)  
   
- [GetObjectOwner (método)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
+ [Método GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
   
  [SetObjectOwner (método)](../../../ado/reference/adox-api/setobjectowner-method.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Ninguno.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)

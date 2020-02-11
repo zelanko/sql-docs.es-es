@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519309"
 ---
 # <a name="event-tracing-for-windows-target"></a>seguimiento de eventos para Windows de destino
@@ -86,7 +86,7 @@ ADD TARGET package0.etw_classic_sync_target
   
  Para obtener más información sobre un ejemplo completo que muestra cómo usar el destino ETW, incluida la forma de ver los datos, vea [Supervisar la actividad del sistema mediante eventos extendidos](monitor-system-activity-using-extended-events.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Destinos de SQL Server Extended Events](../../database-engine/sql-server-extended-events-targets.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   

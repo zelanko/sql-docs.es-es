@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1916c87eae6a884775ae612e42381a12586d894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62509967"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>Elegir nombre (cuadro de diálogo, Visual Database Tools)
-  Este cuadro de diálogo aparece cuando se elige **guardar \<TableName**>, **guardar \<nombrediagrama >** , o **guardar \<ViewName >** desde el **archivo** menú.  
+  Este cuadro de diálogo aparece cuando elige **Guardar \<TableName**>, **guarda \<DiagramName>** o **guarda \<ViewName>** en el menú **archivo** .  
   
  **Escriba un nombre para la tabla, diagrama o vista.**  
  Proporciona un cuadro de texto para escribir el nombre de la tabla, diagrama o vista.  

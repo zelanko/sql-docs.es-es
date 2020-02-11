@@ -1,5 +1,5 @@
 ---
-title: AppendChunk y GetChunk métodos ejemplo (VB) | Microsoft Docs
+title: Ejemplo de los métodos AppendChunk y GetChunk (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7183dbc6b54e5560784e5de602a45da8e5a235a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920624"
 ---
-# <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk y GetChunk métodos ejemplo (VB)
-Este ejemplo se usa el [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) y [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) métodos para rellenar un campo de imagen con datos de otro registro.  
+# <a name="appendchunk-and-getchunk-methods-example-vb"></a>Ejemplo de los métodos AppendChunk y GetChunk (VB)
+En este ejemplo se usan los métodos [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) y [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) para rellenar un campo de imagen con datos de otro registro.  
   
 ```  
 'BeginAppendChunkVB  
@@ -147,8 +147,8 @@ End Sub
 'EndAppendChunkVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Método AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
- [Método GetChunk (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [AppendChunk (método) (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
+ [Field (objeto)](../../../ado/reference/ado-api/field-object.md)   
+ [GetChunk (método) (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   
  [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)

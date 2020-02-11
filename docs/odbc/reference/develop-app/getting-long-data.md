@@ -1,5 +1,5 @@
 ---
-title: Obtención de datos de tipo Long | Microsoft Docs
+title: Obtención de datos largos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 49f0023f726dd4bb290ffba1018ce2608800dd90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68216368"
 ---
 # <a name="getting-long-data"></a>Obtener datos de tipo Long
-Definen DBMS *datos long* como cualquier carácter o datos binarios a través de un determinado tamaño, por ejemplo, 255 caracteres. Estos datos pueden ser lo suficientemente pequeños como para almacenarse en un único búfer, por ejemplo, una descripción de la parte de varios miles de caracteres. Sin embargo, podría ser demasiado largo para almacenar en memoria, como documentos de texto largos o mapas de bits. Porque no se puede almacenar estos datos en un único búfer, se recupera desde el controlador en partes con **SQLGetData** después de que se han obtenido los demás datos de la fila.  
+Los DBMS definen *datos largos* como cualquier carácter o dato binario a lo largo de un determinado tamaño, como 255 caracteres. Estos datos pueden ser lo suficientemente pequeños como para almacenarse en un solo búfer, como una descripción de varios miles de caracteres. Sin embargo, puede que sea demasiado largo para almacenar en memoria, como documentos de texto largos o mapas de bits. Dado que estos datos no se pueden almacenar en un solo búfer, se recuperan del controlador en partes con **SQLGetData** después de que se hayan capturado los demás datos de la fila.  
   
 > [!NOTE]  
->  Una aplicación realmente puede recuperar cualquier tipo de datos con **SQLGetData**, no solo largos de datos, aunque se pueden recuperar sólo datos de caracteres y binarios en partes. Sin embargo, si los datos son lo suficientemente pequeños como para caber en un único búfer, normalmente hay ninguna razón para utilizar **SQLGetData**. Es mucho más fácil enlazar un búfer a la columna y dejar que el controlador de devolver los datos en el búfer.  
+>  En realidad, una aplicación puede recuperar cualquier tipo de datos con **SQLGetData**, no solo datos largos, aunque solo se pueden recuperar en partes los datos de caracteres y binarios. Sin embargo, si los datos son lo suficientemente pequeños como para caber en un solo búfer, generalmente no hay ningún motivo para usar **SQLGetData**. Es mucho más fácil enlazar un búfer a la columna y dejar que el controlador devuelva los datos en el búfer.  
   
- Para recuperar datos long de una columna, una aplicación llama primero **SQLFetchScroll** o **SQLFetch** para desplazarse a una fila y capturar los datos de las columnas enlazadas. La aplicación, a continuación, llama a **SQLGetData**. **SQLGetData** tiene los mismos argumentos que **SQLBindCol**: un identificador de instrucción; un número de columna; la longitud de bytes, la dirección y el tipo de datos de C de una variable de aplicación y la dirección de un búfer de longitud/indicador. Ambas funciones tienen los mismos argumentos, puesto que realizan básicamente la misma tarea: Tanto que describen una variable de aplicación para el controlador y especifican que se deben devolver los datos de una columna en particular en esa variable. Las principales diferencias son que **SQLGetData** se llama después de que se captura una fila (y a veces se conoce como *enlace más tarde* por este motivo) y que el enlace especificado por **SQLGetData**  dura solo el tiempo que dure la llamada.  
+ Para recuperar datos de gran tamaño de una columna, una aplicación llama primero a **SQLFetchScroll** o **SQLFetch** para moverse a una fila y capturar los datos de las columnas enlazadas. A continuación, la aplicación llama a **SQLGetData**. **SQLGetData** tiene los mismos argumentos que **SQLBindCol**: un identificador de instrucción; un número de columna; el tipo de datos de C, la dirección y la longitud de bytes de una variable de aplicación; y la dirección de un búfer de longitud/indicador. Ambas funciones tienen los mismos argumentos porque realizan esencialmente la misma tarea: ambos describen una variable de aplicación para el controlador y especifican que los datos de una columna determinada se devuelvan en esa variable. Las principales diferencias son que se llama a **SQLGetData** después de capturar una fila (y a veces se conoce como *enlace en tiempo de ejecución* por este motivo) y que el enlace especificado por **SQLGetData** solo dura la duración de la llamada.  
   
- Acerca de una sola columna, **SQLGetData** se comporta como **SQLFetch**: Recupera los datos de la columna, lo convierte en el tipo de la variable de aplicación y lo devuelve en esa variable. También se devuelve la longitud de bytes de los datos en el búfer de longitud/indicador. Para obtener más información acerca de cómo **SQLFetch** devuelve datos, vea [capturar una fila de datos](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
+ En cuanto a una sola columna, **SQLGetData** se comporta como **SQLFetch**: recupera los datos de la columna, los convierte al tipo de la variable de aplicación y lo devuelve en esa variable. También devuelve la longitud de bytes de los datos en el búfer de longitud/indicador. Para obtener más información sobre cómo devuelve **SQLFetch** los datos, vea [obtener una fila de datos](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
   
- **SQLGetData** difiere **SQLFetch** en un aspecto importante. Si se llama varias veces seguidas de la misma columna, cada llamada devuelve un elemento sucesivo de los datos. Cada llamada, excepto la última llamada devuelve SQL_SUCCESS_WITH_INFO y SQLSTATE 01004 (datos de cadena derecha truncados); la última llamada devuelve SQL_SUCCESS. Se trata cómo **SQLGetData** se usa para recuperar datos largos en partes. Cuando no hay ningún dato más para devolver, **SQLGetData** devuelve SQL_NO_DATA. La aplicación es responsable de reunir los datos grandes, lo que podría significar la concatenación de las partes de los datos. Cada parte está terminada en null; la aplicación debe quitar el carácter de terminación null si las partes a concatenar. Recuperación de datos en partes puede hacerse para marcadores de longitud variable, así que para otros datos de tipo long. El valor devuelto en las salidas de búfer de longitud/indicador en cada llamada por el número de bytes devuelto en la llamada anterior, aunque es común para que no pueda detectar la cantidad de datos disponibles y devolver una longitud de bytes de SQL_NO_TOTAL el controlador. Por ejemplo:  
+ **SQLGetData** difiere de **SQLFetch** en un respeto importante. Si se llama más de una vez consecutivamente para la misma columna, cada llamada devuelve una parte sucesiva de los datos. Cada llamada a excepción de la última llamada devuelve SQL_SUCCESS_WITH_INFO y SQLSTATE 01004 (datos de cadena, truncados a la derecha). la última llamada devuelve SQL_SUCCESS. Así es como se usa **SQLGetData** para recuperar datos largos en partes. Cuando no hay más datos que devolver, **SQLGetData** devuelve SQL_NO_DATA. La aplicación es responsable de colocar los datos largos juntos, lo que podría significar la concatenación de las partes de los datos. Cada parte termina en null; la aplicación debe quitar el carácter de terminación NULL si se concatenan los elementos. La recuperación de datos en partes puede realizarse para los marcadores de longitud variable y para otros datos de gran tamaño. El valor devuelto en el búfer de longitud/indicador disminuye en cada llamada el número de bytes devueltos en la llamada anterior, aunque es común que el controlador no detecte la cantidad de datos disponibles y devuelva una longitud de bytes de SQL_NO_TOTAL. Por ejemplo:  
   
 ```  
 // Declare a binary buffer to retrieve 5000 bytes of data at a time.  
@@ -72,16 +72,16 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- Existen varias restricciones sobre el uso de **SQLGetData**. Por lo general, acceso las columnas con **SQLGetData**:  
+ Existen varias restricciones en el uso de **SQLGetData**. Por lo general, las columnas a las que se tiene acceso con **SQLGetData**:  
   
--   Debe tener acceso a en orden creciente número de columna (debido a la manera en que las columnas del conjunto de resultados se leen desde el origen de datos). Por ejemplo, es un error llamar a **SQLGetData** para 5 de columna y, a continuación, llamarlo para la columna 4.  
+-   Se debe tener acceso a en orden de número de columna creciente (debido al modo en que las columnas de un conjunto de resultados se leen desde el origen de datos). Por ejemplo, es un error llamar a **SQLGetData** para la columna 5 y, a continuación, llamarlo para la columna 4.  
   
--   no se puede enlazar.  
+-   No se puede enlazar.  
   
--   Debe tener un número de columna mayor que la última columna enlazada. Por ejemplo, si la última columna enlazada es la columna 3, es un error llamar a **SQLGetData** para la columna 2. Por este motivo, las aplicaciones deben asegurarse de que va a colocar las columnas de datos de tipo long al final de la lista de selección.  
+-   Debe tener un número de columna superior al de la última columna enlazada. Por ejemplo, si la última columna enlazada es la columna 3, es un error llamar a **SQLGetData** para la columna 2. Por este motivo, las aplicaciones deben asegurarse de colocar las columnas de datos largas al final de la lista de selección.  
   
--   No se puede usar si **SQLFetch** o **SQLFetchScroll** se llama para recuperar más de una fila. Para obtener más información, consulte [utilizar cursores de bloque](../../../odbc/reference/develop-app/using-block-cursors.md).  
+-   No se puede usar si se llamó a **SQLFetch** o **SQLFetchScroll** para recuperar más de una fila. Para obtener más información, vea [usar cursores de bloque](../../../odbc/reference/develop-app/using-block-cursors.md).  
   
- Algunos controladores no aplican estas restricciones. Aplicaciones interoperables deben asumir que existen o determinan qué restricciones no se aplican mediante una llamada a **SQLGetInfo** con la opción SQL_GETDATA_EXTENSIONS.  
+ Algunos controladores no aplican estas restricciones. Las aplicaciones interoperables deben suponer que existen o determinar qué restricciones no se aplican llamando a **SQLGetInfo** con la opción SQL_GETDATA_EXTENSIONS.  
   
- Si la aplicación no necesita todos los datos de un carácter o una columna de datos binarios, puede reducir el tráfico de red en los controladores basados en DBMS estableciendo el atributo de instrucción SQL_ATTR_MAX_LENGTH antes de ejecutar la instrucción. Esto restringe el número de bytes de datos que se devolverá para cualquier carácter o una columna binaria. Por ejemplo, suponga que una columna contiene texto largo documentos. Una aplicación que examina la tabla que contiene esta columna podría tener que mostrar solo la primera página de cada documento. Aunque este atributo de instrucción se puede simular en el controlador, no hay ninguna razón para hacerlo. En concreto, si una aplicación desea truncar caracteres o datos binarios, debe enlazar un búfer pequeño a la columna con **SQLBindCol** y dejar que el controlador truncar los datos.
+ Si la aplicación no necesita todos los datos de una columna de datos binarios o de caracteres, puede reducir el tráfico de red en los controladores basados en DBMS estableciendo el atributo de instrucción SQL_ATTR_MAX_LENGTH antes de ejecutar la instrucción. Esto restringe el número de bytes de datos que se devolverán para cualquier carácter o columna binaria. Por ejemplo, supongamos que una columna contiene documentos de texto largo. Es posible que una aplicación que examina la tabla que contiene esta columna tenga que mostrar solo la primera página de cada documento. Aunque este atributo de instrucción se puede simular en el controlador, no hay ninguna razón para hacerlo. En concreto, si una aplicación desea truncar los datos de caracteres o binarios, debe enlazar un búfer pequeño a la columna con **SQLBindCol** y dejar que el controlador trunque los datos.

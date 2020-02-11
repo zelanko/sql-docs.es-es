@@ -1,5 +1,5 @@
 ---
-title: Método MoveRecord (ADO) | Microsoft Docs
+title: MoveRecord (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,10 +17,10 @@ ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918073"
 ---
 # <a name="moverecord-method-ado"></a>Método MoveRecord (ADO)
@@ -35,45 +35,45 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parámetros  
  *Origen*  
- Opcional. Un **cadena** valor que contiene una dirección URL que identifica el **registro** va a mover. Si *origen* se omite o se especifica una cadena vacía, el objeto representado por este **registro** se mueve. Por ejemplo, si la **registro** representa un archivo, el contenido del archivo se mueve a la ubicación especificada por *destino*.  
+ Opcional. Valor de **cadena** que contiene una dirección URL que identifica el **registro** que se va a desplace. Si se omite *source* o especifica una cadena vacía, se mueve el objeto representado por este **registro** . Por ejemplo, si el **registro** representa un archivo, el contenido del archivo se mueve a la ubicación especificada por *Destination*.  
   
  *Destino*  
- Opcional. Un **cadena** valor que contiene la dirección URL que especifica la ubicación donde *origen* se va a mover.  
+ Opcional. Valor de **cadena** que contiene una dirección URL que especifica la ubicación donde se va a desplace el *origen* .  
   
- *UserName*  
- Opcional. Un **cadena** valor que contiene el identificador de usuario que, si es necesario, autoriza el acceso a *destino*.  
+ *Nombre*  
+ Opcional. Valor de **cadena** que contiene el identificador de usuario que, si es necesario, autoriza el acceso al *destino*.  
   
  *Contraseña*  
- Opcional. Un **cadena** que contiene la contraseña que, si es necesario, comprueba *UserName*.  
+ Opcional. Una **cadena** que contiene la contraseña que, si es necesario, comprueba el *nombre de usuario*.  
   
  *Opciones*  
- Opcional. Un [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) cuyo valor predeterminado es el valor **adMoveUnspecified**. Especifica el comportamiento de este método.  
+ Opcional. Un valor de [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) cuyo valor predeterminado es **adMoveUnspecified**. Especifica el comportamiento de este método.  
   
- *Async*  
- Opcional. Un **booleano** valor que, cuando **True**, especifica que esta operación debe ser asincrónica.  
+ *Copystreamtostream*  
+ Opcional. Valor **booleano** que, cuando **es true**, especifica que esta operación debe ser asincrónica.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un valor **String**. Normalmente, el valor de *destino* se devuelve. Sin embargo, el valor devuelto exacto depende del proveedor.  
+ Un valor **String**. Normalmente, se devuelve el valor de *Destination* . Sin embargo, el valor exacto devuelto depende del proveedor.  
   
-## <a name="remarks"></a>Comentarios  
- Los valores de *origen* y *destino* no debe ser idéntico; en caso contrario, se produce un error de tiempo de ejecución. Al menos los nombres de servidor, la ruta de acceso y el recurso deben ser diferente.  
+## <a name="remarks"></a>Observaciones  
+ Los valores de *origen* y *destino* no deben ser idénticos; de lo contrario, se produce un error en tiempo de ejecución. Al menos los nombres de servidor, ruta de acceso y recurso deben ser diferentes.  
   
- Para los archivos movidos mediante el proveedor de publicación en Internet, este método actualiza todos los vínculos de hipertexto de los archivos que se va a mover a menos que especifique otra cosa *opciones*. Este método produce un error si *destino* identifica un objeto existente (por ejemplo, un archivo o directorio), a menos que **adMoveOverWrite** se especifica.  
-  
-> [!NOTE]
->  Use la **adMoveOverWrite** opción con prudencia. Por ejemplo, si especifica esta opción al mover un archivo a un directorio eliminará el directorio y reemplazarlo con el archivo.  
-  
- Ciertos atributos de la **registro** objetos, como el [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) propiedad, no se actualizará una vez completada esta operación. Actualizar el **registro** propiedades del objeto al cerrar la **registro**, a continuación, vuelva a abrirlo con la dirección URL de la ubicación donde se ha movido el archivo o directorio.  
-  
- Si este **registro** se obtuvo de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), no se reflejará inmediatamente en la nueva ubicación del directorio o archivo movido el **Recordset**. Actualizar el **Recordset** al cerrar y volver a abrirlo.  
+ En el caso de los archivos que se movieron mediante el proveedor de publicación en Internet, este método actualiza todos los vínculos de hipertexto de los archivos que se mueven, a *menos que se*especifique lo contrario Este método produce un error si el *destino* identifica un objeto existente (por ejemplo, un archivo o un directorio), a menos que se especifique **adMoveOverWrite** .  
   
 > [!NOTE]
->  Las direcciones URL con el esquema http, se invocarán automáticamente el [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [absoluto y las direcciones URL relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Use la opción **adMoveOverWrite** con prudencia. Por ejemplo, si se especifica esta opción cuando se mueve un archivo a un directorio, se eliminará el directorio y se reemplazará por el archivo.  
+  
+ Algunos atributos del objeto de **registro** , como la propiedad [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) , no se actualizarán una vez completada esta operación. Actualice las propiedades del objeto **Record** cerrando el **registro**y, a continuación, vuelva a abrirlo con la dirección URL de la ubicación donde se ha despasado el archivo o directorio.  
+  
+ Si este **registro** se obtuvo de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md), la nueva ubicación del archivo o directorio que se ha descargado no se reflejará inmediatamente en el **conjunto de registros**. Actualice el **conjunto de registros** . para ello, cierre y vuelva a abrirlo.  
+  
+> [!NOTE]
+>  Las direcciones URL que usan el esquema http invocarán automáticamente el [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [direcciones URL absolutas y relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
- [Método Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [MoveFirst, MoveLast, MoveNext y MovePrevious métodos (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Move (método) (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
+ [Métodos MoveFirst, MoveLast, MoveNext y MovePrevious (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveFirst, MoveLast, MoveNext y MovePrevious métodos (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

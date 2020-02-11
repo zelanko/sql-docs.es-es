@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473054"
 ---
 # <a name="post-download-instructions"></a>Exponer instrucciones de descarga
@@ -38,7 +38,7 @@ ms.locfileid: "62473054"
  **Estos servidores de destino**  
  Seleccione esta opción para exponer la instrucción de descarga en los servidores de destino seleccionados.  
   
- **Select**  
+ **No**  
  Especifica que el servidor de destino reciba la instrucción de descarga.  
   
  **Servidor de destino**  
@@ -50,7 +50,7 @@ ms.locfileid: "62473054"
  **Intervalo de sondeo**  
  Presenta el intervalo de sondeo actual del servidor de destino.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración automatizada en una empresa](automated-administration-across-an-enterprise.md)  
   
   

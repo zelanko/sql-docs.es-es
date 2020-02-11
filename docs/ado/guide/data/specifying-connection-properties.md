@@ -14,14 +14,14 @@ ms.assetid: 49456201-b085-4851-9686-e814136b07be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5aee5946f3087956a0117b88f4044ef8a6c9bd9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924138"
 ---
 # <a name="specifying-connection-properties"></a>Especificar propiedades de conexión
-Puede proporcionar toda la información especificada por un [cadena de conexión](../../../ado/guide/data/creating-a-connection-string.md) estableciendo las propiedades de la **conexión** objeto antes de abrir la conexión. Por ejemplo, podría lograr el mismo efecto como se describe la cadena de conexión en [creación de una cadena de conexión](../../../ado/guide/data/creating-a-connection-string.md) con el código siguiente.  
+Puede proporcionar gran parte de la información especificada por una [cadena de conexión](../../../ado/guide/data/creating-a-connection-string.md) estableciendo las propiedades del objeto de **conexión** antes de abrir la conexión. Por ejemplo, podría lograr el mismo efecto que la cadena de conexión que se describe en [crear una cadena de conexión](../../../ado/guide/data/creating-a-connection-string.md) mediante el código siguiente.  
   
 ```  
 With objConn  
@@ -33,7 +33,7 @@ With objConn
 End With  
 ```  
   
- DefaultDatabase se establece solo después de abrir la conexión.  
+ DefaultDatabase solo se establece después de abrir la conexión.  
   
 > [!NOTE]
->  En ADO no debe usar una contraseña que contenga el punto y coma (";") a menos que la contraseña se encierra entre comillas simples.
+>  En ADO, no debe utilizar una contraseña que contenga signos de punto y coma (";"), a menos que la contraseña se incluya entre comillas simples.

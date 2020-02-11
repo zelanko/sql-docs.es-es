@@ -1,5 +1,5 @@
 ---
-title: Propiedad Dialect | Microsoft Docs
+title: Propiedad de dialecto | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,25 +16,25 @@ ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3b5c5709a63183bf4c92963dafecb2cf234e2d92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918994"
 ---
 # <a name="dialect-property"></a>Propiedad Dialect
-Indica el dialecto de la [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propiedades. El dialecto define la sintaxis y las reglas generales que usa el proveedor para analizar la cadena o secuencia.  
+Indica el dialecto de las propiedades [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) . El dialecto define la sintaxis y las reglas generales que el proveedor utiliza para analizar la cadena o el flujo.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- El **dialecto** propiedad contiene un GUID válido que representa el dialecto del texto de comando o secuencia. El valor predeterminado de esta propiedad es {C8B521FB-5CF3-11CE-ADE5-00AA0044773D}, lo que indica que el proveedor debe elegir cómo interpretar el texto del comando o la secuencia.  
+ La propiedad **Dialect** contiene un GUID válido que representa el dialecto del texto del comando o de la secuencia. El valor predeterminado de esta propiedad es {C8B521FB-5CF3-11CE-ADE5-00AA0044773D}, que indica que el proveedor debe elegir cómo interpretar el texto o la secuencia del comando.  
   
-## <a name="remarks"></a>Comentarios  
- ADO no consultará el proveedor cuando el usuario lee el valor de esta propiedad; Devuelve una representación de cadena del valor almacenado actualmente en el [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
+## <a name="remarks"></a>Observaciones  
+ ADO no consulta el proveedor cuando el usuario lee el valor de esta propiedad; Devuelve una representación de cadena del valor almacenado actualmente en el objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) .  
   
- Cuando el usuario establece el **dialecto** valida el GUID de propiedad, ADO y genera un error si el valor proporcionado no es un GUID válido. Consulte la documentación de su proveedor para determinar los valores GUID admitidos por el **dialecto** propiedad.  
+ Cuando el usuario establece la propiedad de **dialecto** , ADO valida el GUID y genera un error si el valor proporcionado no es un GUID válido. Consulte la documentación del proveedor para determinar los valores de GUID admitidos por la propiedad de **dialecto** .  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Método Execute (Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)

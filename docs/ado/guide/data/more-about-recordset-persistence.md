@@ -1,5 +1,5 @@
 ---
-title: Más información acerca de la persistencia de conjunto de registros | Microsoft Docs
+title: Más información sobre la persistencia de conjuntos de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,24 +16,24 @@ ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bee7d185d5f598a2f0a086bb7e3bea49ddfff88c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924907"
 ---
 # <a name="more-about-recordset-persistence"></a>Más información acerca de la persistencia de conjunto de registros
-El objeto de conjunto de registros ADO admite almacenar el contenido de un **Recordset** objeto en un archivo mediante el uso de su [guardar](../../../ado/reference/ado-api/save-method.md) método. El archivo de forma persistente almacenado existan en una variable local de unidad, servidor, o como una dirección URL en un servidor Web de sitio. Más adelante, se puede restaurar el archivo con cualquiera el [abierto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método de la **Recordset** objeto o la [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método de la [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
+El objeto ADO Recordset permite almacenar el contenido de un objeto de **conjunto de registros** en un archivo mediante el método [Save](../../../ado/reference/ado-api/save-method.md) . El archivo almacenado de forma persistente puede existir en una unidad local, en un servidor o como una dirección URL en un sitio Web. Más adelante, el archivo se puede restaurar con el método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) del objeto **Recordset** o el método [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) del objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
   
- Además, el [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) método convierte un **Recordset** objeto a un formulario en el que las columnas y filas se delimitan con los caracteres especificados.  
+ Además, el método [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) convierte un objeto de **conjunto de registros** en un formulario en el que las columnas y filas se delimitan con los caracteres que se especifiquen.  
   
- Para conservar un **Recordset**, conviértalo primero a un formulario que se puede almacenar en un archivo. **Conjunto de registros** objetos se pueden almacenar en el formato Advanced Data TableGram (ADTG) propietario o el formato abierto de Extensible Markup Language (XML). En la sección siguiente se muestran ejemplos ADTG. Para obtener más información acerca de la persistencia de XML, vea [almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
+ Para conservar un **conjunto de registros**, empiece convirtiéndolo en un formulario que pueda almacenarse en un archivo. Los objetos de **conjunto de registros** se pueden almacenar en el formato de TableGram de datos avanzados (ADTG) propietario o en el formato Open lenguaje de marcado extensible (XML). Los ejemplos de ADTG se muestran en la sección siguiente. Para obtener más información sobre la persistencia de XML, vea [guardar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
   
- Guardar los cambios pendientes en el archivo almacenado. Esto permite emitir una consulta que devuelve un **Recordset** (objeto), las modificaciones la **Recordset**, guarda y los cambios pendientes, más adelante restaura el **Recordset**y, a continuación, actualiza el origen de datos con el guardado los cambios pendientes.  
+ Guarde los cambios pendientes en el archivo guardado. Esto permite emitir una consulta que devuelve un objeto de **conjunto de registros** , edita el **conjunto de registros**, lo guarda y los cambios pendientes, restaura posteriormente el conjunto de **registros**y, a continuación, actualiza el origen de datos con los cambios pendientes guardados.  
   
- Para obtener información acerca del almacenamiento persistente **Stream** objetos, vea [secuencias y persistencia](../../../ado/guide/data/streams-and-persistence.md).  
+ Para obtener información sobre el almacenamiento persistente de objetos de **flujo** , vea [secuencias y persistencia](../../../ado/guide/data/streams-and-persistence.md).  
   
- Para obtener un ejemplo de **Recordset** persistencia, consulte el escenario de persistencia del conjunto de registros de XML.  
+ Para obtener un ejemplo de persistencia del **conjunto de registros** , vea el escenario de persistencia del conjunto de registros XML.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -44,21 +44,21 @@ Dim rs as New ADODB.Recordset
 rs.Save "c:\yourFile.adtg", adPersistADTG  
 ```  
   
-### <a name="open-a-persisted-file-with-recordsetopen"></a>Abrir un archivo almacenado con Recordset.Open:  
+### <a name="open-a-persisted-file-with-recordsetopen"></a>Abra un archivo persistente con Recordset. Open:  
   
 ```  
 Dim rs as New ADODB.Recordset  
 rs.Open "c:\yourFile.adtg", "Provider=MSPersist",,,adCmdFile  
 ```  
   
- Opcionalmente, si la **Recordset** does no tiene una conexión activa, puede aceptar todos los valores predeterminados y el siguiente código:  
+ Opcionalmente, si el **conjunto de registros** no tiene una conexión activa, puede aceptar todos los valores predeterminados y codificar lo siguiente:  
   
 ```  
 Dim rs as New ADODB.Recordset  
 rs.Open "c:\yourFile.adtg"  
 ```  
   
-### <a name="open-a-persisted-file-with-connectionexecute"></a>Abrir un archivo almacenado con Connection.Execute:  
+### <a name="open-a-persisted-file-with-connectionexecute"></a>Abra un archivo persistente con Connection. Execute:  
   
 ```  
 Dim conn as New ADODB.Connection  
@@ -67,8 +67,8 @@ conn.Open "Provider=MSPersist"
 Set rs = conn.execute("c:\yourFile.adtg")  
 ```  
   
-### <a name="open-a-persisted-file-with-rdsdatacontrol"></a>Abrir un archivo almacenado con RDS. Control de datos:  
- En este caso, el **Server** no se establece la propiedad.  
+### <a name="open-a-persisted-file-with-rdsdatacontrol"></a>Abra un archivo persistente con RDS. DataControl  
+ En este caso, no se establece la propiedad del **servidor** .  
   
 ```  
 Dim dc as New RDS.DataControl  
@@ -77,8 +77,8 @@ dc.SQL = "c:\yourFile.adtg"
 dc.Refresh  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [GetString (método) (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Proveedor de persistencia OLE DB de Microsoft (proveedor de servicios de ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
+ [Proveedor de persistencia de Microsoft OLE DB (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Secuencias y persistencia](../../../ado/guide/data/streams-and-persistence.md)

@@ -16,19 +16,19 @@ ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc20ff68e90d504a6eed69d4845cacc0e3e687be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966880"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
-Especifica las características de un [columna](../../../ado/reference/adox-api/column-object-adox.md).  
+Especifica las características de una [columna](../../../ado/reference/adox-api/column-object-adox.md).  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|**adColFixed**|1|La columna es una longitud fija.|  
-|**adColNullable**|2|La columna puede contener valores null.|  
+|**adColFixed**|1|La columna tiene una longitud fija.|  
+|**adColNullable**|2|La columna puede contener valores NULL.|  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Attributes (propiedad, ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)

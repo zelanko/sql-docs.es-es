@@ -10,12 +10,12 @@ ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26d88f2123d87d462ff7f83d0736c182885bf250
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 868fb0f7176faf1c1e795b8efe43f8b6d4cdb3f5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75225355"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918098"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Lista de comprobación: Usar PowerShell para comprobar PowerPivot para SharePoint
   Ninguna operación de instalación o recuperación de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] está completa sin un paso sólido de comprobación que confirme que los servicios y los datos son operativos. En este artículo, le mostramos cómo realizar estos pasos con Windows PowerShell. Cada paso tiene su propia sección para que pueda ir directamente a determinadas tareas. Por ejemplo, ejecute el script de la sección [Bases de datos](#bkmk_databases) de este tema para comprobar el nombre de la aplicación de servicio y las bases de datos de contenido si desea programar su mantenimiento o copia de seguridad.  
@@ -32,7 +32,7 @@ ms.locfileid: "75225355"
   
 |||  
 |-|-|  
-|[Preparar el entorno de PowerShell](#bkmk_prerequisites)<br /><br /> [Síntomas y acciones recomendadas](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services servicio de Windows](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService y PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [aplicaciones de servicio PowerPivot y servidores proxy](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [bases de datos](#bkmk_databases)<br /><br /> [Características de SharePoint](#bkmk_features)<br /><br /> [Trabajos de temporizador](#bkmk_timer_jobs)<br /><br /> [Reglas de estado](#bkmk_health_rules)<br /><br /> **(E)** [registros de Windows y ULS](#bkmk_logs)<br /><br /> [Proveedor MSOLAP](#bkmk_msolap)<br /><br /> [Biblioteca de cliente de ADOMD.Net](#bkmk_adomd)<br /><br /> [Reglas de recopilación de datos de mantenimiento](#bkmk_health_collection)<br /><br /> [Solución](#bkmk_solutions)<br /><br /> [Pasos de comprobación manual](#bkmk_manual)<br /><br /> [Más recursos](#bkmk_more_resources)<br /><br /> [Script completo de PowerShell](#bkmk_full_script)|![comprobación de powershell de powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "comprobación de powershell de powerpivot")|  
+|[Preparar el entorno de PowerShell](#bkmk_prerequisites)<br /><br /> [Síntomas y acciones recomendadas](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services servicio de Windows](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService y PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [aplicaciones de servicio PowerPivot y servidores proxy](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [bases de datos](#bkmk_databases)<br /><br /> [Características de SharePoint](#bkmk_features)<br /><br /> [Trabajos de temporizador](#bkmk_timer_jobs)<br /><br /> [Reglas de estado](#bkmk_health_rules)<br /><br /> **(E)** [registros de Windows y ULS](#bkmk_logs)<br /><br /> [Proveedor MSOLAP](#bkmk_msolap)<br /><br /> [Biblioteca de cliente de ADOMD.Net](#bkmk_adomd)<br /><br /> [Reglas de recopilación de datos de mantenimiento](#bkmk_health_collection)<br /><br /> [Soluciones](#bkmk_solutions)<br /><br /> [Pasos de comprobación manual](#bkmk_manual)<br /><br /> [Más recursos](#bkmk_more_resources)<br /><br /> [Script completo de PowerShell](#bkmk_full_script)|![comprobación de powershell de powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "comprobación de powershell de powerpivot")|  
   
 ##  <a name="bkmk_prerequisites"></a>Preparar el entorno de PowerShell  
  Los pasos de esta sección sirven para preparar el entorno de PowerShell. Puede que estos pasos no sean necesarios, en función de cómo esté configurado actualmente el entorno de scripting.  
@@ -302,7 +302,7 @@ Category    : Data Refresh
 EventID     : 43  
 Level       : High  
 Correlation : 5755879c-7cab-e097-8f80-f27895d44a77  
-Message     : The following error occured when working with the service application, Default PowerPivot Service Application. Skipping the service application..  
+Message     : The following error occurred when working with the service application, Default PowerPivot Service Application. Skipping the service application..  
   
 Timestamp   : 4/14/2014 7:15:02 PM  
 Area        : PowerPivot Service  
@@ -414,7 +414,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
   
  [Administración de servicios de Excel con Windows PowerShell (SharePoint Server 2010)](https://technet.microsoft.com/library/ff191201\(v=office.14\).aspx)  
   
- [Ver y leer archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
  [Usar el cmdlet Get-EventLog](https://technet.microsoft.com/library/ee176846.aspx)  
   
@@ -458,7 +458,7 @@ Get-SPExcelServiceApplication | Select typename,  DisplayName, status
 #Write-Host ""  
 Write-Host -ForegroundColor Green "PowerPivot Service Application pool"  
 Write-Host -ForegroundColor Green ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"  
-# the following assumes there is only 1 PowerPivot Service Application, and returns that applicaitons pool name.  if you have more than one, use the 2nd version  
+# the following assumes there is only 1 PowerPivot Service Application, and returns that application's pool name.  if you have more than one, use the 2nd version  
 $poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)  
 $position = $poolname.lastindexof("=")  
 $poolname = $poolname.substring($position+1)  

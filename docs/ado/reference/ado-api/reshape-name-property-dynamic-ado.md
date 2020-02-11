@@ -1,5 +1,5 @@
 ---
-title: Cambiar la forma de nombre de propiedad dinámica (ADO) | Microsoft Docs
+title: 'Propiedad Reshape Name: dinámica (ADO) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,33 +14,33 @@ ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec72b2b1908f967caee4610e27315acaab787ac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917172"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Propiedad dinámica Reshape Name (ADO)
-Especifica un nombre para el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+Especifica un nombre para el objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ## <a name="return-values"></a>Valores devueltos  
- Devuelve un **cadena** valor que es el nombre de la **Recordset**.  
+ Devuelve un valor de **cadena** que es el nombre del **conjunto de registros**.  
   
-## <a name="remarks"></a>Comentarios  
- Los nombres se conservan para la duración de la conexión o hasta que el **Recordset** está cerrado.  
+## <a name="remarks"></a>Observaciones  
+ Los nombres se conservan mientras dure la conexión o hasta que se cierra el **conjunto de registros** .  
   
- El **Reshape Name** propiedad sirve principalmente para su uso con la característica de cambio de forma de la [servicio de forma de datos de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) proveedor de servicios. Los nombres deben ser únicos para participar en volver a dar forma a.  
+ La propiedad **Reshape Name** está pensada principalmente para su uso con la característica de cambio de forma del servicio de forma de [datos de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) proveedor de servicios. Los nombres deben ser únicos para participar en el cambio de forma.  
   
- Esta propiedad es de solo lectura, pero se puede establecer indirectamente cuando un **Recordset** se crea. Por ejemplo, si una cláusula de un comando Shape crea un **Recordset** y le da un nombre de alias mediante el uso de la **AS** palabra clave, el alias se asigna a la **Reshape Name** propiedad. Si no se declara ningún alias, el **Reshape Name** propiedad se asigna un nombre único generado por el servicio de la forma de datos. Si el nombre de alias es el mismo que el nombre de un miembro de **Recordset**, ni **Recordset** puede cambiarse hasta que se libere una de ellas. El comportamiento predeterminado se puede cambiar estableciendo un nombre único la [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md) propiedad en la conexión de ADO a **True**. Al establecer esta propiedad proporciona el permiso de servicio para cambiar el nombre de usuario asignado, si es necesario, para garantizar la unicidad de la forma de datos. Para obtener más información acerca de nuevas formas, consulte [servicio de forma de datos de Microsoft para OLE DB (proveedor de servicios de ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md).  
+ Esta propiedad es de solo lectura, pero se puede establecer indirectamente cuando se crea un **conjunto de registros** . Por ejemplo, si una cláusula de un comando Shape crea un **conjunto de registros** y le asigna un nombre de alias mediante la palabra clave **as** , el alias se asigna a la propiedad **Reshape Name** . Si no se declara ningún alias, se asigna a la propiedad **nombre de reforma** un nombre único generado por el servicio de forma de datos. Si el nombre de alias es el mismo que el nombre de un **conjunto de registros**existente, no se puede cambiar la forma de ningún **conjunto de registros** hasta que se libere uno de ellos. El comportamiento predeterminado se puede cambiar estableciendo un nombre único en la propiedad [nombre de la reformación](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md) de la conexión ADO en **true**. Al establecer esta propiedad, se concede al servicio de forma de datos permiso para cambiar el nombre asignado por el usuario, si es necesario, para garantizar la exclusividad. Para obtener más información sobre cómo remodelar, vea [servicio de forma de datos de Microsoft para OLE DB (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md).  
   
- Use la **Reshape Name** propiedad cuando desea hacer referencia a un **Recordset** en un comando de forma, o cuando no conoce el nombre debido a que se ha generado por el servicio de datos de forma. En ese caso, es posible generar un comando de forma al concatenar el comando con la cadena devuelta por la **Reshape Name** propiedad.  
+ Utilice la propiedad **Reshape Name** cuando desee hacer referencia a un **conjunto de registros** en un comando Shape o cuando no conozca el nombre porque lo generó el servicio de forma de datos. En ese caso, podría generar un comando de forma concatenando el comando en torno a la cadena devuelta por la propiedad **Reshape Name** .  
   
- **Cambiar la forma de nombre** se anexa una propiedad dinámica a la **Recordset** del objeto [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección cuando el [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad está establecida en **adUseClient**.  
+ **Reshape Name** es una propiedad dinámica anexada a la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) del objeto de **conjunto de registros** cuando la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) está establecida en **adUseClient**.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
- [Servicio de OLE DB (proveedor de servicios de ADO) de la forma de datos de Microsoft](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
- [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)   
+## <a name="see-also"></a>Consulte también  
+ [Servicio de forma de datos de Microsoft para OLE DB (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
+ [Comandos Shape en general](../../../ado/guide/data/shape-commands-in-general.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

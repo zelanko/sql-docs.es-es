@@ -1,5 +1,5 @@
 ---
-title: Almacena el ejemplo de propiedades de procedimiento (JScript) | Microsoft Docs
+title: Ejemplo de propiedades de procedimiento almacenado (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,14 +19,14 @@ ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c9c474cfe2b1d38154129070cb11c91434ee4fad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921558"
 ---
-# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, tamaño y ejemplo de propiedades de dirección (JScript)
-Este ejemplo se usa el [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [tamaño](../../../ado/reference/ado-api/size-property-ado-parameter.md), y [dirección](../../../ado/reference/ado-api/direction-property.md) propiedades para ejecutar un procedimiento almacenado. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **ActiveConnectionJS.asp**.  
+# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>Ejemplo de las propiedades ActiveConnection, CommandText, CommandTimeout, CommandType, size y Direction (JScript)
+En este ejemplo se usan las propiedades [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [size](../../../ado/reference/ado-api/size-property-ado-parameter.md)y [Direction](../../../ado/reference/ado-api/direction-property.md) para ejecutar un procedimiento almacenado. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **ActiveConnectionJS. asp**.  
   
 ```  
 <!-- BeginActiveConnectionJS -->  
@@ -172,15 +172,15 @@ BODY {
 <!-- EndActiveConnectionJS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Propiedad CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
+ [Command (objeto) (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [CommandText (propiedad, ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandTimeout (propiedad, ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
- [Propiedad CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Propiedad Direction](../../../ado/reference/ado-api/direction-property.md)   
- [Objeto de parámetro](../../../ado/reference/ado-api/parameter-object.md)   
+ [CommandType (propiedad, ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
+ [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Direction (propiedad)](../../../ado/reference/ado-api/direction-property.md)   
+ [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)   
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propiedad Size (parámetro de ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

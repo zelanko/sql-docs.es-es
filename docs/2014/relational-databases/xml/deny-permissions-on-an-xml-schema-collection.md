@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2fe1a42540b21fd11dbfb9747a77991073d35c97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637573"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Denegar permisos en una colección de esquemas XML
@@ -109,7 +109,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>b. Denegar permisos en una colección de esquemas XML  
+### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>B. Denegar permisos en una colección de esquemas XML  
  El ejemplo siguiente muestra cómo se puede denegar a un inicio de sesión un permiso específico en una colección de esquemas XML existente. En este ejemplo, se deniega el permiso REFERENCES a un inicio de sesión de prueba para una colección de esquemas XML existente.  
   
  El ejemplo crea un usuario, `TestLogin1`, y una base de datos. Además del esquema `dbo` , también se crea un esquema relacional en la base de datos. Inicialmente, el permiso `CREATE XML SCHEMA` permite al usuario crear una colección de esquemas en cualquier lugar de la base de datos.  
@@ -188,7 +188,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Comparar XML con tipo y XML sin tipo](compare-typed-xml-to-untyped-xml.md)   
  [Colecciones de esquemas XML &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)   
  [Requisitos y limitaciones de las colecciones de esquemas XML en el servidor](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   

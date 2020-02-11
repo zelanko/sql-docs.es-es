@@ -1,5 +1,5 @@
 ---
-title: Origen (propiedad, ADO Error) | Microsoft Docs
+title: Propiedad Source (error de ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,33 +18,33 @@ ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b55ebbe5a167b7d70cf606fc4e37e7ede36b486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916902"
 ---
 # <a name="source-property-ado-error"></a>Propiedad Source (Error de ADO)
-Indica el nombre del objeto o la aplicación que ha generado un error.  
+Indica el nombre del objeto o la aplicación que originalmente generó un error.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve un **cadena** valor que indica el nombre de un objeto o la aplicación.  
+ Devuelve un valor de **cadena** que indica el nombre de un objeto o una aplicación.  
   
-## <a name="remarks"></a>Comentarios  
- Use la **origen** propiedad en un [Error](../../../ado/reference/ado-api/error-object.md) objeto para determinar el nombre del objeto o la aplicación que ha generado un error. Esto podría ser el nombre de clase o el ID del objeto Para los errores de ADO, será el valor de propiedad **ADODB.** _ObjectName_, donde *ObjectName* es el nombre del objeto que desencadenó el error. En ADOX y ADO MD, el valor será **ADOX.** _ObjectName_ y **ADOMD.** _ObjectName_, respectivamente.  
+## <a name="remarks"></a>Observaciones  
+ Utilice la propiedad **source** en un objeto de [error](../../../ado/reference/ado-api/error-object.md) para determinar el nombre del objeto o la aplicación que originalmente generó un error. Podría ser el nombre de clase del objeto o el identificador de programación. En el caso de los errores de ADO, el valor de la propiedad será **ADODB.** _Objectname_, donde *objectname* es el nombre del objeto que desencadenó el error. Para ADOX y ADO MD, el valor será **ADOX.** _Objectname_ y **ADOMD.** _Objectname_, respectivamente.  
   
- Basándose en la documentación de error desde el **origen**, [número](../../../ado/reference/ado-api/number-property-ado.md), y [descripción](../../../ado/reference/ado-api/description-property.md) propiedades de **Error** objetos, puede escribir código que va a controlar el error adecuadamente.  
+ En función de la documentación del error de las propiedades **source**, [Number](../../../ado/reference/ado-api/number-property-ado.md)y [Description](../../../ado/reference/ado-api/description-property.md) de los objetos de **error** , puede escribir código que controle el error de forma adecuada.  
   
- El **origen** propiedad es de solo lectura para **Error** objetos.  
+ La propiedad de **origen** es de solo lectura para los objetos de **error** .  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de error](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>Vea también  
- [Descripción, HelpContext, HelpFile, NativeError, número, origen y ejemplo de las propiedades SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Descripción, HelpContext, HelpFile, NativeError, número, origen y ejemplo de las propiedades SQLState (VC ++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de las propiedades Description, HelpContext, HelpFile, NativeError, Number, Source y SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Ejemplo de las propiedades Description, HelpContext, HelpFile, NativeError, Number, Source y SQLState (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Propiedad Description](../../../ado/reference/ado-api/description-property.md)   
- [HelpContext, HelpFile propiedades](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
+ [HelpContext, propiedades de HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
  [Propiedad Number (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [Propiedad Source (Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)   
+ [Propiedad Source (registro de ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)   
  [Propiedad Source (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

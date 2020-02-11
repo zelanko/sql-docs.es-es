@@ -14,18 +14,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12d68b8494fee4400c0a8e9ec043f0972ba2de5c
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783362"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Ver la configuración de NodeWeight de quórum de clúster
   En este tema se describe cómo ver la configuración de NodeWeight para cada nodo miembro en un clúster de clústeres de conmutación por error de Windows Server (WSFC). La configuración de NodeWeight durante el voto de quórum para admitir los escenarios de recuperación de desastres y de múltiples subredes para las instancias de clúster de conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **Antes de empezar:**  [Requisitos previos](#Prerequisites), [Seguridad](#Security)  
   
--   **Para ver la configuración de NodeWeight de quórum con:** [Usar Transact-SQL](#TsqlProcedure), [Usar PowerShell](#PowerShellProcedure), [Usar Cluster.exe](#CommandPromptProcedure)  
+-   **Para ver la configuración de NodeWeight de quórum con:** [Uso de Transact-SQL](#TsqlProcedure), [Uso de Powershell](#PowerShellProcedure), [Uso de Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
@@ -101,7 +101,7 @@ $nodes | Format-Table -Property NodeName, State, NodeWeight
 cluster.exe Cluster001 node /status /properties  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configuración de los votos y modos de cuórum WSFC &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Configurar los valores de NodeWeight de quórum de clúster](configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)   

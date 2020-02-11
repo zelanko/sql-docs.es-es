@@ -16,13 +16,13 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eb9fdd324ba6275cd20f99a32f0a82aa112626b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68117879"
 ---
-# <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
+# <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ajusta el intervalo de identidad de una publicación y reasigna nuevos intervalos según el valor de umbral de la publicación. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
@@ -39,26 +39,26 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación en la que reasignan nuevos intervalos de identidad. *publicación* es **sysname**, su valor predeterminado es null.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación en la que se reasignan los nuevos intervalos de identidad. *Publication* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @table_name = ] 'table_name'` Es el nombre de la tabla en la que reasignan nuevos intervalos de identidad. *table_name* es **sysname**, su valor predeterminado es null.  
+`[ @table_name = ] 'table_name'`Es el nombre de la tabla en la que se reasignan los nuevos intervalos de identidad. *TABLE_NAME* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @table_owner = ] 'table_owner'` Es el propietario de la tabla en el publicador. *TABLE_OWNER* es **sysname**, su valor predeterminado es null. Si *table_owner* no se especifica, se usa el nombre del usuario actual.  
+`[ @table_owner = ] 'table_owner'`Es el propietario de la tabla en el publicador. *table_owner* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *table_owner* , se usa el nombre del usuario actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_adjustpublisheridentityrange** se utiliza en todos los tipos de replicación.  
   
- En una publicación que tiene habilitado el intervalo de identidad automático, el Agente de distribución o el Agente de mezcla es responsable de ajustar automáticamente el intervalo de identidad en una publicación según su valor de umbral. Sin embargo, si por alguna razón el agente de distribución o el agente de mezcla no se ha ejecutado durante un período de tiempo y el recurso de intervalo de identidad se ha consumido hasta el punto del umbral, los usuarios pueden llamar **sp_adjustpublisheridentityrange** Para asignar un nuevo intervalo de valores para un publicador.  
+ En una publicación que tiene habilitado el intervalo de identidad automático, el Agente de distribución o el Agente de mezcla es responsable de ajustar automáticamente el intervalo de identidad en una publicación según su valor de umbral. Sin embargo, si por alguna razón el Agente de distribución o Agente de mezcla no se ha ejecutado durante un período de tiempo, y el recurso de intervalo de identidad se ha consumido en gran medida hasta el punto de umbral, los usuarios pueden llamar a **sp_adjustpublisheridentityrange** para asignar un nuevo intervalo de valores para un publicador.  
   
- Al ejecutar **sp_adjustpublisheridentityrange**, ya sea *publicación* o *table_name* debe especificarse. Si se especifican ambos o ninguno, se devolverá un error.  
+ Al ejecutar **sp_adjustpublisheridentityrange**, se debe especificar cualquier *publicación* o *TABLE_NAME* . Si se especifican ambos o ninguno, se devolverá un error.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_adjustpublisheridentityrange**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_adjustpublisheridentityrange**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

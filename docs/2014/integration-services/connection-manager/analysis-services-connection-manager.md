@@ -15,21 +15,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8f8ca9ce77e151e761e2cbb1f9128a44784af8ca
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890401"
 ---
 # <a name="analysis-services-connection-manager"></a>administrador de conexiones de Analysis Services
-  Un administrador de conexiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite que un paquete se conecte con un servidor que se ejecuta en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o con un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que proporciona acceso a datos de cubo y dimensiones. Solo puede conectarse a un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mientras desarrolla paquetes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Durante el tiempo de ejecución, los paquetes se conectan al servidor y la base de datos en la que se implementó el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+  Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrador de conexiones permite a un paquete conectarse a un servidor que ejecuta [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] una base de datos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de o a un proyecto de que proporciona acceso a datos de cubos y dimensiones. Solo puede conectarse a un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mientras desarrolla paquetes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Durante el tiempo de ejecución, los paquetes se conectan al servidor y la base de datos en la que se implementó el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Ambas tareas, como la tarea Ejecutar DDL de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y la tarea Procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , y los destinos como el destino de Entrenamiento del modelo de minería de datos, usan un administrador de conexiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Para obtener más información sobre las bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Bases de datos de modelos multidimensionales &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-databases-ssas).  
   
 ## <a name="configuration-of-the-analysis-services-connection-manager"></a>Configuración del administrador de conexiones de Analysis Services  
- Cuando se agrega un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrador de conexiones a un paquete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un administrador de conexiones que se resuelve [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como una conexión en tiempo de ejecución, establece las propiedades del administrador de conexiones y agrega el administrador de conexiones a la `Connections` colección del paquete. La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `MSOLAP100`.  
+ Cuando se agrega un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrador de conexiones a un paquete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , crea un administrador de conexiones que se resuelve [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como una conexión en tiempo de ejecución, establece las propiedades del administrador de conexiones y agrega el `Connections` administrador de conexiones a la colección del paquete. La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `MSOLAP100`.  
   
  Puede configurar el administrador de conexiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de las maneras siguientes:  
   

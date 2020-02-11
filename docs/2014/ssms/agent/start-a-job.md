@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e94adcf8242c6acaca7c28ff9a854e0aa87cb3ea
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798180"
 ---
-# <a name="start-a-job"></a>Start a Job
-  En este tema se describe cómo iniciar la ejecución de un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de SQL Server.  
+# <a name="start-a-job"></a>Iniciar un trabajo
+  En este tema se describe cómo iniciar la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecución de un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] trabajo del [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]agente [!INCLUDE[tsql](../../includes/tsql-md.md)] en mediante o objetos de administración de SQL Server.  
   
  Un trabajo es una serie especificada de acciones que realiza el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden ejecutar en un servidor local o en varios servidores remotos.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72798180"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
@@ -78,7 +78,7 @@ ms.locfileid: "72798180"
     GO  
     ```  
   
- Para obtener más información, vea [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
+ Para más información, vea [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
   
 ##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
 

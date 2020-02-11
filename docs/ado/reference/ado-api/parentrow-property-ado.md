@@ -1,5 +1,5 @@
 ---
-title: ParentRow (propiedad) (ADO) | Microsoft Docs
+title: Propiedad ParentRow (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a81eb6ee58d942547a159728b9c3edf9a30f1ece
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917672"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow (propiedad) (ADO)
-Establece el contenedor de OLE DB **fila** objeto en un **ADORecordConstruction** objeto, para que el elemento primario de la fila se convierte en ADO **registro** objeto.  
+Establece el contenedor de un objeto de **fila** OLE DB en un objeto **ADORecordConstruction** , de modo que el elemento primario de la fila se convierta en un objeto **Record** de ADO.  
   
  De solo escritura.  
   
@@ -37,7 +37,7 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
   
 ## <a name="parameters"></a>Parámetros  
  *pParent*  
- Un contenedor de una fila.  
+ Contenedor de una fila.  
   
 ## <a name="return-values"></a>Valores devueltos  
  Este método de propiedad devuelve los valores HRESULT estándar, incluidos S_OK y E_FAIL.  

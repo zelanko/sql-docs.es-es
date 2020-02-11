@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7bb7aebed25c571108e4b0d7e7366fc52c45e3c1
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882308"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definir y modificar un filtro de fila estático
@@ -38,7 +38,7 @@ ms.locfileid: "73882308"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -48,10 +48,10 @@ ms.locfileid: "73882308"
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
--   Dado que estos filtros son estáticos, todos los suscriptores recibirán el mismo subconjunto de los datos. Si necesita filtrar dinámicamente las filas en un artículo de la tabla que pertenece a una publicación de combinación para que cada suscriptor reciba una partición diferente de los datos, vea [Define and Modify a Parameterized Row Filter for a Merge Article](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). La replicación de mezcla también permite filtrar filas relacionadas con un filtro de filas existente. Para más información, consulte [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+-   Dado que estos filtros son estáticos, todos los suscriptores recibirán el mismo subconjunto de los datos. Si necesita filtrar dinámicamente las filas en un artículo de la tabla que pertenece a una publicación de combinación para que cada suscriptor reciba una partición diferente de los datos, vea [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). La replicación de mezcla también permite filtrar filas relacionadas con un filtro de filas existente. Para obtener más información, consulte [Definir y modificar un filtro de combinación entre artículos de mezcla](define-and-modify-a-join-filter-between-merge-articles.md).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Defina, modifique y elimine filtros de filas estáticas en la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, vea [Crear una publicación](create-a-publication.md) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Defina, modifique y elimine filtros de filas estáticas en la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-static-row-filter"></a>Para definir un filtro de fila estático  
   
@@ -107,7 +107,7 @@ ms.locfileid: "73882308"
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Para definir un filtro de fila estático para una publicación transaccional o de instantáneas  
   
-1.  Defina el artículo que se va a filtrar. Para obtener más información, consulte [Define an Article](define-an-article.md).  
+1.  Defina el artículo que se va a filtrar. Para más información, consulte [Define an Article](define-an-article.md).  
   
 2.  En la base de datos de publicación del publicador, ejecute [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Especifique el nombre del artículo para **\@article**, el nombre de la publicación para **\@publication**, un nombre de filtro para **\@filter_name** y la cláusula de filtrado para **\@filter_clause** (sin incluir `WHERE`).  
   
@@ -119,7 +119,7 @@ ms.locfileid: "73882308"
   
 2.  En la base de datos de publicación del publicador, ejecute [sp_articleview &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Especifique el nombre de la publicación para **\@publication**, el nombre del artículo filtrado para **\@article** y la cláusula de filtro especificada en el paso 1 para **\@filter_clause**. Esto vuelve a crear la vista que define el artículo filtrado.  
   
-3.  Vuelva a ejecutar el trabajo del Agente de instantáneas para que la publicación genere una instantánea actualizada. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+3.  Vuelva a ejecutar el trabajo del Agente de instantáneas para que la publicación genere una instantánea actualizada. Para más información, consulte [Crear y aplicar la instantánea inicial](../create-and-apply-the-initial-snapshot.md).  
   
 4.  Reinicialice las suscripciones. Para obtener más información, vea [Reinicializar suscripciones](../reinitialize-subscriptions.md).  
   
@@ -127,13 +127,13 @@ ms.locfileid: "73882308"
   
 1.  En la base de datos de publicación del publicador, ejecute [sp_articlefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql). Especifique el nombre del artículo para **\@article**, el nombre de la publicación para **\@publication**, un valor de NULL para **\@filter_name** y un valor de NULL para **\@filter_clause**. Como este cambio invalidará los datos en las suscripciones existentes, especifique un valor de **1** para **\@force_reinit_subscription**.  
   
-2.  Vuelva a ejecutar el trabajo del Agente de instantáneas para que la publicación genere una instantánea actualizada. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+2.  Vuelva a ejecutar el trabajo del Agente de instantáneas para que la publicación genere una instantánea actualizada. Para más información, consulte [Crear y aplicar la instantánea inicial](../create-and-apply-the-initial-snapshot.md).  
   
 3.  Reinicialice las suscripciones. Para obtener más información, vea [Reinicializar suscripciones](../reinitialize-subscriptions.md).  
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>Para definir un filtro de fila estático para una publicación de combinación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique la cláusula de filtrado para **\@subset_filterclause** (sin incluir `WHERE`). Para obtener más información, consulte [Define an Article](define-an-article.md).  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique la cláusula de filtrado para **\@subset_filterclause** (sin incluir `WHERE`). Para más información, consulte [Define an Article](define-an-article.md).  
   
 2.  Si todavía debe definirse un filtro de columna, vea [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -141,7 +141,7 @@ ms.locfileid: "73882308"
   
 1.  En el publicador de la base de datos de publicación, ejecute [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique el nombre de la publicación para **\@publication**, el nombre del artículo filtrado para **\@article**, un valor de **subset_filterclause** para **\@property** y la nueva cláusula de filtrado para **\@value** (sin incluir `WHERE`). Como este cambio invalidará los datos en las suscripciones existentes, especifique un valor de 1 para **\@force_reinit_subscription**.  
   
-2.  Vuelva a ejecutar el trabajo del Agente de instantáneas para que la publicación genere una instantánea actualizada. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+2.  Vuelva a ejecutar el trabajo del Agente de instantáneas para que la publicación genere una instantánea actualizada. Para más información, consulte [Crear y aplicar la instantánea inicial](../create-and-apply-the-initial-snapshot.md).  
   
 3.  Reinicialice las suscripciones. Para obtener más información, vea [Reinicializar suscripciones](../reinitialize-subscriptions.md).  
   
@@ -150,11 +150,11 @@ ms.locfileid: "73882308"
   
  [!code-sql[HowTo#sp_AddTranArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranarticle)]  
   
- En este ejemplo de replicación de mezcla, los artículos se filtran horizontalmente para devolver solo las filas que pertenecen al vendedor especificado. También se usa un filtro de combinación. Para más información, consulte [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md).  
+ En este ejemplo de replicación de mezcla, los artículos se filtran horizontalmente para devolver solo las filas que pertenecen al vendedor especificado. También se usa un filtro de combinación. Para obtener más información, consulte [Definir y modificar un filtro de combinación entre artículos de mezcla](define-and-modify-a-join-filter-between-merge-articles.md).  
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Definición y modificación de un filtro de fila con parámetros para un artículo de mezcla](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Cambiar las propiedades de la publicación y de los artículos](change-publication-and-article-properties.md)   
  [Filtrar datos publicados](filter-published-data.md)   

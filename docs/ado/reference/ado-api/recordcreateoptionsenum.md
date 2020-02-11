@@ -16,26 +16,26 @@ ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917341"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
-Especifica si una existente **registro** debe estar abierto o un nuevo **registro** creado para el [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto [abierto](../../../ado/reference/ado-api/open-method-ado-record.md) método. Los valores se pueden combinar con un operador AND.  
+Especifica si se debe abrir un **registro** existente o crear un nuevo **registro** para el método [Open](../../../ado/reference/ado-api/open-method-ado-record.md) del objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) . Los valores se pueden combinar con un operador AND.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|**adCreateCollection**|0x2000|Crea un nuevo **registro** en el nodo especificado por *origen* parámetro, en lugar de abrir uno existente **registro**. Si el origen apunta a un nodo existente, a continuación, se produce un error de tiempo de ejecución, a menos que **adCreateCollection** se combina con **adOpenIfExists** o **adCreateOverwrite**.|  
-|**adCreateNonCollection**|0|Crea un nuevo **registro** typu [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  
-|**adCreateOverwrite**|0x4000000|Modifica las marcas de creación **adCreateCollection**, **adCreateNonCollection**, y **adCreateStructDoc**. Cuando o se usa con este valor y uno de los valores de indicador de creación, si la dirección URL de origen apunta a un nodo existente o **registro**, entonces el existente **registro** es sobrescritos y una en su lugar se crea uno nuevo. Este valor no se puede usar junto con **adOpenIfExists**.|  
-|**adCreateStructDoc**|0x80000000|Crea un nuevo **registro** typu [adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md), en lugar de abrir uno existente **registro**.|  
-|**adFailIfNotExists**|-1|Predeterminado: Se produce un error en tiempo de ejecución si *origen* apunta a un nodo que no existe.|  
-|**adOpenIfExists**|0x2000000|Modifica las marcas de creación **adCreateCollection**, **adCreateNonCollection**, y **adCreateStructDoc**. Cuando o se usa con este valor y uno de los valores de indicador de creación, si la dirección URL de origen apunta a un nodo existente o **registro** objeto, a continuación, debe abrir el proveedor existente **registro** en lugar de crear un nuevo uno. Este valor no se puede usar junto con **adCreateOverwrite**.|  
+|**adCreateCollection**|0x2000|Crea un nuevo **registro** en el nodo especificado por el parámetro *source* , en lugar de abrir un **registro**existente. Si el origen apunta a un nodo existente, se produce un error en tiempo de ejecución, a menos que **adCreateCollection** se combine con **adOpenIfExists** o **adCreateOverwrite**.|  
+|**adCreateNonCollection**|0|Crea un nuevo **registro** de tipo [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  
+|**adCreateOverwrite**|0x4000000|Modifica las marcas de creación **adCreateCollection**, **adCreateNonCollection**y **adCreateStructDoc**. Cuando se usa o con este valor y uno de los valores de la marca de creación, si la dirección URL de origen apunta a un nodo o **registro**existente, se sobrescribe el **registro** existente y se crea uno nuevo en su lugar. Este valor no se puede usar junto con **adOpenIfExists**.|  
+|**adCreateStructDoc**|0x80000000|Crea un nuevo **registro** de tipo [adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md), en lugar de abrir un **registro**existente.|  
+|**adFailIfNotExists**|-1|Default. Da como resultado un error en tiempo de ejecución si el *origen* apunta a un nodo no existente.|  
+|**adOpenIfExists**|0x2000000|Modifica las marcas de creación **adCreateCollection**, **adCreateNonCollection**y **adCreateStructDoc**. Cuando se usa o con este valor y uno de los valores de la marca de creación, si la dirección URL de origen apunta a un objeto de **registro** o nodo existente, el proveedor debe abrir el **registro** existente en lugar de crear uno nuevo. Este valor no se puede usar junto con **adCreateOverwrite**.|  
   
-## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Estas constantes no tienen equivalentes de ADO y WFC.  
+## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
+ Estas constantes no tienen equivalentes de ADO/WFC.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Open (método) (registro de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)

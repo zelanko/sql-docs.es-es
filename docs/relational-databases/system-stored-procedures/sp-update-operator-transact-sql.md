@@ -18,13 +18,13 @@ ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084844"
 ---
-# <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
+# <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Actualiza información acerca de un operador (destinatario de la notificación) para utilizarla con las alertas y los trabajos.  
@@ -54,65 +54,65 @@ sp_update_operator
   
 ## <a name="arguments"></a>Argumentos  
  [ @name=] '*nombre*'  
- El nombre del operador que se va a modificar. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
+ El nombre del operador que se va a modificar. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
  [ @new_name=] '*new_name*'  
- Nuevo nombre del operador. Este nombre debe ser único. *new_name* es **sysname**, su valor predeterminado es null.  
+ Nuevo nombre del operador. El nombre debe ser único. *new_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
  [ @enabled=] *habilitado*  
- Un número que indica el estado actual del operador (**1** si está habilitado, **0** si no es así). *habilitado* es **tinyint**, su valor predeterminado es null. Si no está habilitado, un operador no recibirá notificaciones de alertas.  
+ Número que indica el estado actual del operador (**1** si está habilitado actualmente; **0** si no lo está). *Enabled* es de **tinyint**y su valor predeterminado es NULL. Si no está habilitado, un operador no recibirá notificaciones de alertas.  
   
- [ @email_address=] '*email_address*'  
- La dirección de correo electrónico del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *Email_Address* es **nvarchar (100)** , su valor predeterminado es null.  
+ [ @email_address=] '*EMAIL_ADDRESS*'  
+ Dirección de correo electrónico del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *EMAIL_ADDRESS* es de tipo **nvarchar (100)** y su valor predeterminado es NULL.  
   
  [ @pager_address=] '*pager_number*'  
- La dirección del buscapersonas del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *pager_number* es **nvarchar (100)** , su valor predeterminado es null.  
+ Dirección del buscapersonas del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *pager_number* es de tipo **nvarchar (100)** y su valor predeterminado es NULL.  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
- Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas a este operador, de lunes a viernes. *weekday_pager_start_time*es **int**, su valor predeterminado es null y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
+ Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas a este operador, de lunes a viernes. *weekday_pager_start_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
  [ @weekday_pager_end_time=] *weekday_pager_end_time*  
- Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas al operador especificado, de lunes a viernes. *weekday_pager_end_time*es **int**, su valor predeterminado es null y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
+ Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas al operador especificado, de lunes a viernes. *weekday_pager_end_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
  [ @saturday_pager_start_time=] *saturday_pager_start_time*  
- Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas los sábados al operador especificado. *saturday_pager_start_time*es **int**, su valor predeterminado es null y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
+ Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas los sábados al operador especificado. *saturday_pager_start_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
  [ @saturday_pager_end_time=] *saturday_pager_end_time*  
- Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas los sábados al operador especificado. *saturday_pager_end_time*es **int**, su valor predeterminado es null y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
+ Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas los sábados al operador especificado. *saturday_pager_end_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
  [ @sunday_pager_start_time=] *sunday_pager_start_time*  
- Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas los domingos al operador especificado. *sunday_pager_start_time*es **int**, su valor predeterminado es null y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
+ Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas los domingos al operador especificado. *sunday_pager_start_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
  [ @sunday_pager_end_time=] *sunday_pager_end_time*  
- Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas los domingos al operador especificado. *sunday_pager_end_time*es **int**, su valor predeterminado es null y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
+ Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas los domingos al operador especificado. *sunday_pager_end_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
  [ @pager_days=] *pager_days*  
- Especifica los días en que el operador está disponible para recibir mensajes por buscapersonas (de acuerdo con las horas inicial y final especificadas). *pager_days*es **tinyint**, su valor predeterminado es null, y debe ser un valor de **0** a través de **127**. *pager_days* se calcula sumando los valores individuales de los días necesarios. Por ejemplo, del lunes al viernes es **2**+**4**+**8**+**16** + **32** = **64**.  
+ Especifica los días en que el operador está disponible para recibir mensajes por buscapersonas (de acuerdo con las horas inicial y final especificadas). *pager_days*es de **tinyint**, su valor predeterminado es NULL y debe ser un valor comprendido entre **0** y **127**. *pager_days* se calcula agregando los valores individuales de los días necesarios. Por ejemplo, de lunes a viernes, **2**+**4**+**8**+**16**+**32** = **64**.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
 |**4**|Martes|  
-|**8**|Miércoles|  
-|**16**|Jueves|  
+|**203**|Miércoles|  
+|**dieciséi**|Jueves|  
 |**32**|Viernes|  
 |**64**|Sábado|  
   
  [ @netsend_address=] '*netsend_address*'  
- La dirección de red del operador al que se envía el mensaje de red. *netsend_address*es **nvarchar (100)** , su valor predeterminado es null.  
+ La dirección de red del operador al que se envía el mensaje de red. *netsend_address*es de tipo **nvarchar (100)** y su valor predeterminado es NULL.  
   
  [ @category_name=] '*categoría*'  
- El nombre de la categoría de esta alerta. *categoría* es **sysname**, su valor predeterminado es null.  
+ El nombre de la categoría de esta alerta. *Category* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_update_operator se debe ejecutar desde la base de datos msdb.  
   
 ## <a name="permissions"></a>Permisos  
- Permisos para ejecutar este procedimiento de forma predeterminada a los miembros del rol fijo de servidor sysadmin.  
+ Los permisos de ejecución para este procedimiento corresponden de forma predeterminada a los miembros del rol fijo de servidor sysadmin.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se actualiza el estado del operador a habilitado y se establecen los días (de lunes a viernes, de 8 a.m. a 5 p.m.) en que se le puede enviar una notificación por buscapersonas.  
@@ -132,10 +132,10 @@ EXEC dbo.sp_update_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

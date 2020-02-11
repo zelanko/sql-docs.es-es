@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229010"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Grupos de disponibilidad AlwaysOn (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "75229010"
  Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Las conmutaciones por error no se deben a problemas de bases de datos como que una base de datos pase a ser sospechosa debido a la pérdida de un archivo de datos, la eliminación de una base de datos o los daños de un registro de transacciones.  
   
   
-##  <a name="Benefits"></a>Privilegios  
+##  <a name="Benefits"></a> Ventajas  
  
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] proporciona un amplio conjunto de opciones que mejoran la disponibilidad de las bases de datos y que permiten el uso de recursos mejorado. Los componentes clave son los siguientes:  
   
@@ -152,37 +152,37 @@ ms.locfileid: "75229010"
 > [!WARNING]  
 >  Para obtener información sobre las restricciones y limitaciones del uso de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]otras características con, vea [Always on grupos de disponibilidad: interoperabilidad; SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
-##  <a name="RelatedTasks"></a>Tareas relacionadas  
+##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Introducción con Always On grupos de disponibilidad; SQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a>Contenido relacionado  
+##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   **Blogs**  
+-   **Blogs:**  
   
      [SQL Server blogs del equipo de Always On: el blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs de los ingenieros de SQL Server CSS](https://blogs.msdn.com/b/psssql/)  
+     [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   
--   **Vídeos**  
+-   **Vídeos:**  
   
-     [Microsoft SQL Server la serie de Always On de código "Denali", parte 1: Introducción a la solución de alta disponibilidad de próxima generación](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali", Serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de próxima generación](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server la serie de Always On de código "Denali", parte 2: creación de una solución crítica de alta disponibilidad mediante AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **White**  
+-   **Notas del producto:**  
   
-     [Microsoft SQL Server guía de soluciones de Always On para alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad de Always On; SQL Server;](overview-of-always-on-availability-groups-sql-server.md)   
  [Requisitos previos, restricciones y recomendaciones para el SQL Server de &#40;de Grupos de disponibilidad AlwaysOn&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Configuración de una instancia de servidor para Always On grupos de disponibilidad; SQL Server;](always-on-availability-groups-sql-server.md)   
  [Creación y configuración de grupos de disponibilidad; SQL Server;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Administración de un grupo de disponibilidad; SQL Server;](administration-of-an-availability-group-sql-server.md)   
- [Supervisión de grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
+ [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [Información general sobre las instrucciones Transact-SQL para Always On grupos de disponibilidad; SQL Server;](transact-sql-statements-for-always-on-availability-groups.md)   
  [Información general de los cmdlets de PowerShell para Grupos de disponibilidad AlwaysOn; SQL Server;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

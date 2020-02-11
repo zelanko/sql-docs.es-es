@@ -15,11 +15,11 @@ ms.assetid: a2259db8-feb7-4f0a-afc8-88e235d86be7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: adcb9175913603a0d13fb2587e62d41b52939042
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094204"
 ---
 # <a name="default-subkey"></a>Subclave predeterminada
-El registro puede especificar un origen de datos de forma predeterminada con la subclave de forma predeterminada. Esta subclave es un caso especial de una subclave de especificación del origen de datos y tiene los mismos valores que cualquier otro subclave de especificación de origen de datos. La única diferencia es que no aparece como un valor bajo la subclave de orígenes de datos ODBC.
+El registro puede especificar un origen de datos predeterminado con la subclave predeterminada. Esta subclave es un caso especial de una subclave de especificación de origen de datos y tiene los mismos valores que cualquier otra subclave de especificación de origen de datos. La única diferencia es que no aparece como un valor en la subclave de orígenes de datos ODBC.

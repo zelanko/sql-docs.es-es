@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797812"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navegar por las rutas de acceso de SQL Server PowerShell
   El proveedor de PowerShell de [!INCLUDE[ssDE](../includes/ssde-md.md)] expone el conjunto de objetos de una instancia de SQL Server en una estructura similar a una ruta de acceso del archivo. Puede usar los cmdlets de Windows PowerShell para navegar por la ruta de acceso del proveedor y crear las unidades personalizadas para acortar la ruta de acceso que tiene que escribir.  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  Windows PowerShell implementa cmdlets para navegar por la estructura de ruta de acceso que representa la jerarquía de objetos compatible con un proveedor de PowerShell. Cuando ha navegado a un nodo de la ruta de acceso, puede usar otros cmdlets para realizar operaciones básicas en el objeto actual. Dado que los cmdlets se usan con frecuencia, tienen alias canónicos cortos. También hay un conjunto de alias que asigna los cmdlets a comandos del símbolo del sistema similares, y otro conjunto para los comandos shell de UNIX.  
   
  El proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa un subconjunto de los cmdlets de proveedor, que se muestran en la tabla siguiente.  
@@ -130,7 +130,7 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
  [Trabajar con rutas acceso de SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
  [Convertir URN en rutas de acceso del proveedor de SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   

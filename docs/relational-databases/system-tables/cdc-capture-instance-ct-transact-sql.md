@@ -1,5 +1,5 @@
 ---
-title: CDC.&lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs
+title: CCE. &lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -18,48 +18,48 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72908395"
 ---
-# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC.&lt;capture_instance&gt;_CT (Transact-SQL)
+# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CCE. &lt;_CT&gt;CAPTURE_INSTANCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Es la tabla de cambio creada cuando la captura de datos de cambio se habilita en una tabla de origen. La tabla devuelve una fila para cada inserción y elimina la operación realizada contra la tabla de origen y dos filas para cada operación de actualización realizada contra la tabla de origen. Cuando el nombre de la tabla de cambio no se especifica en el momento que se habilita la tabla de origen, el nombre se deriva. El formato del nombre es CDC. *capture_instance*_CT donde *capture_instance* es el nombre del esquema de la tabla de origen y el nombre de la tabla de origen en el *schema_table*de formato. Por ejemplo, si la tabla **Person. Address** de la base de datos de ejemplo **AdventureWorks** está habilitada para la captura de datos modificados, el nombre de la tabla de cambios derivada sería **CDC. Person_Address_CT**.  
   
- Se recomienda **no consultar directamente las tablas del sistema**. En su lugar, ejecute las funciones [CDC. fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) y [CDC. fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) < capture_instance >.  
+ Se recomienda **no consultar directamente las tablas del sistema**. En su lugar, ejecute las funciones [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) y [CDC. fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>.  
   
 
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**__$start_lsn**|**binary(10)**|Número de flujo de registro (LSN) asociado con la transacción de confirmación para el cambio.<br /><br /> Todos los cambios confirmados en la misma transacción comparten el mismo LSN de confirmación. Por ejemplo, si una operación de eliminación en la tabla de origen quita dos filas, la tabla de cambios contendrá dos filas, cada una con el mismo valor **_ _ $ start_lsn** .|  
-|**__$end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esta columna siempre es NULL.|  
-|**__$seqval**|**binary(10)**|Valor de secuencia utilizado para ordenar los cambios de fila dentro de una transacción.|  
-|**__$operation**|**int**|Identifica la operación del lenguaje de manipulación de datos (DML) asociada con el cambio. Puede ser uno de los valores siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 3 = actualizar (valores anteriores)<br /><br /> Los datos de columna tienen valores de fila antes de ejecutar la instrucción de actualización.<br /><br /> 4 = actualizar (valores nuevos)<br /><br /> Los datos de columna tienen valores de fila después de ejecutar la instrucción de actualización.|  
-|**__$update_mask**|**varbinary(128)**|Máscara de bits basada en los índices de columna de la tabla de cambios que identifica las columnas que cambiaron.|  
-|*\<columnas de la tabla de origen capturadas>*|varía|Las columnas restantes de la tabla de cambios son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó ninguna columna en la lista de columnas capturadas, todas las columnas en la tabla de origen se incluyen en esta tabla.|  
-|**__$command_id** |**int** |Realiza un seguimiento del orden de las operaciones dentro de una transacción. |  
+|**_ _ $ start_lsn**|**binario (10)**|Número de flujo de registro (LSN) asociado con la transacción de confirmación para el cambio.<br /><br /> Todos los cambios confirmados en la misma transacción comparten el mismo LSN de confirmación. Por ejemplo, si una operación de eliminación en la tabla de origen quita dos filas, la tabla de cambios contendrá dos filas, cada una con el mismo valor **_ _ $ start_lsn** .|  
+|**_ _ $ end_lsn**|**binario (10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esta columna siempre es NULL.|  
+|**_ _ $ seqval**|**binario (10)**|Valor de secuencia utilizado para ordenar los cambios de fila dentro de una transacción.|  
+|**_ _ $ Operation**|**int**|Identifica la operación del lenguaje de manipulación de datos (DML) asociada con el cambio. Puede ser uno de los siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 3 = actualizar (valores anteriores)<br /><br /> Los datos de columna tienen valores de fila antes de ejecutar la instrucción de actualización.<br /><br /> 4 = actualizar (valores nuevos)<br /><br /> Los datos de columna tienen valores de fila después de ejecutar la instrucción de actualización.|  
+|**_ _ $ update_mask**|**varbinary (128)**|Máscara de bits basada en los índices de columna de la tabla de cambios que identifica las columnas que cambiaron.|  
+|*\<columnas de la tabla de origen capturadas>*|Varía|Las columnas restantes de la tabla de cambios son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó ninguna columna en la lista de columnas capturadas, todas las columnas en la tabla de origen se incluyen en esta tabla.|  
+|**_ _ $ command_id** |**int** |Realiza un seguimiento del orden de las operaciones dentro de una transacción. |  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
 
-La columna `__$command_id` columna estaba incluida en una actualización acumulativa en las versiones 2012 a 2016. Para obtener información sobre la versión y la descarga, consulte el artículo 3030352 de Knowledge base en [corrección: la tabla de cambios se ordena incorrectamente para las filas actualizadas después de habilitar la captura de datos modificados para una base de datos de Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Para obtener más información, consulte [la funcionalidad CDC se puede interrumpir después de actualizar a la cu más reciente para SQL Server 2012, 2014 y 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+La `__$command_id` columna era la columna se incluyó en una actualización acumulativa en las versiones 2012 a 2016. Para obtener información sobre la versión y la descarga, consulte el artículo 3030352 de Knowledge base en [corrección: la tabla de cambios se ordena incorrectamente para las filas actualizadas después de habilitar la captura de datos modificados para una base de datos de Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Para obtener más información, consulte [la funcionalidad CDC se puede interrumpir después de actualizar a la cu más reciente para SQL Server 2012, 2014 y 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
 ## <a name="captured-column-data-types"></a>Tipos de datos de columna capturados  
  Las columnas capturadas incluidas en esta tabla tienen el mismo valor y tipo de datos que sus columnas de origen correspondientes con las excepciones siguientes:  
   
--   Las columnas de **marca** de tiempo se definen como **binarias (8)** .  
+-   Las columnas de **marca** de tiempo se definen como **binarias (8)**.  
   
 -   Las columnas de **identidad** se definen como **int** o **BIGINT**.  
   
  Sin embargo, los valores de estas columnas son iguales que los valores de las columnas de origen.  
   
 ### <a name="large-object-data-types"></a>Tipos de datos de objetos grandes  
- A las columnas de tipo de datos **Image**, **Text**y **ntext** siempre se les asigna un valor **null** cuando _ _ $ Operation = 1 o \_\_$Operation = 3. A las columnas de tipo de datos **varbinary (Max)** , **VARCHAR (Max)** o **nvarchar (Max)** se les asigna un valor **null** cuando \_\_$Operation = 3, a menos que la columna cambie durante la actualización. Cuando \_\_$operation = 1, a estas columnas se les asigna su valor en el momento de la eliminación. Las columnas calculadas que se incluyen en una instancia de captura siempre tienen el valor **null**.  
+ A las columnas de tipo de datos **Image**, **Text**y **ntext** siempre se les asigna un valor **null** cuando _ _ $ \_ \_Operation = 1 o $Operation = 3. A las columnas de tipo de datos **varbinary (Max)**, **VARCHAR (Max)** o **nvarchar (Max)** se les asigna un \_ \_valor **null** cuando $Operation = 3, a menos que la columna cambie durante la actualización. Cuando \_ \_$Operation = 1, a estas columnas se les asigna su valor en el momento de la eliminación. Las columnas calculadas que se incluyen en una instancia de captura siempre tienen el valor **null**.  
   
- De forma predeterminada, el tamaño máximo que se pueden agregar a una columna capturada en una sola instrucción INSERT, UPDATE, WRITETEXT o UPDATETEXT es 65.536 bytes o 64 KB. Para aumentar este tamaño y admitir datos LOB más grandes, utilice la [opción de configuración del servidor configurar el tamaño de replicación de texto máximo](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) para especificar un tamaño máximo mayor. Para más información, consulte [Configure the max text repl size Server Configuration Option](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
+ De forma predeterminada, el tamaño máximo que se pueden agregar a una columna capturada en una sola instrucción INSERT, UPDATE, WRITETEXT o UPDATETEXT es 65.536 bytes o 64 KB. Para aumentar este tamaño y admitir datos LOB más grandes, utilice la [opción de configuración del servidor configurar el tamaño de replicación de texto máximo](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) para especificar un tamaño máximo mayor. Para más información, consulte [Establecer la opción de configuración del servidor Tamaño de replicación de texto máximo](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
 ## <a name="data-definition-language-modifications"></a>Modificaciones del lenguaje de definición de datos  
  Las modificaciones de DDL en la tabla de origen, como agregar o quitar columnas, se registran en la tabla [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Estos cambios no se aplican a la tabla de cambio. Es decir, la definición de la tabla de cambio se mantiene constante. Al insertar las filas en la tabla de cambio, el proceso de captura omite esas columnas que no aparecen en la lista de columnas capturadas asociadas con la tabla de origen. Si en la lista de columnas capturadas aparece una columna que ya no se encuentra en la tabla de origen, se asignará un valor nulo a la columna.  
@@ -81,8 +81,8 @@ La columna `__$command_id` columna estaba incluida en una actualización acumula
   
  Para operaciones de inserción y eliminación, todos los bits de la máscara de actualización están activados. Para las operaciones de actualización, la máscara de actualización tanto en las filas de actualización antiguas como nuevas se modificará para reflejar las columnas que cambiaron durante la actualización.  
   
-## <a name="see-also"></a>Vea también  
- [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [Sys. sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

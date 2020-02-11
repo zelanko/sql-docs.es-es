@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892112"
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxis de MDX)
@@ -30,7 +30,7 @@ ms.locfileid: "68892112"
   
  MDX es compatible con los operadores que se indican en la siguiente tabla:  
   
-|Para realizar este tipo de operación|Usar|  
+|Para realizar este tipo de operación|Uso|  
 |---------------------------------------|---------|  
 |Asignar un valor a una variable o asociar una columna de un conjunto de resultados a un alias.|[Operadores de asignación](../mdx/assignment-operators.md)|  
 |Sumar, restar, multiplicar, dividir.|[Operadores aritméticos](../mdx/arithmetic-operators.md)|  
@@ -71,13 +71,13 @@ ms.locfileid: "68892112"
   
 -   NOT  
   
--   Y  
+-   y  
   
 -   XOR  
   
--   OR  
+-   O BIEN  
   
- Para obtener más información sobre los operadores en MDX, vea MDX [ &#40;Operator&#41;Reference MDX](../mdx/mdx-operator-reference-mdx.md).  
+ Para obtener más información acerca de los operadores de MDX, vea [MDX Operator Reference &#40;mdx&#41;](../mdx/mdx-operator-reference-mdx.md).  
   
 ### <a name="determining-results"></a>Determinar los resultados  
  Cuando se combinan expresiones simples para crear una más compleja, el tipo de datos del valor resultante viene determinado por la combinación de las reglas de los operadores con las reglas de precedencia para los tipos de datos.  
@@ -91,14 +91,14 @@ ms.locfileid: "68892112"
   
 |Tipo original|Tipo necesario|Conversión|  
 |-------------------|-----------------|----------------|  
-|Nivel|Establecer|\<Level >. Members|  
-|Hierarchy|Member|\<> de jerarquía. DefaultMember|  
-|Member|Tuple|(\<> Miembro)|  
-|Tuple|Member|\<tuple>.item(0)|  
-|Tuple|Escalar|\<tuple>.value|  
+|Nivel|Set|\<Level>. Members|  
+|Hierarchy|Miembro|\<> de jerarquía. DefaultMember|  
+|Miembro|Tuple|(\<> miembro)|  
+|Tuple|Miembro|\<tupla>. Item (0)|  
+|Tuple|Escalar|\<> de tupla. valor|  
   
-## <a name="see-also"></a>Vea también  
- [MDX de referencia &#40;de operadores MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [MDX (elementos &#40;de sintaxis MDX)&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

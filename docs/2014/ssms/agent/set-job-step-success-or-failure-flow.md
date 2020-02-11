@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9412ee0bd2be7b44dff2a06bd674abee0da34a
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798166"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
-  Al crear trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede especificar la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realizará si se produce un error durante la ejecución de un trabajo. Tras la resolución correcta o errónea de cada paso del trabajo, determine la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debería realizar. A continuación, utilice el siguiente procedimiento para configurar la lógica del flujo de las acciones de los pasos de trabajo mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Al crear [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajos del agente, puede especificar qué acción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe realizar si se produce un error durante la ejecución del trabajo. Tras la resolución correcta o errónea de cada paso del trabajo, determine la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debería realizar. A continuación, utilice el siguiente procedimiento para configurar la lógica del flujo de las acciones de los pasos de trabajo mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Antes de empezar:**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "72798166"
   
      [objetos de administración de SQL Server](#SMO)  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
   
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
@@ -92,7 +92,7 @@ ms.locfileid: "72798166"
     GO  
     ```  
   
- Para obtener más información, [vea &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Para obtener más información, vea [sp_add_jobstep &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 ##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
 

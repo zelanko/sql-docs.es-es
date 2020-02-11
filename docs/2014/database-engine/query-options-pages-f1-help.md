@@ -13,26 +13,26 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 9ae4a5009c33067dcb5db2d26ff3e287b31b8768
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71118126"
 ---
 # <a name="query-options-pages-f1-help"></a>Páginas de Opciones de consulta (Ayuda F1)
 
 Esta sección contiene los temas de la Ayuda F1 de las páginas de **Opciones de consulta** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
-[Analysis Services página general de &#40;opciones de ejecución de consulta&#41;](analysis-services-query-execution-options-general-page.md)
+[Analysis Services opciones de ejecución de consulta &#40;página general&#41;](analysis-services-query-execution-options-general-page.md)
 
-[Analysis Services página general &#40;de resultados de la consulta&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
+[Analysis Services resultados de la consulta &#40;página general&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
 
-[Página avanzadas de &#40;ejecución de opciones de consulta&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)
+[Ejecución de opciones de consulta &#40;página avanzadas&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)
 
-[Página ANSI de &#40;ejecución de opciones de consulta&#41;](../../2014/database-engine/query-options-execution-ansi-page.md)
+[Ejecución de opciones de consulta &#40;página ANSI&#41;](../../2014/database-engine/query-options-execution-ansi-page.md)
 
-[Página general de &#40;ejecución de opciones de consulta&#41;](../../2014/database-engine/query-options-execution-general-page.md)
+[Ejecución de opciones de consulta &#40;página general&#41;](../../2014/database-engine/query-options-execution-general-page.md)
   
-[Página de cuadrícula &#40;de resultados de opciones de consulta&#41;](../../2014/database-engine/query-options-results-grid-page.md)
+[Resultados de opciones de consulta &#40;página de cuadrícula&#41;](../../2014/database-engine/query-options-results-grid-page.md)
 
-[Página de texto &#40;de resultados de opciones de consulta&#41;](../../2014/database-engine/query-options-results-text-page.md)
+[Resultados de opciones de consulta &#40;página de texto&#41;](../../2014/database-engine/query-options-results-text-page.md)

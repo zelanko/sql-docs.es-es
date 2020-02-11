@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_get_sql (Transact-SQL) | Microsoft Docs
+title: Sys. fn_get_sql (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,19 +24,19 @@ ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120257"
 ---
-# <a name="sysfngetsql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
+# <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve el texto de la instrucción SQL para el identificador SQL especificado.  
   
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Microsoft SQL Server. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Use sys.dm_exec_sql_text en su lugar. Para obtener más información, consulte [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
+>  Esta característica se quitará en una versión futura de Microsoft SQL Server. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Use sys.dm_exec_sql_text en su lugar. Para obtener más información, vea [Sys. dm_exec_sql_text &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
  
   
@@ -51,28 +51,28 @@ sys.fn_get_sql ( SqlHandle )
   
 ## <a name="arguments"></a>Argumentos  
  *SqlHandle*  
- Es el valor del identificador. *SqlHandle* es **varbinary (64)** no tiene ningún valor predeterminado.  
+ Es el valor del identificador. *SqlHandle* es **varbinary (64)** y no tiene ningún valor predeterminado.  
   
 ## <a name="tables-returned"></a>Tablas devueltas  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |dbid|**smallint**|Id. de la base de datos. En el caso de instrucciones SQL ad hoc y preparadas, identificador de la base de datos en que se compilaron las instrucciones.|  
 |objectid|**int**|Identificador del objeto de base de datos. Este valor es NULL para las instrucciones SQL ad hoc.|  
-|número|**smallint**|Indica el número del grupo, si se agrupan los procedimientos.<br /><br /> 0 = Las no son procedimientos.<br /><br /> NULL = Instrucciones SQL ad hoc.|  
+|number|**smallint**|Indica el número del grupo, si se agrupan los procedimientos.<br /><br /> 0 = Las no son procedimientos.<br /><br /> NULL = Instrucciones SQL ad hoc.|  
 |encrypted|**bit**|Indica si el objeto está cifrado.<br /><br /> 0 = No cifrado<br /><br /> 1 = Cifrada|  
-|text|**texto**|Texto de la instrucción SQL. Este valor es NULL para objetos cifrados.|  
+|text|**negrita**|Texto de la instrucción SQL. Este valor es NULL para objetos cifrados.|  
   
-## <a name="remarks"></a>Comentarios  
- Puede obtener un identificador SQL válido de la columna sql_handle en la [sys.dm_exec_requests &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) vista de administración dinámica.  
+## <a name="remarks"></a>Observaciones  
+ Puede obtener un identificador SQL válido de la columna sql_handle de la vista de administración dinámica [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  
   
  Si pasa un identificador que ya no existe en la memoria caché, fn_get_sq**l** devuelve un conjunto de resultados vacío. Si pasa un identificador no válido, el archivo por lotes se detiene y aparece un mensaje de error.  
   
- El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] no se puede almacenar en caché algunos [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones, como instrucciones de copia masiva e instrucciones con literales de cadena mayores de 8 KB. No se pueden recuperar identificadores de esas instrucciones utilizando la función fn_get_sql.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] No puede almacenar en [!INCLUDE[tsql](../../includes/tsql-md.md)] caché algunas instrucciones, como instrucciones de copia masiva e instrucciones con literales de cadena mayores de 8 KB. No se pueden recuperar identificadores de esas instrucciones utilizando la función fn_get_sql.  
   
- El **texto** se filtra la columna del conjunto de resultados para el texto que puede contener contraseñas. Para obtener más información acerca de la seguridad relacionados con los procedimientos almacenados que no se supervisan, vea [filtrar un seguimiento](../../relational-databases/sql-trace/filter-a-trace.md).  
+ La columna de **texto** del conjunto de resultados se filtra por texto que puede contener contraseñas. Para obtener más información acerca de los procedimientos almacenados relacionados con la seguridad que no se supervisan, vea [filtrar un seguimiento](../../relational-databases/sql-trace/filter-a-trace.md).  
   
- La función fn_get_sql devuelve información similar a la [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) comando. Los siguientes son ejemplos de situaciones en las que se puede utilizar la función fn_get_sql cuando no se puede utilizar DBCC INPUTBUFFER:  
+ La función fn_get_sql devuelve información similar al comando [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md) . Los siguientes son ejemplos de situaciones en las que se puede utilizar la función fn_get_sql cuando no se puede utilizar DBCC INPUTBUFFER:   
   
 -   Cuando los eventos tengan más de 255 caracteres.  
   
@@ -93,9 +93,9 @@ SELECT * FROM sys.fn_get_sql(@Handle);
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [Sys. sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Estado de ejemplo de la propiedad (VB) | Microsoft Docs
+title: Ejemplo de la propiedad State (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e9c497d8e417ccfcc74df2b21043446c2ce9860
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916852"
 ---
 # <a name="state-property-example-vb"></a>Ejemplo de la propiedad State (VB)
-Este ejemplo se usa el [estado](../../../ado/reference/ado-api/state-property-ado.md) propiedad para mostrar un mensaje mientras se están abriendo conexiones asincrónicas y se están ejecutando los comandos asincrónicos.  
+En este ejemplo se usa la propiedad [State](../../../ado/reference/ado-api/state-property-ado.md) para mostrar un mensaje mientras se abren las conexiones asincrónicas y se ejecutan los comandos asincrónicos.  
   
 ```  
 'BeginStateVB  
@@ -107,6 +107,6 @@ End Sub
 'EndStateVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propiedad State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

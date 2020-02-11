@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1408d970093fde0e2efea9662b56b9f099d6b0b4
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783029"
 ---
 # <a name="change-the-session-timeout-period-for-an-availability-replica-sql-server"></a>Cambiar el tiempo de espera de la sesión en una réplica de disponibilidad (SQL Server)
@@ -40,9 +40,9 @@ ms.locfileid: "72783029"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
   
@@ -106,5 +106,5 @@ ms.locfileid: "72783029"
   
 Para configurar y usar el proveedor de SQL Server PowerShell, vea [proveedor de SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md).
   
-## <a name="see-also"></a>Ver también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

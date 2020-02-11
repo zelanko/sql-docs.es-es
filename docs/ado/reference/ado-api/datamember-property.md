@@ -16,24 +16,24 @@ ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 623f9b1f1e8873ddc4819bb8500c11edf09f5f76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919220"
 ---
 # <a name="datamember-property"></a>Propiedad DataMember
-Indica el nombre del miembro de datos que se recuperan desde el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) hace referencia a él la [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) propiedad.  
+Indica el nombre del miembro de datos que se recuperará del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) al que hace referencia la propiedad [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un **cadena** valor. El nombre no distingue mayúsculas de minúsculas.  
+ Establece o devuelve un valor de **cadena** . El nombre no distingue entre mayúsculas y minúsculas.  
   
-## <a name="remarks"></a>Comentarios  
- Esta propiedad se utiliza para crear controles enlazados a datos con el entorno de datos. El entorno de datos mantiene las colecciones de datos (orígenes de datos) que contiene objetos con nombre (miembros de datos) que se representará como un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+## <a name="remarks"></a>Observaciones  
+ Esta propiedad se usa para crear controles enlazados a datos con el entorno de datos. El entorno de datos mantiene colecciones de datos (orígenes de datos) que contienen objetos con nombre (miembros de datos) que se representarán como un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
- El **DataMember** y **DataSource** propiedades deben usarse juntas.  
+ Las propiedades **DataMember** y **DataSource** deben usarse juntas.  
   
- El **DataMember** propiedad determina qué objeto especificado por el **DataSource** propiedad se representará como un **Recordset** objeto. El **Recordset** objeto debe estar cerrado antes de establecer esta propiedad. Se genera un error si el **DataMember** no se establece la propiedad antes de la **DataSource** propiedad, o si el **DataMember** no se reconoce el nombre por el objeto especificado en el **DataSource** propiedad.  
+ La propiedad **DataMember** determina qué objeto especificado por la propiedad **DataSource** se representará como un objeto de **conjunto de registros** . El objeto de **conjunto de registros** debe cerrarse antes de que se establezca esta propiedad. Se genera un error si la propiedad **DataMember** no se establece antes que la propiedad **DataSource** , o si el objeto especificado en la propiedad **DataSource** no reconoce el nombre de **DataMember** .  
   
 ## <a name="usage"></a>Uso  
   
@@ -46,5 +46,5 @@ Set rs.DataSource = myDE      'Name of the object containing an IRowset
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad de origen de datos (ADO)](../../../ado/reference/ado-api/datasource-property-ado.md)

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebb20180e96302ba2ee90e9ab90cb79be19b7e1b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796379"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción
@@ -24,40 +24,40 @@ ms.locfileid: "72796379"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  Modo nativo de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] &#124; Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] modo de SharePoint|  
   
  **En este tema:**  
   
 -   [Cómo usar los scripts](#bkmk_how_to)  
   
--   [Script: mostrar la propiedad de todas las suscripciones](#bkmk_list_ownership_all)  
+-   [Script: Mostrar la propiedad de todas las suscripciones](#bkmk_list_ownership_all)  
   
--   [Script: mostrar todas las suscripciones propiedad de un usuario específico](#bkmk_list_all_one_user)  
+-   [Script: Mostrar todas las suscripciones propiedad de un usuario específico](#bkmk_list_all_one_user)  
   
 -   [Script: cambiar la propiedad de todas las suscripciones propiedad de un usuario específico](#bkmk_change_all)  
   
--   [Script: mostrar todas las suscripciones asociadas a un informe específico](#bkmk_list_for_1_report)  
+-   [Script: Mostrar todas las suscripciones asociadas a un informe específico](#bkmk_list_for_1_report)  
   
 -   [Script: cambiar la propiedad de una suscripción específica](#bkmk_change_all_1_subscription)  
   
 -   [Script: ejecutar (desencadenar) una sola suscripción](#bkmk_run_1_subscription)  
   
-##  <a name="bkmk_how_to"></a> Cómo usar los scripts  
+##  <a name="bkmk_how_to"></a>Cómo usar los scripts  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Permisos  
  Esta sección resume los niveles de permiso requeridos para utilizar los métodos para el modo nativo y para el modo SharePoint de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Los scripts de este tema usan los siguientes métodos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  
   
--   [Método ReportingService2010.ListSubscriptions](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+-   [ReportingService2010. ListSubscriptions, método](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
   
--   [Método ReportingService2010.ChangeSubscriptionOwner](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+-   [ReportingService2010. ChangeSubscriptionOwner, método](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
   
--   [ReportingService2010.ListChildren](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+-   [ReportingService2010. ListChildren](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
   
 -   El método [ReportingService2010.FireEvent](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) solo se usa en el último script para activar la suscripción específica que se ejecutará. Si no tiene previsto utilizar este script, omita los requisitos de permiso para el método FireEvent.  
   
  **Modo nativo:**  
   
--   Enumerar suscripciones: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription en el informe y el usuario es el propietario de la suscripción) o ReadAnySubscription  
+-   Enumerar suscripciones: (HYPERLINKhttps://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx"" ReadSubscription en el informe y el usuario es el propietario de la suscripción) o ReadAnySubscription  
   
 -   Cambiar suscripciones; el usuario debe ser miembro del grupo BUILTIN\Administrators  
   
@@ -65,9 +65,9 @@ ms.locfileid: "72796379"
   
 -   Desencadenar evento: GenerateEvents (Sistema)  
   
- **Modo SharePoint:**  
+ **Modo de SharePoint:**  
   
--   Enumerar suscripciones: ManageAlerts o (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts en el informe y el usuario es el propietario de la suscripción y la suscripción es una suscripción con el tiempo.  
+-   Mostrar suscripciones: ManageAlerts o (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts en el informe y el usuario es el propietario de la suscripción y la suscripción es una suscripción con tiempo).  
   
 -   Cambiar suscripciones: ManageWeb  
   
@@ -78,13 +78,13 @@ ms.locfileid: "72796379"
  Para obtener más información, vea [Comparación de roles y tareas en Reporting Services con grupos y permisos de SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).  
   
 ### <a name="script-usage"></a>Uso de scripts  
- **Crear archivos de script (.ps1)**  
+ **Crear archivos de script (. PS1)**  
   
 1.  Crear una carpeta con el nombre **c:\scripts**. Si elige una carpeta diferente, modifique el nombre de la carpeta utilizada en las instrucciones de sintaxis de línea de comandos del ejemplo.  
   
 2.  Cree un archivo de texto para cada script y guarde los archivos en la carpeta c:\scripts. Cuando cree los archivos .ps1, use el nombre de la sintaxis de línea de comandos de cada ejemplo.  
   
-3.  Abra un símbolo del sistema con privilegios administrativos.  
+3.  Abra un símbolo del sistema con privilegio de administración.  
   
 4.  Ejecute cada archivo de script utilizando la sintaxis de línea de comando proporcionada con cada ejemplo.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "72796379"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
-##  <a name="bkmk_list_ownership_all"></a> Script: mostrar la propiedad de todas las suscripciones  
+##  <a name="bkmk_list_ownership_all"></a>Script: Mostrar la propiedad de todas las suscripciones  
  Este script presenta todas las suscripciones de un sitio. Puede utilizarlo para probar su conexión o para comprobar la ruta de acceso del informe y el identificador de la suscripción para su uso en los demás scripts. Además, es un script útil para verificar qué suscripciones existen y quién las posee.  
   
 ### <a name="native-mode-syntax"></a>Sintaxis del modo nativo
@@ -135,7 +135,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 >  Para comprobar las direcciones URL de los sitios en modo de SharePoint, use el cmdlet de SharePoint **Get-SPSite**. Para obtener más información, vea [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
-##  <a name="bkmk_list_all_one_user"></a> Script: mostrar todas las suscripciones propiedad de un usuario específico  
+##  <a name="bkmk_list_all_one_user"></a>Script: Mostrar todas las suscripciones propiedad de un usuario específico  
  Este script presenta todas las suscripciones poseídas por un usuario específico. Puede utilizarlo para probar su conexión o para comprobar la ruta de acceso del informe y el identificador de la suscripción para su uso en los demás scripts. Este script es útil si desea comprobar qué suscripciones poseía una persona que abandona su organización, para cambiar el propietario o eliminar la suscripción.  
   
 ### <a name="native-mode-syntax"></a>Sintaxis del modo nativo
@@ -172,7 +172,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-##  <a name="bkmk_change_all"></a> Script: cambiar la propiedad de todas las suscripciones propiedad de un usuario específico  
+##  <a name="bkmk_change_all"></a>Script: cambiar la propiedad de todas las suscripciones propiedad de un usuario específico  
  Este script cambia la propiedad de todas las suscripciones poseídas por un usuario específico al nuevo parámetro de propietario.  
   
 ### <a name="native-mode-syntax"></a>Sintaxis del modo nativo
@@ -242,7 +242,7 @@ ForEach ($item in $items)
 }  
 ```  
   
-##  <a name="bkmk_list_for_1_report"></a> Script: mostrar todas las suscripciones asociadas a un informe específico  
+##  <a name="bkmk_list_for_1_report"></a>Script: Mostrar todas las suscripciones asociadas a un informe específico  
  Este script presenta todas las suscripciones asociadas a un informe específico. La sintaxis de la ruta de acceso del informe es un modo SharePoint diferente que requiere una dirección URL completa. En los ejemplos de sintaxis, el nombre del informe es "title only", que contiene un espacio, lo que obliga a usar comillas en el nombre del informe.  
   
 ### <a name="native-mode-syntax"></a>Sintaxis del modo nativo
@@ -280,7 +280,7 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}  
 ```  
   
-##  <a name="bkmk_change_all_1_subscription"></a> Script: cambiar la propiedad de una suscripción específica  
+##  <a name="bkmk_change_all_1_subscription"></a>Script: cambiar la propiedad de una suscripción específica  
  Este script cambia la propiedad de una suscripción específica. La suscripción está identificada por el SubscriptionID que pasa al script. Puede utilizar uno de los scripts para presentar suscripciones para determinar el SubscriptionID correcto.  
   
 ### <a name="native-mode-syntax"></a>Sintaxis del modo nativo
@@ -326,7 +326,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-##  <a name="bkmk_run_1_subscription"></a> Script: ejecutar (desencadenar) una sola suscripción  
+##  <a name="bkmk_run_1_subscription"></a>Script: ejecutar (desencadenar) una sola suscripción  
  Este script ejecuta una suscripción específica mediante el método FireEvent. El script ejecuta inmediatamente la suscripción independientemente de la programación configurada para la suscripción. Se compara EventType con el conjunto de eventos conocido que se ha definido en el archivo de configurador del servidor de informes **rsreportserver.config** . El script utiliza el siguiente tipo de eventos para las suscripciones estándar:  
   
  `<Event>`  
@@ -377,7 +377,7 @@ $subscriptions = $rs2010.ListSubscriptions($site);
 $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID, EventType, lastexecuted | where {$_.SubscriptionID -eq $subscriptionid}
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  <xref:ReportService2010.ReportingService2010.ListSubscriptions%2A>   
  <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>   
  <xref:ReportService2010.ReportingService2010.ListChildren%2A>   

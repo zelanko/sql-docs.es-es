@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797875"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Hay varios orígenes de información sobre cómo utilizar los cmdlets y el proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows PowerShell. Esto incluye la ayuda que está disponible en el entorno de Windows PowerShell.  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  Para obtener información sobre Windows PowerShell, vea el [Guía de Introducción de Windows PowerShell](https://technet.microsoft.com/library/hh857337.aspx).  
   
  Para ver una introducción a los cmdlets y el proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vea [SQL Server PowerShell](../powershell/sql-server-powershell.md).  
@@ -42,14 +42,14 @@ ms.locfileid: "72797875"
   
  La entrada *-Query* o *-QueryFromFile* puede contener:  
   
--   Variables y comandos de**sqlcmd** . Para obtener información sobre estas variables y comandos, consulte la sección Comentarios de [sqlcmd Utility](../tools/sqlcmd-utility.md).  
+-   variables y comandos de **sqlcmd** . Para obtener información sobre estas variables y comandos, consulte la sección Comentarios de [sqlcmd Utility](../tools/sqlcmd-utility.md).  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] . Para obtener más información sobre el idioma [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference).  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)]afirma. Para obtener más información sobre el idioma [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference).  
   
 -   Instrucciones XQuery. Para obtener más información sobre lenguaje XQuery admitido por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vea [Referencia del lenguaje XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 ## <a name="get-help-for-a-sql-server-cmdlet"></a>Obtener ayuda para un cmdlet de SQL Server.  
- **Para obtener ayuda para un cmdlet**  
+ **Obtención de ayuda sobre un cmdlet**  
   
 -   Ejecute Get-Help especificando el nombre del cmdlet y el nivel de ayuda que se va a devolver.  
   
@@ -89,7 +89,7 @@ Get-Help -Category provider
 ```  
   
 ## <a name="get-help-about-the-sql-server-provider"></a>Obtener ayuda acerca del proveedor de SQL Server  
- **Para obtener ayuda acerca del proveedor**  
+ **Para obtener ayuda sobre el proveedor**  
   
 1.  Ejecute Get-Help especificando el nombre SQLServer  
   
@@ -101,7 +101,7 @@ Get-Help SQLServer
 ```  
   
 ## <a name="list-methods-and-properties"></a>Enumerar métodos y propiedades  
- **Para mostrar los métodos y propiedades para un nodo en una ruta de acceso del proveedor de SQL Server**  
+ **Para enumerar los métodos y las propiedades de un nodo en una ruta de acceso del proveedor de SQL Server**  
   
 1.  Un CD de un nodo de la ruta de acceso de SQL Server, o crear una variable establecida en esa ubicación.  
   
@@ -122,6 +122,6 @@ $MyVar = New-Object Microsoft.SqlServer.Management.SMO.Table
 $MyVar | Get-Member -Type Properties  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Proveedor de PowerShell de SQL Server](../powershell/sql-server-powershell-provider.md)   
  [Utilizar los cmdlets del motor de base de datos](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

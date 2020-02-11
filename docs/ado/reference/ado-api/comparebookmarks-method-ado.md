@@ -1,5 +1,5 @@
 ---
-title: Método CompareBookmarks (ADO) | Microsoft Docs
+title: CompareBookmarks (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,10 +18,10 @@ ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919597"
 ---
 # <a name="comparebookmarks-method-ado"></a>Método CompareBookmarks (ADO)
@@ -35,30 +35,30 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve un [CompareEnum](../../../ado/reference/ado-api/compareenum.md) valor que indica la posición de fila relativa de dos registros representados por sus marcadores.  
+ Devuelve un valor de [CompareEnum](../../../ado/reference/ado-api/compareenum.md) que indica la posición de fila relativa de dos registros representados por sus marcadores.  
   
 #### <a name="parameters"></a>Parámetros  
- *Marcador Bookmark1*  
- El marcador de la primera fila.  
+ *Bookmark1*  
+ Marcador de la primera fila.  
   
  *Bookmark2*  
- El marcador de la segunda fila.  
+ Marcador de la segunda fila.  
   
-## <a name="remarks"></a>Comentarios  
- Los marcadores que deben aplicarse al mismo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, o un **Recordset** objeto y su [clon](../../../ado/reference/ado-api/clone-method-ado.md). No se puede comparar de manera confiable los marcadores de diferentes **Recordset** objetos, incluso si se crearon desde el mismo origen o el comando. Tampoco se pueden comparar los marcadores para un **Recordset** cuyo proveedor subyacente no admite comparaciones de objeto.  
+## <a name="remarks"></a>Observaciones  
+ Los marcadores se deben aplicar al mismo objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) , a un objeto de conjunto de **registros** y a su [clonación](../../../ado/reference/ado-api/clone-method-ado.md). No puede comparar de forma confiable los marcadores de distintos objetos de **conjunto de registros** , aunque se hayan creado a partir del mismo origen o comando. Ni puede comparar marcadores para un objeto de **conjunto de registros** cuyo proveedor subyacente no admita comparaciones.  
   
- Un marcador que identifica una fila en un **Recordset** objeto. Use la [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md) propiedad de la fila actual para obtener su marcador.  
+ Un marcador identifica de forma única una fila en un objeto de **conjunto de registros** . Use la propiedad [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) de la fila actual para obtener su marcador.  
   
- Dado que el tipo de datos de un marcador es específico para cada proveedor, ADO lo expone como un **Variant**. Por ejemplo, los marcadores de SQL Server son de tipo DBTYPE_R8 (**doble**). ADO expondrá este tipo como un **Variant** con un subtipo de **doble**.  
+ Dado que el tipo de datos de un marcador es específico de cada proveedor, ADO lo expone como **variante**. Por ejemplo, SQL Server marcadores son del tipo DBTYPE_R8 (**Double**). ADO expondría este tipo como una **variante** con un subtipo de **Double**.  
   
- Cuando se comparan marcadores, ADO no realiza ningún tipo de conversión. Los valores se pasan simplemente al proveedor que se produce la comparación. Si los marcadores que se pasan a la **CompareBookmarks** método se almacenan en variables de diferentes tipos, puede generar el error de coincidencia de tipo siguientes: "Argumentos son del tipo incorrecto, están fuera del intervalo aceptable o que están en conflicto entre sí".  
+ Al comparar marcadores, ADO no intenta ningún tipo de coerción. Los valores simplemente se pasan al proveedor donde se produce la comparación. Si los marcadores pasados al método **CompareBookmarks** se almacenan en variables de tipos diferentes, puede generar el siguiente error de coincidencia de tipos: "los argumentos son del tipo incorrecto, están fuera del intervalo aceptable o están en conflicto entre sí".  
   
- Marcador que no es válido o con formato incorrecto producirá un error.  
+ Un marcador que no sea válido o que tenga un formato incorrecto producirá un error.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo del método CompareBookmarks (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
- [Ejemplo del método CompareBookmarks (VC ++)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
+ [Ejemplo del método CompareBookmarks (VC + +)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
  [Bookmark (propiedad) (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)

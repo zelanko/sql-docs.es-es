@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6afc3a73b958062bd6472153b2452bc0e3fa6cfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020622"
 ---
 # <a name="-range-mdx"></a>: (Intervalo) (MDX)
@@ -34,8 +34,8 @@ Member_Expression : Member_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Un conjunto que contiene los miembros especificados y todos los miembros que se encuentran entre los miembro especificados.  
   
-## <a name="remarks"></a>Comentarios  
- Ambos parámetros deben especificar miembros del mismo nivel y jerarquía de una dimensión determinada. Si ambos parámetros especifican el mismo miembro, el **: (Intervalo)**  operador devuelve un conjunto que contiene solamente el miembro especificado. Si el primer parámetro es NULL, el conjunto contiene todos los miembros desde el principio del nivel del miembro especificado en el segundo parámetro hasta dicho miembro inclusive. Si el segundo parámetro es NULL, el conjunto contiene todos los miembros desde el miembro especificado en el primer parámetro hasta el último miembro del mismo nivel inclusive.  
+## <a name="remarks"></a>Observaciones  
+ Ambos parámetros deben especificar miembros del mismo nivel y jerarquía de una dimensión determinada. Si ambos parámetros especifican el mismo miembro, el operador **: (Range)** devuelve un conjunto que contiene solamente el miembro especificado. Si el primer parámetro es NULL, el conjunto contiene todos los miembros desde el principio del nivel del miembro especificado en el segundo parámetro hasta dicho miembro inclusive. Si el segundo parámetro es NULL, el conjunto contiene todos los miembros desde el miembro especificado en el primer parámetro hasta el último miembro del mismo nivel inclusive.  
   
  Este operador de conjunto no tiene equivalente funcional en MDX.  
   
@@ -61,7 +61,7 @@ WHERE
     ([Measures].[Freight Per Customer])  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Consulte también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

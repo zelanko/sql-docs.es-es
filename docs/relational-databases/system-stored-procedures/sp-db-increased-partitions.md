@@ -18,13 +18,13 @@ ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 83a40c9070db1c997f30db71a6cff226cd0430d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108265"
 ---
-# <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
+# <a name="sp_db_increased_partitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Habilita o deshabilita la compatibilidad con hasta 15.000 particiones de la base de datos especificada.  
@@ -44,11 +44,11 @@ sp_dp_increased_partitions
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @dbname=] '*database_name*'  
- Es el nombre de la base de datos. *dbname* es **sysname** con un valor predeterminado es null. Si *dbname* no se especifica, se usa la base de datos actual.  
+ [ @dbname= ] '*database_name*'  
+ Es el nombre de la base de datos. *dbname* es de **tipo sysname y su** valor predeterminado es NULL. Si no se especifica *dbname* , se usa la base de datos actual.  
   
- [ @increased_partitions=] '*increased_partitions*'  
- Habilita o deshabilita la compatibilidad con 15.000 particiones en la base de datos especificada. *increased_partitions* es **varchar(6)** con el valor predeterminado es NULL. Los valores aceptados son 'ON' o 'TRUE' para habilitar la compatibilidad y 'OFF' o 'FALSE' para deshabilitarla. Si *increased_partitions* no se especifica, el procedimiento devuelve 1 para indicar la compatibilidad está habilitada para la base de datos especificada o 0 para indicar la compatibilidad está deshabilitada.  
+ [ @increased_partitions= ] '*increased_partitions*'  
+ Habilita o deshabilita la compatibilidad con 15.000 particiones en la base de datos especificada. *increased_partitions* es de tipo **VARCHAR (6)** y su valor predeterminado es NULL. Los valores aceptados son 'ON' o 'TRUE' para habilitar la compatibilidad y 'OFF' o 'FALSE' para deshabilitarla. Si no se especifica *increased_partitions* , el procedimiento devuelve 1 para indicar que la compatibilidad está habilitada para la base de datos especificada o 0 para indicar que la compatibilidad está deshabilitada.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

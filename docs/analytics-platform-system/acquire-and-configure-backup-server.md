@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401493"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Adquisición y configuración de un servidor de copia de seguridad para almacenamiento de datos paralelos
@@ -118,7 +118,7 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-Para obtener más información, consulte: 
+Para más información, consulte: 
   
 -   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
@@ -149,6 +149,6 @@ Las operaciones en el servidor de carga pueden usar una ruta de acceso UNC para 
 - Requerir la firma en la conexión. 
 - En el servidor de carga, establezca la siguiente opción de directiva de grupo en configuración de Seguridad\directivas Locales\opciones de seguridad: cliente de red de Microsoft: firmar digitalmente las comunicaciones (siempre): habilitado.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Copias de seguridad y restauración](backup-and-restore-overview.md)  
   

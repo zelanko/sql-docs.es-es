@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c67150d5345b95b025e4005642ebccac63f86f2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889497"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Cubos locales (Analysis Services - Datos multidimensionales)
@@ -38,10 +38,10 @@ ms.locfileid: "68889497"
   
 |Origen de los datos del cubo local|Método de creación|  
 |------------------------------------|---------------------|  
-|Cubo basado en servidor|Puede usar la instrucción CREATE global Cube o un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] script de lenguaje de scripting de (ASSL) para crear y rellenar un cubo a partir de un cubo basado en servidor. Para obtener más información, vea [Create global Cube &#40;Statement&#41; MDX](/sql/mdx/mdx-data-definition-create-global-cube) o [Analysis Services scripting &#40;Language&#41; ASSL Reference](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
-|Origen de datos relacionales|Puede usar un script ASSL para crear y rellenar una base de datos relacional OLE DB. Para crear un cubo local mediante ASSL, conéctese a un archivo de cubo local (*.cub) y ejecute el script ASSL de la misma forma que ejecuta un script ASSL en una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para crear un cubo de servidor. Para obtener más información, vea [Analysis Services referencia de &#40;ASSL&#41; de lenguaje](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)de scripting.|  
+|Cubo basado en servidor|Puede usar la instrucción CREATE GLOBAL CUBE o un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] script de lenguaje de scripting de (ASSL) para crear y rellenar un cubo a partir de un cubo basado en servidor. Para obtener más información, vea [Create global Cube Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube) o [Analysis Services scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
+|Origen de datos relacionales|Puede usar un script ASSL para crear y rellenar una base de datos relacional OLE DB. Para crear un cubo local mediante ASSL, conéctese a un archivo de cubo local (*.cub) y ejecute el script ASSL de la misma forma que ejecuta un script ASSL en una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para crear un cubo de servidor. Para obtener más información, vea [Analysis Services scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).|  
   
- Use la instrucción REFRESH CUBE  para volver a generar un cubo local y actualizar sus datos. Para obtener más información, vea [Actualizar instrucción &#40;de&#41;cubo MDX](/sql/mdx/mdx-data-definition-refresh-cube).  
+ Use la instrucción REFRESH CUBE  para volver a generar un cubo local y actualizar sus datos. Para obtener más información, vea [actualizar la instrucción CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube).  
   
 ### <a name="local-cubes-created-from-server-based-cubes"></a>Cubos locales creados desde cubos basados en servidor  
  Al crear cubos locales creados a partir de cubos basados en servidor, debe tener en cuenta las siguientes consideraciones:  
@@ -69,13 +69,13 @@ ms.locfileid: "68889497"
 -   Solo los miembros calculados, los conjuntos con nombres y las asignaciones que dependen de medidas y dimensiones agregadas al cubo local se mostrarán en el cubo local. Los miembros calculados, los conjuntos con nombre y las asignaciones no válidos se excluirán automáticamente.  
   
 ### <a name="security"></a>Seguridad  
- Para que un usuario pueda crear un cubo local a partir de un cubo del servidor, se debe conceder al usuario permisos de **obtención de detalles y cubo local** en el cubo del servidor. Para obtener más información, vea [conceder permisos &#40;para cubos o modelos Analysis Services&#41;](../../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+ Para que un usuario pueda crear un cubo local a partir de un cubo del servidor, se debe conceder al usuario permisos de **obtención de detalles y cubo local** en el cubo del servidor. Para obtener más información, vea [Grant Permission or Model permissions &#40;Analysis Services&#41;](../../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  Los cubos locales no se protegen mediante roles como los cubos de servidor. Cualquier usuario con acceso de nivel de archivo a un archivo de cubo local puede realizar consultas en los cubos que allí residen. Puede usar la propiedad de conexión `Encryption Password` en un archivo de cubo local para establecer una contraseña en el archivo de cubo local. Al establecer una contraseña en un archivo de cubo local es preciso que todas las conexiones futuras al archivo de cubo local usen esta contraseña para consultar el archivo.  
   
-## <a name="see-also"></a>Vea también  
- [Instrucción &#40;Create global Cube MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)   
- [Desarrollar aplicaciones con Analysis Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
- [Instrucción &#40;Refresh Cube MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)  
+## <a name="see-also"></a>Consulte también  
+ [CREATE GLOBAL CUBE, instrucción &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube)   
+ [Desarrollo con Analysis Services lenguaje de scripting &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [Instrucción REFRESH CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-refresh-cube)  
   
   

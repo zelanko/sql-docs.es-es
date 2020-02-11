@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método (VB) Move | Microsoft Docs
+title: Ejemplo del método move (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 258f915b560bf7da9110909ada0f015fdc36af63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932122"
 ---
 # <a name="move-method-example-vb"></a>Ejemplo del método Move (VB)
-Este ejemplo se usa el [mover](../../../ado/reference/ado-api/move-method-ado.md) método para colocar el puntero de registro basado en la entrada del usuario.  
+En este ejemplo se usa el método [Move](../../../ado/reference/ado-api/move-method-ado.md) para colocar el puntero de registro en función de los datos proporcionados por el usuario.  
   
 ```  
 'BeginMoveVB  
@@ -126,6 +126,6 @@ End Sub
 'EndMoveVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Método Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Move (método) (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

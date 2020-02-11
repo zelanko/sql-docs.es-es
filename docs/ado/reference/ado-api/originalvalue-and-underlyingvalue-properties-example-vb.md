@@ -1,5 +1,5 @@
 ---
-title: Ejemplo OriginalValue y UnderlyingValue propiedades (VB) | Microsoft Docs
+title: Ejemplo de las propiedades OriginalValue y UnderlyingValue (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d424fb1033ff30044dd34134ac31991d8561c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917800"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>Ejemplo OriginalValue y UnderlyingValue propiedades (VB)
-Este ejemplo se muestra el [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) y [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propiedades al mostrar un mensaje si los datos subyacentes de un registro ha cambiado durante una [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) actualización por lotes.  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>Ejemplo de las propiedades OriginalValue y UnderlyingValue (VB)
+En este ejemplo se muestran las propiedades [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) y [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) al mostrar un mensaje si los datos subyacentes de un registro han cambiado durante una actualización por lotes del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ```  
 'BeginOriginalValueVB  
@@ -119,7 +119,7 @@ End Sub
 'EndOriginalValueVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Propiedad OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [OriginalValue (propiedad, ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propiedad UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

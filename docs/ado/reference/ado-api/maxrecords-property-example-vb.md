@@ -15,14 +15,14 @@ ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3caa09a03a7aabd87eddedff335abc3bddd1b318
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918184"
 ---
 # <a name="maxrecords-property-example-vb"></a>Ejemplo de la propiedad MaxRecords (VB)
-Este ejemplo se usa el [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propiedad para abrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que contiene los títulos más caros 10 en el ***títulos*** tabla.  
+En este ejemplo se usa la propiedad [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) para abrir un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que contiene los 10 títulos más caros en la tabla ***titles*** .  
   
 ```  
 'BeginMaxRecordsVB  
@@ -87,6 +87,6 @@ End Sub
 'EndMaxRecordsVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

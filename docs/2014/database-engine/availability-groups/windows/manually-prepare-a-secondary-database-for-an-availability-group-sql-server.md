@@ -19,17 +19,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797652"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Preparar manualmente una base de datos secundaria para un grupo de disponibilidad (SQL Server)
   En este tema se describe cómo preparar una base de datos secundaria de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell. La preparación de una base de datos secundaria requiere dos pasos: (1) restaurar una copia de seguridad reciente de la base de datos principal y las copias de seguridad del registro subsiguientes en cada instancia del servidor que hospeda la réplica secundaria utilizando RESTORE WITH NORECOVERY, y (2) unir la base de datos restaurada al grupo de disponibilidad.  
   
 > [!TIP]  
->  Si no tiene una configuración de trasvase de registros, es posible que pueda convertir la base de datos principal de trasvase de registros junto con una o varias de sus bases de datos secundarias en una base de datos principal AlwaysOn y una o varias bases de datos secundarias AlwaysOn. Para obtener más información, consulte [requisitos previos para la migración desde el trasvase de &#40;registros&#41;a grupos de disponibilidad AlwaysOn SQL Server](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
+>  Si no tiene una configuración de trasvase de registros, es posible que pueda convertir la base de datos principal de trasvase de registros junto con una o varias de sus bases de datos secundarias en una base de datos principal AlwaysOn y una o varias bases de datos secundarias AlwaysOn. Para obtener más información, consulte [requisitos previos para migrar desde el trasvase de registros a Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
 -   **Antes de empezar:**  
   
@@ -49,9 +49,9 @@ ms.locfileid: "72797652"
   
 -   [Tareas de copia de seguridad y restauración relacionadas](#RelatedTasks)  
   
--   **Seguimiento:** [Después de preparar una base de datos secundaria](#FollowUp)  
+-   **Seguimiento:** [después de preparar una base de datos secundaria](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos y restricciones  
   
@@ -77,11 +77,11 @@ ms.locfileid: "72797652"
  Cuando se realiza una copia de seguridad de una base de datos, la [propiedad de base de datos TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) se establece en OFF. Por lo tanto, TRUSTWORTHY está siempre en OFF en una base de datos que se acaba de restaurar.  
   
 ####  <a name="Permissions"></a> Permisos  
- De forma predeterminada, los permisos de BACKUP DATABASE y BACKUP LOG corresponden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator** . Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
+ De forma predeterminada, los permisos BACKUP DATABASE y BACKUP LOG corresponden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator** . Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
- Cuando la base de datos que se va a restaurar no existe en la instancia de servidor, la instrucción RESTORE requiere permisos CREATE DATABASE. Para obtener más información, consulte [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
+ Cuando la base de datos que se va a restaurar no existe en la instancia de servidor, la instrucción RESTORE requiere permisos CREATE DATABASE. Para obtener más información, vea [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 > [!NOTE]  
 >  Si las rutas de acceso de archivos de copia de seguridad y restauración son idénticas entre la instancia del servidor que hospeda la réplica principal y cada instancia que hospeda la réplica secundaria, debe poder crear bases de datos secundarias con el [Asistente para nuevo grupo de disponibilidad](use-the-availability-group-wizard-sql-server-management-studio.md), el [Asistente para agregar una réplica al grupo de disponibilidad](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)o el [Asistente para agregar una base de datos al grupo de disponibilidad](availability-group-add-database-to-group-wizard.md).  
@@ -94,7 +94,7 @@ ms.locfileid: "72797652"
   
 3.  En la instancia del servidor que hospeda la réplica secundaria, restaure la copia de seguridad completa de la base de datos principal (y opcionalmente una copia de seguridad diferencial) seguida de las copias de seguridad del registro subsiguientes.  
   
-     En la página **Opciones de RESTORE DATABASE** , seleccione **Dejar la base de datos no operativa y no revertir transacciones no confirmadas. Pueden restaurarse registros de transacciones adicionales. (RESTORE WITH NORECOVERY)** .  
+     En la página **Opciones de RESTORE DATABASE** , seleccione **Dejar la base de datos no operativa y no revertir transacciones no confirmadas. Pueden restaurarse registros de transacciones adicionales. (RESTORE WITH NORECOVERY)**.  
   
      Si las rutas de acceso de archivos de la base de datos principal y la base de datos secundaria difieren, por ejemplo, si la base de datos principal se encuentra en la unidad "F:" pero la instancia de servidor que hospeda la réplica secundaria no tiene unidad "F:", incluya la opción MOVE en la cláusula WITH.  
   
@@ -103,24 +103,24 @@ ms.locfileid: "72797652"
 > [!NOTE]  
 >  Para obtener información sobre cómo realizar estas operaciones de copia de seguridad y restauración, vea [Tareas de copia de seguridad y restauración relacionadas](#RelatedTasks), más adelante en esta sección.  
   
-###  <a name="RelatedTasks"></a> Tareas de copia de seguridad y restauración relacionadas  
- **Para crear una copia de seguridad de la base de datos**  
+###  <a name="RelatedTasks"></a>Tareas de copia de seguridad y restauración relacionadas  
+ **Para crear una copia de seguridad de base de datos**  
   
 -   [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
 -   [Crear una copia de seguridad diferencial de una base de datos &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
- **Para crear una copia de seguridad del registro**  
+ **Para crear una copia de seguridad de registros**  
   
--   [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
  **Para restaurar copias de seguridad**  
   
--   [Restaurar una copia de &#40;seguridad de base de datos SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [Restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [Restaurar una copia de seguridad diferencial de la base de datos &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
--   [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
+-   [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
 -   [Restaurar una base de datos a una nueva ubicación &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -146,7 +146,7 @@ ms.locfileid: "72797652"
 > [!NOTE]  
 >  Para obtener información sobre cómo realizar estas operaciones de copia de seguridad y restauración, vea [Tareas de copia de seguridad y restauración relacionadas](#RelatedTasks), más adelante en este tema.  
   
-###  <a name="ExampleTsql"></a> Ejemplo de Transact-SQL  
+###  <a name="ExampleTsql"></a>Ejemplo de Transact-SQL  
  En el siguiente ejemplo se prepara una base de datos secundaria. En este ejemplo se utiliza la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , que usa de forma predeterminada un modelo de recuperación simple.  
   
 1.  Para utilizar la base de datos [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , modifíquela para que utilice el modelo de recuperación completa:  
@@ -254,15 +254,15 @@ ms.locfileid: "72797652"
 4.  Para restaurar las copias de seguridad de base de datos y del registro de cada base de datos principal, utilice el cmdlet `restore-SqlDatabase`, especificando el parámetro de restauración `NoRecovery`. Si las rutas de acceso de archivo difieren entre equipos que hospedan la réplica principal y la réplica secundaria de destino, utilice también el parámetro de restauración `RelocateFile`.  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, vea [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 5.  Para completar la configuración de la base de datos secundaria, debe unirla al grupo de disponibilidad. Para obtener más información, vea [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de PowerShell de SQL Server](../../../powershell/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a> Ejemplo de comando y script de copias de seguridad y restauración  
+###  <a name="ExamplePSscript"></a>Ejemplo de script y comando de copia de seguridad y restauración  
  Los siguientes comandos de PowerShell realizan una copia de seguridad del registro de transacciones y una copia de seguridad completa de la base de datos en un recurso compartido de red y restauran las copias de seguridad de ese recurso compartido. En este ejemplo se supone que la ruta de acceso de archivo en que se restaura la base de datos es la misma que la ruta de acceso de archivo en que se creo la copia de seguridad de la base de datos.  
   
 ```powershell
@@ -276,12 +276,12 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -N
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: después de preparar una base de datos secundaria  
- Para completar la configuración de la base de datos secundaria, debe unir la base de datos que se acaba de restaurar al grupo de disponibilidad. Para obtener más información, vea [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
+##  <a name="FollowUp"></a>Seguimiento: después de preparar una base de datos secundaria  
+ Para completar la configuración de la base de datos secundaria, debe unir la base de datos que se acaba de restaurar al grupo de disponibilidad. Para obtener más información, vea [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
-## <a name="see-also"></a>Vea también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [RESTORE &#40;argumentos, Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [Argumentos RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Solucionar problemas de una operación &#40;Add-File grupos de disponibilidad AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
+ [Solucionar problemas de una operación Add-File &#40;Grupos de disponibilidad AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

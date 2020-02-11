@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796391"
 ---
 # <a name="create-dml-triggers"></a>Crear desencadenadores DML
   En este tema se describe cómo crear un desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y usando la instrucción CREATE TRIGGER de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-##  <a name="Top"></a> Antes de empezar  
+##  <a name="Top"></a> Antes de comenzar  
   
 ### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  Para obtener una lista de las limitaciones y restricciones relacionadas con la creación de desencadenadores DML, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
@@ -60,13 +60,13 @@ ms.locfileid: "72796391"
     |---------------|-----------|  
     |Autor|*Su nombre.*|  
     |Create Date|*La fecha de hoy.*|  
-    |Description|Comprueba la solvencia del proveedor antes de permitir que se inserte un nuevo pedido de compra con el proveedor.|  
-    |Schema_Name|Purchasing|  
+    |Descripción|Comprueba la solvencia del proveedor antes de permitir que se inserte un nuevo pedido de compra con el proveedor.|  
+    |Schema_Name|Compra|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|Quite UPDATE y DELETE de la lista.|  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 7.  En el **Editor de consultas**, reemplace el comentario `-- Insert statements for trigger here` con la instrucción siguiente:  
   

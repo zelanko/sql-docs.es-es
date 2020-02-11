@@ -1,5 +1,5 @@
 ---
-title: Simular coloca instrucciones Update y Delete | Microsoft Docs
+title: Simulando instrucciones Update y DELETE posicionadas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,46 +17,46 @@ ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d7642620d510ebba050a3fbc4348898e070070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107532"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Simulación de actualización por posición y las instrucciones Delete
-Si el origen de datos no admite actualización posicionada e instrucciones delete, el controlador puede simular estos. Por ejemplo, la biblioteca de cursores ODBC simula actualización posicionada y eliminar las instrucciones. La estrategia general para simular instrucciones posicionada update y delete es convertir instrucciones posicionadas a que se busca. Para ello, reemplace el **WHERE CURRENT OF** cláusula con una búsqueda **donde** cláusula que identifica la fila actual.  
+Si el origen de datos no admite instrucciones Update y DELETE posicionadas, el controlador puede simularlas. Por ejemplo, la biblioteca de cursores ODBC simula las instrucciones Update y DELETE posicionadas. La estrategia general para simular instrucciones Update y DELETE posicionadas es convertir las instrucciones posicionadas en las que se buscan. Esto se hace reemplazando la cláusula **WHERE CURRENT of** por una cláusula **Where** de búsqueda que identifica la fila actual.  
   
- Por ejemplo, porque la columna CustID identifica de forma única cada fila de la tabla Customers, la posición delete, instrucción  
+ Por ejemplo, dado que la columna CustID identifica de forma única cada fila de la tabla Customers, la instrucción Delete posicionada  
   
 ```  
 DELETE FROM Customers WHERE CURRENT OF CustCursor  
 ```  
   
- se pueden convertir en  
+ se puede convertir en  
   
 ```  
 DELETE FROM Customers WHERE (CustID = ?)  
 ```  
   
- El controlador puede usar uno de los siguientes *identificadores de fila* en el **donde** cláusula:  
+ El controlador puede usar uno de los siguientes *identificadores de fila* en la cláusula **Where** :  
   
--   Columnas cuyos valores sirven para identificar de forma única cada fila de la tabla. Por ejemplo, al llamar a **SQLSpecialColumns** con SQL_BEST_ROWID devuelve la columna óptima o el conjunto de columnas que sirven para este propósito.  
+-   Columnas cuyos valores sirven para identificar de forma única cada fila de la tabla. Por ejemplo, al llamar a **SQLSpecialColumns** con SQL_BEST_ROWID se devuelve la columna óptima o el conjunto de columnas que sirven para este propósito.  
   
--   Pseudocolumnas, proporcionadas por algunos orígenes de datos, con el fin de identificar de forma exclusiva cada fila. También pueden ser recuperables mediante una llamada a **SQLSpecialColumns**.  
+-   Pseudo columnas, proporcionadas por algunos orígenes de datos, con el fin de identificar de forma única cada fila. También se pueden recuperar llamando a **SQLSpecialColumns**.  
   
--   Un índice único, si está disponible.  
+-   Índice único, si está disponible.  
   
 -   Todas las columnas del conjunto de resultados.  
   
- Exactamente qué columnas debe usar un controlador en el **donde** cláusula construye depende del controlador. En algunos datos de orígenes, determinar un identificador de fila pueden ser costosos. Sin embargo, es más rápido ejecutar y garantiza que una instrucción simulada actualiza o elimina una fila como máximo. Según las capacidades del DBMS subyacente, puede ser costoso configurar mediante un identificador de fila. Sin embargo, es más rápido ejecutar y garantiza que una instrucción simulada actualizará o eliminará una única fila. Es normalmente mucho más fácil configurar la opción de usar todas las columnas del conjunto de resultados. Sin embargo, es más lento ejecutar y, si las columnas no identificar inequívocamente una fila, puede dar lugar a las filas que se va a actualizar o eliminar de forma no intencionada, especialmente cuando se establece la lista de selección para el resultado no contiene todas las columnas que existen en la tabla subyacente.  
+ Exactamente qué columnas debe usar un controlador en la cláusula **Where** que crea depende del controlador. En algunos orígenes de datos, la determinación de un identificador de fila puede ser costosa. Sin embargo, es más rápido ejecutar y garantiza que una instrucción simulada actualiza o elimina como máximo una fila. En función de las capacidades del DBMS subyacente, el uso de un identificador de fila puede ser caro de configurar. Sin embargo, es más rápido ejecutar y garantiza que una instrucción simulada actualizará o eliminará una sola fila. La opción de usar todas las columnas del conjunto de resultados suele ser mucho más fácil de configurar. Sin embargo, es más lento ejecutar y, si las columnas no identifican de forma única una fila, pueden provocar que las filas se actualicen o eliminen involuntariamente, especialmente cuando la lista de selección para el conjunto de resultados no contenga todas las columnas que existen en la tabla subyacente.  
   
- Dependiendo de cuál de las estrategias anteriores el controlador admite, una aplicación puede decidir qué estrategia quiere que el controlador que se utilizará con el atributo de instrucción SQL_ATTR_SIMULATE_CURSOR. Aunque puede parecer extraño para una aplicación para que el riesgo de forma no intencionada, actualizar o eliminar una fila, la aplicación puede quitar este riesgo asegurándose de que las columnas del conjunto de resultados identifican de forma única cada fila del conjunto de resultados. Esto guarda al controlador en el esfuerzo de tener que hacerlo.  
+ En función de las estrategias anteriores que admita el controlador, una aplicación puede elegir qué estrategia desea que use el controlador con el atributo de instrucción SQL_ATTR_SIMULATE_CURSOR. Aunque puede parecer extraño que una aplicación se arriesga a la actualización o eliminación accidental de una fila, la aplicación puede eliminar este riesgo asegurándose de que las columnas del conjunto de resultados identifican de forma única cada fila del conjunto de resultados. Esto evita que el controlador tenga que hacerlo.  
   
- Si el controlador decide usar un identificador de fila, intercepta el **SELECT FOR UPDATE** instrucción que crea el conjunto de resultados. Si las columnas de la lista de selección no detectar de manera eficaz una fila, el controlador agrega las columnas necesarias al final de la lista de selección. Algunos orígenes de datos tienen una sola columna que identifica siempre de una fila, como la columna ROWID en Oracle; Si este tipo de columna está disponible, el controlador lo utiliza. En caso contrario, el controlador llama a **SQLSpecialColumns** para cada tabla en la **FROM** cláusula para recuperar una lista de las columnas que identifican de forma única cada fila. Una restricción común que se origina esta técnica es que se produce un error de simulación de cursor si no hay más de una tabla en la **FROM** cláusula.  
+ Si el controlador elige usar un identificador de fila, intercepta la instrucción **Select for update** que crea el conjunto de resultados. Si las columnas de la lista de selección no identifican de forma eficaz una fila, el controlador agrega las columnas necesarias al final de la lista de selección. Algunos orígenes de datos tienen una única columna que siempre identifica de forma única una fila, como la columna ROWID en Oracle. Si este tipo de columna está disponible, el controlador lo utiliza. De lo contrario, el controlador llama a **SQLSpecialColumns** para cada tabla de la cláusula **from** para recuperar una lista de las columnas que identifican de forma única cada fila. Una restricción común que se obtiene de esta técnica es que se produce un error en la simulación de cursor si hay más de una tabla en la cláusula **from** .  
   
- Independientemente de cómo el controlador identifica las filas, normalmente elimina el **FOR UPDATE OF** cláusula desactivado el **SELECT FOR UPDATE** instrucción antes de enviarla al origen de datos. El **FOR UPDATE OF** cláusula se utiliza únicamente con actualización por posición y eliminar las instrucciones. Orígenes de datos que no admiten la actualización por posición y las instrucciones delete por lo general no lo admiten.  
+ Independientemente de cómo el controlador identifique las filas, normalmente elimina la cláusula **for update OF de** la instrucción **Select for update** antes de enviarla al origen de datos. La cláusula **for Update of** solo se usa con las instrucciones Update y DELETE posicionadas. Los orígenes de datos que no admiten las instrucciones Update y DELETE posicionadas no lo admiten normalmente.  
   
- Cuando la aplicación envía una actualización por posición o la instrucción delete para su ejecución, el controlador reemplaza el **WHERE CURRENT OF** cláusula con una **donde** cláusula que contiene el identificador de fila. Los valores de estas columnas se recuperan desde una caché mantenida por el controlador para cada columna utiliza en el **donde** cláusula. Después de que el controlador ha reemplazado el **donde** cláusula, envía la instrucción para el origen de datos para su ejecución.  
+ Cuando la aplicación envía una instrucción UPDATE o DELETE posicionada para su ejecución, el controlador reemplaza la cláusula **WHERE CURRENT of** por una cláusula **Where** que contiene el identificador de fila. Los valores de estas columnas se recuperan de una caché mantenida por el controlador para cada columna que utiliza en la cláusula **Where** . Una vez que el controlador ha reemplazado la cláusula **Where** , envía la instrucción al origen de datos para su ejecución.  
   
  Por ejemplo, supongamos que la aplicación envía la instrucción siguiente para crear un conjunto de resultados:  
   
@@ -64,31 +64,31 @@ DELETE FROM Customers WHERE (CustID = ?)
 SELECT Name, Address, Phone FROM Customers FOR UPDATE OF Phone, Address  
 ```  
   
- Si la aplicación ha establecido SQL_ATTR_SIMULATE_CURSOR para solicitar una garantía de exclusividad y si el origen de datos no proporciona una pseudocolumna que siempre se identifica una fila, el controlador llama a **SQLSpecialColumns** para el La tabla Customers, descubre que CustID es la clave para la tabla Customers y agrega a la lista de selección y elimina el **FOR UPDATE OF** cláusula:  
+ Si la aplicación ha establecido SQL_ATTR_SIMULATE_CURSOR para solicitar una garantía de unicidad y si el origen de datos no proporciona una pseudocolumna que siempre identifique de forma única una fila, el controlador llama a **SQLSpecialColumns** para la tabla Customers, detecta que CustID es la clave para la tabla Customers y lo agrega a la lista de selección, y elimina la cláusula **for Update of** :  
   
 ```  
 SELECT Name, Address, Phone, CustID FROM Customers  
 ```  
   
- Si la aplicación no ha solicitado una garantía de exclusividad, el controlador se elimina solo el **FOR UPDATE OF** cláusula:  
+ Si la aplicación no ha solicitado una garantía de unicidad, el controlador solo quita la cláusula **for Update of** :  
   
 ```  
 SELECT Name, Address, Phone FROM Customers  
 ```  
   
- Suponga que la aplicación se desplaza por el conjunto de resultados y envía la siguiente instrucción de actualización posicionada para su ejecución, donde Cust es el nombre del cursor sobre el conjunto de resultados:  
+ Supongamos que la aplicación se desplaza por el conjunto de resultados y envía la siguiente instrucción de actualización posicionada para su ejecución, donde Cust es el nombre del cursor sobre el conjunto de resultados:  
   
 ```  
 UPDATE Customers SET Address = ?, Phone = ? WHERE CURRENT OF Cust  
 ```  
   
- Si la aplicación no ha solicitado una garantía de exclusividad, el controlador reemplaza el **donde** cláusula y enlaza el parámetro CustID a la variable en la memoria caché:  
+ Si la aplicación no ha solicitado una garantía de unicidad, el controlador reemplaza la cláusula **Where** y enlaza el parámetro CustID a la variable en su caché:  
   
 ```  
 UPDATE Customers SET Address = ?, Phone = ? WHERE (CustID = ?)  
 ```  
   
- Si la aplicación no ha solicitado una garantía de exclusividad, el controlador reemplaza el **donde** cláusula y enlaza los parámetros de nombre, dirección y teléfono en esta cláusula para las variables en su memoria caché:  
+ Si la aplicación no ha solicitado una garantía de unicidad, el controlador reemplaza la cláusula **Where** y enlaza los parámetros de nombre, dirección y teléfono de esta cláusula con las variables de su caché:  
   
 ```  
 UPDATE Customers SET Address = ?, Phone = ?  

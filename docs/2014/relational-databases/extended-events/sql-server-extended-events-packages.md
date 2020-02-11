@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638742"
 ---
 # <a name="sql-server-extended-events-packages"></a>Paquetes de SQL Server Extended Events
@@ -36,7 +36,7 @@ ms.locfileid: "62638742"
   
  Un paquete puede contener cualquiera de los objetos siguientes, o todos ellos, que se describen pormenorizadamente más adelante en este tema:  
   
--   Events  
+-   Eventos  
   
 -   Destinos  
   
@@ -53,9 +53,9 @@ ms.locfileid: "62638742"
 ## <a name="package-contents"></a>Contenido de los paquetes  
  La ilustración siguiente muestra los objetos que pueden existir en paquetes, que se encuentran en un módulo. Un módulo puede ser un archivo ejecutable o una biblioteca de vínculos dinámicos.  
   
- ![La relación de un módulo, paquetes y un objeto](../../database-engine/media/xepackagesobjects.gif "La relación de un módulo, paquetes y un objeto")  
+ ![Relación de un módulo, varios paquetes y un objeto](../../database-engine/media/xepackagesobjects.gif "Relación de un módulo, varios paquetes y un objeto")  
   
-### <a name="events"></a>Events  
+### <a name="events"></a>Eventos  
  Los eventos son puntos de supervisión de interés en la ruta de ejecución de un programa, como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La activación de un evento conlleva el hecho de que se ha llegado al punto de interés, así como información de estado del momento en que se activó el evento.  
   
  Los eventos se pueden utilizar únicamente para realizar el seguimiento o para activar acciones. Estas acciones pueden ser sincrónicas o asincrónicas.  
@@ -70,7 +70,7 @@ ms.locfileid: "62638742"
 #### <a name="event-categorization"></a>Clasificación de eventos  
  Extended Events utiliza un modelo de clasificación de eventos parecido al Seguimiento de eventos para Windows (ETW). Para la clasificación se utilizan dos propiedades de eventos, canal y palabra clave. La utilización de estas propiedades es compatible con la integración de Extended Events en ETW y sus herramientas.  
   
- **Canal**  
+ **Channel**  
   
  Un canal identifica a los destinatarios de un evento. Estos canales se describen en la siguiente tabla.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62638742"
 |Administración|Los eventos de administración se destinan principalmente a usuarios finales, administradores y soporte técnico. Los eventos que se encuentran en los canales de administración indican un problema con una solución bien determinada ante la que un administrador puede emprender una acción. Un ejemplo de un evento de administración es cuando una aplicación no conecta a una impresora. Estos eventos están bien documentados o tienen un mensaje asociado que indica al lector qué hacer para rectificar el problema.|  
 |Operativos|Los eventos operativos se utilizan para analizar y diagnosticar un problema o situación concreta. Se pueden utilizar para activar herramientas o tareas basadas en el problema o situación concreta. Un ejemplo de evento operativo se produce cuando una impresora se agrega o quita de un sistema.|  
 |Analíticos|Los eventos analíticos se publican en grandes cantidades. Describen el funcionamiento del programa y se utilizan normalmente en investigaciones sobre rendimiento.|  
-|Depuración|Únicamente los programadores utilizan los eventos de depuración para diagnosticar un problema y depurarlo.<br /><br /> Nota: Los eventos del canal Depurar devuelven datos sobre el estado interno de la implementación. Los esquemas y los datos que devuelven los eventos pueden cambiar o dejar de ser válidos en versiones futuras de SQL Server. Por lo tanto, los eventos del canal Depurar pueden cambiar o quitarse en versiones futuras de SQL Server sin previo aviso.|  
+|Depurar|Únicamente los programadores utilizan los eventos de depuración para diagnosticar un problema y depurarlo.<br /><br /> Nota: los eventos del canal de depuración devuelven datos internos de estado específicos de la implementación. Los esquemas y los datos que devuelven los eventos pueden cambiar o dejar de ser válidos en versiones futuras de SQL Server. Por lo tanto, los eventos del canal Depurar pueden cambiar o quitarse en versiones futuras de SQL Server sin previo aviso.|  
   
  **Palabra clave**  
   
@@ -141,7 +141,7 @@ where name = 'keyword_map'
   
 -   action  
   
--   target  
+-   Destino  
   
 -   pred_source  
   
@@ -213,9 +213,9 @@ where name = 'lock_mode'
   
  Utilizando esta tabla como ejemplo, suponga que tiene una columna denominada modo, y su valor es 5. La tabla indica que 5 se asigna a X, lo que quiere decir el tipo de bloqueo es Exclusivo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)   
  [Motor de SQL Server Extended Events](sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](../../database-engine/sql-server-extended-events-targets.md)  
+ [Destinos de SQL Server Extended Events](../../database-engine/sql-server-extended-events-targets.md)  
   
   

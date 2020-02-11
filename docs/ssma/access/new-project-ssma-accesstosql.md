@@ -12,10 +12,10 @@ ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e7e854b532040c9a0d9468ad98a7e08048569de
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632676"
 ---
 # <a name="new-project-ssma-accesstosql"></a>Nuevo proyecto (SSMA) (AccessToSQL)
@@ -26,7 +26,7 @@ Utilice el cuadro de diálogo **nuevo proyecto** para crear un nuevo proyecto de
   
 Escriba el nombre del proyecto. SSMA anexará la extensión de archivo.  
   
-**Ubicación**  
+**Location**  
   
 Escriba o busque la carpeta o la ubicación de red en la que desea guardar el proyecto.  
   
@@ -34,15 +34,15 @@ Escriba o busque la carpeta o la ubicación de red en la que desea guardar el pr
   
 Seleccione una de las siguientes versiones de la base de datos de destino.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016  
   
 -   SQL Azure  
   

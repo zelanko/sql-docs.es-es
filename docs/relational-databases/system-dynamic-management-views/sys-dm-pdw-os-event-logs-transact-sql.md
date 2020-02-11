@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_os_event_logs (Transact-SQL) | Microsoft Docs
+title: Sys. dm_pdw_os_event_logs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,31 +13,31 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 819b38bce871bd1a43b3d259d23b2c95fb6dfdd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086211"
 ---
-# <a name="sysdmpdwoseventlogs-transact-sql"></a>sys.dm_pdw_os_event_logs (Transact-SQL)
+# <a name="sysdm_pdw_os_event_logs-transact-sql"></a>Sys. dm_pdw_os_event_logs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Contiene información sobre los eventos de Windows diferentes registros en distintos nodos.  
+  Contiene información relacionada con los distintos registros de eventos de Windows en los diferentes nodos.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|Este registro es de un nodo de dispositivo.<br /><br /> pdw_node_id y nombreDelRegistro forman la clave para esta vista.||  
-|nombreDelRegistro|**nvarchar(255)**|Nombre del registro de eventos de Windows.<br /><br /> pdw_node_id y nombreDelRegistro forman la clave para esta vista.||  
-|log_source|**nvarchar(255)**|Nombre del origen de registro de eventos de Windows.||  
-|event_id|**int**|Id. del evento. No es único.||  
-|event_type|**nvarchar(255)**|Tipo del evento, que identifica la gravedad.|'Information', 'Advertencia', 'Error'|  
+|pdw_node_id|**int**|Nodo del dispositivo del que procede este registro.<br /><br /> pdw_node_id y log_name forman la clave de esta vista.||  
+|log_name|**nvarchar(255)**|Nombre del registro de eventos de Windows.<br /><br /> pdw_node_id y log_name forman la clave de esta vista.||  
+|log_source|**nvarchar(255)**|Nombre del origen del registro de eventos de Windows.||  
+|event_id|**int**|IDENTIFICADOR del evento. No es único.||  
+|event_type|**nvarchar(255)**|Tipo del evento, que identifica la gravedad.|' Información ', ' ADVERTENCIA ', ' error '|  
 |event_message|**nvarchar(4000)**|Detalles del evento.||  
-|generate_time|**datetime**|Tiempo que se creó el evento.||  
-|write_time|**datetime**|El evento se ha escrito realmente en el registro de tiempo.||  
+|generate_time|**datetime**|Hora en que se creó el evento.||  
+|write_time|**datetime**|Hora en que el evento se escribió realmente en el registro.||  
   
- Para obtener información sobre el número máximo de filas retenidas por esta vista, consulte la sección de metadatos en el [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) tema. 
+ Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección de metadatos en el tema [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) . 
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de almacenamiento de datos en paralelo y SQL Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4d0feb6b3254ddff640a41de8e0b833739225761
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73168768"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73168768"
 
   Obtiene el valor hash de una contraseña y lo compara con el de otra existente. PWDCOMPARE se puede usar para buscar contraseñas de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en blanco o contraseñas poco seguras comunes.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,12 +55,12 @@ PWDCOMPARE ( 'clear_text_password'
 > [!CAUTION]  
 >  Este parámetro se proporciona por compatibilidad con las versiones anteriores, pero se omite porque los blobs de hash de contraseña contienen ahora su propia descripción de versión. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos de valor devuelto  
  **int**  
   
  Devuelve 1 si el valor hash de *clear_text_password* coincide con el parámetro *password_hash* y 0 si no coincide.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  La función PWDCOMPARE no es una amenaza contra la seguridad de los valores hash de las contraseñas porque podría realizarse la misma prueba intentando iniciar sesión con la contraseña proporcionada como primer parámetro.  
   
  **PWDCOMPARE** no se puede usar con las contraseñas de usuarios de base de datos independiente. No hay una base de datos independiente equivalente.  

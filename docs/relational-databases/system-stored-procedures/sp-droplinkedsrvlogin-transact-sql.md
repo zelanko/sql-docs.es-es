@@ -18,13 +18,13 @@ ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097665"
 ---
-# <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
+# <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita una asignación existente entre un inicio de sesión del servidor local que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un inicio de sesión en el servidor vinculado.  
@@ -40,17 +40,17 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rmtsrvname = ] 'rmtsrvname'` Es el nombre de un servidor vinculado que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplica la asignación de inicio de sesión. *rmtsrvname* es **sysname**, no tiene ningún valor predeterminado. *rmtsrvname* ya debe existir.  
+`[ @rmtsrvname = ] 'rmtsrvname'`Es el nombre de un servidor vinculado al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se aplica la asignación de inicio de sesión. *rmtsrvname* es de **tipo sysname**y no tiene ningún valor predeterminado. *rmtsrvname* ya debe existir.  
   
-`[ @locallogin = ] 'locallogin'` Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión en el servidor local que tiene una asignación para el servidor vinculado *rmtsrvname*. *locallogin* es **sysname**, no tiene ningún valor predeterminado. Una asignación para *locallogin* a *rmtsrvname* ya debe existir. Si es NULL, la asignación predeterminada creada por **sp_addlinkedserver**, que asigna todos los inicios de sesión en el servidor local a inicios de sesión en el servidor vinculado, se elimina.  
+`[ @locallogin = ] 'locallogin'`Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión en el servidor local que tiene una asignación al servidor vinculado *rmtsrvname*. *locallogin* es de **tipo sysname**y no tiene ningún valor predeterminado. Ya debe existir una asignación para *locallogin* a *rmtsrvname* . Si es NULL, se elimina la asignación predeterminada creada por **sp_addlinkedserver**, que asigna todos los inicios de sesión del servidor local a los inicios de sesión en el servidor vinculado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- Cuando la asignación existente para un inicio de sesión se elimina, el servidor local utiliza la asignación predeterminada creada por **sp_addlinkedserver** cuando se conecta al servidor vinculado en nombre de ese inicio de sesión. Para cambiar la asignación predeterminada, use **sp_addlinkedsrvlogin**.  
+## <a name="remarks"></a>Observaciones  
+ Cuando se elimina la asignación existente para un inicio de sesión, el servidor local utiliza la asignación predeterminada creada por **sp_addlinkedserver** cuando se conecta al servidor vinculado en nombre de ese inicio de sesión. Para cambiar la asignación predeterminada, use **sp_addlinkedsrvlogin**.  
   
- Si también se elimina la asignación predeterminada, solo los inicios de sesión que se han asignado explícitamente una asignación de inicio de sesión para el servidor vinculado, mediante el uso de **sp_addlinkedsrvlogin**, puede tener acceso al servidor vinculado.  
+ Si también se elimina la asignación predeterminada, solo los inicios de sesión a los que se haya asignado explícitamente una asignación de inicio de sesión al servidor vinculado, mediante **sp_addlinkedsrvlogin**, pueden tener acceso al servidor vinculado.  
   
  **sp_droplinkedsrvlogin** no se puede ejecutar desde una transacción definida por el usuario.  
   
@@ -66,16 +66,16 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 EXEC sp_droplinkedsrvlogin 'Accounts', 'Mary';  
 ```  
   
-### <a name="b-removing-the-default-login-mapping"></a>b. Quitar la asignación de inicio de sesión predeterminada  
+### <a name="b-removing-the-default-login-mapping"></a>B. Quitar la asignación de inicio de sesión predeterminada  
  En el siguiente ejemplo se quita la asignación de inicio de sesión predeterminada creada originalmente al ejecutar `sp_addlinkedserver` en el servidor vinculado `Accounts`.  
   
 ```  
 EXEC sp_droplinkedsrvlogin 'Accounts', NULL;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

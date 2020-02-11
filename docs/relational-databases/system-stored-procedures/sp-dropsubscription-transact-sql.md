@@ -16,10 +16,10 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d324d5f26f847488af8cec480cce6c699a5f473
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70212281"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
@@ -42,13 +42,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` es el nombre de la publicación asociada. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. Si es **All**, se cancelan todas las suscripciones de todas las publicaciones del suscriptor especificado. la *publicación* es un parámetro necesario.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación asociada. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. Si es **All**, se cancelan todas las suscripciones de todas las publicaciones del suscriptor especificado. la *publicación* es un parámetro necesario.  
   
-`[ @article = ] 'article'` es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es NULL. Si es **All**, se quitan las suscripciones a todos los artículos de cada publicación y suscriptor especificados. Usar **todo para las** publicaciones que permiten la actualización inmediata.  
+`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es NULL. Si es **All**, se quitan las suscripciones a todos los artículos de cada publicación y suscriptor especificados. Usar **todo para las** publicaciones que permiten la actualización inmediata.  
   
-`[ @subscriber = ] 'subscriber'` es el nombre del suscriptor al que se quitarán sus suscripciones. *Subscriber* es de **tipo sysname**y no tiene ningún valor predeterminado. Si es **All**, se quitan todas las suscripciones de todos los suscriptores.  
+`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor al que se quitarán sus suscripciones. *Subscriber* es de **tipo sysname**y no tiene ningún valor predeterminado. Si es **All**, se quitan todas las suscripciones de todos los suscriptores.  
   
-`[ @destination_db = ] 'destination_db'` es el nombre de la base de datos de destino. *destination_db* es de **tipo sysname y su**valor predeterminado es NULL. Cuando es NULL, se quitan todas las suscripciones del suscriptor indicado.  
+`[ @destination_db = ] 'destination_db'`Es el nombre de la base de datos de destino. *destination_db* es de **tipo sysname y su**valor predeterminado es NULL. Cuando es NULL, se quitan todas las suscripciones del suscriptor indicado.  
   
 `[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -59,7 +59,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  **sp_dropsubscription** se utiliza en la replicación de instantáneas y transaccional.  
   
  Si quita la suscripción a un artículo de una publicación de sincronización inmediata, no podrá volverla a agregar, a menos que quite las suscripciones a todos los artículos de la publicación y las agregue de nuevo todas a la vez.  
@@ -70,10 +70,10 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** , el rol fijo de base de datos **db_owner** o el usuario que creó la suscripción pueden ejecutar **sp_dropsubscription**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_addsubscription &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_addsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubstatus &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_helpsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

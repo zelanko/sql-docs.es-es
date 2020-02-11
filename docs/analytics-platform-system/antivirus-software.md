@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: c3687b839e52e64350591402c3aa19e9c2c54ac7
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401470"
 ---
 # <a name="antivirus-software-for-analytics-platform-system-aps"></a>Software antivirus para Analytics Platform System (APS)
@@ -74,6 +74,6 @@ Para instalar el software antivirus en las máquinas virtuales, excluya la sigui
   
 -   C:\iscsitarget  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Tareas de administración de dispositivos &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ba38b6a3c425972ef0b893d302df78e3d835f85
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783388"
 ---
 # <a name="view-the-job-history"></a>View the Job History
-  En este tema se describe cómo ver el registro de historial de trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]u Objetos de administración de SQL Server.  
+  En este tema se describe cómo ver [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el registro del historial de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] trabajos del [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]agente [!INCLUDE[tsql](../../includes/tsql-md.md)]en mediante, o objetos de administración de SQL Server.  
   
 -   **Antes de empezar:**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "72783388"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
@@ -77,7 +77,7 @@ ms.locfileid: "72783388"
     GO  
     ```  
   
- Para obtener más información, [vea &#40;SP_HELP_JOBHISTORY Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
+ Para obtener más información, vea [sp_help_jobhistory &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql).  
   
 ##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
  **Para ver el registro de historial de trabajos**  

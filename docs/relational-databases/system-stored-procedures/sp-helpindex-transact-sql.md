@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 17e43f9739b0306a42c4c454cf93fdf92b255177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122531"
 ---
-# <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
+# <a name="sp_helpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve información acerca de los índices de una tabla o vista.  
@@ -40,25 +40,25 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'name'` Es el nombre completo o incompleto de una tabla definida por el usuario o la vista. Solo son necesarias las comillas si se especifica una tabla o nombre de vista calificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *nombre* es **nvarchar(776)** , no tiene valor predeterminado.  
+`[ @objname = ] 'name'`Es el nombre completo o no completo de una vista o tabla definida por el usuario. Solo son necesarias las comillas si se especifica una tabla o nombre de vista calificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *Name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|Nombre del índice.|  
-|**index_description**|**varchar(210)**|Descripción del índice incluido el grupo de archivos en el que está ubicado.|  
-|**index_keys**|**nvarchar(2078)**|Columnas de tabla o vista sobre las que se genera el índice.|  
+|**index_description**|**VARCHAR (210)**|Descripción del índice incluido el grupo de archivos en el que está ubicado.|  
+|**index_keys**|**nvarchar (2078)**|Columnas de tabla o vista sobre las que se genera el índice.|  
   
  Aparecerá listada una columna de índice descendente en el conjunto de resultados con un signo menos (-) tras el nombre; la columna predeterminada de índice ascendente aparecerá listada solamente por su nombre.  
   
-## <a name="remarks"></a>Comentarios  
- Si se han establecido los índices mediante la opción NORECOMPUTE de UPDATE STATISTICS, esa información se incluye en el **index_description** columna.  
+## <a name="remarks"></a>Observaciones  
+ Si los índices se han establecido mediante la opción NORECOMPUTE de UPDATE STATISTICs, esa información se incluye en la columna **index_description** .  
   
- **sp_helpindex** expone solo las columnas de índice ordenable; por lo tanto, no expone información sobre los índices XML o índices espaciales.  
+ **sp_helpindex** solo expone columnas de índice ordenable; por lo tanto, no expone información sobre índices XML o índices espaciales.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
@@ -73,8 +73,8 @@ EXEC sp_helpindex N'Sales.Customer';
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

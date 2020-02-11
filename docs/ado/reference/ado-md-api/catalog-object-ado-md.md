@@ -1,5 +1,5 @@
 ---
-title: Catálogo (objeto) (ADO MD) | Microsoft Docs
+title: Objeto Catalog (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,29 +16,29 @@ ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b791803b828852a1861e55dd8ec6ef189ea6e84b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930375"
 ---
 # <a name="catalog-object-ado-md"></a>Objeto Catalog (ADO MD)
-Contiene información de esquema multidimensional (es decir, los cubos y dimensiones subyacentes, jerarquías, niveles y miembros) específico de un proveedor de datos multidimensionales (MDP).  
+Contiene información de esquema multidimensional (es decir, cubos y dimensiones subyacentes, jerarquías, niveles y miembros) específicas de un proveedor de datos multidimensionales (MDP).  
   
-## <a name="remarks"></a>Comentarios  
- Con las colecciones y propiedades de un **catálogo** objeto, puede hacer lo siguiente:  
+## <a name="remarks"></a>Observaciones  
+ Con las colecciones y las propiedades de un objeto de **Catálogo** , puede hacer lo siguiente:  
   
--   Abrir el catálogo estableciendo el [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) propiedad a un estándar ADO [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto o en una cadena de conexión válida.  
+-   Abra el catálogo estableciendo la propiedad [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) en un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) ADO estándar o en una cadena de conexión válida.  
   
--   Identificar el **catálogo** con el [nombre](../../../ado/reference/ado-md-api/name-property-ado-md.md) propiedad.  
+-   Identifique el **Catálogo** con la propiedad [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) .  
   
--   Recorrer en iteración los cubos de un catálogo mediante la [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) colección.  
+-   Recorrer en iteración los cubos de un catálogo mediante la colección [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) .  
   
  Esta sección contiene el siguiente tema.  
   
 -   [Propiedades, métodos y eventos](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo de catálogo (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Colección CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

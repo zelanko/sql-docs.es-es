@@ -16,13 +16,13 @@ ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 410bdf157cc4194191649e6a6e6ab6d92ea033b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124145"
 ---
-# <a name="spgeneratefilters-transact-sql"></a>sp_generatefilters (Transact-SQL)
+# <a name="sp_generatefilters-transact-sql"></a>sp_generatefilters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea filtros en tablas de clave externa cuando se replica una tabla especificada. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
@@ -37,18 +37,18 @@ sp_generatefilters [ @publication =] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación que se van a filtrar. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación que se va a filtrar. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_generatefilters** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_generatefilters**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_generatefilters**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

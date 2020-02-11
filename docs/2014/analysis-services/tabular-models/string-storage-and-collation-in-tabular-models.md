@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874491"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Almacenamiento e intercalación de cadenas en modelos tabulares
@@ -22,7 +22,7 @@ ms.locfileid: "70874491"
   
  En este tema se describe el mecanismo mediante el cual se comprimen y almacenan las cadenas, y se proporcionan ejemplos de cómo afectan la intercalación y el idioma a los resultados de las fórmulas de texto en los modelos tabulares.  
   
-## <a name="storage"></a>Almacenamiento  
+## <a name="storage"></a>Storage  
  En los modelos tabulares, todos los datos están muy comprimidos para que puedan almacenarse sin problemas en la memoria. En consecuencia, todas las cadenas consideradas léxicamente equivalentes se almacenan solo una vez. La primera instancia de la cadena se utiliza como la representación canónica y a partir de este momento cada cadena equivalente se indiza al mismo valor comprimido que la primera repetición.  
   
  La pregunta clave es: ¿qué constituye una cadena léxicamente equivalente? Dos cadenas se consideran léxicamente equivalentes si se pueden considerar como la misma palabra. Por ejemplo, cuando busca la palabra **violin** en inglés en un diccionario, puede encontrar la entrada **Violin** o **violin**, dependiendo de la directiva editorial del diccionario, pero generalmente considerará ambas palabras equivalentes, y no tendrá en cuenta la diferencia en el uso de mayúsculas. En un modelo tabular, el factor que determina si dos cadenas son léxicamente equivalentes no es la directiva editorial ni las preferencias del usuario, sino la configuración regional y la intercalación asignadas a la columna.  
@@ -37,11 +37,11 @@ ms.locfileid: "70874491"
 |PlAnT|  
 |trEE|  
 |PlAnT|  
+|Plant|  
+|Árbol|  
 |PlAnT|  
 |trEE|  
-|PlAnT|  
-|trEE|  
-|trEE|  
+|árbol|  
 |PlAnT|  
 |trEE|  
   

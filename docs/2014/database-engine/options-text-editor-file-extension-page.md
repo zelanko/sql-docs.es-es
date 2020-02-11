@@ -1,5 +1,5 @@
 ---
-title: Opciones (Editor de texto - página extensión de archivo) | Microsoft Docs
+title: Opciones (editor de texto-página extensión de archivo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4bf6c8146e8f3b5f6222affb3709439c37fc5023
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089935"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Opciones (Editor de texto - Página Extensión de archivo)
@@ -29,16 +29,16 @@ ms.locfileid: "66089935"
  **Editor**  
  Seleccione el editor de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] que quiera usar para abrir los documentos con la extensión de archivo que ha escrito en el cuadro **Extensión**. Cuando seleccione una opción "con codificación", aparecerá un cuadro de diálogo siempre que abra un documento de este tipo, donde podrá seleccionar un esquema de codificación.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agregue una entrada que incluya la **Extensión** especificada y los valores **Editor asociado** a la **Lista de extensiones**.  
   
- **Quitar**  
+ **Remove**  
  Elimine la entrada seleccionada de la **Lista de extensiones**.  
   
  **Extensión**  
  Presenta una lista de todas las extensiones para las que se ha especificado un editor.  
   
- **Experiencia de edición**  
+ **Editor asociado**  
  Presenta una lista de los editores seleccionados para las **Extensiones**.  
   
  **Asignar archivos sin extensión**  

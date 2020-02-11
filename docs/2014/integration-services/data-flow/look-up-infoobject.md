@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba2550b3d327d392d63aeacf4d6588457cd1aa79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771121"
 ---
 # <a name="look-up-infoobject"></a>Buscar InfoObject
@@ -58,7 +58,7 @@ ms.locfileid: "62771121"
  **Características de tiempo**  
  Permite buscar InfoObjects que representan características de tiempo.  
   
- **Name**  
+ **Nombre**  
  Permite escribir el nombre del InfoObject que desea buscar o un nombre parcial con el carácter comodín de asterisco (*). O bien, use el carácter comodín de asterisco por sí solo para incluir todos los InfoObjects.  
   
  **Descripción**  
@@ -78,7 +78,7 @@ ms.locfileid: "62771121"
   
  Cuando aparezca la lista de InfoObjects disponibles, seleccione el InfoObject que desee y el destino rellenará las opciones asociadas a los valores necesarios.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear InfoCube para datos de transacción](create-infocube-for-transaction-data.md)   
  [Crear InfoSource](create-infosource.md)   
  [Crear InfoSource para datos de transacción](create-infosource-for-transaction-data.md)   

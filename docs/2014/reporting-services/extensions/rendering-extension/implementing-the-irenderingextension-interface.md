@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68e965a523df8dadd03d77df8d3d522870f70a93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62987146"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementar la interfaz IRenderingExtension
@@ -49,7 +49,7 @@ ms.locfileid: "62987146"
 -   *createAndRegisterStream* es una función delegada a la que se va a llamar para obtener una secuencia en la que representar.  
   
 ### <a name="deviceinfo-parameter"></a>Parámetro de deviceInfo  
- El parámetro *deviceInfo* contiene los parámetros de representación, no los parámetros de informe. Estos parámetros de representación se pasan a la extensión de representación. El servidor de informes convierte los valores de *deviceInfo* en un objeto <xref:System.Collections.Specialized.NameValueCollection>. Los elementos del parámetro *deviceInfo* se tratan como valores que no distinguen mayúsculas y minúsculas. Si la solicitud de representación se ha producido como resultado de un acceso URL, los parámetros de dirección URL con el formato `rc:key=value` se convierten en pares de clave-valor en el objeto de diccionario *deviceInfo*. El código de detección de explorador también proporciona los siguientes elementos en el *clientCapabilities* diccionario: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, tipo y AcceptLanguage. Se omite cualquier par de nombre-valor del parámetro *deviceInfo* que la extensión de representación no entienda. La muestra de código siguiente muestra un método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> de muestra que recupera los iconos.  
+ El parámetro *deviceInfo* contiene los parámetros de representación, no los parámetros de informe. Estos parámetros de representación se pasan a la extensión de representación. El servidor de informes convierte los valores de *deviceInfo* en un objeto <xref:System.Collections.Specialized.NameValueCollection>. Los elementos del parámetro *deviceInfo* se tratan como valores que no distinguen mayúsculas y minúsculas. Si la solicitud de representación se ha producido como resultado de un acceso URL, los parámetros de dirección URL con el formato `rc:key=value` se convierten en pares de clave-valor en el objeto de diccionario *deviceInfo*. El código de detección de explorador también proporciona los elementos siguientes en el diccionario *clientCapabilities*: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type y AcceptLanguage. Se omite cualquier par de nombre-valor del parámetro *deviceInfo* que la extensión de representación no entienda. La muestra de código siguiente muestra un método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> de muestra que recupera los iconos.  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  
@@ -74,7 +74,7 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
 ## <a name="getrenderingresource-method"></a>Método GetRenderingResource  
  El método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> recupera la información sin ejecutar una representación completa del informe. Hay ocasiones en que el informe requiere información que no requiere representar el propio informe. Por ejemplo, si necesita el icono asociado a la extensión de representación, use el parámetro *deviceInfo* que contiene la etiqueta única **\<Icon>** . En estos casos, puede usar el método <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar una extensión de representación](implementing-a-rendering-extension.md)   
  [Información general de las extensiones de representación](rendering-extensions-overview.md)  
   

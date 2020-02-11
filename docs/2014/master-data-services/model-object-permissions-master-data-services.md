@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 94ad81913071a3bbd4aad33515c27c68b9e268e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482671"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Permisos de objeto del modelo (Master Data Services)
@@ -27,19 +27,19 @@ ms.locfileid: "65482671"
   
  Para determinar la seguridad asignada en cada valor de atributo individual, los permisos de objeto de modelo se combinan con los permisos de miembros de jerarquía, que determinan los miembros a los que un usuario puede tener acceso.  
   
- Para conceder a un usuario acceso a un área funcional no sea **Explorer**, el usuario debe ser un administrador de modelo, lo que implica también la asignación de permisos de objeto de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+ Para conceder a un usuario acceso a un área funcional que no sea el **Explorador**, el usuario debe ser un administrador del modelo, lo que implica también la asignación de permisos de objeto de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
- Los permisos del objeto de modelo se asignan en la interfaz de usuario de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], en el área funcional **Permisos de grupos y usuarios** de la pestaña **Modelos**. En esta pestaña, el modelo se representa como una estructura de árbol. Cuando asigne un permiso a un objeto en el árbol, todos los objetos subordinados heredan ese permiso. Para invalidar esa herencia asignando el permiso a objetos individuales.  
+ Los permisos del objeto de modelo se [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] asignan en la interfaz de usuario (UI), en el área funcional **permisos de usuario y de grupo** de la pestaña **modelos** . En esta pestaña, el modelo se representa como una estructura de árbol. Cuando asigne un permiso a un objeto en el árbol, todos los objetos subordinados heredan ese permiso. Para invalidar esa herencia asignando el permiso a objetos individuales.  
   
- Puede asignar **de sólo lectura**, **actualización**, o **Deny** permiso a objetos del modelo. Si no asigna permisos en la pestaña **Modelos** , el usuario no podrá ver ningún modelo ni ningún dato en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
+ Puede asignar el permiso de **solo lectura**, **Actualizar**o **denegar** a los objetos de modelo. Si no asigna permisos en la pestaña **Modelos** , el usuario no podrá ver ningún modelo ni ningún dato en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="best-practice"></a>Práctica recomendada  
- En general, debe asignar **actualización** permiso para el objeto de modelo y, a continuación, asignar explícitamente permisos a objetos subordinados. Si no asigna permisos en objetos subordinados, los permisos se heredan y el usuario es un administrador.  
+## <a name="best-practice"></a>Procedimiento recomendado  
+ En general, debe asignar el permiso **Actualizar** al objeto de modelo y, a continuación, asignar explícitamente el permiso a los objetos situados debajo de. Si no asigna permisos en objetos subordinados, los permisos se heredan y el usuario es un administrador.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Permisos de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-permissions-master-data-services.md)   
- [Permisos del área funcional &#40;Master Data Services&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
+ [&#40;Master Data Services permisos de área funcional&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
  [Permisos de miembros de la jerarquía &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [Cómo se determinan los permisos &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   

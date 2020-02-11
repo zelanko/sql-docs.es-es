@@ -1,5 +1,5 @@
 ---
-title: Elemento de configuración (DTA) | Microsoft Docs
+title: Configuration (DTA, elemento) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 934acda419b734f577de4c8127184d3dd18ea650
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150149"
 ---
 # <a name="configuration-element-dta"></a>Configuration (DTA, elemento)
@@ -57,12 +57,12 @@ ms.locfileid: "63150149"
 |Relación|Elementos|  
 |------------------|--------------|  
 |**Elemento primario**|[Elemento DTAInput &#40;DTA&#41;](dtainput-element-dta.md)|  
-|**Elementos secundarios**|[Elemento Server de Configuration &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
+|**Elementos secundarios**|[Elemento Server para Configuration &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

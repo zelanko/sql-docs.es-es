@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245343"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Servidores de destino (pestaña Descargar instrucciones)
@@ -38,22 +38,22 @@ ms.locfileid: "63245343"
  **Nombre de objeto**  
  Muestra el nombre del objeto que se verá afectado por la instrucción de descarga.  
   
- **Fecha de exposición**  
+ **Fecha de publicación**  
  Muestra la fecha y la hora local en la que se expuso la instrucción.  
   
  **Fecha de descarga**  
  Muestra la fecha y la hora local en la que el servidor de destino descargó la instrucción. Si se produce un error durante la descarga, se indicará.  
   
- **Estado de instrucciones de descarga**  
+ **Estado de la descarga de instrucciones**  
  Vea el estado más reciente de la instrucción de descarga seleccionada.  
   
  **Eliminar**  
  Elimina la instrucción de descarga seleccionada.  
   
- **Desactivar**  
+ **Borrar**  
  Borra el estado de la instrucción de descarga seleccionada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración automatizada en una empresa](automated-administration-across-an-enterprise.md)  
   
   

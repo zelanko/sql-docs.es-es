@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892441"
 ---
-# <a name="step-2-adding-and-configuring-logging"></a>Paso 2: Adición y configuración de registro
+# <a name="step-2-adding-and-configuring-logging"></a>Paso 2: Agregar y configurar el registro
   En esta tarea, habilitará el registro del flujo de datos del paquete Lesson 3.dtsx. A continuación, configurará un proveedor de registro de archivos de texto para registrar los eventos PipelineExecutionPlan y PipelineExecuteTrees. El proveedor de registro de archivos de texto crea registros que pueden verse y transportarse con facilidad. La sencillez de estos archivos de registro hace que sean especialmente útiles durante la fase de prueba básica de un paquete. También puede ver las entradas del archivo de registro en la ventana Registrar eventos del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ### <a name="to-add-logging-to-the-package"></a>Para agregar el registro al paquete  
@@ -28,17 +28,17 @@ ms.locfileid: "62892441"
   
 3.  En la pestaña **Proveedores y registros** , en el cuadro **Tipo de proveedor** , seleccione **Proveedor de registro SSIS para archivos de texto**y haga clic en **Agregar**.  
   
-     Integration Services agrega un nuevo proveedor de registro para archivos de texto al paquete con el nombre predeterminado **Proveedor de registro SSIS para archivos de texto**. Ahora puede configurar el nuevo proveedor de registro.  
+     Integration Services agrega un nuevo proveedor de registro de archivos de texto al paquete con el nombre predeterminado **proveedor de registro SSIS para archivos de texto**. Ahora puede configurar el nuevo proveedor de registro.  
   
-4.  En el **nombre** columna, escriba `Lesson 3 Log File`.  
+4.  En la columna **nombre** , escriba `Lesson 3 Log File`.  
   
 5.  Si lo desea, modifique el campo **Descripción**.  
   
-6.  En el **configuración** columna, haga clic en  **\<nueva conexión >** para especificar el destino al que se escribe la información del registro.  
+6.  En la columna **configuración** , haga clic en ** \<nueva conexión>** para especificar el destino en el que se escribe la información de registro.  
   
      En el cuadro de diálogo **Editor del administrador de conexiones de archivos** , en **Tipo de uso**, seleccione **Crear archivo**y, a continuación, haga clic en **Examinar**. De forma predeterminada, el cuadro de diálogo **Seleccionar archivo** abre la carpeta del proyecto, pero puede guardar la información de registro en cualquier ubicación.  
   
-7.  En el **Seleccionar archivo** cuadro de diálogo el **nombre de archivo** cuadro, escriba `TutorialLog.log`y haga clic en **abierto**.  
+7.  En el cuadro de diálogo **Seleccionar archivo** , en el cuadro **nombre** de `TutorialLog.log`archivo, escriba y haga clic en **abrir**.  
   
 8.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor del administrador de conexiones de archivos** .  
   
@@ -53,11 +53,11 @@ ms.locfileid: "62892441"
   
 12. Haga clic en **Básicas** para ocultar las categorías de información.  
   
-13. En el **proveedores y registros** ficha la **nombre** columna, seleccione `Lesson 3 Log File`. Una vez que haya creado un proveedor de registro para el paquete, si lo desea, puede anular su selección para desactivar temporalmente el registro, sin tener que eliminar un proveedor de registro y crearlo de nuevo.  
+13. En la pestaña **proveedor y registros** , en la columna **nombre** , seleccione `Lesson 3 Log File`. Una vez que haya creado un proveedor de registro para el paquete, si lo desea, puede anular su selección para desactivar temporalmente el registro, sin tener que eliminar un proveedor de registro y crearlo de nuevo.  
   
-14. Haga clic en **Aceptar**.  
+14. Haga clic en **OK**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Paso 3: Probar el paquete del Tutorial lección 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+ [Paso 3: Probar el paquete del tutorial de la lección 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
   

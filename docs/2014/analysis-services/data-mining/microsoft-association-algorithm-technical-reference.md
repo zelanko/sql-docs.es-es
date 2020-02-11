@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica del algoritmo de asociación de Microsoft | Microsoft Docs
+title: Referencia técnica del algoritmo de Asociación de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084130"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Referencia técnica del algoritmo de asociación de Microsoft
@@ -42,11 +42,11 @@ ms.locfileid: "66084130"
  Los modelos de asociación se pueden crear también para atributos numéricos. Si los atributos son continuos, los números se pueden *discretizar* o agruparse en depósitos. A continuación, los valores de datos discretos se pueden tratar como booleanos o como pares atributo-valor.  
   
 ### <a name="support-probability-and-importance"></a>Soporte, probabilidad e importancia  
- *Soporte*, también denominado *frecuencia*, es el número de casos que contiene el elemento o la combinación de elementos de destino. Solo se pueden incluir en el modelo los elementos que tienen al menos el soporte especificado.  
+ La *compatibilidad*, que también a la que se hace referencia como *frecuencia*, significa el número de casos que contienen el elemento o la combinación de elementos de destino. Solo se pueden incluir en el modelo los elementos que tienen al menos el soporte especificado.  
   
  Se denomina *conjunto de elementos frecuente* a una colección de elementos cuya combinación de elementos también admite cantidades superiores al umbral definido por el parámetro MINIMUM_SUPPORT. Por ejemplo, si el conjunto de elementos es {A,B,C} y el valor de MINIMUM_SUPPORT es 10, cada uno de los elementos individuales A, B y C debe hallarse en al menos 10 casos para ser incluido en el modelo, y la combinación de elementos {A,B,C} debe hallarse también en al menos 10 casos.  
   
- **Nota** : también puede controlar el número de conjuntos de elementos de un modelo de minería de datos especificando la longitud máxima, es decir, el número de elementos, que puede tener un conjunto de elementos.  
+ **Nota:** También puede controlar el número de conjuntos en un modelo de minería de datos especificando la longitud máxima de un conjunto de elementos, donde longitud indica el número de elementos.  
   
  De forma predeterminada, el soporte para cualquier elemento o conjunto de elementos determinado representa un recuento de los casos que contienen dichos elementos. Sin embargo, también se puede expresar MINIMUM_SUPPORT como un porcentaje de los casos totales en el conjunto de datos, escribiendo el número como un valor decimal inferior a 1. Por ejemplo, si especifica un valor MINIMUM_SUPPORT de 0,03, significa que al menos el 3% del total de casos del conjunto de datos debe contener este elemento o conjunto de elementos para su inclusión en el modelo. Experimente con el modelo para determinar si resulta más apropiado usar un recuento o un porcentaje.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "66084130"
  El algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite varios parámetros que influyen en el comportamiento, el rendimiento y la precisión del modelo de minería de datos resultante.  
   
 ### <a name="setting-algorithm-parameters"></a>Establecer parámetros del algoritmo  
- Puede cambiar los parámetros para un modelo de minería de datos en cualquier momento mediante el Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. También puede cambiar los parámetros mediante programación utilizando la <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> colección en AMO, o mediante el [elemento MiningModels &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) en XMLA. Estos parámetros se describen en la tabla siguiente.  
+ Puede cambiar los parámetros para un modelo de minería de datos en cualquier momento mediante el Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. También puede cambiar los parámetros mediante programación usando la <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> colección en amo o mediante el [elemento MiningModels &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) en XMLA. Estos parámetros se describen en la tabla siguiente.  
   
 > [!NOTE]  
->  No se puede cambiar los parámetros de un modelo existente mediante el uso de una instrucción DMX; debe especificar los parámetros en las instrucciones DMX CREATE MODEL o ALTER STRUCTURE... ADD MODEL cuando se crea el modelo.  
+>  No se pueden cambiar los parámetros en un modelo existente mediante una instrucción DMX. debe especificar los parámetros en las instrucciones DMX CREATE MODEL o ALTER STRUCTURE... Agregar modelo al crear el modelo.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  Especifica el número máximo de conjuntos de elementos que se van a generar. Si no se especifica ningún número, se usa el valor predeterminado.  
@@ -153,7 +153,7 @@ ms.locfileid: "66084130"
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo Reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se incluyen en la tabla siguiente. Para más información sobre el significado de los tipos de contenido en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
   
-|columna|Tipos de contenido|  
+|Columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Cyclical, Discrete, Discretized, Key, Table y Ordered|  
 |Atributo de predicción|Cyclical, Discrete, Discretized, Table, Ordered|  
@@ -161,9 +161,9 @@ ms.locfileid: "66084130"
 > [!NOTE]  
 >  Se admiten los tipos de contenido Cyclical y Ordered, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmo de asociación de Microsoft](microsoft-association-algorithm.md)   
- [Ejemplos de consultas del modelo de asociación](association-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Algoritmo de Asociación de Microsoft](microsoft-association-algorithm.md)   
+ [Ejemplos de consultas de modelos de asociación](association-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services-minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

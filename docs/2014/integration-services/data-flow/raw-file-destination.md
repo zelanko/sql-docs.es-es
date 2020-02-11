@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770865"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
@@ -55,7 +55,7 @@ ms.locfileid: "62770865"
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|Anexar|Anexa datos a un archivo existente. Los metadatos de los datos anexados deben coincidir con el formato del archivo.|  
+|Append|Anexa datos a un archivo existente. Los metadatos de los datos anexados deben coincidir con el formato del archivo.|  
 |Crear siempre|Crea siempre un nuevo archivo.|  
 |Crear una vez|Crea un nuevo archivo. Si existe el archivo, el componente genera un error.|  
 |Truncar y anexar|Trunca un archivo existente y luego escribe los datos en el archivo. Los metadatos de los datos anexados deben coincidir con el formato del archivo.|  
@@ -113,7 +113,7 @@ ms.locfileid: "62770865"
   
 1.  Establezca la propiedad WriteOption en **CreateOnce** o **CreateAlways**y ejecute una iteración del bucle. Se crea el archivo. Así se garantiza que los metadatos de los datos agregados y del archivo sean iguales.  
   
-2.  Restablece la propiedad WriteOption en **Append** y establezca la propiedad ValidateExternalMetadata en `False`.  
+2.  Restablezca la propiedad WriteOption en **Append** y establezca la propiedad ValidateExternalMetadata en `False`.  
   
  Si usa la opción **TruncateAppend** en lugar de la opción **Append** , truncará las filas que se agregaron en toda iteración anterior y anexará filas nuevas. Con la opción **TruncateAppend** también es necesario que los datos tengan el mismo formato que el archivo.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62770865"
 ## <a name="related-content"></a>Contenido relacionado  
  Entrada del blog, sobre los [archivos sin formato](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), en sqlservercentral.com  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Origen de archivo sin formato](raw-file-source.md)   
  [Flujo de datos](data-flow.md)  
   

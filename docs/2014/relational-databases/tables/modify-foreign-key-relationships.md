@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196845"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relaciones de claves externas.
@@ -56,7 +56,7 @@ ms.locfileid: "68196845"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>Para modificar una clave externa  
   
@@ -69,10 +69,10 @@ ms.locfileid: "68196845"
      **Relación seleccionada**  
      Muestra las relaciones existentes. Seleccione una relación para mostrar sus propiedades en la cuadrícula situada a la derecha. Si la lista está vacía, no se han definido relaciones para la tabla.  
   
-     **Agregar**  
+     **Add (Agregar)**  
      Crea una nueva relación. Debe definir **Especificación de tablas y columnas** para que la relación sea válida.  
   
-     **Delete**  
+     **Eliminar**  
      Elimina la relación seleccionada en la lista **Relaciones seleccionadas** . Para cancelar la adición de una relación, utilice este botón para eliminar la relación.  
   
      **Categoría General**  
@@ -99,8 +99,8 @@ ms.locfileid: "68196845"
      **Categoría Identidad**  
      Se expande para mostrar los campos de propiedades de **Nombre** y **Descripción**.  
   
-     **Name**  
-     Muestra el nombre de relación. Cuando se crea una nueva relación, se le da un nombre predeterminado que se basa en la tabla de la ventana activa del **Diseñador de tablas**. Este nombre se puede cambiar en cualquier momento.  
+     **Nombre**  
+     Muestra el nombre de relación. Cuando se crea una nueva relación, se le da un nombre predeterminado que se basa en la tabla de la ventana activa del **Diseñador de tablas**. Puede cambiar el nombre en cualquier momento.  
   
      **Descripción**  
      Describe la relación. Para escribir una descripción más detallada, haga clic en **Descripción** y luego en los puntos suspensivos **(...)** que aparecen a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
@@ -108,7 +108,7 @@ ms.locfileid: "68196845"
      **Categoría Diseñador de tablas**  
      Se expande para mostrar la información de **Comprobar datos existentes al crear o al habilitar de nuevo** y **Exigir para replicación**.  
   
-     **Enforce For Replication**  
+     **Exigir para replicación**  
      Indica si se exigirá la restricción cuando un agente de replicación realice una inserción, actualización o eliminación en esta tabla.  
   
      **Exigir restricción de clave externa**  

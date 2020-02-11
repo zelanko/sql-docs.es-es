@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876089"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restauraciones por etapas (SQL Server)
@@ -56,7 +56,7 @@ ms.locfileid: "62876089"
   
      Para obtener información sobre las restauraciones por etapas de bases de datos de OLTP en memoria, vea [Copias de seguridad y restauración por etapas de bases de datos con tablas con optimización para memoria](../in-memory-oltp/memory-optimized-tables.md).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restricciones  
  Si una secuencia de restauración parcial excluye cualquier grupo de archivos [FILESTREAM](../blob/filestream-sql-server.md) , no se admite la restauración a un momento dado. Puede forzarse la continuación de la secuencia de restauración. Sin embargo, no se podrán restaurar los grupos de archivos FILESTREAM omitidos en la instrucción RESTORE. Para forzar una restauración a un momento específico, especifique la opción CONTINUE_AFTER_ERROR junto con la opción STOPAT, STOPATMARK o STOPBEFOREMARK, que debe especificar también en las instrucciones RESTORE LOG siguientes. Si se especifica CONTINUE_AFTER_ERROR, la secuencia de restauración parcial será correcta y el grupo de archivos FILESTREAM no será recuperable.  
   
 ## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>Restauración por etapas con el modelo de recuperación simple  
@@ -119,7 +119,7 @@ ms.locfileid: "62876089"
   
 ### <a name="examples"></a>Ejemplos  
   
--   [Ejemplo: restauración por etapas de la base de datos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
@@ -147,7 +147,7 @@ ms.locfileid: "62876089"
   
 ### <a name="examples"></a>Ejemplos  
   
--   [Ejemplo: restauración por etapas de la base de datos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
@@ -172,7 +172,7 @@ ms.locfileid: "62876089"
   
 4.  Una copia de seguridad diferencial se realiza después de otras copias de seguridad restauradas en la secuencia de restauración por etapas original para restaurar los datos hasta el punto de recuperación original.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   

@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002463"
 ---
-# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
+# <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Actualiza los metadatos de Always Encrypted para los parámetros de la no enlazada a esquema de procedimiento almacenado, función definida por el usuario, vista, desencadenador DML, desencadenador DDL de nivel de base de datos o desencadenador DDL de nivel de servidor en la base de datos actual. 
+Actualiza los metadatos de Always Encrypted para los parámetros del procedimiento almacenado no enlazado a un esquema especificado, la función definida por el usuario, la vista, el desencadenador DML, el desencadenador DDL de nivel de base de datos o el desencadenador DDL de nivel de servidor en la base de datos actual. 
 
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,45 +46,46 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Argumentos
 
-`[ @name = ] 'module_name'` Es el nombre del procedimiento almacenado, función definida por el usuario, vista, desencadenador DML, desencadenador DDL de nivel de base de datos o desencadenador DDL de nivel de servidor. *module_name* no puede ser un common language runtime (CLR) procedimiento almacenado o una función CLR. *module_name* no puede estar enlazada a esquema. *module_name* es `nvarchar`, no tiene ningún valor predeterminado. *module_name* puede ser un identificador formado por varias partes, pero solo puede hacer referencia a objetos en la base de datos actual.
+`[ @name = ] 'module_name'`Es el nombre del procedimiento almacenado, la función definida por el usuario, la vista, el desencadenador DML, el desencadenador DDL de nivel de base de datos o el desencadenador DDL de nivel de servidor. *MODULE_NAME* no puede ser un procedimiento almacenado de Common Language Runtime (CLR) o una función CLR. *MODULE_NAME* no se pueden enlazar a un esquema. *MODULE_NAME* es `nvarchar`y no tiene ningún valor predeterminado. *MODULE_NAME* puede ser un identificador de varias partes, pero solo puede hacer referencia a objetos de la base de datos actual.
 
-`[ @namespace = ] ' < class > '` Es la clase del módulo especificado. Cuando *module_name* es un desencadenador DDL, `<class>` es necesario. El valor de `<class>` es `nvarchar(20)`. Las entradas válidas son `DATABASE_DDL_TRIGGER` y `SERVER_DDL_TRIGGER`.    
+`[ @namespace = ] ' < class > '`Es la clase del módulo especificado. Cuando *MODULE_NAME* es un desencadenador DDL `<class>` , es necesario. 
+  `<class>` es `nvarchar(20)`. Las entradas `DATABASE_DDL_TRIGGER` válidas `SERVER_DDL_TRIGGER`son y.    
 
 ## <a name="return-code-values"></a>Valores de código de retorno  
 
 0 (correcto) o un número distinto de cero (error)
 
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
-Los metadatos de cifrado para los parámetros de un módulo pueden quedar obsoleto, si:   
-* Propiedades de cifrado de una columna en una tabla se han actualizado las referencias de módulo. Por ejemplo, se ha quitado una columna y se ha agregado una nueva columna con el mismo nombre, pero un tipo de cifrado diferente, clave de cifrado o un algoritmo de cifrado.  
-* El módulo hace referencia a otro módulo con los metadatos de cifrado del parámetro obsoleto.  
+Los metadatos de cifrado de los parámetros de un módulo pueden quedarse obsoletos si:   
+* Se han actualizado las propiedades de cifrado de una columna de una tabla a la que hace referencia el módulo. Por ejemplo, se ha quitado una columna y se ha agregado una nueva columna con el mismo nombre, pero se ha agregado un tipo de cifrado diferente, una clave de cifrado o un algoritmo de cifrado.  
+* El módulo hace referencia a otro módulo con metadatos de cifrado de parámetros obsoletos.  
 
-Cuando se modifican las propiedades de cifrado de una tabla, `sp_refresh_parameter_encryption` se debe ejecutar para los módulos que directa o indirectamente hace referencia a la tabla. Este procedimiento almacenado se puede llamar en esos módulos en cualquier orden, sin solicitar al usuario a la primera actualización al módulo interno antes de pasar a sus llamadores.
+Cuando se modifican las propiedades de cifrado `sp_refresh_parameter_encryption` de una tabla, se debe ejecutar para cualquier módulo que haga referencia directa o indirectamente a la tabla. Se puede llamar a este procedimiento almacenado en los módulos en cualquier orden, sin necesidad de que el usuario actualice primero el módulo interno antes de pasar a sus llamadores.
 
-`sp_refresh_parameter_encryption` no afecta a ningún permiso, propiedades extendidas, o `SET` opciones que están asociados con el objeto. 
+`sp_refresh_parameter_encryption`no afecta a ningún permiso, propiedad extendida u `SET` opciones asociadas al objeto. 
 
 Para actualizar un desencadenador DDL de nivel de servidor, ejecute este procedimiento almacenado desde el contexto de cualquier base de datos.
 
 > [!NOTE]
->  Las firmas asociadas con el objeto se anulan al ejecutar `sp_refresh_parameter_encryption`.
+>  Las firmas asociadas al objeto se quitan cuando se ejecuta `sp_refresh_parameter_encryption`.
 
 ## <a name="permissions"></a>Permisos
 
-Requiere `ALTER` permiso en el módulo y `REFERENCES` permiso en todas las colecciones de esquemas XML que hace referencia el objeto y tipos definidos por el usuario CLR.   
+Requiere `ALTER` el permiso en el módulo `REFERENCES` y el permiso en los tipos definidos por el usuario CLR y las colecciones de esquemas XML a los que hace referencia el objeto.   
 
-Cuando el módulo especificado es un desencadenador DDL de nivel de base de datos, requiere `ALTER ANY DATABASE DDL TRIGGER` permiso en la base de datos actual.    
+Cuando el módulo especificado es un desencadenador DDL de nivel de base `ALTER ANY DATABASE DDL TRIGGER` de datos, requiere el permiso en la base de datos actual.    
 
-Cuando el módulo especificado es un desencadenador DDL de nivel de servidor, requiere `CONTROL SERVER` permiso.
+Cuando el módulo especificado es un desencadenador DDL de nivel de servidor `CONTROL SERVER` , requiere el permiso.
 
-Para los módulos que se definen con la `EXECUTE AS` cláusula, `IMPERSONATE` se requiere el permiso en la entidad de seguridad especificada. Por lo general, la actualización de un objeto no cambia su `EXECUTE AS` principal, a menos que el módulo se ha definido con `EXECUTE AS USER` y el nombre de usuario de la entidad de seguridad ahora se resuelve como un usuario diferente que tenía en el momento el módulo se ha creado.
+En el caso de los módulos definidos `EXECUTE AS` con la `IMPERSONATE` cláusula, se requiere el permiso en la entidad de seguridad especificada. Por lo general, la actualización de un objeto `EXECUTE AS` no cambia su entidad de seguridad, a `EXECUTE AS USER` menos que el módulo se haya definido con y el nombre de usuario de la entidad de seguridad se resuelva ahora como un usuario diferente del que tenía en el momento en que se creó el módulo.
  
 ## <a name="examples"></a>Ejemplos
 
-El ejemplo siguiente se crea una tabla y un procedimiento que hacen referencia a la tabla, configura Always Encrypted y, a continuación, se muestra cómo modificar la tabla y ejecutando el `sp_refresh_parameter_encryption` procedimiento.  
+En el ejemplo siguiente se crea una tabla y un procedimiento que hace referencia a la tabla, se configura Always Encrypted y, a continuación, se muestra `sp_refresh_parameter_encryption` cómo modificar la tabla y cómo ejecutar el procedimiento.  
 
-En primer lugar, cree la tabla inicial y un procedimiento almacenado que hacen referencia a la tabla.
+En primer lugar, cree la tabla inicial y un procedimiento almacenado que haga referencia a la tabla.
 ```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
     [SSN] [char](11), 
@@ -113,7 +114,7 @@ END;
 GO
 ```
 
-A continuación, establezca las claves de Always Encrypted.
+A continuación, configure las claves de Always Encrypted.
 ```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
@@ -135,7 +136,7 @@ GO
 ```
 
 
-Por último, reemplazamos la columna SSN con la columna cifrada y, a continuación, ejecuta el `sp_refresh_parameter_encryption` procedimiento para actualizar los componentes de Always Encrypted.
+Por último, se reemplaza la columna SSN con la columna cifrada y, `sp_refresh_parameter_encryption` después, se ejecuta el procedimiento para actualizar los componentes de Always encrypted.
 ```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
@@ -153,8 +154,8 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## <a name="see-also"></a>Vea también 
+## <a name="see-also"></a>Consulte también 
 
-[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[Asistente de Always Encrypted](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[Asistente para Always Encrypted](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 

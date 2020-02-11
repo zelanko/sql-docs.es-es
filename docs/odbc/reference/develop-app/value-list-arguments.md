@@ -1,5 +1,5 @@
 ---
-title: Valor de argumentos de la lista | Microsoft Docs
+title: Argumentos de lista de valores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: 863837be-603b-4c7a-8b96-b71014037ee5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 646d2724489140080a673f31e22429cc7ca39d4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022102"
 ---
 # <a name="value-list-arguments"></a>Argumentos de la lista de valores
-Un argumento de valor de la lista consta de una lista de valores separados por comas que se usará para la coincidencia. Hay un argumento de la lista de un solo valor en las funciones de catálogo ODBC: el *TableType* argumento en **SQLTables**. Establecer *TableType* a un puntero null es el mismo que si se establece en SQL_ALL_TABLE_TYPES, que enumera todos los posibles miembros de la lista de valores. Este argumento no se ve afectado por el atributo de instrucción SQL_ATTR_METADATA_ID. Para obtener más información, consulte el [SQLTables](../../../odbc/reference/syntax/sqltables-function.md) descripción de la función.
+Un argumento de lista de valores se compone de una lista de valores separados por comas que se usarán para la búsqueda de coincidencias. Solo hay un argumento de lista de valores en las funciones de catálogo de ODBC: el argumento *TableType* en **SQLTables**. Establecer *TableType* en un puntero nulo es el mismo que si se establece en SQL_ALL_TABLE_TYPES, que enumera todos los miembros posibles de la lista de valores. Este argumento no se ve afectado por el atributo de instrucción SQL_ATTR_METADATA_ID. Para obtener más información, vea la descripción de la función [SQLTables](../../../odbc/reference/syntax/sqltables-function.md) .

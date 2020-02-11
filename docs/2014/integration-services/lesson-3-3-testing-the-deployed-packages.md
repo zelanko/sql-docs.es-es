@@ -1,5 +1,5 @@
 ---
-title: 'Paso 3: Prueba de los paquetes implementados | Microsoft Docs'
+title: 'Paso 3: Probar los paquetes implementados | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92055ceb4226406fe26d7ce23491c81606f292c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891827"
 ---
-# <a name="step-3-testing-the-deployed-packages"></a>Paso 3: Prueba de los paquetes implementados
+# <a name="step-3-testing-the-deployed-packages"></a>Paso 3: Probar los paquetes implementados
   En esta tarea probará los paquetes que ha implementado en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  En otros tutoriales de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ejecutó paquetes en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], con la opción **Iniciar depuración** del menú **Depurar** . Esta vez ejecutará los paquetes de otra forma.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona varias herramientas que puede utilizar para ejecutar paquetes en el entorno de prueba y producción: la utilidad del símbolo del sistema `dtexec` y la Utilidad de ejecución de paquetes. La Utilidad de ejecución de paquetes es una herramienta gráfica integrada en `dtexec`. Las dos herramientas ejecutan el paquete de forma inmediata. Además, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona un subsistema del Agente SQL Server que está diseñado especialmente para programar la ejecución de paquetes como un paso del trabajo del Agente SQL Server.  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona varias herramientas que puede utilizar para ejecutar paquetes en el entorno de prueba y producción: la utilidad del símbolo del sistema `dtexec` y la Utilidad de ejecución de paquetes. La Utilidad de ejecución de paquetes es una herramienta gráfica integrada en `dtexec`. Las dos herramientas ejecutan el paquete de forma inmediata. Además, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona un subsistema del Agente SQL Server que está diseñado especialmente para programar la ejecución de paquetes como un paso del trabajo del Agente SQL Server.  
   
  Utilizará la Utilidad de ejecución de paquetes para ejecutar los paquetes implementados. Los paquetes se utilizarán tal como están; por tanto, no tiene que actualizar información en ninguna página del cuadro de diálogo. Ejecutará los paquetes desde la página General, que es la primera página de la Utilidad de ejecución de paquetes. Si lo desea, puede hacer clic en otras páginas para ver la información que contienen para cada paquete.  
   
@@ -103,9 +104,9 @@ ms.locfileid: "62891827"
   
      La consulta devuelve 21 filas de datos. El resultado devuelto consta de filas del archivo de datos XML, orders.xml. Cada fila es un resumen por país y región; la fila presenta el nombre de un país o región, el número de pedidos de cada país o región, y las fechas del pedido más reciente y más antiguo.  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [dtexec (utilidad)](packages/dtexec-utility.md)  
   
   

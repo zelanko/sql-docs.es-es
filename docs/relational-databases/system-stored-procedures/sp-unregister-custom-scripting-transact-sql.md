@@ -16,16 +16,16 @@ ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fe6bfe4c93ccabfaaec27739f7a1fd0e09348526
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017898"
 ---
-# <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
+# <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Este procedimiento almacenado quita un procedimiento almacenado personalizado definido por el usuario o [!INCLUDE[tsql](../../includes/tsql-md.md)] archivo de script que se registró mediante la ejecución de [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
+  Este procedimiento almacenado quita un archivo de script o [!INCLUDE[tsql](../../includes/tsql-md.md)] un procedimiento almacenado personalizado definido por el usuario que se registró ejecutando [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,29 +39,29 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @type = ] 'type'` Se está quitando el tipo de procedimiento almacenado personalizado o el script. *tipo* es **varchar (16)** , no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
+`[ @type = ] 'type'`Es el tipo de procedimiento almacenado personalizado o el script que se va a quitar. *Type* es de tipo **VARCHAR (16)**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**insert**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción INSERT.|  
-|**update**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción UPDATE.|  
-|**delete**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción DELETE.|  
+|**introducir**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción INSERT.|  
+|**Update**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción UPDATE.|  
+|**elimínelos**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción DELETE.|  
 |**custom_script**|El procedimiento almacenado personalizado registrado o el script se ejecuta al final del desencadenador de lenguaje de definición de datos (DDL).|  
   
-`[ @publication = ] 'publication'` Nombre de la publicación para que se está quitando el procedimiento almacenado personalizado o una secuencia de comandos. *publicación* es **sysname**, su valor predeterminado es null.  
+`[ @publication = ] 'publication'`Nombre de la publicación para la que se va a quitar el procedimiento almacenado personalizado o el script. *Publication* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @article = ] 'article'` Nombre del artículo para el que se está quitando el procedimiento almacenado personalizado o una secuencia de comandos. *artículo* es **sysname**, su valor predeterminado es null.  
+`[ @article = ] 'article'`Nombre del artículo para el que se va a quitar el procedimiento almacenado personalizado o el script. *article* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_unregister_custom_scripting** se utiliza en la replicación de instantáneas y transaccional.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor el **db_owner** fijo de base de datos, o la **db_ddladmin** rol fijo de base de datos se puede ejecutar **sp_ unregister_custom_scripting**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** , el rol fijo de base de datos **db_owner** o el rol fijo de base de datos **db_ddladmin** pueden ejecutar **sp_unregister_custom_scripting**.  
   
-## <a name="see-also"></a>Vea también  
- [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [sp_register_custom_scripting &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  
   
   

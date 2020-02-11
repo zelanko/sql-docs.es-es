@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211403"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
-  En este tema se describe cómo editar una alerta del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo editar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una alerta del [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] agente en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
   
  **En este tema**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68211403"
 ####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden editar la información de una alerta. A otros usuarios debe concederse el rol fijo de base de datos **SQLAgentOperatorRole** en la base de datos **msdb** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-edit-an-alert"></a>Para modificar una alerta  
   
@@ -80,6 +80,6 @@ ms.locfileid: "68211403"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_update_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql).  
+ Para obtener más información, vea [sp_update_alert &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql).  
   
   

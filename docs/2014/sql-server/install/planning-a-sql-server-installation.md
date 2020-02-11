@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211493"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planear una instalación de SQL Server
@@ -61,7 +61,7 @@ ms.locfileid: "68211493"
  [Instalar SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
  En esta sección se proporciona información general de las distintas opciones de instalación de que se dispone para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- [Instalar las características de BI de SQL Server 2014](install-sql-server-business-intelligence-features.md)  
+ [Instalar las características de SQL Server 2014 BI](install-sql-server-business-intelligence-features.md)  
  Esta sección de la documentación de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica cómo instalar las funciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que forman parte de la plataforma de BI de Microsoft.  
   
  [Actualizar a SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
@@ -73,11 +73,11 @@ ms.locfileid: "68211493"
  [Instalación de clúster de conmutación por error de SQL Server](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
  Esta sección de la documentación del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica cómo instalar y configurar el clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
- [Inicio rápido de instalación de SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
- [Instalar a SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+## <a name="see-also"></a>Consulte también  
+ [Instalación de inicio rápido de SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
+ [Instalación de SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Soluciones de alta disponibilidad &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   
  [Antes de instalar los clústeres de conmutación por error](../failover-clusters/install/before-installing-failover-clustering.md)   
- [Actualización a SQL Server 2014 mediante el Asistente para instalación &#40;el programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Actualice a SQL Server 2014 mediante el Asistente para la instalación &#40;la instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

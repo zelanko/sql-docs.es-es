@@ -16,13 +16,13 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9db4f3a40311e94d94d8910f4d1625f89f29926a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768960"
 ---
-# <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
+# <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Cambia las propiedades de la base de datos de distribución. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
@@ -43,7 +43,7 @@ sp_changedistributiondb [ @database= ] 'database'
   
 `[ @property = ] 'property'`Es la propiedad que se va a cambiar para la base de datos dada. *Property* es de **tipo sysname**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**history_retention**|Período de retención de la tabla de historial.|  
 |**max_distretention**|Período máximo de retención de la distribución.|  
@@ -55,7 +55,7 @@ sp_changedistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_changedistributiondb** se utiliza en todos los tipos de replicación.  
   
 ## <a name="example"></a>Ejemplo  
@@ -64,11 +64,11 @@ sp_changedistributiondb [ @database= ] 'database'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_changedistributiondb**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
- [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_adddistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

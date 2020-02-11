@@ -16,13 +16,13 @@ ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e4cacb78e797583dbd45954f09c89a774c381966
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68770919"
 ---
-# <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
+# <a name="sp_helpdistributor_properties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Devuelve las propiedades del distribuidor. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
@@ -38,20 +38,20 @@ sp_helpdistributor_properties
   
 ## <a name="result-set"></a>Tipo de cursor  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**heartbeat_interval**|**int**|Número máximo de minutos que un agente puede ejecutarse sin registrar un mensaje de progreso.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpdistributor_properties** se usa con todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros del rol fijo de servidor **sysadmin** , los miembros del rol fijo de base de datos **db_owner** o **replmonitor** en la base de datos de distribución y los usuarios de la lista de acceso a la publicación (PAL) para una publicación que usa este distribuidor pueden Ejecute **sp_helpdistributor_properties**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** , los miembros del rol fijo de base de datos **db_owner** o **replmonitor** en la base de datos de distribución y los usuarios de la lista de acceso a la publicación (PAL) para una publicación que usa este distribuidor pueden ejecutar **sp_helpdistributor_properties**.  
   
-## <a name="see-also"></a>Vea también  
- [Transact &#40;-SQL de sp_changedistributor_property&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [sp_changedistributor_property &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

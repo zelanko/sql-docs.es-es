@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771661"
 ---
 # <a name="project-properties-dialog-box"></a>Propiedades del proyecto (cuadro de diálogo)
@@ -50,7 +50,7 @@ ms.locfileid: "62771661"
 ##  <a name="general"></a> Establecer las opciones de la página General  
  Use la página General para ver las propiedades del proyecto.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del proyecto.  
   
  **Identificador**  
@@ -71,7 +71,7 @@ ms.locfileid: "62771661"
  Examinar  
  Haga clic en **Examinar** para seleccionar los usuarios y los roles para los que quiere establecer permisos con el cuadro de diálogo **Examinar todas las entidades** .  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del usuario o del rol.  
   
  **Tipo**  
@@ -86,7 +86,7 @@ ms.locfileid: "62771661"
  **Conceder**  
  Al seleccionar **Conceder** , se concede el permiso al usuario o al rol seleccionado.  
   
- **Denegar**  
+ **Deny**  
  Al seleccionar **Denegar** , se deniega el permiso al usuario o al rol seleccionado.  
   
   

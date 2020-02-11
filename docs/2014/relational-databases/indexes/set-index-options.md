@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63036222"
 ---
 # <a name="set-index-options"></a>Establecer opciones de índice
@@ -51,7 +51,7 @@ ms.locfileid: "63036222"
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Las opciones siguientes se aplican inmediatamente al índice mediante la cláusula SET de la instrucción ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY y STATISTICS_NORECOMPUTE.  
+-   Las siguientes opciones se aplican inmediatamente al índice mediante la cláusula SET de la instrucción ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY y STATISTICS_NORECOMPUTE.  
   
 -   Las opciones siguientes se pueden establecer cuando se vuelve a generar un índice mediante ALTER INDEX REBUILD o CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP y DROP_EXISTING (solo CREATE INDEX).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63036222"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>Para modificar las propiedades de un índice en el Diseñador de tablas  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63036222"
   
 3.  Haga clic con el botón derecho en la tabla en la que quiere modificar las propiedades de un índice y seleccione **Diseño**.  
   
-4.  En el menú **Diseñador de tablas** , haga clic en **Índices o claves**.  
+4.  En el menú **Diseñador de tablas** , haga clic en **índices o claves**.  
   
 5.  Seleccione el índice que desea modificar. Sus propiedades aparecerán en la cuadrícula principal.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63036222"
   
 7.  Haga clic en **Cerrar**.  
   
-8.  En el menú **Archivo** , seleccione **Guardar**_nombre_tabla_.  
+8.  En el menú **archivo** , seleccione **Guardar**_TABLE_NAME_.  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Para modificar las propiedades de un índice en el Explorador de objetos  
   

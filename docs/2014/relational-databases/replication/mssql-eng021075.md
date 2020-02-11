@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4647b34db4cd224e5c76f6e960a5636deaeeac8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62938521"
 ---
-# <a name="mssqleng021075"></a>MSSQL_ENG021075
+# <a name="mssql_eng021075"></a>MSSQL_ENG021075
     
 ## <a name="message-details"></a>Detalles del mensaje  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|21075|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|21075|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
 |Texto del mensaje|La instantánea inicial de la publicación '%1!' aún no está disponible.|  
@@ -42,7 +42,7 @@ ms.locfileid: "62938521"
   
  Si el error persiste, aumente el registro del agente y especifique un archivo de salida para el registro. Dependiendo del contexto del error, esto puede proporcionar los pasos que conducen al error o a mensajes de error adicionales.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y eventos &#40;replicación&#41;](errors-and-events-reference-replication.md)  
   
   

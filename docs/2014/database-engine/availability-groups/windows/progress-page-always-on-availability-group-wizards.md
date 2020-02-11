@@ -1,5 +1,5 @@
 ---
-title: Avanzar página (asistentes del grupo de disponibilidad AlwaysOn) | Microsoft Docs
+title: Página progreso (asistentes para grupos de disponibilidad AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789115"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Página Progreso (asistentes para grupos de disponibilidad AlwaysOn)
@@ -33,7 +33,7 @@ ms.locfileid: "62789115"
  **Más detalles**  
  Haga clic en la flecha abajo para mostrar una cuadrícula de progreso que enumera los pasos completados, en orden, seguida de la operación en curso actual. La cuadrícula contiene las columnas siguientes:  
   
- **Name**  
+ **Nombre**  
  Muestra una frase que describe un paso concreto.  
   
  **Estado**  
@@ -43,7 +43,7 @@ ms.locfileid: "62789115"
 |------------|-----------------|  
 |**Error**|Indica que la operación para este paso ha experimentado un error. Haga clic en el vínculo para mostrar un cuadro de diálogo de mensaje que describe el error.|  
 |**En curso (** *porcentaje completado* **)**|Indica que la operación se está produciendo ahora y calcula el porcentaje completado de este paso.|  
-|**Correcto**|Indica que la operación correspondiente a este paso se ha completado correctamente.|  
+|**Success**|Indica que la operación correspondiente a este paso se ha completado correctamente.|  
   
  **Menos detalles**  
  Haga clic para ocultar la cuadrícula de progreso.  
@@ -61,7 +61,7 @@ ms.locfileid: "62789115"
   
 -   [Usar el Asistente para grupo de disponibilidad de conmutación por error &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

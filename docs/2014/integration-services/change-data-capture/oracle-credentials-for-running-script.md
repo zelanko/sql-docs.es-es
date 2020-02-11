@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12de97bf147ccb61cde5f82e2fa31782404071e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771116"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Credenciales de Oracle para ejecutar script
@@ -25,14 +25,14 @@ ms.locfileid: "62771116"
   
  **Autenticación**  
   
- Seleccione una de las opciones siguientes:  
+ Seleccione uno de los siguientes:  
   
 -   **Autenticación de Windows**: seleccione esta opción para usar las credenciales del dominio de Windows actual. Solo puede usar esta opción si la base de datos de Oracle está configurada para usar la autenticación de Windows.  
   
--   **Autenticación de Oracle**: si selecciona esta opción, debe escribir los valores de **Nombre de usuario** y **Contraseña** del usuario de la base de datos Oracle a la que se va a conectar.  
+-   **Autenticación de Oracle**: si selecciona esta opción, debe escribir el **Nombre de usuario** y la **Contraseña** para el usuario en la base de datos de Oracle de origen a la que se está conectando.  
   
-## <a name="see-also"></a>Vea también  
- [Cómo administrar una instancia CDC](manage-a-cdc-instance.md)   
+## <a name="see-also"></a>Consulte también  
+ [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [Revisar y generar Scripts de registro complementario](review-and-generate-supplemental-logging-scripts.md)  
   
   

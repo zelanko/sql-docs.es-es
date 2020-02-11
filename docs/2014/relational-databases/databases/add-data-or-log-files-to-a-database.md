@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917735"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Agregar archivos de datos o de registro a una base de datos
@@ -55,7 +55,7 @@ ms.locfileid: "62917735"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Para agregar archivos de datos o de registro a una base de datos  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62917735"
   
 8.  Especifique el tamaño inicial del archivo. Defina el mayor tamaño posible para los archivos de datos, según la cantidad de datos máxima prevista para la base datos.  
   
-9. Para especificar cómo debe crecer el archivo, haga clic en ( **...** ) en la columna **Crecimiento automático**. Seleccione una de las opciones siguientes:  
+9. Para especificar cómo debe crecer el archivo, haga clic en ( **...** ) en la columna **Crecimiento automático**. Seleccione entre las siguientes opciones:  
   
     1.  Para permitir que el archivo actualmente seleccionado crezca cuando se necesite más espacio para los datos, active la casilla **Habilitar crecimiento automático** y, a continuación, elija una de las opciones siguientes:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62917735"
     > [!NOTE]  
     >  De forma predeterminada, los datos y los registros de transacciones se colocan en la misma unidad y ruta de acceso para adecuarse a sistemas de un solo disco, pero puede que esto no resulte óptimo para los entornos de producción. Para más información, consulte [Database Files and Filegroups](database-files-and-filegroups.md).  
   
-12. Haga clic en **Aceptar**.  
+12. Haga clic en **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -115,7 +115,7 @@ ms.locfileid: "62917735"
   
  Para obtener más ejemplos, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Database Files and Filegroups](database-files-and-filegroups.md)   
  [Eliminar archivos de datos o de registro de una base de datos](delete-data-or-log-files-from-a-database.md)   
  [Aumentar el tamaño de una base de datos](increase-the-size-of-a-database.md)  

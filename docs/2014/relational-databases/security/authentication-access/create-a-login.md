@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012027"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
@@ -36,7 +36,7 @@ ms.locfileid: "63012027"
   
 -   **Antes de empezar:**  
   
-     [Información previa](#Background)  
+     [Información preliminar](#Background)  
   
      [Seguridad](#Security)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63012027"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Pasos para realizar después de crear un inicio de sesión](#FollowUp)  
+-   **Seguimiento:**  [pasos que se deben realizar después de crear un inicio de sesión](#FollowUp)  
   
 ##  <a name="Background"></a> Información previa  
  Un inicio de sesión es una entidad de seguridad o una entidad que puede ser autenticada por un sistema seguro. Los usuarios necesitan iniciar sesión para conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede crear un inicio de sesión basado en una entidad de seguridad de Windows (como un usuario de dominio o un grupo de dominio de Windows) o puede crear un inicio de sesión que no lo esté (como un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  
@@ -61,7 +61,7 @@ ms.locfileid: "63012027"
 ### <a name="permissions"></a>Permisos  
  Requiere el permiso `ALTER ANY LOGIN` o `ALTER LOGIN` del servidor.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 ##### <a name="to-create-a-sql-server-login"></a>Para crear un inicio de sesión de SQL Server  
   
@@ -81,13 +81,13 @@ ms.locfileid: "63012027"
   
     4.  Haga clic en **Avanzadas...** para obtener más opciones avanzadas de búsqueda. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo): página Opciones avanzadas](https://technet.microsoft.com/library/cc733110.aspx).  
   
-    5.  Haga clic en **Aceptar**.  
+    5.  Haga clic en **OK**.  
   
 4.  Para crear un inicio de sesión basado en una entidad de seguridad de Windows, seleccione **Autenticación de Windows**. Esta es la selección predeterminada.  
   
 5.  Para crear un inicio de sesión que se guarde en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , seleccione **Autenticación de SQL Server**.  
   
-    1.  En el cuadro **Contraseña** , escriba una contraseña para el nuevo usuario. Vuelva a escribir la contraseña en el cuadro **Confirmar contraseña** .  
+    1.  En el campo **Contraseña** , escriba una contraseña para el usuario nuevo. Vuelva a escribir esa contraseña en el cuadro **Confirmar contraseña** .  
   
     2.  Al cambiar una contraseña existente, seleccione **Especificar contraseña anterior**y escriba la contraseña anterior en el cuadro **Contraseña anterior** .  
   
@@ -113,7 +113,7 @@ ms.locfileid: "63012027"
  En el cuadro de diálogo **Inicio de sesión - Nuevo** también se ofrecen opciones en cuatro páginas adicionales: **Roles de servidor**, **Asignación de usuarios**, **Elementos protegibles** y **Estado**.  
   
 ### <a name="server-roles"></a>Roles del servidor  
- La página **Roles de servidor** enumera todos los roles posibles que se pueden asignar al nuevo inicio de sesión. Las siguientes opciones están disponibles:  
+ La página **Roles de servidor** enumera todos los roles posibles que se pueden asignar al nuevo inicio de sesión. Están disponibles las siguientes opciones:  
   
  Casilla**bulkadmin**  
  Los miembros del rol fijo de servidor **bulkadmin** pueden ejecutar la instrucción BULK INSERT.  
@@ -148,22 +148,22 @@ ms.locfileid: "63012027"
  **Usuarios asignados a este inicio de sesión**  
  Selecciona las bases de datos a las que se puede obtener acceso con este inicio de sesión. Cuando se seleccione una base de datos, sus roles de bases de datos válidos se mostrarán en el panel **Miembros del rol de base de datos para:** _nombre_baseDeDatos_ .  
   
- **Mapa**  
+ **Map**  
  Permite que el inicio de sesión obtenga acceso a las bases de datos que se muestran a continuación.  
   
  **Base de datos**  
  Muestra las bases de datos disponibles en el servidor.  
   
- **Usuario**  
+ **User**  
  Especifica el usuario de base de datos que se va a asignar al inicio de sesión. De forma predeterminada, el nombre del usuario de base de datos coincide con el inicio de sesión.  
   
  **Esquema predeterminado**  
  Especifica el esquema predeterminado del usuario. Cuando se crea un usuario por primera vez, el esquema predeterminado es **dbo**. Es posible especificar un esquema predeterminado que aún no existe. No puede especificar un esquema predeterminado para un usuario asignado a un grupo, un certificado o una clave asimétrica de Windows.  
   
- **Guest account enabled for:**  _database_name_  
+ **Cuenta de invitado habilitada para:** _nombre_baseDeDatos_  
  Atributo de solo lectura que indica si la cuenta de invitado está habilitada en la base de datos seleccionada. Utilice la página **Estado** del cuadro de diálogo **Propiedades de inicio de sesión** de la cuenta de invitado para habilitarla o deshabilitarla.  
   
- **Database role membership for:**  _database_name_  
+ **Miembros del rol de base de datos para:** _nombre_baseDeDatos_  
  Selecciona los roles para el usuario en la base de datos especificada. Todos los usuarios son miembros del rol **public** de todas las bases de datos, y no pueden eliminarse. Para obtener más información sobre los roles de base de datos, vea [Roles de nivel de base de datos](database-level-roles.md).  
   
 ### <a name="securables"></a>Elementos protegibles  
@@ -176,10 +176,10 @@ ms.locfileid: "63012027"
   
 1.  Haga clic en **Buscar**.  
   
-2.  En el cuadro de diálogo **Agregar objetos**, seleccione una de las opciones siguientes: **Objetos específicos...** , **Todos los objetos de los tipos...** , o **el servidor**_nombre_servidor_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  En el cuadro de diálogo **agregar objetos** , seleccione una de las opciones siguientes: **objetos específicos...**, **todos los objetos de los tipos...** o **el servidor**_SERVER_NAME_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  Cuando se selecciona **El servidor**_nombre_servidor_, se rellena automáticamente la cuadrícula superior con todos los objetos protegibles de ese servidor.  
+    >  Al seleccionar **el servidor**_SERVER_NAME_ se rellena automáticamente la cuadrícula superior con todos los objetos protegibles de los servidores.  
   
 3.  Si selecciona **Objetos específicos...** :  
   
@@ -195,7 +195,7 @@ ms.locfileid: "63012027"
   
 4.  Si selecciona **Todos los objetos de los tipos...** , en el cuadro de diálogo **Seleccionar tipos de objeto**, seleccione alguno o todos los tipos de objeto siguientes: **Puntos de conexión**, **Inicios de sesión**, **Servidores**, **Grupos de disponibilidad** y **Roles de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **Name**  
+ **Nombre**  
  El nombre de cada entidad de seguridad o elemento protegible que se agrega a la cuadrícula.  
   
  **Tipo**  
@@ -204,7 +204,7 @@ ms.locfileid: "63012027"
  **Pestaña Explícito**  
  Enumere los posibles permisos del elemento protegible seleccionados en la cuadrícula superior. No todas las opciones están disponibles para todos los permisos explícitos.  
   
- **Permissions**  
+ **Permisos**  
  Nombre del permiso.  
   
  **Otorgante de permisos**  
@@ -216,10 +216,10 @@ ms.locfileid: "63012027"
  **WITH GRANT**  
  Refleja el estado de la opción WITH GRANT para el permiso indicado. Este cuadro es de solo lectura. Para aplicar este permiso, use la instrucción [GRANT](/sql/t-sql/statements/grant-transact-sql) .  
   
- **Denegar**  
+ **Deny**  
  Active esta casilla para denegar el permiso al inicio de sesión. Desactívela para revocar el permiso.  
   
-### <a name="status"></a>Estado  
+### <a name="status"></a>Status  
  La página **Estado** enumera algunas de las opciones de autenticación y autorización que se pueden configurar en el inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seleccionado.  
   
  En esta página están disponibles las opciones siguientes:  
@@ -236,7 +236,7 @@ ms.locfileid: "63012027"
   
  Seleccione esta opción para habilitar o deshabilitar este inicio de sesión. Esta opción utiliza la instrucción ALTER LOGIN con las opciones ENABLE o DISABLE.  
   
- **SQL Server Authentication**  
+ **Autenticación de SQL Server**  
  La casilla **Inicio de sesión bloqueado** solo está disponible si el inicio de sesión se conecta usando la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y si este se ha bloqueado. Este valor es solo de lectura. Para desbloquear un inicio de sesión fuera el que se bloquea, ejecute ALTER LOGIN con la opción de UNLOCK.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  

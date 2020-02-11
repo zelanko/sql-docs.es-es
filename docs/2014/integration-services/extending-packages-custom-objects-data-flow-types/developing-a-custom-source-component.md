@@ -22,14 +22,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ea069983515564225d0cf6b74e3660f6ef0829e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768951"
 ---
 # <a name="developing-a-custom-source-component"></a>Desarrollar un componente de origen personalizado
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite que los desarrolladores escriban componentes de origen que se puedan conectar a los orígenes de datos personalizados y proporcionar datos de estos orígenes a otros componentes en una tarea de flujo de datos. La capacidad para crear orígenes personalizados es importante cuando es necesario conectar a orígenes de datos a los que no se puede tener acceso utilizando uno de los orígenes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existentes.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ofrece a los desarrolladores la capacidad de escribir componentes de origen que se pueden conectar a orígenes de datos personalizados y proporcionar datos de estos orígenes a otros componentes de una tarea de flujo de datos. La capacidad para crear orígenes personalizados es importante cuando es necesario conectar a orígenes de datos a los que no se puede tener acceso utilizando uno de los orígenes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existentes.  
   
  Los componentes de origen tienen una o más salidas y ninguna entrada. En tiempo de diseño, los componentes de origen se utilizan para crear y configurar conexiones, leer metadatos de columna del origen de datos externo y configurar las columnas de salida del origen en función del origen de datos externo. Durante la ejecución, conectan al origen de datos externo y agregan filas a un búfer de salida. A continuación, la tarea de flujo de datos proporciona este búfer de filas de datos a componentes de nivel inferior.  
   
@@ -169,7 +169,7 @@ End Sub
   
  El <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> de la columna determina los valores que se establecen para otras propiedades. En la tabla siguiente se muestran los requisitos de las propiedades dependientes para cada <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>. En los tipos de datos no enumerados, sus propiedades dependientes se establecen en cero.  
   
-|DataType|Longitud|Escala|Precisión|CodePage|  
+|DataType|Length|Escala|Precision|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|Mayor que 0 y menor o igual que 28.|0|0|  
 |DT_CY|0|0|0|0|  
@@ -524,7 +524,7 @@ Public Overrides Sub PrimeOutput(ByVal outputs As Integer, ByVal outputIDs As In
 End Sub  
 ```  
   
-## <a name="sample"></a>Ejemplo  
+## <a name="sample"></a>Muestra  
  En el ejemplo siguiente se muestra un componente de origen simple que utiliza un administrador de conexiones de archivos para cargar el contenido binario de los archivos en el flujo de datos. En este ejemplo no se muestran todos los métodos ni funcionalidad tratados en este tema. Muestra los métodos importantes que cada componente de origen personalizado debe invalidar, pero no contiene código para la validación en tiempo de diseño.  
   
 ```csharp  
@@ -666,10 +666,10 @@ Namespace BlobSrc
 End Namespace  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
- [Developing a Custom Destination Component](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  (Desarrollo de un componente de destino personalizado)  
+## <a name="see-also"></a>Consulte también  
+ [Desarrollar un componente de destino personalizado](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)   
  [Crear un origen con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
   
   

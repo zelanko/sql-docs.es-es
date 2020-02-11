@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62955848"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicar datos en columnas cifradas (SQL Server Management Studio)
@@ -85,8 +85,8 @@ ms.locfileid: "62955848"
   
  [!code-sql[HowTo#sp_SubscriberEncryptedColumn](../../../snippets/tsql/SQL15/replication/howto/tsql/subscriberencryptedcolumn.sql#sp_subscriberencryptedcolumn)]  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad de replicación de SQL Server](view-and-modify-replication-security-settings.md)   
+## <a name="see-also"></a>Consulte también  
+ [Seguridad de Replicación de SQL Server](view-and-modify-replication-security-settings.md)   
  [Crear claves simétricas idénticas en dos servidores](../../security/encryption/create-identical-symmetric-keys-on-two-servers.md)  
   
   

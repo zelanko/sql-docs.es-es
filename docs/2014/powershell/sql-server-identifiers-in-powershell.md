@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3823b6d55439aad860d9176933c348e44acc1ba5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922854"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Identificadores de SQL Server en PowerShell
@@ -49,11 +49,11 @@ SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Describe cómo especificar un nombre de instancia, incluido el nombre del equipo en el que se ejecuta la instancia.|[Especificar instancias del proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)|  
+|Describe cómo especificar un nombre de instancia, incluido el nombre del equipo en el que se ejecuta la instancia.|[Especificar instancias del proveedor de SQL Server PowerShell](sql-server-powershell-provider.md)|  
 |Describe cómo especificar la codificación hexadecimal para los caracteres en identificadores delimitados que no se admiten en las rutas de acceso de Windows PowerShell. También describe cómo descodificar los caracteres hexadecimales.|[Codificar y descodificar identificadores de SQL Server](encode-and-decode-sql-server-identifiers.md)|  
 |Describe cómo usar el carácter de escape de Windows PowerShell para los caracteres no admitidos en las rutas de acceso de PowerShell.|[Identificadores de SQL Server de escape](escape-sql-server-identifiers.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)   
  [Identificadores de base de datos](../relational-databases/databases/database-identifiers.md)  

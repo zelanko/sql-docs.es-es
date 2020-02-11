@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 98a8476ef317a0ddfa6f7fc27c0c9572ed12817a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770206"
 ---
 # <a name="unpivot-transformation"></a>Anulación de dinamización, transformación
@@ -29,11 +29,11 @@ ms.locfileid: "62770206"
   
  El diagrama siguiente muestra un conjunto de datos antes de que se anule la dinamización de los datos en la columna Product.  
   
- ![Conjunto de datos después de que se anule la dinamización](../../media/mw-dts-18.gif "Dataset after it is unpivoted")  
+ ![Conjunto de datos después de que se anule la dinamización](../../media/mw-dts-18.gif "Conjunto de datos después de que se anule la dinamización")  
   
  El diagrama siguiente muestra un conjunto de datos después de que se haya anulado la dinamización de los datos en la columna Product.  
   
- ![Conjunto de datos antes de que se anule la dinamización](../../media/mw-dts-17.gif "Dataset before it is unpivoted")  
+ ![Conjunto de datos antes de que se anule la dinamización](../../media/mw-dts-17.gif "Conjunto de datos antes de que se anule la dinamización")  
   
  En algunas circunstancias, los resultados de anulación de dinamización pueden contener filas con valores no esperados. Por ejemplo, si los datos de muestra del diagrama en los que se va a anular la dinamización tuvieran valores NULL en todas las columnas Qty para Fred, el resultado incluiría solamente una fila para Fred, no cinco. La columna Qty contendría NULL o cero, dependiendo del tipo de datos de la columna.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62770206"
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   

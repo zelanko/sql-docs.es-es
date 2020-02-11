@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917462"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Crear un alias de tipo de datos definido por el usuario
@@ -50,7 +50,7 @@ ms.locfileid: "62917462"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso CREATE TYPE en la base de datos actual y el permiso ALTER en *schema_name*. Si no se especifica *schema_name* , se aplican las reglas de resolución de nombres predeterminadas para determinar el esquema del usuario actual.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-user-defined-data-type"></a>Para crear un tipo de datos definido por el usuario  
   
@@ -59,10 +59,10 @@ ms.locfileid: "62917462"
      **Permitir valores NULL**  
      Especifique si el tipo de datos definido por el usuario puede aceptar valores NULL. La capacidad de admitir valores NULL de un tipo de datos existente definido por el usuario no puede modificarse.  
   
-     **Data type**  
+     **Tipo de datos**  
      Seleccione el tipo de datos base en el cuadro de lista. En el cuadro de lista se muestran todos los tipos de datos, excepto `geography`, `geometry`, `hierarchyid`, `sysname`, `timestamp` y `xml`. El tipo de un tipo de datos existente definido por el usuario no puede modificarse.  
   
-     **Valor de DB-Library**  
+     **Valor predeterminado**  
      Opcionalmente, seleccione una regla o un valor predeterminado para enlazarlo al alias de tipo de datos definido por el usuario.  
   
      **Longitud/Precisión**  
@@ -70,10 +70,10 @@ ms.locfileid: "62917462"
   
      La longitud no se muestra para los tipos de datos `nvarchar(max)`, `varchar(max)` o `varbinary(max)`.  
   
-     **Name**  
-     Si va a crear un nuevo alias de tipo de datos definido por el usuario, escriba un nombre único que se usará en la base de datos para representar el tipo de datos definido por el usuario. El número máximo de caracteres debe coincidir con el sistema `sysname` tipo de datos. El nombre de un alias existente de tipo de datos definido por el usuario no puede modificarse.  
+     **Nombre**  
+     Si va a crear un nuevo alias de tipo de datos definido por el usuario, escriba un nombre único que se usará en la base de datos para representar el tipo de datos definido por el usuario. El número máximo de caracteres debe coincidir con `sysname` el tipo de datos del sistema. El nombre de un alias existente de tipo de datos definido por el usuario no puede modificarse.  
   
-     **Rule**  
+     **Regla**  
      Opcionalmente, seleccione una regla para enlazarla al alias de tipo de datos definido por el usuario.  
   
      **Escala**  
@@ -92,7 +92,7 @@ ms.locfileid: "62917462"
     |20 - 28|13|  
     |29 - 38|17|  
   
-     Para `nchar` y `nvarchar` tipos de datos, el valor de almacenamiento siempre es dos veces el valor de **longitud**.  
+     En `nchar` el `nvarchar` caso de los tipos de datos y, el valor de almacenamiento siempre es dos veces el valor de **length**.  
   
      El almacenamiento no se muestra para los tipos de datos `nvarchar(max)`, `varchar(max)` o `varbinary(max)`.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62917462"
   
 6.  Active la casilla **Permitir valores NULL** si el nuevo alias de tipo de datos puede permitir valores NULL.  
   
-7.  En el área **Enlace** , rellene los cuadros **Predeterminado** o **Regla** si desea enlazar un valor predeterminado o una regla al nuevo alias de tipo de datos. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]no pueden crearse valores predeterminados ni reglas. Utilice [!INCLUDE[tsql](../../includes/tsql-md.md)]. El Explorador de plantillas incluye códigos de ejemplo para crear valores predeterminados y reglas.  
+7.  En el área **Enlace** , rellene los cuadros **Predeterminado** o **Regla** si desea enlazar un valor predeterminado o una regla al nuevo alias de tipo de datos. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]no pueden crearse valores predeterminados ni reglas. Mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. El Explorador de plantillas incluye códigos de ejemplo para crear valores predeterminados y reglas.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -123,7 +123,7 @@ CREATE TYPE ssn
 FROM varchar(11) NOT NULL ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Identificadores de base de datos](database-identifiers.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)  
   

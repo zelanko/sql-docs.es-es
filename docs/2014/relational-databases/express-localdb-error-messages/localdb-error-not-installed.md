@@ -11,23 +11,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2077b7b5f8ac84d95903a80a0a567cff119231e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065783"
 ---
-# <a name="localdberrornotinstalled"></a>LOCALDB_ERROR_NOT_INSTALLED
+# <a name="localdb_error_not_installed"></a>LOCALDB_ERROR_NOT_INSTALLED
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|278|  
-|Origen del evento|SQL Server Local Database Runtime 12.0|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|278|  
+|Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
-|Texto del mensaje|**Nota:**  El texto del mensaje está vacío, ya que este mensaje significa que toda la API de LocalDB (incluida la función FormatMessage que asigna HRESULTS al texto del mensaje) no está disponible.|  
+|Texto del mensaje|**Nota:**  El texto del mensaje está vacío, porque este mensaje significa que la API de LocalDB completa (incluida la función FormatMessage que asigna HRESULTs en el texto del mensaje) no está disponible.|  
   
 ## <a name="explanation"></a>Explicación  
  Local Database Runtime no está instalado en el equipo.  

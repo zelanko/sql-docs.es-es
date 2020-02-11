@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63031979"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Crear consultas de inserción de resultados (Visual Database Tools)
@@ -76,15 +76,15 @@ WHERE (pub_id = '0766')
     > [!NOTE]  
     >  El Diseñador de consultas y vistas no puede determinar con antelación las tablas y vistas que se pueden actualizar. Por tanto, en la lista **Nombre de la tabla** del cuadro de diálogo **Elegir tabla de destino para Insertar resultados** , se muestran todas las tablas y vistas disponibles en la conexión de datos que está consultando, incluso aquellas en las que no se pueden copiar filas.  
   
-4.  En el rectángulo que representa la tabla o el objeto con valores de tabla, elija los nombres de las columnas cuyo contenido desea copiar. Para copiar filas enteras, elija  **\* (todas las columnas)** .  
+4.  En el rectángulo que representa la tabla o el objeto con valores de tabla, elija los nombres de las columnas cuyo contenido desea copiar. Para copiar filas enteras, elija ** \* (todas las columnas)**.  
   
      El Diseñador de consultas y vistas agrega las columnas elegidas a la columna **Columna** del panel Criterios.  
   
-5.  En la columna **Anexar** del panel Criterios, seleccione una columna de la tabla de destino para cada columna que vaya a copiar. Elija *tablename.\**  si va a copiar filas enteras. Las columnas de la tabla de destino deben tener el mismo tipo de datos que las columnas de la tabla de origen o un tipo de datos compatible.  
+5.  En la columna **Anexar** del panel Criterios, seleccione una columna de la tabla de destino para cada columna que vaya a copiar. Elija *TableName.\* * si va a copiar filas enteras. Las columnas de la tabla de destino deben tener el mismo tipo de datos que las columnas de la tabla de origen o un tipo de datos compatible.  
   
 6.  Si desea copiar las filas en un orden determinado, especifique un criterio de ordenación. Para detalles, consulte [Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md).  
   
-7.  Indique las filas que desea copiar especificando condiciones de búsqueda en la columna **Filtro**. Para detalles, consulte [Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md).  
+7.  Indique las filas que desea copiar especificando condiciones de búsqueda en la columna **Filtro** . Para detalles, consulte [Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md).  
   
      Si no especifica ninguna condición de búsqueda, se copiarán todas las filas de la tabla de origen en la tabla de destino.  
   
@@ -95,7 +95,7 @@ WHERE (pub_id = '0766')
   
  Cuando se ejecuta una consulta de inserción de resultados, los resultados no se incluyen en el [panel Resultados](results-pane-visual-database-tools.md). En su lugar, aparece un mensaje que indica cuántas filas se han copiado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tipos de consultas &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
  [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

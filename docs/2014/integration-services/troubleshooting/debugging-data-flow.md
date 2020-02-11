@@ -17,20 +17,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766198"
 ---
 # <a name="debugging-data-flow"></a>Depurar el flujo de datos
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluyen características y herramientas que puede usar para solucionar los problemas de los flujos de datos en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el [!INCLUDE[ssIS](../../includes/ssis-md.md)] diseñador de incluyen características y herramientas que puede usar para solucionar problemas de los flujos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] datos en un paquete de.  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona visores de datos.  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona visores de datos.  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] y las transformaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporcionan recuentos de filas.  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] y las transformaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporcionan recuentos de filas.  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona informes de progreso en tiempo de ejecución.  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona informes de progreso en tiempo de ejecución.  
   
 ## <a name="data-viewers"></a>Visores de datos  
  Los visores de datos muestran datos entre dos componentes en un flujo de datos. Los visores de datos pueden mostrar datos cuando los datos se extraen de un origen de datos y entran por primera vez en un flujo de datos, antes y después de que una transformación actualice los datos, y antes de que los datos se carguen en su destino.  
@@ -66,9 +69,9 @@ ms.locfileid: "62766198"
 |Sin color|Espera la llamada del motor de flujo de datos.|  
 |Amarillo|Ejecución de una transformación, extracción de datos o carga de datos.|  
 |Verde|Ejecución correcta.|  
-|rojo|Ejecución con errores.|  
+|red|Ejecución con errores.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas para solucionar problemas con el desarrollo de paquetes](troubleshooting-tools-for-package-development.md)  
   
   

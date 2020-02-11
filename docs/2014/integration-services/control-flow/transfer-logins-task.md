@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 805c89c24b0a16051de1d555b484a0870de0cfde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830016"
 ---
 # <a name="transfer-logins-task"></a>Tarea Transferir inicios de sesión
@@ -27,7 +27,7 @@ ms.locfileid: "62830016"
 ## <a name="transfer-logins-between-instances-of-sql-server"></a>Transferir inicios de sesión entre instancias de SQL Server  
  La tarea Transferir inicios de sesión admite un origen y un destino que sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  La tarea Transferir inicios de sesión emite un evento de información que indica el número de inicios de sesión transferidos y un evento de advertencia cuando se sobrescribe un inicio de sesión.  
   
  La tarea Transferir inicios de sesión no indica el progreso incremental de la transferencia; solo indica 0% y 100%.  
@@ -68,7 +68,7 @@ ms.locfileid: "62830016"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea Transferir inicios de sesión &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea transferir inicios de sesión &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor de la tarea Transferir inicios de sesión &#40;página Inicios de sesión&#41;](../transfer-logins-task-editor-logins-page.md)  
   

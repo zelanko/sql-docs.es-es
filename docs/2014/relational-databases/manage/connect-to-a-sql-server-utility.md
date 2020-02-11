@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c23f91f24f2da173280e54a544b00a1b4a6fd09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806165"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>Conectarse a una utilidad de SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "62806165"
   
 3.  Haga clic en **Ver** y, a continuación, en **Explorador de la utilidad**.  
   
-4.  En el panel de navegación del Explorador de la utilidad, haga clic en ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")**Conectar con la utilidad**.  
+4.  En el panel de navegación del Explorador de Utilidad, haga clic en ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")**Conectar con la Utilidad**.  
   
 5.  En el cuadro de diálogo **Conectar con el servidor** , especifique el nombre de instancia del UCP y, a continuación, haga clic en **Conectar**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62806165"
   
  Cuando cree un UCP nuevo, también se conectará a la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Crear un punto de control de la Utilidad de SQL Server &#40;Utilidad de SQL Server&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Características y tareas de la utilidad de SQL Server](sql-server-utility-features-and-tasks.md)   
  [Ver los resultados de la directiva de mantenimiento de recursos &#40;Utilidad de SQL Server&#41;](view-resource-health-policy-results-sql-server-utility.md)  
   

@@ -24,20 +24,20 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211966"
 ---
 # <a name="create-a-database-user"></a>Crear un usuario de base de datos
-  En este tema se describe cómo crear un usuario de base de datos asignado a un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. El usuario de la base de datos es la identidad del inicio de sesión cuando está conectado a una base de datos. El usuario de la base de datos puede utilizar el mismo nombre que el inicio de sesión, pero no es necesario. En este tema se supone que ya existe un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener información sobre cómo crear un inicio de sesión, vea [crear un inicio de sesión](create-a-login.md).  
+  En este tema se describe cómo crear un usuario de base de datos asignado a un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. El usuario de la base de datos es la identidad del inicio de sesión cuando está conectado a una base de datos. El usuario de la base de datos puede utilizar el mismo nombre que el inicio de sesión, pero no es necesario. En este tema se supone que ya existe un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener información sobre cómo crear un inicio de sesión, consulte [crear un inicio de sesión](create-a-login.md).  
   
  **En este tema**  
   
 -   **Antes de empezar:**  
   
-     [Información previa](#Restrictions)  
+     [Información preliminar](#Restrictions)  
   
      [Seguridad](#Security)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68211966"
 ####  <a name="Permissions"></a> Permisos  
  Debe tener el permiso `ALTER ANY USER` para la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 ##### <a name="to-create-a-database-user"></a>Para crear un usuario de base de datos  
   
@@ -70,19 +70,19 @@ ms.locfileid: "68211966"
   
 2.  Expanda la base de datos en la que se va a crear el usuario de la misma.  
   
-3.  Haga clic con el botón derecho en la carpeta **Seguridad**, seleccione **Nuevo** y después **Usuario...** .  
+3.  Haga clic con el botón derecho en la carpeta **Seguridad**, seleccione **Nuevo** y después **Usuario...**.  
   
-4.  En el cuadro de diálogo **Usuario de base de datos - Nuevo**, en la página **General**, seleccione uno de los tipos de usuario siguientes de la lista **Tipo de usuario**: **Usuario SQL con inicio de sesión**, **usuario SQL sin inicio de sesión**, **usuario asignado a un certificado**, **usuario asignado a una clave asimétrica**, o **usuario de Windows** .  
+4.  En el cuadro de diálogo **usuario de base de datos-nuevo** , en la página **General** , seleccione uno de los siguientes tipos de usuario de la lista **tipo de usuario** : **usuario SQL con inicio de sesión**, **usuario SQL sin inicio de sesión**, **usuario asignado a un certificado**, **usuario asignado a una clave asimétrica**o **usuario de Windows**.  
   
 5.  En el cuadro **Nombre de usuario** , escriba un nombre para el nuevo usuario. Si ha elegido **Usuario de Windows** en la lista **Tipo de usuario**, también puede hacer clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccione Usuario o Grupo**.  
   
-6.  En el cuadro **Nombre de inicio de sesión** , escriba el inicio de sesión para el usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión**. Si selecciona**Usuario SQL con inicio de sesión** o **Usuario de Windows** en la lista **Tipo de usuario** , estará disponible **Nombre de inicio de sesión** .  
+6.  En el cuadro **Nombre de inicio de sesión** , escriba el inicio de sesión para el usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión**. El **nombre de inicio de sesión** está disponible si selecciona **usuario SQL con inicio de sesión** o usuario de **Windows** en la lista **tipo de usuario** .  
   
-7.  En el cuadro **Esquema predeterminado** , especifique el esquema al que pertenecerán los objetos creados por este usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar esquema**. Si selecciona**Usuario SQL con inicio de sesión** , **Usuario SQL sin inicio de sesión**, **Usuario de Windows**en la lista **Tipo de usuario** , estará disponible **Esquema predeterminado** .  
+7.  En el cuadro **Esquema predeterminado** , especifique el esquema al que pertenecerán los objetos creados por este usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar esquema**. El **esquema predeterminado** está disponible si selecciona **usuario SQL con inicio de sesión**, **usuario SQL sin inicio de sesión**o usuario de **Windows** en la lista **tipo de usuario** .  
   
-8.  En el cuadro de **Nombre de certificado** , escriba el certificado que se utilizará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar certificado**. Si selecciona**Usuario asignado a un certificado** en la lista **Tipo de usuario** , estará disponible **Nombre de certificado** .  
+8.  En el cuadro de **Nombre de certificado** , escriba el certificado que se utilizará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar certificado**. El **nombre del certificado** está disponible si selecciona **usuario asignado a un certificado** en la lista **tipo de usuario** .  
   
-9. En el cuadro **Nombre de clave asimétrica**  , escriba la clave que se va a usar para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar clave asimétrica**. Si selecciona**Usuario asignado a una clave asimétrica** en la lista **Tipo de usuario** , estará disponible **Nombre de clave asimétrica** .  
+9. En el cuadro **Nombre de clave asimétrica**  , escriba la clave que se va a usar para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar clave asimétrica**. El **nombre de clave asimétrica** está disponible si selecciona **usuario asignado a una clave asimétrica** en la lista **tipo de usuario** .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68211966"
   
  Para obtener más información, vea [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Entidades de seguridad &#40;motor de base de datos&#41;](principals-database-engine.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ver el estado de archivo | Microsoft Docs
+title: Ver estado del archivo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773371"
 ---
 # <a name="view-file-status"></a>Ver el estado de archivo
@@ -30,7 +30,7 @@ ms.locfileid: "62773371"
   
 -   El número de la última versión del archivo seleccionado.  
   
--   La fecha en que se creó la versión.  
+-   Fecha en la que se creó la versión.  
   
 -   Los comentarios de usuario asociados a una versión.  
   
@@ -40,12 +40,12 @@ ms.locfileid: "62773371"
   
 1.  En el Explorador de soluciones, seleccione un elemento.  
   
-2.  En el **archivo** menú, elija **Control de código fuente**y haga clic en **propiedades de SourceSafe**.  
+2.  En el menú **archivo** , seleccione **control de código fuente**y haga clic en **propiedades de SourceSafe**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer y recuperar información de versión](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Ver el historial de proyecto](../../2014/database-engine/view-project-history.md)   
- [Recuperar archivos](../../2014/database-engine/retrieve-files.md)   
+ [Ver el historial del proyecto](../../2014/database-engine/view-project-history.md)   
+ [Recuperación de archivos](../../2014/database-engine/retrieve-files.md)   
  [Comparar archivos](../../2014/database-engine/compare-files.md)  
   
   

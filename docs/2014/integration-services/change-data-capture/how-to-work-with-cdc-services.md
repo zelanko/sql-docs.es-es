@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d047d1c584e176f5446361dd29821eb4ff18aa74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771215"
 ---
 # <a name="how-to-work-with-cdc-services"></a>Cómo trabajar con servicios CDC
@@ -54,7 +54,7 @@ ms.locfileid: "62771215"
   
          Para más información sobre cómo especificar las credenciales de un inicio de sesión que tenga permisos de escritura en la base de datos MSXDBCDC, como el rol de base de datos **db_owner** , vea [Crear y editar un servicio CDC de Oracle](create-and-edit-an-oracle-cdc-service.md) y [Conexión con SQL Server](connection-to-sql-server.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con servicios CDC](work-with-cdc-services.md)  
   
   

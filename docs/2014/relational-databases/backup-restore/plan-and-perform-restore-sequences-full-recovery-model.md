@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921865"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planear y realizar secuencias de restauración (modelo de recuperación completa)
@@ -61,7 +61,7 @@ ms.locfileid: "62921865"
 ## <a name="restarting-a-restore-sequence"></a>Reiniciar una secuencia de restauración  
  Si encuentra algún problema con el resultado de una secuencia de restauración, puede salir de ella y reiniciarla desde el principio. Por ejemplo, si accidentalmente restaura demasiadas copias de seguridad de registros y se supera el punto de recuperación deseado, debe reiniciar la secuencia de restauración hasta la copia de seguridad de registros que contenga el punto de recuperación de destino.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información general de copia de seguridad &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](complete-database-restores-full-recovery-model.md)   

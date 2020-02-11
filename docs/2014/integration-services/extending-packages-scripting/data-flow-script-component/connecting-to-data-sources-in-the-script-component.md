@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96041fa9b632be0162259d72cd4001e9d7defdd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768461"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Conectarse a orígenes de datos del componente de script
@@ -50,14 +50,14 @@ ms.locfileid: "62768461"
 > [!IMPORTANT]  
 >  Al escribir el código administrado en un componente de script, no puede llamar al método AcquireConnection de los administradores de conexiones que devuelven objetos no administrados, como el administrador de conexiones de OLE DB y el administrador de conexiones de Excel. Sin embargo, puede leer la propiedad ConnectionString de estos administradores de conexiones y conectarse directamente al origen de datos en el código utilizando la cadena de conexión de una **conexión** OLEDB del espacio de nombres **System.Data.OleDb**.  
 >   
->  Si tiene que llamar al método AcquireConnection de un administrador de conexiones que devuelve un objeto no administrado, utilice un administrador de conexiones ADO.NET. Al configurar el administrador de conexiones ADO.NET para utilizar un proveedor OLE DB, se conecta mediante el proveedor de datos de .NET Framework para OLE DB. En este caso, el método AcquireConnection devuelve un `System.Data.OleDb.OleDbConnection` en lugar de un objeto no administrado. Para configurar un administrador de conexiones ADO.NET para su uso con un origen de datos de Excel, seleccione el proveedor OLE DB de Microsoft para Jet, especifique un libro de Excel y, a continuación, escriba `Excel 8.0` (para Excel 97 y posterior) como el valor de **Propiedades extendidas** en la página **Todas** del cuadro de diálogo **Administrador de conexiones**.  
+>  Si tiene que llamar al método AcquireConnection de un administrador de conexiones que devuelve un objeto no administrado, utilice un administrador de conexiones ADO.NET. Al configurar el administrador de conexiones ADO.NET para utilizar un proveedor OLE DB, se conecta mediante el proveedor de datos de .NET Framework para OLE DB. En este caso, el método AcquireConnection devuelve un `System.Data.OleDb.OleDbConnection` objeto en lugar de un objeto no administrado. Para configurar un administrador de conexiones ADO.NET para su uso con un origen de datos de Excel, seleccione el proveedor OLE DB de Microsoft para Jet, especifique un libro de Excel y, a continuación, escriba `Excel 8.0` (para Excel 97 y posterior) como el valor de **Propiedades extendidas** en la página **Todas** del cuadro de diálogo **Administrador de conexiones**.  
   
  Para obtener más información acerca de cómo se utilizan los administradores de conexiones con el componente de script, consulte [Crear un origen con el componente de script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) y [Crear un destino con el componente de script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md).  
   
-![Icono de Integration Services (pequeño)](../../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
- [Conexiones de Integration Services &#40;SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md)   
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;SSIS&#41; conexiones](../../connection-manager/integration-services-ssis-connections.md)   
  [Crear administradores de conexiones](../../create-connection-managers.md)  
   
   

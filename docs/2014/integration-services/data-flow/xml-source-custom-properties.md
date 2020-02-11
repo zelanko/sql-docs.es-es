@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5c992253304d2a1c493f52a9e24cf569ff29883
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770195"
 ---
 # <a name="xml-source-custom-properties"></a>Propiedades personalizadas del origen XML
@@ -24,7 +24,7 @@ ms.locfileid: "62770195"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|Modo que se usa para tener acceso los datos XML.|  
+|AccessMode|Entero|Modo que se usa para tener acceso los datos XML.|  
 |UseInlineSchema|Boolean|Valor que indica si se usa una definición de esquema insertada dentro del origen XML. El valor predeterminado de esta propiedad es `False`.|  
 |XMLDATA|String|Archivo o variables desde las que recuperar los datos XML.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.|  
 |XMLSchemaDefinition|String|Ruta de acceso y nombre del archivo de definición de esquema (.xsd).<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.|  
@@ -39,7 +39,7 @@ ms.locfileid: "62770195"
   
  Para más información, consulte [XML Source](xml-source.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Common Properties](../common-properties.md)  
   
   

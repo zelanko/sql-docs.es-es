@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033652"
 ---
-# <a name="set-the-polling-interval-for-target-servers"></a>Establecer el intervalo de sondeo para servidores de destino
-  En este tema se describe cómo establecer la frecuencia con la que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualiza la información del servidor maestro en los servidores de destino. Un trabajo es una serie especificada de acciones que realiza el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un trabajo multiservidor es un trabajo que ejecuta un servidor maestro en uno o más servidores de destino.  
+# <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
+  En este tema se describe cómo establecer la frecuencia [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la que el agente actualiza la información del servidor maestro en los servidores de destino. Un trabajo es una serie especificada de acciones que realiza el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un trabajo multiservidor es un trabajo que ejecuta un servidor maestro en uno o más servidores de destino.  
   
--   **Antes de empezar:**  [Seguridad](#Security)  
+-   **Antes de empezar:**  [seguridad](#Security)  
   
--   **Para establecer el intervalo de sondeo para servidores de destino, utilizando lo siguiente:**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
+-   **Para establecer el intervalo de sondeo para los servidores de destino, utilizando:**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Cada servidor de destino puede ejecutar una instancia del mismo trabajo al mismo tiempo. Cada servidor de destino sondea periódicamente al servidor maestro, descarga una copia de cualquier nuevo trabajo asignado al servidor de destino y, a continuación, se desconecta. El servidor de destino ejecuta el trabajo de manera local y, a continuación, se vuelve a conectar al servidor maestro para cargar el estado del resultado del trabajo.  
@@ -37,8 +37,8 @@ ms.locfileid: "63033652"
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) y [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
- **Para establecer el intervalo de sondeo para servidores de destino**  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
+ **Para establecer el intervalo de sondeo para los servidores de destino**  
   
 1.  En el **Explorador de objetos** , conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, después, expándala.  
   
@@ -57,15 +57,15 @@ ms.locfileid: "63033652"
     2.  Haga clic en **Estos servidores de destino** si no todos los servidores de destino comparten el mismo intervalo de sondeo y, a continuación, seleccione cada servidor de destino que usará este intervalo de sondeo.  
   
 ##  <a name="TSQL"></a> Usar Transact-SQL  
- **Para establecer el intervalo de sondeo para servidores de destino**  
+ **Para establecer el intervalo de sondeo para los servidores de destino**  
   
 1.  En el Explorador de objetos, conéctese a una instancia del Motor de base de datos y, a continuación, expándala.  
   
 2.  En la barra de herramientas, haga clic en **Nueva consulta**.  
   
-3.  En la ventana de consulta, use la [sp_post_msx_operation &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) procedimiento para establecer el intervalo de sondeo para servidores de destino almacenado del sistema.  
+3.  En la ventana de consulta, use el sp_post_msx_operation &#40;procedimiento almacenado del sistema [&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) para establecer el intervalo de sondeo para los servidores de destino.  
   
-## <a name="see-also"></a>Vea también  
- [dbo.sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
+## <a name="see-also"></a>Consulte también  
+ [DBO. sysdownloadlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  
   
   

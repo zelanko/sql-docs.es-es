@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f5504c6f58d7ff5254d081ea479ca30ed6ca705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770349"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Combinar datos mediante la transformación Unión de todo
@@ -50,12 +50,12 @@ ms.locfileid: "62770349"
   
 7.  Repita los pasos 5 y 6 para cada columna en cada entrada.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
- [Union All Transformation](union-all-transformation.md)   
+## <a name="see-also"></a>Consulte también  
+ [Transformación Unión de todo](union-all-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)   
  [Rutas de Integration Services](../integration-services-paths.md)   
  [Tarea Flujo de datos](../../control-flow/data-flow-task.md)  

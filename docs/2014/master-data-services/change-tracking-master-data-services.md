@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7b4b7d9d9d153456ca471196c6480465d057e412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483521"
 ---
 # <a name="change-tracking-master-data-services"></a>Seguimiento de cambios [Master Data Services]
@@ -32,12 +32,12 @@ ms.locfileid: "65483521"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Agregar atributos a un grupo de seguimiento de cambios.|[Agregar atributos a un grupo de seguimiento de cambios &#40;Master Data Services&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Agregar atributos a un grupo de seguimiento de cambios.|[Agregar atributos a un grupo de Change Tracking &#40;Master Data Services&#41;](add-attributes-to-a-change-tracking-group-master-data-services.md)|  
 |Crear una regla de negocios para iniciar acciones según los cambios en los atributos.|[Iniciar acciones según los cambios de valores de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Validación &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [Master Data Services de &#40;de validación&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
 -   [Reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   

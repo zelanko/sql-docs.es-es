@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8e94b24634eedf68afcb25c8c1ef957ce063cdc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136738"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
-  En este tema se describe el modo de crear una alerta del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se active cuando se produzca un evento con un nivel de gravedad específico en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo crear [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una alerta del agente que se genera cuando se produce un evento con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] un nivel de gravedad específico [!INCLUDE[tsql](../../includes/tsql-md.md)]en mediante o.  
   
  **En este tema**  
   
@@ -43,7 +43,8 @@ ms.locfileid: "63136738"
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona una forma gráfica y fácil de administrar todo el sistema de alertas, y constituye el método recomendado para configurar una infraestructura de alertas.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona una forma gráfica y fácil de administrar todo el sistema de alertas, y constituye el método recomendado para configurar una infraestructura de alertas.  
   
 -   Los eventos generados durante **xp_logevent** se producen en la base de datos maestra. Por tanto, **xp_logevent** no desencadena una alerta a menos que el valor de **@database_name** de la alerta sea is **'master'** o NULL.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "63136738"
 ####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_add_alert**.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-an-alert-using-severity-level"></a>Para crear una alerta con nivel de gravedad  
   
@@ -74,7 +75,7 @@ ms.locfileid: "63136738"
   
 8.  Active la casilla correspondiente a **Mostrar alerta cuando el mensaje contenga** para restringir la alerta a una secuencia de caracteres en particular y, a continuación, escriba una palabra clave o una cadena de caracteres en el **Texto del mensaje**. El número máximo de caracteres es 100.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -101,6 +102,6 @@ ms.locfileid: "63136738"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_add_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql).  
+ Para obtener más información, vea [sp_add_alert &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql).  
   
   

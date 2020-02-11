@@ -1,5 +1,5 @@
 ---
-title: Crear informes de estado e historial | Microsoft Docs
+title: Crear informes de historial y estado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807509"
 ---
 # <a name="create-history-and-status-reports"></a>Crear informes de historial y estado
@@ -27,27 +27,27 @@ ms.locfileid: "62807509"
   
 1.  En el Explorador de soluciones, seleccione el archivo.  
   
-2.  En el **archivo** menú, elija **Control de código fuente**y haga clic en **historial**.  
+2.  En el menú **archivo** , seleccione **control de código fuente**y haga clic en **historial**.  
   
-3.  En el **historial de** \<archivo o proyecto > cuadro de diálogo, haga clic en **informe**.  
+3.  En el cuadro **de diálogo historial de** \<archivo o proyecto>, haga clic en **Informe**.  
   
-4.  En el **informe de historial** cuadro de diálogo, seleccione las opciones adecuadas y, a continuación, haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **Informe de historial** , seleccione las opciones adecuadas y, a continuación, haga clic en **Aceptar**.  
   
- Para obtener más información acerca de las opciones que puede especificar al recuperar el historial de un archivo, consulte [Ver historial de archivo](../../2014/database-engine/view-file-history.md).  
+ Para obtener más información sobre las opciones que puede especificar al recuperar el historial de un archivo, vea [ver el historial de archivos](../../2014/database-engine/view-file-history.md).  
   
 #### <a name="to-create-a-status-report"></a>Para crear un informe de estado  
   
 1.  En el Explorador de soluciones, seleccione el archivo.  
   
-2.  En el **archivo** menú, elija **Control de código fuente**y haga clic en **propiedades de SourceSafe**.  
+2.  En el menú **archivo** , seleccione **control de código fuente**y haga clic en **propiedades de SourceSafe**.  
   
-3.  En el **estado del archivo** cuadro de diálogo, haga clic en **informe**.  
+3.  En el cuadro de diálogo **Estado del archivo** , haga clic en **Informe**.  
   
-4.  En el **las propiedades de archivo de informe** cuadro de diálogo, haga clic en las opciones adecuadas y, a continuación, haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **Informe de propiedades de archivo** , haga clic en las opciones adecuadas y, a continuación, haga clic en **Aceptar**.  
   
- Para obtener más información acerca de las opciones pueden especificar al recuperar el estado del archivo, consulte [ver el estado de archivo](../../2014/database-engine/view-file-status.md).  
+ Para obtener más información sobre las opciones que puede especificar al recuperar el estado del archivo, consulte [ver el estado](../../2014/database-engine/view-file-status.md)de los archivos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer y recuperar información de versión](../../2014/database-engine/set-and-retrieve-version-information.md)  
   
   

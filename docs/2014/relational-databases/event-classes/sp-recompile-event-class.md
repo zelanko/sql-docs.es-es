@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f9d894eb3f38248e1f7af2b1f693f87bdfebefa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63050921"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile, clase de eventos
@@ -35,7 +35,7 @@ ms.locfileid: "63050921"
 |DatabaseID|`int`|Id. de la base de datos en que se ejecuta el procedimiento almacenado. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta el procedimiento almacenado.|35|Sí|  
 |EventClass|`int`|Tipo de evento = 37.|27|No|  
-|EventSequence|`int`|Secuencia de un evento determinado dentro de la solicitud.|51|Sin|  
+|EventSequence|`int`|Secuencia de un evento determinado dentro de la solicitud.|51|No|  
 |EventSubClass|`int`|Tipo de la subclase de eventos. Indica la razón de la recompilación.<br /><br /> 1 = Cambio en el esquema<br /><br /> 2 = Cambio en estadísticas<br /><br /> 3 = Recompilación DNR<br /><br /> 4 = Cambio en opción configurada<br /><br /> 5 = Cambio en tabla Temp<br /><br /> 6 = Cambio en conjunto de filas remoto<br /><br /> 7 = Cambio en permisos For Browse<br /><br /> 8 = Cambio en entorno de notificación de consultas<br /><br /> 9 = Cambio en vista MPI<br /><br /> 10 = Cambio en opciones de cursor<br /><br /> 11 = Opción con recompilación|21|Sí|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
@@ -50,8 +50,8 @@ ms.locfileid: "63050921"
 |ObjectName|`nvarchar`|Nombre del objeto que ha desencadenado la recompilación.|34|Sí|  
 |ObjectType|`int`|Valor que representa el tipo de objeto implicado en el evento. Para más información, consulte [ObjectType Trace Event Column](objecttype-trace-event-column.md).|28|Sí|  
 |Offset|`int`|Desplazamiento inicial de la instrucción en el procedimiento almacenado o proceso por lotes que causó la recompilación.|61|Sí|  
-|IdSolicitud|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|Sin|  
+|RequestID|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
+|nombreDeServidor|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |SqlHandle|`varbinary`|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a sys.dm_exec_sql_text para recuperar el texto SQL asociado.|63|Sí|  
@@ -60,8 +60,8 @@ ms.locfileid: "63050921"
 |TransactionID|`bigint`|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|`bigint`|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [SQL:StmtRecompile Event Class](sql-stmtrecompile-event-class.md)  
+ [SQL:StmtRecompile (clase de eventos)](sql-stmtrecompile-event-class.md)  
   
   

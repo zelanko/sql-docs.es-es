@@ -1,5 +1,5 @@
 ---
-title: Vínculos de seguridad de la integración de CLR | Microsoft Docs
+title: Vínculos en la seguridad de integración de CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781074"
 ---
 # <a name="links-in-clr-integration-security"></a>Vínculos en el ámbito de seguridad de la integración CLR
@@ -32,7 +32,7 @@ ms.locfileid: "62781074"
  Los vínculos de acceso a tablas corresponden a valores de recuperación o modificación de una tabla, vista o función con valores de tabla. Son similares a los vínculos de invocación, pero tienen un control de acceso más exhaustivo en lo que se refiere a los permisos SELECT, INSERT, UPDATE y DELETE .  
   
 ## <a name="gated-links"></a>Vínculos canalizados  
- Los vínculos canalizados implican que, durante la ejecución, los permisos no se comprueban a través de la relación de objetos una vez que se ha establecido. Cuando hay un vínculo canalizado entre dos objetos (por ejemplo, un objeto **x** y un objeto **y**), los permisos en el objeto **y** y otros objetos a los que se obtiene acceso desde el objeto **y** solamente se comprueban en el momento de creación del objeto **x**. En el momento de creación del objeto **x**, `REFERENCE` permiso se comprueba en **y** con el propietario de **x**. En tiempo de ejecución (por ejemplo, cuando alguien llama al objeto **x**), no hay ningún permiso comprobado en **y** ni en otros objetos a los que hace referencia de forma estática. En tiempo de ejecución, un permiso adecuado se comprobará en el propio objeto **x** .  
+ Los vínculos canalizados implican que, durante la ejecución, los permisos no se comprueban a través de la relación de objetos una vez que se ha establecido. Cuando hay un vínculo canalizado entre dos objetos (por ejemplo, un objeto **x** y un objeto **y**), los permisos en el objeto **y** y otros objetos a los que se obtiene acceso desde el objeto **y** solamente se comprueban en el momento de creación del objeto **x**. En el momento de la creación **** del objeto `REFERENCE` x, el permiso se comprueba en **y** con el propietario de **x**. En tiempo de ejecución (por ejemplo, cuando alguien llama al objeto **x**), no hay ningún permiso comprobado en **y** ni en otros objetos a los que hace referencia de forma estática. En tiempo de ejecución, un permiso adecuado se comprobará en el propio objeto **x** .  
   
  Los vínculos canalizados siempre se usan junto con una dependencia de metadatos entre dos objetos. Esta dependencia de metadatos es una relación establecida en catálogos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que impide que se quite un objeto siempre que haya otro objeto que dependa de él.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62781074"
   
 4.  El permiso se comprueba en el contexto de ejecución actual. Pueden crearse procedimientos y funciones con un contexto de ejecución diferente al del autor de las llamadas. Los ensamblados siempre se crean con el contexto de ejecución del procedimiento, función o desencadenador que se define en el mismo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Seguridad de la integración CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

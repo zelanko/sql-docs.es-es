@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53a0cdb7ccc30afb425197d12dad2b9ca5fa345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676305"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Crear consultas de creación de tabla (Visual Database Tools)
@@ -65,7 +65,7 @@ WHERE country = 'UK'
   
      Para crear una tabla de destino en otra base de datos, especifique un nombre de tabla completo, incluido el nombre de la base de datos de destino, el propietario (si es necesario) y el nombre de la tabla.  
   
-4.  Defina las columnas que se van a copiar agregándolas a la consulta. Para detalles, consulte [Agregar columnas a las consultas &#40;Visual Database Tools&#41;](visual-database-tools.md). Las columnas se copian solo si se agregan a la consulta. Para copiar filas enteras, elija  **\* (todas las columnas)** .  
+4.  Defina las columnas que se van a copiar agregándolas a la consulta. Para detalles, consulte [Agregar columnas a las consultas &#40;Visual Database Tools&#41;](visual-database-tools.md). Las columnas se copian solo si se agregan a la consulta. Para copiar filas enteras, elija ** \* (todas las columnas)**.  
   
      El Diseñador de consultas y vistas agrega las columnas elegidas a la columna **Columna** del panel Criterios.  
   
@@ -82,8 +82,8 @@ WHERE country = 'UK'
   
  Cuando se ejecuta una consulta de creación de tabla, los resultados no se incluyen en el [panel Resultados](results-pane-visual-database-tools.md). En su lugar, aparece un mensaje que indica cuántas filas se han copiado.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñar temas de procedimientos de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [Tipos de consultas (Visual Database Tools)](types-of-queries-visual-database-tools.md)  
   
   

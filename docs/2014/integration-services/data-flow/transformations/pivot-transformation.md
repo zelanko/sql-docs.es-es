@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770351"
 ---
 # <a name="pivot-transformation"></a>Dinámica, transformación
@@ -93,7 +93,7 @@ ms.locfileid: "62770351"
   
  En la tabla siguiente se muestra un conjunto de datos antes de dinamizar los datos en la columna **Year** .  
   
-|Year|Nombre del producto|Total|  
+|Year|Nombre de producto|Total|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
@@ -131,9 +131,9 @@ ms.locfileid: "62770351"
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Para más información sobre cómo establecer las propiedades de este componente, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
+ Para obtener más información sobre cómo establecer las propiedades de este componente, vea [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Transformación Anulación de dinamización](pivot-transformation.md)   
  [Flujo de datos](../data-flow.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  

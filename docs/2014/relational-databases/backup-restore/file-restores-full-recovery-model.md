@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921946"
 ---
 # <a name="file-restores-full-recovery-model"></a>Restauraciones de archivos (modelo de recuperación completa)
@@ -50,7 +50,7 @@ ms.locfileid: "62921946"
      Para más información sobre la restauración con conexión de archivos y páginas, vea [Características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Para obtener más información sobre la restauración con conexión, vea [Restauración con conexión &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Si quiere que la base de datos esté sin conexión durante una restauración de archivos, deje sin conexión la base de datos antes de iniciar la secuencia de restauración mediante la ejecución de la instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) siguiente: ALTER DATABASE *nombre_base_de_datos* SET OFFLINE.  
+    >  Si quiere que la base de datos esté sin conexión durante una restauración de archivos, deje sin conexión la base de datos de que empiece a restaurar la secuencia realizando la acción siguiente [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) : ALTER DATABASE *nombre_base_de_datos* SET OFFLINE.  
   
   
   
@@ -118,7 +118,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [Ejemplo: restauración con conexión de un archivo de solo lectura &#40;modelo de recuperación completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
--   [Ejemplo: restauración sin conexión del grupo de archivos principal y de otro grupo de archivos &#40;modelo de recuperación completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Ejemplo: restauración sin conexión del grupo de archivo principal y de otro grupo de archivos &#40;modelo de recuperación completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
  **Para restaurar archivos y grupos de archivos**  
@@ -131,7 +131,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Copias de seguridad y restauración: interoperabilidad y coexistencia &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Copias de seguridad diferenciales &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Copias de seguridad de archivos completas &#40;SQL Server&#41;](full-file-backups-sql-server.md)   

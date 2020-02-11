@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771001"
 ---
 # <a name="ole-db-source"></a>Origen de OLE DB
@@ -80,7 +80,7 @@ ms.locfileid: "62771001"
  El procedimiento almacenado espera las variables `@StartProductID` y `@CheckDate`para proporcionar valores de parámetros. El orden en el que los parámetros aparecen en la lista **Asignaciones** es irrelevante. El único requisito es que los nombres de parámetros coincidan con los nombres de variables en el procedimiento almacenado, incluido el signo \@.  
   
 ### <a name="mapping-parameters-to-variables"></a>Asignar parámetros a variables  
- Los parámetros se asignan a variables que proporcionan los valores de parámetros en tiempo de ejecución. Las variables son generalmente variables definidas por el usuario, aunque también puede usar variables del sistema que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si utiliza variables definidas por el usuario, asegúrese de establecer el tipo de datos en un tipo que sea compatible con el tipo de datos de la columna a la que hace referencia el parámetro asignado. Para más información, vea [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md).  
+ Los parámetros se asignan a variables que proporcionan los valores de parámetros en tiempo de ejecución. Las variables son generalmente variables definidas por el usuario, aunque también puede usar variables del sistema que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si utiliza variables definidas por el usuario, asegúrese de establecer el tipo de datos en un tipo que sea compatible con el tipo de datos de la columna a la que hace referencia el parámetro asignado. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
 ## <a name="troubleshooting-the-ole-db-source"></a>Solucionar problemas del origen de OLE DB  
  Puede registrar las llamadas realizadas por el origen de OLE DB a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar problemas relacionados con la carga de datos desde orígenes de datos externos que realiza el origen de OLE DB. Para registrar las llamadas realizadas por el origen de OLE DB a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -90,11 +90,11 @@ ms.locfileid: "62771001"
   
  Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de origen de OLE DB** , haga clic en uno de los temas siguientes:  
   
--   [Editor de origen de OLE DB &#40;página Administrador de conexiones&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [OLE DB Editor de origen &#40;página Administrador de conexiones&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [Editor de origen de OLE DB &#40;página Columnas&#41;](../ole-db-source-editor-columns-page.md)  
+-   [&#40;página columnas del editor de origen de OLE DB&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [Editor de origen de OLE DB &#40;página Salida de error&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [OLE DB Editor de origen &#40;página salida de error&#41;](../ole-db-source-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
@@ -115,7 +115,7 @@ ms.locfileid: "62771001"
 ## <a name="related-content"></a>Contenido relacionado  
  Artículo wiki, sobre [SSIS con conectores Oracle](https://go.microsoft.com/fwlink/?LinkId=220670), en social.technet.microsoft.com.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Destino de OLE DB](ole-db-destination.md)   
  [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Flujo de datos](data-flow.md)  

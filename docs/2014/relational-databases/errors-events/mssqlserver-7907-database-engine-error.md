@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f2b9006c03ec0d22ab9194c385d95a2829c023e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762412"
 ---
-# <a name="mssqlserver7907"></a>MSSQLSERVER_7907
+# <a name="mssqlserver_7907"></a>MSSQLSERVER_7907
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7907|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7907|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|Texto del mensaje|Error de tabla: El directorio 'Directorio' en la partición PN_ID no es un directorio de Filestream válido.|  
+|Texto del mensaje|Error de tabla: el directorio "DIRECTORY" de la partición con Id. PN_ID no es un directorio de Filestream válido.|  
   
 ## <a name="explanation"></a>Explicación  
  El nombre de un directorio de columna es el Id. de columna del motor relacional de la partición. Si un nombre de directorio de columna no se puede convertir en un Id. de columna, el directorio no es un directorio de columna válido.  

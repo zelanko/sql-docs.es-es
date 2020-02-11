@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771031"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
@@ -29,16 +29,16 @@ ms.locfileid: "62771031"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> Opciones de carga  
  El destino ODBC puede usar uno de dos módulos de de carga de acceso. Establezca el modo en el [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../odbc-source-editor-connection-manager-page.md). Los dos modos son:  
   
--   **Lote**: en este modo, el destino ODBC intenta usar el método más eficaz de inserción en función de las funcionalidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, esto significaría preparar una instrucción INSERT con parámetros y usar después un enlace de parámetros de matriz en las filas (donde el tamaño de la matriz está controlado por la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente los modificadores al modo **Fila a fila** .  
+-   **Lote**: en este modo, el destino ODBC intenta usar el método más eficaz de inserción en función de las capacidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, esto significaría preparar una instrucción INSERT con parámetros y usar después un enlace de parámetros de matriz en las filas (donde el tamaño de la matriz está controlado por la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente los modificadores al modo **Fila a fila** .  
   
--   **Fila a fila**: en este modo, el destino ODBC prepara una instrucción INSERT con parámetros y usa **Ejecutar SQL** para insertar las filas de una en una.  
+-   **Fila a fila**: en este modo, el destino ODBC prepara una instrucción INSERT con parámetros y usa **Execute de SQL** para insertar las filas de una en una.  
   
 ## <a name="error-handling"></a>Tratamiento de errores  
  El destino ODBC tiene una salida de error. La salida de error del componente incluye las columnas de salida siguientes:  
   
 -   **Código de error**: número que corresponde al error actual. Vea la documentación de la base de datos de origen para obtener una lista de errores. Para obtener una lista de códigos de errores de SSIS, vea la referencia Código de errores y mensajes de SSIS.  
   
--   **Columna de error**: la columna de origen que produce el error (para los errores de conversión).  
+-   **Columna de error**: columna de origen que produce el error (para los errores de conversión).  
   
 -   Columnas estándar de datos de salida.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "62771031"
   
 -   [Cargar datos mediante el destino de ODBC](odbc-destination.md)  
   
--   [ODBC Destination Custom Properties](odbc-destination-custom-properties.md)  
+-   [Propiedades personalizadas de los destinos de ODBC](odbc-destination-custom-properties.md)  
   
   

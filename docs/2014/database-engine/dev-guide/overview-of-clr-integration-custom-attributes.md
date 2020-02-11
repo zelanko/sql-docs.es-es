@@ -1,5 +1,5 @@
 ---
-title: Información general de atributos personalizados de integración de CLR | Microsoft Docs
+title: Información general sobre los atributos personalizados de la integración CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781110"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Información general de los atributos personalizados de la integración CLR
   El Common Language Runtime (CLR) de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] permite el uso de palabras clave descriptivas, llamadas atributos. Estos atributos proporcionan información adicional para muchos elementos, tales como métodos y clases. Los atributos se guardan en el ensamblado con los metadatos del objeto y se pueden utilizar para describir el código a otras herramientas de desarrollo, o para alterar el comportamiento en tiempo de ejecución dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Al registrar una rutina CLR con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deriva un conjunto de propiedades sobre la rutina. Estas propiedades rutinarias determinan las capacidades de la rutina, incluido si se puede indizar la rutina. Por ejemplo, establecer la propiedad `DataAccess` en `DataAccessKind.Read` permite tener acceso a datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de una función CLR. El ejemplo siguiente muestra un caso sencillo donde el `DataAccess` propiedad se establece para facilitar el acceso a datos desde una tabla de usuario **table1**.  
+ Al registrar una rutina CLR con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deriva un conjunto de propiedades sobre la rutina. Estas propiedades rutinarias determinan las capacidades de la rutina, incluido si se puede indizar la rutina. Por ejemplo, establecer la propiedad `DataAccess` en `DataAccessKind.Read` permite tener acceso a datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de una función CLR. En el ejemplo siguiente se muestra un caso simple en `DataAccess` el que la propiedad se establece para facilitar el acceso a datos desde una tabla de usuario **Table1**.  
   
 ```csharp  
 using System;  
@@ -88,7 +88,7 @@ End Class
   
  Los atributos personalizados necesarios para las rutinas CLR, los tipos definidos por el usuario y los agregados se definen en el espacio de nombres `Microsoft.SqlServer.Server`.  
   
-## <a name="see-also"></a>Vea también  
- [Atributos personalizados para las rutinas de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
+## <a name="see-also"></a>Consulte también  
+ [Atributos personalizados para las rutinas CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
   
   

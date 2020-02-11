@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921820"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recuperar una base de datos sin restaurar los datos (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62921820"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  La cláusula FROM **=** \<*dispositivoDeCopiaDeSeguridad>* no se usa en las restauraciones de solo recuperación porque no es necesario realizar una copia de seguridad.  
+>  La cláusula FROM **=** \<*dispositivo_de_copia_de_seguridad>* no se usa en las restauraciones de solo recuperación porque no es necesario realizar una copia de seguridad.  
   
  **Ejemplo**  
   
@@ -63,7 +63,7 @@ RESTORE DATABASE AdventureWorks2012
   
  La sintaxis de [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) para una restauración de solo recuperación de archivos es:  
   
- RESTORE DATABASE *database_name* { FILE **=** _logical_file_name_ | FILEGROUP **=** _logical_filegroup_name_ }[ **,** ...*n* ] WITH RECOVERY  
+ Restore database *database_name* { **=** file _logical_file_name_ | **=** _Logical_filegroup_name_ **de grupo de**archivos} [,... *n* ] con recuperación  
   
  **Ejemplo**  
   
@@ -76,19 +76,19 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 ## <a name="examples-of-completing-a-piecemeal-restore-scenario-with-a-recovery-only-restore"></a>Ejemplos de llevar a cabo una restauración por etapas con una restauración de solo recuperación  
  **Modelo de recuperación simple**  
   
--   [Ejemplo: restauración por etapas de la base de datos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
  **Modelo de recuperación completa**  
   
--   [Ejemplo: restauración por etapas de la base de datos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Restauración con conexión &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [Restauraciones por etapas &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [Restauraciones de archivos &#40;modelo de recuperación simple&#41;](file-restores-simple-recovery-model.md)   

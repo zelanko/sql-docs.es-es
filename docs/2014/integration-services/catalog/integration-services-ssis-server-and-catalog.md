@@ -1,5 +1,5 @@
 ---
-title: Integration Services Server (SSIS) | Microsoft Docs
+title: Servidor Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02966721d1fdfd1c1d3051510e0dd68ed26dcbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771741"
 ---
 # <a name="integration-services-ssis-server"></a>Servidor de Integration Services (SSIS)
@@ -41,7 +41,7 @@ ms.locfileid: "62771741"
   
 -   **Base de datos SSISDB**  
   
-     El `SSISDB` base de datos aparece bajo el **bases de datos** nodo en el Explorador de objetos. Puede consultar las vistas y llamar a los procedimientos almacenados que administran el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los objetos que están almacenados en el servidor.  
+     La `SSISDB` base de datos aparece bajo el nodo **bases** de datos en el explorador de objetos. Puede consultar las vistas y llamar a los procedimientos almacenados que administran el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los objetos que están almacenados en el servidor.  
   
 -   **Catálogos de Integration Services**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62771741"
   
 -   [Ver la lista de paquetes en el servidor de Integration Services](view-the-list-of-packages-on-the-integration-services-server.md)  
   
--   [Implementar proyectos en el servidor de Integration Services](../deploy-projects-to-integration-services-server.md)  
+-   [Implementación de paquetes en el servidor de Integration Services](../deploy-projects-to-integration-services-server.md)  
   
 -   [Ejecutar un paquete en el servidor SSIS con SQL Server Management Studio](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   

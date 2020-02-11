@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808403"
 ---
 # <a name="connection-properties-dialog-box"></a>Propiedades de conexión, cuadro de diálogo
@@ -28,8 +28,8 @@ ms.locfileid: "62808403"
   
  Observe que el tiempo de espera de consulta para SQL Azure es de 30 minutos.  
   
-## <a name="authentication"></a>Autenticación  
- Vea las propiedades de autenticación de la conexión actual. Las propiedades de autenticación son el inicio de sesión y el método de autenticación cuando se establece la conexión. Para cambiar las propiedades de autenticación, desconéctese de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y, a continuación, conecte de nuevo el Explorador de objetos al servidor, mediante las opciones de conexión deseadas.  
+## <a name="authentication"></a>Authentication  
+ Vea las propiedades de autenticación de la conexión actual. Las propiedades de autenticación son el inicio de sesión y el método de autenticación cuando se establece la conexión. Para cambiar las propiedades de autenticación, desconéctese de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y, a continuación, vuelva a conectar explorador de objetos con el servidor, con las opciones de conexión deseadas.  
   
  **Método de autenticación**  
  El método de autenticación que utiliza la conexión actual.  
@@ -43,7 +43,7 @@ ms.locfileid: "62808403"
  **Base de datos**  
  Nombre de la base de datos a la que está conectado. Para efectuar cambios, use la barra de herramientas del Editor SQL.  
   
- **SPID**  
+ **IDENTIFICADOR**  
  Id. de proceso del sistema que asigna el servidor a la conexión. No puede cambiarse para esta conexión.  
   
  **Protocolo de red**  
@@ -61,19 +61,19 @@ ms.locfileid: "62808403"
  **Cifrado**  
  Indica si la conexión actual está cifrada. Para cambiar esta opción, conéctese de nuevo con las propiedades de conexión deseadas.  
   
-## <a name="product-category"></a>Categoría del producto  
+## <a name="product-category"></a>Categoría de productos  
  Vea las propiedades del producto de la conexión actual. Estas propiedades describen el producto, la versión, el nombre de instancia y la intercalación del servidor. Las propiedades se configuran durante la instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Nombre del producto**  
+ **Nombre de producto**  
  El nombre del producto [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Versión del producto**  
  Versión del producto [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Nombre de servidor**  
+ **Nombre del servidor**  
  Nombre del equipo que ejecuta [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- **Nombre de la instancia**  
+ **Nombre de instancia**  
  Nombre de instancia del servidor. Está en blanco de forma predeterminada.  
   
  **Lenguaje**  
@@ -94,14 +94,14 @@ ms.locfileid: "62808403"
  **Sistema operativo**  
  La versión de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows instalada en el servidor.  
   
- **Procesadores**  
+ **Incrustrados**  
  Número de procesadores del servidor.  
   
  **Memoria del sistema operativo**  
  La cantidad total de memoria física del servidor, en megabytes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Páginas de propiedades en SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
- [Conectar al servidor &#40;Página Inicio de sesión&#41; Motor de base de datos](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
+ [Conectar al servidor &#40;página de inicio de sesión&#41; Motor de base de datos](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

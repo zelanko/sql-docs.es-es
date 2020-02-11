@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960804"
 ---
 # <a name="replication-tutorials"></a>Tutoriales de replicación
@@ -33,13 +33,13 @@ ms.locfileid: "62960804"
  [Preparar el servidor para la replicación](tutorial-preparing-the-server-for-replication.md)  
  Aprenda cómo preparar servidores para poder ejecutar una replicación con privilegios mínimos. Debe finalizar este tutorial antes de realizar otros tutoriales de replicación.  
   
- [Replicar datos entre servidores conectados de forma continua](tutorial-replicating-data-between-continuously-connected-servers.md)  
+ [Replicación de datos entre servidores conectados de forma continua](tutorial-replicating-data-between-continuously-connected-servers.md)  
  Aprenda cómo utilizar la replicación transaccional para replicar datos entre servidores conectados de forma continua.  
   
  [Replicar datos con clientes móviles](tutorial-replicating-data-with-mobile-clients.md)  
  Aprenda cómo utilizar la replicación de mezcla para intercambiar datos entre un servidor y uno o más clientes que solo se conectan en determinadas ocasiones.  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad de replicación de SQL Server](security/view-and-modify-replication-security-settings.md)  
+## <a name="see-also"></a>Consulte también  
+ [Seguridad de Replicación de SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

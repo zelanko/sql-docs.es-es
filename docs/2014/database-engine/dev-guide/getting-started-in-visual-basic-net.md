@@ -1,5 +1,5 @@
 ---
-title: Introducción a Visual Basic .NET | Microsoft Docs
+title: Introducción en Visual Basic .NET | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781573"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Introducción a Visual Basic .NET
+  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET en uno de los lenguajes de programación administrados compatibles con la biblioteca en tiempo de ejecución común en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Muchos de los ejemplos en esta documentación se escriben [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Puede utilizar [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] y [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] para desarrollar aplicaciones SMO.  
   
 ## <a name="references-and-imports"></a>Referencias e importaciones  
@@ -29,7 +30,7 @@ ms.locfileid: "62781573"
   
  En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los ensamblados SMO se encuentran en la carpeta [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)  
   
   

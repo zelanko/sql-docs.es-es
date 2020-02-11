@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a8306fa98194fbf314796b199fea98ddd53cb1fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769431"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (expresión de SSIS)
@@ -37,7 +37,7 @@ CEILING(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  El tipo de datos de la expresión numérica pasada a la función.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  CEILING devuelve un resultado NULL si el valor del argumento es NULL.  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  
@@ -53,7 +53,7 @@ CEILING(123.74)
 CEILING(-124.27)  
 ```  
   
- Devuelve -124.00.  
+ Devuelve -124,00  
   
 ```  
 CEILING(0.00)  
@@ -61,7 +61,7 @@ CEILING(0.00)
   
  Devuelve 0,00.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [FLOOR &#40;expresión de SSIS&#41;](floor-ssis-expression.md)   
  [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md)  
   

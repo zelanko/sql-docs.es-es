@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0e64b60c027f7d6750a1afdb9988e1d6aac3ac1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770631"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurar salidas mediante el Asistente para dimensión de variación lenta
@@ -48,9 +48,9 @@ ms.locfileid: "62770631"
   
 4.  Elija el tipo de cambio de cada columna.  
   
-    -   **Atributo variable** sobrescribe los valores existentes en los registros.  
+    -   El **atributo Changing** sobrescribe los valores existentes en los registros.  
   
-    -   **Atributo histórico** crea nuevos registros en lugar de actualizar registros existentes.  
+    -   El **atributo histórico** crea nuevos registros en lugar de actualizar los registros existentes.  
   
     -   **Atributo fijo** indica que el valor de la columna no debe cambiar.  
   
@@ -74,12 +74,12 @@ ms.locfileid: "62770631"
   
      El siguiente diagrama muestra un ejemplo de flujo de datos que admite cambios de atributo fijo, atributo variable y atributo histórico, miembros deducidos y cambios en los registros coincidentes.  
   
-     ![Flujo de datos del Asistente para dimensiones de variación lenta](../../media/dimensionwizard.gif "Data flow from Slowly Changing Dimension Wizard")  
+     ![Flujo de datos del Asistente para dimensiones de variación lenta](../../media/dimensionwizard.gif "Flujo de datos del Asistente para dimensiones de variación lenta")  
   
 ## <a name="updating-slowly-changing-dimension-outputs"></a>Actualizar salidas de dimensión de variación lenta  
  La manera más simple de actualizar la configuración de la transformación Dimensión de variación lenta es volver a ejecutar el Asistente para dimensiones variablesy modificar las propiedades en las páginas del asistente. También puede actualizar la transformación Dimensión de variación lenta mediante el cuadro de diálogo **Editor avanzado** o mediante programación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)  
   
   

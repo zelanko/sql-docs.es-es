@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830131"
 ---
 # <a name="transfer-error-messages-task"></a>Tarea Transferir mensajes de error
@@ -40,7 +40,7 @@ ms.locfileid: "62830131"
   
  La tarea Transferir mensajes de error admite un origen y un destino que sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No hay restricciones respecto a qué versión hay que usar como origen o como destino.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  La tarea genera un evento de información que indica el número de mensajes de error transferidos.  
   
  La tarea Transferir mensajes de error no indica el progreso incremental de la transferencia de mensajes de error; solo indica 0% y 100%.  
@@ -65,7 +65,7 @@ ms.locfileid: "62830131"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea Transferir mensajes de error &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea transferir mensajes de error &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor de la tarea Transferir mensajes de error &#40;página Mensajes&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62830131"
   
 -   [Establecer las propiedades de tareas o contenedores](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](integration-services-tasks.md)   
  [Flujo de control](control-flow.md)  
   

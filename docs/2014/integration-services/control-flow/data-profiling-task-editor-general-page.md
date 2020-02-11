@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832244"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor de tareas de generación de perfiles de datos (página General)
@@ -39,7 +39,7 @@ ms.locfileid: "62832244"
 3.  En el **Editor de tareas de generación de perfiles de datos**, haga clic en **General**.  
   
 ## <a name="data-profiling-options"></a>Opciones de la generación de perfiles de datos  
- **Timeout**  
+ **Tiempo de espera**  
  Especifique el número de segundos transcurridos los cuales la tarea de generación de datos debe agotar el tiempo de espera y dejar de ejecutarse. El valor predeterminado es 0, lo que no indica ningún tiempo de espera.  
   
 ## <a name="destination-options"></a>Opciones de destino  
@@ -50,10 +50,10 @@ ms.locfileid: "62832244"
  **DestinationType**  
  Especifique si guardar el perfil de los datos generado en un archivo o una variable:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**FileConnection**|Guarde el perfil generado en un archivo de la ubicación que se especifica en un administrador de conexiones de archivos.<br /><br /> Nota: Para especificar qué administrador de conexiones de archivos usar, utilice la opción **Destino**.|  
-|**Variable**|Guarde el perfil generado en una variable de paquete.<br /><br /> Nota: Para especificar qué variable de paquete usar, utilice la opción **Destination**.|  
+|**FileConnection**|Guarde el perfil generado en un archivo de la ubicación que se especifica en un administrador de conexiones de archivos.<br /><br /> Nota: Para especificar qué administrador de conexiones de archivos utilizar, use la opción **Destino** .|  
+|**Variable**|Guarde el perfil generado en una variable de paquete.<br /><br /> Para especificar qué variable de paquete utilizar, use la opción **Destino** .|  
   
  **Destino**  
  Especifique qué administrador de conexiones de archivos o variable de paquete contiene el perfil de datos generado:  
@@ -78,7 +78,7 @@ ms.locfileid: "62832244"
 > [!NOTE]  
 >  También puede abrir el Visor de perfil de datos si ejecuta el archivo DataProfileViewer.exe en la carpeta *\<unidad>* :\Archivos de programa (x86) | Archivos de programa\Microsoft SQL Server\110\DTS\Binn.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](single-table-quick-profile-form-data-profiling-task.md)   
  [Editor de tareas de generación de perfiles de datos &#40;página Solicitudes de perfil&#41;](data-profiling-task-editor-profile-requests-page.md)  
   

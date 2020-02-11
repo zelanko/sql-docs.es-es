@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d722d3b54c2f0b6d73660e2195aed4039e1eda2c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771084"
 ---
-# <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
+# <a name="sp_helpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Devuelve la lista de todos los tipos de restricciones, el nombre definido por el usuario o proporcionado por el sistema, las columnas en que se han definido y la expresión que define la restricción (solo para las restricciones DEFAULT y CHECK).  
@@ -51,8 +51,8 @@ sp_helpconstraint [ @objname = ] 'table'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_helpconstraint** muestra una columna indizada descendente si participó en las claves principales. El nombre de la columna indizada en orden descendente irá seguido de un signo menos (-) en el conjunto de resultados. La columna predeterminada, indizada en orden ascendente, aparecerá solo por su nombre.  
   
-## <a name="remarks"></a>Comentarios  
- La ejecución de la_tabla_ **sp_help**informa de toda la información acerca de la tabla especificada. Para ver solo la información de restricción, use **sp_helpconstraint**.  
+## <a name="remarks"></a>Observaciones  
+ Al ejecutar **sp_help**_tabla_ , se muestra toda la información sobre la tabla especificada. Para ver solo la información de restricción, use **sp_helpconstraint**.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
@@ -66,14 +66,14 @@ GO
 EXEC sp_helpconstraint 'Production.Product';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos &#40;almacenados de motor de base de datos TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [sys.check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
- [sys.default_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
+ [Sys. key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
+ [Sys. check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [Sys. default_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
   
   

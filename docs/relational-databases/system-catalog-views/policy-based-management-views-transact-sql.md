@@ -15,10 +15,10 @@ ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 224d19231eae84658580e17666221d6b76d99f69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018442"
 ---
 # <a name="policy-based-management-views-transact-sql"></a>Vistas de administración basada en directivas (Transact-SQL)
@@ -28,12 +28,12 @@ ms.locfileid: "68018442"
   
 |||  
 |-|-|  
-|[syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)|[syspolicy_policy_groups_subscriptions](../../relational-databases/system-catalog-views/syspolicy-policy-category-subscriptions-transact-sql.md)|  
+|[syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)|[syspolicy_policy_group_subscriptions](../../relational-databases/system-catalog-views/syspolicy-policy-category-subscriptions-transact-sql.md)|  
 |[syspolicy_policies](../../relational-databases/system-catalog-views/syspolicy-policies-transact-sql.md)|[syspolicy_policy_groups](../../relational-databases/system-catalog-views/syspolicy-policy-categories-transact-sql.md)|  
 |[syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md)|[syspolicy_system_health_state](../../relational-databases/system-catalog-views/syspolicy-system-health-state-transact-sql.md)|  
 |[syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md)||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

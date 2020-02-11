@@ -14,25 +14,25 @@ ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab8b94835fb9a6103436026a669c86f2401d57b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036433"
 ---
 # <a name="connection-handles"></a>Identificadores de conexión
-Un *conexión* consta de un controlador y un origen de datos. Un identificador de conexión identifica cada conexión. El identificador de conexión define qué controlador usar, pero no sólo qué origen de datos para usar con ese controlador. Dentro de un segmento de código que implementa ODBC (el Administrador de controladores o un controlador), el identificador de conexión identifica una estructura que contiene información de conexión, como la siguiente:  
+Una *conexión* consta de un controlador y un origen de datos. Un identificador de conexión identifica cada conexión. El identificador de conexión define no solo el controlador que se va a usar pero el origen de datos que se va a usar con ese controlador. Dentro de un segmento de código que implementa ODBC (el administrador de controladores o un controlador), el identificador de conexión identifica una estructura que contiene información de conexión, como la siguiente:  
   
--   El estado de la conexión  
+-   El estado de la conexión.  
   
--   Los diagnósticos de nivel de conexión actuales  
+-   Diagnósticos en el nivel de conexión actual  
   
--   Los identificadores de instrucciones y descriptores asignados actualmente en la conexión  
+-   Los identificadores de instrucciones y descriptores asignados actualmente en la conexión.  
   
 -   La configuración actual de cada atributo de conexión  
   
- ODBC no impide que varias conexiones simultáneas, si el controlador es compatible con ellos. Por lo tanto, en un entorno de ODBC determinado, varios identificadores de conexión podrían apuntar a una variedad de controladores y orígenes de datos, en el mismo controlador y una variedad de orígenes de datos, o incluso a múltiples conexiones con el mismo controlador y el origen de datos. Algunos controladores de limitan el número de conexiones activas que admiten; opción el SQL_MAX_DRIVER_CONNECTIONS **SQLGetInfo** especifica cuántas conexiones activas que admite un controlador determinado.  
+ ODBC no impide varias conexiones simultáneas, si el controlador las admite. Por lo tanto, en un entorno ODBC determinado, varios identificadores de conexión pueden apuntar a una variedad de controladores y orígenes de datos, al mismo controlador y a una variedad de orígenes de datos, o incluso a varias conexiones al mismo controlador y origen de datos. Algunos controladores limitan el número de conexiones activas que admiten; la opción SQL_MAX_DRIVER_CONNECTIONS de **SQLGetInfo** especifica el número de conexiones activas que admite un controlador determinado.  
   
- Identificadores de conexión se utilizan principalmente al conectarse al origen de datos (**SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect**), desconectar de los datos origen (**SQLDisconnect**), obtener información sobre el origen de datos y el controlador (**SQLGetInfo**), recuperar diagnósticos (**SQLGetDiagField** y **SQLGetDiagRec**) y realizar transacciones (**SQLEndTran**). También se usan al establecer y obtener los atributos de conexión (**SQLSetConnectAttr** y **SQLGetConnectAttr**) y al obtener el formato nativo de una instrucción SQL (**SQLNativeSql** ).  
+ Los identificadores de conexión se utilizan principalmente cuando se conecta al origen de datos (**SQLConnect**, **SQLDriverConnect**o **SQLBrowseConnect**), se desconecta del origen de datos (**SQLDisconnect**), se obtiene información sobre el controlador y el origen de datos (**SQLGetInfo**), se recuperan los diagnósticos (**SQLGetDiagField** y **SQLGetDiagRec**) y se realizan transacciones (**SQLEndTran**). También se usan al establecer y obtener atributos de conexión (**SQLSetConnectAttr** y **SQLGetConnectAttr**) y al obtener el formato nativo de una instrucción SQL (**SQLNativeSql**).  
   
- Identificadores de conexión se asignan con **SQLAllocHandle** y liberado con **SQLFreeHandle**.
+ Los identificadores de conexión se asignan con **SQLAllocHandle** y se liberan con **SQLFreeHandle**.

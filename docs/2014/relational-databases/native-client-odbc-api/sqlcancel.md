@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bad2cc35a30f5c6f5855292ff73635cef6072b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067851"
 ---
 # <a name="sqlcancel"></a>SQLCancel
-  El [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) tema dice que en ODBC 2.x, si una aplicación llama a `SQLCancel` cuando no se realiza ningún procesamiento en la instrucción, `SQLCancel` tiene el mismo efecto que `SQLFreeStmt` con el `SQL_CLOSE` opción; esto comportamiento se define únicamente por integridad y las aplicaciones deben llamar a `SQLFreeStmt` o `SQLCloseCursor` para cerrar los cursores. Pero aunque la aplicación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client establezca que la versión de la API de ODBC ha de ser 3.5.x o posterior, la función `SQLCancel` utilizará el comportamiento de ODBC 2.x.  
+  En el tema [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) se indica que, en ODBC 2. x, si `SQLCancel` una aplicación llama a cuando no se realiza ningún procesamiento `SQLCancel` en la instrucción, tiene `SQLFreeStmt` el mismo `SQL_CLOSE` efecto que con la opción; Este comportamiento solo se define para la integridad y las aplicaciones deben `SQLFreeStmt` llamar `SQLCloseCursor` a o para cerrar cursores. Pero aunque la aplicación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client establezca que la versión de la API de ODBC ha de ser 3.5.x o posterior, la función `SQLCancel` utilizará el comportamiento de ODBC 2.x.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516)   
- [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

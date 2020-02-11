@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072394"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
-  El recopilador de rendimiento de transacción en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] permite evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos. El informe de análisis del rendimiento de las transacciones indica también la cantidad de trabajo que debe realizar para habilitar OLTP en memoria en la aplicación. Después de identificar una tabla basada en disco para convertirla a OLTP en memoria, puede usar el [Asistente de optimización de memoria](memory-optimization-advisor.md)para que le ayude a migrar la tabla. De manera similar, el [Native Compilation Advisor](native-compilation-advisor.md) le permitirá convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa.  
+  El recopilador de rendimiento [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] de las transacciones de le ayuda a evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos. El informe de análisis del rendimiento de las transacciones indica también la cantidad de trabajo que debe realizar para habilitar OLTP en memoria en la aplicación. Después de identificar una tabla basada en disco para convertirla a OLTP en memoria, puede usar el [Asistente de optimización de memoria](memory-optimization-advisor.md)para que le ayude a migrar la tabla. De manera similar, el [Native Compilation Advisor](native-compilation-advisor.md) le permitirá convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa.  
   
  En este tema se explicará cómo:  
   
@@ -44,12 +44,12 @@ ms.locfileid: "63072394"
     > [!IMPORTANT]  
     >  El rendimiento de un sistema de base de datos depende de diversos de factores, no todos los cuales puede observar y medir el recopilador de rendimiento de las transacciones. Por consiguiente, el informe de análisis del rendimiento de las transacciones no garantiza que las mejoras reales en el rendimiento coincidirán con las predicciones, en el caso de que las haya.  
   
- El recopilador de rendimiento de transacciones y la capacidad de generar un informe de análisis de rendimiento de transacciones se instalan al seleccionar **herramientas de administración-Basic** o **las herramientas de administración-avanzada** al instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ El recopilador de rendimiento de las transacciones y la capacidad de generar un informe de análisis de rendimiento de las transacciones se instalan cuando se selecciona **herramientas de administración-básica** o **herramientas de administración-avanzadas** al instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  El flujo de trabajo recomendado se muestra en el diagrama de flujo siguiente. Los nodos amarillos representan procedimientos opcionales:  
   
- ![Flujo de trabajo AMR](../../database-engine/media/amr-1.gif "flujo de trabajo AMR")  
+ ![Flujo de trabajo de AMR](../../database-engine/media/amr-1.gif "Flujo de trabajo de AMR")  
   
  Puede utilizar cualquier método para establecer una línea base de rendimiento, incluyendo pero sin limitarse al uso de registros de contador de rendimiento o del Monitor de actividad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La información que se utiliza en la línea base de rendimiento y las comparaciones son:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63072394"
   
  El recopilador de rendimiento de las transacciones captura los datos cada 15 minutos. Para obtener resultados útiles, ejecute el recopilador de rendimiento de las transacciones al menos durante una hora. Para obtener los mejores resultados, ejecute el recopilador de rendimiento de las transacciones durante el tiempo necesario para capturar los datos para los escenarios principales. Genere un informe de análisis del rendimiento de las transacciones solo después de que termine de recopilar los datos.  
   
- Configure el recopilador de rendimiento de las transacciones para ejecutarlo en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en producción y recopilar los datos en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el entorno de desarrollo (pruebas) para asegurar una sobrecarga mínima. Para obtener información sobre cómo guardar datos en una base de datos de almacén de datos de administración en un control remoto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la instancia, vea [configurar la recopilación de datos en una instancia remota de SQL Server](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
+ Configure el recopilador de rendimiento de las transacciones para ejecutarlo en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en producción y recopilar los datos en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el entorno de desarrollo (pruebas) para asegurar una sobrecarga mínima. Para obtener información sobre cómo guardar datos en una base de datos de almacén de administración [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de datos en una instancia remota, vea [configurar la recopilación de datos en una instancia de SQL Server remota](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
   
 ## <a name="performance-impacts"></a>Impactos de rendimiento  
  El recopilador del rendimiento de las transacciones consta de dos conjuntos de recopilación de datos:  
@@ -87,51 +87,51 @@ ms.locfileid: "63072394"
   
 1.  En el Explorador de objetos, expanda **Administración**.  
   
-2.  Haga clic en **la recopilación de datos** y seleccione **tareas** y, a continuación, **configurar el almacén de datos de administración**. El **configurar del Asistente para el almacén de datos de administración** comienza.  
+2.  Haga clic con el botón secundario en **recopilación de datos** y seleccione **tareas** y, después, **configurar almacén de administración de datos**. Se inicia el **Asistente para configurar el almacén de administración de datos** .  
   
-3.  Haga clic en **siguiente** para seleccionar la base de datos que actuará como almacén de datos de administración.  
+3.  Haga clic en **siguiente** para seleccionar la base de datos que actuará como almacén de administración de datos.  
   
-4.  Haga clic en **New** para crear una nueva base de datos para almacenar los datos de perfil. Cuando termine de crear la base de datos, haga clic en **siguiente** en el asistente.  
+4.  Haga clic en **nuevo** para crear una nueva base de datos que contenga los datos del perfil. Cuando termine de crear la base de datos, haga clic en **siguiente** en el asistente.  
   
 5.  En el paso siguiente del asistente podrá agregar usuarios e inicios de sesión. Puede asignar inicios de sesión a las pertenencias a roles para la instancia de MDW. No es necesario recopilar los datos de la instancia local. Si no va a recopilar datos de la instancia local, puede conceder la pertenencia al rol de base de datos `mdw_admin` a la cuenta que ejecutará las transacciones que se incluirán en el perfil. Cuando haya terminado, haga clic en **siguiente**.  
   
 6.  Asegúrese de que el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se esté ejecutando.  
   
-7.  En la siguiente pantalla, haga clic en **finalizar** para salir del asistente.  
+7.  En la siguiente pantalla, haga clic en **Finalizar** para salir del asistente.  
   
 ### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>Configurar la recopilación de datos en una instancia local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  La recopilación de datos requiere que el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esté iniciado. Solo es necesario configurar un recopilador de datos en un servidor.  
   
- Se puede configurar un recopilador de datos en SQL Server 2012 o una versión posterior de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Un recopilador de datos se puede configurar en un SQL Server 2012 o una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]versión posterior de.  
   
  Para configurar la recopilación de datos para cargar una base de datos del almacén de administración de datos en la misma instancia,  
   
-1.  En **Explorador de objetos**, expanda **administración**.  
+1.  En **Explorador de objetos**, expanda **Administración**.  
   
-2.  Haga clic en **la recopilación de datos**, seleccione **tareas**y, a continuación, **configurar la recolección de datos**. El **Asistente para configurar la recopilación de datos** comienza.  
+2.  Haga clic con el botón derecho en **recopilación de datos**, seleccione **tareas**y, después, **Configure la recopilación de datos**. Se iniciará el **Asistente para configurar la recopilación de datos** .  
   
-3.  Haga clic en **siguiente** para seleccionar la base de datos que recopilará los datos de perfil.  
+3.  Haga clic en **siguiente** para seleccionar la base de datos que recopilará los datos del perfil.  
   
 4.  Seleccione la instancia actual de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y una base de datos del almacén de administración de datos en esa instancia.  
   
-5.  En el cuadro etiquetado **seleccionar conjuntos de recopiladores de datos que desea habilitar**, seleccione **conjuntos de recopilación de rendimiento de transacción**. Haga clic en **siguiente** cuando haya terminado.  
+5.  En el cuadro con la etiqueta **seleccionar conjuntos de recopiladores de datos que desea habilitar**, seleccione **conjuntos de recopilación de rendimiento de transacciones**. Haga clic en **Siguiente** cuando termine.  
   
-6.  Compruebe las selecciones. Haga clic en **volver** para modificar la configuración. Haga clic **Finalizar** cuando haya terminado.  
+6.  Compruebe las selecciones. Haga clic en **atrás** para modificar la configuración. Haga clic en **Finalizar** cuando haya terminado.  
   
-###  <a name="xxx"></a> Configurar la recopilación de datos en un control remoto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia  
+###  <a name="xxx"></a>Configurar la recopilación de datos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] una instancia remota  
  La recopilación de datos requiere que se inicie el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la instancia que recopilará los datos.  
   
- Se puede configurar un recopilador de datos en SQL Server 2012 o una versión posterior de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Un recopilador de datos se puede configurar en un SQL Server 2012 o una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]versión posterior de.  
   
- Necesita un proxy del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] establecido con la credencial correcta para que un recopilador de datos cargue los datos en una base de datos del almacén de administración de datos en una instancia distinta de aquella en la que se van a generar perfiles de las transacciones. Para habilitar un proxy del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], primero debe establecer una credencial con un inicio de sesión habilitado para dominio. El inicio de sesión habilitado para el dominio debe ser miembro del grupo `mdw_admin` para la base de datos del almacén de administración de datos. Consulte [Cómo: Crear una credencial (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) para obtener información sobre cómo crear una credencial.  
+ Necesita un proxy del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] establecido con la credencial correcta para que un recopilador de datos cargue los datos en una base de datos del almacén de administración de datos en una instancia distinta de aquella en la que se van a generar perfiles de las transacciones. Para habilitar un proxy del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], primero debe establecer una credencial con un inicio de sesión habilitado para dominio. El inicio de sesión habilitado para el dominio debe ser miembro del grupo `mdw_admin` para la base de datos del almacén de administración de datos. Consulte [Cómo: crear una credencial (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) para obtener información sobre cómo crear una credencial.  
   
  Para configurar la recopilación de datos para cargar una base de datos del almacén de administración de datos en otra instancia,  
   
-1.  En la instancia que contiene los objetos basados en disco que desea migrar a OLTP en memoria, expanda el **administración** nodo en el Explorador de objetos.  
+1.  En la instancia que contiene los objetos basados en disco que desea migrar a OLTP en memoria, expanda el nodo **Administración** en explorador de objetos.  
   
-2.  Haga clic en **la recopilación de datos** y seleccione **tareas** y, a continuación, **configurar la recolección de datos**. El **Asistente para configurar la recopilación de datos** comienza.  
+2.  Haga clic con el botón derecho en **recopilación de datos** y seleccione **tareas** y, después, **configurar recopilación de datos**. Se iniciará el **Asistente para configurar la recopilación de datos** .  
   
-3.  Haga clic en **siguiente** para seleccionar la base de datos que recopilará los datos de perfil.  
+3.  Haga clic en **siguiente** para seleccionar la base de datos que recopilará los datos del perfil.  
   
 4.  Asegúrese de que existe una base de datos del almacén de administración de datos en la otra instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -139,34 +139,34 @@ ms.locfileid: "63072394"
   
      La versión de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que recopilará los datos (perfil) debe ser la misma o una más antigua que la de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde se ha configurado el almacén de administración de datos.  
   
-6.  En el cuadro etiquetado **seleccionar conjuntos de recopiladores de datos que desea habilitar**, seleccione **conjuntos de recopilación de rendimiento de transacción**.  
+6.  En el cuadro con la etiqueta **seleccionar conjuntos de recopiladores de datos que desea habilitar**, seleccione **conjuntos de recopilación de rendimiento de transacciones**.  
   
-7.  Seleccione **uso un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proxy del agente para cargas remotas**.  
+7.  Seleccione **usar un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proxy del agente para cargas remotas**.  
   
-8.  Haga clic en **siguiente** cuando haya terminado.  
+8.  Haga clic en **Siguiente** cuando termine.  
   
 9. Seleccione el proxy.  
   
      Si desea crear un nuevo proxy del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)],  
   
-    1.  Haga clic en **New** para mostrar el **nueva cuenta de Proxy** cuadro de diálogo.  
+    1.  Haga clic en **nuevo** para abrir el cuadro de diálogo **nueva cuenta de proxy** .  
   
-    2.  En el **nueva cuenta de Proxy** cuadro de diálogo, escriba el nombre del servidor proxy, seleccione la credencial y, opcionalmente, escriba una descripción. A continuación, haga clic en **entidades**.  
+    2.  En el cuadro de diálogo **nueva cuenta de proxy** , escriba el nombre del proxy, seleccione la credencial y, si lo desea, escriba una descripción. A continuación, haga clic en **entidades**de seguridad.  
   
-    3.  Haga clic en **agregar** y seleccione **Msdb** rol.  
+    3.  Haga clic en **Agregar** y seleccione rol **msdb** .  
   
-    4.  Seleccione `dc_proxy` y haga clic en **Aceptar**. A continuación, haga clic en **Aceptar** nuevo.  
+    4.  Seleccione `dc_proxy` y haga clic en **Aceptar**. Haga clic en **Aceptar** de nuevo.  
   
-     Después de selecciona el proxy correcto, haga clic en **siguiente**.  
+     Una vez seleccionado el proxy correcto, haga clic en **siguiente**.  
   
-10. Para configurar conjuntos de recopilación del sistema, active **conjuntos de recopilación del sistema** y haga clic en **siguiente**.  
+10. Para configurar los conjuntos de recopilación del sistema, compruebe los **conjuntos de recopilación del sistema** y haga clic en **siguiente**.  
   
-11. Compruebe las selecciones. Haga clic en **volver** para modificar la configuración. Haga clic en **finalizar** cuando haya terminado.  
+11. Compruebe las selecciones. Haga clic en **atrás** para modificar la configuración. Clicck **Finalizar** cuando haya terminado.  
   
  Los conjuntos de recopilación de datos deben estar configurados ahora y ejecutándose en la instancia.  
   
 ### <a name="generate-reports"></a>Generar informes  
- Puede generar informes de análisis de rendimiento de transacciones a la derecha haciendo clic en la base de datos del almacén de datos de administración y seleccionar **informes**, a continuación, **almacén de administración de datos**y, a continuación, **Información general de análisis de rendimiento de transacción**.  
+ Puede generar informes de análisis de rendimiento de transacciones haciendo clic con el botón secundario en la base de datos del almacén de administración de datos y seleccionando **informes**, **almacén de administración de datos**y, a continuación, **información general de análisis de rendimiento de transacciones**.  
   
  El informe recopila información sobre todas las bases de datos de usuario en el servidor de la carga de trabajo. Si la base de datos del almacén de administración de datos (MDW) se encuentra en el equipo local, verá las bases de datos MDW en el informe.  
   
@@ -186,19 +186,19 @@ ms.locfileid: "63072394"
   
 -   Sección de estadísticas de contención  
   
-     Esta sección incluye una tabla que muestra la contención en la tabla de base de datos. Para obtener más información sobre los bloqueos de base de datos y los, consulte [arquitectura de bloqueo](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). Estas son sus columnas:  
+     Esta sección incluye una tabla que muestra la contención en la tabla de base de datos. Para obtener más información sobre bloqueos y bloqueos temporales de base de datos, consulte [arquitectura de bloqueo](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). Estas son sus columnas:  
   
     -   Porcentaje de esperas en total. El porcentaje de esperas por bloqueos y bloqueos temporales en esta tabla de base de datos en comparación con la actividad de la base de datos. Cuanto mayor sea el porcentaje, más se usa la tabla en comparación con otras de la base de datos.  
   
-    -   Estadísticas de bloqueos temporales. Estas columnas registran el número de esperas por bloqueos temporales para las consultas que implican a esta tabla. Para obtener información sobre los bloqueos temporales, vea [Latching](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). Cuanto mayor sea este número, más contención por bloqueos temporales hay en la tabla.  
+    -   Estadísticas de bloqueos temporales. Estas columnas registran el número de esperas por bloqueos temporales para las consultas que implican a esta tabla. Para obtener información acerca de los bloqueos temporales, consulte [bloqueo temporal](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). Cuanto mayor sea este número, más contención por bloqueos temporales hay en la tabla.  
   
-    -   Estadísticas de bloqueos. Este grupo de columnas registra el número de esperas y de adquisiciones de bloqueos de página para las consultas de esta tabla. Para obtener más información sobre los bloqueos, consulte [comprender los bloqueos en SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Cuantas más esperas hay, más contención por bloqueos se producen en la tabla.  
+    -   Estadísticas de bloqueos. Este grupo de columnas registra el número de esperas y de adquisiciones de bloqueos de página para las consultas de esta tabla. Para obtener más información sobre los bloqueos, vea [Descripción del bloqueo en SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Cuantas más esperas hay, más contención por bloqueos se producen en la tabla.  
   
 -   Sección de dificultades de migración  
   
-     Esta sección incluye una tabla que muestra las dificultades de convertir esta tabla de base de datos en una tabla optimizada para memoria. Una clasificación de mayor dificultad indica que convertir la tabla es más difícil. Para ver información sobre cómo convertir esta tabla de base de datos, utilice el [Memory Optimization Advisor](memory-optimization-advisor.md).  
+     Esta sección incluye una tabla que muestra las dificultades de convertir esta tabla de base de datos en una tabla optimizada para memoria. Una clasificación de mayor dificultad indica que convertir la tabla es más difícil. Para ver los detalles para convertir esta tabla de base de datos, use el [Asesor de optimización de memoria](memory-optimization-advisor.md).  
   
- Las estadísticas de contención en el informe de detalles de la tabla se recopilan y se agregan desde [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql).  
+ Las estadísticas de análisis y contención en el informe de detalles de la tabla se recopilan y se agregan desde [Sys. dm_db_index_operational_stats &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql).  
   
  El informe de detalles de un procedimiento almacenado consta de dos secciones:  
   
@@ -220,11 +220,11 @@ ms.locfileid: "63072394"
   
      Esta sección incluye una tabla que muestra las tablas a las que este procedimiento almacenado hace referencia. Antes de convertir el procedimiento almacenado en un procedimiento almacenado compilado de forma nativa, todas estas tablas deben convertirse en tablas optimizadas para memoria y deben permanecer en el mismo servidor y base de datos.  
   
- Estadísticas de ejecución en el informe de detalles del procedimiento almacenado se recopilan y se agregan desde [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql). Las referencias se obtienen de [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql).  
+ Las estadísticas de ejecución del informe de detalles del procedimiento almacenado se recopilan y se agregan desde [Sys. dm_exec_procedure_stats &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql). Las referencias se obtienen de [Sys. sql_expression_dependencies &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql).  
   
- Para ver detalles sobre cómo convertir un procedimiento almacenado a un procedimiento almacenado compilado de forma nativa, utilice el [Native Compilation Advisor](native-compilation-advisor.md).  
+ Para ver detalles sobre cómo convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa, use el [Asistente de compilación nativa](native-compilation-advisor.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Migrar a OLTP en memoria](migrating-to-in-memory-oltp.md)  
   
   

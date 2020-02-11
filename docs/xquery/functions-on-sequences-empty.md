@@ -1,5 +1,5 @@
 ---
-title: está vacío (función de XQuery) | Microsoft Docs
+title: Empty (función de XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004674"
 ---
 # <a name="functions-on-sequences---empty"></a>Funciones usadas en secuencias: empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve True si el valor de *$arg* es una secuencia vacía. De lo contrario, la función devuelve False.  
+  Devuelve true si el valor de *$arg* es una secuencia vacía. De lo contrario, la función devuelve False.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,14 +38,14 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  Secuencia de elementos. Si la secuencia está vacía, la función devuelve True. De lo contrario, la función devuelve False.  
   
-## <a name="remarks"></a>Comentarios  
- El **fn:Exists()** no se admite la función. Como alternativa, el **not()** se puede usar la función.  
+## <a name="remarks"></a>Observaciones  
+ La función **FN: exists ()** no se admite. Como alternativa, se puede usar la función **Not ()** .  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Utilizar la función empty() de XQuery para determinar si un atributo está presente  
- En el proceso de fabricación del modelo de producto 7, esta consulta devuelve todas las ubicaciones de centros de trabajo que no tienen un **MachineHours** atributo.  
+ En el proceso de fabricación del modelo de producto 7, esta consulta devuelve todas las ubicaciones de centro de trabajo que no tienen un atributo **MachineHours** .  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -64,7 +64,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 ProductModelID      Result          
@@ -74,7 +74,7 @@ ProductModelID      Result
                <Location LocationID="60" LaborHrs="4"/>  
 ```  
   
- La consulta siguiente, ligeramente modificada, devuelve "NotFound" si el **MachineHour** atributo no está presente:  
+ La consulta siguiente, ligeramente modificada, devuelve "NotFound" si el atributo **MachineHour** no está presente:  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -96,7 +96,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 ProductModelID Result                         
@@ -110,8 +110,8 @@ ProductModelID Result
   <Location LocationID="60" LaborHrs="4" MachineHours="NotFound"/>  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)   
+## <a name="see-also"></a>Consulte también  
+ [Funciones de XQuery con el tipo de datos XML](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [Método exist&#40;&#41; &#40;tipo de datos xml&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
   
   

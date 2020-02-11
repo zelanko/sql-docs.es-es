@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85cd7335290a619a7dd7b5e2cfcb729879bdaf6f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782953"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Quitar una base de datos secundaria de un grupo de disponibilidad (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "72782953"
   
 -   **Seguimiento:**  [después de quitar una base de datos secundaria de un grupo de disponibilidad](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a>   
 ###  <a name="Prerequisites"></a> Requisitos previos y restricciones  
@@ -54,7 +54,7 @@ ms.locfileid: "72782953"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para quitar una base de datos secundaria de un grupo de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica secundaria de la que desea quitar una o varias bases de datos secundarias y expanda el árbol.  
@@ -105,17 +105,17 @@ ms.locfileid: "72782953"
     ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, vea [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de PowerShell de SQL Server](../../../powershell/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de quitar una base de datos secundaria de un grupo de disponibilidad  
  Cuando se quita una base de datos secundaria, deja de estar unida al grupo de disponibilidad y este descartará toda la información acerca de la base de datos secundaria quitada. La base de datos secundaria quitada se pone en estado RESTORING.  
   
 > [!TIP]  
->  Durante un breve período de tiempo después de quitar una base de datos secundaria, es posible que pueda reiniciar la sincronización de datos de AlwaysOn en la base de datos volviéndola a unir al grupo de disponibilidad. Para obtener más información, vea [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
+>  Durante un breve período de tiempo después de quitar una base de datos secundaria, es posible que pueda reiniciar la sincronización de datos de AlwaysOn en la base de datos volviéndola a unir al grupo de disponibilidad. Para obtener más información, vea [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  En este momento hay formas alternativas de tratar una base de datos secundaria quitada:  
   
@@ -127,6 +127,6 @@ ms.locfileid: "72782953"
   
      Para obtener más información, vea [Recuperar una base de datos sin restaurar los datos &#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
-## <a name="see-also"></a>Vea también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Quitar una base de datos principal de un grupo de disponibilidad &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  

@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0c97262ab6b3ee42b070511a813fcb4498b78d60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745824"
 ---
 # <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API de procedimiento almacenado extendido)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
  Devuelve las opciones de tiempo de ejecución para el procedimiento almacenado remoto actual.  
   
@@ -51,12 +52,12 @@ srvproc
 ## <a name="returns"></a>Devuelve  
  Un mapa de bits que contiene las marcas en tiempo de ejecución combinadas en un OR lógico para el procedimiento almacenado remoto actual. Si no hay un procedimiento almacenado remoto actual, se devuelve 0 y se genera un mensaje.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En la tabla siguiente se describen las marcas de tiempo de ejecución.  
   
 |Marca de tiempo de ejecución|Descripción|  
 |--------------------|-----------------|  
-|SRV_NOMETADATA|El cliente ha solicitado resultados sin información de metadatos. Esta marca solamente se usa cuando el cliente se está comunicando con una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una aplicación API de procedimiento almacenado extendido no puede omitir información de metadatos.|  
+|SRV_NOMETADATA|El cliente ha solicitado resultados sin información de metadatos. Esta marca solo se utiliza cuando el cliente se está comunicando con una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instancia de. Una aplicación API de procedimiento almacenado extendido no puede omitir información de metadatos.|  
 |SRV_RECOMPILE|El cliente ha solicitado volver a compilar el procedimiento almacenado remoto antes de ejecutarlo. Esta marca no se puede aplicar a una aplicación API de procedimiento almacenado extendido.|  
   
 > [!IMPORTANT]  

@@ -16,13 +16,13 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f8073fcb4c92861ffb09da8739c7c9f8064d9d70
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769147"
 ---
-# <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
+# <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
@@ -108,7 +108,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 `[ @publisher_password = ] 'publisher_password'`Es la contraseña que se usa al conectarse al publicador. *publisher_password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Cuando sea posible, pida a los usuarios que especifiquen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]Cuando sea posible, pida a los usuarios que escriban las credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
 `[ @publisher_encrypted_password = ]publisher_encrypted_password`Ya no se admite la configuración de *publisher_encrypted_password* . Si se intenta establecer este parámetro de **bits** en **1** se producirá un error.  
   
@@ -121,12 +121,12 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. El Agente de mezcla siempre conecta con el suscriptor local mediante Autenticación de Windows. Si se especifica un valor para este parámetro, se devolverá un mensaje de advertencia, pero el valor se pasará por alto.  
   
-`[ @subscriber_login = ] 'subscriber_login'`Es el inicio de sesión del suscriptor que se va a utilizar al conectarse a un suscriptor durante la sincronización. se requiere *subscriber_login* si *subscriber_security_mode* está establecido en **0**. *subscriber_login* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @subscriber_login = ] 'subscriber_login'`Es el inicio de sesión del suscriptor que se va a utilizar al conectarse a un suscriptor durante la sincronización. *subscriber_login* es necesario si *subscriber_security_mode* está establecido en **0**. *subscriber_login* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. Si se especifica un valor para este parámetro, se devolverá un mensaje de advertencia, pero el valor se pasará por alto.  
   
-`[ @subscriber_password = ] 'subscriber_password'`Es la contraseña del suscriptor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la autenticación. se requiere *subscriber_password* si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @subscriber_password = ] 'subscriber_password'`Es la contraseña del suscriptor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la autenticación. *subscriber_password* es necesario si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. Si se especifica un valor para este parámetro, se devolverá un mensaje de advertencia, pero el valor se pasará por alto.  
@@ -138,24 +138,24 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'`Es el inicio de sesión del distribuidor que se va a utilizar al conectarse a un distribuidor durante la sincronización. se requiere *distributor_login* si *distributor_security_mode* está establecido en **0**. *distributor_login* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @distributor_login = ] 'distributor_login'`Es el inicio de sesión del distribuidor que se va a utilizar al conectarse a un distribuidor durante la sincronización. *distributor_login* es necesario si *distributor_security_mode* está establecido en **0**. *distributor_login* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @distributor_password = ] 'distributor_password'`Es la contraseña del distribuidor. se requiere *distributor_password* si *distributor_security_mode* está establecido en **0**. *distributor_password* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @distributor_password = ] 'distributor_password'`Es la contraseña del distribuidor. *distributor_password* es necesario si *distributor_security_mode* está establecido en **0**. *distributor_password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Cuando sea posible, pida a los usuarios que especifiquen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]Cuando sea posible, pida a los usuarios que escriban las credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
 `[ @encrypted_password = ] encrypted_password`Ya no se admite la configuración de *encrypted_password* . Si se intenta establecer este parámetro de **bits** en **1** se producirá un error.  
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el Agente de mezcla. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
-|**4**|Cada día|  
-|**8**|Programación semanal|  
-|**16**|Programación mensual|  
+|**4**|Diariamente|  
+|**203**|Semanal|  
+|**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
 |**128**|Periódica|  
@@ -166,7 +166,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_interval = ] frequency_interval`El día o los días en los que se ejecuta el Agente de mezcla. *frequency_interval* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -175,32 +175,32 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**5**|Jueves|  
 |**6**|Viernes|  
 |**7**|Sábado|  
-|**8**|Day|  
-|**9**|Días de la semana|  
-|**10**|Días del fin de semana|  
+|**203**|Día|  
+|**9**|Días laborables|  
+|**7**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha del Agente de mezcla. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Primero|  
-|**2**|Second|  
+|**2**|Segundo|  
 |**4**|Tercero|  
-|**8**|Cuarto|  
-|**16**|Último|  
+|**203**|Cuarto|  
+|**dieciséi**|Último|  
 |NULL (predeterminado)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es NULL.  
   
 `[ @frequency_subday = ] frequency_subday`Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**1**|Una vez|  
-|**2**|Second|  
+|**1**|Una sola vez|  
+|**2**|Segundo|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**203**|Hour|  
 |NULL (predeterminado)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
@@ -243,7 +243,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
->  La activación remota del agente ha quedado desusada y ya no es compatible. Este parámetro solamente se admite por compatibilidad de scripts con versiones anteriores. Si establece *remote_agent_activation* en un valor distinto de **false** , se generará un error.  
+>  La activación remota del agente ha quedado desusada y ya no es compatible. Este parámetro solamente se admite por compatibilidad de scripts con versiones anteriores. Si se establece *remote_agent_activation* en un valor distinto de **false** , se generará un error.  
   
 `[ @offloadserver = ] 'remote_agent_server_name'`
  > [!NOTE]  
@@ -251,7 +251,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @job_name = ] 'job_name' ]`Es el nombre de un trabajo del agente existente. *job_name* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro solamente se especifica cuando la suscripción se va a sincronizar mediante un trabajo existente en lugar de uno recién creado (el valor predeterminado). Si no es miembro del rol fijo de servidor **sysadmin** , debe especificar *job_login* y *job_password* al especificar *job_name*.  
   
-`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]`La ruta de acceso a la carpeta donde se leerán los archivos de instantáneas si se va a usar una instantánea de datos filtrados. *dynamic_snapshot_location* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]`La ruta de acceso a la carpeta donde se leerán los archivos de instantáneas si se va a usar una instantánea de datos filtrados. *dynamic_snapshot_location* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Para obtener más información, consulte [Filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 `[ @use_web_sync = ] use_web_sync`Indica que la sincronización web está habilitada. *use_web_sync* es de **bit**y su valor predeterminado es 0. **1** especifica que la suscripción de extracción se puede sincronizar a través de Internet mediante http.  
   
@@ -266,10 +266,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @internet_security_mode = ] internet_security_mode`Es el método de autenticación utilizado por el Agente de mezcla al conectarse al servidor Web durante la sincronización Web mediante HTTPS. *internet_security_mode* es de **tipo int** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Se utiliza Autenticación básica.|  
-|**1** (predeterminado)|Se utiliza Autenticación integrada de Windows.|  
+|**1** (valor predeterminado)|Se utiliza Autenticación integrada de Windows.|  
   
 > [!NOTE]  
 >  Se recomienda utilizar la autenticación básica con sincronización web. Para utilizar la sincronización web, es necesario realizar una conexión SSL al servidor web. Para más información, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
@@ -288,8 +288,8 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_addmergepullsubscription_agent** se utiliza en la replicación de mezcla y utiliza una funcionalidad similar a [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
+## <a name="remarks"></a>Observaciones  
+ **sp_addmergepullsubscription_agent** se utiliza en la replicación de mezcla y utiliza una funcionalidad similar a la de [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
  Para obtener un ejemplo de cómo especificar correctamente la configuración de seguridad al ejecutar **sp_addmergepullsubscription_agent**, vea [crear una suscripción de extracción](../../relational-databases/replication/create-a-pull-subscription.md).  
   
@@ -299,13 +299,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addmergepullsubscription_agent**.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una suscripción de extracción](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
- [Transact &#40;-SQL de sp_addmergepullsubscription&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [Transact &#40;-SQL de sp_changemergepullsubscription&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [Transact &#40;-SQL de sp_helpmergepullsubscription&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [sp_addmergepullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

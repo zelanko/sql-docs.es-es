@@ -16,13 +16,13 @@ ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ed0992ff1b6b7de6f93213b612ff05ebcbdb3df5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042699"
 ---
-# <a name="spvupgrademergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
+# <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Vuelve a generar los desencadenadores específicos de artículo, los procedimientos almacenados y las vistas que se usan para realizar un seguimiento y aplicar los cambios de datos para la replicación de mezcla. Ejecute este procedimiento en las siguientes situaciones:  
@@ -45,22 +45,22 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @login = ] 'login'` Es el inicio de sesión del administrador del sistema a usar al crear nuevos objetos del sistema en la base de datos de distribución. *login* es de tipo **sysname** y su valor predeterminado es NULL. Este parámetro no es necesario si *security_mode* está establecido en **1**, es decir, autenticación de Windows.  
+`[ @login = ] 'login'`Es el inicio de sesión del administrador del sistema que se va a usar al crear nuevos objetos del sistema en la base de datos de distribución. *login* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro no es necesario si *security_mode* está establecido en **1**, que es la autenticación de Windows.  
   
-`[ @password = ] 'password'` Es la contraseña de administrador del sistema a usar al crear nuevos objetos del sistema en la base de datos de distribución. *contraseña* es **sysname**, su valor predeterminado es **''** (cadena vacía). Este parámetro no es necesario si *security_mode* está establecido en **1**, es decir, autenticación de Windows.  
+`[ @password = ] 'password'`Es la contraseña de administrador del sistema que se va a usar al crear nuevos objetos del sistema en la base de datos de distribución. *password* es de **tipo sysname y su**valor predeterminado es **' '** (cadena vacía). Este parámetro no es necesario si *security_mode* está establecido en **1**, que es la autenticación de Windows.  
   
-`[ @security_mode = ] 'security_mode'` Es el modo de seguridad de inicio de sesión que se usará al crear nuevos objetos del sistema en la base de datos de distribución. *security_mode* es **bit** con un valor predeterminado de **1**. Si **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usará autenticación. Si **1**, se usará la autenticación de Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] 'security_mode'`Es el modo de seguridad de inicio de sesión que se va a usar al crear nuevos objetos del sistema en la base de datos de distribución. *security_mode* es de **bits** con un valor predeterminado de **1**. Si **** es 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se usará la autenticación. Si es **1**, se utilizará la autenticación de Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_vupgrade_mergeobjects** solo se usa para la replicación de mezcla.  
+## <a name="remarks"></a>Observaciones  
+ **sp_vupgrade_mergeobjects** solo se utiliza para la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Actualizar bases de datos replicadas](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   

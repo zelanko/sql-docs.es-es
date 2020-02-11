@@ -1,5 +1,5 @@
 ---
-title: Acerca de las propiedades OLE DB | Documentos de Microsoft
+title: Acerca de OLE DB propiedades | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e7c010beaf3aefa4f73314d8576a066dca6a167
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638077"
 ---
 # <a name="about-ole-db-properties"></a>Acerca de las propiedades de OLE DB
@@ -27,7 +27,7 @@ ms.locfileid: "62638077"
   
  Cada propiedad incluye un valor, un tipo, una descripción y un atributo de lectura/escritura y, en el caso de las propiedades de conjunto de filas, un indicador de si puede aplicarse columna por columna.  
   
- Una propiedad se identifica mediante un GUID y un número entero que representa el identificador de propiedad. Un conjunto de propiedades es un conjunto de todas las propiedades que comparten el mismo GUID. Además de la propiedad de OLE DB predefinida establece, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client implementa conjuntos de propiedades específicas del proveedor y las propiedades en ellos. Cada propiedad pertenece a uno o varios grupos de propiedades. Un grupo de propiedades es el grupo de todas las propiedades que se aplican a un objeto determinado. Algunos grupos de propiedades incluyen el grupo de propiedades de inicialización, el grupo de propiedades de origen de datos, el grupo de propiedades de sesión, el grupo de propiedades de conjunto de filas, el grupo de propiedades de tabla y el grupo de propiedades de columna. Hay propiedades en todos estos grupos de propiedades.  
+ Una propiedad se identifica mediante un GUID y un número entero que representa el identificador de propiedad. Un conjunto de propiedades es un conjunto de todas las propiedades que comparten el mismo GUID. Además de los conjuntos de propiedades OLE DB predefinidos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native Client implementa las propiedades y los conjuntos de propiedades específicos del proveedor. Cada propiedad pertenece a uno o varios grupos de propiedades. Un grupo de propiedades es el grupo de todas las propiedades que se aplican a un objeto determinado. Algunos grupos de propiedades incluyen el grupo de propiedades de inicialización, el grupo de propiedades de origen de datos, el grupo de propiedades de sesión, el grupo de propiedades de conjunto de filas, el grupo de propiedades de tabla y el grupo de propiedades de columna. Hay propiedades en todos estos grupos de propiedades.  
   
  El establecimiento de valores de propiedades implica:  
   
@@ -45,8 +45,8 @@ ms.locfileid: "62638077"
   
 7.  Llamar a un método para establecer las propiedades y pasar el recuento y la matriz de estructuras DBPROPSET.  
   
-## <a name="see-also"></a>Vea también  
- [Creación de una aplicación de proveedor SQL Server Native Client OLE DB](creating-a-sql-server-native-client-ole-db-provider-application.md)   
+## <a name="see-also"></a>Consulte también  
+ [Creación de una aplicación de proveedor de OLE DB de SQL Server Native Client](creating-a-sql-server-native-client-ole-db-provider-application.md)   
  [Propiedades (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

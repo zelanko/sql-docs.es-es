@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470022"
 ---
 # <a name="customize-commands-page"></a>Personalizar (página Comandos)
@@ -38,5 +38,5 @@ ms.locfileid: "62470022"
  **Teclado**  
  Muestra la página **Teclado** del cuadro de diálogo **Opciones** , que permite especificar combinaciones de teclas de método abreviado de los comandos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Personalizar los menús y los métodos abreviados de teclado](../customize-menus-and-shortcut-keys.md)  

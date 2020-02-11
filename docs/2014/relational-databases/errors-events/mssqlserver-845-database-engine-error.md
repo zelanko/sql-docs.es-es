@@ -13,27 +13,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d98be02727582d4f9201ec7f47c3cdb8db5a56b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761924"
 ---
-# <a name="mssqlserver845"></a>MSSQLSERVER_845
+# <a name="mssqlserver_845"></a>MSSQLSERVER_845
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|845|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|845|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|BUFLATCH_TIMEOUT|  
 |Texto del mensaje|Tiempo de espera agotado para el tipo de bloqueo temporal del búfer %d de la página %S_PGID, id. de base de datos %d.|  
   
 ## <a name="explanation"></a>Explicación  
- Un proceso estaba a la espera de adquirir un bloqueo temporal, pero el proceso ha esperado hasta que transcurrió el límite de tiempo sin adquirirlo. Esto puede ocurrir si una operación de E/S tarda demasiado en completarse, normalmente debido a otras tareas que bloquean procesos del sistema. En algunos casos, este error puede ser el resultado de un error de hardware.  
+ Un proceso estaba esperando adquirir un bloqueo temporal, pero el proceso ha esperado hasta que el límite de tiempo ha expirado y no se ha podido adquirir. Esto puede ocurrir si una operación de E/S tarda demasiado en completarse, normalmente debido a otras tareas que bloquean procesos del sistema. En algunos casos, este error puede ser el resultado de un error de hardware.  
   
 ## <a name="user-action"></a>Acción del usuario  
  Las siguientes tareas pueden impedir este error:  

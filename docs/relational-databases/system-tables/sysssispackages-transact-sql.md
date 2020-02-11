@@ -18,39 +18,39 @@ ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029642"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una fila por cada paquete que se guarda en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta tabla se almacena en el **msdb** base de datos.  
+  Contiene una fila por cada paquete que se guarda en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta tabla se almacena en la base de datos **msdb** .  
   
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Identificador único del paquete.|  
-|**id**|**uniqueidentifier**|Identificador único global (GUID) del paquete.|  
-|**description**|**nvarchar**|Descripción opcional del paquete.|  
-|**createdate**|**datetime**|Fecha de creación del paquete.|  
-|**folderid**|**uniqueidentifier**|GUID de la carpeta lógica en la que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye el paquete.|  
+|**Name**|**sysname**|Identificador único del paquete.|  
+|**sesión**|**uniqueidentifier**|Identificador único global (GUID) del paquete.|  
+|**denominación**|**nvarchar**|Descripción opcional del paquete.|  
+|**CreateDate**|**datetime**|Fecha de creación del paquete.|  
+|**folderId**|**uniqueidentifier**|GUID de la carpeta lógica en la que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye el paquete.|  
 |**ownersid**|**varbinary**|Identificador de seguridad único del usuario que creó el paquete.|  
-|**packagedata**|**image**|El paquete.|  
-|**packageformat**|**int**|Formato con el que se guarda el paquete:<br /><br /> Un valor de 2 indica que el paquete se guarda en el [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] formato.<br /><br /> Un valor de 3 indica que el paquete se guarda en formato de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]o una versión posterior.|  
-|**packagetype**|**int**|Cliente que creó el paquete. Los valores posibles son los siguientes:<br /><br /> 0 (valor predeterminado)<br /><br /> 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importar y exportar asistente)<br /><br /> 3 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replicación)<br /><br /> 5 ([!INCLUDE[ssIS](../../includes/ssis-md.md)] diseñador)<br /><br /> 6 (Asistente o Diseñador de planes de mantenimiento).<br /><br /> <br /><br /> Tenga en cuenta que los valores de esta columna se corresponden con los <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> enumeración.|  
+|**packagedata**|**impresión**|El paquete.|  
+|**packageformat**|**int**|Formato con el que se guarda el paquete:<br /><br /> Un valor de 2 indica que el paquete se guarda en el [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] formato.<br /><br /> Un valor de 3 indica que el paquete se guarda en formato de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]o posterior.|  
+|**packagetype**|**int**|Cliente que creó el paquete. Los valores posibles son los siguientes:<br /><br /> 0 (valor predeterminado)<br /><br /> 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para importación y exportación)<br /><br /> 3 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replicación)<br /><br /> 5 ([!INCLUDE[ssIS](../../includes/ssis-md.md)] diseñador)<br /><br /> 6 (Asistente o Diseñador de planes de mantenimiento).<br /><br /> <br /><br /> Tenga en cuenta que los valores de esta columna se <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> corresponden con la enumeración.|  
 |**vermajor**|**int**|Última versión importante del paquete.|  
-|**VerMinor**|**int**|Última versión de menor importancia del paquete.|  
+|**verminor**|**int**|Última versión de menor importancia del paquete.|  
 |**verbuild**|**int**|Última versión de compilación del paquete.|  
 |**vercomments**|**nvarchar**|Comentarios acerca de la versión del paquete.|  
-|**verid**|**uniqueidentifier**|El GUID de la versión del paquete.|  
+|**verid**|**uniqueidentifier**|GUID de la versión del paquete.|  
 |**isencrypted**|**bit**|Valor booleano que indica si el paquete está cifrado.|  
 |**readrolesid**|**varbinary**|Rol de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que puede cargar paquetes.|  
 |**writerolesid**|**varbinary**|Rol de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que puede guardar paquetes.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1203872d92c1b9d424cfe457437cbde16b8e2120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761517"
 ---
 # <a name="create-primary-keys"></a>Crear claves principales
@@ -30,7 +30,7 @@ ms.locfileid: "62761517"
   
      [Seguridad](#Security)  
   
--   **Para crear una clave principal con:**  
+-   **Para crear una clave principal, use:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -51,11 +51,11 @@ ms.locfileid: "62761517"
   
  La creación de una clave principal de una tabla existente requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-primary-key"></a>Para crear una clave principal  
   
-1.  En el Explorador de objetos, haga clic con el botón derecho en la tabla a la que quiere agregar una restricción UNIQUE y haga clic en **Diseño**.  
+1.  En Explorador de objetos, haga clic con el botón secundario en la tabla a la que desea agregar una restricción UNIQUE y haga clic en **diseño**.  
   
 2.  En el **Diseñador de tablas**, haga clic en el selector de filas de la columna de base de datos que desea definir como clave principal. Si desea seleccionar varias columnas, mantenga presionada la tecla CTRL mientras hace clic en los selectores de fila de las otras columnas.  
   

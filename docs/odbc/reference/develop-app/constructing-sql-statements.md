@@ -1,5 +1,5 @@
 ---
-title: Crear instrucciones SQL | Microsoft Docs
+title: Construir instrucciones SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: ee9cd360-07e5-4f8a-804b-ad95aecae3e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33aa08b86767b855b3c5cfc70ceaef785c419aef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002202"
 ---
 # <a name="constructing-sql-statements"></a>Crear instrucciones SQL
-Se pueden construir instrucciones SQL en una de estas tres maneras: rígida durante el desarrollo, construido en tiempo de ejecución, o bien escrito directamente por el usuario.  
+Las instrucciones SQL se pueden construir de tres maneras: codificadas de forma rígida durante el desarrollo, construidas en tiempo de ejecución o especificadas directamente por el usuario.  
   
  Esta sección contiene los temas siguientes.  
   

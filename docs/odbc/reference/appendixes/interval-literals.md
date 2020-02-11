@@ -15,19 +15,19 @@ ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e90f7683c13d8693529c60f1ba893bd645920bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041911"
 ---
 # <a name="interval-literals"></a>Literales de intervalo
-ODBC exige que todos los controladores para admiten la conversión del tipo de datos SQL_CHAR o SQL_VARCHAR a todos los tipos de datos de intervalo de C. Sin embargo, si el origen de datos subyacente no admite tipos de datos interval, el controlador necesita conocer el formato correcto del valor en el campo SQL_CHAR para admitir estas conversiones. De forma similar, ODBC requiere que se debe tener cualquier tipo ser convertible a SQL_CHAR o SQL_VARCHAR, por lo que necesita saber qué formato de un intervalo que se almacena en el campo de carácter un controlador de C de ODBC. En esta sección se describe la sintaxis de literales de intervalo, que debe usar para validar los campos SQL_CHAR durante la conversión a o desde tipos de datos de intervalo de C el escritor de controlador.  
+ODBC requiere que todos los controladores admitan la conversión del tipo de datos SQL_CHAR o SQL_VARCHAR en todos los tipos de datos de intervalo de C. Sin embargo, si el origen de datos subyacente no admite tipos de datos de intervalo, el controlador debe conocer el formato correcto del valor en el campo SQL_CHAR para admitir estas conversiones. Del mismo modo, ODBC requiere que cualquier tipo C de ODBC sea convertible en SQL_CHAR o SQL_VARCHAR, por lo que un controlador debe saber qué formato debe tener un intervalo almacenado en el campo de carácter. En esta sección se describe la sintaxis de los literales de intervalo, que el escritor de controladores debe utilizar para validar los campos de SQL_CHAR durante la conversión a o desde los tipos de datos de intervalo de C.  
   
 > [!NOTE]  
->  La sintaxis completa de BNF para literales de intervalo se muestra en la sección [sintaxis de literales de intervalo](../../../odbc/reference/appendixes/interval-literal-syntax.md) en el apéndice C: Gramática de SQL.  
+>  La sintaxis BNF completa para los literales de intervalo se muestra en la sección sintaxis de los literales de [intervalo](../../../odbc/reference/appendixes/interval-literal-syntax.md) en el Apéndice C: gramática de SQL.  
   
- Para pasar los literales de intervalo como parte de una instrucción SQL, se define una sintaxis de cláusulas de escape para literales de intervalo. Para obtener más información, consulte [fecha, hora y marca de tiempo literales](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
+ Para pasar los literales de intervalo como parte de una instrucción SQL, se define una sintaxis de cláusula de escape para los literales de intervalo. Para obtener más información, vea [literales de fecha, hora y marca de tiempo](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
  Un literal de intervalo tiene el formato:  
   
@@ -35,62 +35,62 @@ ODBC exige que todos los controladores para admiten la conversión del tipo de d
 INTERVAL[<sign>] 'value' <interval qualifier>  
 ```  
   
- donde "INTERVAL" indica que el literal de carácter es un intervalo. El inicio de sesión puede ser más o menos; está fuera de la cadena de intervalo y es opcional.  
+ donde "INTERVAL" indica que el literal de carácter es un intervalo. El signo puede ser más o menos; está fuera de la cadena de intervalo y es opcional.  
   
- El calificador de intervalo puede ser un campo datetime único o estar formada por dos campos de fecha y hora, en el formulario: \< *campo inicial*> TO \< *campo final*>.  
+ El calificador de intervalo puede ser un único campo de fecha y hora o estar compuesto por dos campos de fecha \<y hora, en el formato:> de *campo inicial* al> de \< *campo final* .  
   
--   Cuando el intervalo se compone de un solo campo, el campo solo puede ser un campo de segundos no puede estar acompañado por una precisión inicial opcional entre paréntesis. El campo datetime único puede ser también un segundo campo que puede estar acompañado por la precisión inicial opcional, la precisión en segundos fraccionaria opcional entre paréntesis o ambos. Si hay una precisión inicial y una precisión de fracciones de segundos para un campo de segundos, están separados por comas. Si el campo de segundos tiene una precisión de fracciones de segundos, también debe tener una precisión inicial.  
+-   Cuando el intervalo se compone de un solo campo, el campo único puede ser un campo que no es de segundo y que puede ir acompañado de una precisión inicial opcional entre paréntesis. El campo DateTime único también puede ser un segundo campo que puede ir acompañado de la precisión inicial opcional, la precisión de fracciones de segundo opcional entre paréntesis o ambos. Si tanto la precisión inicial como la precisión de las fracciones de segundo están presentes en un campo de segundos, se separan mediante comas. Si el campo segundos tiene una precisión de fracciones de segundo, también debe tener una precisión inicial.  
   
--   Cuando el intervalo se compone de campos iniciales y finales, el campo inicial es un campo de segundos no puede estar acompañado por el intervalo inicial de precisión del campo entre paréntesis. El campo al final puede ser un campo que no son segundos o un segundo campo que puede estar acompañado por una precisión de fracciones de segundos de intervalo entre paréntesis.  
+-   Cuando el intervalo se compone de campos iniciales y finales, el campo inicial es un campo no de segundo que puede ir acompañado de la precisión del campo inicial del intervalo entre paréntesis. El campo final puede ser un campo que no sea de segundo o un segundo campo que puede ir acompañado de un intervalo de precisión de fracciones de segundos entre paréntesis.  
   
- La cadena de intervalo en *valor* se encierra entre comillas simples. Puede ser un literal de mes del año o un literal de hora del día. El formato de la cadena en *valor* viene determinada por las reglas siguientes:  
+ La cadena de intervalo en el *valor* se incluye entre comillas simples. Puede ser un literal de año o un literal de fecha y hora. El formato de la cadena en el *valor* se determina mediante las siguientes reglas:  
   
--   La cadena contiene un valor decimal para cada campo que está implícito en el \< *intervalo* *calificador*>.  
+-   La cadena contiene un valor decimal para cada campo implícito por el \< *calificador* de *intervalo*>.  
   
--   Si la precisión de intervalo incluye los campos de año y mes, los valores de estos campos están separados por un signo menos.  
+-   Si la precisión del intervalo incluye los campos año y mes, los valores de estos campos se separan con un signo menos.  
   
--   Si la precisión de intervalo incluye los campos de día y hora, los valores de estos campos están separados por un espacio.  
+-   Si la precisión del intervalo incluye los campos día y hora, los valores de estos campos están separados por un espacio.  
   
--   Si la precisión de intervalo incluye el campo de hora y los campos de orden inferior (minuto y segundo), los valores de estos campos están separados por dos puntos.  
+-   Si la precisión del intervalo incluye el campo hora y los campos de orden inferior (minuto y segundo), los valores de estos campos se separan mediante dos puntos.  
   
--   Si la precisión de intervalo incluye un segundo campo y la precisión de segundos expresa o implícita es distinto de cero, el carácter inmediatamente antes del primer dígito de la parte fraccionaria de segundo es un punto.  
+-   Si la precisión del intervalo incluye un segundo campo y la precisión de segundos expresada o implícita es distinto de cero, el carácter situado inmediatamente antes del primer dígito de la parte fraccionaria del segundo es un punto.  
   
--   Ningún campo puede ser más de dos dígitos, excepto:  
+-   Ningún campo puede tener más de dos dígitos de longitud, excepto:  
   
-    -   El valor del campo inicial puede ser tan largo como el intervalo expresado o implícito de precisión del principio.  
+    -   El valor del campo inicial puede ser tan largo como la precisión inicial del intervalo expresado o implícito.  
   
-    -   La parte fraccionaria del segundo campo puede ser tan larga como la precisión de segundos expresas o implícitas.  
+    -   La parte fraccionaria del segundo campo puede ser tan larga como la precisión de segundos expresada o implícita.  
   
-    -   Los campos finales siguen las restricciones habituales del calendario gregoriano. (Consulte [restricciones del calendario gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md).)  
+    -   Los campos finales siguen las restricciones habituales del calendario gregoriano. (Vea [restricciones del calendario gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)).  
   
- En la tabla siguiente se muestra ejemplos de literales de intervalo válido, tal como se incluye en la cláusula de escape ODBC para los intervalos. La sintaxis de la cláusula de escape es como sigue:  
+ En la tabla siguiente se muestran ejemplos de literales de intervalo válidos, tal como se incluye en la cláusula escape de ODBC para los intervalos. La sintaxis de la cláusula escape es la siguiente:  
   
 > [!NOTE]  
->  *{Cadena del intervalo de inicio de sesión de intervalo intervalo-qualifier}*  
+>  *{Intervalo de signo de intervalo-intervalo de cadenas-calificador}*  
   
-|Cláusula de escape literal|Intervalo especificado|  
+|Cláusula escape literal|Intervalo especificado|  
 |---------------------------|------------------------|  
-|{YEAR(4) INTERVALO '326'}|Especifica un intervalo de años 326. El intervalo de precisión inicial es 4.|  
-|{MONTH(3) INTERVALO '326'}|Especifica un intervalo de meses 326. El intervalo de precisión inicial es 3.|  
-|{DAY(4) INTERVALO '3261'}|Especifica un intervalo de días 3261. El intervalo de precisión inicial es 4.|  
-|{HOUR(3) INTERVALO '163'}|Especifica un intervalo de días 163. El intervalo de precisión inicial es 3.|  
-|{MINUTE(3) INTERVALO '163'}|Especifica un intervalo de minutos 163. El intervalo de precisión inicial es 3.|  
-|{SECOND(3,2) INTERVALO '223.16'}|Especifica un intervalo de segundos 223.16. La precisión de intervalo inicial es 3, y la precisión de segundos es 2.|  
-|{INTERVALO ' 163-11' AÑO (3) AL MES}|Especifica un intervalo de 163 años y 11 meses. El intervalo de precisión inicial es 3.|  
-|{INTERVALO 163 ' 12' DAY(3) HORA}|Especifica un intervalo de 163 días y 12 horas. El intervalo de precisión inicial es 3.|  
-|{INTERVALO ' 163 12:39 ' DAY(3) AL MINUTO}|Especifica un intervalo de 163 días, 12 horas y 39 minutos. El intervalo de precisión inicial es 3.|  
-|{INTERVALO '163 12:39:59.163' DAY(3) A SECOND(3)}|Especifica un intervalo de 163 días, 12 horas, 39 minutos y 59.163 segundos. La precisión de intervalo inicial es 3, y la precisión de segundos es 3.|  
-|{INTERVALO HOUR(3) AL MINUTO ' 163:39'}|Especifica un intervalo de 163 horas y 39 minutos. El intervalo de precisión inicial es 3.|  
-|{INTERVALO '163:39:59.163' HOUR(3) A SECOND(4)}|Especifica un intervalo de 163 horas, 39 minutos y 59.163 segundos. La precisión de intervalo inicial es 3, y la precisión de segundos es 4.|  
-|{INTERVALO '163:59.163' MINUTE(3) A SECOND(5)}|Especifica un intervalo de 163 minutos y 59.163 segundos. La precisión de intervalo inicial es 3, y la precisión de segundos es 5.|  
-|{INTERVAL-'16 23:39:56.23' DÍA A SEGUNDO}|Especifica un intervalo de menos de 16 días, 23 horas, 39 minutos y 56.23 segundos. La precisión inicial implícita es 2, y la precisión de segundos implícito es 6.|  
+|{INTERVAL ' 326 ' YEAR (4)}|Especifica un intervalo de 326 años. La precisión inicial del intervalo es 4.|  
+|{INTERVAL ' 326 ' MONTH (3)}|Especifica un intervalo de 326 meses. La precisión inicial del intervalo es 3.|  
+|{INTERVAL ' 3261 ' DAY (4)}|Especifica un intervalo de 3261 días. La precisión inicial del intervalo es 4.|  
+|{INTERVALO ' 163 ' HORA (3)}|Especifica un intervalo de 163 días. La precisión inicial del intervalo es 3.|  
+|{INTERVALO ' 163 ' MINUTO (3)}|Especifica un intervalo de 163 minutos. La precisión inicial del intervalo es 3.|  
+|{INTERVAL ' 223,16 ' SECOND (3, 2)}|Especifica un intervalo de 223,16 segundos. La precisión inicial del intervalo es 3 y la precisión de los segundos es 2.|  
+|{INTERVAL ' 163-11 ' YEAR (3) AL MES}|Especifica un intervalo de 163 años y 11 meses. La precisión inicial del intervalo es 3.|  
+|{INTERVAL ' 163 12 ' DAY (3) A HOUR}|Especifica un intervalo de 163 días y 12 horas. La precisión inicial del intervalo es 3.|  
+|{INTERVAL ' 163 12:39 ' DAY (3) A MINUTE}|Especifica un intervalo de 163 días, 12 horas y 39 minutos. La precisión inicial del intervalo es 3.|  
+|{INTERVAL ' 163 12:39:59.163 ' DAY (3) A SECOND (3)}|Especifica un intervalo de 163 días, 12 horas, 39 minutos y 59,163 segundos. La precisión inicial del intervalo es 3 y la precisión de los segundos es 3.|  
+|{INTERVALO ' 163:39 ' HORA (3) A MINUTO}|Especifica un intervalo de 163 horas y 39 minutos. La precisión inicial del intervalo es 3.|  
+|{INTERVAL ' 163:39:59.163 ' HOUR (3) TO SECOND (4)}|Especifica un intervalo de 163 horas, 39 minutos y 59,163 segundos. La precisión inicial del intervalo es 3 y la precisión de los segundos es 4.|  
+|{INTERVAL ' 163:59.163 ' MINUTE (3) TO SECOND (5)}|Especifica un intervalo de 163 minutos y 59,163 segundos. La precisión inicial del intervalo es 3 y la precisión de los segundos es 5.|  
+|{INTERVAL-' 16 23:39:56.23 ' DAY TO SECOND}|Especifica un intervalo de menos de 16 días, 23 horas, 39 minutos y 56,23 segundos. La precisión inicial implícita es 2 y la precisión de segundos implícita es 6.|  
   
- En la tabla siguiente se enumera algunos ejemplos de literales de intervalo no válido:  
+ En la tabla siguiente se muestran ejemplos de literales de intervalo no válidos:  
   
-|Cláusula de escape literal|Motivo por qué no válido|  
+|Cláusula escape literal|Motivo por el que no es válido|  
 |---------------------------|------------------------|  
-|{HOUR(2) INTERVALO '163'}|La precisión de intervalo inicial es 2, pero el valor del campo inicial es 163.|  
-|{SECOND(2,2) INTERVALO '223.16'}<br /><br /> {SECOND(3,1) INTERVALO '223.16'}|En el primer ejemplo, la precisión inicial es demasiado pequeña y, en el segundo ejemplo, la precisión de segundos es demasiado pequeña.|  
-|{INTERVALO '223.16' SEGUNDO}<br /><br /> {INTERVALO '223' YEAR}|Dado que la precisión inicial no se especifica, el valor predeterminado es 2, que es demasiado pequeño para contener el literal especificado.|  
-|{INTERVALO '22.1234567' SEGUNDO}|Por lo que el valor predeterminado es 6, no se especifica, la precisión de segundos. El literal tiene siete dígitos después del separador decimal.|  
-|{INTERVALO ' 163-13' AÑO (3) AL MES}<br /><br /> {INTERVALO ' 163 65' DAY(3) HORA}<br /><br /> {INTERVALO '163 62:39' DAY(3) AL MINUTO}<br /><br /> {INTERVALO '163 12:125:59.163' DAY(3) A SECOND(3)}<br /><br /> {INTERVALO HOUR(3) AL MINUTO ' 163:144'}<br /><br /> {INTERVALO '163:567:234.163' HOUR(3) A SECOND(4)}<br /><br /> {INTERVALO '163:591.163' MINUTE(3) A SECOND(5)}|El campo al final no sigue las reglas del calendario gregoriano.|
+|{INTERVALO ' 163 ' HORA (2)}|La precisión inicial del intervalo es 2, pero el valor del campo inicial es 163.|  
+|{INTERVALO ' 223,16 ' SEGUNDO (2, 2)}<br /><br /> {INTERVAL ' 223,16 ' SECOND (3, 1)}|En el primer ejemplo, la precisión inicial es demasiado pequeña y, en el segundo ejemplo, la precisión de los segundos es demasiado pequeña.|  
+|{INTERVALO ' 223,16 ' SEGUNDO}<br /><br /> {INTERVALO ' 223 ' AÑO}|Dado que no se especifica la precisión inicial, el valor predeterminado es 2, que es demasiado pequeño para contener el literal especificado.|  
+|{INTERVALO ' 22,1234567 ' SEGUNDO}|La precisión de los segundos no se especifica, por lo que el valor predeterminado es 6. El literal tiene siete dígitos después del separador decimal.|  
+|{INTERVAL ' 163-13 ' YEAR (3) AL MES}<br /><br /> {INTERVAL ' 163 65 ' DAY (3) A HOUR}<br /><br /> {INTERVAL ' 163 62:39 ' DAY (3) A MINUTE}<br /><br /> {INTERVAL ' 163 12:125:59.163 ' DAY (3) A SECOND (3)}<br /><br /> {INTERVALO ' 163:144 ' HORA (3) A MINUTO}<br /><br /> {INTERVAL ' 163:567:234.163 ' HOUR (3) TO SECOND (4)}<br /><br /> {INTERVAL ' 163:591.163 ' MINUTE (3) TO SECOND (5)}|El campo final no sigue las reglas del calendario gregoriano.|

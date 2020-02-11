@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524381"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar las tablas insertadas y eliminadas
@@ -49,13 +49,14 @@ ms.locfileid: "62524381"
 > [!NOTE]  
 >  Si las acciones del desencadenador dependen del número de filas afectadas por una modificación de datos, use pruebas (como, por ejemplo, un examen de @@ROWCOUNT) para las modificaciones de datos que afecten a varias filas (instrucciones INSERT, DELETE o UPDATE basadas en una instrucción SELECT) y tome las medidas oportunas.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no permite referencias a las columnas `text`, `ntext` o `image` en las tablas insertadas y eliminadas por los desencadenadores AFTER. Sin embargo, estos tipos de datos se incluyen únicamente por motivos de compatibilidad con versiones anteriores. El almacenamiento preferido para datos de gran tamaño es el uso de tipos de datos `varchar(max)`, `nvarchar(max)` y `varbinary(max)`. Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos `varchar(max)`, `nvarchar(max)` y `varbinary(max)` en las tablas insertadas y eliminadas. Para obtener más información, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no permite referencias a las columnas `text`, `ntext` o `image` en las tablas insertadas y eliminadas por los desencadenadores AFTER. Sin embargo, estos tipos de datos se incluyen únicamente por motivos de compatibilidad con versiones anteriores. El almacenamiento preferido para datos de gran tamaño es el uso de tipos de datos `varchar(max)`, `nvarchar(max)` y `varbinary(max)`. Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos `varchar(max)`, `nvarchar(max)` y `varbinary(max)` en las tablas insertadas y eliminadas. Para obtener más información, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
   
  **Ejemplo del uso de la tabla inserted en un desencadenador para exigir reglas de negocios**  
   
  Debido a que las restricciones CHECK solo pueden hacer referencia a las columnas en las que se han definido las restricciones de columna o de tabla, cualquier restricción entre tablas, en este caso, reglas de negocios, debe definirse como desencadenadores.  
   
- En este ejemplo se crea un desencadenador DML. El desencadenador comprueba que la solvencia del proveedor es satisfactoria cuando se intenta insertar un nuevo pedido de compra en la tabla `PurchaseOrderHeader` . Para obtener la solvencia de crédito del proveedor correspondiente al pedido de compra recién insertado, la tabla `Vendor` debe hacer referencia a la tabla insertada y estar combinada con ella. Si la solvencia no es satisfactoria, se obtiene un mensaje y no se ejecuta la inserción. Tenga en cuenta que en este ejemplo no se permiten las modificaciones de datos en varias filas. Para más información, consulte [Create DML Triggers to Handle Multiple Rows of Data](../triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ En este ejemplo se crea un desencadenador DML. El desencadenador comprueba que la solvencia del proveedor es satisfactoria cuando se intenta insertar un nuevo pedido de compra en la tabla `PurchaseOrderHeader` . Para obtener la solvencia de crédito del proveedor correspondiente al pedido de compra recién insertado, la tabla `Vendor` debe hacer referencia a la tabla insertada y estar combinada con ella. Si la solvencia no es satisfactoria, se obtiene un mensaje y no se ejecuta la inserción. Tenga en cuenta que en este ejemplo no se permiten las modificaciones de datos en varias filas. Para más información, consulte [Crear desencadenadores DML para administrar varias filas de datos](../triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../snippets/tsql/SQL14/tsql/triggerddl/transact-sql/snippet_create_alter_drop_trigger.sql#createtrigger3)]  
   

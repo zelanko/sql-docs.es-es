@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761604"
 ---
 # <a name="create-tables-database-engine"></a>Crear tablas (motor de base de datos)
@@ -31,7 +31,7 @@ ms.locfileid: "62761604"
   
      [Seguridad](#Security)  
   
--   **Para crear una tabla, utilizando:**  
+-   **Para crear una tabla con:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62761604"
   
  Si las columnas de la instrucción CREATE TABLE tienen asociada una colección de esquemas XML, se necesita la propiedad de la colección de esquemas XML o el permiso REFERENCES.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-table-with-table-designer"></a>Para crear una tabla con el Diseñador de tablas  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62761604"
   
      Para obtener más información acerca de los esquemas, vea [Create a Database Schema](../security/authentication-access/create-a-database-schema.md).  
   
-9. En el menú **Archivo** , elija **Guardar** *table name*.  
+9. En el menú **archivo** , elija **Guardar** *nombre de tabla*.  
   
 10. En el cuadro de diálogo **Elegir nombre** , escriba un nombre para la tabla y haga clic en **Aceptar**.  
   

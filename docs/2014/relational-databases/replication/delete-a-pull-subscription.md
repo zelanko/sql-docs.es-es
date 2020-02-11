@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ac5d4f7d199e3ee3de6ffb43e2c43e232681b0d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721458"
 ---
 # <a name="delete-a-pull-subscription"></a>Eliminar una suscripción de extracción
@@ -35,12 +35,12 @@ ms.locfileid: "62721458"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Elimine una suscripción de extracción en el publicador (desde la carpeta **Publicaciones locales** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) o en el suscriptor (desde la carpeta **Suscripciones locales** ). Al eliminar una suscripción no se quitan los objetos ni los datos de la suscripción, y deben quitarse manualmente.  
   
 #### <a name="to-delete-a-pull-subscription-at-the-publisher"></a>Para eliminar una suscripción de extracción en el publicador  
   
-1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, expanda el nodo del servidor.  
+1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y luego expanda el nodo del servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
@@ -65,15 +65,15 @@ ms.locfileid: "62721458"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para eliminar una suscripción de extracción a una publicación transaccional o de instantáneas  
   
-1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql). Especifique **@publication** , **@publisher** y **@publisher_db** .  
+1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql). Especifique **@publication**, **@publisher**y **@publisher_db**.  
   
-2.  (Opcional) en la base de datos de publicación del publicador, ejecute [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Especifique **@publication** y **@subscriber** . Especifique un valor de **all** para **@article** . (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
+2.  (Opcional) en la base de datos de publicación del publicador, ejecute [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Especifique **@publication** y **@subscriber**. Especifique un valor de **all** para **@article**. (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>Para eliminar una suscripción de extracción a una publicación de combinación  
   
-1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql). Especifique **@publication** , **@publisher** y **@publisher_db** .  
+1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql). Especifique **@publication**, **@publisher**y **@publisher_db**.  
   
-2.  En el publicador de la base de datos de publicaciones, ejecute [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql). Especifique **@publication** , **@subscriber** y **@subscriber_db** . Especifique un valor de **pull** para **@subscription_type** . (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
+2.  En el publicador de la base de datos de publicaciones, ejecute [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql). Especifique **@publication**, **@subscriber**y **@subscriber_db**. Especifique un valor **pull** para **@subscription_type**. (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  El siguiente ejemplo elimina una suscripción de extracción en una publicación transaccional. El primer lote se ejecuta en el Suscriptor y el segundo lote se ejecuta en el Publicador.  
@@ -99,13 +99,13 @@ ms.locfileid: "62721458"
   
 3.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que la suscripción existe. Si el valor de esta propiedad es `false`, significa que las propiedades de suscripción del paso 2 se definieron incorrectamente o bien, que la suscripción no existe.  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A>.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> .  
   
 5.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPublication> con la conexión de publicador del paso 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> y <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si este método devuelve `false`, las propiedades especificadas en el paso 5 son incorrectas o la publicación no existe en el servidor.  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si este método devuelve `false`, las propiedades especificadas en el paso 5 son incorrectas o la publicación no existe en el servidor.  
   
-7.  Llame al método <xref:Microsoft.SqlServer.Replication.TransPublication.RemovePullSubscription%2A>. Especifique el nombre del Suscriptor y la base de datos de suscripciones para los parámetros *subscriber* y *subscriberDB* .  
+7.  Llame al método <xref:Microsoft.SqlServer.Replication.TransPublication.RemovePullSubscription%2A> . Especifique el nombre del Suscriptor y la base de datos de suscripciones para los parámetros *subscriber* y *subscriberDB* .  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>Para eliminar una suscripción de extracción a una publicación de combinación  
   
@@ -115,13 +115,13 @@ ms.locfileid: "62721458"
   
 3.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que la suscripción existe. Si el valor de esta propiedad es `false`, significa que las propiedades de suscripción del paso 2 se definieron incorrectamente o bien, que la suscripción no existe.  
   
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A>.  
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.PullSubscription.Remove%2A> .  
   
 5.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication> con la conexión de publicador del paso 1. Especifique <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> y <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Si este método devuelve `false`, las propiedades especificadas en el paso 5 son incorrectas o la publicación no existe en el servidor.  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si este método devuelve `false`, las propiedades especificadas en el paso 5 son incorrectas o la publicación no existe en el servidor.  
   
-7.  Llame al método <xref:Microsoft.SqlServer.Replication.MergePublication.RemovePullSubscription%2A>. Especifique el nombre del Suscriptor y la base de datos de suscripciones para los parámetros *subscriber* y *subscriberDB* .  
+7.  Llame al método <xref:Microsoft.SqlServer.Replication.MergePublication.RemovePullSubscription%2A> . Especifique el nombre del Suscriptor y la base de datos de suscripciones para los parámetros *subscriber* y *subscriberDB* .  
   
 ###  <a name="PShellExample"></a> Ejemplos (RMO)  
  Este ejemplo elimina una suscripción de extracción a una publicación transaccional y quita el registro de suscripciones en el Publicador.  
@@ -136,8 +136,8 @@ ms.locfileid: "62721458"
   
  [!code-vb[HowTo#rmo_vb_DropMergePullSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepullsub)]  
   
-## <a name="see-also"></a>Vea también  
- [Suscribirse a publicaciones](subscribe-to-publications.md)   
- [Prácticas recomendadas de seguridad de replicación](security/replication-security-best-practices.md)  
+## <a name="see-also"></a>Consulte también  
+ [Subscribe to Publications](subscribe-to-publications.md)   
+ [Procedimientos recomendados de seguridad de replicación](security/replication-security-best-practices.md)  
   
   

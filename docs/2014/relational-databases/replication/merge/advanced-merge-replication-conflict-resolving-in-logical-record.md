@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba249d99c991fafc377aee019d666b9fa11df8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629925"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Detectar y solucionar conflictos en registros lógicos
-  En este tema se tratan las diferentes combinaciones de opciones de detección y resolución de conflictos posibles al utilizar registros lógicos. Los conflictos en la replicación de mezcla se producen cuando más de un nodo cambia los mismos datos o, al replicar cambios, la replicación de mezcla encuentra determinados tipos de errores, por ejemplo una infracción de restricción. Para obtener más información acerca de la detección y resolución de conflictos, vea [Detección y resolución de conflictos de replicación de mezcla avanzada](advanced-merge-replication-conflict-detection-and-resolution.md).  
+  En este tema se tratan las diferentes combinaciones de opciones de detección y resolución de conflictos posibles al utilizar registros lógicos. Los conflictos en la replicación de mezcla se producen cuando más de un nodo cambia los mismos datos o, al replicar cambios, la replicación de mezcla encuentra determinados tipos de errores, por ejemplo una infracción de restricción. Para obtener más información acerca de la detección y resolución de conflictos, vea [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).  
   
- Para especificar el seguimiento de conflictos y el nivel de resolución para un artículo, vea [Especificar el seguimiento de conflictos y el nivel de resolución para artículos de mezcla](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
+ Para especificar el seguimiento de conflictos y el nivel de resolución para un artículo, vea [Specify the Conflict Tracking and Resolution Level for Merge Articles](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 ## <a name="conflict-detection"></a>Detección de conflictos  
  Dos propiedades de artículo determinan la manera en que se detectan conflictos para los registros lógicos: **column_tracking** y **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y las versiones posteriores también admiten la detección de nivel de registro lógico.  
@@ -74,7 +74,7 @@ ms.locfileid: "62629925"
   
  Debido a que los conflictos se resuelven en el nivel de registro lógico, los cambios ganadores realizados en el publicador sustituyen a los cambios realizados en las tablas del suscriptor durante el proceso de replicación.  
   
- ![Serie de tablas que muestran los cambios en filas relacionadas](../media/logical-records-06.gif "Serie de tablas que muestran los cambios en filas relacionadas")  
+ ![Series de tablas en las que se muestran cambios en filas relacionadas](../media/logical-records-06.gif "Series de tablas en las que se muestran cambios en filas relacionadas")  
   
 ### <a name="row-level-detection-logical-record-resolution"></a>Detección en el nivel de fila, resolución de registro lógico  
  En este ejemplo, la publicación se ha configurado de la siguiente manera:  
@@ -89,7 +89,7 @@ ms.locfileid: "62629925"
   
  Debido a que los conflictos se resuelven en el nivel de registro lógico, durante la sincronización los cambios ganadores realizados en el publicador reemplazan los cambios realizados en las tablas del suscriptor.  
   
- ![Serie de tablas que muestran los cambios en filas relacionadas](../media/logical-records-07.gif "Serie de tablas que muestran los cambios en filas relacionadas")  
+ ![Series de tablas en las que se muestran cambios en filas relacionadas](../media/logical-records-07.gif "Series de tablas en las que se muestran cambios en filas relacionadas")  
   
 ### <a name="logical-record-detection-logical-record-resolution"></a>Detección en el nivel de registro lógico, resolución de registro lógico  
  En este ejemplo, la publicación se ha configurado de la siguiente manera:  
@@ -102,9 +102,9 @@ ms.locfileid: "62629925"
   
  Puesto que los conflictos también se resuelven en el nivel de registro lógico, durante la sincronización los cambios ganadores realizados en el publicador reemplazan los cambios realizados en las tablas del suscriptor.  
   
- ![Serie de tablas que muestran los cambios en filas relacionadas](../media/logical-records-08.gif "Serie de tablas que muestran los cambios en filas relacionadas")  
+ ![Series de tablas en las que se muestran cambios en filas relacionadas](../media/logical-records-08.gif "Series de tablas en las que se muestran cambios en filas relacionadas")  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Agrupar cambios en filas relacionadas con registros lógicos](group-changes-to-related-rows-with-logical-records.md)  
   
   

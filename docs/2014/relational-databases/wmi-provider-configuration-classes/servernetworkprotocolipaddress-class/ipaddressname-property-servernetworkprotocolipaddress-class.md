@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8ca6b4b0c4449880a407e27df9becf340c84a2eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643070"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>Propiedad IpAddressName (clase ServerNetworkProtocolIPAddress)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *object*  
- Un [clase ServerNetworkProtocolIPAdress](servernetworkprotocolipaddress-class.md) objeto que representa una dirección IP para el protocolo de red en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ *objeto*  
+ A [clase ServerNetworkProtocolIPAdress](servernetworkprotocolipaddress-class.md) que representa una dirección IP del protocolo de red en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el nombre de la dirección IP.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

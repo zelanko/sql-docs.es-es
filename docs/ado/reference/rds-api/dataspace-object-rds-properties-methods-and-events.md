@@ -1,5 +1,5 @@
 ---
-title: Los eventos, métodos y propiedades del objeto DataSpace (RDS) | Microsoft Docs
+title: Propiedades, métodos y eventos del objeto DataSpace (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ ms.assetid: c4a1f2e7-19ff-465e-9d9a-275ac0f4dc6a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd5115b4dcf4db7e8f7d5e4c1e2b5d4d4159e8e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964341"
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto DataSpace (RDS)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="properties"></a>Propiedades  
  [Propiedad InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)  
@@ -30,10 +30,10 @@ ms.locfileid: "67964341"
 ## <a name="methods"></a>Métodos  
  [CreateObject (método) (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Ninguno.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
 
 

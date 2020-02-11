@@ -1,5 +1,5 @@
 ---
-title: Al recuperar los resultados (Basic) | Microsoft Docs
+title: Recuperando resultados (Basic) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7abe4dd2f0bfb0b5302022d8e50cddc7df84f192
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020468"
 ---
 # <a name="retrieving-results-basic"></a>Al recuperar los resultados (Basic)
-Un *conjunto de resultados* es un conjunto de filas del origen de datos que coincida con determinados criterios. Es una tabla conceptual que da como resultado de una consulta y que está disponible para una aplicación en formato tabular. **Seleccione** instrucciones, funciones de catálogo y algunos procedimientos para crear conjuntos de resultados. En el ejemplo siguiente, la primera instrucción SQL crea un conjunto que contiene todas las filas y todas las columnas de la tabla Orders de resultados y la segunda instrucción SQL crea un conjunto que contiene las columnas OrderID, vendedor y el estado de las filas de la tabla Orders de resultados en el que el estado es pendiente:  
+Un *conjunto de resultados* es un conjunto de filas del origen de datos que coincide con determinados criterios. Se trata de una tabla conceptual que resulta de una consulta y que está disponible para una aplicación en formato tabular. Las instrucciones **Select** , las funciones de catálogo y algunos procedimientos crean conjuntos de resultados. En el ejemplo siguiente, la primera instrucción SQL crea un conjunto de resultados que contiene todas las filas y todas las columnas de la tabla Orders, y la segunda instrucción SQL crea un conjunto de resultados que contiene las columnas OrderID, SalesPerson y status para las filas de la tabla Orders. en el que el estado es OPEN:  
   
 ```  
 SELECT * FROM Orders  
 SELECT OrderID, SalesPerson, Status FROM Orders WHERE Status = 'OPEN'  
 ```  
   
- Un conjunto de resultados puede estar vacío, que es diferente de ningún conjunto de resultados. Por ejemplo, la instrucción SQL siguiente crea un conjunto de resultados vacío:  
+ Un conjunto de resultados puede estar vacío, que es diferente de ningún conjunto de resultados. Por ejemplo, la siguiente instrucción SQL crea un conjunto de resultados vacío:  
   
 ```  
 SELECT * FROM Orders WHERE 1 = 2  
 ```  
   
- Un conjunto de resultados vacío no es diferente cualquier otro conjunto de resultados, salvo que no tiene ninguna fila. Por ejemplo, la aplicación puede recuperar metadatos para el conjunto de resultados, puede intentar recuperar las filas y debe cerrar el cursor sobre el conjunto de resultados.  
+ Un conjunto de resultados vacío no es diferente de ningún otro conjunto de resultados, salvo que no tiene ninguna fila. Por ejemplo, la aplicación puede recuperar metadatos para el conjunto de resultados, puede intentar capturar filas y debe cerrar el cursor sobre el conjunto de resultados.  
   
- El proceso de recuperar las filas del origen de datos y devolverlos a la aplicación se denomina *capturando*. Esta sección explica las partes básicas de ese proceso. Para obtener información acerca de temas más avanzados, como bloque y los cursores desplazables, consulte [cursores de bloque](../../../odbc/reference/develop-app/block-cursors.md) y [los cursores desplazables](../../../odbc/reference/develop-app/scrollable-cursors.md). Para obtener información acerca de la actualización, eliminación e inserción de filas, vea [Introducción a la actualización datos](../../../odbc/reference/develop-app/updating-data-overview.md).  
+ El proceso de recuperar filas del origen de datos y devolverlas a la aplicación se denomina *captura*. En esta sección se explican las partes básicas de ese proceso. Para obtener información sobre temas más avanzados, como cursores de bloque y desplazables, consulte cursores de [bloque](../../../odbc/reference/develop-app/block-cursors.md) y [cursores desplazables](../../../odbc/reference/develop-app/scrollable-cursors.md). Para obtener información sobre cómo actualizar, eliminar e insertar filas, vea [información general](../../../odbc/reference/develop-app/updating-data-overview.md)sobre la actualización de datos.  
   
  Esta sección contiene los temas siguientes.  
   

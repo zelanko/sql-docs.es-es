@@ -10,22 +10,22 @@ ms.assetid: c1595263-6264-4a43-9535-5eb76ece3a57
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86a76c02f6fbd2d4d47772950fa08af656701ac0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68011009"
 ---
-# <a name="localdberrortoomanysharedinstances"></a>LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES
+# <a name="localdb_error_too_many_shared_instances"></a>LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|287|  
-|Origen del evento|SQL Server Local Database Runtime 12.0|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|287|  
+|Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
 |Texto del mensaje|Hay demasiadas instancias compartidas y no se puede generar un nombre de instancia único. Deje de compartir parte de las instancias compartidas existentes.|  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Consulta de columnas de tipo XML | Microsoft Docs'
+title: 'Ejemplo: consultar columnas de tipo XML | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637735"
 ---
-# <a name="example-querying-xmltype-columns"></a>Ejemplo: Consulta de columnas de tipo XML
+# <a name="example-querying-xmltype-columns"></a>Ejemplo: Consultar columnas de tipo XML
   La consulta siguiente incluye columnas de tipo `xml`. La consulta recupera el identificador, nombre y pasos de fabricación del modelo de producto en la primera ubicación de la columna `Instructions` de tipo `xml`.  
   
 ## <a name="example"></a>Ejemplo  
@@ -48,7 +48,7 @@ GO
  </ProductModelData>  
 ```  
   
- Si la consulta especifica un nombre de columna para el XML devuelto por la consulta XQuery, como se especifica en la siguiente instrucción `SELECT`, los pasos de fabricación se incluyen en el elemento que tiene el nombre especificado.  
+ Si la consulta especifica un nombre de columna para el XML devuelto por la consulta XQuery, como se especifica en la siguiente instrucción `SELECT` , los pasos de fabricación se incluyen en el elemento que tiene el nombre especificado.  
   
 ```  
 USE AdventureWorks2012;  
@@ -63,7 +63,7 @@ FOR XML RAW ('ProductModelData')
 go  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <ProductModelData ProductModelID="5" Name="HL Mountain Frame" />  
@@ -91,7 +91,7 @@ FOR XML RAW ('ProductModelData'), root('MyRoot'), ELEMENTS XSINIL
 go  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <MyRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -113,7 +113,7 @@ go
 </MyRoot>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo RAW con FOR XML](use-raw-mode-with-for-xml.md)  
   
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519145"
 ---
 # <a name="report-server-item-properties"></a>Propiedades de los elementos del servidor de informes
@@ -30,17 +30,17 @@ ms.locfileid: "62519145"
 ## <a name="item-properties"></a>Propiedades de los elementos  
  Las propiedades siguientes se aplican a todos los elementos de la base de datos del servidor de informes.  
   
-|Property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |**CreatedBy**|Nombre del usuario que agregó originalmente el elemento para la base de datos del servidor de informes.|  
 |**CreationDate**|Fecha y hora cuando el elemento se agregó a la base de datos del servidor de informes.|  
 |**Descripción**|Descripción del elemento.|  
-|**Hidden**|Valor que indica si el elemento está visible y disponible para los usuarios.|  
-|**ID**|Identificador de un elemento de la base de datos del servidor de informes.|  
+|**Oculto**|Valor que indica si el elemento está visible y disponible para los usuarios.|  
+|**Id**|Identificador de un elemento de la base de datos del servidor de informes.|  
 |**ModifiedBy**|Nombre del usuario que modificó el elemento de la base de datos del servidor de informes en último lugar.|  
 |**ModifiedDate**|Fecha y hora cuando el usuario modificó el elemento por última vez.|  
-|**Name**|Nombre de un elemento de la base de datos del servidor de informes.|  
-|**Ruta de acceso**|Nombre de la ruta de acceso completa del elemento. La ruta de acceso de cualquier elemento de la base de datos del servidor de informes tiene una longitud máxima de 260 caracteres.|  
+|**Nombre**|Nombre de un elemento de la base de datos del servidor de informes.|  
+|**Path**|Nombre de la ruta de acceso completa del elemento. La ruta de acceso de cualquier elemento de la base de datos del servidor de informes tiene una longitud máxima de 260 caracteres.|  
 |**Tamaño**|El tamaño, en bytes, de un elemento en la base de datos del servidor de informes.|  
 |**Tipo**|Tipo de un elemento de la base de datos del servidor de informes.|  
 |**VirtualPath**|Ruta de acceso virtual de un elemento de la base de datos del servidor de informes. El valor de la propiedad <xref:ReportService2010.CatalogItem.VirtualPath%2A> es la ruta de acceso en la que un usuario espera ver el elemento. Por ejemplo, un informe denominado informe1, que se encuentra en la carpeta personal Mis informes, tiene la ruta de acceso virtual /Mis informes. La ruta de acceso real del elemento es /Usuarios/nombredeusuario/Mis informes.|  
@@ -48,17 +48,17 @@ ms.locfileid: "62519145"
 ## <a name="folder-properties"></a>Propiedades de carpeta  
  Además de las propiedades de los elementos enumerados previamente, la propiedad siguiente se aplica a las carpetas en la base de datos del servidor de informes.  
   
-|Property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |**Reserved**|Valor que devuelve el método <xref:ReportService2010.ReportingService2010.GetProperties%2A> para las carpetas que reserva el servidor de informes. Las carpetas reservadas incluyen Usuarios, Mis informes y /. Las carpetas reservadas no se pueden modificar ni quitar.|  
   
 ## <a name="report-properties"></a>Propiedades de informe  
  Además de las propiedades de los elementos enumerados previamente, las propiedades siguientes se aplican a las carpetas en la base de datos del servidor de informes.  
   
-|Property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |**Lenguaje**|Lenguaje utilizado en un informe. El valor es un código de idioma definido en la especificación del Grupo de trabajo de ingeniería de Internet (IETF) RFC1766. La primera parte es una designación de dos caracteres del lenguaje de bajo nivel. La segunda parte se separa con un guión y designa la variación o dialecto del lenguaje. Si no se especifica un valor en el elemento `Style` asociado al elemento `Body` en la definición de informe, el valor predeterminado es el lenguaje del servidor de informes.|  
-|`ReportProcessingTimeout`|Tiempo de espera, en segundos, para un informe individual. Si se establece este valor, el servidor de informes intenta detener el procesamiento de un informe cuando ha transcurrido el tiempo especificado. Los valores válidos son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1`, no se agota el tiempo del informe durante el procesamiento. Si el valor es `null`, el valor de propiedad del sistema `ReportProcessingTimeout` se usa para el tiempo de espera de procesamiento de informes. El valor predeterminado es `null`. Para más información, vea [Propiedades del sistema del servidor de informes](reporting-services-properties-report-server-system-properties.md).|  
+|`ReportProcessingTimeout`|Tiempo de espera, en segundos, para un informe individual. Si se establece este valor, el servidor de informes intenta detener el procesamiento de un informe cuando ha transcurrido el tiempo especificado. Los valores válidos son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1`, no se agota el tiempo del informe durante el procesamiento. Si el valor es `null`, se utiliza el valor de la `ReportProcessingTimeout` propiedad del sistema para el tiempo de espera de procesamiento del informe. El valor predeterminado es `null`. Para más información, vea [Propiedades del sistema del servidor de informes](reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Fecha y hora cuando una instantánea de informe se creó por última vez para un informe.|  
 |**CanRunUnattended**|Valor que indica si un informe se puede ejecutar de forma desatendida. Si esta propiedad se establece en `true`, se definen valores predeterminados para los parámetros de informe y las credenciales del origen de datos se almacenan con el informe, o la opción de recuperación de credenciales se establece en `None`. Si esta propiedad se establece en `false`, los requisitos previos para ejecutar un informe desatendido no se cumplen. Vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) para más información.|  
 |**HasParameterDefaultValues**|Valor que indica si el informe tiene establecidos los valores predeterminados válidos para todos los parámetros de informe. El valor también es `true` si un informe no tiene los parámetros de informe. Si esta propiedad se establece en `false`, uno o más parámetros de informe no tienen un valor predeterminado válido.|  
@@ -69,11 +69,11 @@ ms.locfileid: "62519145"
 ## <a name="resource-properties"></a>Propiedades de los recursos  
  Además de las propiedades de los elementos enumerados previamente, la propiedad siguiente se aplica a los recursos en la base de datos del servidor de informes.  
   
-|Property|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
-|**MimeType**|Tipo MIME de un recurso en la base de datos del servidor de informes.|  
+|**MIME**|Tipo MIME de un recurso en la base de datos del servidor de informes.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Creación de aplicaciones con el servicio web y .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../report-server-web-service.md)   
  [Referencia técnica &#40;SSRS&#41;](../../technical-reference-ssrs.md)  

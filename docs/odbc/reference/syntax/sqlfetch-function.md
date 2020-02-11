@@ -21,15 +21,15 @@ ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c5d2d14786080f665e488acf2bfa888f09a5df4
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68345200"
 ---
 # <a name="sqlfetch-function"></a>Función SQLFetch
 **Conformidad**  
- Versión introducida: Compatibilidad con los estándares de ODBC 1,0: ISO 92  
+ Versión introducida: compatibilidad con estándares de ODBC 1,0: ISO 92  
   
  **Resumen**  
  **SQLFetch** captura el siguiente conjunto de filas de datos del conjunto de resultados y devuelve los datos de todas las columnas enlazadas.  
@@ -50,9 +50,9 @@ SQLRETURN SQLFetch(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLFetch** devuelve SQL_ERROR u SQL_SUCCESS_WITH_INFO, se puede obtener un valor SQLSTATE asociado llamando a la [función SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) con un *HandleType* de SQL_HANDLE_STMT y un *identificador* de *StatementHandle* . En la tabla siguiente se enumeran los valores de SQLSTATE que suele devolver **SQLFetch** y se explica cada uno de ellos en el contexto de esta función. la notación "(DM)" precede a las descripciones de SQLSTATEs devueltas por el administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario. Si se produce un error en una sola columna, se puede llamar a [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) con un *DiagIdentifier* de SQL_DIAG_COLUMN_NUMBER para determinar la columna en la que se produjo el error. y se puede llamar a **SQLGetDiagField** con un *DiagIdentifier* de SQL_DIAG_ROW_NUMBER para determinar la fila que contiene esa columna.  
+ Cuando **SQLFetch** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, se puede obtener un valor SQLSTATE asociado mediante una llamada a la [función SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) con un *HandleType* de SQL_HANDLE_STMT y un *identificador* de *StatementHandle*. En la tabla siguiente se enumeran los valores de SQLSTATE que suele devolver **SQLFetch** y se explica cada uno de ellos en el contexto de esta función. la notación "(DM)" precede a las descripciones de SQLSTATEs devueltas por el administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario. Si se produce un error en una sola columna, se puede llamar a [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) con un *DiagIdentifier* de SQL_DIAG_COLUMN_NUMBER para determinar la columna en la que se produjo el error; y se puede llamar a **SQLGetDiagField** con un *DiagIdentifier* de SQL_DIAG_ROW_NUMBER para determinar la fila que contiene esa columna.  
   
- En el caso de todos los SQLSTATEs que pueden devolver SQL_SUCCESS_WITH_INFO o SQL_ERROR (excepto 01xxx SQLSTATEs), se devuelve SQL_SUCCESS_WITH_INFO si se produce un error en una o varias filas, pero no en todas, filas de una operación MultiRow, y se devuelve SQL_ERROR si se produce un error en un operación de una sola fila.  
+ En el caso de todos los SQLSTATEs que pueden devolver SQL_SUCCESS_WITH_INFO o SQL_ERROR (excepto 01xxx SQLSTATEs), se devuelve SQL_SUCCESS_WITH_INFO si se produce un error en una o varias filas de una operación de MultiRow y se devuelve SQL_ERROR si se produce un error en un. operación de una sola fila.  
   
 |SQLSTATE|Error|Descripción|  
 |--------------|-----------|-----------------|  
@@ -60,12 +60,12 @@ SQLRETURN SQLFetch(
 |01004|Datos de cadena, truncados a la derecha|Los datos binarios o de cadena devueltos para una columna dieron como resultado el truncamiento de datos binarios de caracteres que no están en blanco o no NULOs. Si fuera un valor de cadena, se truncó a la derecha.|  
 |01S01|Error en la fila|Se produjo un error al capturar una o más filas.<br /><br /> (Si se devuelve este SQLSTATE cuando una aplicación ODBC 3 *. x* está trabajando con un controlador ODBC 2 *. x* , se puede pasar por alto).|  
 |01S07|Truncamiento fraccionario|Los datos devueltos para una columna se han truncado. En el caso de los tipos de datos numéricos, se truncó la parte fraccionaria del número. En el caso de los tipos de datos Time, TIMESTAMP y Interval que contienen un componente de hora, se truncó la parte fraccionaria de la hora.<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|07006|Infracción de atributo de tipo de datos restringido|No se pudo convertir el valor de datos de una columna del conjunto de resultados al tipo de datos especificado por *TargetType* en **SQLBindCol**.<br /><br /> La columna 0 se ha enlazado con un tipo de datos de SQL_C_BOOKMARK y el atributo de instrucción SQL_ATTR_USE_BOOKMARKS se ha establecido en SQL_UB_VARIABLE.<br /><br /> La columna 0 se ha enlazado con un tipo de datos de SQL_C_VARBOOKMARK y el atributo de instrucción SQL_ATTR_USE_BOOKMARKS no se ha establecido en SQL_UB_VARIABLE.|  
-|07009|Índice de descriptor no válido|El controlador era un controlador ODBC 2 *. x* que no admite **SQLExtendedFetch**, y un número de columna especificado en el enlace para una columna era 0.<br /><br /> Se ha enlazado la columna 0 y el atributo de la instrucción SQL_ATTR_USE_BOOKMARKS se ha establecido en SQL_UB_OFF.|  
+|07006|Infracción de atributo de tipo de datos restringido|No se pudo convertir el valor de datos de una columna del conjunto de resultados al tipo de datos especificado por *TargetType* en **SQLBindCol**.<br /><br /> La columna 0 se ha enlazado con un tipo de datos de SQL_C_BOOKMARK y el atributo SQL_ATTR_USE_BOOKMARKS instrucción se ha establecido en SQL_UB_VARIABLE.<br /><br /> La columna 0 se ha enlazado con un tipo de datos de SQL_C_VARBOOKMARK y el atributo SQL_ATTR_USE_BOOKMARKS instrucción no se ha establecido en SQL_UB_VARIABLE.|  
+|07009|Índice de descriptor no válido|El controlador era un controlador ODBC 2 *. x* que no admite **SQLExtendedFetch**, y un número de columna especificado en el enlace para una columna era 0.<br /><br /> La columna 0 estaba enlazada y el atributo SQL_ATTR_USE_BOOKMARKS instrucción se estableció en SQL_UB_OFF.|  
 |08S01|Error de vínculo de comunicación|Se produjo un error en el vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador antes de que la función finalizara el procesamiento.|  
 |22001|Datos de cadena, truncados a la derecha|Un marcador de longitud variable devuelto para una columna se truncó.|  
-|22002|Se requiere una variable de indicador pero no se ha proporcionado|Se han capturado datos NULL en una columna cuyo *StrLen_or_IndPtr* establecido por **SQLBINDCOL** (o SQL_DESC_INDICATOR_PTR establecido por **SQLSetDescField** o **SQLSetDescRec**) era un puntero nulo.|  
-|22003|Valor numérico fuera del intervalo|Si se devuelve el valor numérico como numérico o de cadena para una o varias columnas enlazadas, la parte entera (en oposición a fraccionaria) del número se trunca.<br /><br /> Para obtener más información, vea [convertir datos de SQL a tipos de datos de C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) en el Apéndice D: Tipos de datos.|  
+|22002|Se requiere una variable de indicador pero no se ha proporcionado|Se han capturado datos NULL en una columna cuya *StrLen_or_IndPtr* establecida por **SQLBindCol** (o SQL_DESC_INDICATOR_PTR establecida por **SQLSetDescField** o **SQLSetDescRec**) era un puntero nulo.|  
+|22003|Valor numérico fuera del intervalo|Si se devuelve el valor numérico como numérico o de cadena para una o varias columnas enlazadas, la parte entera (en oposición a fraccionaria) del número se trunca.<br /><br /> Para obtener más información, vea [convertir datos de SQL a tipos de datos de C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) en el Apéndice D: tipos de datos.|  
 |22007|Formato de fecha y hora no válido|Una columna de caracteres del conjunto de resultados estaba enlazada a una estructura de fecha, hora o marca de tiempo de C, y un valor de la columna era, respectivamente, una fecha, una hora o una marca de tiempo no válidas.|  
 |22012|División por cero|Se devolvió un valor de una expresión aritmética, lo que da como resultado una división por cero.|  
 |22015|Desbordamiento de campo de intervalo|La asignación de un tipo numérico exacto o de intervalo SQL a un tipo de intervalo C provoca una pérdida de dígitos significativos en el campo inicial.<br /><br /> Al capturar datos en un tipo de intervalo C, no había ninguna representación del valor del tipo SQL en el tipo de intervalo C.|  
@@ -73,17 +73,17 @@ SQLRETURN SQLFetch(
 |24000|Estado de cursor no válido|El *StatementHandle* estaba en un estado ejecutado pero no se asoció ningún conjunto de resultados con el *StatementHandle*.|  
 |40001|Error de serialización|La transacción en la que se ejecutó la captura ha finalizado para evitar el interbloqueo.|  
 |40003|Finalización de instrucciones desconocida|No se pudo establecer la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función **SQLFetch** y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*. A continuación, se llamó de nuevo a la función **SQLFetch** en el *StatementHandle*.<br /><br /> O bien, se llamó a la función **SQLFetch** y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
-|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLFetch** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) el *StatementHandle* especificado no se encontraba en un estado ejecutado. Se llamó a la función sin llamar primero a **SQLExecDirect**, **SQLExecute** o a una función de catálogo.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSETPOS** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> Se llamó a **SQLFetch** (DM) para *StatementHandle* después de llamar a **SQLExtendedFetch** y antes de que se llamara a **SQLFreeStmt** con la opción SQL_CLOSE.|  
+|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLFetch** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) el *StatementHandle* especificado no se encontraba en un estado ejecutado. Se llamó a la función sin llamar primero a **SQLExecDirect**, **SQLExecute** o a una función de catálogo.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> Se llamó a **SQLFetch** (DM) para *StatementHandle* después de llamar a **SQLExtendedFetch** y antes de que se llamara a **SQLFreeStmt** con la opción SQL_CLOSE.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
-|HY090|Longitud de búfer o cadena no válida|El atributo de la instrucción SQL_ATTR_USE_BOOKMARK se ha establecido en SQL_UB_VARIABLE y la columna 0 se ha enlazado a un búfer cuya longitud no es igual a la longitud máxima del marcador de este conjunto de resultados. (Esta longitud está disponible en el campo SQL_DESC_OCTET_LENGTH de IRD y se puede obtener llamando a **SQLDescribeCol**, **SQLColAttribute**o **SQLGetDescField**).|  
-|HY107|Valor de fila fuera del intervalo|El valor especificado con el atributo de instrucción SQL_ATTR_CURSOR_TYPE era SQL_CURSOR_KEYSET_DRIVEN, pero el valor especificado con el atributo de instrucción SQL_ATTR_KEYSET_SIZE era mayor que 0 y menor que el valor especificado con SQL_ATTR_ROW_ARRAY_ Atributo de la instrucción SIZE.|  
+|HY090|Longitud de búfer o cadena no válida|El atributo de instrucción SQL_ATTR_USE_BOOKMARK se estableció en SQL_UB_VARIABLE y la columna 0 estaba enlazada a un búfer cuya longitud no es igual a la longitud máxima para el marcador de este conjunto de resultados. (Esta longitud está disponible en el campo SQL_DESC_OCTET_LENGTH de IRD y se puede obtener llamando a **SQLDescribeCol**, **SQLColAttribute**o **SQLGetDescField**).|  
+|HY107|Valor de fila fuera del intervalo|Se SQL_CURSOR_KEYSET_DRIVEN el valor especificado con el atributo de instrucción SQL_ATTR_CURSOR_TYPE, pero el valor especificado con el atributo de instrucción SQL_ATTR_KEYSET_SIZE era mayor que 0 y menor que el valor especificado con el SQL_ATTR_ROW_ARRAY_ Atributo de la instrucción SIZE.|  
 |HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Característica opcional no implementada|El controlador o el origen de datos no admite la conversión especificada por la combinación de *TargetType* en **SQLBindCol** y el tipo de datos SQL de la columna correspondiente.|  
-|HYT00|Se agotó el tiempo de espera|El período de tiempo de espera de consulta expiró antes de que el origen de datos devolviera el conjunto de resultados solicitado. El período de tiempo de espera se establece a través de SQLSetStmtAttr, SQL_ATTR_QUERY_TIMEOUT.|  
-|HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|HYT00|Tiempo de espera agotado|El período de tiempo de espera de consulta expiró antes de que el origen de datos devolviera el conjunto de resultados solicitado. El período de tiempo de espera se establece a través de SQLSetStmtAttr, SQL_ATTR_QUERY_TIMEOUT.|  
+|HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El período de tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|El controlador no admite esta función|(DM) el controlador asociado a *StatementHandle* no admite la función.|  
 |IM017|El sondeo está deshabilitado en el modo de notificación asincrónico|Cada vez que se usa el modelo de notificación, el sondeo se deshabilita.|  
 |IM018|No se ha llamado a **SQLCompleteAsync** para completar la operación asincrónica anterior en este controlador.|Si la llamada de función anterior en el identificador devuelve SQL_STILL_EXECUTING y si el modo de notificación está habilitado, se debe llamar a **SQLCompleteAsync** en el identificador para realizar el procesamiento posterior y completar la operación.|  
@@ -93,12 +93,12 @@ SQLRETURN SQLFetch(
   
  Si una aplicación ODBC*3. x* funciona con un controlador ODBC*2. x* , el administrador de controladores asigna llamadas **SQLFetch** a **SQLExtendedFetch** para un controlador ODBC 2 *. x* que admite **SQLExtendedFetch**. Si el controlador ODBC 2 *. x* no es compatible con **SQLExtendedFetch**, el administrador de controladores asigna llamadas **SQLFetch** a **SQLFetch** en el controlador ODBC 2 *. x* , que solo puede capturar una sola fila.  
   
- Para obtener más información, vea cursores de [bloque, cursores desplazables y compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) en el Apéndice G: Instrucciones del controlador para la compatibilidad con versiones anteriores.  
+ Para obtener más información, vea [cursores de bloque, cursores desplazables y compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) en el Apéndice G: instrucciones de controlador para la compatibilidad con versiones anteriores.  
   
 ## <a name="positioning-the-cursor"></a>Colocar el cursor  
- Cuando se crea el conjunto de resultados, el cursor se coloca antes del inicio del conjunto de resultados. **SQLFetch** captura el siguiente conjunto de filas. Es equivalente a llamar a **SQLFetchScroll** con *FETCHORIENTATION* establecido en SQL_FETCH_NEXT. Para obtener más información sobre los cursores [, vea](../../../odbc/reference/develop-app/cursors.md) cursores y cursores de [bloque](../../../odbc/reference/develop-app/block-cursors.md).  
+ Cuando se crea el conjunto de resultados, el cursor se coloca antes del inicio del conjunto de resultados. **SQLFetch** captura el siguiente conjunto de filas. Es equivalente a llamar a **SQLFetchScroll** con *FetchOrientation* establecido en SQL_FETCH_NEXT. Para obtener más información sobre los cursores [, vea](../../../odbc/reference/develop-app/cursors.md) cursores y [cursores de bloque](../../../odbc/reference/develop-app/block-cursors.md).  
   
- El atributo de la instrucción SQL_ATTR_ROW_ARRAY_SIZE especifica el número de filas del conjunto de filas. Si el conjunto de filas que se captura por **SQLFetch** se superpone al final del conjunto de resultados, **SQLFetch** devuelve un conjunto de filas parcial. Es decir, si S + R-1 es mayor que L, donde S es la fila inicial del conjunto de filas que se va a capturar, R es el tamaño del conjunto de filas y L es la última fila del conjunto de resultados, solo las primeras L-S + 1 filas del conjunto de filas son válidas. Las filas restantes están vacías y tienen un estado de SQL_ROW_NOROW.  
+ El atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE especifica el número de filas del conjunto de filas. Si el conjunto de filas que se captura por **SQLFetch** se superpone al final del conjunto de resultados, **SQLFetch** devuelve un conjunto de filas parcial. Es decir, si S + R-1 es mayor que L, donde S es la fila inicial del conjunto de filas que se va a capturar, R es el tamaño del conjunto de filas y L es la última fila del conjunto de resultados, solo las primeras L-S + 1 filas del conjunto de filas son válidas. Las filas restantes están vacías y tienen el estado SQL_ROW_NOROW.  
   
  Una vez que se devuelve **SQLFetch** , la fila actual es la primera fila del conjunto de filas.  
   
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |Condición|Primera fila del conjunto de filas nuevo|  
 |---------------|-----------------------------|  
 |Antes del inicio|1|  
-|*CurrRowsetStart* LastResultRow-RowsetSize [1] \< = |*CurrRowsetStart* + *RowsetSize*[2]|  
-|CurrRowsetStart > *LastResultRow-RowsetSize*[1]|Después del final|  
+|** \<CurrRowsetStart =  *LastResultRow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow-RowsetSize*[1]|Después del final|  
 |Después del final|Después del final|  
   
  [1] si se cambia el tamaño del conjunto de filas entre las capturas, este es el tamaño del conjunto de filas que se usó con la captura anterior.  
@@ -145,10 +145,10 @@ SQLRETURN SQLFetch(
   
      Si los datos de la columna no son NULL, **SQLFetch** continúa en el paso 2.  
   
-2.  Si el atributo de la instrucción SQL_ATTR_MAX_LENGTH se establece en un valor distinto de cero y la columna contiene datos binarios o de caracteres, los datos se truncan en SQL_ATTR_MAX_LENGTH bytes.  
+2.  Si el atributo de instrucción SQL_ATTR_MAX_LENGTH está establecido en un valor distinto de cero y la columna contiene datos binarios o de caracteres, los datos se truncan en SQL_ATTR_MAX_LENGTH bytes.  
   
     > [!NOTE]  
-    >  El atributo de la instrucción SQL_ATTR_MAX_LENGTH está pensado para reducir el tráfico de red. Normalmente, se implementa mediante el origen de datos, que trunca los datos antes de devolverlos a través de la red. No es necesario que los controladores y los orígenes de datos sean compatibles. Por lo tanto, para garantizar que los datos se truncan a un tamaño determinado, una aplicación debe asignar un búfer de ese tamaño y especificar el tamaño en el argumento *cbValueMax* en **SQLBindCol**.  
+    >  El atributo de instrucción SQL_ATTR_MAX_LENGTH está diseñado para reducir el tráfico de red. Normalmente, se implementa mediante el origen de datos, que trunca los datos antes de devolverlos a través de la red. No es necesario que los controladores y los orígenes de datos sean compatibles. Por lo tanto, para garantizar que los datos se truncan a un tamaño determinado, una aplicación debe asignar un búfer de ese tamaño y especificar el tamaño en el argumento *cbValueMax* en **SQLBindCol**.  
   
 3.  Convierte los datos al tipo especificado por *TargetType* en **SQLBindCol**.  
   
@@ -160,20 +160,20 @@ SQLRETURN SQLFetch(
   
 6.  Coloca la longitud de los datos en el búfer de longitud/indicador. Si el puntero del indicador y el puntero de longitud se establecieron en el mismo búfer (como una llamada a **SQLBindCol** sí), la longitud se escribe en el búfer para los datos válidos y SQL_NULL_DATA se escribe en el búfer para los datos null. Si no se ha enlazado ningún búfer de longitud/indicador, **SQLFetch** no devuelve la longitud.  
   
-    -   En el caso de los datos de caracteres o binarios, es la longitud de los datos después de la conversión y antes del truncamiento debido a que el búfer de datos es demasiado pequeño. Si el controlador no puede determinar la longitud de los datos después de la conversión, como en ocasiones es el caso con datos largos, establece la longitud en SQL_NO_TOTAL. Si los datos se truncaron debido al atributo de la instrucción SQL_ATTR_MAX_LENGTH, el valor de este atributo se coloca en el búfer de longitud/indicador en lugar de en la longitud real. Esto se debe a que este atributo está diseñado para truncar los datos en el servidor antes de la conversión, de modo que el controlador no tenga forma de averiguar cuál es la longitud real.  
+    -   En el caso de los datos de caracteres o binarios, es la longitud de los datos después de la conversión y antes del truncamiento debido a que el búfer de datos es demasiado pequeño. Si el controlador no puede determinar la longitud de los datos después de la conversión, como en ocasiones es el caso con datos largos, establece la longitud en SQL_NO_TOTAL. Si los datos se truncaron debido al atributo de instrucción SQL_ATTR_MAX_LENGTH, el valor de este atributo se coloca en el búfer de longitud/indicador en lugar de en la longitud real. Esto se debe a que este atributo está diseñado para truncar los datos en el servidor antes de la conversión, de modo que el controlador no tenga forma de averiguar cuál es la longitud real.  
   
     -   Para el resto de tipos de datos, es la longitud de los datos después de la conversión. es decir, es el tamaño del tipo al que se han convertido los datos.  
   
      Para obtener información sobre cómo determinar la dirección del búfer de longitud/indicador, vea el tema sobre direcciones de búfer en [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
   
-7.  Si los datos se truncan durante la conversión sin una pérdida de dígitos significativos (por ejemplo, el número real 1,234 se trunca en el entero 1 cuando se convierte), **SQLFetch** devuelve SQLSTATE 01S07 (truncamiento fraccionario) e SQL_SUCCESS_WITH_INFO. Si se truncan los datos porque la longitud del búfer de datos es demasiado pequeña (por ejemplo, la cadena "abcdef" se coloca en un búfer de 4 bytes), **SQLFetch** devuelve SQLSTATE 01004 (datos truncados) e SQL_SUCCESS_WITH_INFO. Si los datos se truncan debido al atributo de la instrucción SQL_ATTR_MAX_LENGTH, **SQLFetch** devuelve SQL_SUCCESS y no devuelve SQLSTATE 01S07 (truncamiento fraccionario) o SQLSTATE 01004 (datos truncados). Si los datos se truncan durante la conversión con una pérdida de dígitos significativos (por ejemplo, si un valor de SQL_INTEGER mayor que 100.000 se convirtió en SQL_C_TINYINT), **SQLFetch** devuelve SQLSTATE 22003 (valor numérico fuera del intervalo) y SQL_ERROR (si el el tamaño del conjunto de filas es 1) o SQL_SUCCESS_WITH_INFO (si el tamaño del conjunto de filas es mayor que 1).  
+7.  Si los datos se truncan durante la conversión sin una pérdida de dígitos significativos (por ejemplo, el número real 1,234 se trunca en el entero 1 cuando se convierte), **SQLFetch** devuelve SQLSTATE 01S07 (truncamiento fraccionario) y SQL_SUCCESS_WITH_INFO. Si se truncan los datos porque la longitud del búfer de datos es demasiado pequeña (por ejemplo, la cadena "abcdef" se coloca en un búfer de 4 bytes), **SQLFetch** devuelve SQLSTATE 01004 (datos truncados) y SQL_SUCCESS_WITH_INFO. Si se truncan los datos debido al atributo de instrucción SQL_ATTR_MAX_LENGTH, **SQLFetch** devuelve SQL_SUCCESS y no devuelve SQLSTATE 01S07 (truncamiento fraccionario) o SQLSTATE 01004 (datos truncados). Si se truncan los datos durante la conversión con una pérdida de dígitos significativos (por ejemplo, si un valor SQL_INTEGER mayor que 100.000 se convirtió en una SQL_C_TINYINT), **SQLFetch** devuelve SQLSTATE 22003 (valor numérico fuera del intervalo) y SQL_ERROR (si el tamaño del conjunto de filas es 1) o SQL_SUCCESS_WITH_INFO (si el tamaño del conjunto de filas es mayor que 1).  
   
- El contenido del búfer de datos enlazado y el búfer de indicador o longitud no están definidos si **SQLFetch** o **SQLFETCHSCROLL** no devuelve SQL_SUCCESS ni SQL_SUCCESS_WITH_INFO.  
+ El contenido del búfer de datos enlazado y el búfer de indicador o longitud no están definidos si **SQLFetch** o **SQLFetchScroll** no devuelve SQL_SUCCESS ni SQL_SUCCESS_WITH_INFO.  
   
 ## <a name="row-status-array"></a>Matriz de Estados de fila  
- La matriz de estado de fila se utiliza para devolver el estado de cada fila del conjunto de filas. La dirección de esta matriz se especifica con el atributo de la instrucción SQL_ATTR_ROW_STATUS_PTR. La aplicación asigna la matriz y debe tener tantos elementos como especifique el atributo de la instrucción SQL_ATTR_ROW_ARRAY_SIZE. Sus valores se establecen mediante **SQLFetch**, **SQLFetchScroll**y **SQLBulkOperations** o **SQLSetPos** (excepto cuando se les ha llamado después de haber colocado el cursor por **SQLExtendedFetch**). Si el valor del atributo de la instrucción SQL_ATTR_ROW_STATUS_PTR es un puntero nulo, estas funciones no devuelven el estado de la fila.  
+ La matriz de estado de fila se utiliza para devolver el estado de cada fila del conjunto de filas. La dirección de esta matriz se especifica con el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR. La aplicación asigna la matriz y debe tener tantos elementos como especifique el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE. Sus valores se establecen mediante **SQLFetch**, **SQLFetchScroll**y **SQLBulkOperations** o **SQLSetPos** (excepto cuando se les ha llamado después de haber colocado el cursor por **SQLExtendedFetch**). Si el valor del atributo de instrucción SQL_ATTR_ROW_STATUS_PTR es un puntero nulo, estas funciones no devuelven el estado de fila.  
   
- El contenido del búfer de matriz de estado de fila no está definido si **SQLFetch** o **SQLFETCHSCROLL** no devuelve SQL_SUCCESS ni SQL_SUCCESS_WITH_INFO.  
+ El contenido del búfer de matriz de estado de fila no está definido si **SQLFetch** o **SQLFetchScroll** no devuelve SQL_SUCCESS ni SQL_SUCCESS_WITH_INFO.  
   
  Los valores siguientes se devuelven en la matriz de estado de fila.  
   
@@ -183,8 +183,8 @@ SQLRETURN SQLFetch(
 |SQL_ROW_SUCCESS_WITH_INFO|La fila se ha recuperado correctamente y no ha cambiado desde que se capturó por última vez desde este conjunto de resultados. Sin embargo, se devolvió una advertencia sobre la fila.|  
 |SQL_ROW_ERROR|Se produjo un error al capturar la fila.|  
 |SQL_ROW_UPDATED [1], [2] y [3]|La fila se ha recuperado correctamente y ha cambiado desde que se capturó por última vez desde este conjunto de resultados. Si la fila se recupera de nuevo desde este conjunto de resultados o se actualiza mediante **SQLSetPos**, el estado cambia al nuevo estado de la fila.|  
-|SQL_ROW_DELETED[3]|La fila se ha eliminado desde la última vez que se recuperó de este conjunto de resultados.|  
-|SQL_ROW_ADDED[4]|**SQLBulkOperations**insertó la fila. Si la fila se recupera de nuevo desde este conjunto de resultados o se actualiza mediante **SQLSetPos**, su estado es SQL_ROW_SUCCESS.|  
+|SQL_ROW_DELETED [3]|La fila se ha eliminado desde la última vez que se recuperó de este conjunto de resultados.|  
+|SQL_ROW_ADDED [4]|**SQLBulkOperations**insertó la fila. Si la fila se recupera de nuevo desde este conjunto de resultados o se actualiza mediante **SQLSetPos**, su estado es SQL_ROW_SUCCESS.|  
 |SQL_ROW_NOROW|El conjunto de filas se superpone al final del conjunto de resultados y no se devolvió ninguna fila que corresponda a este elemento de la matriz de estado de fila.|  
   
  [1] para los cursores KEYSET, mixto y dinámico, si se actualiza un valor de clave, se considera que la fila de datos se ha eliminado y se ha agregado una nueva fila.  
@@ -196,12 +196,12 @@ SQLRETURN SQLFetch(
  [4] solo devuelto por SQLBulkOperations. No establecido por **SQLFetch** o **SQLFetchScroll**.  
   
 ### <a name="rows-fetched-buffer"></a>Búfer de filas recuperadas  
- El búfer de filas recuperadas se usa para devolver el número de filas recuperadas, incluidas las filas para las que no se devolvieron datos porque se produjo un error mientras se capturaban. En otras palabras, es el número de filas para las que el valor de la matriz de estado de fila no es SQL_ROW_NOROW. La dirección de este búfer se especifica con el atributo de la instrucción SQL_ATTR_ROWS_FETCHED_PTR. La aplicación asigna el búfer. Se establece mediante **SQLFetch** y **SQLFetchScroll**. Si el valor del atributo de la instrucción SQL_ATTR_ROWS_FETCHED_PTR es un puntero nulo, estas funciones no devuelven el número de filas recuperadas. Para determinar el número de la fila actual del conjunto de resultados, una aplicación puede llamar a **SQLGetStmtAttr** con el atributo SQL_ATTR_ROW_NUMBER.  
+ El búfer de filas recuperadas se usa para devolver el número de filas recuperadas, incluidas las filas para las que no se devolvieron datos porque se produjo un error mientras se capturaban. En otras palabras, es el número de filas para las que no se SQL_ROW_NOROW el valor de la matriz de estado de fila. La dirección de este búfer se especifica con el atributo de instrucción SQL_ATTR_ROWS_FETCHED_PTR. La aplicación asigna el búfer. Se establece mediante **SQLFetch** y **SQLFetchScroll**. Si el valor del atributo de instrucción SQL_ATTR_ROWS_FETCHED_PTR es un puntero nulo, estas funciones no devuelven el número de filas recuperadas. Para determinar el número de la fila actual del conjunto de resultados, una aplicación puede llamar a **SQLGetStmtAttr** con el atributo SQL_ATTR_ROW_NUMBER.  
   
- El contenido del búfer de filas recuperadas no está definido si **SQLFetch** o **SQLFETCHSCROLL** no devuelve SQL_SUCCESS ni SQL_SUCCESS_WITH_INFO, excepto cuando se devuelve SQL_NO_DATA, en cuyo caso el valor del búfer de filas capturadas se establece en 0.  
+ El contenido del búfer de filas recuperadas no está definido si **SQLFetch** o **SQLFetchScroll** no devuelve SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, excepto cuando se devuelve SQL_NO_DATA, en cuyo caso el valor del búfer de filas capturadas se establece en 0.  
   
 ### <a name="error-handling"></a>Tratamiento de errores  
- Los errores y las advertencias se pueden aplicar a filas individuales o a toda la función. Para obtener más información sobre los registros de [diagnóstico](../../../odbc/reference/develop-app/diagnostics.md) consulte diagnósticos y [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
+ Los errores y las advertencias se pueden aplicar a filas individuales o a toda la función. Para obtener más información sobre los registros de diagnóstico, consulte [diagnósticos](../../../odbc/reference/develop-app/diagnostics.md) y [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
   
 #### <a name="errors-and-warnings-on-the-entire-function"></a>Errores y advertencias en toda la función  
  Si se aplica un error a toda la función, como SQLSTATE HYT00 (tiempo de espera expirado) o SQLSTATE 24000 (estado de cursor no válido), **SQLFetch** devuelve SQL_ERROR y el SQLSTATE aplicable. El contenido de los búferes del conjunto de filas no está definido y la posición del cursor no se modifica.  
@@ -232,22 +232,22 @@ SQLRETURN SQLFetch(
   
 |Campo descriptor|Multilínea.|Campo de|Establecer mediante|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|ARD|Encabezado|Atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE|  
-|SQL_DESC_ARRAY_STATUS_PTR|IRD|Encabezado|Atributo de instrucción SQL_ATTR_ROW_STATUS_PTR|  
-|SQL_DESC_BIND_OFFSET_PTR|ARD|Encabezado|Atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_DESC_BIND_TYPE|ARD|Encabezado|Atributo de instrucción SQL_ATTR_ROW_BIND_TYPE|  
-|SQL_DESC_COUNT|ARD|Encabezado|Argumento *ColumnNumber* de **SQLBindCol**|  
-|SQL_DESC_DATA_PTR|ARD|informes|Argumento *TargetValuePtr* de **SQLBindCol**|  
-|SQL_DESC_INDICATOR_PTR|ARD|informes|Argumento *StrLen_or_IndPtr* en **SQLBindCol**|  
-|SQL_DESC_OCTET_LENGTH|ARD|informes|Argumento *BufferLength* en **SQLBindCol**|  
-|SQL_DESC_OCTET_LENGTH_PTR|ARD|informes|Argumento *StrLen_or_IndPtr* en **SQLBindCol**|  
-|SQL_DESC_ROWS_PROCESSED_PTR|IRD|Encabezado|Atributo de instrucción SQL_ATTR_ROWS_FETCHED_PTR|  
-|SQL_DESC_TYPE|ARD|informes|Argumento *TargetType* en **SQLBindCol**|  
+|SQL_DESC_ARRAY_SIZE|ARD|encabezado|SQL_ATTR_ROW_ARRAY_SIZE (atributo de instrucción)|  
+|SQL_DESC_ARRAY_STATUS_PTR|IRD|encabezado|SQL_ATTR_ROW_STATUS_PTR (atributo de instrucción)|  
+|SQL_DESC_BIND_OFFSET_PTR|ARD|encabezado|SQL_ATTR_ROW_BIND_OFFSET_PTR (atributo de instrucción)|  
+|SQL_DESC_BIND_TYPE|ARD|encabezado|SQL_ATTR_ROW_BIND_TYPE (atributo de instrucción)|  
+|SQL_DESC_COUNT|ARD|encabezado|Argumento *ColumnNumber* de **SQLBindCol**|  
+|SQL_DESC_DATA_PTR|ARD|records|Argumento *TargetValuePtr* de **SQLBindCol**|  
+|SQL_DESC_INDICATOR_PTR|ARD|records|*StrLen_or_IndPtr* argumento en **SQLBindCol**|  
+|SQL_DESC_OCTET_LENGTH|ARD|records|Argumento *BufferLength* en **SQLBindCol**|  
+|SQL_DESC_OCTET_LENGTH_PTR|ARD|records|*StrLen_or_IndPtr* argumento en **SQLBindCol**|  
+|SQL_DESC_ROWS_PROCESSED_PTR|IRD|encabezado|SQL_ATTR_ROWS_FETCHED_PTR (atributo de instrucción)|  
+|SQL_DESC_TYPE|ARD|records|Argumento *TargetType* en **SQLBindCol**|  
   
  Todos los campos de descriptor también se pueden establecer a través de **SQLSetDescField**.  
   
 #### <a name="separate-length-and-indicator-buffers"></a>Búferes de longitud y indicador independientes  
- Las aplicaciones pueden enlazar un único búfer o dos búferes independientes que se pueden usar para contener valores de longitud y indicador. Cuando una aplicación llama a **SQLBindCol**, el controlador establece los campos SQL_DESC_OCTET_LENGTH_PTR y SQL_DESC_INDICATOR_PTR del ARD en la misma dirección, que se pasa en el argumento *StrLen_or_IndPtr* . Cuando una aplicación llama a **SQLSetDescField** o **SQLSetDescRec**, puede establecer estos dos campos en direcciones diferentes.  
+ Las aplicaciones pueden enlazar un único búfer o dos búferes independientes que se pueden usar para contener valores de longitud y indicador. Cuando una aplicación llama a **SQLBindCol**, el controlador establece los campos SQL_DESC_OCTET_LENGTH_PTR y SQL_DESC_INDICATOR_PTR de ARD en la misma dirección, que se pasa en el argumento *StrLen_or_IndPtr* . Cuando una aplicación llama a **SQLSetDescField** o **SQLSetDescRec**, puede establecer estos dos campos en direcciones diferentes.  
   
  **SQLFetch** determina si la aplicación ha especificado la longitud y los búferes de indicador independientes. En este caso, cuando los datos no son NULL, **SQLFetch** establece el búfer de indicador en 0 y devuelve la longitud en el búfer de longitud. Cuando los datos son NULL, **SQLFetch** establece el búfer de indicador en SQL_NULL_DATA y no modifica el búfer de longitud.  
   
@@ -256,19 +256,19 @@ SQLRETURN SQLFetch(
   
 ### <a name="related-functions"></a>Funciones relacionadas  
   
-|Para obtener información acerca de|Vea|  
+|Para información acerca de|Vea|  
 |---------------------------|---------|  
-|Enlazar un búfer a una columna de un conjunto de resultados|[Función SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Enlazar un búfer a una columna de un conjunto de resultados|[SQLBindCol (función)](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
 |Cancelar el procesamiento de instrucciones|[Función SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Devolver información acerca de una columna de un conjunto de resultados|[Función SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
+|Devolver información acerca de una columna de un conjunto de resultados|[SQLDescribeCol (función)](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
 |Ejecutar una instrucción SQL|[Función SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |Ejecutar una instrucción SQL preparada|[Función SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Obtener un bloque de datos o desplazarse por un conjunto de resultados|[Función SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |Cerrar el cursor en la instrucción|[Función SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
 |Capturar parte o toda una columna de datos|[Función SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
-|Devolver el número de columnas del conjunto de resultados|[Función SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
+|Devolver el número de columnas del conjunto de resultados|[SQLNumResultCols (función)](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
 |Preparar una instrucción para su ejecución|[Función SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

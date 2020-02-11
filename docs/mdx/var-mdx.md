@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 96bb307607792a3846ee6566027457a05ce3b905
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037928"
 ---
 # <a name="var-mdx"></a>Var (MDX)
 
 
-  Devuelve la varianza de muestra de una expresión numérica evaluada sobre un conjunto mediante la fórmula de población no sesgada (al dividir por *n*).  
+  Devuelve la varianza de muestra de una expresión numérica evaluada sobre un conjunto mediante la fórmula de población no sesgada (dividiendo por *n*).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,12 +34,12 @@ Var(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Comentarios  
- El **Var** función devuelve la varianza no sesgada de una expresión numérica especificada evaluada sobre un conjunto especificado.  
+## <a name="remarks"></a>Observaciones  
+ La función **var** devuelve la varianza no sesgada de una expresión numérica especificada evaluada sobre un conjunto especificado.  
   
- El **Var** función utiliza la fórmula de población no sesgada y la [VarP](../mdx/varp-mdx.md) función utiliza la fórmula de población sesgada.  
+ La función **var** utiliza la fórmula de llenado no sesgada y la función [VarP](../mdx/varp-mdx.md) utiliza la fórmula de población sesgada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

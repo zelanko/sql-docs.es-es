@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53ef09d19b62c0e6ce7742c41581d3cdefdfc374
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890559"
 ---
 # <a name="partition-processing-destination"></a>Destino de procesamiento de particiones
-  El destino de procesamiento de particiones carga y procesa una partición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre particiones, vea [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
+  El destino de procesamiento de particiones carga [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y procesa una partición. Para más información sobre particiones, vea [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
   
  El destino de procesamiento de particiones incluye las siguientes características:  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68890559"
   
 -   Asignación de columnas de entrada para columnas de particiones.  
   
- Para más información sobre los objetos de procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services).  
+ Para más información sobre el procesamiento de objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services).  
   
 > [!NOTE]  
 >  Las tareas aquí descritas no se aplican a los modelos tabulares de Analysis Services.  No se pueden asignar las columnas de entrada a las de partición para los modelos tabulares. En su lugar puede usar la tarea Ejecutar DDL de Analysis Services [Analysis Services Execute DDL Task](../control-flow/analysis-services-execute-ddl-task.md) para procesar la partición.  
@@ -50,9 +50,9 @@ ms.locfileid: "68890559"
   
 -   [Editor de destino de procesamiento de particiones &#40;página Administrador de conexiones&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de procesamiento de particiones &#40;página Asignaciones&#41;](../partition-processing-destination-editor-mappings-page.md)  
+-   [&#40;página asignaciones del editor de destino de procesamiento de particiones&#41;](../partition-processing-destination-editor-mappings-page.md)  
   
--   [Editor de destino de procesamiento de particiones &#40;página Avanzadas&#41;](../partition-processing-destination-editor-advanced-page.md)  
+-   [Editor de destino de procesamiento de particiones &#40;página avanzadas&#41;](../partition-processing-destination-editor-advanced-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   

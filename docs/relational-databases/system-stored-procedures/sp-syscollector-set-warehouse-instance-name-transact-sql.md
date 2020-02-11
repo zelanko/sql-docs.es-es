@@ -19,13 +19,13 @@ ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6e21096971b9a0891d2c51c5fce34c119b454f0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010587"
 ---
-# <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
+# <a name="sp_syscollector_set_warehouse_instance_name-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Especifica el nombre de la instancia para la cadena de conexión que se usa para conectar al almacén de administración de datos.  
@@ -40,18 +40,18 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @instance_name =] '*instance_name*'  
- Es el nombre de la instancia. *instance_name* es **sysname** y los valores predeterminados para la instancia local si es NULL.  
+ [ @instance_name = ] '*instance_name*'  
+ Es el nombre de la instancia. *instance_name* es de **tipo sysname** y su valor predeterminado es la instancia local si es NULL.  
   
-> **Nota:** _instance_name_ debe ser el nombre de instancia completo, que está formado por el nombre del equipo y el nombre de instancia en el formulario *computerName* \\ *nombreDeInstancia*.  
+> **Nota:**  _instance_name_ debe ser el nombre completo de la instancia, que consta del nombre del equipo y el nombre de la instancia con el formato *NombreDeEquipo*\\*nombreDeInstancia*.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- Debe deshabilitar al recopilador de datos antes de cambiar esta configuración del recopilador de datos. Se produce un error en este procedimiento si se habilita el recopilador de datos.  
+## <a name="remarks"></a>Observaciones  
+ Debe deshabilitar el recopilador de datos antes de cambiar esta configuración para todo el recopilador de datos. Se produce un error en este procedimiento si se habilita el recopilador de datos.  
   
- Para ver el nombre de la instancia actual, consulte el [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) vista del sistema.  
+ Para ver el nombre de instancia actual, consulte la vista del sistema [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) .  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de base de datos dc_admin (con permiso EXECUTE) para ejecutar este procedimiento.  
@@ -66,8 +66,8 @@ EXEC sp_syscollector_set_warehouse_instance_name N'RemoteSERVER'; -- the default
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [syscollector_config_store &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)  
+ [syscollector_config_store &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md)  
   
   

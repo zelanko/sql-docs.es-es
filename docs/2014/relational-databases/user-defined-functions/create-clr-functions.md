@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524065"
 ---
 # <a name="create-clr-functions"></a>Crear funciones CLR
-  Es posible crear un objeto de base de datos dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programada en un ensamblado creado en Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Los objetos de bases de datos capaces de aprovechar el modelo enriquecido de programación suministrado por Common Language Runtime son las funciones de agregado, las funciones, los procedimientos almacenados, los desencadenadores y los tipos.  
+  Puede crear un objeto de base de datos dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una instancia de programada en un ensamblado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] creado en el Common Language Runtime (CLR). Los objetos de bases de datos capaces de aprovechar el modelo enriquecido de programación suministrado por Common Language Runtime son las funciones de agregado, las funciones, los procedimientos almacenados, los desencadenadores y los tipos.  
   
  Para crear una función CLR en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se deben seguir los pasos detallados a continuación:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62524065"
 ## <a name="accessing-external-resources"></a>Obtener acceso a recursos externos  
  Las funciones CLR se pueden utilizar para obtener acceso a recursos externos tales como archivos, recursos de red, servicios web y otras bases de datos (incluidas las instancias remotas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Para ello, es posible utilizar diversas clases en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], como por ejemplo `System.IO`, `System.WebServices`, `System.Sql`, etc. El ensamblado que contiene estas funciones debe estar configurado por lo menos con el conjunto de permisos EXTERNAL_ACCESS que tiene este objetivo. Para más información, consulte [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql). El proveedor administrado cliente SQL se puede utilizar para obtener acceso a instancias remotas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, las conexiones vinculadas en bucles de retorno con el servidor de origen no están admitidas en las funciones CLR.  
   
- **Para crear, modificar o quitar ensamblados de SQL Server**  
+ **Para crear, modificar o quitar ensamblados en SQL Server**  
   
 -   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   
@@ -55,9 +55,9 @@ ms.locfileid: "62524065"
 ## <a name="accessing-native-code"></a>Acceso a código nativo  
  Las funciones CLR se pueden usar para tener acceso a código nativo (no administrado), como el código escrito en C o C++, a través del uso de PInvoke desde código administrado (vea [Llamar a funciones nativas desde código administrado](https://go.microsoft.com/fwlink/?LinkID=181929) para obtener detalles). Así, puede reutilizar el código heredado como las UDF de CLR, o escribir UDF esenciales para el rendimiento en código nativo. Esto requiere usar un ensamblado UNSAFE. Vea [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) para conocer advertencias acerca del uso de ensamblados UNSAFE.  
   
-## <a name="see-also"></a>Vea también  
- [Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](create-user-defined-functions-database-engine.md)   
- [Crear funciones de agregado definidas por el usuario](create-user-defined-aggregates.md)   
+## <a name="see-also"></a>Consulte también  
+ [Crear funciones definidas por el usuario &#40;Motor de base de datos&#41;](create-user-defined-functions-database-engine.md)   
+ [Crear agregados definidos por el usuario](create-user-defined-aggregates.md)   
  [Ejecutar funciones definidas por el usuario](execute-user-defined-functions.md)   
  [Ver funciones definidas por el usuario](view-user-defined-functions.md)   
  [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b3bce4baf3dc3499621f67defd40a4579e9cd460
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037956"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
@@ -31,14 +31,14 @@ ValidMeasure(Tuple_Expression)
  *Tuple_Expression*  
  Expresión MDX válida que devuelve una tupla.  
   
-## <a name="remarks"></a>Comentarios  
- El **ValidMeasure** función devuelve el valor de una tupla, omitiendo los atributos que no tienen relación con el grupo de medida de la medida cuyo valor devuelve la tupla. Un atributo puede no estar relacionado con una medida por dos razones:  
+## <a name="remarks"></a>Observaciones  
+ La función **ValidMeasure** devuelve el valor de una tupla, omitiendo los atributos que no tienen ninguna relación con el grupo de medida de la medida cuyo valor devuelve la tupla. Un atributo puede no estar relacionado con una medida por dos razones:  
   
 -   La dimensión del atributo no tiene ninguna relación con el grupo de medida de la medida de la tupla.  
   
 -   La dimensión del atributo no tiene una relación con el grupo de medida de la medida, pero el atributo de granularidad no es el atributo clave y el atributo de granularidad no tiene una relación directa con el atributo en la tupla.  
   
- El comportamiento especificado por esta función es el comportamiento de servidor predeterminado y se controla mediante el **IgnoreUnrelatedDimensions** propiedad del objeto de grupo de medida.  
+ El comportamiento especificado por esta función es el comportamiento predeterminado del servidor y está controlado por la propiedad **IgnoreUnrelatedDimensions** en el objeto de grupo de medida.  
   
  En cada atributo de la tupla especificada con granularidad (es decir, donde el miembro de la tupla no es el miembro All), la coordenada actual de cada uno de esos atributos se mueve de la siguiente manera:  
   
@@ -68,7 +68,7 @@ FROM [Adventure Works]
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

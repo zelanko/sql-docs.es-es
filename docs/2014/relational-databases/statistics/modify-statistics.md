@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2da978efd869a748bb48f6d494d59ae2f4cfb019
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211861"
 ---
 # <a name="modify-statistics"></a>Modificar estadísticas
@@ -46,7 +46,7 @@ ms.locfileid: "68211861"
   
 -   El usuario debe ser el propietario de la tabla o vista indexada o un miembro de uno de los roles siguientes: rol fijo de servidor **sysadmin** , rol fijo de base de datos **db_owner** o rol fijo de base de datos **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-statistics"></a>Para modificar las estadísticas  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68211861"
   
 6.  En el cuadro de diálogo **Propiedades de estadísticas:** *nombre_estadísticas*, en la página **General**, haga clic en **Agregar**, **Quitar**, **Subir**o **Bajar**o cualquier combinación, para alterar las propiedades de las estadísticas. Recuerde que la ubicación de una columna dentro de la cuadrícula **Columnas de estadísticas** puede afectar considerablemente a la utilidad de las estadísticas.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para modificar las estadísticas**  

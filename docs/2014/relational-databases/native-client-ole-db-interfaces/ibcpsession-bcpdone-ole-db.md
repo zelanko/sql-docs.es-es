@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) | Microsoft Docs
+title: 'IBCPSession:: BCPDone (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743201"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -33,8 +33,8 @@ ms.locfileid: "62743201"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- No se puede llamar a ninguna otra operación en la interfaz [IBCPSession](ibcpsession-ole-db.md) después de llamar al método **BCPDone**. La única posibilidad es llamar al método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) para iniciar una nueva operación de copia masiva. Esto es similar a llamar al método [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) .  
+## <a name="remarks"></a>Observaciones  
+ No se puede llamar a ninguna otra operación en la interfaz [IBCPSession](ibcpsession-ole-db.md) después de llamar al método **BCPDone**. La única posibilidad es llamar al método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) para iniciar una nueva operación de copia masiva. Esto es similar a llamar al método [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  S_OK  
@@ -62,7 +62,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Podría utilizar BCP para volver a agregar estos datos a la tabla con el comando siguiente:  
   
- **bcp master..fltest in outfile.dat -n -T -S** *server*  
+ **maestro BCP.. fltest en OUTFILE. dat-n-T-S** *Server*  
   
  Tendrá que especificar sqlncli11.lib al compilar este ejemplo.  
   
@@ -461,7 +461,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Realizar operaciones de copia masiva](../native-client/features/performing-bulk-copy-operations.md)  
   

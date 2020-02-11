@@ -18,13 +18,13 @@ ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022318"
 ---
-# <a name="spmonitor-transact-sql"></a>sp_monitor (Transact-SQL)
+# <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra estadísticas sobre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,26 +43,26 @@ sp_monitor
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
-|**last_run**|Tiempo **sp_monitor** ejecutó por última vez.|  
+|**last_run**|Hora **sp_monitor** la última vez que se ejecutó.|  
 |**current_run**|Tiempo **sp_monitor** se está ejecutando.|  
-|**segundos**|Número de segundos transcurridos desde que **sp_monitor** se ejecutó.|  
+|**segundos**|Número de segundos transcurridos desde que se ejecutó **sp_monitor** .|  
 |**cpu_busy**|Número de segundos durante los que la CPU del equipo servidor ha realizado trabajos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**io_busy**|Número de segundos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha invertido en realizar operaciones de E/S.|  
-|**Inactivo**|Número de segundos durante los que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha estado inactivo.|  
+|**activos**|Número de segundos durante los que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha estado inactivo.|  
 |**packets_received**|Número de paquetes de entrada que ha leído [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**packets_sent**|Número de paquetes de salida escritos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**packet_errors**|Número de errores que ha encontrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al leer y escribir paquetes.|  
 |**total_read**|Número de lecturas que ha realizado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**total_write**|Número de escrituras que ha realizado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**total_errors**|Número de errores que ha encontrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al leer y escribir.|  
-|**Conexiones**|Número de inicios de sesión o intentos de inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**conexiones**|Número de inicios de sesión o intentos de inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Comentarios  
- A través de una serie de funciones, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza el seguimiento del trabajo que ha realizado. Ejecutar **sp_monitor** muestra los valores devueltos por estas funciones y muestra cuánto han cambiado desde la última vez que se ejecutó el procedimiento.  
+## <a name="remarks"></a>Observaciones  
+ A través de una serie de funciones, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza el seguimiento del trabajo que ha realizado. Al ejecutar **sp_monitor** se muestran los valores actuales devueltos por estas funciones y se muestra cuánto han cambiado desde la última vez que se ejecutó el procedimiento.  
   
- Para cada columna, la estadística se imprime en el formulario *número*(*número*)-*número*% o *número*(*número*). La primera *número* hace referencia al número de segundos (para **cpu_busy**, **io_busy**, y **inactivo**) o el número total (para los demás variables) puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinició. El *número* entre paréntesis hace referencia al número de segundos o al número total desde la última vez **sp_monitor** se ejecutó. El porcentaje es el porcentaje de tiempo transcurrido desde **sp_monitor** ejecutó por última vez. Por ejemplo, si el informe muestra **cpu_busy** como 4250 (215)-68%, la CPU ha estado ocupada 4250 segundos desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inició por última vez hacia arriba, 215 segundos desde **sp_monitor** era última ejecución y un 68 por ciento de la total de tiempo transcurrido desde **sp_monitor** ejecutó por última vez.  
+ Para cada columna, la estadística se imprime con el formato *número*(*número*)-*número*% o *número*(*número*). El primer *número* hace referencia al número de segundos (por **cpu_busy**, **io_busy**e **inactivo**) o el número total (para las demás variables) desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se reinició. El *número* entre paréntesis hace referencia al número de segundos o al número total transcurridos desde la última vez que se ejecutó **sp_monitor** . El porcentaje es el porcentaje de tiempo transcurrido desde la última vez que se ejecutó **sp_monitor** . Por ejemplo, si el informe muestra **cpu_busy** como 4250 (215)-68%, la CPU ha estado ocupada 4250 segundos desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se inició por última vez, 215 segundos desde la última vez que se ejecutó **sp_monitor** , y el 68% del tiempo total transcurrido desde la última vez que se ejecutó la **sp_monitor** .  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
@@ -84,20 +84,20 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**cpu_busy**|**io_busy**|**Inactivo**|  
-|190(0)-0%|187(0)-0%|148(556)-99%|  
+|**cpu_busy**|**io_busy**|**activos**|  
+|190 (0)-0%|187 (0)-0%|148 (556): 99%|  
   
 ||||  
 |-|-|-|  
 |**packets_received**|**packets_sent**|**packet_errors**|  
-|16(1)|20(2)|0(0)|  
+|16 (1)|20 (2)|0 (0)|  
   
 |||||  
 |-|-|-|-|  
-|**total_read**|**total_write**|**total_errors**|**Conexiones**|  
-|141(0)|54920(127)|0(0)|4(0)|  
+|**total_read**|**total_write**|**total_errors**|**conexiones**|  
+|141 (0)|54920 (127)|0 (0)|4 (0)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

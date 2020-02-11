@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524391"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
-  En este tema se describe cómo quitar un operado para que deje de recibir notificaciones de alerta del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  En este tema se describe cómo quitar un operador para que deje de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recibir notificaciones de alerta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del agente [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en [!INCLUDE[tsql](../../includes/tsql-md.md)]mediante o.  
   
  **En este tema**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62524391"
 ####  <a name="Permissions"></a> Permisos  
  Los miembros del rol fijo de servidor **sysadmin** pueden eliminar operadores.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-delete-an-operator"></a>Para eliminar un operador  
   
@@ -86,6 +86,6 @@ ms.locfileid: "62524391"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_delete_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql).  
+ Para obtener más información, vea [sp_delete_operator &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql).  
   
   

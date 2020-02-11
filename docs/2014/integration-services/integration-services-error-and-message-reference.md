@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892663"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referencia de errores y mensajes de Integration Services
@@ -1413,7 +1413,7 @@ ms.locfileid: "62892663"
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|El número de filas %2!ld! no es válido para la propiedad "%1". Debe ser mayor que 0.|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|Se pidió al adaptador que escribiera una cadena de %1!I64d! bytes de longitud, pero todos los datos deben tener menos de 4294967295 bytes de longitud.|  
 |0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|No se asignó ninguna entrada a una salida. "%1" debe tener al menos una columna de entrada asignada a una columna de salida.|  
-|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|La conversión de "%1" con página de códigos %2!d! en "%3" con página de códigos %4!d! no se admite.|  
+|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|La conversión de "%1" con página de códigos %2!d! en "%3" con página de códigos %4!d! no está permitida.|  
 |0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|La asignación de columna de metadatos externos a %1 no es válida.  El Id. de columna de metadatos externos no puede ser cero.|  
 |0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|Se ha asignado %1 a una columna de metadatos externa que no existe.|  
 |0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|Error al escribir datos de objeto long de tipo DT_TEXT, DT_NTEXT o DT_IMAGE en el búfer de la tarea Flujo de datos para la columna "%1".|  

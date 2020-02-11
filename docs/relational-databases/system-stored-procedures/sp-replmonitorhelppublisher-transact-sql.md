@@ -16,13 +16,13 @@ ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5db934c972282609e9b2978a66034b39bb38a092
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771192"
 ---
-# <a name="spreplmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher (Transact-SQL)
+# <a name="sp_replmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Devuelve información sobre el estado actual para uno o más publicadores asociados a un distribuidor. Este procedimiento almacenado, que se utiliza para supervisar la replicación, se ejecuta en el distribuidor en la base de datos de distribución.  
@@ -44,24 +44,24 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**publicador**|**sysname**|Es el nombre de un publicador.|  
 |**distribution_db**|**sysname**|Es el nombre de la base de datos de distribución utilizada por un publicador.|  
-|**status**|**int**|Estado máximo de todos los agentes de replicación asociados a las publicaciones de este publicador, el cual puede ser uno de los valores siguientes.<br /><br /> **1** = iniciado<br /><br /> **2** = correcto<br /><br /> **3** = en curso<br /><br /> **4** = inactivo<br /><br /> **5** = reintentando<br /><br /> **6** = error|  
-|**warning**|**int**|Advertencia de umbral máximo generada por una suscripción perteneciente a una publicación de este publicador, la cual puede ser el resultado lógico OR de uno o más de estos valores.<br /><br /> **1** = expiración: una suscripción a una publicación transaccional no se ha sincronizado en el umbral del período de retención.<br /><br /> **2** = latencia: el tiempo que se tarda en replicar los datos de un publicador transaccional en el suscriptor supera el umbral, en segundos.<br /><br /> **4** = mergeexpiration: una suscripción a una publicación de combinación no se ha sincronizado en el umbral del período de retención.<br /><br /> **8** = mergefastrunduration: el tiempo que se tarda en completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red rápida.<br /><br /> **16** = mergeslowrunduration: el tiempo que se tarda en completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red lenta o de acceso telefónico.<br /><br /> **32** = mergefastrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red rápida.<br /><br /> **64** = mergeslowrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red lenta o de acceso telefónico.|  
+|**estatus**|**int**|Estado máximo de todos los agentes de replicación asociados a las publicaciones de este publicador, el cual puede ser uno de los valores siguientes.<br /><br /> **1** = iniciado<br /><br /> **2** = correcto<br /><br /> **3** = en curso<br /><br /> **4** = inactivo<br /><br /> **5** = reintentando<br /><br /> **6** = error|  
+|**atención**|**int**|Advertencia de umbral máximo generada por una suscripción perteneciente a una publicación de este publicador, la cual puede ser el resultado lógico OR de uno o más de estos valores.<br /><br /> **1** = expiración: una suscripción a una publicación transaccional no se ha sincronizado en el umbral del período de retención.<br /><br /> **2** = latencia: el tiempo que se tarda en replicar los datos de un publicador transaccional en el suscriptor supera el umbral, en segundos.<br /><br /> **4** = mergeexpiration: una suscripción a una publicación de combinación no se ha sincronizado en el umbral del período de retención.<br /><br /> **8** = mergefastrunduration: el tiempo que se tarda en completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red rápida.<br /><br /> **16** = mergeslowrunduration: el tiempo que se tarda en completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red lenta o de acceso telefónico.<br /><br /> **32** = mergefastrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red rápida.<br /><br /> **64** = mergeslowrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red lenta o de acceso telefónico.|  
 |**publicationcount**|**int**|Es el número de publicaciones pertenecientes al publicador.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_replmonitorhelppublisher** se usa con todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** en el distribuidor o los miembros de los roles fijos de base de datos **db_owner** o **replmonitor** de la base de datos de distribución pueden ejecutar **sp_replmonitorhelppublisher**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la replicación mediante programación](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

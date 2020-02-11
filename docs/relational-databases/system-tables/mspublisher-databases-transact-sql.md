@@ -18,25 +18,25 @@ ms.assetid: 59b0166e-a64c-46b8-befc-c222fa1ccce2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da208c7fb83053c1817693bb16d16c3488fe90c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032612"
 ---
-# <a name="mspublisherdatabases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
+# <a name="mspublisher_databases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MSpublisher_databases** tabla contiene una fila por cada par de base de datos del publicador y publicador da servido el distribuidor local. Esta tabla se almacena en la base de datos de distribución.  
+  La tabla **MSpublisher_databases** contiene una fila por cada par de publicador y base de datos del publicador que presta servicio el distribuidor local. Esta tabla se almacena en la base de datos de distribución.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**publisher_id**|**smallint**|El ID. del publicador.|  
+|**publisher_id**|**smallint**|IDENTIFICADOR del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
-|**id**|**int**|Id. de la fila.|  
-|**publisher_engine_edition**|**int**|Edición del publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que puede ser una de las siguientes:<br /><br /> **10** = personal Edition<br /><br /> **11** = desktop Engine (MSDE)<br /><br /> **20** = estándar<br /><br /> **21** = grupo de trabajo<br /><br /> **30** = Enterprise (evaluación)<br /><br /> **31** = para desarrolladores<br /><br /> **40** = express (Express no puede ser un publicador. Este valor está presente por integridad.)|  
+|**sesión**|**int**|Id. de la fila.|  
+|**publisher_engine_edition**|**int**|Edición del publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que puede ser una de las siguientes:<br /><br /> **10** = edición personal<br /><br /> **11** = Desktop Engine (MSDE)<br /><br /> **20** = estándar<br /><br /> **21** = grupo de trabajo<br /><br /> **30** = Enterprise (evaluación)<br /><br /> **31** = desarrollador<br /><br /> **40** = Express (Express no puede ser un publicador. Este valor está presente por integridad.)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

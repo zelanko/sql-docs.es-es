@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bac8c34542f6c398541e69b690c11d364d37096d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761767"
 ---
-# <a name="mssqlserver7986"></a>MSSQLSERVER_7986
+# <a name="mssqlserver_7986"></a>MSSQLSERVER_7986
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|7986|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|7986|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_PRE_CHECKS_CROSS_OBJECT_LINKAGE|  
-|Texto del mensaje|Comprobaciones previas de tabla de sistema: Id. de objeto O_ID tiene encadenamiento entre objetos. La página P_ID1 apunta a P_ID2 en el Id. de unidad de asignación A_ID1 (debería ser A_ID2). Instrucción de comprobación terminada debido a un error irreparable.|  
+|Texto del mensaje|Comprobaciones previas de tabla del sistema: el id. de objeto O_ID tiene encadenamiento entre objetos. La página P_ID1 apunta a P_ID2 en el Id. de unidad de asignación A_ID1 (debería ser A_ID2). Instrucción de comprobación terminada debido a un error irreparable.|  
   
 ## <a name="explanation"></a>Explicación  
  La primera fase de DBCC CHECKDB es hacer comprobaciones básicas en las páginas de datos de las tablas críticas del sistema. Si se encuentra algún error, no puede repararse; por tanto, DBCC CHECKDB termina inmediatamente. El puntero de página siguiente de la página *P_ID1* en el nivel de datos del objeto especificado apunta a una página, *P_ID2*, de un objeto diferente.  

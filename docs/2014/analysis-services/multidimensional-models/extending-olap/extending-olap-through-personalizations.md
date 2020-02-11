@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74c5b777dda06cf70a6afa2e6384eb2a3587d431
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62725989"
 ---
 # <a name="extending-olap-through-personalizations"></a>Extender OLAP mediante personalizaciones
@@ -30,8 +30,8 @@ ms.locfileid: "62725989"
 ## <a name="personalized-extensions"></a>Extensiones personalizadas  
  Las extensiones de personalización de SQL Server Analysis Services constituyen el fundamento de la idea de implementar una arquitectura de complemento. Las extensiones de personalización de Analysis Services son una modificación simple y elegante de la arquitectura de ensamblado administrado existente y se exponen en el modelo de objetos <xref:Microsoft.AnalysisServices.AdomdServer>, la sintaxis de Expresiones multidimensionales (MDX) y los conjuntos de filas de esquema de Analysis Services.  
   
-## <a name="see-also"></a>Vea también  
- [Administración de los ensamblados de modelos multidimensionales](../multidimensional-model-assemblies-management.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administración de ensamblados de modelos multidimensionales](../multidimensional-model-assemblies-management.md)   
  [Extensiones de personalización de Analysis Services](analysis-services-personalization-extensions.md)  
   
   

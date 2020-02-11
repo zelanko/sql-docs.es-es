@@ -1,5 +1,5 @@
 ---
-title: Referencia de mensajes de Error de LocalDB de SQL Server Express | Microsoft Docs
+title: Referencia del mensaje de error de SQL Server Express LocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98c76925063c332ef2f537d427ae62bb83bc7024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714912"
 ---
 # <a name="sql-server-express-localdb-error-message-reference"></a>Referencia de mensajes de error de SQL Server Express LocalDB
@@ -69,7 +69,7 @@ ms.locfileid: "62714912"
  El búfer de entrada es demasiado corto y no se ha solicitado truncamiento.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](localdb-error-internal-error.md)  
- Error inesperado. Vea el registro de eventos para obtener detalles.  
+ Se ha producido un error inesperado. Vea el registro de eventos para obtener detalles.  
   
  [LOCALDB_ERROR_INVALID_INSTANCE_NAME](localdb-error-invalid-instance-name.md)  
  El nombre de instancia de especificado no es válido.  

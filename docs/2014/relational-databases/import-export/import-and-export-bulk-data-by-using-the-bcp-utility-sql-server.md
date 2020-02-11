@@ -15,10 +15,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
 ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71708210"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importar y exportar datos de forma masiva con la utilidad bcp (SQL Server)
@@ -50,13 +50,13 @@ Este tema constituye una introducción al uso de la [utilidad bcp](../../tools/b
 
  Para consultar los ejemplos de **bcp** , vea:  
   
--   [bcp Utility](../../tools/bcp-utility.md)  
+-   [bcp (utilidad)](../../tools/bcp-utility.md)  
   
 -   [Crear un archivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
 -   [Ejemplos de importación y exportación en bloque de documentos XML &#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [Mantener valores de identidad al importar datos en bloque &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Mantener los valores de identidad al importar datos de forma masiva &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [Mantener valores NULL o usar valores predeterminados durante la importación en bloque &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
@@ -72,13 +72,13 @@ Este tema constituye una introducción al uso de la [utilidad bcp](../../tools/b
   
 -   [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Instrucción &#40;INSERT de Transact&#41; -SQL](/sql/t-sql/statements/insert-transact-sql)
-[SELECT de &#40;Transact&#41; -SQL](/sql/t-sql/queries/select-clause-transact-sql)
-[utilidad BCP](../../tools/bcp-utility.md)   
-[Preparar la importación masiva de &#40;datos&#41; SQL Server](prepare-to-bulk-import-data-sql-server.md)
-[Bulk Insert &#40;Transact-&#41; SQL](/sql/t-sql/statements/bulk-insert-transact-sql)
-[importación y exportación masivas &#40;de&#41; datos SQL Server](bulk-import-and-export-of-data-sql-server.md)
-[OPENROWSET &#40;Transact&#41; -SQL](/sql/t-sql/functions/openrowset-transact-sql)
-[crear un &#40;archivo&#41; de formato SQL Server](create-a-format-file-sql-server.md)
+[Insert &#40;instrucción SELECT de Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) 
+ [&#40;la utilidad BCP de Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
+ [](../../tools/bcp-utility.md)   
+[Preparar para la importación masiva de datos &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
+ [Bulk Insert &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
+ [importación y exportación masivas de datos &#40;](bulk-import-and-export-of-data-sql-server.md) 
+SQL Server&#41;[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
+ [crear un archivo de formato &#40;](create-a-format-file-sql-server.md) SQL Server&#41;

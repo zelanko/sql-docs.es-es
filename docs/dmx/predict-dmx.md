@@ -1,5 +1,5 @@
 ---
-title: Predecir (DMX) | Microsoft Docs
+title: Predicción (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: eb939c45d298117fa81b05d6188aa3a4c5cd7c4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008161"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  El **Predict** función devuelve un valor de predicción, o un conjunto de valores para una columna especificada.  
+  La función **PREDICT** devuelve un valor o un conjunto de valores predichos para una columna especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -31,43 +31,43 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="applies-to"></a>Se aplica a  
  Una referencia de columna escalar o una referencia de columna de tabla.  
   
-## <a name="return-type"></a>Tipo devuelto  
- \<referencia de columna escalar >  
+## <a name="return-type"></a>Tipo de valor devuelto  
+ \<> de referencia de columna escalar  
   
- o Administrador de configuración de  
+ or  
   
- \<referencia de columna de tabla >  
+ \<> de referencia de columna de tabla  
   
  El tipo devuelvo depende del tipo de columna a la que se aplica la función.  
   
 > [!NOTE]  
 >  INCLUSIVE, EXCLUSIVE, INPUT_ONLY e INCLUDE_STATISTICS solo se aplican a una referencia de columna de tabla, mientras que EXCLUDE_NULL e INCLUDE_NULL se aplican exclusivamente a una referencia de columna escalar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Entre las opciones de la función, figuran EXCLUDE_NULL (predeterminada), INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (predeterminada), INPUT_ONLY e INCLUDE_STATISTICS.  
   
 > [!NOTE]  
->  Para los modelos de serie temporal, la función Predict no admite INCLUDE_STATISTICS.  
+>  En los modelos de serie temporal, la función PREDICT no admite INCLUDE_STATISTICS.  
   
- El parámetro INCLUDE_NODE_ID devuelve la columna $NODEID en el resultado. NODE_ID es el nodo de contenido en el que se ejecuta la predicción para un caso concreto. Este parámetro es opcional cuando el uso de Predict en columnas de tabla.  
+ El parámetro INCLUDE_NODE_ID devuelve la columna $NODEID en el resultado. NODE_ID es el nodo de contenido en el que se ejecuta la predicción para un caso concreto. Este parámetro es opcional cuando se usa predecir en columnas de tabla.  
   
- El *n* parámetro se aplica a columnas de la tabla. Define el número de filas que se devuelve en función del tipo de predicción. Si la columna subyacente es la secuencia, llama a la **PredictSequence** función. Si la columna subyacente es una serie temporal, llama a la **PredictTimeSeries** función. Caso de tipos de predicción, llama a la **PredictAssociation** función.  
+ El parámetro *n* se aplica a las columnas de la tabla. Define el número de filas que se devuelve en función del tipo de predicción. Si la columna subyacente es Sequence, llama a la función **PredictSequence** . Si la columna subyacente es serie temporal, llama a la función **PredictTimeSeries** . En el caso de tipos asociativos de predicción, llama a la función **PredictAssociation** .  
   
- El **Predict** función admite el polimorfismo.  
+ La función **PREDICT** admite el polimorfismo.  
   
  Las siguientes formas abreviadas alternativas son de uso frecuente:  
   
--   [Gender] es una alternativa para **Predict**([Gender], EXCLUDE_NULL).  
+-   [Gender] es una alternativa para **predicción**([sexo], EXCLUDE_NULL).  
   
--   [Products Purchases] es una alternativa para **Predict**([Products Purchases], EXCLUDE_NULL, EXCLUSIVE).  
+-   [Products Purchases] es una alternativa para **predicción**([Products Purchases], EXCLUDE_NULL, Exclusive).  
   
     > [!NOTE]  
-    >  El propio tipo devuelto de esta función se considera como una referencia de columna. Esto significa que el **Predict** función se puede usar como argumento en otras funciones que toman una referencia de columna como un argumento (excepto para el **Predict** función en Sí).  
+    >  El propio tipo devuelto de esta función se considera como una referencia de columna. Esto significa que la función de **predicción** se puede usar como argumento en otras funciones que toman una referencia de columna como argumento (excepto para la propia función de **predicción** ).  
   
- Si se pasa INCLUDE_STATISTICS a una predicción en una columna con valores de tabla agrega las columnas **$Probability** y **$Support** a la tabla resultante. Estas columnas describen la probabilidad de que exista el registro de tabla anidada asociado.  
+ Al pasar INCLUDE_STATISTICS a una predicción en una columna con valores de tabla, se agregan las columnas **$probability** y **$support** a la tabla resultante. Estas columnas describen la probabilidad de que exista el registro de tabla anidada asociado.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente usa la función Predict para devolver los cuatro productos en la base de datos de Adventure Works que es más probable que se pueden vender juntos. Dado que la función predice frente a un modelo de minería de datos de reglas de asociación, usa automáticamente el **PredictAssociation** funcione como se describió anteriormente.  
+ En el ejemplo siguiente se usa la función PREDICT para devolver los cuatro productos de la base de datos de Adventure Works que es más probable que se vendan juntos. Dado que la función está prediciendo en un modelo de minería de datos de reglas de asociación, utiliza automáticamente la función **PredictAssociation** como se describió anteriormente.  
   
 ```  
 SELECT  
@@ -86,8 +86,8 @@ FROM     [Association]
 |Patch Kit|2113|0.142012232004839|0.132389356196586|  
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
-## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
+## <a name="see-also"></a>Consulte también  
+ [Referencia de funciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

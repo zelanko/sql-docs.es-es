@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63131489"
 ---
 # <a name="localdbstartinstance-function"></a>Función LocalDBStartInstance
   Inicia la instancia de SQL Server Express LocalDB especificada.  
   
- **Archivo de encabezado:** sqlncli.h  
+ **Archivo de encabezado:** SQLNCLI. h  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -102,21 +102,21 @@ HRESULT LocalDBStartInstance(
  No se puede crear una instancia automática. Vea el registro de eventos de aplicación de Windows para obtener los detalles del error.  
   
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
- Error inesperado. Vea el registro de eventos para obtener detalles.  
+ Se ha producido un error inesperado. Vea el registro de eventos para obtener detalles.  
   
 ## <a name="details"></a>Detalles  
  Ell argumento del búfer de conexión (*wszSqlConnection*) y el argumento del tamaño de búfer de conexión (*lpcchSqlConnection*) son opcionales. La tabla siguiente muestra las opciones de uso de estos argumentos y sus resultados.  
   
-|Búfer|Tamaño de búfer|Análisis razonado|Acción|  
+|Buffer|Tamaño de búfer|Análisis razonado|Acción|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|Usuario desea iniciar la instancia y no necesita una canalización de nombre.|Inicia una instancia (sin devolución de canalización y no se requiere la devolución de tamaño de búfer).|  
-|NULL|Mostrar|El usuario solicita el tamaño de búfer de salida. (En la llamada siguiente el usuario probablemente solicitará un inicio real).|Devuelve el tamaño de búfer necesario (sin inicio y sin devolución de canalización). El resultado es S_OK.|  
-|Mostrar|NULL|No está permitido; entrada no correcta.|El resultado devuelto es LOCALDB_ERROR_INVALID_PARAMETER.|  
-|Mostrar|Mostrar|El usuario desea iniciar la instancia y necesita el nombre de la canalización para conectarse una vez se haya iniciado.|Comprueba el tamaño de búfer, inicia la instancia y devuelve el nombre de la canalización en el búfer. <br />El argumento de tamaño de búfer devuelve la longitud de la "servidor =" cadena, sin incluir valores NULL finales.|  
+|NULL|NULL|El usuario desea iniciar la instancia y no necesita un nombre de canalización.|Inicia una instancia (sin devolución de canalización y no se requiere la devolución de tamaño de búfer).|  
+|NULL|Presente|El usuario solicita el tamaño de búfer de salida. (En la llamada siguiente el usuario probablemente solicitará un inicio real).|Devuelve el tamaño de búfer necesario (sin inicio y sin devolución de canalización). El resultado es S_OK.|  
+|Presente|NULL|No está permitido; entrada no correcta.|El resultado devuelto es LOCALDB_ERROR_INVALID_PARAMETER.|  
+|Presente|Presente|El usuario desea iniciar la instancia y necesita el nombre de la canalización para conectarse una vez se haya iniciado.|Comprueba el tamaño de búfer, inicia la instancia y devuelve el nombre de la canalización en el búfer. <br />El argumento de tamaño de búfer devuelve la longitud de la cadena "Server =", sin incluir los valores NULL de terminación.|  
   
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Información de encabezado y versión de SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

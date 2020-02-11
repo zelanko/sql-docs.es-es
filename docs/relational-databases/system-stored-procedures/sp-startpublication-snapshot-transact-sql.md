@@ -16,13 +16,13 @@ ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ab1b3487c3a1affe7a0dc40f62d241d19b29186b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032761"
 ---
-# <a name="spstartpublicationsnapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
+# <a name="sp_startpublication_snapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Se utiliza para iniciar el trabajo del Agente de instantáneas que genera la instantánea inicial para una publicación. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
@@ -38,24 +38,24 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher = ] 'publisher'` Es el nombre de una que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null. No debe especificar este parámetro para un publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @publisher = ] 'publisher'`Es el nombre de un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. No debe especificar este parámetro para un publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_startpublication_snapshot** se utiliza con todos los tipos de replicación.  
+## <a name="remarks"></a>Observaciones  
+ **sp_startpublication_snapshot** se usa con todos los tipos de replicación.  
   
- Para que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher, este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
+ Para un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de, este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_startpublication_snapshot**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_startpublication_snapshot**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
- [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
- [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)  
+ [sp_addpublication_snapshot &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
+ [sp_changepublication_snapshot &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)  
   
   

@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c46f6bee67aa84bb805709e01ea911722902a3e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762171"
 ---
-# <a name="mssqlserver8974"></a>MSSQLSERVER_8974
+# <a name="mssqlserver_8974"></a>MSSQLSERVER_8974
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|8974|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|8974|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
-|Texto del mensaje|Error de tabla: Id. de objeto O_ID, ID. de índice de partición PN_ID ID, unidad de asignación A_ID (tipo TYPE). Las páginas P_ID2, zona S_ID2 y P_ID3, zona P_ID3 apuntan al nodo de datos no consecutivos de la página P_ID1, zona S_ID1, Id. de texto TEXT_ID.|  
+|Texto del mensaje|Error de tabla: Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID, Id. de unidad de asignación ID A_ID (tipo TYPE). Las páginas P_ID2, zona S_ID2 y P_ID3, zona P_ID3 apuntan al nodo de datos no consecutivos de la página P_ID1, zona S_ID1, Id. de texto TEXT_ID.|  
   
 ## <a name="explanation"></a>Explicación  
  Un nodo de datos no consecutivos tiene dos registros de datos o índices que lo enumeran como un nodo secundario. Un nodo solo puede tener un nodo primario.  

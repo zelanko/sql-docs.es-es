@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211994"
 ---
 # <a name="create-a-resource-pool"></a>Crear un grupo de recursos de servidor
   Puede crear un grupo de recursos de servidor con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
+-   **Antes de empezar:**  [limitaciones y restricciones](#LimitationsRestrictions), [permisos](#Permissions)  
   
--   **Para crear un grupo de recursos de servidor con:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **Para crear un grupo de recursos con:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -37,8 +37,8 @@ ms.locfileid: "68211994"
 ###  <a name="Permissions"></a> Permisos  
  Para crear un grupo de recursos de servidor se requiere un permiso CONTROL SERVER.  
   
-##  <a name="CreRPProp"></a> Crear un grupo de recursos de servidor mediante SQL Server Management Studio  
- **Para crear un grupo de recursos de servidor con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="CreRPProp"></a>Cree un grupo de recursos mediante SQL Server Management Studio  
+ **Para crear un grupo de recursos mediante[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta e incluyendo el nodo **Regulador de recursos**.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "68211994"
   
 6.  Haga clic en **Aceptar**para guardar los cambios.  
   
-##  <a name="CreRPTSQL"></a> Crear un grupo de recursos de servidor mediante Transact-SQL  
- **Para crear un grupo de recursos de servidor con [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+##  <a name="CreRPTSQL"></a>Crear un grupo de recursos mediante Transact-SQL  
+ **Para crear un grupo de recursos mediante[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Ejecute la instrucción `CREATE RESOURCE POOL` especificando los valores de propiedad que desea establecer.  
   
@@ -70,16 +70,16 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Regulador de recursos](resource-governor.md)   
  [Habilitar el regulador de recursos](enable-resource-governor.md)   
- [Resource Governor Resource Pool](resource-governor-resource-pool.md)   
+ [Grupo de recursos de servidor del regulador de recursos](resource-governor-resource-pool.md)   
  [Cambiar la configuración del grupo de recursos de servidor](change-resource-pool-settings.md)   
- [Eliminar un grupo de recursos de servidor](delete-a-resource-pool.md)   
- [Configurar el regulador de recursos utilizando una plantilla](configure-resource-governor-using-a-template.md)   
+ [Eliminar un grupo de recursos](delete-a-resource-pool.md)   
+ [Configuración de Resource Governor mediante una plantilla](configure-resource-governor-using-a-template.md)   
  [Grupos de cargas de trabajo del regulador de recursos](resource-governor-workload-group.md)   
- [Función clasificadora del regulador de recursos](resource-governor-classifier-function.md)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [Resource Governor función clasificadora](resource-governor-classifier-function.md)   
+ [Crear grupo de recursos de &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

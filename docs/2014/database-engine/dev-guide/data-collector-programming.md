@@ -1,5 +1,5 @@
 ---
-title: Programar el recopilador de datos | Microsoft Docs
+title: Programación del recopilador de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 11da8d77f5ea97dc435b9af23090d1d34da0f05c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753125"
 ---
 # <a name="data-collector-programming"></a>Programar el recopilador de datos
@@ -24,6 +24,6 @@ ms.locfileid: "62753125"
   
  En la siguiente ilustración se muestran elementos clave del modelo de objetos del recopilador de datos.  
   
- ![El modelo de objetos del recopilador de datos](../../../2014/database-engine/dev-guide/media/dc-objectmodel.gif "el modelo de objetos del recopilador de datos")  
+ ![Modelo de objetos del recopilador de datos](../../../2014/database-engine/dev-guide/media/dc-objectmodel.gif "Modelo de objetos del recopilador de datos")  
   
   

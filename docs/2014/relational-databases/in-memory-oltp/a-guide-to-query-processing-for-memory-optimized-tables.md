@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811071"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
@@ -36,7 +36,7 @@ ms.locfileid: "68811071"
   
 -   Formas de solucionar los planes de consulta no válidos.  
   
-## <a name="example-query"></a>Ejemplo de consulta  
+## <a name="example-query"></a>Consulta de ejemplo  
  El ejemplo siguiente se utilizará para mostrar los conceptos del procesamiento de consultas descritos en este artículo.  
   
  Consideramos dos tablas, Customer y Order. El siguiente script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] contiene las definiciones de estas dos tablas y los índices asociados, en su formato basado en disco (tradicional):  
@@ -77,7 +77,7 @@ Plan de consulta para una combinación de tablas basadas en disco.
   
 -   Las filas de la tabla Customer se recuperan del índice clúster, que es la estructura de datos principal y tiene los datos completos de la tabla.  
   
--   Los datos de la tabla Order se recuperan usando el índice no clúster en la columna CustomerID. Este índice contiene la columna CustomerID, que se utiliza para la combinación, y la columna de clave principal OrderID, que se devuelve al usuario. Devolver columnas adicionales de la tabla Order requeriría búsquedas en el índice clúster de la tabla Order.  
+-   Los datos de la tabla Order se recuperan usando el índice no agrupado en la columna CustomerID. Este índice contiene la columna CustomerID, que se utiliza para la combinación, y la columna de clave principal OrderID, que se devuelve al usuario. Devolver columnas adicionales de la tabla Order requeriría búsquedas en el índice clúster de la tabla Order.  
   
 -   El operador físico `Inner Join` implementa el operador lógico `Merge Join`. Los otros tipos de combinación físicos son `Nested Loops` y `Hash Join`. El operador `Merge Join` se aprovecha del hecho de que ambos índices están ordenados por la columna de combinación CustomerID.  
   
@@ -97,7 +97,7 @@ Plan de consulta para una combinación hash de tablas basadas en disco.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Procesamiento de consultas para las tablas basadas en disco  
  El siguiente diagrama muestra el flujo de procesamiento de consultas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para las consultas ad hoc:  
   
- ![Canalización de procesamiento de consultas de SQL Server.](../../database-engine/media/hekaton-query-plan-3.gif "Canalización de procesamiento de consultas de SQL Server.")  
+ ![Canalización de procesamiento de consultas de SQL Server](../../database-engine/media/hekaton-query-plan-3.gif "Canalización de procesamiento de consultas de SQL Server")  
 Canalización de procesamiento de consultas de SQL Server  
   
  En este escenario:  
@@ -114,7 +114,7 @@ Canalización de procesamiento de consultas de SQL Server
   
 6.  Access Methods recupera las filas de las páginas de datos e índices del grupo de búferes y carga las páginas del disco al grupo de búferes según sea necesario.  
   
- En la primera consulta de ejemplo, el motor de ejecución solicita filas en el índice clúster en el cliente y en el índice no clúster en el orden de los métodos de acceso. Access Methods atraviesa las estructuras de índice del árbol B para recuperar las filas solicitadas. En este caso, todas las filas se recuperan como las llamadas de plan para los recorridos de índice completos.  
+ Para la primera consulta del ejemplo, el motor de ejecución solicita filas del índice agrupado en la tabla Customer y el índice no agrupado en la tabla Order de Access Methods. Access Methods atraviesa las estructuras de índice del árbol B para recuperar las filas solicitadas. En este caso, todas las filas se recuperan como las llamadas de plan para los recorridos de índice completos.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Acceso de [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado a las tablas con optimización para memoria  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] también se denominan [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Interpretado hace referencia al hecho de que el plan de consulta es interpretado por el motor de ejecución de consulta para cada operador del plan de consultas. El motor de ejecución lee el operador y sus parámetros y realiza la operación.  
@@ -159,7 +159,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  El plan estimado es el siguiente:  
   
- ![Plan de consulta para una combinación de tablas optimizadas para memoria.](../../database-engine/media/hekaton-query-plan-5.gif "Plan de consulta para una combinación de tablas optimizadas para memoria.")  
+ ![Plan de consulta para una combinación de tablas con optimización para memoria.](../../database-engine/media/hekaton-query-plan-5.gif "Plan de consulta para una combinación de tablas optimizadas para memoria.")  
 Plan de consulta para una combinación de tablas optimizadas para memoria.  
   
  Observe las siguientes diferencias con el plan para la misma consulta en las tablas basadas en disco (ilustración 1):  
@@ -195,7 +195,7 @@ END
 |-|-----------------------|-----------------|  
 |Compilación inicial|En el momento de la creación.|En la primera ejecución.|  
 |Recompilación automática|En la primera ejecución del procedimiento después del reinicio de la base de datos o del servidor.|Al reiniciar el servidor. O bien, se expulsa de la memoria caché de planes, generalmente según los cambios de esquema o de estadísticas, o por presión en la memoria.|  
-|Recompilación manual|No compatible. La solución es quitar y volver a crear el procedimiento almacenado.|Utilice `sp_recompile`. Puede expulsar manualmente el plan de la memoria caché, por ejemplo con DBCC FREEPROCCACHE. También puede crear el procedimiento almacenado WITH RECOMPILE y el procedimiento almacenado se recompilará en cada ejecución.|  
+|Recompilación manual|No compatible. La solución es quitar y volver a crear el procedimiento almacenado.|Mediante `sp_recompile`. Puede expulsar manualmente el plan de la memoria caché, por ejemplo con DBCC FREEPROCCACHE. También puede crear el procedimiento almacenado WITH RECOMPILE y el procedimiento almacenado se recompilará en cada ejecución.|  
   
 ### <a name="compilation-and-query-processing"></a>Compilación y procesamiento de consultas  
  El siguiente diagrama muestra el proceso de compilación para los procedimientos almacenados compilados de forma nativa:  
@@ -217,7 +217,7 @@ Compilación nativa de procedimientos almacenados.
   
  La invocación de un procedimiento almacenado compilado de forma nativa se traduce en la llamada a una función del archivo DLL.  
   
- ![Ejecución de los procedimientos almacenados compilados de forma nativa.](../../database-engine/media/hekaton-query-plan-7.gif "Ejecución de los procedimientos almacenados compilados de forma nativa.")  
+ ![Ejecución de procedimientos almacenados compilados de forma nativa.](../../database-engine/media/hekaton-query-plan-7.gif "Ejecución de los procedimientos almacenados compilados de forma nativa.")  
 Ejecución de los procedimientos almacenados compilados de forma nativa.  
   
  La invocación de un procedimiento almacenado compilado de forma nativa se describe como sigue:  
@@ -255,12 +255,12 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>Operadores de consulta en procedimientos almacenados compilados de forma nativa  
  En la tabla siguiente se resumen los operadores de consulta admitidos dentro de procedimientos almacenados compilados de forma nativa:  
   
-|Operador|Consulta de ejemplo|  
+|Operator|Consulta de ejemplo|  
 |--------------|------------------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`|  
-|SUPRIMIR|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
+|Delete|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
 |Compute Scalar|Este operador se usa tanto para las funciones intrínsecas como para las conversiones de tipos. No todas las funciones y conversiones de tipos se admiten en los procedimientos almacenados compilados de forma nativa.<br /><br /> `SELECT OrderID+1 FROM dbo.[Order]`|  
 |Combinación de bucles anidados|Nested Loops es el único operador de combinación admitido en los procedimientos almacenados compilados de forma nativa. Todos los planes que contienen combinaciones utilizarán el operador Nested Loops, incluso si el plan para la misma consulta ejecutada como [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado contiene una combinación de mezcla o hash.<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
 |Sort|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
@@ -291,7 +291,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Después de eliminar todas las filas menos una en la tabla Customer:  
   
- ![Estadísticas de columna y combinaciones. ](../../database-engine/media/hekaton-query-plan-9.gif "Estadísticas de columna y combinaciones.")  
+ ![Combinaciones y estadísticas de columnas.](../../database-engine/media/hekaton-query-plan-9.gif "Combinaciones y estadísticas de columnas.")  
   
  Acerca de este plan de consulta:  
   
@@ -300,9 +300,10 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   El examen de índice completo en IX_CustomerID se ha reemplazado por index seek. Esto provocó el examen de 5 filas en lugar de las 830 necesarias para el examen de índice completo.  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>Estadísticas y cardinalidad para las tablas con optimización para memoria  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantiene las estadísticas de nivel de columna de las tablas optimizadas para memoria. Además, mantiene el recuento de filas real de la tabla. Sin embargo, a diferencia de las tablas basadas en disco, las estadísticas de las tablas optimizadas para memoria no se actualizan automáticamente. Por tanto, las estadísticas se deben actualizar manualmente cuando se produzcan cambios significativos en las tablas. Para obtener más información, vea [Estadísticas para las tablas con optimización para memoria](memory-optimized-tables.md).  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantiene las estadísticas de nivel de columna de las tablas optimizadas para memoria. Además, mantiene el recuento de filas real de la tabla. Sin embargo, a diferencia de las tablas basadas en disco, las estadísticas de las tablas optimizadas para memoria no se actualizan automáticamente. Por tanto, las estadísticas se deben actualizar manualmente cuando se produzcan cambios significativos en las tablas. Para obtener más información, vea [Estadísticas para las tablas con optimización para memoria](memory-optimized-tables.md).  
   
-## <a name="see-also"></a>Vea también  
- [Tablas con optimización para memoria](memory-optimized-tables.md)  
+## <a name="see-also"></a>Consulte también  
+ [Tablas optimizadas para la memoria](memory-optimized-tables.md)  
   
   

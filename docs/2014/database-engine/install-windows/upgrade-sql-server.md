@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d47c670088f088260435f9e046e0bbdbf1fb9e4a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637700"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Actualizar a SQL Server 2014
@@ -45,21 +45,21 @@ ms.locfileid: "73637700"
   
 -   [Actualizar bases de datos replicadas](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
--   [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+-   [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
 -   [Actualizar las herramientas de administración de SQL Server](upgrade-sql-server-management-tools.md)  
   
 -   [Temas de procedimientos de actualización](../../../2014/sql-server/install/upgrade-how-to-topics.md)  
   
-## <a name="see-also"></a>Vea también  
- [Actualizar el motor de base de datos](upgrade-database-engine.md)   
- [Actualizar Analysis Services](upgrade-analysis-services.md)   
- [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
- [Actualizar Integration Services](../../integration-services/install-windows/upgrade-integration-services.md)   
- [Actualizar bases de datos replicadas](../../database-engine/install-windows/upgrade-replicated-databases.md)   
- [Actualizar Master Data Services](upgrade-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Motor de base de datos de actualización](upgrade-database-engine.md)   
+ [Analysis Services de actualización](upgrade-analysis-services.md)   
+ [Actualización y migración de Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Integration Services de actualización](../../integration-services/install-windows/upgrade-integration-services.md)   
+ [Actualización de bases de datos replicadas](../../database-engine/install-windows/upgrade-replicated-databases.md)   
+ [Master Data Services de actualización](upgrade-master-data-services.md)   
  [SQL Server 2005 Analizador de procedimientos recomendados](https://www.microsoft.com/download/details.aspx?id=23864)   
- [Best Practices Analyzer para SQL Server 2008 R2](https://www.microsoft.com/download/details.aspx?id=15289)   
+ [SQL Server 2008 R2 Analizador de procedimientos recomendados](https://www.microsoft.com/download/details.aspx?id=15289)   
  [Compatibilidad con versiones anteriores](../../../2014/getting-started/backward-compatibility.md)  
   
   

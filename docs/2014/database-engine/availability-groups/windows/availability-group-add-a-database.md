@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dda5ac5b2f569c8438439ec77da33fde3a385fa0
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782900"
 ---
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>Agregar una base de datos a un grupo de disponibilidad (SQL Server)
@@ -38,20 +38,20 @@ ms.locfileid: "72782900"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos y restricciones  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
   
--   La base de datos debe residir en la instancia del servidor que hospeda la réplica principal y cumple los requisitos previos y las restricciones de las bases de datos de disponibilidad. Para más información, vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+-   La base de datos debe residir en la instancia del servidor que hospeda la réplica principal y cumple los requisitos previos y las restricciones de las bases de datos de disponibilidad. Para obtener más información, consulte [requisitos previos, restricciones y recomendaciones para obtener Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Security"></a> Seguridad  
   
 ###  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para agregar una base de datos a un grupo de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
@@ -81,7 +81,7 @@ ms.locfileid: "72782900"
   
      ALTER AVAILABILITY GROUP *group_name* ADD DATABASE *database_name* [,...*n*]  
   
-     Donde *group_name* es el nombre del grupo de disponibilidad y *database_name* es el nombre de la base de datos que se va a agregar al grupo.  
+     donde *group_name* es el nombre del grupo de disponibilidad y *database_name* es el nombre de una base de datos que se va a agregar al grupo.  
   
      En el ejemplo siguiente se agrega la base de datos *MyDb3* al grupo de disponibilidad *MyAG* .  
   
@@ -99,7 +99,7 @@ ms.locfileid: "72782900"
   
 1.  Cambie el directorio (`cd`) a la instancia de servidor que hospeda la réplica principal.  
   
-2.  Utilice el cmdlet `Add-SqlAvailabilityDatabase`.  
+2.  Utilice el cmdlet `Add-SqlAvailabilityDatabase` .  
   
      Por ejemplo, en el comando siguiente se agrega la base de datos secundaria `MyDd` al grupo de disponibilidad `MyAG` , cuya réplica principal está hospedada en `PrimaryServer\InstanceName`.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "72782900"
     ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, vea [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 3.  Después de agregar una base de datos a un grupo de disponibilidad, debe configurar la base de datos secundaria correspondiente en cada instancia de servidor que hospeda una réplica secundaria. Para más información, vea [Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
@@ -136,8 +136,8 @@ Add-SqlAvailabilityDatabase -Path $MyAgPrimaryPath -Database "MyDatabase"
 Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [Usar el panel &#40;de AlwaysOn&#41; SQL Server Management Studio](use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  

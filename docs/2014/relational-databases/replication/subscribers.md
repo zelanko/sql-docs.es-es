@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629385"
 ---
 # <a name="subscribers"></a>Suscriptores
-  Especifique los suscriptores de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que recibirán una suscripción a la publicación seleccionada.  
+  Especifique los [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptores de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o que no sean de que recibirán una suscripción a la publicación seleccionada.  
   
 ## <a name="options"></a>Opciones  
  **Suscriptores**  
- Active la casilla de la cuadrícula para habilitar el origen de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o no[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondiente como suscriptor a la publicación seleccionada en la página **Publicación** . Si el suscriptor no aparece, haga clic en **Agregar suscriptor** o **Agregar suscriptor de SQL Server**.  
+ Active la casilla de la cuadrícula para habilitar el origen de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos correspondiente o no perteneciente como suscriptor a la publicación seleccionada en la página **publicación** . Si el suscriptor no aparece, haga clic en **Agregar suscriptor** o **Agregar suscriptor de SQL Server**.  
   
- **Base de datos de suscripciones**  
+ **Base de datos de suscripción**  
  La información mostrada y las acciones disponibles en esta columna dependen del tipo de suscriptor que aparece en la columna **Suscriptores** :  
   
 -   Para suscriptores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , seleccione una base de datos de suscripciones de la lista **Base de datos de suscripciones** o cree una nueva base de datos seleccionando el comando **Base de datos nueva** de la misma lista.  
@@ -48,11 +48,11 @@ ms.locfileid: "62629385"
   
 -   La suscripción es una suscripción de inserción.  
   
--   El publicador de la publicación seleccionada es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior.  
+-   El publicador de la publicación seleccionada [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] es o posterior.  
   
- Al hacer clic en **Agregar suscriptor** aparece un menú con dos opciones: **Agregar suscriptor de SQL Server** y **Agregar suscriptor que no sea de SQL Server**. Haga clic en **Agregar suscriptor que no sea de SQL Server** para agregar un suscriptor de Oracle o IBM DB2.  
+ Al hacer clic en **Agregar suscriptor** , aparece un menú con dos opciones: **Agregar suscriptor de SQL Server** y **Agregar suscriptor que no sea de SQL Server**. Haga clic en **Agregar suscriptor que no sea de SQL Server** para agregar un suscriptor de Oracle o IBM DB2.  
   
- **Agregar suscriptor de SQL Server**  
+ **Agregar SQL Server suscriptor**  
  Agregue un servidor a la lista de servidores que pueda habilitarse como suscriptores. Este botón aparece cuando se cumplen una o varias de las condiciones siguientes:  
   
 -   La publicación que ha seleccionado es una publicación de combinación, o una publicación de instantáneas o transaccional que admite actualización de suscripciones.  
@@ -67,8 +67,8 @@ ms.locfileid: "62629385"
   
     -   La publicación permite suscripciones anónimas.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una suscripción de extracción](create-a-pull-subscription.md)   
+## <a name="see-also"></a>Consulte también  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [Suscribirse a publicaciones](subscribe-to-publications.md)  

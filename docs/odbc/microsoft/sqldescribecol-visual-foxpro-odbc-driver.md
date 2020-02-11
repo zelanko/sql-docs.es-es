@@ -13,20 +13,20 @@ ms.assetid: a8d06507-8376-42b5-b09f-338a77cea131
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c78e75981031b1e91dbb31ba0c07ccbee3ac26e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054040"
 ---
 # <a name="sqldescribecol-visual-foxpro-odbc-driver"></a>SQLDescribeCol (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: Completo  
+ Compatibilidad: completa  
   
- Conformidad de la API de ODBC: Nivel básico  
+ Conformidad con la API de ODBC: nivel básico  
   
- Devuelve el nombre de tipo, precisión, escala y la nulabilidad de la columna de resultados determinado.  
+ Devuelve el nombre, el tipo, la precisión, la escala y la nulabilidad de la columna de resultados especificada.  
   
- Para obtener más información, consulte [SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md) en el *referencia del programador de ODBC*.
+ Para obtener más información, vea [SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md) en la *Referencia del programador de ODBC*.

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811049"
 ---
 # <a name="understanding-the-database-schemas"></a>Descripción de esquemas de base de datos
@@ -82,7 +82,7 @@ ms.locfileid: "68811049"
  El asistente genera una tabla independiente para contener los valores traducidos de las propiedades en el grupo de medida que requieran una columna de traducción. El asistente también crea una columna independiente para cada idioma necesario.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversión de tipo de datos y longitudes predeterminadas  
- El Asistente para generar esquemas omite los tipos de datos en todos los casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] excepto para las columnas que usan el tipo de `wchar` datos. El tamaño de datos `wchar` traduce directamente al tipo de datos `nvarchar`. Sin embargo, si la longitud especificada de una columna que utiliza el tamaño `wchar` es superior a 4.000 bytes, el Asistente para generar esquemas registrará un error.  
+ El Asistente para generar esquemas omite los tipos de datos en todos los casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` excepto para las columnas que usan el tipo de datos. El tamaño de datos `wchar` traduce directamente al tipo de datos `nvarchar`. Sin embargo, si la longitud especificada de una columna que utiliza el tamaño `wchar` es superior a 4.000 bytes, el Asistente para generar esquemas registrará un error.  
   
  Si un elemento de datos, como el enlace de un atributo, no posee una longitud especificada, se utilizará en la columna la longitud predeterminada que se muestra en la siguiente tabla.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68811049"
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Descripción de la generación incremental](understanding-incremental-generation.md)   
  [Administrar los cambios de las vistas del origen de datos y los orígenes de datos](manage-changes-to-data-source-views-and-data-sources.md)  
   

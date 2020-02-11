@@ -14,10 +14,10 @@ ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727949"
 ---
 # <a name="models-master-data-services"></a>Modelos (Master Data Services)
@@ -69,17 +69,17 @@ ms.locfileid: "73727949"
   
 -   Geography: podría incluir entidades como códigos postales, ciudades, municipios, estados, provincias, regiones, territorios, países y continentes.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear un modelo para organizar los datos maestros.|[Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
-|Cambiar el nombre de un modelo existente.|[Editar modelo &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)|  
+|Crear un modelo para organizar los datos maestros.|[Cree un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
+|Cambiar el nombre de un modelo existente.|[Editar Master Data Services de &#40;del modelo&#41;](../master-data-services/edit-model-master-data-services.md)|  
 |Eliminar un modelo existente.|[Eliminar un modelo &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Introducción a Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Información general de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
@@ -87,6 +87,6 @@ ms.locfileid: "73727949"
   
 -   [Implementar modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
--   [Permisos de objeto del modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+-   [Permisos del objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

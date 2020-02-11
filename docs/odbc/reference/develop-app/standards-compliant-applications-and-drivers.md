@@ -1,5 +1,5 @@
 ---
-title: Controladores y aplicaciones compatibles con estándares | Microsoft Docs
+title: Controladores y aplicaciones compatibles con los estándares | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4980cfe64a5a8e8404c6b5b0bdc8b1aba484f0c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107332"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Controladores y aplicaciones compatibles con estándares
-Un controlador o aplicación compatible con los estándares es aquella que cumple la especificación de CAE grupo abierto "gestión de datos: Interfaz de nivel de llamada SQL (CLI)"y la norma ISO/IEC 9075-3:1995 (E) interfaz de nivel de llamada (SQL/CLI).  
+Una aplicación o un controlador compatible con los estándares es uno que se ajusta a la especificación del grupo de apertura "Administración de datos: la interfaz de nivel de llamada de SQL (CLI)" y la interfaz de nivel de llamada ISO/IEC 9075-3:1995 (E) (SQL/CLI).  
   
- ODBC *3.x* garantiza las siguientes características:  
+ ODBC *3. x* garantiza las siguientes características:  
   
--   Una aplicación creada a las especificaciones de Open Group y ISO CLI funcionará con un ODBC *3.x* controlador o un controlador compatible con los estándares cuando se compila con ODBC *3.x* archivos de encabezado y enlazan con ODBC *3.x* bibliotecas, y cuando obtiene acceso al controlador a través de ODBC *3.x* Administrador de controladores.  
+-   Una aplicación escrita en las especificaciones Open Group e ISO CLI funcionará con un controlador ODBC *3. x* o con un controlador compatible con los estándares cuando se compila con los archivos de encabezado ODBC *3.* x y se vincula con bibliotecas ODBC *3. x* , y cuando obtiene acceso al controlador a través del administrador de controladores ODBC *3. x* .  
   
--   Un controlador que se escriben en las especificaciones de Open Group y ISO CLI funcionará con un ODBC *3.x* aplicación o una aplicación estándar cuando se compila con ODBC *3.x* archivos de encabezado y vinculado con ODBC *3.x* bibliotecas, y cuando la aplicación obtiene acceso al controlador a través de ODBC *3.x* Administrador de controladores.  
+-   Un controlador escrito en las especificaciones Open Group e ISO CLI funcionará con una aplicación ODBC *3. x* o conforme a los estándares cuando se compila con los archivos de encabezado ODBC *3.* x y se vinculan a las bibliotecas ODBC *3. x* , y cuando la aplicación obtiene acceso al controlador a través del administrador de controladores ODBC *3. x* .  
   
- Controladores y aplicaciones compatibles con los estándares se compilan con la marca de compilación ODBC_STD.  
+ Los controladores y las aplicaciones conformes a los estándares se compilan con la marca de compilar ODBC_STD.  
   
- Aplicaciones compatibles con los estándares de presentan el siguiente comportamiento:  
+ Las aplicaciones conformes a los estándares presentan el siguiente comportamiento:  
   
--   Si llama una aplicación compatible con los estándares **SQLAllocEnv** (lo que puede producirse porque **SQLAllocEnv** es una función válida en el grupo de abierto y ISO CLI), la llamada se asigna a  **SQLAllocHandleStd** en tiempo de compilación. Como resultado, en tiempo de ejecución llama la aplicación **SQLAllocHandleStd**. Durante el transcurso de procesamiento de esta llamada, el Administrador de controladores establece el atributo de entorno SQL_ATTR_ODBC_VERSION en SQL_OV_ODBC3. Una llamada a **SQLAllocHandleStd** es equivalente a una llamada a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_ENV y una llamada a **SQLSetEnvAttr** establecer SQL_ATTR_ODBC_VERSION en SQL_OV_ODBC3.  
+-   Si una aplicación compatible con los estándares llama a **SQLAllocEnv** (que puede producirse porque **SQLAllocEnv** es una función válida en el grupo Open y la CLI ISO), la llamada se asigna a **SQLAllocHandleStd** en tiempo de compilación. Como resultado, en tiempo de ejecución, la aplicación llama a **SQLAllocHandleStd**. Durante el transcurso del procesamiento de esta llamada, el administrador de controladores establece el atributo SQL_ATTR_ODBC_VERSION Environment en SQL_OV_ODBC3. Una llamada a **SQLAllocHandleStd** es equivalente a una llamada a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_ENV y una llamada a **SQLSetEnvAttr** para establecer SQL_ATTR_ODBC_VERSION en SQL_OV_ODBC3.  
   
--   Si llama una aplicación compatible con los estándares **SQLBindParam** (lo que puede producirse porque **SQLBindParam** es una función válida en el grupo de abierto y ISO CLI), ODBC *3.x* Administrador de controladores se asigna la llamada a la llamada equivalente en **SQLBindParameter**. (Consulte [asignación de SQLBindParam](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) en el apéndice G: Directrices de controlador para compatibilidad con versiones anteriores.)  
+-   Si una aplicación compatible con los estándares llama a **SQLBindParam** (que puede producirse porque **SQLBindParam** es una función válida en el grupo Open e ISO CLI), el administrador de controladores ODBC *3. x* asigna la llamada a la llamada equivalente en **SQLBindParameter**. (Consulte [asignación de SQLBindParam](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) en el Apéndice G: instrucciones del controlador para la compatibilidad con versiones anteriores).  
   
--   Para alinear con la CLI de ISO, ODBC *3.x* archivos de encabezado contienen un alias para los tipos de información que se usa en llamadas a **SQLGetInfo**. Una aplicación compatible con los estándares puede usar estos alias en lugar de ODBC *3.x* tipos de información. Para obtener más información, vea el tema siguiente, [archivos de encabezado](../../../odbc/reference/develop-app/header-files.md).  
+-   Para alinear con la CLI ISO, los archivos de encabezado ODBC *3. x* contienen alias para los tipos de información que se usan en las llamadas a **SQLGetInfo**. Una aplicación compatible con los estándares puede usar estos alias en lugar de los tipos de información de ODBC *3. x* . Para obtener más información, vea el tema siguiente, [archivos de encabezado](../../../odbc/reference/develop-app/header-files.md).  
   
--   Una aplicación compatible con los estándares debe comprobar que se admiten todas las características que admite en el controlador que funcione con. Establecer el atributo de instrucción SQL_ATTR_CURSOR_SCROLLABLE como SQL_SCROLLABLE y configuración del atributo de instrucción SQL_ATTR_CURSOR_SENSITIVITY SQL_INSENSITIVE o SQL_SENSITIVE son funciones que están disponibles como características opcionales en los estándares pero no se incluyen en el archivo ODBC *3.x* Core nivel y, por tanto, puede no ser compatibles con ODBC todas *3.x* controladores. Si una aplicación compatible con los estándares utiliza estas capacidades, debe comprobar que es compatible con el controlador que funcionará con ellos.
+-   Una aplicación compatible con los estándares debe comprobar que todas las características que admite se admiten en el controlador con el que se va a trabajar. Establecer el atributo de instrucción SQL_ATTR_CURSOR_SCROLLABLE en SQL_SCROLLABLE y establecer el atributo de instrucción SQL_ATTR_CURSOR_SENSITIVITY en SQL_INSENSITIVE o SQL_SENSITIVE son funciones que están disponibles como características opcionales en los estándares pero que no se incluyen en el nivel de núcleo de ODBC *3. x* y, por lo tanto, es posible que no sean compatibles con todos los controladores ODBC *3. x* . Si una aplicación compatible con los estándares utiliza estas capacidades, debe comprobar que el controlador con el que funcionará las admite.

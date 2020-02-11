@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530939"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Herramientas y enfoques de procesamiento (Analysis Services)
@@ -46,7 +46,7 @@ ms.locfileid: "69530939"
  El procesamiento es una operación altamente configurable, controlada por un conjunto de opciones de procesamiento que determinan si se produce un procesamiento completo o incremental en el nivel de objeto. Para más información sobre las opciones de procesamiento, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) y [Procesar objetos de Analysis Services](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  En este tema se describen las herramientas y los enfoques para procesar modelos multidimensionales. Para obtener más información sobre el procesamiento de modelos tabulares, vea [procesar base de datos, tabla o partición](../tabular-models/process-database-table-or-partition-analysis-services.md) y [procesar datos &#40;&#41;tabulares](../process-data-ssas-tabular.md).  
+>  En este tema se describen las herramientas y los enfoques para procesar modelos multidimensionales. Para obtener más información sobre el procesamiento de modelos tabulares, vea [procesar base de datos, tabla o partición](../tabular-models/process-database-table-or-partition-analysis-services.md) y [procesar datos &#40;&#41;tabular de SSAS ](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Procesar objetos en SQL Server Management Studio  
   
@@ -74,7 +74,7 @@ ms.locfileid: "69530939"
   
 5.  Opcionalmente, haga clic en **Cambiar configuración** para modificar el orden de procesamiento, el comportamiento de procesamiento relativo a tipos de errores concretos y otras opciones de configuración.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
      El cuadro de diálogo Progreso del proceso proporciona el estado actual de cada comando. Si un mensaje de estado aparece truncado, puede hacer clic en **Ver detalles** para leer la totalidad del mismo.  
   
@@ -92,13 +92,14 @@ ms.locfileid: "69530939"
   
 6.  Cuando el procesamiento haya finalizado, haga clic en **Cerrar**.  
   
-##  <a name="bkmk_impactanalysis"></a> Ejecutar el análisis de impacto para identificar las dependencias del objeto y el ámbito de las operaciones  
+##  <a name="bkmk_impactanalysis"></a>Ejecutar el análisis de impacto para identificar las dependencias de objetos y el ámbito de las operaciones  
   
 1.  Antes de procesar un objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], puede analizar el efecto sobre los objetos relacionados haciendo clic en **Análisis de impacto** en uno de los cuadros de diálogo **Procesar objetos** .  
   
 2.  Haga clic con el botón derecho en una dimensión, cubo, grupo de medida o partición para abrir un cuadro de diálogo **Procesar objetos** .  
   
-3.  Haga clic en **Análisis de impacto** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] examina el modelo e informa de los requisitos de nuevo procesamiento de los objetos relacionados con el objeto seleccionado para procesar.  
+3.  Haga clic en **Análisis de impacto** 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] examina el modelo e informa de los requisitos de nuevo procesamiento de los objetos relacionados con el objeto seleccionado para procesar.  
   
 ### <a name="processing-objects-using-xmla"></a>Procesar objetos utilizando XMLA  
   
@@ -128,7 +129,7 @@ ms.locfileid: "69530939"
   
     -   [Cmdlet Invoke-ProcessPartition](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   El[cmdlet Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd), que se puede usar para ejecutar un script XMLA, MDX o DMX que incluya comandos de procesamiento.  
+    -   El [cmdlet Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd), que se puede usar para ejecutar un script XMLA, MDX o DMX que incluya comandos de procesamiento.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Supervisar el procesamiento de objetos mediante SQL Server Profiler  
   
@@ -138,13 +139,13 @@ ms.locfileid: "69530939"
   
 3.  Elija los siguientes eventos:  
   
-    -   **Inicio del comando** y **Fin del comando** para mostrar cuándo se inicia y se detiene el procesamiento  
+    -   **Inicio del comando** y **final del comando** para mostrar Cuándo se inicia y se detiene el procesamiento  
   
-    -   **Error** para capturar errores  
+    -   **Error** al capturar los errores  
   
-    -   **Informe de progreso Inicio**, **Informe de progreso Actual**y **Fin del informe de progreso** para informar del estado del proceso y mostrar las consultas SQL usadas para recuperar los datos  
+    -   **Inicio**del informe de progreso, informe de **progreso actual**y **fin del informe de progreso** para informar sobre el estado del proceso y mostrar las consultas SQL usadas para recuperar los datos  
   
-    -   **Ejecutar script MDX Inicio** y **Ejecutar script MDX Final** para mostrar los cálculos del cubo  
+    -   **Ejecutar script MDX Inicio** y **Ejecutar script MDX final** para mostrar los cálculos del cubo  
   
     -   Opcionalmente, agregue eventos de bloqueo si está diagnosticando problemas de rendimiento relacionados con el procesamiento  
   
@@ -156,7 +157,7 @@ ms.locfileid: "69530939"
   
 3.  Edite la tarea para especificar una conexión con la base de datos, qué objetos se van a procesar y la opción de proceso. Para obtener más información acerca de cómo implementar esta tarea, vea [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procesamiento de objetos del modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
   
   

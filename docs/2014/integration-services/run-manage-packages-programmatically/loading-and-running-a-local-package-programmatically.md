@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766897"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Cargar y ejecutar un paquete local mediante programación
@@ -57,9 +57,9 @@ ms.locfileid: "62766897"
   
 1.  Inicie el entorno de desarrollo de Visual Studio y cree una nueva aplicación en su lenguaje de desarrollo preferido. En este ejemplo se utiliza una aplicación de consola; sin embargo, también puede ejecutar un paquete de una aplicación Windows Forms, un formulario Web Forms o servicio web ASP.NET o un servicio de Windows.  
   
-2.  En el menú **Proyecto**, haga clic en **Agregar referencia** y agregue una referencia a **Microsoft.SqlServer.ManagedDTS.dll**. Haga clic en **Aceptar**.  
+2.  En el menú **Proyecto**, haga clic en **Agregar referencia** y agregue una referencia a **Microsoft.SqlServer.ManagedDTS.dll**. Haga clic en **OK**.  
   
-3.  Usar Visual Basic `Imports` instrucción o C# `using` instrucción para importar el **Microsoft.SqlServer.Dts.Runtime** espacio de nombres.  
+3.  Use la instrucción `Imports` Visual Basic o la instrucción `using` de C# para importar el espacio de nombres **Microsoft. SqlServer. DTS. Runtime** .  
   
 4.  Agregue el código siguiente en la rutina principal. La aplicación de consola completada se debe parecer al ejemplo siguiente.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62766897"
   
 5.  Ejecute el proyecto. En el código de ejemplo se ejecuta el paquete de ejemplo CalculatedColumns que se instala con los ejemplos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El resultado de la ejecución del paquete se muestra en la ventana de la consola.  
   
-### <a name="sample-code"></a>Código muestra  
+### <a name="sample-code"></a>Código de ejemplo  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  
@@ -136,7 +136,7 @@ namespace RunFromClientAppCS
   
 3.  Ejecute el proyecto. En el código de ejemplo se ejecuta el paquete de ejemplo CalculatedColumns que se instala con los ejemplos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El resultado de la ejecución del paquete se muestra en la ventana de la consola, junto con cualquier error que se produzca.  
   
-### <a name="sample-code"></a>Código muestra  
+### <a name="sample-code"></a>Código de ejemplo  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Runtime  
@@ -223,9 +223,9 @@ namespace RunFromClientAppWithEventsCS
 }  
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Descripción de las diferencias entre la ejecución local y remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Cargar y ejecutar un paquete remoto mediante programación](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [Cargar la salida de un paquete local](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

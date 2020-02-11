@@ -1,5 +1,5 @@
 ---
-title: Derivado de Editor de transformación de columna | Microsoft Docs
+title: Editor de transformación columna derivada | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059567"
 ---
 # <a name="derived-column-transformation-editor"></a>Columna derivada, editor de transformación
@@ -39,17 +39,17 @@ ms.locfileid: "66059567"
  **Columna derivada**  
  Seleccione una columna derivada de la lista. Elija si desea agregar la columna derivada como columna de salida nueva o reemplazar los datos de una columna existente.  
   
- **Expresión**  
+ **Expression**  
  Escriba una expresión o genere una arrastrando elementos de la lista anterior de columnas, variables, funciones y operadores disponibles.  
   
  Puede especificar el valor de esta propiedad con una expresión de propiedad.  
   
- **Temas relacionados:**: [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Temas relacionados**: [Integration Services &#40;expresiones de&#41; ssis](expressions/integration-services-ssis-expressions.md), [operadores &#40;&#41;de expresión de SSIS ](expressions/operators-ssis-expression.md)y [funciones &#40;expresión de SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Tipo de datos**  
  Si agrega datos a una nueva columna, el cuadro de diálogo **Editor de transformación Columna derivada** evalúa automáticamente la expresión y establece el tipo de datos según corresponda. El valor de esta columna es de solo lectura. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
- **Longitud**  
+ **Length**  
  Si agrega datos a una nueva columna, el cuadro de diálogo **Editor de transformación Columna derivada** evalúa automáticamente la expresión y establece la longitud de columna para los datos de cadena. El valor de esta columna es de solo lectura.  
   
  **Precisión**  
@@ -64,7 +64,7 @@ ms.locfileid: "66059567"
  **Configurar la salida de errores**  
  Especifique cómo quiere controlar los errores mediante el cuadro de diálogo [Configurar la salida de errores](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Derivar valores de columna mediante la transformación Columna derivada](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Opciones (Editor de texto - XML - página de varios) | Microsoft Docs
+title: Opciones (editor de texto-XML-Página varios) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089209"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Opciones (Editor de texto - XML - Página Varios)
@@ -25,23 +25,23 @@ El cuadro de diálogo **Opciones** permite modificar las opciones de finalizaci�
  **Etiquetas de cierre**  
  El Editor de texto agrega etiquetas de cierre al crear elementos XML. Si se selecciona la etiqueta de inicio de un elemento, el editor inserta la etiqueta de cierre correspondiente, incluido el prefijo de espacio de nombres. Esta casilla está activada de forma predeterminada.  
   
- **Comillas de atributo**  
- Al crear atributos XML, el editor inserta los caracteres `="``"` y coloca el símbolo de intercalación ( **^)** dentro de las comillas. Esta casilla está activada de forma predeterminada.  
+ **Comillas para atributos**  
+ Al crear atributos XML, el editor inserta los caracteres `="``"` y coloca el símbolo de intercalación (**^)** dentro de las comillas. Esta casilla está activada de forma predeterminada.  
   
- **Declaraciones de Namespace**  
+ **Declaraciones de espacios de nombres**  
  El editor inserta automáticamente declaraciones de espacios de nombres cuando son necesarias. Esta casilla está activada de forma predeterminada.  
   
- **Otro marcado (comentarios, CDATA)**  
+ **Otro tipo de marcado (Comentarios, CDATA)**  
  Finalización automática de comentarios, CDATA, DOCTYPE, instrucciones de proceso y otro tipo de marcado. Esta casilla está activada de forma predeterminada.  
   
-## <a name="network"></a>red  
+## <a name="network"></a>Red  
  **Descargar automáticamente DTD y esquemas**  
  Los esquemas y las definiciones de tipos de documentos (DTD) se descargan automáticamente desde ubicaciones HTTP. Esta función utiliza System.Net con la opción de detección de servidores proxy automáticos habilitada. Esta casilla está activada de forma predeterminada.  
   
 ## <a name="outlining"></a>Esquematización  
- **Especificar el modo de esquematización al abrirán archivos**  
+ **Especificar el modo de esquematización al abrir los archivos**  
  Activa la función de esquematización al abrir un archivo. Esta casilla está activada de forma predeterminada.  
   
 ## <a name="caching"></a>Almacenamiento en memoria caché  
  **Esquemas**  
- Especifica la ubicación de la caché de esquemas. El botón Examinar (...) abre la ubicación de la caché de esquemas actual en una ventana nueva. La ubicación predeterminada es  *\<directorio de instalación de Management Studio >* \Xml\Schemas.  
+ Especifica la ubicación de la caché de esquemas. El botón Examinar (...) abre la ubicación de la caché de esquemas actual en una ventana nueva. La ubicación predeterminada es * \<Management Studio directorio de instalación>* \Xml\Schemas.  

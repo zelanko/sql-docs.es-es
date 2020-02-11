@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 716ade5265c2bb3325ad08005c98a1e67c474419
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63130654"
 ---
 # <a name="smo-object-model-diagram"></a>Diagrama del modelo de objetos de SMO
@@ -24,10 +24,10 @@ ms.locfileid: "63130654"
   
  ![Diagrama que muestra las relaciones jerárquicas](../../../2014/database-engine/dev-guide/media/object-diagram.gif "Diagrama que muestra las relaciones jerárquicas")  
   
- ![Modelo de objetos, vista de árbol que muestra la jerarquía](../../../2014/database-engine/dev-guide/media/object-diagram-02.gif "Modelo de objetos, vista de árbol que muestra la jerarquía")  
+ ![Modelo de objetos, vista de árbol en la que se muestra la jerarquía](../../../2014/database-engine/dev-guide/media/object-diagram-02.gif "Modelo de objetos, vista de árbol en la que se muestra la jerarquía")  
   
- ![Modelo de objetos, vista de árbol que muestra la jerarquía](../../../2014/database-engine/dev-guide/media/object-diagram-03.gif "Modelo de objetos, vista de árbol que muestra la jerarquía")  
+ ![Modelo de objetos, vista de árbol en la que se muestra la jerarquía](../../../2014/database-engine/dev-guide/media/object-diagram-03.gif "Modelo de objetos, vista de árbol en la que se muestra la jerarquía")  
   
- ![Modelo de objetos, vista de árbol que muestra la jerarquía](../../../2014/database-engine/dev-guide/media/object-diagram-04.gif "Modelo de objetos, vista de árbol que muestra la jerarquía")  
+ ![Modelo de objetos, vista de árbol en la que se muestra la jerarquía](../../../2014/database-engine/dev-guide/media/object-diagram-04.gif "Modelo de objetos, vista de árbol en la que se muestra la jerarquía")  
   
   

@@ -18,13 +18,13 @@ ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e55465dfe2424144d74bc40492fdb897d4aa72b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130622"
 ---
-# <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
+# <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita un paso de un trabajo.  
@@ -41,13 +41,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` El número de identificación del trabajo desde el que se quitará el paso. *job_id*es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id`El número de identificación del trabajo del que se quitará el paso. *job_id*es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` El nombre del trabajo desde el que se quitará el paso. *job_name*es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'`Nombre del trabajo del que se quitará el paso. *job_name*es de **tipo sysname y su**valor predeterminado es NULL.  
   
-> **NOTA:** Cualquier *job_id* o *job_name* debe especificarse; no se pueden especificar ambos.  
+> **Nota:** Se debe especificar *job_id* o *job_name* ; no se pueden especificar ambos.  
   
-`[ @step_id = ] step_id` El número de identificación del paso que se va a quitar. *step_id*es **int**, no tiene ningún valor predeterminado.  
+`[ @step_id = ] step_id`Número de identificación del paso que se va a quitar. *step_id*es de **tipo int**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -55,12 +55,12 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si se quita un paso de un trabajo, se actualizan automáticamente los otros pasos del trabajo que hacen referencia al paso eliminado.  
   
- Para obtener más información acerca de los pasos asociados con un trabajo determinado, ejecute **sp_help_jobstep**.  
+ Para obtener más información acerca de los pasos asociados a un trabajo determinado, ejecute **sp_help_jobstep**.  
   
-> **NOTA:** Una llamada a **sp_delete_jobstep** con un *step_id* valor de cero, eliminan todos los pasos de trabajo para el trabajo.  
+> **Nota:** La llamada a **sp_delete_jobstep** con un valor *step_id* de cero elimina todos los pasos del trabajo.  
   
  Microsoft SQL Server Management Studio ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   
@@ -75,7 +75,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo los miembros del **sysadmin** puede eliminar un paso de trabajo que pertenece a otro usuario.  
+ Solo los miembros de **sysadmin** pueden eliminar un paso de trabajo que pertenece a otro usuario.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se quita el paso de trabajo `1` del trabajo `Weekly Sales Data Backup`.  
@@ -90,11 +90,11 @@ EXEC dbo.sp_delete_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver o modificar trabajos](../../ssms/agent/view-or-modify-jobs.md)   
- [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_add_jobstep &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_update_jobstep &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

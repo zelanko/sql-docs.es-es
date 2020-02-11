@@ -14,21 +14,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5386c8db5c3d240533b21311794779905039e70a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62985814"
 ---
 # <a name="rendering-extensions-overview"></a>Información general de las extensiones de representación
-  Una extensión de representación es un componente o módulo de un servidor de informes que transforma los datos de informes y la información de diseño en un formato específico del dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye siete extensiones de representación: HTML, Excel, Word, CSV o texto, XML, imagen y PDF. Puede crear extensiones de representación adicionales para generar informes en otros formatos.  
+  Una extensión de representación es un componente o módulo de un servidor de informes que transforma los datos de informes y la información de diseño en un formato específico del dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye siete extensiones de representación: HTML, Excel, Word, CSV o Text, XML, Image y PDF. Puede crear extensiones de representación adicionales para generar informes en otros formatos.  
   
 > [!NOTE]  
 >  Para determinar qué extensiones de representación están disponibles, puede ver la lista de extensiones instaladas en el archivo RSReportServer.config.  
   
  En la tabla siguiente se describen las extensiones de representación que se incluyen con [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Extension Name|Descripción|  
+|Nombre de la extensión|Descripción|  
 |--------------------|-----------------|  
 |`XML`|Representa un informe en XML. El informe se abre en un explorador. Las transformaciones adicionales aplicadas a esta salida XML pueden constituir una manera rentable de evitar desarrollar una extensión de representación propia.|  
 |`CSV`|Representa un informe en formato delimitado por comas. El informe se abre en una herramienta de visualización asociada a los formatos de archivo CSV.|  
@@ -36,8 +36,10 @@ ms.locfileid: "62985814"
 |`PDF`|Representa un informe en Adobe Acrobat Reader. El formato se muestra como **Archivo de Acrobat (PDF)** en el cuadro desplegable Exportar de la barra de herramientas del informe.|  
 |`EXCEL`|Representa un informe en [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)].|  
 |`WORD`|Representar un informe en [!INCLUDE[ofprword](../../../includes/ofprword-md.md)].|  
-|`HTML 4.0` (parte de la extensión de representación en HTML)|HTML es el formato que se usó inicialmente para representar el informe. Si el explorador admite HTML 4.0, ése es el formato que se utiliza. De lo contrario, se utiliza HTML 3.2.|  
-|`MHTML` (parte de la extensión de representación en HTML)|Representa un informe en MHTML. El informe se abre en Internet Explorer. El formato se muestra como **Archivo web** en el cuadro desplegable Exportar de la barra de herramientas del informe.|  
+|
+  `HTML 4.0` (parte de la extensión de representación en HTML)|HTML es el formato que se usó inicialmente para representar el informe. Si el explorador admite HTML 4.0, ése es el formato que se utiliza. De lo contrario, se utiliza HTML 3.2.|  
+|
+  `MHTML` (parte de la extensión de representación en HTML)|Representa un informe en MHTML. El informe se abre en Internet Explorer. El formato se muestra como **Archivo web** en el cuadro desplegable Exportar de la barra de herramientas del informe.|  
 |`NULL`|No representa un informe en un formato concreto. Esta extensión de representación es útil para colocar los informes en la memoria caché. La representación NULL se debería utilizar junto con una ejecución o entrega programada.|  
   
  Para más información sobre los formatos recomendados y sus usos, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../report-builder/export-reports-report-builder-and-ssrs.md).  
@@ -48,7 +50,7 @@ ms.locfileid: "62985814"
  Cuando se procesa un informe, el resultado es un modelo de objetos expuesto públicamente conocido como Modelo de objetos de representación (ROM). El Modelo de objetos de representación es una colección de clases que definen el contenido, diseño y datos de un informe que se ha procesado. El ROM está disponible para los programadores que desean diseñar, desarrollar e implementar las extensiones de representación personalizadas para [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. ROM se genera cuando el servidor de informes procesa la definición XML de un informe junto con los datos del mismo definidos por el usuario. Cuando el procesamiento se completa, una extensión de representación utiliza el modelo de objetos público para definir la salida del informe. Las clases públicas disponibles del ROM se definen en el espacio de nombres `Microsoft.ReportingServices.OnDemandReportRendering`.  
   
 ## <a name="writing-custom-rendering-extensions"></a>Escribir extensiones de representación personalizadas  
- Antes de decidir crear una extensión de representación personalizada, debería evaluar alternativas más simples. Puede hacer lo siguiente:  
+ Antes de decidir crear una extensión de representación personalizada, debería evaluar alternativas más simples. Puede:  
   
 -   Personalizar la salida representada especificando la configuración de la información de los dispositivos para las extensiones existentes.  
   
@@ -58,7 +60,7 @@ ms.locfileid: "62985814"
   
  Para obtener documentación complementaria y notas del producto de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], vea los recursos técnicos más recientes en el [sitio web de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=19951).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar una extensión de representación](implementing-a-rendering-extension.md)   
  [Biblioteca de extensiones de Reporting Services](../reporting-services-extension-library.md)  
   

@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032126"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Supervisar el uso de recursos (Monitor de sistema)
@@ -69,7 +69,7 @@ ms.locfileid: "63032126"
   
 -   Actividad del disco  
   
--   Uso del procesador  
+-   Utilización del procesador  
   
 -   Uso de la memoria  
   
@@ -86,6 +86,6 @@ ms.locfileid: "63032126"
 |Describe cómo se crea una alerta que se activará cuando se alcance un valor de umbral en un contador del Monitor del sistema.|[Crear una alerta de base de datos de SQL Server](create-a-sql-server-database-alert.md)|  
 |Describe cómo se crean gráficos, alertas, registros e informes para supervisar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Crear gráficos, alertas, registros e informes](create-charts-alerts-logs-and-reports.md)|  
 |Muestra los objetos y contadores que el Monitor del sistema usa para supervisar la actividad de los equipos en los que se ejecuta una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Usar objetos de SQL Server](use-sql-server-objects.md)|  
-|Muestra los objetos y contadores que el Monitor del sistema usa para supervisar la actividad de OLTP en memoria.|[XTP &#40;OLTP en memoria&#41; los contadores de rendimiento](../../integration-services/performance/performance-counters.md)|  
+|Muestra los objetos y contadores que el Monitor del sistema usa para supervisar la actividad de OLTP en memoria.|[Contadores de rendimiento de OLTP &#40;en memoria&#41;](../../integration-services/performance/performance-counters.md)|  
   
   

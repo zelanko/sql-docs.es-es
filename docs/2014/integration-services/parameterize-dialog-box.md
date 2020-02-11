@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo se parametrizan | Microsoft Docs
+title: Parametrizar (cuadro de diálogo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056871"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
@@ -29,13 +29,13 @@ ms.locfileid: "66056871"
  **Usar parámetro existente**  
  Seleccione esta opción para asociar la propiedad de tarea con un parámetro existente y, a continuación, seleccione el parámetro de la lista desplegable.  
   
- **No usar el parámetro**  
+ **No usar parámetro**  
  Seleccione esta opción para quitar una referencia a un parámetro. Parámetro no se elimina.  
   
  **Crear nuevo parámetro**  
  Seleccione esta opción para crear un nuevo parámetro que desee asociar con la propiedad de tarea.  
   
- **Name**  
+ **Nombre**  
  Especifique el nombre del parámetro que desea crear.  
   
  **Descripción**  
@@ -47,7 +47,7 @@ ms.locfileid: "66056871"
  **Ámbito**  
  Especifique el ámbito del parámetro seleccionando la opción **Proyecto** o **Paquete** . Los parámetros de proyecto se usan para proporcionar cualquier entrada externa que el proyecto recibe a uno o más paquetes del proyecto. Los parámetros de paquete permiten modificar la ejecución del paquete sin tener que modificarlo ni volver a implementarlo.  
   
- **Con distinción**  
+ **Sensibilidad**  
  Especifique si es un parámetro con distinción activando o desactivando la casilla. Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.  
   
  **Obligatorio**  

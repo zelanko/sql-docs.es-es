@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198422"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (motor de base de datos)
@@ -34,10 +34,10 @@ ms.locfileid: "68198422"
 ## <a name="sql-server-audit-components"></a>Componentes de SQL Server Audit  
  Una *auditoría* es la combinación de varios elementos en un único paquete para un grupo específico de acciones de servidor o de base de datos. Los componentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit se combinan para producir una salida denominada auditoría, de la misma manera que una definición de informe combinada con gráficos y elementos de datos da como resultado un informe.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit usa *eventos extendidos* para facilitar la creación de auditorías. Para obtener más información acerca de los eventos extendidos, vea [eventos extendidos](../../extended-events/extended-events.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Audit usa *eventos extendidos* para ayudarle a crear una auditoría. Para obtener más información sobre los eventos extendidos, vea [eventos extendidos](../../extended-events/extended-events.md).  
   
 ### <a name="sql-server-audit"></a>SQL Server Audit  
- El objeto *SQL Server Audit* recopila una única instancia de acciones y grupos de acciones de nivel de servidor o de base de datos para su supervisión. La auditoría se realiza en el nivel de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Es posible tener varias auditorías por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ El objeto *SQL Server Audit* recopila una única instancia de acciones de nivel de base de datos o de servidor, así como grupos de acciones que se van a supervisar. La auditoría se realiza en el nivel de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Es posible tener varias auditorías por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Cuando se define una auditoría, se especifica la ubicación para los resultados generados. Éste es el destino de la auditoría. La auditoría se crea en un estado *deshabilitado* y no audita automáticamente ninguna acción. Una vez habilitada la auditoría, el destino de la auditoría recibe los datos de la misma.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68198422"
 ### <a name="database-audit-specification"></a>Especificación de auditoría de base de datos  
  El objeto *Especificación de auditoría de base de datos* también pertenece a una auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Puede crear una única especificación de auditoría de base de datos para cada base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y cada auditoría.  
   
- La especificación de auditoría de base de datos recopila acciones de auditoría de nivel de base de datos generadas por la característica Extended Events. Puede agregar grupos de acciones de auditoría o eventos de auditoría a una especificación de auditoría de base de datos. Los*eventos de auditoría* son las acciones atómicas que puede auditar el motor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Los*grupos de acciones de auditoría* son grupos predefinidos de acciones. Ambos están en el ámbito de la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Estas acciones se envían a la auditoría, que las registra en el destino. No incluya objetos con ámbito en el servidor, como las vistas del sistema, en una especificación de auditoría de base de datos.  
+ La especificación de auditoría de base de datos recopila acciones de auditoría de nivel de base de datos generadas por la característica Extended Events. Puede agregar grupos de acciones de auditoría o eventos de auditoría a una especificación de auditoría de base de datos. Los *eventos de auditoría* son las acciones atómicas que puede auditar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el motor. Los grupos de acciones de *Auditoría* son grupos predefinidos de acciones. Ambos están en el ámbito de la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Estas acciones se envían a la auditoría, que las registra en el destino. No incluya objetos con ámbito en el servidor, como las vistas del sistema, en una especificación de auditoría de base de datos.  
   
  Los grupos de acciones de auditoría de base de datos y las acciones de auditoría se describen en el tema [Grupos de acciones y acciones de SQL Server Audit](sql-server-audit-action-groups-and-actions.md).  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68198422"
 > [!IMPORTANT]  
 >  Cualquier usuario autenticado puede leer y escribir en el registro de eventos de aplicación Windows. El registro de eventos de aplicación requiere permisos más bajos que el registro de eventos de seguridad de Windows, por lo que es menos seguro que éste.  
   
- La escritura en el registro de seguridad de Windows requiere que se agregue la cuenta del servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la directiva **Generar auditorías de seguridad** . De forma predeterminada, el sistema local, el servicio local y el servicio de red forman parte de esta directiva. Este valor se puede configurar utilizando el complemento de directiva de seguridad (secpol.msc). Además, la directiva de seguridad **Auditar el acceso a objetos** debe estar habilitada tanto para **Correcto** como para **Error**. Este valor se puede configurar utilizando el complemento de directiva de seguridad (secpol.msc). En [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, puede establecer más granulares **aplicación generada** directiva desde la línea de comandos mediante el programa de directiva de auditoría (`AuditPol.exe)`. Para obtener más información sobre los pasos necesarios para habilitar la escritura en el registro de seguridad de Windows, vea [Escribir eventos de auditoría de SQL Server en el registro de seguridad](write-sql-server-audit-events-to-the-security-log.md). Para obtener más información sobre el programa Auditpol.exe, vea el artículo 921469 de Knowledge Base que describe [cómo usar la directiva de grupo para configurar las opciones detalladas de auditoría de seguridad](https://support.microsoft.com/kb/921469/). Los registros de eventos de Windows son globales para el sistema operativo Windows. Para obtener más información sobre los registros de eventos de Windows, vea [Información general sobre el Visor de eventos](https://go.microsoft.com/fwlink/?LinkId=101455). Si necesita permisos más concretos en la auditoría, utilice el destino de archivo binario.  
+ La escritura en el registro de seguridad de Windows requiere que se agregue la cuenta del servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la directiva **Generar auditorías de seguridad** . De forma predeterminada, el sistema local, el servicio local y el servicio de red forman parte de esta directiva. Este valor se puede configurar utilizando el complemento de directiva de seguridad (secpol.msc). Además, la directiva de seguridad **Auditar el acceso a objetos** debe estar habilitada tanto para **Correcto** como para **Error**. Este valor se puede configurar utilizando el complemento de directiva de seguridad (secpol.msc). En [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, puede establecer la Directiva de aplicación más granular **generada** desde la línea de comandos mediante el programa de directiva`AuditPol.exe)`de auditoría (. Para obtener más información sobre los pasos necesarios para habilitar la escritura en el registro de seguridad de Windows, vea [Escribir eventos de auditoría de SQL Server en el registro de seguridad](write-sql-server-audit-events-to-the-security-log.md). Para obtener más información sobre el programa Auditpol.exe, vea el artículo 921469 de Knowledge Base que describe [cómo usar la directiva de grupo para configurar las opciones detalladas de auditoría de seguridad](https://support.microsoft.com/kb/921469/). Los registros de eventos de Windows son globales para el sistema operativo Windows. Para obtener más información sobre los registros de eventos de Windows, vea [Información general sobre el Visor de eventos](https://go.microsoft.com/fwlink/?LinkId=101455). Si necesita permisos más concretos en la auditoría, utilice el destino de archivo binario.  
   
  Al guardar información de auditoría en un archivo, para tratar de impedir su alteración, puede restringir el acceso a la ubicación del archivo de las maneras siguientes:  
   
@@ -119,14 +119,14 @@ ms.locfileid: "68198422"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Creación de reflejo de la base de datos y SQL Server Audit  
  Una base de datos en la que se haya definido una especificación de auditoría de base de datos y que use la creación de reflejo de la base de datos incluirá la especificación de auditoría de base de datos. Para poder trabajar correctamente en la instancia de SQL reflejada, se deben configurar los elementos siguientes:  
   
--   El servidor reflejado debe tener una auditoría con el mismo GUID para permitir que la especificación de auditoría de base de datos escriba registros de auditoría. Esto se puede configurar mediante el comando CREATE AUDIT WITH GUID`=` *\<GUID de auditoría de servidor de origen*>.  
+-   El servidor reflejado debe tener una auditoría con el mismo GUID para permitir que la especificación de auditoría de base de datos escriba registros de auditoría. Esto se puede configurar mediante el comando CREATE Audit with GUID`=`*\<GUID from Source Server Audit*>.  
   
 -   En el caso de los destinos de archivo binario, la cuenta de servicio del servidor reflejado debe tener los permisos adecuados para la ubicación en la que se escribe la pista de auditoría.  
   
 -   Si el destino es el registro de eventos de Windows, la directiva de seguridad del equipo en el que está ubicado el servidor reflejado debe permitir el acceso de la cuenta de servicio al registro de eventos de seguridad o de la aplicación.  
   
 ### <a name="auditing-administrators"></a>Auditar a los administradores  
- Los miembros de la `sysadmin` rol fijo de servidor se identifican como el **dbo** usuario en cada base de datos. Para auditar las acciones de los administradores, se auditan las acciones del usuario **dbo** .  
+ Los miembros del `sysadmin` rol fijo de servidor se identifican como el usuario **DBO** en cada base de datos. Para auditar las acciones de los administradores, se auditan las acciones del usuario **dbo** .  
   
 ## <a name="creating-and-managing-audits-with-transact-sql"></a>Crear y administrar auditorías con Transact-SQL  
  Puede usar instrucciones DDL, vistas y funciones de administración dinámica y vistas de catálogo para implementar todos los aspectos de la Auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -136,11 +136,11 @@ ms.locfileid: "68198422"
   
 |||  
 |-|-|  
-|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CREATE SERVER AUDIT](/sql/t-sql/statements/create-server-audit-transact-sql)|  
-|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[CREATE SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
-|[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[DROP DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
-|[ALTER SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/alter-server-audit-transact-sql)|[DROP SERVER AUDIT](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
-|[CREATE DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
+|[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CREAR AUDITORÍA DE SERVIDOR](/sql/t-sql/statements/create-server-audit-transact-sql)|  
+|[MODIFICAR ESPECIFICACIÓN DE AUDITORÍA DE BASE DE DATOS](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[CREAR ESPECIFICACIÓN DE AUDITORÍA DE SERVIDOR](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
+|[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[QUITAR ESPECIFICACIÓN DE AUDITORÍA DE BASE DE DATOS](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
+|[MODIFICAR ESPECIFICACIÓN DE AUDITORÍA DE SERVIDOR](/sql/t-sql/statements/alter-server-audit-transact-sql)|[QUITAR AUDITORÍA DE SERVIDOR](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
+|[CREAR ESPECIFICACIÓN DE AUDITORÍA DE BASE DE DATOS](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[QUITAR ESPECIFICACIÓN DE AUDITORÍA DE SERVIDOR](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
   
 ### <a name="dynamic-views-and-functions"></a>Funciones y vistas dinámicas  
  En la tabla siguiente se enumeran las funciones y vistas dinámicas que puede usar con las auditorías de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -157,11 +157,11 @@ ms.locfileid: "68198422"
   
 |Vistas de catálogo|Descripción|  
 |-------------------|-----------------|  
-|[sys.database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Contiene información sobre las especificaciones de auditoría de base de datos en una auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de una instancia del servidor.|  
+|[Sys. database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Contiene información sobre las especificaciones de auditoría de base de datos en una auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de una instancia del servidor.|  
 |[sys.database_audit_specification_details](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)|Contiene información sobre las especificaciones de auditoría de base de datos en una auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de una instancia de servidor para todas las bases de datos.|  
 |[sys.server_audits](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)|Contiene una fila para cada auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de una instancia de servidor.|  
 |[sys.server_audit_specifications](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)|Contiene información sobre las especificaciones de auditoría de servidor en una auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de una instancia del servidor.|  
-|[sys.server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Contiene información sobre los detalles de especificación de auditoría del servidor (acciones) en una auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de una instancia de servidor.|  
+|[Sys. server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Contiene información sobre los detalles de especificación de auditoría del servidor (acciones) en una auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de una instancia de servidor.|  
 |[sys.server_file_audits](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)|Contiene información adicional sobre el tipo de auditoría de archivos en una auditoría de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de una instancia de servidor.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -186,25 +186,26 @@ ms.locfileid: "68198422"
  Para obtener más información sobre cómo conceder derechos y permisos, vea [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql).  
   
 > [!CAUTION]  
->  De la misma forma que las entidades de seguridad del rol sysadmin pueden manipular cualquier componente de auditoría, las del rol db_owner pueden manipular las especificaciones de auditoría en una base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit comprobará si un inicio de sesión que crea o modifica una especificación de auditoría tiene al menos el permiso ALTER ANY DATABASE AUDIT. Sin embargo, no realiza ninguna validación al adjuntar una base de datos. Como norma, debería otorgar la misma confianza a las especificaciones de auditoría de base de datos que a las entidades de seguridad que tienen el rol sysadmin o db_owner.  
+>  De la misma forma que las entidades de seguridad del rol sysadmin pueden manipular cualquier componente de auditoría, las del rol db_owner pueden manipular las especificaciones de auditoría en una base de datos. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit comprobará si un inicio de sesión que crea o modifica una especificación de auditoría tiene al menos el permiso ALTER ANY DATABASE AUDIT. Sin embargo, no realiza ninguna validación al adjuntar una base de datos. Como norma, debería otorgar la misma confianza a las especificaciones de auditoría de base de datos que a las entidades de seguridad que tienen el rol sysadmin o db_owner.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Crear una auditoría de servidor y una especificación de auditoría de servidor](create-a-server-audit-and-server-audit-specification.md)  
   
- [Crear una especificación de auditoría de servidor y de auditoría de base de datos](create-a-server-audit-and-database-audit-specification.md)  
+ [Crear una auditoría de servidor y una especificación de auditoría de base de datos](create-a-server-audit-and-database-audit-specification.md)  
   
- [Ver un registro de SQL Server Audit](view-a-sql-server-audit-log.md)  
+ [Ver un registro de auditoría de SQL Server](view-a-sql-server-audit-log.md)  
   
- [Escribir eventos de SQL Server Audit en el registro de seguridad](write-sql-server-audit-events-to-the-security-log.md)  
+ [Escribir eventos de auditoría de SQL Server en el registro de seguridad](write-sql-server-audit-events-to-the-security-log.md)  
   
 ## <a name="topics-closely-related-to-auditing"></a>Temas estrechamente relacionados con la auditoría  
- [Propiedades del servidor &#40;página Seguridad&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
+ [Propiedades del servidor &#40;página seguridad&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
  Explica cómo activar la auditoría de inicio de sesión para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los registros de auditoría se almacenan en el registro de aplicación de Windows.  
   
  [c2 audit mode (opción de configuración del servidor)](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
  Explica la compatibilidad de seguridad del modo auditoría C2 en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Categoría de eventos Auditoría de seguridad &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
+ [&#40;de la categoría de eventos auditoría de seguridad SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
  Explica los eventos de auditoría que puede utilizar en [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]. Para más información, consulte [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md).  
   
  [Seguimiento de SQL](../../sql-trace/sql-trace.md)  
@@ -213,11 +214,11 @@ ms.locfileid: "68198422"
  [Desencadenadores DDL](../../triggers/ddl-triggers.md)  
  Explica cómo puede usar los desencadenadores del Lenguaje de definición de datos (DDL) para realizar el seguimiento de los cambios en sus bases de datos.  
   
- [Microsoft TechNet: SQL Server TechCenter: Seguridad y protección de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server TechCenter: seguridad y protección de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Proporciona información actualizada sobre la seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
- [Grupos de acciones y acciones de SQL Server Audit](sql-server-audit-action-groups-and-actions.md)   
- [Registros de SQL Server Audit](sql-server-audit-records.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQL Server grupos de acciones y acciones de auditoría](sql-server-audit-action-groups-and-actions.md)   
+ [SQL Server registros de auditoría](sql-server-audit-records.md)  
   
   

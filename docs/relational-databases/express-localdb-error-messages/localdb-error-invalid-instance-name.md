@@ -10,22 +10,22 @@ ms.assetid: 709ac713-aadd-4d5b-a0f9-d859a79dd24c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3e2b24483b57c638d68e044bd3dda175cc76cc48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68011155"
 ---
-# <a name="localdberrorinvalidinstancename"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
+# <a name="localdb_error_invalid_instance_name"></a>LOCALDB_ERROR_INVALID_INSTANCE_NAME
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|283|  
-|Origen del evento|SQL Server Local Database Runtime 12.0|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|283|  
+|Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
 |Texto del mensaje|El nombre de instancia contiene caracteres no válidos o es demasiado largo. Consulte la documentación de la API.|  
   
@@ -33,6 +33,6 @@ ms.locfileid: "68011155"
  El nombre de instancia contiene caracteres no válidos o es demasiado largo.  
   
 ## <a name="user-action"></a>Acción del usuario  
- Consulte la documentación de la API de Local Database Runtime sobre los nombres válidos para las instancias de Local Database Runtime.  Para obtener más información, consulte [referencia de SQL Server Express LocalDB instancia API](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md).
+ Consulte la documentación de la API de Local Database Runtime sobre los nombres válidos para las instancias de Local Database Runtime.  Para obtener más información, vea [SQL Server Express referencia de API de instancia de LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md).
   
   

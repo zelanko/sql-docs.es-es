@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67792914"
 ---
 # <a name="create-the-finance-name-policy"></a>Crear la directiva Finance Name
-  En esta tarea, creará una base de datos denominada Finance y después una condición que requiera que los nombres de todas las tablas comiencen con las letras **fintbl**. A continuación, creará una directiva y una categoría de directivas para exigir una denominación estándar para las tablas de la base de datos Finance.  
+  En esta tarea, creará una base de datos denominada Finance y, a continuación, creará una condición que requiera que todas las tablas comiencen con las letras **fintbl**. A continuación, creará una directiva y una categoría de directivas para exigir una denominación estándar para las tablas de la base de datos Finance.  
   
 ### <a name="to-create-the-finance-database"></a>Para crear la base de datos Finance  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67792914"
   
 3.  En la lista **Faceta** , seleccione **Nombre de varias partes**.  
   
-4.  En el **expresión** área, en el **campo** cuadro, seleccione  **\@nombre**; en el **operador** cuadro, seleccione  **Al igual que**; y en el **valor** , escriba **'fintbl %'** para forzar que todos los nombres de tabla comiencen con las letras **fintbl**.  
+4.  En el área **expresión** , en el cuadro **campo** , seleccione ** \@nombre**; en el cuadro **operador** , seleccione **like**; y en el cuadro **valor** , escriba **' fintbl% '** para forzar que todos los nombres de tabla comiencen con las letras **fintbl**.  
   
 5.  En la página **Descripción** , escriba **Los nombres de tablas de finanzas deben comenzar con fintbl**y, a continuación, haga clic en **Aceptar** para crear la condición.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67792914"
   
 6.  En el cuadro de diálogo **Crear nueva condición** , en el cuadro **Nombre** , escriba **Finance Database**.  
   
-7.  En el **expresión** cuadro, complete la expresión para incluir  **\@nombre = 'Finance'** y, a continuación, haga clic en **Aceptar** para cerrar la página de la condición.  
+7.  En el cuadro **expresión** , complete la expresión para incluir ** \@name = ' Finance '** y, a continuación, haga clic en **Aceptar** para cerrar la página condición.  
   
     > [!NOTE]  
     >  Es posible que tenga que salir del cuadro **Valor** para habilitar el botón **Aceptar** .  
@@ -74,7 +74,7 @@ ms.locfileid: "67792914"
   
 1.  En el Explorador de objetos, expanda **Administración**, haga clic con el botón derecho en **Administración de directivas**y, después, haga clic en **Administrar categorías**.  
   
-2.  En el **administrar categorías de directiva** cuadro de diálogo **nombre**, tipo `Finance` en el cuadro en blanco y, a continuación, desactive **suscripciones de base de datos de mandatos**. **Suscripciones de base de datos de mandatos** exigirá que cada base de datos en la instancia se suscriba a las directivas que pertenecen a esta categoría de directiva. Para esta lección, solo la base de datos Finance debería suscribirse a la directiva Finance Name.  
+2.  En el cuadro de diálogo **administrar categorías** de directiva ****, en nombre `Finance` , escriba en el cuadro en blanco y, a continuación, desactive las **suscripciones de base de datos de autorización**. Las **suscripciones de base de datos de mandato** obligarán a que cada base de datos de la instancia se suscriba a las directivas que pertenecen a esta categoría de directiva. Para esta lección, solo la base de datos Finance debería suscribirse a la directiva Finance Name.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

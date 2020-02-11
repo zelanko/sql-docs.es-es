@@ -11,14 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811007"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar los requisitos de memoria para las tablas con optimización para memoria
-  Si va a crear una nueva [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabla optimizada para memoria o migrar una tabla basada en disco existente a una tabla optimizada para memoria, es importante tener una estimación razonable de las necesidades de memoria de cada tabla para poder aprovisionar el servidor con suficiente memoria. En esta sección se describe cómo calcular la cantidad de memoria necesaria para almacenar los datos de una tabla optimizada para memoria.  
+  Si va a crear una nueva [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabla optimizada para memoria o migrar una tabla basada en disco existente a una tabla optimizada para memoria, es importante tener una estimación razonable de las necesidades de memoria de cada tabla para poder aprovisionar el servidor con memoria suficiente. En esta sección se describe cómo calcular la cantidad de memoria necesaria para almacenar los datos de una tabla optimizada para memoria.  
   
  Si va a realizar la migración desde tablas basadas en disco a tablas optimizadas para memoria, antes de continuar en este tema, vea el tema [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) para obtener información sobre qué tablas son más adecuadas para la migración. Todos los temas de [Migrar a OLTP en memoria](migrating-to-in-memory-oltp.md) ofrecen instrucciones sobre la migración de tablas basadas en disco a tablas optimizadas para memoria.  
   
@@ -117,32 +117,32 @@ SELECT COUNT(DISTINCT [Col2])
   
  **Nota:** No se puede cambiar el tamaño de la matriz de índices de hash sobre la marcha. Para cambiar el tamaño de la matriz de índices hash debe quitar la tabla, cambiar el valor de bucket_count y volver a crear la tabla.  
   
- **Establecer el tamaño de la matriz de índices de hash**  
+ **Establecer el tamaño de la matriz de índices hash**  
   
- El tamaño de la matriz hash se `(bucket_count= <value>)` establece \<mediante donde value > es un valor entero mayor que cero. Si \<el valor > no es una potencia de 2, el bucket_count real se redondea a la siguiente potencia más cercana de 2.  En la tabla de ejemplo, (bucket_count = 5 millones), dado que 5 millones no es una potencia de 2, el número de depósitos real se redondea hasta 8.388.608 (2<sup>23</sup>).  Debe usar este número, no 5.000.000, al calcular la memoria necesaria para la matriz hash.  
+ El tamaño de la matriz hash se `(bucket_count= <value>)` establece \<mediante donde Value> es un valor entero mayor que cero. Si \<el valor> no es una potencia de 2, el bucket_count real se redondea a la siguiente potencia más cercana de 2.  En la tabla de ejemplo, (bucket_count = 5 millones), dado que 5 millones no es una potencia de 2, el número de depósitos real se redondea hasta 8.388.608 (2<sup>23</sup>).  Debe usar este número, no 5.000.000, al calcular la memoria necesaria para la matriz hash.  
   
  Así, en nuestro ejemplo, la memoria necesaria para cada matriz hash es:  
   
- 8\.388.608 * 8 = 2<sup>23</sup> \* 8 = 2<sup>23</sup> \* 2<sup>3</sup> = 2<sup>26</sup> = 67.108.864 o aproximadamente 64 MB.  
+ 8.388.608 * 8 = 2<sup>23</sup> \* 8 = 2<sup>23</sup> \* 2<sup>3</sup> = 2<sup>26</sup> = 67.108.864 o aproximadamente 64 MB.  
   
  Puesto que tenemos tres índices hash, la memoria necesaria para los índices hash es 3 * 64 MB = 192 MB.  
   
- **Memoria para índices no clúster**  
+ **Memoria para los índices no agrupados**  
   
- Los índices no clúster se implementan como árboles b donde con los nodos internos que contienen el valor de índice y punteros a los nodos posteriores.  Los nodos hoja contienen el valor de índice y un puntero a la fila de la tabla en memoria.  
+ Los índices no agrupados se implementan como árboles b donde los nodos internos contienen el valor de índice y punteros a los nodos posteriores.  Los nodos hoja contienen el valor de índice y un puntero a la fila de la tabla en memoria.  
   
- A diferencia de los índices hash, los índices no clúster no tienen un tamaño de cubo fijo. El índice aumenta y disminuye dinámicamente con los datos.  
+ A diferencia de los índices hash, los índices no agrupados no tienen un tamaño de cubo fijo. El índice aumenta y disminuye dinámicamente con los datos.  
   
- La memoria que necesitan los índices no clúster se puede calcular de la manera siguiente:  
+ La memoria que necesitan los índices no agrupados se puede calcular de la manera siguiente:  
   
 -   **Memoria asignada a los nodos no hoja**   
     Para una configuración típica, la memoria asignada a los nodos no hoja es un porcentaje muy pequeño de la memoria total usada por el índice. Es tan pequeña que se puede omitir de forma segura.  
   
 -   **Memoria para los nodos hoja**   
-    Los nodos hoja tienen un fila por cada clave única de la tabla que apunta a las filas de datos con esa clave única.  Si tiene varias filas con la misma clave (es decir, tiene un índice no clúster no único), solo hay una fila en el nodo hoja del índice que apunta a una de las filas con las demás filas vinculadas entre sí.  Así, se puede calcular aproximadamente la memoria total necesaria de esta forma:   
+    Los nodos hoja tienen un fila por cada clave única de la tabla que apunta a las filas de datos con esa clave única.  Si tiene varias filas con la misma clave (es decir, tiene un índice no agrupado que no es único), solo hay una fila en el nodo hoja del índice que apunta a una de las filas con las demás filas vinculadas entre sí.  Así, se puede calcular aproximadamente la memoria total necesaria de esta forma:   
     memoryForNonClusteredIndex = (pointerSize + sum (keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
- Los índices no clúster son los más adecuados cuando se usan para búsquedas de intervalo, como se ilustra en la consulta siguiente:  
+ Los índices no agrupados son los más adecuados cuando se emplean para búsquedas de intervalo, como se ilustra en la consulta siguiente:  
   
 ```sql  
   
@@ -173,7 +173,7 @@ SELECT * FROM t_hk
 ##  <a name="bkmk_MemoryForGrowth"></a> Memoria para el crecimiento  
  Los cálculos anteriores estiman sus necesidades de memoria para la tabla tal y como es actualmente. Además de esta memoria, debe calcular el crecimiento de la tabla y proporcionar la memoria adecuada para permitir ese crecimiento.  Por ejemplo, si prevé un crecimiento del 10 %, necesita multiplicar los resultados anteriores por 1,1 para obtener la memoria total necesaria para la tabla.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Migrar a OLTP en memoria](migrating-to-in-memory-oltp.md)  
   
   

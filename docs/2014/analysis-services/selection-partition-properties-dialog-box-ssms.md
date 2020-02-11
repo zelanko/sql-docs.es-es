@@ -1,5 +1,5 @@
 ---
-title: Selección (cuadro de diálogo Propiedades de partición) (SSMS) | Microsoft Docs
+title: Selección (cuadro de diálogo Propiedades de la partición) (SSMS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,33 +13,33 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069222"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>Selección (cuadro de diálogo Propiedades de la partición, SSMS)
   Use la página **Selección** del cuadro de diálogo **Propiedades de la partición** en SQL Server Management Studio para seleccionar una partición de un grupo de medida del que desea ver o modificar las propiedades en el panel **General**, **Almacenamiento en caché automático**o **Configuración de errores** .  
   
 ## <a name="options"></a>Opciones  
- **Grid**  
+ **Cuadrícula**  
  Muestra las particiones del grupo de medida que contiene la partición seleccionada.  
   
  Seleccione la partición cuyas propiedades desea ver en la página **General**, **Almacenamiento en caché automático**o **Configuración de errores** .  
   
  La cuadrícula contiene las columnas siguientes:  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
-|**Name**|Muestra el nombre de la partición.|  
-|**Source**|Muestra la tabla o consulta utilizada para proporcionar datos de origen para la partición.|  
+|**Nombre**|Muestra el nombre de la partición.|  
+|**Origen**|Muestra la tabla o consulta utilizada para proporcionar datos de origen para la partición.|  
 |**Agregaciones**|Muestra una cadena que describe el diseño de agregaciones utilizado por la partición.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cuadro de diálogo Propiedades de la partición &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
- [General &#40;cuadro de diálogo Propiedades de la partición&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)   
- [Almacenamiento en caché automático &#40;cuadro de diálogo Propiedades de la partición&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)   
- [Configuración de errores de procesamiento de dimensiones, particiones y cubos &#40;SSAS - multidimensionales&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
+ [Cuadro de diálogo Propiedades de la partición de &#40;general&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)   
+ [Cuadro de diálogo Propiedades de la partición del almacenamiento en caché automático &#40;&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)   
+ [Configuración de errores para el procesamiento de cubos, particiones y dimensiones &#40;SSAS-multidimensional&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)  
   
   

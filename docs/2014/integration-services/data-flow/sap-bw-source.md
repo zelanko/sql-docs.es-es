@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 169c35d89075646aa3f4964d0e9d6eda92bc13a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901078"
 ---
 # <a name="sap-bw-source"></a>Origen de SAP BW
-  El origen de SAP BW es el componente de origen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Así, el origen de SAP BW extrae datos de un sistema SAP Netweaver BW de la versión 7 y hace que estos datos estén disponibles para el flujo de datos en un paquete de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
+  El origen de SAP BW es el componente de origen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Por lo tanto, el origen de SAP BW extrae datos de un sistema SAP Netweaver BW versión 7 y hace que estos datos estén disponibles [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para el flujo de datos en un paquete.  
   
  Este origen tiene una salida y una salida de error.  
   
@@ -34,9 +34,9 @@ ms.locfileid: "62901078"
   
 -   [Conectarse al sistema SAP Netweaver BW](#bkmk_Connect_Database)  
   
--   [Configurar el origen de SAP BW](#bkmk_Configure_Source)  
+-   [Configuración del origen de SAP BW](#bkmk_Configure_Source)  
   
-##  <a name="bkmk_Prepare_Objects"></a> Preparar los objetos SAP Netweaver BW que requiera el origen  
+##  <a name="bkmk_Prepare_Objects"></a>Preparar los objetos de SAP Netweaver BW que requiera el origen  
  El origen de SAP BW requiere que ciertos objetos estén en el sistema SAP Netweaver BW antes de que pueda funcionar el origen. Si estos objetos no existen aún, debe seguir estos pasos para crear y configurar estos objetos en el sistema SAP Netweaver BW.  
   
 > [!NOTE]  
@@ -48,7 +48,7 @@ ms.locfileid: "62901078"
   
     2.  Para **Tipo de activación**, seleccione **Programa de servidor registrado**.  
   
-    3.  Para **Communication Type with Target System**(Tipo de comunicación con sistema de destino), seleccione **Non-Unicode (Inactive MDMP Settings)**(No Unicode (valores inactivos de MDMP)).  
+    3.  Para **Tipo de comunicación con sistema de destino**, seleccione **No Unicode (valores inactivos de MDMP)** .  
   
     4.  Asignar un identificador de programa adecuado  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62901078"
   
     2.  Configure, guarde y active el DTP.  
   
-    3.  En el menú, haga clic en **Ir a**y, a continuación, haga clic en **Configuración del administrador de lotes**.  
+    3.  En el menú, haga clic en **Ir a** y, a continuación, haga clic en **Configuración del administrador de lotes**.  
   
     4.  Actualice **Número de procesos** a 1 para el procesamiento en serie.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62901078"
   
  Para obtener más información sobre el administrador de conexiones de SAP BW, vea [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
   
-##  <a name="bkmk_Configure_Source"></a> Configurar el origen de SAP BW  
+##  <a name="bkmk_Configure_Source"></a>Configuración del origen de SAP BW  
  Puede configurar el origen de SAP BW de las maneras siguientes:  
   
 -   Busque y seleccione el destino del servicio de concentrador abierto (OHS) que se usará para extraer datos.  
@@ -110,7 +110,7 @@ ms.locfileid: "62901078"
   
 -   Use las opciones que ha seleccionado para obtener una vista previa de los datos que se van a extraer.  
   
- También puede habilitar el registro de las llamadas del origen a funciones RFC. (Este registro es independiente del registro opcional que puede habilitar en los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]). Las llamadas a funciones RFC se habilitan cuando se configura el administrador de conexiones SAP BW que va a usar el origen. Para obtener más información sobre cómo configurar el administrador de conexiones de SAP BW, vea [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
+ También puede habilitar el registro de las llamadas del origen a funciones RFC. (Este registro es independiente del registro opcional que puede habilitar en los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ). Las llamadas a funciones RFC se habilitan cuando se configura el administrador de conexiones SAP BW que va a usar el origen. Para obtener más información sobre cómo configurar el administrador de conexiones de SAP BW, vea [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
   
  Si no conoce todos los valores necesarios para configurar el origen, puede que tenga que ponerse en contacto con el administrador de SAP.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "62901078"
   
 -   [Registro de solicitudes](request-log.md)  
   
--   [Vista previa](preview.md)  
+-   [Versión preliminar](preview.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Componentes de Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-components.md)  
   
   

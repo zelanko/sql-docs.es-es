@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 7: Agregar transformación al flujo de datos de limpieza de DQS | Microsoft Docs'
+title: 'Tarea 7: agregar la transformación limpieza de DQS al flujo de datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,56 +11,56 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488942"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tarea 7: Adición de la transformación Limpieza de DQS al flujo de datos
-  En esta tarea, agregará la transformación Limpieza de DQS al flujo de datos para limpiar los datos de proveedor de entrada mediante DQS. Consulte **[transformación limpieza de DQS](https://msdn.microsoft.com/library/ee677619.aspx)** para obtener más información acerca de la transformación.  
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tarea 7: agregar la transformación Limpieza de DQS al flujo de datos
+  En esta tarea, agregará la transformación Limpieza de DQS al flujo de datos para limpiar los datos de proveedor de entrada mediante DQS. Vea **[transformación limpieza de DQS](https://msdn.microsoft.com/library/ee677619.aspx)** para obtener más detalles sobre la transformación.  
   
-1.  Haga clic en **limpieza de DQS** en el **de flujo de datos** ficha y haga clic en **cambiar el nombre**. Tipo **limpiar datos de proveedor**y presione **ENTRAR**.  
+1.  Haga clic con el botón secundario en **limpieza de DQS** en la pestaña **flujo de datos** y haga clic en **cambiar nombre**. Escriba **limpiar datos de proveedor**y presione **entrar**.  
   
-2.  Seleccione **leer datos de proveedor de archivo de Excel**; arrastre el conector azul hasta **limpiar datos de proveedor**. Los componentes ahora están conectados.  
+2.  Seleccione **leer datos de proveedor del archivo de Excel**; Arrastre el conector azul para **limpiar los datos de proveedor**. Los componentes ahora están conectados.  
   
-     ![Leer datos de proveedor -> Limpiar datos de proveedor](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-01.jpg "leer datos de proveedor -> Limpiar datos de proveedor")  
+     ![Leer datos de proveedor: > limpiar los datos de proveedor](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-01.jpg "Leer datos de proveedor -> Limpiar datos de proveedor")  
   
 3.  Haga doble clic en **limpiar datos de proveedor**.  
   
-4.  En el **Editor de transformación limpieza de DQS**, haga clic en **New** junto a la **lista desplegable de administrador de conexiones de calidad de datos**.  
+4.  En el **Editor de transformación limpieza de DQS**, haga clic en **nuevo** junto a la lista desplegable **Administrador de conexiones de calidad de datos**.  
   
-5.  En el **DQS Cleansing Connection Manager** cuadro de diálogo, escriba **(local)** o **período** (.) para conectarse al servidor local. En esta lección se da por supuesto que ha instalado DQS en un servidor local.  
+5.  En el cuadro de diálogo **Administrador de conexiones de limpieza de DQS** , escriba **(local)** o **punto** (.) para conectarse al servidor local. En esta lección se da por supuesto que ha instalado DQS en un servidor local.  
   
-6.  Haga clic en **Probar conexión** para probar la conexión al servidor DQS.  
+6.  Haga clic en **probar conexión** para probar la conexión con el servidor DQS.  
   
 7.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
-8.  Seleccione **proveedores** para el **Data Quality Knowledge Base**.  
+8.  Seleccione **proveedores** en la **base de conocimiento de calidad de datos**.  
   
-     ![Editor de transformación: KB de proveedores de limpieza de DQS](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-02.jpg "Editor de transformación: KB de proveedores de limpieza de DQS")  
+     ![Editor de transformación Limpieza de DQS - Knowledge Base de los proveedores](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-02.jpg "Editor de transformación Limpieza de DQS - Knowledge Base de los proveedores")  
   
-9. Cambie a la **asignación** ficha en la parte superior.  
+9. Cambie a la pestaña **asignación** en la parte superior.  
   
-10. Desde **columnas de entrada disponibles**, seleccione **Supplier Name**, **ContactEmailAddress**, **Address Line**, **Ciudad**, **Estado**, **país**, y **código postal** seleccionando las casillas de verificación.  
+10. En **columnas de entrada disponibles**, **Seleccione Nombre del proveedor**, **ContactEmailAddress**, línea de **Dirección**, **ciudad**, **Estado**, **país**y **código postal** . para ello, active las casillas de verificación.  
   
-     ![Editor de transformación: asignaciones de limpieza de DQS](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-03.jpg "Editor de transformación: asignaciones de limpieza de DQS")  
+     ![Editor de transformación Limpieza de DQS - Asignaciones](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-03.jpg "Editor de transformación Limpieza de DQS - Asignaciones")  
   
-11. En el panel inferior, asigne estas columnas mediante las listas desplegables en el **dominio** columna:  
+11. En el panel inferior, asigne estas columnas mediante listas desplegables de la columna **dominio** :  
   
-    |columna|Dominio|  
+    |Columna|Domain|  
     |------------|------------|  
-    |Nombre de proveedor|Nombre de proveedor|  
-    |ContactEmailAddress|Póngase en contacto con el correo electrónico|  
+    |Nombre del proveedor|Nombre del proveedor|  
+    |ContactEmailAddress|Dirección de correo electrónico de contacto|  
     |Address Line|Address Line|  
     |City|City|  
     |State|State|  
-    |País|País|  
+    |Country|Country|  
     |Zip Code|Zip|  
   
-12. Haga clic en **Aceptar** para cerrar el **Editor de transformación limpieza de DQS** cuadro de diálogo.  
+12. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor de transformación limpieza de DQS** .  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 8: Agregar la transformación División condicional para dividir el resultado de limpieza](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 8: agregar la transformación División condicional para dividir el resultado de la limpieza](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

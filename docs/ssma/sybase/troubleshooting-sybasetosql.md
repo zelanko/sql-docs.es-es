@@ -12,16 +12,16 @@ ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2ecbd6235e0ebec1850bb959aec2aa25832e857f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020881"
 ---
 # <a name="troubleshooting-sybasetosql"></a>Solución de problemas (SybaseToSQL)
-No es raro experimenta midway de problemas de migración ejecutando los comandos o scripts de la consola.  
+No es raro que se ejecute en problemas de migración que ejecutan los comandos o scripts de la consola.  
   
-Los errores se pueden corregir pueden estar relacionados con:  
+Los errores de fixable pueden estar relacionados con:  
   
 1.  Función  
   
@@ -35,5 +35,5 @@ Los errores se pueden corregir pueden estar relacionados con:
   
 6.  Cambiar la configuración del proyecto  
   
-Los problemas pueden solucionarse mediante la interfaz de usuario SSMA abriendo el archivo de proyecto creado mediante la consola.  
+Los problemas se pueden corregir mediante la interfaz de usuario de SSMA abriendo el archivo de proyecto creado a través de la consola de.  
   

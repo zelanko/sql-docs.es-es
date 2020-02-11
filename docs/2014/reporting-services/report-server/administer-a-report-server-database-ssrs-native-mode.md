@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d155437880f1fb93779a2352bd507ea83de16256
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104280"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrar una base de datos del servidor de informes (Modo nativo de SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66104280"
   
  Para administrar las bases de datos del servidor de informes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una amplia variedad de herramientas.  
   
--   Para realizar una copia de seguridad, restaurar, mover o recuperar una base de datos del servidor de informes, se puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], los comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] o las utilidades de símbolo del sistema de la base de datos. Para obtener instrucciones, vea [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) en los Libros en pantalla de SQL Server.  
+-   Para realizar una copia de seguridad o restaurar la base de datos del servidor de informes, quitar una base de datos del servidor de informes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o recuperar [!INCLUDE[tsql](../../includes/tsql-md.md)] una base de datos del servidor de informes, puede usar, los comandos o las utilidades del símbolo del sistema de la base de datos. Para obtener instrucciones, vea [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) en los Libros en pantalla de SQL Server.  
   
 -   Para copiar el contenido de una base de datos existente en otra base de datos del servidor de informes, puede adjuntar una copia de una base de datos del servidor de informes y utilizarla con una instancia distinta del servidor de informes. También puede crear y ejecutar un script que utilice llamadas SOAP para volver a crear contenido del servidor de informes en una nueva base de datos. Puede usar la utilidad **rs** para ejecutar el script.  
   
@@ -44,12 +44,14 @@ ms.locfileid: "66104280"
   
  Automáticamente se creará para usted un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la base de datos del servidor de informes para la cuenta especificada.  
   
- Los permisos a la base de datos también se configuran automáticamente. La herramienta de configuración de Reporting Services asignará la cuenta o usuario de la base de datos a los roles `Public` y `RSExecRole` para las bases de datos del servidor de informes. `RSExecRole` otorga permisos para tener acceso a las tablas de base de datos y para ejecutar procedimientos almacenados. El `RSExecRole` se crea en master y msdb al crear la base de datos del servidor de informes. `RSExecRole` es miembro del rol `db_owner` para las bases de datos del servidor de informes, lo que permite al servidor de informes actualizar su propio esquema que admite un proceso de actualización automática.  
+ Los permisos a la base de datos también se configuran automáticamente. La herramienta de configuración de Reporting Services asignará la cuenta o usuario de la base de datos a los roles `Public` y `RSExecRole` para las bases de datos del servidor de informes. 
+  `RSExecRole` otorga permisos para tener acceso a las tablas de base de datos y para ejecutar procedimientos almacenados. `RSExecRole` Se crea en Master y msdb al crear la base de datos del servidor de informes. 
+  `RSExecRole` es miembro del rol `db_owner` para las bases de datos del servidor de informes, lo que permite al servidor de informes actualizar su propio esquema que admite un proceso de actualización automática.  
   
 ## <a name="naming-conventions-for-the-report-server-databases"></a>Convenciones de nomenclatura para las bases de datos del servidor de informes  
  Cuando se crea la base de datos principal, su nombre debe seguir las reglas especificadas para los [Identificadores de bases de datos](../../relational-databases/databases/database-identifiers.md). El nombre de la base de datos temporal utiliza siempre el mismo nombre que la base de datos principal del servidor de informes pero con el sufijo Tempdb. No puede elegir un nombre diferente para la base de datos temporal.  
   
- No se permite cambiar el nombre de una base de datos del servidor de informes porque las bases de datos del servidor de informes se consideran componentes internos. Si se cambia el nombre de las bases de datos del servidor de informes, se producen errores. Específicamente, si se cambia el nombre de la base de datos principal, un mensaje de error explica que los nombres de las bases de datos no están sincronizados. Si cambia el nombre de la base de datos ReportServerTempdb, se produce el siguiente error interno más adelante al ejecutar informes:  
+ No se permite cambiar el nombre de una base de datos del servidor de informes porque las bases de datos del servidor de informes se consideran componentes internos. Si se cambia el nombre de las bases de datos del servidor de informes, se producen errores. En concreto, si cambia el nombre de la base de datos principal, un mensaje de error explica que los nombres de las bases de datos no están sincronizados. Si cambia el nombre de la base de datos ReportServerTempdb, se produce el siguiente error interno más adelante al ejecutar informes:  
   
  "Error interno en el servidor de informes. Vea el registro de errores para obtener más detalles. (rsInternalError)  
   
@@ -58,7 +60,7 @@ ms.locfileid: "66104280"
  Este error se debe a que el nombre ReportServerTempdb se almacena internamente y lo utilizan los procedimientos almacenados para realizar operaciones internas. Si se cambia el nombre de la base de datos temporal, no funcionarán correctamente los procedimientos almacenados.  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>Habilitar el aislamiento de instantánea en la base de datos del servidor de informes  
- No puede habilitar el aislamiento de instantánea en la base de datos del servidor de informes. Si está activado el aislamiento de instantánea, se producirá el error siguiente: "El informe seleccionado no está preparado para verlo. Aún se está representando o no hay disponible una instantánea de informe".  
+ No puede habilitar el aislamiento de instantánea en la base de datos del servidor de informes. Si se activa el aislamiento de instantánea, encontrará el error siguiente: "El informe seleccionado no está listo para su visualización. Aún se está representando o no hay disponible una instantánea de informe".  
   
  Si no habilitó explícitamente el aislamiento de instantánea, puede que el atributo lo estableciera otra aplicación o que la base de datos **modelo** tenga el aislamiento de instantánea habilitado, haciendo que todas las bases de datos nuevas heredaran el valor.  
   
@@ -76,18 +78,18 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>Acerca de las versiones de base de datos  
- En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]no se dispone de información explícita acerca de la versión de la base de datos. Sin embargo, como las versiones de la base de datos siempre están sincronizadas con las versiones de los productos, se puede utilizar la información de la versión del producto para saber cuándo ha cambiado la versión de la base de datos. Información de versión del producto de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se indica a través de la información de versión del archivo que aparece en los archivos de registro en los encabezados de todas las llamadas SOAP, y cuando se conecta a la URL del servidor de informes (por ejemplo, cuando abre un explorador para http://localhost/reportserver).  
+ En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]no se dispone de información explícita acerca de la versión de la base de datos. Sin embargo, como las versiones de la base de datos siempre están sincronizadas con las versiones de los productos, se puede utilizar la información de la versión del producto para saber cuándo ha cambiado la versión de la base de datos. La información de versión [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de producto de se indica a través de la información de versión de archivo que aparece en los archivos de registro, en los encabezados de todas las llamadas SOAP y al conectarse a la dirección URL del servidor de informes http://localhost/reportserver)(por ejemplo, al abrir un explorador en.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Crear una base de datos del servidor de informes en modo nativo &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar una conexión a la base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Operaciones de copia de seguridad y restauración de Reporting Services](../install-windows/backup-and-restore-operations-for-reporting-services.md)   
+ [Operaciones de copia de seguridad y restauración para Reporting Services](../install-windows/backup-and-restore-operations-for-reporting-services.md)   
  [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server-database-ssrs-native-mode.md)   
- [Servidor de informes de Reporting Services &#40;modo nativo&#41;](reporting-services-report-server-native-mode.md)   
- [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Reporting Services servidor de informes &#40;modo nativo&#41;](reporting-services-report-server-native-mode.md)   
+ [Almacenar datos cifrados del servidor de informes &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

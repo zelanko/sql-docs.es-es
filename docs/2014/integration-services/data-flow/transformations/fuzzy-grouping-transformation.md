@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900574"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Agrupación aproximada, transformación
@@ -69,7 +69,7 @@ ms.locfileid: "62900574"
  Esta transformación tiene una entrada y una salida. No admite una salida de error.  
   
 ## <a name="row-comparison"></a>Comparar filas  
- Al configurar la transformación Agrupación aproximada, puede especificar el algoritmo de comparación que utiliza la transformación para comparar las filas de la entrada de la transformación. Si establece la propiedad Exhaustive en `true`, la transformación compara cada fila de la entrada con todas las demás filas en la entrada. Este algoritmo de comparación puede producir resultados más exactos, pero es probable que la transformación sea más lenta, a menos que el número de filas de la entrada sea pequeño. Para evitar problemas de rendimiento, es conveniente establecer la propiedad Exhaustive en `true` solo durante el desarrollo del paquete.  
+ Al configurar la transformación Agrupación aproximada, puede especificar el algoritmo de comparación que utiliza la transformación para comparar las filas de la entrada de la transformación. Si establece la propiedad exhaustiva en `true`, la transformación compara cada fila de la entrada con todas las demás filas de la entrada. Este algoritmo de comparación puede producir resultados más exactos, pero es probable que la transformación sea más lenta, a menos que el número de filas de la entrada sea pequeño. Para evitar problemas de rendimiento, se recomienda establecer la propiedad exhaustiva en `true` solo durante el desarrollo de paquetes.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tablas e índices temporales  
  Durante la ejecución, la transformación Agrupación aproximada crea objetos temporales, como tablas e índices, que pueden tener un tamaño considerable, en la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la que se conecta la transformación. El tamaño de las tablas y los índices es proporcional al número de filas de la entrada de la transformación y al número de tokens creados por la transformación Agrupación aproximada.  
@@ -83,15 +83,15 @@ ms.locfileid: "62900574"
   
  Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Agrupación aproximada** , haga clic en uno de los temas siguientes:  
   
--   [Editor de transformación Agrupación aproximada &#40;pestaña Administrador de conexiones&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [Editor de transformación agrupación aproximada &#40;pestaña administrador de conexiones&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Editor de transformación Agrupación aproximada &#40;pestaña Columnas&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Editor de transformación agrupación aproximada &#40;pestaña columnas&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [Editor de transformación Agrupación aproximada &#40;pestaña Avanzadas&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [Editor de transformación agrupación aproximada &#40;pestaña avanzadas&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   
@@ -102,8 +102,8 @@ ms.locfileid: "62900574"
   
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Vea también  
- [Transformación Búsqueda aproximada](lookup-transformation.md)   
+## <a name="see-also"></a>Consulte también  
+ [Transformación búsqueda aproximada](lookup-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  
   
   

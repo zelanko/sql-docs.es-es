@@ -21,15 +21,15 @@ ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0940a5a2c70a7b670ca6a81521759fd08e60461e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68345630"
 ---
 # <a name="sqlgetenvattr-function"></a>Función SQLGetEnvAttr
 **Conformidad**  
- Versión introducida: Compatibilidad con los estándares de ODBC 3,0: ISO 92  
+ Versión introducida: compatibilidad con estándares de ODBC 3,0: ISO 92  
   
  **Resumen**  
  **SQLGetEnvAttr** devuelve la configuración actual de un atributo de entorno.  
@@ -59,10 +59,10 @@ SQLRETURN SQLGetEnvAttr(
  Si *ValuePtr* es null, *StringLengthPtr* devolverá el número total de bytes (sin incluir el carácter de terminación null para los datos de caracteres) disponible para devolver en el búfer señalado por *ValuePtr*.  
   
  *BufferLength*  
- Entradas Si *ValuePtr* apunta a una cadena de caracteres, este argumento debe ser la longitud \*de *ValuePtr*. Si \* *ValuePtr* es un entero, *BufferLength* se omite. *Si\*ValuePtr* es una cadena Unicode (al llamar a **SQLGetEnvAttrW**), el argumento *BufferLength* debe ser un número par. Si el valor del atributo no es una cadena de caracteres, *BufferLength* no se utiliza.  
+ Entradas Si *ValuePtr* apunta a una cadena de caracteres, este argumento debe ser la longitud \*de *ValuePtr*. Si \* *ValuePtr* es un entero, *BufferLength* se omite. Si * \*ValuePtr* es una cadena Unicode (al llamar a **SQLGetEnvAttrW**), el argumento *BufferLength* debe ser un número par. Si el valor del atributo no es una cadena de caracteres, *BufferLength* no se utiliza.  
   
  *StringLengthPtr*  
- Genere Un puntero a un búfer en el que se va a devolver el número total de bytes (sin incluir el carácter de terminación de NULL) disponible para devolver en  *\*ValuePtr*. Si *ValuePtr* es un puntero nulo, no se devuelve ninguna longitud. Si el valor del atributo es una cadena de caracteres y el número de bytes disponibles para devolver es mayor o igual que *BufferLength*, los datos \*de *ValuePtr* se truncan en *BufferLength* menos la longitud de una terminación nula. y el controlador termina en NULL.  
+ Genere Un puntero a un búfer en el que se va a devolver el número total de bytes (sin incluir el carácter de terminación de NULL) disponible para devolver en * \*ValuePtr*. Si *ValuePtr* es un puntero nulo, no se devuelve ninguna longitud. Si el valor del atributo es una cadena de caracteres y el número de bytes disponibles para devolver es mayor o igual que *BufferLength*, los datos \*de *ValuePtr* se truncan en *BufferLength* menos la longitud de un carácter de terminación NULL y el controlador termina en NULL.  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR o SQL_INVALID_HANDLE.  
@@ -74,9 +74,9 @@ SQLRETURN SQLGetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01004|Datos de cadena, truncados a la derecha|Los datos devueltos en \* *ValuePtr* se truncaron para *BufferLength* menos el carácter de terminación null. La longitud del valor de cadena no truncado se devuelve en **StringLengthPtr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
-|HY010|Error de secuencia de función|(DM) **SQL_ATTR_ODBC_VERSION** todavía no se ha establecido a través de **SQLSetEnvAttr**. No es necesario establecer **SQL_ATTR_ODBC_VERSION** explícitamente si se usa **SQLAllocHandleStd**.|  
+|HY010|Error de secuencia de función|El **SQL_ATTR_ODBC_VERSION** (DM) aún no se ha establecido a través de **SQLSetEnvAttr**. No es necesario establecer **SQL_ATTR_ODBC_VERSION** explícitamente si se usa **SQLAllocHandleStd**.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
 |HY092|Identificador de opción/atributo no válido|El valor especificado para el *atributo* argument no era válido para la versión de ODBC admitida por el controlador.|  
 |HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -89,11 +89,11 @@ SQLRETURN SQLGetEnvAttr(
  Se puede llamar a **SQLGetEnvAttr** en cualquier momento entre la asignación y la liberación de un identificador de entorno. Todos los atributos de entorno establecidos correctamente por la aplicación para el entorno se conservan hasta que se llama a **SQLFreeHandle** en *EnvironmentHandle* con *HandleType* de SQL_HANDLE_ENV. Se puede asignar más de un identificador de entorno simultáneamente en ODBC 3 *. x*. Un atributo de entorno en un entorno no se ve afectado cuando se ha asignado otro entorno.  
   
 > [!NOTE]
->  El atributo de entorno SQL_ATTR_OUTPUT_NTS es compatible con las aplicaciones compatibles con los estándares. Cuando se llama a **SQLGetEnvAttr** , el administrador de controladores ODBC 3 *. x* siempre devuelve SQL_TRUE para este atributo. SQL_ATTR_OUTPUT_NTS solo se puede establecer en SQL_TRUE mediante una llamada a **SQLSetEnvAttr**.  
+>  El atributo de entorno SQL_ATTR_OUTPUT_NTS es compatible con las aplicaciones compatibles con los estándares. Cuando se llama a **SQLGetEnvAttr** , el administrador de controladores ODBC 3 *. x* siempre devuelve SQL_TRUE para este atributo. SQL_ATTR_OUTPUT_NTS se puede establecer en SQL_TRUE solo mediante una llamada a **SQLSetEnvAttr**.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   
-|Para obtener información acerca de|Vea|  
+|Para información acerca de|Vea|  
 |---------------------------|---------|  
 |Devolver el valor de un atributo de conexión|[Función SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Devolver el valor de un atributo de instrucción|[Función SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
@@ -101,6 +101,6 @@ SQLRETURN SQLGetEnvAttr(
 |Establecer un atributo de entorno|[Función SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)|  
 |Establecer un atributo de instrucción|[Función SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

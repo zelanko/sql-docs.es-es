@@ -1,5 +1,5 @@
 ---
-title: Insertar función, cuadro de diálogo (SSAS) | Microsoft Docs
+title: Cuadro de diálogo Insertar función (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080410"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Cuadro de diálogo Insertar función (SSAS)
@@ -25,8 +25,8 @@ ms.locfileid: "66080410"
 |||  
 |-|-|  
 |Elemento|Descripción|  
-|**Seleccione una categoría**|Si tiene una idea general de qué tipo de función necesita, elija una categoría en la lista o seleccione **Todos** para ver una lista alfabética de funciones.|  
-|**Seleccionar una función**|Muestra una lista de las funciones en la categoría seleccionada.|  
+|**Seleccionar una categoría**|Si tiene una idea general de qué tipo de función necesita, elija una categoría en la lista o seleccione **Todos** para ver una lista alfabética de funciones.|  
+|**Selección de una función**|Muestra una lista de las funciones en la categoría seleccionada.|  
 |**Descripción**|Muestra una descripción de lo que hace la función, junto con cualquier argumento obligatorio u opcional, como nombres de columna y expresiones.|  
   
 ## <a name="function-categories"></a>Categorías de funciones  
@@ -38,18 +38,18 @@ ms.locfileid: "66080410"
   
  Filter  
   
- Lógico  
+ Lógicos  
   
  Matemáticas y trigonométricas  
   
- Estadísticas  
+ Estadística  
   
- Text  
+ Texto  
   
 ## <a name="measures-and-formulas"></a>Medidas y fórmulas  
  El cuadro de diálogo **Insertar función** solo está disponible cuando se está generando una fórmula. Puede crear los cálculos en una columna calculada, en una tabla dinámica o en un gráfico dinámico. Las fórmulas que genera expresamente para usarse en una tabla dinámica también se denominan *medidas*. Para obtener más información, vea [Crear una columna calculada &#40;SSAS tabular&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) y [Crear y administrar medidas &#40;SSAS tabular&#41;](tabular-models/measures-ssas-tabular.md).  
   
-## <a name="see-also"></a>Vea también  
- [Cálculos &#40;SSAS tabular&#41;](tabular-models/calculations-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte también  
+ [Cálculos &#40;&#41;tabular de SSAS](tabular-models/calculations-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Agregar el Editor de transformación (pestaña agregaciones) | Microsoft Docs
+title: Editor de transformación agregado (pestaña agregaciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 698e3757a32d9a2a9db95df495e33903dbdfed1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061579"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor de transformación Agregado (pestaña Agregaciones)
@@ -27,12 +27,12 @@ ms.locfileid: "66061579"
 > [!NOTE]  
 >  Las opciones para el recuento de claves, la escala de claves, la clave Count Distinct y la escala de claves distintas estarán disponibles en el componente si se especifican en la pestaña **Avanzadas** , en la salida si se especifican en la pantalla avanzada de la pestaña **Agregaciones** y en la columna si se especifican en la lista de columnas en la parte inferior de la pestaña **Agregaciones** .  
 >   
->  En la transformación Agregado, **Claves** y **Escala de claves** hacen referencia al número de grupos que se esperan como resultado de una operación **Agrupar por** . **Claves Count Distinct** y **Escala Count Distinct** hacen referencia al número de valores distintos que se esperan como resultado de una operación **Recuento distinto** .  
+>  En la transformación Agregado, **Claves** y **Escala de claves** hacen referencia al número de grupos que se esperan como resultado de una operación **Agrupar por** . **Count DISTINCT Keys** y **Count DISTINCT Scale** hacen referencia al número de valores distintos que se esperan como resultado de una operación **DISTINCT Count** .  
   
  Para obtener más información acerca de la transformación Agregado, vea [Aggregate Transformation](data-flow/transformations/aggregate-transformation.md).  
   
 ## <a name="options"></a>Opciones  
- **Avanzadas/Básicas**  
+ **Avanzadas/básicas**  
  Muestra u oculta opciones para configurar diversas agregaciones para varias salidas. De forma predeterminada, las opciones Avanzadas aparecen ocultas.  
   
  **Nombre de agregación**  
@@ -44,12 +44,12 @@ ms.locfileid: "66061579"
  **Escala de claves**  
  En la pantalla Avanzadas, especifique opcionalmente el número aproximado de claves que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se seleccionan las propiedades **Escala de claves** y **Claves** , tendrá prioridad el valor de **Claves** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|No especificado|No se utiliza la propiedad Escala de claves.|  
-|Baja|La agregación podrá escribir aproximadamente 500 000 claves.|  
-|Media|La agregación podrá escribir aproximadamente 5.000.000 claves.|  
-|Alta|La agregación podrá escribir más de 25.000.000 claves.|  
+|Sin especificar|No se utiliza la propiedad Escala de claves.|  
+|Bajo|La agregación podrá escribir aproximadamente 500 000 claves.|  
+|Mediano|La agregación podrá escribir aproximadamente 5.000.000 claves.|  
+|Alto|La agregación podrá escribir más de 25.000.000 claves.|  
   
  **Claves**  
  En la pantalla Avanzadas, especifique opcionalmente el número exacto de claves que podrá escribir la agregación. Si se especifican **Escala de claves** y **Claves** , tendrá prioridad **Claves** .  
@@ -68,10 +68,10 @@ ms.locfileid: "66061579"
   
 |Operación|Descripción|  
 |---------------|-----------------|  
-|**GROUP BY**|Divide los conjuntos de datos en grupos. Podrán agruparse columnas con cualquier tipo de datos. Para obtener más información, vea GROUP BY.|  
-|**Sum**|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para obtener más información, vea SUM.|  
-|**Promedio**|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para obtener más información, vea AVG.|  
-|**Count**|Devuelve el número de elementos de un grupo. Para obtener más información, vea COUNT.|  
+|**GroupBy**|Divide los conjuntos de datos en grupos. Podrán agruparse columnas con cualquier tipo de datos. Para obtener más información, vea GROUP BY.|  
+|**Sume**|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para obtener más información, vea SUM.|  
+|**Average**|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para obtener más información, vea AVG.|  
+|**Contabiliza**|Devuelve el número de elementos de un grupo. Para obtener más información, vea COUNT.|  
 |**CountDistinct**|Devuelve el número de valores únicos distintos de NULL de un grupo. Para obtener más información, vea COUNT y Distinct.|  
 |**Mínima**|Devuelve el valor mínimo en un grupo. Está restringido a los tipos de datos numéricos.|  
 |**Máximo**|Devuelve el valor máximo en un grupo. Está restringido a los tipos de datos numéricos.|  
@@ -79,22 +79,22 @@ ms.locfileid: "66061579"
  **Marcas de comparación**  
  Si selecciona **Agrupar por**, use las casillas para controlar cómo realiza la transformación la comparación. Para obtener más información acerca de las opciones de comparación de cadenas, vea [Comparing String Data](data-flow/comparing-string-data.md).  
   
- **Count Distinct Scale**  
- Opcionalmente, puede especificar el número aproximado de valores DISTINCT que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si ambos `CountDistinctScale` y **CountDistinctKeys** se especifican, **CountDistinctKeys** tiene prioridad.  
+ **Escala Count DISTINCT**  
+ Opcionalmente, puede especificar el número aproximado de valores DISTINCT que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se `CountDistinctScale` especifican y **CountDistinctKeys** , **CountDistinctKeys** tiene prioridad.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|No especificado|No se utiliza la propiedad `CountDistinctScale`.|  
-|Baja|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
-|Media|La agregación podrá escribir aproximadamente 5 000 000 valores DISTINCT.|  
-|Alta|La agregación podrá escribir más de 25.000.000 valores DISTINCT.|  
+|Sin especificar|No se utiliza la propiedad `CountDistinctScale`.|  
+|Bajo|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
+|Mediano|La agregación podrá escribir aproximadamente 5 000 000 valores DISTINCT.|  
+|Alto|La agregación podrá escribir más de 25.000.000 valores DISTINCT.|  
   
- **Count Distinct Keys**  
- Opcionalmente, puede especificar el número exacto de valores DISTINCT que podrá escribir la agregación. Si ambos `CountDistinctScale` y **CountDistinctKeys** se especifican, **CountDistinctKeys** tiene prioridad.  
+ **Claves Count DISTINCT**  
+ Opcionalmente, puede especificar el número exacto de valores DISTINCT que podrá escribir la agregación. Si se `CountDistinctScale` especifican y **CountDistinctKeys** , **CountDistinctKeys** tiene prioridad.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformación Agregado &#40;pestaña Avanzadas&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
- [Incorporación de valores en un conjunto de datos con la transformación Agregado](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [Editor de transformación agregado &#40;pestaña avanzadas&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
+ [Agregar valores en un conjunto de datos mediante la transformación Agregado](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

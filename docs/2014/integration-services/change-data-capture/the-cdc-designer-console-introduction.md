@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62834660"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introducción a la Consola del diseñador CDC
   En esta sección se describen los procedimientos de instalación del Diseñador de captura de datos modificados para Oracle de Attunity.  
   
-## <a name="installation"></a>Installation  
- En esta sección se describen los procedimientos de instalación del Diseñador de captura de datos modificados para Oracle de Attunity. Para instalar la consola del diseñador CDC, ejecute manualmente **AttunityOracleCdcDesigner.msi** desde los medios de instalación de SQL Server.  Paquetes de instalación para x86 y x64 se encuentran en **.\Tools\AttunityCDCOracle\\**  en los medios de instalación de SQL Server.  
+## <a name="installation"></a>Instalación  
+ En esta sección se describen los procedimientos de instalación del Diseñador de captura de datos modificados para Oracle de Attunity. Para instalar la consola de CDC Designer, ejecute manualmente **AttunityOracleCdcDesigner. msi** desde los medios de instalación de SQL Server.  Los paquetes de instalación para x86 y x64 se encuentran en **.\Tools\AttunityCDCOracle\\ ** en los medios de instalación de SQL Server.  
   
 ## <a name="supported-windows-environments"></a>Entornos de Windows admitidos  
  La Consola del diseñador CDC se puede ejecutar en los entornos de Windows siguientes:  
@@ -37,26 +37,26 @@ ms.locfileid: "62834660"
 ## <a name="database-prerequisites"></a>Requisitos previos de la base de datos  
  Para trabajar con el Diseñador de captura de datos modificados para Oracle de Attunity, se trabaja con una base de datos de Oracle. El Diseñador de captura de datos modificados para Oracle de Attunity admite las siguientes versiones:  
   
- **Base de datos de Oracle**  
+ **Oracle Database**  
   
--   Oracle Database 10g versión 2: 10.2.0.1-10.2.0.5 (revisión de abril de 2010)  
+-   Versión 2 de la base de datos 10g de Oracle: 10.2.0.1-10.2.0.5 (revisión de abril de 2010)  
   
--   Oracle Database 11g versión 1: 11.1.0.6-11.1.0.7 (revisión de septiembre de 2008)  
+-   Versión 1 de la base de datos 11g de Oracle: 11.1.0.6-11.1.0.7 (revisión de septiembre de 2008)  
   
--   Oracle Database 11g versión 2: 11.2.0.1-11.2.0.3 (revisión de septiembre de 2011)  
+-   Versión 2 de la base de datos 11g de Oracle: 11.2.0.1-11.2.0.3 (revisión de septiembre de 2011)  
   
- **Base de datos de SQL Server**  
+ **SQL Server base de datos**  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con compatibilidad para CDC de SQL Server  
   
 ## <a name="software-prerequisites"></a>Requisitos previos de software  
- Se necesita el software siguiente:  
+ Se requiere el software siguiente:  
   
--   Cliente de Oracle 10.x  
+-   Cliente de Oracle 10. x  
   
 -   Cliente Oracle 11.x  
   
- **Nota**: Debe usar la versión de 32 bits o 64 bits de este software según la versión de la consola del diseñador CDC de Oracle instalada.  
+ **Nota**: debe usar la versión de 32 bits o de 64 bits de este software según la versión instalada de la consola de CDC Designer de Oracle.  
   
  La Consola del diseñador CDC de Oracle emplea el proveedor ODBC de Oracle para comunicarse con la base de datos de Oracle de origen.  
   

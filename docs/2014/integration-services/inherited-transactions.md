@@ -1,5 +1,5 @@
 ---
-title: Hereda las transacciones | Microsoft Docs
+title: Transacciones heredadas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058063"
 ---
 # <a name="inherited-transactions"></a>Transacciones heredadas
@@ -37,17 +37,17 @@ ms.locfileid: "66058063"
   
  Los paquetes y las tareas tienen los siguientes atributos de transacción:  
   
--   **TransactionOption** se establece en **Required** en los paquetes A y C  
+-   **TransactionOption** se establece en **required** en los paquetes a y C  
   
--   **TransactionOption** se establece en **Supported** en los paquetes B y D, y en las tareas Ejecutar paquete B, Ejecutar paquete D y Ejecutar paquete F.  
+-   **TransactionOption** se establece en **Supported** en los paquetes b y D, y en las tareas Ejecutar paquete b, ejecutar paquete D y ejecutar paquete F.  
   
--   **TransactionOption** se establece en **NotSupported** en el paquete E y en las tareas Ejecutar paquete C y Ejecutar paquete E.  
+-   **TransactionOption** se establece en **NotSupported** en el paquete e y en las tareas Ejecutar paquete C y ejecutar paquete E.  
   
- ![Flujo de transacciones heredadas](media/mw-dts-executepack.gif "Flow of inherited transactions")  
+ ![Flujo de transacciones heredadas](media/mw-dts-executepack.gif "Flujo de transacciones heredadas")  
   
  Solo los paquetes B, D y F pueden heredar transacciones de sus paquetes primarios.  
   
- Los paquetes B y D heredan la transacción iniciada por el paquete A.  
+ Los paquetes B y D heredan la transacción iniciada por el paquete A.   
   
  El paquete F hereda la transacción iniciada por el paquete C.  
   

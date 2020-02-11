@@ -1,5 +1,5 @@
 ---
-title: Enviar datos como un parámetro con valores de tabla usando datos en ejecución (ODBC) | Documentos de Microsoft
+title: Enviar datos como un parámetro con valores de tabla usando datos en ejecución (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205462"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Enviar datos como un parámetro con valores de tabla usando datos en ejecución (ODBC)
-  Esto es similar a la [todo en memoria](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) procedimiento, pero usa los datos en ejecución para el parámetro con valores de tabla.  
+  Es similar al procedimiento [All in memory](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) , pero utiliza datos en ejecución para el parámetro con valores de tabla.  
   
- Para obtener otro ejemplo que muestra los parámetros con valores de tabla, vea [usar parámetros &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
+ Para ver otro ejemplo en el que se muestran los parámetros con valores de tabla, vea [usar parámetros con valores de tabla &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
   
- En este ejemplo, cuando se llama a SQLExecute o SQLExecDirect, el controlador devuelve SQL_NEED_DATA. A continuación, la aplicación llama SQLParamData repetidamente hasta que el controlador devuelve un valor distinto de SQL_NEED_DATA. El controlador devuelve *ParameterValuePtr* para informar a la aplicación qué parámetro está solicitando datos. La aplicación llama a SQLPutData para suministrar los datos de parámetro antes de la siguiente llamada a SQLParamData. Para un parámetro con valores de tabla, la llamada a SQLPutData indica cuántas filas ha preparado para el controlador (en este ejemplo, siempre es 1). Cuando se pasa al controlador de todas las filas de los valores de tabla, se denomina SQLPutData para indicar que hay 0 filas.  
+ En este ejemplo, cuando se llama a SQLExecute o SQLExecDirect, el controlador devuelve SQL_NEED_DATA. A continuación, la aplicación llama a SQLParamData repetidamente hasta que el controlador devuelve un valor distinto de SQL_NEED_DATA. El controlador devuelve *ParameterValuePtr* para informar a la aplicación de los parámetros para los que solicita datos. La aplicación llama a SQLPutData para proporcionar los datos de parámetro antes de la siguiente llamada a SQLParamData. En el caso de un parámetro con valores de tabla, la llamada a SQLPutData indica el número de filas que ha preparado para el controlador (en este ejemplo, siempre 1). Cuando todas las filas del valor de tabla se han pasado al controlador, se llama a SQLPutData para indicar que hay 0 filas disponibles.  
   
- Es posible utilizar valores de datos en ejecución dentro de las filas de un valor de tabla. El valor devuelto por SQLParamData informa a la aplicación qué valor requiere que el controlador. Al igual que con los valores de parámetro normales, se puede llamar a SQLPutData valor de la columna de una o varias veces para un carácter o binario valores de tabla. Esto permite que la aplicación pase valores grandes en partes.  
+ Es posible utilizar valores de datos en ejecución dentro de las filas de un valor de tabla. El valor devuelto por SQLParamData informa a la aplicación del valor que requiere el controlador. Al igual que con los valores de parámetro normales, se puede llamar a SQLPutData una o varias veces para un valor de columna de valor de tabla binaria o de caracteres. Esto permite que la aplicación pase valores grandes en partes.  
   
- Cuando se llama a SQLPutData para un valor de la tabla, *DataPtr* se usa para el número de filas disponible (en este ejemplo, siempre es 1). *StrLen_or_IndPtr* siempre debe ser 0. Cuando se hayan pasado todas las filas de los valores de tabla, se llama a SQLPutData con un *DataPtr* el valor 0.  
+ Cuando se llama a SQLPutData para un valor de tabla, *DataPtr* se usa para el número de filas disponibles (en este ejemplo, siempre 1). *StrLen_or_IndPtr* debe ser siempre 0. Cuando se han pasado todas las filas del valor de tabla, se llama a SQLPutData con un valor de *DataPtr* de 0.  
   
 ## <a name="prerequisite"></a>Requisito previo  
  En este procedimiento se supone que se ha ejecutado el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] en el servidor:  
@@ -67,7 +67,7 @@ from @Items
     SQLPOINTER ParamId;  
     ```  
   
-2.  Enlace los parámetros. *ColumnSize* es 1, lo que significa que al menos una fila se pasa a la vez.  
+2.  Enlace los parámetros. *Columnas* es 1, lo que significa que se pasa una fila a la vez.  
   
     ```  
     // Bind parameters for call to TVPOrderEntryByRow.  
@@ -129,7 +129,7 @@ from @Items
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-6.  Proporcione datos de parámetro de datos en ejecución. Cuando se devuelve SQLParamData el *ParameterValuePtr* para un parámetro con valores de tabla, la aplicación debe preparar las columnas de la siguiente fila o filas de los valores de tabla. A continuación, la aplicación llama a SQLPutData con *DataPtr* establecido en el número de filas disponible (en este ejemplo, 1) y *StrLen_or_IndPtr* establecido en 0.  
+6.  Proporcione datos de parámetro de datos en ejecución. Cuando SQLParamData devuelve *ParameterValuePtr* para un parámetro con valores de tabla, la aplicación debe preparar las columnas para las filas siguientes del valor de la tabla. A continuación, la aplicación llama a SQLPutData con *DataPtr* establecido en el número de filas disponibles (en este ejemplo, 1) y *StrLen_or_IndPtr* establecido en 0.  
   
     ```  
     // Check if parameter data is required, and get the first parameter ID token  
@@ -184,7 +184,7 @@ from @Items
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- Este ejemplo muestra que puede usar la transmisión por secuencias, una fila por cada llamada a SQLPutData con ODBC TVP, similar a cómo podría utilizar BCP.exe para cargar datos en una base de datos de fila.  
+ Este ejemplo muestra que puede usar el streaming de filas, una fila por llamada a SQLPutData, con ODBC TVP, de forma similar a como podría utilizar BCP. exe para cargar datos en una base de datos.  
   
  Antes de generar el ejemplo, cambie el nombre del servidor en la cadena de conexión.  
   
@@ -372,7 +372,7 @@ EXIT:
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- Este ejemplo muestra que puede usar la transmisión por secuencias, varias filas por llamada a SQLPutData con ODBC TVP, similar a cómo podría utilizar BCP.exe para cargar datos en una base de datos de fila.  
+ Este ejemplo muestra que puede usar el streaming de filas, varias filas por llamada a SQLPutData, con ODBC TVP, de forma similar a como podría utilizar BCP. exe para cargar datos en una base de datos.  
   
  Antes de generar el ejemplo, cambie el nombre del servidor en la cadena de conexión.  
   
@@ -577,7 +577,7 @@ EXIT:
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplos de programación de parámetros con valores de tabla ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
   
   

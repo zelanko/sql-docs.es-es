@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68070352"
 ---
-# <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
+# <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve la información de columna para los objetos especificados, que se pueden consultar en el entorno actual.  
@@ -45,53 +45,53 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ \@table_name = ] object` Es el nombre del objeto que se usa para devolver información del catálogo. *objeto* puede ser una tabla, vista u otro objeto que tiene columnas como funciones con valores de tabla. *objeto* es **nvarchar (384)** , no tiene ningún valor predeterminado. Se admite la coincidencia de patrón de caracteres comodín.  
+`[ \@table_name = ] object`Es el nombre del objeto que se utiliza para devolver información del catálogo. el *objeto* puede ser una tabla, una vista u otro objeto que tenga columnas como funciones con valores de tabla. el *objeto* es de tipo **nvarchar (384)** y no tiene ningún valor predeterminado. Se admite la coincidencia de patrón de caracteres comodín.  
   
-`[ \@table_owner = ] owner` Es el propietario del objeto del objeto que se usa para devolver información del catálogo. *propietario* es **nvarchar (384)** , su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de objeto del DBMS subyacente.  
+`[ \@table_owner = ] owner`Es el propietario del objeto que se utiliza para devolver información del catálogo. *Owner* es **nvarchar (384)** y su valor predeterminado es NULL. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica *Owner* , se aplican las reglas de visibilidad de objeto predeterminadas del DBMS subyacente.  
   
- Si el usuario actual posee un objeto con el nombre especificado, se devuelven las columnas de ese objeto. Si *propietario* no se especifica y el usuario actual no posee un objeto con los valores especificados *objeto*, **sp_columns** busca un objeto con los valores especificados  *objeto* que pertenezca al propietario de la base de datos. Si existe uno, se devuelven las columnas de ese objeto.  
+ Si el usuario actual posee un objeto con el nombre especificado, se devuelven las columnas de ese objeto. Si no se especifica *Owner* y el usuario actual no posee un objeto con el *objeto*especificado, **sp_columns** busca un objeto con el *objeto* especificado que pertenezca al propietario de la base de datos. Si existe uno, se devuelven las columnas de ese objeto.  
   
-`[ \@table_qualifier = ] qualifier` Es el nombre del calificador de objeto. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para objetos (_calificador_ **.** _propietario_ **.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre de servidor del entorno de base de datos del objeto.  
+`[ \@table_qualifier = ] qualifier`Es el nombre del calificador de objeto. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para objetos (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre de servidor del entorno de base de datos del objeto.  
   
-`[ \@column_name = ] column` Es una sola columna y se utiliza cuando se desea solo una columna de información del catálogo. *columna* es **nvarchar (384)** , su valor predeterminado es null. Si *columna* no es se especifica, se devuelven todas las columnas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *columna* representa el nombre de columna como se muestra en el **syscolumns** tabla. Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL-92 (caracteres comodín % y _).  
+`[ \@column_name = ] column`Es una sola columna y se utiliza cuando solo se desea una columna de información del catálogo. la *columna* es de tipo **nvarchar (384)** y su valor predeterminado es NULL. Si no se especifica *Column* , se devuelven todas las columnas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la *columna* representa el nombre de la columna tal y como aparece en la tabla **syscolumns** . Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL-92 (caracteres comodín % y _).  
   
-`[ \@ODBCVer = ] ODBCVer` Es la versión de ODBC que se está usando. *ODBCVer* es **int**, con el valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para las diferencias de comportamiento entre las versiones 2 y 3, vea el ODBC **SQLColumns** especificación.  
+`[ \@ODBCVer = ] ODBCVer`Es la versión de ODBC que se está utilizando. *ODBCVer* es de **tipo int**y su valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para conocer las diferencias de comportamiento entre las versiones 2 y 3, vea la especificación de **SQLColumns** de ODBC.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- El **sp_columns** es equivalente al procedimiento almacenado de catálogo **SQLColumns** en ODBC. Los resultados devueltos se ordenan por **TABLE_QUALIFIER**, **TABLE_OWNER**, y **TABLE_NAME**.  
+ El procedimiento almacenado del catálogo **sp_columns** es equivalente a **SQLColumns** en ODBC. Los resultados devueltos se ordenan por **TABLE_QUALIFIER**, **table_owner**y **TABLE_NAME**.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Nombre del calificador del objeto. Este campo puede ser NULL.|  
 |**TABLE_OWNER**|**sysname**|Nombre del propietario del objeto. Este campo siempre devuelve un valor.|  
-|**TABLE_NAME**|**sysname**|Nombre del objeto. Este campo siempre devuelve un valor.|  
-|**COLUMN_NAME**|**sysname**|Nombre de columna para cada columna de la **TABLE_NAME** devuelto. Este campo siempre devuelve un valor.|  
-|**DATA_TYPE**|**smallint**|Código entero del tipo de datos ODBC. Si se trata de un tipo de datos que no se puede asignar a un tipo ODBC, se considera NULL. Se devuelve el nombre de tipo de datos nativos en el **TYPE_NAME** columna.|  
+|**TABLE_NAME**|**sysname**|Nombre de objeto. Este campo siempre devuelve un valor.|  
+|**COLUMN_NAME**|**sysname**|Nombre de columna para cada columna del **TABLE_NAME** devuelto. Este campo siempre devuelve un valor.|  
+|**DATA_TYPE**|**smallint**|Código entero del tipo de datos ODBC. Si se trata de un tipo de datos que no se puede asignar a un tipo ODBC, se considera NULL. El nombre del tipo de datos nativo se devuelve en la columna **TYPE_NAME** .|  
 |**TYPE_NAME**|**sysname**|Cadena que representa un tipo de datos. El DBMS subyacente presenta este nombre del tipo de datos.|  
-|**PRECISION**|**int**|Número de dígitos significativos. El valor devuelto para la **precisión** columna es en base 10.|  
-|**LENGTH**|**int**|Tamaño de transferencia de los datos. <sup>1</sup>|  
+|**PRECISIÓN**|**int**|Número de dígitos significativos. El valor devuelto para la columna **Precision** está en base 10.|  
+|**LONGITUD**|**int**|Tamaño de la transferencia de los datos. <sup>1</sup>|  
 |**ESCALA**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
 |**RADIX**|**smallint**|Base para tipos de datos numéricos.|  
-|**QUE ACEPTA VALORES NULL**|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Se admiten valores NULL.<br /><br /> 0 = No se admiten valores NULL.|  
-|**COMENTARIOS**|**varchar(254)**|Este campo siempre devuelve NULL.|  
+|**ACEPTA valores NULL**|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Se admiten valores NULL.<br /><br /> 0 = No se admiten valores NULL.|  
+|**SECCIÓN**|**VARCHAR (254)**|Este campo siempre devuelve NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valor predeterminado de la columna.|  
-|**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos SQL tal como aparece en el campo TYPE del descriptor. Esta columna es el mismo que el **DATA_TYPE** columna, excepto para el **datetime** y SQL-92 **intervalo** tipos de datos. Esta columna siempre devuelve un valor.|  
-|**SQL_DATETIME_SUB**|**smallint**|Código de subtipo para **datetime** y SQL-92 **intervalo** tipos de datos. Para otros tipos de datos, esta columna devuelve NULL.|  
+|**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos SQL tal como aparece en el campo TYPE del descriptor. Esta columna es igual que la columna **data_type** , excepto los tipos de datos de **intervalo** **DateTime** y SQL-92. Esta columna siempre devuelve un valor.|  
+|**SQL_DATETIME_SUB**|**smallint**|Código de subtipo para los tipos de datos de **intervalo** **DateTime** y SQL-92. Para otros tipos de datos, esta columna devuelve NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Longitud máxima en bytes de una columna de tipos de datos de caracteres o enteros. Para los demás tipos de datos, esta columna devuelve NULL.|  
 |**ORDINAL_POSITION**|**int**|Posición ordinal de la columna en el objeto. La primera columna del objeto es 1. Esta columna siempre devuelve un valor.|  
-|**IS_NULLABLE**|**varchar(254)**|Indica si la columna admite valores NULL en el objeto. Se siguen las normas ISO para determinar la nulabilidad. Un DBMS que cumpla la norma ISO SQL no puede devolver una cadena vacía.<br /><br /> YES = La columna puede incluir valores NULL.<br /><br /> NO = La columna no puede incluir valores NULL.<br /><br /> Esta columna devuelve una cadena de longitud cero si no se conoce la nulabilidad.<br /><br /> Devuelve el valor de esta columna es diferente del valor devuelto para la **NULLABLE** columna.|  
-|**SS_DATA_TYPE**|**tinyint**|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado por procedimientos almacenados extendidos. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
+|**IS_NULLABLE**|**VARCHAR (254)**|Indica si la columna admite valores NULL en el objeto. Se siguen las normas ISO para determinar la nulabilidad. Un DBMS que cumpla la norma ISO SQL no puede devolver una cadena vacía.<br /><br /> YES = La columna puede incluir valores NULL.<br /><br /> NO = La columna no puede incluir valores NULL.<br /><br /> Esta columna devuelve una cadena de longitud cero si no se conoce la nulabilidad.<br /><br /> El valor devuelto para esta columna es diferente del valor devuelto para la columna que **acepta valores NULL** .|  
+|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de datos utilizado por los procedimientos almacenados extendidos. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
   
- <sup>1</sup> para obtener más información, consulte la documentación de Microsoft ODBC.  
+ <sup>1</sup> para obtener más información, vea la documentación de Microsoft ODBC.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere permisos SELECT y VIEW DEFINITION en el esquema.  
   
-## <a name="remarks"></a>Comentarios  
- **sp_columns** cumple los requisitos para los identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
+## <a name="remarks"></a>Observaciones  
+ **sp_columns** sigue los requisitos de los identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se devuelve información de columna para una tabla especificada.  
@@ -113,9 +113,9 @@ EXEC sp_columns @table_name = N'DimEmployee',
    @table_owner = N'dbo';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
- [Procedimientos almacenados del catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_tables &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
+ [Procedimientos almacenados de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

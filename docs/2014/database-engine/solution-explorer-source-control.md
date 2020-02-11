@@ -1,5 +1,5 @@
 ---
-title: Control de código fuente del explorador de soluciones | Microsoft Docs
+title: Explorador de soluciones control de código fuente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,21 +19,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843117"
 ---
 # <a name="solution-explorer-source-control"></a>Control de código fuente del Explorador de soluciones
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] El Explorador de soluciones puede integrarse en un sistema de control de código fuente independiente. Una vez que una solución o un proyecto se integra en un sistema de control de código fuente, se pueden controlar el acceso de archivos y las versiones de los scripts y las consultas en los proyectos.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Explorador de soluciones puede integrarse en un sistema de control de código fuente independiente. Una vez que una solución o un proyecto se integra en un sistema de control de código fuente, se pueden controlar el acceso de archivos y las versiones de los scripts y las consultas en los proyectos.  
   
 ## <a name="solution-and-project-source-control"></a>Control de código fuente de soluciones y proyectos  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
- El control de código fuente hace referencia a un sistema en el que una pieza central de software del servidor almacena y realiza un seguimiento de las versiones de los archivos, además de controlar el acceso a esos archivos. Un sistema típico de control de código fuente incluye un proveedor de control de código fuente y dos o más clientes de control de código fuente. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] se puede integrar con un servicio de control de código fuente. Esto significa que puede usar la herramienta como cliente del proveedor de control de código fuente. Es posible administrar fácilmente los proyectos individuales y de equipo sin salir del entorno. El proveedor de control de código fuente no se incluye con [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+ El control de código fuente hace referencia a un sistema en el que una pieza central de software del servidor almacena y realiza un seguimiento de las versiones de los archivos, además de controlar el acceso a esos archivos. Un sistema típico de control de código fuente incluye un proveedor de control de código fuente y dos o más clientes de control de código fuente. 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] se puede integrar con un servicio de control de código fuente. Esto significa que puede usar la herramienta como cliente del proveedor de control de código fuente. Es posible administrar fácilmente los proyectos individuales y de equipo sin salir del entorno. El proveedor de control de código fuente no se incluye con [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 #### <a name="to-select-a-source-control-provider"></a>Para seleccionar un proveedor de control de código fuente  
   
@@ -41,9 +42,9 @@ ms.locfileid: "62843117"
   
 2.  En [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], en el menú **Herramientas** , haga clic en **Opciones**.  
   
-3.  En el **opciones** cuadro de diálogo, expanda **Control de código fuente**y, a continuación, haga clic en el **selección de complemento** página.  
+3.  En el cuadro de diálogo **Opciones** , expanda **control de código fuente**y, a continuación, haga clic en la página **selección de complemento** .  
   
-4.  En el **complemento de control de código fuente actual** , seleccione el complemento de control de código fuente.  
+4.  En el cuadro **complemento de control de código fuente actual** , seleccione el complemento de control de código fuente.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -57,7 +58,7 @@ ms.locfileid: "62843117"
 |[Establecer y recuperar información de versión](../../2014/database-engine/set-and-retrieve-version-information.md)|Explica cómo recuperar el historial de un proyecto o elemento, cómo recuperar una copia local de un elemento o cómo comparar dos versiones de un elemento.|  
 |||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de soluciones](../ssms/solution/solution-explorer.md)   
  [Soluciones &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)   
  [Proyectos &#40;SQL Server Management Studio&#41;](../ssms/solution/projects-sql-server-management-studio.md)   

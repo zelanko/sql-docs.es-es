@@ -1,5 +1,5 @@
 ---
-title: Seleccionar instancia (desinstalar) | Microsoft Docs
+title: Selección de instancia (Desinstalar) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6de0fbb9f2e6a5ee621c24c4832a13b900919048
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094226"
 ---
 # <a name="instance-selection-uninstall"></a>Seleccionar instancia (Desinstalar)
-  En la selección de instancia - desinstalar página, utilice el cuadro de lista desplegable para especificar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para desinstalar.  
+  En la página selección de instancia-desinstalar, use el cuadro desplegable para especificar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a desinstalar.  
   
 ## <a name="options"></a>Opciones  
  Puede especificar una instancia completa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o puede indicar que se desinstalen únicamente las características compartidas y las herramientas de administración.  

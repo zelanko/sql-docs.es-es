@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197112"
 ---
 # <a name="stored-procedures-database-engine"></a>Procedimientos almacenados (motor de base de datos)
-  Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un grupo de una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o una referencia a un método de Common Runtime Language (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Los procedimientos se asemejan a las construcciones de otros lenguajes de programación, porque pueden:  
+  Un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un grupo de una o varias [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones o una referencia a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] método de Common Runtime Language (CLR). Los procedimientos se asemejan a las construcciones de otros lenguajes de programación, porque pueden:  
   
 -   Aceptar parámetros de entrada y devolver varios valores en forma de parámetros de salida al programa que realiza la llamada.  
   
@@ -52,22 +52,22 @@ ms.locfileid: "68197112"
  Mantenimiento más sencillo  
  Cuando las aplicaciones cliente llaman a procedimientos y mantienen las operaciones de base de datos en la capa de datos, solo deben actualizarse los cambios de los procesos en la base de datos subyacente. El nivel de aplicación permanece independiente y no tiene que tener conocimiento sobre los cambios realizados en los diseños, las relaciones o los procesos de la base de datos.  
   
- Rendimiento mejorado  
+ rendimiento mejorado.  
  De forma predeterminada, un procedimiento se compila la primera vez que se ejecuta y crea un plan de ejecución que vuelve a usarse en posteriores ejecuciones. Como el procesador de consultas no tiene que crear un nuevo plan, normalmente necesita menos tiempo para procesar el procedimiento.  
   
  Si ha habido cambios importantes en las tablas o datos a los que se hace referencia en el procedimiento, el plan precompilado podría hacer que el procedimiento se ejecutara con mayor lentitud. En este caso, volver a crear el procedimiento y forzar un nuevo plan de ejecución puede mejorar el rendimiento.  
   
 ## <a name="types-of-stored-procedures"></a>Tipos de procedimientos almacenados  
- Definidos por el usuario  
- Un procedimiento definido por el usuario se puede crear en una base de datos definida por el usuario o en todas las bases de datos del sistema excepto en la base de datos **Resource** . El procedimiento se puede desarrollar en [!INCLUDE[tsql](../../includes/tsql-md.md)] o como una referencia a un método de Common Runtime Language (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Definidas por el usuario  
+ Un procedimiento definido por el usuario se puede crear en una base de datos definida por el usuario o en todas las bases de datos del sistema excepto en la base de datos **Resource** . El procedimiento se puede desarrollar en [!INCLUDE[tsql](../../includes/tsql-md.md)] o como una referencia a un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] método de Common Runtime Language (CLR).  
   
- Temporales  
+ Temporal  
  Los procedimientos temporales son una forma de procedimientos definidos por el usuario. Los procedimientos temporales son iguales que los procedimientos permanentes salvo porque se almacenan en **tempdb**. Hay dos tipos de procedimientos temporales: locales y globales. Se diferencian entre sí por los nombres, la visibilidad y la disponibilidad. Los procedimientos temporales locales tienen como primer carácter de sus nombres un solo signo de número (#); solo son visibles en la conexión actual del usuario y se eliminan cuando se cierra la conexión. Los procedimientos temporales globales presentan dos signos de número (##) antes del nombre; son visibles para cualquier usuario después de su creación y se eliminan al final de la última sesión en la que se usa el procedimiento.  
   
  Sistema  
- Los procedimientos del sistema se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Están almacenados físicamente en la base de datos interna y oculta **Resource** y se muestran de forma lógica en el esquema **sys** de cada base de datos definida por el sistema y por el usuario. Además, la base de datos **msdb** también contiene procedimientos almacenados del sistema en el esquema **dbo** que se usan para programar alertas y trabajos. Dado que los procedimientos del sistema empiezan con el prefijo **sp_** , le recomendamos que no use este prefijo cuando asigne un nombre a los procedimientos definidos por el usuario. Para obtener una lista completa de los procedimientos del sistema, vea [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)  
+ Los procedimientos del sistema se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Están almacenados físicamente en la base de datos interna y oculta **Resource** y se muestran de forma lógica en el esquema **sys** de cada base de datos definida por el sistema y por el usuario. Además, la base de datos **msdb** también contiene procedimientos almacenados del sistema en el esquema **dbo** que se usan para programar alertas y trabajos. Dado que los procedimientos del sistema empiezan con el prefijo **sp_**, le recomendamos que no use este prefijo cuando asigne un nombre a los procedimientos definidos por el usuario. Para obtener una lista completa de los procedimientos del sistema, vea [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los procedimientos del sistema que proporcionan una interfaz de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a los programas externos para varias actividades de mantenimiento. Estos procedimientos extendidos usan el prefijo xp_. Para obtener una lista completa de los procedimientos extendidos, vea [Procedimientos almacenados extendidos generales &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]admite los procedimientos del sistema que proporcionan una interfaz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de a programas externos para diversas actividades de mantenimiento. Estos procedimientos extendidos usan el prefijo xp_. Para obtener una lista completa de los procedimientos extendidos, vea [Procedimientos almacenados extendidos generales &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql).  
   
  Extendidos definidos por el usuario  
  Los procedimientos extendidos le permiten crear sus propias rutinas externas en un lenguaje de programación como puede ser C. Estos procedimientos son DLL que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede cargar y ejecutar dinámicamente.  
@@ -79,7 +79,7 @@ ms.locfileid: "68197112"
   
 |||  
 |-|-|  
-|**Descripción de la tarea**|**Tema**|  
+|**Descripción de la tarea**|**Tema.**|  
 |Describe cómo se crea un procedimiento almacenado.|[Crear un procedimiento almacenado](../stored-procedures/create-a-stored-procedure.md)|  
 |Describe cómo se modifica un procedimiento almacenado.|[Modificar un procedimiento almacenado](../stored-procedures/modify-a-stored-procedure.md)|  
 |Describe cómo se elimina un procedimiento almacenado.|[Eliminar un procedimiento almacenado](../stored-procedures/delete-a-stored-procedure.md)|  

@@ -18,14 +18,14 @@ ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad141939a548aa008ef7109d0adaec5b3a8c6c3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002002"
 ---
 # <a name="cursor-library-operations"></a>Operaciones de la biblioteca de cursores
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- Si una aplicación trabajar con un ODBC *2.x* controlador realiza llamadas a ODBC *3.x* biblioteca de cursores, la aplicación podría ser capaz de utilizar ODBC *3.x* características que no están compatible con ODBC *2.x* controlador. Un escritor de la aplicación debe tener cuidado, cómo se utilizan estas características, sin embargo. Uso de ODBC *3.x* biblioteca de cursores no realiza un ODBC *2.x* controlador en un ODBC *3.x* controlador.
+ Si una aplicación que trabaja con un controlador ODBC *2. x* realiza llamadas a la biblioteca de cursores ODBC *3. x* , es posible que la aplicación pueda usar las características ODBC *3. x* que no son compatibles con el controlador ODBC *2. x* . Sin embargo, un escritor de aplicaciones debe tener cuidado al usar estas características. El uso de la biblioteca de cursores ODBC *3. x* no convierte un controlador ODBC *2. x* en un controlador ODBC *3. x* .

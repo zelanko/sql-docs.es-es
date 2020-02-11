@@ -13,20 +13,20 @@ ms.assetid: a2308f6c-2fa1-47e9-903f-37c2a03c723a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0055013e27f56dd76565ece3fa90f7a331208672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002213"
 ---
 # <a name="sqlparamdata-visual-foxpro-odbc-driver"></a>SQLParamData (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: Completo  
+ Compatibilidad: completa  
   
- Conformidad de la API de ODBC: Nivel 1  
+ Conformidad con la API de ODBC: nivel 1  
   
- Usar junto con [SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md) para especificar los datos de parámetro en tiempo de ejecución de la instrucción.  
+ Se usa junto con [SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md) para especificar los datos de parámetro en el tiempo de ejecución de la instrucción.  
   
- Para obtener más información, consulte [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) en el *referencia del programador de ODBC*.
+ Para obtener más información, vea [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) en la *Referencia del programador de ODBC*.

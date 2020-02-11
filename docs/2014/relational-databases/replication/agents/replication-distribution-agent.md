@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210741"
 ---
 # <a name="replication-distribution-agent"></a>Agente de distribución de replicación
@@ -89,14 +89,14 @@ ms.locfileid: "68210741"
  **-?**  
  Imprime todos los parámetros disponibles.  
   
- **-Publisher** _server_name_[ **\\** _instance_name_]  
- Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Publicador** _SERVER_NAME_[**\\**_instance_name_]  
+ Es el nombre del publicador. Especifique *SERVER_NAME* para la instancia predeterminada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _SERVER_NAME_**\\**_instance_name_ para una instancia con nombre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de en ese servidor.  
   
  **-PublisherDB** _publisher_database_  
  Es el nombre de la base de datos del publicador.  
   
- **-Subscriber** _server_name_[ **\\** _instance_name_]  
- Es el nombre del suscriptor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-SERVER_NAME de suscriptor** __[**\\**_instance_name_]  
+ Es el nombre del suscriptor. Especifique *server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _SERVER_NAME_**\\**_instance_name_ para una instancia con nombre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de en ese servidor.  
   
  **-SubscriberDB** _subscriber_database_  
  Es el nombre de la base de datos del suscriptor.  
@@ -119,7 +119,7 @@ ms.locfileid: "68210741"
  **-DefinitionFile** _def_path_and_file_name_  
  Es la ruta de acceso del archivo de definición de agente. Un archivo de definición de agente contiene los argumentos de símbolo del sistema para el agente. El contenido del archivo se analiza como un archivo ejecutable. Utilice las comillas tipográficas (") para especificar valores de argumento que contienen caracteres arbitrarios.  
   
- **-Distributor** _distributor_  
+ **-Distribuidor del distribuidor** __  
  Es el nombre del distribuidor. Para la distribución (inserción) del Distribuidor, el nombre tiene como valor predeterminado el nombre del Distribuidor local.  
   
  **-DistributorLogin** _distributor_login_  
@@ -143,7 +143,7 @@ ms.locfileid: "68210741"
  > [!NOTE]  
  >  Un certificado SSL válido se define con un nombre de dominio completo de SQL Server. Para que el agente se conecte correctamente al establecer -EncryptionLevel en 2, cree un alias en la instancia local de SQL Server. El parámetro "Alias Name" debe ser el nombre del servidor, mientras que el parámetro "Server" se debe establecer en el nombre completo de la instancia de SQL Server.
 
- Para obtener más información, consulte [seguridad de replicación de SQL Server](../security/view-and-modify-replication-security-settings.md).  
+ Para obtener más información, consulte [replicación de SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
  **-ErrorFile** _error_path_and_file_name_  
  Es la ruta y nombre del archivo de error generado por el Agente de distribución. Este archivo se genera en cualquier punto en el que se haya producido el error durante la aplicación de transacciones de replicación en el suscriptor; los errores que se producen en el publicador o el distribuidor no se registran en este archivo. Contiene las transacciones de replicación en las que se ha producido un error y los mensajes de error relacionados. Si no se especifica, el archivo de error se genera en el directorio actual del Agente de distribución. El nombre del archivo de error es el nombre del agente de distribución con la extensión .err. Si el nombre de archivo especificado existe, los mensajes de error se anexan al archivo. Este parámetro puede tener un máximo de 256 caracteres Unicode.  
@@ -157,13 +157,13 @@ ms.locfileid: "68210741"
  **-FtpAddress** _ftp_address_  
  Es la dirección de red del servicio FTP para el distribuidor. Cuando no se especifica, se utiliza **DistributorAddress** . Si no se especifica **DistributorAddress** , se utiliza **Distribuidor** .  
   
- **-FtpPassword** _ftp_password_  
+ **-FtpPassword** _FTP_PASSWORD_  
  Es la contraseña del usuario que se utiliza para conectarse al servicio FTP.  
   
  **-FtpPort** _ftp_port_  
  Es el número de puerto del servicio FTP para el distribuidor. Cuando no se especifica, se utiliza el número de puerto predeterminado para el servicio FTP (21).  
   
- **-FtpUserName**  _nombre_de_usuario_de_ftp_  
+ **-FtpUserName**  _ftp_user_name_  
  Es el nombre de usuario que se utiliza para conectar con el servicio FTP. Cuando no se especifica, se utiliza **anónimo** .  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
@@ -172,7 +172,7 @@ ms.locfileid: "68210741"
 |Valor HistoryVerboseLevel|Descripción|  
 |-------------------------------|-----------------|  
 |**0**|Los mensajes de progreso se escriben en la consola o bien en un archivo de resultados. Los registros del historial no se registran en la base de datos de distribución.|  
-|**1**|Predeterminado: Siempre actualiza un mensaje del historial anterior del mismo estado (inicio, progreso, éxito, etc.). Si no existe ningún registro anterior con el mismo estado, inserta un nuevo registro.|  
+|**1**|Default. Siempre actualiza un mensaje del historial anterior del mismo estado (inicio, progreso, éxito, etc.). Si no existe ningún registro anterior con el mismo estado, inserta un nuevo registro.|  
 |**2**|Inserta nuevos registros de historial a menos que el registro sea para mensajes de inactividad o mensajes de trabajos de ejecución prolongada, en cuyo caso actualiza los registros anteriores.|  
 |**3**|Siempre inserta nuevos registros, a menos que sea para mensajes inactivos.|  
   
@@ -183,12 +183,12 @@ ms.locfileid: "68210741"
  Es el número de segundos antes de que el subproceso del historial compruebe si cualquiera de las conexiones existentes está esperando una respuesta del servidor. Este valor se puede reducir para evitar que la comprobación del agente marque al agente de distribución como sospechoso al ejecutar un lote de ejecución prolongada. El valor predeterminado es **300** segundos.  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- Es el número de segundos antes de que el inicio de sesión exceda el tiempo de espera. El valor predeterminado es de **15** segundos.  
+ Es el número de segundos antes de que se agote el tiempo de espera del inicio de sesión. El valor predeterminado es **15** segundos.  
   
  **-MaxBcpThreads** _number_of_threads_  
  Especifica el número de operaciones de copia masiva que se pueden realizar en paralelo. El número máximo de subprocesos y conexiones ODBC que existen simultáneamente es el menor entre **MaxBcpThreads** y el número de solicitudes de copia masiva que aparecen en la transacción de sincronización en la base de datos de distribución. **MaxBcpThreads** debe tener un valor mayor que **0** y no tiene ningún límite superior codificado de forma rígida. El valor predeterminado es **2** veces el número de procesadores, hasta un valor máximo de **8**. Al aplicar una instantánea que se generó en el publicador utilizando la opción de instantánea simultánea, se utiliza un subproceso, sin tener en cuenta el número especificado para **MaxBcpThreads**.  
   
- **-MaxDeliveredTransactions** _number_of_transactions_  
+ **-Maxdeliveredtransactions como** _number_of_transactions_  
  Es el número máximo de transacciones de inserción o extracción aplicado a suscriptores en una sincronización. Un valor de **0** indica que el máximo es un número infinito de transacciones. Los suscriptores pueden utilizar otros valores para acortar la duración de una sincronización que se extrae de un publicador.  
   
 > [!NOTE]  
@@ -206,13 +206,13 @@ ms.locfileid: "68210741"
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  Especifica el tamaño mínimo, en bytes, para los datos del objeto binario grande por encima del cual los datos se vincularán como un flujo. Debe especificar **-UseOledbStreaming** para usar este parámetro. Los valores pueden ir de 400 a 1048576 bytes, con un valor predeterminado de 16384 bytes.  
   
- **-Output** _output_path_and_file_name_  
+ **-Output_path_and_file_name de salida** __  
  Es la ruta de acceso del archivo de salida del agente. Si no se proporciona un nombre de archivo, el resultado se envía a la consola. Si el nombre de archivo especificado existe, el resultado se anexa al archivo.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  Especifica si el resultado debería ser detallado. Si el nivel detallado es **0**, solo se imprimen los mensajes de error. Si el nivel detallado es **1**, se imprimen todos los mensajes del informe de progreso. Si el nivel detallado es **2** (valor predeterminado), se imprimen todos los mensajes de error y mensajes del informe de progreso, lo que es útil para la depuración.  
   
- **-PacketSize** _packet_size_  
+ **-Packet_size de paquete** __  
  Es el tamaño del paquete, en bytes. El valor predeterminado es 4096 (bytes).  
   
  **-PollingInterval** _polling_interval_  
@@ -221,16 +221,16 @@ ms.locfileid: "68210741"
  **-ProfileName** _profile_name_  
  Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, vea [Perfiles del Agente de replicación](replication-agent-profiles.md).  
   
- **-Publication**  _publicación_  
+ **-Publicación de publicación**__    
  Es el nombre de la publicación. Este parámetro solamente es válido si la publicación se define para tener siempre una instantánea disponible para las suscripciones nuevas o reinicializadas.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
- Es el número de segundos antes de que la consulta exceda el tiempo de espera. El valor predeterminado es 1800 segundos.  
+ Es el número de segundos antes de que se agote el tiempo de espera de la consulta. El valor predeterminado es 1800 segundos.  
   
- **-QuotedIdentifier** _quoted_identifier_  
+ **-QuotedIdentifier** _QUOTED_IDENTIFIER_  
  Especifica el carácter del identificador entrecomillado que se utilizará. El primer carácter del valor indica el valor que utiliza el agente de distribución. Si **QuotedIdentifier** se utiliza sin ningún valor, el agente de distribución utiliza un espacio. Si no se utiliza **QuotedIdentifier** , el agente de distribución utiliza cualquier identificador entrecomillado que admita el suscriptor.  
   
- **-SkipErrors** _native_error_id_ [ **:** _...n_]  
+ **-SkipErrors** _native_error_id_ [**:**_... n_]  
  Es una lista separada por dos puntos que especifica los números de error que este agente omitirá.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
@@ -254,7 +254,7 @@ ms.locfileid: "68210741"
 |**1**|Origen de datos ODBC|  
 |**3**|Origen de datos OLE DB|  
   
- **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
+ **-SubscriptionStreams** [**0**|**1**|**2**|... **64**]  
  Es el número de conexiones permitidas por el agente de distribución para aplicar lotes de cambios en paralelo a un suscriptor, aunque manteniendo muchas de las características transaccionales presentes al utilizar un único subproceso. Para un publicador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se admite un intervalo de valores de 1 a 64. Este parámetro solo se admite cuando el publicador y el distribuidor se están ejecutando en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o en versiones posteriores. Este parámetro no se admite o debe ser 0 para suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o suscripciones punto a punto.  
   
 > [!NOTE]  
@@ -275,7 +275,7 @@ ms.locfileid: "68210741"
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
  Especifica el intervalo de la transacción para el registro del historial. Si el número de transacciones confirmadas después de la última instancia de registro del historial es mayor que esta opción, se registra un mensaje de historial. El valor predeterminado es 100. Un valor de **0** indica infinito **TransactionsPerHistory**. Vea el parámetro **-MessageInterval** anterior.  
   
- **-UseDTS**  
+ **-Utilizados**  
  Se debe especificar como un parámetro para una publicación que permite la transformación de datos.  
   
  **-UseInprocLoader**  
@@ -284,7 +284,7 @@ ms.locfileid: "68210741"
  **-UseOledbStreaming**  
  Cuando se especifica, habilita el enlace de datos del objeto binario como un flujo. Utilice **-OledbStreamThreshold** para especificar el tamaño, en bytes, por encima del cual se utilizará un flujo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!IMPORTANT]  
 >  Si ha instalado el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que se ejecute en una cuenta de sistema local en lugar de debajo de una cuenta de usuario de dominio (el valor predeterminado), el servicio puede tener acceso solo al equipo local. Si el agente de distribución que se ejecuta en el agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura para utilizar el modo de autenticación de Windows cuando inicia sesión en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el agente de distribución devuelve un error. La configuración predeterminada es la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener información acerca del cambio de cuentas de seguridad, vea [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md).  
@@ -297,7 +297,7 @@ ms.locfileid: "68210741"
 |---------------------|  
 |Se ha agregado el parámetro **-ExtendedEventConfigFile** .|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración del Agente de replicación](replication-agent-administration.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138902"
 ---
 # <a name="open-file-dialog-box"></a>Cuadro de diálogo Abrir archivo
@@ -73,7 +73,7 @@ ms.locfileid: "63138902"
  **Vistas en miniatura**  
  Muestra vistas en miniatura de los elementos del panel de información.  
   
- **Mosaicos**  
+ **Iconos**  
  Muestra archivos y carpetas como iconos grandes.  
   
  **Iconos**  
@@ -85,7 +85,7 @@ ms.locfileid: "63138902"
  **Detalles**  
  Muestra el nombre, el tamaño, el tipo y la fecha de última modificación de los archivos y carpetas en formato de lista. Para ordenar según un detalle determinado, haga clic en su encabezado de columna.  
   
- **Vista web**  
+ **WebView**  
  Este comando no está disponible.  
   
 ## <a name="tools"></a>Herramientas  

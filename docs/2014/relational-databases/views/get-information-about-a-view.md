@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211646"
 ---
 # <a name="get-information-about-a-view"></a>Obtener información acerca de una vista
@@ -53,7 +53,7 @@ ms.locfileid: "68211646"
 ####  <a name="Permissions"></a> Permisos  
  La utilización de `sp_helptext` para devolver la definición de una vista requiere la pertenencia al rol **público** . La utilización de `sys.sql_expression_dependencies` para buscar todas las dependencias de una vista requiere el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en `sys.sql_expression_dependencies` para la base de datos. Las definiciones de objeto del sistema, como las que se devuelven en SELECT OBJECT_DEFINITION, son visibles de forma pública.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Obtener las propiedades de la vista mediante el Explorador de objetos  
   
@@ -69,13 +69,13 @@ ms.locfileid: "68211646"
      **Server**  
      Nombre de la instancia de servidor actual.  
   
-     **Usuario**  
+     **User**  
      Nombre del usuario de esta conexión.  
   
      **Fecha de creación**  
      Muestra la fecha en la que se creó la vista.  
   
-     **Name**  
+     **Nombre**  
      Nombre de la vista actual.  
   
      **Esquema**  
@@ -109,7 +109,7 @@ ms.locfileid: "68211646"
      **(Nombre)**  
      Nombre de la vista actual.  
   
-     **Database Name**  
+     **Nombre de la base de datos**  
      Nombre de la base de datos que contiene esta vista.  
   
      **Descripción**  
@@ -118,7 +118,7 @@ ms.locfileid: "68211646"
      **Esquema**  
      Muestra el esquema al que pertenece la vista.  
   
-     **Nombre del servidor**  
+     **Nombre de servidor**  
      Nombre de la instancia de servidor actual.  
   
      **Enlace a esquema**  
@@ -145,7 +145,7 @@ ms.locfileid: "68211646"
      **(Superior)**  
      Especifica que la vista incluirá una cláusula TOP, que solo devuelve las primeras n filas o el primer n por cierto de filas en el conjunto de resultados. De forma predeterminada, la vista devolverá las diez primeras filas en el conjunto de resultados. Use esto para cambiar el número de filas que se van a devolver o para especificar un porcentaje diferente.  
   
-     **Expresión**  
+     **Expression**  
      Muestra qué porcentaje (si **Porcentaje** está establecido en **Sí**) o registros (si **Porcentaje** está establecido en **No**) devolverá la vista.  
   
      **Porcentaje**  

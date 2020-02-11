@@ -14,10 +14,10 @@ ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b717c350bae35606dcf0aae09610c085ccff1767
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75240155"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Miembros y tipos no permitidos en Microsoft.VisualBasic.dll
@@ -65,25 +65,25 @@ ms.locfileid: "75240155"
 |Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Sincronización|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|Sincronización|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|Sincronización|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|Sincronización|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|Sincronización|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|Sincronización|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|Sincronización|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|Sincronización|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|Synchronization|  
 |Microsoft.VisualBasic.Logging.Log|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.ClipboardProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.FileSystemProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.RegistryProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy|ExternalProcessMgmt|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Atributos de protección del host y programación de la integración CLR](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [Tipos y miembros no permitidos en mscorlib. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
  [Tipos y miembros no permitidos en System. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
  [Tipos y miembros no permitidos en System. Data. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
- [Tipos y miembros no permitidos en System. Core. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
+ [Tipos y miembros no permitidos en System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
   
   

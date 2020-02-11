@@ -1,5 +1,5 @@
 ---
-title: Cambiar la partición de DirectQuery (SSAS Tabular) | Microsoft Docs
+title: Cambiar la partición DirectQuery (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eb0b6349eac28bbd2abc22b9483ef74edf1bf33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088190"
 ---
 # <a name="change-the-directquery-partition-ssas-tabular"></a>Cambiar la partición DirectQuery (SSAS Tabular)
@@ -44,7 +44,7 @@ ms.locfileid: "66088190"
   
 4.  Elija una partición diferente en la lista desplegable **Nombre de partición** y, a continuación, cambie las opciones de procesamiento de la partición si es necesario.  
   
-## <a name="see-also"></a>Vea también  
- [Particiones &#40;SSAS tabular&#41;](tabular-models/partitions-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte también  
+ [Particiones &#40;&#41;tabular de SSAS](tabular-models/partitions-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tamaño de columna, dígitos decimales, longitud de bytes de transferencia, el tamaño de presentación | Microsoft Docs
+title: Tamaño de columna, dígitos decimales, longitud de octetos de transferencia, tamaño de presentación | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,30 +22,30 @@ ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d8d7f1b8ec5647a34b09f0636fc8fcc2ad070f72
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019243"
 ---
-# <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Tamaño de la columna, dígitos decimales, longitud de transferencia y mostrar tamaño - ODBC
-Tipos de datos se caracterizan por su tamaño de columna (o parámetro), los dígitos decimales, longitud y tamaño de presentación. Las siguientes funciones ODBC devuelven estos atributos para un parámetro en una instrucción SQL o un tipo de datos SQL en un origen de datos. Cada función ODBC devuelve un conjunto diferente de estos atributos, como sigue:  
+# <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Tamaño de columna, dígitos decimales, longitud de octetos de transferencia y tamaño de presentación-ODBC
+Los tipos de datos se caracterizan por su tamaño de columna (o parámetro), dígitos decimales, longitud y tamaño de presentación. Las siguientes funciones ODBC devuelven estos atributos para un parámetro en una instrucción SQL o para un tipo de datos SQL en un origen de datos. Cada función ODBC devuelve un conjunto diferente de estos atributos, como se indica a continuación:  
   
--   **SQLDescribeCol** devuelve dígitos decimales y tamaño de las columnas se describe de la columna.  
+-   **SQLDescribeCol** devuelve el tamaño de columna y los dígitos decimales de las columnas que describe.  
   
--   **SQLDescribeParam** devuelve el parámetro de dígitos decimales y tamaño de los parámetros se describe. **SQLBindParameter** establece el parámetro de dígitos decimales y tamaño para un parámetro en una instrucción SQL.  
+-   **SQLDescribeParam** devuelve el tamaño del parámetro y los dígitos decimales de los parámetros que describe. **SQLBindParameter** establece el tamaño del parámetro y los dígitos decimales para un parámetro en una instrucción SQL.  
   
--   Las funciones de catálogo **SQLColumns**, **SQLProcedureColumns**, y **SQLGetTypeInfo** devolver atributos para una columna en una tabla, el conjunto de resultados o un parámetro de procedimiento y los atributos del catálogo de los tipos de datos del origen de datos. **SQLColumns** devuelve el tamaño de la columna, dígitos decimales y longitud de una columna en las tablas especificadas (por ejemplo, la tabla base, vista o una tabla del sistema). **SQLProcedureColumns** devuelve el tamaño de la columna, dígitos decimales y longitud de una columna de un procedimiento. **SQLGetTypeInfo** devuelve el tamaño máximo de columna y los dígitos decimales de mínimos y máximo de un tipo de datos SQL en un origen de datos.  
+-   Las funciones de catálogo **SQLColumns**, **SQLProcedureColumns**y **SQLGetTypeInfo** devuelven los atributos de una columna de una tabla, un conjunto de resultados o un parámetro de procedimiento y los atributos de catálogo de los tipos de datos del origen de datos. **SQLColumns** devuelve el tamaño de la columna, los dígitos decimales y la longitud de una columna en las tablas especificadas (como la tabla base, la vista o una tabla del sistema). **SQLProcedureColumns** devuelve el tamaño de la columna, los dígitos decimales y la longitud de una columna en un procedimiento. **SQLGetTypeInfo** devuelve el tamaño máximo de la columna y los dígitos decimales mínimos y máximos de un tipo de datos SQL en un origen de datos.  
   
- Los valores devueltos por estas funciones para la columna o el tamaño de parámetro corresponden a "precisión" como se definen en ODBC 2. *x*. Sin embargo, los valores no corresponden necesariamente a los valores devueltos en SQL_DESC_PRECISION o cualquier otro campo descriptor uno. Lo mismo puede decirse de dígitos decimales, que corresponden a "escala" como definidas en ODBC 2. *x*. No corresponden necesariamente a los valores devueltos en SQL_DESC_SCALE o cualquier otro campo descriptor uno, pero procede de los campos de descriptor diferentes según el tipo de datos. Para obtener más información, consulte [tamaño de la columna](../../../odbc/reference/appendixes/column-size.md) y [dígitos decimales](../../../odbc/reference/appendixes/decimal-digits.md).  
+ Los valores devueltos por estas funciones para el tamaño de la columna o del parámetro corresponden a "precisión", tal y como se define en ODBC 2. *x*. Sin embargo, los valores no se corresponden necesariamente con los valores devueltos en SQL_DESC_PRECISION o en cualquier otro campo de descriptor. Lo mismo se aplica a los dígitos decimales, que corresponden a "escala" tal y como se define en ODBC 2. *x*. No se corresponde necesariamente con los valores devueltos en SQL_DESC_SCALE o en cualquier otro campo de descriptor, pero procede de campos de descriptor diferentes en función del tipo de datos. Para obtener más información, vea [tamaño de columna](../../../odbc/reference/appendixes/column-size.md) y [dígitos decimales](../../../odbc/reference/appendixes/decimal-digits.md).  
   
- De forma similar, los valores de longitud de bytes de transferencia no proceden de SQL_DESC_LENGTH. Provienen de la SQL_DESC_OCTET_LENGTH de un campo de un descriptor para todos los tipos de caracteres y binarios. No hay ningún campo de descriptor que contiene esta información para otros tipos.  
+ Del mismo modo, los valores de longitud de octetos de transferencia no provienen de SQL_DESC_LENGTH. Proceden del SQL_DESC_OCTET_LENGTH de un campo de un descriptor para todos los tipos de caracteres y binarios. No hay ningún campo de descriptor que contenga esta información para otros tipos.  
   
- El valor de tamaño de presentación para todos los tipos de datos corresponde al valor en un campo único descriptor, columnas SQL_DESC_DISPLAY_SIZE.  
+ El valor de tamaño de presentación de todos los tipos de datos se corresponde con el valor de un solo campo de descriptor, SQL_DESC_DISPLAY_SIZE.  
   
- Los campos de descriptor describen las características de un conjunto de resultados. Los campos de descriptor no contienen los valores válidos acerca de los datos antes de ejecutar la instrucción. Los valores de columna, dígitos decimales, visualización y el tamaño devuelto por el tamaño **SQLColumns**, **SQLProcedureColumns**, y **SQLGetTypeInfo**, por otro lado, devolver características de los objetos de base de datos, como columnas de la tabla y los tipos de datos, que existe en el catálogo de datos de origen. Del mismo modo, en su conjunto de resultados, **SQLColAttribute** devuelve el tamaño de la columna, dígitos decimales y longitud de bytes de transferencia de las columnas en el origen de datos; estos valores no son necesariamente los mismos que los valores en el SQL_DESC_PRECISION, SQL_ DESC_SCALE y campos de descriptor SQL_DESC_OCTET_LENGTH.  
+ Los campos de descriptor describen las características de un conjunto de resultados. Los campos de descriptor no contienen valores válidos sobre los datos antes de la ejecución de la instrucción. Los valores de tamaño de columna, dígitos decimales y tamaño de presentación devueltos por **SQLColumns**, **SQLProcedureColumns**y **SQLGetTypeInfo**, por otro lado, devuelven características de los objetos de base de datos, como las columnas de tabla y los tipos de datos, que existen en el catálogo del origen de datos. Del mismo modo, en su conjunto de resultados, **SQLColAttribute** devuelve el tamaño de la columna, los dígitos decimales y la longitud del octeto de transferencia de las columnas en el origen de datos; Estos valores no son necesariamente los mismos que los valores de los campos de descriptor SQL_DESC_PRECISION, SQL_DESC_SCALE y SQL_DESC_OCTET_LENGTH.  
   
- Para obtener más información acerca de estos campos de descriptor, consulte [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).  
+ Para obtener más información sobre estos campos de descriptor, vea [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).  
   
  Temas relacionados:  
   

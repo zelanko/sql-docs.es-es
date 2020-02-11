@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4833ee0dd6514b6a05118b80b756c5fd2de069a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836816"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabajar con variables mediante programación
@@ -46,7 +46,7 @@ ms.locfileid: "62836816"
   
 -   Se pueden crear variables personalizadas para todos los tipos de contenedores: paquetes, contenedores de **bucles Para cada uno**, contenedores de **bucles Para**, contenedores de **secuencias**, TaskHosts y controladores de eventos. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) y [Usar variables en paquetes](../use-variables-in-packages.md).  
   
-## <a name="scope"></a>Scope  
+## <a name="scope"></a>Ámbito  
  Cada contenedor tiene su propia colección <xref:Microsoft.SqlServer.Dts.Runtime.Variables>. Cuando se crea una nueva variable, está dentro del ámbito de su contenedor primario. Dado que el contenedor del paquete se encuentra en la parte superior de la jerarquía de contenedores, las variables con ámbito de paquete funcionan como variables globales y están visibles para todos los contenedores del paquete. Los elementos secundarios del contenedor también pueden tener acceso a la colección de variables para el contenedor a través de la colección <xref:Microsoft.SqlServer.Dts.Runtime.Variables>, utilizando el nombre de variable o el índice de la variable en la colección.  
   
  Dado que la visibilidad de una variable afecta desde arriba hacia abajo, las variables declaradas en el nivel de paquete están visibles para todos los contenedores del paquete. Por consiguiente, la colección <xref:Microsoft.SqlServer.Dts.Runtime.Variables> de un contenedor incluye todas las variables que pertenecen a su elemento primario además de sus propias variables.  
@@ -113,7 +113,7 @@ Module Module1
 End Module  
 ```  
   
- **Salida del ejemplo:**  
+ **Resultado de ejemplo:**  
   
  `Variable: CancelEvent, Int32, 0`  
   
@@ -158,11 +158,11 @@ End Module
  Observe que todas las variables en el ámbito del espacio de nombres **System** están disponibles para el paquete. Para más información, consulte [System Variables](../system-variables.md).  
   
 ## <a name="namespaces"></a>Espacios de nombres  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) proporciona dos espacios de nombres predeterminados donde residen las variables; los espacios de nombres **User** y **System**. De forma predeterminada, cualquier variable personalizada que crea el desarrollador se agrega al espacio de nombres **User**. Las variables System residen en el espacio de nombres **System**. Puede crear espacios de nombres adicionales distintos del espacio de nombres **User** para contener variables personalizadas y puede cambiar el nombre del espacio de nombres **User**, pero no puede agregar ni modificar variables en el espacio de nombres **System** ni asignar variables del sistema a un espacio de nombres diferente.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) proporciona dos espacios de nombres predeterminados donde residen las [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variables; Espacios de nombres **del sistema y del** **usuario** . De forma predeterminada, cualquier variable personalizada que crea el desarrollador se agrega al espacio de nombres **User**. Las variables System residen en el espacio de nombres **System**. Puede crear espacios de nombres adicionales distintos del espacio de nombres **User** para contener variables personalizadas y puede cambiar el nombre del espacio de nombres **User**, pero no puede agregar ni modificar variables en el espacio de nombres **System** ni asignar variables del sistema a un espacio de nombres diferente.  
   
  Las variables del sistema que están disponibles difieren en función del tipo de contenedor. Para obtener una lista de variables del sistema disponibles para paquetes, contenedores, tareas y controladores de eventos, vea [Variables del sistema](../system-variables.md).  
   
-## <a name="value"></a>Valor  
+## <a name="value"></a>Value  
  El valor de una variable personalizada puede ser un literal o una expresión:  
   
 -   Si desea que la variable contenga un valor literal, establezca el valor de su propiedad <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A>.  
@@ -217,7 +217,7 @@ Module Module1
 End Module  
 ```  
   
- **Salida del ejemplo:**  
+ **Resultado de ejemplo:**  
   
  `Expression for myVar: 100 * 2`  
   
@@ -228,9 +228,9 @@ End Module
 ## <a name="configuration-files"></a>Archivos de configuración  
  Si un archivo de configuración incluye una variable personalizada, la variable puede estar actualizada en tiempo de ejecución. Esto significa que cuando el paquete se ejecuta, se reemplaza el valor de la variable originalmente en el paquete con un nuevo valor del archivo de configuración. Esta técnica del reemplazo es útil cuando se implementa un paquete en varios servidores que requieren distintos valores de variable. Por ejemplo, una variable puede especificar el número de veces que un contenedor de **bucles Para cada uno** repite su flujo de trabajo, o enumerar los destinatarios a los que un controlador de eventos envía un correo electrónico cuando se produce un error, o cambiar el número de errores que se pueden producir antes de que se genere un error en el paquete. Estas variables se proporcionan de forma dinámica en archivos de configuración para cada entorno. Por consiguiente, en archivos de configuración únicamente se permiten variables de lectura/escritura. Para obtener más información, vea [Crear configuraciones de paquetes](../create-package-configurations.md).  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
  [Usar variables en paquetes](../use-variables-in-packages.md)  
   

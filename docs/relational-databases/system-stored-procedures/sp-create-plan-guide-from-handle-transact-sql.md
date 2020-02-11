@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 15fa1de65ada904ecf4b93947e1e9e9f818fd0d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a5e4ad5d6f3d0b2e35633694d65e58dd782cc3ba
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108674"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75688255"
 ---
-# <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
+# <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea una o varias guías de plan a partir de un plan de consulta en la memoria caché del plan. Puede utilizar este procedimiento almacenado para asegurarse de que el optimizador de consultas siempre utiliza un plan de consulta concreto para la consulta especificada. Para obtener más información acerca de las guías de plan, vea [Plan Guides](../../relational-databases/performance/plan-guides.md).  
@@ -34,39 +34,38 @@ ms.locfileid: "68108674"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'  
     , [ @plan_handle = ] plan_handle  
     , [ [ @statement_start_offset = ] { statement_start_offset | NULL } ]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @name =] N'*plan_guide_name*'  
- Es el nombre de la guía de plan. Los nombres de guía de plan se encuentran en el ámbito de la base de datos actual. *plan_guide_name* debe cumplir las reglas para [identificadores](../../relational-databases/databases/database-identifiers.md) y no puede comenzar con el signo de número (#). La longitud máxima de *plan_guide_name* es de 124 caracteres.  
+ [ @name = ] N '*plan_guide_name*'  
+ Es el nombre de la guía de plan. Los nombres de guía de plan se encuentran en el ámbito de la base de datos actual. *plan_guide_name* debe cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md) y no puede comenzar por el signo de número (#). La longitud máxima de *plan_guide_name* es de 124 caracteres.  
   
- [ @plan_handle =] *plan_handle*  
- Identifica un lote en la memoria caché del plan. *plan_handle* es **varbinary (64)** . *plan_handle* puede obtenerse a partir del [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) vista de administración dinámica.  
+ [ @plan_handle = ] *plan_handle*  
+ Identifica un lote en la memoria caché del plan. *plan_handle* es **varbinary (64)**. *plan_handle* se pueden obtener de la vista de administración dinámica [Sys. dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) .  
   
- [ @statement_start_offset = ] { *statement_start_offset* | NULL } ]  
- Identifica la posición inicial de la instrucción dentro del lote especificado *plan_handle*. *statement_start_offset* es **int**, su valor predeterminado es null.  
+ [ @statement_start_offset = ] { *statement_start_offset* | NULL}]  
+ Identifica la posición inicial de la instrucción dentro del lote del *plan_handle*especificado. *statement_start_offset* es de **tipo int**y su valor predeterminado es NULL.  
   
- El desplazamiento de la instrucción corresponde a la columna statement_start_offset de la [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) vista de administración dinámica.  
+ El desplazamiento de la instrucción corresponde a la columna statement_start_offset de la vista de administración dinámica [Sys. dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) .  
   
  Si se especifica NULL o no se especifica un desplazamiento de instrucción, se crea una guía de plan para cada instrucción del lote utilizando el plan de consulta para el identificador de plan especificado. Las guías de plan resultantes son equivalentes a las guías de plan que utilizan la sugerencia de consulta USE PLAN para forzar el uso de un plan concreto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  No se puede crear una guía de plan para todos los tipos de instrucción. Si no puede crearse una guía de plan para una instrucción del lote, el procedimiento almacenado omite la instrucción y continúa en la instrucción siguiente del lote. Si una instrucción aparece varias veces en el mismo lote, se habilita el plan para la última aparición y se deshabilitan los planes anteriores para la instrucción. Si no se puede utilizar ninguna instrucción del lote en una guía de plan, se producirá el error 10532 y la instrucción producirá un error. Se recomienda obtener siempre el identificador de plan a partir de la vista de administración dinámica sys.dm_exec_query_stats para evitar en lo posible la aparición de este error.  
   
 > [!IMPORTANT]  
->  sp_create_plan_guide_from_handle crea guías de plan basadas en planes según aparecen en la caché del plan. Esto significa que el texto por lotes, las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] y el plan de presentación XML se toman carácter a carácter (incluidos los valores literales pasados a la consulta) desde la caché del plan hasta la guía de plan resultante. Estas cadenas de texto pueden contener información confidencial que se almacena en los metadatos de la base de datos. Los usuarios con los permisos adecuados pueden ver esta información mediante el uso de la vista de catálogo de sys.plan_guides y el **propiedades de la Guía de Plan** cuadro de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para asegurarse de que dicha información confidencial no se divulga a través de una guía de plan, se recomienda revisar las guías de plan creadas a partir de la memoria caché del plan.  
+>  sp_create_plan_guide_from_handle crea guías de plan basadas en planes según aparecen en la caché del plan. Esto significa que el texto por lotes, las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] y el plan de presentación XML se toman carácter a carácter (incluidos los valores literales pasados a la consulta) desde la caché del plan hasta la guía de plan resultante. Estas cadenas de texto pueden contener información confidencial que se almacena en los metadatos de la base de datos. Los usuarios con los permisos adecuados pueden ver esta información mediante la vista de catálogo sys. plan_guides y el cuadro de diálogo Propiedades [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de la guía de **plan** en. Para asegurarse de que dicha información confidencial no se divulga a través de una guía de plan, se recomienda revisar las guías de plan creadas a partir de la memoria caché del plan.  
   
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>Crear guías de plan para varias instrucciones dentro de un plan de consulta  
  Al igual que sp_create_plan_guide, sp_create_plan_guide_from_handle quita el plan de consulta para el módulo o lote concreto de la caché del plan. Esto se hace para asegurarse de que todos los usuarios empiezan a utilizar la nueva guía de plan. Al crear una guía de plan para varias instrucciones dentro de un único plan de consulta, puede posponer la eliminación del plan de caché mediante la creación de todas las guías de plan en una transacción explícita. Este método permite al plan permanecer en la memoria caché hasta que se completa la transacción y crear una guía de plan para cada instrucción especificada. Vea el ejemplo B.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso VIEW SERVER STATE. Además, se requieren permisos individuales para cada guía de plan creada mediante sp_create_plan_guide_from_handle. Para crear una guía de plan de tipo OBJECT, se requiere el permiso ALTER en el objeto al que se hace referencia. Para crear una guía de plan de tipo SQL o TEMPLATE, se requiere el permiso ALTER en la base de datos actual. Para determinar el tipo de guía de plan que se va a crear, ejecute la consulta siguiente:  
+ Requiere el permiso `VIEW SERVER STATE`. Además, se requieren permisos individuales para cada guía de plan creada mediante sp_create_plan_guide_from_handle. Para crear una guía de plan de tipo OBJECT `ALTER` se requiere el permiso en el objeto al que se hace referencia. Para crear una guía de plan de tipo SQL o TEMPLATE `ALTER` , se requiere el permiso en la base de datos actual. Para determinar el tipo de guía de plan que se va a crear, ejecute la consulta siguiente:  
   
-```  
+```sql  
 SELECT cp.plan_handle, sql_handle, st.text, objtype   
 FROM sys.dm_exec_cached_plans AS cp  
 JOIN sys.dm_exec_query_stats AS qs ON cp.plan_handle = qs.plan_handle  
@@ -115,18 +114,18 @@ WHERE scope_batch LIKE N'SELECT WorkOrderID, p.Name, OrderQty, DueDate%';
 GO  
 ```  
   
-### <a name="b-creating-multiple-plan-guides-for-a-multistatement-batch"></a>b. Crear varias guías de plan para un lote de varias instrucciones  
+### <a name="b-creating-multiple-plan-guides-for-a-multistatement-batch"></a>B. Crear varias guías de plan para un lote de varias instrucciones  
  El ejemplo siguiente crea una guía de plan para dos instrucciones dentro de un lote de varias instrucciones. Las guías de plan se crean dentro de una transacción explícita de modo que el plan de consulta para el lote no se quite de la caché del plan una vez creada la primera guía de plan. El ejemplo comienza ejecutando un lote de varias instrucciones. El plan para el lote se examina mediante las vistas de administración dinámica. Observe que se devuelve una fila por cada instrucción del lote. A continuación, se crea una guía de plan para la primera y tercera instrucciones del lote mediante el parámetro `@statement_start_offset`. La última instrucción del ejemplo comprueba que las guías de plan existen.  
   
  [!code-sql[PlanGuides#Create_From_Handle2](../../relational-databases/system-stored-procedures/codesnippet/tsql/sp-create-plan-guide-fro_1.sql)]  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [Guías de plan](../../relational-databases/performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
- [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [sp_create_plan_guide &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [Sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [Sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
+ [sp_control_plan_guide &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

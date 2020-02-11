@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44fbab98aa017be66cd4dc369a713f44e8d248d5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228216"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Características de SQL Server desusadas en SQL Server 2014
@@ -38,7 +38,7 @@ ms.locfileid: "75228216"
  
  - [SQL Server el programa de instalación de 2012 es más inteligente...](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2012-Setup-just-got-smarter-8230/ba-p/317440)
  
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con versiones anteriores](../../2014/getting-started/backward-compatibility.md)  
   
   

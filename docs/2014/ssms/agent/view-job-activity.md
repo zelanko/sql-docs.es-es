@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fc6099fa9f523b351489ce4301596aeb90c1509
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211305"
 ---
 # <a name="view-job-activity"></a>Ver actividad de trabajo
@@ -33,7 +33,7 @@ ms.locfileid: "68211305"
   
      [Seguridad](#Security)  
   
--   **Para ver la actividad de los trabajos, utilizando:**  
+-   **Para ver la actividad de trabajo, utilizando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68211305"
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-job-activity"></a>Para ver la actividad de los trabajos  
   
@@ -79,6 +79,6 @@ ms.locfileid: "68211305"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_help_jobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql).  
+ Para obtener más información, vea [sp_help_jobactivity &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql).  
   
   

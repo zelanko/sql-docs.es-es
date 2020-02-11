@@ -1,5 +1,5 @@
 ---
-title: Pestaña validación cruzada (vista Gráfico de precisión de minería de datos) | Microsoft Docs
+title: Pestaña validación cruzada (vista gráfico de precisión de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086615"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Pestaña Validación cruzada (vista Gráfico de precisión de minería de datos)
@@ -52,12 +52,12 @@ ms.locfileid: "66086615"
 > [!NOTE]  
 >  Cuando aumenta el número de subconjuntos, el tiempo que se necesita para realizar la validación cruzada aumenta de igual forma en n. Pueden producirse problemas de rendimiento si el número de casos es elevado y el valor de **Recuento de plegamientos** también es elevado.  
   
- **Máximo de casos**  
+ **Número máximo de casos**  
  Especifique el número máximo de casos para utilizar en la validación cruzada. El número de casos en cualquier subconjunto determinado es igual al valor **Máximo de casos** dividido por el valor de **Recuento de plegamientos** .  
   
  Si usa **0**, todos los casos de los datos de origen se usarán para la validación cruzada.  
   
- No existe ningún valor predeterminado.  
+ No hay ningún valor predeterminado.  
   
 > [!NOTE]  
 >  El tiempo de proceso también aumenta a medida que aumenta el número de casos.  
@@ -74,7 +74,7 @@ ms.locfileid: "66086615"
   
  Se deshabilita para modelos de agrupación en clústeres.  
   
- **Umbral**  **de destino**  
+ ******Umbral** de destino    
  Especifique un valor entre 0 y 1 que indique la probabilidad de la predicción anterior que se considera que un estado predicho es correcto. El valor se puede establecer en 0,1 incrementos.  
   
  El valor predeterminado es `null`, lo que indica que la predicción más probable se cuenta como correcta.  
@@ -96,12 +96,12 @@ ms.locfileid: "66086615"
   
  Por ejemplo, suponga que se hacen tres predicciones para un estado de destino determinado, y las probabilidades de cada predicción son 0,05, 0,15 y 0,8. Si establece el umbral en 0,5, solamente se tiene en cuenta una predicción como correcta. Si establece **Umbral** **de destino** en 0,10, se tienen en cuenta dos predicciones como correctas.  
   
- Cuando **destino** **umbral** está establecido en `null`, que es el valor predeterminado, la predicción más probable para cada caso se cuenta como correcta. En el ejemplo recién citado, 0,05, 0,15 y 0,8 son las probabilidades de las predicciones de tres casos diferentes. Aunque las probabilidades son muy distintas, cada una se contaría como correcta, porque cada caso genera solo una predicción y éstas son las mejores predicciones para estos casos.  
+ Cuando **** **umbral** de destino está establecido `null`en, que es el valor predeterminado, la predicción más probable para cada caso se considera correcta. En el ejemplo recién citado, 0,05, 0,15 y 0,8 son las probabilidades de las predicciones de tres casos diferentes. Aunque las probabilidades son muy distintas, cada una se contaría como correcta, porque cada caso genera solo una predicción y éstas son las mejores predicciones para estos casos.  
   
-## <a name="see-also"></a>Vea también  
- [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)   
- [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Pruebas y validación &#40;&#41;de minería de datos](data-mining/testing-and-validation-data-mining.md)   
+ [Analysis Services de &#40;de validación cruzada&#41;de minería de datos](data-mining/cross-validation-analysis-services-data-mining.md)   
  [Medidas en el informe de validación cruzada](data-mining/measures-in-the-cross-validation-report.md)   
- [Procedimientos almacenados de minería de datos &#40;Analysis Services - Minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procedimientos almacenados de minería de datos &#40;Analysis Services:&#41;de minería de datos](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa11481ed3c446becf2519a2ed149867456ac94a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101925"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ofrece características de seguridad integradas que puede usar para conceder acceso a los elementos del servidor de informes a los que accede desde sitios y bibliotecas de SharePoint. Si ya asignó permisos a los usuarios, dichos usuarios tendrán acceso a los elementos y las operaciones del servidor de informes inmediatamente después de configurarse la integración entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] y un servidor de informes. Puede usar los permisos existentes para cargar definiciones de informe y otros documentos, ver informes, crear suscripciones y administrar elementos.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPF2010](../../includes/spf2010-md.md)] proporciona características de seguridad integradas que puede usar para conceder acceso a los elementos del servidor de informes a los que tiene acceso desde sitios y bibliotecas de SharePoint. Si ya asignó permisos a los usuarios, dichos usuarios tendrán acceso a los elementos y las operaciones del servidor de informes inmediatamente después de configurarse la integración entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] y un servidor de informes. Puede usar los permisos existentes para cargar definiciones de informe y otros documentos, ver informes, crear suscripciones y administrar elementos.  
   
  Si no ha asignado permisos o si no está familiarizado con las características de seguridad de [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], siga estas instrucciones:  
   
@@ -42,11 +42,13 @@ ms.locfileid: "66101925"
   
 -   Los objetos protegibles incluyen sitios, listas, bibliotecas, carpetas y documentos.  
   
--   Un permiso es una autorización para realizar una tarea específica. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] proporciona 33 permisos predefinidos que puede combinar en un nivel de permiso.  
+-   Un permiso es una autorización para realizar una tarea específica. 
+  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] proporciona 33 permisos predefinidos que puede combinar en un nivel de permiso.  
   
 -   Un nivel de permiso es un conjunto de permisos que se pueden conceder a los usuarios o a los grupos de SharePoint para un objeto protegible como un sitio, una biblioteca, una lista, una carpeta, un elemento o un documento. Equivale a una definición de roles de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Existen cinco niveles de permiso predefinidos. Puede personalizarlos o crear otros nuevos si es necesario.  
   
--   Un grupo de SharePoint es un grupo de usuarios que se puede crear en un sitio de SharePoint para administrar los permisos del sitio y proporcionar una lista de distribución de correo electrónico para los miembros del sitio. Un grupo de SharePoint consta de cuentas de usuario y de grupo de Windows, o de inicios de sesión del usuario si usa la autenticación de formularios. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] proporciona tres grupos. Puede personalizarlos o crear otros nuevos si es necesario.  
+-   Un grupo de SharePoint es un grupo de usuarios que se puede crear en un sitio de SharePoint para administrar los permisos del sitio y proporcionar una lista de distribución de correo electrónico para los miembros del sitio. Un grupo de SharePoint consta de cuentas de usuario y de grupo de Windows, o de inicios de sesión del usuario si usa la autenticación de formularios. 
+  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] proporciona tres grupos. Puede personalizarlos o crear otros nuevos si es necesario.  
   
 -   La herencia de permisos permite que los subsitios, las listas y bibliotecas, y los elementos hereden la configuración de seguridad del sitio primario. Puede usar los permisos heredados para tener acceso a los elementos del servidor de informes almacenados en una biblioteca de SharePoint. El uso de la herencia de permisos y los grupos de SharePoint predefinidos puede simplificar la implementación y proporciona un acceso inmediato a la mayoría de las operaciones del servidor de informes.  
   
@@ -75,7 +77,7 @@ ms.locfileid: "66101925"
  Para usar las características de seguridad integradas, debe asignar cuentas de usuario o de grupo de Windows a los grupos de SharePoint. Excepto en el caso del administrador del servidor y el propietario del sitio del portal, con acceso automático a [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] una vez instalado el software, se deben conceder permisos a los demás usuarios para que tengan acceso al servidor.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Uso de la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  Explica cómo se pueden usar los grupos de SharePoint y los niveles de permiso predefinidos para tener acceso a los elementos del servidor de informes.  
   
  [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
@@ -90,7 +92,7 @@ ms.locfileid: "66101925"
  [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Proporciona instrucciones para crear grupos de SharePoint nuevos con permiso para iniciar el Generador de informes y establecer la seguridad de elementos de modelo. En este tema también se incluyen instrucciones generales acerca de cómo establecer permisos personalizados para cualquier elemento u operación del servidor de informes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Seguridad y protección de Reporting Services](reporting-services-security-and-protection.md)  
   

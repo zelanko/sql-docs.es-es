@@ -1,5 +1,5 @@
 ---
-title: Modificar la propiedad KeyColumns de un atributo | Microsoft Docs
+title: Modifique la propiedad KeyColumn de un atributo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c5effed34dda946d3c65028aa5834f4fbddf7cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077248"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Modificar la propiedad KeyColumns de un atributo
@@ -32,9 +32,9 @@ ms.locfileid: "66077248"
   
     -   En el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta **Dimensiones** y, después, haga clic en **Abrir** o en **Diseñador de vistas**.  
   
-         -o bien-  
+         O bien  
   
-    -   En el Diseñador de cubos, en el **estructura de cubo** , expanda la dimensión de cubo en el **dimensiones** panel y haga clic en **editar \<dimensión >** .  
+    -   En el diseñador de cubos, en la pestaña **estructura de cubo** , expanda la dimensión de cubo en el panel **dimensiones** y haga clic en ** \<editar>de dimensiones **.  
   
 3.  En el panel **Atributos** de la pestaña **Estructura de dimensión** , haga clic en el atributo cuya propiedad **KeyColumns** desee modificar.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66077248"
   
 8.  Para cambiar el orden de las columnas de clave, seleccione una columna y, después, haga clic en el botón **Subir** o **Bajar** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de las propiedades de los atributos de dimensión](dimension-attribute-properties-reference.md)  
   
   

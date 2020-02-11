@@ -1,5 +1,5 @@
 ---
-title: Importar desde Analysis Services (SSAS Tabular) | Microsoft Docs
+title: Importar desde Analysis Services (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d864b2f8256bdd33cd2f595274a7894b4ea5e89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067047"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>Importar desde Analysis Services (SSAS tabular)
@@ -35,7 +35,7 @@ ms.locfileid: "66067047"
   
 5.  En **Nombre de la base de datos**, seleccione la base de datos del modelo tabular que contiene los metadatos del modelo que desea importar y, a continuación, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
- [Propiedades del proyecto &#40;SSAS tabular&#41;](properties-ssas-tabular.md)  
+## <a name="see-also"></a>Consulte también  
+ [Propiedades del proyecto &#40;&#41;tabular de SSAS](properties-ssas-tabular.md)  
   
   

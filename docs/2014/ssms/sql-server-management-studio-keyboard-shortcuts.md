@@ -21,14 +21,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127050"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Métodos abreviados de teclado de SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ofrece a los usuarios dos esquemas de teclado. De forma predeterminada, usa el esquema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , con métodos abreviados de teclado basados en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece un esquema del teclado similar al esquema estándar de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para cambiar el esquema de teclado o agregar otros métodos abreviados de teclado, haga clic en **Opciones** en el menú **Herramientas**. Seleccione el esquema de teclado deseado en la página **Entorno**, **Teclado** .  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ofrece a los usuarios dos esquemas de teclado. De forma predeterminada, usa el [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] esquema, con métodos abreviados de teclado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] basados en 2010. 
+  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece un esquema del teclado similar al esquema estándar de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para cambiar el esquema de teclado o agregar otros métodos abreviados de teclado, haga clic en **Opciones** en el menú **Herramientas**. Seleccione el esquema de teclado deseado en la página **Entorno**, **Teclado** .  
   
 > [!NOTE]  
 >  Para que solo aparezcan los títulos, haga clic en **Contraer todo** en la parte superior de esta página.  
@@ -42,7 +43,7 @@ ms.locfileid: "63127050"
 |Mostrar el menú contextual|MAYÚS+F10|MAYÚS+F10|  
 |Mostrar el cuadro de diálogo **Nuevo archivo** para crear un archivo|CTRL+N|CTRL+N|  
 |Mostrar el cuadro de diálogo **Nuevo proyecto** para crear un proyecto nuevo|CTRL+MAYÚS+N|CTRL+MAYÚS+N|  
-|Mostrar el cuadro de diálogo **Abrir archivo** para abrir un archivo existente|CTRL+O<br /><br /> o Administrador de configuración de<br /><br /> CTRL+MAYÚS+G|CTRL+O|  
+|Mostrar el cuadro de diálogo **Abrir archivo** para abrir un archivo existente|CTRL+O<br /><br /> or<br /><br /> CTRL+MAYÚS+G|CTRL+O|  
 |Mostrar el cuadro de diálogo **Abrir proyecto** para abrir un proyecto existente|CTRL+MAYÚS+O|CTRL+MAYÚS+O|  
 |Mostrar el cuadro de diálogo **Agregar nuevo elemento** para agregar un archivo nuevo al proyecto actual|CTRL+MAYÚS+A|CTRL+MAYÚS+A|  
 |Mostrar el cuadro de diálogo **Agregar elemento existente** para agregar un archivo existente al proyecto actual|MAYÚS+ALT+A|MAYÚS+ALT+A|  
@@ -55,7 +56,7 @@ ms.locfileid: "63127050"
 |------------|-----------------------------|---------------------------------|  
 |Cerrar la ventana secundaria MDI actual|CTRL+F4|CTRL+F4|  
 |Cerrar un menú o un cuadro de diálogo, cancelar una operación en curso o colocar el foco en la ventana del documento actual|ESC|ESC|  
-|Imprimir|CTRL+P|CTRL+P|  
+|Print|CTRL+P|CTRL+P|  
 |Salir|ALT+F4|ALT+F4|  
 |Pasar al modo de pantalla completa|MAYÚS+ALT+ENTRAR|MAYÚS+ALT+ENTRAR|  
 |Cerrar la ventana de herramientas actual|MAYÚS+ESC|MAYÚS+ESC|  
@@ -65,10 +66,10 @@ ms.locfileid: "63127050"
 |Mover el punto de inserción a la barra desplegable situada encima del editor de código cuando el editor está en la vista Código o Código del servidor|CTRL+F2|Sin equivalencia|  
 |Ir a la barra de herramientas de la ventana de herramientas actual|MAYÚS+ALT|MAYÚS+ALT|  
 |Mostrar el navegador del IDE con la primera ventana de herramientas seleccionada|ALT+F7|Sin equivalencia|  
-|Ir a la siguiente ventana de herramientas|ALT+F6<br /><br /> o Administrador de configuración de<br /><br /> F6 en el Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)]|ALT+F6|  
+|Ir a la siguiente ventana de herramientas|ALT+F6<br /><br /> or<br /><br /> F6 en el Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)]|ALT+F6|  
 |Ir a la ventana de herramientas anterior|MAYÚS+ALT+F7|MAYÚS+ALT+F7|  
 |Ir al siguiente panel de una vista de panel dividido de un documento|F6|F6|  
-|Ir a la ventana seleccionada anteriormente|MAYÚS+ALT+F6<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+F6 en el Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)]|MAYÚS+ALT+F6|  
+|Ir a la ventana seleccionada anteriormente|MAYÚS+ALT+F6<br /><br /> or<br /><br /> MAYÚS+F6 en el Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)]|MAYÚS+ALT+F6|  
 |Ir al panel anterior de una vista de panel dividido de un documento|MAYÚS+F6|F6|  
 |Mostrar el menú Acoplar|ALT+SIGNO MENOS (-)|Sin equivalencia|  
 |Mostrar un menú emergente con todas las ventanas abiertas|CTRL+ALT+FLECHA ABAJO|Sin equivalencia|  
@@ -80,14 +81,14 @@ ms.locfileid: "63127050"
 |Mostrar la ventana Resumen|F7|F7|  
 |Mostrar la ventana Propiedades|F4|F4|  
 |Mostrar la ventana **Resultados**|CTRL+ALT+O|Sin equivalencia|  
-|Mostrar la ventana **Lista de tareas**|CTRL+\\, T<br /><br /> o Administrador de configuración de<br /><br /> CTRL+\\, CTRL+T|CTRL+ALT+K|  
+|Mostrar la ventana **Lista de tareas**|CTRL+\\, T<br /><br /> or<br /><br /> CTRL+\\, CTRL+T|CTRL+ALT+K|  
 |Alternar entre la vista de lista Detalles del Explorador de objetos y el panel de propiedades Detalles del Explorador de objetos.|F6|F6|  
 |Controlar la barra de división que separa la vista de lista Detalles del Explorador de objetos y el panel de propiedades Detalles del Explorador de objetos a fin de ajustar el tamaño del panel de información.|TAB, luego flecha ARRIBA o flecha ABAJO|TAB, luego flecha ARRIBA o flecha ABAJO|  
 |Mostrar el cuadro de herramientas|CTRL+ALT+X|CTRL+ALT+X|  
 |Mostrar la ventana Marcadores|CTRL+K, CTRL+W|CTRL+K, CTRL+W|  
 |Mostrar la ventana del explorador|CTRL+ALT+R|CTRL+ALT+R|  
 |Mostrar un menú de etiquetas inteligentes de comandos comunes para los controles del servidor web en el diseñador de HTML|MAYÚS+ALT+F10|Sin equivalencia|  
-|Mostrar la ventana Lista de errores (solo Editor de[!INCLUDE[tsql](../includes/tsql-md.md)] )|CRTL+\\, CTRL+E<br /><br /> o Administrador de configuración de<br /><br /> CTRL+\\, E|CRTL+\\, CTRL+E|  
+|Mostrar la ventana Lista de errores (solo Editor de[!INCLUDE[tsql](../includes/tsql-md.md)] )|CRTL+\\, CTRL+E<br /><br /> or<br /><br /> CTRL+\\, E|CRTL+\\, CTRL+E|  
 |Ir a la entrada siguiente en la ventana Lista de errores (solo Editor de[!INCLUDE[tsql](../includes/tsql-md.md)] )|CTRL+MAYÚS+F12|CTRL+MAYÚS+F12|  
 |Mostrar la página anterior del historial de consultas. Disponible solamente en la ventana del explorador web|ALT+FLECHA IZQUIERDA|Sin equivalencia|  
 |Mostrar la página siguiente del historial de consultas. Disponible solamente en la ventana del explorador web|ALT+FLECHA DERECHA|Sin equivalencia|  
@@ -97,7 +98,7 @@ ms.locfileid: "63127050"
 |Acción|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Mover el cursor a la izquierda|FLECHA IZQUIERDA|FLECHA IZQUIERDA|  
-|Mover el cursor a la derecha|FLECHA DERECHA|FLECHA DERECHA|  
+|Mover el cursor a la derecha|Flecha derecha|Flecha derecha|  
 |Mover el cursor hacia arriba|FLECHA ARRIBA|FLECHA ARRIBA|  
 |Mover el cursor hacia abajo|FLECHA ABAJO|FLECHA ABAJO|  
 |Mover el cursor al comienzo de la línea|INICIO|INICIO|  
@@ -180,12 +181,12 @@ ms.locfileid: "63127050"
 |Pasar a la vista de pantalla completa|MAYÚS+ALT+ENTRAR|MAYÚS+ALT+ENTRAR|  
 |Desplazarse por el texto una línea hacia arriba|CTRL+FLECHA ARRIBA|CTRL+FLECHA ARRIBA|  
 |Desplazarse por el texto una línea hacia abajo|CTRL+FLECHA ABAJO|CTRL+ FLECHA ABAJO|  
-|Deshacer la última acción de modificación|CTRL+Z<br /><br /> o Administrador de configuración de<br /><br /> ALT+RETROCESO|CTRL+Z|  
-|Restaurar la modificación previamente deshecha|CTRL+MAYÚS+Z<br /><br /> o Administrador de configuración de<br /><br /> CTRL+Y<br /><br /> o Administrador de configuración de<br /><br /> ALT+MAYÚS+RETROCESO|CTRL+MAYÚS+Z<br /><br /> o Administrador de configuración de<br /><br /> CTRL+Y<br /><br /> o Administrador de configuración de<br /><br /> ALT+MAYÚS+RETROCESO|  
+|Deshacer la última acción de modificación|CTRL+Z<br /><br /> or<br /><br /> ALT+RETROCESO|CTRL+Z|  
+|Restaurar la modificación previamente deshecha|CTRL+MAYÚS+Z<br /><br /> or<br /><br /> CTRL+Y<br /><br /> or<br /><br /> ALT+MAYÚS+RETROCESO|CTRL+MAYÚS+Z<br /><br /> or<br /><br /> CTRL+Y<br /><br /> or<br /><br /> ALT+MAYÚS+RETROCESO|  
 |Guardar el elemento seleccionado|CTRL+S|CTRL+S|  
 |Guardar todo|CTRL+MAYÚS+S|CTRL+MAYÚS+S|  
 |Cerrar|CTRL+F4|CTRL+F4|  
-|Imprimir|CTRL+P|CTRL+P|  
+|Print|CTRL+P|CTRL+P|  
 |Salir|ALT+F4|ALT+F4|  
 |Abrir el archivo actual en un explorador|CTRL+MAYÚS+W|Sin equivalencia|  
 |Eliminar todo el texto del archivo actual|CTRL+MAYÚS+SUPR|CTRL+MAYÚS+SUPR|  
@@ -200,7 +201,7 @@ ms.locfileid: "63127050"
 |Abrir una consulta nueva con la conexión actual|CTRL+N|CTRL+N|  
 |Abrir una base de datos en el Explorador de objetos|ALT+F8|ALT+F8|  
 |Especificar valores para los parámetros de plantilla|CTRL+MAYÚS+M|CTRL+MAYÚS+M|  
-|Ejecutar la parte seleccionada del editor de consultas o todo él si no hay nada seleccionado|F5<br /><br /> o Administrador de configuración de<br /><br /> CTRL+MAYÚS+E|F5<br /><br /> o Administrador de configuración de<br /><br /> CTRL+E<br /><br /> o Administrador de configuración de<br /><br /> ALT+X|  
+|Ejecutar la parte seleccionada del editor de consultas o todo él si no hay nada seleccionado|F5<br /><br /> or<br /><br /> CTRL+MAYÚS+E|F5<br /><br /> or<br /><br /> CTRL+E<br /><br /> or<br /><br /> ALT+X|  
 |Analizar la parte seleccionada del editor de consultas o todo él si no hay nada seleccionado|CTRL+F5|CTRL+F5|  
 |Mostrar el plan de ejecución estimado|CTRL+MAYÚS+ALT+L|CTRL+L|  
 |Cancelar la consulta que se está ejecutando|ALT+INTERRUMPIR|ALT+INTERRUMPIR|  
@@ -213,7 +214,7 @@ ms.locfileid: "63127050"
 |Alternar entre los paneles de consulta y de resultados|F6|F6|  
 |Copiar la cuadrícula y los encabezados de resultados al Portapapeles|CTRL+MAYÚS+C|Sin equivalencia|  
 |Ir a la siguiente ventana activa de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]|ALT+F6|ALT+F6|  
-|Abrir [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|CTRL+ALT+P|CTRL+ALT+P|  
+|Abra [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].|CTRL+ALT+P|CTRL+ALT+P|  
 |Mostrar el cuadro de dialogo del Diseñador de consultas en la ventana de editor de consultas|CTRL+MAYÚS+Q|Sin equivalencia|  
 |Ejecutar el procedimiento almacenado del sistema `sp_help`|ALT+F1|ALT+F1|  
 |Ejecutar el procedimiento almacenado del sistema `sp_who`|CTRL+1|CTRL+1|  
@@ -234,8 +235,8 @@ ms.locfileid: "63127050"
 |------------|-----------------------------|---------------------------------|  
 |Insertar una línea nueva|ENTRAR o MAYÚS+ENTRAR|ENTRAR o MAYÚS+ENTRAR|  
 |Intercambiar los caracteres de cualquier lado del cursor (no es aplicable al Editor SQL).|CTRL+T|CTRL+T|  
-|Eliminar un carácter situado a la derecha del cursor|SUPRIMIR|SUPRIMIR|  
-|Eliminar un carácter situado a la izquierda del cursor|RETROCESO<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+<br /><br /> RETROCESO|RETROCESO<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+<br /><br /> RETROCESO|  
+|Eliminar un carácter situado a la derecha del cursor|Delete|Delete|  
+|Eliminar un carácter situado a la izquierda del cursor|RETROCESO<br /><br /> or<br /><br /> MAYÚS+<br /><br /> RETROCESO|RETROCESO<br /><br /> or<br /><br /> MAYÚS+<br /><br /> RETROCESO|  
 |Eliminar el espacio en blanco de la selección o eliminar el espacio en blanco junto al curso si no hay selección|CTRL+K, C|Sin equivalencia|  
 |Insertar el número de espacios configurado para el editor|TAB|TAB|  
 |Insertar una línea en blanco encima del cursor|CTRL+ENTRAR|CTRL+ENTRAR|  
@@ -278,7 +279,7 @@ ms.locfileid: "63127050"
 |Definir la siguiente instrucción|Ctrl+3 0|Sin equivalencia|  
 |Mostrar la instrucción siguiente|ALT+NUM|Sin equivalencia|  
 |Implementar el comando **Ejecutar hasta el cursor**|CTRL+F10|CTRL+F10|  
-|Mostrar el cuadro de diálogo **Inspección rápida**|CTRL+ALT+Q<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+F9|CTRL+ALT+Q|  
+|Mostrar el cuadro de diálogo **Inspección rápida**|CTRL+ALT+Q<br /><br /> or<br /><br /> MAYÚS+F9|CTRL+ALT+Q|  
 |Alternar puntos de interrupción|F9|F9|  
 |Habilitar puntos de interrupción|CTRL+F9|Sin equivalencia|  
 |Eliminar punto de interrupción Solamente disponible en la ventana **Puntos de interrupción**|ALT+F9, D|Sin equivalencia|  
@@ -303,13 +304,13 @@ ms.locfileid: "63127050"
   
 |Acción|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Enumerar miembros|CTRL+J|CTRL+ESPACIO<br /><br /> o Administrador de configuración de<br /><br /> CTRL+J|  
-|Completar palabra|CTRL+ESPACIO<br /><br /> o Administrador de configuración de<br /><br /> ALT+FLECHA DERECHA|ALT+FLECHA DERECHA|  
+|Enumerar miembros|CTRL+J|CTRL+ESPACIO<br /><br /> or<br /><br /> CTRL+J|  
+|Completar palabra|CTRL+ESPACIO<br /><br /> or<br /><br /> ALT+FLECHA DERECHA|ALT+FLECHA DERECHA|  
 |Mostrar información rápida|CTRL+K, CTRL+I|Sin equivalencia|  
 |Mostrar información de parámetros|CTRL+MAYÚS+ESPACIO|CTRL+MAYÚS+ESPACIO|  
 |Copiar sugerencia de parámetros|CTRL+MAYÚS+ALT+C|Sin equivalencia|  
 |Pegar sugerencia de parámetros|CTRL+MAYÚS+ALT+P|Sin equivalencia|  
-|Salto entre pares de la sintaxis|CTRL+]|CTRL+]|  
+|Salto entre pares de la sintaxis|CTRL +]|CTRL +]|  
 |Iniciar el selector de fragmento de código|CTRL+K, CTRL+X|CTRL+K, CTRL+Z|  
 |Actualizar memoria caché local|CTRL+MAYÚS+R|CTRL+MAYÚS+R|  
 |Iniciar el selector de fragmento de código Rodear con|CTRL+K, CTRL+S|CTRL+K, CTRL+S|  
@@ -343,7 +344,7 @@ ms.locfileid: "63127050"
   
 |Acción|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Ayuda|F1<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+F1|F1|  
+|Ayuda|F1<br /><br /> or<br /><br /> MAYÚS+F1|F1|  
 |Mostrar los Libros en pantalla de SQL Server|CTRL+F1|Sin equivalencia|  
 |Abrir el Administrador de la biblioteca de ayuda|CTRL+ALT+F1|Sin equivalencia|  
 |Mostrar la página web del centro de recursos de SQL Server|CTRL+ALT+F2|Sin equivalencia|  
@@ -375,17 +376,17 @@ ms.locfileid: "63127050"
 |Detener la búsqueda **Buscar en archivos**|ALT+F3, S|ALT+F3, S|  
 |Activar o desactivar la opción **Palabra completa** de **Buscar y reemplazar**|ALT+F3, W|ALT+F3, W|  
 |Activar o desactivar la opción **Carácter comodín** de **Buscar y reemplazar**|ALT+F3, P|ALT+F3, P|  
-|Poner el símbolo de inserción en el cuadro Buscar/Comando de la barra de herramientas Estándar|CTRL+/|Sin equivalencia|  
+|Poner el símbolo de inserción en el cuadro Buscar/Comando de la barra de herramientas Estándar|CTRL + /|Sin equivalencia|  
   
 ## <a name="cut-and-paste-keyboard-shortcuts"></a>Métodos abreviados de teclado para cortar y pegar  
   
 |Acción|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Cortar (eliminar el elemento seleccionado y colocarlo en el Portapapeles)|CTRL+X<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+CTRL+SUPR|CTRL+X<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+SUPR|  
-|Cortar todas las líneas seleccionadas o la línea actual si no hay nada seleccionado|CTRL+L<br /><br /> o Administrador de configuración de<br /><br /> CTRL+MAYÚS+L|Sin equivalencia|  
-|Copiar en el Portapapeles|CTRL+C<br /><br /> o Administrador de configuración de<br /><br /> CTRL+INSERT|CTRL+C<br /><br /> o Administrador de configuración de<br /><br /> CTRL+INSERT|  
-|Pegar desde el Portapapeles en el punto de inserción|CTRL+V<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+INSERT|CTRL+V<br /><br /> o Administrador de configuración de<br /><br /> MAYÚS+INSERT|  
-|Pegar un elemento desde el anillo del Portapapeles en el punto de inserción y seleccionar automáticamente el elemento pegado|CTRL+MAYÚS+V<br /><br /> o Administrador de configuración de<br /><br /> CTRL+MAYÚS+INSERT|Sin equivalencia|  
+|Cortar (eliminar el elemento seleccionado y colocarlo en el Portapapeles)|CTRL+X<br /><br /> or<br /><br /> MAYÚS+CTRL+SUPR|CTRL+X<br /><br /> or<br /><br /> MAYÚS+SUPR|  
+|Cortar todas las líneas seleccionadas o la línea actual si no hay nada seleccionado|CTRL+L<br /><br /> or<br /><br /> CTRL+MAYÚS+L|Sin equivalencia|  
+|Copiar en el Portapapeles|Ctrl+C<br /><br /> or<br /><br /> CTRL+INSERT|Ctrl+C<br /><br /> or<br /><br /> CTRL+INSERT|  
+|Pegar desde el Portapapeles en el punto de inserción|CTRL+V<br /><br /> or<br /><br /> MAYÚS+INSERT|CTRL+V<br /><br /> or<br /><br /> MAYÚS+INSERT|  
+|Pegar un elemento desde el anillo del Portapapeles en el punto de inserción y seleccionar automáticamente el elemento pegado|CTRL+MAYÚS+V<br /><br /> or<br /><br /> CTRL+MAYÚS+INSERT|Sin equivalencia|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>Métodos abreviados de teclado para el visor de registros  
   
@@ -410,7 +411,7 @@ ms.locfileid: "63127050"
 |Desplazarse por los paneles|F6|F6|  
 |Expandir o contraer el panel seleccionado|CTRL y + o -|CTRL y + o -|  
 |Expandir o contraer todos los paneles|+ o -|+ o -|  
-|Copia toda la fila seleccionada en la cuadrícula|CTRL+C|CTRL+C|  
+|Copia toda la fila seleccionada en la cuadrícula|Ctrl+C|Ctrl+C|  
 |Copiar celda|CTRL+MAYÚS+C|CTRL+MAYÚS+C|  
 |Menú desplegable para filtrar en cuadrícula|ALT+Av Pág|ALT+Av Pág|  
 |Desplazar hacia arriba o hacia abajo el Monitor de actividad|CTRL+ALT+Flecha arriba/abajo|CTRL+ALT+Flecha arriba/abajo|  
@@ -449,7 +450,7 @@ ms.locfileid: "63127050"
 |------------|-----------------------------|---------------------------------|  
 |Bajar el control seleccionado en incrementos de 8 en la superficie de diseño|FLECHA ABAJO|Sin equivalencia|  
 |Mover a la izquierda el control seleccionado en incrementos de 8 en la superficie de diseño|FLECHA IZQUIERDA|Sin equivalencia|  
-|Mover a la derecha el control seleccionado en incrementos de 8 en la superficie de diseño|FLECHA DERECHA|Sin equivalencia|  
+|Mover a la derecha el control seleccionado en incrementos de 8 en la superficie de diseño|Flecha derecha|Sin equivalencia|  
 |Subir el control seleccionado en incrementos de 8 en la superficie de diseño|FLECHA ARRIBA|Sin equivalencia|  
 |Aumentar el alto del control seleccionado en incrementos de 8|MAYÚS+FLECHA ABAJO|Sin equivalencia|  
 |Reducir el ancho del control seleccionado en incrementos de 8|MAYÚS+FLECHA IZQUIERDA|Sin equivalencia|  
@@ -459,7 +460,7 @@ ms.locfileid: "63127050"
 |Ir al control anterior de la página|MAYÚS+TAB|Sin equivalencia|  
 |Mostrar la cuadrícula en la superficie de diseño|ENTRAR|Sin equivalencia|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Personalizar los menús y los métodos abreviados de teclado](customize-menus-and-shortcut-keys.md)  
   
   

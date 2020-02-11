@@ -16,18 +16,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137606"
 ---
-# <a name="extended-stored-procedures-programmer39s-reference"></a>Programador de procedimientos almacenados de Extended&#39;s referencia
+# <a name="extended-stored-procedures-programmer39s-reference"></a>Referencia del programador de procedimientos almacenados extendidos&#39;s
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
- La API de procedimiento almacenado extendido de [!INCLUDE[msCoName](../../includes/msconame-md.md)], previamente parte de Servicios abiertos de datos, proporciona una interfaz de programación de aplicaciones (API) basada en servidor para extender la funcionalidad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La API está compuesta de funciones y macros de C y C++ que se utilizan para generar aplicaciones.  
+ La [!INCLUDE[msCoName](../../includes/msconame-md.md)] API de procedimiento almacenado extendido, que anteriormente formaba parte de Open Data Services, proporciona una interfaz de programación de aplicaciones (API [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) basada en servidor para extender la funcionalidad. La API está compuesta de funciones y macros de C y C++ que se utilizan para generar aplicaciones.  
   
  Con la aparición de las más recientes y eficaces tecnologías, como la integración CLR, se ha reemplazado en gran medida la necesidad de procedimientos almacenados extendidos.  
   

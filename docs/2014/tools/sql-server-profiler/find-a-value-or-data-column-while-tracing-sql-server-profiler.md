@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cc5088fdb0bc78a2befff241854e4a2bc354a22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035040"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>Buscar un valor o una columna de datos durante la ejecución de un seguimiento (SQL Server Profiler)
@@ -38,7 +38,7 @@ ms.locfileid: "63035040"
   
      La búsqueda se inicia en la fila que se seleccionó en el paso 1.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Profiler](sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)  
   

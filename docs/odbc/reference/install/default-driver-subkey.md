@@ -16,26 +16,26 @@ ms.assetid: 9e58b24f-ebfc-4286-a272-0843b4d6f2d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e82644d3bddab5d4f6fde6f7103bd9731872bab9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094188"
 ---
 # <a name="default-driver-subkey"></a>Subclave de controlador predeterminada
-La subclave predeterminada contiene un valor único que describe el controlador utilizado por el origen de datos de forma predeterminada. El formato de este valor se muestra en la tabla siguiente.  
+La subclave predeterminada contiene un valor único que describe el controlador utilizado por el origen de datos predeterminado. El formato de este valor se muestra en la tabla siguiente.  
   
-|NOMBRE|Tipo de datos|Datos|  
+|Nombre|Tipo de datos|data|  
 |----------|---------------|----------|  
-|**Controlador**|REG_SZ|*default-driver-description*|  
+|**Controlador**|REG_SZ|*default-Driver-Description*|  
   
- El *descripción del controlador predeterminado* nombre es el mismo que el nombre del valor bajo la subclave de controladores ODBC que describe el controlador.  
+ El nombre *predeterminado-Driver-Description* es el mismo que el nombre del valor de la subclave ODBC drivers que describe el controlador.  
   
- Por ejemplo, si el origen de datos de forma predeterminada, usa el controlador de SQL Server, el valor bajo la subclave predeterminada podría ser:  
+ Por ejemplo, si el origen de datos predeterminado usa el controlador SQL Server, el valor de la subclave predeterminada podría ser:  
   
 ```  
 Driver : REG_SZ : SQL Server  
 ```  
   
 > [!NOTE]  
->  El controlador predeterminado de contenidos en la subclave predeterminada puede hacer referencia a un DSN de usuario predeterminado o un DSN de sistema de forma predeterminada. Si un DSN de usuario predeterminado y un sistema predeterminado DSN se han creado, el controlador predeterminado viene determinada por el DSN que se creó por última vez, por lo que quizás no sea una entrada válida para el DSN que creó en primer lugar.
+>  El controlador predeterminado incluido en la subclave predeterminada puede hacer referencia a un DSN de usuario predeterminado o a un DSN de sistema predeterminado. Si se han creado un DSN de usuario predeterminado y un DSN de sistema predeterminado, el controlador predeterminado viene determinado por el DSN que se creó en último lugar, por lo que es posible que no sea una entrada válida para el DSN que se creó en primer lugar.

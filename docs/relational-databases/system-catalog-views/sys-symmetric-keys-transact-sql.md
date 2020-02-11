@@ -1,5 +1,5 @@
 ---
-title: sys.symmetric_keys (Transact-SQL) | Microsoft Docs
+title: Sys. symmetric_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,37 +21,37 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5b4607c5873889c17e9934cc4f24465fe4e83007
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108927"
 ---
-# <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
+# <a name="syssymmetric_keys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve una fila por cada clave simétrica creada con la instrucción CREATE SYMMETRIC KEY.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nombre de la clave. Es único en la base de datos.|  
+|**Name**|**sysname**|Nombre de la clave. Es único en la base de datos.|  
 |**principal_id**|**int**|Identificador de la entidad de seguridad de la base de datos que posee la clave.|  
 |**symmetric_key_id**|**int**|Id. de la clave. Es único en la base de datos.|  
 |**key_length**|**int**|Longitud de la clave, en bits.|  
-|**key_algorithm**|**char(2)**|Algoritmo utilizado con la clave:<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = clave EKM|  
-|**algorithm_desc**|**nvarchar(60)**|Descripción del algoritmo usado con la clave:<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> Descripción de la Administración extensible de claves, solamente los algoritmos (NULL)|  
+|**key_algorithm**|**Char (2)**|Algoritmo utilizado con la clave:<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = clave EKM|  
+|**algorithm_desc**|**nvarchar (60)**|Descripción del algoritmo usado con la clave:<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> Descripción de la Administración extensible de claves, solamente los algoritmos (NULL)|  
 |**create_date**|**datetime**|Fecha de creación de la clave.|  
 |**modify_date**|**datetime**|Fecha de modificación de la clave.|  
 |**key_guid**|**uniqueidentifier**|Identificador único global (GUID) asociado a la clave. Se genera automáticamente para claves permanentes. Los GUID para claves temporales se obtienen a partir de la frase de contraseña suministrada por el usuario.|  
 |**key_thumbprint**|**sql_variant**|Hash de la tecla 1 SHA. El hash es globalmente único. Para las claves que no sean de Administración extensible de claves, este valor será NULL.|  
-|**provider_type**|**nvarchar(120)**|Tipo de proveedor criptográfico:<br /><br /> CRYPTOGRAPHIC PROVIDER = claves de Administración extensible de claves<br /><br /> NULL = Claves que no sean de Administración extensible de claves|  
+|**provider_type**|**nvarchar (120)**|Tipo de proveedor criptográfico:<br /><br /> CRYPTOGRAPHIC PROVIDER = claves de Administración extensible de claves<br /><br /> NULL = Claves que no sean de Administración extensible de claves|  
 |**cryptographic_provider_guid**|**uniqueidentifier**|GUID del proveedor criptográfico. Para las claves que no sean de Administración extensible de claves, este valor será NULL.|  
 |**cryptographic_provider_algid**|**sql_variant**|Identificador del algoritmo del proveedor criptográfico. Para las claves que no sean de Administración extensible de claves, este valor será NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El algoritmo RC4 está obsoleto. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!NOTE]  
@@ -65,7 +65,7 @@ ms.locfileid: "68108927"
   
 -   Las claves simétricas creadas con ALGORITHM = TRIPLE_DES utilizan TRIPLE DES con una clave de 128 bits.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

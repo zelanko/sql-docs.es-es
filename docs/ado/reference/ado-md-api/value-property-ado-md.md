@@ -1,5 +1,5 @@
 ---
-title: Value (propiedad, ADO MD) | Microsoft Docs
+title: Propiedad Value (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,20 +17,20 @@ ms.assetid: 70dc5cff-0b05-456d-b86b-2686fe4e7ce6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74cebabb5fad4dc7e7f6719224324b243b40d206
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913883"
 ---
 # <a name="value-property-ado-md"></a>Value (propiedad) (ADO MD)
-Indica el valor del elemento actual [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  
+Indica el valor de la [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md)actual.  
   
 ## <a name="return-values"></a>Valores devueltos  
- Devuelve un **Variant** y es de solo lectura.  
+ Devuelve una **variante** y es de solo lectura.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [FormattedValue (propiedad, ADO MD)](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)

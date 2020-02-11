@@ -1,5 +1,5 @@
 ---
-title: Mtd (MDX) | Microsoft Docs
+title: MTD (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e604f66e48c8c8bb93ff5fd4abb174449f0fcdd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088440"
 ---
 # <a name="mtd-mdx"></a>Mtd (MDX)
@@ -31,10 +31,10 @@ Mtd( [ Member_Expression ] )
  *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Comentarios  
- Si no se especifica una expresión de miembro, el valor predeterminado es el miembro actual de la primera jerarquía con un nivel de tipo *meses* en la primera dimensión de tipo *tiempo* en el grupo de medida.  
+## <a name="remarks"></a>Observaciones  
+ Si no se especifica una expresión de miembro, el valor predeterminado es el miembro actual de la primera jerarquía con un nivel de tipo *months* en la primera dimensión de tipo *Time* en el grupo de medida.  
   
- El **Mtd** función es una función abreviada para la [PeriodsToDate](../mdx/periodstodate-mdx.md) funcionar cuando se establece la propiedad Type de la jerarquía de atributo en el que un nivel se basa en *meses*. Es decir, `Mtd(Member_Expression)` es equivalente a `PeriodsToDate(Month_Level_Expression,Member_Expression)`.  
+ La función **MTD** es una función de acceso directo para la función [PeriodsToDate](../mdx/periodstodate-mdx.md) cuando la propiedad Type de la jerarquía de atributo en la que se basa un nivel está establecida en *months*. Es decir, `Mtd(Member_Expression)` es equivalente a `PeriodsToDate(Month_Level_Expression,Member_Expression)`.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve la suma de los costos de flete de las ventas por Internet del mes de julio de 2002 hasta el día 20 de julio.  
@@ -49,8 +49,8 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Suma &#40;MDX&#41;](../mdx/sum-mdx.md)   
+## <a name="see-also"></a>Consulte también  
+ [SUM &#40;MDX&#41;](../mdx/sum-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

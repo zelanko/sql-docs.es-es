@@ -1,5 +1,5 @@
 ---
-title: Los identificadores de tipo SQL | Microsoft Docs
+title: Identificadores de tipo SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be36bd8efc059c1a4f9b5ddf2cdd7faf32cf7dd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107447"
 ---
 # <a name="sql-type-identifiers"></a>Identificadores de tipo SQL
-Cada origen de datos define sus propios tipos de datos SQL. ODBC define los identificadores de tipo y describe las características generales de los tipos de datos SQL que se pueden asignar a cada identificador de tipo. Es cómo cada tipo de datos en el origen de datos subyacente se asigna a un identificador de tipo SQL de ODBC específicos del controlador.  
+Cada origen de datos define sus propios tipos de datos SQL. ODBC define los identificadores de tipo y describe las características generales de los tipos de datos de SQL que podrían estar asignados a cada identificador de tipo. Es específico del controlador el modo en que cada tipo de datos del origen de datos subyacente se asigna a un identificador de tipo SQL de ODBC.  
   
- Por ejemplo, SQL_CHAR es el identificador de tipo para una columna de caracteres con una longitud fija, normalmente entre 1 y 254 caracteres. Estas características se corresponden con el tipo de datos de carácter se encuentra en muchos orígenes de datos SQL. Por lo tanto, cuando una aplicación descubre que el identificador de tipo para una columna SQL_CHAR, puede asumir probablemente se trata de una columna CHAR. Sin embargo, debería comprobar la longitud de bytes de la columna antes de dar por supuesto que está entre 1 y 254 caracteres; el controlador para un origen de datos que no sea de SQL, por ejemplo, podría asignar una columna de caracteres de longitud fija de 500 caracteres SQL_CHAR o SQL_LONGVARCHAR, porque ninguna de ellas es una coincidencia exacta.  
+ Por ejemplo, SQL_CHAR es el identificador de tipo de una columna de caracteres con una longitud fija, normalmente de entre 1 y 254 caracteres. Estas características se corresponden con el tipo de datos CHAR que se encuentra en muchos orígenes de datos SQL. Por lo tanto, cuando una aplicación detecta que el identificador de tipo de una columna es SQL_CHAR, puede suponer que probablemente está tratando con una columna CHAR. Sin embargo, todavía debería comprobar la longitud de bytes de la columna antes de suponer que tiene entre 1 y 254 caracteres; por ejemplo, el controlador para un origen de datos que no es de SQL podría asignar una columna de caracteres de longitud fija de 500 caracteres a SQL_CHAR o SQL_LONGVARCHAR, porque ninguna de ellas es una coincidencia exacta.  
   
- ODBC define una amplia variedad de identificadores de tipo SQL. Sin embargo, el controlador no debe usar todos estos identificadores. En su lugar, usa solo esos identificadores que necesita para exponer los tipos de datos SQL admite el origen de datos subyacente. Si el origen de datos subyacente admite tipos de datos SQL para que ningún identificador de tipo se corresponde, el controlador puede definir los identificadores de tipo adicionales. Para obtener más información, consulte [los tipos de datos específicos del controlador, Descriptor tipos, tipos de información, tipos de diagnóstico y atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
+ ODBC define una gran variedad de identificadores de tipo SQL. Sin embargo, no es necesario que el controlador Use todos estos identificadores. En su lugar, solo usa los identificadores que necesita para exponer los tipos de datos de SQL admitidos por el origen de datos subyacente. Si el origen de datos subyacente admite tipos de datos de SQL a los que no se corresponde ningún identificador de tipo, el controlador puede definir identificadores de tipo adicionales. Para obtener más información, vea [tipos de datos específicos del controlador, tipos de descriptores, tipos de información, tipos de diagnóstico y atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
- Para obtener una descripción completa de identificadores de tipo SQL, consulte [tipos de datos C](../../../odbc/reference/appendixes/c-data-types.md) en el apéndice D: Tipos de datos.
+ Para obtener una descripción completa de los identificadores de tipo SQL, vea [tipos de datos de C](../../../odbc/reference/appendixes/c-data-types.md) en el Apéndice D: tipos de datos.

@@ -18,13 +18,13 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122449"
 ---
-# <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
+# <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Proporciona información acerca de inicios de sesión y sus usuarios asociados en cada base de datos.  
@@ -39,7 +39,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @LoginNamePattern = ] 'login'` Es un nombre de inicio de sesión. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión* debe existir si se especifica. Si *inicio de sesión* no es se especifica, se devuelve información sobre todos los inicios de sesión.  
+`[ @LoginNamePattern = ] 'login'`Es un nombre de inicio de sesión. *login* es de **tipo sysname y su**valor predeterminado es NULL. el *Inicio de sesión* debe existir si se especifica. Si no se especifica *login* , se devuelve información acerca de todos los inicios de sesión.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -47,37 +47,37 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  El primer informe contiene información acerca de cada inicio de sesión especificado, tal como se muestra en la tabla siguiente.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nombre de inicio de sesión.|  
 |**SID**|**varbinary(85)**|Identificador de seguridad (SID) del inicio de sesión.|  
-|**DefDBName**|**sysname**|Base de datos predeterminada que **LoginName** utiliza al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**DefLangName**|**sysname**|Idioma predeterminado utilizado por **LoginName**.|  
-|**Auser**|**char(5)**|Sí = **LoginName** tiene un nombre de usuario asociada en una base de datos.<br /><br /> No = **LoginName** no tiene un nombre de usuario asociado.|  
-|**ARemote**|**char(7)**|Sí = **LoginName** tiene asociado un inicio de sesión remoto.<br /><br /> No = **LoginName** no tiene asociado un inicio de sesión.|  
+|**DefDBName**|**sysname**|Base de datos predeterminada que **LoginName** usa al conectarse a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instancia de.|  
+|**DefLangName**|**sysname**|Idioma predeterminado usado por **LoginName**.|  
+|**Auser**|**Char (5)**|Sí = **LoginName** tiene un nombre de usuario asociado en una base de datos.<br /><br /> No = **LoginName** no tiene un nombre de usuario asociado.|  
+|**ARemote**|**Char (7)**|Sí = **LoginName** tiene asociado un inicio de sesión remoto.<br /><br /> No = **LoginName** no tiene un inicio de sesión asociado.|  
   
  El segundo informe contiene información sobre los usuarios asignados a cada inicio de sesión y las pertenencias a roles del inicio de sesión como se muestra en la tabla siguiente.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nombre de inicio de sesión.|  
-|**DBName**|**sysname**|Base de datos predeterminada que **LoginName** utiliza al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**UserName**|**sysname**|Cuenta de usuario que **LoginName** está asociado en **DBName**y los roles que **LoginName** es un miembro en **DBName**.|  
-|**UserOrAlias**|**char(8)**|MemberOf = **UserName** es un rol.<br /><br /> Usuario = **UserName** es una cuenta de usuario.|  
+|**Nombrebd**|**sysname**|Base de datos predeterminada que **LoginName** usa al conectarse a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instancia de.|  
+|**Nombre**|**sysname**|Cuenta de usuario a la que **LoginName** está asignada en **dbname**y los roles de los que **LoginName** es miembro en **dbname**.|  
+|**UserOrAlias**|**Char (8)**|MemberOf = **username** es un rol.<br /><br /> User = **username** es una cuenta de usuario.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Antes de quitar un inicio de sesión, utilice **sp_helplogins** para identificar las cuentas de usuario que se asignan al inicio de sesión.  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **securityadmin** rol fijo de servidor.  
+ Requiere la pertenencia al rol fijo de servidor **securityadmin** .  
   
- Para identificar todas las cuentas de usuario asignadas a un inicio de sesión determinado, **sp_helplogins** debe comprobar todas las bases de datos en el servidor. Por lo tanto, en todas las bases de datos del servidor se tiene que dar, como mínimo, una de las condiciones siguientes:  
+ Para identificar todas las cuentas de usuario asignadas a un inicio de sesión determinado, **sp_helplogins** debe comprobar todas las bases de datos del servidor. Por lo tanto, en todas las bases de datos del servidor se tiene que dar, como mínimo, una de las condiciones siguientes:  
   
--   El usuario que se está ejecutando **sp_helplogins** tiene permiso para acceder a la base de datos.  
+-   El usuario que ejecuta **sp_helplogins** tiene permiso para obtener acceso a la base de datos.  
   
--   El **invitado** cuenta de usuario está habilitada en la base de datos.  
+-   La cuenta de usuario **invitado** está habilitada en la base de datos.  
   
- Si **sp_helplogins** no puede tener acceso a una base de datos, **sp_helplogins** devolverá tanta información como posible y mostrará el mensaje de error 15622.  
+ Si **sp_helplogins** no puede tener acceso a una base de datos, **sp_helplogins** devolverá toda la información que pueda y mostrará el mensaje de error 15622.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se proporciona información sobre el inicio de sesión `John`.  
@@ -99,10 +99,10 @@ John        pubs     John       User
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpdb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_helpuser &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

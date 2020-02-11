@@ -1,5 +1,5 @@
 ---
-title: Sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
+title: Sys. memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,23 +21,23 @@ author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68102380"
 ---
-# <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
+# <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Contiene una fila para cada tabla interna optimizada para memoria que se usa para almacenar tablas de usuario optimizadas para memoria. Cada tabla de usuario corresponde a una o varias tablas internas. Se usa solo una tabla para el almacén de datos central. Las tablas internas adicionales se usan para admitir características como almacenamiento temporal, almacenamiento de índice de almacén de columnas y almacenamiento no consecutivo (LOB) para tablas optimizadas para memoria.
  
-| Nombre de columna  | Tipo de datos  | Descripción |
+| Nombre de la columna  | Tipo de datos  | Descripción |
 | :------ |:----------| :-----|
 |object_id  |**int**|       Identificador de la tabla de usuario. Las tablas internas optimizadas para memoria que existen para admitir una tabla de usuario (como almacenamiento no consecutivo o filas eliminadas, en el caso de las combinaciones de Hk/almacén de columnas) tienen el mismo valor object_id como principal. |
-|xtp_object_id  |**bigint**|    Identificador de objeto de OLTP en memoria que corresponde a la tabla interna optimizada para memoria que se usa para admitir la tabla de usuario. Es un identificador único dentro de la base de datos y puede cambiar a lo largo de la duración del objeto. 
+|xtp_object_id  |**BIGINT**|    Identificador de objeto de OLTP en memoria que corresponde a la tabla interna optimizada para memoria que se usa para admitir la tabla de usuario. Es un identificador único dentro de la base de datos y puede cambiar a lo largo de la duración del objeto. 
 |type|  **int** |   Tipo de tabla interna.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
-|type_desc| **nvarchar(60)**|   Descripción del tipo<br/><br/>DELETED_ROWS_TABLE -> Tabla interna que hace seguimiento de las filas eliminadas en un índice de almacén de columnas.<br/>USER_TABLE -> Tabla que contiene los datos de usuario de manera consecutiva.<br/>DICTIONARIES_TABLE -> Diccionarios correspondiente a un índice de almacén de columnas.<br/>SEGMENTS_TABLE -> Segmentos comprimidos de un índice de almacén de columnas.<br/>ROW_GROUPS_INFO_TABLE -> Metadatos sobre los grupos de filas comprimidas de un índice de almacén de columnas.<br/>INTERNAL OFF-ROW DATA TABLE -> Tabla interna que se usa para almacenar una columna de manera no consecutiva. En este caso, minor_id refleja el valor de column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Final activo de la tabla de historial basada en disco. Las filas insertadas en el historial se insertan primero en esta tabla interna optimizada para memoria. Existe una tarea en segundo plano que mueve de forma asincrónica las filas desde esta tabla interna a la tabla de historial basada en disco. |
+|type_desc| **nvarchar (60)**|   Descripción del tipo<br/><br/>DELETED_ROWS_TABLE -> Tabla interna que hace seguimiento de las filas eliminadas en un índice de almacén de columnas.<br/>USER_TABLE -> Tabla que contiene los datos de usuario de manera consecutiva.<br/>DICTIONARIES_TABLE -> Diccionarios correspondiente a un índice de almacén de columnas.<br/>SEGMENTS_TABLE -> Segmentos comprimidos de un índice de almacén de columnas.<br/>ROW_GROUPS_INFO_TABLE -> Metadatos sobre los grupos de filas comprimidas de un índice de almacén de columnas.<br/>INTERNAL OFF-ROW DATA TABLE -> Tabla interna que se usa para almacenar una columna de manera no consecutiva. En este caso, minor_id refleja el valor de column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Final activo de la tabla de historial basada en disco. Las filas insertadas en el historial se insertan primero en esta tabla interna optimizada para memoria. Existe una tarea en segundo plano que mueve de forma asincrónica las filas desde esta tabla interna a la tabla de historial basada en disco. |
 |minor_id|  **int**|    El valor 0 indica un usuario o una tabla interna.<br/><br/>Un valor distinto de 0 indica el identificador de una columna almacenada no de manera consecutiva. Se combina con column_id en sys.columns.<br/><br/>Cada columna que se almacena de manera no consecutiva tiene una fila correspondiente en esta vista del sistema.|
 
 ## <a name="permissions"></a>Permisos  
@@ -75,7 +75,7 @@ FROM sys.memory_optimized_tables_internal_attributes moa
 WHERE moa.type=5;
 ```
 
-### <a name="b-returning-memory-consumption-of-all-columns-that-are-stored-off-row"></a>b. Devolver el consumo de memoria de todas las columnas que se almacenan de manera no consecutiva
+### <a name="b-returning-memory-consumption-of-all-columns-that-are-stored-off-row"></a>B. Devolver el consumo de memoria de todas las columnas que se almacenan de manera no consecutiva
 
 Para más detalles sobre el consumo de memoria de las columnas que se almacenan de manera no consecutiva, puede usar la consulta siguiente que muestra el consumo de memoria de todas las tablas internas y los índices que se usan para almacenar las columnas no consecutivas:
 
@@ -97,7 +97,7 @@ WHERE moa.type=5;
 
 ### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>C. Devolver el consumo de memoria de los índices de almacén de columnas en las tablas optimizadas para memoria
 
-Utilice la siguiente consulta para mostrar el consumo de memoria de los índices de almacén de columnas en tablas optimizadas para memoria:
+Use la siguiente consulta para mostrar el consumo de memoria de los índices de almacén de columnas en las tablas optimizadas para memoria:
 
 ```Transact-SQL
 SELECT
@@ -113,7 +113,7 @@ WHERE moa.type IN (0, 2, 3, 4)
 GROUP BY o.schema_id, moa.object_id, i.name;
 ```
 
-Use la siguiente consulta desglosa el consumo de memoria a través de las estructuras internas que se usa para los índices de almacén de columnas en tablas optimizadas para memoria:
+Use la siguiente consulta para desglosar el consumo de memoria en las estructuras internas usadas para los índices de almacén de columnas en las tablas optimizadas para memoria:
 
 ```Transact-SQL
 SELECT

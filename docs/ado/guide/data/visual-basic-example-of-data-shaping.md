@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de Visual Basic de forma de datos | Microsoft Docs
+title: Visual Basic ejemplo de modelado de datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,10 +15,10 @@ ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a21eda26bab7f5bc5d678c6763c803323ffcff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923509"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Ejemplo de Visual Basic de forma de datos
@@ -90,16 +90,16 @@ End Function
   
 ```  
   
-#### <a name="try-it"></a>¡Pruébelo!  
+#### <a name="try-it"></a>¡ Pruébelo!  
   
-1.  Cree un proyecto de aplicación EXE estándar de Visual Basic  
+1.  Creación de un proyecto de aplicación EXE estándar Visual Basic  
   
-2.  Seleccione **componentes** desde el **proyecto** menú en Visual Studio  
+2.  Seleccionar **componentes** en el menú **proyecto** de Visual Studio  
   
-3.  Seleccione "Microsoft jerárquica FlexGrid Control 6.0 (OLEDB)" en el **componentes** ventana emergente y, a continuación, haga clic en **guardar**.  
+3.  Seleccione "Microsoft Hierarchical FlexGrid control 6,0 (OLEDB)" en la ventana emergente **componentes** y, a continuación, haga clic en **Guardar**.  
   
-4.  Haga doble clic en el FlexGrid Control desde el panel cuadro de herramientas del área de trabajo de Visual Basic. Cambie el nombre de esta instancia a MSHFLEXGRID.  
+4.  Haga doble clic en el control FlexGrid del panel cuadro de herramientas en el área de trabajo Visual Basic. Cambie el nombre de esta instancia a MSHFLEXGRID.  
   
-5.  Copie el código anterior y péguelo en el **código** página para reemplazar cualquier código existente.  
+5.  Copie el código anterior y péguelo en la página de **códigos** para reemplazar cualquier código existente.  
   
-6.  Seleccione **iniciar** desde el **ejecutar** menú para ejecutar la aplicación.
+6.  Seleccione **iniciar** en el menú **Ejecutar** para ejecutar la aplicación.

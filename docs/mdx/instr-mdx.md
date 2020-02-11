@@ -1,5 +1,5 @@
 ---
-title: InStr (MDX) | Microsoft Docs
+title: Instr (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105302"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
@@ -27,7 +27,7 @@ InStr([start, ]searched_string, search_string[, compare])
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *start*  
+ *iniciales*  
  (Opcional) Expresión numérica que establece la posición inicial de cada búsqueda. Si se omite este valor, la búsqueda comienza en la posición del primer carácter. Si start es NULL, el valor devuelto de la función es indefinido.  
   
  *searched_string*  
@@ -36,13 +36,13 @@ InStr([start, ]searched_string, search_string[, compare])
  *search_string*  
  Expresión de cadena que se va a buscar.  
   
- *Comparar*  
- (opcional) Valor entero. Este argumento siempre se pasa por alto. Se define para la compatibilidad con otras **Instr** funciones en otros lenguajes.  
+ *Compare*  
+ (opcional) Valor entero. Este argumento siempre se pasa por alto. Se define para la compatibilidad con otras funciones de **instr** en otros lenguajes.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un valor entero con la posición inicial de *cadena2* en *String1*.  
+ Valor entero con la posición inicial de *cadena2* en *cadena1*.  
   
- Además, **InStr** función devuelve los valores enumerados en la tabla siguiente según la condición:  
+ Además, la función **instr** devuelve los valores que se muestran en la tabla siguiente, en función de la condición:  
   
 |Condición|Valor devuelto|  
 |---------------|------------------|  
@@ -53,13 +53,13 @@ InStr([start, ]searched_string, search_string[, compare])
 |String2 no se encuentra|cero (0)|  
 |start es mayor que Len(String2)|cero (0)|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!WARNING]  
->  **InStr** siempre realiza una comparación entre mayúsculas y minúsculas.  
+>  **Instr** siempre realiza una comparación sin distinción entre mayúsculas y minúsculas.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra el uso de la **Instr** función y se muestran diversos escenarios de resultado.  
+ En el ejemplo siguiente se muestra el uso de la función **instr** y se muestran diferentes escenarios de resultados.  
   
 ```  
 with   
@@ -97,7 +97,7 @@ from [Adventure Works]
   
 |||  
 |-|-|  
-||Resultados|  
+||Results|  
 |lowercase found in lowercase string|16|  
 |uppercase found in lowercase string|16|  
 |searched string is empty|0|  

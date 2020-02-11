@@ -1,5 +1,5 @@
 ---
-title: Configuración de conversión (MySQLToSQL) | Microsoft Docs
+title: Configuración de la conversión (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,14 +10,14 @@ ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: debdd549dc010f7be6b9d9b37a4caf649d4e106a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103123"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Configuración de conversión (MySQLToSQL)
-El **'Configuración'** pestaña permite al usuario establecer la configuración del nivel de nodo. La pestaña estará disponible en los siguientes nodos de la Metabase:  
+La pestaña **"configuración"** permite al usuario establecer la configuración de nivel de nodo. La pestaña estará disponible en los siguientes nodos de la metabase:  
   
 -   Nodo de base de datos  
   
@@ -29,51 +29,51 @@ El **'Configuración'** pestaña permite al usuario establecer la configuración
   
 -   Nodo de tabla  
   
-## <a name="specifications"></a>Especificaciones:  
-El **configuración** pestaña tiene dos configuraciones de usuario, viz.:  
+## <a name="specifications"></a>Las  
+La pestaña **configuración** tiene dos configuraciones de usuario, es decir,:  
   
-1.  Conversión de función  
+1.  Conversión de funciones  
   
-2.  Conversión de la tabla  
+2.  Conversión de tabla  
   
-Estas opciones estarán disponibles en función del tipo de nodo de la Metabase. Por ejemplo, conversión de función relacionados con la configuración no estará disponible en el nodo de tabla  
+Esta configuración estará disponible en función del tipo de nodo de la metabase. Por ejemplo, la configuración relacionada con la conversión de funciones no estará disponible en el nodo de tabla  
   
 > [!NOTE]  
-> -   Los cambios realizados por el usuario se guardará en el área de trabajo del proyecto como un archivo de preferencias independiente.  
+> -   Los cambios realizados por el usuario se guardarán en el área de trabajo del proyecto como un archivo de preferencias independiente.  
 > -   La extensión de este archivo será **ccprefs**.  
   
-1.  **Configuración de conversión de función:**  
+1.  **Configuración de la conversión de funciones:**  
   
-    1.  Esta ficha contiene **'Forzar la conversión de la función'** opción. La opción puede tener uno de los siguientes cuatro valores:  
+    1.  Esta pestaña contiene la opción **forzar conversión de función** . La opción puede tener uno de los cuatro valores siguientes:  
   
-        -   Convertir según la configuración de proyecto [heredada]  
+        -   Convertir según la configuración del proyecto [heredado]  
   
-        -   Convertir siempre a una función  
+        -   Convertir siempre en una función  
   
-        -   Convertir siempre a un procedimiento  
+        -   Convertir siempre en un procedimiento  
   
         -   Convertir según la configuración del proyecto  
   
-    2.  Según la configuración, la función se convertirá a una función o a un procedimiento almacenado.  
+    2.  En función de la configuración, la función se convertirá en una función o en un procedimiento almacenado.  
   
-    3.  La configuración realizada por el usuario se guarda en el archivo de preferencias en cascada al hacer clic en **aplicar** botón.  
+    3.  La configuración realizada por el usuario se guarda en el archivo de preferencias en cascada al hacer clic en el botón **aplicar** .  
   
 2.  **Configuración de conversión de tabla:**  
   
-    1.  Esta ficha contiene **'Generación de columna auxiliar suprimir ROWID'** opción. La opción puede tener uno de los siguientes cuatro valores:  
+    1.  Esta pestaña contiene la opción **' suprimir la generación de columnas auxiliares ROWID '** . La opción puede tener uno de los cuatro valores siguientes:  
   
-        -   Convertir según la configuración de proyecto [heredada]  
+        -   Convertir según la configuración del proyecto [heredado]  
   
         -   Sí  
   
-        -   Sin  
+        -   No  
   
         -   Convertir según la configuración del proyecto  
   
-    2.  Si **'Sí'** , esta configuración prohíbe la creación de la creación de la columna auxiliar ROWID en tablas de destino.  
+    2.  Si es **"Yes"**, esta configuración prohíbe la creación de la creación de columnas auxiliares ROWID en las tablas de destino.  
   
-    3.  La configuración realizada por el usuario se guarda en el archivo de preferencias en cascada al hacer clic en **aplicar** botón.  
+    3.  La configuración realizada por el usuario se guarda en el archivo de preferencias en cascada al hacer clic en el botón **aplicar** .  
   
-## <a name="see-also"></a>Vea también  
-[Configuración del proyecto (conversión) (MySQL a SQL)](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
+## <a name="see-also"></a>Consulte también  
+[Configuración del proyecto (conversión) (MySQL en SQL)](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

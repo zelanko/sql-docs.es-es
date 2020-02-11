@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71d42f9f3f819dc12964ea0f13de92dfc8db5663
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257393"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificar columnas de clave mediante sql:key-fields (SQLXML 4.0)
@@ -43,7 +43,7 @@ ms.locfileid: "75257393"
 ## <a name="examples"></a>Ejemplos  
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>a. Generar el anidamiento adecuado cuando \<SQL: Relationship> no proporciona información suficiente  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Generar el anidamiento adecuado cuando \<SQL: Relationship> no proporciona información suficiente  
  Este ejemplo muestra dónde se debe especificar **SQL: Key-Fields** .  
   
  Fíjese en el siguiente esquema. El esquema especifica una jerarquía entre el ** \<orden>** y ** \<** los elementos de>de cliente en los que el ** \<elemento Order>** es el elemento primario y el ** \<elemento Customer>** es un elemento secundario.  

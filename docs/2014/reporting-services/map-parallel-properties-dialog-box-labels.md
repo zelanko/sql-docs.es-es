@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Propiedades de paralelo, las etiquetas de mapa | Microsoft Docs
+title: Cuadro de diálogo Propiedades de paralelo de mapa, etiquetas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108247"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Cuadro de diálogo Propiedades de paralelo de mapa, Etiquetas
-  Use la **MapParallel propiedades** cuadro de diálogo para cambiar las opciones de etiqueta de la cuadrícula horizontal en la ventanilla del mapa. Un paralelo representa el valor siguiente en función del sistema de coordenadas especificado para la ventanilla:  
+  Use el cuadro de diálogo **propiedades de MapParallel** para cambiar las opciones de etiqueta de la cuadrícula horizontal en la ventanilla de mapa. Un paralelo representa el valor siguiente en función del sistema de coordenadas especificado para la ventanilla:  
   
 -   **Planar.** Coordenada X.  
   
--   **Geográfico.** Latitud de la proyección actual.  
+-   **Mapas.** Latitud de la proyección actual.  
   
  Haga clic en el botón **Expresión** (*fx*) para modificar una expresión que establezca el valor de la opción.  
   
@@ -36,20 +36,20 @@ ms.locfileid: "66108247"
  **Mostrar etiquetas**  
  Seleccione esta opción para mostrar etiquetas para los paralelos.  
   
- **Placement**  
+ **Ubicación**  
  Seleccione una ubicación para mostrar las etiquetas en relación con la parte superior, central e inferior de la ventanilla. La posición predeterminada es **Cerca**.  
   
--   **Cerca** Muestra las etiquetas en la parte superior.  
+-   **Near** Mostrar etiquetas en la parte superior.  
   
--   **Un cuarto** Muestra las etiquetas a medio camino entre la parte superior y el centro.  
+-   **Un trimestre** Muestra las etiquetas a medio camino entre la parte superior y el centro.  
   
--   **Centro** Muestra las etiquetas en el centro.  
+-   **Centro** de Mostrar etiquetas en el centro.  
   
--   **Tres cuartos** Muestra las etiquetas a medio camino entre el centro y la parte inferior.  
+-   **Tres trimestres** Muestra las etiquetas a medio camino entre el centro y la parte inferior.  
   
--   **Lejos** Muestra las etiquetas en la parte inferior.  
+-   **Lejos** Mostrar etiquetas en la parte inferior.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Mapas &#40;Generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
  [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   

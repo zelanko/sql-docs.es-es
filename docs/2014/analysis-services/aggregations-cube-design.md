@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35c862d89d5f98bee968f0e980c784e35c43e74d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062655"
 ---
 # <a name="aggregations-cube-design"></a>Agregaciones (diseño de cubos)
@@ -32,7 +32,7 @@ ms.locfileid: "66062655"
  **Vista avanzada**  
  Use el panel **Vista avanzada** para crear y modificar agregaciones. Únicamente los usuarios avanzados deben utilizar esta vista.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

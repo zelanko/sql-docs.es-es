@@ -1,5 +1,5 @@
 ---
-title: Establecer las propiedades del servicio de Integration Services | Microsoft Docs
+title: Establecer las propiedades del servicio Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c40ec2d7da7dc8f46644632d29b6fb8d1101ff9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055639"
 ---
 # <a name="set-the-properties-of-the-integration-services-service"></a>Establecer las propiedades del servicio Integration Services
     
 > [!IMPORTANT]  
->  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] admite el servicio para mantener la compatibilidad con versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
+>  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]admite el servicio para mantener la compatibilidad con versiones anteriores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]de. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
   
- El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administra y supervisa los paquetes de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Al instalar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]por primera vez, se inicia el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y el tipo de inicio del servicio se establece como automático.  
+ El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administra y supervisa los paquetes de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. La primera vez que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]se instala [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , el servicio se inicia y el tipo de inicio del servicio se establece en automático.  
   
  Una vez instalado el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , puede establecer sus propiedades mediante el Administrador de configuración de SQL Server o el complemento Servicios de componentes de MMC.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66055639"
         > [!NOTE]  
         >  La pestaña **Avanzadas** no contiene información para el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 5.  En el menú **Archivo** , haga clic en **Salir** para cerrar el complemento **Administrador de configuración de SQL Server** .  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66055639"
   
 3.  En el complemento **Servicios** , localice **SQL Server Integration Services** en la lista de servicios, haga clic con el botón derecho en **SQL Server Integration Services**y, después, haga clic en **Propiedades**.  
   
-4.  En el cuadro de diálogo **Propiedades de SQL Server Integration Services** , puede hacer lo siguiente:  
+4.  En el cuadro de diálogo **propiedades de SQL Server Integration Services** , puede hacer lo siguiente:  
   
     -   Haga clic en la pestaña **General** . Para habilitar el servicio, seleccione el tipo de inicio manual o automático. Para deshabilitar el servicio, seleccione Deshabilitar en el cuadro **Tipo de inicio** . Si el servicio se está ejecutando, no se detendrá al seleccionar Deshabilitar.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "66055639"
   
     -   Haga clic en la pestaña **Dependencias** para ver una lista de los servicios dependientes. El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no tiene dependencias.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  Opcionalmente, si el tipo de inicio es Manual o Automático, puede hacer clic con el botón derecho en **SQL Server Integration Services** y hacer clic en **Iniciar, Detener o Reiniciar**.  
   
 7.  En el menú **Archivo** , haga clic en **Salir** para cerrar el complemento **Servicios** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar el servicio Integration Services](../../2014/integration-services/manage-the-integration-services-service.md)  
   
   

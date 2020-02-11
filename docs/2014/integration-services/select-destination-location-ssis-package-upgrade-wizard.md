@@ -1,5 +1,5 @@
 ---
-title: Seleccionar ubicación de destino (Asistente actualización del paquete SSIS) | Microsoft Docs
+title: Seleccionar ubicación de destino (Asistente para actualización del paquete SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056009"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>Seleccionar ubicación de destino (Asistente para actualización del paquete SSIS)
@@ -41,16 +41,16 @@ ms.locfileid: "66056009"
  **Origen del paquete**  
  Especifique dónde se van a almacenar los paquetes de actualización. Esta opción tiene los valores que figuran en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Sistema de archivos**|Indica que los paquetes actualizados se van a guardar en una carpeta en el equipo local.|  
-|**Almacén de paquetes SSIS**|Indica que los paquetes actualizados se van a guardar en el almacén de paquetes de Integration Services. El almacén de paquetes consta del conjunto de carpetas del sistema de archivos que el servicio Integration Services administra. Para más información, vea [Administración de paquetes &#40;servicio SSIS&#41;](service/package-management-ssis-service.md).<br /><br /> Al seleccionar este valor, se muestran las opciones dinámicas correspondientes de **Origen del paquete** .|  
+|**Almacén de paquetes SSIS**|Indica que los paquetes actualizados se van a guardar en el almacén de paquetes de Integration Services. El almacén de paquetes consta del conjunto de carpetas del sistema de archivos que el servicio Integration Services administra. Para obtener más información, vea [Administración de paquetes &#40;servicio SSIS&#41;](service/package-management-ssis-service.md).<br /><br /> Al seleccionar este valor, se muestran las opciones dinámicas correspondientes de **Origen del paquete** .|  
 |**Microsoft SQL Server**|Indica que los paquetes actualizados se guardarán en una instancia existente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> Al seleccionar este valor, se muestran las opciones dinámicas correspondientes de **Origen del paquete** .|  
   
  **Carpeta**  
  Escriba el nombre de una carpeta en la que se guardarán los paquetes actualizados, o bien haga clic en **Examinar** y busque la carpeta.  
   
- **Examinar**  
+ **Browse**  
  Busque la carpeta en la que se guardarán los paquetes actualizados.  
   
 ## <a name="package-source-dynamic-options"></a>Opciones dinámicas de Origen del paquete  
@@ -63,19 +63,19 @@ ms.locfileid: "66056009"
  **Server**  
  Escriba el nombre del servidor en el que se guardarán los paquetes de la actualización, o seleccione este servidor en la lista.  
   
- **Usar la autenticación de Windows**  
+ **Usar autenticación de Windows**  
  Seleccione esta opción para utilizar la autenticación de Windows para conectarse al servidor.  
   
- **Utilizar autenticación de SQL Server**  
+ **Usar autenticación SQL Server**  
  Seleccione esta opción para usar la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse al servidor. Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Escriba el nombre de usuario que se usará con la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse al servidor.  
   
  **Contraseña**  
  Escriba la contraseña que se usará con la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse al servidor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Actualizar paquetes de Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

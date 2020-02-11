@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a3eae5b89a0b4c07dcd32c8db454312879e581a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137622"
 ---
 # <a name="sql-server-browser-properties-advanced-tab"></a>Propiedades de SQL Server Browser (pestaña Avanzadas)
-  El programa Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como un servicio en el servidor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser escucha las solicitudes entrantes de recursos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporciona información acerca de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas en el equipo.  
+  El programa Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como un servicio en el servidor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser escucha las solicitudes entrantes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos y proporciona información acerca [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de las instancias instaladas en el equipo.  
   
 ## <a name="options"></a>Opciones  
  **Agrupado**  
@@ -31,12 +31,12 @@ ms.locfileid: "63137622"
  Ubicación de los volcados de memoria si se produce un error.  
   
  **Informes de errores**  
- Cuando se establece en **Yes**, el programa Dr. Watson envía información a [!INCLUDE[msCoName](../../includes/msconame-md.md)] o a su servidor de errores si se produce un error grave. Para obtener más información acerca de Informes de errores, busque el tema sobre la configuración de informes de errores y uso en los Libros en pantalla.  
+ Cuando se establece en **Sí**, el programa Dr. Watson envía información a [!INCLUDE[msCoName](../../includes/msconame-md.md)] o a su servidor de errores si se produce un error grave. Para obtener más información acerca de Informes de errores, busque el tema sobre la configuración de informes de errores y uso en los Libros en pantalla.  
   
  **Id. de instancia**  
  Indica la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ha usado esta instancia del Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La instancia predeterminada es **MSSQL10_50.MSSQLSERVER**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servicio SQL Server Browser](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   
   

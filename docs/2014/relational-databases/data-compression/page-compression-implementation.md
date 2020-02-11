@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65777f25066cfb42093313b90ac198c6bc1796a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918236"
 ---
 # <a name="page-compression-implementation"></a>Implementación de la compresión de página
-  En este tema se resume cómo el [!INCLUDE[ssDE](../../includes/ssde-md.md)] implementa la compresión de página. Este resumen proporciona la información básica para ayudarlo a planear el espacio de almacenamiento que necesita para sus datos.  
+  En este tema se resume cómo el [!INCLUDE[ssDE](../../includes/ssde-md.md)] implementa la compresión de página. Este resumen proporciona la información básica para ayudarle a planear el espacio de almacenamiento que necesita para sus datos.  
   
  La compresión de página es similar para las tablas, las particiones de tabla, los índices y las particiones de índice. La descripción siguiente de la compresión de página para una tabla se aplica a la compresión de página para todos los tipos de objeto. En los ejemplos siguientes se comprimen las cadenas de caracteres, pero la compresión de prefijo y de diccionario aplican los mismos principios a otros tipos de datos.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "62918236"
   
  Cuando se convierte para la compresión de página una tabla existente con datos, todas las páginas se volverán a crear y evaluar. La regeneración de todas las páginas hace que se vuelva a generar la tabla, el índice o la partición.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Comprimir datos](data-compression.md)   
- [Row Compression Implementation](row-compression-implementation.md)  
+ [Implementación de la compresión de fila](row-compression-implementation.md)  
   
   

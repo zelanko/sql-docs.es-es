@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3301be2f0af9960a48602a1b540fa2cac2f39914
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021364"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication-sql-server-management-studio"></a>Agregar y quitar artículos de una publicación (SQL Server Management Studio)
@@ -42,8 +42,8 @@ ms.locfileid: "63021364"
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [Definir un artículo](define-an-article.md)   
+## <a name="see-also"></a>Consulte también  
+ [Define an Article](define-an-article.md)   
  [Publicar datos y objetos de base de datos](publish-data-and-database-objects.md)  
   
   

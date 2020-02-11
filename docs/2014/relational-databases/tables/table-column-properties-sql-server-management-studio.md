@@ -15,22 +15,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211795"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propiedades de columnas de tablas (SQL Server Management Studio)
   Estas propiedades aparecen en el panel inferior del Diseñador de tablas. A menos que se especifique lo contrario, podrá modificar estas propiedades en la ventana Propiedades cuando la columna esté seleccionada. Las **Propiedades de columna** pueden mostrarse en categorías o en orden alfabético. Muchas propiedades solo aparecen o solo se pueden cambiar por ciertos tipos de datos.  
   
 > [!NOTE]  
->  Si se publica la tabla para replicación, debe modificar el esquema mediante la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) o SMO (Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Si se modifica el esquema mediante el Diseñador de tablas o el Diseñador de diagramas de base de datos, se intentará eliminar la tabla y volver a crearla. No se pueden eliminar objetos publicados, por lo que la modificación del esquema generará un error.  
+>  Si se publica la tabla para replicación, debe modificar el esquema mediante la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)][ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) o SMO (Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Si se modifica el esquema mediante el Diseñador de tablas o el Diseñador de diagramas de base de datos, se intentará eliminar la tabla y volver a crearla. No se pueden eliminar objetos publicados, por lo que la modificación del esquema generará un error.  
   
  **General**  
  Se expande para mostrar **Nombre**, **Permitir valores NULL**, **Tipo de datos**, **Valor o enlace predeterminado**, **Longitud**, **Precisión**y **Escala**.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la columna seleccionada.  
   
  **Permitir valores NULL**  
@@ -87,18 +87,18 @@ ms.locfileid: "68211795"
 > [!NOTE]  
 >  Para cambiar el valor que se muestra para la propiedad **Especificación de texto completo** , debe expandirla y editar la propiedad secundaria **Está indexado por texto completo** .  
   
--   **Está indexado por texto completo** Indica si esta columna tiene un índice de texto completo. Esta propiedad solo puede establecerse en **Sí** si el tipo de datos de la columna se puede buscar por texto completo y si la tabla a la que pertenece esta columna tiene especificado un índice de texto completo. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
+-   **Está indizado por texto completo** Indica si esta columna tiene un índice de texto completo. Esta propiedad solo puede establecerse en **Sí** si el tipo de datos de la columna se puede buscar por texto completo y si la tabla a la que pertenece esta columna tiene especificado un índice de texto completo. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
--   **Columna de tipo de texto completo** Muestra el nombre de la columna en la que esta columna tiene un índice de texto. Esta propiedad se debe establecer si la propiedad **Tipo de datos** de esta columna es **image** o **varbinary**. La columna citada en esta propiedad debe ser del tipo **[n]char, [n]varchar,** o **xml**, y la lista desplegable de esta propiedad solo contiene columnas que tienen uno de estos tres tipos de datos. Las filas de la columna citada por esta propiedad indican el tipo de documento de las filas correspondientes de la columna en la que se pueden realizar búsquedas de texto completo. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
+-   **Columna de tipo de texto completo** Muestra el nombre de la columna en la que esta columna está indizada por texto completo. Esta propiedad se debe establecer si la propiedad **Tipo de datos** de esta columna es **image** o **varbinary**. La columna citada en esta propiedad debe ser del tipo **[n]char, [n]varchar,** o **xml**, y la lista desplegable de esta propiedad solo contiene columnas que tienen uno de estos tres tipos de datos. Las filas de la columna citada por esta propiedad indican el tipo de documento de las filas correspondientes de la columna en la que se pueden realizar búsquedas de texto completo. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
--   **Idioma** Indica el idioma del separador de palabras utilizado para indizar la columna. El valor almacenado en la propiedad es en realidad el identificador de configuración regional del separador de palabras. Para obtener más información sobre los separadores de palabras y los LCID, vea Separadores de palabras y lematizadores. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
+-   **Idioma** de Indica el idioma del separador de palabras utilizado para indizar la columna. El valor almacenado en la propiedad es en realidad el identificador de configuración regional del separador de palabras. Para obtener más información sobre los separadores de palabras y los LCID, vea Separadores de palabras y lematizadores. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
  **Semántica estadística**  
  Seleccione si desea habilitar la indización semántica estadística para la columna seleccionada. Para obtener más información, vea [Búsqueda semántica &#40;SQL Server&#41;](../search/semantic-search-sql-server.md).  
   
  Si selecciona **Idioma** antes de seleccionar **Semántica estadística**y el idioma seleccionado no tiene un modelo de idioma semántico asociado, la opción **Semántica estadística** se establece en **No** y no puede modificarse. Si selecciona **Sí** para la opción de **Semántica estadística** antes de seleccionar **Idioma**, los idiomas disponibles en la columna **Idioma** estarán limitados a aquellos para los que exista un modelo de idioma semántico.  
   
- **Suscriptor que no es de SQL Server**  
+ **No es suscriptor de SQL Server**  
  Indica si la columna se está replicando en un suscriptor que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Especificación de identidad**  
@@ -119,10 +119,10 @@ ms.locfileid: "68211795"
  **Publicado por combinación**  
  Muestra si la columna está publicada por combinación.  
   
- **No disponible para replicación**  
+ **No para replicación**  
  Indica si los valores de identidad originales se conservan durante la replicación. Para obtener más información sobre la replicación, vea CREATE TABLE. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
- **Replicada**  
+ **Replican**  
  Muestra si esta columna se replica en otra ubicación.  
   
  **RowGuid**  
@@ -132,6 +132,7 @@ ms.locfileid: "68211795"
  Muestra el tamaño en bytes permitido por el tipo de datos de la columna. Por ejemplo, un tipo de datos nchar puede tener una longitud de 10 (número de caracteres) pero tendría un tamaño de 20 para los juegos de caracteres Unicode.  
   
 > [!NOTE]  
->  La longitud de un tipo de datos **(max)** varía en cada fila. **sp_help** devuelve (- 1) como longitud de columnas **(max)** . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] muestra -1 como tamaño de columna.  
+>  La longitud de un tipo de datos **(max)** varía en cada fila. **sp_help** devuelve (-1) como longitud de columnas **(Max)** . 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] muestra -1 como tamaño de columna.  
   
   

@@ -24,10 +24,10 @@ ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948100"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
@@ -68,7 +68,7 @@ WRITETEXT [BULK]
  *data*  
  Son los datos reales de tipo **text**, **ntext** o **image** que se van a almacenar. *data* puede ser un literal o un parámetro. La longitud máxima de texto que se puede insertar interactivamente con WRITETEXT es de 120 KB aproximadamente para datos de tipo **text**, **ntext** e **image**.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Observaciones  
  Use WRITETEXT para reemplazar datos de tipo **text**, **ntext** e **image** y UPDATETEXT para modificar datos de tipo **text**, **ntext** e **image**. UPDATETEXT es más flexible debido a que cambia solo una parte de una columna **text**, **ntext** o **image**, en lugar de la columna completa.  
   
  Para mejorar el rendimiento, se recomienda insertar o actualizar los datos de tipo **text**, **ntext** e **image** en fragmentos que sean múltiplos de 8040 bytes.  
@@ -84,7 +84,7 @@ WRITETEXT [BULK]
   
  La función SQLPutData de ODBC es más rápida y usa menos memoria dinámica que WRITETEXT. Esta función puede insertar hasta 2 gigabytes de datos de tipo **text**, **ntext** o **image**.  
   
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible que existan punteros de texto de fila a datos de tipo **text**, **ntext** o **image**, pero que no sean válidos. Para más información sobre la opción "text in row ", vea [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para más información sobre cómo invalidar punteros de texto, vea [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible que existan punteros de texto de fila a datos de tipo **text**, **ntext** o **image**, pero que no sean válidos. Para obtener más información sobre la opción "text in row", vea [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Para más información sobre cómo invalidar punteros de texto, vea [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso UPDATE en la base de datos especificada. El permiso se puede transferir cuando se transfiere el permiso UPDATE.  

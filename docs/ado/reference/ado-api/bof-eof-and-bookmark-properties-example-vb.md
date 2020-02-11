@@ -1,5 +1,5 @@
 ---
-title: BOF, EOF y Bookmark propiedades ejemplo (VB) | Microsoft Docs
+title: Ejemplo de las propiedades BOF, EOF y Bookmark (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ab332d7d4144d62dd3a0cee1d3585820bf77e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920437"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>Ejemplo de las propiedades BOF, EOF y Bookmark (VB)
-Este ejemplo se usa el [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propiedades para mostrar un mensaje si un usuario intenta pasar el primer o último registro de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa el [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md) propiedad para permitir que el usuario marca un registro en un **Recordset** y volver a él más adelante.  
+En este ejemplo se usan las propiedades [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) para mostrar un mensaje si un usuario intenta moverse más allá del primer o último registro de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Usa la propiedad [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) para permitir que el usuario Marque un registro en un **conjunto de registros** y vuelva a él más adelante.  
   
 ```  
 'BeginBOFVB  
@@ -129,13 +129,13 @@ End Sub
 'EndBOFVB  
 ```  
   
- Este ejemplo se usa el **marcador** y [filtro](../../../ado/reference/ado-api/filter-property.md) propiedades para crear una vista limitada de la **Recordset**. Solo los registros que se hace referencia a la matriz de los marcadores son accesibles.  
+ En este ejemplo se usan las propiedades **Bookmark** y [Filter](../../../ado/reference/ado-api/filter-property.md) para crear una vista limitada del **conjunto de registros**. Solo se puede tener acceso a los registros a los que hace referencia la matriz de marcadores.  
   
 ```  
 Attribute VB_Name = "BOF"  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [BOF, EOF (propiedades) (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Bookmark (propiedad) (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Propiedades BOF, EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [Bookmark (propiedad, ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

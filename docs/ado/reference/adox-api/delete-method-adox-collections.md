@@ -1,5 +1,5 @@
 ---
-title: Método Delete (colecciones ADOX) | Microsoft Docs
+title: Delete (método) (colecciones ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -31,10 +31,10 @@ ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be2aa91cf27d7dc12d3cd0c1e0bf719bd43797ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966434"
 ---
 # <a name="delete-method-adox-collections"></a>Delete (método) (colecciones ADOX)
@@ -48,13 +48,13 @@ Collection.Delete Name
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Name*  
- Un **Variant** que especifica el nombre o la posición ordinal (índice) del objeto que se va a eliminar.  
+ *Nombre*  
+ **Variante** que especifica el nombre o la posición ordinal (índice) del objeto que se va a eliminar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Se producirá un error si el *nombre* no existe en la colección.  
   
- Para [tablas](../../../ado/reference/adox-api/tables-collection-adox.md) y [usuarios](../../../ado/reference/adox-api/users-collection-adox.md) colecciones, se producirá un error si el proveedor no admite la eliminación de tablas o los usuarios, respectivamente. Para [procedimientos](../../../ado/reference/adox-api/procedures-collection-adox.md) y [vistas](../../../ado/reference/adox-api/views-collection-adox.md) colecciones, **eliminar** se producirá un error si el proveedor no admite comandos persistentes.  
+ En el caso de las colecciones de [tablas](../../../ado/reference/adox-api/tables-collection-adox.md) y [usuarios](../../../ado/reference/adox-api/users-collection-adox.md) , se producirá un error si el proveedor no admite la eliminación de tablas o usuarios, respectivamente. En el caso de [los procedimientos](../../../ado/reference/adox-api/procedures-collection-adox.md) y las colecciones de [vistas](../../../ado/reference/adox-api/views-collection-adox.md) , **Delete** producirá un error si el proveedor no admite comandos persistentes.  
   
 ## <a name="applies-to"></a>Se aplica a  
   
@@ -64,6 +64,6 @@ Collection.Delete Name
 |[Colección de claves (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Colección de procedimientos (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Colección de tablas (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
 |[Colección de usuarios (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Colección de vistas (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
-## <a name="see-also"></a>Vea también  
- [Eliminación de procedimientos de ejemplo del método (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de método Delete de procedimientos (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Ejemplo de método Delete de vistas (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 392fcbf3a46b48b2032b5792321e9a22b3027341
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832790"
 ---
 # <a name="azure-blob-upload-task"></a>Tarea de carga de blobs de Azure
-  La tarea de carga de blobs de Azure permite que un paquete SSIS cargar archivos en Azure blob storage.   
+  La tarea de carga de blobs de Azure permite a un paquete SSIS cargar archivos a un almacenamiento de blobs de Azure.   
 Para agregar una **tarea de carga de blobs de Azure**, arrástrela y colóquela en el Diseñador SSIS, haga doble clic o haga clic con el botón derecho y, luego, haga clic en **Editar** para ver el siguiente cuadro de diálogo del **Azure Blob Upload Task Editor** (Editor de la tarea de carga de blobs de Azure).  
   
  En la tabla siguiente se proporcionan las descripciones de los campos de este cuadro de diálogo.  
@@ -31,9 +31,9 @@ Para agregar una **tarea de carga de blobs de Azure**, arrástrela y colóquela 
 |**Campo**|**Descripción**|  
 |AzureStorageConnection|Especifique un administrador de conexiones de almacenamiento de Azure existente o cree uno nuevo que haga referencia a una cuenta de almacenamiento de Azure, que esté orientado a la ubicación en la que se encuentran hospedados los archivos de blob.|  
 |BlobContainer|Especifica el nombre del contenedor de blobs que contendrá los archivos cargados como blobs.|  
-|BlobDirectory|Especifica el directorio de blobs donde se almacenará el archivo cargado como un blob en bloques. El directorio de blob es una estructura jerárquica virtual. Si ya existe el blob, se reemplazará.|  
+|BlobDirectory|Especifica el directorio de blobs donde se almacenará el archivo cargado como un blob en bloques. El directorio de blobs es una estructura jerárquica virtual. Si ya existe el blob, se reemplazará.|  
 |LocalDirectory|Especifica el directorio local que contiene los archivos que se van a cargar.|  
-|FileName|Especifica un filtro de nombre para seleccionar archivos con el patrón de nombre especificado. Por ejemplo: MiHoja*.xls\* incluirá archivos como MiHoja001.xls y MiHojaABC.xlsx.|  
+|FileName|Especifica un nombre de filtro para seleccionar archivos con el patrón de nombre especificado. Por ejemplo, MiHoja*.xls\* incluirá archivos como MiHoja001.xls y MiHojaABC.xlsx.|  
 |TimeRangeFrom/TimeRangeTo|Especifica un filtro de intervalo de tiempo. Se incluirán los archivos modificados después de **TimeRangeFrom** y antes de **TimeRangeTo** .|  
   
   

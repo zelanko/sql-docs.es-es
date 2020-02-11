@@ -1,5 +1,5 @@
 ---
-title: Proteger los archivos | Microsoft Docs
+title: Proteger archivos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812589"
 ---
 # <a name="check-in-files"></a>Proteger archivos
@@ -32,7 +32,7 @@ ms.locfileid: "62812589"
   
 2.  Si aparece el cuadro de diálogo **Proteger** , seleccione las opciones adecuadas y, a continuación, haga clic en **Aceptar**.  
   
-     **Check-in**  
+     **Proteger**  
      Protege todos los elementos seleccionados.  
   
      **Columnas**  
@@ -41,13 +41,13 @@ ms.locfileid: "62812589"
      **Comentarios**  
      Agregue un comentario para asociarlo a la operación de protección.  
   
-     **No mostrar en el cuadro de diálogo de comprobación al proteger elementos**  
+     **No mostrar el cuadro de diálogo Proteger al proteger elementos**  
      Suprime el cuadro de diálogo en las operaciones de protección.  
   
      **Vista plana**  
      Muestra los archivos que protege como listas planas en su conexión de control de código fuente.  
   
-     **Name**  
+     **Nombre**  
      Muestra los nombres de los elementos que se protegen. Los elementos aparecen con las casillas que se encuentran junto a ellos activadas. Si no desea proteger un elemento determinado, desactive su casilla.  
   
      **Opciones**  
@@ -61,7 +61,7 @@ ms.locfileid: "62812589"
   
  Si el archivo que ha protegido no forma parte de una desprotección compartida, el entorno de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] lo protege inmediatamente. De lo contrario, es posible que se le pida que combine su versión con las versiones creadas por otros usuarios.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver una lista de archivos modificados](../../2014/database-engine/view-a-list-of-modified-files.md)   
  [Administrar protecciones](../../2014/database-engine/manage-checkins.md)  
   

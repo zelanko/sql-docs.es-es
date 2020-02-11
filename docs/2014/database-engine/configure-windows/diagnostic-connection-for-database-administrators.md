@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810426"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexión de diagnóstico para administradores de bases de datos
@@ -36,16 +36,16 @@ ms.locfileid: "62810426"
   
 ||  
 |-|  
-|**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
+|**Se aplica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
 ## <a name="connecting-with-dac"></a>Conectar con DAC  
  De forma predeterminada, solo se permite la conexión desde un cliente que se ejecute en el servidor. Las conexiones de red no están permitidas, a menos que se configuren con el procedimiento almacenado sp_configure con la opción [remote admin connections](remote-admin-connections-server-configuration-option.md).  
   
  Solo los miembros del rol sysadmin de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden conectarse utilizando la DAC.  
   
- La DAC está disponible y se admite a través de la utilidad del símbolo del sistema **sqlcmd** a través de un modificador de administrador especial ( **-A**). Para obtener más información sobre cómo usar **sqlcmd**, vea [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). También puede conectar agregando el prefijo `admin:`al nombre de la instancia en el formato **sqlcmd - Sadmin:** _< nombre_instancia >._ También puede iniciar una DAC desde un [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas mediante la conexión a `admin:` \< *instance_name*>.  
+ La DAC está disponible y se admite a través de la utilidad del símbolo del sistema **sqlcmd** a través de un modificador de administrador especial ( **-A**). Para obtener más información sobre cómo usar **sqlcmd**, vea [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). También puede conectar el prefijo `admin:`al nombre de la instancia con el formato **sqlcmd-Sadmin:** _<instance_name>._ También puede iniciar una [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DAC desde un editor de consultas conectándose a `admin:` \< *instance_name*>.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restricciones  
  Dado que la DAC existe únicamente para el diagnóstico de problemas de servidor en raras circunstancias, hay algunas restricciones en la conexión:  
   
 -   Para asegurarse de que haya recursos disponibles para la conexión, solo se permite una DAC por cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si ya hay una conexión DAC activa, cualquier solicitud nueva de conexión a través de la DAC se denegará con el error 17810.  
@@ -74,9 +74,9 @@ ms.locfileid: "62810426"
   
 -   Consultas en vistas de catálogo.  
   
--   Comandos DBCC básicos como DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` y DBCC SQLPERF. No ejecute comandos que consumen muchos recursos, como **DBCC** , CHECKDB, DBCC DBREINDEX o DBCC SHRINKDATABASE.  
+-   Comandos DBCC básicos como DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` y DBCC SQLPERF. No ejecute comandos que consumen muchos recursos, como **DBCC** CHECKDB, DBCC DBREINDEX o DBCC SHRINKDATABASE.  
   
--   Comando KILL *\<spid>* de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Dependiendo del estado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible que el comando KILL no siempre se ejecute correctamente; en tal caso, la única opción puede ser reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Éstas son algunas directrices generales:  
+-   Comando KILL[!INCLUDE[tsql](../../includes/tsql-md.md)]*spid>\< de* . Dependiendo del estado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible que el comando KILL no siempre se ejecute correctamente; en tal caso, la única opción puede ser reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Éstas son algunas directrices generales:  
   
     -   Compruebe que realmente se ha eliminado el SPID con la consulta `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`. Si no devuelve ninguna fila, significa que la sesión se ha eliminado.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "62810426"
   
  Durante el inicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna dinámicamente el puerto de la DAC. Mientras se establece la conexión a la instancia predeterminada, la DAC evita el uso de una solicitud del protocolo de resolución de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP) al servicio SQL Server Browser. Primero se conecta a través del puerto TCP 1434. Si se produce un error, realiza una llamada SSRP para obtener el puerto. Si el Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no escucha las solicitudes SSRP, la solicitud de conexión devolverá un error. Consulte el registro de errores para ver en qué número de puerto escucha la DAC. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para aceptar conexiones de administración remotas, la DAC debe iniciarse con un número de puerto explícito:  
   
- **sqlcmd-Stcp:** _\<server>,\<port>_  
+ **sqlcmd-STCP:** _ \<servidor>,\<puerto>_  
   
  El registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra el número de puerto de la DAC, que es 1434 de forma predeterminada. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para aceptar solo conexiones DAC locales, conéctese mediante el adaptador de bucles invertidos con el comando siguiente:  
   
- **sqlcmd-S127.0.0.1**,`1434`  
+ **sqlcmd-s 127.0.0.1**,`1434`  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo, un administrador observa que el servidor `URAN123` no responde y desea diagnosticar el problema. Para ello, el usuario activa la utilidad del símbolo del sistema `sqlcmd` y se conecta al servidor `URAN123` mediante `-A` para indicar la DAC.  
@@ -111,7 +111,7 @@ ms.locfileid: "62810426"
 ## <a name="related-content"></a>Contenido relacionado  
  [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)  
   
- [sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)  
+ [Utilidad sqlcmd](../../tools/sqlcmd-utility.md)  
   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  
   

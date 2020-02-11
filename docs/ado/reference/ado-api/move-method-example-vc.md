@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método (VC ++) Move | Microsoft Docs
+title: Ejemplo del método move (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ad0cfea4762dc1e6e757a0fe6182505927b70c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932099"
 ---
 # <a name="move-method-example-vc"></a>Ejemplo del método Move (VC ++)
-Este ejemplo se usa el [mover](../../../ado/reference/ado-api/move-method-ado.md) método para colocar el puntero de registro basado en la entrada del usuario.  
+En este ejemplo se usa el método [Move](../../../ado/reference/ado-api/move-method-ado.md) para colocar el puntero de registro en función de los datos proporcionados por el usuario.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -241,7 +241,7 @@ void PrintComError(_com_error &e) {
 0  
 ```  
   
-## <a name="sample-output"></a>Salida del ejemplo  
+## <a name="sample-output"></a>Salida de muestra  
   
 ```  
 Record 1 of 23  
@@ -257,5 +257,5 @@ Enter number of records to Move
 (positive or negative, Enter to quit):  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Move (método) (ADO)](../../../ado/reference/ado-api/move-method-ado.md)

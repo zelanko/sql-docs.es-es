@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7b61bd02d44639cb3f5ad540d53ebeebcff4da0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832740"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Tarea de Hive de HDInsight de Azure
@@ -37,7 +37,7 @@ Para agregar una **tarea de Hive de HDInsight de Azure**, arrástrela al Diseña
   
 5.  Hay dos maneras de especificar el script de Hive que se va a ejecutar:
   
-    1.  **Script insertado**: para especificar el campo **Script**, escriba el script insertado que quiere ejecutar en el cuadro de diálogo **Escriba el script**.
+    1.  **Script en línea**: especifique el campo **Script** escribiendo en línea el script que quiere ejecutar en el cuadro de diálogo **Escriba el script**.
   
     2.  **Archivo de script**: cargue el archivo de script en Azure Blob Storage y especifique el campo **BlobName**. Si el blob no está en el contenedor ni en la cuenta de almacenamiento predeterminados asociados con el clúster de HDInsight, deben especificarse los campos **ExternalStorageAccountName** y **ExternalBlobContainer**. Para un blob externo, asegúrese de que está configurado como accesible públicamente.  
   

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63016066"
 ---
 # <a name="execute-a-stored-procedure"></a>Ejecutar un procedimiento almacenado
@@ -83,7 +83,7 @@ ms.locfileid: "63016066"
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
     ```  
   
-     O bien  
+     -O bien-  
   
     ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
@@ -125,7 +125,7 @@ ms.locfileid: "63016066"
 ####  <a name="Permissions"></a> Permisos  
  Para obtener más información, vea la sección "Permisos" de [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>Para ejecutar un procedimiento almacenado  
   
@@ -204,7 +204,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Especificar parámetros](specify-parameters.md)   
  [Establecer la opción de configuración del servidor Buscar procedimientos de inicio](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)   

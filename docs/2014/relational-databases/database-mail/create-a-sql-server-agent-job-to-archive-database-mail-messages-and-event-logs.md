@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917597"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos
@@ -80,7 +80,7 @@ ms.locfileid: "62917597"
   
 2.  En el cuadro **Nombre del paso** , escriba **Copiar elementos del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62917597"
   
 2.  En el cuadro **Nombre del paso** , escriba **Copiar datos adjuntos del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62917597"
   
 2.  En el cuadro **Nombre del paso** , escriba **Copiar el registro del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "62917597"
   
 2.  En el cuadro **Nombre del paso** , escriba **Eliminar filas del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "62917597"
   
 2.  En el cuadro **Nombre del paso** , escriba **Eliminar filas del registro de eventos del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
   
 4.  En el cuadro **Comando** , escriba la instrucción siguiente para quitar las filas anteriores al mes actual del registro de eventos del Correo electrónico de base de datos:  
   
@@ -208,7 +208,7 @@ ms.locfileid: "62917597"
   
 5.  En el área **Frecuencia** , seleccione las opciones para ejecutar el trabajo periódicamente, por ejemplo una vez al mes.  
   
-6.  En el área **Frecuencia diaria**, seleccione **Sucede una vez a las \<hora>** .  
+6.  En el área **frecuencia diaria** , seleccione **sucede una vez \<>**.  
   
 7.  Compruebe que las demás opciones están configuradas tal como desea y, a continuación, haga clic en **Aceptar** para guardar la programación.  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 13ec38a90e0acf85dccf87edd94f6efa4cf3dfd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916963"
 ---
 # <a name="database-properties-general-page"></a>Propiedades de la base de datos (página General)
@@ -29,7 +29,7 @@ ms.locfileid: "62916963"
  **Última copia de seguridad del registro de la base de datos**  
  Muestra la fecha de la última copia de seguridad del registro de transacciones de la base de datos.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la base de datos.  
   
  **Estado**  
@@ -53,7 +53,7 @@ ms.locfileid: "62916963"
  **Nombre de intercalación**  
  Muestra la intercalación usada para la base de datos. La intercalación puede modificarse en la página **Opciones** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

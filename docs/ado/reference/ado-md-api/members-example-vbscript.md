@@ -15,14 +15,14 @@ ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8f3fc746660b1382d8c06f5ffc343fd52ecf024
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949414"
 ---
 # <a name="members-example-vbscript"></a>Ejemplo de Members (VBScript)
-Este ejemplo usa una cadena de consulta MDX para recuperar datos OLAP y escribe el conjunto de celdas resultante en una estructura de tabla HTML con las características de expansión de columna para conjuntos de celdas de varias dimensiones.  
+En este ejemplo se usa una cadena de consulta MDX para recuperar los datos OLAP y se escribe el decuadro de tabla resultante en una estructura de tabla HTML mediante las características de extensión de columnas para celdas de varias dimensiones.  
   
 ```  
 <%@ Language=VBScript %>  

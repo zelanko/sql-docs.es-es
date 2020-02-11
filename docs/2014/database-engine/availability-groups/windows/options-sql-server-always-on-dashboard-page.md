@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789251"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>Opciones (SQL Server AlwaysOn, página del panel)
   Use la página **Panel AlwaysOn de SQL Server** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**de** para configurar el panel AlwaysOn.  
   
- **Para acceder a esta página:**  
+ **Para tener acceso a esta página:**  
   
  En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **SQL Server AlwaysOn** y, a continuación, haga clic en **Panel**.  
   
 ## <a name="on-this-page"></a>En esta página  
- **Activar actualización automática.**  
+ **Active la actualización automática.**  
  Haga clic para habilitar la actualización automática. Las opciones son:  
   
 -   El campo **Intervalo de actualización (en segundos)** muestra el número de segundos que pasarán antes de cada actualización del panel. El valor predeterminado es 30. Cuando se habilita la actualización automática, se puede editar este campo para cambiar el intervalo de actualización.  
@@ -37,7 +37,7 @@ ms.locfileid: "62789251"
  **Habilitar la directiva de AlwaysOn definida por el usuario.**  
  Si ha definido su propia directiva de AlwaysOn, haga clic en esta opción para habilitar su directiva.  
   
-## <a name="see-also"></a>Vea también  
- [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>Consulte también  
+ [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

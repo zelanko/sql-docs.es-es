@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917733"
 ---
 # <a name="create-a-database-mail-account"></a>Crear una nueva cuenta de Correo electrónico de base de datos
@@ -25,9 +25,9 @@ ms.locfileid: "62917733"
   
 -   **Antes de empezar:**  [Requisitos previos](#Prerequisites)  
   
--   **Creación de cuenta de un correo electrónico de base de datos, utilizando:**  [Asistente para configuración de Correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para crear una cuenta de Correo electrónico de base de datos, mediante:**  [Asistente para configuración de Correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Pasos siguientes para configurar el correo electrónico de base de datos](#FollowUp)  
+-   **Seguimiento:**  [pasos siguientes para configurar el Correo electrónico de base de datos](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: Pasos siguientes para configurar el correo electrónico de base de datos  
+##  <a name="FollowUp"></a> Seguimiento: pasos siguientes para configurar el Correo electrónico de base de datos  
   
 -   [Crear un perfil de Correo electrónico de base de datos](create-a-database-mail-profile.md)  
   

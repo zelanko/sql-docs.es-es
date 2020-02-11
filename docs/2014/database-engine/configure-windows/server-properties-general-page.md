@@ -15,22 +15,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809357"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>Propiedades del servidor (página General) - SQL Server Management Studio
-  Use esta página para ver información de solo lectura sobre la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Use esta página para ver información de solo lectura sobre la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalación de.  
   
 ## <a name="property-grid"></a>Cuadrícula de propiedades  
  Presenta las propiedades del servidor seleccionado, como el nombre del servidor, el sistema operativo del servidor o el número de procesadores.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la instancia del servidor.  
   
- **Product**  
+ **Producto**  
  Muestra la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se está ejecutando en la actualidad.  
   
  **Sistema operativo**  
@@ -48,7 +48,7 @@ ms.locfileid: "62809357"
  **Memoria**  
  Muestra la cantidad de RAM instalada en el servidor.  
   
- **Procesadores**  
+ **Incrustrados**  
  Muestra el número de CPU instaladas.  
   
  **Directorio raíz**  
@@ -57,7 +57,7 @@ ms.locfileid: "62809357"
  **Intercalación del servidor**  
  Muestra la intercalación compatible con el servidor. Una intercalación especifica la página de códigos y el orden específicos que se van a utilizar con los datos Unicode y no Unicode.  
   
- **En clúster**  
+ **Está en clúster**  
  Muestra **True** si la instancia del servidor está configurada en un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o **False** si la instancia del servidor no pertenece a ningún clúster.  
   
  **Habilitado para HADR**  
@@ -66,7 +66,7 @@ ms.locfileid: "62809357"
 ## <a name="description-field"></a>Campo de descripción  
  Presenta información adicional sobre las propiedades del servidor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

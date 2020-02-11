@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999552"
 ---
-# <a name="name-not-found-dialog-box"></a>Nombre no encontrado (cuadro de diálogo)
+# <a name="name-not-found-dialog-box"></a>Nombre no encontrado, cuadro de diálogo
   No se ha podido encontrar uno o varios nombres de objetos en el cuadro de diálogo. Seleccione una opción para continuar.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
@@ -34,10 +34,10 @@ ms.locfileid: "62999552"
  **Tipos de objeto**  
  Haga clic en esta opción para abrir el cuadro de diálogo **Seleccionar tipos de objeto** y elegir los tipos de objeto en una lista.  
   
- **Escriba el nombre de objeto**  
+ **Escriba el nombre del objeto**  
  Contiene el nombre del objeto que no se ha encontrado. Corrija el nombre del objeto o escriba un nuevo nombre.  
   
- **Quitar** *\<nombre de objeto >* **de selección**  
+ *****Quitar\<el nombre de objeto>* **de la selección**      
  Seleccione esta opción para cerrar el cuadro de diálogo **Nombre no encontrado** y quitar el elemento del cuadro de diálogo **Seleccionar objetos** .  
   
   

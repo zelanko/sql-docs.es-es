@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 94faa6587f69f5944f29f6ec17f3899a6632b49a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109560"
 ---
 # <a name="data-alert-designer"></a>Diseñador de alertas de datos
@@ -44,11 +44,11 @@ ms.locfileid: "66109560"
 > [!NOTE]  
 >  Dado que la característica de alertas de datos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] solo está disponible cuando se instala [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en el modo de SharePoint, el informe en el que se quiere crear una alerta debe guardarse, implementarse o cargarse en una biblioteca de documentos de SharePoint.  
 >   
->  Las alertas de datos no se pueden crear en los informes que utilizan la Autenticación integrada de Windows o piden credenciales. Los informes deben usar credenciales almacenadas. Para más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+>  Las alertas de datos no se pueden crear en los informes que utilizan la Autenticación integrada de Windows o piden credenciales. Los informes deben usar credenciales almacenadas. Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Para abrir el Diseñador de alertas de datos, haga clic en la opción **Nueva alerta de datos** en el menú **Acciones** de la barra de herramientas de informe. Si no ve la opción **Nueva alerta de datos** , el informe no está configurado para usar credenciales almacenadas. Puede actualizar el tipo de credenciales actualizando el origen de datos del informe desde la biblioteca de SharePoint.  
   
-##  <a name="AlertDesigner"></a> Interfaz de usuario del Diseñador de alertas de datos  
+##  <a name="AlertDesigner"></a>Interfaz de usuario del diseñador de alertas de datos  
  El Diseñador de alertas de datos se divide en varias áreas. El área donde se selecciona la fuente de distribución de datos de informe, el área donde se crean condiciones sencillas o complejas agregando reglas a las condiciones, etcétera. En la imagen siguiente se muestran las áreas del Diseñador de alertas de datos.  
   
  ![Áreas dentro de la interfaz de usuario del Diseñador de alertas](media/rs-alertdesigner.gif "Áreas dentro de la interfaz de usuario del Diseñador de alertas")  
@@ -75,7 +75,7 @@ ms.locfileid: "66109560"
 ### <a name="rules-and-clauses"></a>Reglas y cláusulas  
  El ámbito de los cambios en los datos y las reglas de la alerta definen los cambios en los datos que desencadenan la alerta. El ámbito de los cambios en los datos es el siguiente:  
   
--   **Cualquier dato tiene**: al menos un valor de los datos satisface las reglas especificadas por la condición.  
+-   **Cualquier dato tiene**, al menos un valor de los datos satisface las reglas especificadas por la condición.  
   
 -   **Ningún dato tiene**: ningún valor de los datos satisface las reglas especificadas por la condición.  
   
@@ -89,17 +89,17 @@ ms.locfileid: "66109560"
   
 -   Nombre de la empresa **no es** Contoso  
   
- **Reglas combinadas con el operador AND**  
+ **Reglas combinadas por el operador AND**  
   
 -   Ventas **es mayor que** 1500,00  
   
-     **y** unidades vendidas **es menor que** 500  
+     **y** Unidades vendidas **es menor que** 500  
   
      Fecha de devolución **es anterior** a 1/1/2010  
   
 -   Ventas **es mayor o igual a** 1500,00  
   
-     **y** Fecha de devolución **es posterior** a 1/1/2010  
+     **y** La fecha de devolución **es posterior** a 1/1/2010  
   
      **y** Unidades vendidas **es mayor que** 500  
   
@@ -107,23 +107,23 @@ ms.locfileid: "66109560"
   
      **y** Unidades vendidas **es mayor que** 500  
   
-     **y** Devoluciones **es**  0  
+     **y** El valor devuelto **es** 0  
   
  **Reglas con cláusulas OR**  
   
 -   El apellido **es** Blythe  
   
-     **O**  Petulescu  
+     **O bien**  Petulescu  
   
-     **O**  Martin  
+     **O bien**  Juan  
   
 -   Fecha de devolución **es posterior** a 1/1/2010  
   
-     **y** Territorio de ventas **es**  Central  
+     **y** El territorio de ventas **es** central  
   
-     **O**  Sur  
+     **O bien**  Sud  
   
-     **O**  Norte  
+     **O bien**  Zona  
   
  Dependiendo del tipo de datos del campo, el Diseñador de alertas de datos proporciona comparaciones diferentes. El Diseñador de alertas de datos proporciona comparaciones que se adaptan al tipo de datos del campo con el que se comparan los valores. A continuación se muestran comparaciones disponibles para diferentes tipos de datos. El tipo de datos `Boolean` no se admite en las reglas.  
   
@@ -146,13 +146,13 @@ ms.locfileid: "66109560"
 ### <a name="schedule-settings"></a>Configuración de la programación  
  La programación que se define para la alerta de datos define el patrón de periodicidad para enviar el mensaje de alerta de datos y cuándo iniciar y detener el envío de mensajes de alerta. Los patrones son: una vez, minuto, diaria y semanal. Aunque una alerta solo tiene una programación, puede crear patrones de periodicidad complejos que cubran la mayoría de las necesidades empresariales mediante estos intervalos. A continuación se ofrecen algunos ejemplos de patrones de periodicidad comunes para su uso en las programaciones:  
   
--   **Diaria cada 10 días**: envía alertas una vez al día, cada 10 días.  
+-   **Diariamente cada 10** días: envía alertas una vez al día, cada 10 días.  
   
--   **Semanal cada 2 semanas el lunes**: envía las alertas cada dos semanas el lunes solamente.  
+-   **Semanal cada 2** semanas el lunes: envía las alertas cada dos semanas solo los lunes.  
   
--   **Cada hora cada 12 horas**: envía las alertas cada 12 horas.  
+-   **Cada hora cada 12** horas: envía las alertas cada 12 horas.  
   
--   **Minuto cada 30 minutos**: envía las alertas cada 30 minutos.  
+-   **Minuto cada 30 minutos** : envía las alertas cada 30 minutos.  
   
  El patrón de periodicidad especifica cuándo se envía la alerta. Si las reglas se cumplen durante el intervalo especificado por el patrón, la alerta no se envía hasta el final del intervalo.  
   
@@ -166,11 +166,11 @@ ms.locfileid: "66109560"
   
  El asunto predeterminado del mensaje de correo electrónico es **Alerta de datos para \<nombre de alerta>**. Puede cambiar el asunto de acuerdo con sus necesidades.  
   
- Puede proporcionar también una descripción para incluirla en el mensaje de alerta de datos en la opción **Descripción** . Incluir una descripción, especialmente si tiene alertas de datos similares, le ayudará a diferenciar rápidamente los mensajes de alertas. Además del mensaje de alerta que se envía cuando los datos del informe satisfacen las reglas especificadas, se envía un mensaje de alerta a todos los destinatarios cuando se produce un error. Para más información, consulte [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md).  
+ Puede proporcionar también una descripción para incluirla en el mensaje de alerta de datos en la opción **Descripción** . Incluir una descripción, especialmente si tiene alertas de datos similares, le ayudará a diferenciar rápidamente los mensajes de alertas. Además del mensaje de alerta que se envía cuando los datos del informe satisfacen las reglas especificadas, se envía un mensaje de alerta a todos los destinatarios cuando se produce un error. Para obtener más información, consulte [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md).  
   
  Para obtener más información sobre cómo se genera el correo electrónico, vea [Alertas de datos de Reporting Services](../ssms/agent/alerts.md).  
   
-##  <a name="CreateAlert"></a> Crear una definición de alerta de datos  
+##  <a name="CreateAlert"></a>Crear una definición de alerta de datos  
  Si tiene los permisos Ver elemento y Crear alertas de SharePoint, puede crear una definición de alerta de datos para cualquier informe para el que tenga permiso de visualización, siempre y cuando el informe use credenciales almacenadas o no use credenciales. El informe se ejecuta desde una biblioteca de SharePoint. Los datos disponibles para su uso en el Diseñador de alertas de datos proceden del informe. Si el informe tiene parámetros, puede que tenga que ejecutarlo con diferentes valores de parámetros para asegurarse de que los datos que le interesan aparecen en el informe. Después de abrir el informe, puede hacer clic en la opción **Nueva alerta de datos** del menú **Acciones** de la barra de herramientas de informe para abrir el Diseñador de alertas de datos. En la imagen siguiente se muestra cómo se puede abrir el Diseñador de alertas de datos.  
   
  ![Abrir el Diseñador de alertas desde la biblioteca de SharePoint](media/rs-openalertdesigneriw.gif "Abrir el Diseñador de alertas desde la biblioteca de SharePoint")  
@@ -178,7 +178,7 @@ ms.locfileid: "66109560"
  Para obtener más información, vea [Crear una alerta de datos en el Diseñador de alertas de datos](create-a-data-alert-in-data-alert-designer.md).  
   
   
-##  <a name="SaveAlert"></a> Guardar una definición de alerta de datos  
+##  <a name="SaveAlert"></a>Guardar una definición de alerta de datos  
  El Diseñador de alertas de datos muestra la dirección URL del sitio en que se guardará la definición de alerta de datos. Las definiciones de alertas de datos siempre se guardan en el mismo sitio que los informes.  
   
 > [!NOTE]  
@@ -187,7 +187,7 @@ ms.locfileid: "66109560"
  Antes de guardar la definición de la alerta, se valida. Debe corregir los errores antes de que la definición de la alerta se pueda guardar correctamente. Para obtener más información, vea [Crear una alerta de datos en el Diseñador de alertas de datos](create-a-data-alert-in-data-alert-designer.md).  
   
   
-##  <a name="EditAlert"></a> Editar una definición de alerta de datos  
+##  <a name="EditAlert"></a>Editar una definición de alerta de datos  
  Después de guardar la definición de alerta de datos, puede volver a abrirla y modificarla en el Diseñador de alertas de datos. Puede agregar, cambiar o eliminar reglas y cláusulas, y cambiar la configuración de programación y de correo electrónico. Si la fuente de distribución de datos de informe que utiliza la alerta ha cambiado y ya no proporciona los campos a los que hacen referencia las reglas de la alerta o han cambiado los tipos de datos u otros metadatos de los campos, la definición de la alerta ya no es válida y debe corregirla para poder volver a guardarla. Si desea utilizar otra fuente de distribución de datos, debe crear una nueva definición de alerta.  
   
  Para editar una definición de alerta de datos, haga clic con el botón secundario en el Administrador de alertas de datos y haga clic en **Editar**. En la imagen siguiente se muestra el menú contextual de una alerta de datos en el Administrador de alertas de datos.  
@@ -202,11 +202,11 @@ ms.locfileid: "66109560"
   
 -   [Modificar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md)  
   
--   [Creación de una alerta de datos en el Diseñador de alertas de datos](create-a-data-alert-in-data-alert-designer.md)  
+-   [Crear una alerta de datos en el Diseñador de alertas de datos](create-a-data-alert-in-data-alert-designer.md)  
   
   
-## <a name="see-also"></a>Vea también  
- [Alertas de datos de Reporting Services](../ssms/agent/alerts.md)   
+## <a name="see-also"></a>Consulte también  
+ [Reporting Services de alertas de datos](../ssms/agent/alerts.md)   
  [Administrador de alertas de datos para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
   
   

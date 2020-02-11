@@ -1,5 +1,5 @@
 ---
-title: 'Paso 9: Probar el paquete del Tutorial de la lección 1 | Microsoft Docs'
+title: 'Paso 9: Probar el paquete del tutorial de la lección 1 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767617"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Paso 9: Prueba del paquete del tutorial de la lección 1
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Paso 9: Probar el paquete del tutorial de la lección 1
   En esta lección, ha llevado a cabo las tareas siguientes:  
   
 -   Ha creado un proyecto de [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
@@ -33,11 +33,11 @@ ms.locfileid: "62767617"
   
  **Flujo de control**  
   
- ![Flujo de control del paquete](../../2014/tutorials/media/task9lesson1control.gif "Control flow in package")  
+ ![Flujo de control del paquete](../../2014/tutorials/media/task9lesson1control.gif "Flujo de control del paquete")  
   
  **Flujo de datos**  
   
- ![Flujo de datos del paquete](../../2014/tutorials/media/task9lesson1data.gif "Data flow in package")  
+ ![Flujo de datos del paquete](../../2014/tutorials/media/task9lesson1data.gif "Flujo de datos del paquete")  
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>Para ejecutar el paquete del tutorial de la lección 1  
   
@@ -48,9 +48,9 @@ ms.locfileid: "62767617"
 2.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar** , haga clic en **Detener depuración**.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Agregar bucles](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+ [Lección 2: Agregar bucles](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejecución de proyectos y paquetes](packages/run-integration-services-ssis-packages.md)  
+## <a name="see-also"></a>Consulte también  
+ [Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md) (Ejecución de proyectos y paquetes)  
   
   

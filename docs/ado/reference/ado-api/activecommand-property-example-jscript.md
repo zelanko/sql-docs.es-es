@@ -15,14 +15,14 @@ ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ad96904c913cadc451bc7d4c67fb5e4f8c59c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921662"
 ---
 # <a name="activecommand-property-example-jscript"></a>Ejemplo de la propiedad ActiveCommand (JScript)
-Este ejemplo se muestra el [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propiedad. Corte y pegue el código siguiente en el Bloc de notas u otro editor de texto y guárdelo como **ActiveCommandJS.asp**.  
+En este ejemplo se muestra la propiedad [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) . Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **ActiveCommandJS. asp**.  
   
 ```  
 <!-- BeginActiveCommandJS -->  
@@ -125,7 +125,7 @@ if (strName.length > 0)
 <!-- EndActiveCommandJS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Command (objeto) (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

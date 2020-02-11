@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 535ae5f92fea0222468ed64f567154495e329a61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044217"
 ---
-# <a name="format-pager-addresses-for-alerts"></a>Dar formato a las direcciones de buscapersonas para alertas
-  En este tema se describe cómo dar fomato a las direcciones del buscapersonas de las alertas del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+# <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
+  En este tema se describe cómo dar formato a las [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] direcciones de buscapersonas para [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] las [!INCLUDE[tsql](../../includes/tsql-md.md)]alertas del agente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante o.  
   
  **En este tema**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63044217"
   
      [Seguridad](#Security)  
   
--   **Para dar formato a direcciones del buscapersonas, utilizando:**  
+-   **Para dar formato a las direcciones del buscapersonas, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63044217"
 ####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ver información acerca de una alerta. A otros usuarios debe concederse el rol fijo de base de datos **SQLAgentOperatorRole** en la base de datos **msdb** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-format-pager-addresses"></a>Para dar formato a direcciones del buscapersonas  
   

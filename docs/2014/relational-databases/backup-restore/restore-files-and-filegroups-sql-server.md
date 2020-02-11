@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2d056e61abd08a75b1a1b62117d351b2c55d7e09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921142"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Restaurar archivos y grupos de archivos (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "62921142"
   
 -   En el modelo de recuperación simple, el archivo debe pertenecer a un grupo de archivos de solo lectura.  
   
--   En el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, para poder restaurar archivos, debe realizar una copia de seguridad del registro de transacciones activo (conocido como el final del registro). Para obtener más información, vea [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md).  
+-   En el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, para poder restaurar archivos, debe realizar una copia de seguridad del registro de transacciones activo (conocido como el final del registro). Para obtener más información, vea [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)).  
   
 -   Para restaurar una base de datos cifrada, debe tener acceso al certificado o la clave asimétrica que se usó para cifrarla. La base de datos no se puede restaurar sin el certificado o la clave asimétrica. Como resultado, se debe conservar el certificado que se usa para cifrar la clave de cifrado de base de datos mientras se necesite la copia de seguridad. Para obtener más información, consulte [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62921142"
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-restore-files-and-filegroups"></a>Para restaurar archivos y grupos de archivos  
   
@@ -92,10 +92,10 @@ ms.locfileid: "62921142"
   
     |Encabezado de columna|Valores|  
     |-----------------|------------|  
-    |**Restaurar**|Las casillas activadas indican los conjuntos de copias de seguridad que se restaurarán.|  
-    |**Name**|Nombre del conjunto de copia de seguridad.|  
-    |**Tipo de archivo**|Especifica el tipo de datos en la copia de seguridad: **Datos**, **registro**, o **datos Filestream**. Los datos contenidos en tablas están en archivos de **datos** . Los datos del registro de transacciones están en archivos de **registro** . Los datos de objetos binarios grandes (BLOB) que están almacenados en el sistema de archivos se encuentran en archivos de **datos de FILESTREAM** .|  
-    |**Tipo**|El tipo de copia de seguridad realizada: **Completa**, **Diferencial** o **Registro de transacciones**.|  
+    |**Restauración**|Las casillas activadas indican los conjuntos de copias de seguridad que se restaurarán.|  
+    |**Nombre**|Nombre del conjunto de copia de seguridad.|  
+    |**Tipo de archivo**|Especifica el tipo de datos en la copia de seguridad: **Datos**, **Registro** o **Datos de FILESTREAM**. Los datos contenidos en tablas están en archivos de **datos** . Los datos del registro de transacciones están en archivos de **registro** . Los datos de objetos binarios grandes (BLOB) que están almacenados en el sistema de archivos se encuentran en archivos de **datos de FILESTREAM** .|  
+    |**Tipo**|Tipo de copia de seguridad realizada: **Completa**, **Diferencial** o **Registro de transacciones**.|  
     |**Server**|Nombre de la instancia del motor de base de datos que ha realizado la operación de copia de seguridad.|  
     |**Nombre lógico de archivo**|Nombre lógico del archivo.|  
     |**Base de datos**|Nombre de la base de datos para la operación de copia de seguridad.|  
@@ -131,13 +131,13 @@ ms.locfileid: "62921142"
     |Encabezado de columna|Valores|  
     |-----------------|------------|  
     |**Nombre del archivo original**|La ruta de acceso completa de un archivo de copia de seguridad de origen.|  
-    |**Tipo de archivo**|Especifica el tipo de datos en la copia de seguridad: **Datos**, **registro**, o **datos Filestream**. Los datos contenidos en tablas están en archivos de **datos** . Los datos del registro de transacciones están en archivos de **registro** . Los datos de objetos binarios grandes (BLOB) que están almacenados en el sistema de archivos se encuentran en archivos de **datos de FILESTREAM** .|  
+    |**Tipo de archivo**|Especifica el tipo de datos en la copia de seguridad: **Datos**, **Registro** o **Datos de FILESTREAM**. Los datos contenidos en tablas están en archivos de **datos** . Los datos del registro de transacciones están en archivos de **registro** . Los datos de objetos binarios grandes (BLOB) que están almacenados en el sistema de archivos se encuentran en archivos de **datos de FILESTREAM** .|  
     |**Restaurar como**|La ruta de acceso completa del archivo de base de datos que se va a restaurar. Para especificar un nuevo archivo de restauración, haga clic en el cuadro de texto y edite la ruta de acceso y el nombre de archivo que aparecen de forma predeterminada. El hecho de cambiar la ruta de acceso o el nombre de archivo de la columna **Restaurar como** equivale a utilizar la opción MOVE en una instrucción RESTORE de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
   
 11. El panel **Estado de recuperación** determina el estado de la base de datos después de la operación de restauración.  
   
      **Revertir las transacciones no confirmadas para dejar la base de datos lista para su uso. No pueden restaurarse registros de transacciones adicionales. (RESTORE WITH RECOVERY)**  
-     Recupera la base de datos. Éste es el comportamiento predeterminado. Elija esta opción únicamente si va a restaurar ahora todas las copias de seguridad necesarias. Esta opción es equivalente a especificar WITH RECOVERY en una instrucción RESTORE de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+     Recupera la base de datos. Este es el comportamiento predeterminado. Elija esta opción únicamente si va a restaurar ahora todas las copias de seguridad necesarias. Esta opción es equivalente a especificar WITH RECOVERY en una instrucción RESTORE de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
      **Dejar la base de datos no operativa y no revertir las transacciones no confirmadas. Pueden restaurarse registros de transacciones adicionales. (RESTORE WITH NORECOVERY)**  
      Deja la base de datos en estado de restauración. Para recuperar la base de datos, debe realizar otra restauración con la opción RESTORE WITH RECOVERY anterior (vea el párrafo anterior). Esta opción es equivalente a especificar WITH NORECOVERY en una instrucción RESTORE de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -205,12 +205,12 @@ RESTORE LOG MyDatabase
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
- [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
- [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
+ [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

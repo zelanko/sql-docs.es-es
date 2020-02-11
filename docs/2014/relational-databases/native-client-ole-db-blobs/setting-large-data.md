@@ -1,5 +1,5 @@
 ---
-title: Definir datos grandes | Microsoft Docs
+title: Configuración de datos de gran tamaño | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140620"
 ---
 # <a name="setting-large-data"></a>Definir datos grandes
-  Con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB, puede establecer datos BLOB pasando un puntero a un objeto de almacenamiento del consumidor.  
+  Con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, puede establecer datos de BLOB pasando un puntero a un objeto de almacenamiento del consumidor.  
   
  El consumidor crea un objeto de almacenamiento que contiene los datos y pasa al proveedor un puntero a este objeto de almacenamiento. A continuación, el proveedor lee los datos del objeto de almacenamiento del consumidor y los escribe en la columna BLOB.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63140620"
   
 2.  Establezca las propiedades en el grupo de propiedades DBPROPSET_ROWSET de modo que el conjunto de filas sea actualizable.  
   
-3.  Cree un conjunto de enlaces (uno de cada columna) utilizando una matriz de estructuras DBBINDING. Establezca el elemento *wType* de la estructura DBBINDING en DBTYPE_IUNKNOWN y el elemento *pObject* que señale a la estructura DBOBJECT creada.  
+3.  Cree un conjunto de enlaces (uno de cada columna) utilizando una matriz de estructuras DBBINDING. Establezca el elemento *wType* de la estructura DBBINDING en DBTYPE_IUNKNOWN y el elemento *pObject* para que señale a la estructura DBOBJECT creada.  
   
 4.  Cree un descriptor de acceso utilizando la información de enlace de la matriz de estructuras DBBINDINGS.  
   
@@ -717,8 +717,8 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [BLOB y objetos OLE](blobs-and-ole-objects.md)   
+## <a name="see-also"></a>Consulte también  
+ [Blobs y objetos OLE](blobs-and-ole-objects.md)   
  [Usar tipos de valor grande](../native-client/features/using-large-value-types.md)  
   
   

@@ -13,39 +13,39 @@ ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: eda3f15f0d9ca1cfe04c25bfee5f2ece827e8b83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909002"
 ---
 # <a name="managing-passwords-mysqltosql"></a>Administración de contraseñas (MySQLToSQL)
-En esta sección es acerca de cómo proteger las contraseñas de la base de datos y el procedimiento para importar o exportar a ellos a través de servidores:  
+Esta sección trata sobre la protección de contraseñas de base de datos y el procedimiento para importarlas o exportarlas entre servidores:  
   
-1.  Protección de contraseña  
+1.  Protección de contraseñas  
   
-2.  Exportar o importar la contraseña cifrada  
+2.  Exportar o importar contraseña cifrada  
   
-## <a name="securing-password"></a>Protección de contraseña  
-SSMA permite proteger la contraseña de una base de datos.  
+## <a name="securing-password"></a>Protección de contraseñas  
+SSMA le permite proteger la contraseña de una base de datos.  
   
 Use el procedimiento siguiente para implementar una conexión segura:  
   
 Especifique una contraseña válida con uno de los tres métodos siguientes:  
   
-1.  **Texto no cifrado:** Escriba la contraseña de la base de datos en el atributo de valor del nodo 'contraseña'. Se encuentra bajo el nodo de definición de servidor en la sección de servidor del archivo de script o archivo de conexión de servidor.  
+1.  **Texto no cifrado:** Escriba la contraseña de la base de datos en el atributo de valor del nodo ' contraseña '. Se encuentra en el nodo definición del servidor en la sección servidor del archivo de script o el archivo de conexión de servidor.  
   
-    Las contraseñas en texto no cifrado no son seguras. Por lo tanto, se producirá el siguiente mensaje de advertencia en la salida de consola: *"Servidor &lt;id de servidor&gt; sea la contraseña proporcionada en forma de texto no cifrado no seguras, aplicación de consola de SSMA proporciona una opción para proteger la contraseña a través de cifrado, vea la opción - securepassword en el archivo de ayuda SSMA para obtener más información información".*  
+    Las contraseñas en texto no cifrado no son seguras. Por lo tanto, se mostrará el siguiente mensaje de advertencia en la salida de la consola: * &lt;"&gt; la contraseña del ID. del servidor del servidor se proporciona en forma de texto no cifrado no seguro, la aplicación de consola SSMA proporciona una opción para proteger la contraseña a través del cifrado, consulte la opción-securepassword en el archivo de ayuda de SSMA para obtener más información".*  
   
-    **Contraseñas cifradas:** En este caso, la contraseña especificada, se almacena en un formato cifrado en el equipo local en ProtectedStorage.ssma.  
+    **Contraseñas cifradas:** La contraseña especificada, en este caso, se almacena en un formato cifrado en el equipo local en ProtectedStorage. SSMA.  
   
     -   **Protección de contraseñas**  
   
-        -   Ejecute el `SSMAforMySQLConsole.exe` con el `-securepassword` y agregue el modificador de la línea de comandos pasando el servidor de archivos de conexión o un script que contiene el nodo de contraseña en la sección de definición de servidor.  
+        -   Ejecute `SSMAforMySQLConsole.exe` con la `-securepassword` línea de comandos y Add switch at pasando la conexión de servidor o el archivo de script que contiene el nodo de contraseña en la sección de definición de servidor.  
   
-        -   En el símbolo del sistema, el usuario se le pide que escriba la contraseña de la base de datos y confírmela.  
+        -   En el símbolo del sistema, se pide al usuario que escriba la contraseña de la base de datos y la confirme.  
   
-            Los identificadores de definición de servidor y sus correspondientes contraseñas cifradas se almacenan en un archivo en el equipo local  
+            Los identificadores de definición de servidor y sus contraseñas cifradas correspondientes se almacenan en un archivo en el equipo local.  
             
             Ejemplo 1:
             
@@ -71,27 +71,27 @@ Especifique una contraseña válida con uno de los tres métodos siguientes:
             
     -   **Quitar contraseñas cifradas**  
   
-        Ejecute el `SSMAforMySQLConsole.exe` con el`-securepassword` y `-remove` cambiar en la línea de comandos pasar los identificadores de servidor, para quitar las contraseñas cifradas desde el archivo de almacenamiento protegido presente en el equipo local.  
+        Ejecute `SSMAforMySQLConsole.exe` con el`-securepassword` modificador `-remove` y en la línea de comandos pasando los identificadores de servidor para quitar las contraseñas cifradas del archivo de almacenamiento protegido presente en el equipo local.  
   
         Ejemplo:  
 
             C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove all
             C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove "source_1,target_1"  
   
-    -   **Enumerar los Id. de servidor cuyas contraseñas están cifradas**  
+    -   **Enumerar los identificadores de servidor cuyas contraseñas están cifradas**  
   
-        Ejecute el `SSMAforMySQLConsole.exe` con el `-securepassword` y `-list` cambiar en la línea de comandos para enumerar todos los identificadores de servidor cuyas contraseñas se han cifrado.  
+        Ejecute `SSMAforMySQLConsole.exe` con la línea `-securepassword` de `-list` comandos y en la línea de comandos para enumerar todos los identificadores de servidor cuyas contraseñas se han cifrado.  
   
         Ejemplo:  
         
             C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -list  
   
     > [!NOTE]  
-    > 1.  La contraseña en texto no cifrado que se mencionan en el archivo de conexión de script o un servidor tiene prioridad sobre la contraseña cifrada en el archivo protegido.  
-    > 2.  Cuando no existe ninguna contraseña en la sección de servidor del archivo de conexión de servidor o el archivo de script, o si no están protegido en el equipo local, la consola le pide que escriba la contraseña.  
+    > 1.  La contraseña en texto no cifrado mencionada en el archivo de conexión de script o servidor tiene prioridad sobre la contraseña cifrada en un archivo protegido.  
+    > 2.  Cuando no existe ninguna contraseña en la sección servidor del archivo de conexión del servidor o el archivo de script o si no se ha protegido en el equipo local, la consola de le pide que escriba la contraseña.  
   
-## <a name="exporting-or-importing-encrypted-passwords"></a>Exportar o importar las contraseñas cifradas  
-La aplicación de consola de SSMA permite exportar las contraseñas de cifrado de base de datos presentes en un archivo en el equipo local a un archivo protegido y viceversa. Lo ayuda a hacer que la máquina de contraseñas cifradas independientes. Funcionalidad de exportación lee el identificador del servidor y la contraseña de la variable local almacenamiento protegido y guarda la información en un archivo cifrado. El usuario se le pedirá que escriba la contraseña para el archivo protegido. Asegúrese de que la contraseña escrita es la longitud de 8 caracteres o más. Este archivo protegido es portátil entre distintos equipos. Funcionalidad de importación lee al servidor de la información de identificador y la contraseña desde el archivo protegido. El usuario se le pedirá que escriba la contraseña para el archivo protegido y anexa la información en el almacenamiento local protegido.  
+## <a name="exporting-or-importing-encrypted-passwords"></a>Exportar o importar contraseñas cifradas  
+La aplicación de consola SSMA permite exportar contraseñas de base de datos cifradas presentes en un archivo del equipo local a un archivo protegido y viceversa. Ayuda a que las contraseñas cifradas sean independientes de la máquina. La funcionalidad de exportación lee el identificador y la contraseña del servidor desde el almacenamiento protegido local y guarda la información en un archivo cifrado. Se solicita al usuario que escriba la contraseña del archivo protegido. Asegúrese de que la contraseña especificada tiene una longitud de 8 caracteres o más. Este archivo protegido es portátil entre diferentes equipos. La funcionalidad de importación lee el ID. de servidor y la información de contraseña del archivo protegido. Se solicita al usuario que escriba la contraseña del archivo protegido y anexa la información al almacenamiento protegido local.  
   
 Ejemplo:  
 
@@ -129,6 +129,6 @@ Ejemplo:
     
     Please confirm password: xxxxxxxx  
   
-## <a name="see-also"></a>Vea también  
-[Ejecución de la consola SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+## <a name="see-also"></a>Consulte también  
+[Ejecutar la consola SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

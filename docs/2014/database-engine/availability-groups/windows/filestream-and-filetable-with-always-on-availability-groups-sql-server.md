@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM y FileTable con grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
+title: FILESTREAM y FileTable con Grupos de disponibilidad AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fa149aa47c99418bd3109829bfffee698ab3f6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814147"
 ---
 # <a name="filestream-and-filetable-with-alwayson-availability-groups-sql-server"></a>FILESTREAM y FileTable con grupos de disponibilidad AlwaysOn (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62814147"
   
 -   [Requisitos previos](#Prerequisites)  
   
--   [Usar nombres de red virtual (VNN) para el acceso de FILESTREAM y FileTable](#vnn)  
+-   [Usar nombres de Virtual Network (VNN) para el acceso de FILESTREAM y FileTable](#vnn)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62814147"
 ##  <a name="RelatedContent"></a> Contenido relacionado  
  Ninguno.  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

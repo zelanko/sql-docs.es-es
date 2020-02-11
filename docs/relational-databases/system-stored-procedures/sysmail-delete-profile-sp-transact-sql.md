@@ -18,13 +18,13 @@ ms.assetid: 71998653-4a02-446d-b6f7-50646a29e8a2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9442f4d3637fcb7c891eacbe7546254708918ad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909200"
 ---
-# <a name="sysmaildeleteprofilesp-transact-sql"></a>sysmail_delete_profile_sp (Transact-SQL)
+# <a name="sysmail_delete_profile_sp-transact-sql"></a>sysmail_delete_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Elimina un perfil de correo del Correo electrónico de base de datos.  
@@ -39,9 +39,9 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id` Es el identificador de perfil del perfil que se va a eliminar. *profile_id* es **int**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* debe especificarse.  
+`[ @profile_id = ] profile_id`Es el identificador del perfil que se va a eliminar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Es el nombre del perfil que va a eliminar. *nombre_perfil* es **sysname**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* debe especificarse.  
+`[ @profile_name = ] 'profile_name'`Es el nombre del perfil que se va a eliminar. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -49,15 +49,15 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La eliminación de un perfil no elimina las cuentas utilizadas por dicho perfil.  
   
- Este procedimiento almacenado elimina el perfil independientemente de si otros usuarios tienen acceso a él. Tenga cuidado al quitar el perfil privado predeterminado para un usuario o el perfil público predeterminado para el **msdb** base de datos. Cuando no esté disponible, ningún perfil predeterminado **sp_send_dbmail** requiere que el nombre de un perfil como argumento. Por lo tanto, al quitar un perfil predeterminado puede provocar llamadas a **sp_send_dbmail** un error. Para obtener más información, consulte [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
+ Este procedimiento almacenado elimina el perfil independientemente de si otros usuarios tienen acceso a él. Tenga cuidado al quitar el perfil privado predeterminado de un usuario o el perfil público predeterminado para la base de datos **msdb** . Cuando no hay ningún perfil predeterminado disponible, **sp_send_dbmail** requiere el nombre de un perfil como argumento. Por lo tanto, si se quita un perfil predeterminado, pueden producirse errores en las llamadas a **sp_send_dbmail** . Para obtener más información, vea [sp_send_dbmail &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
   
- El procedimiento almacenado **sysmail_delete_profile_sp** está en el **msdb** de base de datos y que pertenece el **dbo** esquema. El procedimiento debe ejecutarse con un nombre de tres partes si la base de datos actual no es **msdb**.  
+ El procedimiento almacenado **sysmail_delete_profile_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
 ## <a name="permissions"></a>Permisos  
- Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+ Los permisos de ejecución para este procedimiento tienen como valor predeterminado los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se muestra la eliminación del perfil llamado `AdventureWorks Administrator`.  
@@ -67,9 +67,9 @@ EXECUTE msdb.dbo.sysmail_delete_profile_sp
     @profile_name = 'AdventureWorks Administrator' ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
- [Objetos de configuración de correo electrónico de base de datos](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Procedimientos almacenados de correo electrónico de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos objetos de configuración](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

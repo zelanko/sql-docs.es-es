@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815441"
 ---
 # <a name="availability-group-is-offline"></a>Grupo de disponibilidad sin conexión
@@ -29,7 +29,7 @@ ms.locfileid: "62815441"
 |-|-|  
 |**Nombre de directiva**|Estado en línea del grupo de disponibilidad|  
 |**Problema**|El grupo de disponibilidad está sin conexión.|  
-|**Categoría**|**Crítico**|  
+|**Categoría**|**Critical)** (Crítico)|  
 |**Faceta**|grupo de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
@@ -40,7 +40,7 @@ ms.locfileid: "62815441"
 > [!NOTE]  
 >  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Grupo de disponibilidad sin conexión](https://go.microsoft.com/fwlink/p/?LinkId=220850) en TechNet Wiki.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  Este problema se puede deber a un error en la instancia del servidor que hospeda la réplica principal o a que el recurso de grupo de disponibilidad del clúster de conmutación por error de Windows Server (WSFC) se ha quedado sin conexión. A continuación se indican las posibles causas de que el grupo de disponibilidad esté sin conexión:  
   
 -   El grupo de disponibilidad no está configurado con el modo de conmutación automática por error. La réplica principal deja de estar disponible y el rol de todas las réplicas del grupo de disponibilidad es RESUELVE AFTER.  
@@ -72,8 +72,8 @@ ms.locfileid: "62815441"
   
 -   Si hay una conmutación por error en curso, espere a que se complete.  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

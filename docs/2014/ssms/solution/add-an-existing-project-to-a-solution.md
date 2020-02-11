@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 84ee67faf36668a297cdfd801a84147ed236ce50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956080"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>Agregar un proyecto existente a una solución
@@ -39,7 +39,7 @@ ms.locfileid: "62956080"
 > [!NOTE]  
 >  Antes de agregar un proyecto existente desde directorios compartidos en un entorno de varios desarrolladores de software, deberá intentar asegurarse de que sus cambios no afectarán negativamente o sobrescribirán los cambios de otros desarrolladores de software.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Proyectos &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [Soluciones &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)  
   

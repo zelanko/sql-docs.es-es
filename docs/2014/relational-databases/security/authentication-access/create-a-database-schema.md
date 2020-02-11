@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3c3747149b23c6217f321eff9d19621189b89b66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011987"
 ---
 # <a name="create-a-database-schema"></a>Crear un esquema de la base de datos
@@ -57,7 +57,7 @@ ms.locfileid: "63011987"
   
 -   Para especificar otro usuario como el propietario del esquema que se está creando, el autor de la llamada debe tener el permiso IMPERSONATE sobre ese usuario. Si se especifica un rol de base de datos como propietario, el autor de la llamada debe pertenecer al rol o debe tener el permiso ALTER para el rol.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 ##### <a name="to-create-a-schema"></a>Para crear un esquema  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63011987"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opciones adicionales  
- En el cuadro de diálogo **Esquema - Nuevo** también se ofrecen opciones en dos páginas adicionales: **Permisos** y **Propiedades extendidas**.  
+ El cuadro de diálogo **Esquema - Nuevo** también proporciona opciones de dos páginas adicionales: **Permisos** y **Propiedades extendidas**.  
   
 -   La página **Permisos** muestra todos los elementos protegibles posibles y los permisos en esos elementos protegibles que se pueden conceder al inicio de sesión.  
   

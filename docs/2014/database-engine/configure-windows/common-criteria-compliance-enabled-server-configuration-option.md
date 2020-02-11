@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8fef699da6e63c534d19e0d66bfa076f85348d29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786644"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration-option"></a>common criteria compliance enabled (opción de configuración del servidor)
@@ -40,7 +40,7 @@ ms.locfileid: "62786644"
   
  Si está utilizando el procedimiento almacenado del sistema sp_configure para cambiar la configuración, solo podrá cambiar la opción common criteria compliance enabled si Mostrar opciones avanzadas está establecido en 1. La configuración surte efecto cuando se reinicia el servidor. Los valores posibles son 0 y 1:  
   
--   0 indica que no está habilitada la opción de cumplimiento del criterio común. Ésta es la opción predeterminada.  
+-   0 indica que no está habilitada la opción de cumplimiento del criterio común. Este es el valor predeterminado.  
   
 -   1 indica que está habilitada la opción de cumplimiento del criterio común.  
   
@@ -58,7 +58,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493905"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Ordenar los miembros de atributo en función de un atributo secundario
@@ -49,7 +49,7 @@ ms.locfileid: "69493905"
   
      Observe que todos los atributos de la dimensión **Date** están relacionados directamente con el atributo **Date** , que es el miembro de clave que relaciona los miembros de dimensión con los hechos de los grupos de medida relacionados. No hay ninguna relación definida entre el atributo **Month Name** y el atributo **Month Number Of Year** .  
   
-6.  En el diagrama, haga clic con el botón secundario en el atributo **Month Name** y seleccione **Nueva relación de atributo**.  
+6.  En el diagrama, haga clic con el botón derecho en el atributo **Month Name** y seleccione **Nueva relación de atributo**.  
   
 7.  En el cuadro de diálogo **Crear relación de atributo** , el **Atributo de origen** es **Month Name**. Establezca el **Atributo relacionado** en **Month Number Of Year**.  
   
@@ -75,11 +75,11 @@ ms.locfileid: "69493905"
   
 1.  Cambie a la pestaña **Explorador** del Diseñador de dimensiones para la dimensión Customer y, después, examine los miembros de la jerarquía del atributo **Commute Distance** .  
   
-     Observe que los miembros de la jerarquía de atributo están ordenados en función de los valores ASCII de la clave de miembro. En este caso, si se ordena por el nombre o la clave del atributo, las distancias para ir al trabajo no se ordenan de menor a mayor. En esta tarea, debe ordenar los miembros de la jerarquía de atributo en función del cálculo con nombre **CommuteDistanceSort** que atribuye el número de orden apropiado a cada valor distinto de la columna. Para ahorrar tiempo, este cálculo con nombre ya se ha agregado a la tabla **Customer** de la vista del origen de datos [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW. Puede cambiar a esta vista del origen de datos para ver el script SQL que se usa en este cálculo con nombre. Para más información, vea [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+     Observe que los miembros de la jerarquía de atributo están ordenados en función de los valores ASCII de la clave de miembro. En este caso, si se ordena por el nombre o la clave del atributo, las distancias para ir al trabajo no se ordenan de menor a mayor. En esta tarea, debe ordenar los miembros de la jerarquía de atributo en función del cálculo con nombre **CommuteDistanceSort** que atribuye el número de orden apropiado a cada valor distinto de la columna. Para ahorrar tiempo, este cálculo con nombre ya se ha agregado a la tabla **Customer** de la vista del origen de datos [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW. Puede cambiar a esta vista del origen de datos para ver el script SQL que se usa en este cálculo con nombre. Para obtener más información, vea [definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
      En la imagen siguiente se muestran los miembros de la jerarquía de atributo **Commute Distance** , ordenados según los valores ASCII de la clave de miembro.  
   
-     ![Jerarquía de atributo Commute Distance](../../2014/tutorials/media/l4-memberproperties-4.gif "Jerarquía de atributo Commute Distance")  
+     ![Jerarquía del atributo Commute Distance](../../2014/tutorials/media/l4-memberproperties-4.gif "Jerarquía del atributo Commute Distance")  
   
 2.  Cambie a la pestaña **Estructura de dimensión** del Diseñador de dimensiones de la dimensión Customer, haga clic con el botón secundario en **CommuteDistanceSort** en la tabla **Customer** del panel **Vista del origen de datos** y, después, haga clic en **Nuevo atributo de columna**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "69493905"
   
      Observe que los miembros de la jerarquía de atributo ahora están clasificados en un orden lógico en función de una distancia cada vez mayor, como es muestra en la imagen siguiente.  
   
-     ![Jerarquía de atributo Commute Distance](../../2014/tutorials/media/l4-memberproperties-5.gif "Jerarquía de atributo Commute Distance")  
+     ![Jerarquía del atributo Commute Distance ordenada de nuevo](../../2014/tutorials/media/l4-memberproperties-5.gif "Jerarquía del atributo Commute Distance ordenada de nuevo")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Especificar relaciones de atributo entre los atributos de una jerarquía definida por el usuario](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

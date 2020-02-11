@@ -14,16 +14,16 @@ ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 945ebced0703c109ac64c374e31d2e76b556e7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67944835"
 ---
 # <a name="odbc-overview"></a>Información general sobre ODBC
-Open Database Connectivity (ODBC) es una interfaz de programación de aplicaciones ampliamente aceptado (API) para el acceso a la base de datos. Se basa en las especificaciones de la interfaz de nivel de llamada (CLI) de Open Group y ISO/IEC para las API de base de datos y usa el lenguaje de consulta estructurado (SQL) como idioma de acceso de la base de datos.  
+La conectividad abierta de bases de datos (ODBC) es una interfaz de programación de aplicaciones (API) ampliamente aceptada para el acceso a bases de datos. Se basa en las especificaciones de la interfaz de nivel de llamada (CLI) de Open Group e ISO/IEC para las API de base de datos y usa Lenguaje de consulta estructurado (SQL) como su lenguaje de acceso a bases de datos.  
   
- ODBC está diseñada para máximo *interoperabilidad* : es decir, la capacidad de una sola aplicación para tener acceso a los sistemas de administración de otra base de datos (DBMS) con el mismo código fuente. Las aplicaciones de base de datos, llamar a funciones en la interfaz ODBC, que se implementan en los módulos específicos de la base de datos denominados *controladores*. El uso de controladores aísla las aplicaciones de llamadas específicas de la base de datos de la misma manera que los controladores de impresora aislar los programas de procesamiento de texto de comandos específicos de la impresora. Dado que los controladores se cargan en tiempo de ejecución, un usuario solo tiene que agregar un nuevo controlador para tener acceso a un nuevo sistema de DBMS; no es necesario volver a compilar o volver a vincular la aplicación.  
+ ODBC está diseñado para obtener la máxima *interoperabilidad* , es decir, la capacidad de una sola aplicación para tener acceso a diferentes sistemas de administración de bases de datos (DBMS) con el mismo código fuente. Las aplicaciones de base de datos llaman a funciones de la interfaz ODBC, que se implementan en módulos específicos de la base de datos denominados *Controladores*. El uso de controladores aísla las aplicaciones de las llamadas específicas de la base de datos de la misma manera que los controladores de impresora aíslan los programas de procesamiento de texto de los comandos específicos de la impresora. Dado que los controladores se cargan en tiempo de ejecución, un usuario solo tiene que agregar un nuevo controlador para tener acceso a un nuevo DBMS; no es necesario volver a compilar o volver a vincular la aplicación.  
   
  Esta sección contiene los temas siguientes.  
   

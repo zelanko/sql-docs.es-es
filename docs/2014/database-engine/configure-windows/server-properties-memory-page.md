@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809422"
 ---
 # <a name="server-properties-memory-page"></a>Propiedades del servidor (página Memoria)
@@ -27,7 +27,7 @@ ms.locfileid: "62809422"
  Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe empezar, al menos, con la cantidad mínima de memoria asignada y no debe liberar memoria por debajo de este valor. Establezca este valor basándose en el tamaño y la actividad de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Establezca siempre la opción en un valor razonable para asegurarse de que el sistema operativo no requiere demasiada memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no impide el rendimiento de Windows.  
   
  **Cantidad máxima de memoria del servidor (en MB)**  
- Especifica la cantidad máxima de memoria que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede asignar cuando se inicia y mientras se ejecuta. Puede establecer esta opción de configuración como un valor específico si sabe que se ejecutan varias aplicaciones al mismo tiempo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y desea que estas aplicaciones tengan memoria suficiente para ejecutarse. Si estas otras aplicaciones, por ejemplo, los servidores web o de correo electrónico, solo solicitan memoria cuando la necesitan, no establezca la opción, ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suministrará memoria cuando sea necesario. Sin embargo, a menudo las aplicaciones utilizan la memoria disponible cuando se inician y no solicitan más aunque sea necesario. Si una aplicación con este comportamiento se ejecuta en el mismo equipo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]simultáneamente, establezca la opción con un valor que garantice que la memoria que requiere la aplicación no está asignada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las cantidades mínimas de memoria que puede especificar para **memoria de servidor máxima** son 64 megabytes (MB) para sistemas de 32 bits y 128 MB para los sistemas de 64 bits.  
+ Especifica la cantidad máxima de memoria que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede asignar cuando se inicia y mientras se ejecuta. Puede establecer esta opción de configuración como un valor específico si sabe que se ejecutan varias aplicaciones al mismo tiempo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y desea que estas aplicaciones tengan memoria suficiente para ejecutarse. Si estas otras aplicaciones, por ejemplo, los servidores web o de correo electrónico, solo solicitan memoria cuando la necesitan, no establezca la opción, ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suministrará memoria cuando sea necesario. Sin embargo, a menudo las aplicaciones utilizan la memoria disponible cuando se inician y no solicitan más aunque sea necesario. Si una aplicación con este comportamiento se ejecuta en el mismo equipo que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]simultáneamente, establezca la opción con un valor que garantice que la memoria que requiere la aplicación no está asignada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cantidad mínima de memoria que puede especificar para **memoria de servidor máxima** es 64 megabytes (MB) para sistemas de 32 bits y 128 MB para sistemas de 64 bits.  
   
  **Memoria de creación de índice (en KB, 0 = memoria dinámica)**  
  Especifica la cantidad de memoria (en KB) que se va a utilizar durante la ordenación en la creación de índices. El valor predeterminado de cero permite la asignación dinámica y funcionará en la mayoría de los casos sin ajustes adicionales; sin embargo, el usuario puede escribir un valor diferente, entre 704 y 2147483647.  
@@ -44,7 +44,7 @@ ms.locfileid: "62809422"
  **Valores actuales**  
  Muestra los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [Opciones de configuración de memoria del servidor](server-memory-server-configuration-options.md)  
   

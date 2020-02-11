@@ -1,5 +1,5 @@
 ---
-title: Provocar (MDX) | Microsoft Docs
+title: Cliente potencial (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cc4d362fbc7656e9427548a352b32d5d8297071e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905742"
 ---
 # <a name="lead-mdx"></a>Lead (MDX)
@@ -31,19 +31,19 @@ Member_Expression.Lead( Index )
  *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
- *Index*  
+ *Ajustar*  
  Expresión numérica válida que especifica el número de posiciones de los miembros.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las posiciones de los miembros en un nivel se determinan por el orden natural de la jerarquía de atributo. La numeración de las posiciones tiene como base cero.  
   
- Si la posición inicial especificada es cero (0), el **provocar** función devuelve el miembro especificado.  
+ Si el cliente potencial especificado es cero (0), la función **Lead** devuelve el miembro especificado.  
   
- Si la posición inicial especificada es negativa, el **provocar** función devuelve un miembro anterior.  
+ Si el cliente potencial especificado es negativo, la función **Lead** devuelve un miembro anterior.  
   
- `Lead(1)` es equivalente a la [NextMember](../mdx/nextmember-mdx.md) función. `Lead(-1)` es equivalente a la [PrevMember](../mdx/prevmember-mdx.md) función.  
+ `Lead(1)`es equivalente a la función [NextMember](../mdx/nextmember-mdx.md) . `Lead(-1)`es equivalente a la función [PrevMember](../mdx/prevmember-mdx.md) .  
   
- El **provocar** función es similar a la [Lag](../mdx/lag-mdx.md) funcione, salvo que el **Lag** función busca en la dirección opuesta a la **provocar** función. Es decir, `Lead(n)` es equivalente a `Lag(-n)`.  
+ La función **Lead** es similar a la función [lag](../mdx/lag-mdx.md) , salvo que la función **lag** busca en la dirección opuesta a la función **Lead** . Es decir, `Lead(n)` es equivalente a `Lag(-n)`.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve el valor para diciembre de 2001:  
@@ -62,7 +62,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

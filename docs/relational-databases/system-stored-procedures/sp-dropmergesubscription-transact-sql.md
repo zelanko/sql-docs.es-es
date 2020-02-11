@@ -16,13 +16,13 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8bf38ef67089c65d53bedcb56afd81de3e21a413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933872"
 ---
-# <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
+# <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita una suscripción a una publicación de combinación y su Agente de mezcla asociado. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
@@ -42,43 +42,43 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de publicación. *publicación* es **sysname**, su valor predeterminado es null. La publicación debe existir y debe cumplir las normas de los identificadores.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. La publicación debe existir y debe cumplir las normas de los identificadores.  
   
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null.  
+`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripción. *subscription_database*es **sysname**, su valor predeterminado es null.  
+`[ @subscriber_db = ] 'subscriber_db'`Es el nombre de la base de datos de suscripciones. *subscription_database*es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @subscription_type = ] 'subscription_type'` Es el tipo de suscripción. *subscription_type*es **nvarchar (15)** , y puede tener uno de estos valores.  
+`[ @subscription_type = ] 'subscription_type'`Es el tipo de suscripción. *subscription_type*es **nvarchar (15)** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**all**|Suscripciones de inserción, de extracción y anónimas.|  
-|**Anónimo**|Suscripción anónima.|  
-|**push**|Suscripción de inserción.|  
-|**pull**|Suscripción de extracción.|  
-|**ambos** (valor predeterminado)|Suscripción de inserción y de extracción.|  
+|**todos**|Suscripciones de inserción, de extracción y anónimas.|  
+|**Anonymous**|Suscripción anónima.|  
+|**enviar**|Suscripción de inserción.|  
+|**obtener**|Suscripción de extracción.|  
+|**both** (valor predeterminado)|Suscripción de inserción y de extracción.|  
   
-`[ @ignore_distributor = ] ignore_distributor` Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**. Este parámetro se puede utilizar para quitar una suscripción sin tener que realizar tareas de limpieza en el distribuidor. También es útil cuando ha sido necesario volver a instalar el distribuidor.  
+`[ @ignore_distributor = ] ignore_distributor`Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es de **bit**y su valor predeterminado es **0**. Este parámetro se puede utilizar para quitar una suscripción sin tener que realizar tareas de limpieza en el distribuidor. También es útil cuando ha sido necesario volver a instalar el distribuidor.  
   
-`[ @reserved = ] reserved` está reservado para uso futuro. *reservado* es **bit**, su valor predeterminado es **0**.  
+`[ @reserved = ] reserved`Está reservado para uso futuro. *Reserved* es de **bit**y su valor predeterminado es **0**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_dropmergesubscription** se utiliza en la replicación de mezcla.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergesubscription_1.sql)]  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_dropmergesubscription**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_dropmergesubscription**.  
   
-## <a name="see-also"></a>Vea también  
- [Eliminar una suscripción de inserción](../../relational-databases/replication/delete-a-push-subscription.md)   
+## <a name="see-also"></a>Consulte también  
+ [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-push-subscription.md)   
  [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_addmergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   

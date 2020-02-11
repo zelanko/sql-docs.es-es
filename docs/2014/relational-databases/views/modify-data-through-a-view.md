@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211673"
 ---
 # <a name="modify-data-through-a-view"></a>Modificar datos mediante una vista
@@ -32,7 +32,7 @@ ms.locfileid: "68211673"
   
      [Seguridad](#Security)  
   
--   **Para modificar los datos de tabla mediante una vista, utilizando:**  
+-   **Para modificar los datos de la tabla mediante una vista, use:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68211673"
 ####  <a name="Permissions"></a> Permisos  
  Requiere los permisos UPDATE, INSERT o DELETE en la tabla de destino, en función de la acción que se realizará.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-table-data-through-a-view"></a>Para modificar los datos de la tabla mediante una vista  
   

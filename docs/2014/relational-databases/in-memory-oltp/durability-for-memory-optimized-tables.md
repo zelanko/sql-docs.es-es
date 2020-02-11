@@ -11,13 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072780"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidad de las tablas con optimización para memoria
+  
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] proporciona durabilidad total para las tablas optimizadas para memoria. Cuando una transacción que ha cambiado una tabla optimizada para memoria se confirma, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (como hace para las tablas basadas en disco) garantiza que los cambios son permanentes (sobrevivirán a un reinicio de la base de datos), siempre y cuando el almacenamiento subyacente esté disponible. Hay dos componentes clave de durabilidad: registro de transacciones y conservación de los cambios de los datos en el almacenamiento en disco.  
   
 ## <a name="transaction-log"></a>Registro de transacciones  
@@ -43,7 +44,7 @@ ms.locfileid: "63072780"
 ## <a name="populating-data-and-delta-files"></a>Rellenar los archivos delta y de datos  
  Los archivos delta y de datos son rellenados por un subproceso en segundo plano denominado punto de comprobación sin conexión. Este subproceso lee las entradas del registro de transacciones generadas por las transacciones confirmadas en las tablas optimizadas para memoria y anexa información sobre las filas insertadas y eliminadas en los archivos de datos y delta correspondientes. A diferencia de las tablas basadas en disco donde las páginas de índice o datos se vacían con E/S aleatoria cuando se realiza el punto de comprobación, la persistencia de la tabla optimizada para memoria es una operación en segundo plano continua. Se obtiene acceso a varios archivos delta porque una transacción puede eliminar o actualizar cualquier fila que fuera insertada por alguna transacción anterior. La información de eliminación siempre se anexa al final del archivo delta. Por ejemplo, una transacción con una marca de tiempo de confirmación de 600 inserta una nueva fila y elimina las filas insertadas por las transacciones con una marca de tiempo de confirmación de 150, 250 y 450, como se muestra en la imagen siguiente. Las cuatro operaciones de E/S de archivo (tres para las filas eliminadas y 1 para las filas recién insertadas) son operaciones de solo anexar para los archivos de datos y delta correspondientes.  
   
- ![Lectura de registros de tablas optimizadas para memoria.](../../database-engine/media/read-logs-hekaton.gif "Lectura de registros de tablas optimizadas para memoria.")  
+ ![Leer las entradas de registro de las tablas optimizadas para memoria.](../../database-engine/media/read-logs-hekaton.gif "Leer las entradas de registro de las tablas optimizadas para memoria.")  
   
 ## <a name="accessing-data-and-delta-files"></a>Acceso a los archivos delta y de datos  
  Se tiene acceso a los pares de archivos delta y de datos cuando ocurre lo siguiente.  
@@ -87,8 +88,9 @@ ms.locfileid: "63072780"
   
  Un subproceso en segundo plano evalúa todos los CFP cerrados mediante una directiva de combinación y después inicia una o varias solicitudes para los CFP aptos. Estas solicitudes de combinación se procesan mediante el subproceso de punto de comprobación sin conexión. La evaluación de la directiva de combinación se realiza periódicamente y también cuando se cierra un punto de comprobación.  
   
-### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Directiva de combinación  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementa la directiva de combinación siguiente:  
+### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Directiva de combinación  
+ 
+  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementa la directiva de combinación siguiente:  
   
 -   Se programa una combinación si se pueden consolidar 2 o más CFP consecutivos, después de tener en cuenta las filas eliminadas, de forma que las filas resultantes quepan en 1 CFP de tamaño ideal. El tamaño ideal de un CFP se determina de la manera siguiente:  
   
@@ -108,16 +110,16 @@ ms.locfileid: "63072780"
   
  No todos los CFP con espacio disponible con aptos para la combinación. Por ejemplo, si dos CFP adyacentes están completos al 60%, no optarán por la combinación y cada uno de estos CFP tendrá un almacenamiento del 40% no utilizado. En el peor de los casos, todos los CFP estarán completos al 50%, una utilización del almacenamiento de solo el 50%. Mientras que las filas eliminadas pueden existir en almacenamiento porque los CFP no son aptos para la combinación, es posible que el recolector de elementos no utilizados en memoria haya quitado ya las filas eliminadas. La administración de almacenamiento y de la memoria es independiente de la recolección de elementos no utilizados. El almacenamiento ocupado por los CFP (no todos los CFP se actualizan) puede ser hasta 2 veces mayor que el tamaño de las tablas durables en memoria.  
   
- Si es necesario, puede realizar explícitamente una combinación manual llamando [sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
+ Si es necesario, se puede realizar explícitamente una combinación manual llamando a [Sys. sp_xtp_merge_checkpoint_files &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
   
 ### <a name="life-cycle-of-a-cfp"></a>Ciclo de vida de un CFP  
- Los CPF realizan una transición por varios estados antes de que se puedan desasignar. En un momento dado, los CFP están en una de las siguientes fases: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE y objetos de DESECHO. Para obtener una descripción de estas fases, vea [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Los CPF realizan una transición por varios estados antes de que se puedan desasignar. En un momento dado, los CFP están en una de las fases siguientes: PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE y TOMBSTONE. Para obtener una descripción de estas fases, vea [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
- Después de tener en cuenta el almacenamiento ocupado por los CFP en distintos estados, el almacenamiento total ocupado por las tablas durables optimizadas para memoria puede ser mucho mayor que el doble del tamaño de las tablas en memoria. La DMV [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) se puede consultar para enumerar todos los CFP del grupo de archivos optimizados para memoria, incluida su fase. La transición de los CFP del estado SOURCE MERGE a TOMBSTONE y en última instancia a la recolección de elementos no utilizados puede consumir hasta cinco puntos de comprobación, donde cada punto de comprobación va seguido de una copia de seguridad de registros de transacciones, si la base de datos está configurada para el modelo de recuperación completa u optimizado para cargas masivas de registros.  
+ Después de tener en cuenta el almacenamiento ocupado por los CFP en distintos estados, el almacenamiento total ocupado por las tablas durables optimizadas para memoria puede ser mucho mayor que el doble del tamaño de las tablas en memoria. La DMV [Sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) se puede consultar para enumerar todos los CFP en el grupo de archivos optimizados para memoria, incluida su fase. La transición de los CFP del estado SOURCE MERGE a TOMBSTONE y en última instancia a la recolección de elementos no utilizados puede consumir hasta cinco puntos de comprobación, donde cada punto de comprobación va seguido de una copia de seguridad de registros de transacciones, si la base de datos está configurada para el modelo de recuperación completa u optimizado para cargas masivas de registros.  
   
  Puede forzarse manualmente el punto de comprobación seguido de la copia de seguridad de registros para acelerar la recolección de elementos no utilizados pero esto agregará 5 CFP vacíos (5 pares de archivos de datos y delta con un archivo de datos de un tamaño de 128 MB cada uno). En escenarios de producción, los puntos de comprobación automáticos y las copias de seguridad de registros realizados como parte de la estrategia de copia de seguridad simplificarán la transición de los CFP por estas fases sin que sea necesaria ninguna intervención manual. El efecto del proceso de recolección de elementos no utilizados es que las bases de datos con tablas optimizadas para memoria pueden tener un tamaño de almacenamiento máximo respecto a su tamaño en memoria. No es infrecuente que los CFP tengan en memoria un tamaño que es hasta cuatro veces el de las tablas durables optimizadas para memoria.  
   
-## <a name="see-also"></a>Vea también  
- [Crear y administrar el almacenamiento de objetos con optimización para memoria](creating-and-managing-storage-for-memory-optimized-objects.md)  
+## <a name="see-also"></a>Consulte también  
+ [Crear y administrar el almacenamiento de objetos optimizados para memoria](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

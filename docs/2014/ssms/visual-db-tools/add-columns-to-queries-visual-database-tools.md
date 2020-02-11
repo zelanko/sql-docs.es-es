@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015706"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Agregar columnas a las consultas (Visual Database Tools)
@@ -34,13 +34,13 @@ ms.locfileid: "63015706"
   
 -   En el **panel Diagrama**, active la casilla situada junto a la columna que desea incluir.  
   
-     -o bien-  
+     O bien  
   
 -   En el **panel Criterios**, vaya a la primera fila en blanco de la cuadrícula, haga clic en el campo de la columna **Columna** y seleccione un nombre de columna de la lista desplegable.  
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>Para agregar todas las columnas correspondientes a una tabla o a un objeto con valores de tabla  
   
--   En el **panel Diagrama**, active la casilla situada junto a  **\*(todas las columnas)** .  
+-   En el **panel Diagrama**, active la casilla situada junto a ** \*(todas las columnas)**.  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>Para agregar todas las columnas correspondientes a todas las tablas y todos los objetos con estructura de tabla  
   
@@ -50,11 +50,11 @@ ms.locfileid: "63015706"
   
 3.  En la ventana Propiedades, haga clic en **Mostrar todas las columnas** y elija **Sí** o **No** en la lista desplegable.  
   
-## <a name="see-also"></a>Vea también  
- [Quitar columnas de resultados de la consulta &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Quitar columnas de los resultados de una consulta &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Quitar columnas de las consultas &#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
  [Especificar criterios de búsqueda &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [Resumir los resultados de consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Resumir los resultados de una consulta &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

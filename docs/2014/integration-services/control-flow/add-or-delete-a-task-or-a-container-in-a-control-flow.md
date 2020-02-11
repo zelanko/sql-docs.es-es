@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f13db8a1e22c88c4433cd8928479a6ed1af540f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833140"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Agregar o eliminar tareas o contenedores en un flujo de control
@@ -53,7 +53,7 @@ ms.locfileid: "62833140"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que desea.  
   
-2.  En el Explorador de soluciones, haga doble clic en el paquete para abrirlo. Realice una de las siguientes operaciones:  
+2.  En el Explorador de soluciones, haga doble clic en el paquete para abrirlo. Realice una de las siguientes acciones:  
   
     -   Haga clic en la pestaña **Flujo de control** , haga clic con el botón derecho en la tarea o contenedor que quiera eliminar y, después, haga clic en **Eliminar**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62833140"
   
 3.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](integration-services-tasks.md)   
  [Contenedores de Integration Services](integration-services-containers.md)   
  [Flujo de control](control-flow.md)  

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c3515610a0c833a17c78602ff48ed488b739ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918320"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Habilitar compresión de una tabla o un índice
@@ -61,7 +61,7 @@ ms.locfileid: "62918320"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o índice.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-enable-compression-on-a-table-or-index"></a>Para habilitar la compresión de una tabla o un índice  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62918320"
   
 2.  Para comprimir un índice, expanda la tabla que contiene el índice que desea comprimir y, a continuación, expanda la carpeta **Índices** .  
   
-3.  Haga clic con el botón derecho en la tabla o el índice que quiera comprimir, seleccione **Almacenamiento** y, luego, **Administrar la compresión...**.  
+3.  Haga clic con el botón derecho en la tabla o el índice que quiera comprimir, seleccione **Almacenamiento** y, luego, **Administrar la compresión...** .  
   
 4.  En la página de bienvenida del **Asistente para compresión de datos** , haga clic en **Siguiente**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62918320"
   
      Las siguientes opciones están disponibles en la página de **Seleccionar el tipo de compresión** :  
   
-     Casilla**Usar el mismo tipo de compresión para todas las particiones**   
+     Casilla**Usar el mismo tipo de compresión para todas las particiones**  
      Active esta casilla para configurar el mismo valor de compresión para todas las particiones. Esto habilita el cuadro de selección y deshabilita la columna **Tipo de compresión** en la cuadrícula. Cuando se activa, las opciones de la lista adyacente son **Ninguna**, **Fila**y **Página**.  
   
      **Número de partición**  
@@ -158,7 +158,7 @@ ms.locfileid: "62918320"
   
     6.  Debajo de **Resumen**, en **Descripción**, compruebe que todos los valores de la programación de trabajo son correctos.  
   
-    7.  Haga clic en **Aceptar**.  
+    7.  Haga clic en **OK**.  
   
      Después de completar esta página, haga clic en **Siguiente**.  
   
@@ -177,10 +177,10 @@ ms.locfileid: "62918320"
      **Estado**  
      Indica si la acción del asistente como conjunto ha devuelto el valor **Correcto** o **Error**.  
   
-     **de mensaje**  
+     **Mensaje**  
      Proporciona los mensajes de error o de advertencia devueltos por el proceso.  
   
-     **Informe**  
+     **Report**  
      Crea un informe que contiene los resultados del Asistente para la creación de particiones. Las opciones son **Ver informe**, **Guardar informe en archivo**, **Copiar informe al Portapapeles**y **Enviar informe como correo electrónico**.  
   
      **Ver informe**  
@@ -245,8 +245,8 @@ ms.locfileid: "62918320"
   
  Para obtener más información, vea [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) y [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
- [Compresión de datos](data-compression.md)   
+## <a name="see-also"></a>Consulte también  
+ [Comprimir datos](data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql)  
   
   

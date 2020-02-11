@@ -16,18 +16,18 @@ ms.assetid: f948febd-c885-4621-823b-421e116fec4e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fad40c6daed6fd86f93da3f658af6a21c33ca762
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928622"
 ---
 # <a name="actionenum"></a>ActionEnum
-Especifica el tipo de acción que se realizará cuando [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) se llama.  
+Especifica el tipo de acción que se debe realizar cuando se llama a [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) .  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|**adAccessDeny**|3|El grupo o usuario se denegarán los permisos especificados.|  
-|**adAccessGrant**|1|El usuario o grupo tendrá al menos los permisos solicitados.|  
-|**adAccessRevoke**|4|Se revocará los derechos de acceso explícita del usuario o grupo.|  
-|**adAccessSet**|2|El usuario o grupo tendrá exactamente los permisos solicitados.|
+|**adAccessDeny**|3|Al grupo o al usuario se le denegarán los permisos especificados.|  
+|**adAccessGrant**|1|El grupo o usuario tendrá al menos los permisos solicitados.|  
+|**adAccessRevoke**|4|Se revocarán todos los derechos de acceso explícitos del grupo o usuario.|  
+|**adAccessSet**|2|El grupo o usuario tendrá exactamente los permisos solicitados.|

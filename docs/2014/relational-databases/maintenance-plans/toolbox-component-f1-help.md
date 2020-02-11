@@ -13,20 +13,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806833"
 ---
 # <a name="toolbox-component-f1-help"></a>Cuadro de herramientas (Ayuda F1)
 
-El**cuadro de herramientas** muestra varios elementos que se utilizan en los proyectos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . El **cuadro de herramientas** puede abrirse desde el menú **Ver** , y esta ventana puede acoplarse como se desee. Cuando está acoplado, el **cuadro de herramientas** puede estar abierto de forma permanente o puede configurarse de modo que se **oculte automáticamente** si no se utiliza.  
+**Cuadro de herramientas** muestra varios elementos que se usan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en los proyectos de. El **cuadro de herramientas** puede abrirse desde el menú **Ver** , y esta ventana puede acoplarse como se desee. Cuando está acoplado, el **cuadro de herramientas** puede estar abierto de forma permanente o puede configurarse de modo que se **oculte automáticamente** si no se utiliza.  
   
-Los iconos del**cuadro de herramientas** pueden arrastrarse y colocarse, o bien copiarse y pegarse en los editores de código o en superficies de vistas de diseño de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Los iconos del **cuadro de herramientas** se pueden arrastrar y colocar, o copiar y pegar en los editores de código o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en las superficies de la vista de diseño de.  
   
 ## <a name="using-the-toolbox"></a>Usar el cuadro de herramientas  
- El cuadro de herramientas es un control de árbol deslizante cuyo comportamiento es muy parecido al del Explorador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, pero sin líneas de cuadrícula ni de conexión. Pueden expandirse varios segmentos del **cuadro de herramientas** (denominados "pestañas") al mismo tiempo, y todo el árbol se desplaza dentro de la ventana del **cuadro de herramientas** . Para expandir una pestaña del **cuadro de herramientas**, haga clic en el signo más ( **+** ) que aparece junto a su nombre. Para contraer una pestaña, haga clic en el signo menos ( **-** ) que aparece junto a su nombre.  
+ El cuadro de herramientas es un control de árbol deslizante cuyo comportamiento es muy parecido al del Explorador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, pero sin líneas de cuadrícula ni de conexión. Pueden expandirse varios segmentos del **cuadro de herramientas** (denominados "pestañas") al mismo tiempo, y todo el árbol se desplaza dentro de la ventana del **cuadro de herramientas** . Para expandir una pestaña del **cuadro de herramientas**, haga clic en el signo más (**+**) que aparece junto a su nombre. Para contraer una pestaña expandida, haga clic**-** en el signo menos () situado junto a su nombre.  
   
  Cada vez que regresa a un editor a diseñador, el **cuadro de herramientas** se desplaza automáticamente hasta la pestaña y el elemento seleccionado de forma más reciente. Al cambiar el foco a un editor o diseñador distinto, la selección actual del **cuadro de herramientas** también cambia.  
   
@@ -35,6 +35,6 @@ Los iconos del**cuadro de herramientas** pueden arrastrarse y colocarse, o bien 
   
  Para agregar elementos al **cuadro de herramientas** o eliminarlos de éste, en el menú **Herramientas** , haga clic en **Elegir elementos del cuadro de herramientas**. Solo las **tareas de mantenimiento** pueden estar disponibles como iconos del **cuadro de herramientas** . No todos los componentes están siempre disponibles. Por ejemplo, las tareas de mantenimiento solo están disponibles si se crea un plan de mantenimiento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el cuadro de herramientas](../../ssms/use-the-toolbox.md)   
- [Elegir elementos del cuadro de herramientas &#40;página Tareas de mantenimiento&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
+ [Elegir elementos del cuadro de herramientas &#40;página tareas de mantenimiento&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  

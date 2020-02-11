@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22225f9a1791185ed78dfc75d92c3dbced7be3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769342"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (expresión de SSIS)
@@ -31,7 +31,7 @@ DATEPART(datepart, date)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *parte de fecha*  
+ *datepart*  
  Parámetro que especifica para qué parte de la fecha se devuelve un valor nuevo.  
   
  *date*  
@@ -40,7 +40,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  DATEPART devuelve un resultado NULL si el valor del argumento es NULL.  
   
  Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
@@ -53,12 +53,12 @@ DATEPART(datepart, date)
 |Trimestre|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|Día|dd, d|  
 |Semana|wk, ww|  
-|Weekday|dw|  
+|Día de la semana|dw|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|Second|ss, s|  
+|Segundo|ss, s|  
 |Millisecond|Ms|  
   
 ## <a name="ssis-expression-examples"></a>Ejemplos de expresiones de SSIS  
@@ -80,7 +80,7 @@ DATEPART("dd", ModifiedDate)
 DATEPART("yy",GETDATE())  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [DATEADD &#40;expresión de SSIS&#41;](dateadd-ssis-expression.md)   
  [DATEDIFF &#40;expresión de SSIS&#41;](datediff-ssis-expression.md)   
  [DAY &#40;expresión de SSIS&#41;](day-ssis-expression.md)   

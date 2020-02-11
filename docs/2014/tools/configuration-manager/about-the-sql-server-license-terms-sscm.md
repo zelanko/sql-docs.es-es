@@ -1,5 +1,5 @@
 ---
-title: Acerca de los términos de licencia SQL Server (SSCM) | Microsoft Docs
+title: Acerca de los términos de licencia de SQL Server (SSCM) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035324"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Acerca de los términos de licencia de SQL Server (SSCM)
-  Los términos de licencia de software de [!INCLUDE[msCoName](../../includes/msconame-md.md)]se copian en el equipo local cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el caso de que se instalen en el mismo equipo varias instancias de la misma edición e idioma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se aplicará una única copia de los términos de licencia a todas las instancias de esa edición e idioma. Los archivos se escriben en: %ProgramFiles%\Microsoft SQL Server\110\License Terms\ o en % ProgramFiles (x86) %\Microsoft SQL Server\110\License términos\\.  
+  Los términos de licencia de software de [!INCLUDE[msCoName](../../includes/msconame-md.md)]se copian en el equipo local cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el caso de que se instalen en el mismo equipo varias instancias de la misma edición e idioma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se aplicará una única copia de los términos de licencia a todas las instancias de esa edición e idioma. Los archivos se escriben en:%ProgramFiles%\Microsoft SQL Server\110\License términos \ o% ProgramFiles (x86)% \ Microsoft SQL Server\110\License\\términos.  
   
  En el caso de que se instalen en el mismo equipo varias instancias de la misma edición e idioma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se aplicará una única copia de los términos de licencia a todas las instancias de esa edición e idioma.  
   
@@ -77,8 +77,8 @@ ms.locfileid: "63035324"
 ## <a name="sql-server-licensing-options"></a>Opciones de licencia de SQL Server  
  Para obtener más información acerca del precio y las opciones de licencia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea el sitio web de [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) .  
   
-## <a name="see-also"></a>Vea también  
- [Declaración de privacidad de Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
+## <a name="see-also"></a>Consulte también  
+ [Microsoft SQL Server declaración de privacidad](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
  [Aviso legal de la documentación](../../../2014/getting-started/legal-notice-for-documentation.md)  
   
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811329"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurar permisos del sistema de archivos para el acceso al motor de base de datos
@@ -32,23 +32,23 @@ ms.locfileid: "62811329"
   
 2.  Haga clic en la pestaña **Seguridad** , haga clic en **Editar**y, a continuación, en **Agregar**.  
   
-3.  En el cuadro de diálogo **Seleccionar usuarios, equipos, cuentas de servicio o grupos** , haga clic en **Ubicaciones**, seleccione el nombre del equipo en la parte superior de la lista de ubicaciones y, a continuación, haga clic en **Aceptar**.  
+3.  En el cuadro de diálogo **Seleccionar usuarios, equipos, cuentas de servicio o grupos**, haga clic en **Ubicaciones**, seleccione el nombre del equipo en la parte superior de la lista de ubicaciones y, a continuación, haga clic en **Aceptar**.  
   
-4.  En el **escriba los nombres de objeto para seleccionar** , escriba el nombre del SID por servicio aparece en el tema de libros en pantalla de **Configure Windows Service Accounts and Permissions**. (Para el [!INCLUDE[ssDE](../../includes/ssde-md.md)] SID por servicio, utilice **NT SERVICE\MSSQLSERVER** para una instancia predeterminada, o **NT SERVICE\MSSQL$ InstanceName** para una instancia con nombre.)  
+4.  En el cuadro **Escriba los nombres de objeto que desea seleccionar** , escriba el nombre del SID por servicio que aparece en el tema de los libros en pantalla **configurar los permisos y las cuentas de servicio de Windows**. (Para el [!INCLUDE[ssDE](../../includes/ssde-md.md)] SID por servicio, use **NT SERVICE\MSSQLSERVER** para una instancia predeterminada o **NT SERVICE\MSSQL $ InstanceName** para una instancia con nombre).  
   
 5.  Para validar la entrada, haga clic en **Comprobar nombres** . A menudo, se produce un error en la validación, y es posible que aparezca un mensaje indicando que no se encontró el nombre. Al hacer clic en **Aceptar**, aparece un cuadro de diálogo **Se encontraron varios nombres** .  
   
-6.  Ahora seleccione el SID por servicio, bien **MSSQLSERVER** o **NT SERVICE\MSSQL$ InstanceName**y, a continuación, haga clic en **Aceptar**.  
+6.  Ahora seleccione el SID por servicio, **MSSQLSERVER** o **NT SERVICE\MSSQL $ InstanceName**y, a continuación, haga clic en **Aceptar**.  
   
-7.  Haga clic en **Aceptar** de nuevo para regresar al cuadro de diálogo **Permisos** .  
+7.  Vuelva a hacer clic en **Aceptar** para volver al cuadro de diálogo **permisos** .  
   
-8.  En el **grupo o usuario** nombres, seleccione el SID por servicio y, a continuación, en el **permisos para** \<nombre > cuadro, seleccione el **permitir** casilla de verificación para  **Control total**.  
+8.  En el cuadro nombres de **grupos o usuarios** , seleccione el SID por servicio y, a continuación, en el cuadro **permisos de** \<nombre>, active la casilla **permitir** para **control total**.  
   
 9. Haga clic en **Aplicar**y, a continuación, haga clic dos veces en **Aceptar** para salir.  
   
-## <a name="see-also"></a>Vea también  
- [Administrar el servicio del motor de base de datos](manage-the-database-engine-services.md)   
- [Mover bases de datos del sistema](../../relational-databases/databases/system-databases.md)   
+## <a name="see-also"></a>Consulte también  
+ [Administrar los servicios de Motor de base de datos](manage-the-database-engine-services.md)   
+ [Traslado de bases de datos del sistema](../../relational-databases/databases/system-databases.md)   
  [Mover bases de datos de usuario](../../relational-databases/databases/move-user-databases.md)  
   
   

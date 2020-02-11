@@ -19,13 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42299bce176f3fa93b9a145204ff95e292aed542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108886"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una cuenta especial que se utiliza para el procesamiento de informes en modo desatendido y para enviar solicitudes de conexión a través de la red. La cuenta se utiliza de las formas siguientes:  
   
 -   Envíe las solicitudes de conexión a través de la red para los informes que usen la autenticación de base de datos, o conéctese a los orígenes de datos de informe externos que no requieran ni usen autenticación. Para obtener más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../integration-services/connection-manager/data-sources.md) en los Libros en pantalla de SQL Server.  
@@ -35,7 +36,7 @@ ms.locfileid: "66108886"
  El procesamiento de informes en modo desatendido hace referencia a cualquier proceso de ejecución de informe activado por un evento (sea un evento controlado por programación o de actualización de datos) y no por la solicitud de un usuario. El servidor de informes utiliza la cuenta de procesamiento de informes en modo desatendido para iniciar una sesión en el equipo que hospeda el origen de datos externo. Esta cuenta es necesaria porque las credenciales de la cuenta del servicio del servidor de informes no se han utilizado nunca para conectarse a otros equipos.  
   
 > [!IMPORTANT]  
->  La configuración de esta cuenta es opcional. No obstante, si no la configura, limitará sus opciones para conectarse a algunos orígenes de datos y es posible que no pueda recuperar archivos de imagen desde equipos remotos. Si configura la cuenta, debe mantenerla actualizada. En concreto, si permite que una contraseña expire o se cambia la información de cuenta en Active Directory, se producirá el siguiente error la próxima vez que se procesa un informe: "Error de inicio de sesión (rsLogonFailed) Error al iniciar sesión: nombre de usuario desconocido o contraseña incorrecta." Resulta esencial el mantenimiento adecuado de la cuenta de procesamiento de informes en modo desatendido, aunque no recupere nunca imágenes externas o no envíe nunca solicitudes de conexión a equipos externos. Si configura la cuenta pero se da cuenta de que no la está utilizando, puede eliminarla para evitar las tareas rutinarias de mantenimiento de la cuenta.  
+>  La configuración de esta cuenta es opcional. No obstante, si no la configura, limitará sus opciones para conectarse a algunos orígenes de datos y es posible que no pueda recuperar archivos de imagen desde equipos remotos. Si configura la cuenta, debe mantenerla actualizada. Concretamente, si permite que una contraseña expire o se modifica la información de la cuenta en Active Directory, se producirá el siguiente error la próxima vez que se procese un informe: "Error de inicio de sesión (rsLogonFailed) Error de inicio de sesión: nombre de usuario desconocido o contraseña incorrecta". Resulta esencial el mantenimiento adecuado de la cuenta de procesamiento de informes en modo desatendido, aunque no recupere nunca imágenes externas o no envíe nunca solicitudes de conexión a equipos externos. Si configura la cuenta pero se da cuenta de que no la está utilizando, puede eliminarla para evitar las tareas rutinarias de mantenimiento de la cuenta.  
   
 ## <a name="how-to-configure-the-account"></a>Cómo configurar la cuenta  
  Debe usar una cuenta de usuario de dominio. Para cumplir su propósito específico, esta cuenta debería ser distinta de la que se utiliza para ejecutar el servicio del servidor de informes. Asegúrese de utilizar una cuenta que tenga permisos mínimos (son suficientes los permisos de acceso de solo lectura con conexión de red) y acceso limitado a aquellos equipos que proporcionan los orígenes de datos y los recursos al servidor de informes. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
@@ -49,17 +50,17 @@ ms.locfileid: "66108886"
 3.  Especifique la cuenta y la contraseña, vuelva a especificar esta última y, a continuación, haga clic en **Aplicar**.  
   
 ### <a name="using-rsconfig-utility"></a>Usar la utilidad RSCONFIG  
- Otra manera de establecer la cuenta es usar la utilidad **rsconfig** . Para especificar la cuenta, use el argumento **-e** de **rsconfig**. Al especificar el argumento **-e** de **rsconfig** , se indica a la utilidad que escriba la información de la cuenta en el archivo de configuración. No es necesario especificar una ruta de acceso para RSreportserver.config. Siga estos pasos para configurar la cuenta.  
+ Otra manera de establecer la cuenta es usar la utilidad **rsconfig** . Para especificar la cuenta, use el argumento **-e** de **rsconfig**. Al especificar el argumento **-e** de **rsconfig** , se indica a la utilidad que escriba la información de la cuenta en el archivo de configuración. No necesita especificar una ruta de acceso a RSreportserver.config. Siga estos pasos para configurar la cuenta.  
   
 1.  Cree o seleccione una cuenta de dominio que tenga acceso a los equipos y servidores que proporcionen datos o servicios a un servidor de informes. Debe utilizar una cuenta que tenga permisos reducidos (por ejemplo, permisos de solo lectura).  
   
-2.  Abra un símbolo del sistema: En el **iniciar** menú, haga clic en **ejecutar**, tipo **cmd**y, a continuación, haga clic en **Aceptar**.  
+2.  Abra un símbolo del sistema: en el menú **Inicio** , haga clic en **Ejecutar**, escriba **cmd**y haga clic en **Aceptar**.  
   
 3.  Escriba el siguiente comando para configurar la cuenta de una instancia de servidor de informes local:  
   
-     **rsconfig -e -u\<dominio/nombreDeUsuario> -p\<password>**  
+     **rsconfig-e-u\<dominio/nombre de usuario>\<-p contraseña>**  
   
- **rsconfig -e** admite argumentos adicionales. Para obtener más información sobre la sintaxis y para ver ejemplos de comandos, consulte [rsconfig (utilidad) &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) en los Libros en pantalla de SQL Server.  
+ **rsconfig-e** admite argumentos adicionales. Para más información sobre la sintaxis y para ver ejemplos de comandos, vea [rsconfig (utilidad) &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) en los Libros en pantalla de SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Cómo se almacena la información de la cuenta  
  Al establecer la cuenta, la configuración siguiente se especifica en forma de valores cifrados en el archivo RSreportserver.config de una instancia local o remota del servidor de informes:  
@@ -103,7 +104,7 @@ ms.locfileid: "66108886"
   
  La información de cuenta se quita del archivo RSReportServer.config.  
   
-## <a name="see-also"></a>Vea también  
- [Administrador de configuración de Reporting Services &#40;SUPR&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
+## <a name="see-also"></a>Consulte también  
+ [Administrador de configuración de Reporting Services &#40;del&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

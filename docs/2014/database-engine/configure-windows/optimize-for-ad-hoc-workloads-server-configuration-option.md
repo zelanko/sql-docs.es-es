@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7edf279b49374823c9083005be9b8d047b003f62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781441"
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>optimize for ad hoc workloads (opción de configuración del servidor)
@@ -28,12 +28,12 @@ ms.locfileid: "62781441"
   
  El código auxiliar del plan compilado es uno de los elementos cacheobjtypes mostrados por la vista de catálogo sys.dm_exec_cached_plans. Tiene un identificador de sql e identificador del plan único. El código auxiliar del plan compilado no tiene un plan de ejecución asociado a él por lo que, al consultar el identificador del plan, no se devolverá un plan de presentación XML.  
   
- La marca de seguimiento 8032 revierte los parámetros de límite de la memoria caché al valor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] de RTM que en general permite que las memorias caché sean mayores. Use este valor cuando las entradas de caché que se reutilizan con frecuencia no quepan en la memoria caché y cuando la *opción de configuración del servidor Optimizar para cargas de trabajo ad hoc* no haya podido resolver el problema con la caché de planes.  
+ La marca de seguimiento 8032 revierte los parámetros de límite de la memoria caché al valor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] de RTM que en general permite que las memorias caché sean mayores. Use esta opción cuando las entradas de caché reutilizadas con frecuencia no quepan en la caché y cuando la *opción de configuración del servidor optimizar para cargas de trabajo ad hoc* no haya podido resolver el problema con la caché del plan.  
   
 > [!WARNING]  
 >  La marca de seguimiento 8032 puede ocasionar la degradación del rendimiento si las memorias caché grandes suponen que haya menos memoria disponible para otros consumidores de memoria, como el grupo de búferes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   

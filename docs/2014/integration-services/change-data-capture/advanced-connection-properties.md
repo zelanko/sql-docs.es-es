@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7a5744aa2adcaab74ca09bbb962c8c69d985b79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771521"
 ---
 # <a name="advanced-connection-properties"></a>Propiedades avanzadas de conexión
@@ -31,7 +31,7 @@ ms.locfileid: "62771521"
 > [!IMPORTANT]  
 >  No incluya credenciales de inicio de sesión en el cuadro de diálogo **Propiedades avanzadas de conexión** . No se cifrarán cuando se pasen a través de la red.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Obtener acceso a la Consola del diseñador CDC](access-the-cdc-designer-console.md)   
  [Conexión de SQL Server para la creación de instancias](sql-server-connection-for-instance-creation.md)  
   

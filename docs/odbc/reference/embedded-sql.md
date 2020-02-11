@@ -1,5 +1,5 @@
 ---
-title: SQL incrustadas | Microsoft Docs
+title: SQL incrustado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6a7fa2b3105aedee6cb054c5d5dfa76f3c430f35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915424"
 ---
 # <a name="embedded-sql"></a>SQL incrustado
-La primera técnica para enviar instrucciones SQL para el DBMS se incrusta SQL. Dado que no usan SQL variables y las instrucciones de control de flujo, se utiliza a menudo como una variante de idioma de la base de datos que se puede agregar a un programa escrito en un lenguaje de programación convencional, como C o COBOL. Se trata de una idea central de SQL incrustado: colocar instrucciones SQL en un programa escrito en un host de lenguaje de programación. En pocas palabras, las técnicas siguientes se utilizan para incrustar instrucciones SQL en un lenguaje de host:  
+La primera técnica para enviar instrucciones SQL al DBMS es Embedded SQL. Dado que SQL no utiliza variables y instrucciones de control de flujo, a menudo se usa como un subidioma de base de datos que se puede Agregar a un programa escrito en un lenguaje de programación convencional, como C o COBOL. Se trata de una idea central de SQL incrustado: colocar instrucciones SQL en un programa escrito en un lenguaje de programación de host. Brevemente, se usan las técnicas siguientes para insertar instrucciones SQL en un idioma host:  
   
--   Instrucciones SQL insertadas se procesan por un precompilador SQL especial. Todas las instrucciones SQL comienzan con un iniciador y terminan con un terminador, que marca la instrucción SQL para el precompilador. El iniciador y el terminador varían con el lenguaje del host. Por ejemplo, el iniciador es "EXEC SQL" en C y "& SQL (" en PAPERAS, y el terminador es un punto y coma (;) en C y un paréntesis derecho en PAPERAS.  
+-   Las instrucciones SQL incrustadas las procesa un precompilador de SQL especial. Todas las instrucciones SQL comienzan con un presentador y finalizan con un terminador, que marcan la instrucción SQL para el precompilador. El presentador y el terminador varían con el idioma del host. Por ejemplo, el presentador es "EXEC SQL" en C y "&SQL (" en las PAPERas, y el terminador es un punto y coma (;) en C y un paréntesis derecho en PAPERs.  
   
--   Variables desde el programa de aplicación, que se denominan variables de host, pueden usarse en instrucciones SQL insertadas siempre que se permiten constantes. Estos se pueden usar en la entrada para adaptar una instrucción SQL para una situación determinada y en la salida para recibir los resultados de una consulta.  
+-   Las variables del programa de aplicación, denominadas variables de host, se pueden usar en instrucciones SQL incrustadas siempre que se permitan constantes. Se pueden usar en la entrada para adaptar una instrucción SQL a una situación determinada y en la salida para recibir los resultados de una consulta.  
   
--   Las consultas que devuelven una única fila de datos se controlan con una instrucción SELECT singleton; Esta instrucción especifica que la consulta y las variables de host en el que se va a devolver los datos.  
+-   Las consultas que devuelven una única fila de datos se administran con una instrucción SELECT de singleton; Esta instrucción especifica la consulta y las variables de host en las que se van a devolver los datos.  
   
--   Las consultas que devuelven varias filas de datos se controlan con cursores. Un cursor realiza un seguimiento de la fila actual dentro de un conjunto de resultados. La instrucción DECLARE CURSOR define la consulta, la instrucción OPEN comienza el procesamiento de consultas, la instrucción FETCH recupera las sucesivas filas de datos y la instrucción CLOSE finaliza el procesamiento de consultas.  
+-   Las consultas que devuelven varias filas de datos se controlan con cursores. Un cursor realiza un seguimiento de la fila actual dentro de un conjunto de resultados. La instrucción DECLARE CURSOR define la consulta, la instrucción OPEN comienza el procesamiento de la consulta, la instrucción FETCH recupera filas sucesivas de datos y la instrucción CLOSE finaliza el procesamiento de la consulta.  
   
--   Mientras el cursor está abierto, pueden utilizarse para actualizar o eliminar la fila seleccionada actualmente por el cursor actualización posicionada y las instrucciones delete posicionadas.  
+-   Mientras un cursor está abierto, se pueden usar las instrucciones Update y DELETE posicionadas para actualizar o eliminar la fila seleccionada actualmente por el cursor.  
   
  Esta sección contiene los temas siguientes.  
   

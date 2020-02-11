@@ -16,29 +16,29 @@ ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc360bc91e977228a6f9139089a7bfa87d912e1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918438"
 ---
 # <a name="isolationlevel-property"></a>Propiedad IsolationLevel
-Indica el nivel de aislamiento para un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
+Indica el nivel de aislamiento para un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md) valor. El valor predeterminado es **adXactReadCommitted**.  
+ Establece o devuelve un valor de [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md) . El valor predeterminado es **adXactReadCommitted**.  
   
-## <a name="remarks"></a>Comentarios  
- Use la **IsolationLevel** para establecer el nivel de aislamiento de la propiedad de un **conexión** objeto. La configuración no surte efecto hasta la próxima vez que se llama a la [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método. Si el nivel de aislamiento solicitado no está disponible, el proveedor puede devolver el siguiente nivel superior de aislamiento sin actualizar el **IsolationLevel** propiedad.  
+## <a name="remarks"></a>Observaciones  
+ Utilice la propiedad **IsolationLevel** para establecer el nivel de aislamiento de un objeto de **conexión** . La configuración no surte efecto hasta la próxima vez que se llame al método [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) . Si el nivel de aislamiento solicitado no está disponible, el proveedor puede devolver el siguiente nivel mayor de aislamiento sin actualizar la propiedad **IsolationLevel** .  
   
- El **IsolationLevel** propiedad es de lectura/escritura.  
+ La propiedad **IsolationLevel** es de lectura y escritura.  
   
 > [!NOTE]
->  **Uso del servicio de datos remoto** cuando se usa en un cliente **conexión** objeto, el **IsolationLevel** propiedad se puede establecer solo en **adXactUnspecified**. Dado que los usuarios están trabajando sin conexión **Recordset** objetos en una memoria caché del lado cliente, puede haber problemas de multiusuario. Por ejemplo, cuando dos usuarios distintos intentan actualizar el mismo registro, servicio de datos remotos simplemente permite al usuario que actualice primero el registro "win". Solicitud de actualización del segundo usuario producirá un error.  
+>  **Uso del servicio de datos remotos** Cuando se usa en un objeto de **conexión** del lado cliente, la propiedad **IsolationLevel** solo se puede establecer en **adXactUnspecified**. Dado que los usuarios trabajan con objetos de **conjunto de registros** desconectados en una caché del lado cliente, puede haber problemas con los usuarios. Por ejemplo, cuando dos usuarios diferentes intentan actualizar el mismo registro, el servicio de datos remotos simplemente permite al usuario que actualiza el registro primero a "Win". Se producirá un error en la solicitud de actualización del segundo usuario.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo IsolationLevel y Mode propiedades (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [Ejemplo IsolationLevel y Mode propiedades (VC ++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de las propiedades IsolationLevel y MODE (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
+ [Ejemplo de las propiedades IsolationLevel y MODE (VC + +)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

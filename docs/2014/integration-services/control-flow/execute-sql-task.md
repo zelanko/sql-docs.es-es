@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831773"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
@@ -44,9 +44,9 @@ ms.locfileid: "62831773"
   
 |Tipo de conexión|Administrador de conexiones|  
 |---------------------|------------------------|  
-|EXCEL|[Administrador de conexiones de Excel](../connection-manager/excel-connection-manager.md)|  
-|OLE DB|[Administrador de conexiones OLE DB](../connection-manager/ole-db-connection-manager.md)|  
-|ODBC|[Administrador de conexiones ODBC](../connection-manager/odbc-connection-manager.md)|  
+|EXCEL|[Administrador de conexiones con Excel](../connection-manager/excel-connection-manager.md)|  
+|OLE DB|[OLE DB, administrador de conexiones](../connection-manager/ole-db-connection-manager.md)|  
+|ODBC|[ODBC, administrador de conexiones](../connection-manager/odbc-connection-manager.md)|  
 |ADO|[Administrador de conexiones ADO](../connection-manager/ado-connection-manager.md)|  
 |ADO.NET|[Administrador de conexiones ADO.NET](../connection-manager/ado-net-connection-manager.md)|  
 |SQLMOBILE|[Administrador de conexiones con SQL Server Compact Edition](../connection-manager/sql-server-compact-edition-connection-manager.md)|  
@@ -56,7 +56,7 @@ ms.locfileid: "62831773"
   
  Si las instrucciones SQL se almacenan en un archivo, la tarea utiliza un administrador de conexiones de archivos para conectar con el archivo. Para obtener más información, consulte [File Connection Manager](../connection-manager/file-connection-manager.md).  
   
- En el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puede utilizar el cuadro de diálogo **Editor de la tarea Ejecutar SQL** para escribir instrucciones SQL, o utilizar el **Generador de consultas**, una interfaz gráfica de usuario para crear consultas SQL. Para más información, vea [Editor de la tarea Ejecutar SQL &#40;página General&#41;](../execute-sql-task-editor-general-page.md) y [Generador de consultas](../query-builder.md).  
+ En el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puede utilizar el cuadro de diálogo **Editor de la tarea Ejecutar SQL** para escribir instrucciones SQL, o utilizar el **Generador de consultas**, una interfaz gráfica de usuario para crear consultas SQL. Para más información, vea [Execute SQL Task Editor &#40;General Page&#41;](../execute-sql-task-editor-general-page.md) y [Generador de consultas](../query-builder.md).  
   
 > [!NOTE]  
 >  Es posible que la tarea Ejecutar SQL no pueda analizar correctamente instrucciones SQL válidas escritas fuera de dicha tarea.  
@@ -102,7 +102,7 @@ ms.locfileid: "62831773"
 -   Si utiliza los administradores de conexiones ODBC y ADO.NET, la tarea no omite los conjuntos de resultados que se producen después del primer conjunto de resultados. Con estos administradores de conexiones, la tarea producirá un error cuando un conjunto de resultados distinto del primer conjunto de resultados contenga un error.  
   
 ### <a name="custom-log-entries"></a>Entradas del registro personalizadas  
- La siguiente tabla contiene la entrada del registro personalizada para la tarea Ejecutar SQL. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene la entrada del registro personalizada para la tarea Ejecutar SQL. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -127,11 +127,11 @@ ms.locfileid: "62831773"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Ejecutar el Editor de la tarea SQL &#40;página General&#41;](../execute-sql-task-editor-general-page.md)  
+-   [Editor de la tarea ejecutar SQL &#40;página general&#41;](../execute-sql-task-editor-general-page.md)  
   
--   [Ejecutar el Editor de la tarea SQL &#40;página asignación de parámetros&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
+-   [&#40;página de asignación de parámetros del editor de la tarea ejecutar SQL&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
   
--   [Ejecutar el Editor de la tarea SQL &#40;página conjunto de resultados&#41;](../execute-sql-task-editor-result-set-page.md)  
+-   [Editor de la tarea ejecutar SQL &#40;página conjunto de resultados&#41;](../execute-sql-task-editor-result-set-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -146,7 +146,7 @@ ms.locfileid: "62831773"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Asignar parámetros de consulta a variables en una tarea Ejecutar SQL](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
+-   [asignar parámetros de consulta a variables en una tarea Ejecutar SQL](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
   
 -   [Asignar conjuntos de resultados a variables en una tarea Ejecutar SQL](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
   

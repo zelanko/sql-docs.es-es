@@ -18,10 +18,10 @@ ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919917"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Colecciones (ADO para la sintaxis Visual C++)
@@ -140,8 +140,8 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
 -   [Propiedad Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Colección de errores (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Colección de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Colección de parámetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Parameters (colección) (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

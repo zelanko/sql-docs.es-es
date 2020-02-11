@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1ddc919b4658395c6a4268f03131bc92291f1b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832888"
 ---
 # <a name="cdc-control-task"></a>Tarea Control CDC
@@ -40,16 +40,16 @@ ms.locfileid: "62832888"
 |Operación|Descripción|  
 |---------------|-----------------|  
 |GetProcessingRange|Esta operación se usa antes de invocar el flujo de datos que usa el flujo de datos origen de CDC. Establece un intervalo de LSN que lee el flujo de datos de origen de CDC cuando se invoca. El intervalo se almacena en una variable de paquete SSIS que usa el origen de CDC durante el procesamiento del flujo de datos.<br /><br /> Para obtener más información sobre los estados que se almacenan, vea [Definir una variable de estado](../data-flow/define-a-state-variable.md).|  
-|MarkProcessedRange|: esta operación se ejecuta después de cada ejecución de CDC (después de que el flujo de datos de CDC se completa correctamente) para registrar el último LSN que se procesó totalmente en la ejecución de CDC. La próxima vez que se ejecute GetProcessingRange, esta posición será el inicio del intervalo de procesamiento.|  
+|MarkProcessedRange|: esta operación se ejecuta después de cada ejecución de CDC (después de que el flujo de datos de CDC se completa correctamente) para registrar el último LSN que se ha procesado totalmente en la ejecución de CDC. La próxima vez que se ejecute GetProcessingRange, esta posición será el inicio del intervalo de procesamiento.|  
   
 ## <a name="handling-cdc-state-persistency"></a>Controlar la persistencia de estado CDC  
  La tarea Control CDC mantiene un estado persistente entre las activaciones. La información almacenada en el estado CDC se usa para determinar y mantener el intervalo de procesamiento del paquete CDC y para detectar condiciones de error. El estado persistente se almacena como una cadena. Para obtener más información, consulte [Definir una variable de estado](../data-flow/define-a-state-variable.md).  
   
  La tarea Control CDC admite dos tipos de persistencia de estado  
   
--   Persistencia de estado manual: en este caso, la tarea Control CDC administra el estado almacenado en una variable de paquete pero el desarrollador de paquetes debe leer la variable desde un almacén persistente antes de llamar al Control CDC y después escribirla de nuevo en ese almacén persistente cuando el Control CDC se llame por última vez y la ejecución del CDC se complete.  
+-   Persistencia de estado manual: en este caso, la tarea Control CDC administra el estado almacenado en una variable de paquete pero el desarrollador del paquete debe leer la variable desde un almacén persistente antes de llamar al Control CDC y después escribirla de nuevo en el almacén persistente cuando el Control CDC se llame por última vez y la ejecución del CDC se complete.  
   
--   Persistencia de estado automática: el estado de CDC se almacena en una tabla de una base de datos. El estado se almacena con un nombre proporcionado en la propiedad **StateName** en una tabla denominada en la propiedad **Tabla para Storing State** , que se encuentra en un administrador de conexiones seleccionado para almacenar el estado. El valor predeterminado es el administrador de conexiones de origen pero la práctica común es que sea el administrador de conexiones de destino. La tarea Control CDC actualiza el valor de estado en la tabla de estados y esta se confirma como parte de la transacción ambiente.  
+-   Persistencia de estado automática: el estado del CDC se almacena en una tabla de una base de datos. El estado se almacena con un nombre proporcionado en la propiedad **StateName** en una tabla denominada en la propiedad **Tabla para Storing State** , que se encuentra en un administrador de conexiones seleccionado para almacenar el estado. El valor predeterminado es el administrador de conexiones de origen pero la práctica común es que sea el administrador de conexiones de destino. La tarea Control CDC actualiza el valor de estado en la tabla de estados y esta se confirma como parte de la transacción ambiente.  
   
 ## <a name="error-handling"></a>Tratamiento de errores  
  La tarea Control CDC puede notificar un error cuando:  
@@ -69,7 +69,7 @@ ms.locfileid: "62832888"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Editor de la tarea Control de CDC](../cdc-control-task-editor.md)  
+-   [Editor de la tarea Control CDC](../cdc-control-task-editor.md)  
   
 -   [Propiedades personalizadas de la tarea Control CDC](cdc-control-task-custom-properties.md)  
   

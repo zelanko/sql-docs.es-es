@@ -1,5 +1,5 @@
 ---
-title: Programación ADO con JScript | Microsoft Docs
+title: Programación ADO en JScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,30 +16,30 @@ ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d07759405dc337667cc8971ce7795af428a0cfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926803"
 ---
 # <a name="jscript-ado-programming"></a>Programación ADO con JScript
 ## <a name="creating-an-ado-project"></a>Crear un proyecto de ADO  
- Microsoft JScript no admite las bibliotecas de tipos, por lo que no es necesario hacer referencia a ADO en el proyecto. Por lo tanto, se admite ninguna característica asociada como la finalización de la línea de comandos. Además, de forma predeterminada, no se definen las constantes enumeradas de ADO en JScript.  
+ Microsoft JScript no es compatible con las bibliotecas de tipos, por lo que no es necesario hacer referencia a ADO en el proyecto. Por consiguiente, no se admiten características asociadas como la finalización de la línea de comandos. Además, de forma predeterminada, las constantes enumeradas de ADO no se definen en JScript.  
   
- Sin embargo, ADO ofrece que dos incluyen los archivos que contienen las siguientes definiciones para usarse con JScript:  
+ Sin embargo, ADO proporciona dos archivos de inclusión que contienen las siguientes definiciones que se van a usar con JScript:  
   
--   Uso de scripting del lado servidor Adojavas.inc, que se instala en las carpetas de la biblioteca ADO.  
+-   Para el scripting del lado servidor, use Adojavas. Inc, que se instala en las carpetas de la biblioteca de ADO.  
   
--   Uso de scripting del lado cliente Adcjavas.inc, que se instala en las carpetas de la biblioteca ADO.  
+-   En el caso del scripting de cliente, use Adcjavas. Inc, que se instala en las carpetas de la biblioteca de ADO.  
   
- Puede copiar y pegar las definiciones de constantes de estos archivos en las páginas ASP o, si va a realizar el scripting del lado servidor, copie el archivo Adojavas.inc en una carpeta en el sitio Web y hace referencia a él desde la página ASP similar al siguiente:  
+ Puede copiar y pegar definiciones de constantes de estos archivos en las páginas ASP, o bien, si va a realizar scripts en el servidor, copie el archivo Adojavas. Inc en una carpeta de su sitio web y haga referencia a él desde la página ASP del modo siguiente:  
   
 ```javascript
 <!--#include File="adojavas.inc"-->  
 ```  
   
-## <a name="creating-ado-objects-in-jscript"></a>Creación de objetos ADO en JScript  
- En su lugar, debe usar el **CreateObject** llamada de función:  
+## <a name="creating-ado-objects-in-jscript"></a>Crear objetos ADO en JScript  
+ En su lugar, debe usar la llamada a la función **CreateObject** :  
   
 ```javascript
 var Rs1;  
@@ -47,7 +47,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ```  
   
 ## <a name="jscript-example"></a>Ejemplo de JScript  
- El código siguiente es un ejemplo genérico de programación de JScript en el servidor en un archivo de páginas Active Server (ASP) que se abre un **Recordset** objeto:  
+ El código siguiente es un ejemplo genérico de programación del lado servidor de JScript en un archivo de Active Server página (ASP) que abre un objeto de **conjunto de registros** :  
   
 ```javascript
 <%  @LANGUAGE="JScript" %>  

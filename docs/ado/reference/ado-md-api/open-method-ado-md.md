@@ -1,5 +1,5 @@
 ---
-title: Abrir (método) (ADO MD) | Microsoft Docs
+title: Método Open (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,10 +17,10 @@ ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 089fad427989c26ed1ed22ec3e9267297a29b820
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949388"
 ---
 # <a name="open-method-ado-md"></a>Open (método) (ADO MD)
@@ -35,21 +35,21 @@ Cellset.Open Source, ActiveConnection
   
 #### <a name="parameters"></a>Parámetros  
  *Origen*  
- Opcional. Un **Variant** que se evalúa como una consulta multidimensional válida, por ejemplo, una consulta de expresiones multidimensionales (MDX). El *origen* argumento corresponde a la [origen](../../../ado/reference/ado-md-api/source-property-ado-md.md) propiedad. Para obtener más información acerca de MDX, vea el [OLE DB para OLAP Online Analytical Processing ()](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) documentación en el SDK de Microsoft Data Access Components.  
+ Opcional. Una **variante** que se evalúa como una consulta multidimensional válida, como una consulta de expresión multidimensional (MDX). El argumento de *origen* corresponde a la propiedad de [origen](../../../ado/reference/ado-md-api/source-property-ado-md.md) . Para obtener más información acerca de MDX, consulte la documentación del [OLE DB para el procesamiento analítico en línea (OLAP)](https://msdn.microsoft.com/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) en el SDK de Microsoft Data Access Components.  
   
  *ActiveConnection*  
- Opcional. Un **Variant** que se evalúa como una cadena que especifica un ADO válido [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto nombre de variable o una definición de una conexión. El *ActiveConnection* argumento especifica la conexión en el que se va a abrir el [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto. Si se pasa una definición de conexión para este argumento, ADO abre una nueva conexión mediante los parámetros especificados. El *ActiveConnection* argumento corresponde a la [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) propiedad.  
+ Opcional. Una **variante** que se evalúa como una cadena que especifica un nombre de variable de objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) ADO válido o una definición para una conexión. El argumento *ActiveConnection* especifica la conexión en la que se va a abrir el objeto [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) . Si pasa una definición de conexión para este argumento, ADO abrirá una nueva conexión con los parámetros especificados. El argumento *ActiveConnection* corresponde a la propiedad [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) .  
   
-## <a name="remarks"></a>Comentarios  
- El **abrir** método genera un error si se omite cualquiera de sus parámetros y su correspondiente valor de propiedad no se ha establecido antes de intentar abrir el **Cellset**.  
+## <a name="remarks"></a>Observaciones  
+ El método **Open** genera un error si se omite cualquiera de sus parámetros y el valor de propiedad correspondiente no se ha establecido antes de intentar abrir el conjunto de **celdas**.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de celdas (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de conjunto de celdas (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [ActiveConnection (propiedad, ADO MD)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
- [Close (método) (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de Cellset (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
+ [Propiedad ActiveConnection (ADO MD)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
+ [Método Close (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
+ [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Propiedad Source (ADO MD)](../../../ado/reference/ado-md-api/source-property-ado-md.md)   
  [State (propiedad) (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)

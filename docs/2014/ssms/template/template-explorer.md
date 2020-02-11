@@ -20,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63074070"
 ---
 # <a name="template-explorer"></a>Template Explorer
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una variedad de plantillas. Las plantillas son archivos estereotipados que contienen scripts SQL que ayudan a crear objetos en una base de datos. La primera vez que se abre el Explorador de plantillas, se coloca una copia de las plantillas en la carpeta del usuario c:\Users, en AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una variedad de plantillas. Las plantillas son archivos estereotipados que contienen scripts SQL que ayudan a crear objetos en una base de datos. La primera vez que se abre el explorador de plantillas, se coloca una copia de las plantillas en la carpeta del usuario en C:\Users, en AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates.  
   
  Puede examinar las plantillas disponibles en el explorador de plantillas; a continuación abra una plantilla para escribir el código en una ventana del editor de código. También puede crear plantillas personalizadas.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63074070"
 ## <a name="related-tasks"></a>Related Tasks  
  Use los temas siguientes para empezar a trabajar con las plantillas  
   
-|**Description**|**Tema**|  
+|**Descripción**|**Tema.**|  
 |---------------------|---------------|  
 |Describe cómo incorporar el código de una plantilla en una ventana del editor de código.|[Abrir una plantilla](open-a-template.md)|  
 |Describe cómo reemplazar valores de parámetros de plantilla después de abrir una plantilla en un editor de código.|[Reemplazar parámetros de plantilla](replace-template-parameters.md)|  

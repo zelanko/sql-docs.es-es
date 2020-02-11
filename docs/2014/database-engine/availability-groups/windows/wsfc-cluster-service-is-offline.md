@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cfab5de4cd3d171d4d8b7515e65b0a9cd117ac16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812903"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>El servicio de clúster de WSFC está sin conexión
@@ -29,7 +29,7 @@ ms.locfileid: "62812903"
 |-|-|  
 |**Nombre de directiva**|Estado de clúster de WSFC|  
 |**Problema**|El servicio de clúster de WSFC está sin conexión.|  
-|**Categoría**|**Crítico**|  
+|**Categoría**|**Critical)** (Crítico)|  
 |**Faceta**|Instancia de SQL Server|  
   
 ## <a name="description"></a>Descripción  
@@ -40,14 +40,14 @@ ms.locfileid: "62812903"
 > [!NOTE]  
 >  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [El servicio de clúster de WSFC está desconectado](https://go.microsoft.com/fwlink/p/?LinkId=220849) en TechNet Wiki.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  Esto puede deberse a un problema del servicio de clúster o a la pérdida del quorum en el clúster.  
   
 ## <a name="possible-solution"></a>Solución posible  
  Use la herramienta Administrador de clústeres para realizar el flujo de trabajo de quorum forzado o de recuperación ante desastres. Si no puede resolver el problema al realizar el quorum forzado o la recuperación ante desastres, póngase en contacto con el administrador de clústeres para que le ayude a solucionar este problema. Para obtener más información, vea [Forzar el inicio de un clúster WSFC sin un cuórum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md) en los Libros en línea de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

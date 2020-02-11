@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f5aeb8a5eda8e4e49e478cbc53cd0ad90e3cc890
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095475"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>Información de encabezado y versión de SQL Server Express LocalDB
@@ -26,7 +26,7 @@ ms.locfileid: "74095475"
 ## <a name="localdb-versioning"></a>Versión de LocalDB  
  La instalación de LocalDB utiliza un conjunto único de archivos binarios por versión principal de SQL Server. Estas versiones de LocalDB se mantienen y se revisan de forma independiente. Esto significa que el usuario tiene que especificar la versión de línea base de LocalDB (es decir, la versión principal de SQL Server) que se va a utilizar. La versión se especifica en el formato de versión estándar definido por la clase .NET Framework **System. version** :  
   
- *major.minor[.build[.revision]]*  
+ *principal. secundaria [. compilación [. Revisión]]*  
   
  Los dos primeros números de la cadena de versión (*principal* y *secundaria*) son obligatorios. Los dos últimos números en la cadena de versión (*compilación* y *revisión*) son opcionales y tienen como valor predeterminado cero si el usuario los deja fuera. Esto significa que si el usuario especifica solo "12,2" como número de versión de LocalDB, se tratará como si el usuario hubiera especificado "12.2.0.0".  
   
@@ -45,7 +45,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- En esta clave hay una lista de claves, una para cada versión de LocalDB que se haya instalado en el equipo. Cada una de estas claves se denomina con el número de versión de LocalDB en el formato *\<> de versión principal*. *\<> de versión secundaria* (por ejemplo, la clave de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] se denomina 13,0). En cada clave de la versión hay un par nombre-valor `InstanceAPIPath` que definen la ruta completa al archivo SQLUserInstance.dll que se haya instalado con esa versión. En el ejemplo siguiente se muestran las entradas del registro para un equipo que tiene instaladas las versiones 11,0 y 13,0 de LocalDB:  
+ En esta clave hay una lista de claves, una para cada versión de LocalDB que se haya instalado en el equipo. Cada una de estas claves se denomina con el número de versión de LocalDB en el formato * \<de la versión principal>*.>de versión secundaria (por ejemplo, la clave de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] se denomina 13,0). * \<* En cada clave de la versión hay un par nombre-valor `InstanceAPIPath` que definen la ruta completa al archivo SQLUserInstance.dll que se haya instalado con esa versión. En el ejemplo siguiente se muestran las entradas del registro para un equipo que tiene instaladas las versiones 11,0 y 13,0 de LocalDB:  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\13.0]  
@@ -54,7 +54,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 "InstanceAPIPath"="C:\\Program Files\\Microsoft SQL Server\\130\\LocalDB\\Binn\\SqlUserInstance.dll"]  
 ```  
   
- El proveedor de cliente debe encontrar la última versión entre todas las versiones instaladas y cargar el archivo dll de **SQLUserInstance** del valor de `InstanceAPIPath` asociado.  
+ El proveedor de cliente debe encontrar la última versión entre todas las versiones instaladas **** y cargar el archivo dll de `InstanceAPIPath` SQLUserInstance desde el valor asociado.  
   
 ### <a name="wow64-mode-on-64-bit-windows"></a>Modo WOW64 en Windows de 64 bits  
  Las instalaciones de 64 bits de LocalDB tendrán un conjunto adicional de claves del Registro para que las aplicaciones de 32 bits que se ejecutan en el modo de Windows de 32 bits sobre Windows de 64 bits (WOW64) puedan utilizar LocalDB. Concretamente, en Windows de 64 bits, el MSI de LocalDB creará las claves del Registro siguientes:  
@@ -67,7 +67,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
   
 ```  
   
- los programas de 64 bits que leen la clave de `Installed Versions` verán valores que señalan a versiones de 64 bits de la dll de **SQLUserInstance** , mientras que los programas de 32 bits (que se ejecutan en Windows de 64 bits en modo WOW64) se redirigirán automáticamente a una clave de `Installed Versions` ubicada en el `Wow6432Node` Hive. Esta clave contiene valores que apuntan a las versiones de 32 bits de la dll de **SQLUserInstance** .  
+ los programas de 64 bits que `Installed Versions` leen la clave verán valores que señalan a versiones de 64 bits de la dll de **SQLUserInstance** , mientras que los programas de 32 bits (que se ejecutan en Windows de 64 bits `Installed Versions` en modo WOW64) `Wow6432Node` se redirigirán automáticamente a una clave ubicada en el subárbol. Esta clave contiene valores que apuntan a las versiones de 32 bits de la dll de **SQLUserInstance** .  
   
 ## <a name="using-localdb_define_proxy_functions"></a>Uso de LOCALDB_DEFINE_PROXY_FUNCTIONS  
  La API de instancia de LocalDB define una constante denominada LOCALDB_DEFINE_PROXY_FUNCTIONS que automatiza la detección y carga de la dll de **SqlUserInstance** .  

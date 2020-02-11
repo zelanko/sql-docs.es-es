@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 19778bce64e5779471e78b8c4305e1bd6315c0ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099209"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Error de Reporting Services
@@ -25,9 +25,9 @@ ms.locfileid: "66099209"
   
 |||  
 |-|-|  
-|Nombre del producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|Identificador del evento|rsServerConfiguration|  
-|Origen del evento|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
+|Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|Id. de evento|rsServerConfiguration|  
+|Origen de eventos|Microsoft.ReportingServices.Diagnostics.Utilities.ErrorStrings|  
 |Componente|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |Texto del mensaje|El servidor de informes ha encontrado un error de configuración.|  
   
@@ -47,11 +47,11 @@ ms.locfileid: "66099209"
 ## <a name="user-action"></a>Acción del usuario  
  Si este error empezara a producirse después de editar manualmente un archivo de configuración, quite los cambios efectuados y especifique el valor anterior, o restaure una versión anterior si tiene una copia de seguridad.  
   
- Para revisar la información del mensaje de error adicional que acompaña a la `rsServerConfiguration` error, revise los archivos de registro de informes servidor seguimiento, que se encuentran en \Microsoft SQL Server\MSRS12.\< nombreDeInstancia > \Reporting Services\LogFiles. Para más información, vea [Archivos de registro y orígenes de Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
+ Para revisar la información adicional del mensaje de error que `rsServerConfiguration` acompaña al error, revise los archivos de registro de seguimiento del servidor de informes, que se encuentran en \Microsoft SQL Server\MSRS12. \<nombreDeInstancia > \reporting Services\LogFiles. Para más información, vea [Archivos de registro y orígenes de Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Solo para uso interno  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Archivos de configuración de Reporting Services](../report-server/reporting-services-configuration-files.md)   
  [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   

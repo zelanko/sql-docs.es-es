@@ -1,5 +1,5 @@
 ---
-title: Crear una consulta de predicción Singleton desde una plantilla | Microsoft Docs
+title: Crear una consulta de predicción singleton desde una plantilla | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085490"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Crear una consulta de predicción singleton desde una plantilla
-  Una consulta singleton es útil cuando tiene un modelo que desea usar para la predicción, pero no desea asignarlo a un conjunto de datos de entrada externos o realizar predicciones masivas. Una consulta singleton le permite proporcionar un valor o varios valores al modelo y ver al momento el valor predicho.  
+  Una consulta singleton es útil cuando tiene un modelo que desea usar para la predicción, pero no desea asignarlo a un conjunto de datos de entrada externo ni realizar predicciones masivas. Una consulta singleton le permite proporcionar un valor o varios valores al modelo y ver al momento el valor predicho.  
   
  Por ejemplo, la consulta DMX siguiente representa una consulta singleton frente al modelo de correo directo, TM_Decision_Tree.  
   
@@ -69,20 +69,20 @@ AS [t]
   
 5.  En la fila **modelo de minería de datos** , escriba el nombre del modelo de minería de datos entre la lista de modelos de minería de datos que aparecen en el **Explorador de objetos**.  
   
-     Para el código de ejemplo mostrado al principio de este tema, el **modelo de minería de datos** fila se estableció en el nombre, `TM_Decision_Tree`.  
+     En el código de ejemplo que se muestra al principio de este tema, la fila del **modelo de minería** de datos `TM_Decision_Tree`se estableció en el nombre.  
   
 6.  En la fila **value** , escriba el nuevo valor de datos para el que desea realizar una predicción.  
   
-     Para el código de ejemplo mostrado al principio de este tema, el **valor** fila se estableció en `2` para predecir el comportamiento en función del número de niños en casa de compras.  
+     En el código de ejemplo que se muestra al principio de este tema, la fila **Value** se `2` estableció en para predecir el comportamiento de compra de bicicletas en función del número de hijos en casa.  
   
 7.  En la fila **column** , escriba el nombre de la columna del modelo de minería de datos al que deberían estar asignados los nuevos datos.  
   
-     Para el código de ejemplo mostrado al principio de este tema, el **columna** fila se ha establecido en `Number Children at Home`.  
+     En el código de ejemplo que se muestra al principio de este tema **** , la fila de la `Number Children at Home`columna estaba establecida en.  
   
     > [!NOTE]  
     >  Al usar el cuadro de diálogo **Especificar valores para parámetros de plantilla** , no tiene que agregar corchetes al nombre de columna. Los corchetes se agregarán automáticamente.  
   
-8.  Deje el **alias de entrada** como `t`.  
+8.  Deje el **alias** de entrada `t`como.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -92,7 +92,7 @@ AS [t]
   
 11. Haga clic en **Ejecutar**.  
   
-## <a name="see-also"></a>Vea también  
- [Crear predicciones &#40;Tutorial básico de minería de datos&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+## <a name="see-also"></a>Consulte también  
+ [Crear predicciones &#40;tutorial básico de minería de datos&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

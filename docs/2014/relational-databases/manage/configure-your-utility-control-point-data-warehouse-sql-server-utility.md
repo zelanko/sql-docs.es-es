@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d2a9f40c2d1566a1f8ca5f054467f61da1920e5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62805941"
 ---
 # <a name="configure-your-utility-control-point-data-warehouse-sql-server-utility"></a>Configurar el almacenamiento de datos del punto de control de la utilidad (utilidad de SQL Server)
@@ -24,16 +24,16 @@ ms.locfileid: "62805941"
   
  Los siguientes valores de configuración no se pueden establecer en esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   Nombre UMDW: Sysutility_mdw.  
+-   Nombre de UMDW: Sysutility_mdw.  
   
--   Frecuencia de carga del conjunto de recopilación: Cada 15 minutos.  
+-   Frecuencia de la carga del conjunto de recopilación: cada 15 minutos.  
   
- Es posible configurar el directorio del UMDW: \<Unidad del sistema >: \Program Files\Microsoft SQL Server\MSSQL10_50. < UCP_Name > \MSSQL\Data\\, donde \<unidadDelSistema > es normalmente el C:\ unidad. El archivo de registro, Sysutility_mdw_\<GUID>_LOG, se encuentra en el mismo directorio.  
+ El directorio de UMDW se puede configurar: \<Unidad del sistema:>:Archivos de programa\Microsoft SQL Server\MSSQL10_50.<Nombre_UCP\MSSQL\Data\\,donde \<Unidad del sistema> normalmente es la unidad C:\. El archivo de registro, Sysutility_mdw_\<GUID>_LOG, se encuentra en el mismo directorio.  
   
 > [!NOTE]  
 >  La ubicación del archivo del almacén de administración de datos de utilidad se puede cambiar mediante detach/attach o ALTER DATABASE. Recomendamos el uso de ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Características y tareas de la utilidad de SQL Server](sql-server-utility-features-and-tasks.md)  
   
   

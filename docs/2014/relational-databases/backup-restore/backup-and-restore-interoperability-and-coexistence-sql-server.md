@@ -1,5 +1,5 @@
 ---
-title: 'Copia de seguridad y restauración: Interoperabilidad y coexistencia (SQL Server) | Microsoft Docs'
+title: 'Copias de seguridad y restauración: interoperabilidad y coexistencia (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922440"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Copia de seguridad y restauración: Interoperabilidad y coexistencia (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Copias de seguridad y restauración: interoperabilidad y coexistencia (SQL Server)
   En este tema se describen las consideraciones de copias de seguridad y restauración para varias características de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Entre estas características se incluyen restauración de archivos e inicio de bases de datos, restauración en línea e índices deshabilitados, creación de reflejo de la base de datos, y restauración por etapas e índices de texto completo.  
   
  **En este tema:**  
@@ -48,7 +48,7 @@ ms.locfileid: "62922440"
   
  Si se detecta algún problema durante el inicio de la base de datos, no se puede llevar a cabo la restauración y la base de datos se marca como SUSPECT. Si es posible aislar el problema en un archivo o una serie de archivos, el administrador de la base de datos puede dejar sin conexión los archivos en cuestión e intentar reiniciar la base de datos. Para dejar sin conexión un archivo se puede utilizar la siguiente instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) :  
   
- ALTER DATABASE *database_name* MODIFY FILE (nombre **=' *`filename`* '** , sin conexión)  
+ ALTER DATABASE *database_name* Modify File (name **= '*`filename`*'** sin conexión)  
   
  En caso de iniciarse correctamente, los grupos de archivos que contengan algún archivo sin conexión seguirán sin conexión.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62922440"
  Esta sección solo es relevante para bases de datos con el modelo completo que contienen varios grupos de archivos.  
   
 > [!NOTE]  
->  La característica de creación de reflejo de la base de datos se quitará en una versión futura de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Utilice [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
+>  La característica de creación de reflejo de la base de datos se quitará en una versión futura de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
  Creación de reflejo de la base de datos es una solución para aumentar la disponibilidad de la base de datos. La creación de reflejo se implementa en cada una de las bases de datos y solo funciona con las que utilizan el modelo de recuperación completa. Para obtener más información, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -129,9 +129,9 @@ ms.locfileid: "62922440"
   
 -   [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](../replication/administration/back-up-and-restore-replicated-databases.md)   
- [Secundarias activas: Copia de seguridad en réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;Grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

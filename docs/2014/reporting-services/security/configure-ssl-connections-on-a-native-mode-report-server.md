@@ -13,13 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb33e6ccb5afbdee1bf6c3673a24548d6fe9961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102118"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurar conexiones SSL en un servidor de informes en modo nativo
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo nativo usa el servicio HTTP SSL (Capa de sockets seguros) para establecer conexiones cifradas con un servidor de informes. Si tiene el archivo de certificado (.cer) instalado en un almacén de certificados local en el equipo del servidor de informes, puede enlazar el certificado a una reserva de direcciones URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para admitir las conexiones con el servidor de informes en un canal cifrado.  
   
 > [!TIP]  
@@ -28,7 +29,8 @@ ms.locfileid: "66102118"
  Como Internet Information Services (IIS) también usa HTTP SSL, hay importantes problemas de interoperabilidad que es necesario tener en cuenta si IIS y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecutan en el mismo equipo. Asegúrese de revisar la sección Problemas de interoperabilidad con IIS para obtener información sobre cómo resolver estos problemas.  
   
 ## <a name="server-certificate-requirements"></a>Requisitos de certificado de servidor  
- Debe tener un certificado de servidor instalado en el equipo (no se admiten los certificados de cliente). Reporting Services no proporciona funciones para solicitar, generar, descargar o instalar un certificado. [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] proporciona un complemento Certificados que se puede usar para pedir un certificado de una entidad de certificación de confianza.  
+ Debe tener un certificado de servidor instalado en el equipo (no se admiten los certificados de cliente). Reporting Services no proporciona funciones para solicitar, generar, descargar o instalar un certificado. 
+  [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] proporciona un complemento Certificados que se puede usar para pedir un certificado de una entidad de certificación de confianza.  
   
  En esta prueba, puede generar un certificado localmente. Si usa la utilidad **MakeCert** y el comando de ejemplo como una plantilla, asegúrese de especificar el nombre del servidor como host y quite todos los saltos de línea antes de ejecutar el comando. Si ejecuta el comando en una ventana DOS, puede que tenga que aumentar el tamaño de búfer de la ventana para que pueda contener todo el comando.  
   
@@ -54,7 +56,8 @@ ms.locfileid: "66102118"
   
 2.  Haga clic en **Dirección URL del servicio web**.  
   
-3.  Expanda la lista de certificados SSL. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] detecta los certificados de autenticación del servidor en el almacén local. Si instaló un certificado y no lo ve en la lista, puede que tenga que reiniciar el servicio. Puede utilizar los botones **Detener** e **Iniciar** en la página **Estado del servidor de informes** en la herramienta Configuración de Reporting Services para reiniciar el servicio.  
+3.  Expanda la lista de certificados SSL. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] detecta los certificados de autenticación del servidor en el almacén local. Si instaló un certificado y no lo ve en la lista, puede que tenga que reiniciar el servicio. Puede utilizar los botones **Detener** e **Iniciar** en la página **Estado del servidor de informes** en la herramienta Configuración de Reporting Services para reiniciar el servicio.  
   
 4.  Seleccione el certificado.  
   
@@ -84,13 +87,14 @@ ms.locfileid: "66102118"
   
  Los enlaces SSL son un recurso compartido en Microsoft Windows. Los cambios realizados por el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] u otras herramientas como el Administrador de IIS pueden afectar a otras aplicaciones ubicadas en el mismo equipo. Se recomienda usar la misma herramienta para editar los enlaces que usó para crearlos.  Por ejemplo, si creó enlaces SSL mediante el Administrador de configuración, se recomienda usar este administrador para configurar el ciclo de vida de los enlaces. Si utiliza el administrador de IIS para crear enlaces, se recomienda usar este administrador para administrar el ciclo de vida de los enlaces. Si IIS estaba instalado en el equipo antes de que se instalara [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , es recomendable que revise la configuración de SSL en IIS antes de configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Si quita enlaces SSL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con el Administrador de configuración de Reporting Services, puede que los enlaces SSL ya no funcionen para los sitios web en un servidor que ejecute Internet Information Services (IIS) o en otro servidor HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] quite la siguiente clave del Registro. Cuando se quita esta clave del Registro, también se quita el enlace SSL para IIS. Sin este enlace, SSL no se proporciona para el protocolo HTTPS. Para diagnosticar este problema, use el Administrador de IIS o la utilidad de línea de comandos HTTPCFG.exe. Para resolver el problema, restaure el enlace SSL para los sitios web mediante el Administrador de IIS. Para evitar que se produzca este problema en el futuro, use el Administrador de IIS para quitar los enlaces SSL y use el Administrador de IIS para restaurar el enlace para los sitios web que desee. Para más información, consulte el artículo de la base de conocimiento [SSL no funciona después de quitar un enlace SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
+ Si quita enlaces SSL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con el Administrador de configuración de Reporting Services, puede que los enlaces SSL ya no funcionen para los sitios web en un servidor que ejecute Internet Information Services (IIS) o en otro servidor HTTP.SYS. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] quite la siguiente clave del Registro. Cuando se quita esta clave del Registro, también se quita el enlace SSL para IIS. Sin este enlace, SSL no se proporciona para el protocolo HTTPS. Para diagnosticar este problema, use el Administrador de IIS o la utilidad de línea de comandos HTTPCFG.exe. Para resolver el problema, restaure el enlace SSL para los sitios web mediante el Administrador de IIS. Para evitar que se produzca este problema en el futuro, use el Administrador de IIS para quitar los enlaces SSL y use el Administrador de IIS para restaurar el enlace para los sitios web que desee. Para más información, consulte el artículo de la base de conocimiento [SSL no funciona después de quitar un enlace SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Autenticación con el servidor de informes](authentication-with-the-report-server.md)   
  [Configurar y administrar un servidor de informes &#40;modo nativo de SSRS&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [Administrador de configuración de Reporting Services &#40;SUPR&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Administrador de configuración de Reporting Services &#40;del&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

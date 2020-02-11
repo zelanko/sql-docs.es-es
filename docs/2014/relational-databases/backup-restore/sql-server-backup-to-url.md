@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232322"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
@@ -23,7 +23,7 @@ ms.locfileid: "75232322"
 ## <a name="requirements-components-and-concepts"></a>Requisitos, componentes y conceptos  
  **En esta sección:**  
   
--   [Bursátil](#security)  
+-   [Seguridad](#security)  
   
 -   [Introducción a los principales componentes y conceptos](#intorkeyconcepts)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75232322"
   
 -   [Componentes de SQL Server](#sqlserver)  
   
--   [Límite](#limitations)  
+-   [Limitaciones](#limitations)  
   
 -   [Compatibilidad con instrucciones backup/restore](#Support)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75232322"
   
 -   [Restauración desde Azure Storage mediante SQL Server Management Studio](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a>Bursátil  
+###  <a name="security"></a> Seguridad  
  A continuación se muestran los requisitos y las consideraciones de seguridad al realizar copias de seguridad o restaurar desde los servicios de almacenamiento de blobs de Azure.  
   
 -   Al crear un contenedor para el servicio de almacenamiento de blobs de Azure, se recomienda establecer el acceso en **privado**. Al configurar el acceso privado se restringe el acceso a los usuarios o las cuentas capaces de proporcionar la información necesaria para autenticarse en la cuenta de Azure.  
@@ -124,7 +124,7 @@ ms.locfileid: "75232322"
 |||||  
 |-|-|-|-|  
 |Instrucción BACKUP/RESTORE|Compatible|Excepciones|Comentarios|  
-|COPIA DE SEGURIDAD|&#x2713;|No se admiten BLOCKSIZE y MAXTRANSFERSIZE.|Es necesario especificar WITH CREDENTIAL|  
+|BACKUP|&#x2713;|No se admiten BLOCKSIZE y MAXTRANSFERSIZE.|Es necesario especificar WITH CREDENTIAL|  
 |RESTORE|&#x2713;||Es necesario especificar WITH CREDENTIAL|  
 |RESTORE FILELISTONLY|&#x2713;||Es necesario especificar WITH CREDENTIAL|  
 |RESTORE HEADERONLY|&#x2713;||Es necesario especificar WITH CREDENTIAL|  
@@ -239,7 +239,7 @@ ms.locfileid: "75232322"
   
  [Copia de seguridad de base de datos &#40;página Opciones de copia de seguridad&#41;](back-up-database-backup-options-page.md)  
   
- [Crear credencial-autenticarse en Azure Storage](create-credential-authenticate-to-azure-storage.md)  
+ [Crear credencial - autenticarse en Azure Storage](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a>SQL Server realizar copia de seguridad en URL mediante el Asistente para planes de mantenimiento  
  Al igual que la tarea de copia de seguridad descrita anteriormente, el Asistente para planes de mantenimiento de SQL Server Management Studio se ha mejorado para incluir la **dirección URL** como una de las opciones de destino y otros objetos de compatibilidad necesarios para realizar la copia de seguridad en Azure Storage, como la credencial SQL. Para obtener más información, consulte la sección **Definir las tareas de copia de seguridad** en [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
@@ -253,7 +253,7 @@ ms.locfileid: "75232322"
   
 3.  A continuación, SQL Server se conecta a Azure Storage con la información de la credencial SQL proporcionada y abre el cuadro **de diálogo Buscar archivo de copia de seguridad en Azure** . Los archivos de copia de seguridad que residen en el almacenamiento se muestran en esta página. Seleccione el archivo que desee usar para restaurar y haga clic en **Aceptar**. De esta forma, vuelve al cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** y, haciendo clic en **Aceptar** en este cuadro de diálogo, vuelve al cuadro de diálogo principal **Restaurar** donde podrá completar la restauración.  Para obtener más información, vea los siguientes temas:  
   
-     [Restaurar base de datos &#40;página general&#41;](restore-database-general-page.md)  
+     [Restaurar la base de datos &#40;página General&#41;](restore-database-general-page.md)  
   
      [Página restaurar archivos de &#40;de base de datos&#41;](restore-database-files-page.md)  
   
@@ -800,6 +800,6 @@ ms.locfileid: "75232322"
    Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backuplogFile  -ToPointInTime (Get-Date).ToString()
    ```  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server procedimientos recomendados y solución de problemas de copia de seguridad en URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   

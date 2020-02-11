@@ -1,5 +1,5 @@
 ---
-title: Buscar y ver informes en el Administrador de informes (generador de informes y SSRS) | Microsoft Docs
+title: Buscar y ver informes en Administrador de informes (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22d183aa8ddbad06b0dc949bfe1780f360eb96ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107867"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>Buscar y ver informes en el Administrador de informes (Generador de informes y SSRS)
-  El Administrador de informes es una herramienta basada en Web que incluye características para la visualización y administración de informes. Forma parte de la instalación del servidor de informes. Para abrir el Administrador de informes, escriba su dirección URL en una ventana del explorador. Para obtener información sobre los requisitos del explorador, vea [planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md). Para obtener más información sobre cómo se podría configurar en su servidor de informes una dirección URL del Administrador de informes URL, póngase en contacto con el administrador del sistema. Para obtener más información, vea [Configurar el Administrador de informes &#40;modo nativo&#41;](../report-server/configure-web-portal.md).  
+  El Administrador de informes es una herramienta basada en Web que incluye características para la visualización y administración de informes. Forma parte de la instalación del servidor de informes. Para abrir el Administrador de informes, escriba su dirección URL en una ventana del explorador. Para obtener información sobre los requisitos del explorador, consulte [Planning for Reporting Services and Power View Browser Support &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md). Para obtener más información sobre cómo se podría configurar en su servidor de informes una dirección URL del Administrador de informes URL, póngase en contacto con el administrador del sistema. Para obtener más información, vea [Configurar el Administrador de informes &#40;modo nativo&#41;](../report-server/configure-web-portal.md).  
   
  Los permisos que establece el administrador del sistema en el servidor de informes determinan lo que puede ver al utilizar Administrador de informes. Los permisos se conceden a través de la asignación de roles. Para poder buscar y ver informes, su asignación de roles debe incluir la tarea Ver informes. Para hallar un informe en un servidor de informes, búsquelo por nombre o por descripción, o desplácese por las carpetas del servidor de informes. Solo puede buscar o desplazarse a los informes que se han publicado o se han cargado en el servidor de informes. Para más información sobre cómo buscar un informe, vea [Buscar informes y otros elementos &#40;Generador de informes y SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md).  
   
@@ -54,7 +54,7 @@ Cinta de opciones del Administrador de informes
   
 -   Para buscar texto específico dentro de un informe, use la barra de herramientas situada en la parte superior del informe.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Buscar informes y otros elementos &#40;Generador de informes y SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

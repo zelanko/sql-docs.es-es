@@ -1,5 +1,5 @@
 ---
-title: 'Lección 4: Crear una base de datos en Azure Storage | Microsoft Docs'
+title: 'Lección 4: crear una base de datos en Azure Storage | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175629"
 ---
-# <a name="lesson-4-create-a-database-in-azure-storage"></a>Lección 4: Crear una base de datos en Azure Storage
+# <a name="lesson-4-create-a-database-in-azure-storage"></a>Lección 4: Creación de una base de datos en Azure Storage
   En esta lección, obtendrá información sobre cómo crear una base de datos mediante la característica archivos de datos de SQL Server en Azure. Tenga en cuenta que, antes que esta lección, debe completar las lecciones 1, 2 y 3. La lección 3 es un paso muy importante porque debe almacenar la información sobre el contenedor de Azure Storage y su nombre de directiva asociado y la clave SAS en el almacén de credenciales de SQL Server antes de la lección 4.  
   
  Para cada contenedor de almacenamiento utilizado por un archivo de datos o de registro, debe crear una credencial de SQL Server cuyo nombre coincida con la ruta de acceso del contenedor. A continuación, puede crear una nueva base de datos en Azure Storage  
@@ -73,11 +73,11 @@ ms.locfileid: "70175629"
   
 6.  Asimismo, para ver la base de datos recién creada en su cuenta de almacenamiento, conéctese a ella mediante SQL Server Management Studio (SSMS). Para obtener información sobre cómo conectarse a un almacenamiento de Azure mediante SQL Server Management Studio, siga estos pasos:  
   
-    1.  Primero, obtenga la información de la cuenta de almacenamiento. Inicie sesión en el Portal de administración. A continuación, haga clic en **almacenamiento** y elija su cuenta de almacenamiento. Cuando se seleccione una cuenta de almacenamiento, haga clic en **administrar claves de acceso** en la parte inferior de la página. Se abrirá un cuadro de diálogo similar a esta:  
+    1.  Primero, obtenga la información de la cuenta de almacenamiento. Inicie sesión en el Portal de administración. A continuación, haga clic en **Almacenamiento** y elija su cuenta de almacenamiento. Cuando se seleccione una cuenta de almacenamiento, haga clic en **administrar claves de acceso** en la parte inferior de la página. Se abrirá un cuadro de diálogo similar a esta:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  Copie los valores de **nombre de cuenta de almacenamiento** y clave de **acceso principal** en la ventana de diálogo **conectar a Azure Storage** en SSMS. A continuación, haga clic en **conectar**. De esta forma, la información sobre los contenedores de la cuenta de almacenamiento en SSMS aparecerán como se muestra en la siguiente captura de pantalla:  
+    2.  Copie los valores de **nombre de cuenta de almacenamiento** y clave de **acceso principal** en la ventana de diálogo **conectar a Azure Storage** en SSMS. Después, haga clic en **Conectar**. De esta forma, la información sobre los contenedores de la cuenta de almacenamiento en SSMS aparecerán como se muestra en la siguiente captura de pantalla:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
@@ -85,7 +85,7 @@ ms.locfileid: "70175629"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **Nota:** Si hay referencias activas a los archivos de datos en un contenedor, se produce un error en cualquier intento de eliminar la credencial de SQL Server asociada. De igual forma, si ya hay una concesión en un archivo de base de datos específico de un blob y desea eliminarlo, primero debe interrumpirla en el blob. Para interrumpir la concesión, puede usar la [concesión](https://msdn.microsoft.com/library/azure/ee691972.aspx)de blobs.  
+ **Nota:** Si hay referencias activas a los archivos de datos en un contenedor, se produce un error en cualquier intento de eliminar la credencial de SQL Server asociada. De igual forma, si ya hay una concesión en un archivo de base de datos específico de un blob y desea eliminarlo, primero debe interrumpirla en el blob. Para interrumpir la concesión, puede usar la [concesión de blobs](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
   
  Mediante esta nueva característica, puede configurar SQL Server de modo que cualquier instrucción CREATE DATABASE será, de forma predeterminada, una base de datos habilitada para la nube. En otras palabras, puede establecer las ubicaciones predeterminadas de datos y de registro en SQL Server Management Studio propiedades de la instancia de servidor, de modo que cada vez que cree una base de datos, todos los archivos de base de datos (. MDF,. ldf) se crean como blobs en páginas en Azure Storage.  
   
@@ -111,6 +111,6 @@ ms.locfileid: "70175629"
   
  **Lección siguiente:**  
   
- [Lección 5. &#40;Opcional&#41; cifrar la base de datos mediante TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [Lección 5. &#40;opcional&#41; cifrar la base de datos mediante TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   

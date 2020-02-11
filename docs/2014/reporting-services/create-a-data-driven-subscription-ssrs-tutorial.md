@@ -15,13 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109687"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Crear una suscripción controlada por datos (Tutorial de SSRS)
+  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona suscripciones controladas por datos para que pueda personalizar la distribución de un informe basándose en datos dinámicos de suscriptores. Las suscripciones controladas por datos están destinadas a los escenarios siguientes:  
   
 -   La distribución de informes a un grupo grande de destinatarios cuya pertenencia al grupo puede cambiar de una distribución a otra. Por ejemplo, la distribución de un informe mensual a todos los clientes actuales.  
@@ -33,23 +34,23 @@ ms.locfileid: "66109687"
   
  El tutorial está compuesto por tres lecciones:  
   
- [Lección 1: Creación de una base de datos de suscriptor de ejemplo](lesson-1-creating-a-sample-subscriber-database.md)  
+ [Lección 1: Crear una base de datos de suscriptor de ejemplo](lesson-1-creating-a-sample-subscriber-database.md)  
  En esta lección aprenderá a crear una base de datos local de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con información de suscriptores.  
   
- [Lección 2: Modificar las propiedades del origen de datos de informe](lesson-2-modifying-the-report-data-source-properties.md)  
+ [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
  En esta lección aprenderá a modificar propiedades del origen de datos de informe de manera que el informe pueda ejecutarse en modo desatendido. El procesamiento desatendido requiere las credenciales almacenadas. Además, modificará el conjunto de datos de informe para que incluya un parámetro proporcionado por los datos del suscriptor.  
   
- [Lección 3: Definir una suscripción controlada por datos](lesson-3-defining-a-data-driven-subscription.md)  
+ [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
  En esta lección aprenderá a definir una suscripción controlada por datos. Esta lección le guía a través de cada página del Asistente para suscripciones controladas por datos.  
   
 ## <a name="requirements"></a>Requisitos  
  Normalmente, los administradores del servidor de informes se ocupan de crear y mantener las suscripciones controladas por datos. La posibilidad de crear suscripciones controladas por datos requiere tener conocimientos de creación de consultas, estar familiarizado con los orígenes de datos que contienen datos de suscriptores y tener permisos superiores en un servidor de informes.  
   
- El tutorial usará el informe creado en el tutorial [crear un informe de tabla básico &#40;Tutorial de SSRS&#41; ](create-a-basic-table-report-ssrs-tutorial.md) y los datos de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ En el tutorial se usará el informe creado en el tutorial [crear un informe de tabla básico &#40;tutorial de SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md) y datos de[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  Para usar este tutorial, debe tener el software siguiente instalado en el sistema:  
   
--   Una edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que admita suscripciones controladas por datos. Para obtener más información, consulte [ediciones y componentes de SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md).  
+-   Una edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que admita suscripciones controladas por datos. Para obtener más información, vea [ediciones y componentes de SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 -   El servidor de informes debe ejecutarse en modo nativo. La interfaz de usuario descrita en este tutorial se basa en un servidor de informes en modo nativo. Las suscripciones se admiten en los servidores de informes de modo de SharePoint pero la interfaz de usuario será diferente a la que se describe en este tutorial.  
   
@@ -65,7 +66,7 @@ ms.locfileid: "66109687"
   
  **Tiempo estimado para completar este tutorial:** 30 minutos. Otros 30 minutos si no ha completado el tutorial de informe básico.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   

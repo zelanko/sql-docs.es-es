@@ -1,5 +1,5 @@
 ---
-title: Especificar la palabra clave WITH al utilizar las sugerencias de tabla en modo de compatibilidad 90 | Microsoft Docs
+title: Especifique la palabra clave WITH al utilizar sugerencias de tabla en el modo de compatibilidad 90 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff2fee26c6f71cc398f8dbacf91f3ad8dbdb3358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092159"
 ---
 # <a name="specify-the-with-keyword-when-using-table-hints-in-90-compatibility-mode"></a>Especificar la palabra clave WITH al utilizar sugerencias de tabla en el modo de compatibilidad 90
@@ -29,8 +29,8 @@ ms.locfileid: "66092159"
 ## <a name="corrective-action"></a>Acción correctora  
  Modifique las consultas que incluyan sugerencias de tabla en la cláusula FROM incluyendo la palabra clave WITH antes de la sugerencia de tabla.  
   
-## <a name="see-also"></a>Vea también  
- [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte también  
+ [Problemas de actualización Motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server el asesor de actualizaciones de 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

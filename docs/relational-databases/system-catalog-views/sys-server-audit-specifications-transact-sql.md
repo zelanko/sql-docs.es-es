@@ -1,5 +1,5 @@
 ---
-title: Sys.server_audit_specifications (Transact-SQL) | Microsoft Docs
+title: Sys. server_audit_specifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,32 +20,32 @@ ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a3c6522218702b52c075ef5ce8088057fc7662b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125007"
 ---
-# <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
+# <a name="sysserver_audit_specifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene información sobre las especificaciones de auditoría de servidor de una auditoría de SQL Server en una instancia del servidor. Para más información sobre SQL Server Audit, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nombre de la especificación de servidor.|  
-|**server_specification_id**|**Int**|Id. de la **server_specification**.|  
-|**create_date**|**Fecha y hora**|Fecha en la que se creó la especificación de auditoría de servidor.|  
-|**modified_date**|**Fecha y hora**|Fecha en la que se modificó por última vez la especificación de auditoría de servidor.|  
-|**is_state_enabled**|**tinyint**|Estado de la especificación de auditoría:<br /><br /> 0 - DESHABILITADO<br /><br /> 1 - HABILITADO|  
+|**Name**|**Predeterminado**|Nombre de la especificación de servidor.|  
+|**server_specification_id**|**Inter**|IDENTIFICADOR del **server_specification**.|  
+|**create_date**|**DateTime**|Fecha en la que se creó la especificación de auditoría de servidor.|  
+|**modified_date**|**DateTime**|Fecha en la que se modificó por última vez la especificación de auditoría de servidor.|  
+|**is_state_enabled**|**tinyint**|Estado de la especificación de auditoría:<br /><br /> 0: DESHABILITADO<br /><br /> 1: HABILITADO|  
 |**audit_GUID**|**uniqueidentifier**|GUID de la auditoría que contiene esta especificación. Se usa durante la enumeración de especificaciones de auditoría de servidores miembro al iniciar el servidor.|  
   
 ## <a name="permissions"></a>Permisos  
- Las entidades de seguridad con el **ALTER ANY SERVER AUDIT** o **VIEW ANY DEFINITION** permisos tienen acceso a esta vista de catálogo. Además, no se debe denegar la entidad de seguridad **VIEW ANY DEFINITION** permiso.  
+ Las entidades de seguridad con el permiso **ALTER any Server Audit** o **View any Definition** tienen acceso a esta vista de catálogo. Además, no se debe denegar el permiso **View any Definition** a la entidad de seguridad.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

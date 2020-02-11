@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478903"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Coincidencia de calidad de datos en el Complemento MDS para Excel
@@ -40,7 +40,7 @@ ms.locfileid: "65478903"
   
 -   La base de conocimiento predeterminada (DQS Data) se crea al instalar DQS. Si elige utilizar la base de conocimiento predeterminada (sin agregar una directiva correspondiente a la base de conocimiento predeterminada en Data Quality Client), debe asignar columnas en la hoja de cálculo en los dominios de la base de conocimiento y asignar después un valor de ponderación a los dominios que elija.  
   
--   Puede utilizar Data Quality Client para crear una base de conocimiento nueva con una directiva correspondiente o agregar una directiva correspondiente a la base de conocimiento predeterminada. En este caso, los valores de ponderación se determinan mediante la directiva de coincidencia que creó previamente y solo tiene que asignar las columnas a los dominios. Para más información, consulte [crear una directiva de coincidencia](../../data-quality-services/create-a-matching-policy.md).  
+-   Puede utilizar Data Quality Client para crear una base de conocimiento nueva con una directiva correspondiente o agregar una directiva correspondiente a la base de conocimiento predeterminada. En este caso, los valores de ponderación se determinan mediante la directiva de coincidencia que creó previamente y solo tiene que asignar las columnas a los dominios. Para más información, consulte [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md).  
   
  Para obtener más información acerca de las bases de conocimiento, vea [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
@@ -49,11 +49,11 @@ ms.locfileid: "65478903"
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Combinar los datos externos con los datos administrados con MDS en preparación para compararlos.|[Combinar datos &#40;Complemento MDS para Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
-|Use el conocimiento de DQS para buscar similitudes en los datos.|[Coincidir datos similares &#40;Complemento MDS para Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
+|Use el conocimiento de DQS para buscar similitudes en los datos.|[Coincide con &#40;de datos similares Complemento MDS para Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Publicar datos &#40;complemento MDS para Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [Complemento MDS para Excel de &#40;de datos de publicación&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [Coincidencia de datos](../../data-quality-services/data-matching.md)  
   

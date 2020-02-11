@@ -1,5 +1,5 @@
 ---
-title: Ejecutar el cuadro de diálogo paquete | Microsoft Docs
+title: Cuadro de diálogo Ejecutar paquete | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059185"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
@@ -29,17 +29,17 @@ ms.locfileid: "66059185"
   
 -   [Abrir el cuadro de diálogo Ejecutar paquete](#open_dialog)  
   
--   [Establecer las opciones de la página General](#general)  
+-   [Establecer las opciones de la página general](#general)  
   
--   [Establecer las opciones de la pestaña Parámetros](#parameters)  
+-   [Establecer las opciones de la pestaña parámetros](#parameters)  
   
--   [Establecer las opciones de la pestaña Administradores de conexiones](#connection)  
+-   [Establecer las opciones de la pestaña administradores de conexiones](#connection)  
   
--   [Establecer las opciones de la pestaña Avanzadas](#advanced)  
+-   [Establecer las opciones de la pestaña Opciones avanzadas](#advanced)  
   
 -   [Scripting de las opciones del cuadro de diálogo Ejecutar paquete](#script)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Ejecutar paquete  
+##  <a name="open_dialog"></a>Abrir el cuadro de diálogo Ejecutar paquete  
   
 1.  En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -53,19 +53,19 @@ ms.locfileid: "66059185"
   
 5.  Haga clic con el botón derecho en el paquete y, después, haga clic en **Ejecutar**.  
   
-##  <a name="general"></a> Establecer las opciones de la página General  
+##  <a name="general"></a>Establecer las opciones de la página general  
  Seleccione **Entorno** para especificar el entorno que se aplica cuando se ejecuta el paquete.  
   
-##  <a name="parameters"></a> Establecer las opciones de la pestaña Parámetros  
+##  <a name="parameters"></a>Establecer las opciones de la pestaña parámetros  
  Utilice la pestaña **Parámetros** para modificar los valores de parámetro que se utilizan cuando se ejecuta el paquete.  
   
-##  <a name="connection"></a> Establecer las opciones de la pestaña Administradores de conexiones  
+##  <a name="connection"></a>Establecer las opciones de la pestaña administradores de conexiones  
  Utilice la pestaña Administradores de conexiones para establecer las propiedades de los administradores de conexiones del paquete.  
   
-##  <a name="advanced"></a> Establecer las opciones de la pestaña Avanzadas  
+##  <a name="advanced"></a>Establecer las opciones de la pestaña Opciones avanzadas  
  Utilice la pestaña Avanzadas para administrar propiedades y otra configuración del paquete.  
   
- **Agregar**, **Editar**, **Quitar**  
+ **Agregar**, **Editar**, **quitar**  
  Haga clic para agregar, editar o quitar una propiedad.  
   
  **Nivel de registro**  
@@ -74,10 +74,10 @@ ms.locfileid: "66059185"
  **Volcado de errores**  
  Especifique si se crea un archivo de volcado cuando se producen errores durante la ejecución del paquete. Para obtener más información, consulte [Generating Dump Files for Package Execution](troubleshooting/generating-dump-files-for-package-execution.md).  
   
- **Tiempo de ejecución de 32 bits**  
+ **tiempo de ejecución de 32 bits**  
  Especifique que el paquete se ejecutará en un sistema de 32 bits.  
   
-##  <a name="script"></a> Scripting de las opciones del cuadro de diálogo Ejecutar paquete  
+##  <a name="script"></a>Scripting de las opciones del cuadro de diálogo Ejecutar paquete  
  Mientras está en el cuadro de diálogo **Ejecutar paquete** , también puede utilizar el botón **Script** de la barra de herramientas para escribir código de [!INCLUDE[tsql](../includes/tsql-md.md)] . El script generado realiza una llamada a los procedimientos almacenados [catalog.start_execution &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) con las mismas opciones que ha seleccionado en el cuadro de diálogo **Ejecutar paquete**. El script aparece en una nueva ventana de script en [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
   

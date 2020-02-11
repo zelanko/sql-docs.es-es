@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a67cadab4ee67bb3f81776ccb658c66fe6a67d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085162"
 ---
 # <a name="data-definition-queries-data-mining"></a>Consultas de definición de datos (minería de datos)
@@ -28,27 +28,27 @@ ms.locfileid: "66085162"
   
  [Crear consultas de definición de datos](#bkmk_Create)  
   
--   [Consultas de definición de datos en Herramientas de datos de SQL Server](#bkmk_ssdt)  
+-   [Consultas de definición de datos en SQL Server Data Tools](#bkmk_ssdt)  
   
 -   [Consultas de definición de datos en SQL Server Management Studio](#bkmk_SSMS)  
   
- [Generar script para instrucciones de definición de datos](#bkmk_Scripts)  
+ [Scripting de instrucciones de definición de datos](#bkmk_Scripts)  
   
- [Generar script para instrucciones de definición de datos](#bkmk_Export)  
+ [Scripting de instrucciones de definición de datos](#bkmk_Export)  
   
-##  <a name="bkmk_Create"></a> Crear consultas de definición de datos  
+##  <a name="bkmk_Create"></a>Crear consultas de definición de datos  
  Puede crear consultas de definición de datos (instrucciones) mediante el Generador de consultas de predicción en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o mediante la ventana Consulta DMX en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Las instrucciones de definición de datos de DMX forman parte del lenguaje de definición de datos (DDL) de Analysis Services.  
   
  Para obtener información sobre la sintaxis de las instrucciones de definición de datos específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  
   
-###  <a name="bkmk_ssdt"></a> Consultas de definición de datos en Herramientas de datos de SQL Server  
+###  <a name="bkmk_ssdt"></a>Consultas de definición de datos en SQL Server Data Tools  
  El Asistente para minería de datos es la herramienta preferida de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear y modificar modelos y estructuras de minería de datos y para definir los orígenes de datos que se utilizan en las consultas de predicción y para entrenar.  
   
  Sin embargo, si desea conocer qué instrucciones envía el asistente al servidor para crear estructuras de datos o modelos de minería de datos, puede utilizar SQL Server Profiler para capturar instrucciones de definición de datos. Para más información, consulte [Use SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
  Para ver las instrucciones utilizadas para definir los orígenes de datos utilizados para entrenar o la predicción, puede utilizar la **Vista SQL** en el Generador de consultas de predicción. A veces puede resultar útil compilar consultas básicas para entrenar y probar modelos utilizando el Generador de consultas de predicción, para establecer la sintaxis correcta. A continuación, puede pasar a la **Vista SQL** y editar manualmente la consulta. Para más información, consulte [Manually Edit a Prediction Query](manually-edit-a-prediction-query.md).  
   
-###  <a name="bkmk_SSMS"></a> Consultas de definición de datos en SQL Server Management Studio  
+###  <a name="bkmk_SSMS"></a>Consultas de definición de datos en SQL Server Management Studio  
  Para los objetos de minería de datos, puede utilizar consultas de definición de datos para realizar las siguientes acciones:  
   
 -   Crear tipos de modelos específicos, como un modelo de agrupación en clústeres o modelo de árbol de decisión, mediante [CREATE MINING MODEL &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx).  
@@ -59,18 +59,20 @@ ms.locfileid: "66085162"
   
 -   Definir el conjunto de datos usado para entrenar un modelo mediante [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) junto con una consulta de origen de datos como OPENROWSET.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona plantillas de consulta que pueden ayudarle a crear consultas de definición de datos. Para más información, consulte [Use Analysis Services Templates in SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona plantillas de consulta que pueden ayudarle a crear consultas de definición de datos. Para más información, consulte [Use Analysis Services Templates in SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md).  
   
  En general, las plantillas proporcionadas para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] solo contienen la definición de la sintaxis general, que debe personalizar, escribiendo en la ventana **Consulta** , o utilizando el cuadro de diálogo proporcionado para especificar parámetros.  
   
  Para obtener un ejemplo de cómo especificar parámetros mediante la interfaz, vea [Crear una consulta de predicción singleton desde una plantilla](create-a-singleton-prediction-query-from-a-template.md).  
   
-###  <a name="bkmk_Scripts"></a> Generar script para instrucciones de definición de datos  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios lenguajes de scripting y programación que puede utilizar para crear o modificar objetos de minería de datos, o definir orígenes de datos.  Aunque DMX está diseñado para acelerar las tareas de minería de datos, también puede utilizar XMLA y AMO para manipular objetos en scripts o en código personalizado.  
+###  <a name="bkmk_Scripts"></a>Scripting de instrucciones de definición de datos  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios lenguajes de scripting y programación que puede utilizar para crear o modificar objetos de minería de datos, o definir orígenes de datos.  Aunque DMX está diseñado para acelerar las tareas de minería de datos, también puede utilizar XMLA y AMO para manipular objetos en scripts o en código personalizado.  
   
  El Complemento de minería de datos para Excel también incluye muchas plantillas de consulta y proporciona el **Editor de consultas avanzadas**, que le ayuda a crear instrucciones DMX complejas. Puede compilar una consulta interactivamente y, a continuación, cambiar a la Vista SQL para capturar la instrucción DMX.  
   
-##  <a name="bkmk_Export"></a> Importar y exportar modelos  
+##  <a name="bkmk_Export"></a>Exportar e importar modelos  
  Puede utilizar instrucciones de definición de datos en DMX para exportar la definición de un modelo y su estructura y orígenes de datos necesarios y, a continuación, importar la definición en un servidor diferente. La importación y exportación es la manera más rápida y fácil de mover modelos y estructuras de minería de datos entre las instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obtener más información, vea [Administración de las soluciones y los objetos de minería de datos](management-of-data-mining-solutions-and-objects.md).  
   
 > [!WARNING]  
@@ -81,14 +83,14 @@ ms.locfileid: "66085162"
   
 |||  
 |-|-|  
-|Trabajar con plantillas para consultas DMX.|[Use Analysis Services Templates in SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Trabajar con plantillas para consultas DMX.|[Usar las plantillas de Analysis Services en SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Diseñar consultas de todo tipo, utilizando el Generador de consultas de predicción.|[Crear una consulta de predicción con el Generador de consultas de predicción](create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|Capturar definiciones de consultas utilizando SQL Server Profiler y utilizar seguimientos para supervisar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Use SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|Obtener más información sobre los lenguajes de scripting y lenguajes de programación proporcionados por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Referencia XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)<br /><br /> [Desarrollar con Objetos de administración de análisis &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
-|Obtener información sobre la administración de modelos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Exportar e importar objetos de minería de datos](export-and-import-data-mining-objects.md)<br /><br /> [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)|  
-|Obtener más información sobre OPENROWSET y otras maneras de consultar datos externos.|[&#60;source data query&#62;](/sql/dmx/source-data-query).|  
+|Capturar definiciones de consultas utilizando SQL Server Profiler y utilizar seguimientos para supervisar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Usar SQL Server Profiler para supervisar Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|Obtener más información sobre los lenguajes de scripting y lenguajes de programación proporcionados por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Referencia&#41; &#40;de XML for Analysis XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)<br /><br /> [Desarrollo con Objetos de administración de análisis &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
+|Obtener información sobre la administración de modelos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Exportar e importar objetos de minería de datos](export-and-import-data-mining-objects.md)<br /><br /> [EXPORTAR &#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORTAR &#40;DMX&#41;](/sql/dmx/import-dmx)|  
+|Obtener más información sobre OPENROWSET y otras maneras de consultar datos externos.|[&#60;&#62;de consultas de datos de origen ](/sql/dmx/source-data-query).|  
   
-## <a name="see-also"></a>Vea también  
- [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining-wizard-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Asistente para minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining-wizard-analysis-services-data-mining.md)  
   
   

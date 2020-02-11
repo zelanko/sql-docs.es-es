@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244959"
 ---
 # <a name="database-engine-scripting"></a>Scripting del motor de base de datos
@@ -78,12 +78,12 @@ ms.locfileid: "75244959"
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Describe cómo usar el código y los editores de texto en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para desarrollar, para depurar, y ejecutar interactivamente los scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Editores de consultas y texto &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
-|Describe cómo usar la utilidad de `sqlcmd` para ejecutar scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] del símbolo del sistema, incluida la capacidad de desarrollar de forma interactiva los scripts.|[Temas de procedimientos de SQLCMD](../../database-engine/sqlcmd-how-to-topics.md)|  
+|Describe cómo usar la utilidad de `sqlcmd` para ejecutar scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] del símbolo del sistema, incluida la capacidad de desarrollar de forma interactiva los scripts.|[Temas de procedimientos sobre sqlcmd](../../database-engine/sqlcmd-how-to-topics.md)|  
 |Describe cómo integrar los componentes de SQL Server en un entorno de Windows PowerShell 2.0 y, a continuación, compilar scripts de PowerShell y administrar instancias y objetos de SQL Server.|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
 |Describe cómo usar el asistente de **Generar y publicar scripts** para crear scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] que vuelven a crear los objetos de una base de datos.|[Generar scripts &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)   
- [Tutorial: escribir instrucciones Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Tutorial: Escribir instrucciones Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

@@ -31,14 +31,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811035"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar y volver a generar índices
-  En este tema se describe cómo reorganizar o volver a generar un índice fragmentado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mantiene los índices automáticamente cada vez que se realizan operaciones de inserción, actualización o eliminación en los datos subyacentes. Con el tiempo, estas modificaciones pueden hacer que la información del índice se disperse por la base de datos (se fragmente). La fragmentación ocurre cuando los índices tienen páginas en las que la ordenación lógica, basada en el valor de clave, no coincide con la ordenación física dentro del archivo de datos. Los índices muy fragmentados pueden reducir el rendimiento de la consulta y ralentizar la respuesta de la aplicación.  
+  En este tema se describe cómo reorganizar o volver a generar un índice fragmentado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mantiene los índices automáticamente cada vez que se realizan operaciones de inserción, actualización o eliminación en los datos subyacentes. Con el tiempo, estas modificaciones pueden hacer que la información del índice se disperse por la base de datos (se fragmente). La fragmentación ocurre cuando los índices tienen páginas en las que la ordenación lógica, basada en el valor de clave, no coincide con la ordenación física dentro del archivo de datos. Los índices muy fragmentados pueden reducir el rendimiento de la consulta y ralentizar la respuesta de la aplicación.  
   
  Puede solucionar la fragmentación del índice reorganizándolo o volviéndolo a generar. Para los índices con particiones generados en un esquema de partición, puede usar cualquiera de estos métodos en un índice completo o en una sola partición de un índice. El proceso de volver a crear un índice quita y vuelve a crear el índice. Quita la fragmentación, utiliza espacio en disco al compactar las páginas según el valor de factor de relleno especificado o existente y vuelve a ordenar las filas del índice en páginas contiguas. Cuando se especifica ALL, todos los índices de la tabla se quitan y se vuelven a generar en una única transacción. La reorganización de un índice usa muy pocos recursos del sistema. Desfragmenta el nivel hoja de los índices agrupados y no clúster de las tablas y las vistas al volver a ordenar físicamente las páginas de nivel hoja para que coincidan con el orden lógico de los nodos hoja, de izquierda a derecha. La reorganización también compacta las páginas de índice. La compactación se basa en el valor de factor de relleno existente.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "68811035"
   
 -   **Antes de empezar:**  
   
-     [Detectar la fragmentación](#Fragmentation)  
+     [Detección de fragmentación](#Fragmentation)  
   
      [Limitaciones y restricciones](#Restrictions)  
   
@@ -66,12 +67,12 @@ ms.locfileid: "68811035"
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Fragmentation"></a> Detectar la fragmentación  
+###  <a name="Fragmentation"></a>Detección de fragmentación  
  El primer paso necesario para detectar qué método de desfragmentación utilizar es analizar el índice a fin de determinar la magnitud de la fragmentación. Si usa la función del sistema [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql), podrá detectar la fragmentación de un índice específico, de todos los índices de una tabla o vista indexada, de todos los índices de una base de datos o de todos los índices de todas las bases de datos. Para los índices con particiones, **sys.dm_db_index_physical_stats** también proporciona información de la fragmentación para cada partición.  
   
- El conjunto de resultados devuelto por la función **sys.dm_db_index_physical_stats** tiene las columnas siguientes.  
+ El conjunto de resultados devuelto por la función **Sys. dm_db_index_physical_stats** incluye las columnas siguientes.  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|Porcentaje de fragmentación lógica (páginas de un índice que no funcionan correctamente).|  
 |**fragment_count**|Número de fragmentos (páginas hoja físicamente consecutivas) en el índice.|  
@@ -79,15 +80,15 @@ ms.locfileid: "68811035"
   
  Una vez determinada la magnitud de la fragmentación, utilice la siguiente tabla para determinar el mejor método para corregir la fragmentación propiamente dicha.  
   
-|Valor de**avg_fragmentation_in_percent**|Instrucción correctiva|  
+|**avg_fragmentation_in_percent** valor|Instrucción correctiva|  
 |-----------------------------------------------|--------------------------|  
 |> 5% y \< = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
 
-<sup>1</sup> La regeneración de un índice se puede ejecutar en línea o sin conexión. La reorganización de un índice siempre se ejecuta en línea. Para lograr una disponibilidad similar a la opción de reorganización, debe volver a generar los índices en línea.  
+<sup>1</sup> la regeneración de un índice se puede ejecutar en línea o sin conexión. La reorganización de un índice siempre se ejecuta en línea. Para lograr una disponibilidad similar a la opción de reorganización, debe volver a generar los índices en línea.  
   
 > [!TIP]
-> Estos valores proporcionan directrices generales para la determinación del punto en el que debe cambiar entre `ALTER INDEX REORGANIZE` y `ALTER INDEX REBUILD`. No obstante, los valores reales pueden variar de un caso a otro. Es importante que experimente la determinación del mejor umbral para su entorno. Por ejemplo, si se usa un índice determinado principalmente para las operaciones de examen, la eliminación de la fragmentación puede mejorar el rendimiento de estas operaciones. Las ventajas de rendimiento son menos evidentes para los índices que se usan principalmente para las operaciones de búsqueda. Del mismo modo, la eliminación de la fragmentación en un montón (una tabla sin índice clúster) es especialmente útil para las operaciones de examen de índices no clúster, pero tiene poco efecto en las operaciones de búsqueda.
+> Estos valores proporcionan directrices generales para la determinación del punto en el que debe cambiar entre `ALTER INDEX REORGANIZE` y `ALTER INDEX REBUILD`. No obstante, los valores reales pueden variar de un caso a otro. Es importante que experimente la determinación del mejor umbral para su entorno. Por ejemplo, si se usa un índice determinado principalmente para operaciones de examen, la eliminación de la fragmentación puede mejorar el rendimiento de estas operaciones. Las ventajas de rendimiento son menos evidentes para los índices que se usan principalmente para las operaciones de búsqueda. Del mismo modo, la eliminación de la fragmentación en un montón (una tabla sin índice agrupado) es especialmente útil para las operaciones de examen de índices no agrupados, pero tiene poco efecto en las operaciones de búsqueda.
 
 Los niveles de fragmentación muy bajos (inferiores al 5 por ciento) normalmente no deben tratarse con ninguno de estos comandos, dado que el beneficio de quitar una cantidad de fragmentación tan pequeña es casi siempre ampliamente superado por el costo de reorganizar o volver a generar el índice. 
 
@@ -95,19 +96,19 @@ Los niveles de fragmentación muy bajos (inferiores al 5 por ciento) normalmente
 > Con frecuencia, cuando se vuelven a generar o se reorganizan los índices pequeños no se reduce la fragmentación. Las páginas de índices pequeños a veces se almacenan en extensiones mixtas. Las extensiones mixtas pueden estar compartidas por hasta ocho objetos, de modo que es posible que no se pueda reducir la fragmentación en un índice pequeño después de reorganizar o volver a generar dicho índice.
 
 ### <a name="index-defragmentation-considerations"></a>Consideraciones sobre la desfragmentación de índices
-En determinadas condiciones, al volver a generar un índice clúster, se volverán a generar automáticamente los índices no clúster que hagan referencia a la clave de agrupación en clústeres, si es necesario cambiar los identificadores físicos o lógicos contenidos en los registros de índice no clúster.
+En determinadas circunstancias, al recompilar un índice agrupado, se recompilarán automáticamente los índices no agrupados que hagan referencia a la clave de agrupación en clústeres, si es necesario cambiar los identificadores físicos o lógicos contenidos en los registros de índices no agrupados.
 
-Escenarios que obligan a que todos los índices no clúster se vuelvan a generar automáticamente en una tabla:
+Escenarios que obligan a que todos los índices no agrupados se recompilen automáticamente en una tabla:
 
--  Crear un índice clúster en una tabla
--  Quitar un índice clúster, lo que hace que la tabla se almacene como un montón
--  Cambiar la clave de agrupación en clústeres para incluir o excluir columnas
+-  Creación de un índice agrupado en una tabla
+-  Eliminación de un índice agrupado, lo que hace que la tabla se almacene como un montón
+-  Cambio de la clave de agrupación en clústeres para incluir o excluir columnas
 
-Los escenarios que no requieren que todos los índices no clúster se vuelvan a generar automáticamente en una tabla:
+Escenarios que no requieren recompilar automáticamente en una tabla todos los índices no agrupados:
 
--  Volver a generar un índice clúster único
--  Volver a generar un índice clúster no único
--  Cambiar el esquema de índice, como aplicar un esquema de partición a un índice clúster o mover el índice clúster a un grupo de archivos diferente
+-  Recompilación de un índice agrupado único
+-  Recompilación de un índice agrupado que no es único
+-  Cambio del esquema de índice, como al aplicar un esquema de partición a un índice agrupado o al mover el índice agrupado a un grupo de archivos diferente
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -124,7 +125,7 @@ No es posible volver a organizar o generar un índice si el grupo de archivos en
 ####  <a name="Permissions"></a> Permisos  
  Debe tener un permiso de `ALTER` sobre la tabla o vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
-##  <a name="SSMSProcedureFrag"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedureFrag"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>Para comprobar la fragmentación de un índice  
   
@@ -151,7 +152,7 @@ No es posible volver a organizar o generar un índice si el grupo de archivos en
      **Promedio de tamaño de fila**  
      Tamaño medio de una fila de nivel hoja.  
   
-     **Profundidad**  
+     **Amplia**  
      Número de niveles del índice, incluido el nivel hoja.  
   
      **Registros reenviados**  
@@ -166,10 +167,10 @@ No es posible volver a organizar o generar un índice si el grupo de archivos en
      **Filas de nivel de hoja**  
      Número de filas de nivel hoja.  
   
-     **Tamaño máximo de la fila**  
+     **Tamaño máximo de fila**  
      Tamaño máximo de la fila de nivel de hoja.  
   
-     **Tamaño mínimo de la fila**  
+     **Tamaño de fila mínimo**  
      Tamaño mínimo de la fila de nivel de hoja.  
   
      **Páginas**  
@@ -219,7 +220,7 @@ No es posible volver a organizar o generar un índice si el grupo de archivos en
   
  Para obtener más información, vea [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql).  
   
-##  <a name="SSMSProcedureReorg"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedureReorg"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-reorganize-or-rebuild-an-index"></a>Para reorganizar o volver a generar un índice  
   
@@ -237,7 +238,7 @@ No es posible volver a organizar o generar un índice si el grupo de archivos en
   
 7.  Active la casilla **Compactar datos de columnas de objetos de gran tamaño** para especificar que se compacten también todas las páginas que contengan datos de objetos grandes (LOB).  
   
-8.  Haga clic en **Aceptar.**  
+8.  Haga clic en **Aceptar**.  
   
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>Para reorganizar todos los índices de una tabla  
   
@@ -253,7 +254,7 @@ No es posible volver a organizar o generar un índice si el grupo de archivos en
   
 6.  Active la casilla **Compactar datos de columnas de objetos de gran tamaño** para especificar que se compacten también todas las páginas que contengan datos de objetos grandes (LOB).  
   
-7.  Haga clic en **Aceptar.**  
+7.  Haga clic en **Aceptar**.  
   
 #### <a name="to-rebuild-an-index"></a>Para volver a generar un índice  
   
@@ -271,7 +272,7 @@ No es posible volver a organizar o generar un índice si el grupo de archivos en
   
 7.  Active la casilla **Compactar datos de columnas de objetos de gran tamaño** para especificar que se compacten también todas las páginas que contengan datos de objetos grandes (LOB).  
   
-8.  Haga clic en **Aceptar.**  
+8.  Haga clic en **Aceptar**.  
   
 ##  <a name="TsqlProcedureReorg"></a> Usar Transact-SQL  
   
@@ -332,7 +333,7 @@ No es posible volver a organizar o generar un índice si el grupo de archivos en
   
  Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
- [Prácticas recomendadas de desfragmentación de índices de Microsoft SQL Server 2000](https://technet.microsoft.com/library/cc966523.aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Microsoft SQL Server procedimientos recomendados de desfragmentación de índices de 2000](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

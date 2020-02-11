@@ -13,14 +13,14 @@ ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ead713a37d4ecf8bdfecd0d6c485684d1ad0777f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926078"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>Creación de instancias de eventos de ADO: Visual Basic
-Para controlar eventos de ADO en Microsoft® Visual Basic®, se debe declarar una variable nivel de módulo mediante la **WithEvents** palabra clave. La variable se puede declarar únicamente como parte de un módulo de clase y se debe declarar en el nivel de módulo. Esto no es tan restrictivo como parece, sin embargo, dado que Visual Basic **formulario** objetos también son clases. La manera más sencilla de controlar eventos de ADO es declarar una variable utilizando **WithEvents**. El ejemplo siguiente se controla el **ConnectComplete** eventos para un **conexión** objeto:  
+Para controlar los eventos de ADO en Microsoft® Visual Basic®, debe declarar una variable de nivel de módulo mediante la palabra clave **WithEvents** . La variable solo se puede declarar como parte de un módulo de clase y se debe declarar en el nivel de módulo. No obstante, esto no es tan restrictivo como parece, porque Visual Basic objetos **Form** también son clases. La manera más sencilla de controlar los eventos de ADO es declarar una variable mediante **WithEvents**. En el ejemplo siguiente se controla el evento **ConnectComplete** para un objeto **Connection** :  
   
 ```  
 ' BeginEventExampleVB02  
@@ -65,4 +65,4 @@ End Sub
 ' EndEventExampleVB02  
 ```  
   
- El **conexión** objeto se declara en el **formulario** nivel mediante el **WithEvents** palabra clave para habilitar el control de eventos. El controlador de eventos Form_Load crea el objeto asignando un nuevo **conexión** objeto *connEvent* y, a continuación, abre la conexión. Por supuesto, una aplicación real realizará más procesamiento en el controlador de eventos Form_Load que se muestra aquí.
+ El objeto de **conexión** se declara en el nivel de **formulario** mediante la palabra clave **WithEvents** para habilitar el control de eventos. En realidad, el controlador de eventos Form_Load crea el objeto mediante la asignación de un nuevo objeto de **conexión** a *connEvent* y, a continuación, abre la conexión. Por supuesto, una aplicación real haría más procesamiento en el controlador de eventos Form_Load que el que se muestra aquí.

@@ -1,5 +1,5 @@
 ---
-title: Opciones (diseñadores-Table y página diseñadores de base de datos) | Microsoft Docs
+title: Opciones (diseñadores-página diseñadores de tablas y bases de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283662"
 ---
-# <a name="options-designers-table-and-database-designers-page"></a>Opciones (diseñadores-Table y página diseñadores de base de datos)
+# <a name="options-designers-table-and-database-designers-page"></a>Opciones (diseñadores-página diseñadores de tablas y bases de datos)
   Utilice esta página para determinar el comportamiento predeterminado del diseñador. Para tener acceso a esta configuración, en el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Diseñadores** y haga clic en **Diseñador de tablas**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
@@ -57,7 +57,7 @@ ms.locfileid: "63283662"
  **Vista de tabla predeterminada**  
  Seleccione la forma en que desea ver las tablas en los diseñadores:  
   
--   **Standard**  
+-   **Estándar**  
   
      Muestra el encabezado de tablas, todos los nombres de columna, tipos de datos y la configuración Permitir valores NULL.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63283662"
   
      Muestra los nombres de columna.  
   
--   **Key**  
+-   **Clave**  
   
      Muestra el encabezado de tabla y las columnas de clave principal.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63283662"
   
      Solo muestra el encabezado de tabla con su nombre.  
   
--   **Personalizado**  
+-   **Personalizada**  
   
      Permite elegir las columnas que se muestran.  
   

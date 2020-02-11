@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcaa38cd3849f1665d0f31e8d2749730d2494fcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63217945"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>Propiedades de SQL Server Integration Services (pestaña Iniciar sesión)
-  Use la pestaña **Iniciar sesión** del cuadro de diálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Properties** dialog box to specify the account used by the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, and to start and stop the service.  
+  Use la pestaña **Iniciar sesión** del cuadro de diálogo Propiedades[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ** de ** para especificar la cuenta que usa el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], así como para iniciar y detener el servicio.  
   
 ## <a name="options"></a>Opciones  
  **Cuenta de sistema local**  
@@ -39,7 +39,7 @@ ms.locfileid: "63217945"
  **Iniciar**  
  Inicie el servicio.  
   
- **Detener**  
+ **Detención**  
  Detenga el servicio.  
   
  **Pausar**  

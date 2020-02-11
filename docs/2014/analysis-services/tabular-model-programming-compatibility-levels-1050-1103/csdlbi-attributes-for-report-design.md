@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7d2a9f075879ce1bfa0c0e7257ea8a2495562c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757935"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Atributos CSDLBI para el diseño de informes
@@ -25,19 +25,19 @@ ms.locfileid: "62757935"
   
 |Nombre del atributo|Tipo de datos|Descripción|  
 |--------------------|---------------|-----------------|  
-|Culture|Text|Indica la referencia cultural usada para los formatos de moneda. Si se omite, se usa EN-US.|  
+|Referencia cultural|Texto|Indica la referencia cultural usada para los formatos de moneda. Si se omite, se usa EN-US.|  
 |IsRightToLeft|Boolean|Indica si los valores de los campos de texto se deben leer derecha a izquierda de forma predeterminada.|  
   
-## <a name="entity-attributes"></a>Atributos de la entidad  
+## <a name="entity-attributes"></a>Atributos de entidad  
  Estos atributos se definen en un subelemento de un elemento EntitySet o EntityType de CSDL.  
   
 |Nombre del atributo|Tipo de datos|Descripción|  
 |--------------------|---------------|-----------------|  
-|`ReferenceName`|Text|El identificador usado para hacer referencia a esta entidad en una consulta de DAX. Si se omite, se usa el nombre.|  
-|`Caption`|Text|El nombre para mostrar de la entidad.|  
-|`Documentation`|Text|Texto descriptivo que se usa para ayudar a los usuarios empresariales a entender el significado de los datos.|  
-|`Hidden`|Boolean|Indica si se debe mostrar la entidad. De manera predeterminada, es `false`.|  
-|`CollectionCaption`|Text|Nombre plural para hacer referencia a un conjunto de instancias de la entidad. Si se omite, se usa el atributo Caption.|  
+|`ReferenceName`|Texto|El identificador usado para hacer referencia a esta entidad en una consulta de DAX. Si se omite, se usa el nombre.|  
+|`Caption`|Texto|El nombre para mostrar de la entidad.|  
+|`Documentation`|Texto|Texto descriptivo que se usa para ayudar a los usuarios empresariales a entender el significado de los datos.|  
+|`Hidden`|Boolean|Indica si se debe mostrar la entidad. El valor predeterminado es `false`.|  
+|`CollectionCaption`|Texto|Nombre plural para hacer referencia a un conjunto de instancias de la entidad. Si se omite, se usa el atributo Caption.|  
 |`DisplayKey`|MemberRef[]|Lista ordenada de campos que se usa para identificar una instancia de la entidad para un usuario empresarial. Las referencias pueden incluir propiedades de instancia y de navegación. Cuando se hace referencia a una propiedad de navegación, se muestra el atributo `DisplayKey` de la entidad de destino. Si se omite el valor del atributo `DisplayKey`, se usa el campo Key.|  
 |`DefaultImage`|MemberRef|Referencia al campo que contiene una imagen usada para identificar visualmente una instancia de la entidad a un usuario empresarial. Si se omite, se usa el primer campo de imagen en la entidad, si existe alguno.|  
 |`DefaultDetails`|MemberRef[]|Lista ordenada de campos que representan el conjunto predeterminado de información detallada que se muestra a un usuario empresarial sobre una instancia de la entidad. Si se omite, se usan los cinco (5) primeros campos de la entidad, exceptuando aquellos a los que ya se ha hecho referencia mediante `Key`, `DisplayKey` o `DefaultImage`.|  
@@ -50,20 +50,20 @@ ms.locfileid: "62757935"
   
 |Nombre del atributo|Tipo de datos|Descripción|  
 |--------------------|---------------|-----------------|  
-|`ReferenceName`|Text|El identificador usado para hacer referencia a esta entidad en una consulta de DAX. Si se omite, se usa el nombre del campo.|  
-|`Caption`|Text|El nombre para mostrar de la entidad. Si se omite, el campo `ReferenceName` se utiliza.|  
-|`Documentation`|Text|Texto descriptivo que se usa para ayudar a los usuarios empresariales a entender el significado del campo.|  
+|`ReferenceName`|Texto|El identificador usado para hacer referencia a esta entidad en una consulta de DAX. Si se omite, se usa el nombre del campo.|  
+|`Caption`|Texto|El nombre para mostrar de la entidad. Si se omite, se utiliza `ReferenceName` el del campo.|  
+|`Documentation`|Texto|Texto descriptivo que se usa para ayudar a los usuarios empresariales a entender el significado del campo.|  
 |`Hidden`|Boolean|Indica si se debe mostrar el campo. El valor predeterminado es `false`, es decir, aparece el nombre del campo.|  
-|`DisplayFolder`|Text|El nombre (ruta de acceso completa) de la carpeta en la cual se muestra este campo. Si se omite, el campo se muestra en la raíz del modelo.|  
+|`DisplayFolder`|Texto|El nombre (ruta de acceso completa) de la carpeta en la cual se muestra este campo. Si se omite, el campo se muestra en la raíz del modelo.|  
 |`ContextualNameRule`|Enum|Valor que indica si se debe modificar el nombre de la propiedad basándose en el contexto en el que se usa, y cómo debe hacerse. Los valores posibles son: `None`, `Role` o `Merge`.|  
-|`Alignment`|Enum|Valor que indica cómo los valores del campo se deben alinear en una presentación tabular. Los valores posibles son: `Default`, `Center`, `Left` o `Right`. Si se omite, el valor predeterminado determina la alineación basándose en el tipo de datos del campo.|  
-|`FormatString`|Text|Cadena de formato de .NET Framework que indica cómo debe aplicarse el valor del campo de forma predeterminada. Si se omite, se supone que se usa el formato siguiente:<br /><br /> -Los campos Datetime: formato de fecha corta o "d"<br />-Función de agregado campos punto flotante y campos enteros con un valor predeterminado: número regional o "n"<br />: Función de agregado de enteros no tiene ningún valor predeterminado: número decimal regional o "d"<br /><br /> Para todos los demás tipos de campos, no se aplica ninguna cadena de formato.|  
-|`Units`|Text|Símbolo que se aplica a los valores de los campos para expresar unidades. Si se omite, se supone que las unidades son desconocidas.|  
-|`Width`|Integer|El ancho preferido de caracteres que se deben reservar para mostrar los valores del campo en una presentación tabular. Si se omite, un ancho predeterminado se basa en el tipo de datos del campo.|  
-|`SortDirection`|Enum|Valor que indica cómo se suelen ordenar los valores de los campos. Los valores posibles son: `Default`, `Ascending` o `Descending`. Si se omite, escriba el valor predeterminado se asigna que una dirección de ordenación se basa en los datos del campo.|  
+|`Alignment`|Enum|Valor que indica cómo los valores del campo se deben alinear en una presentación tabular. Los valores posibles son: `Default`, `Center`, `Left` o `Right`. Si se omite, el valor predeterminado determina la alineación en función del tipo de datos del campo.|  
+|`FormatString`|Texto|Una cadena de formato .NET que indica cómo se debe dar formato al valor del campo de forma predeterminada. Si se omite, se supone que se usa el formato siguiente:<br /><br /> -Campos DateTime: fecha corta regional o "d"<br />-Campos de punto flotante y campos enteros con una función de agregado predeterminada: número regional o "n"<br />-Enteros sin función de agregado predeterminada: número decimal regional o "d"<br /><br /> Para todos los demás tipos de campos, no se aplica ninguna cadena de formato.|  
+|`Units`|Texto|Símbolo que se aplica a los valores de los campos para expresar unidades. Si se omite, se supone que las unidades son desconocidas.|  
+|`Width`|Entero|El ancho preferido en caracteres que se debe reservar para mostrar los valores del campo en una presentación tabular. Si se omite, el ancho predeterminado se basa en el tipo de datos del campo.|  
+|`SortDirection`|Enum|Valor que indica cómo se suelen ordenar los valores de los campos. Los valores posibles son: `Default`, `Ascending` o `Descending`. Si se omite, el valor predeterminado asigna una dirección de ordenación basada en el tipo de datos del campo.|  
 |`IsRightToLeft`|Boolean|Indica si el campo contiene texto que se debe leer de derecha a izquierda. Si se omite, se supone que se debe usar la configuración del modelo.|  
-|`OrderBy`|MemberRef|Una referencia a otro campo dentro del modelo que define el criterio de ordenación para los valores de este campo. Los valores de los dos campos deben tener una asignación 1:1, o la ordenación quedará indefinida. Si se omite, el campo se ordena basándose en su propio valor.|  
-|`Contents`|Enum|Enumeración que describe el subtipo o el contenido del campo. Si se omite, no determinado subtipo se supone que, a menos que el tipo de datos del campo es binario, en cuyo caso se supone imagen. Para obtener una lista completa de los tipos de contenido admitidos, vea la documentación de AMO.|  
+|`OrderBy`|MemberRef|Referencia a otro campo dentro del modelo que define el criterio de ordenación de los valores de este campo. Los valores de los dos campos deben tener una asignación 1:1, o la ordenación quedará indefinida. Si se omite, el campo se ordena basándose en su propio valor.|  
+|`Contents`|Enum|Enumeración que describe el subtipo o el contenido del campo. Si se omite, no se supone ningún subtipo concreto, a menos que el tipo de datos del campo sea binario, en cuyo caso se presupone la imagen. Para obtener una lista completa de los tipos de contenido admitidos, vea la documentación de AMO.|  
 |`DefaultAggregateFunction`|Enum|Valor que indica la función predeterminada, si la hay, que se usa habitualmente para agregar este campo. Los valores posibles son: `None`, `Sum`, `Average`, `Count`, `Min` y `Max`. Si se omite, se supone que se debe usar `Sum` para los campos numéricos y `None` para todos los demás campos.|  
 |`IsSimpleMeasure`|Boolean|Indica si una medida es únicamente un agregado simple de un campo numérico. Tales agregados se pueden definir fácilmente en la consulta según sea necesario y, por lo tanto, se deben omitir de la definición del modelo para mejorar el rendimiento. Si se omite, se supone que se debe usar el valor `false`.|  
 |`Kpi`<br /><br /> `KpiGoal`<br /><br /> `KpiStatus`|Subelemento|Indica que el elemento de medida debe usarse como un KPI. El subelemento KPI utiliza los elementos KpiGoal y KpiStatus para definir la imagen y los rangos de destino asociados.|  

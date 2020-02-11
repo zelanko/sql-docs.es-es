@@ -1,5 +1,5 @@
 ---
-title: Crear una nueva relación de clave externa entre las tablas de ejemplo (VB) | Microsoft Docs
+title: Ejemplo de creación de una nueva relación de clave externa entre tablas (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,14 +19,14 @@ ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6873b964adfcfc5bffed5d093bed48f4fbd29a20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965861"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Ejemplo de propiedades Type, RelatedColumn, RelatedTable y UpdateRule de clave, método Append de claves (VB)
-El código siguiente muestra cómo crear una nueva relación de clave externa entre dos tablas existentes denominado **clientes** y **pedidos**.  
+En el código siguiente se muestra cómo crear una nueva relación de clave externa entre dos tablas existentes denominadas **Customers** y **Orders**.  
   
 ```  
 ' BeginCreateKeyVB  
@@ -72,18 +72,18 @@ End Sub
 ' EndCreateKeyVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Append (método) (columnas ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append (método) (claves ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Objeto column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Colección de columnas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)   
  [Colección de claves (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
- [Nombre (propiedad, ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [RelatedColumn (propiedad, ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)   
- [RelatedTable (propiedad, ADOX)](../../../ado/reference/adox-api/relatedtable-property-adox.md)   
+ [Name (propiedad, ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
+ [Propiedad RelatedColumn (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)   
+ [Propiedad RelatedTable (ADOX)](../../../ado/reference/adox-api/relatedtable-property-adox.md)   
  [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [Colección de tablas (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Propiedad de tipo (clave) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
+ [Type (propiedad, Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [UpdateRule (propiedad, ADOX)](../../../ado/reference/adox-api/updaterule-property-adox.md)

@@ -1,5 +1,5 @@
 ---
-title: Página Propiedades generales, informes partes (Administrador de informes) | Microsoft Docs
+title: Página de propiedades generales, elementos de informe (Administrador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109085"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Página de propiedades generales, Elementos de informe (Administrador de informes)
@@ -49,7 +49,7 @@ ms.locfileid: "66109085"
  **Tamaño**  
  Tamaño del archivo del elemento de informe. Solo lectura.  
   
- **Name**  
+ **Nombre**  
  Escriba un nombre para identificar el elemento de informe.  
   
  **Descripción**  
@@ -67,21 +67,21 @@ ms.locfileid: "66109085"
  **Eliminar**  
  Quite el elemento de informe de la base de datos del servidor de informes. Al eliminar un elemento de informe del servidor, no se evitará la representación de informes existentes a los que se agregó.  
   
- **Mover**  
- Haga clic para abrir la página Mover elementos para mover un elemento de informe dentro de la jerarquía de carpetas del servidor de informes. Para obtener más información, consulte [página Mover elementos &#40;el Administrador de informes&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
+ **Move**  
+ Haga clic para abrir la página Mover elementos para mover un elemento de informe dentro de la jerarquía de carpetas del servidor de informes. Para obtener más información, vea [Página de elementos de movimiento &#40;Administrador de informes&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
  **Descargar**  
  Extraiga una copia de la definición del elemento de informe que se va a guardar como archivo .rsc. El archivo .rsc se puede cargar en una carpeta del servidor de informes o utilizarse para reemplazar un elemento de informe existente en una carpeta del servidor de informes.  
   
- **Reemplazar**  
+ **Reemplace**  
  Reemplace la definición del elemento de informe con otra diferente de un archivo .rsc.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar elementos de informe](report-design/managing-report-parts.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenido &#40;página del Administrador de informes&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Administrador de informes de &#40;de página de contenido&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Elementos de informe &#40;Generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Administrador de informes la ayuda F1](../../2014/reporting-services/report-manager-f1-help.md)   
  [Elementos de informe y conjuntos de datos en el Generador de informes](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

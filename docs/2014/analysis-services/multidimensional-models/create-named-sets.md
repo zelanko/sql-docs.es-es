@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1fc4ab5d778535fdc4e2186c5bc88741b4367f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076142"
 ---
 # <a name="create-named-sets"></a>Crear conjuntos con nombre
@@ -26,10 +26,10 @@ ms.locfileid: "66076142"
   
  Para crear un conjunto con nombre, utilice el comando **Nuevo conjunto con nombre** en la pestaña **Cálculos** del Diseñador de cubos. Este comando se puede invocar en el menú **Cubo** de la barra de herramientas de la pestaña **Cálculos** . Este comando muestra un formulario para especificar las siguientes opciones para el conjunto con nombre:  
   
- **Name**  
+ **Nombre**  
  Seleccione el nombre del conjunto con nombre. Éste es el nombre que ven los usuarios finales cuando examinan el cubo.  
   
- **Expresión**  
+ **Expression**  
  Especifique la expresión que crea el conjunto con nombre. Esta expresión puede escribirse en MDX. La expresión puede contener cualquiera de los elementos siguientes:  
   
 -   Expresiones de datos que representan los componentes del cubo como dimensiones, niveles, medidas, etc.  
@@ -43,9 +43,9 @@ ms.locfileid: "66076142"
  Puede copiar o arrastrar los componentes del cubo desde la pestaña **Metadatos** del panel **Herramientas de cálculo** hasta el cuadro **Expresión** del panel **Editor de Formulario de conjuntos con nombres** . Puede copiar o arrastrar funciones desde la pestaña **Funciones** del panel **Herramientas de cálculo** al cuadro **Expresión** del panel **Editor de Formulario de conjuntos con nombres** .  
   
 > [!IMPORTANT]  
->  Si crea la expresión de conjunto nombrando explícitamente los miembros del conjunto, incluya la lista de miembros en un par de llaves ({}).  
+>  Si crea la expresión de conjunto mediante el nombre explícito de los miembros del conjunto, incluya la lista de miembros en un par de llaves ({}).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cálculos en modelos multidimensionales](calculations-in-multidimensional-models.md)  
   
   

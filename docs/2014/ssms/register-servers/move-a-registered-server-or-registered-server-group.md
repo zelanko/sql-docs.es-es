@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 23683b70d5b0de7b2852187969842702dd925da4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241332"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>Mover un Servidor registrado o un grupo de Servidores registrados (SQL Server Management Studio)
@@ -34,7 +34,7 @@ ms.locfileid: "75241332"
   
 2.  En el cuadro de diálogo **Mover registro de servidor** , expanda la lista de grupos de servidores, haga clic en el nodo donde desea que se muestre el servidor o grupo de servidores y, a continuación, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Registrar servidores](register-servers.md)   
  [Crear o editar un grupo de servidores &#40;SQL Server Management Studio&#41;](create-or-edit-a-server-group-sql-server-management-studio.md)  
   

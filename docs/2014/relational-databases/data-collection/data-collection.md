@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd38517c80eb5a1eca697bbc1705880132f4ea62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919047"
 ---
 # <a name="data-collection"></a>Recopilación de datos
@@ -36,7 +36,8 @@ ms.locfileid: "62919047"
 ## <a name="data-collector-concepts"></a>Conceptos del recopilador de datos  
  El recopilador de datos se integra en el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], y usa ambos exhaustivamente. Antes de trabajar con el recopilador de datos, debe conocer ciertos conceptos relacionados con cada uno de estos componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usa para programar y ejecutar trabajos de recopilación. Debe conocer los conceptos siguientes:  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usa para programar y ejecutar trabajos de recopilación. Debe conocer los conceptos siguientes:  
   
 -   Trabajo  
   
@@ -44,23 +45,24 @@ ms.locfileid: "62919047"
   
 -   Programación de trabajo  
   
--   Subsistema  
+-   Subsystem  
   
 -   Cuentas de proxy  
   
  Para obtener más información, vea [Tareas administrativas automatizadas &#40;Agente SQL Server&#41;](../../ssms/agent/sql-server-agent.md).  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) se usa para ejecutar paquetes que recopilan datos de proveedores de datos individuales. Debe estar familiarizado con los siguientes conceptos y herramientas de [!INCLUDE[ssIS](../../includes/ssis-md.md)] :  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) se usa para ejecutar paquetes que recopilan datos de proveedores de datos individuales. Debe estar familiarizado con los siguientes conceptos y herramientas de [!INCLUDE[ssIS](../../includes/ssis-md.md)] :  
   
--   Paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]configura  
   
 -   configuración de paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
  Para obtener más información, vea [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).  
   
 ## <a name="data-collector-terminology"></a>Terminología del recopilador de datos  
- target  
- Instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admite la recopilación de datos. Para obtener más información sobre las ediciones admitidas, vea la sección "Facilidad de uso" de [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Destino  
+ Instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admite la recopilación de datos. Para obtener más información sobre las ediciones admitidas, vea la sección "facilidad de administración" de [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Una *raíz de destino* define un subárbol en la jerarquía de destino. Un *conjunto de destinos* es el grupo de destinos resultante de aplicar un filtro a un subárbol definido por una raíz de destino. Una raíz de destino puede ser una base de datos, una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o una instancia del equipo.  
   
@@ -113,6 +115,6 @@ ms.locfileid: "62919047"
 |----------------------|-----------|  
 |Describe cómo administrar distintos aspectos de la recopilación de datos, como habilitar o deshabilitar la recopilación de datos, cambiar la configuración de un conjunto de recopilación o ver los datos en el almacén de administración de datos.|[Administrar la recopilación de datos](manage-data-collection.md)|  
 |Describe cómo usar estos informes para obtener información con el fin de supervisar la capacidad del sistema y solucionar problemas de rendimiento del sistema.|[Informes de conjuntos de recopilación de datos del sistema](system-data-collection-set-reports.md)|  
-|Describe cómo usar el almacén de administración de datos para recopilar datos de un servidor que ejecute un destino de recopilación de datos.|[Almacén de administración de datos](management-data-warehouse.md)|  
+|Describe cómo usar el almacén de administración de datos para recopilar datos de un servidor que ejecute un destino de recopilación de datos.|[almacén de administración de datos](management-data-warehouse.md)|  
   
   

@@ -10,33 +10,33 @@ ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 702f7b5ec8ea1fc5eeea7ce95fae84bdcb17418a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075429"
 ---
 # <a name="global-settings-dialogs-mysqltosql"></a>Configuración global (cuadros de diálogo) (MySQLToSQL)
-Use la página de los cuadros de diálogo de la **configuración Global** cuadro de diálogo para especificar la acción predeterminada del usuario y la configuración de advertencia de SSMA.  
+Use la página cuadros de diálogo del cuadro de diálogo **configuración global** para especificar la configuración predeterminada de la acción del usuario y de la advertencia para SSMA.  
   
-Para obtener acceso a la configuración del cuadro de diálogo en el **herramientas** menú, seleccione **configuración Global**, haga clic en **GUI** en la parte inferior del panel izquierdo y a continuación, seleccione **decuadrosdediálogo**.  
+Para tener acceso a la configuración del cuadro de diálogo en el menú **herramientas** , seleccione **configuración global**, haga clic en **GUI** en la parte inferior del panel izquierdo y, a continuación, seleccione **cuadros de diálogo**.  
   
 ## <a name="options"></a>Opciones  
-**Advertir antes de sobrescribir los objetos**  
-Cuando SSMA convierte los objetos en SQL Server, algunos objetos ya existan en los metadatos del proyecto SQL Server. Estos objetos es posible que ya se han convertido o los objetos simplemente pueden tener el mismo nombre en el esquema de destino que los objetos que se va a convertir.  
+**Advertir antes de sobrescribir objetos**  
+Cuando SSMA convierte objetos en SQL Server, es posible que algunos objetos ya existan en los metadatos del SQL Server del proyecto. Es posible que estos objetos ya se hayan convertido o que los objetos simplemente tengan el mismo nombre en el esquema de destino que los objetos que se van a convertir.  
   
-Use esta opción para especificar si SSMA debe solicitarle para sobrescribir las definiciones de objeto duplicados:  
+Use esta opción para especificar si SSMA debe pedirle que se sobrescriban las definiciones de objetos duplicados:  
   
--   Si selecciona **True**, SSMA mostrará un cuadro de diálogo de advertencia cuando encuentra un objeto duplicado. En este cuadro de diálogo, puede especificar para sobrescribir los objetos individuales o todos los objetos duplicados, u omitir los objetos individuales o todos los objetos duplicados.  
+-   Si selecciona **true**, SSMA mostrará un cuadro de diálogo de advertencia cuando encuentre un objeto duplicado. En este cuadro de diálogo, puede especificar para sobrescribir objetos individuales o todos los objetos duplicados, o para omitir objetos individuales o todos los objetos duplicados.  
   
--   Si selecciona **False**, **acción predeterminada de sobrescritura de objeto** opción aparece donde especifica la acción predeterminada.  
+-   Si selecciona **false**, aparece la opción de **acción predeterminada sobrescribir objeto** en la que se especifica la acción predeterminada.  
   
-**Acción predeterminada de sobrescritura de objeto**  
-Esta opción aparece si selecciona **False** para el **Avisar antes de sobrescribir objetos** opción.  
+**Acción predeterminada para sobrescribir objetos**  
+Esta opción aparece si selecciona **false** para la opción **advertir antes de sobrescribir objetos** .  
   
-Use esta opción para especificar el comportamiento de sobrescritura de objeto predeterminado:  
+Use esta opción para especificar el comportamiento de sobrescritura del objeto predeterminado:  
   
--   Si selecciona **True**, SSMA sobrescribirá automáticamente los objetos en los metadatos de proyecto de SQL Server que tienen el mismo nombre y están en el mismo esquema de destino que el objeto que se va a convertir.  
+-   Si selecciona **true**, SSMA sobrescribirá automáticamente los objetos de los metadatos del proyecto SQL Server que tengan el mismo nombre y estén en el mismo esquema de destino que el objeto que se va a convertir.  
   
--   Si selecciona **False**, SSMA no sobrescribe los metadatos del objeto durante la conversión.  
+-   Si selecciona **false**, SSMA no sobrescribirá los metadatos del objeto durante la conversión.  
   

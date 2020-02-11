@@ -1,5 +1,5 @@
 ---
-title: Método Open (ADO Recordset) | Microsoft Docs
+title: Open (método) (conjunto de registros ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931903"
 ---
 # <a name="open-method-ado-recordset"></a>Open (método) (conjunto de registros ADO)
-Se abre un cursor en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+Abre un cursor en un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,82 +35,82 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
 #### <a name="parameters"></a>Parámetros  
  *Origen*  
- Opcional. Un **Variant** que se evalúa como válido [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto, una instrucción SQL, un nombre de tabla, una llamada a procedimiento almacenado, una dirección URL o el nombre de un archivo o [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto que contiene un almacenar de manera permanente [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Opcional. **Variante** que se evalúa como un objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) válido, una instrucción SQL, un nombre de tabla, una llamada a un procedimiento almacenado, una dirección URL o el nombre de un archivo o un objeto de [flujo](../../../ado/reference/ado-api/stream-object-ado.md) que contiene un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)almacenado de forma persistente.  
   
  *ActiveConnection*  
- Opcional. Ya sea un **Variant** que se evalúa como válido [conexión](../../../ado/reference/ado-api/connection-object-ado.md) nombre de variable de objeto, o un **cadena** que contiene [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) parámetros.  
+ Opcional. Una **variante** que se evalúa como un nombre de variable de objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) válido o una **cadena** que contiene parámetros [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
  *CursorType*  
- Opcional. Un [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) valor que determina el tipo de cursor que el proveedor debe usar al abrir el **Recordset**. El valor predeterminado es **adOpenForwardOnly**.  
+ Opcional. Valor de [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) que determina el tipo de cursor que el proveedor debe usar al abrir el **conjunto de registros**. El valor predeterminado es **adOpenForwardOnly**.  
   
  *LockType*  
- Opcional. Un [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valor que determina qué tipo de bloqueo (concurrencia) el proveedor debe usar al abrir el **Recordset**. El valor predeterminado es **adLockReadOnly**.  
+ Opcional. Valor de [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) que determina qué tipo de bloqueo (simultaneidad) debe utilizar el proveedor al abrir el **conjunto de registros**. El valor predeterminado es **adLockReadOnly**.  
   
  *Opciones*  
- Opcional. Un **largo** valor que indica cómo el proveedor debe evaluar el *origen* argumento si representa algo distinto de un **comando** objeto, o que el **Recordset** debe restaurarse desde un archivo donde se guardó anteriormente. Puede ser uno o más [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valores, que se pueden combinar con un operador OR bit a bit.  
+ Opcional. Un valor de **tipo Long** que indica cómo el proveedor debe evaluar el argumento de *origen* si representa algo distinto de un objeto **Command** o si el **conjunto de registros** debe restaurarse a partir de un archivo en el que se guardó previamente. Puede ser uno o varios valores [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) , que se pueden combinar con un operador OR bit a bit.  
   
 > [!NOTE]
->  Si abre un **Recordset** desde un **Stream** que contiene un persistente **Recordset**, con un [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valor **adAsyncFetchNonBlocking** no tendrá ningún efecto; la recuperación será sincrónica y de bloqueo.  
+>  Si abre un **conjunto de registros** desde una **secuencia** que contiene un **conjunto de registros**persistente, el uso de un valor de [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) de **adAsyncFetchNonBlocking** no tendrá ningún efecto; la captura será sincrónica y se bloqueará.  
   
 > [!NOTE]
->  El **ExecuteOpenEnum** valores de **adExecuteNoRecords** o **adExecuteStream** no debe usarse con **abierto**.  
+>  Los valores de **ExecuteOpenEnum** de **adExecuteNoRecords** o **adExecuteStream** no deben usarse con **Open**.  
   
-## <a name="remarks"></a>Comentarios  
- El cursor predeterminado para ADO **Recordset** es un cursor de solo avance y solo lectura ubicado en el servidor.  
+## <a name="remarks"></a>Observaciones  
+ El cursor predeterminado para un **conjunto de registros** ADO es un cursor de solo avance y de solo lectura que se encuentra en el servidor.  
   
- Mediante el **abierto** método en un **Recordset** objeto abre un cursor que representa los registros de una tabla base, los resultados de una consulta o guardado anteriormente **Recordset**.  
+ Al usar el método **Open** en un objeto de **conjunto de registros** , se abre un cursor que representa los registros de una tabla base, los resultados de una consulta o un **conjunto de registros**previamente guardado.  
   
- Usar el elemento opcional *origen* argumento para especificar un origen de datos mediante uno de los siguientes: un **comando** variable de objeto, una instrucción SQL, un procedimiento almacenado, un nombre de tabla, una dirección URL o un nombre de ruta de acceso completa del archivo. Si *origen* es un nombre de ruta de acceso de archivo, puede ser una ruta de acceso completa ("c:\dir\file.rst"), una ruta de acceso relativa (".. \file.rst"), o una dirección URL ("<https://files/file.rst>").  
+ Use el argumento *source* opcional para especificar un origen de datos mediante uno de los siguientes: una variable de objeto de **comando** , una instrucción SQL, un procedimiento almacenado, un nombre de tabla, una dirección URL o un nombre de ruta de acceso de archivo completo. Si el *origen* es un nombre de ruta de acceso de archivo, puede ser una ruta de acceso completa ("c:\dir\file.RST"), una ruta de acceso relativa (".. \file.RST ") o una dirección URL ("<https://files/file.rst>").  
   
- No es una buena idea usar el *origen* argumento de la **abierto** método para realizar una consulta de acción que no devuelve registros porque no hay ninguna manera fácil de determinar si la llamada se realizó correctamente. El **Recordset** devuelve como una consulta se cerrarán. Para realizar una consulta que no devuelve ningún registro, como una instrucción INSERT de SQL, llame a la [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método de un **comando** objeto o la [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método de un [Conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto en su lugar.  
+ No es recomendable usar el argumento *source* del método **Open** para realizar una consulta de acción que no devuelva registros porque no hay ninguna manera fácil de determinar si la llamada se realizó correctamente. Se cerrará el **conjunto de registros** devuelto por esta consulta. Para realizar una consulta que no devuelva registros, como una instrucción INSERT de SQL, llame al método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) de un objeto **Command** o al método [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) de un objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) en su lugar.  
   
- El *ActiveConnection* argumento corresponde a la [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propiedad y se especifica en qué conexión para abrir el **Recordset** objeto. Si se pasa una definición de conexión para este argumento, ADO abre una nueva conexión mediante los parámetros especificados. Después de abrir el **Recordset** con un cursor del lado cliente estableciendo el [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad **adUseClient**, puede cambiar el valor de esta propiedad para enviar actualizaciones a otro proveedor. O puede establecer esta propiedad en **nada** (en Microsoft Visual Basic) o NULL para desconectar el **Recordset** desde cualquier proveedor. Cambiar *ActiveConnection* para un cursor de servidor genera un error, sin embargo.  
+ El argumento *ActiveConnection* corresponde a la propiedad [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) y especifica en qué conexión se debe abrir el objeto de **conjunto de registros** . Si pasa una definición de conexión para este argumento, ADO abrirá una nueva conexión con los parámetros especificados. Después de abrir el **conjunto de registros** con un cursor del lado cliente estableciendo la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) en **adUseClient**, puede cambiar el valor de esta propiedad para enviar las actualizaciones a otro proveedor. También puede establecer esta propiedad en **Nothing** (en Microsoft Visual Basic) o null para desconectar el **conjunto de registros** de cualquier proveedor. Sin embargo, si se cambia *ActiveConnection* para un cursor del servidor, se genera un error.  
   
- Para los demás argumentos que se corresponden directamente a las propiedades de un **Recordset** objeto (*origen*, *CursorType*, y *LockType*), la relación de los argumentos a las propiedades es como sigue:  
+ Para los demás argumentos que corresponden directamente a las propiedades de un objeto de **conjunto de registros** (*source*, *CursorType*y *LockType*), la relación de los argumentos con las propiedades es la siguiente:  
   
--   La propiedad es de lectura/escritura antes de la **Recordset** se abre el objeto.  
+-   La propiedad es de lectura y escritura antes de que se abra el objeto de **conjunto de registros** .  
   
--   Los valores de propiedad se usan a menos que pase los argumentos correspondientes al ejecutar el **abierto** método. Si se pasa un argumento, reemplaza el valor de propiedad correspondiente y se actualiza la configuración de la propiedad con el valor del argumento.  
+-   Se usa la configuración de la propiedad a menos que se pasen los argumentos correspondientes al ejecutar el método **Open** . Si se pasa un argumento, reemplaza el valor de la propiedad correspondiente y el valor de la propiedad se actualiza con el valor del argumento.  
   
--   Después de abrir el **Recordset** objeto, estas propiedades son de solo lectura.  
-  
-> [!NOTE]
->  El **ActiveConnection** propiedad es de solo lectura para **Recordset** objetos cuya propiedad [origen](../../../ado/reference/ado-api/source-property-ado-recordset.md) propiedad está establecida en válido **comando** objeto, incluso si la **Recordset** objeto no está abierto.  
-  
- Si se pasa un **comando** objeto en el *origen* argumento y también pase un *ActiveConnection* argumento, que se produce un error. El **ActiveConnection** propiedad de la **comando** objeto ya se debe establecer en válido **conexión** objeto o cadena de conexión.  
-  
- Si pasa algo distinto de un **comando** objeto en el *origen* argumento, puede usar el *opciones* argumento para optimizar la evaluación de la *origen*  argumento. Si el *opciones* argumento no está definido, puede experimentar una disminución del rendimiento porque ADO debe realizar llamadas al proveedor para determinar si el argumento es una instrucción SQL, un procedimiento almacenado, una dirección URL o un nombre de tabla. Si sabe qué *origen* tipo que está utilizando, establecer el *opciones* argumento indica a ADO que saltar directamente al código pertinente. Si el *opciones* argumento no coincide con el *origen* escribe, se produce un error.  
-  
- Si se pasa un **Stream** objeto en el *origen* argumento, no debería pasar información en los demás argumentos. Si lo hace, se generará un error. El **ActiveConnection** información no conservan cuando un **Recordset** se abre desde una **Stream**.  
-  
- El valor predeterminado para el *opciones* argumento es **adCmdFile** si no hay ninguna conexión está asociada con el **Recordset**. Esto suele ser el caso para almacenar de manera permanente **Recordset** objetos.  
-  
- Si el origen de datos no devuelve ningún registro, el proveedor establece tanto la [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propiedades a **True**, y la posición actual del registro es indefinida. Todavía puede agregar nuevos datos a este vacío **Recordset** objeto si el tipo de cursor lo permite.  
-  
- Cuando haya finalizado las operaciones a través de una abierta **Recordset** de objeto, utilice el [cerrar](../../../ado/reference/ado-api/close-method-ado.md) método para liberarlos recursos del sistema asociados. Cerrar un objeto no quita de la memoria; puede cambiar la configuración de sus propiedades y utilizar el **abrir** método abrirlo de nuevo más tarde. Para eliminar completamente un objeto de la memoria, establezca la variable de objeto *nada*.  
-  
- Antes de la **ActiveConnection** propiedad está establecida, llame a **abierto** sin operandos para crear una instancia de un **Recordset** creado mediante la anexión de campos para el  **Conjunto de registros** [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección.  
-  
- Si ha establecido la [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad **adUseClient**, puede recuperar las filas de forma asincrónica en uno de dos maneras. El método recomendado consiste en establecer *opciones* a **adAsyncFetch**. Como alternativa, puede usar la propiedad dinámica "Asynchronous Rowset Processing" en el [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección, pero los eventos recuperados relacionados pueden perderse si no establece la *opciones* parámetro **adAsyncFetch**.  
+-   Después de abrir el objeto de **conjunto de registros** , estas propiedades pasan a ser de solo lectura.  
   
 > [!NOTE]
->  Recuperación en segundo plano en el proveedor MS Remote se admite solo la **abierto** del método *opciones* parámetro.  
+>  La propiedad **ActiveConnection** es de solo lectura para los objetos **Recordset** cuya propiedad [source](../../../ado/reference/ado-api/source-property-ado-recordset.md) se establece en un objeto **Command** válido, incluso si el objeto **Recordset** no está abierto.  
+  
+ Si pasa un objeto **Command** en el argumento *source* y también pasa un argumento *ActiveConnection* , se produce un error. La propiedad **ActiveConnection** del objeto de **comando** ya debe estar establecida en un objeto de **conexión** o una cadena de conexión válidos.  
+  
+ Si pasa algo que no sea un objeto **Command** en el argumento *source* , puede usar el argumento *Options* para optimizar la evaluación del argumento *source* . Si el argumento *Options* no está definido, puede experimentar un rendimiento reducido porque ADO debe realizar llamadas al proveedor para determinar si el argumento es una instrucción SQL, un procedimiento almacenado, una dirección URL o un nombre de tabla. Si sabe qué tipo de *origen* está utilizando, al establecer el argumento *Opciones* se indica a ADO que salte directamente al código relevante. Si el argumento *Options* no coincide con el tipo de *origen* , se produce un error.  
+  
+ Si pasa un objeto de **flujo** en el argumento de *origen* , no debe pasar información a los demás argumentos. Si lo hace, se generará un error. La información de **ActiveConnection** no se conserva cuando se abre un **conjunto de registros** desde una **secuencia**.  
+  
+ El valor predeterminado para el argumento *Options* es **adCmdFile** si no hay ninguna conexión asociada al **conjunto de registros**. Este suele ser el caso de los objetos de **conjunto de registros** almacenados de forma persistente.  
+  
+ Si el origen de datos no devuelve ningún registro, el proveedor establece las propiedades [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) en **true**y la posición del registro actual es indefinida. Todavía puede agregar nuevos datos a este objeto de **conjunto de registros** vacío si el tipo de cursor lo permite.  
+  
+ Cuando haya finalizado las operaciones sobre un objeto de **conjunto de registros** abierto, use el método [Close](../../../ado/reference/ado-api/close-method-ado.md) para liberar los recursos del sistema asociados. Al cerrar un objeto no se quita de la memoria; puede cambiar la configuración de sus propiedades y usar el método **Open** para abrirla de nuevo más adelante. Para eliminar completamente un objeto de la memoria, establezca la variable de objeto en *Nothing*.  
+  
+ Antes de establecer la propiedad **ActiveConnection** , llame **a Open** sin operandos para crear una instancia de un **conjunto de registros** creado anexando los campos a la colección de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) de **conjunto de registros** .  
+  
+ Si ha establecido la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) en **adUseClient**, puede recuperar las filas de forma asincrónica de una de estas dos maneras. El método recomendado consiste en establecer *las opciones* en **adAsyncFetch**. Como alternativa, puede usar la propiedad dinámica "procesamiento de conjuntos de filas asíncronos" en la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) , pero se pueden perder eventos recuperados relacionados si no establece el parámetro *Options* en **adAsyncFetch**.  
   
 > [!NOTE]
->  Las direcciones URL con el esquema http, se invocarán automáticamente el [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [absoluto y las direcciones URL relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  La captura en segundo plano en el proveedor de MS Remote solo se admite a través del parámetro *Options* del método **Open** .  
   
- Ciertas combinaciones de [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) y [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valores no son válidos. Para obtener información sobre los cuales no se puede combinar las opciones, vea los temas para la [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md), y [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md).  
+> [!NOTE]
+>  Las direcciones URL que usan el esquema http invocarán automáticamente el [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [direcciones URL absolutas y relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+  
+ Ciertas combinaciones de valores [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) y [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) no son válidas. Para obtener información sobre las opciones que no se pueden combinar, vea los temas para [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)y [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de los métodos de apertura y cierre (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de los métodos Open y Close (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Ejemplo de los métodos Open y Close (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
- [Ejemplo de los métodos Open y Close (VC ++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
- [Guardar y abrir un ejemplo de los métodos (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
- [Método Open (conexión de ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Método Open (Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Método Open (Stream de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
+ [Ejemplo de los métodos Open y Close (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
+ [Ejemplo de métodos Save y Open (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
+ [Open (método) (conexión de ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Open (método) (record de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
+ [Open (método, secuencia de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [OpenSchema (método)](../../../ado/reference/ado-api/openschema-method.md)   
  [Save (método)](../../../ado/reference/ado-api/save-method.md)

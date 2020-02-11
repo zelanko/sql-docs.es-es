@@ -1,5 +1,5 @@
 ---
-title: Herramientas de solución de problemas de conectividad entre paquetes | Microsoft Docs
+title: Solución de problemas de conectividad de paquetes de herramientas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8bb86d738aed61743defa3261318e2eb7536aa84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766168"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>Herramientas para solucionar problemas de conectividad entre paquetes
@@ -68,8 +68,8 @@ ms.locfileid: "62766168"
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas para solucionar problemas con el desarrollo de paquetes](troubleshooting-tools-for-package-development.md)   
- [Herramientas para solucionar problemas con la ejecución de paquetes](troubleshooting-tools-for-package-execution.md)  
+ [Herramientas para solucionar problemas de la ejecución de paquetes](troubleshooting-tools-for-package-execution.md)  
   
   

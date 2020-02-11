@@ -15,24 +15,24 @@ ms.assetid: e9625b59-06a0-4883-b155-b932ba7528d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2895ec765df3910dbbaa1e76ba1579e4afe5cca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091652"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>Actualizar datos con SQLSetPos
-Pueden actualizar o eliminar cualquier fila del conjunto de filas con las aplicaciones **SQLSetPos**. Una llamada a **SQLSetPos** es una buena alternativa para crear y ejecutar una instrucción SQL. Permite que un controlador ODBC admiten las actualizaciones posicionadas incluso cuando el origen de datos no admite instrucciones SQL posicionadas. Es parte del paradigma de conseguir acceso a la base de datos completa por medio de las llamadas de función.  
+Las aplicaciones pueden actualizar o eliminar cualquier fila del conjunto de filas con **SQLSetPos**. Llamar a **SQLSetPos** es una alternativa práctica para construir y ejecutar una instrucción SQL. Permite que un controlador ODBC admita actualizaciones posicionadas incluso cuando el origen de datos no admite instrucciones SQL colocadas. Forma parte del paradigma de lograr el acceso completo a la base de datos por medio de llamadas a funciones.  
   
- **SQLSetPos** opera en el conjunto de filas actual y se puede usar solo después de llamar a **SQLFetchScroll**. La aplicación especifica el número de la fila para actualizar, eliminar o insertar, y el controlador recupera los nuevos datos para esa fila de los búferes de conjunto de filas. **SQLSetPos** también se puede usar para designar una fila especificada como la fila actual, o actualizar una fila determinada en el conjunto de filas del origen de datos.  
+ **SQLSetPos** funciona en el conjunto de filas actual y solo se puede usar después de una llamada a **SQLFetchScroll**. La aplicación especifica el número de la fila que se va a actualizar, eliminar o insertar, y el controlador recupera los nuevos datos de esa fila de los búferes del conjunto de filas. **SQLSetPos** también se puede utilizar para designar una fila especificada como la fila actual o para actualizar una fila determinada del conjunto de filas desde el origen de datos.  
   
- Tamaño del conjunto de filas se establece mediante una llamada a **SQLSetStmtAttr** con un *atributo* argumento de SQL_ATTR_ROW_ARRAY_SIZE. **SQLSetPos** usa un nuevo tamaño del conjunto de filas, sin embargo, solo después de llamar a **SQLFetch** o **SQLFetchScroll**. Por ejemplo, si se cambia el tamaño del conjunto de filas, **SQLSetPos** se llama y, a continuación, **SQLFetch** o **SQLFetchScroll** se llama a y la llamada a **SQLSetPos** utiliza el tamaño del conjunto de filas anterior al **SQLFetch** o **SQLFetchScroll** usa el nuevo tamaño del conjunto de filas.  
+ El tamaño del conjunto de filas se establece mediante una llamada a **SQLSetStmtAttr** con un argumento de *atributo* de SQL_ATTR_ROW_ARRAY_SIZE. **SQLSetPos** usa un nuevo tamaño de conjunto de filas, sin embargo, solo después de una llamada a **SQLFetch** o **SQLFetchScroll**. Por ejemplo, si se cambia el tamaño del conjunto de filas, se llama a **SQLSetPos** y luego se llama a **SQLFetch** o **sqlfetchscroll** , y la llamada a **SQLSetPos** utiliza el tamaño del conjunto de filas anterior, mientras que **SQLFetch** o **sqlfetchscroll** usa el nuevo tamaño del conjunto de filas.  
   
- La primera fila del conjunto de filas es el número de fila 1. El *RowNumber* argumento en **SQLSetPos** debe identificar una fila del conjunto de filas; es decir, su valor debe ser en el intervalo comprendido entre 1 y el número de filas que se han capturado recientemente (lo que puede ser menor que tamaño del conjunto de filas). Si *RowNumber* es 0, la operación se aplica a todas las filas del conjunto de filas.  
+ La primera fila del conjunto de filas es el número de fila 1. El argumento *RowNumber* de **SQLSetPos** debe identificar una fila del conjunto de filas; es decir, su valor debe estar en el intervalo comprendido entre 1 y el número de filas que se capturaron más recientemente (que puede ser menor que el tamaño del conjunto de filas). Si *RowNumber* es 0, la operación se aplica a todas las filas del conjunto de filas.  
   
- Dado que la mayoría de interacción con bases de datos relacionales se realiza a través de SQL, **SQLSetPos** no se admite ampliamente. Sin embargo, un controlador puede fácilmente emular, crear y ejecutar un **actualización** o **eliminar** instrucción.  
+ Dado que la mayor parte de la interacción con bases de datos relacionales se realiza a través de SQL, **SQLSetPos** no es ampliamente compatible. Sin embargo, un controlador puede emularla fácilmente mediante la creación y ejecución de una instrucción **Update** o **Delete** .  
   
- Para determinar qué operaciones **SQLSetPos** admite, una aplicación llama a **SQLGetInfo** con el SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 información opción (según el tipo del cursor).  
+ Para determinar qué operaciones admite **SQLSetPos** , una aplicación llama a **SQLGetInfo** con la opción de información SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 (dependiendo del tipo de cursor).  
   
  Esta sección contiene los temas siguientes.  
   

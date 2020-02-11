@@ -1,5 +1,5 @@
 ---
-title: Ayuda de F1 del asistente (Analysis Services - datos multidimensionales) de partición | Microsoft Docs
+title: Asistente para particiones (ayuda F1) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072133"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Asistente para particiones (Ayuda F1) (Analysis Services - Datos multidimensionales)
@@ -37,17 +37,17 @@ ms.locfileid: "66072133"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Especificar información de origen &#40;Asistente para partición&#41;](specify-source-information-partition-wizard.md)  
+-   [Especificar información de origen &#40;Asistente para particiones&#41;](specify-source-information-partition-wizard.md)  
   
--   [Restringir filas &#40;Asistente para partición&#41;](restrict-rows-partition-wizard.md)  
+-   [Restringir filas &#40;Asistente para particiones&#41;](restrict-rows-partition-wizard.md)  
   
--   [Ubicaciones de procesamiento y almacenamiento &#40;Asistente para partición&#41;](processing-and-storage-locations-partition-wizard.md)  
+-   [Ubicaciones de procesamiento y almacenamiento &#40;Asistente para particiones&#41;](processing-and-storage-locations-partition-wizard.md)  
   
--   [Finalización del asistente &#40;Asistente para partición&#41;](completing-the-wizard-partition-wizard.md)  
+-   [Finalización del asistente &#40;Asistente para particiones&#41;](completing-the-wizard-partition-wizard.md)  
   
--   [Busque el cuadro de diálogo de la carpeta remota &#40;Analysis Services - datos multidimensionales&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
+-   [Cuadro de diálogo Buscar carpeta remota &#40;Analysis Services-datos multidimensionales&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>Vea también  
- [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Particiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

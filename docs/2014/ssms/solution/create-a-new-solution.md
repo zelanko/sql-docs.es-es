@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8edec14b380a4df9868c97e9b4d9db4feefc4dd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282112"
 ---
 # <a name="create-a-new-solution"></a>Crear una nueva solución
@@ -36,9 +36,9 @@ ms.locfileid: "63282112"
   
 5.  También puede modificar el nombre de la solución en el cuadro de texto **Nombre de la solución** .  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Explorador de soluciones](solution-explorer.md)   
  [Abrir soluciones desde el control de código fuente](../../database-engine/open-solutions-from-source-control.md)  
   

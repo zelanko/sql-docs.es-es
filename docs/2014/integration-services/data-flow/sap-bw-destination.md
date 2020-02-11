@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cac8403327ecf3888439290554f059bb00bce2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770874"
 ---
 # <a name="sap-bw-destination"></a>Destino de SAP BW
@@ -79,7 +79,7 @@ ms.locfileid: "62770874"
   
 -   Pruebe la carga de datos con las opciones que ha seleccionado.  
   
- También puede habilitar el registro de las llamadas por parte del destino. (Este registro es independiente del registro opcional que puede habilitar en los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]). Las llamadas a funciones RFC se habilitan cuando se configura el administrador de conexiones SAP BW que va a usar el destino. Para obtener más información sobre cómo configurar el administrador de conexiones de SAP BW, vea [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
+ También puede habilitar el registro de las llamadas por parte del destino. (Este registro es independiente del registro opcional que puede habilitar en los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ). Las llamadas a funciones RFC se habilitan cuando se configura el administrador de conexiones SAP BW que va a usar el destino. Para obtener más información sobre cómo configurar el administrador de conexiones de SAP BW, vea [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
   
  Si no conoce todos los valores necesarios para configurar el destino, puede que tenga que ponerse en contacto con el administrador de SAP.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62770874"
   
 -   [Crear InfoPackage](create-infopackage.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Componentes de Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-components.md)  
   
   

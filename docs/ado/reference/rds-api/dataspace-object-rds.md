@@ -14,40 +14,40 @@ ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbd27490e20e8c615ba934299e80f55eb06a5481
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964356"
 ---
 # <a name="dataspace-object-rds"></a>Objeto DataSpace (RDS)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Crea objetos proxy de cliente a objetos de negocios personalizados que se encuentra en el nivel intermedio.  
+ Crea proxies del lado cliente para objetos comerciales personalizados ubicados en el nivel intermedio.  
   
- Servicio de datos remotos necesita a servidores proxy de objetos de negocio para que los componentes del lado cliente puedan comunicarse con objetos de negocios que se encuentra en el nivel intermedio. Servidores proxy facilitan el empaquetado, desempaquetado y del transporte (serialización) de la aplicación [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) datos a través de límites de proceso o del equipos.  
+ El servicio de datos remoto necesita servidores proxy de objetos empresariales para que los componentes del lado cliente puedan comunicarse con los objetos empresariales ubicados en el nivel intermedio. Los proxies facilitan el empaquetado, desempaquetado y transporte (serialización) de los datos del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) de la aplicación a través de los límites del proceso o del equipo.  
   
- Servicio de datos remoto usa el **RDS. DataSpace** del objeto [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) método para crear servidores proxy de objetos de negocios. El proxy del objeto de negocios se crea dinámicamente cada vez que se crea una instancia de su equivalente de objetos empresariales de nivel medio. Servicio de datos remoto admite los siguientes protocolos: HTTP, HTTPS (HTTP Secure Sockets), DCOM y en proceso (los componentes de cliente y el objeto de negocios que residen en el mismo equipo).  
-  
-> [!NOTE]
->  RDS se comporta de forma "independiente" cuando el **RDS. DataSpace** objeto utiliza los protocolos HTTP o HTTPS. Es decir, se descarta cualquier información interna sobre una solicitud de cliente después de que el servidor devuelve una respuesta.  
+ El servicio de datos remotos utiliza **RDS. **Método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) del objeto DataSpace para crear servidores proxy de objeto comercial. El proxy de objeto comercial se crea dinámicamente cada vez que se crea una instancia de su equivalente de objeto comercial de nivel intermedio. El servicio de datos remotos admite los siguientes protocolos: HTTP, HTTPS (sockets seguros HTTP), DCOM y en proceso (los componentes de cliente y el objeto comercial residen en el mismo equipo).  
   
 > [!NOTE]
->  Aunque parezca que el objeto de negocios existe durante la vigencia del proxy del objeto de negocio, el objeto de negocios realmente existe sólo hasta que se envía una respuesta a una solicitud. Cuando se emite una solicitud (es decir, se invoca un método en el objeto de negocios), el proxy abre una nueva conexión con el servidor y el servidor crea una nueva instancia del objeto comercial. Después de que el objeto de negocios responde a la solicitud, el servidor destruye el objeto de negocios y cierra la conexión.  
+>  RDS se comporta de manera "sin estado" cuando el **objeto RDS. **El objeto DataSpace usa los protocolos http o https. Es decir, cualquier información interna sobre una solicitud de cliente se descarta después de que el servidor devuelva una respuesta.  
   
 > [!NOTE]
->  Este comportamiento significa que no se puede pasar datos de una solicitud a otra mediante una propiedad de objeto de negocios o una variable. Debe emplear algún otro mecanismo, como un archivo o un argumento de método, para conservar los datos de estado.  
+>  Aunque el objeto comercial parece existir durante la vigencia del proxy del objeto comercial, el objeto comercial solo existe hasta que se envía una respuesta a una solicitud. Cuando se emite una solicitud (es decir, se invoca un método en el objeto comercial), el proxy abre una nueva conexión al servidor y el servidor crea una nueva instancia del objeto comercial. Una vez que el objeto comercial responde a la solicitud, el servidor destruye el objeto comercial y cierra la conexión.  
   
- El identificador de clase para el **RDS. DataSpace** objeto es BD96C556-65A3 - 11 D 0-983A-00C04FC29E36.  
+> [!NOTE]
+>  Este comportamiento significa que no se pueden pasar datos de una solicitud a otra mediante una propiedad o una variable de objeto comercial. Debe emplear algún otro mecanismo, como un archivo o un argumento de método, para conservar los datos de estado.  
   
- El **DataSpace** objeto es seguro para scripting.  
+ IDENTIFICADOR de clase del **objeto RDS. **El objeto DataSpace es BD96C556-65A3-11D0-983A-00C04FC29E36.  
+  
+ El objeto **DataSpace** es seguro para el scripting.  
   
  Esta sección contiene el siguiente tema.  
   
 -   [Eventos, métodos y propiedades del objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [DataSpace y el ejemplo del método CreateObject (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
 
 

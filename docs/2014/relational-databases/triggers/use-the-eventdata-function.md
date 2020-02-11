@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524276"
 ---
 # <a name="use-the-eventdata-function"></a>Usar la función EVENTDATA
@@ -49,7 +49,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- La instrucción `EVENTDATA()` del desencadenador DDL captura el texto de la instrucción `CREATE TABLE` que no se admite. Esto se logra mediante el uso de una instrucción XQuery en el `xml` datos generados por EVENTDATA y recuperando el \<CommandText > elemento. Para obtener más información, vea [Referencia del lenguaje XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
+ La instrucción `EVENTDATA()` del desencadenador DDL captura el texto de la instrucción `CREATE TABLE` que no se admite. Esto se logra mediante el uso de una instrucción XQuery `xml` en los datos generados por EVENTDATA y la recuperación \<del elemento> CommandText. Para obtener más información, vea [Referencia del lenguaje XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  EVENTDATA captura los datos de los eventos CREATE_SCHEMA, así como el >schema_element< de la definición CREATE SCHEMA correspondiente, si existe. Además, EVENTDATA reconoce la definición <schema_element> como un evento aparte. Por lo tanto, un desencadenador DDL creado en un evento CREATE_SCHEMA y en un evento representado por el <schema_element> de la definición CREATE SCHEMA, puede devolver los mismos datos de evento dos veces, por ejemplo, datos `TSQLCommand`. Por ejemplo, considere un desencadenador DDL creado en los eventos CREATE_SCHEMA y CREATE_TABLE, y que se ejecute el siguiente lote:  
@@ -129,7 +129,7 @@ GO
   
  Un ejemplo de desencadenador DDL parecido se proporciona con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obtener el ejemplo, localice la carpeta Database Triggers mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta carpeta se encuentra en la carpeta **Programación** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Haga clic con el botón derecho en **ddlDatabaseTriggerLog** y seleccione **Script Database Trigger as** (desencadenador de base de datos de script como). De forma predeterminada, el desencadenador DDL **ddlDatabaseTriggerLog** está deshabilitado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eventos DDL](../triggers/ddl-events.md)   
  [Grupos de eventos DDL](../triggers/ddl-event-groups.md)  
   

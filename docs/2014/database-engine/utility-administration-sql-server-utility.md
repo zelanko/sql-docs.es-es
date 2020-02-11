@@ -1,5 +1,5 @@
 ---
-title: Administración de la utilidad (utilidad de SQL Server) | Microsoft Docs
+title: Administración de la utilidad (Utilidad de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773757"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Administración de la utilidad (utilidad de SQL Server)
@@ -89,11 +89,11 @@ ms.locfileid: "62773757"
  Información de configuración de almacenamiento de datos de utilidad  
  Los siguientes valores de configuración no se pueden establecer en esta versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Nombre UMDW: Sysutility_mdw_\<GUID > _DATA.  
+-   Nombre de UMDW: Sysutility_mdw_\<GUID>_DATA.  
   
--   Frecuencia de carga del conjunto de recopilación: Cada 15 minutos.  
+-   Frecuencia de la carga del conjunto de recopilación: cada 15 minutos.  
   
- Es posible configurar el directorio del UMDW: \<Unidad del sistema >: \Program Files\Microsoft SQL Server\MSSQL10_50. < UCP_Name > \MSSQL\Data\\, donde \<unidadDelSistema > es normalmente el C:\ unidad. El archivo de registro, UMDW_\<GUID>_LOG, se encuentra en el mismo directorio.  
+ El directorio de UMDW se puede configurar: \<Unidad del sistema:>:Archivos de programa\Microsoft SQL Server\MSSQL10_50.<Nombre_UCP\MSSQL\Data\\,donde \<Unidad del sistema> normalmente es la unidad C:\. El archivo de registro, UMDW_\<GUID>_LOG, se encuentra en el mismo directorio.  
   
 > [!NOTE]  
 >  La ubicación del archivo del almacén de administración de datos de utilidad se puede cambiar mediante detach/attach o ALTER DATABASE. Recomendamos el uso de ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
@@ -101,8 +101,8 @@ ms.locfileid: "62773757"
  Restablecer los valores originales  
  Para restablecer los valores de esta pestaña a los valores predeterminados, haga clic en el botón **Restaurar valores predeterminados** y, luego, en **Aplicar**.  
   
-## <a name="see-also"></a>Vea también  
- [Panel de la utilidad &#40;utilidad de SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+## <a name="see-also"></a>Consulte también  
+ [Utilidad de SQL Server de &#40;del panel de utilidad&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Supervisar instancias de SQL Server en la utilidad de SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  

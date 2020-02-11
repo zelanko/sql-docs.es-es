@@ -1,5 +1,5 @@
 ---
-title: Unorder, (MDX) | Microsoft Docs
+title: Desordenar (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 954a71c8ca2e96d905892d77ff12b7270deded5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097260"
 ---
 # <a name="unorder-mdx"></a>Unorder (MDX)
@@ -31,10 +31,10 @@ Unorder(Set_Expression)
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Comentarios  
- El **Unorder** función quita cualquier ordenación impuesta en las tuplas contenidas en el conjunto por cualquier otra función o instrucción, como el [orden](../mdx/order-mdx.md) función. El orden de las tuplas en el conjunto devuelto por la **Unorder** función es indeterminado.  
+## <a name="remarks"></a>Observaciones  
+ La función **unorder** quita cualquier orden impuesta en las tuplas contenidas en el conjunto por cualquier otra función o instrucción, como la función [Order](../mdx/order-mdx.md) . El orden de las tuplas en el conjunto devuelto por la función **unorder** es indeterminado.  
   
- El **Unorder** función se utiliza como una sugerencia para optimizar la consulta para el procesamiento de conjunto. Si el orden de las tuplas de un conjunto no es significativo en una consulta o cálculo, utilizando el **Unorder** función puede proporcionar una mejora del rendimiento en estos casos. Por ejemplo, el [NonEmpty (MDX)](../mdx/nonempty-mdx.md) función puede funcionar mejor cuando el conjunto especificado a esta función está ordenado que si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tiene que conservar el orden, aunque con [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], el procesador de consultas intenta realizar Esta función automáticamente para muchas funciones, como **suma** y **agregado**. La ventaja de rendimiento de usar **Unorder** es probable que sea notable en los conjuntos muy grandes que constan de millones de tuplas.  
+ La función **unorder** se utiliza como una sugerencia para la optimización de consultas para el procesamiento de conjuntos. Si el orden de las tuplas dentro de un conjunto no es importante para un cálculo o una consulta, el uso de la función **unorder** puede proporcionar una ventaja de rendimiento en dichos casos. Por ejemplo, la [función NonEmpty (MDX)](../mdx/nonempty-mdx.md) puede funcionar mejor cuando el conjunto proporcionado a esta función no está ordenado [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que si necesita conservar el orden, aunque [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]con, el procesador de consultas intenta realizar esta función automáticamente para muchas funciones, como **SUM** y **Aggregate**. La ventaja de rendimiento que supone el uso de **unorder** solo es probable que se aprecie en conjuntos muy grandes que se componen de millones de tuplas.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente pseudocódigo muestra la sintaxis de esta función.  
@@ -43,7 +43,7 @@ Unorder(Set_Expression)
 NonEmpty (UnOrder (<set_expression>))  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

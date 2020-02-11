@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Especificación de información de conexión (Reporting Services) | Microsoft Docs'
+title: 'Lección 2: Especificar información de conexión (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69d7ad1e3a65f49aa850e016e5e5bd609039ccf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108519"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lección 2: Especificación de información de conexión (Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lección 2: Especificar información de conexión (Reporting Services)
   Después de agregar un informe al proyecto Tutorial, necesita definir un *origen de datos*, que es la información de conexión que el informe usa para tener acceso a los datos procedentes de una base de datos relacional, una base de datos multidimensional u otro recurso.  
   
- En esta lección usará la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] como origen de datos. En este tutorial se da por hecho que esta base de datos se encuentra en una instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] , que está instalada en el equipo local.  
+ En esta lección usará la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] como origen de datos. En este tutorial se da por supuesto que esta base de datos se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] encuentra en una instancia predeterminada de que está instalada en el equipo local.  
   
 ### <a name="to-set-up-a-connection"></a>Para configurar una conexión  
   
-1.  En el **datos de informe** panel, haga clic en **New** y, a continuación, haga clic en **origen de datos...** .  
+1.  En el panel **datos de informe** , haga clic en **nuevo** y, a continuación, haga clic en **origen de datos.**  
   
     > [!NOTE]  
     >  Si el panel **Datos de informe** no está visible, haga clic en **Datos de informe** en el menú **Ver**.  
@@ -48,16 +48,16 @@ ms.locfileid: "66108519"
     >   
     >  `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2012`  
     >   
-    >  Para obtener más información acerca de las cadenas de conexión, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md) y [cuadro de diálogo de propiedades de origen de datos, General](data-source-properties-dialog-box-general.md).  
+    >  Para obtener más información sobre las cadenas de conexión, vea [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md) y [propiedades del origen de datos (cuadro de diálogo), general](data-source-properties-dialog-box-general.md).  
   
-6.  Haga clic en **Credenciales** en el panel izquierdo y haga clic en **Usar autenticación de Windows (seguridad integrada)** .  
+6.  Haga clic en **Credenciales** en el panel izquierdo y haga clic en **Usar autenticación de Windows (seguridad integrada)**.  
   
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] origen de datos [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] se agrega a la **datos de informe** panel.  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]origen [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] de datos se agrega al panel **datos de informe** .  
   
 ## <a name="next-task"></a>Tarea siguiente  
- Ha definido correctamente una conexión a la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . A continuación, creará el informe. Consulte [Lección 3: Definición de un conjunto de datos para el informe de tabla &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+ Ha definido correctamente una conexión a la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . A continuación, creará el informe. Vea [Lección 3: Definir un conjunto de datos para el informe de tabla &#40;Reporting Services&#41;;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
-## <a name="see-also"></a>Vea también  
- [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Data Connections, Data Sources, and Connection Strings in Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

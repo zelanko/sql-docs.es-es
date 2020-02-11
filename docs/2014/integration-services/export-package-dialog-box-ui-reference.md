@@ -1,5 +1,5 @@
 ---
-title: Referencia de interfaz de usuario del cuadro de diálogo de paquete de exportación | Microsoft Docs
+title: Referencia de la interfaz de usuario del cuadro de diálogo Exportar paquete | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1cca0a2761f87d6f4f3837df1e9a0bdcc5b91a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058909"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Exportar paquete
@@ -26,13 +26,13 @@ ms.locfileid: "66058909"
   
 ## <a name="options"></a>Opciones  
  **Ubicación del paquete**  
- Seleccione el tipo de almacenamiento al que desea exportar el paquete. Las siguientes opciones están disponibles:  
+ Seleccione el tipo de almacenamiento al que desea exportar el paquete. Están disponibles las siguientes opciones:  
   
  **SQL Server**  
   
  **Sistema de archivos**  
   
- **Almacén de paquetes SSIS**  
+ **Almacenamiento de paquetes SSIS**  
   
  **Server**  
  Escriba un nombre de servidor o seleccione un servidor de la lista.  
@@ -46,7 +46,7 @@ ms.locfileid: "66058909"
  **Tipo de autenticación**  
  Seleccione un tipo de autenticación.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione un nombre de usuario.  
   
  **Contraseña**  
@@ -58,7 +58,7 @@ ms.locfileid: "66058909"
  **Nivel de protección**  
  Haga clic en el botón Examinar **(…)** y actualice el nivel de protección en el cuadro de diálogo **Nivel de protección de paquetes**. Para obtener más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Guardar copia del paquete](../../2014/integration-services/save-copy-of-package.md)   
  [Referencia de la interfaz de usuario del cuadro de diálogo Importar paquete](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Guardar paquetes](save-packages.md)   

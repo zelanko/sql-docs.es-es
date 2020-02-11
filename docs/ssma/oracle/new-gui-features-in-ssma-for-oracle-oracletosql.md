@@ -1,5 +1,5 @@
 ---
-title: Nuevas características de interfaz gráfica de usuario de SSMA para Oracle (OracleToSQL) | Microsoft Docs
+title: Nuevas características de la interfaz gráfica de usuario de SSMA para Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,117 +10,117 @@ ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 2304865a421c7aa50fc83119854004f9a1c0e5c1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 295372026ec0a1eed0abb4e62a10bc56fd279d56
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259004"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910218"
 ---
-# <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Nuevas características de interfaz gráfica de usuario de SSMA para Oracle (OracleToSQL)
-Este capítulo describe las nuevas características de interfaz de usuario de SSMA.  
+# <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Nuevas características de la interfaz gráfica de usuario de SSMA para Oracle (OracleToSQL)
+En este capítulo se describen las nuevas características de la interfaz de usuario de SSMA.  
   
 ## <a name="layouts"></a>Diseños  
-Esta característica le permite elegir uno de dos ventanas predefinidos decoración o crear un diseño propio. Para obtener acceso a submenú de diseño, en el menú Ver, seleccione diseños. Puede elegir uno de los diseños existentes, agregue el nuevo diseño o administrar los diseños.  
+Esta característica permite elegir entre dos diseños predefinidos de Windows o crear su propio diseño. Para tener acceso al submenú diseño, en el menú Ver, seleccione diseños. Puede elegir uno de los diseños existentes, agregar nuevo diseño o administrar diseños.  
   
 ### <a name="add-current-layout"></a>Agregar diseño actual  
-Para guardar el diseño actual de windows, en el menú Ver, apunte a los diseños, a continuación, haga clic en Agregar diseño actual.  
+Para guardar el diseño de Windows actual, en el menú Ver, seleccione diseños y, a continuación, haga clic en agregar diseño actual.  
   
 ### <a name="choose-predefined-layout"></a>Elegir el diseño predefinido  
-Para elegir uno de los diseños predefinidos, en el menú Ver, seleccione diseños y haga clic en el diseño predeterminado o exploradores sin. También puede utilizar métodos abreviados de Ctrl + Alt + 1 o Ctrl + Alt + 2 diseños predefinidos.  
+Para elegir uno de los diseños predefinidos, en el menú Ver, seleccione diseños y, a continuación, haga clic en diseño predeterminado o sin exploradores. También puede usar los métodos abreviados Ctrl + Alt + 1 o Ctrl + Alt + 2 para los diseños predefinidos.  
   
 ### <a name="choose-user-defined-layout"></a>Elegir el diseño definido por el usuario  
-Para elegir el diseño definido por el usuario, en el menú Ver, apunte a los diseños, a continuación, haga clic en el diseño definido por el usuario. También puede usar los accesos directos definidos para los diseños.  
+Para elegir el diseño definido por el usuario, en el menú Ver, seleccione diseños y, a continuación, haga clic en uno de los diseños definidos por el usuario. También puede usar accesos directos definidos para los diseños.  
   
 ### <a name="manage-layouts"></a>Administrar diseños  
-Para abrir el cuadro de diálogo Administrar diseños, en el menú Ver, elija los diseños y haga clic en administrar diseños. En el cuadro de diálogo Administrar diseños encontrará una lista de los diseños existentes en el lado izquierdo del cuadro de diálogo. Se puede seleccionar el diseño para cambiar su configuración. También puede cambiar el orden de los diseños de la lista o eliminar el diseño con botones en la parte superior de la lista. En el lado derecho del cuadro de diálogo puede cambiar la configuración de diseño siguientes:  
+Para abrir el cuadro de diálogo administrar diseños, en el menú Ver, seleccione diseños y haga clic en administrar diseños. En el cuadro de diálogo administrar diseños encontrará una lista de los diseños existentes en el lado izquierdo del cuadro de diálogo. Puede seleccionar el diseño para cambiar su configuración. También puede cambiar el orden de diseño en la lista o eliminar el diseño con los botones situados en la parte superior de la lista. En el lado derecho del cuadro de diálogo puede cambiar la siguiente configuración de diseño:  
   
 -   Nombre del diseño  
   
--   Sincronización de los exploradores de los metadatos  
+-   Sincronización de exploradores de metadatos  
   
--   Visibilidad y el ancho de los exploradores de los metadatos de origen y destino  
+-   Visibilidad y ancho de los exploradores de metadatos de origen y de destino  
   
--   Visibilidad de las ventanas de origen o destino y sus tamaños  
+-   Visibilidad de las ventanas de origen o de destino y sus tamaños  
   
--   Visibilidad y el alto de windows auxiliares  
+-   Visibilidad y alto de las ventanas auxiliares  
   
 ## <a name="bookmarks"></a>Marcadores  
-Esta característica permite establecer uno o más marcadores en el origen o código de destino, rápido encontró un marcador mediante los métodos abreviados, administrar los marcadores con un cuadro de diálogo descriptivo.  
+Esta característica permite establecer uno o varios marcadores en el código de origen o de destino, encontrar rápidamente un marcador mediante accesos directos, administrar los marcadores con un cuadro de diálogo descriptivo.  
   
 ### <a name="toggle-bookmark"></a>Alternar marcador  
-Puede conjunto o quitar un marcador de las maneras siguientes:  
+Puede establecer o quitar un marcador de las siguientes maneras:  
   
--   Use el botón Alternar marcador sobre la ventana SQL de origen o destino  
+-   Usar el botón Alternar marcador en la parte superior de la ventana SQL de origen o de destino  
   
--   Haga clic en el área gris de la izquierda de la ventana SQL  
+-   Haga clic en el área gris a la izquierda de la ventana SQL.  
   
--   Utilice Ctrl + Mayús +&lt;0..9&gt; para establecer un marcador numerado  
+-   Use Ctrl + Mayús +&lt;0.. 9&gt; para establecer el marcador numerado  
   
-### <a name="bookmark-navigation"></a>Navegación de marcadores  
-Puede comenzar a través de los marcadores de las maneras siguientes:  
+### <a name="bookmark-navigation"></a>Navegación por marcadores  
+Puede recorrer los marcadores de las siguientes maneras:  
   
--   Utilice los botones de marcador siguiente; el marcador anterior en la parte superior de la ventana SQL  
+-   Usar botones marcador siguiente, marcador anterior en la parte superior de la ventana SQL  
   
--   Utilice Ctrl +&lt;0..9&gt; para buscar un marcador numerado  
+-   Use Ctrl +&lt;0.. 9&gt; para buscar el marcador numerado  
   
--   Utilice los botones Ir a o ver código fuente en el cuadro de diálogo Administrar marcadores  
+-   Usar los botones ir a o ver código fuente en el cuadro de diálogo administrar marcadores  
   
 ### <a name="removing-bookmark"></a>Quitar marcador  
-Puede quitar un marcador de las maneras siguientes:  
+Puede quitar un marcador de las siguientes maneras:  
   
--   Use el botón Borrar en la parte superior de la ventana SQL para quitar todos los marcadores del documento actual  
+-   Use el botón borrar en la parte superior de la ventana de SQL para quitar todos los marcadores del documento actual.  
   
--   Use los botones eliminar o quitar todo en el cuadro de diálogo Administrar marcadores  
+-   Usar botones quitar o quitar todo en el cuadro de diálogo administrar marcadores  
   
 ### <a name="manage-bookmarks"></a>Administrar marcadores  
-Para abrir el cuadro de diálogo Administrar marcadores, haga clic en Administrar marcadores en el menú Edición. En el cuadro de diálogo, verá una lista de los marcadores existentes. Puede usar los botones en el lado derecho del cuadro de diálogo para administrar los marcadores.  
+Para abrir el cuadro de diálogo administrar marcadores, en el menú Edición, haga clic en administrar marcadores. En el cuadro de diálogo verá una lista de marcadores existentes. Puede usar los botones que se encuentran en el lado derecho del cuadro de diálogo para administrar los marcadores.  
   
-## <a name="object-history"></a>Historial de objeto  
-Historial de objeto de interfaz gráfica de usuario permite las siguientes ventajas cuando se navega a objetos:  
+## <a name="object-history"></a>Historial de objetos  
+El historial de objetos GUI le permite las siguientes ventajas al navegar por objetos:  
   
--   Puede usar los botones Atrás y hacia delante para navegar por los objetos que ya ha visitado  
+-   Puede usar los botones ir atrás y adelante para navegar por los objetos que ya ha visitado  
   
--   Cuando se una al objeto, realizar una copia en la misma ficha que ha dejado  
+-   Cuando vuelva al objeto, volverá a la misma pestaña que ha dejado.  
   
--   Cuando la vuelta a la pestaña y el objeto es de SQL, realizar una copia en la misma posición del cursor que ha dejado  
+-   Cuando vuelva al objeto y la pestaña sea SQL, volverá a la misma posición del cursor que ha dejado.  
   
 ## <a name="advanced-search-capabilities"></a>Funcionalidades de búsqueda avanzada  
-Capacidades de búsqueda avanzadas proporcionan las características de búsqueda eficaces y flexibles y permiten encontrar la declaración del objeto, obtener información sobre los objetos, realizar una búsqueda rápida, realizar búsquedas en categorías mediante patrones etcetera avanzada de objetos.  
+Las funcionalidades de búsqueda avanzada proporcionan características de búsqueda eficaces y flexibles, y permiten buscar declaraciones de objetos, obtener información de objetos, realizar búsquedas rápidas, realizar búsquedas de objetos avanzadas en categorías mediante patrones, etc.  
   
 ### <a name="get-quick-information"></a>Obtener información rápida  
-Puede obtener información rápida sobre el objeto en la posición del cursor de las maneras siguientes:  
+Puede obtener información rápida sobre el objeto en la posición del cursor de las siguientes maneras:  
   
--   Haga clic en el botón información rápida en la parte superior de la ventana de SQL  
+-   Haga clic en la información rápida del botón en la parte superior de la ventana de SQL  
   
--   Seleccione la información rápida en el menú emergente  
+-   Seleccione información rápida en el menú emergente que aparece al hacer clic con el botón secundario  
   
 -   Presione Ctrl + Mayús + barra espaciadora  
   
-### <a name="find-declaration"></a>Busque la declaración  
-Puede ir a la declaración del objeto en la posición del cursor de las maneras siguientes:  
+### <a name="find-declaration"></a>Buscar declaración  
+Puede ir a la declaración del objeto en la posición del cursor de las siguientes maneras:  
   
--   Haga clic en el botón Ir a declaración realizada en la ventana SQL  
+-   Haga clic en el botón ir a declaración en la parte superior de la ventana SQL  
   
--   Seleccionar Ir a declaración en el menú emergente  
+-   Seleccione ir a declaración en el menú emergente que aparece al hacer clic con el botón secundario.  
   
 -   Presione F12  
   
 ### <a name="quick-search"></a>Búsqueda rápida  
-Puede realizar búsquedas de texto rápido con las siguientes características:  
+Puede realizar una búsqueda de texto rápida con las siguientes características:  
   
--   Puede iniciar la búsqueda mediante el uso de método abreviado Ctrl + F  
+-   Puede iniciar la búsqueda con el método abreviado CTRL + F.  
   
--   Puede repetir la última búsqueda hacia delante mediante el uso de F3  
+-   Puede repetir la última búsqueda hacia delante mediante F3  
   
--   Puede repetir la última búsqueda hacia atrás utilizando las teclas MAYÚS + F3  
+-   Puede repetir la última búsqueda hacia atrás con MAYÚS + F3  
   
--   También puede encontrar siguiente repetición de la palabra en la posición del cursor mediante Ctrl + F3  
+-   Puede buscar la siguiente aparición de la palabra en la posición del cursor mediante CTRL + F3  
   
--   También puede encontrar la repetición anterior de la palabra en la posición del cursor mediante Ctrl + Mayús + F3  
+-   Puede buscar la repetición anterior de la palabra en la posición del cursor mediante CTRL + MAYÚS + F3.  
   
--   También puede realizar todas estas acciones con los elementos de menú.  
+-   También puede realizar todas estas acciones con elementos de menú.  
   
 ### <a name="advanced-search"></a>Búsqueda avanzada  
-Para abrir el cuadro de diálogo de búsqueda avanzada, en el menú de Editar punto de búsqueda, haga clic en la búsqueda avanzada. En el cuadro de diálogo podrá buscar cualquier objeto con el patrón. En la parte superior del cuadro de diálogo puede elegir las categorías de área y el objeto de búsqueda.  
+Para abrir el cuadro de diálogo búsqueda avanzada, en el menú Edición, busque y, a continuación, haga clic en búsqueda avanzada. En el cuadro de diálogo, podrá encontrar cualquier objeto que use pattern. En la parte superior del cuadro de diálogo puede elegir área de búsqueda y categorías de objetos.  
   

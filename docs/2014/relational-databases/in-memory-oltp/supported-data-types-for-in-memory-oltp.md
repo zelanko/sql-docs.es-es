@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155152"
 ---
 # <a name="supported-data-types"></a>Tipos de datos admitidos
@@ -24,28 +24,28 @@ ms.locfileid: "63155152"
   
 |Tipo de datos|Para obtener más información|  
 |---------------|--------------------------|  
-|INT|[int, bigint, smallint y tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|BIGINT|[int, bigint, smallint y tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|SMALLINT|[int, bigint, smallint y tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
-|TINYINT|[int, bigint, smallint y tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|int|[int, bigint, smallint y tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|bigint|[int, bigint, smallint y tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|smallint|[int, bigint, smallint y tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
+|tinyint|[int, bigint, smallint y tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
 |Decimal|[decimal y numeric &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
 |NUMERIC|[decimal y numeric &#40;Transact-SQL&#41;](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
 |FLOAT|[float y real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
-|REAL|[float y real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
+|real|[float y real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)|  
 |money|[money y smallmoney &#40;Transact-SQL&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
 |SMALLMONEY|[money y smallmoney &#40;Transact-SQL&#41;](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
   
- **Tipos de datos de cadena**  
+ **Tipos de datos String**  
   
 |Tipo de datos|Para obtener más información|  
 |---------------|--------------------------|  
 |char(n)|[char y varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
-|varchar(n) <sup>1</sup>|[char y varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
+|VARCHAR (n) <sup>1</sup>|[char y varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
 |nchar(n)|[nchar y nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
-|nvarchar(n) <sup>1</sup>|[nchar y nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
+|nvarchar (n) <sup>1</sup>|[nchar y nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar y nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
- <sup>1</sup> limitación es de 8060 bytes por fila en total, contando (n) en los tipos de longitud variable.  
+ <sup>1</sup> la limitación es de 8060 bytes por fila en total, contando (n) en tipos de longitud variable.  
   
  Para obtener información sobre las intercalaciones admitidas, consulte [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).  
   
@@ -65,9 +65,9 @@ ms.locfileid: "63155152"
 |---------------|--------------------------|  
 |bit|[bit &#40;Transact-SQL&#41;](/sql/t-sql/data-types/bit-transact-sql)|  
 |binary(n)|[binary y varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
-|varbinary <sup>1</sup>|[binary y varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
+|varbinary (n) <sup>1</sup>|[binary y varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
   
- <sup>1</sup> limitación es de 8060 bytes por fila en total, contando (n) en los tipos de longitud variable.  
+ <sup>1</sup> la limitación es de 8060 bytes por fila en total, contando (n) en tipos de longitud variable.  
   
  **Otros tipos de datos**  
   
@@ -75,7 +75,7 @@ ms.locfileid: "63155152"
 |---------------|--------------------------|  
 |UNIQUEIDENTIFIER|[uniqueidentifier &#40;Transact-SQL&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
   
- **Tipos de datos no admitido**  
+ **Tipos de datos no compatibles**  
   
  No se admiten los tipos de datos siguientes:  
   
@@ -85,9 +85,9 @@ ms.locfileid: "63155152"
 |HIERARCHYID|Objetos grandes (LOB). Por ejemplo, varchar(max), nvarchar(max), varbinary(max), image, xml, text y ntext.|ROWVERSION|  
 |sql_variant|Funciones CLR|Tipos definidos por el usuario (UDT)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad de Transact-SQL con OLTP en memoria](transact-sql-support-for-in-memory-oltp.md)   
- [Implementar columnas LOB en una tabla con optimización para memoria](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
+ [Implementar columnas LOB en una tabla optimizada para memoria](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
  [Implementar SQL_VARIANT en una tabla con optimización para memoria](implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   

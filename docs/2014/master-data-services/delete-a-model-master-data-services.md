@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f12b66fd895b7a7b90103fd1bed1eb51597c669a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483174"
 ---
 # <a name="delete-a-model-master-data-services"></a>Eliminar un modelo (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65483174"
 > [!NOTE]  
 >  Cuando haya completado este procedimiento, se eliminarán permanentemente todos los objetos y todos los datos de todas las versiones del modelo.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -39,16 +39,16 @@ ms.locfileid: "65483174"
   
 2.  En la página **Vista de modelo** , en la barra de menús, seleccione **Administrar** y haga clic en **Modelos**.  
   
-3.  En el **mantenimiento de modelos** , seleccione la fila correspondiente al modelo que desea eliminar.  
+3.  En la página **mantenimiento de modelos** , seleccione la fila del modelo que desea eliminar.  
   
-4.  Haga clic en **modelo seleccionado Delete**.  
+4.  Haga clic en **eliminar modelo seleccionado**.  
   
 5.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
 6.  En el cuadro de diálogo de confirmación adicional, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Modelos &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
- [Crear un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
+ [Cree un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
   
   

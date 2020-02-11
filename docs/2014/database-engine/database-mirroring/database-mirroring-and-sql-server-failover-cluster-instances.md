@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755575"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Creación de reflejo de la base de datos e instancias de clúster de conmutación por error
   Un clúster de conmutación por error es una combinación de uno o más discos físicos en un grupo de clústeres de los Servicios de Cluster Server de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MSCS), conocido como un grupo de recursos, que son nodos participantes en el clúster. El grupo de recursos está configurado como una instancia en clúster de conmutación por error que hospeda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparece en la red como si fuera un solo equipo, pero dispone de funcionalidad que proporciona conmutación por error de un nodo a otro si un nodo deja de estar disponible. Para obtener más información, vea [Always On Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) (Instancias de clúster de conmutación por error de Always On [SQL Server]).  
   
- Los clústeres de conmutación por error proporcionan compatibilidad de alta disponibilidad para una instancia entera de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a diferencia de la creación de reflejo de la base de datos, que proporciona compatibilidad de alta disponibilidad para una sola base de datos. La creación de reflejo de la base de datos trabaja entre clústeres de conmutación por error y, también, entre un clúster de conmutación por error y un host no agrupado.  
+ Los clústeres de conmutación por error proporcionan compatibilidad con alta [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibilidad para una instancia completa, a diferencia de la creación de reflejo de la base de datos, que proporciona compatibilidad con alta disponibilidad para una sola base de datos. La creación de reflejo de la base de datos trabaja entre clústeres de conmutación por error y, también, entre un clúster de conmutación por error y un host no agrupado.  
   
 > [!NOTE]  
 >  Para obtener una introducción a la creación de reflejo de la base de datos, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "62755575"
   
  ![Clúster de conmutación por error](../media/dbm-and-failover-clustering.gif "Clúster de conmutación por error")  
   
- Las tres instancias de servidor de la sesión de creación de reflejo residen en tres clústeres distintos: **Cluster_A**, **Cluster_B** y **Cluster_C**. En cada clúster, se ejecuta una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al iniciarse la sesión de creación de reflejo, la instancia en clúster de conmutación por error en **Cluster_A** es el servidor principal, la instancia en clúster de conmutación por error en **Cluster_B** es el servidor reflejado y la instancia en clúster de conmutación por error en **Cluster_C** es el testigo de la sesión de creación de reflejo. Es posible que el nodo activo de **Cluster_A** tenga un error, lo que provocará que el servidor principal deje de estar disponible.  
+ Las tres instancias de servidor de la sesión de creación de reflejo residen en tres clústeres distintos: **Cluster_A**, **Cluster_B**y **Cluster_C**. En cada clúster, se ejecuta una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al iniciarse la sesión de creación de reflejo, la instancia en clúster de conmutación por error en **Cluster_A** es el servidor principal, la instancia en clúster de conmutación por error en **Cluster_B** es el servidor reflejado y la instancia en clúster de conmutación por error en **Cluster_C** es el testigo de la sesión de creación de reflejo. Es posible que el nodo activo de **Cluster_A** tenga un error, lo que provocará que el servidor principal deje de estar disponible.  
   
  Antes de que el clúster tenga tiempo de realizar la conmutación por error, el servidor reflejado detecta la pérdida del servidor principal con la ayuda del testigo. El servidor reflejado pone al día su base de datos y la pone en línea como nueva base de datos principal lo más rápido posible. Cuando **Cluster_A** finaliza la conmutación por error, el servidor principal anterior se convierte en servidor reflejado y sincroniza su base de datos con la base de datos principal actual en **Cluster_B**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62755575"
   
  **Para configurar un nuevo clúster de conmutación por error de SQL Server**  
   
--   [Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   [Cree una nueva configuración de clúster de conmutación por error de SQL Server &#40;&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
  **Para configurar la creación de reflejo de la base de datos**  
   
@@ -63,9 +63,9 @@ ms.locfileid: "62755575"
   
 -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)   
- [Instancias de clúster de conmutación por error AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
+ [Instancias de clúster de conmutación por error de AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
   
   

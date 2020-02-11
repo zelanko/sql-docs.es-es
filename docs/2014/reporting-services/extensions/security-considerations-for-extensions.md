@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 128da8d5bb3b956b5b5661ce47ca6e4b741f0bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282417"
 ---
 # <a name="security-considerations-for-extensions"></a>Consideraciones de seguridad para las extensiones
@@ -46,7 +46,7 @@ ms.locfileid: "63282417"
 ## <a name="initialization-of-extension-assemblies"></a>Inicialización de los ensamblados de extensión  
  Cuando el servidor de informes carga por primera vez las extensiones en la memoria, utilizan las credenciales de cuenta de servicio, porque algunos ensamblados de extensión requieren permisos concretos para tener acceso a los recursos del sistema, leer los archivos de configuración y cargar otros ensamblados dependientes. Sin embargo, una vez cargado e inicializado un ensamblado, todas las llamadas subsiguientes a los ensamblados de extensión utilizan las credenciales de la cuenta de usuario en la que se ha iniciado sesión actualmente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Extensiones de Reporting Services](reporting-services-extensions.md)   
  [Biblioteca de extensiones de Reporting Services](reporting-services-extension-library.md)  
   

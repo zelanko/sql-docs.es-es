@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629738"
 ---
 # <a name="join-filters"></a>filtros de combinación
@@ -43,7 +43,7 @@ ms.locfileid: "62629738"
 LoginID = SUSER_SNAME()  
 ```  
   
- Este filtro asegura que cada suscripción de empleado contenga solamente los datos de la tabla **HumanResources.Employee** que sean relevantes para dicho empleado (que en este caso es una sola fila). Para más información, consulte [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).  
+ Este filtro asegura que cada suscripción de empleado contenga solamente los datos de la tabla **HumanResources.Employee** que sean relevantes para dicho empleado (que en este caso es una sola fila). Para obtener más información, consulte [Filtros de fila con parámetros](parameterized-filters-parameterized-row-filters.md).  
   
  El siguiente paso es extender este filtro a cada una de las tablas relacionadas, utilizando una sintaxis similar a la que se utiliza para especificar una combinación entre dos tablas. La cláusula de este primer filtro de combinación es:  
   
@@ -86,7 +86,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      Se recomienda encarecidamente que todas las lógicas similares se expresen en un filtro de combinación en lugar de una subconsulta. Si la aplicación requiere que un filtro de fila utilice una subconsulta, asegúrese de que la subconsulta solo hace referencia a los datos de búsqueda que no cambian.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Filtrar datos publicados para la replicación de mezcla](filter-published-data-for-merge-replication.md)   
  [Filtros de fila con parámetros](parameterized-filters-parameterized-row-filters.md)  
   

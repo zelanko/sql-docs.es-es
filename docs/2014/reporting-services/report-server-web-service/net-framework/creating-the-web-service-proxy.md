@@ -17,21 +17,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520387"
 ---
 # <a name="creating-the-web-service-proxy"></a>Creación del proxy del servicio web
   Un cliente y un servicio web pueden comunicarse utilizando mensajes SOAP, que encapsulan los parámetros de entrada y salida como XML. Una clase de proxy asigna los parámetros a los elementos XML y, a continuación, envía los mensajes SOAP a través de una red. De esta manera, la clase de proxy le evita tener que comunicarse con el servicio web en el nivel SOAP y le permite invocar a los métodos de servicio web en cualquier entorno de desarrollo que admita SOAP y proxys de servicio web.  
   
- Hay dos maneras de agregar una clase de proxy a su proyecto de desarrollo usando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]: con la herramienta WSDL en [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] y agregando una referencia web en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. En las secciones siguientes se explica esta cuestión con mayor detalle.  
+ Hay dos maneras de agregar una clase de proxy a su proyecto de desarrollo mediante [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]: con la herramienta WSDL en [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]y agregando una referencia Web en. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] En las secciones siguientes se explica esta cuestión con mayor detalle.  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>Agregar el proxy mediante la herramienta WSDL  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK incluye la herramienta Lenguaje de descripción de servicios web (Wsdl.exe), que permite generar un proxy de servicio web para usarse en el entorno de desarrollo de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. La manera más común de crear un proxy de cliente en los lenguajes que admiten servicios web (actualmente C# y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) es usar la herramienta WSDL.  
+ 
+  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK incluye la herramienta Lenguaje de descripción de servicios web (Wsdl.exe), que permite generar un proxy de servicio web para usarse en el entorno de desarrollo de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. La forma más común de crear un proxy de cliente en lenguajes que admiten servicios web ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]actualmente C# y) es usar la herramienta WSDL.  
   
- **Para agregar una clase de proxy a un proyecto mediante Wsdl.exe**  
+ **Para agregar una clase de proxy al proyecto mediante WSDL. exe**  
   
 1.  Desde un símbolo del sistema, utilice Wsdl.exe para crear una clase de proxy, especificando, como mínimo, la dirección URL del servicio web del servidor de informes.  
   
@@ -66,9 +67,10 @@ ReportingService2010 service = new ReportingService2010();
  Para obtener más información sobre la herramienta Wsdl.exe, incluida su sintaxis completa, vea "Herramienta Lenguaje de descripción de servicios web" en la documentación de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK. Para obtener una explicación completa de los proxys del servicio web, vea "Crear un proxy de servicio web XML" en la documentación de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK.  
   
 ## <a name="adding-the-proxy-using-a-web-reference-in-visual-studio"></a>Agregar el proxy usando una referencia web en Visual Studio  
- Una referencia web permite a un proyecto usar uno o más servicios web. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] permite a los usuarios agregar referencias de servicio web a los proyectos siguiendo unos pasos simples.  
+ Una referencia web permite a un proyecto usar uno o más servicios web. 
+  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] permite a los usuarios agregar referencias de servicio web a los proyectos siguiendo unos pasos simples.  
   
- **Para agregar una referencia web a un proyecto**  
+ **Para agregar una referencia Web a un proyecto**  
   
 1.  En el **Explorador de soluciones**, seleccione el proyecto que consumirá el servicio web.  
   
@@ -128,7 +130,7 @@ Import myNamespace.myReferenceName
 using myNamespace.myReferenceName;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servicio web del servidor de informes](../report-server-web-service.md)   
  [Creación de aplicaciones con el servicio web y .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   
  [Referencia técnica &#40;SSRS&#41;](../../technical-reference-ssrs.md)  

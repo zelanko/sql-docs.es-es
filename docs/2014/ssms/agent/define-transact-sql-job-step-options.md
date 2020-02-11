@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62523888"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Define Transact-SQL Job Step Options
-  En este tema se describe cómo definir las opciones de pasos de trabajo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] u Objetos de administración de SQL Server.  
+  En este tema se describe cómo definir opciones [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para [!INCLUDE[tsql](../../includes/tsql-md.md)] los pasos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] trabajo del [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] agente en mediante o objetos de administración de SQL Server.  
   
  **En este tema**  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62523888"
   
      [Seguridad](#Security)  
   
--   **Para definir las opciones de pasos de trabajo de Transact-SQL con:** ,  
+-   **Para definir las opciones de paso de trabajo de Transact-SQL con:** ,  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62523888"
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-define-transact-sql-job-step-options"></a>Para definir opciones de pasos de trabajo de Transact-SQL  
   
@@ -69,8 +69,8 @@ ms.locfileid: "62523888"
   
 9. Si es miembro del rol fijo de servidor **sysadmin** y desea ejecutar este paso de trabajo con otro inicio de sesión de SQL, seleccione el inicio de sesión de SQL en la lista **Ejecutar como usuario** .  
   
-##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
- **Para definir opciones de pasos de trabajo de Transact-SQL**  
+##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
+ **Para definir las opciones de paso de trabajo de Transact-SQL**  
   
  Utilice la clase `JobStep` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell.  
   

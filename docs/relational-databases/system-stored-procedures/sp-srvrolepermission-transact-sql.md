@@ -18,13 +18,13 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032809"
 ---
-# <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
+# <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra los permisos de un rol de servidor fijo.  
@@ -42,13 +42,13 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @srvrolename = ] 'role'` Es el nombre del rol fijo de servidor para el que se devuelven permisos. *rol* es **sysname**, su valor predeterminado es null. Si no se especifica un rol, se devuelven los permisos de todos los roles fijos de servidor. *rol* puede tener uno de los siguientes valores.  
+`[ @srvrolename = ] 'role'`Es el nombre del rol fijo de servidor para el que se devuelven los permisos. *role* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica un rol, se devuelven los permisos de todos los roles fijos de servidor. el *rol* puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**sysadmin**|Administradores del sistema|  
 |**securityadmin**|Administradores de seguridad|  
-|**serveradmin**|Administradores de servidor|  
+|**ServerAdmin**|Administradores de servidor|  
 |**setupadmin**|Administradores de instalación|  
 |**processadmin**|Administradores de proceso|  
 |**diskadmin**|Administradores de disco|  
@@ -60,15 +60,15 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|Nombre de un rol fijo de servidor|  
-|**Permiso**|**sysname**|Permiso asociado **ServerRole**|  
+|**Permiso**|**sysname**|Permiso **asociado a la función de función**|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los permisos enumerados incluyen las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se pueden ejecutar y otras actividades especiales que pueden realizar los miembros del rol fijo de servidor. Para mostrar una lista de los roles fijos de servidor, ejecute **sp_helpsrvrole**.  
   
- El **sysadmin** rol fijo de servidor tiene los permisos de todos los demás roles fijos de servidor.  
+ El rol fijo de servidor **sysadmin** tiene los permisos de todos los demás roles fijos de servidor.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
@@ -81,11 +81,11 @@ EXEC sp_srvrolepermission 'sysadmin';
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [sp_helpsrvrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
+ [sp_addsrvrolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [sp_dropsrvrolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [sp_helpsrvrole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

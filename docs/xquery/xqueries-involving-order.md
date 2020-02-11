@@ -1,5 +1,5 @@
 ---
-title: Consultas XQuery con orden | Microsoft Docs
+title: Consultas XQuery que requiere el orden | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946113"
 ---
 # <a name="xqueries-involving-order"></a>Consultas XQuery basadas en el orden
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Las bases de datos relacionales no reconocen el concepto de secuencia. Por ejemplo, no se puede realizar una solicitud similar a "Obtener el primer cliente de la base de datos". Sin embargo, puede consultar un documento XML y recuperar el primer \<cliente > elemento. A partir de ahí, siempre se recuperará el mismo cliente.  
+  Las bases de datos relacionales no reconocen el concepto de secuencia. Por ejemplo, no se puede realizar una solicitud similar a "Obtener el primer cliente de la base de datos". Sin embargo, puede consultar un documento XML y recuperar el primer \<elemento> el cliente. A partir de ahí, siempre se recuperará el mismo cliente.  
   
  En este tema se describen las consultas que se basan en el orden en que aparecen los nodos en el documento.  
   
@@ -59,15 +59,15 @@ WHERE ProductModelID=7
   
  Observe lo siguiente en la consulta anterior:  
   
--   Las expresiones entre llaves se sustituyen por el resultado de su evaluación. Para obtener más información, consulte [construcción de XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md).  
+-   Las expresiones entre llaves se sustituyen por el resultado de su evaluación. Para obtener más información, vea [XML Construction &#40;XQuery&#41;](../xquery/xml-construction-xquery.md).  
   
--   **@\*** Recupera todos los atributos de la segunda ubicación de centro de trabajo.  
+-   **@\*** recupera todos los atributos de la ubicación del segundo centro de trabajo.  
   
--   La iteración FLWOR (para... RETURN) recupera todos los <`step`> ubicación del centro de los elementos secundarios del segundo trabajo.  
+-   La iteración FLWOR (para... Return) recupera todos los <`step`> elementos secundarios de la ubicación del segundo centro de trabajo.  
   
--   El [función SQL:Column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) incluye el valor relacional en el XML que se está construyendo.  
+-   La [función SQL: column () (XQuery)](../xquery/xquery-extension-functions-sql-column.md) incluye el valor relacional en el XML que se está construyendo.  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <ManuStep ProdModelID="7" ProductModelName="HL Touring Frame">  
@@ -81,9 +81,9 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- La consulta anterior recupera solamente los nodos de texto. Si desea que todo el <`step`> en su lugar, devuelve el elemento se quite el **string()** función de la consulta:  
+ La consulta anterior recupera solamente los nodos de texto. Si desea que se devuelva `step` el elemento <> completo en su lugar, quite la función **String ()** de la consulta:  
   
-### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>b. Encontrar todas las herramientas y todo el material utilizados en el segundo centro de trabajo en la fabricación de un producto  
+### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Encontrar todas las herramientas y todo el material utilizados en el segundo centro de trabajo en la fabricación de un producto  
  Para un modelo de producto específico, la consulta siguiente recupera las herramientas y el material utilizados en el segundo centro de trabajo de una serie de centros de trabajo del proceso de fabricación.  
   
 ```sql
@@ -115,11 +115,11 @@ where ProductModelID=7
   
  Observe lo siguiente en la consulta anterior:  
   
--   La consulta genera el < Loca`tion`> elemento y recupera los valores de su atributo de la base de datos.  
+-   La consulta construye el elemento <loca`tion`> y recupera sus valores de atributo de la base de datos.  
   
 -   Utiliza dos iteraciones FLWOR (for...return): una para recuperar las herramientas y otra para recuperar el material.  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -137,7 +137,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. Recuperar las dos primeras descripciones de las características de un producto del catálogo de productos  
- Para un modelo de producto determinado, la consulta recupera las primeras descripciones de dos características de la <`Features`> elemento en el catálogo del modelo de producto.  
+ Para un modelo de producto específico, la consulta recupera las dos primeras descripciones de características `Features` del elemento <> del catálogo de modelos de producto.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -157,11 +157,11 @@ where ProductModelID=19
   
  Observe lo siguiente en la consulta anterior:  
   
- El cuerpo de la consulta genera XML que incluye el <`ProductModel`> elemento que tiene los atributos ProductModelID y ProductModelName.  
+ El cuerpo de la consulta crea XML que incluye el `ProductModel` <> elemento que tiene los atributos ProductModelID y ProductModelName.  
   
--   La consulta usa un FOR... El bucle RETURN para recuperar las descripciones de características del modelo de producto. El **position()** función se usa para recuperar las dos primeras características.  
+-   La consulta utiliza un... Devuelva el bucle para recuperar las descripciones de las características del modelo de producto. La función **Position ()** se usa para recuperar las dos primeras características.  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```xml
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
@@ -181,7 +181,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. Encontrar las dos primeras herramientas utilizadas en el primer centro de trabajo en el proceso de fabricación de un producto  
- Para un modelo de producto, esta consulta recupera las dos primeras herramientas utilizadas en el primer centro de trabajo de una serie de centros de trabajo del proceso de fabricación. La consulta se especifica en las instrucciones de fabricación almacenadas en el **instrucciones** columna de la **Production.ProductModel** tabla.  
+ Para un modelo de producto, esta consulta recupera las dos primeras herramientas utilizadas en el primer centro de trabajo de una serie de centros de trabajo del proceso de fabricación. La consulta se especifica en las instrucciones de fabricación almacenadas en la columna **instructions** de la tabla **Production. ProductModel** .  
   
 ```sql
 SELECT Instructions.query('  
@@ -204,7 +204,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -217,7 +217,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. Encontrar los dos últimos pasos de fabricación del primer centro de trabajo de fabricación de un producto específico  
- La consulta utiliza la **last()** función para recuperar los dos últimos pasos de fabricación.  
+ La consulta utiliza la función **Last ()** para recuperar los dos últimos pasos de fabricación.  
   
 ```sql
 SELECT Instructions.query('   
@@ -234,7 +234,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```xml
 <LastTwoManuSteps>  
@@ -245,9 +245,9 @@ where ProductModelID=7
 </LastTwoManuSteps>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [Construcción de XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
+ [Construcción XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

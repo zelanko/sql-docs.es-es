@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Solicitud de esquemas como resultados con las opciones XMLDATA y XMLSCHEMA | Microsoft Docs'
+title: 'Ejemplo: solicitar esquemas como resultados con las opciones XMLDATA y XMLSCHEMA | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637931"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Ejemplo: Solicitud de esquemas como resultados con las opciones XMLDATA y XMLSCHEMA
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Ejemplo: solicitar esquemas como resultados con las opciones XMLDATA y XMLSCHEMA
   Esta consulta devuelve el esquema XML-DATA que describe la estructura del documento.  
   
 ## <a name="example"></a>Ejemplo  
@@ -35,7 +35,7 @@ FOR XML RAW, XMLDATA
 GO  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <Schema name="Schema1" xmlns="urn:schemas-microsoft-com:xml-data"   
@@ -66,7 +66,7 @@ FOR XML RAW, XMLSCHEMA
 GO  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -101,7 +101,7 @@ FOR XML RAW, XMLSCHEMA ('urn:example.com')
 GO  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <xsd:schema targetNamespace="urn:example.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -123,7 +123,7 @@ GO
 <row xmlns="urn:example.com" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo RAW con FOR XML](use-raw-mode-with-for-xml.md)  
   
   

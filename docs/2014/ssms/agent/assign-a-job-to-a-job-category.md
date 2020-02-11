@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473206"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Asignar un trabajo a una categoría de trabajo
-  En este tema se describe cómo asignar trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a categorías de trabajo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de SQL Server.  
+  En este tema se describe cómo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asignar trabajos del agente a categorías [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de trabajo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante o objetos de administración de SQL Server.  
   
  Las categorías de trabajo le ayudan a organizar los trabajos para poder filtrarlos y agruparlos fácilmente. Por ejemplo, puede organizar todos los trabajos de copia de seguridad de las bases de datos en la categoría Mantenimiento de bases de datos. Puede asignar trabajos a las categorías de trabajo integradas o puede crear una categoría de trabajo definida por el usuario y, después, asignarle trabajos.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62473206"
   
   
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Para asignar un trabajo a una categoría de trabajo  
   
@@ -49,9 +49,9 @@ ms.locfileid: "62473206"
   
 4.  Haga clic con el botón derecho en el trabajo que desee editar y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo **Propiedades del trabajo -** _nombre_trabajo_ , en la lista **Categoría** , seleccione la categoría de trabajo que quiere asignar al trabajo.  
+5.  En el cuadro de diálogo **propiedades del trabajo-**_job_name_ , en la lista **categoría** , seleccione la categoría de trabajo que desea asignar al trabajo.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
   
 ##  <a name="TSQL"></a> Usar Transact-SQL  
@@ -74,11 +74,11 @@ ms.locfileid: "62473206"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
+ Para obtener más información, vea [sp_update_job &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql).  
   
   
   
-##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
+##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
  **Para asignar un trabajo a una categoría de trabajo**  
   
  Utilice la clase `JobCategory` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell.  

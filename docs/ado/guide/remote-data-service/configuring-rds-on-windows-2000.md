@@ -1,5 +1,5 @@
 ---
-title: Configuración de RDS en Windows 2000 | Microsoft Docs
+title: Configurar RDS en Windows 2000 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,33 +13,33 @@ ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6230fb7ffbaa1226bc65d391d988ad064617998
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922897"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Configuración de RDS en Windows 2000
-Si experimenta dificultades para conseguir que RDS funcione correctamente después de actualizar a Windows 2000, siga estos pasos para solucionar el problema:  
+Si tiene dificultades para que RDS funcione correctamente después de actualizar a Windows 2000, siga estos pasos para solucionar el problema:  
   
-1.  Asegúrese de que se ejecuta primero el servicio de publicación World Wide Web, vaya a https:// server mediante el uso de Internet Explorer. Si no puede acceder el servidor Web de esta manera, abra un símbolo del sistema y escriba el comando siguiente, "NET iniciar W3SVC".  
+1.  Para asegurarse de que el servicio de publicación de World Wide Web se está ejecutando en primer lugar, vaya a https://Server con Internet Explorer. Si no puede tener acceso al servidor Web de esta manera, abra un símbolo del sistema y escriba el siguiente comando: NET START W3SVC.  
   
-2.  En el menú Inicio, seleccione Ejecutar. Escriba msdfmap.ini y, a continuación, haga clic en Aceptar para abrir el archivo msdfmap.ini en el Bloc de notas. Consulte la sección [DEFAULT conectarse] y, si el parámetro de acceso se establece en NOACCESS, cámbielo a READONLY.  
+2.  En el menú Inicio, seleccione Ejecutar. Escriba MSDFMAP. ini y, a continuación, haga clic en Aceptar para abrir el archivo MSDFMAP. ini en el Bloc de notas. Active la sección [CONNECT DEFAULT] y, si el parámetro de acceso está establecido en NoAccess, cámbielo a READONLY.  
   
-3.  Mediante la utilidad RegEdit, vaya a "Registro hasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo" y asegúrese de que **HandlerRequired** se establece en 0 y **DefaultHandler** es "" (cadena nula).  
+3.  Con la utilidad regedit, vaya a "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\DataFactory\HandlerInfo" y asegúrese de que **HandlerRequired** está establecido en 0 y el valor **predeterminado** es "" (cadena nula).  
   
-     **Tenga en cuenta** si realiza cambios en esta sección del registro, debe detener y reiniciar el servicio de publicación World Wide Web escribiendo los siguientes comandos en un símbolo del sistema: "NET STOP W3SVC" y "NET iniciar W3SVC".  
+     **Nota:** Si realiza cambios en esta sección del registro, debe detener y reiniciar el servicio de publicación de World Wide Web escribiendo los siguientes comandos en un símbolo del sistema: "NET STOP W3SVC" y "NET START W3SVC".  
   
-4.  Con la utilidad RegEdit, navegue en el registro a "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch" y compruebe que existe una clave denominada **RDSServer.Datafactory**. Si no es así, crearla.  
+4.  Con la utilidad regedit, navegue en el registro hasta "HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch" y compruebe que hay una clave denominada **RDSServer. DataFactory**. Si no es así, créelo.  
   
-5.  Con el Administrador de servicios de Internet, busque el sitio Web predeterminado y ver las propiedades de la raíz virtual MSADC. Inspeccione el directorio seguridad o la dirección IP y las restricciones de nombre de dominio. Si se activa el "acceso denegado", a continuación, seleccione "Granted".  
+5.  Con Administrador de servicios Internet, busque el sitio web predeterminado y vea las propiedades de la raíz virtual de MSADC. Inspeccione las restricciones de seguridad de directorios/dirección IP y nombre de dominio. Si está activada la casilla "acceso denegado", seleccione "concedido".  
   
- Asegúrese de reiniciar el servidor si los cambios no aparezcan solucionar el problema en primer lugar.  
+ Asegúrese de intentar reiniciar el servidor si los cambios en no parecen resolver el problema al principio.  
   
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565). Componentes de servidor RDS a partir de Windows 8 y Windows Server 2012, ya no se incluyen en el sistema operativo de Windows. Migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565). A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows. Migre las aplicaciones que usan RDS a un [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

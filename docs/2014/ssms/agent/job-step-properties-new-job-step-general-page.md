@@ -1,5 +1,5 @@
 ---
-title: 'Propiedades de paso de trabajo: Nuevo paso de trabajo (página General) | Microsoft Docs'
+title: 'Propiedades de paso de trabajo: nuevo paso de trabajo (página general) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510959"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>Propiedades de paso de trabajo: Nuevo paso de trabajo (página General)
-  Use esta página para ver y cambiar las propiedades de un paso de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para definir un nuevo paso de trabajo.  
+  Utilice esta página para ver y cambiar las propiedades de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paso de trabajo del agente, o para definir un nuevo paso de trabajo.  
   
  Para navegar a esta página, en el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic con el botón derecho en **Trabajos**, haga clic en **Nuevo trabajo**, seleccione la página **Pasos** y haga clic en **Nuevo**. También puede navegar a esta página si hace clic con el botón derecho en un trabajo en el Explorador de objetos, hace clic en **Propiedades**, selecciona la página **Pasos** y hace clic en **Nuevo**, **Insertar**o **Editar**.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62510959"
  **Base de datos**  
  Establece la base de datos en la que se ejecuta el paso de trabajo. Esta opción no está disponible para todos los tipos de pasos de trabajo.  
   
- **Command**  
+ **Comando**  
  Establece el comando que ejecuta el paso de trabajo.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Opciones de pasos de trabajo Transact-SQL  
@@ -47,7 +47,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copiar**  
+ **Copy**  
  Copia el texto seleccionado al Portapapeles.  
   
  **Pegar**  
@@ -67,7 +67,7 @@ ms.locfileid: "62510959"
  **JScript**  
  Especifica JScript como lenguaje de los pasos de trabajo.  
   
- **Otro**  
+ **Otros**  
  Escriba el nombre del lenguaje para los pasos de trabajo escritos en otro lenguaje de scripts.  
   
  **Abrir**  
@@ -76,7 +76,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copiar**  
+ **Copy**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -92,7 +92,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copiar**  
+ **Copy**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -105,7 +105,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del script.  
   
- **Copiar**  
+ **Copy**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -115,7 +115,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copiar**  
+ **Copy**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -125,7 +125,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copiar**  
+ **Copy**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -138,7 +138,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copiar**  
+ **Copy**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -148,7 +148,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copiar**  
+ **Copy**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -158,7 +158,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copiar**  
+ **Copy**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -174,7 +174,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copiar**  
+ **Copy**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -193,7 +193,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copiar**  
+ **Copy**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -205,7 +205,7 @@ ms.locfileid: "62510959"
  Especifique dónde se encuentra el paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) y qué método de autenticación se va a utilizar. Cuando seleccione esta pestaña, aparecerán las opciones siguientes.  
   
  **Origen del paquete**  
- Especifica dónde se almacena el paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Elija una de las siguientes opciones:  
+ Especifica dónde se almacena el paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Elija alguna de las acciones siguientes:  
   
 -   **SQL Server**  
   
@@ -216,16 +216,17 @@ ms.locfileid: "62510959"
  **Server**  
  Escriba el nombre del servidor en donde se almacena el paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Esta opción solo está disponible cuando se especifica **SQL Server** o **Almacén de paquetes SSIS** para **Origen del paquete**.  
   
- **Utilizar autenticación de Windows**  
+ **Usar autenticación de Windows**  
  Para los inicios de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza la autenticación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Utilizar autenticación de SQL Server**  
+ **Usar autenticación SQL Server**  
  Para los inicios de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si selecciona este método de autenticación, escriba el **nombre de usuario** y la **contraseña**adecuados.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se proporciona por motivos de compatibilidad con versiones anteriores. Para mejorar la seguridad, utilice la autenticación de Windows siempre que sea posible.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se proporciona por motivos de compatibilidad con versiones anteriores. Para mejorar la seguridad, utilice la autenticación de Windows siempre que sea posible.  
   
- **Paquete**  
+ **Package**  
  Escriba la ubicación del paquete.  
   
 > [!IMPORTANT]  
@@ -237,10 +238,10 @@ ms.locfileid: "62510959"
  **Archivos de configuración**  
  Presenta una lista de los archivos de configuración del paquete.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega un archivo de configuración para el paquete.  
   
- **Quitar**  
+ **Remove**  
  Quita un archivo de configuración del paquete.  
   
  **Subir**  
@@ -255,10 +256,10 @@ ms.locfileid: "62510959"
  **Archivos de comandos**  
  Presenta una lista de los archivos de comandos del paquete.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Agrega un archivo de comandos.  
   
- **Quitar**  
+ **Remove**  
  Quita el archivo de comandos seleccionado.  
   
  **Subir**  
@@ -282,7 +283,7 @@ ms.locfileid: "62510959"
 ### <a name="execution-options-tab"></a>Opciones de ejecución (pestaña)  
  En esta pestaña puede consultar o cambiar las opciones de configuración del paquete.  
   
- **Rechazar el paquete cuando haya advertencias de validación**  
+ **Error de paquete en advertencias de validación**  
  Active esta opción para rechazar la ejecución del paquete si se producen advertencias de validación.  
   
  **Validar el paquete sin ejecutarlo**  
@@ -300,7 +301,7 @@ ms.locfileid: "62510959"
  **...**  
  Busque el archivo de punto de comprobación del paquete.  
   
- **Omitir opciones de reinicio**  
+ **Invalidar opciones de reinicio**  
  Active esta opción para especificar en este paso de trabajo opciones de reinicio diferentes de las opciones especificadas en el paquete.  
   
  **Opción de reinicio**  
@@ -315,43 +316,43 @@ ms.locfileid: "62510959"
  **Cadena de configuración**  
  Escriba la cadena de configuración del proveedor de registro.  
   
- **Quitar**  
+ **Remove**  
  Quita el proveedor de registro.  
   
 ### <a name="set-values-tab"></a>Valores establecidos (pestaña)  
  En esta pestaña puede consultar o cambiar valores de propiedades del paquete.  
   
- **Ruta de acceso de la propiedad**  
+ **Ruta de acceso de propiedad**  
  Permite ver o cambiar la ruta de acceso de la propiedad.  
   
  **Valor**  
  Permite ver o cambiar el valor de la propiedad.  
   
- **Quitar**  
+ **Remove**  
  Quita la propiedad.  
   
 ### <a name="verification-tab"></a>Comprobación (pestaña)  
  En esta pestaña puede seleccionar las opciones de comprobación del paso de trabajo.  
   
- **Ejecutar solo los paquetes firmados**  
+ **Ejecutar solo paquetes firmados**  
  Solo ejecuta paquetes con firma. Si se selecciona esta opción, el paso de trabajo se rechaza si es un paquete sin firma.  
   
- **Comprobar la generación del paquete**  
+ **Comprobar la compilación del paquete**  
  Solo ejecuta paquetes con un número de generación específico. Si se selecciona esta opción, el paso de trabajo se rechaza si el paquete no tiene el número de generación especificado.  
   
- **Compilar**  
+ **Build**  
  Escriba el número de generación del paquete.  
   
- **Comprobar el Id. del paquete**  
+ **Comprobar el identificador del paquete**  
  Ejecuta solo los paquetes que tienen un identificador concreto. Si se selecciona esta opción, el paso de trabajo se rechaza si el paquete no tiene el identificador especificado.  
   
- **Id. de paquete**  
+ **IDENTIFICADOR de paquete**  
  Escriba el Id. del paquete.  
   
- **Comprobar el Id. de versión**  
+ **Comprobar el ID. de versión**  
  Ejecuta solo los paquetes que tienen un identificador de versión concreto. Si se selecciona esta opción, el paso de trabajo se rechaza si el paquete no tiene el identificador de versión especificado.  
   
- **Id. de versión**  
+ **Id. de la versión**  
  Escriba el Id. de versión.  
   
 ### <a name="command-line-tab"></a>Línea de comandos (pestaña)  
@@ -366,9 +367,9 @@ ms.locfileid: "62510959"
  **Línea de comandos**  
  Escriba las opciones de línea de comandos que se van a utilizar en este paquete.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar pasos de trabajo](manage-job-steps.md)   
- [Trabajos del Agente SQL Server para paquetes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
+ [Trabajos de Agente SQL Server para paquetes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)   
  [Administración del Agente de replicación](../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

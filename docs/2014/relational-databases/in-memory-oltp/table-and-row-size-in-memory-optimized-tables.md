@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688903"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
@@ -70,9 +70,9 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
  En la tabla siguiente se describe el cálculo del tamaño del cuerpo de fila, indicado como [tamaño real del cuerpo de fila] = SUM([tamaño de tipos superficiales]) + 2 + 2 * [número de columnas de tipo profundo].  
   
-|Sección|Tamaño|Comentarios|  
+|Sección|Size|Comentarios|  
 |-------------|----------|--------------|  
-|Columnas de tipo superficial|SUM ([tamaño de tipos superficiales])<br /><br /> **El tamaño de los tipos individuales es el siguiente:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (precisión < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric (precisión > 18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
+|Columnas de tipo superficial|SUM ([tamaño de tipos superficiales])<br /><br /> **El tamaño de los tipos individuales es el siguiente:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (precisión <= 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric (precisión>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |Relleno superficial de la columna|Los valores posibles son:<br /><br /> 1, si hay columnas de tipo profundo y el tamaño total de datos de las columnas superficiales es un número impar.<br /><br /> De lo contrario, es 0|Los tipos profundos son (var)binary y (n)(var)char.|  
 |Matriz de desplazamiento para las columnas de tipo profundo|Los valores posibles son:<br /><br /> 0, si no hay columnas de tipos profundos<br /><br /> 2 + 2 * [número de columnas de tipo profundo], en caso contrario|Los tipos profundos son (var)binary y (n)(var)char.|  
 |Matriz NULL|[número de columnas que admiten valores NULL] / 8, redondeado a bytes completos.|La matriz tiene un bit por cada columna que admite valores NULL. Se redondea a bytes completos.|  
@@ -82,7 +82,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
 |Columnas de tipo profundo de longitud variable [tamaño calculado]|SUM([tamaño calculado de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño calculado de cada columna es el siguiente:<br /><br /> i para varchar(i) y varbinary(i)<br /><br /> 2 * i para nvarchar(i)|Esta fila solo se aplica al [tamaño del texto calculado de la fila].<br /><br /> Las columnas de tipo profundo de longitud variable son de tipo varchar(i), nvarchar(i) o varbinary(i). El tamaño calculado se determina mediante la longitud máxima (i) de la columna.|  
 |Columnas de tipo profundo de longitud variable [tamaño real]|SUM([tamaño real de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño real de cada columna es el siguiente:<br /><br /> n, donde n es el número de caracteres almacenados en la columna, para varchar(i).<br /><br /> 2 * n, donde n es el número de caracteres almacenados en la columna, para nvarchar(i).<br /><br /> n, donde n es el número de bytes almacenados en la columna, para varbinary(i).|Esta fila solo se aplica al [tamaño del texto real de la fila].<br /><br /> El tamaño real se determina con los datos almacenados en las columnas de la fila.|  
   
-##  <a name="bkmk_RowStructure"></a> Estructura de filas  
+##  <a name="bkmk_RowStructure"></a>Estructura de filas  
  Las filas de una tabla optimizada para memoria tienen los siguientes componentes:  
   
 -   El encabezado de fila contiene la marca de tiempo necesaria para implementar las versiones de fila. El encabezado de fila también contiene el puntero de índice para implementar el encadenamiento de filas en cubos de hash (descritos arriba).  
@@ -113,24 +113,24 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
 -   Segundo cubo: (John, París), (Jane, Praga)  
   
- Una marca &#x221e; de tiempo de finalización (infinito) indica que se trata de la versión válida actualmente de la fila. La fila no se ha actualizado ni se ha eliminado desde que esta versión de fila se escribió.  
+ Una marca de tiempo de finalización &#x221e; (infinito) indica que se trata de la versión válida actualmente de la fila. La fila no se ha actualizado ni se ha eliminado desde que esta versión de fila se escribió.  
   
  Para un tiempo mayor que 200, la tabla contiene las filas siguientes:  
   
-|Name|Ciudad|  
+|Nombre|City|  
 |----------|----------|  
 |John|Beijing|  
-|Jane|Praga|  
+|Julia|Praga|  
   
  Sin embargo, cualquier transacción activa con el tiempo de inicio 100 verá la versión siguiente de la tabla:  
   
-|Name|Ciudad|  
+|Nombre|City|  
 |----------|----------|  
-|John|Paris|  
-|Jane|Praga|  
+|John|París|  
+|Julia|Praga|  
 |Susan|Bogotá|  
   
-##  <a name="bkmk_ExampleComputation"></a> Ejemplo: Cálculo del tamaño de fila y tabla  
+##  <a name="bkmk_ExampleComputation"></a>Ejemplo: cálculo del tamaño de las tablas y las filas  
  Para los índices hash, el número de cubos real se redondea a la potencia más cercana de 2. Por ejemplo, si el bucket_count especificado es 100000, el número real de cubos para el índice es 131072.  
   
  Considere una tabla Orders con la definición siguiente:  
@@ -222,7 +222,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Tablas con optimización para memoria](memory-optimized-tables.md)  
+## <a name="see-also"></a>Consulte también  
+ [Tablas optimizadas para la memoria](memory-optimized-tables.md)  
   
   

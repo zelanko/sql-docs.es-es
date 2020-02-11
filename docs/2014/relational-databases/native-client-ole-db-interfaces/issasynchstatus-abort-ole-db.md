@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: Abort (OLE DB) | Microsoft Docs'
+title: 'ISSAsynchStatus:: ABORT (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b61f5e3e44f9584fc3f93efb521585e3173b6c1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638722"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
@@ -42,7 +42,7 @@ HRESULT Abort(
  *eOperation*[in]  
  Operación para anular. El valor debe ser el siguiente:  
   
- DBASYNCHOP_OPEN: la solicitud de cancelación se aplica a la apertura o rellenado asincrónico de un conjunto de filas o a la inicialización asincrónica de un objeto de origen de datos.  
+ DBASYNCHOP_OPEN-La solicitud para cancelar se aplica a la apertura o rellenado asincrónico de un conjunto de filas o a la inicialización asincrónica de un objeto de origen de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  S_OK  
@@ -61,20 +61,20 @@ HRESULT Abort(
  El parámetro *hChapter* no es DB_NULL_HCHAPTER, o *eOperation* no es DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- Se llamó a**ISSAsynchStatus::Abort** en un objeto de origen de datos en el que no se llamó a **IDBInitialize::Initialize** , o no se ha completado.  
+ Se llamó a **ISSAsynchStatus:: ABORT** en un objeto de origen de datos en el que no se ha llamado a **IDBInitialize:: Initialize** o que no se ha completado.  
   
- Se llamó a**ISSAsynchStatus::Abort** en un objeto de origen de datos en el que se llamó a **IDBInitialize::Initialize** pero se canceló posteriormente antes de la inicialización, o se ha superado el tiempo de espera. Todavía no se ha inicializado el objeto de origen de datos.  
+ Se llamó a **ISSAsynchStatus:: ABORT** en un objeto de origen de datos en el que se llamó a **IDBInitialize:: Initialize** pero posteriormente se canceló antes de la inicialización o se agotó el tiempo de espera. Todavía no se ha inicializado el objeto de origen de datos.  
   
- Se llamó a**ISSAsynchStatus::Abo at** en un conjunto de filas en el que previamente se llamó a **ITransaction::Commit** o a **ITransaction::Abo at** was previously called, and the rowset did not survive the commit o a abo at and is in a zombie state.  
+ Se llamó a **ISSAsynchStatus:: ABORT** en un conjunto de filas en el que se llamó a **ITransaction:: commit** o **ITransaction:: ABORT** previamente, y el conjunto de filas no sobrevivió la confirmación o anulación y está en estado inerte.  
   
- Se llamó a**ISSAsynchStatus::Abort** en un conjunto de filas que se canceló de forma asincrónica en su fase de inicialización. El conjunto de filas se encuentra en estado inerte.  
+ Se llamó a **ISSAsynchStatus:: ABORT** en un conjunto de filas que se canceló de forma asincrónica en su fase de inicialización. El conjunto de filas se encuentra en estado inerte.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Al anular la inicialización de un conjunto de filas u objeto de origen de datos, se podría dejar el conjunto de filas u objeto de origen de datos en un estado zombi, de forma que todos los métodos distintos de los métodos **IUnknown** devuelvan un valor E_UNEXPECTED. Si esto sucede, la única acción posible para el consumidor es liberar el conjunto de filas u objeto de origen de datos.  
   
  Llamando a **ISSAsynchStatus::Abort** y pasando un valor para *eOperation* distinto de DBASYNCHOP_OPEN, devuelve S_OK. Esto no implica que la operación se haya completado o cancelado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Realizar operaciones asincrónicas](../native-client/features/performing-asynchronous-operations.md)  
   
   

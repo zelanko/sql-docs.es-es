@@ -16,13 +16,13 @@ ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2724a62f6bf55941edbaa206728f9352e8fce5c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941721"
 ---
-# <a name="sprevokepublicationaccess-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
+# <a name="sp_revoke_publication_access-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita el inicio de sesión de la lista de acceso de una publicación. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
@@ -37,24 +37,24 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación para tener acceso a. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación a la que se va a obtener acceso. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @login = ] 'login'` Es el identificador de inicio de sesión. *inicio de sesión* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @login = ] 'login'`Es el identificador de inicio de sesión. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_revoke_publication_access** se utiliza en instantáneas, transaccional y replicación de mezcla.  
+## <a name="remarks"></a>Observaciones  
+ **sp_revoke_publication_access** se utiliza en la replicación de instantáneas, transaccional y de mezcla.  
   
- **sp_revoke_publication_access** puede llamarse varias veces.  
+ se puede llamar a **sp_revoke_publication_access** de forma repetida.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_revoke_publication_access**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_revoke_publication_access**.  
   
-## <a name="see-also"></a>Vea también  
- [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_grant_publication_access &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_help_publication_access &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
  [Proteger el publicador](../../relational-databases/replication/security/secure-the-publisher.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

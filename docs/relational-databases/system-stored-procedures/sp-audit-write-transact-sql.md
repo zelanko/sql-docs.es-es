@@ -18,10 +18,10 @@ ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251972"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
@@ -42,20 +42,20 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Argumentos  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Parámetro definido por el usuario y registrado en la columna **user_defined_event_id** del registro de auditoría. *\@user_defined_event_id* es de tipo **smallint**.  
+ Parámetro definido por el usuario y registrado en la columna **user_defined_event_id** del registro de auditoría. user_defined_event_id es de tipo **smallint**. * \@*  
   
  `[ @succeeded = ] succeeded`  
- Parámetro pasado por el usuario para indicar si el evento se realizó correctamente o no. Aparece en la columna "succeeded" del registro de auditoría. `@succeeded` es **bit**.  
+ Parámetro pasado por el usuario para indicar si el evento se realizó correctamente o no. Aparece en la columna "succeeded" del registro de auditoría. `@succeeded`es de **bit**.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- Es el texto definido por el usuario y registrado en la nueva columna user_defined_event_id column del registro de auditoría. `@user_defined_information` es **nvarchar (4000)** .  
+ Es el texto definido por el usuario y registrado en la nueva columna user_defined_event_id column del registro de auditoría. `@user_defined_information`es de tipo **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
  Los errores los producen parámetros de entrada incorrectos o errores al escribir en el registro de auditoría de destino.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  Cuando se agrega el **USER_DEFINED_AUDIT_GROUP** a una especificación de auditoría de servidor o a una especificación de auditoría de base de datos, el evento desencadenado por **sp_audit_write** se incluirá en el registro de auditoría.  
   
 ## <a name="permissions"></a>Permisos  
@@ -72,7 +72,7 @@ EXEC sp_audit_write @user_defined_event_id =  27 ,
             , @user_defined_information = N'Access to a monitored object.' ;  
 ```  
   
-### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>b.  Crear un evento de auditoría definido por el usuario sin texto informativo  
+### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>B.  Crear un evento de auditoría definido por el usuario sin texto informativo  
  En el ejemplo siguiente se crea un evento de auditoría con identificador 27, el valor de "succeeded" 0 y sin incluir texto informativo opcional ni nombres de parámetro opcionales.  
   
 ```  
@@ -80,14 +80,14 @@ EXEC sp_audit_write 27, 0;
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [sp_addrole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_dropuser &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [sp_grantdbaccess &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [sp_grantlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

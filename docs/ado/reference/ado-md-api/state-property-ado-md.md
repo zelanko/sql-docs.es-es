@@ -1,5 +1,5 @@
 ---
-title: Estado (propiedad, ADO MD) | Microsoft Docs
+title: Propiedad State (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,24 +17,24 @@ ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c11bb74b62d54b1e2489cba5dd7cd35ee376a41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949157"
 ---
 # <a name="state-property-ado-md"></a>State (propiedad) (ADO MD)
-Indica el estado actual del conjunto de celdas.  
+Indica el estado actual del Cellset.  
   
 ## <a name="return-values"></a>Valores devueltos  
- Devuelve un **largo** entero que indica el estado actual de la [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) de objetos y es de solo lectura. Los valores siguientes son válidos: **adStateClosed** (0) y **adStateOpen** (1).  
+ Devuelve un entero **largo** que indica la condición actual del objeto [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) y es de solo lectura. Los valores siguientes son válidos: **adStateClosed** (0) y **adStateOpen** (1).  
   
-## <a name="remarks"></a>Comentarios  
- Para usar el [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) los nombres de constantes, debe tener en el proyecto hace referencia a la biblioteca de tipos de ADO. Consulte [utilizar ADO con ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md) para obtener más información.  
+## <a name="remarks"></a>Observaciones  
+ Para usar los nombres de constantes [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) , debe tener la biblioteca de tipos ADO a la que se hace referencia en el proyecto. Vea [usar ado con ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md) para obtener más información.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de celdas (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>Vea también  
- [Close (método) (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
+## <a name="see-also"></a>Consulte también  
+ [Método Close (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
  [Open (método) (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

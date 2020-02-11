@@ -16,13 +16,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512559"
 ---
-# <a name="use-the-systemhealth-session"></a>Usar la sesión system_health
+# <a name="use-the-system_health-session"></a>Usar la sesión system_health
   La sesión system_health es una sesión de eventos extendidos que se incluye de forma predeterminada con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta sesión se inicia automáticamente cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] se inicia, y se ejecuta sin ningún efecto de rendimiento notable. La sesión recopila datos del sistema que se pueden utilizar para ayudar a solucionar problemas de rendimiento en el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por consiguiente, se recomienda no detener ni eliminar la sesión.  
   
  La sesión recopila información como la que se indica a continuación:  
@@ -67,14 +67,14 @@ WHERE xe.name = 'system_health'
   
  Para ver los datos de sesión del archivo de eventos, use la interfaz de usuario Eventos extendidos disponible en Management Studio. Consulte [View Event Session Data](../../database-engine/view-event-session-data.md) para obtener más información.  
   
-## <a name="restoring-the-systemhealth-session"></a>Restaurar la sesión system_health  
- Si elimina la sesión system_health, puede restaurarla si ejecuta el archivo **u_tables.sql** en el Editor de consultas. Este archivo se encuentra en la siguiente carpeta, donde C: representa la unidad en la que se instalaron los archivos de programa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+## <a name="restoring-the-system_health-session"></a>Restaurar la sesión system_health  
+ Si elimina la sesión system_health, puede restaurarla si ejecuta el archivo **u_tables.sql** en el Editor de consultas. Este archivo se encuentra en la siguiente carpeta, donde C: representa la unidad en la que se instalaron los archivos de programa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- C:\Program Files\Microsoft SQL Server\MSSQL12. \< *instanceid*> \MSSQL\Install  
+ C:\Archivos de Programa\microsoft SQL Server\MSSQL12. \< *InstanceID*> \mssql\install  
   
  Tenga en cuenta que después de restaurar la sesión, debe iniciarla utilizando la instrucción ALTER EVENT SESSION o utilizando el nodo **Eventos extendidos** en el Explorador de objetos. De lo contrario, la sesión se iniciará automáticamente la próxima vez que se reinicie el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas de eventos extendidos](extended-events-tools.md)  
   
   

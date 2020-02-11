@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468202"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Compatibilidad de SQL Server Management Studio con OLTP en memoria
@@ -80,7 +80,7 @@ ms.locfileid: "62468202"
   
 1.  Para obtener información sobre el uso de memoria:  
   
-    -   En el **Explorador de objetos**, haga clic con el botón derecho en la tabla optimizada para memoria, haga clic en **Propiedades**y, después, haga clic en la página **Almacenamiento** . El valor de la propiedad **Espacio de datos** indica la memoria utilizada por los datos de la tabla. El valor de la propiedad **Espacio de índice** indica la memoria utilizada por los índices de la tabla.  
+    -   En **Explorador de objetos**, haga clic con el botón secundario en la tabla optimizada para memoria, aga clic en **Propiedades** y, a continuación, haga clic en la página **Almacenamiento**. El valor de la propiedad **Espacio de datos** indica la memoria utilizada por los datos de la tabla. El valor de la propiedad **Espacio de índice** indica la memoria utilizada por los índices de la tabla.  
   
     -   En el **Explorador de objetos**, haga clic con el botón derecho en la base de datos, haga clic en **Propiedades**y, después, haga clic en la página **General** . El valor de la propiedad **Memoria asignada a los objetos optimizados para memoria** indica la memoria asignada a los objetos optimizados para memoria en la base de datos. El valor de la propiedad **Memoria usada por los objetos optimizados para memoria** indica la memoria usada por los objetos optimizados para memoria en la base de datos.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62468202"
   
     -   Menús contextuales  
   
-    -   Configuración del filtro  
+    -   Configuración de filtros  
   
     -   Script como  
   
@@ -153,9 +153,9 @@ ms.locfileid: "62468202"
 ## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Características no admitidas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Para los objetos OLTP en memoria, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no admite las características y las operaciones que tampoco admite el motor de base de datos.  
   
- Para obtener más información sobre no admitida [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] características, vea [admite características de SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md).  
+ Para obtener más información sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las características no admitidas, vea [características admitidas de SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad de SQL Server con OLTP en memoria](sql-server-support-for-in-memory-oltp.md)  
   
   

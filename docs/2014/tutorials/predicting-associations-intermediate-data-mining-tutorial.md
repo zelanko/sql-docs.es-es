@@ -1,5 +1,5 @@
 ---
-title: Predecir asociaciones (Tutorial de minería de datos intermedios) | Microsoft Docs
+title: Predecir asociaciones (tutorial intermedio de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62472850"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Predecir asociaciones (Tutorial intermedio de minería de datos)
-  Una vez procesados los modelos, puede utilizar la información sobre las asociaciones almacenada en el modelo para crear predicciones. En la tarea final de esta lección, aprenderá a generar consultas de predicción a partir de los modelos de asociación que creó. En esta lección se presupone que sabe cómo se utiliza el Generador de consultas de predicción y desea obtener información acerca de cómo se generan consultas de predicción a partir de modelos de asociación. Para obtener más información cómo usar el generador de consultas de predicción, vea [Interfaces de consultas de minería de datos](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  
+  Una vez procesados los modelos, puede utilizar la información sobre las asociaciones almacenada en el modelo para crear predicciones. En la tarea final de esta lección, aprenderá a generar consultas de predicción a partir de los modelos de asociación que creó. En esta lección se presupone que sabe cómo se utiliza el Generador de consultas de predicción y desea obtener información acerca de cómo se generan consultas de predicción a partir de modelos de asociación. Para obtener más información sobre cómo usar la predicción Generador de consultas, vea [interfaces de consulta de minería de datos](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  
   
 ## <a name="creating-a-singleton-prediction-query"></a>Crear una consulta de predicción singleton  
  Las consultas de predicción en un modelo de asociación pueden ser muy útiles para lo siguiente:  
@@ -35,31 +35,31 @@ ms.locfileid: "62472850"
   
 #### <a name="to-create-a-prediction-query-on-an-association-model"></a>Para crear una consulta de predicción en un modelo de asociación  
   
-1.  Haga clic en el **predicción de modelo de minería de datos** ficha del Diseñador de minería de datos.  
+1.  Haga clic en la pestaña **predicción de modelo de minería** de datos del diseñador de minería de datos.  
   
-2.  En el **Mining Model** panel, haga clic en **Seleccionar modelo**. (Puede omitir este paso y el siguiente si el modelo correcto ya está seleccionado).  
+2.  En el panel **modelo de minería de datos** , haga clic en **Seleccionar modelo**. (Puede omitir este paso y el siguiente si el modelo correcto ya está seleccionado).  
   
-3.  En el **Seleccionar modelo de minería de datos** diálogo cuadro, expanda el nodo que representa la estructura de minería de datos **asociación**y seleccione el modelo **asociación**. Haga clic en **Aceptar**.  
+3.  En el cuadro de diálogo **Seleccionar modelo de minería de datos** , expanda el nodo que representa la **Asociación**de la estructura de minería de datos y seleccione la **Asociación**del modelo. Haga clic en **OK**.  
   
      De momento, puede hacer caso omiso al panel de entrada.  
   
-4.  En la cuadrícula, haga clic en la celda vacía bajo **origen** y seleccione **función de predicción.** En la celda bajo **campo**, seleccione `PredictAssociation`.  
+4.  En la cuadrícula, haga clic en la celda vacía situada debajo de **origen** y seleccione **función de predicción.** En la celda situada **** debajo de campo `PredictAssociation`, seleccione.  
   
-     También puede usar el **Predict** función para predecir las asociaciones. Si lo hace, asegúrese que elija la versión de la **Predict** función que toma una columna de tabla como argumento.  
+     También puede utilizar la función **PREDICT** para predecir las asociaciones. Si lo hace, asegúrese de elegir la versión de la función de **predicción** que toma una columna de tabla como argumento.  
   
-5.  En el **Mining Model** panel, seleccione la tabla anidada `vAssocSeqLineItems`y arrástrela hasta la cuadrícula, al **criterios o argumento** cuadro para el `PredictAssociation` función.  
+5.  En el **Panel modelo de minería de datos** , seleccione la `vAssocSeqLineItems`tabla anidada y arrástrela hasta la cuadrícula hasta el cuadro **criterios o argumento** de la `PredictAssociation` función.  
   
-     Al arrastrar y colocar la tabla y los nombres de columna, podrá crear instrucciones complejas sin errores sintácticos. Sin embargo, se reemplazará el contenido actual de la celda, que contiene otros argumentos opcionales para el `PredictAssociation` función. Para consultar los demás argumentos, puede agregar provisionalmente una segunda instancia de la función a la cuadrícula como referencia.  
+     Al arrastrar y colocar la tabla y los nombres de columna, podrá crear instrucciones complejas sin errores sintácticos. Sin embargo, reemplaza el contenido actual de la celda, que incluye otros argumentos opcionales para la `PredictAssociation` función. Para consultar los demás argumentos, puede agregar provisionalmente una segunda instancia de la función a la cuadrícula como referencia.  
   
-6.  Haga clic en el **criterios o argumento** cuadro y escriba el texto siguiente después del nombre de tabla: `,3`  
+6.  Haga clic en el cuadro **criterios o argumento** y escriba el siguiente texto después del nombre de la tabla:`,3`  
   
-     El texto completo en el **criterios o argumento** cuadro debería ser como sigue:  
+     El texto completo del cuadro **criterios o argumento** debe ser el siguiente:  
   
      `[Association].[v Assoc Seq Line Items],3`  
   
-7.  Haga clic en el **resultados** situado en la esquina superior del generador de consultas de predicción.  
+7.  Haga clic en el botón **resultados** en la esquina superior de la generador de consultas de predicción.  
   
- Los resultados esperados contienen una sola columna con el encabezado **expresión**. El **expresión** columna contiene una tabla anidada con una sola columna y las siguientes tres filas. Como no especificó un valor de entrada, estas predicciones representan las asociaciones de productos del modelo en su conjunto que tienen mayor probabilidad de producirse.  
+ Los resultados esperados contienen una sola columna con la **expresión**de encabezado. La columna **expresión** contiene una tabla anidada con una sola columna y las tres filas siguientes. Como no especificó un valor de entrada, estas predicciones representan las asociaciones de productos del modelo en su conjunto que tienen mayor probabilidad de producirse.  
   
 |Modelo|  
 |-----------|  
@@ -67,25 +67,25 @@ ms.locfileid: "62472850"
 |Water Bottle|  
 |Touring-3000|  
   
- A continuación, usará el **entrada de consulta Singleton** panel para especificar un producto como entrada para la consulta y ver los productos que tienen más probabilidades asociadas con ese elemento.  
+ A continuación, utilizará el panel **entrada de consulta singleton** para especificar un producto como entrada de la consulta y ver los productos que es más probable que estén asociados a ese elemento.  
   
 #### <a name="to-create-a-singleton-prediction-query-with-nested-table-inputs"></a>Para crear una consulta de predicción singleton con entradas de tabla anidada  
   
-1.  Haga clic en el **diseño** situado en la esquina del generador de consultas de predicción para volver a la cuadrícula de generación de consultas.  
+1.  Haga clic en el botón **diseño** en la esquina del generador de consultas de predicción para volver a la cuadrícula de creación de la consulta.  
   
-2.  En el **Mining Model** menú, seleccione **consulta Singleton**.  
+2.  En el menú **modelo de minería de datos** , seleccione **consulta singleton**.  
   
-3.  En el **Mining Model** cuadro de diálogo, seleccione el **asociación** modelo.  
+3.  En el cuadro de diálogo **modelo de minería de datos** , seleccione el modelo de **Asociación** .  
   
-4.  En la cuadrícula, haga clic en la celda vacía bajo **origen** y seleccione **función de predicción.** En la celda bajo **campo**, seleccione `PredictAssociation`.  
+4.  En la cuadrícula, haga clic en la celda vacía situada debajo de **origen** y seleccione **función de predicción.** En la celda situada **** debajo de campo `PredictAssociation`, seleccione.  
   
-5.  En el **Mining Model** panel, seleccione la tabla anidada `vAssocSeqLineItems`y arrástrela hasta la cuadrícula, al **criterios o argumento** cuadro para el `PredictAssociation` función. Tipo `,3` después del nombre de tabla anidada, al igual que en el procedimiento anterior.  
+5.  En el **Panel modelo de minería de datos** , seleccione la `vAssocSeqLineItems`tabla anidada y arrástrela hasta la cuadrícula hasta el cuadro **criterios o argumento** de la `PredictAssociation` función. Escriba `,3` después del nombre de la tabla anidada como en el procedimiento anterior.  
   
-6.  En el **entrada de consulta Singleton** cuadro de diálogo, haga clic en el **valor** situada al lado **vAssoc Seq Line Items**y, a continuación, haga clic en el **(...)**  botón.  
+6.  En el cuadro de diálogo **entrada de consulta singleton** , haga clic en el cuadro **valor** situado junto a **vAssoc SEQ line items**y, a continuación, haga clic en el botón **(...)** .  
   
-7.  En el **entrada de tabla anidada** cuadro de diálogo, seleccione `Touring Tire` en el **columna clave** panel y, a continuación, haga clic en **agregar**.  
+7.  En el cuadro de diálogo **entrada de tabla anidada** , seleccione `Touring Tire` en el panel **columna de clave** y, a continuación, haga clic en **Agregar**.  
   
-8.  Haga clic en el **resultados** botón.  
+8.  Haga clic en el botón **resultados** .  
   
  Los resultados muestran ahora las predicciones de los productos que con mayor probabilidad estarán asociados a Touring Tire.  
   
@@ -99,40 +99,40 @@ ms.locfileid: "62472850"
   
 #### <a name="to-add-inputs-and-probabilities-to-the-singleton-prediction-query"></a>Para agregar entradas y probabilidades a la consulta de predicción singleton  
   
-1.  Haga clic en el **diseño** situado en la esquina del generador de consultas de predicción para volver a la cuadrícula de generación de consultas.  
+1.  Haga clic en el botón **diseño** en la esquina del generador de consultas de predicción para volver a la cuadrícula de creación de la consulta.  
   
-2.  En el **entrada de consulta Singleton** cuadro de diálogo, haga clic en el **valor** situada al lado **vAssoc Seq Line Items**y, a continuación, haga clic en el **(...)**  botón.  
+2.  En el cuadro de diálogo **entrada de consulta singleton** , haga clic en el cuadro **valor** situado junto a **vAssoc SEQ line items**y, a continuación, haga clic en el botón **(...)** .  
   
-3.  En el **columna clave** panel, seleccione `Touring Tire`y, a continuación, haga clic en **agregar**.  
+3.  En el panel **columna de clave** , `Touring Tire`seleccione y, a continuación, haga clic en **Agregar**.  
   
-4.  En la cuadrícula, haga clic en la celda vacía bajo **origen** y seleccione **función de predicción.** En la celda bajo **campo**, seleccione `PredictAssociation`.  
+4.  En la cuadrícula, haga clic en la celda vacía situada debajo de **origen** y seleccione **función de predicción.** En la celda situada **** debajo de campo `PredictAssociation`, seleccione.  
   
-5.  En el **Mining Model** panel, seleccione la tabla anidada `vAssocSeqLineItems`y arrástrela hasta la cuadrícula, al **criterios o argumento** cuadro para el `PredictAssociation` función. Tipo `,3` después del nombre de tabla anidada, al igual que en el procedimiento anterior.  
+5.  En el **Panel modelo de minería de datos** , seleccione la `vAssocSeqLineItems`tabla anidada y arrástrela hasta la cuadrícula hasta el cuadro **criterios o argumento** de la `PredictAssociation` función. Escriba `,3` después del nombre de la tabla anidada como en el procedimiento anterior.  
   
-6.  En el **entrada de tabla anidada** cuadro de diálogo, seleccione `Touring Tire Tube` en el **columna clave** panel y, a continuación, haga clic en **agregar**.  
+6.  En el cuadro de diálogo **entrada de tabla anidada** , seleccione `Touring Tire Tube` en el panel **columna de clave** y, a continuación, haga clic en **Agregar**.  
   
-7.  En la cuadrícula, en la fila de la `PredictAssociation` de función, haga clic en el **criterios o argumento** cuadro y cambie los argumentos para agregar el argumento INCLUDE_STATISTICS.  
+7.  En la cuadrícula, en la fila de la `PredictAssociation` función, haga clic en el cuadro **criterios o argumento** y cambie los argumentos para agregar el argumento INCLUDE_STATISTICS.  
   
-     El texto completo en el **criterios o argumento** cuadro debería ser como sigue:  
+     El texto completo del cuadro **criterios o argumento** debe ser el siguiente:  
   
      `[Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3`  
   
-8.  Haga clic en el **resultados** botón.  
+8.  Haga clic en el botón **resultados** .  
   
- Los resultados de la tabla anidada se modifican ahora para mostrar las predicciones, junto con la compatibilidad y probabilidad. Para obtener más información sobre cómo interpretar estos valores, vea [Mining Model Content los modelos de asociación &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
+ Los resultados de la tabla anidada se modifican ahora para mostrar las predicciones, junto con la compatibilidad y probabilidad. Para obtener más información sobre cómo interpretar estos valores, vea [contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services-&#41;de minería de datos ](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md).  
   
 |Modelo|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.291...|0.252...|  
-|Water Bottle|2866|0.192...|0.175...|  
-|Patch Kit|2113|0.142...|0.132|  
+|Sport-100|4334|0,291...|0,252...|  
+|Water Bottle|2866|0,192...|0,175...|  
+|Patch Kit|2113|0,142...|0,132|  
   
 ## <a name="working-with-results"></a>Trabajar con resultados  
  Cuando hay muchas tablas anidadas en los resultados, es posible que desee simplificar los resultados para facilitar su consulta. Para ello, puede modificar la consulta manualmente y agregar la palabra clave `FLATTENED`.  
   
 #### <a name="to-flatten-nested-rowsets-in-a-prediction-query"></a>Para simplificar los conjuntos de filas anidados de una consulta de predicción  
   
-1.  Haga clic en el **SQL** situado en la esquina del generador de consultas de predicción.  
+1.  Haga clic en el botón **SQL** en la esquina del generador de consultas de predicción.  
   
      La cuadrícula cambia a un panel abierto donde puede ver y modificar la instrucción DMX que creó el Generador de consultas de predicción.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "62472850"
       UNION SELECT 'Touring Tire Tube' AS [Model]) AS [v Assoc Seq Line Items]) AS t  
     ```  
   
-3.  Haga clic en el **resultados** situado en la esquina superior del generador de consultas de predicción.  
+3.  Haga clic en el botón **resultados** en la esquina superior de la generador de consultas de predicción.  
   
  Tenga en cuenta que después de editar una consulta manualmente, no podrá volver a cambiar a la vista Diseño sin perder los cambios. Si desea guardar la consulta, puede copiar la instrucción DMX que creó manualmente en un archivo de texto. Cuando cambie de nuevo a la vista Diseño, la consulta se revertirá a la última versión que fue válida en la vista Diseño.  
   
@@ -159,11 +159,11 @@ ms.locfileid: "62472850"
   
 #### <a name="to-change-the-input-method-for-the-prediction-query"></a>Para cambiar el método de entrada de la consulta de predicción  
   
-1.  En el **Mining Model** menú, seleccione **consulta Singleton** nuevo, para borrar la marca de verificación.  
+1.  En el menú **modelo de minería de datos** , seleccione **consulta singleton** de nuevo para borrar la marca de verificación.  
   
 2.  Aparecerá un mensaje de error en el que se advierte que se perderá la consulta singleton. Haga clic en **Sí**.  
   
-     El nombre del cuadro de diálogo de entrada cambia a **seleccionar tablas de entrada**.  
+     El nombre del cuadro de diálogo de entrada cambia a **seleccionar tabla (s) de entrada**.  
   
  Dado que lo que le interesa es crear una consulta de predicción que proporcione un identificador de cliente y una lista de productos como entrada, incorporará la tabla de clientes como la tabla de casos y la tabla de compras como la tabla anidada. A continuación, agregará las funciones de predicción para crear recomendaciones.  
   
@@ -171,45 +171,45 @@ ms.locfileid: "62472850"
   
 1.  En el panel Modelo de minería de datos, seleccione el modelo Association Filtered.  
   
-2.  En el **Seleccionar tabla (s) de entrada** cuadro de diálogo, haga clic en **Seleccionar tabla de casos**.  
+2.  En el cuadro de diálogo **seleccionar tabla (s) de entrada** , haga clic en **seleccionar tabla de casos**.  
   
-3.  En el **Seleccionar tabla** cuadro de diálogo para **origen de datos**, seleccione AdventureWorksDW2008. En el **nombre de tabla o vista** lista, seleccione vAssocSeqOrders y, a continuación, haga clic en **Aceptar**.  
+3.  En el cuadro de diálogo **seleccionar tabla** , en **origen de datos**, seleccione AdventureWorksDW2008. En la lista **nombre de tabla o vista** , seleccione vAssocSeqOrders y, a continuación, haga clic en **Aceptar**.  
   
      La tabla vAssocSeqOrders se agrega al panel.  
   
-4.  En el **Seleccionar tabla (s) de entrada** cuadro de diálogo, haga clic en **Seleccionar tabla anidada**.  
+4.  En el cuadro de diálogo **seleccionar tabla (s) de entrada** , haga clic en **seleccionar tabla anidada**.  
   
-5.  En el **Seleccionar tabla** cuadro de diálogo para **origen de datos**, seleccione AdventureWorksDW2008. En el **nombre de tabla o vista** lista, seleccione Vassocseqlineitem y, a continuación, haga clic en **Aceptar**.  
+5.  En el cuadro de diálogo **seleccionar tabla** , en **origen de datos**, seleccione AdventureWorksDW2008. En la lista **nombre de tabla o vista** , seleccione vAssocSeqLineItems y, a continuación, haga clic en **Aceptar**.  
   
      La tabla vAssocSeqLineItems se agrega al panel.  
   
-6.  En el **especificar combinación anidada** cuadro de diálogo, arrastre el OrderNumber el campo de la tabla de casos y colóquelo en el campo OrderNumber de la tabla anidada.  
+6.  En el cuadro de diálogo **especificar combinación anidada** , arrastre el campo ordernumber desde la tabla de casos y colóquelo en el campo ordernumber de la tabla anidada.  
   
-     También puede hacer clic en **agregar relación** y crear la relación seleccionando las columnas de una lista.  
+     También puede hacer clic en **Agregar relación** y crear la relación seleccionando columnas de una lista.  
   
-7.  En el **especificar relación** diálogo cuadro, compruebe que los campos OrderNumber están asignados correctamente y, a continuación, haga clic en **Aceptar**.  
+7.  En el cuadro de diálogo **especificar relación** , compruebe que los campos OrderNumber están asignados correctamente y, a continuación, haga clic en **Aceptar**.  
   
-8.  Haga clic en **Aceptar** para cerrar el **especificar combinación anidada** cuadro de diálogo.  
+8.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **especificar combinación anidada** .  
   
-     La tabla anidada y la tabla de casos se actualizan en el panel de diseño para mostrar las combinaciones que conectan las columnas de datos externos con las columnas del modelo. Si las relaciones son erróneas, puede haga clic en la línea de combinación y seleccionar **modificar conexiones** para editar la columna asignación, o haga clic en la línea de combinación y seleccionar **eliminar** para quitar el relación completamente.  
+     La tabla anidada y la tabla de casos se actualizan en el panel de diseño para mostrar las combinaciones que conectan las columnas de datos externos con las columnas del modelo. Si las relaciones son erróneas, puede hacer clic con el botón secundario en la línea de combinación y seleccionar **modificar conexiones** para editar la asignación de columnas, o puede hacer clic con el botón secundario en la línea de combinación y seleccionar **eliminar** para quitar la relación por completo.  
   
-9. Agregue una nueva fila a la cuadrícula. Para **origen**, seleccione **tabla vAssocSeqOrders**. Para **campo**, seleccione CustomerKey.  
+9. Agregue una nueva fila a la cuadrícula. En **origen**, seleccione **tabla vAssocSeqOrders**. En **campo**, seleccione CustomerKey.  
   
-10. Agregue una nueva fila a la cuadrícula. Para **origen**, seleccione **tabla vAssocSeqOrders**. Para **campo**, seleccione la región.  
+10. Agregue una nueva fila a la cuadrícula. En **origen**, seleccione **tabla vAssocSeqOrders**. En **campo**, seleccione región.  
   
-11. Agregue una nueva fila a la cuadrícula. Para **origen**, seleccione **función de predicción**y para **campo**, seleccione `PredictAssociation`.  
+11. Agregue una nueva fila a la cuadrícula. En **origen**, seleccione **función de predicción**y, en **campo**, `PredictAssociation`seleccione.  
   
-12. Arrastre vAssocSeqLineItems al **criterios o argumento** cuadro de la `PredictAssociation` fila. Haga clic al final de la **criterios o argumento** cuadro y, a continuación, escriba el texto siguiente: `INCLUDE_STATISTICS,3`  
+12. Arrastre vAssocSeqLineItems, al cuadro **criterios o argumento** de la `PredictAssociation` fila. Haga clic al final del cuadro **criterios o argumento** y escriba el siguiente texto:`INCLUDE_STATISTICS,3`  
   
-     El texto completo en el **criterios o argumento** cuadro debe ser: `[Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3`  
+     El texto completo del cuadro **criterios o argumento** debe ser:`[Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3`  
   
-13. Haga clic en el **resultado** botón para ver las predicciones para cada cliente.  
+13. Haga clic en el botón **resultado** para ver las predicciones de cada cliente.  
   
- Puede intentar crear una consulta de predicción similar en varios modelos para ver si al aplicar filtros, cambian los resultados de predicción. Para obtener más información sobre cómo crear predicciones y otros tipos de consultas, vea [ejemplos de consultas de modelo de asociación](../../2014/analysis-services/data-mining/association-model-query-examples.md).  
+ Puede intentar crear una consulta de predicción similar en varios modelos para ver si al aplicar filtros, cambian los resultados de predicción. Para obtener más información sobre cómo crear predicciones y otros tipos de consultas, vea [ejemplos de consultas de modelos de asociación](../../2014/analysis-services/data-mining/association-model-query-examples.md).  
   
-## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
- [PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)   
+## <a name="see-also"></a>Consulte también  
+ [Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services-minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [&#41;PredictAssociation &#40;DMX](/sql/dmx/predictassociation-dmx)   
  [Crear una consulta de predicción con el Generador de consultas de predicción](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
   

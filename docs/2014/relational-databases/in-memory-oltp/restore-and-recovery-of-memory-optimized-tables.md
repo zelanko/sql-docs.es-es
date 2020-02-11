@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9560249e07cbd360914b5dab21eb68dc8e7f013f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467249"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restaurar y recuperar tablas con optimización para memoria
@@ -40,7 +40,7 @@ ms.locfileid: "62467249"
   
 -   Transmitir los archivos de datos.  Una vez creado el filtro de mapas de delta, se leen los archivos de datos utilizando tantos subprocesos como CPU lógicas haya. Cada subproceso que lee el archivo de datos lee las filas de datos, comprueba el mapa de delta asociado e inserta únicamente la fila en la tabla si esta fila no se ha marcado como eliminada. Esta parte de la recuperación puede estar limitada por la CPU en algunos casos como se indica a continuación.  
   
- ![Tablas con optimización para memoria.](../../database-engine/media/memory-optimized-tables.gif "Tablas con optimización para memoria.")  
+ ![Tablas con optimización para memoria.](../../database-engine/media/memory-optimized-tables.gif "Tablas optimizadas para memoria.")  
   
  Las tablas con optimización para memoria se pueden cargar normalmente en memoria a la velocidad de E/S pero hay casos que al cargar las filas de datos en memoria será más lento. Los casos específicos son:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62467249"
   
  En este punto, puede crear el grupo de recursos para el enlace de la base de datos y luego usar RESTORE WITH RECOVERY para poner en línea la base de datos restaurada.  Dado que el enlace se coloca antes de poner en línea la base de datos, su consumo de memoria de OLTP en memoria se tiene en cuenta correctamente. Esto requiere restaurar la base de datos solo una vez. El primer comando RESTORE es un comando informativo que solo lee el encabezado de copia de seguridad y el último comando solo desencadena una recuperación sin restaurar realmente ningún bit.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](memory-optimized-tables.md)  
   
   

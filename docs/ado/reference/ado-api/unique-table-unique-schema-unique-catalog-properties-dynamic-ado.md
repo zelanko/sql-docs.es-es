@@ -1,5 +1,5 @@
 ---
-title: El control cambia a la tabla Base del conjunto de registros (ADO) | Microsoft Docs
+title: Controlar los cambios en la tabla base del conjunto de registros (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,39 +16,39 @@ ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911686"
 ---
-# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabla única, Unique Schema, único catálogo propiedades dinámicos (ADO)
-Le permite controlar las modificaciones realizadas en una tabla base concreta en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que estaba formada por una operación de combinación en varias tablas base.  
+# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabla única, esquema único, propiedades de catálogo únicas: dinámica (ADO)
+Permite controlar estrechamente las modificaciones realizadas en una tabla base determinada de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que formaba parte de una operación de combinación en varias tablas base.  
   
--   **Tabla única** especifica el nombre de la tabla base en la que se permiten actualizaciones, inserciones y eliminaciones.  
+-   **Tabla única** especifica el nombre de la tabla base en la que se permiten las actualizaciones, las inserciones y las eliminaciones.  
   
--   **Esquema único** especifica la *esquema*, o el nombre del propietario de la tabla.  
+-   **Unique Schema** especifica el *esquema*o el nombre del propietario de la tabla.  
   
--   **Catálogo único** especifica la *catálogo*, o el nombre de la base de datos que contiene la tabla.  
+-   **Catálogo único** especifica el *Catálogo*o el nombre de la base de datos que contiene la tabla.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un **cadena** valor que es el nombre de una tabla, esquema o catálogo.  
+ Establece o devuelve un valor de **cadena** que es el nombre de una tabla, un esquema o un catálogo.  
   
-## <a name="remarks"></a>Comentarios  
- La tabla base deseada se identifica por su catálogo, esquema y los nombres de tabla. Cuando el **Unique Table** propiedad está establecida, los valores de la **Unique Schema** o **Unique Catalog** propiedades se utilizan para buscar la tabla base. Se recomienda, aunque no es necesario, que uno o ambos el **Unique Schema** y **Unique Catalog** propiedades se establecen antes de la **Unique Table** propiedad está establecida.  
+## <a name="remarks"></a>Observaciones  
+ La tabla base deseada se identifica de forma única mediante el catálogo, el esquema y los nombres de tabla. Cuando se establece la propiedad de **tabla única** , se usan los valores de las propiedades **Unique Schema** o Unique **Catalog** para buscar la tabla base. Está previsto, pero no es necesario, que el **esquema único** y las propiedades del **catálogo único** se establezcan antes de que se establezca la propiedad de **tabla única** .  
   
- La clave principal de la **Unique Table** se trata como la clave principal de todo el **Recordset**. Esta es la clave que se usa para cualquier método que requiere una clave principal.  
+ La clave principal de la **tabla única** se trata como la clave principal del conjunto de **registros**completo. Esta es la clave que se usa para cualquier método que requiera una clave principal.  
   
- Mientras **Unique Table** se establece, el [eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md) método afecta solo a la tabla con nombre. El [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [actualización](../../../ado/reference/ado-api/update-method.md), y [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) métodos afectan a cualquier tabla base subyacente de la **Recordset**.  
+ Mientras se establece la **tabla única** , el método de [eliminación](../../../ado/reference/ado-api/delete-method-ado-recordset.md) solo afecta a la tabla con nombre. Los métodos [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [Update](../../../ado/reference/ado-api/update-method.md)y [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) afectan a las tablas base subyacentes adecuadas del **conjunto de registros**.  
   
- **Tabla única** debe especificarse antes de realizar cualquier sincronización personalizada. Si **Unique Table** no se ha especificado, el [resincronizar comando](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) propiedad no tiene ningún efecto.  
+ Se debe especificar una **tabla única** antes de realizar cualquier resincronización personalizada. Si no se ha especificado una **tabla única** , la propiedad del [comando Resync](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) no tendrá ningún efecto.  
   
- Se produce un error de tiempo de ejecución si no se encuentra una única tabla base.  
+ Si no se encuentra una tabla base única, se produce un error en tiempo de ejecución.  
   
- Estas propiedades dinámicas se anexan a la **Recordset** objeto [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección cuando el [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad está establecida en  **adUseClient**.  
+ Todas estas propiedades dinámicas se anexan a la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) del objeto de **conjunto de registros** cuando la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) está establecida en **adUseClient**.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

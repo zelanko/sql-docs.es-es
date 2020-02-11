@@ -16,16 +16,16 @@ ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038873"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funciones usadas en nodos: local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve la parte local del nombre de *$arg* como xs: String que será la cadena de longitud cero o tendrá la forma léxica de un xs: NCName. Si no se proporciona el argumento, el valor predeterminado será el nodo de contexto.  
+  Devuelve la parte local del nombre de *$arg* como XS: String, que será la cadena de longitud cero o tendrá la forma léxica de XS: NCName. Si no se proporciona el argumento, el valor predeterminado será el nodo de contexto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,16 +38,16 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  Nombre del nodo cuya parte de nombre local se recuperará.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
--   En SQL Server, **fn:local-name()** sin un argumento solo se puede utilizar en el contexto de un predicado dependiente del contexto. En concreto, solo se puede utilizar entre corchetes (`[ ]`).  
+-   En SQL Server, **FN: local-name ()** sin un argumento solo se puede usar en el contexto de un predicado dependiente del contexto. En concreto, solo se puede utilizar entre corchetes (`[ ]`).  
   
 -   Si se proporciona el argumento y es la secuencia vacía, la función devolverá la cadena de longitud cero.  
   
 -   Si el nodo de destino no tiene nombre porque es un nodo de documento, un comentario o un nodo de texto, la función devolverá la cadena de longitud cero.  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la base de datos AdventureWorks.  
   
 ### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Recuperar el nombre local de un nodo específico  
  La consulta siguiente se especifica en una instancia XML sin tipo. La expresión de consulta, `local-name(/ROOT[1])`, recupera la parte de nombre local del nodo especificado.  
@@ -70,8 +70,8 @@ WHERE ProductModelID=7
 -- result = Location  
 ```  
   
-### <a name="b-using-local-name-without-argument-in-a-predicate"></a>b. Usar local-name sin argumento en un predicado  
- La siguiente consulta se especifica en la columna Instructions, escribió **xml** columna de la tabla ProductModel. La expresión devuelve todos los elementos secundarios de la <`root`> cuya parte del nombre local de QName es "Location" del elemento. El **local-name()** función se especifica en el predicado y no tiene ningún argumento de la función usa el nodo de contexto.  
+### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Usar local-name sin argumento en un predicado  
+ La siguiente consulta se especifica en la columna instructions, la columna **XML** con tipo, de la tabla ProductModel. La expresión devuelve todos los elementos secundarios del elemento <`root`> cuya parte del nombre local de QName sea "Location". La función **local-name ()** se especifica en el predicado y no tiene ningún argumento que la función usa el nodo de contexto.  
   
 ```  
 SELECT Instructions.query('  
@@ -81,10 +81,10 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- La consulta devuelve todos los <`Location`> elementos secundarios de la <`root`> elemento.  
+ La consulta devuelve todos los elementos `Location` secundarios del elemento <> del `root` elemento <>.  
   
-## <a name="see-also"></a>Vea también  
- [Funciones usadas en nodos](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+## <a name="see-also"></a>Consulte también  
+ [Funciones en nodos](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [Función namespace-uri &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
   
   

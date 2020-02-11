@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de la propiedad Version (VB) | Microsoft Docs
+title: Ejemplo de la propiedad version (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,24 +15,24 @@ ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 023ee009831cb3576691f0af5dfb85752d51fcc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938742"
 ---
 # <a name="version-property-example-vb"></a>Ejemplo de la propiedad Version (VB)
-Este ejemplo se usa el [versión](../../../ado/reference/ado-api/version-property-ado.md) propiedad de un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto para mostrar la versión actual de ADO. También se utilizan varias propiedades dinámicas para mostrar:  
+En este ejemplo se usa la propiedad [version](../../../ado/reference/ado-api/version-property-ado.md) de un objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) para mostrar la versión actual de ADO. También usa varias propiedades dinámicas para mostrar:  
   
--   el nombre actual de DBMS y la versión.  
+-   el nombre y la versión de DBMS actuales.  
   
 -   Versión de OLE DB.  
   
--   Nombre del proveedor y la versión.  
+-   nombre y versión del proveedor.  
   
 -   Versión de ODBC.  
   
--   Nombre del controlador ODBC y la versión.  
+-   Nombre y versión del controlador ODBC.  
   
 ```  
 'BeginVersionVB  
@@ -77,6 +77,6 @@ End Sub
 'EndVersionVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Propiedad Version (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

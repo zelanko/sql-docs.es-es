@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24dfd1f587db8d652390be27fa2307a8500c3145
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470052"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
@@ -28,10 +28,10 @@ ms.locfileid: "62470052"
 ## <a name="options"></a>Opciones  
  La pestaña **Tareas de mantenimiento** incluye las siguientes columnas de información.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de los componentes disponibles. Delante del nombre aparece una casilla. Si está activada, indica que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ha encontrado una entrada para el componente en el Registro del equipo. El componente ya se encuentra en la pestaña **Cuadro de herramientas** activa o se agregará a ella cuando haga clic en **Aceptar**. Si está desactivada, indica que el componente no se encuentra en el **Cuadro de herramientas**o que se quitará del **Cuadro de herramientas** cuando haga clic en **Aceptar**.  
   
- **Ruta de acceso**  
+ **Path**  
  Muestra la ruta de acceso completa al componente. Para identificar los componentes predeterminados enviados con el producto, ordene esta columna y localice los almacenados en la ruta de instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio.  
   
  **Modificado por última vez**  
@@ -40,7 +40,7 @@ ms.locfileid: "62470052"
  Haga clic en un nombre para mostrar los atributos del componente en los cuadros **Idioma** y **Versión** , además del icono.  
   
 ## <a name="options"></a>Opciones  
- **Idioma**  
+ **Lenguaje**  
  Idioma del componente.  
   
  **Versión**  

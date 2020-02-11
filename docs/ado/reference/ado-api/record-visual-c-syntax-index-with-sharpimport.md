@@ -1,5 +1,5 @@
 ---
-title: 'Registro (Visual C++ índice de sintaxis con #import) | Microsoft Docs'
+title: 'Registro (Visual C++ Índice de sintaxis con #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: ba6dd186-9552-4b6c-960b-3ee6cd589afd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f39e5802e08fd47f5442cd7d394b6589ce56c597
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917356"
 ---
-# <a name="record-visual-c-syntax-index-with-import"></a>Registro (Visual C++ índice de sintaxis con #import)
+# <a name="record-visual-c-syntax-index-with-import"></a>Registro (Visual C++ Índice de sintaxis con #import)
 ## <a name="methods"></a>Métodos  
   
 ```  
@@ -77,5 +77,5 @@ enum ObjectStateEnum GetState( );
 __declspec(property(get=GetState)) enum ObjectStateEnum State;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

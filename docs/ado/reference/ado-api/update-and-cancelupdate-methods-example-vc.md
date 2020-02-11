@@ -1,5 +1,5 @@
 ---
-title: Actualización de los métodos y CancelUpdate (VC ++) | Microsoft Docs
+title: Ejemplo de los métodos Update y CancelUpdate (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09b33331607678d20e2e7fff6cb487f100d29d84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940088"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Ejemplo de los métodos Update y CancelUpdate (VC ++)
-Este ejemplo se muestra el [actualización](../../../ado/reference/ado-api/update-method.md) método junto con el [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método.  
+En este ejemplo se muestra el método [Update](../../../ado/reference/ado-api/update-method.md) junto con el método [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
   
 ```  
 // Update_CancelUpdate_Methods_Sample.cpp  
@@ -309,6 +309,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Método CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [CancelUpdate (método) (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Update (método)](../../../ado/reference/ado-api/update-method.md)

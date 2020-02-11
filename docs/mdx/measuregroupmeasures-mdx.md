@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45d7adc5e1f4e103790d9d067bc4876fb5b134d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033876"
 ---
 # <a name="measuregroupmeasures-mdx"></a>MeasureGroupMeasures (MDX)
@@ -31,7 +31,7 @@ MEASUREGROUPMEASURES(MeasureGroupName)
  *MeasureGroupName*  
  Expresión de cadena válida que contiene el nombre del grupo de medida del que se recuperará el conjunto de medidas.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La cadena especificada debe coincidir exactamente con el nombre del grupo de medida. No es necesario utilizar corchetes para los nombres de los grupos de medida con espacios.  
   
 ## <a name="example"></a>Ejemplo  
@@ -42,7 +42,7 @@ SELECT MeasureGroupMeasures('Internet Sales') ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

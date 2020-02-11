@@ -15,20 +15,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62472935"
 ---
 # <a name="pick-schedule-for-job"></a>Elegir programación para trabajo
-  Utilice este cuadro de diálogo para elegir una programación existente para el trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilice este cuadro de diálogo para elegir una programación existente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el trabajo del agente.  
   
 ## <a name="options"></a>Opciones  
  **Programaciones disponibles**  
  Muestra las programaciones disponibles para este trabajo. Puesto a que un trabajo y una programación deben tener un mismo propietario, esta lista solo incluye las programaciones del propietario del trabajo.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre de la programación.  
   
  **Enabled**  
@@ -43,7 +43,7 @@ ms.locfileid: "62472935"
  **Propiedades**  
  Abre el cuadro de diálogo **Propiedades de programación del trabajo** donde puede ver información acerca de la programación.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear y adjuntar programaciones a trabajos](create-and-attach-schedules-to-jobs.md)  
   
   

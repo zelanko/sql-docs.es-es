@@ -14,17 +14,17 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 467cb4dab267b04965058f118d798bdd5a7b0909
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62672146"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76929191"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar y supervisar la captura de datos modificados (SQL Server)
   En este tema se describe cómo administrar y supervisar la captura de datos modificados.  
   
-##  <a name="Capture"></a> Trabajo de captura  
+##  <a name="Capture"></a>Trabajo de captura  
  El trabajo de captura se inicia ejecutando el procedimiento almacenado sin parámetros `sp_MScdc_capture_job`. Este procedimiento almacenado empieza extrayendo los valores configurados para *maxtrans*, *maxscans*, *continuous*y *pollinginterval* para el trabajo de captura desde msdb.dbo.cdc_jobs. A continuación, estos valores configurados se pasan como parámetros al procedimiento almacenado `sp_cdc_scan`. Esto se utiliza para llamar a `sp_replcmds` con el fin de realizar el examen del registro.  
   
 ### <a name="capture-job-parameters"></a>Parámetros de trabajo de captura  
@@ -36,11 +36,11 @@ ms.locfileid: "62672146"
 #### <a name="maxscans-parameter"></a>Parámetro maxscans  
  El parámetro *maxscans* especifica el número máximo de ciclos de examen que se intentan para agotar el registro antes de devolver (continuous = 0) o ejecutar waitfor (continuous = 1).  
   
-#### <a name="continous-parameter"></a>Parámetro continuous  
- El *continua* parámetro controla si `sp_cdc_scan` abandona el control después de agotar el registro o ejecutando el número máximo de ciclos de examen (modo de una instantánea). También controla si `sp_cdc_scan` continúa ejecutándose hasta detenerse explícitamente (modo continuo).  
+#### <a name="continuous-parameter"></a>continuous (parámetro)  
+ El parámetro *Continuous* controla si `sp_cdc_scan` renuncia el control después de agotar el registro o de ejecutar el número máximo de ciclos de recorrido (modo de una instantánea). También controla si `sp_cdc_scan` continúa ejecutándose hasta detenerse explícitamente (modo continuo).  
   
 ##### <a name="one-shot-mode"></a>Modo de una instantánea  
- En el modo de una instantánea, el trabajo de captura solicita `sp_cdc_scan` realizar hasta *maxtrans* exámenes para tratar de agotar el registro y volver. Cualquier transacción adicional a *maxtrans* que se encuentre en el registro se procesará en exámenes posteriores.  
+ En el modo de una instantánea, el trabajo `sp_cdc_scan` de captura solicita realizar hasta *maxtrans* exámenes para intentar agotar el registro y volver. Cualquier transacción adicional a *maxtrans* que se encuentre en el registro se procesará en exámenes posteriores.  
   
  El modo de una instantánea se utiliza en pruebas controladas, en las que se conoce el volumen de las transacciones que se van a procesar, y hay ventajas en el hecho de que el trabajo se cierra automáticamente en cuanto finaliza. Este modo no se recomienda para usarse en producción. Esto se debe a que se basa en la programación de trabajos para administrar la frecuencia con la que se ejecuta el ciclo de examen.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "62672146"
 ### <a name="capture-job-customization"></a>Personalización del trabajo de captura  
  En el trabajo de captura se puede aplicar una lógica adicional para determinar si un examen nuevo comienza inmediatamente o si se impone una suspensión antes de iniciarse en lugar de basarse en un intervalo de sondeo fijo. La opción podría basarse simplemente en la hora del día, exigiendo quizás suspensiones muy largas durante las horas de actividad máxima, e incluso el paso a un intervalo de sondeo igual a 0 al final del día, cuando es importante completar el procesamiento de los días y preparar las ejecuciones nocturnas. El progreso del proceso de captura también se puede supervisar para determinar el momento en que todas las transacciones confirmadas a media noche han sido examinadas y depositadas en las tablas de cambios. Esto permite que el trabajo de captura finalice y se reinicie de la forma programada diariamente. Al reemplazar el paso de trabajo entregado llamando a `sp_cdc_scan` con una llamada a un contenedor escrito por el usuario para `sp_cdc_scan`, se puede obtener un comportamiento muy personalizado con poco esfuerzo adicional.  
   
-##  <a name="Cleanup"></a> Trabajo de limpieza  
+##  <a name="Cleanup"></a>Trabajo de limpieza  
  En esta sección se proporciona información sobre cómo funciona el trabajo de limpieza de la captura de datos modificados.  
   
 ### <a name="structure-of-the-cleanup-job"></a>Estructura del trabajo de limpieza  
- La captura de datos modificados utiliza una estrategia de limpieza basada en la retención para administrar el tamaño de la tabla de cambios. El mecanismo de limpieza consta de un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] que se crea cuando se habilita la primera tabla de la base de datos. Un único trabajo de limpieza controla la limpieza para todas las tablas de cambios de base de datos y aplica el mismo valor de retención a todas las instancias de captura definidas.  
+ La captura de datos modificados utiliza una estrategia de limpieza basada en la retención para administrar el tamaño de la tabla de cambios. El mecanismo de limpieza consta de un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] que se crea cuando se habilita la primera tabla de la base de datos. Un único trabajo de limpieza controla la limpieza para todas las tablas de cambios de base de datos y aplica el mismo valor de retención a todas las instancias de captura definidas.  
   
- El trabajo de limpieza se inicia ejecutando el procedimiento almacenado sin parámetros `sp_MScdc_cleanup_job`. Este procedimiento almacenado comienza extrayendo los valores configurados para la retención y el umbral del trabajo de limpieza de `msdb.dbo.cdc_jobs`. El valor de retención se utiliza para calcular una nueva marca de límite inferior para las tablas de cambios. El número especificado de minutos se resta de la máxima *tran_end_time* valor desde el `cdc.lsn_time_mapping` tabla para obtener la nueva marca de límite mínimo expresada como un valor de fecha y hora. A continuación, la tabla CDC.lsn_time_mapping se utiliza para convertir este valor datetime en un valor de `lsn` correspondiente. Si varias entradas comparten el mismo tiempo de confirmación en la tabla, el `lsn` que corresponde a la entrada que tiene el valor de `lsn` más bajo se elige como nueva marca de límite inferior. Este valor de `lsn` se pasa al procedimiento `sp_cdc_cleanup_change_tables` para quitar las entradas de las tablas de cambios de base de datos.  
+ El trabajo de limpieza se inicia ejecutando el procedimiento almacenado sin parámetros `sp_MScdc_cleanup_job`. Este procedimiento almacenado comienza extrayendo los valores configurados para la retención y el umbral del trabajo de limpieza de `msdb.dbo.cdc_jobs`. El valor de retención se utiliza para calcular una nueva marca de límite inferior para las tablas de cambios. El número especificado de minutos se resta del valor de *tran_end_time* máximo de la `cdc.lsn_time_mapping` tabla para obtener la nueva marca de límite inferior expresada como un valor de fecha y hora. A continuación, la tabla CDC.lsn_time_mapping se utiliza para convertir este valor datetime en un valor de `lsn` correspondiente. Si varias entradas comparten el mismo tiempo de confirmación en la tabla, el `lsn` que corresponde a la entrada que tiene el valor de `lsn` más bajo se elige como nueva marca de límite inferior. Este valor de `lsn` se pasa al procedimiento `sp_cdc_cleanup_change_tables` para quitar las entradas de las tablas de cambios de base de datos.  
   
 > [!NOTE]  
 >  La ventaja de utilizar el tiempo de confirmación de la transacción reciente como base para calcular la nueva marca de límite inferior es que permite que los cambios permanezcan en las tablas de cambios durante el tiempo especificado. Esto sucede incluso cuando el proceso de captura se ejecuta en segundo plano. Todas las entradas que tienen el mismo tiempo de confirmación que la marca de límite inferior actual continúan siendo representadas dentro de las tablas de cambios si se elige el valor de `lsn` más bajo que tenga el tiempo de confirmación compartido para la marca de límite inferior real.  
@@ -77,8 +77,8 @@ ms.locfileid: "62672146"
 ### <a name="cleanup-job-customization"></a>Personalización del trabajo de limpieza  
  La posibilidad de personalización de los trabajos de limpieza radica en la estrategia que se usa para determinar qué entradas de la tabla de cambios se van a descartar. La única estrategia admitida en el trabajo de limpieza entregado es la que se basa en el tiempo. En esa situación, la nueva marca de límite inferior se calcula restando el período de retención permitido del tiempo de confirmación de la última transacción procesada. Como los procedimientos de limpieza subyacentes se basan en `lsn` en lugar de en el tiempo, se puede usar cualquier cantidad de estrategias para determinar el valor `lsn` más bajo que se debe conservar en las tablas de cambios. Solo algunas se basan estrictamente en el tiempo. Por ejemplo, el conocimiento sobre los clientes se puede utilizar para proporcionar un seguro si los procesos de niveles inferiores que requieren acceso a las tablas de cambios no se pueden ejecutar. Además, aunque la estrategia predeterminada aplica el mismo `lsn` para limpiar las tablas de cambios de todas las bases de datos, también se puede llamar al procedimiento de limpieza subyacente para limpiar en el nivel de la instancia de captura.  
   
-##  <a name="Monitor"></a> Supervisar el proceso de captura de datos modificados  
- Supervisar el proceso de captura de datos modificados permite determinar si los cambios se están escribiendo correctamente y con una latencia razonable en las tablas de cambios. La supervisión también puede ayudar a identificar los errores que puedan producirse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos vistas de administración dinámica para ayudar a supervisar la captura de datos modificados: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) y [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
+##  <a name="Monitor"></a>Supervisar el proceso de captura de datos modificados  
+ Supervisar el proceso de captura de datos modificados permite determinar si los cambios se están escribiendo correctamente y con una latencia razonable en las tablas de cambios. La supervisión también puede ayudar a identificar los errores que puedan producirse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]incluye dos vistas de administración dinámica para ayudarle a supervisar la captura de datos modificados: [Sys. dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) y [Sys. dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
   
 ### <a name="identify-sessions-with-empty-result-sets"></a>Identificar las sesiones con conjuntos de resultados vacíos  
  Cada fila de sys.dm_cdc_log_scan_sessions representa una sesión de examen del registro (excepto la fila con el identificador 0). Una sesión de examen del registro es equivalente a una ejecución de [sp_cdc_scan](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql). Durante una sesión, el examen puede devolver los cambios o un resultado vacío. Si el conjunto de resultados está vacío, la columna empty_scan_count de sys.dm_cdc_log_scan_sessions se establece en 1. Si hay conjuntos de resultados vacíos consecutivos, por ejemplo si el trabajo de captura se está ejecutando continuamente, el valor empty_scan_count de la última fila existente se incrementa. Por ejemplo, si sys.dm_cdc_log_scan_sessions ya contiene 10 filas para los exámenes que devolvieron los cambios y hay seguidos cinco resultados vacíos, la vista contiene 11 filas. La última fila tiene el valor 5 en la columna empty_scan_count. Para determinar las sesiones que tenían un examen vacío, ejecute la consulta siguiente:  
@@ -105,7 +105,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 ### <a name="use-data-collector-to-collect-sampling-data"></a>Usar el recopilador de datos para recopilar datos de muestreo  
  El recopilador de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite reunir instantáneas de datos de cualquier tabla o vista de administración dinámica y generar un almacenamiento de datos de rendimiento. Cuando la captura de datos modificados está habilitada en una base de datos, es útil tomar instantáneas de las vistas sys.dm_cdc_log_scan_sessions y sys.dm_cdc_errors a intervalos regulares para analizarlas posteriormente. El procedimiento siguiente configura un recopilador de datos para reunir datos de muestra de la vista de administración sys.dm_cdc_log_scan_sessions.  
   
- **Configurar la recopilación de datos**  
+ **Configuración de la recopilación de datos**  
   
 1.  Habilite el recopilador de datos y configure un almacén de administración de datos. Para obtener más información, vea [Administrar la recopilación de datos](../data-collection/data-collection.md).  
   
@@ -159,7 +159,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
   
 4.  En el almacenamiento de datos que configuró en el paso 1, busque la tabla custom_snapshots.cdc_log_scan_data. En esta tabla se proporciona una instantánea histórica de los datos de las sesiones de examen del registro. Estos datos se pueden utilizar para analizar la latencia, el rendimiento y otras medidas de rendimiento a lo largo del tiempo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
  [Habilitar y deshabilitar la captura de datos modificados &#40;SQL Server&#41;](enable-and-disable-change-data-capture-sql-server.md)   

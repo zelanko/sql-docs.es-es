@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0dd90613851184ad7fcff16ecf0a89875433dbfd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512387"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server
@@ -77,7 +77,7 @@ ms.locfileid: "62512387"
   
 -   Para las clases de eventos de Seguimiento de SQL configurables por el usuario (de UserConfigurable:1 a UserConfigurable:9), los eventos extendidos usan un solo evento para reemplazarlos. El evento se denomina user_event. Este evento se produce al usar sp_trace_generateevent, que es el mismo procedimiento almacenado usado por el Seguimiento de SQL. El evento user_event se devuelve independientemente del identificador de evento que se pase al procedimiento almacenado. Pero un campo event_id se devuelve como parte de los datos de evento. Esto permite generar un predicado basado en el identificador de evento. Por ejemplo, si usa UserConfigurable:0 (event_id = 82) en el código, puede agregar el evento user_event a la sesión y especificar un predicado de "event_id = 82". Por tanto, no tiene que cambiar el código porque el procedimiento almacenado sp_trace_generateevent genera el evento user_event de eventos extendidos y la clase de eventos de Seguimiento de SQL equivalente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)  
   
   

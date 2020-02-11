@@ -1,5 +1,5 @@
 ---
-title: Desarrollador&#39;s guía (Analysis Services) | Microsoft Docs
+title: Guía para desarrolladores&#39;(Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638781"
 ---
-# <a name="developer39s-guide-analysis-services"></a>Desarrollador&#39;s guía (Analysis Services)
+# <a name="developer39s-guide-analysis-services"></a>Guía para desarrolladores&#39;(Analysis Services)
     
 ## <a name="in-this-section"></a>En esta sección  
  [Programación de modelo tabular](tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)  
@@ -32,13 +32,13 @@ ms.locfileid: "62638781"
  [Programación de modelos multidimensionales](multidimensional-models/multidimensional-model-programming.md)  
  Describe las tareas y los métodos de desarrollo para integrar objetos del modelo multidimensional en una solución personalizada.  
   
- [Conjuntos de filas de esquema de Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
+ [Analysis Services conjuntos de filas de esquema](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
  Describe los conjuntos de filas de esquema que proporcionan información sobre el estado del servidor, las operaciones de servidor y los objetos de base de datos.  
   
- [Lenguaje de Scripting de Analysis Services &#40;ASSL&#41; referencia](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
+ [Referencia de ASSL&#41; &#40;de lenguaje de scripting Analysis Services](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  Describe las extensiones de ASSL para XMLA. ASSL ofrece un lenguaje de definición y manipulación de datos para modelos multidimensionales de Analysis Services que complementa la especificación XMLA.  
   
- [Referencia XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Referencia&#41; &#40;de XML for Analysis XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  Describe los conceptos de XMLA que pueden ayudarle a entender cómo contribuye XMLA a una solución personalizada. También describe el nivel de cumplimiento de la especificación XMLA 1.1.  
   
   

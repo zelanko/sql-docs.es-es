@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de la propiedad de dirección URL (VBScript) | Microsoft Docs
+title: Ejemplo de la propiedad URL (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +15,17 @@ ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a7cdfd5b91caa52b3c2de3d0775ecf7d706b1a73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963238"
 ---
 # <a name="url-property-example-vbscript"></a>Ejemplo de la propiedad de dirección URL (VBScript)
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- El código siguiente muestra cómo establecer el **URL** propiedad en el lado cliente para especificar un archivo .asp que a su vez controla el envío de cambios al origen de datos.  
+ El código siguiente muestra cómo establecer la propiedad **URL** en el lado cliente para especificar un archivo. asp que, a su vez, controla el envío de cambios al origen de datos.  
   
 ```  
 <!-- BeginURLClientVBS -->  
@@ -100,7 +100,7 @@ End Sub
 <!-- EndURLClientVBS -->  
 ```  
   
- El código del lado servidor que existe en **URLServerVBS.asp** envía la actualización **Recordset** al origen de datos.  
+ El código del lado servidor que existe en **URLServerVBS. asp** envía el conjunto de **registros** actualizado al origen de datos.  
   
 ```  
 <!-- BeginURLServerVBS -->  
@@ -138,7 +138,7 @@ End Sub
 <!-- EndURLServerVBS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad de dirección URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)
 
 

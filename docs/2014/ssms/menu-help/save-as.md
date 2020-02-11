@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510324"
 ---
 # <a name="save-as"></a>Guardar como
-  Utilice este cuadro de diálogo para guardar una instancia del elemento actual en una ubicación especificada y en un formato de archivo determinado. Para mostrar este cuadro de diálogo, haga clic en **guardar**  *\<archivo >* **como** en el **archivo** menú (donde  *\<archivo >* es el nombre del elemento actual), o bien presione ALT+F, A en el Editor de código.  
+  Utilice este cuadro de diálogo para guardar una instancia del elemento actual en una ubicación especificada y en un formato de archivo determinado. Para mostrar este cuadro de diálogo, haga clic en **Guardar** * \<archivo>* **como** en el menú **archivo** (donde * \<archivo>* es el nombre del elemento actual), o presione Alt + F, A en el editor de código.  
   
 ## <a name="central-panel"></a>Panel central  
  **Guardar en**  
@@ -50,7 +50,7 @@ ms.locfileid: "62510324"
  **Mi PC**  
  Muestra la ubicación **Mi PC** de su equipo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Opciones avanzadas para guardar](advanced-save-options.md)   
  [Administrar archivos con codificación](../solution/manage-files-with-encoding.md)  
   

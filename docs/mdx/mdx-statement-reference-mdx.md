@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d2d8f37d37b0e895752934aa1b469e03d957c187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033904"
 ---
 # <a name="mdx-statement-reference-mdx"></a>Referencia de instrucciones MDX (MDX)
@@ -24,11 +24,11 @@ ms.locfileid: "68033904"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Instrucciones para scripting de MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)|Contiene información sobre las instrucciones de scripting de MDX que administran el contexto y el ámbito de la consulta, así como el control de flujo en los scripts de MDX.|  
-|[Instrucciones de definición de datos MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|Contiene información sobre las instrucciones de definición de datos de MDX que crean, eliminan y manipulan objetos multidimensionales.|  
-|[Instrucciones de manipulación de datos MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|Contiene información sobre las instrucciones de manipulación de datos MDX que recuperan y manipulan datos de objetos multidimensionales.|  
+|[Instrucciones de scripting de MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)|Contiene información sobre las instrucciones de scripting de MDX que administran el contexto y el ámbito de la consulta, así como el control de flujo en los scripts de MDX.|  
+|[Instrucciones de definición de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|Contiene información sobre las instrucciones de definición de datos de MDX que crean, eliminan y manipulan objetos multidimensionales.|  
+|[Instrucciones de manipulación de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)|Contiene información sobre las instrucciones de manipulación de datos MDX que recuperan y manipulan datos de objetos multidimensionales.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del lenguaje MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

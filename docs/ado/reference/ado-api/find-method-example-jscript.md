@@ -1,5 +1,5 @@
 ---
-title: Ejemplo (JScript) del método Find | Microsoft Docs
+title: Ejemplo del método Find (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b6a81b69fc16c587786685897c476c65937bb4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932632"
 ---
 # <a name="find-method-example-jscript"></a>Ejemplo del método Find (JScript)
-Este ejemplo se usa el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [buscar](../../../ado/reference/ado-api/find-method-ado.md) método para buscar y mostrar las compañías en la ***Northwind*** base de datos cuyo nombre comienza con la letra G. cortar y pegar el siguiente código en el Bloc de notas u otro editor de texto y guárdelo como **FindJS.asp**.  
+En este ejemplo se usa el método [Find](../../../ado/reference/ado-api/find-method-ado.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para buscar y mostrar las compañías en la base de datos ***Northwind*** cuyo nombre comienza con la letra G. corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **FindJS. asp**.  
   
 ```  
 <!-- BeginFindJS -->  
@@ -152,6 +152,6 @@ BODY {
 <!-- EndFindJS -->  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Buscar (método) (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Find (método) (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

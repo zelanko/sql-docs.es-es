@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de código ADO MD en Visual Basic | Microsoft Docs
+title: ADO MD ejemplos de código en Visual Basic | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,18 @@ ms.assetid: bfb52e8c-cb06-47a0-931c-03b8bdb1a05a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6608ef9d70909b4838a027e43339739402caccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940073"
 ---
 # <a name="ado-md-code-examples-in-visual-basic"></a>Ejemplos de código ADO MD en Visual Basic
-Los siguientes ejemplos requieren la versión 5.0 de Microsoft Visual Basic con Service Pack 3 o Visual Basic versión 6.0.  
+En los siguientes ejemplos se requiere la versión 5,0 de Microsoft Visual Basic con Service Pack 3 o Visual Basic versión 6,0.  
   
 > [!NOTE]
->  Pegue el ejemplo de código completo de principio a fin, en el editor de código. El ejemplo no funcionen correctamente si se usan ejemplos parciales o si se pierde el formato de párrafo.  
+>  Pegue el ejemplo de código completo, de principio a fin, en el editor de código. Es posible que el ejemplo no se ejecute correctamente si se usan ejemplos parciales o si se pierde el formato del párrafo.  
   
--   [Ejemplo de conjunto de celdas](../../../ado/reference/ado-md-api/cellset-example-vb.md)  
+-   [Ejemplo de Cellset](../../../ado/reference/ado-md-api/cellset-example-vb.md)  
   
 -   [Ejemplo de catálogo](../../../ado/reference/ado-md-api/catalog-example-vb.md)

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a95fa1c010197d0107c757198d9db7eaf8d3c42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637603"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>Crear, modificar y quitar índices XML selectivos
@@ -24,7 +24,7 @@ ms.locfileid: "62637603"
   
 ##  <a name="create"></a> Crear un índice XML selectivo  
   
-### <a name="how-to-create-a-selective-xml-index"></a>Procedimientos: Crear un índice XML selectivo  
+### <a name="how-to-create-a-selective-xml-index"></a>Crear un índice XML selectivo  
  **Crear un nuevo índice XML selectivo con Transact-SQL**  
  Crear un índice XML selectivo llamado a la instrucción CREATE SELECTIVE XML INDEX. Para obtener más información, vea [CREAR ÍNDICE XML SELECTIVO &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-selective-xml-index-transact-sql).  
   
@@ -48,7 +48,7 @@ FOR(
   
 ##  <a name="alter"></a> Modificar un índice XML selectivo  
   
-### <a name="how-to-alter-a-selective-xml-index"></a>Procedimientos: Modificar un índice XML selectivo  
+### <a name="how-to-alter-a-selective-xml-index"></a>Modificar un índice XML selectivo  
  **Modificar un índice XML selectivo con Transact-SQL**  
  Modificar un índice XML selectivo existente llamado a la instrucción ALTER INDEX. Para obtener más información, vea [ALTER INDEX &#40;Selective XML Indexes&#41;](../indexes/indexes.md).  
   
@@ -70,7 +70,7 @@ FOR
   
 ##  <a name="drop"></a> Quitar un índice XML selectivo  
   
-### <a name="how-to-drop-a-selective-xml-index"></a>Procedimientos: Quitar un índice XML selectivo  
+### <a name="how-to-drop-a-selective-xml-index"></a>Quitar un índice XML selectivo  
  **Quitar un índice XML selectivo con Transact-SQL**  
  Quitar un índice XML selectivo llamando a la instrucción DROP INDEX. Para obtener más información, vea [DROP INDEX &#40;índices XML selectivos&#41;](/sql/t-sql/statements/drop-index-selective-xml-indexes).  
   

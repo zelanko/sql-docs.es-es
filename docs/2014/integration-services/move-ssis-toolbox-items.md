@@ -1,5 +1,5 @@
 ---
-title: Mover elementos del cuadro de herramientas SSIS | Microsoft Docs
+title: Trasladar elementos del cuadro de herramientas de SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7bcb7001f9be0812d369a0c1c8db6689d736be1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057558"
 ---
 # <a name="move-ssis-toolbox-items"></a>Mover elementos del cuadro de herramientas de SSIS
@@ -24,17 +24,17 @@ ms.locfileid: "66057558"
   
 1.  Haga clic con el botón secundario en un elemento del cuadro de herramientas de SSIS y, a continuación, haga clic en una de las siguientes opciones:  
   
-    -   **Mover a Favoritos**  
+    -   **Moverse a favoritos**  
   
-    -   **Mover a Común**  
+    -   **Cambiar a común**  
   
-    -   **Mover a Otros orígenes**  
+    -   **Moverse a otros orígenes**  
   
-    -   **Mover a Otros destinos**  
+    -   **Moverse a otros destinos**  
   
-    -   **Mover a Otras transformaciones**  
+    -   **Moverse a otras transformaciones**  
   
-    -   **Mover a Otras tareas**  
+    -   **Moverse a otras tareas**  
   
 ### <a name="to-refresh-the-ssis-toolbox"></a>Para actualizar el cuadro de herramientas de SSIS  
   

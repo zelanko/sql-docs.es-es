@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882355"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aumentar el rendimiento de la replicación transaccional
@@ -51,7 +51,7 @@ ms.locfileid: "73882355"
   
 -   Replique la ejecución de los procedimientos almacenados al realizar actualizaciones por lotes en las tablas publicadas.  
   
-     Si tiene actualizaciones por lotes que afectan ocasionalmente a un gran número de filas en el suscriptor, considere la posibilidad de actualizar la tabla publicada mediante un procedimiento almacenado y publique la ejecución del procedimiento almacenado. En vez de enviar una actualización o eliminación para cada fila afectada, el Agente de distribución ejecutará el mismo procedimiento en el suscriptor con los mismos valores de parámetros. Para más información, consulte [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+     Si tiene actualizaciones por lotes que afectan ocasionalmente a un gran número de filas en el suscriptor, considere la posibilidad de actualizar la tabla publicada mediante un procedimiento almacenado y publique la ejecución del procedimiento almacenado. En vez de enviar una actualización o eliminación para cada fila afectada, el Agente de distribución ejecutará el mismo procedimiento en el suscriptor con los mismos valores de parámetros. Para más información, vea [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 -   Reparta los artículos entre varias publicaciones.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73882355"
   
 -   Ejecute los agentes continuamente en lugar de utilizar programaciones muy frecuentes.  
   
-     Configurar los agentes para que se ejecuten continuamente en vez de crear programaciones frecuentes (por ejemplo, cada minuto) mejora el rendimiento de la replicación, ya que el agente no tiene que iniciarse y detenerse. Si configura el Agente de distribución para que se ejecute continuamente, los cambios se propagan con latencia baja a los demás servidores conectados en la topología. Para obtener más información, vea:  
+     Configurar los agentes para que se ejecuten continuamente en vez de crear programaciones frecuentes (por ejemplo, cada minuto) mejora el rendimiento de la replicación, ya que el agente no tiene que iniciarse y detenerse. Si configura el Agente de distribución para que se ejecute continuamente, los cambios se propagan con latencia baja a los demás servidores conectados en la topología. Para más información, consulte:  
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Especificar programaciones de sincronización](../specify-synchronization-schedules.md)  
   
@@ -74,13 +74,14 @@ ms.locfileid: "73882355"
      El parámetro **-MaxCmdsInTran** especifica el número máximo de instrucciones agrupadas en una transacción cuando el Agente de registro del LOG escribe comandos en la base de datos de distribución. El uso de este parámetro permite al Agente de registro del LOG y al Agente de distribución dividir las transacciones grandes (compuestas por muchos comandos) del publicador en varias transacciones más pequeñas cuando se aplican comandos en el suscriptor. Especificando este parámetro se puede reducir la contención en el distribuidor y la latencia entre el publicador y el suscriptor. Puesto que la transacción original se aplica en unidades más pequeñas, el suscriptor puede obtener acceso a las filas de una transacción lógica del publicador de gran tamaño antes de que finalice la transacción original, lo que interrumpe la estricta atomicidad transaccional. El valor predeterminado es **0**, que conserva los límites de la transacción del publicador. Este parámetro no se aplica a los publicadores de Oracle.  
   
     > [!WARNING]  
-    >  `MaxCmdsInTran` no se ha diseñado para estar siempre activado. Su función es evitar los casos en los que alguien ha realizado accidentalmente un gran número de operaciones DML en una sola transacción (lo que produce un retraso en la distribución de comandos hasta que toda la transacción está en la base de datos de distribución, se establecen los bloqueos, etc.). Si se encuentra habitualmente esta situación, debe revisar las aplicaciones y buscar formas de reducir el tamaño de las transacciones.  
+    >  
+  `MaxCmdsInTran` no se ha diseñado para estar siempre activado. Su función es evitar los casos en los que alguien ha realizado accidentalmente un gran número de operaciones DML en una sola transacción (lo que produce un retraso en la distribución de comandos hasta que toda la transacción está en la base de datos de distribución, se establecen los bloqueos, etc.). Si se encuentra habitualmente esta situación, debe revisar las aplicaciones y buscar formas de reducir el tamaño de las transacciones.  
   
 -   Use el parámetro **-SubscriptionStreams** para el agente de distribución.  
   
      El parámetro **-SubscriptionStreams** puede mejorar considerablemente el rendimiento de la replicación. Permite establecer varias conexiones con un suscriptor para aplicar lotes de cambios en paralelo, al tiempo que mantiene muchas de las características transaccionales presentes cuando se usa un solo subproceso. Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores. Antes de que finalice esta fase de reintento, pueden aparecer incoherencias transaccionales temporales en el suscriptor. Una vez que se han confirmado correctamente los lotes con errores, el suscriptor vuelve al estado de coherencia transaccional.  
   
-     Se puede especificar un valor para este parámetro de agente mediante el **\@subscriptionstreams** de [SP_ADDSUBSCRIPTION &#40;Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
+     Se puede especificar un valor para este parámetro de agente mediante el ** \@subscriptionstreams** de [sp_addsubscription &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   
 -   Aumente el valor del parámetro **-ReadBatchSize** del Agente de registro del LOG.  
   
@@ -94,7 +95,7 @@ ms.locfileid: "73882355"
   
      El parámetro **-PollingInterval** especifica con qué frecuencia se consulta el registro de transacciones de una base de datos publicada para que las transacciones se repliquen. El valor predeterminado es 5 segundos. Si reduce este valor, el registro se sondea más a menudo, lo que puede dar lugar a una menor latencia para el envío de transacciones de la base de datos de publicaciones a la de distribución. No obstante, debe equilibrar la necesidad de una menor latencia frente al aumento de carga en el servidor debido a sondeos más frecuentes.  
   
- Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para obtener más información, vea:  
+ Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para más información, consulte:  
   
 -   [Trabajar con perfiles del Agente de replicación](../agents/replication-agent-profiles.md)  
   

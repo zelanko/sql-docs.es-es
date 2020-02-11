@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0ef70f4f9d28fc23c0ac0a168447cc1b8867cd27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900171"
 ---
 # <a name="merge-join-transformation"></a>Combinación de mezcla, transformación
@@ -55,14 +55,14 @@ ms.locfileid: "62900171"
   
  Para obtener información sobre cómo establecer las propiedades de esta transformación, haga clic en uno de los temas siguientes:  
   
--   [Ampliar un conjunto de datos con la transformación Combinación de mezcla](merge-join-transformation.md)  
+-   [Ampliación de un conjunto de datos con la transformación Combinación de mezcla](merge-join-transformation.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>Vea también  
- [Editor de transformación Combinación de mezcla](../../merge-join-transformation-editor.md)   
+## <a name="see-also"></a>Consulte también  
+ [Editor de transformación combinación de mezcla](../../merge-join-transformation-editor.md)   
  [Transformación Mezclar](merge-transformation.md)   
  [Transformación Unión de todo](union-all-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  

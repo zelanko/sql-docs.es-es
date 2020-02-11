@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc11acccd25dafd811379384bf9975e74e8986b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63070989"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Reglas para especificar valores de búsqueda (Visual Database Tools)
@@ -118,7 +118,7 @@ ms.locfileid: "63070989"
 |--------------|---------------------|  
 |Criterios|Específico de la configuración regional Específico de la base de datos Estándar ANSI<br /><br /> Las fechas escritas en el [panel Criterios](visual-database-tools.md) se convierten a un formato compatible con la base de datos en el panel SQL.|  
 |SQL|Específico de la base de datos Estándar ANSI|  
-|Resultado|Específico de la configuración regional|  
+|Results|Específico de la configuración regional|  
   
 ## <a name="searching-on-logical-values"></a>Buscar valores lógicos  
  El formato de los datos lógicos varía de una base de datos a otra. Los valores False suelen almacenarse como cero (0). Un valor True se suele almacenar como 1 y, de vez en cuando, como -1. Las siguientes directrices se aplican al escribir valores lógicos en las condiciones de búsqueda:  
@@ -144,7 +144,7 @@ ms.locfileid: "63070989"
     WHERE contract <> 0  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Especificar criterios de búsqueda (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

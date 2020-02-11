@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 88ed55a3c2890864e3e9623f3fa53ca3e747350c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: aca31d10c030c360dcd82d6c4851df700bc3c4fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536181"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74319050"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware y software para la instalación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -86,7 +86,7 @@ Los siguientes requisitos se aplican a todas las instalaciones:
 |.NET Framework|Los sistemas operativos mínimos incluyen, como mínimo, .NET Framework.|  
 |Software de red|Los sistemas operativos admitidos para [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] tienen software de red integrado. Las instancias con nombre y predeterminadas de una instalación independiente admiten los siguientes protocolos de red: Memoria compartida, canalizaciones con nombre y TCP/IP.<br/><br/> |  
 |Disco duro|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requiere un mínimo de 6 GB de espacio disponible en disco.<br/><br/> Las necesidades de espacio en disco variarán según los componentes de [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] que instale. Para obtener más información, vea [Requisitos de espacio en disco duro](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) en este artículo. Para obtener información acerca de los tipos de almacenamiento admitidos para los archivos de datos, vea [Tipos de almacenamiento para los archivos de datos](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)|  
-|Monitor|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requiere Super VGA (800x600) o un monitor de una resolución mayor.|  
+|Supervisión|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] requiere Super VGA (800x600) o un monitor de una resolución mayor.|  
 |Internet|La funcionalidad de Internet necesita acceso a Internet (no necesariamente de carácter gratuito).|  
 
 > [!NOTE]
@@ -100,8 +100,8 @@ Los siguientes requisitos se aplican a todas las instalaciones:
   
 |Componente|Requisito|  
 |---------------|-----------------|  
-|Memoria \*|**Mínimo:**<br/><br/> Ediciones Express: 512 MB<br/><br/> Las demás ediciones: 1 GB<br/><br/> **Recomendado:**<br/><br/> Ediciones Express: 1 GB<br/><br/> Las demás ediciones: Al menos 4 GB, que debe aumentar a medida que el tamaño de la base de datos aumente para asegurar un rendimiento óptimo.|  
-|Velocidad del procesador|**Mínimo:** Procesador x64: 1,4 GHz<br/><br/> **Recomendado:** 2.0 GHz o superior|  
+|Memoria \*|**Mínimo:**<br/><br/> Ediciones Express: 512 MB<br/><br/> Las demás ediciones: 1 GB<br/><br/> **Se recomienda que use:**<br/><br/> Ediciones Express: 1 GB<br/><br/> Las demás ediciones: Al menos 4 GB, que debe aumentar a medida que el tamaño de la base de datos aumente para asegurar un rendimiento óptimo.|  
+|Velocidad del procesador|**Mínimo:** Procesador x64: 1,4 GHz<br/><br/> **Se recomienda que use:** 2.0 GHz o superior|  
 |Tipo de procesador|Procesador x64: AMD Opteron, AMD Athlon 64, Intel Xeon compatible con Intel EM64T, Intel Pentium IV compatible con EM64T|  
   
 > [!NOTE]  
@@ -127,13 +127,16 @@ La siguiente tabla muestra qué ediciones de SQL Server 2019 son compatibles co
   
 
 | Edición de SQL Server:               | Enterprise | Desarrollador | Estándar | Web | Express |  
-| :------------------------       | :--------- | :-------- | :------- | :-- | :------ | 
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2019 Standard      |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2019 Essentials    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
-| Windows Server 2016 Datacenter    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
+| Windows Server 2016 Datacenter    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2016 Standard      |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
 | Windows Server 2016 Essentials    |    Sí     |    Sí    |    Sí   | Sí |   Sí   |
+| Windows 10 Enterprise             |    No      |    Sí    |    Sí   | No  |   Sí   |
+| Windows 10 Professional           |    No      |    Sí    |    Sí   | No  |   Sí   |
+| Windows 10 Home                   |    No      |    Sí    |    Sí   | No  |   Sí   |
 | &nbsp; | &nbsp; |
 
 
@@ -189,7 +192,7 @@ La siguiente tabla muestra qué ediciones de SQL Server 2019 son compatibles co
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se admite en un controlador de dominio de solo lectura. El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede crear grupos de seguridad ni suministrar cuentas de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio de solo lectura. En este escenario, se producirá un error de instalación. 
 - Una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se admite en un entorno donde solo se puede acceder a un controlador de dominio de solo lectura. 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Consideraciones de seguridad para una instalación de SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
 

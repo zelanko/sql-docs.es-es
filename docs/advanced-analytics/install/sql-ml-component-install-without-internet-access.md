@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e966406a20df723c453a5c8083f00f2e4989d9d0
-ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74064126"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalación de SQL Server Machine Learning (R y Python) en equipos sin acceso a Internet
@@ -41,7 +41,7 @@ Para instalar SQL Server Machine Learning Services (R y Python) en un servidor a
 
 En un equipo que tenga conexión a Internet, descargue los archivos CAB que proporcionan características de R y Python para la versión inicial y los medios de instalación de SQL Server 2019.
 
-Versión  |Vínculo de descarga  |
+Release  |Vínculo de descarga  |
 ---------|---------------|
 Microsoft R Open        | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085686) |
 Microsoft R Server      | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792) |
@@ -73,7 +73,7 @@ Para instalar SQL Server Machine Learning Services (R y Python) en un servidor a
 
 En un equipo que tenga conexión a Internet, descargue los archivos CAB que proporcionan características de R y Python para la versión inicial y los medios de instalación de SQL Server 2017. 
 
-Versión  |Vínculo de descarga  |
+Release  |Vínculo de descarga  |
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
@@ -100,7 +100,7 @@ En un equipo que tenga conexión a Internet, descargue los archivos CAB usados p
 
 ### <a name="1---download-2016-cabs"></a>1 - Descargar archivos CAB 2016
 
-Versión  | Microsoft R Open | Microsoft R Server |
+Release  | Microsoft R Open | Microsoft R Server |
 ---------|-----------------|---------------------|
 **SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
@@ -138,7 +138,7 @@ Al ejecutar el programa de instalación de SQL Server en un equipo sin conexión
 
 ## <a name="apply-cumulative-updates"></a>Aplicación de actualizaciones acumulativas
 
-Se recomienda aplicar la última actualización acumulativa al motor de base de datos y a los componentes de aprendizaje automático. Las actualizaciones acumulativas se instalan a través del programa de instalación. 
+Se recomienda aplicar la última actualización acumulativa tanto en el motor de base de datos como en los componentes de Machine Learning. Las actualizaciones acumulativas se instalan a través del programa de instalación. 
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 1. Comience con una instancia de línea base. Solo puede aplicar las actualizaciones acumulativas a las instalaciones existentes de la versión inicial de SQL Server.
@@ -153,7 +153,7 @@ Se recomienda aplicar la última actualización acumulativa al motor de base de 
 
 2. En un dispositivo conectado a Internet, vaya a la lista de actualizaciones acumulativas correspondientes a su versión de SQL Server:
 
-   + [Actualizaciones de SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
+   + [Actualizaciones de SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
@@ -161,12 +161,12 @@ Se recomienda aplicar la última actualización acumulativa al motor de base de 
 
 2. En un dispositivo conectado a Internet, vaya a la lista de actualizaciones acumulativas correspondientes a su versión de SQL Server:
 
-   + [Actualizaciones de SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+   + [Actualizaciones de SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
 ::: moniker-end
 
 3. Seleccione la actualización acumulativa más reciente para descargar el archivo ejecutable.
 
-4. Obtenga los archivos CAB correspondientes a R y Python. Para obtener los vínculos de descarga, vea [Descargas de CAB de actualizaciones acumulativas en instancias de análisis en base de datos de SQL Server](sql-ml-cab-downloads.md).
+4. Obtenga los archivos .CAB correspondientes a R y Python. Para obtener los vínculos de descarga, vea [Descargas de CAB de actualizaciones acumulativas en instancias de análisis en base de datos de SQL Server](sql-ml-cab-downloads.md).
 
 5. Transfiera todos los archivos, archivos ejecutables y archivos CAB a la misma carpeta del equipo sin conexión.
 

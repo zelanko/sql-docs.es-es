@@ -1,5 +1,5 @@
 ---
-title: Filtrar datos en una tabla (SSAS Tabular) | Microsoft Docs
+title: Filtrar datos en una tabla (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067127"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrar los datos de una tabla (SSAS tabular)
@@ -33,17 +33,17 @@ ms.locfileid: "66067127"
   
 2.  En el menú Autofiltro, siga uno de estos procedimientos:  
   
-    -   En la lista de valores de columna, active o desactive uno o varios valores para filtrar y haga clic en **Aceptar**.  
+    -   En la lista de valores de columna, Active o desactive uno o varios valores para filtrar y, a continuación, haga clic en **Aceptar**.  
   
          Si el número de valores es sumamente grande, algunos elementos individuales podrían no mostrarse en la lista. En su lugar, verá un mensaje similar a "Demasiados elementos para mostrar".  
   
-    -   Haga clic en **Filtros de números** o **Filtros de texto** (en función del tipo de columna) y, después, haga clic en uno de los comandos de operador de comparación (como **Es igual a**) o haga clic en **Filtro personalizado**. En el cuadro de diálogo **Filtro personalizado** , cree el filtro y, a continuación, haga clic en **Aceptar**.  
+    -   Haga clic en filtros de **números** o **filtros de texto** (en función del tipo de columna) y, a continuación, haga clic en los comandos del operador de comparación (como **es igual**a) o haga clic en **filtro personalizado**. En el cuadro de diálogo **Filtro personalizado** , cree el filtro y, a continuación, haga clic en **Aceptar**.  
   
 ### <a name="to-clear-a-filter-for-a-column"></a>Para borrar un filtro para una columna  
   
 1.  Haga clic en la flecha del encabezado de la columna en la que desea borrar un filtro.  
   
-2.  Haga clic en **Borrar filtro de \<nombre de columna >** .  
+2.  Haga clic en **Borrar \<filtro de nombre de columna>**.  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>Para borrar todos los filtros de una tabla  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66067127"
   
 2.  Haga clic en el menú **Columna** y, a continuación, haga clic en **Borrar todos los filtros**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Filtrar y ordenar datos &#40;SSAS tabular&#41;](../filter-and-sort-data-ssas-tabular.md)   
  [Perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md)   
  [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md)  

@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02872a037e60fa3af58a70d3599b03c61d0cfb5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257338"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificar relaciones mediante sql:relationship (SQLXML 4.0)
@@ -52,10 +52,10 @@ ms.locfileid: "75257338"
   
  Para proporcionar los nombres de tabla y la información de combinación necesaria, se especifican los siguientes atributos en la anotación **SQL: Relationship** . Estos atributos solo son válidos con el ** \<elemento SQL: Relationship>** :  
   
- **Name**  
+ **Nombre**  
  Especifica el nombre único de la relación.  
   
- **Aérea**  
+ **Parent**  
  Especifica la relación primaria (tabla). Es un atributo opcional; si no se especifica, el nombre de la tabla primaria se obtiene a partir de la información de la jerarquía secundaria del documento. Si el esquema especifica dos jerarquías de elementos primarios y secundarios que usan la misma ** \<SQL: Relationship>** pero distintos elementos primarios, no se especifica el atributo primario en ** \<SQL: Relationship>**. Esta información se obtiene de la jerarquía del esquema.  
   
  **parent-key**  
@@ -77,7 +77,7 @@ ms.locfileid: "75257338"
 ## <a name="examples"></a>Ejemplos  
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>a. Especificar la anotación sql:relationship en un elemento  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Especificar la anotación sql:relationship en un elemento  
  El siguiente esquema XSD anotado incluye ** \<los elementos Customer>** y ** \<Order>** . El ** \<elemento Order>** es un elemento secundario del elemento ** \<Customer>** .  
   
  En el esquema, la anotación **SQL: Relationship** se especifica en el ** \<orden>** elemento secundario. La propia relación se define en el ** \<elemento xsd: Appinfo>** .  
@@ -318,7 +318,7 @@ ms.locfileid: "75257338"
 </ROOT>  
 ```  
   
-### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>c. Especificar la anotación relationship en un atributo  
+### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>C. Especificar la anotación relationship en un atributo  
  El esquema de este ejemplo incluye un \<elemento Customer> con un \<elemento secundario CustomerID> y un atributo atributo OrderIDList de tipo IDREFS. El \<elemento Customer> se asigna a la tabla sales. Customer de la base de datos AdventureWorks. De forma predeterminada, el ámbito de esta asignación se aplica a todos los elementos o atributos secundarios, a menos que se especifique **SQL: relation** en el elemento o atributo secundario, en cuyo caso, la relación de clave principal y clave externa \<adecuada debe definirse mediante el elemento de> de relación. Y el elemento o atributo secundario, que especifica la tabla diferente mediante la anotación de **relación** , también debe especificar la anotación de **relación** .  
   
 ```  

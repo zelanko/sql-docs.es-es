@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6504e4f5eee83d670b4843fb8d956b23a84d4aad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62893036"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar el destino del archivo plano (Asistente para importación y exportación de SQL Server)
-  Use la **configurar Flat File Destination** página para especificar opciones de formato para el archivo plano de destino y obtener una vista previa de resultados antes de continuar.  
+  Use la página **configurar el destino de archivo plano** para especificar las opciones de formato del archivo plano de destino y para obtener una vista previa de los resultados antes de continuar.  
   
- Para obtener más información acerca de este asistente, vea [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información acerca de las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, consulte [ejecutar la importación de SQL Server y el Asistente para exportación de](start-the-sql-server-import-and-export-wizard.md).  
+ Para obtener más información acerca de este asistente, vea [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información sobre las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, vea [ejecutar el Asistente para importación y exportación de SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
  La finalidad del Asistente para importación y exportación de SQL Server es copiar datos desde un origen a un destino. El asistente también puede crear una base de datos y tablas de destino. Sin embargo, si tiene que copiar diversas bases de datos o tablas, u otros tipos de objetos de bases de datos, debe utilizar el Asistente para copiar bases de datos. Para más información, consulte [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -33,35 +33,35 @@ ms.locfileid: "62893036"
  **Delimitador de filas**  
  Seleccione los delimitadores de filas de la lista.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**{CR}{LF}**|La fila está delimitada por una combinación de retorno de carro y avance de línea.|  
-|**{CR}**|La fila está delimitada por un retorno de carro.|  
-|**{LF}**|La fila está delimitada por un avance de línea.|  
+|**COMPRA LF**|La fila está delimitada por una combinación de retorno de carro y avance de línea.|  
+|**COMPRA**|La fila está delimitada por un retorno de carro.|  
+|**LF**|La fila está delimitada por un avance de línea.|  
 |**Punto y coma {;}**|La fila está delimitada por un punto y coma.|  
 |**Dos puntos {:}**|La fila está delimitada por dos puntos.|  
-|**Coma {,}**|La fila está delimitada por una coma.|  
+|**Unas{,}**|La fila está delimitada por una coma.|  
 |**Tabulación {t}**|La fila está delimitada por un tabulador.|  
 |**Barra vertical {&#124;}**|La fila está delimitada por una barra vertical.|  
   
  **Delimitador de columna**  
  Seleccione los delimitadores de columna de la lista.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**{CR}{LF}**|Las columnas se delimitan mediante un retorno de carro-combinación de avance de línea.|  
-|**{CR}**|Las columnas se delimitan mediante un retorno de carro.|  
-|**{LF}**|Las columnas se delimitan mediante un avance de línea.|  
+|**COMPRA LF**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
+|**COMPRA**|Las columnas se delimitan mediante un retorno de carro.|  
+|**LF**|Las columnas se delimitan mediante un avance de línea.|  
 |**Punto y coma {;}**|Las columnas se delimitan mediante un punto y coma.|  
 |**Dos puntos {:}**|Las columnas se delimitan mediante dos puntos.|  
-|**Coma {,}**|Las columnas se delimitan mediante una coma.|  
+|**Unas{,}**|Las columnas se delimitan mediante una coma.|  
 |**Tabulación {t}**|Las columnas se delimitan mediante un tabulador.|  
 |**Barra vertical {&#124;}**|Las columnas se delimitan mediante una barra vertical.|  
   
- **Vista previa**  
- Ver en el **datos de vista previa** cuadro de diálogo Opciones de los resultados de la barra de formato seleccionadas para el archivo plano de destino.  
+ **Versión preliminar**  
+ En el cuadro de diálogo **vista previa** de los datos, los resultados de las opciones de formato seleccionadas para el archivo plano de destino.  
   
  **Editar transformación**  
- Eliminar filas, anexar filas y configurar columnas en el archivo de destino mediante el uso de la **asignaciones de columnas** cuadro de diálogo.  
+ Eliminar filas, anexar filas y configurar columnas en el archivo de destino mediante el cuadro de diálogo **asignaciones de columnas** .  
   
   

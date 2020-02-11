@@ -13,10 +13,10 @@ ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 86b9a2ed9738790cf9747fbad104074393fd33d1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729276"
 ---
 # <a name="entity-dependencies-explorer"></a>Explorador de dependencias de entidad
@@ -24,7 +24,8 @@ ms.locfileid: "73729276"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   
-[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 agrega una nueva página del explorador, Dependencias de entidades, que proporciona una forma alternativa de visualizar las relaciones entre miembros de la entidad dentro de un modelo, según lo especificado por sus valores de atributo basados en dominio (DBA), pero sin tener que definir primero una jerarquía derivada.   
+
+  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 agrega una nueva página del explorador, Dependencias de entidades, que proporciona una forma alternativa de visualizar las relaciones entre miembros de la entidad dentro de un modelo, según lo especificado por sus valores de atributo basados en dominio (DBA), pero sin tener que definir primero una jerarquía derivada.   
   
 Ayuda a responder a la pregunta "¿Quién consume mi entidad y cómo?". La vista es similar a la de la página del explorador de la jerarquía derivada, pero es más inclusiva. Muestra todas las relaciones de DBA, no solo las que se definen como parte de una jerarquía determinada. No se necesita una definición de jerarquía porque la estructura jerárquica mostrada se deduce simplemente de los DBA existentes.  
   

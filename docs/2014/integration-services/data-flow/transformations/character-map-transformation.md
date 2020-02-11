@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d00f864d5e7209bc0865bfbb52bd1231a2c12a9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770427"
 ---
 # <a name="character-map-transformation"></a>Transformación Mapa de caracteres
@@ -47,19 +47,19 @@ ms.locfileid: "62770427"
 |Minúsculas|Conversión de caracteres a minúsculas.|  
 |Chino simplificado|Asigna caracteres de chino tradicional a caracteres de chino simplificado.|  
 |Chino tradicional|Asigna caracteres de chino simplificado a caracteres de chino tradicional.|  
-|Mayúsculas|Conversión de caracteres a mayúsculas.|  
+|Uppercase|Conversión de caracteres a mayúsculas.|  
   
 ## <a name="mutually-exclusive-mapping-operations"></a>Operaciones de asignación mutuamente exclusivas  
  En una transformación pueden realizarse varias operaciones. Sin embargo, algunas operaciones son mutuamente exclusivas. La siguiente tabla enumera las restricciones que se aplican al usar varias operaciones sobre la misma columna. Las operaciones sobre las columnas Operación A y Operación B son mutuamente exclusivas.  
   
 |Operación A|Operación B|  
 |-----------------|-----------------|  
-|Minúsculas|Mayúsculas|  
+|Minúsculas|Uppercase|  
 |Hiragana|Katakana|  
 |Formato medio|Formato completo|  
 |Chino tradicional|Chino simplificado|  
 |Minúsculas|Hiragana, katakana, formato medio, formato completo|  
-|Mayúsculas|Hiragana, katakana, formato medio, formato completo|  
+|Uppercase|Hiragana, katakana, formato medio, formato completo|  
   
 ## <a name="configuration-of-the-character-map-transformation"></a>Configuración de la transformación Mapa de caracteres  
  Puede configurar la transformación Mapa de caracteres de las maneras siguientes:  
@@ -74,7 +74,7 @@ ms.locfileid: "62770427"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Propiedades comunes](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   

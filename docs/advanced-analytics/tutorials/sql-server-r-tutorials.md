@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7c71ebfbda37e66050f868fa7676d0247e84840e
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74119227"
 ---
 # <a name="sql-server-r-language-tutorials"></a>Tutoriales de lenguaje R de SQL Server
@@ -46,7 +46,7 @@ En este artículo se describen los tutoriales de lenguaje R para el análisis e
 | [Compilación de un modelo predictivo con R en SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Verá cómo se podría utilizar Machine Learning en una empresa de alquiler de esquís para predecir alquileres futuros, lo que resulta muy útil para el plan de negocios y para el personal a la hora de satisfacer la futura demanda. |
 | [Agrupaciones en clústeres de clientes con R y SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | Use el aprendizaje sin supervisión para segmentar a los clientes en función de los datos de ventas. |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 + [Extensión de R en SQL Server](../concepts/extension-r.md)
 + [Tutoriales de SQL Server Machine Learning Services](machine-learning-services-tutorials.md)

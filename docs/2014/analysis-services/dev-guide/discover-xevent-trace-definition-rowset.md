@@ -1,5 +1,5 @@
 ---
-title: Conjunto de filas DISCOVER_XEVENT_TRACE_DEFINITION | Microsoft Docs
+title: DISCOVER_XEVENT_TRACE_DEFINITION conjunto de filas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62731917"
 ---
-# <a name="discoverxeventtracedefinition-rowset"></a>Conjunto de filas DISCOVER_XEVENT_TRACE_DEFINITION
+# <a name="discover_xevent_trace_definition-rowset"></a>Conjunto de filas DISCOVER_XEVENT_TRACE_DEFINITION
   Proporciona información acerca de los seguimientos XEvent que están activos en el servidor.  
   
  **Se aplica a:** modelos tabulares, modelos multidimensionales  
@@ -25,7 +25,7 @@ ms.locfileid: "62731917"
 ## <a name="rowset-columns"></a>Columnas del conjunto de filas  
  El conjunto de filas `DISCOVER_XEVENT_TRACE_DEFINITION` contiene las siguientes columnas.  
   
-|Nombre de columna|Indicador de tipo|Longitud|Descripción|  
+|Nombre de la columna|Indicador de tipo|Length|Descripción|  
 |-----------------|--------------------|------------|-----------------|  
 |`Data`|`DBTYPE_WSTR`||La definición XML del seguimiento de XEvent.|  
   
@@ -36,14 +36,14 @@ ms.locfileid: "62731917"
   
  La tabla siguiente proporciona el GUID y los valores de cadena que identifican este conjunto de filas.  
   
-|Argumento|Valor|  
+|Argumento|Value|  
 |--------------|-----------|  
 |GUID|a07ccd1c-8148-11d0-87bb-00c04fc33942|  
 |String|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
-## <a name="see-also"></a>Vea también  
- [XML para conjuntos de filas de esquema de análisis](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
- [Usar SQL Server extendida Events &#40;XEvents&#41; supervisar Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [Usar vistas de administración dinámica &#40;DMV&#41; para supervisar Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [XML for Analysis conjuntos de filas de esquema](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
+ [Use SQL Server Extended Events &#40;XEvents&#41; para supervisar Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
+ [Usar vistas de administración dinámica &#40;DMV&#41; supervisar Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

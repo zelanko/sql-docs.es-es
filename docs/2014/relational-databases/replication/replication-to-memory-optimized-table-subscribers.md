@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811228"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicación en suscriptores de tablas con optimización para memoria
@@ -23,7 +23,7 @@ ms.locfileid: "68811228"
 ## <a name="configuring-a-memory-optimized-table-as-a-subscriber"></a>Configurar una tabla optimizada para memoria como suscriptor  
  Para configurar una tabla optimizada para memoria como suscriptor, realice los pasos siguientes.  
   
- **Crear y habilitar publicación**  
+ **Crear y habilitar una publicación**  
   
 1.  Crear una publicación.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68811228"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Navegue hasta la carpeta de la instantánea. La ubicación predeterminada es "C:\Archivos de Programa\microsoft SQL Server\MSSQL12. Instancia > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\". \<  
+2.  Navegue hasta la carpeta de la instantánea. La ubicación predeterminada es "C:\Archivos de Programa\microsoft SQL Server\MSSQL12. \<Instancia> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\".  
   
 3.  Busque el **. SCH** en la tabla y ábralo en Management Studio. Cambie el esquema de tabla y actualice el procedimiento almacenado como se describe a continuación.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "68811228"
     go  
     ```  
   
-5.  Cree una base de datos de suscriptor con la opción de **aislamiento elevar a Snapshot** y establezca la intercalación predeterminada en Latin1_General_CS_AS_KS_WS en caso de que se utilicen tipos de datos de caracteres no Unicode.  
+5.  Cree una base de datos de suscriptor con la opción de **aislamiento elevar a Snapshot** y establezca la intercalación predeterminada en Latin1_General_CS_AS_KS_WS en el caso de usar tipos de datos de caracteres no Unicode.  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -263,7 +263,7 @@ ms.locfileid: "68811228"
     GO  
     ```  
   
- **No agregar suscripción de sincronización**  
+ **Agregar una suscripción nosync**  
   
  Agregue una suscripción nosync.  
   
@@ -301,7 +301,7 @@ GO
   
 -   Hay ciertas restricciones para la actualización de la clave principal de tablas que se replican en una tabla optimizada para memoria en un suscriptor. Para obtener más información, vea [replicar cambios en una clave principal](#PrimaryKey).  
   
--   En las tablas optimizadas para memoria no se admiten claves externas, restricciones UNIQUE, desencadenadores, modificaciones de esquema, ROWGUIDCOL, columnas calculadas, compresión de datos, tipos de datos de alias, control de versiones ni bloqueos. Vea [Construcciones T-SQL no admitidas por OLTP en memoria](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obtener información.  
+-   En las tablas optimizadas para memoria no se admiten claves externas, restricciones UNIQUE, desencadenadores, modificaciones de esquema, ROWGUIDCOL, columnas calculadas, compresión de datos, tipos de datos de alias, control de versiones ni bloqueos. Vea [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obtener información.  
   
 ##  <a name="Schema"></a> Modificar un archivo de esquema  
   
@@ -316,7 +316,7 @@ GO
 ##  <a name="PrimaryKey"></a>Replicación de cambios en una clave principal  
  La clave principal de una tabla optimizada para memoria no se puede actualizar. Para replicar la actualización de una clave principal en un suscriptor, modifique el procedimiento almacenado de actualización para entregar la actualización como un par de eliminación e inserción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Replicación de SQL Server](sql-server-replication.md)  
   
   

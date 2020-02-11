@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056612"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migre SQL Server o SQL Server locales en máquinas virtuales de Azure para Azure SQL Database con el Data Migration Assistant
@@ -27,7 +27,7 @@ El Data Migration Assistant proporciona evaluaciones sin problemas de SQL Server
 
 En este artículo se proporcionan instrucciones paso a paso para migrar SQL Server de forma local a Azure SQL Database mediante el Data Migration Assistant.
 
-## <a name="create-a-new-migration-project"></a>Crear un nuevo proyecto de migración
+## <a name="create-a-new-migration-project"></a>Creación de un proyecto de migración
 
 1. En el panel izquierdo, seleccione **nuevo** (+) y, a continuación, seleccione el tipo de proyecto de **migración** .
 
@@ -57,7 +57,7 @@ En este artículo se proporcionan instrucciones paso a paso para migrar SQL Serv
 
     ![Seleccionar base de datos de origen](../dma/media/select-source-database.png)
 
-5. Seleccione **Siguiente**.
+5. Seleccione **Next** (Siguiente).
 
 ## <a name="specify-the-target-server-and-database"></a>Especificar el servidor de destino y la base de datos
 
@@ -79,7 +79,7 @@ En este artículo se proporcionan instrucciones paso a paso para migrar SQL Serv
 
     ![Seleccionar base de datos de destino](../dma/media/select-target-database.png)
 
-5. Seleccione **Siguiente**.
+5. Seleccione **Next** (Siguiente).
 
 ## <a name="select-schema-objects"></a>Seleccionar objetos de esquema
 
@@ -116,9 +116,9 @@ En este artículo se proporcionan instrucciones paso a paso para migrar SQL Serv
 
 En la pantalla final se muestra el estado general.
 
-   ![Estado de la migración](../dma/media/migration-status.png) 
+   ![Estado de migración](../dma/media/migration-status.png) 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: opciones de configuración](../dma/dma-configurationsettings.md)

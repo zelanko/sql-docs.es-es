@@ -15,14 +15,14 @@ ms.assetid: 3b24c499-829c-4e65-90cf-a3a0f6d0a186
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ed366acde11778342387d3bcb152a6619a6a3778
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138865"
 ---
 # <a name="interoperability-of-sql-statements"></a>Interoperabilidad de instrucciones SQL
-Igual que el resto de una aplicación, pueden ser instrucciones SQL interoperable o específicos para DBMS. Y como el resto de la aplicación, la elección de instrucciones SQL interoperables cómo deben ser depende del tipo de aplicación. Están menos probable que use instrucciones SQL interoperables porque normalmente están diseñadas para aprovechar las capacidades del DBMS de uno o dos, posiblemente, las aplicaciones personalizadas. Aplicaciones genéricas usar instrucciones SQL interoperables porque están diseñadas para funcionar con una variedad de DBMS. Y aplicaciones verticales suelen clasificarse en algún lugar entre ambos, exigir un cierto nivel de funcionalidad, pero en caso contrario, usar instrucciones SQL interoperables.  
+Al igual que el resto de una aplicación, las instrucciones SQL pueden ser interoperables o específicas del DBMS. Y, al igual que el resto de la aplicación, la elección de cómo las instrucciones SQL interoperables deben depender del tipo de aplicación. Es menos probable que las aplicaciones personalizadas usen instrucciones SQL interoperables porque normalmente están diseñadas para aprovechar las capacidades de uno o posiblemente dos DBMS. Las aplicaciones genéricas usan instrucciones SQL interoperables porque están diseñadas para trabajar con diversos DBMS. Y las aplicaciones verticales normalmente se encuentran en algún lugar entre, lo que exige cierto nivel de funcionalidad pero, de lo contrario, usa instrucciones SQL interoperables.  
   
  Esta sección contiene los temas siguientes.  
   

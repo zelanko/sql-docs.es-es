@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767587"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>Paso 1: Compilación de la utilidad de implementación
+# <a name="step-1-building-the-deployment-utility"></a>Paso 1: generar la utilidad de implementación
   En esta tarea, configurará y generará una utilidad de implementación para el proyecto Deployment Tutorial.  
   
  Antes de generar la utilidad de implementación, debe modificar las propiedades del proyecto Deployment Tutorial. Usará el cuadro de diálogo **Deployment Tutorial Property Pages** (Páginas de propiedades de Deployment Tutorial) para configurar estas propiedades. En este cuadro de diálogo, debe habilitar la capacidad de actualizar configuraciones durante la implementación y especificar que el proceso de creación crea una utilidad de implementación. Después de establecer las propiedades, generará el proyecto.  
@@ -34,9 +34,9 @@ ms.locfileid: "62767587"
   
 4.  En el cuadro de diálogo **Deployment Tutorial Property Pages** (Páginas de propiedades de Deployment Tutorial), expanda Propiedades de configuración y haga clic en Utilidad de implementación.  
   
-5.  En el panel derecho de la **Deployment Tutorial Property Pages** diálogo cuadro, compruebe que `AllowConfigurationChanges` está establecido en `true`, establezca `CreateDeploymentUtility` a `true`y, opcionalmente, actualice el valor predeterminado de `DeploymentOutputPath`.  
+5.  En el panel derecho del cuadro de diálogo **páginas de propiedades del tutorial** de implementación `AllowConfigurationChanges` , compruebe que `true`está establecido `CreateDeploymentUtility` en `true`, establecido en y, opcionalmente, actualice `DeploymentOutputPath`el valor predeterminado de.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ### <a name="to-build-the-deployment-utility"></a>Para generar las propiedades de la utilidad de implementación  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62767587"
   
 4.  En la ventana de resultados, compruebe la siguiente información:  
   
-     Compilación iniciada: Proyecto de SQL Integration Services: Incremental ...  
+     Generación iniciada: proyecto de SQL Integration Services: Incremental...  
   
      Creando la utilidad de implementación...  
   
@@ -56,16 +56,16 @@ ms.locfileid: "62767587"
   
      Generación completa -- 0 errores, 0 advertencias  
   
-     ========== Build: 0 correcto, 0 errores, 1 actualizados, 0 omitidos ==========  
+     ========== Compilación: 0 correcto, 0 errores, 1 actualizados, 0 omitidos ==========  
   
 5.  En el menú **Archivo** , haga clic en **Salir**. Si se le pregunta si quiere guardar los cambios en los elementos de Deployment Tutorial, haga clic en **Sí**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 2: Comprobación del paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+ [Paso 2: Comprobar el paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una utilidad de implementación](../../2014/integration-services/create-a-deployment-utility.md)  
   
   

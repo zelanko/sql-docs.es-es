@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c6de9072c32155446b3ff40df3f81af9073c1090
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706821"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (módulo de Python en SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "73706821"
 
 Los orígenes de datos y los contextos de cálculo que se creen en **revoscalepy** también se pueden usar en algoritmos de aprendizaje automático. Para obtener una introducción a estos algoritmos, consulte [módulo microsoftml de Python en SQL Server](ref-py-microsoftml.md).
 
-## <a name="full-reference-documentation"></a>Documentación de referencia completa:
+## <a name="full-reference-documentation"></a>Documentación de referencia completa
 
 La biblioteca de **revoscalepy** se distribuye en varios productos de Microsoft, pero el uso es el mismo, se obtenga la biblioteca en SQL Server o en otro producto. Dado que las funciones son las mismas, la [documentación de las funciones individuales de revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) se publica en una sola ubicación en la [referencia de Python](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) para Microsoft Machine Learning Server. Si existe algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
 
@@ -35,7 +35,7 @@ La biblioteca de **revoscalepy** se distribuye en varios productos de Microsoft,
 
 El módulo de **revoscalepy** se basa en Python 3.5 y solo está disponible cuando se instala uno de los siguientes productos o descargas de Microsoft:
 
-+ [Servicios de aprendizaje de máquina SQL Server](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 o posterior](https://docs.microsoft.com/machine-learning-server/)
 + [Bibliotecas de cliente de Python para un cliente de ciencia de datos](setup-python-client-tools-sql.md)
 
@@ -117,7 +117,7 @@ from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 + [Tutoriales de Python](../tutorials/sql-server-python-tutorials.md)
 + [Tutorial: Código de Python para insertar en T-SQL](../tutorials/run-python-using-t-sql.md)

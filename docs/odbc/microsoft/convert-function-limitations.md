@@ -1,5 +1,5 @@
 ---
-title: Limitaciones de la función CONVERT | Microsoft Docs
+title: CONVERTIR las limitaciones de la función | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: 3c81fc58-57f0-4dd7-be16-2b146eb15cbc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 65cc8fa7517d3093b7314cacdafd8f607d89bc3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081993"
 ---
 # <a name="convert-function-limitations"></a>CONVERTIR las limitaciones de la función
-Como resultado errores de conversión de tipo en la columna afectada que se establece en NULL.  
+Los errores de conversión de tipos hacen que la columna afectada se establezca en NULL.  
   
- Tipo de datos ni la fecha ni la marca de tiempo se puede convertir a otro datos tipo (o propio) mediante la función CONVERT.
+ No se puede convertir el tipo de datos DATE ni TIMESTAMP en otro tipo de datos (o en sí mismo) mediante la función CONVERT.

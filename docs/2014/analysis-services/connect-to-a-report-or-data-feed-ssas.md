@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70151832"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Conectarse a un informe o a una fuente de distribución de datos (SSAS)
@@ -31,7 +31,7 @@ ms.locfileid: "70151832"
   
  Haga clic en **Ver informe** para mostrar el informe.  
   
- **Examinar**  
+ **Browse**  
  Navegue a una ubicación donde haya un informe.  
   
  **Avanzadas**  
@@ -44,10 +44,10 @@ ms.locfileid: "70151832"
  **Nombre descriptivo de la conexión**  
  Escriba un nombre descriptivo para la conexión con la fuente de distribución de datos.  
   
- **URL de fuente de distribución de datos**  
+ **Dirección URL de la fuente de distribución de datos**  
  Escriba la ruta de acceso completa a un documento de servicio Atom (.atomsvc, .atom) o la dirección URL de una sola fuente de distribución de datos, o bien haga clic en **Examinar** para seleccionar un documento de servicio Atom.  
   
- **Examinar**  
+ **Browse**  
  Navegue a una ubicación donde haya un informe.  
   
  Haga clic en **Ver conjuntos de datos de Azure DataMarket disponibles** para mostrar los conjuntos de datos disponibles.  
@@ -71,16 +71,16 @@ ms.locfileid: "70151832"
  **Nombre descriptivo de la conexión**  
  Escriba un nombre descriptivo para la conexión con la fuente de distribución de datos.  
   
- **URL de fuente de distribución de datos**  
+ **Dirección URL de la fuente de distribución de datos**  
  Escriba la ruta de acceso completa a un documento de servicio Atom (.atomsvc, .atom) o la dirección URL de una sola fuente de distribución de datos, o bien haga clic en **Examinar** para seleccionar un documento de servicio Atom.  
   
  Haga clic en **Incluir todas las columnas de fuente** para especificar si se importan todas las columnas de fuente de distribución de datos.  
   
- **Examinar**  
+ **Browse**  
  Navegue hasta una ubicación donde haya una fuente de distribución de datos.  
   
  **Avanzadas**  
- Establezca las propiedades de conexión adicionales con el cuadro de diálogo **Establecer propiedades avanzadas** .  
+ Establezca las propiedades de conexión adicionales mediante el cuadro de diálogo **establecer propiedades avanzadas** .  
   
  **Probar conexión**  
  Intente establecer una conexión con el origen de datos usando la configuración actual. Se muestra un mensaje que indica si la conexión es correcta.  

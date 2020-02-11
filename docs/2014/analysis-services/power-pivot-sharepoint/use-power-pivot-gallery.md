@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 880baacd3cf629ee28f55a399fcb02019e836d44
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229227"
 ---
 # <a name="use-powerpivot-gallery"></a>Usar la galería de PowerPivot
@@ -43,7 +43,7 @@ ms.locfileid: "75229227"
   
  [Requisitos previos](#prereq)  
   
-##  <a name="prereq"></a>Requisitos previos  
+##  <a name="prereq"></a> Requisitos previos  
   
 > [!NOTE]  
 >  La Galería de Power Pivot requiere Microsoft Silverlight.  El navegador Microsoft Edge no es compatible con Silverlight.   
@@ -149,7 +149,7 @@ ms.locfileid: "75229227"
   
 3.  Haga clic en la flecha abajo a la derecha y seleccione **Modificar propiedades**.  
   
-4.  Haga clic en **Guardar**. Al guardar el documento, obliga al servicio de instantánea a regenerar la imagen de vista previa.  
+4.  Haga clic en **Save**(Guardar). Al guardar el documento, obliga al servicio de instantánea a regenerar la imagen de vista previa.  
   
 ##  <a name="bkmk_known_issues"></a>Problemas conocidos  
   
@@ -162,7 +162,7 @@ ms.locfileid: "75229227"
   
  El tipo de contenido **Documento de galería de PowerPivot** no se agrega automáticamente a las bibliotecas de documentos. No encontrará este problema a menos que habilite manualmente el tipo de contenido no admitido.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Crear una ubicación de confianza para los sitios de PowerPivot en administración central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Eliminar la galería de PowerPivot](delete-power-pivot-gallery.md)   
  [Crear y personalizar la galería de PowerPivot](create-and-customize-power-pivot-gallery.md)   

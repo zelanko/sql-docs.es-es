@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683601"
 ---
 # <a name="getting-sql-server-assistance"></a>Obtener ayuda sobre SQL Server
@@ -59,8 +59,7 @@ ms.locfileid: "74683601"
   
  Si no encuentra la información que está buscando en estas fuentes, puede publicar preguntas en los grupos de noticias y foros de la comunidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o abrir un caso de soporte con [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Libros en pantalla  
+## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Libros en pantalla  
  Los documentos de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cubren los conceptos y los procedimientos necesarios para utilizar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los Libros en pantalla también incluyen material de referencia de los lenguajes e interfaces de programación para almacenar, recuperar, realizar informes y modificar datos con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Puede obtener acceso a los Libros en pantalla de varias formas:  
@@ -95,7 +94,7 @@ ms.locfileid: "74683601"
   
  Los productos [!INCLUDE[msCoName](../includes/msconame-md.md)] tienen un ciclo de vida de soporte técnico que define cuánto tiempo está disponible el soporte técnico para cada versión. El soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] mantiene una página que define el ciclo de vida de soporte de [!INCLUDE[msCoName](../includes/msconame-md.md)]. La página contiene vínculos a otras paginas que especifican la disponibilidad de soporte técnico de los productos [!INCLUDE[msCoName](../includes/msconame-md.md)]. Para obtener más información, vea [soporte técnico de Microsoft Lifecycle](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Usar la documentación del producto para SQL Server](../2014-toc/index.yml)  
   
   

@@ -55,7 +55,7 @@ Especifica una expresión que se evalúa como un carácter o una cadena binaria 
   
  La salida se ajusta al algoritmo estándar: 128 bits (16 bytes) para MD2, MD4 y MD5; 160 bits (20 bytes) para SHA y SHA1; 256 bits (32 bytes) para SHA2_256 y 512 bits (64 bytes) para SHA2_512.  
   
-**Válido para** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
+**Válido para **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
   
  En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones anteriores, los valores de entrada permitidos tienen un límite de 8000 bytes.  
   

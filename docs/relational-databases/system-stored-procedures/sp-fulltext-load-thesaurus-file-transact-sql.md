@@ -20,10 +20,10 @@ ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305214"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
@@ -41,15 +41,15 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *lcid*  
- Entero que asigna el identificador de configuración regional (LCID) del idioma para el que desea lade la definición de XML del Diccionario de sinónimos. Para obtener los LCID de los idiomas que están disponibles en una instancia de servidor, use la vista de catálogo [Sys. fulltext_languages &#40;de Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) .  
+ *LCID*  
+ Entero que asigna el identificador de configuración regional (LCID) del idioma para el que desea lade la definición de XML del Diccionario de sinónimos. Para obtener los LCID de los idiomas que están disponibles en una instancia de servidor, use la vista de catálogo [Sys. fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) .  
   
- **\@loadOnlyIfNotLoaded** = *acción*  
+ **\@** = *acción* loadOnlyIfNotLoaded  
  Especifica si el archivo de diccionario de sinónimos se carga en las tablas de diccionario de sinónimos internas aun cuando ya se haya cargado. la *acción* es una de las siguientes:  
   
-|Valor|Definición|  
+|Value|Definición|  
 |-----------|----------------|  
-|**0**|Se carga el archivo de diccionario de sinónimos sin tener en cuenta si ya está cargado. Este es el comportamiento predeterminado de **sp_fulltext_load_thesaurus_file**.|  
+|**0**|Se carga el archivo de diccionario de sinónimos sin tener en cuenta si ya está cargado. Éste es el comportamiento predeterminado de **sp_fulltext_load_thesaurus_file**.|  
 |1|Solo se carga el archivo de diccionario de sinónimos si todavía no está cargado.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -58,13 +58,13 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las consultas de texto completo que utilizan el diccionario de sinónimos cargan automáticamente los archivos de sinónimos. Para evitar este primer impacto en el rendimiento de las consultas de texto completo, se recomienda ejecutar **sp_fulltext_load_thesaurus_file**.  
   
- Use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' para actualizar la lista de idiomas registrados en la búsqueda de texto completo.  
+ Use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**" para actualizar la lista de idiomas registrados en la búsqueda de texto completo.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros del rol fijo de servidor **sysadmin** o del administrador del sistema pueden ejecutar el procedimiento almacenado **sp_fulltext_load_thesaurus_file** .  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del administrador del sistema pueden ejecutar el **sp_fulltext_load_thesaurus_file** procedimiento almacenado.  
   
  Solo los administradores del sistema pueden actualizar, modificar o eliminar archivos de diccionarios de sinónimos.  
   
@@ -77,14 +77,14 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 EXEC sys.sp_fulltext_load_thesaurus_file 1033;
 ```  
   
-### <a name="b-load-a-thesaurus-file-only-if-it-is-not-yet-loaded"></a>b. Cargar un archivo de diccionario de sinónimos si todavía no está cargado  
+### <a name="b-load-a-thesaurus-file-only-if-it-is-not-yet-loaded"></a>B. Cargar un archivo de diccionario de sinónimos si todavía no está cargado  
  El ejemplo siguiente analiza y carga el archivo de diccionario de sinónimos en árabe, a menos que ya esté cargado.  
   
 ```sql
 EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;
 ```  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
 [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

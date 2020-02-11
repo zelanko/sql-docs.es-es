@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 0f880ea881b53c2600fb1fffdf7da5d16ab8d423
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056283"
 ---
 # <a name="wideworldimporters-data-generation"></a>Generación de datos de WideWorldImporters
@@ -62,7 +62,7 @@ WideWorldImportersDW puede aumentar arbitrariamente el tamaño de los datos para
 
 Uno de los desafíos es mantener el tamaño de la descarga lo suficientemente pequeño como para descargar fácilmente, pero lo suficientemente grande como para mostrar SQL Server características de rendimiento. Por ejemplo, las ventajas significativas para los índices de almacén de columnas solo se logran cuando se trabaja con un número mayor de filas. 
 
-Puede usar el procedimiento `Application.Configuration_PopulateLargeSaleTable` para aumentar el número de filas de la tabla `Fact.Sale`. Las filas se insertan en el año natural 2012 para evitar colisiones con los datos de World Wide Importers existentes que comienzan el 1 de enero de 2013.
+Puede utilizar el `Application.Configuration_PopulateLargeSaleTable` procedimiento para aumentar el número de filas de la `Fact.Sale` tabla. Las filas se insertan en el año natural 2012 para evitar colisiones con los datos de World Wide Importers existentes que comienzan el 1 de enero de 2013.
 
 ### <a name="procedure-details"></a>Detalles del procedimiento
 
@@ -72,10 +72,10 @@ Puede usar el procedimiento `Application.Configuration_PopulateLargeSaleTable` p
 
 #### <a name="parameters"></a>Parámetros
 
-  `@EstimatedRowsFor2012` **BIGINT** (con un valor predeterminado de 12 millones)
+  `@EstimatedRowsFor2012`**BIGINT** (con un valor predeterminado de 12 millones)
 
 #### <a name="result"></a>Resultado
 
-Aproximadamente el número necesario de filas se insertan en la `Fact.Sale` tabla del año 2012. El procedimiento limita artificialmente el número de filas a 50.000 por día. Puede cambiar esta limitación, pero la limitación le ayuda a evitar sobreinflaciones accidentales de la tabla.
+Aproximadamente el número necesario de filas se insertan en `Fact.Sale` la tabla en el año 2012. El procedimiento limita artificialmente el número de filas a 50.000 por día. Puede cambiar esta limitación, pero la limitación le ayuda a evitar sobreinflaciones accidentales de la tabla.
 
 El procedimiento también aplica la indexación de almacén de columnas en clúster si aún no se ha aplicado.

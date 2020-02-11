@@ -19,20 +19,20 @@ ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 827f6ddca12f15ce0bce1773b9cbe26fae5069dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106230"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Enlazar columnas para su uso con cursores de bloque
-Dado que los cursores de bloque devuelven varias filas, las aplicaciones que usan deben enlazar una matriz de variables a cada columna en lugar de una sola variable. Estas matrices se conocen colectivamente como la *búferes de conjunto de filas*. Estos son los dos estilos de enlace:  
+Dado que los cursores de bloque devuelven varias filas, las aplicaciones que las usan deben enlazar una matriz de variables a cada columna en lugar de a una sola variable. Estas matrices se conocen colectivamente como *búferes de conjunto de filas*. A continuación se muestran los dos estilos de enlace:  
   
--   Enlazar una matriz para cada columna. Esto se denomina *el enlace* porque cada estructura de datos (matriz) contiene datos para una sola columna.  
+-   Enlazar una matriz a cada columna. Esto se denomina *enlace de modo de columna* porque cada estructura de datos (matriz) contiene datos de una sola columna.  
   
--   Definir una estructura que contenga los datos de una fila completa y enlazar una matriz de estas estructuras. Esto se denomina *el enlace* porque cada estructura de datos contiene los datos de una sola fila.  
+-   Defina una estructura que contenga los datos de una fila completa y enlace una matriz de estas estructuras. Esto se denomina *enlace de modo de fila* porque cada estructura de datos contiene los datos de una sola fila.  
   
- Cuando cuando la aplicación enlaza variables de solo a las columnas, se llama a **SQLBindCol** para enlazar las matrices a las columnas. La única diferencia es que las direcciones pasadas son direcciones de matriz, no sola direcciones de variable. La aplicación establece el atributo de instrucción SQL_BIND_BY_COLUMN para especificar si está utilizando enlace de columna o de modo de fila. Si se debe utilizar el enlace de columna o de modo de fila es principalmente una cuestión de preferencia de la aplicación. El enlace podría corresponden más al diseño de la aplicación de datos, en cuyo caso proporcionaría un mejor rendimiento.  
+ Como cuando la aplicación enlaza variables únicas a columnas, llama a **SQLBindCol** para enlazar matrices a columnas. La única diferencia es que las direcciones que se pasan son direcciones de matriz, no direcciones de una sola variable. La aplicación establece el atributo de instrucción SQL_BIND_BY_COLUMN para especificar si utiliza el enlace de modo de columna o de modo de fila. El uso de un enlace de modo de columna o de modo de fila es, en gran medida, una cuestión de preferencia de la aplicación. El enlace de modo de fila podría corresponder más estrechamente con el diseño de datos de la aplicación, en cuyo caso proporcionaría un mejor rendimiento.  
   
  Esta sección contiene los temas siguientes.  
   

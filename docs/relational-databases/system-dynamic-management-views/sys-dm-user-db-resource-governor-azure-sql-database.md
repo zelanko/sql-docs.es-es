@@ -1,5 +1,5 @@
 ---
-title: sys.dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
+title: Sys. dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
@@ -21,33 +21,33 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165919"
 ---
-# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
+# <a name="sysdm_user_db_resource_governance-transact-sql"></a>Sys. dm_user_db_resource_governance (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 Devuelve la configuración real y la capacidad que usan los mecanismos de regulación de recursos en la base de datos o el grupo elástico actual.
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**database_id**|int|IDENTIFICADOR de la base de datos, único dentro de un servidor de Azure SQL Database.|
-|**logical_database_guid**|uniqueidentifier|GUID lógico para la base de datos de usuario que permanece a lo largo de la vida de una base de datos de usuario.  Cambiar el nombre de la base de datos o cambiar su objetivo de nivel de servicio no cambiará este valor.|
-|**physical_database_guid**|uniqueidentifier|GUID físico para una base de datos de usuario que permanece a lo largo de la vida de la instancia física de la base de datos de usuario. Cambiar el objetivo de nivel de servicio de base de datos hará que este valor cambie.|
-|**server_name**|nvarchar|Nombre del servidor lógico.|
-|**database_name**|nvarchar|Nombre de la base de datos lógica.|
-|**slo_name**|nvarchar|Objetivo de nivel de servicio, incluida la generación de hardware.|
+|**logical_database_guid**|UNIQUEIDENTIFIER|GUID lógico para la base de datos de usuario que permanece a lo largo de la vida de una base de datos de usuario.  Cambiar el nombre de la base de datos o cambiar su objetivo de nivel de servicio no cambiará este valor.|
+|**physical_database_guid**|UNIQUEIDENTIFIER|GUID físico para una base de datos de usuario que permanece a lo largo de la vida de la instancia física de la base de datos de usuario. Cambiar el objetivo de nivel de servicio de base de datos hará que este valor cambie.|
+|**server_name**|NVARCHAR|Nombre del servidor lógico.|
+|**database_name**|NVARCHAR|Nombre de la base de datos lógica.|
+|**slo_name**|NVARCHAR|Objetivo de nivel de servicio, incluida la generación de hardware.|
 |**dtu_limit**|int|Límite de DTU de la base de datos (NULL para núcleo virtual).|
 |**cpu_limit**|int|Núcleo virtual límite de base de datos (NULL para las bases de datos de DTU).|
 |**min_cpu**|tinyint|El valor MIN_CPU_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
 |**max_cpu**|tinyint|El valor MAX_CPU_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
 |**cap_cpu**|tinyint|El valor CAP_CPU_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
-|**min_cores**|SMALLINT|Exclusivamente para uso interno.|
-|**max_dop**|SMALLINT|El valor de MAX_DOP del grupo de cargas de trabajo del usuario. Consulte [creación](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)de un grupo de cargas de trabajo.|
+|**min_cores**|smallint|Exclusivamente para uso interno.|
+|**max_dop**|smallint|El valor de MAX_DOP del grupo de cargas de trabajo del usuario. Consulte [creación](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql)de un grupo de cargas de trabajo.|
 |**min_memory**|int|El valor MIN_MEMORY_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
 |**max_memory**|int|El valor MAX_MEMORY_PERCENT del grupo de recursos de la carga de trabajo del usuario. Vea [conceptos de grupos de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
 |**max_sessions**|int|El número máximo de sesiones permitidas en el grupo de cargas de trabajo de usuario.|
@@ -61,21 +61,21 @@ Devuelve la configuración real y la capacidad que usan los mecanismos de regula
 |**initial_db_file_size_in_mb**|bigint|Tamaño predeterminado del nuevo archivo de datos, en MB. Vea [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**log_size_in_mb**|bigint|Tamaño predeterminado del nuevo archivo de registro, en MB. Vea [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**instance_cap_cpu**|int|Exclusivamente para uso interno.|
-|**instance_max_log_rate**|bigint|Límite de velocidad de generación de registros para la instancia de SQL Server, en bytes por segundo. Se aplica a todos los registros generados por la instancia de, incluidos `tempdb` y otras bases de datos del sistema. En un grupo elástico, se aplica al registro generado por todas las bases de datos del grupo.|
+|**instance_max_log_rate**|bigint|Límite de velocidad de generación de registros para la instancia de SQL Server, en bytes por segundo. Se aplica a todos los registros generados por la `tempdb` instancia de, incluidas y otras bases de datos del sistema. En un grupo elástico, se aplica al registro generado por todas las bases de datos del grupo.|
 |**instance_max_worker_threads**|int|Límite de subprocesos de trabajo para la instancia de SQL Server.|
 |**replica_type**|int|Tipo de réplica, donde 0 es principal y 1 es secundario.|
 |**max_transaction_size**|bigint|Espacio de registro máximo usado por cualquier transacción, en KB.|
 |**checkpoint_rate_mbps**|int|Exclusivamente para uso interno.|
 |**checkpoint_rate_io**|int|Exclusivamente para uso interno.|
-|**last_updated_date_utc**|Fecha y hora|Fecha y hora del último cambio o reconfiguración de la configuración, en UTC.|
+|**last_updated_date_utc**|datetime|Fecha y hora del último cambio o reconfiguración de la configuración, en UTC.|
 |**primary_group_id**|int|IDENTIFICADOR de grupo de cargas de trabajo para la carga de trabajo de usuario en la réplica principal y en las réplicas secundarias.|
 |**primary_group_max_workers**|int|Límite de subprocesos de trabajo para el grupo de cargas de trabajo de usuario.|
 |**primary_min_log_rate**|bigint|Velocidad de registro mínima en bytes por segundo en el nivel de grupo de cargas de trabajo de usuario. La regulación de recursos no intentará reducir la velocidad de registro por debajo de este valor.|
 |**primary_max_log_rate**|bigint|Velocidad de registro máxima en bytes por segundo en el nivel de grupo de cargas de trabajo de usuario. La regulación de recursos no permitirá la velocidad de registro por encima de este valor.|
 |**primary_group_min_io**|int|IOPS mínimas para el grupo de cargas de trabajo de usuario. La regulación de recursos no intentará reducir las IOPS por debajo de este valor.|
 |**primary_group_max_io**|int|Número máximo de IOPS para el grupo de cargas de trabajo de usuario. La regulación de recursos no permitirá IOPS por encima de este valor.|
-|**primary_group_min_cpu**|float|Porcentaje mínimo de CPU para el nivel de grupo de cargas de trabajo de usuario. La regulación de recursos no intentará reducir el uso de CPU por debajo de este valor.|
-|**primary_group_max_cpu**|float|Porcentaje máximo de CPU para el nivel de grupo de cargas de trabajo de usuario. La regulación de recursos no permitirá el uso de CPU por encima de este valor.|
+|**primary_group_min_cpu**|FLOAT|Porcentaje mínimo de CPU para el nivel de grupo de cargas de trabajo de usuario. La regulación de recursos no intentará reducir el uso de CPU por debajo de este valor.|
+|**primary_group_max_cpu**|FLOAT|Porcentaje máximo de CPU para el nivel de grupo de cargas de trabajo de usuario. La regulación de recursos no permitirá el uso de CPU por encima de este valor.|
 |**primary_log_commit_fee**|int|Cuota de confirmación del gobierno de velocidad de registro para el grupo de cargas de trabajo de usuario, en bytes. Una cuota de confirmación aumenta el tamaño de cada registro e/s por un valor fijo solo con fines de contabilidad de tasas de registro. No se aumenta la e/s de registro real al almacenamiento.|
 |**primary_pool_max_workers**|int|Límite de subprocesos de trabajo para el grupo de recursos de carga de usuario.|
 |**pool_max_io**|int|Límite máximo de IOPS para el grupo de recursos de la carga de trabajo del usuario.|
@@ -94,7 +94,7 @@ Devuelve la configuración real y la capacidad que usan los mecanismos de regula
 
 Esta vista necesita el permiso VIEW DATABASE STATE.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Observaciones
 
 Para obtener una descripción de la regulación de recursos en Azure SQL Database, consulte [SQL Database límites de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
 
@@ -115,13 +115,13 @@ FROM sys.dm_user_db_resource_governance
 ORDER BY database_name;  
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Regulador de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
-- [Sys. dm_resource_governor_resource_pools (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)
-- [Sys. dm_resource_governor_workload_groups (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
+- [sys.dm_resource_governor_resource_pools (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)
+- [sys.dm_resource_governor_workload_groups (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
 - [Sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database)
-- [Sys. dm_resource_governor_workload_groups_history_ex (Azure SQL Database)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
+- [sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
 - [Gobierno de velocidad de registro de transacciones](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [Límites de recursos de DTU de una sola base de datos](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
 - [Límites de recursos núcleo virtual de base de datos única](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

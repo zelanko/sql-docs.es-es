@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 58209d617d7978ff4ed6da486bd5c89c076c05af
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787416"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLColumns** devuelve SQL_SUCCESS si existen o no valores para los parámetros *nombrecatálogo*, *TableName*o *columnName* . **SQLFetch** devuelve SQL_NO_DATA si se usan valores no válidos en estos parámetros.  
+  **SQLColumns** devuelve SQL_SUCCESS si existen o no valores para los parámetros *nombrecatálogo*, *TableName*o *columnName* . **SQLFetch** devuelve SQL_NO_DATA cuando se usan valores no válidos en estos parámetros.  
   
 > [!NOTE]  
 >  Para los tipos de valores grandes, todos los parámetros de longitud se devolverán con un valor de SQL_SS_LENGTH_UNLIMITED.  
@@ -37,10 +37,10 @@ ms.locfileid: "73787416"
   
  La tabla siguiente muestra las columnas devueltas por el conjunto de resultados:  
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |DATA_TYPE|Devuelve SQL_VARCHAR, SQL_VARBINARY o SQL_WVARCHAR para los tipos de datos **VARCHAR (Max)** .|  
-|TYPE_NAME|Devuelve "VARCHAR", "varbinary" o "nvarchar" para los tipos de datos **VARCHAR (Max)** , **varbinary (Max)** y **nvarchar (Max)** .|  
+|TYPE_NAME|Devuelve "VARCHAR", "varbinary" o "nvarchar" para los tipos de datos **VARCHAR (Max)**, **varbinary (Max)** y **nvarchar (Max)** .|  
 |COLUMN_SIZE|Devuelve SQL_SS_LENGTH_UNLIMITED para los tipos de datos **VARCHAR (Max)** que indican que el tamaño de la columna es ilimitado.|  
 |BUFFER_LENGTH|Devuelve SQL_SS_LENGTH_UNLIMITED para los tipos de datos **VARCHAR (Max)** que indican que el tamaño del búfer es ilimitado.|  
 |SQL_DATA_TYPE|Devuelve SQL_VARCHAR, SQL_VARBINARY o SQL_WVARCHAR para los tipos de datos **VARCHAR (Max)** .|  
@@ -56,42 +56,42 @@ ms.locfileid: "73787416"
   
  Para el UDT de los parámetros, puede utilizar los nuevos descriptores específicos del controlador definidos anteriormente para obtener o establecer las propiedades de metadatos adicionales de un UDT, en caso de que el servidor devuelva o requiera esta información.  
   
- Cuando un cliente se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y llama a SQLColumns, el uso de valores NULL o comodín para el parámetro de entrada del catálogo no devolverá información de otros catálogos. En su lugar, solo se devolverá información sobre el catálogo actual. El cliente puede llamar primero a SQLTables para determinar en qué catálogo se encuentra la tabla deseada. A continuación, el cliente puede usar ese valor de catálogo para el parámetro de entrada de catálogo en su llamada a SQLColumns para recuperar información acerca de las columnas de esa tabla.  
+ Cuando un cliente se conecta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a y llama a SQLColumns, el uso de valores NULL o comodín para el parámetro de entrada del catálogo no devolverá información de otros catálogos. En su lugar, solo se devolverá información sobre el catálogo actual. El cliente puede llamar primero a SQLTables para determinar en qué catálogo se encuentra la tabla deseada. A continuación, el cliente puede usar ese valor de catálogo para el parámetro de entrada de catálogo en su llamada a SQLColumns para recuperar información acerca de las columnas de esa tabla.  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>Parámetros de SQLColumns y con valores de tabla  
  El conjunto de resultados devuelto por SQLColumns depende de la configuración de SQL_SOPT_SS_NAME_SCOPE. Para obtener más información, vea [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Se han agregado las columnas siguientes para los parámetros con valores de tabla:  
   
-|Nombre de columna|Tipo de datos|Contenido|  
+|Nombre de la columna|Tipo de datos|Contenido|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|Para una columna de TABLE_TYPE, este es SQL_TRUE si se trata de una columna calculada; de lo contrario, SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE si se trata de una columna de identidad; de lo contrario, SQL_FALSE.|  
   
- Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros &#40;con&#41;valores de tabla ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-enhanced-date-and-time-features"></a>Compatibilidad de SQLColumns con las características mejoradas de fecha y hora  
  Para obtener información sobre los valores devueltos para los tipos de fecha y hora, vea [metadatos de catálogo](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
   
- Para obtener más información, vea [mejoras &#40;de fecha y&#41;hora ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, vea [mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>Compatibilidad de SQLColumns con UDT CLR grandes  
- **SQLColumns** admite tipos definidos por el usuario (UDT) CLR grandes. Para obtener más información, vea [ &#40;tipos CLR grandes definidos por el&#41;usuario ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColumns** admite tipos definidos por el usuario (UDT) CLR grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Compatibilidad de SQLColumns con columnas dispersas  
- Se han agregado dos columnas específicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al conjunto de resultados para SQLColumns:  
+ Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] han agregado dos columnas específicas al conjunto de resultados para SQLColumns:  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|Si la columna es una columna dispersa, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Si la columna es la **COLUMN_SET** columna, se SQL_TRUE; de lo contrario, SQL_FALSE.|  
   
- De acuerdo con la especificación de ODBC, SS_IS_SPARSE y SS_IS_COLUMN_SET aparecen antes de todas las columnas específicas del controlador que se agregaron a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versiones anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]y después de todas las columnas asignadas por el propio ODBC.  
+ De acuerdo con la especificación de ODBC, SS_IS_SPARSE y SS_IS_COLUMN_SET aparecen antes de todas las columnas específicas del controlador que se agregaron a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]versiones anteriores a y después de todas las columnas asignadas por el propio ODBC.  
   
  El conjunto de resultados devuelto por SQLColumns depende de la configuración de SQL_SOPT_SS_NAME_SCOPE. Para obtener más información, vea [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
- Para obtener más información sobre las columnas dispersas en ODBC, vea [las columnas dispersas &#40;admiten ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Para obtener más información sobre las columnas dispersas en ODBC, vea [compatibilidad con columnas Dispersas &#40;odbc&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="see-also"></a>Vea también  
- [SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336) (  de la función)  
- [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQLColumns (función)](https://go.microsoft.com/fwlink/?LinkId=59336)   
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

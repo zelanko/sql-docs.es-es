@@ -1,5 +1,5 @@
 ---
-title: Comprobación de migración y las restricciones Foreign Key | Microsoft Docs
+title: Migración de restricciones check y Foreign Key | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774937"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Migrar restricciones CHECK y de clave externa
@@ -32,7 +32,7 @@ ms.locfileid: "62774937"
   
  Use esta solución alternativa cuando la integridad lógica de los datos sea fundamental para la exactitud y sea probable que haya modificaciones que infrinjan una restricción. Sin embargo, para garantizar la integridad, todas las modificaciones de datos deben realizarse mediante procedimientos almacenados que incluyan estos cumplimientos. Las modificaciones realizadas con consultas ad hoc y otros procedimientos almacenados no aplicarán estas restricciones y, por tanto, pueden infringirlas sin mostrar ninguna advertencia.  
   
-## <a name="sample-code"></a>Código muestra  
+## <a name="sample-code"></a>Código de ejemplo  
  Los ejemplos siguientes se basan en la base de datos AdventureWorks2012. En concreto, estos ejemplos se basan en la tabla [Sales].[SalesOrderDetail] y sus restricciones CHECK y de clave externa asociadas además del índice único.  
   
  Los procedimientos almacenados especificados aquí son para operaciones de inserción únicamente. Los procedimientos almacenados para las operaciones de actualización y eliminación deben tener estructuras similares.  
@@ -240,7 +240,7 @@ END CATCH
 END  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Migrar a OLTP en memoria](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

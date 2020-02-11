@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400620"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Encendido o apagado del dispositivo para el sistema de plataforma de análisis
@@ -107,6 +107,6 @@ Antes de apagar el dispositivo, debe finalizar toda la actividad en el dispositi
 ### <a name="to-verify-the-appliance-health"></a>Para comprobar el estado del dispositivo  
 Una vez iniciado el dispositivo, abra la **consola de administración** y compruebe en la página de estado las alertas que podrían indicar condiciones de error. Para más información, consulte [supervisión del dispositivo mediante la consola de administración &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Tareas de administración de dispositivos &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

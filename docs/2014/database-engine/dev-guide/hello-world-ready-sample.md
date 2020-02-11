@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637654"
 ---
 # <a name="hello-world-ready-sample"></a>Ejemplo de Hola a todos preparado
@@ -30,12 +30,13 @@ ms.locfileid: "73637654"
   
  El código fuente y el ensamblado para el procedimiento almacenado de CLR en sí no cambian. Se proporciona un script `build.cmd` que muestra cómo compilar y vincular los ensamblados de recursos. Aunque el código fuente de la aplicación crea un administrador de recursos basado en el ensamblado que se ejecuta en el momento, no es necesario incrustar los recursos que no dependen de la referencia cultural en el archivo DLL que contiene el procedimiento almacenado. El `System.Resources.NeutralResourcesLanguage attribute` permite que los recursos que no dependen de una referencia cultural existan en un archivo DLL satélite. Es mucho mejor usar un archivo DLL independiente con este fin, de modo que, cuando deba agregarse o cambiarse un texto localizado, no sea necesario cambiar el archivo DLL principal que contiene el procedimiento almacenado CLR. Esto resulta especialmente útil para tipos CLR definidos por el usuario que podrían tener columnas y otras dependencias que dificultarían la acción de quitar y volver a agregar el tipo. Normalmente, las versiones de archivo DLL satélite deben ser idénticas a la versión del ensamblado principal. Sin embargo, se puede usar el atributo `SatelliteContractVersion` para permitir la actualización del ensamblado principal sin actualizar también los ensamblados satélite. Para obtener más información, vea la clase `ResourceManager` en la documentación de Microsoft .NET.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Este ejemplo solo funciona con SQL Server 2005 y versiones posteriores.  
   
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -154,7 +155,7 @@ ms.locfileid: "73637654"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>Código muestra  
+## <a name="sample-code"></a>Código de ejemplo  
  A continuación se muestran las listas de código para este ejemplo.  
   
  C#  
@@ -450,7 +451,7 @@ USE master;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenarios de uso y ejemplos para la integración de Common Language Runtime &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

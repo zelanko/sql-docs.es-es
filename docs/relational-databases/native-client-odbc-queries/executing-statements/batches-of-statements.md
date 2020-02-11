@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19efcc8b4381694177d0ec3d64376368e8d23a7d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779768"
 ---
 # <a name="batches-of-statements"></a>Lotes de instrucciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Un lote de instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] contiene dos o más instrucciones, separadas por un punto y coma (;), integradas en una sola cadena que se pasa a la función **SQLExecDirect** o [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Por ejemplo:  
+  Un lote de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones contiene dos o más instrucciones, separadas por un punto y coma (;), integradas en una sola cadena que se pasa a la función **SQLExecDirect** o [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Por ejemplo:  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -47,7 +47,7 @@ szSqlState = "01S02", pfNativeError = 0
 szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type changed."  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecutar instrucciones &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

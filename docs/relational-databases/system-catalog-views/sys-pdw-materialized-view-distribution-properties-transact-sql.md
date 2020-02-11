@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 5dca3564e8e2ccc83f0968d42c636112880f6e56
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401684"
 ---
 # <a name="syspdw_materialized_view_distribution_properties-transact-sql-preview"></a>Sys. pdw_materialized_view_distribution_properties (Transact-SQL) (versión preliminar)
@@ -27,7 +27,7 @@ Muestra las vistas materializadas de información de distribución.
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------| 
-|object_id|**Inter**|IDENTIFICADOR de la vista materializada para la que se especificaron las propiedades.| 
+|object_id|**int**|IDENTIFICADOR de la vista materializada para la que se especificaron las propiedades.| 
 |distribution_policy |**tinyint**|2 = HASH</br>4 = ROUND_ROBIN|  
 |distribution_policy_desc |**nvarchar (60)**|HASH, ROUND_ROBIN|  
  
@@ -35,7 +35,7 @@ Muestra las vistas materializadas de información de distribución.
 
 Necesita el permiso VIEW DATABASE STATE.
  
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [CREAR una vista MATERIALIZAda como SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [MODIFICAR vista MATERIALIZAda &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   

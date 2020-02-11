@@ -13,18 +13,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642713"
 ---
-# <a name="summary-configuring-permissions-on-database-objects"></a>Resumen: Configuración de permisos en objetos de base de datos
+# <a name="summary-configuring-permissions-on-database-objects"></a>Resumen: Configurar permisos en objetos de base de datos
   Los inicios de sesión proporcionan a los usuarios permisos para conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los usuarios son inicios de sesión que pueden tener acceso a una base de datos específica. Use la instrucción GRANT para conceder a los usuarios permisos para leer y tener acceso a los datos y cambiarlos.  
   
  Una vista es una sola instrucción SELECT y, para el usuario, tiene el aspecto de una tabla. Un procedimiento almacenado es una o varias instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que se ejecutan como un lote.  
   
 ## <a name="next-lesson-in-tutorial"></a>Siguiente lección del tutorial  
- [Lección 3: Eliminación de objetos de base de datos](lesson-3-1-deleting-database-objects.md)  
+ [Lección 3: Eliminar objetos de base de datos](lesson-3-1-deleting-database-objects.md)  
   
   

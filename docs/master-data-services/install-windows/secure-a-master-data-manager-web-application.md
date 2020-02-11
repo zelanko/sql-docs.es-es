@@ -10,10 +10,10 @@ ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729173"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Proteger una aplicación web Master Data Services
@@ -25,7 +25,7 @@ ms.locfileid: "73729173"
 > [!NOTE]  
 >  La aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] puede usa HTTP o HTTPS, pero no ambos.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar el procedimiento:  
   
 -   Debe ser administrador en el servidor web donde está instalado [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
@@ -38,7 +38,7 @@ ms.locfileid: "73729173"
   
 2.  En el panel **Conexiones** , debajo de **Sitios**, haga clic en en el sitio que hospeda la aplicación web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
   
-3.  En el panel **Acciones** , haga clic en **Enlaces**.  
+3.  En el panel **Acciones**, haga clic en **Enlaces**.  
   
 4.  Haga clic en **Agregar**.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "73729173"
   
 6.  Seleccione el certificado SSL.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 8.  Opcional. Para quitar HTTP de modo que los usuarios puedan tener acceso al sitio solo con HTTP, en la lista, haga clic en la fila con **http**. Haga clic en **Quitar** y, en el cuadro de diálogo de confirmación, haga clic en **Sí**.  
   
@@ -61,10 +61,10 @@ ms.locfileid: "73729173"
 
 12. Cambie `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` por `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">` para evitar problemas que puedan aparecer en el cliente de Silverlight.
 
-13. Guarde el archivo y ciérrelo. Si obtiene un error, podría deberse a que ha habilitado UAC. Ahora los usuarios deben poder usar HTTPS para tener acceso al sitio.  
+13. Guarde y cierre el archivo. Si obtiene un error, podría deberse a que ha habilitado UAC. Ahora los usuarios deben poder usar HTTPS para tener acceso al sitio.  
 
   
-## <a name="see-also"></a>Vea también  
- [Crear una aplicación web de Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Cree una aplicación Web de Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

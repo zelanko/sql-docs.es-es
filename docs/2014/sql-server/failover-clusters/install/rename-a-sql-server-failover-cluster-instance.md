@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126037"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Cambiar el nombre de una instancia de clúster de conmutación por error de SQL Server
@@ -29,7 +29,8 @@ ms.locfileid: "63126037"
   
  Antes de comenzar el proceso de cambio de nombre, revise los siguientes puntos.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no admite el cambio de nombre de los servidores que participan en la replicación, excepto si se utiliza el trasvase de registros con la replicación. Se puede cambiar el nombre del servidor secundario del trasvase de registros si se pierde el servidor principal de manera permanente. Para obtener más información, vea [Trasvase de registros y replicación &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no admite el cambio de nombre de los servidores que participan en la replicación, excepto si se utiliza el trasvase de registros con la replicación. Se puede cambiar el nombre del servidor secundario del trasvase de registros si se pierde el servidor principal de manera permanente. Para obtener más información, vea [Trasvase de registros y replicación &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
 -   Cuando se cambia el nombre de un servidor virtual configurado para utilizar la creación de reflejo de la base de datos, debe desactivarse la creación de reflejo de la base de datos antes de realizar la operación de cambio de nombre y, después, volver a establecer la creación de reflejo de la base de datos con el nombre de servidor virtual nuevo. Los metadatos para la creación de reflejo de la base de datos no se actualizan automáticamente con el nuevo nombre del servidor virtual.  
   
@@ -63,15 +64,15 @@ ms.locfileid: "63126037"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Consideraciones adicionales después de la operación de cambio de nombre  
  Después de cambiar el nombre de red en clúster del clúster de conmutación por error, hay que comprobar y seguir las siguientes instrucciones para conseguir que todos los escenarios del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]funcionen.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Después de cambiar el nombre de red de un [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] instancia mediante la herramienta de administrador de clústeres de Windows, futura de actualización de clúster de conmutación por error o desinstalar podría producir un error. Para resolver este problema, actualice el **ClusterName** entrada del registro siguiendo las instrucciones que aparecen en la sección resolución de [esto](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002).  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Después de cambiar el nombre de red de [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] una instancia de clúster de conmutación por error mediante la herramienta Administrador de clústeres de Windows, es posible que se produzca un error en la operación de actualización o desinstalación. Para resolver este problema, actualice la entrada del registro **ClusterName** siguiendo las instrucciones de la sección resolución dehttps://go.microsoft.com/fwlink/?LinkId=244002) [este](https://go.microsoft.com/fwlink/?LinkId=244002) (.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servicio del agente:** Compruebe y realice las acciones adicionales siguientes para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio del agente:  
+ Servicio del agente: ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** Compruebe y realice las acciones adicionales siguientes para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el servicio del agente:  
   
 -   Corrija la configuración del Registro si el Agente SQL se configura para el reenvío de eventos. Para obtener más información, vea [Designar un servidor de reenvío de eventos &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
 -   Corregir los nombres de instancia de los servidores de destino (TSX) y el servidor maestro (MSX) cuando se cambie el nombre de red en clúster o equipos. Para obtener más información, vea los temas siguientes:  
   
-    -   [Dar de baja varios servidores de destino desde un servidor maestro](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [Defect Multiple Target Servers from a Master Server](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [Crear un entorno multiservidor](../../../ssms/agent/create-a-multiserver-environment.md)  
   
@@ -83,7 +84,7 @@ ms.locfileid: "63126037"
   
 -   Actualizar los pasos de trabajo que dependen del nombre de servidor. Para más información, consulte [Manage Job Steps](../../../ssms/agent/manage-job-steps.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

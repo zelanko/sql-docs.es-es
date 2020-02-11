@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022514"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Consideraciones y limitaciones de diseño de los publicadores de Oracle
-  La publicación de una base de datos de Oracle se diseña para que funcione casi idénticamente a la publicación de una base de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No obstante, debe tener en cuenta las siguientes limitaciones y problemas:  
+  La publicación de una base de datos de Oracle se diseña para que funcione casi idénticamente a la publicación de una base de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. No obstante, debe tener en cuenta las siguientes limitaciones y problemas:  
   
 -   La opción de puerta de enlace de Oracle proporciona mejor rendimiento que la opción Completo. No obstante, esta opción no se puede utilizar para publicar la misma tabla en varias publicaciones transaccionales. Una tabla puede aparecer como máximo en una publicación transaccional y en cualquier número de publicaciones de instantánea. Si necesita publicar la misma tabla en varias publicaciones transaccionales, elija la opción Completo de Oracle.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "63022514"
   
 -   Las publicaciones transaccionales estándar admiten tablas de hasta 1000 columnas. Las publicaciones transaccionales de Oracle admiten 995 columnas (la replicación agrega cinco columnas a cada tabla publicada).  
   
--   Se agregan cláusulas de intercalación a las instrucciones CREATE TABLE para habilitar las comparaciones que distinguen entre mayúsculas y minúsculas, que es importante para las claves principales y las restricciones únicas. Este comportamiento se controla con la opción de esquema 0x1000, que se especifica con el parámetro **@schema_option** de [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
+-   Se agregan cláusulas de intercalación a las instrucciones CREATE TABLE para habilitar las comparaciones que distinguen entre mayúsculas y minúsculas, que es importante para las claves principales y las restricciones únicas. Este comportamiento se controla con la opción de esquema 0x1000, que se especifica con **@schema_option** el parámetro de [sp_addarticle &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
 -   Si utiliza procedimientos almacenados para configurar o mantener un publicador de Oracle, no coloque los procedimientos dentro de una transacción explícita. El servidor vinculado que se utiliza para conectar al publicador de Oracle no admite dicha transacción.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "63022514"
   
 -   La cuenta con la que el Agente de instantáneas y el Agente de registro del LOG realizan las conexiones del distribuidor al publicador se especifica mediante uno de los siguientes métodos:  
   
-    -   El parámetro **@security_mode** de [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) (también se pueden especificar valores para **@login** y **@password** si se usa la autenticación de Oracle Authentication)  
+    -   Parámetro de [sp_adddistpublisher &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) (también se especifican valores **@login** para **@password** y si se utiliza la autenticación de Oracle) **@security_mode**  
   
     -   En el cuadro del diálogo **Conectar al servidor** en SQL Server Management Studio, que se utiliza al configurar el publicador de Oracle en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -157,15 +157,15 @@ ms.locfileid: "63022514"
   
 -   La cuenta con la que el Agente de instantáneas y el Agente de registro del LOG realizan las conexiones no se puede cambiar con [sp_changedistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) ni a través de una hoja de propiedades, pero se puede cambiar la contraseña.  
   
--   Si se especifica un valor de 1 (Autenticación de Windows integrada) para el parámetro **@security_mode** de [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql):  
+-   Si especifica un valor de 1 (autenticación integrada de Windows) para el **@security_mode** parámetro de [sp_adddistpublisher &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql):  
   
-    -   La cuenta de proceso y la contraseña usadas para el Agente de instantáneas y el Agente de registro del LOG (los parámetros **@job_login** y **@job_password** de [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) y [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)) deben ser los mismos que la cuenta y contraseña usadas para conectar al publicador de Oracle.  
+    -   La cuenta de proceso y la contraseña que se usan para el Agente de instantáneas y **@job_login** el **@job_password** agente de registro del log (los parámetros y de [sp_addpublication_snapshot &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) y [sp_addlogreader_agent &#40;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)) deben ser los mismos que la cuenta y la contraseña que se usan para conectarse al publicador de Oracle.  
   
-    -   No se puede cambiar el parámetro **@job_login** a través de [sp_changepublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) o [sp_changelogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql), pero se puede cambiar la contraseña.  
+    -   No se puede cambiar **@job_login** el parámetro a través de [sp_changepublication_snapshot &#40;&#41;de Transact-sql](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) o [sp_changelogreader_agent &#40;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql)&#41;, pero se puede cambiar la contraseña.  
   
- Para obtener más información acerca de la seguridad de replicación, vea [seguridad de replicación de SQL Server](../security/view-and-modify-replication-security-settings.md).  
+ Para obtener más información sobre la seguridad de la replicación, consulte [replicación de SQL Server Security](../security/view-and-modify-replication-security-settings.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Consideraciones administrativas para los publicadores de Oracle](administrative-considerations-for-oracle-publishers.md)   
  [Configurar un publicador de Oracle](configure-an-oracle-publisher.md)   
  [Información general de la publicación de Oracle](oracle-publishing-overview.md)  

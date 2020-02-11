@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_continuous_copy_status
+title: sys.dm_continuous_copy_status
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d0bda2d1851d7ec7900a23ad6203d4f85beb73f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844501"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
@@ -35,7 +35,7 @@ ms.locfileid: "73844501"
 Si usa SQL Database V12, debe usar [Sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (porque *Sys. dm_continuous_copy_status* solo se aplica a V11).
 
   
-|Column Name|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|Identificador único de la base de datos de réplica.|  
 |**partner_server**|**sysname**|Nombre del servidor de SQL Database vinculado.|  
@@ -51,15 +51,15 @@ Si usa SQL Database V12, debe usar [Sys. dm_geo_replication_link_status](../../r
 ## <a name="permissions"></a>Permisos  
  Para recuperar datos, es necesario pertenecer al rol de base de datos **db_owner** . El usuario DBO, los miembros del rol de base de datos **dbmanager** y el inicio de sesión SA también pueden consultar esta vista.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  La vista **Sys. dm_continuous_copy_status** se crea en la base de datos de **recursos** y está visible en todas las bases de datos, incluida la maestra lógica. Sin embargo, al consultar esta vista en la maestra lógica se devuelve un conjunto vacío.  
   
  Si la relación de copia continua se termina en una base de datos, la fila de esa base de datos en la vista **Sys. dm_continuous_copy_status** desaparece.  
   
  Al igual que la vista **Sys. dm_database_copies** , **Sys. dm_continuous_copy_status** refleja el estado de la relación de copia continua en la que la base de datos es una base de datos principal o secundaria activa. A diferencia de **Sys. dm_database_copies**, **Sys. dm_continuous_copy_status** contiene varias columnas que proporcionan detalles sobre las operaciones y el rendimiento. Estas columnas incluyen **last_replication**y **replication_lag_sec**.  
   
-## <a name="see-also"></a>Vea también  
- [Sys. dm_database_copies &#40;Azure SQL Database&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [Procedimientos &#40;almacenados de replicación geográfica activa TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
+## <a name="see-also"></a>Consulte también  
+ [Sys. dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
+ [Procedimientos almacenados de replicación geográfica activa &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   
   

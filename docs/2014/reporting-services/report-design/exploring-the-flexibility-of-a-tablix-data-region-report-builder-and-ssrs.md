@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e2ed258caa8019b13ddd8600a5ada2956913977
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105949"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Explorar la flexibilidad de una región de datos Tablix (Generador de informes y SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66105949"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="changing-a-table-to-a-matrix"></a>Convertir una tabla en una matriz  
- De forma predeterminada, una tabla tiene filas de detalles que muestran los valores del conjunto de datos de informe. Normalmente, una tabla incluye grupos de filas que organizan los datos detallados por grupo y, a continuación, incluye valores agregados basados en cada uno de los grupos. Para convertir la tabla en una matriz, agregue grupos de columnas. Normalmente, se quitará el grupo de detalles cuando la región de datos tenga grupos de filas y de columnas con el fin de mostrar solo los valores de resumen para los grupos. Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
+ De forma predeterminada, una tabla tiene filas de detalles que muestran los valores del conjunto de datos de informe. Normalmente, una tabla incluye grupos de filas que organizan los datos detallados por grupo y, a continuación, incluye valores agregados basados en cada uno de los grupos. Para convertir la tabla en una matriz, agregue grupos de columnas. Normalmente, se quitará el grupo de detalles cuando la región de datos tenga grupos de filas y de columnas con el fin de mostrar solo los valores de resumen para los grupos. Para obtener más información, vea [Agregar o eliminar un grupo en una región de datos &#40;generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
  Por definición, cuando se crea una matriz, se agrega una celda de la esquina del Tablix. Puede combinar las celdas de esta área y agregar una etiqueta. Para más información, vea [Combinar celdas en una región de datos &#40;Generador de informes y SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66105949"
 ## <a name="adding-an-adjacent-details-group"></a>Agregar un grupo de detalles adyacente  
  De forma predeterminada, el grupo de detalles es el grupo secundario más interior de una jerarquía de grupos. No se puede anidar un grupo debajo del grupo de detalles. Puede crear grupos de detalles adyacentes adicionales; por ejemplo, para mostrar los 5 productos más vendidos y los 5 menos vendidos. Dado que puede agregar expresiones de filtro y de ordenación en cada grupo, puede mostrar dos vistas de datos detallados del mismo conjunto de datos en una región de datos Tablix. Para más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](understanding-groups-report-builder-and-ssrs.md), [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) y [Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tablas &#40;Generador de informes y SSRS&#41;](tables-report-builder-and-ssrs.md)   

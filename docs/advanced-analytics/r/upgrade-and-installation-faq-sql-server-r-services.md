@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6357f98627842ab790b494cf1b4a1f9b2110ec9c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727349"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Preguntas más frecuentes sobre actualización e instalación de SQL Server Machine Learning o R Server
@@ -72,7 +72,7 @@ Ya no se admite la actualización de versiones preliminares de SQL Server 2016
 
 Estas versiones se instalaron con versiones preliminares de SQL Server 2016.
 
-| Versión | Compilar         |
+| Versión | Build         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |
@@ -163,7 +163,7 @@ Si tiene problemas para quitar una versión anterior, puede que deba editar el R
   
     -   5A2A1571-B8CD-4AAF-9303-8DF463DABE5A        (para 7.5.0)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [SQL Server Machine Learning Services (en la base de datos)](../r/sql-server-r-services.md)
 

@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706852"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200395"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Problemas conocidos de SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -598,7 +598,7 @@ En SQL Server 2019, si intenta usar **pip**. Por ejemplo:
 
 Recibirá este error:
 
-> *bash: /opt/mssql/mlservices/runtime/python/bin/pip: /opt/microsoft/mlserver/9.4.7/bin/python/python: bad interpreter: No such file or directory* (bash: /opt/mssql/mlservices/runtime/python/bin/pip: /opt/microsoft/mlserver/9.4.7/bin/python/python: intérprete incorrecto: no se ha encontrado el archivo o directorio)
+> *bash: /opt/mssql/mlservices/runtime/python/bin/pip: /opt/microsoft/mlserver/9.4.7/bin/python/python: bad interpreter: no se encontró el archivo o directorio*,
 
 **Solución alternativa**
 
@@ -703,7 +703,7 @@ Si tiene una licencia existente para Revolution R Enterprise, debe colocarla en 
 
 Algunas versiones preliminares de [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] incluyen un entorno de desarrollo de R para Windows creado mediante Revolution Analytics. Esta herramienta ya no se proporciona y no es compatible.
 
-Para asegurar la compatibilidad con [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], se recomienda instalar Microsoft R Client en su lugar. [Herramientas de R para Visual Studio](https://www.visualstudio.com/vs/rtvs/) y [Visual Studio Code](https://code.visualstudio.com/) también admiten las soluciones de Microsoft R.
+Para asegurar la compatibilidad con [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], se recomienda instalar Microsoft R Client en su lugar. [Herramientas de R para Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019) y [Visual Studio Code](https://code.visualstudio.com/) también admiten las soluciones de Microsoft R.
 
 ### <a name="2-compatibility-issues-with-sqlite-odbc-driver-and-revoscaler"></a>2. Problemas de compatibilidad con el controlador ODBC de SQLite y RevoScaleR
 

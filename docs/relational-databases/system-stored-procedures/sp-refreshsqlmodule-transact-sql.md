@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982769"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "73982769"
 
   Actualiza los metadatos para el procedimiento almacenado no enlazado a un esquema específico, función definida por el usuario, vista, desencadenador DML, desencadenador DDL de nivel de la base de datos o desencadenador DDL de nivel de servidor en la base de datos actual. Los metadatos persistentes de estos objetos, como los tipos de datos de los parámetros, pueden quedarse obsoletos debido a los cambios en sus objetos subyacentes.
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,9 +56,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'module\_name'` es el nombre del procedimiento almacenado, la función definida por el usuario, la vista, el desencadenador DML, el desencadenador DDL de nivel de base de datos o el desencadenador DDL de nivel de servidor. *MODULE_NAME* no puede ser un procedimiento almacenado de Common Language Runtime (CLR) o una función CLR. *MODULE_NAME* no se pueden enlazar a un esquema. *MODULE_NAME* es de tipo **nvarchar**y no tiene ningún valor predeterminado. *MODULE_NAME* puede ser un identificador de varias partes, pero solo puede hacer referencia a objetos de la base de datos actual.  
+`[ @name = ] 'module\_name'`Es el nombre del procedimiento almacenado, la función definida por el usuario, la vista, el desencadenador DML, el desencadenador DDL de nivel de base de datos o el desencadenador DDL de nivel de servidor. *MODULE_NAME* no puede ser un procedimiento almacenado de Common Language Runtime (CLR) o una función CLR. *MODULE_NAME* no se pueden enlazar a un esquema. *MODULE_NAME* es de tipo **nvarchar**y no tiene ningún valor predeterminado. *MODULE_NAME* puede ser un identificador de varias partes, pero solo puede hacer referencia a objetos de la base de datos actual.  
   
-`[ , @namespace = ] ' \<class> '` es la clase del módulo especificado. Cuando *MODULE_NAME* es un desencadenador DDL, se requiere \<clase >. *\<clase >* es **nvarchar**(20). Las entradas válidas son:  
+`[ , @namespace = ] ' \<class> '`Es la clase del módulo especificado. Cuando *MODULE_NAME* es un desencadenador DDL \<, se requiere la clase>. la>de clase es **nvarchar**(20). * \<* Las entradas válidas son:  
   
 |||  
 |-|-|  
@@ -68,7 +68,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  **sp_refreshsqlmodule** debe ejecutarse cuando se realicen cambios en los objetos subyacentes del módulo que afecten a su definición. De lo contrario, el módulo podría producir resultados inesperados cuando se consulta o se invoca. Para actualizar una vista, puede usar **sp_refreshsqlmodule** o **sp_refreshview** con los mismos resultados.  
   
  **sp_refreshsqlmodule** no afecta a ningún permiso, propiedad extendida o opciones set asociadas al objeto.  
@@ -143,7 +143,7 @@ SELECT dbo.to_upper('abcdefgh');
 GO  
 ```  
   
-### <a name="b-refreshing-a-database-level-ddl-trigger"></a>b. Actualizar un desencadenador DDL de nivel de la base de datos  
+### <a name="b-refreshing-a-database-level-ddl-trigger"></a>B. Actualizar un desencadenador DDL de nivel de la base de datos  
  El ejemplo siguiente actualiza un desencadenador DDL de nivel de la base de datos.  
   
 ```  
@@ -168,8 +168,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Procedimientos &#40;almacenados de motor de base de datos TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [sp_refreshview &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

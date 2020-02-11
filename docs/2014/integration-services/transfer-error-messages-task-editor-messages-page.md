@@ -1,5 +1,5 @@
 ---
-title: Transferir el Editor de tareas de mensajes de Error (página mensajes) | Microsoft Docs
+title: Editor de la tarea transferir mensajes de error (página mensajes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055039"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Editor de la tarea Transferir mensajes de error (página Mensajes)
-  Use la página**Mensajes** del cuadro de diálogo **Editor de la tarea Transferir mensajes de error** para especificar propiedades para copiar uno o varios mensajes de error definidos por el usuario de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a otra. Para obtener más información acerca de esta tarea, vea [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  
+  Use la página **Mensajes** del cuadro de diálogo **Editor de la tarea Transferir mensajes de error** para especificar propiedades para copiar uno o varios mensajes de error definidos por el usuario de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a otra. Para obtener más información acerca de esta tarea, vea [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  
   
 ## <a name="options"></a>Opciones  
  **SourceConnection**  
@@ -39,7 +39,7 @@ ms.locfileid: "66055039"
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**True**|Copiar todos los mensajes definidos por el usuario.|  
 |**False**|Copiar solo los mensajes definidos por el usuario especificados.|  
@@ -56,12 +56,12 @@ ms.locfileid: "66055039"
 > [!NOTE]  
 >  Para poder seleccionar los mensajes de error que se van a copiar, debe especificar el parámetro **SourceConnection** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
- [Editor de la tarea Transferir mensajes de error &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de la tarea transferir mensajes de error &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)   
- [Editor de la tarea Transferir mensajes de error &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)  
+ [Editor de la tarea transferir mensajes de error &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
+ [SMO, administrador de conexiones](connection-manager/smo-connection-manager.md)  
   
   

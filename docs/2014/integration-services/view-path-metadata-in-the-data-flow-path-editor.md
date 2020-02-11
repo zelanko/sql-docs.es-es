@@ -1,5 +1,5 @@
 ---
-title: Ver los metadatos de ruta de acceso en el Editor de rutas de flujo de datos | Microsoft Docs
+title: Ver metadatos de ruta de acceso en el editor de rutas de flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054486"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Ver los metadatos de rutas con el Editor de rutas de flujo de datos
@@ -37,9 +37,9 @@ ms.locfileid: "66054486"
   
 6.  Para copiar los metadatos, haga clic en **Copiar al Portapapeles**.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Rutas de Integration Services](data-flow/integration-services-paths.md)   
  [Flujo de datos](data-flow/data-flow.md)  
   

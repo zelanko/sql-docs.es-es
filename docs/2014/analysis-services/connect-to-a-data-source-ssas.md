@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c1114dd63b9082c6be7486ab5e576a6b8270485
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087340"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>Conectarse a un origen de datos (SSAS)
@@ -24,7 +24,8 @@ ms.locfileid: "66087340"
   
  Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado. También debe tener el proveedor adecuado instalado en el servidor de bases de datos del área de trabajo. Para los servidores de 32 bits (x86), se deben instalar los proveedores de 32 bits. Para los servidores de 64 bits (x64), se deben instalar los proveedores de 64 bits.  
   
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] siempre se ejecuta en un proceso de 32 bits, independientemente de la arquitectura. Cuando ejecute [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] en un equipo de 64 bits, debe tener en cuenta lo siguiente al instalar los proveedores de datos:  
+ 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] siempre se ejecuta en un proceso de 32 bits, independientemente de la arquitectura. Cuando ejecute [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] en un equipo de 64 bits, debe tener en cuenta lo siguiente al instalar los proveedores de datos:  
   
 -   Para los proveedores que admiten la instalación en paralelo de proveedores de 32 y 64 bits, debe instalar los dos proveedores.  
   

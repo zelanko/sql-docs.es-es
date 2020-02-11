@@ -11,10 +11,10 @@ ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0bef34cdd61393e8aaf8ad312428e51affba892c
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728119"
 ---
 # <a name="create-a-master-data-services-database"></a>Crea una base de datos de Master Data Services
@@ -23,7 +23,7 @@ ms.locfileid: "73728119"
 
   Cree una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] cuando necesite una base de datos nueva que sea compatible con la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] y el servicio web de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Para obtener información sobre los requisitos del equipo que hospeda la base de datos, vea [Requisitos de base de datos &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73728119"
   
 -   Configure un plan de mantenimiento para hacer copias de seguridad de la base de datos y de los registros de transacciones. Para obtener más información, vea [Requisitos de base de datos &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Instalar Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

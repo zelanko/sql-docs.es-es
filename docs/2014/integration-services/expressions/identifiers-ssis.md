@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898863"
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)
@@ -112,9 +112,9 @@ ms.locfileid: "62898863"
 > [!IMPORTANT]  
 >  Debe escribir la combinación de espacio de nombres y nombre calificado de la variable entre corchetes para que el evaluador de expresiones reconozca la variable.  
   
- Si el valor de **recuento** en el **usuario** espacio de nombres es 10 y el valor de **recuento** en **MyNamespace** es 2, la expresión se evalúa como `true` porque el evaluador de expresiones reconoce dos variables distintas.  
+ Si el valor de **Count** en el espacio de nombres **User** es 10 y el valor de **Count** en **myNameSpace** es 2, la expresión se evalúa `true` como porque el evaluador de expresiones reconoce dos variables distintas.  
   
- Si los nombres de las variables no son únicos, no se produce un error. El evaluador de expresiones utilizará una sola instancia de la variable para evaluar la expresión y devolverá un resultado incorrecto. Por ejemplo, la siguiente expresión intenta comparar los valores (10 y 2) para dos **recuento** variables, pero la expresión se evalúa como `false` porque el evaluador de expresiones utiliza la misma instancia de la  **Recuento** variable dos veces.  
+ Si los nombres de las variables no son únicos, no se produce un error. El evaluador de expresiones utilizará una sola instancia de la variable para evaluar la expresión y devolverá un resultado incorrecto. Por ejemplo, la siguiente expresión estaba diseñada para comparar los valores (10 y 2) para dos variables de **recuento** independientes, pero la expresión `false` se evalúa como porque el evaluador de expresiones utiliza la misma instancia de la variable **Count** dos veces.  
   
 ```  
 @Count > @Count  

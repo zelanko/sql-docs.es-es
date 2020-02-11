@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ffda3be2194b26b46f9633c3bdf76d60d36ce73c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871927"
 ---
 # <a name="delete-a-database"></a>Eliminar una base de datos
@@ -45,7 +45,7 @@ ms.locfileid: "62871927"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Después de eliminar una base de datos](#FollowUp)  
+-   **Seguimiento:**  [tras eliminar una base de datos](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62871927"
 ####  <a name="Permissions"></a> Permisos  
  Para ejecutar DROP DATABASE, el usuario debe tener, como mínimo, el permiso CONTROL en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-delete-a-database"></a>Para eliminar una base de datos  
   
@@ -97,10 +97,10 @@ DROP DATABASE Sales, NewSales ;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de eliminar una base de datos  
+##  <a name="FollowUp"></a> Seguimiento: tras eliminar una base de datos  
  Hacer una copia de seguridad de la base de datos **maestra** . Si es necesario restaurar la base de datos **maestra** , cualquier base de datos que se haya eliminado después de la última copia de seguridad **maestra** seguirá teniendo referencias en las vistas del catálogo del sistema y puede dar lugar a la aparición de mensajes de error.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e6a5792c7e18013dba5cc4c0963dc6d045410f0
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782918"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Reanudar una base de datos de disponibilidad (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "72782918"
   
      [Seguridad](#Security)  
   
--   **Para reanudar una base de datos secundaria, mediante:**  
+-   **Para reanudar una base de datos secundaria, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,12 +48,12 @@ ms.locfileid: "72782918"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Un comando RESUME realiza la devolución en cuanto haya sido aceptado por la réplica que hospeda la base de datos de destino, pero la reanudación real de la base de datos se produce de forma asincrónica.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe estar conectado a la instancia de servidor que hospeda la base de datos que se va a reanudar.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "72782918"
   
 2.  Reanude la base de datos secundaria utilizando la siguiente instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-hadr):  
   
-     ALTER DATABASE *nombre_base_de_datos* SET HADR RESUME  
+     ALTER DATABASE *database_name* Set HADR resume  
   
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
 
@@ -112,11 +112,11 @@ ms.locfileid: "72782918"
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de PowerShell de SQL Server](../../../powershell/sql-server-powershell-provider.md)  
+-   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Suspender una base de datos de disponibilidad &#40;SQL Server&#41;](suspend-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

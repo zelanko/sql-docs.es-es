@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727137"
 ---
 # <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Tutorial: Implementación de un modelo en Python para clasificar clientes por categorías con SQL Server Machine Learning Services
@@ -33,7 +33,7 @@ En este artículo, aprenderá a:
 > [!div class="checklist"]
 > * Crear un procedimiento almacenado que genere el modelo
 > * Agrupar en clústeres en SQL Server
-> * Usar la información de agrupación en clústeres
+> * Uso de la información de agrupación en clústeres
 
 En la [parte uno](python-clustering-model.md), ha instalado los requisitos previos y ha restaurado la base de datos de ejemplo.
 
@@ -45,7 +45,7 @@ En la [parte tres](python-clustering-model-build.md), ha aprendido a crear y ent
 
 * En la parte cuatro de esta serie de tutoriales, se da por hecho que ha completado los requisitos previos de la [**parte uno**](python-clustering-model.md) y que ha realizado los pasos de la [**parte dos**](python-clustering-model-prepare-data.md) y la [**parte tres**](python-clustering-model-build.md).
 
-## <a name="create-a-stored-procedure-that-generates-the-model"></a>Creación de un procedimiento almacenado que genere el modelo
+## <a name="create-a-stored-procedure-that-generates-the-model"></a>Crear un procedimiento almacenado que genere el modelo
 
 Ejecute el siguiente script de T-SQL para crear el procedimiento almacenado. El procedimiento recrea los pasos que ha desarrollado en las partes uno y dos de esta serie de tutoriales:
 
@@ -173,7 +173,7 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 
 Puede cambiar el valor de **c.cluster** a las direcciones de correo electrónico de retorno de los clientes en otros clústeres.
 
-## <a name="clean-up-resources"></a>Limpiar recursos
+## <a name="clean-up-resources"></a>Limpieza de recursos
 
 Cuando termine este tutorial, puede eliminar la base de datos tpcxbb_1gb de SQL Server.
 

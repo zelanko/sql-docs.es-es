@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_parameter (Transact-SQL) | Microsoft Docs
+title: managed_backup. fn_get_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 18a42273218bb73de55694b9b54877a4f2e0f669
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68140650"
 ---
-# <a name="managedbackupfngetparameter-transact-sql"></a>managed_backup.fn_get_parameter (Transact-SQL)
+# <a name="managed_backupfn_get_parameter-transact-sql"></a>managed_backup. fn_get_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una tabla de 0, 1 o más filas de pares de parámetro y valor.  
@@ -46,11 +46,11 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
   
 ##  <a name="Arguments"></a> Argumentos  
  parameter_name  
- Nombre del parámetro. parameter_name es **nvarchar (128)** . Si se proporciona NULL o una cadena vacía como argumento de la función, se devuelven pares nombre-valor para todos los parámetros de Administración inteligente configurados.  
+ Nombre del parámetro. parameter_name es **nvarchar (128)**. Si se proporciona NULL o una cadena vacía como argumento de la función, se devuelven pares nombre-valor para todos los parámetros de Administración inteligente configurados.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |parameter_name|NVARCHAR(128)|Nombre del parámetro. A continuación se muestra una lista de los parámetros devueltos:<br/><br/>**FileRetentionDebugXevent**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**SSMBackup2WANotificationEmailIds**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**StorageOperationDebugXevent**|  
 |parameter_value|NVARCHAR(128)|Valor establecido actual del parámetro.|  
@@ -81,7 +81,7 @@ FROM managed_backup.fn_get_parameter ('SSMBackup2WANotficationEmailIds')
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

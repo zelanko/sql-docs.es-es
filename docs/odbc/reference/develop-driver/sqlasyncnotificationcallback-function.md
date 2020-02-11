@@ -1,5 +1,5 @@
 ---
-title: SQLAsyncNotificationCallback (función) | Microsoft Docs
+title: Función SQLAsyncNotificationCallback | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,24 +11,24 @@ ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96073b8d5e68d10caaff268aae4c5af60554ef76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915541"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback (función)
 **Conformidad**  
- Versión de introducción: ODBC 3.8  
+ Versión introducida: ODBC 3,8  
   
- Cumplimiento de estándares: None  
+ Compatibilidad con estándares: ninguno  
   
  **Resumen**  
- **SQLAsyncNotificationCallback** permite que el controlador para volver a llamar al administrador de controladores cuando hay cierto progreso de la operación asincrónica actual después de que el controlador devuelve SQL_STILL_EXECUTING. **SQLAsyncNotificationCallback** puede solo llama el controlador.  
+ **SQLAsyncNotificationCallback** permite que un controlador vuelva a llamar al administrador de controladores cuando haya algún progreso de la operación asincrónica actual después de que el controlador devuelva SQL_STILL_EXECUTING. El controlador solo puede llamar a **SQLAsyncNotificationCallback** .  
   
- No llame los controladores **SQLAsyncNotificationCallback** con el nombre de la función **SQLAsyncNotificationCallback**. En su lugar, el Administrador de controladores pasa un puntero de función a un controlador como el valor del atributo SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK o SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK del identificador de conexión correspondiente o identificador de instrucción respectivamente. Es posible asignar valores de puntero de función diferentes identificadores diferentes. El tipo del puntero de función se define como SQL_ASYNC_NOTIFICATION_CALLBACK.  
+ Los controladores no llaman a **SQLAsyncNotificationCallback** con el nombre de función **SQLAsyncNotificationCallback**. En su lugar, el administrador de controladores pasa un puntero de función a un controlador como el valor de la SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK o SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK atributo del identificador de la conexión o el identificador de instrucción correspondiente. poco. A los distintos identificadores se les pueden asignar distintos valores de puntero de función. El tipo del puntero de función se define como SQL_ASYNC_NOTIFICATION_CALLBACK.  
   
- **SQLAsyncNotificationCallback** es segura para subprocesos. Un controlador puede optar por usar varios subprocesos que llaman a **SQLAsyncNotificationCallback** en diferentes controla simultáneamente.  
+ **SQLAsyncNotificationCallback** es seguro para subprocesos. Un controlador puede optar por usar varios subprocesos que llaman a **SQLAsyncNotificationCallback** en diferentes identificadores simultáneamente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,23 +40,23 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
   
 ## <a name="arguments"></a>Argumentos  
  *pContex*  
- Puntero a una estructura de datos definida por el Administrador de controladores. El valor se pasa al controlador a través de SQLSetConnectAttr(SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT) o SQLSetStmtAttr(SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT).  El controlador no tiene acceso al valor.  
+ Puntero a una estructura de datos definida por el administrador de controladores. El valor se pasa al controlador mediante SQLSetConnectAttr (SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT) o SQLSetStmtAttr (SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT).  El controlador no tiene acceso al valor.  
   
  *fLast*  
- Utiliza un controlador para indica que esta invocación de función de devolución de llamada es la última de ellas para la operación asincrónica actual. Cuando el Administrador de controladores llama de nuevo a la función, el controlador devolverá un código de retorno distinto de SQL_STILL_EXECUTING. El Administrador de controladores puede usar esta información como, por ejemplo, para informar a la aplicación por adelantado que se completará la operación asincrónica.  
+ Lo utiliza un controlador para indicar que esta invocación de función de devolución de llamada es la última de la operación asincrónica actual. El controlador devolverá un código de retorno distinto de SQL_STILL_EXECUTING cuando el administrador de controladores vuelva a llamar a la función. El administrador de controladores puede usar esta información, por ejemplo, para informar a la aplicación de antemano de que se completará la operación asincrónica.  
   
- Si *controlar* no es un identificador válido del tipo especificado por *HandleType*, **SQLCancelHandle** devuelva SQL_INVALID_HANDLE.  
+ Si el *identificador* no es un identificador válido del tipo especificado por *HandleType*, **SQLCancelHandle** devuelve SQL_INVALID_HANDLE.  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS o SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- **SQLAsyncNotificationCallback** puede devolver SQL_ERROR para las dos situaciones siguientes (estos errores indican un problema de implementación en el controlador o el Administrador de controladores.  
+ **SQLAsyncNotificationCallback** puede devolver SQL_ERROR para las dos situaciones siguientes (esto indica un problema de implementación en el administrador de controladores o controladores).  
   
 |Error|Descripción|  
 |-----------|-----------------|  
-|Conexión o instrucción no ha solicitado la notificación.||  
-|No válido *controlar*|El controlador pasa un identificador no válido, que no se pudo las pruebas de validación del Administrador de controladores interno.|  
+|La conexión o la instrucción no solicitaron la notificación.||  
+|*Identificador* no válido|El controlador pasó en un identificador no válido, que no superó las pruebas de validación internas del administrador de controladores.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecución asincrónica (método de sondeo)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

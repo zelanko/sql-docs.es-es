@@ -1,5 +1,5 @@
 ---
-title: Nivel y miembros (pestaña explorador, Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Nivel y miembros (pestaña explorador, diseñador de dimensiones) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078110"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Nivel y miembros (pestaña Explorador, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
@@ -40,7 +40,7 @@ ms.locfileid: "66078110"
  **Nivel actual**  
  Muestra el nivel al que pertenece el miembro seleccionado actualmente en **Árbol** .  
   
- **Árbol**  
+ **Palmera**  
  Muestra los miembros del idioma y la jerarquía seleccionada actualmente.  
   
  Si están seleccionadas las propiedades del miembro en la opción **Propiedades del miembro** del panel Barra de herramientas, cada propiedad del miembro se muestra como una columna.  
@@ -50,7 +50,7 @@ ms.locfileid: "66078110"
 ## <a name="context-menu"></a>Menú contextual  
  Las siguientes opciones están disponibles en el menú contextual que se muestra al hacer clic con el botón derecho en cualquier parte del panel **Nivel y miembros** del miembro seleccionado:  
   
- **Creación del mismo nivel**  
+ **Crear igual**  
  Crea un nuevo miembro en el mismo nivel que el miembro seleccionado.  
   
 > [!NOTE]  
@@ -68,7 +68,7 @@ ms.locfileid: "66078110"
 > [!NOTE]  
 >  Esta opción solo se muestra si se ha habilitado el modo de reescritura.  
   
- **Cut**  
+ **Cortar**  
  Copia los miembros seleccionados en el portapapeles y los quita de la jerarquía.  
   
 > [!NOTE]  
@@ -119,11 +119,11 @@ ms.locfileid: "66078110"
  **Contraer miembro**  
  Contrae el miembro seleccionado en el **Árbol**.  
   
- **Writeback**  
+ **Diferi**  
  Seleccione esta opción para habilitar el modo de reescritura.  
   
-## <a name="see-also"></a>Vea también  
- [Barra de herramientas &#40;pestaña del explorador, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [Explorador &#40;Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Barra de herramientas &#40;pestaña explorador, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Explorador &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

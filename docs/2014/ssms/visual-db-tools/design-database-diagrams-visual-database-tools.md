@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e348ace954e19c3e213c7de1779cbfbcb1768887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316095"
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Diseñar diagramas de base de datos (Visual Database Tools)
@@ -41,7 +41,7 @@ ms.locfileid: "63316095"
   
  Si ha modificado una tabla y no la ha guardado todavía, aparecerá un asterisco (*) al final del nombre de la tabla que indica que hay cambios no guardados. Para información sobre cómo guardar tablas y diagramas modificados, consulte [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
- **Selector de fila** Puede hacer clic en el selector de fila para seleccionar una columna de base de datos de la tabla. El selector de fila muestra un símbolo de clave si la columna se encuentra en la clave principal de la tabla. Para obtener información sobre las claves principales, consulte [principal y las restricciones Foreign Key](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
+ **Selector de filas** Puede hacer clic en el selector de fila para seleccionar una columna de base de datos en la tabla. El selector de fila muestra un símbolo de clave si la columna se encuentra en la clave principal de la tabla. Para obtener información sobre las claves principales, consulte [restricciones de clave principal y externa](../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
  **Columnas de propiedades** El conjunto de columnas de propiedades solo es visible en determinadas vistas de la tabla. Dispone de cinco vistas diferentes para ver una tabla, que le ayudan a controlar el tamaño y el diseño del diagrama.  
   
@@ -50,24 +50,24 @@ ms.locfileid: "63316095"
 ## <a name="relationships-in-a-database-diagram"></a>Relaciones de un diagrama de base de datos  
  En un diagrama de base de datos, cada relación puede aparecer con tres características distintas: los extremos, un estilo de línea y las tablas relacionadas.  
   
- **Extremos** Los extremos de la línea indican si la relación es de uno a uno o de uno a varios. Si una relación tiene una clave en un extremo y un símbolo en forma de ocho en el otro extremo, se trata de una relación de uno a varios. Si una relación tiene una clave en cada extremo, se trata de una relación de uno a uno.  
+ **Puntos de conexión** Los extremos de la línea indican si la relación es de uno a uno o de uno a varios. Si una relación tiene una clave en un extremo y un símbolo en forma de ocho en el otro extremo, se trata de una relación de uno a varios. Si una relación tiene una clave en cada extremo, se trata de una relación de uno a uno.  
   
- **Estilo de línea** La línea en sí misma (no sus extremos) indica si el sistema de administración de bases de datos (DBMS) exige integridad referencial para la relación cuando se agregan datos nuevos a la tabla de clave externa. Si la línea aparece sólida, el DBMS exige integridad referencial para la relación cuando se agregan o modifican filas en la tabla de clave externa. Si la línea aparece punteada, el DBMS no exige integridad referencial para la relación cuando se agregan o modifican filas en la tabla de clave externa.  
+ **Estilo de línea** La propia línea (no sus extremos) indica si el sistema de administración de bases de datos (DBMS) exige integridad referencial para la relación cuando se agregan nuevos datos a la tabla de clave externa. Si la línea aparece sólida, el DBMS exige integridad referencial para la relación cuando se agregan o modifican filas en la tabla de clave externa. Si la línea aparece punteada, el DBMS no exige integridad referencial para la relación cuando se agregan o modifican filas en la tabla de clave externa.  
   
- **Tablas relacionadas** Una relación de clave externa entre dos tablas se indica mediante una línea de relación entre ellas. En el caso de una relación de uno a varios, la tabla de clave externa es la tabla situada cerca del símbolo en forma de ocho de la línea. Si ambos extremos de la línea están conectados a la misma tabla, la relación es reflexiva. Para más información, consulte [Dibujar relaciones reflexivas &#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md).  
+ **Tablas relacionadas** La línea de relación indica que existe una relación de clave externa entre una tabla y otra. En el caso de una relación de uno a varios, la tabla de clave externa es la tabla situada cerca del símbolo en forma de ocho de la línea. Si ambos extremos de la línea están conectados a la misma tabla, la relación es reflexiva. Para más información, consulte [Dibujar relaciones reflexivas &#40;Visual Database Tools&#41;](draw-reflexive-relationships-visual-database-tools.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Descripción de la propiedad de un diagrama de base de datos &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)  
   
- [Desplazarse por el Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](navigate-in-database-diagram-designer-visual-database-tools.md)  
+ [Desplazarse por el diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](navigate-in-database-diagram-designer-visual-database-tools.md)  
   
- [Configurar el Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)  
+ [Configurar el diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)  
   
  [Actualizar diagramas de base de datos de ediciones anteriores &#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
   
- [Abrir el Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](open-database-diagram-designer-visual-database-tools.md)  
+ [Abrir el diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](open-database-diagram-designer-visual-database-tools.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Trabajar con tablas en diagramas de base de datos &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)   
  [Trabajar con el diseño de diagramas &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  

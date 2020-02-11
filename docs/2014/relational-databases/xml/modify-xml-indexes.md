@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67767ae7ec3bda62783281385333fef89481f45d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195598"
 ---
 # <a name="modify-xml-indexes"></a>Modificar índices XML
@@ -29,7 +29,7 @@ ms.locfileid: "68195598"
   
 -   Cuando se especifica ALTER INDEX ALL, se aplica tanto a los índices XML como a los que no lo son. Se pueden especificar opciones de indización que no sean válidas para ambos tipos de índices. En este caso, la instrucción producirá un error.  
   
-## <a name="example-modifying-an-xml-index"></a>Ejemplo: Modificación de un índice XML  
+## <a name="example-modifying-an-xml-index"></a>Ejemplo: Modificar un índice XML  
  En el ejemplo siguiente se muestra cómo crear un índice XML y, a continuación, modificarlo estableciendo la opción `ALLOW_ROW_LOCKS` en `OFF`. Cuando `ALLOW_ROW_LOCKS` se ha establecido en `OFF`, las filas no se bloquean y el acceso a los índices especificados se obtiene usando los bloqueos de página y de tabla.  
   
 ```  
@@ -50,7 +50,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>Ejemplo: Deshabilitación y habilitación de un índice XML  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>Ejemplo: Deshabilitar y habilitar un índice XML  
  Un índice XML está habilitado de forma predeterminada. Si un índice XML se deshabilita, las consultas que se realicen en la columna XML no usarán el índice XML. Para habilitar un índice XML, use `ALTER INDEX` con la opción `REBUILD` .  
   
 ```  
@@ -70,7 +70,7 @@ ALTER INDEX PIdx_T_XmlCol on T REBUILD
 Go  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Índices XML &#40;SQL Server&#41;](xml-indexes-sql-server.md)  
   
   

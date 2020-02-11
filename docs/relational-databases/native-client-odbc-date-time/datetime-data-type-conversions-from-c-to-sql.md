@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 07a53f979e721463c0f2cf95df1b79487e471579
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783950"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Conversiones del tipo de datos de fecha y hora de C a SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  En este tema se enumeran los problemas que se deben tener en cuenta al convertir tipos de C en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de fecha y hora.  
+  En este tema se enumeran los problemas que se deben tener en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta al convertir tipos de C a tipos de fecha y hora.  
   
- Las conversiones descritas en la tabla siguiente se aplican a conversiones realizadas en el cliente. En los casos en los que el cliente especifica una precisión de fracciones de segundo para un parámetro que difiere de la definida en el servidor, la conversión del cliente podría realizarse correctamente, pero el servidor devolverá un error cuando se llame a **SQLExecute** o **SQLExecuteDirect** . En concreto, ODBC trata cualquier truncamiento de fracciones de segundo como un error, mientras que el comportamiento del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es redondear; por ejemplo, el redondeo se produce cuando se pasa de **datetime2 (6)** a **datetime2 (2)** . Los valores de las columnas datetime se redondean a la fracción 1/300 de segundo, mientras que para las columnas smalldatetime, el servidor establece los segundos en cero.  
+ Las conversiones descritas en la tabla siguiente se aplican a conversiones realizadas en el cliente. En los casos en los que el cliente especifica una precisión de fracciones de segundo para un parámetro que difiere de la definida en el servidor, la conversión del cliente podría realizarse correctamente, pero el servidor devolverá un error cuando se llame a **SQLExecute** o **SQLExecuteDirect** . En concreto, ODBC trata cualquier truncamiento de fracciones de segundo como un error, mientras que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamiento es Round; por ejemplo, el redondeo se produce cuando se pasa de **datetime2 (6)** a **datetime2 (2)**. Los valores de las columnas datetime se redondean a la fracción 1/300 de segundo, mientras que para las columnas smalldatetime, el servidor establece los segundos en cero.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -47,7 +47,7 @@ ms.locfileid: "73783950"
   
 ## <a name="key-to-symbols"></a>Clave de los símbolos  
   
--   **-** : no se admite la conversión. Se genera un registro de diagnóstico con SQLSTATE 07006 y el mensaje "Infracción del atributo de tipo de datos restringido".  
+-   **-**: No se admite la conversión. Se genera un registro de diagnóstico con SQLSTATE 07006 y el mensaje "Infracción del atributo de tipo de datos restringido".  
   
 -   **1**: si los datos proporcionados no son válidos, se genera un registro de diagnóstico con SQLSTATE 22007 y el mensaje "formato de fecha y hora no válido".  
   
@@ -90,9 +90,9 @@ ms.locfileid: "73783950"
   
      Un tamaño de columna igual a cero implica un tamaño ilimitado de los tipos de caracteres de longitud variable en ODBC (9 dígitos, a menos que sea aplicable la regla de 3 dígitos para SQL_C_TYPE_TIMESTAMP). Especificar un tamaño de columna igual a cero con un tipo de caracteres de longitud fija es un error.  
   
--   **N/A**: se mantiene el [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] existente y el comportamiento anterior.  
+-   **N/A**: se [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] mantiene el comportamiento existente y el anterior.  
   
-## <a name="see-also"></a>Vea también  
- [Mejoras &#40;de fecha y hora ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -12,29 +12,29 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b77bb50620d106ff801241901f7054459806ef36
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780319"
 ---
 # <a name="use-date-and-time-types"></a>Usar tipos de fecha y hora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  En este ejemplo, se muestra cómo inicializar las estructuras de datos de fecha y hora que se agregaron en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. A continuación, se preparan los valores de entrada, se enlazan los parámetros y se ejecuta la consulta. Para obtener más información sobre el uso de estos tipos, vea [mejoras &#40;de&#41;fecha y hora ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+  En este ejemplo, se muestra cómo inicializar las estructuras de datos de fecha y hora que se agregaron en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. A continuación, se preparan los valores de entrada, se enlazan los parámetros y se ejecuta la consulta. Para obtener más información sobre el uso de estos tipos, vea [mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Ejemplo  
  Necesitará un origen de datos ODBC denominado DateTime. La base de datos predeterminada para DateTime debe ser tempdb. Este origen de datos debe estar basado en el controlador ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- Si compila y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
+ Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
- La primera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea una tabla usada por este ejemplo.  
+ La primera lista [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () crea una tabla usada por este ejemplo.  
   
  Compile la segunda lista de código (C++) con odbc32.lib y user32.lib. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
- La tercera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) elimina la tabla usada por este ejemplo.  
+ La tercera lista [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () elimina la tabla usada por este ejemplo.  
   
 ```sql
 use tempdb  

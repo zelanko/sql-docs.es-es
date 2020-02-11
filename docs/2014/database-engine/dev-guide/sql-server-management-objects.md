@@ -11,12 +11,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81f996b167cfbf4b22f7d6d2420cdb9720c59574
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780738"
 ---
 # <a name="sql-server-management-objects"></a>objetos de administración de SQL Server
 
-[Consulte la Guía de programación de objetos de administración de SQL Server](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).
+[Consulte objetos de administración de SQL Server guía de programación](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).

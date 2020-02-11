@@ -1,5 +1,5 @@
 ---
-title: sys.security_policies (Transact-SQL) | Microsoft Docs
+title: Sys. security_policies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,40 +22,40 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135311"
 ---
-# <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (Transact-SQL)
+# <a name="syssecurity_policies-transact-sql"></a>Sys. security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Devuelve una fila para cada directiva de seguridad de la base de datos.  
+  Devuelve una fila para cada directiva de seguridad en la base de datos.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Nombre de la directiva de seguridad, único dentro de la base de datos.|  
 |object_id|**int**|Identificador de la directiva de seguridad.|  
 |principal_id|**int**|Identificador del propietario de la directiva de seguridad, tal y como se registró en la base de datos. Es NULL si el propietario se determina con el esquema.|  
 |schema_id|**int**|Identificador del esquema en el que reside el objeto.|  
 |parent_object_id|**int**|Identificador del objeto al que pertenece la directiva. Debe ser 0.|  
-|type|**vachar(2)**|Debe ser **SP**.|  
-|type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
+|type|**vachar (2)**|Debe ser **SP**.|  
+|type_desc|**nvarchar (60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|Fecha UTC de creación de la directiva de seguridad.|  
 |modify_date|**datetime**|Fecha UTC en la que la directiva de seguridad se modificó por última vez.|  
 |is_ms_shipped|**bit**|Siempre false.|  
 |is_enabled|**bit**|Estado de la especificación de la directiva de seguridad:<br /><br /> 0 = deshabilitado<br /><br /> 1 = habilitado|  
 |is_not_for_replication|**bit**|La directiva se creó con la opción NOT FOR REPLICATION.|  
 |uses_database_collation|**bit**|Utiliza la misma intercalación que la base de datos.|  
-|is_schemabinding_enabled|**bit**|SCHEMABINDING el estado de la directiva de seguridad:<br /><br /> 0 o NULL = habilitado<br /><br /> 1 = deshabilitado|  
+|is_schemabinding_enabled|**bit**|Estado de SCHEMABINDING para la Directiva de seguridad:<br /><br /> 0 o NULL = habilitado<br /><br /> 1 = deshabilitado|  
   
 ## <a name="permissions"></a>Permisos  
- Las entidades de seguridad con el **ALTER ANY SECURITY POLICY** permiso tiene acceso a todos los objetos en esta vista de catálogo, así como cualquier persona con **VIEW DEFINITION** en el objeto.  
+ Las entidades de seguridad con el permiso **ALTER any Security Policy** tienen acceso a todos los objetos de esta vista de catálogo, así como a cualquier persona con **View definition** en el objeto.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md)   
- [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
+ [Sys. security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

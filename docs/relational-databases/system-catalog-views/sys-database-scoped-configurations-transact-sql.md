@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: da115c8d4cf48cfbcd6190c88a83bee4e61ae5a1
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73240770"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>Sys. database_scoped_configurations (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "73240770"
 
 Contiene una fila por cada configuración. 
 
-|Nombre de columna|Data type|Description|
+|Nombre de la columna|Tipo de datos|Descripción|
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|IDENTIFICADOR de la opción de configuración.|
-|**Nombre**|**nvarchar(60)**|Nombre de la opción de configuración. Para obtener información sobre las posibles configuraciones, vea [ALTER DATABASE scoped &#40;Configuration Transact-&#41;SQL](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
-|**value**|**SQLVARIANT**|Valor establecido para esta opción de configuración para la réplica principal.|
+|**Name**|**nvarchar (60)**|Nombre de la opción de configuración. Para obtener información sobre las posibles configuraciones, vea [ALTER DATABASE scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
+|**valor**|**SQLVARIANT**|Valor establecido para esta opción de configuración para la réplica principal.|
 |**value_for_secondary**|**SQLVARIANT**|Valor establecido para esta opción de configuración para las réplicas secundarias.|
 |**is_value_default**|**bit** |Especifica si el conjunto de valores es el valor predeterminado.|
 
@@ -43,12 +43,12 @@ Contiene una fila por cada configuración.
 
 Debe pertenecer al rol **public** .
 
-## <a name="remarks"></a>Notas
+## <a name="remarks"></a>Observaciones
 
 Cuando se devuelve NULL como valor de **value_for_secondary**, esto significa que el secundario se establece en Primary.
  
 Las opciones de configuración con ámbito de base de datos se transfieren con la base de datos. Esto significa que cuando se restaura o adjunta una base de datos, se conservan las opciones de configuración existentes.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)

@@ -1,5 +1,5 @@
 ---
-title: Página de resumen (asistentes del grupo de disponibilidad AlwaysOn) | Microsoft Docs
+title: Página Resumen (asistentes para grupos de disponibilidad AlwaysOn) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62814071"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Página Resumen (asistentes para grupos de disponibilidad AlwaysOn)
   En este tema de Ayuda se describen las opciones de la página **Resumen** . Esta tema se aplica a [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] y [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use la cuadrícula de esta página para revisar las opciones para el nuevo grupo de disponibilidad. Para realizar uno o más cambios, haga clic en **Anterior** para volver a la página o páginas pertinentes. Cuando esté listo, haga clic en **Siguiente** para volver a la página **Resumen** . Cuando esté satisfecho con las opciones seleccionadas, haga clic en **Finalizar**.  
   
-##  <a name="PageOptions"></a> Opciones de página Resumen  
- **Script**  
+##  <a name="PageOptions"></a>Opciones de la página Resumen  
+ **Manuscrit**  
  Haga clic para generar un script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] para las acciones enumeradas en la cuadrícula de resumen. Se le pedirá que especifique un destino para el script.  
   
- **Anterior**  
+ **Previo**  
  Haga clic para volver a la página inmediatamente anterior a la página actual. Puede usar el botón **Anterior** para navegar hacia atrás a cualquiera de las páginas anteriores y, opcionalmente, cambiar cualquiera de los valores especificados.  
   
  **Finalizar**  
@@ -52,7 +52,7 @@ ms.locfileid: "62814071"
   
 
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

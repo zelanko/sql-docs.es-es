@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2f92a270bb599c84f5d0b2bd85e713c3f406f81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479530"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Cómo se determinan los permisos (Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "65479530"
   
  ![mds_conc_security_no_overlap](../../2014/master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>Paso 1: Se determinan los permisos de atributo efectivos.  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>Paso 1: se determinan los permisos de atributo efectivos.  
  En la siguiente lista se describe cómo se determinan los permisos de atributo efectivos:  
   
 -   Los permisos asignados a objetos de modelo determinan a qué atributos puede tener acceso un usuario.  
@@ -44,13 +44,13 @@ ms.locfileid: "65479530"
   
 -   Todos los objetos del mismo nivel que la entidad se deniegan implícitamente.  
   
--   Todos los objetos de un nivel superior reciben acceso de navegación. Para obtener más información sobre el acceso de navegación, consulte [acceso por navegación &#40;Master Data Services&#41;](navigational-access-master-data-services.md).  
+-   Todos los objetos de un nivel superior reciben acceso de navegación. Para obtener más información sobre el acceso de navegación, consulte [&#40;de acceso de navegación Master Data Services&#41;](navigational-access-master-data-services.md).  
   
- En este ejemplo, **de sólo lectura** permiso se asigna a una entidad y su atributo, que se encuentra en un nivel inferior de la estructura del modelo heredan ese permiso. El modelo proporciona acceso de navegación a esta entidad y su atributo. La otra entidad del modelo no tiene ningún permiso explícito asignado y no hereda ningún permiso, de modo que se deniega implícitamente.  
+ En este ejemplo, el permiso **de solo lectura** se asigna a una entidad y el permiso se hereda mediante su atributo, que está en un nivel inferior de la estructura del modelo. El modelo proporciona acceso de navegación a esta entidad y su atributo. La otra entidad del modelo no tiene ningún permiso explícito asignado y no hereda ningún permiso, de modo que se deniega implícitamente.  
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Paso 2: Si se asignan los permisos de los miembros de una jerarquía, se determinan los permisos de miembros efectivos.  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Paso 2: si se asignan los permisos de los miembros de una jerarquía, se determinan los permisos de miembros efectivos.  
  En la siguiente lista se describe cómo se determinan los permisos de los miembros de una jerarquía efectivos:  
   
 -   Los permisos asignados a los nodos de la jerarquía determinan a qué miembros puede tener acceso un usuario.  
@@ -61,11 +61,11 @@ ms.locfileid: "65479530"
   
 -   Todos los nodos de niveles superiores a los que no se asignan los permisos se deniegan implícitamente.  
   
- En este ejemplo, **de sólo lectura** permiso se asigna a un nodo de la jerarquía y un nodo en un nivel inferior de la estructura de jerarquía heredan ese permiso. La raíz no tiene ningún permiso asignado, de modo que se deniega implícitamente. El otro nodo de la estructura de la jerarquía no tiene ningún permiso explícito asignado y no hereda ningún permiso, de modo que se deniega implícitamente.  
+ En este ejemplo, el permiso de **solo lectura** se asigna a un nodo de la jerarquía y el permiso lo hereda un nodo de un nivel inferior en la estructura de la jerarquía. La raíz no tiene ningún permiso asignado, de modo que se deniega implícitamente. El otro nodo de la estructura de la jerarquía no tiene ningún permiso explícito asignado y no hereda ningún permiso, de modo que se deniega implícitamente.  
   
  ![mds_conc_inheritance_hierarchy](../../2014/master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
-### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Paso 3: Se determina la intersección de los permisos de atributo y de miembro.  
+### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Paso 3: se determina la intersección los permisos de atributo y de miembro.  
  Si los permisos de atributo efectivos son diferentes que los permisos de miembro efectivos, los permisos se deben determinar para cada valor de atributo individual. Para obtener más información, consulte [Superponer permisos de modelo y de miembro &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>Permisos asignados a varios grupos  
@@ -75,8 +75,8 @@ ms.locfileid: "65479530"
   
  En este caso, los permisos de usuario y de grupo que se superpongan se deben resolver para poder comparar los permisos del objeto de modelo y del miembro de jerarquía. Para obtener más información, consulte [Superponer permisos de usuario y de grupo &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
-## <a name="see-also"></a>Vea también  
- [Superponer permisos de usuario y de grupo &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Los permisos de usuario y de grupo superpuestos &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
  [Superponer permisos de modelo y de miembro &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

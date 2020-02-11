@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6056a5136d8aceab338a18b32ecfac35a1af0364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204701"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>Descripción de la propiedad de un diagrama de base de datos (Visual Database Tools)
-  Para usar el diseñador de diagramas de base de datos, debe primero configurarlo un miembro del rol db_owner (un rol de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) para controlar el acceso a los diagramas. Cada diagrama tiene un único propietario: el usuario que lo ha creado. Para obtener más información sobre la configuración de diagramas, vea [establecer seguridad del Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md).  
+  Para usar el diseñador de diagramas de base de datos, debe primero configurarlo un miembro del rol db_owner (un rol de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) para controlar el acceso a los diagramas. Cada diagrama tiene un único propietario: el usuario que lo ha creado. Para obtener más información sobre la configuración de diagramas, vea [configurar el diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
  Conviene tener en cuenta algunos aspectos sobre la propiedad de los diagramas:  
   
@@ -34,8 +34,8 @@ ms.locfileid: "63204701"
   
 -   Si se ha eliminado de la base de datos el propietario de un diagrama, el diagrama permanecerá en la base de datos hasta que el miembro del rol db_owner intente abrirlo. En ese momento, el miembro de db_owner podrá decidir si asume su propiedad.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)   
- [Configurar el Diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Configurar el diseñador de diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

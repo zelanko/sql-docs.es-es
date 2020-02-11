@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079336"
 ---
 # <a name="defining-a-data-source"></a>Definir un origen de datos
-  Tras crear un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], generalmente se empieza a trabajar con el mismo definiendo uno o más orígenes de datos que el proyecto usará. Al definir un origen de datos, se define la información de cadena de conexión que se utilizará para establecer la conexión con el origen de datos. Para más información, vea [Crear un origen de datos &#40;SSAS multidimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
+  Tras crear un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , generalmente se empieza a trabajar con el mismo definiendo uno o más orígenes de datos que el proyecto usará. Al definir un origen de datos, se define la información de cadena de conexión que se utilizará para establecer la conexión con el origen de datos. Para más información, vea [Crear un origen de datos &#40;SSAS multidimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
  En la tarea siguiente, definirá la base de datos de ejemplo AdventureWorksDWSQLServer2012 como origen de datos para el proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . En el caso de este tutorial, esta base de datos se encuentra en el equipo local; no obstante, las bases de datos de origen generalmente se encuentran hospedadas en uno o más equipos remotos.  
   
@@ -32,19 +32,20 @@ ms.locfileid: "66079336"
   
 4.  En el cuadro de diálogo **Administrador de conexiones** se definen las propiedades de conexión para el origen de datos. En el cuadro de lista **Proveedor** , compruebe que está seleccionada la opción **Native OLE DB\SQL Server Native Client 11.0** .  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] también admite otros proveedores, que se muestran en la lista **Proveedor** .  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]también admite otros proveedores, que se muestran en la lista de **proveedores** .  
   
-5.  En el **nombre del servidor** cuadro de texto, escriba `localhost`.  
+5.  En el cuadro de texto **nombre** del servidor `localhost`, escriba.  
   
-     Para conectarse a una instancia con nombre en el equipo local, escriba **localhost\\< nombre de instancia\>** . Para conectarse al equipo especificado en lugar de al equipo local, escriba el nombre del equipo o la dirección IP.  
+     Para conectarse a una instancia con nombre en el equipo local, **Escriba\\ localhost<nombre\>de instancia**. Para conectarse al equipo especificado en lugar de al equipo local, escriba el nombre del equipo o la dirección IP.  
   
 6.  Compruebe que la opción **Usar autenticación de Windows** está seleccionada. En la lista **Seleccione o escriba un nombre de base de datos** , seleccione **AdventureWorksDW2012**.  
   
 7.  Haga clic en **Probar conexión** para probar la conexión a la base de datos.  
   
-8.  Haga clic en **Aceptar**y, a continuación, en **Siguiente**.  
+8.  Haga clic en **Aceptar** y luego en **Siguiente**.  
   
-9. En la página **Información de suplantación** del asistente, debe definir las credenciales de seguridad que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] debe usar para conectarse al origen de datos. La suplantación afecta a la cuenta de Windows usada para conectarse al origen de datos cuando está seleccionada la autenticación de Windows. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no admite la suplantación para el procesamiento de objetos OLAP. Seleccione **Usar cuenta de servicio**y haga clic en **Siguiente**.  
+9. En la página **Información de suplantación** del asistente, debe definir las credenciales de seguridad que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] debe usar para conectarse al origen de datos. La suplantación afecta a la cuenta de Windows usada para conectarse al origen de datos cuando está seleccionada la autenticación de Windows. 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no admite la suplantación para el procesamiento de objetos OLAP. Seleccione **Usar cuenta de servicio**y haga clic en **Siguiente**.  
   
 10. En la página **Finalización del asistente** , acepte el nombre predeterminado **Adventure Works DW 2012**y, después, haga clic en **Finalizar** para crear el nuevo origen de datos.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "66079336"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Definir una vista del origen de datos](lesson-1-3-defining-a-data-source-view.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear un origen de datos &#40;SSAS multidimensional&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

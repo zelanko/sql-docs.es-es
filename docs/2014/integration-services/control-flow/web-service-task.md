@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829412"
 ---
 # <a name="web-service-task"></a>Tarea Servicio web
@@ -48,10 +48,10 @@ ms.locfileid: "62829412"
   
  Muchos métodos de servicio web no usan parámetros de entrada. Por ejemplo, un método de servicio web que obtiene los nombres de los presidentes nacidos en el mes en curso no requiere un parámetro de entrada porque el servicio web puede determinar localmente cuál es el mes en curso.  
   
- Los resultados del método de servicio web se pueden escribir en una variable o un archivo. El administrador de conexiones Archivo se utiliza para especificar el archivo o para proporcionar el nombre de la variable en la que se deben escribir los resultados. Para obtener más información, vea [Administrador de conexiones de archivos](../connection-manager/file-connection-manager.md) y [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
+ Los resultados del método de servicio web se pueden escribir en una variable o un archivo. El administrador de conexiones Archivo se utiliza para especificar el archivo o para proporcionar el nombre de la variable en la que se deben escribir los resultados. Para más información, vea [Administrador de conexiones de archivos](../connection-manager/file-connection-manager.md) e [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md).  
   
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Mensajes de registro personalizados disponibles en la tarea Servicio web  
- La siguiente tabla contiene las entradas del registro personalizadas que puede habilitar para la tarea Servicio web. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene las entradas del registro personalizadas que puede habilitar para la tarea Servicio web. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -64,11 +64,11 @@ ms.locfileid: "62829412"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea Servicio web &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea servicio Web &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea Servicio web &#40;página Entrada&#41;](../web-service-task-editor-input-page.md)  
+-   [Editor de la tarea servicio Web &#40;página de entrada&#41;](../web-service-task-editor-input-page.md)  
   
--   [Editor de la tarea Servicio web &#40;página Salida&#41;](../web-service-task-editor-output-page.md)  
+-   [Editor de la tarea servicio Web &#40;página salida&#41;](../web-service-task-editor-output-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62829412"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Vídeo [ How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642) (Procedimiento para llamar a un servicio web con la tarea Servicio web [vídeo de SQL Server]), en technet.microsoft.com.  
+ Vídeo [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642)(Cómo llamar a un servicio web usando la tarea Servicio web (vídeo de SQL Server)), en technet.microsoft.com.  
   
  [Cómo consumir el servicio Web a través del paquete SSIS](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
   

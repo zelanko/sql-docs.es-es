@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400282"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Usar una base de datos de ensayo en almacenamiento de datos paralelos (PDW)
@@ -38,7 +38,7 @@ La estructura de almacenamiento de cada tabla de base de datos depende de la tab
   
 -   En el caso de las cargas en un índice clúster de almacén, la tabla de ensayo es un índice clúster de almacén.  
   
-## <a name="Permissions"></a>Los  
+## <a name="Permissions"></a>Permisos  
 Requiere el permiso CREATE (para crear una tabla temporal) en la base de datos de ensayo. 
 
 <!-- MISSING LINKS
@@ -61,9 +61,9 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
     -   Normalmente, el tamaño del registro es similar al tamaño de la tabla replicada.  
   
-## <a name="Examples"></a>Example  
+## <a name="Examples"></a>Ejemplos  
   
-### <a name="a-create-a-staging-database"></a>a. Crear una base de datos de ensayo 
+### <a name="a-create-a-staging-database"></a>A. Crear una base de datos de ensayo 
 En el ejemplo siguiente se crea una base de datos de ensayo, Stagedb, para su uso con todas las cargas en el dispositivo. Supongamos que calcula que cinco tablas replicadas de tamaño 5 GB se cargarán simultáneamente. Esta simultaneidad da como resultado la asignación de al menos 25 GB para el tamaño replicado. Supongamos que calcula que seis tablas distribuidas de los tamaños 100, 200, 400, 500, 500 y 550 GB se cargarán simultáneamente. Esta simultaneidad da como resultado la asignación de al menos 2250 GB para el tamaño de la tabla distribuida.  
   
 ```sql  

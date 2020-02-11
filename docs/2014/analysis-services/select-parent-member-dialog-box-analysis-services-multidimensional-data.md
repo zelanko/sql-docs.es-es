@@ -1,5 +1,5 @@
 ---
-title: Seleccione el cuadro de diálogo de miembro primario (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo Seleccionar miembro primario (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d8407f04061075bb19aa0207595dc1fffab92c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069308"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Seleccionar miembro primario (Analysis Services - Datos multidimensionales)
@@ -28,11 +28,11 @@ ms.locfileid: "66069308"
 >  En determinados casos, como cuando la jerarquía seleccionada en **Árbol** se ha definido para un atributo en el que no se ha especificado ningún nivel (Todo), es posible que no exista ningún miembro primario que se pueda seleccionar.  
   
 ## <a name="options"></a>Opciones  
- **Árbol**  
+ **Palmera**  
  Seleccione el miembro primario que deberá utilizarse para el miembro calculado.  
   
-## <a name="see-also"></a>Vea también  
- [Editor de formulario de miembro calculado &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Editor de formulario de miembro calculado &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md)   
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método (VC ++) Supports | Microsoft Docs
+title: Ejemplo del método Supports (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8eb0aa12a31337340854f941237d673abd1c601c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936714"
 ---
 # <a name="supports-method-example-vc"></a>Ejemplo del método Supports (VC ++)
-Este ejemplo se usa el [admite](../../../ado/reference/ado-api/supports-method.md) método para mostrar las opciones admitidas por un conjunto de registros abierto con diferentes tipos de cursor. La función DisplaySupport es necesaria para ejecutar este ejemplo.  
+En este ejemplo se usa el método [Supports](../../../ado/reference/ado-api/supports-method.md) para mostrar las opciones admitidas por un conjunto de registros abierto con distintos tipos de cursor. La función DisplaySupport es necesaria para que se ejecute este ejemplo.  
   
 ```  
 // SupportsMethodExample.cpp  
@@ -225,6 +225,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Método Supports](../../../ado/reference/ado-api/supports-method.md)

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ff8ada00af8b70659a19f863a52a5f1005e20b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069237"
 ---
 # <a name="select-tables-and-views-ssas"></a>Seleccionar tablas y vistas (SSAS)
@@ -48,7 +48,7 @@ ms.locfileid: "66069237"
  **Detalles del filtro**  
  Cuando se ha aplicado un filtro a los datos que se están importando, muestra el filtro de importación de datos en el cuadro de diálogo **Detalles del filtro**. Para obtener más información, vea [Detalles del filtro &#40;SSAS&#41;](filter-details-ssas.md).  
   
- **Vista previa y filtrar**  
+ **Vista previa y Filtro**  
  Muestra el cuadro de diálogo **Vista previa de la tabla seleccionada** que se usa para aplicar un filtro a los datos que se están importando. Para obtener más información, consulte [Vista previa de la tabla seleccionada &#40;SSAS&#41;](preview-selected-table-ssas.md).  
   
  **Seleccionar tablas relacionadas**  

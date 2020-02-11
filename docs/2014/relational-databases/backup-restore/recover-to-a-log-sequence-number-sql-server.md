@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875768"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar a un número de secuencia de registro (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62875768"
   
  Cada entrada del registro de transacción se identifica de forma exclusiva mediante un número de secuencia de registro (LSN). Los números LSN se ordenan de manera que si LSN2 es mayor que LSN1, el cambio descrito por la entrada de registro a la que hace referencia LSN2 se produce después del cambio descrito por la entrada de registro LSN.  
   
- El LSN de una entrada de registro en la que se haya producido un evento importante puede resultar útil para generar secuencias de restauración válidas. Dado que los LSN se ordenan, pueden compararse para comprobar su igualdad y desigualdad (es decir, **\<**, **>**, **=**, **\<=**, **>=**). Estas comparaciones son útiles para generar secuencias de restauración.  
+ El LSN de una entrada de registro en la que se haya producido un evento importante puede resultar útil para generar secuencias de restauración válidas. Dado que LSN se ordenan, se pueden comparar la igualdad y la desigualdad (es decir **\<**, **>**, **=**, ** \< **, **>=**,). Estas comparaciones son útiles para generar secuencias de restauración.  
   
 > [!NOTE]  
 >  Los números LSN son valores con tipos de datos `numeric`(25,0). Las operaciones aritméticas (por ejemplo, la suma o la resta) carecen de importancia y no deben utilizarse con los LSN.  
@@ -52,7 +52,7 @@ ms.locfileid: "62875768"
   
 -   [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)  
   
--   [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql); [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+-   [Sys. database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql); [Sys. master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
 -   [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
@@ -64,11 +64,11 @@ ms.locfileid: "62875768"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintaxis de Transact-SQL para restaurar hasta un LSN  
  Con la instrucción [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) , puede detenerse en el LSN o inmediatamente antes, como se indica a continuación:  
   
--   Use la cláusula WITH STOPATMARK **='** lsn:_<númeroDeIsn>_**'**, donde lsn:*\<númeroDeIsn>* es una cadena que especifica que la entrada de registro que contiene el LSN especificado es el punto de recuperación.  
+-   Use la cláusula with STOPATMARK **= '** LSN:_<lsn_number>_ **'** , donde LSN:*\<lsnNumber>* es una cadena que especifica que la entrada de registro que contiene el LSN especificado es el punto de recuperación.  
   
      STOPATMARK realiza una puesta al día hasta el LSN e incluye esa entrada de registro en la puesta al día.  
   
--   Use la cláusula WITH STOPBEFOREMARK **='** lsn:_<númeroDeIsn>_**'**, donde lsn:*\<númeroDeIsn>* es una cadena que especifica que la entrada de registro inmediatamente anterior a la entrada que contiene el número LSN especificado es el punto de recuperación.  
+-   Use la cláusula with STOPBEFOREMARK **= '** LSN:_<lsn_number>_ **'** , donde LSN:*\<lsnNumber>* es una cadena que especifica que la entrada de registro inmediatamente anterior a la entrada de registro que contiene el número LSN especificado es el punto de recuperación.  
   
      STOPBEFOREMARK realiza una puesta al día al LSN y excluye esa entrada de registro de la puesta al día.  
   
@@ -89,7 +89,7 @@ GO
   
 -   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
--   [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
+-   [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
 -   [Restaurar una base de datos según el punto de error en el modelo de recuperación completa &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
   
@@ -97,7 +97,7 @@ GO
   
 -   [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [El registro de transacciones &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  

@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184546"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de mantenimiento (pestaña Diseño)
-  Use el **Plan de mantenimiento (pestaña Diseño)** para especificar las propiedades de un plan de mantenimiento y sus subplanes. Arrastre las tareas del cuadro de herramientas al diseñador de planes. Haga clic con el botón secundario en grupos de tareas para crear rutas de ejecución bifurcadas. Los planes de mantenimiento se guardan como paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se ejecutan mediante trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilice el **plan de mantenimiento (pestaña diseño)** para especificar las propiedades de un plan de mantenimiento y sus subplanes. Arrastre las tareas del cuadro de herramientas al diseñador de planes. Haga clic con el botón secundario en grupos de tareas para crear rutas de ejecución bifurcadas. Los planes de mantenimiento se guardan como paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se ejecutan mediante trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
  **Agregar subplán**  
@@ -40,7 +40,7 @@ ms.locfileid: "63184546"
  **Quitar programación**  
  Quita una programación del subplán seleccionado.  
   
- **Administrar conexiones**  
+ **Administración de conexiones**  
  Muestra el cuadro de diálogo **Administrar conexiones** . Se utiliza para agregar conexiones adicionales de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al plan de mantenimiento. Las tareas de mantenimiento del editor de subplanes pueden usar cualquiera de estas conexiones. Cuando se ejecuta, el plan de mantenimiento establece una conexión, desde el servidor del plan de mantenimiento, con los servidores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados, mediante el uso de credenciales de conexión.  
   
  **Informes y registro**  
@@ -49,7 +49,7 @@ ms.locfileid: "63184546"
  **Servidores**  
  Muestra el cuadro de diálogo **Servidores** , que se usa para seleccionar los servidores en los que se ejecutarán las tareas del subplan. Esta opción está habilitada solo en servidores maestros en entornos multiservidor. Para obtener más información, vea [Crear un entorno multiservidor](../../ssms/agent/create-a-multiserver-environment.md).  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del plan de mantenimiento. En los nuevos planes de mantenimiento, el nombre se especifica en un cuadro de diálogo antes de que se abra el diseñador de planes de mantenimiento. Para cambiar el nombre de un plan de mantenimiento, haga clic con el botón derecho en el plan en el Explorador de objetos y, luego, haga clic en **Cambiar nombre**.  
   
  **Descripción**  
@@ -86,10 +86,10 @@ ms.locfileid: "63184546"
  **Agregar anotación**  
  Agrega una nota descriptiva al área de diseño.  
   
- **Editar**  
+ **Edición**  
  Abre el cuadro de diálogo de propiedades de la tarea.  
   
- **Deshabilitar**  
+ **Disable**  
  De esta manera, la tarea no está disponible temporalmente.  
   
  **Habilitar**  
@@ -101,19 +101,19 @@ ms.locfileid: "63184546"
  **Desagrupar**  
  Quita tareas de un grupo.  
   
- **Ajustar tamaño automáticamente**  
+ **AutoSize**  
  Establece el tamaño óptimo de cada tarea.  
   
- **Contraer**  
+ **Tracción**  
  Oculta las tareas de un grupo.  
   
- **Expandir**  
+ **Extender**  
  Muestra las tareas de un grupo que se habían ocultado mediante **Contraer**.  
   
  **Zoom**  
  Cambia el tamaño de las tareas en el área de diseño.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Planes de mantenimiento](maintenance-plans.md)   
  [Crear un plan de mantenimiento](create-a-maintenance-plan.md)  
   

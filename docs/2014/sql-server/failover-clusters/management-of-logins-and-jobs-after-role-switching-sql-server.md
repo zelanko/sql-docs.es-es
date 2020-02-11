@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63252857"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Administración de inicios de sesión y trabajos tras la conmutación de roles (SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "63252857"
   
  Para obtener más información, vea [Usuarios huérfanos con creación de reflejo de la base de datos y trasvase de registros](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (un blog del motor de base de datos).  
   
-## <a name="jobs"></a>trabajos  
+## <a name="jobs"></a>Trabajos  
  Los trabajos, como, por ejemplo, los trabajos de copia de seguridad, requieren una consideración especial. Normalmente, tras una conmutación de roles, el propietario de la base de datos o el administrador del sistema deben volver a crear los trabajos de la nueva base de datos principal.  
   
  Cuando esté disponible la que antes era la instancia del servidor principal, debería eliminar los trabajos originales en dicha instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Observe que los trabajos de la base de datos reflejada actual generan un error porque la base de datos se encuentra en el estado RESTORING y, por lo tanto, no está disponible.  
@@ -45,7 +45,7 @@ ms.locfileid: "63252857"
 > [!NOTE]  
 >  Las distintas instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden configurarse de forma diferente, con distintas letras de unidad, por ejemplo. Los trabajos para cada asociado deben permitir tales diferencias.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](troubleshoot-orphaned-users-sql-server.md)  
   

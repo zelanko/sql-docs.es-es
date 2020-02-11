@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079030"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Agregar atributos a dimensiones
@@ -38,7 +38,7 @@ ms.locfileid: "66079030"
   
     -   **MaritalStatus**  
   
-    -   **Sexo**  
+    -   **Mujer**  
   
     -   **EmailAddress**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66079030"
   
     -   **NumberCarsOwned**  
   
-    -   **Teléfono**  
+    -   **Número**  
   
     -   **DateFirstPurchase**  
   
@@ -64,13 +64,13 @@ ms.locfileid: "66079030"
   
 5.  Arrastre las columnas siguientes de la tabla **Geography** del panel **Vista del origen de datos** al panel **Atributos** :  
   
-    -   **Ciudad**  
+    -   **City**  
   
     -   **StateProvinceName**  
   
-    -   **SpanishCountryRegionName**  
+    -   **EnglishCountryRegionName**  
   
-    -   **PostalCode**  
+    -   **CódPostal**  
   
 6.  En el menú Archivo, haga clic en **Guardar todo**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66079030"
   
     -   **SizeRange**  
   
-    -   **Peso**  
+    -   **Media**  
   
     -   **DaysToManufacture**  
   
@@ -114,9 +114,9 @@ ms.locfileid: "66079030"
   
     -   **ModelName**  
   
-    -   **StartDate**  
+    -   **Fechainicial**  
   
-    -   **EndDate**  
+    -   **Fechafin**  
   
     -   **Estado**  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66079030"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Revisar las propiedades de cubo y dimensión](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de las propiedades de los atributos de dimensión](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

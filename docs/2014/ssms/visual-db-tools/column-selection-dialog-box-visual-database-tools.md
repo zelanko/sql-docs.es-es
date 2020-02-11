@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 70d6cc06b0e53754c22e6a8233f529b03c8e4371
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224652"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Selección de columnas (cuadro de diálogo, Visual Database Tools)
@@ -42,13 +42,13 @@ ms.locfileid: "63224652"
  **Guardar como predeterminado**  
  Reemplaza la vista personalizada predeterminada por las columnas seleccionadas en este cuadro de diálogo. Si no está activada, la selección de columnas especificada en el cuadro de diálogo solo se aplicará a la tabla seleccionada en el diagrama de base de datos.  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Guarda la vista personalizada.  
   
  **Cancelar**  
  Cancela la modificación de la vista personalizada.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Personalizar la cantidad de información mostrada en los diagramas &#40;Visual Database Tools&#41;](customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
   

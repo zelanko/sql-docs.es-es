@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 14: Agregar tarea Ejecutar SQL al flujo de Control para ejecutar el procedimiento almacenado de MDS | Microsoft Docs'
+title: 'Tarea 14: agregar la tarea ejecutar SQL al flujo de control para ejecutar el procedimiento almacenado para MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,66 +11,66 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3fe1eb6032d9d550b36252e16eee51c98c5d2384
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65477099"
 ---
-# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tarea 14: Adición de la tarea Ejecutar SQL al flujo de control para ejecutar el procedimiento almacenado de MDS
-  Después de cargar datos en las tablas de ensayo de MDS, hay que ejecutar un procedimiento almacenado asociado a esa tabla para cargar los datos de las tablas de ensayo en las tablas adecuadas de la base de datos de MDS. Este procedimiento almacenado tiene dos parámetros requeridos que deben pasar: LogFlag y VersionName. LogFlag especifica si las transacciones se registran durante el proceso de almacenamiento provisional y VersionName representa la versión del modelo. Consulte [procedimiento almacenado provisionalmente](https://msdn.microsoft.com/library/hh231028.aspx) tema para obtener más detalles.  
+# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tarea 14: agregar la tarea Ejecutar SQL al flujo de control para ejecutar el procedimiento almacenado de MDS
+  Después de cargar datos en las tablas de ensayo de MDS, hay que ejecutar un procedimiento almacenado asociado a esa tabla para cargar los datos de las tablas de ensayo en las tablas adecuadas de la base de datos de MDS. Este procedimiento almacenado tiene dos parámetros requeridos que tiene que pasar: LogFlag y VersionName. LogFlag especifica si las transacciones se registran durante el proceso de almacenamiento provisional y VersionName representa la versión del modelo. Vea el tema sobre [procedimientos almacenados preconfigurados](https://msdn.microsoft.com/library/hh231028.aspx) para obtener más detalles.  
   
  En esta tarea, agregará la tarea Ejecutar SQL al flujo de control para invocar el procedimiento almacenado con el fin de cargar los datos almacenados provisionalmente en las tablas adecuadas de MDS.  
   
-1.  Ahora, cambie a la **flujo de Control** ficha.  
+1.  Ahora, cambie a la pestaña **flujo de control** .  
   
-2.  Arrastrar y colocar **tarea Ejecutar SQL** desde el **cuadro de herramientas de SSIS** a la **flujo de Control** ficha.  
+2.  Arrastre y coloque la **tarea ejecutar SQL** desde el **cuadro de herramientas de SSIS** hasta la pestaña flujo de **control** .  
   
-3.  Haga clic en **tarea Ejecutar SQL** en el **flujo de Control** ficha y haga clic en **cambiar el nombre**. Tipo **desencadenar procedimiento almacenado para cargar datos en MDS** y presione **ENTRAR**.  
+3.  Haga clic con el botón secundario en **tarea ejecutar SQL** en la pestaña **flujo de control** y haga clic en **cambiar nombre**. Escriba **desencadenar procedimiento almacenado para cargar datos en MDS** y presione **entrar**.  
   
-4.  Conectar **Receive, limpieza, coincidencia y reparar datos de proveedor** a **desencadenar procedimiento almacenado para cargar datos** mediante el conector verde.  
+4.  Conecte **Receive, cleane, Match y ajustar Supplier Data** para **desencadenar el procedimiento almacenado para cargar datos** mediante el conector verde.  
   
-     ![Conecte la tarea Ejecutar SQL](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-01.jpg "conectarse para la tarea Ejecutar SQL")  
+     ![Conexión a tarea Ejecutar SQL](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-01.jpg "Conexión a tarea Ejecutar SQL")  
   
-5.  Mediante el **Variables** ventana, agregue dos variables nuevas con la configuración siguiente. Si no ve el **Variables** ventana, haga clic en **SSIS** en la barra de menú y haga clic en **Variables**.  
+5.  Mediante la ventana **variables** , agregue dos nuevas variables con la siguiente configuración. Si no ve la ventana **variables** , haga clic en **SSIS** en la barra de menús y, a continuación, haga clic en **variables**.  
   
-    |NOMBRE|Tipo de datos|Valor|  
+    |Nombre|Tipo de datos|Value|  
     |----------|---------------|-----------|  
     |LogFlag|Int32|1|  
     |VersionName|String|VERSION_1|  
   
-     ![Ventana de Variables SSIS](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-02.jpg "ventana de Variables SSIS")  
+     ![Ventana Variables de SSIS](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-02.jpg "Ventana Variables de SSIS")  
   
-6.  Haga doble clic en **desencadenar procedimiento almacenado para cargar datos en MDS**.  
+6.  Haga doble clic en **procedimiento almacenado de desencadenador para cargar datos en MDS**.  
   
-7.  En el **Execute SQL Task Editor** cuadro de diálogo, seleccione **(local). MDS** (o **localhost. MDS**) para **conexión**.  
+7.  En el cuadro de diálogo Editor de la **tarea ejecutar SQL** , seleccione **(local). MDS** (o **localhost). MDS**) para la **conexión**.  
   
-8.  Type **EXEC [stg].[udp_Supplier_Leaf] ?, ?, ?** para **instrucción SQL**. Puede comprobar el nombre mediante SQL Server Management Studio.  
+8.  Escriba **exec [STG]. [ udp_Supplier_Leaf]?,?,?** **instrucción SQL**. Puede comprobar el nombre mediante SQL Server Management Studio.  
   
-     ![Ejecutar el cuadro de diálogo Editor de SQL - configuración General](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-03.jpg "ejecutar el cuadro de diálogo Editor de SQL - configuración General")  
+     ![Cuadro de diálogo Editor de la tarea Ejecutar SQL - Configuración general](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-03.jpg "Cuadro de diálogo Editor de la tarea Ejecutar SQL - Configuración general")  
   
-9. Haga clic en **asignación de parámetros** desde el menú de la izquierda.  
+9. Haga clic en **asignación de parámetros** en el menú de la izquierda.  
   
-10. En el **asignación de parámetros** página, haga clic en **agregar** para agregar una asignación. Maximice la ventana y cambie el tamaño de las columnas de forma que pueda ver correctamente los valores de las listas desplegables.  
+10. En la página **asignación de parámetros** , haga clic en **Agregar** para agregar una asignación. Maximice la ventana y cambie el tamaño de las columnas de forma que pueda ver correctamente los valores de las listas desplegables.  
   
-11. Seleccione **User:: VersionName** en la lista desplegable para la **nombre de Variable**.  
+11. Seleccione **User:: VersionName** en la lista desplegable del nombre de la **variable**.  
   
-12. Seleccione **NVARCHAR** para **tipo de datos**.  
+12. Seleccione **nvarchar** en **tipo de datos**.  
   
-13. Tipo **0** (cero) para **nombre de parámetro**.  
+13. Escriba **0** (cero) para **el nombre del parámetro**.  
   
 14. Repita los cuatro pasos anteriores para agregar dos variables más.  
   
-    |Nombre de variable|Tipo de datos (importante)|Nombre de parámetro|  
+    |Nombre de la variable|Tipo de datos (importante)|Nombre de parámetro|  
     |-------------------|-----------------------------|--------------------|  
     |User::LogFlag|LONG|1|  
     |User::BatchTag|NVARCHAR|2|  
   
-     ![Ejecutar el Editor de la tarea SQL - asignación de parámetros](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-04.jpg "ejecutar el Editor de la tarea SQL - asignación de parámetros")  
+     ![Editor de la tarea Ejecutar SQL - Asignación de parámetros](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-04.jpg "Editor de la tarea Ejecutar SQL - Asignación de parámetros")  
   
-15. Haga clic en **Aceptar** para cerrar el **Editor ejecutar SQL** cuadro de diálogo.  
+15. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor de ejecutar SQL** .  
   
-## <a name="next-step"></a>Paso siguiente  
- [Tarea 15: Compilar y ejecutar el proyecto de SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)  
+## <a name="next-step"></a>siguiente paso  
+ [Tarea 15: compilar y ejecutar el proyecto de SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)  
   
   

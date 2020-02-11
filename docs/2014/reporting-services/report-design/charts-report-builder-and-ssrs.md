@@ -21,14 +21,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106250"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Gráficos (Generador de informes y SSRS)
-  Si desea resumir datos y presentarlos con un formato visual, use la región de datos de gráfico. Los gráficos le permiten visualizar de forma rápida grandes volúmenes de información agregada. Es importante que prepare cuidadosamente los datos y que los comprenda antes de crear los gráficos; esto le ayudará a diseñarlos de manera rápida y eficaz. Para más información, vea [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Para empezar a usar un gráfico inmediatamente, consulte la barra, columna, minigráfico y tutoriales de gráfico circular en [tutoriales &#40;Report Builder&#41; ](../report-builder-tutorials.md) o la barra y los tutoriales de gráfico circular en [Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
+  Si desea resumir datos y presentarlos con un formato visual, use la región de datos de gráfico. Los gráficos le permiten visualizar de forma rápida grandes volúmenes de información agregada. Es importante que prepare cuidadosamente los datos y que los comprenda antes de crear los gráficos; esto le ayudará a diseñarlos de manera rápida y eficaz. Para más información, vea [Agregar un gráfico a un informe &#40;Generador de informes y SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Para empezar a usar un gráfico inmediatamente, vea los tutoriales de barras, columnas, minigráfico y gráficos circulares en los tutoriales [&#40;Generador de informes&#41;](../report-builder-tutorials.md) o los tutoriales de barras y gráficos circulares en [Reporting Services tutoriales &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  
   
  En la ilustración siguiente se muestran muchos de los distintos elementos que se usan en un gráfico.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66106250"
   
   
   
-##  <a name="SimilarMatrix"></a> Similitudes con una matriz  
+##  <a name="SimilarMatrix"></a>Similitudes con una matriz  
  Una forma de analizar el trabajo de los gráficos es compararlos con las matrices.  
   
  ![Nueva matriz agregada desde el cuadro de herramientas, seleccionada](../media/rs-matrixtemplatenewselected.gif "Nueva matriz agregada desde el cuadro de herramientas, seleccionada")  
@@ -147,7 +147,7 @@ ms.locfileid: "66106250"
  [Solucionar problemas de gráficos &#40;Generador de informes y SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
  Ofrece sugerencias para trabajar con gráficos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Imágenes, cuadros de texto, rectángulos y líneas &#40;Generador de informes y SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   

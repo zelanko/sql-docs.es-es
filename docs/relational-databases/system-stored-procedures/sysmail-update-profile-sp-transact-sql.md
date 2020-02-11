@@ -18,13 +18,13 @@ ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 36731206770b324bf4387143ef2c98b0532475ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67902890"
 ---
-# <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
+# <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cambia la descripción o el nombre de un perfil del Correo electrónico de base de datos.  
@@ -40,27 +40,27 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id` El identificador de perfil para la actualización. *profile_id* es **int**, su valor predeterminado es null. Al menos uno de *profile_id* o *profile_name* debe especificarse. Si se especifican los dos, el procedimiento cambia el nombre del perfil.  
+`[ @profile_id = ] profile_id`Identificador de perfil que se va a actualizar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar al menos una de *profile_id* o *profile_name* . Si se especifican los dos, el procedimiento cambia el nombre del perfil.  
   
-`[ @profile_name = ] 'profile_name'` El nombre del perfil que desea actualizar o el nuevo nombre para el perfil. *nombre_perfil* es **sysname**, su valor predeterminado es null. Al menos uno de *profile_id* o *profile_name* debe especificarse. Si se especifican los dos, el procedimiento cambia el nombre del perfil.  
+`[ @profile_name = ] 'profile_name'`Nombre del perfil que se va a actualizar o nombre nuevo del perfil. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar al menos una de *profile_id* o *profile_name* . Si se especifican los dos, el procedimiento cambia el nombre del perfil.  
   
-`[ @description = ] 'description'` La nueva descripción para el perfil. *descripción* es **nvarchar (256)** , su valor predeterminado es null.  
+`[ @description = ] 'description'`Nueva descripción del perfil. la *Descripción* es de tipo **nvarchar (256)** y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si se especifican los dos (el Id. de perfil y el nombre de perfil), el procedimiento cambia el nombre del perfil por el nombre proporcionado y actualiza su descripción. Si solo se proporciona uno de estos argumentos, el procedimiento actualiza la descripción del perfil.  
   
- El procedimiento almacenado **sysmail_update_profile_sp** está en el **msdb** de base de datos y que pertenece el **dbo** esquema. El procedimiento debe ejecutarse con un nombre de tres partes si la base de datos actual no es **msdb**.  
+ El procedimiento almacenado **sysmail_update_profile_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
 ## <a name="permissions"></a>Permisos  
- Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+ Los permisos de ejecución para este procedimiento tienen como valor predeterminado los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  **A. Cambiar la descripción de un perfil**  
   
- En el ejemplo siguiente se cambia la descripción del perfil denominado `AdventureWorks Administrator` en el **msdb** base de datos.  
+ En el ejemplo siguiente se cambia la descripción del perfil `AdventureWorks Administrator` denominado en la base de datos **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profile_sp  
@@ -79,10 +79,10 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
     ,@description = 'Profile to send alert e-mail to operators.';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
- [Objetos de configuración de correo electrónico de base de datos](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Crear una cuenta de correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Procedimientos almacenados de correo electrónico de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos objetos de configuración](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Creación de una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

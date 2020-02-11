@@ -1,5 +1,5 @@
 ---
-title: Conceder permisos en las estructuras de minería de datos y modelos (Analysis Services) | Microsoft Docs
+title: Conceder permisos para estructuras y modelos de minería de datos (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25eb8fe00c523d4a94b7f6f0325bfd2c1f55e7be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074942"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>Otorgar permisos para estructuras y modelos de minería de datos (Analysis Services)
@@ -40,7 +40,7 @@ ms.locfileid: "66074942"
   
 4.  En la página General, escriba un nombre y, si lo desea, una descripción. La página también contiene diversos permisos de base de datos, como Control total, Procesar base de datos y Leer definición. No se necesita ninguno de estos permisos para tener acceso a la minería de datos. Vea [Otorgar permisos de base de datos &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md) para obtener más información sobre los permisos de base de datos.  
   
-5.  En el panel **Estructura de minería de datos**, seleccione **Lectura** o **Lectura y escritura** para cada estructura de minería de datos.  
+5.  En el panel **Estructura de minería de datos** , seleccione **Lectura** o **Lectura y escritura**  para cada estructura de minería de datos.  
   
 6.  En el panel **Pertenencia** , especifique las cuentas de usuario y grupo de Windows que se conectan a Analysis Services con este rol.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66074942"
 ## <a name="set-permissions-to-access-a-mining-model"></a>Establecer permisos para obtener acceso a un modelo de minería de datos  
  Para los modelos de minería de datos, los roles pueden tener permisos de **Lectura** o **Lectura y escritura** , así como permisos de **Obtención de detalles** y **Leer definición** que permiten ver y explorar los datos subyacentes.  
   
- **Nota** : Si habilita la obtención de detalles en la estructura de minería de datos y el modelo de minería, cualquier usuario que sea miembro de un rol que tenga los permisos de obtención de detalles en el modelo de minería y la estructura de minería de datos también podrá ver las columnas en la estructura de minería de datos, aun cuando esas columnas no estén incluidas en el modelo de minería. Por consiguiente, para proteger información confidencial, debería preparar la vista del origen de datos de forma que enmascare datos personales y solo permita el acceso para la obtención de detalles en la estructura de minería de datos cuando sea necesario.  
+ **Nota:** Si habilita la obtención de detalles en la estructura de minería de datos y en el modelo de minería de datos, cualquier usuario que sea miembro de un rol que tenga permisos de obtención de detalles en el modelo de minería de datos y la estructura de minería de datos también podrá ver las columnas de la estructura de minería de datos, aunque dichas columnas no estén incluidas en el modelo de minería de datos. Por consiguiente, para proteger información confidencial, debería preparar la vista del origen de datos de forma que enmascare datos personales y solo permita el acceso para la obtención de detalles en la estructura de minería de datos cuando sea necesario.  
   
  Para conceder permisos de lectura y escritura a un rol de base de datos, un usuario debe ser miembro del rol de servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o de un rol de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con permisos de Control total (Administrador).  
   
@@ -66,10 +66,10 @@ ms.locfileid: "66074942"
 > [!NOTE]  
 >  De forma predeterminada, el envío de consultas DMX al usar OPENROWSET está deshabilitado.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceder permisos de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Conceder permisos de cubo o de modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Otorgar acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Conceder acceso personalizado a los datos de celda &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

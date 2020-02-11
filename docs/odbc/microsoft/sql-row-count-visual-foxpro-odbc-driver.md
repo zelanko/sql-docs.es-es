@@ -13,20 +13,20 @@ ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ddfa668a95345117aee3abfec638d50f49f2575b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063341"
 ---
 # <a name="sql-row-count-visual-foxpro-odbc-driver"></a>Recuento de filas de SQL (el controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: Completo  
+ Compatibilidad: completa  
   
- Conformidad de la API de ODBC: Nivel básico  
+ Conformidad con la API de ODBC: nivel básico  
   
- Devuelve el número de filas afectadas por la última [actualización](../../odbc/microsoft/update-sql-command.md), [insertar](../../odbc/microsoft/insert-sql-command.md), o [eliminar](../../odbc/microsoft/delete-sql-command.md) instrucción.  
+ Devuelve el número de filas afectadas por la última instrucción [Update](../../odbc/microsoft/update-sql-command.md), [Insert](../../odbc/microsoft/insert-sql-command.md)o [Delete](../../odbc/microsoft/delete-sql-command.md) .  
   
- Para obtener más información, consulte [SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md) en el *referencia del programador de ODBC*.
+ Para obtener más información, vea [SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md) en la *Referencia del programador de ODBC*.

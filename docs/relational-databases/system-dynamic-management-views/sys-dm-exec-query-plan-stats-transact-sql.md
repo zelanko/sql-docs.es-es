@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs
+title: Sys. dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: c4d4f58161885519767e299683fe32b5197a045f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66198217"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656997"
 ---
-# <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
+# <a name="sysdm_exec_query_plan_stats-transact-sql"></a>Sys. dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
-Devuelve el equivalente del último plan de ejecución real conocido para un plan de consulta previamente almacenado en caché.
+Devuelve el equivalente del último plan de ejecución real conocido para un plan de consulta almacenado en caché previamente.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -37,9 +37,9 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 ## <a name="arguments"></a>Argumentos 
 *plan_handle*  
-Es un token que identifica de forma exclusiva un plan de ejecución de consulta para un lote que se ha ejecutado y su plan reside en la caché del plan o se está ejecutando actualmente. *plan_handle* es **varbinary (64)** .   
+Es un token que identifica de forma única un plan de ejecución de consulta para un lote que se ha ejecutado y su plan reside en la caché del plan, o se está ejecutando actualmente. *plan_handle* es **varbinary (64)**.   
 
-El *plan_handle* puede obtenerse de los objetos de administración dinámica siguientes:  
+El *plan_handle* se puede obtener de los siguientes objetos de administración dinámica:  
   
 -   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -47,71 +47,75 @@ El *plan_handle* puede obtenerse de los objetos de administración dinámica sig
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [Sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [Sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
 
 ## <a name="table-returned"></a>Tabla devuelta
 
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|
-|**dbid**|**smallint**|Identificador de la base de datos de contexto que estaba activa al compilarse la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente a este plan. En el caso de instrucciones SQL ad hoc y preparadas, identificador de la base de datos en que se compilaron las instrucciones.<br /><br /> Esta columna acepta valores NULL.|  
-|**objectid**|**int**|Identificador del objeto (por ejemplo, procedimiento almacenado o función definida por el usuario) de este plan de consulta. Para lotes ad hoc y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
-|**number**|**smallint**|Entero de procedimiento almacenado numerado. Por ejemplo, un grupo de procedimientos para la **pedidos** aplicación podría llamarse **orderproc; 1**, **orderproc; 2**, y así sucesivamente. Para lotes ad hoc y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
-|**encrypted**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
-|**query_plan**|**xml**|Contiene la representación del plan de presentación del plan de ejecución de consulta real que se especifica con último conocido del runtime *plan_handle*. El plan de presentación está en formato XML. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.| 
+|**DBID**|**smallint**|Identificador de la base de datos de contexto que estaba activa al compilarse la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente a este plan. En el caso de instrucciones SQL ad hoc y preparadas, identificador de la base de datos en que se compilaron las instrucciones.<br /><br /> Esta columna acepta valores NULL.|  
+|**objectId**|**int**|Identificador del objeto (por ejemplo, procedimiento almacenado o función definida por el usuario) de este plan de consulta. Para lotes "ad hoc" y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
+|**número**|**smallint**|Entero de procedimiento almacenado numerado. Por ejemplo, un grupo de procedimientos de la aplicación **orders** puede llamarse **orderproc;1**, **orderproc;2**, etc.  Para lotes "ad hoc" y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
+|**cifra**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
+|**query_plan**|**lenguaje**|Contiene la última representación de SHOWPLAN en tiempo de ejecución conocida del plan de ejecución de consulta real que se especifica con *plan_handle*. El plan de presentación está en formato XML. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.| 
 
-## <a name="remarks"></a>Comentarios
-Esta función del sistema está disponible a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4.
+## <a name="remarks"></a>Observaciones
+Esta función del sistema está disponible a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] partir de CTP 2,4.
 
-Se trata de una característica opcional que requiere que la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esté habilitada. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 2.5 de CTP, para realizar esta acción en el nivel de base de datos, vea la opción LAST_QUERY_PLAN_STATS [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+Se trata de una característica opcional que requiere que la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esté habilitada. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, para realizar esta acción en el nivel de base de datos, vea la opción LAST_QUERY_PLAN_STATS en [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
-Esta función del sistema funciona bajo el **ligera** consultar las estadísticas de ejecución de generación de perfiles de infraestructura. Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).  
+Esta función del sistema funciona en la infraestructura de generación de perfiles de estadísticas de ejecución de consultas **ligeras** . Para obtener más información, consulte la [infraestructura de generación de perfiles de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
-En las siguientes condiciones, un plan de presentación de salida **equivalente a un plan de ejecución real** se devuelve en el **query_plan** columna de la tabla devuelta para **sys.dm_exec_query_plan_ estadísticas**:  
+La salida del plan de presentación por sys. dm_exec_query_plan_stats contiene la siguiente información:
+-  Toda la información de tiempo de compilación que se encuentra en el plan almacenado en caché
+-  Información en tiempo de ejecución, como el número real de filas por operador, el tiempo de la CPU de consulta total y el tiempo de ejecución, las advertencias de derrame, el DOP real, la memoria máxima usada y la memoria concedida
 
--   El plan puede encontrarse en [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **AND**    
--   La consulta que se está ejecutando es complejo o consumo de recursos.
+En las siguientes condiciones, se devuelve un resultado de SHOWPLAN **equivalente a un plan de ejecución real** en la columna **query_plan** de la tabla devuelta para **Sys. dm_exec_query_plan_stats**:  
 
-En las siguientes condiciones, un **simplificada <sup>1</sup>**  de salida de Showplan se devuelve en el **query_plan** columna de la tabla devuelta para **sys.dm_exec_ query_plan_stats**:  
+-   El plan se puede encontrar en [Sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
+    **y**    
+-   La consulta que se ejecuta es compleja o de consumo de recursos.
 
--   El plan puede encontrarse en [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **AND**    
--   La consulta es bastante sencilla, generalmente se clasifican como parte de una carga de trabajo OLTP.
+En las siguientes condiciones, se devuelve una salida del plan de presentación **simplificada <sup></sup> ** en la **query_plan** columna de la tabla devuelta para **Sys. dm_exec_query_plan_stats**:  
 
-<sup>1</sup> a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 2.5 de CTP, se refiere a un plan de presentación que solo contiene el operador de nodo raíz (SELECT). Para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 se refiere al plan almacenado en caché como disponible a través de `sys.dm_exec_cached_plans`.
+-   El plan se puede encontrar en [Sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
+    **y**    
+-   La consulta es lo suficientemente sencilla, normalmente clasificada como parte de una carga de trabajo OLTP.
 
-En las siguientes condiciones, **no se devuelve ningún resultado** desde **sys.dm_exec_query_plan_stats**:
+<sup>1</sup> a partir [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] de CTP 2,5, esto hace referencia a un plan de presentación que solo contiene el operador de nodo raíz (Select). En [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] el caso de CTP 2,4, esto hace referencia al plan almacenado `sys.dm_exec_cached_plans`en caché como disponible a través de.
 
--   El plan de consulta que se especifica mediante el uso de *plan_handle* se ha desalojado de la caché del plan.     
-    **OR**    
--   El plan de consulta no era almacenable en caché en primer lugar. Para obtener más información, consulte [Plan de almacenamiento en caché en ejecución y volver a utilizar ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
+En las siguientes condiciones, **no se devuelve ningún resultado** desde **Sys. dm_exec_query_plan_stats**:
+
+-   El plan de consulta especificado mediante *plan_handle* se ha expulsado de la caché del plan.     
+    **O BIEN**    
+-   No se pudo almacenar en caché el plan de consulta en primer lugar. Para obtener más información, consulte [almacenamiento en caché y reutilización del plan de ejecución ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
-> Debido a una limitación en el número de niveles anidados permitidos en el **xml** tipo de datos, **sys.dm_exec_query_plan** no puede devolver los planes de consulta que tengan o superen los 128 niveles de elementos anidados. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condición impedía el plan de consulta de devolver y [el error 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 y versiones posteriores, el **query_plan** columna devuelve NULL.  
+> Debido a una limitación en el número de niveles anidados permitidos en el tipo de datos **XML** , **Sys. dm_exec_query_plan** no puede devolver planes de consulta que cumplan o superen los 128 niveles de elementos anidados. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condición impedía la devolución del plan de consulta y generaba el [error 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 y versiones posteriores, la columna **query_plan** devuelve NULL.  
 
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `VIEW SERVER STATE` en el servidor.  
 
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. Busca en la última plan de ejecución de consulta real conocido de un plan en caché específico  
- El ejemplo siguiente se consulta **sys.dm_exec_cached_plans** para encontrar el plan de interés y copiar su `plan_handle` desde la salida.  
+### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. Examinando el último plan de ejecución de consultas real conocido para un plan almacenado en caché específico  
+ En el ejemplo siguiente se consulta **Sys. dm_exec_cached_plans** para buscar el plan interesante y `plan_handle` copiar su desde la salida.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_cached_plans;  
 GO  
 ```  
   
-A continuación, para obtener el plan de ejecución de consulta real conocidos último, use el copiado `plan_handle` con la función del sistema **sys.dm_exec_query_plan_stats**.  
+A continuación, para obtener el último plan de ejecución de consulta real conocido, `plan_handle` utilice el copiado con la función del sistema **Sys. dm_exec_query_plan_stats**.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);  
 GO  
 ```   
 
-### <a name="b-looking-at-last-known-actual-query-execution-plan-for-all-cached-plans"></a>b. Busca en la última plan de ejecución de consulta real conocido de todos los planes almacenados en caché
+### <a name="b-looking-at-last-known-actual-query-execution-plan-for-all-cached-plans"></a>B. Examinando el último plan de ejecución de consultas real conocido para todos los planes almacenados en caché
   
 ```sql  
 SELECT *   
@@ -121,7 +125,7 @@ CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle) AS qps;
 GO  
 ```   
 
-### <a name="c-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan-and-query-text"></a>C. Busca en la última plan de ejecución de consulta real conocido de un plan almacenado en caché específico y el texto de consulta
+### <a name="c-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan-and-query-text"></a>C. Examinando el último plan de ejecución de consulta real conocido para un plan y un texto de consulta específicos almacenados en caché
 
 ```sql  
 SELECT *   
@@ -132,7 +136,7 @@ WHERE st.text LIKE 'SELECT * FROM Person.Person%';
 GO  
 ```   
 
-### <a name="d-look-at-cached-events-for-trigger"></a>D. Examine los eventos almacenados en caché para el desencadenador
+### <a name="d-look-at-cached-events-for-trigger"></a>D. Examinar eventos en caché para desencadenador
 
 ```sql
 SELECT *
@@ -142,8 +146,8 @@ WHERE objtype ='Trigger';
 GO
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
   [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081977"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Definir períodos de tiempo (Asistente para dimensiones)
@@ -44,12 +44,12 @@ ms.locfileid: "66081977"
 > [!NOTE]  
 >  El período de tiempo `Date` es obligatorio.  
   
- **Idioma para los nombres de miembro de hora**  
+ **Idioma de los nombres de miembros de tiempo**  
  Seleccione el idioma de los miembros de dimensión de tiempo.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para dimensiones](dimension-wizard-f1-help.md)   
- [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Asistente para dimensiones (ayuda F1)](dimension-wizard-f1-help.md)   
+ [Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Seleccionar calendarios &#40;Asistente para dimensiones&#41;](select-calendars-dimension-wizard.md)  
   

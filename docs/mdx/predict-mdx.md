@@ -1,5 +1,5 @@
 ---
-title: Predecir (MDX) | Microsoft Docs
+title: Predicción (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 165d03b886ad8e9beeb09bf5a835c879cc23a2a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055586"
 ---
 # <a name="predict-mdx"></a>Predict (MDX)
@@ -40,8 +40,8 @@ Predict(Mining_Model_Name,String_Expression)
  *String_Expression*  
  Expresión de cadena válida que se evalúa como una expresión DMX válida para el modelo de minería de datos especificado.  
   
-## <a name="remarks"></a>Comentarios  
- El **Predict** función evalúa la expresión de cadena especificada dentro del contexto del modelo de minería de datos especificado.  
+## <a name="remarks"></a>Observaciones  
+ La función **PREDICT** evalúa la expresión de cadena especificada en el contexto del modelo de minería de datos especificado.  
   
  La sintaxis y las funciones de minería de datos se documentan en la referencia de Expresiones de minería de datos (DMX).  
   
@@ -58,7 +58,7 @@ FROM [Adventure Works]
 WHERE([Customer].[Customer Geography].[Customer].&[12012])  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

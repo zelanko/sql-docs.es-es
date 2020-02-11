@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876868"
 ---
 # <a name="back-up-database-backup-options-page"></a>Copia de seguridad de la base de datos (página Opciones de copia de seguridad)
@@ -33,14 +33,14 @@ ms.locfileid: "62876868"
 >  Puede definir un plan de mantenimiento de base de datos para crear copias de seguridad. Para obtener más información, vea [Planes de mantenimiento](../maintenance-plans/maintenance-plans.md) y [Usar el Asistente para planes de mantenimiento](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [BACKUP](/sql/t-sql/statements/backup-transact-sql) de [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente si hace clic en el botón **Script** y, después, selecciona un destino para el script.  
+>  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) script by clicking the **Script** button and then selecting a destination for the script.  
   
 ## <a name="options"></a>Opciones  
   
 ### <a name="backup-set"></a>Conjunto de copia de seguridad  
  Las opciones del panel **Conjunto de copia de seguridad** permiten especificar información adicional acerca del conjunto de copia de seguridad creado en la operación de copia de seguridad.  
   
- **Name**  
+ **Nombre**  
  Especifique el nombre del conjunto de copia de seguridad. El sistema sugiere automáticamente un nombre predeterminado basándose en el nombre de la base de datos y el tipo de copia de seguridad.  
   
  Para obtener más información sobre los conjuntos de copia de seguridad, vea [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
@@ -86,7 +86,7 @@ ms.locfileid: "62876868"
 >   
 >  Solo se admiten las claves que residen en Administración extensible de claves (EKM).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   

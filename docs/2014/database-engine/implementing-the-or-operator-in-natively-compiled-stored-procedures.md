@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228210"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implementar el operador OR en procedimientos almacenados compilados de forma nativa
@@ -245,6 +245,6 @@ GO
 ## <a name="side-effects"></a>Efectos secundarios  
  Si tiene más de un operador OR en la cláusula WHERE o la condición JOIN, el número de consultas que necesita ejecutar para simular el comportamiento puede aumentar exponencialmente. Esto puede ralentizar el rendimiento de las consultas y aumentar la utilización de memoria debido a la necesidad de usar variables de tabla optimizada para memoria.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Problemas de migración para los procedimientos almacenados compilados de forma nativa](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
   

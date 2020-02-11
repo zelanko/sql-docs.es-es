@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8fd8aa240a72dacc67e7cd09cb058192cddee282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088377"
 ---
 # <a name="name-mdx"></a>Name (MDX)
@@ -50,8 +50,8 @@ Member_Expression.Name
  *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Comentarios  
- El **nombre** función devuelve el nombre del objeto, no el nombre único.  
+## <a name="remarks"></a>Observaciones  
+ La función **Name** devuelve el nombre del objeto, no el nombre único.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -80,7 +80,7 @@ SELECT {Measures.MemberName, Measures.ValueColumn, Measures.KeyColumn, Measures.
 from [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

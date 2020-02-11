@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (página General del Editor de texto: texto sin formato -) | Microsoft Docs'
+title: Opciones (editor de texto-texto sin formato-página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089277"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Editor de texto - Texto sin formato - Página General)
@@ -37,7 +37,7 @@ ms.locfileid: "66089277"
  **Habilitar espacio virtual**  
  Inserta espacios al final de cada línea de texto. Seleccione esta casilla para colocar comentarios en un punto coherente junto al texto.  
   
- **Ajuste de línea**  
+ **Ajuste de palabra**  
  Muestra, en la siguiente línea, cualquier parte de una línea que se extienda horizontalmente fuera del área visible del editor. Cuando se selecciona esta casilla, se habilita la opción **Mostrar glifos visuales para ajuste de línea** .  
   
  **Mostrar glifos visuales para ajuste de línea**  
@@ -46,7 +46,7 @@ ms.locfileid: "66089277"
 > [!NOTE]  
 >  Estas flechas de recordatorio no se agregan al código y no se imprimen. Solo sirven como referencia.  
   
- **Aplicar comandos Cortar o copiar a líneas en blanco cuando no hay ninguna selección**  
+ **Aplicar comandos Cortar o Copiar a líneas en blanco si no hay selección**  
  Establece el comportamiento del editor cuando el punto de inserción se coloca en una línea en blanco, no se selecciona nada y se hace clic en **Copiar** o **Cortar**.  
   
  Cuando se selecciona esta casilla, se copia o se corta la línea en blanco. Si luego hace clic en **Pegar**, se insertará una nueva línea en blanco.  
@@ -62,7 +62,7 @@ ms.locfileid: "66089277"
 > [!NOTE]  
 >  Estos números de línea no se agregan al texto y no se imprimen. Solo sirven como referencia.  
   
- **Habilitar navegación a direcciones URL con un solo clic**  
+ **Habilitar acceso a direcciones URL con un solo clic**  
  El cursor cambia a una mano cuando pasa por encima de una dirección URL en el editor. Puede hacer clic en la dirección URL para abrir la página indicada en el explorador web.  
   
  **Barra de navegación**  

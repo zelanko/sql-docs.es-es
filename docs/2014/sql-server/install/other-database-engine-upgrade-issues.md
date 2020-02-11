@@ -1,5 +1,5 @@
 ---
-title: Otros problemas de actualización de motor de base de datos | Microsoft Docs
+title: Otros problemas de actualización de Motor de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093697"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Otros problemas de actualización del motor de base de datos
@@ -27,7 +27,7 @@ ms.locfileid: "66093697"
   
 -   Las opciones NO_LOG y TRUNCATE_ONLY de BACKUP LOG  
   
--   BACKUP TRANSACTION  
+-   BACKUP TRANSACTION   
   
 -   RESTORE TRANSACTION  
   
@@ -54,16 +54,16 @@ ms.locfileid: "66093697"
 ## <a name="new-data-types"></a>Nuevos tipos de datos  
  Los siguientes son los tipos del sistema reservados. Cambie el nombre de los tipos definidos por el usuario que entran en conflicto, ya sea antes o después de llevar a cabo la actualización.  
   
--   Geografía  
+-   Geography  
   
--   Geometry  
+-   Geometría  
   
 -   Datetime2  
   
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>La tabla de destino de la cláusula OUTPUT INTO no puede tener ningún desencadenador definido  
- No se admite el resultado en una tabla de destino cuando la tabla tiene desencadenadores habilitados.  
+ No se admite la salida en una tabla de destino cuando la tabla tiene ningún desencadenador habilitado.  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>Error en tiempo de compilación con los UDF cuando el destino de una cláusula OUTPUT INTO sea una tabla  
  Las funciones definidas por el usuario (UDF) no se pueden utilizar para realizar acciones que modifiquen el estado de la base de datos. Por ejemplo, un UDF no puede realizar ninguna acción DDL (CREATE/ALTER/DROP) o DML (INSERT/UPDATE/DELETE) sobre ningún objeto, excepto para variables de tabla.  
@@ -72,9 +72,9 @@ ms.locfileid: "66093697"
  MERGE es ahora una palabra clave totalmente reservada. Las aplicaciones ya no pueden tener objetos (tablas, columnas, etc.) denominados MERGE.  
   
 ## <a name="rename-cdc-schema"></a>Cambiar el nombre del esquema CDC  
- Hay un nombre de esquema denominado CDC. Este nombre de esquema no puede estar en utilizado si **captura de datos modificados** está habilitada para la base de datos.  
+ Hay un nombre de esquema denominado CDC. Este nombre de esquema no se puede usar si la **captura de datos modificados** está habilitada para la base de datos.  
   
- Debe quitar el esquema CDC antes de habilitar **captura de datos modificados** para la base de datos. Este paso se puede hacer antes o después de la actualización. Para eliminar el esquema, siga los pasos que se detallan a continuación:  
+ Debe quitar el esquema CDC antes de habilitar la **captura de datos modificados** para la base de datos. Este paso se puede hacer antes o después de la actualización. Para eliminar el esquema, siga los pasos que se detallan a continuación:  
   
 1.  Transfiera los objetos del esquema CDC a un nuevo nombre de esquema utilizando ALTER SCHEMA.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66093697"
   
 4.  Elimine el esquema CDC utilizando DROP SCHEMA.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Problemas de actualización del motor de la base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

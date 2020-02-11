@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63277432"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>Conectarse a una instancia desde el Explorador de objetos
@@ -28,7 +28,7 @@ ms.locfileid: "63277432"
   
  Para especificar valores de conexión opcionales, siga estos pasos:  
   
-1.  Haga clic en **Conectar** en la barra de herramientas del Explorador de objetos y, a continuación, haga clic en el tipo de servidor al que desea conectarse. Aparece el cuadro de diálogo **Conectar al servidor** .  
+1.  Haga clic en **Conectar** en la barra de herramientas del Explorador de objetos y, a continuación, haga clic en el tipo de servidor al que desea conectarse. Aparecerá el cuadro de diálogo **Conectar con el servidor** .  
   
 2.  En el cuadro **Nombre del servidor** , escriba el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -36,12 +36,12 @@ ms.locfileid: "63277432"
   
 4.  Haga clic en el pestaña **Propiedades de conexión** para definir los valores adicionales. Los valores disponibles varían según el tipo de servidor. En el [!INCLUDE[ssDE](../../includes/ssde-md.md)]están disponibles los valores siguientes.  
   
-    |Parámetro|Descripción|  
+    |Configuración|Descripción|  
     |-------------|-----------------|  
-    |**Conectar con base de datos**|Se elige entre las bases de datos disponibles en el servidor. Esta lista solo mostrará las bases de datos que esté autorizado a ver.|  
+    |**Conexión a la base de datos**|Se elige entre las bases de datos disponibles en el servidor. Esta lista solo mostrará las bases de datos que esté autorizado a ver.|  
     |**Protocolo de red**|Se selecciona entre Memoria compartida, TCP/IP o Canalizaciones con nombre.|  
-    |**Tamaño del paquete de red**|Se configura en bytes. El valor predeterminado es 4096 bytes.|  
-    |**Tiempo de espera de la conexión**|Se configura en segundos. El valor predeterminado es 15 segundos.|  
+    |**Tamaño de paquete de red**|Se configura en bytes. El valor predeterminado es 4096 bytes.|  
+    |**Tiempo de espera de conexión**|Se configura en segundos. El valor predeterminado es 15 segundos.|  
     |**Tiempo de espera de ejecución**|Se configura en segundos. El valor predeterminado (0) indica que el tiempo de espera de la ejecución nunca se agotará.|  
     |**Cifrar conexión**|Exige el uso de cifrado.|  
   

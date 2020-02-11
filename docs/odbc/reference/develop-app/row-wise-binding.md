@@ -1,5 +1,5 @@
 ---
-title: El enlace de | Microsoft Docs
+title: Enlace de modo de fila | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aab33f8805741083fd42e9fbcb25d67a416be319
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061622"
 ---
 # <a name="row-wise-binding"></a>El enlace
-Cuando se usa el enlace, una aplicación define una estructura que contiene uno o dos, o en algunos casos, tres, elementos para cada columna para el que se va a devolver datos. El primer elemento contiene el valor de datos, y el segundo elemento contiene el búfer de longitud/indicador. Valores de longitud y los indicadores pueden almacenarse en búferes independientes estableciendo los campos de descriptor SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR en valores diferentes; Si esto sucede, la estructura contiene un tercer elemento. La aplicación, a continuación, asigna una matriz de estas estructuras, que incluye tantos elementos como filas en el conjunto de filas.  
+Cuando se usa el enlace de modo de fila, una aplicación define una estructura que contiene uno o dos, o en algunos casos tres, elementos para cada columna para la que se van a devolver los datos. El primer elemento contiene el valor de los datos y el segundo elemento contiene el búfer de longitud/indicador. Los indicadores y los valores de longitud se pueden almacenar en búferes independientes estableciendo los campos de descriptor SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR en valores diferentes; Si se hace esto, la estructura contiene un tercer elemento. A continuación, la aplicación asigna una matriz de estas estructuras, que contiene tantos elementos como filas hay en el conjunto de filas.  
   
- La aplicación declara el tamaño de la estructura en el controlador con el atributo de instrucción SQL_ATTR_ROW_BIND_TYPE y enlaza la dirección de cada miembro en el primer elemento de la matriz. Por lo tanto, el controlador puede calcular la dirección de los datos para una determinada fila y columna como  
+ La aplicación declara el tamaño de la estructura en el controlador con el atributo de instrucción SQL_ATTR_ROW_BIND_TYPE y enlaza la dirección de cada miembro en el primer elemento de la matriz. Por lo tanto, el controlador puede calcular la dirección de los datos de una fila y columna determinadas como  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size)  
 ```  
   
- donde las filas se numeran del 1 al tamaño del conjunto de filas. (Uno se resta el número de fila porque está basado en cero en C la indización de matrices.) La siguiente ilustración muestra el modo de fila cómo funciona el enlace. Por lo general, solo las columnas que se enlazará se incluyen en la estructura. La estructura puede contener campos que no estén relacionados como resultado columnas del conjunto. Las columnas se pueden colocar en la estructura en cualquier orden, pero se muestran en orden secuencial para mayor claridad.  
+ donde las filas se numeran de 1 al tamaño del conjunto de filas. (Uno se resta del número de fila porque la indización de matrices en C es de base cero). En la ilustración siguiente se muestra cómo funciona el enlace de modo de fila. Por lo general, solo se incluyen en la estructura las columnas que se van a enlazar. La estructura puede contener campos que no están relacionados con las columnas del conjunto de resultados. Las columnas se pueden colocar en la estructura en cualquier orden, pero se muestran en orden secuencial para mayor claridad.  
   
- ![Fila muestra&#45;enlace conveniente](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![Muestra el enlace de&#45;de fila](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
- Por ejemplo, el código siguiente crea una estructura con elementos en la que se va a devolver datos de las columnas OrderID, vendedor y el estado y los indicadores/longitud para las columnas de vendedor y el estado. Asigna el 10 de estas estructuras y se enlazan a las columnas OrderID, vendedor y el estado.  
+ Por ejemplo, el código siguiente crea una estructura con los elementos en los que se devuelven los datos de las columnas OrderID, SalesPerson y status, y length/Indicators para las columnas SalesPerson y status. Asigna 10 de estas estructuras y las enlaza a las columnas OrderID, SalesPerson y status.  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

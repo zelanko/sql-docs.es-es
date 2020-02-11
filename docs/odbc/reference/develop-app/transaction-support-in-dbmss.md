@@ -14,11 +14,11 @@ ms.assetid: 0fc2ae34-4748-4120-9fc3-bb28c8ed867e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72353e9917996ecacdc5971b4a11f9c73718ba43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037632"
 ---
 # <a name="transaction-support-in-dbmss"></a>Compatibilidad con transacciones en DBMS
-Algunas bases de datos, especialmente escritorio bases de datos de dBASE, Paradox y Btrieve, no admiten transacciones. Incluso entre las bases de datos que admiten transacciones, hay variación en lo que pueden ser tipos de instrucciones SQL en una transacción. Para obtener más información, vea la opción SQL_TXN_CAPABLE en el [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descripción de la función.
+Algunas bases de datos, especialmente las bases de datos de escritorio, como dBASE, Paradox y Btrieve, no admiten transacciones. Incluso entre las bases de datos que admiten transacciones, hay una variación en la que los tipos de instrucciones SQL pueden estar en una transacción. Para obtener más información, vea la opción SQL_TXN_CAPABLE en la descripción de la función [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) .

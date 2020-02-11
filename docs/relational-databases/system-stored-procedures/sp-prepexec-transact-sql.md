@@ -18,10 +18,10 @@ ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 670b64cb107610fe8b5506654b9e655b0da5fb16
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68794717"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
@@ -40,13 +40,13 @@ sp_prepexec handle OUTPUT, params , stmt
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *handle*  
+ *asa*  
  Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]identificador de *identificador* generado por. *Handle* es un parámetro necesario con un valor devuelto **int** .  
   
  *params*  
- Identifica instrucciones con parámetros. La definición de params de variables se sustituye por los marcadores de parámetros de la instrucción. *params* es un parámetro necesario que requiere un valor de entrada **ntext**, **nchar**o **nvarchar** . Escriba un valor NULL si la instrucción no tiene parámetros.  
+ Identifica instrucciones con parámetros. La definición de *params* de variables se sustituye por los marcadores de parámetros de la instrucción. *params* es un parámetro necesario que requiere un valor de entrada **ntext**, **nchar**o **nvarchar** . Escriba un valor NULL si la instrucción no tiene parámetros.  
   
- *stmt*  
+ *instrucción*  
  Define el conjunto de resultados del cursor. El parámetro *stmt* es obligatorio y llama a para un valor de entrada **ntext**, **nchar**o **nvarchar** .  
   
  *bound_param*  
@@ -66,8 +66,8 @@ EXEC sp_prepexec @Out output,
 EXEC sp_unprepare @Out;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Transact &#40;-SQL de sp_prepare&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
- [Transact &#40;-SQL de sp_execute&#41;](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
+ [sp_execute &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

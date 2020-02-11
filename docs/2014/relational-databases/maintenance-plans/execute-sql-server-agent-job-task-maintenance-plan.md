@@ -15,25 +15,25 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33f037f4d82cbf5bbdebde01a5c4492128ecc8ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206021"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>Tarea Ejecutar trabajo del Agente SQL Server (Plan de mantenimiento)
-  Utilice el cuadro de diálogo **Tarea Ejecutar trabajo del Agente SQL Server** para ejecutar trabajos del Agente Microsoft SQL Server dentro de un plan de mantenimiento. Esta opción no estará disponible si no tiene trabajos del Agente SQL Server en la conexión seleccionada.  
+  Utilice el cuadro de diálogo **tarea ejecutar trabajo de Agente SQL Server** para ejecutar trabajos del agente de Microsoft SQL Server dentro de un plan de mantenimiento. Esta opción no estará disponible si no tiene trabajos del Agente SQL Server en la conexión seleccionada.  
   
  Esta tarea usa la instrucción **.sp_start_job** .  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **Conexión**  
+ **Connection**  
  Seleccione la conexión al servidor que va a utilizar para la realización de esta tarea.  
   
  **Nuevo**  
  Cree una nueva conexión de servidor que utilizará al realizar esta tarea. El cuadro de diálogo **Nueva conexión** se describe a continuación.  
   
- **Trabajos del Agente SQL Server disponibles**  
+ **Trabajos del Agente SQL disponibles**  
  Seleccione el trabajo que se ejecutará. La cuadrícula proporciona el **Nombre del trabajo** y la **Descripción** para identificar los trabajos.  
   
  **Ver T-SQL**  
@@ -43,7 +43,7 @@ ms.locfileid: "68206021"
 >  Si el número de objetos afectados es elevado, es posible que deba esperar un rato hasta que se muestren.  
   
 ## <a name="new-connection-dialog-box"></a>Cuadro de diálogo Nueva conexión  
- **Nombre de conexión**  
+ **Nombre de la conexión**  
  Escriba un nombre para la nueva conexión.  
   
  **Seleccionar o especificar un nombre de servidor**  
@@ -56,20 +56,20 @@ ms.locfileid: "68206021"
  Especifica el modo de autenticación en el servidor.  
   
  **Usar seguridad integrada de Windows NT**  
- Se conecta a una instancia del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] with Microsoft Windows Authentication.  
+ Se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] con la autenticación de Microsoft Windows.  
   
  **Utilizar un nombre de usuario y una contraseña específicos**  
- Se conecta a una instancia del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Esta opción no está disponible.  
+ Se conecta a una instancia del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] con la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta opción no está disponible.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Proporcione un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la autenticación. Esta opción no está disponible.  
   
  **Contraseña**  
  Proporcione una contraseña para que se utilice en la autenticación. Esta opción no está disponible.  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_job &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   
  [Crear un trabajo](../../ssms/agent/create-a-job.md)   
- [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
+ [sp_start_job &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
   
   

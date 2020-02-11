@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2660582b03a121a81976d6bbc12afc1213877c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107086"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>Establecer un mensaje para cuando no hay datos en una región de datos (Generador de informes y SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107086"
   
 1.  En la vista Diseño, haga clic en la región de datos de tabla, matriz o lista o en el subinforme en la superficie de diseño para seleccionarlo. Las propiedades del elemento seleccionado aparecen en el panel de propiedades.  
   
-2.  En el panel Propiedades, escriba el texto que desea mostrar como un mensaje en `NoRowsMessage` campo de propiedad.  
+2.  En el panel Propiedades, escriba el texto que desea mostrar como mensaje en el campo de `NoRowsMessage` propiedad.  
   
      Como alternativa, en la lista desplegable, haga clic en **Expresión** para abrir el cuadro de diálogo **Expresión** y crear una expresión.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "66107086"
   
 1.  En la vista Diseño, haga clic en el gráfico en la superficie de diseño para seleccionarlo. Las propiedades del elemento seleccionado aparecen en el panel de propiedades.  
   
-2.  En el panel Propiedades, expanda el nodo para `NoDataMessage`.  
+2.  En el panel Propiedades, expanda el nodo `NoDataMessage`de.  
   
-3.  En **título**, escriba el texto que desea mostrar como un mensaje en `NoDataMessage` campo de propiedad.  
+3.  En **título**, escriba el texto que desea mostrar como mensaje en el campo de `NoDataMessage` propiedad.  
   
      Como alternativa, en la lista desplegable, haga clic en **Expresión** para abrir el cuadro de diálogo **Expresión** y crear una expresión.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66107086"
   
 1.  En la vista Diseño, haga clic en el subinforme en la superficie de diseño para seleccionarlo. Las propiedades del elemento seleccionado aparecen en el panel de propiedades.  
   
-2.  En el panel Propiedades, escriba el texto que desea mostrar como un mensaje en `NoRowsMessage` campo de propiedad.  
+2.  En el panel Propiedades, escriba el texto que desea mostrar como mensaje en el campo de `NoRowsMessage` propiedad.  
   
      Como alternativa, en la lista desplegable, haga clic en **Expresión** para abrir el cuadro de diálogo **Expresión** y crear una expresión.  
   
@@ -53,11 +53,11 @@ ms.locfileid: "66107086"
   
 1.  En la vista Diseño, haga clic en la escala de colores del mapa para seleccionarla. Las propiedades del elemento seleccionado aparecen en el panel de propiedades.  
   
-2.  En el panel Propiedades, en `NoDataText`, escriba el texto que desea mostrar como etiqueta para los colores con ningún valor de datos.  
+2.  En el panel Propiedades, en `NoDataText`, escriba el texto que desea mostrar como etiqueta para los colores sin valor de datos.  
   
      Como alternativa, en la lista desplegable, haga clic en **Expresión** para abrir el cuadro de diálogo **Expresión** y crear una expresión.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Subinformes &#40;Generador de informes y SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   

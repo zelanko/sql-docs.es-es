@@ -1,5 +1,5 @@
 ---
-title: Crear o editar el cuadro de diálogo de relación (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo crear o editar relación (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086776"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Crear o Editar relación (Analysis Services - Datos multidimensionales)
@@ -31,14 +31,14 @@ ms.locfileid: "66086776"
 -   Haciendo clic con el botón derecho en el panel **Diagrama** del **Diseñador de vistas del origen de datos** y seleccionando **Editar relación**.  
   
 > [!NOTE]  
->  Puede crear relaciones en el **Diseñador de vistas del origen de datos** que no existen en el origen de datos subyacente y eliminar relaciones creadas mediante el **Diseñador de vistas del origen de datos** a partir de relaciones de clave externa en el origen de datos subyacente.  
+>  Puede crear relaciones en el **Diseñador de vistas del origen de datos** que no existen en el origen de datos subyacente y quitar las relaciones creadas por el **Diseñador de vistas del origen de datos** a partir de relaciones de clave externa existentes en el origen de datos subyacente.  
   
 ## <a name="options"></a>Opciones  
- **Tabla de origen (clave externa)**  
+ **Tabla de origen (de clave externa)**  
  Seleccione la tabla o consulta con nombre que contiene la referencia a una o varias columnas de la tabla de destino.  
   
- **Tabla de destino (clave principal)**  
- Seleccione la tabla que contiene una o varias columnas a las que la tabla de origen hace referencia. Para autocombinaciones, seleccione la misma tabla seleccionada en la **Tabla de origen (de clave externa)** .  
+ **Tabla de destino (de clave principal)**  
+ Seleccione la tabla que contiene una o varias columnas a las que la tabla de origen hace referencia. Para autocombinaciones, seleccione la misma tabla seleccionada en la **Tabla de origen (de clave externa)**.  
   
  **Columnas de origen**  
  Seleccione las columnas que hacen referencia a columnas de la tabla de destino.  
@@ -46,14 +46,14 @@ ms.locfileid: "66086776"
  **Columnas de destino**  
  Seleccione las columnas a las que hacen referencia las columnas de la tabla de origen.  
   
- **Reverse**  
+ **Viceversa**  
  Haga clic para invertir la dirección de la relación.  
   
  **Descripción**  
  Escriba una descripción opcional para la relación.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Diseñador de vistas del origen de datos &#40;Analysis Services de datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

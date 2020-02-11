@@ -14,10 +14,10 @@ ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d6af3aac4ac8e2a1a4026162eb6ab5f6038b5eed
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729408"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Eliminar una regla de negocios (Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "73729408"
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine una regla de negocios cuando ya no se necesite.  
   
 > [!NOTE]  
->  Puede evitar que los datos se validen con una regla de negocios excluyéndola, en lugar de eliminándola. Para obtener más información, consulte [Exclude a Business Rule &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md).  
+>  Puede evitar que los datos se validen con una regla de negocios excluyéndola, en lugar de eliminándola. Para obtener más información, consulte [Excluir una regla de negocios &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md).  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
@@ -58,7 +58,7 @@ ms.locfileid: "73729408"
   
 10. En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. La regla de negocios eliminada ya no aparece en la cuadrícula.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Excluir una regla de negocios &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
  [Crear y publicar una regla de negocios &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  

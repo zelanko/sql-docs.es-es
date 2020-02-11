@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe7b988590de54a3cb02aa540b244e1f56f3ba24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054132"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Estimar el tamaño de un índice clúster
@@ -38,7 +38,7 @@ ms.locfileid: "66054132"
   
 3.  Sumar los valores calculados.  
   
-## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Paso 1: Calcular el espacio utilizado para almacenar datos en el nivel hoja  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Paso 1. Calcular el espacio utilizado para almacenar datos en el nivel hoja  
   
 1.  Especifique el número de filas que habrá en la tabla:  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66054132"
   
      ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
   
-## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Paso 2. Calcular el espacio utilizado para almacenar información de índice  
+## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Paso 2. Calcular el espacio utilizado para almacenar información de índice  
  Los siguientes pasos pueden utilizarse para calcular el espacio necesario para almacenar los niveles superiores del índice:  
   
 1.  Especifique el número de columnas de longitud fija y variable de la clave de índice, y calcule el espacio necesario para su almacenamiento:  
@@ -174,34 +174,34 @@ ms.locfileid: "66054132"
   
 7.  Calcule el número de niveles del índice:  
   
-     ***Non-leaf_Levels*** = 1 + Index_Rows_Per_Page de registro (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***No leaf_Levels*** = 1 + Index_Rows_Per_Page de registro (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
   
      Redondee este valor al número entero más próximo. Este valor no incluye el nivel hoja del índice clúster.  
   
 8.  Calcule el número de páginas no hoja del índice:  
   
-     ***Num_Index_Pages =*** ∑Level ***(Num_Leaf_Pages / (Index_Rows_Per_Page***<sup>Level</sup>***))***  
+     ***Num_Index_Pages =*** ∑ nivel ***(Num_Leaf_Pages/(Index_Rows_Per_Page***<sup>nivel</sup>***))***  
   
      donde 1 <= Level <= ***Non-leaf_Levels***  
   
      Redondee cada sumando al número entero más próximo. Como ejemplo sencillo, considere un índice en el que ***Num_Leaf_Pages*** = 1000 e ***Index_Rows_Per_Page*** = 25. El primer nivel de índice por encima del nivel hoja almacena 1000 filas de índice, lo que equivale a una fila de índice por página hoja, y en cada página caben 25 filas de índice. Esto significa que se necesitan 40 páginas para almacenar las 1000 filas de índice. El siguiente nivel del índice debe almacenar 40 filas. Esto significa que necesita 2 páginas. El nivel final del índice debe almacenar 2 filas. Esto significa que necesita 1 página. Todo ello supone 43 páginas de índice no hoja. Si se utilizan estos números en las fórmulas anteriores, el resultado será el siguiente:  
   
-     ***Non-leaf_Levels*** = 1 + log25 (1000 / 25) = 3  
+     ***No leaf_Levels*** = 1 + log25 (1000/25) = 3  
   
-     ***Num_Index_Pages*** = 1000 /(25<sup>3</sup>) + 1000 / (25<sup>2</sup>) + 1000 / (25<sup>1</sup>) = 1 + 2 + 40 = 43, que es el número de páginas que se describe en el ejemplo.  
+     ***Num_Index_Pages*** = 1000/(25<sup>3</sup>) + 1000/(25<sup>2</sup>) + 1000/(25<sup>1</sup>) = 1 + 2 + 40 = 43, que es el número de páginas que se describe en el ejemplo.  
   
 9. Calcule el tamaño del índice (8.192 bytes por página):  
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## <a name="step-3-total-the-calculated-values"></a>Paso 3. Sumar los valores calculados  
+## <a name="step-3-total-the-calculated-values"></a>Paso 3. Sumar los valores calculados  
  Sume los valores obtenidos en los dos pasos anteriores:  
   
  Tamaño del índice agrupado (bytes) = ***Leaf_Space_Used*** + ***Index_Space_used***  
   
  En este cálculo no se tiene en cuenta lo siguiente:  
   
--   Particiones  
+-   Creación de particiones  
   
      La sobrecarga de espacio de la creación de particiones es mínima, pero resulta difícil de calcular. No es importante incluirla.  
   
@@ -221,7 +221,7 @@ ms.locfileid: "66054132"
   
      Para obtener información sobre los requisitos de espacio de las columnas dispersas, vea [Use Sparse Columns](../tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Índices agrupados y no agrupados descritos](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [Calcular el tamaño de una tabla](estimate-the-size-of-a-table.md)   
  [Crear índices clúster](../indexes/create-clustered-indexes.md)   

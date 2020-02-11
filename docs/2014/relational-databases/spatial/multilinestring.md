@@ -13,14 +13,14 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014206"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  Un `MultiLineString` es una colección de cero o más `geometry` o **geographyLineString** instancias.  
+  Una `MultiLineString` es una colección de cero o más `geometry` instancias de o **geographyLineString** .  
   
 ## <a name="multilinestring-instances"></a>Instancias de MultiLineString  
  En la ilustración siguiente se muestran ejemplos de instancias de `MultiLineString`.  
@@ -29,7 +29,7 @@ ms.locfileid: "66014206"
   
  Como se muestra en la ilustración:  
   
--   Figura 1 es una sencilla `MultiLineString` instancia cuyo límite son los cuatro extremos de sus dos `LineString` elementos.  
+-   La figura 1 es una `MultiLineString` instancia sencilla cuyo límite son los cuatro extremos de sus dos `LineString` elementos.  
   
 -   La figura 2 es una instancia sencilla de `MultiLineString` porque solo forman una intersección los extremos de los elementos `LineString`. El límite lo constituyen los dos extremos que no se superponen.  
   
@@ -37,12 +37,12 @@ ms.locfileid: "66014206"
   
 -   La figura 4 es una instancia de `MultiLineString` no sencilla y sin cerrar.  
   
--   La figura 5 es una instancia de `MultiLineString` sencilla y sin cerrar. No está cerrada porque su `LineStrings` elementos no están cerrados. Es sencilla porque ninguno de los interiores de ninguna de las instancias de `LineStrings` forma parte de una intersección.  
+-   La figura 5 es una instancia de `MultiLineString` sencilla y sin cerrar. No está cerrada porque sus `LineStrings` elementos no están cerrados. Es sencilla porque ninguno de los interiores de ninguna de las instancias de `LineStrings` forma parte de una intersección.  
   
 -   La figura 6 es una instancia de `MultiLineString` sencilla y cerrada. Está cerrada porque lo están todos sus elementos. Es sencilla porque ninguno de sus elementos forma parte de una intersección con los interiores.  
   
 ### <a name="accepted-instances"></a>Instancias aceptadas  
- Para que se acepte una instancia de `MultiLineString`, debe estar vacío o estar formada solo por instancias de `LineString` aceptadas. Para obtener más información sobre aceptado `LineString` instancias, consulte [LineString](../spatial/linestring.md). A continuación se enumeran ejemplos de instancias `MultiLineString` aceptadas.  
+ Para que se acepte una instancia de `MultiLineString`, debe estar vacío o estar formada solo por instancias de `LineString` aceptadas. Para obtener más información sobre `LineString` las instancias aceptadas, vea [LineString](../spatial/linestring.md). A continuación se enumeran ejemplos de instancias `MultiLineString` aceptadas.  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -74,7 +74,8 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- `@g4` no es válida porque la segunda instancia de `LineString` se superpone a la primera instancia de `LineString` en un intervalo. Se tocan en un número infinito de puntos.  
+ 
+  `@g4` no es válida porque la segunda instancia de `LineString` se superpone a la primera instancia de `LineString` en un intervalo. Se tocan en un número infinito de puntos.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente crea una instancia sencilla de `geometry``MultiLineString` que contiene dos elementos `LineString` con un SRID de 0.  
@@ -92,7 +93,7 @@ SET @g = geometry::Parse('MULTILINESTRING((0 2, 1 1), (1 0, 1 1))');
 SET @g.STSrid = 13;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [STLength &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STIsClosed &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)   
  [LineString](../spatial/linestring.md)   

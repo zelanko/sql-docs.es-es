@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d936c1a1086f13d43bc38758f86a0ab80f757f7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63249378"
 ---
 # <a name="subscription-type"></a>Tipo de suscripción
-  La replicación de mezcla proporciona dos tipos de suscripción: servidor y cliente (denominadas en versiones anteriores de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] global y local, respectivamente). Los suscriptores con una suscripción de servidor pueden:  
+  La replicación de mezcla ofrece dos tipos de suscripción: servidor y cliente (denominados en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versiones anteriores de global y local, respectivamente). Los suscriptores con una suscripción de servidor pueden:  
   
 -   Volver a publicar datos en otros suscriptores.  
   
@@ -37,8 +37,8 @@ ms.locfileid: "63249378"
  **Propiedades de la suscripción**  
  Para cada suscriptor, seleccione **Cliente** o **Servidor** en el cuadro de lista desplegable de la columna **Tipo de suscripción** . Para los suscriptores con suscripciones de servidor, escriba un número entre 0 y 99,99 en la columna **Prioridad para la resolución de conflictos** (cuanto mayor sea el número, más alta será la prioridad del suscriptor).  
   
-## <a name="see-also"></a>Vea también  
- [Crear una suscripción de extracción](create-a-pull-subscription.md)   
+## <a name="see-also"></a>Consulte también  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Suscribirse a publicaciones](subscribe-to-publications.md)  
   

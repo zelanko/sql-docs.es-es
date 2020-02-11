@@ -1,5 +1,5 @@
 ---
-title: Marcar objetos de negocios como seguros para Scripting | Microsoft Docs
+title: Marcar objetos comerciales como seguros para el scripting | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,22 +13,22 @@ ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55ae560f35a06e77803bfb011f4d430d5079ea05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922607"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Marcado de objetos de negocios como seguros para scripting
 > [!IMPORTANT]
->  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Para ayudar a garantizar un entorno seguro de Internet, debe marcar los objetos de negocios crea una instancia con el [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) del objeto [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) método como "seguros para scripting." Deberá asegurarse de que se marcan como tal en el área de licencia del registro del sistema antes de que pueden utilizarse en DCOM.  
+ Para ayudar a garantizar un entorno de Internet seguro, debe marcar cualquier objeto empresarial del que se haya creado una instancia con [RDS. ](../../../ado/reference/rds-api/dataspace-object-rds.md)Método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) del objeto DataSpace como "Safe for scripting". Debe asegurarse de que estén marcados como tales en el área de licencia del registro del sistema antes de que se puedan usar en DCOM.  
   
 > [!NOTE]
->  Marcados como "seguros para scripting" o seguro para la inicialización de objetos de negocios se pueden crear instancias de e inicializados por cualquier persona a través de la red. Marcar un objeto de negocios "seguros para scripting" no estén seguros. Es sumamente importante para asegurarse de que se codifican los objetos de negocios con la máxima seguridad para asegurarse de que estos objetos no presentan un punto de acceso sin protección para datos confidenciales.  
+>  Se puede crear una instancia de los objetos de negocios marcados como "seguros para scripting" o seguros para la inicialización a través de la red. Marcar un objeto comercial como "seguro para scripting" no hace que sea seguro. Es importante asegurarse de que los objetos empresariales se codifican con la mayor seguridad para asegurarse de que dichos objetos no presenten un punto de acceso no protegido para datos confidenciales.  
   
- Para marcar el objeto de negocios como seguros para scripting, cree un archivo de texto con la extensión .reg que contenga el texto siguiente. En este ejemplo, \< *MyActiveXGUID*> es el número GUID hexadecimal de un objeto comercial. Los siguientes dos números habilitan la característica de seguridad para el scripting:  
+ Para marcar manualmente el objeto comercial como seguro para el scripting, cree un archivo de texto con una extensión. reg que contenga el texto siguiente. En este ejemplo, \< *MyActiveXGUID*> es el número GUID hexadecimal del objeto comercial. Los dos números siguientes habilitan la característica Safe-for-scripting:  
   
 ```console
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   
@@ -37,12 +37,12 @@ Categories\{7DD95801-9882-11CF-9FA9-00AA006C42C4}]
 Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]  
 ```  
   
- Guarde el archivo y combinarlo con el registro mediante el Editor del registro o hacer doble clic en el archivo .reg en el Explorador de Windows.  
+ Guarde el archivo y fusione en el registro mediante el editor del registro o haga doble clic en el archivo. reg en el explorador de Windows.  
   
- Objetos de negocio creados en Microsoft Visual Basic se pueden marcar automáticamente como "seguros para scripting" en el paquete y el Asistente para la implementación. Cuando el asistente le pide que especifique la configuración de seguridad, seleccione **seguras para inicialización** y **seguros para scripting**.  
+ Los objetos comerciales creados en Microsoft Visual Basic se pueden marcar automáticamente como "seguros para scripting" con el Asistente para la implementación y el paquete. Cuando el asistente le pida que especifique la configuración de seguridad, seleccione **seguro para inicialización** y **seguro para scripting**.  
   
- En el último paso, el Asistente para instalación de aplicaciones crea un .htm y un archivo .cab. A continuación, puede copiar estos dos archivos en el equipo de destino y haga doble clic en el archivo .htm para cargar la página y registrar correctamente el servidor.  
+ En el último paso, el Asistente para la instalación de la aplicación crea un archivo. htm y un archivo. cab. Después, puede copiar estos dos archivos en el equipo de destino y hacer doble clic en el archivo. htm para cargar la página y registrar correctamente el servidor.  
   
- Dado que el objeto de negocios se instalará en el directorio Windows\System32\Occache de forma predeterminada, muévalo al directorio Windows\System32 y cambie la **HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32** clave del registro para que coincida con la ruta de acceso correcta.
+ Dado que el objeto comercial se instalará en el>\\directorio Windows\System32\Occache de forma predeterminada, muévalo al directorio Windows\System32 y cambie la clave del registro **HKEY_CLASSES_ROOT \clsid\\**\<*MyActiveXGUID***InProcServer32** para que coincida con la ruta de acceso correcta.
 
 

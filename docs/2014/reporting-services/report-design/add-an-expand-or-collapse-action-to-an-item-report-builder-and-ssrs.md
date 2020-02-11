@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106753"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Agregar una acción de expandir y contraer a un elemento (Generador de informes y SSRS)
@@ -46,11 +46,11 @@ ms.locfileid: "66106753"
   
 4.  En `Hidden`, elija una de las siguientes opciones para establecer la visibilidad de este elemento de informe la primera vez que ejecute un informe:  
   
-    -   Seleccione `False` para mostrar el elemento de informe.  
+    -   Seleccione `False` esta opción para mostrar el elemento de informe.  
   
-    -   Seleccione `True` para ocultar el elemento de informe.  
+    -   Seleccione `True` esta opción para ocultar el elemento de informe.  
   
-    -   Seleccione **\<Expresión>** para abrir el cuadro de diálogo **Expresión** para crear una expresión que se evalúe en tiempo de ejecución para determinar la visibilidad.  
+    -   Seleccione ** \<expresión>** para abrir el cuadro de diálogo **expresión** y crear una expresión que se evalúa en tiempo de ejecución para determinar la visibilidad.  
   
 5.  En **ToggleItem**, en la lista desplegable, seleccione el nombre de un cuadro de texto al que quiera agregar la imagen de alternancia.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "66106753"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Para agregar una acción de expandir y contraer a un elemento de informe  
   
-1.  En la vista de diseño del informe, haga clic con el botón derecho en el elemento de informe que quiera mostrar u ocultar y, después, haga clic en *Propiedades de \<elemento de informe>* **Propiedades**. Se abrirá el cuadro de diálogo *Propiedades de \<elemento de informe>* **Propiedades** del elemento de informe.  
+1.  En la vista de diseño del informe, haga clic con el botón secundario en el elemento de informe que desee mostrar u ocultar y, a continuación, haga clic en * \<elemento de informe>* **propiedades**. Se * \<* abrirá el cuadro de diálogo **propiedades** de>de elementos de informe para el elemento de informe.  
   
-2.  Haga clic en **Visibilidad**.  
+2.  Haga clic en **visibilidad**.  
   
 3.  En **Cuando se ejecute inicialmente el informe**, elija una de las opciones siguientes para establecer la visibilidad de este elemento de informe la primera vez que se ejecute el informe:  
   
@@ -80,13 +80,13 @@ ms.locfileid: "66106753"
     -   Seleccione **Mostrar u ocultar en función de una expresión** para determinar la visibilidad mediante una expresión que se evalúa en tiempo de ejecución. Haga clic en (**fx**) para abrir el cuadro de diálogo **Expresión** con objeto de crear una expresión.  
   
         > [!NOTE]  
-        >  Al especificar una expresión para la visibilidad, está estableciendo la propiedad Hidden del elemento de informe. La expresión se evalúa como un valor `Boolean` `True` para ocultar el elemento y `False` para mostrarlo.  
+        >  Al especificar una expresión para la visibilidad, está estableciendo la propiedad Hidden del elemento de informe. La expresión se evalúa como un valor `Boolean``True` para ocultar el elemento y `False` para mostrarlo.  
   
 4.  En **La visualización se puede activar o desactivar para este elemento de informe**, en la lista desplegable, escriba o seleccione el nombre de un cuadro de texto del informe en el que quiera mostrar la imagen de alternancia; por ejemplo, Cuadrodetexto1.  
   
      En la siguiente imagen, la tabla está configurada para permitir a los usuarios expandirla y contraerla. La visualización de la tabla se alterna mediante el cuadro de texto de la tabla Products.  
   
-     ![Configurar una tabla de informe que debe expandirse](../media/expandcollapse-reporttable.png "Configurar una tabla de informe que debe expandirse")  
+     ![Configurar una tabla de informe que se va a expandir](../media/expandcollapse-reporttable.png "Se configura una tabla de informes que debe expandirse")  
   
     > [!NOTE]  
     >  El cuadro de texto que elija debe estar en el ámbito contenedor o actual de este elemento de informe (hasta el cuerpo del informe, inclusive). Por ejemplo, para alternar la visibilidad de un gráfico, seleccione un cuadro de texto que esté en el mismo ámbito contenedor que el gráfico; por ejemplo, un rectángulo o el cuerpo del informe. El cuadro de texto debe estar en la misma jerarquía contenedora o superior.  
@@ -95,8 +95,8 @@ ms.locfileid: "66106753"
   
      ![Informe en ejecución con una tabla expandida](../media/expandcollapse-runreport-reporttable.png "Informe en ejecución con una tabla expandida")  
   
-## <a name="see-also"></a>Vea también  
- [Acción de obtención de detalles &#40;generador de informes y SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Acción de obtención de detalles &#40;Generador de informes y SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [Ocultar un elemento &#40;Generador de informes y SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

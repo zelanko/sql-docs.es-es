@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74412845"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
@@ -30,10 +30,10 @@ ms.locfileid: "74412845"
 
   Agrega un paso (operación) a un trabajo del Agente SQL.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > En [instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), se admiten la mayoría de los tipos de trabajo de Agente SQL Server, pero no todos. Consulte [instancia administrada de Azure SQL Database diferencias de T-SQL de SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+  > En [instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), se admiten la mayoría de los tipos de trabajo de Agente SQL Server, pero no todos. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -113,7 +113,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |Value|Descripción (acción)|  
 |-----------|----------------------------|  
 |**1** (valor predeterminado)|Salir con éxito|  
-|**dos**|Salir con error|  
+|**2**|Salir con error|  
 |**3**|Ir al paso siguiente|  
 |**4**|Vaya al paso *on_success_step_id*|  
   
@@ -123,7 +123,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |Value|Descripción (acción)|  
 |-----------|----------------------------|  
-|**dimensional**|Salir con éxito|  
+|**1**|Salir con éxito|  
 |**2** (valor predeterminado)|Salir con error|  
 |**3**|Ir al paso siguiente|  
 |**4**|Vaya al paso *on_fail_step_id*|  
@@ -149,7 +149,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |Value|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Sobrescribir el archivo de salida|  
-|**dos**|Anexar al archivo de salida|  
+|**2**|Anexar al archivo de salida|  
 |**4**|Escribir la salida del paso de trabajo [!INCLUDE[tsql](../../includes/tsql-md.md)] en el historial de pasos|  
 |**203**|Escribir el registro en la tabla (sobrescribir el historial existente)|  
 |**dieciséi**|Escribir el registro en la tabla (anexar al historial existente)|  
@@ -164,7 +164,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Ninguno  
+ None  
   
 ## <a name="remarks"></a>Observaciones  
  **sp_add_jobstep** se debe ejecutar desde la base de datos **msdb** .  
@@ -207,7 +207,7 @@ EXEC sp_add_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Ver o modificar trabajos](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_add_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   

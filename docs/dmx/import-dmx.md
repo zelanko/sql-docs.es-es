@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2141a4f8ccc6e34ec3010ad3ce8e8e3789d09132
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892753"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
@@ -28,10 +28,10 @@ IMPORT FROM <filename>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *filename*  
+ *extensión*  
  Cadena que contiene el nombre y la ubicación del archivo que se va a importar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si no se especifica ningún objeto, se carga todo el contenido del archivo .dmb. Si el archivo .dmb incluye una base de datos que no existe en el servidor, se creará la base de datos.  
   
  Debe ser administrador de base de datos o de servidor para exportar o importar objetos.  
@@ -43,10 +43,10 @@ IMPORT FROM <filename>
 IMPORT FROM 'C:\TEMP\Association_NEW.dmb'  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de definición &#40;de&#41; datos DMX de extensiones de minería de datos](../dmx/dmx-statements-data-definition.md)   
- [Instrucciones de manipulación &#40;de&#41; datos DMX de extensiones de minería de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de la &#40;instrucción&#41; DMX de extensiones de minería de datos](../dmx/data-mining-extensions-dmx-statements.md)   
+## <a name="see-also"></a>Consulte también  
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
  [EXPORTAR &#40;DMX&#41;](../dmx/export-dmx.md)   
  [Exportar e importar objetos de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
   

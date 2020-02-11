@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d826201f44bb666050f5229b4824b5c2198dc0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228997"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>Administración de un grupo de disponibilidad (SQL Server)
@@ -43,7 +43,7 @@ ms.locfileid: "75228997"
 -   Migración entre clústeres de grupos de disponibilidad AlwaysOn para la actualización del sistema operativo  
   
   
-##  <a name="RelatedTasks"></a>Tareas relacionadas  
+##  <a name="RelatedTasks"></a> Tareas relacionadas  
  **Para configurar un grupo de disponibilidad existente**  
   
 -   [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -72,7 +72,7 @@ ms.locfileid: "75228997"
   
 -   [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [Unir una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 -   [Quitar una réplica secundaria de un grupo de disponibilidad &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75228997"
   
 -   [Configurar el enrutamiento de solo lectura para un grupo de disponibilidad &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [Cambiar el período de tiempo de espera de la sesión para una réplica de disponibilidad &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
+-   [Cambiar el tiempo de espera de la sesión en una réplica de disponibilidad &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
  **Para administrar una base de datos de disponibilidad**  
   
@@ -104,7 +104,7 @@ ms.locfileid: "75228997"
   
  **Para supervisar un grupo de disponibilidad**  
   
--   [Supervisión de grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
+-   [Herramientas para supervisar grupos de disponibilidad Always On &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
  **Para admitir la migración de grupos de disponibilidad a un nuevo clúster de WSFC (migración entre clústeres)**  
   
@@ -113,15 +113,15 @@ ms.locfileid: "75228997"
 -   [Poner sin conexión un grupo de disponibilidad &#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)  
   
   
-##  <a name="RelatedContent"></a>Contenido relacionado  
+##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   **Blogs**  
+-   **Blogs:**  
   
      [Blogs del equipo de AlwaysOn de SQL Server: el blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blogs de los ingenieros de SQL Server CSS](https://blogs.msdn.com/b/psssql/)  
+     [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   
--   **Vídeos**  
+-   **Vídeos:**  
   
      [Microsoft SQL Server Code-Named "Denali", Serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de siguiente generación](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
@@ -131,19 +131,19 @@ ms.locfileid: "75228997"
   
      [Notas del producto de Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [Notas del producto de SQL Server Customer Advisory](http://sqlcat.com/)  
+     [Notas del producto del equipo de asesoramiento al cliente de SQL Server](http://sqlcat.com/)  
   
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)   
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Configuración de una instancia de servidor para Grupos de disponibilidad AlwaysOn SQL Server de &#40;&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)  
  [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Secundarias activas: réplicas secundarias legibles &#40;Grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;Grupos de disponibilidad AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
- [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y &#40;de conmutación por error de aplicación SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Directivas de AlwaysOn para problemas operativos con Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
- [Supervisión de grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
+ [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [Grupos de disponibilidad AlwaysOn: SQL Server de &#40;de interoperabilidad&#41;](always-on-availability-groups-interoperability-sql-server.md)   
  [Información general sobre las instrucciones Transact-SQL para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
  [Información general de los cmdlets de PowerShell para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a71c1781432ee4ca35c72beb8b091380f2e72513
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891879"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes)
@@ -29,9 +29,9 @@ ms.locfileid: "68891879"
   
  El diseñador de consultas basado en texto muestra una barra de herramientas y los dos paneles siguientes:  
   
--   **Consulta** Muestra el texto de la consulta, el nombre de tabla o el nombre del procedimiento almacenado, dependiendo del tipo de consulta. No todos los tipos de consulta están disponibles para todos los tipos de origen de datos. Por ejemplo, el nombre de tabla solamente es compatible con el tipo de orígenes de datos OLE DB.  
+-   **Consulta** de Muestra el texto de la consulta, el nombre de la tabla o el nombre del procedimiento almacenado, dependiendo del tipo de consulta. No todos los tipos de consulta están disponibles para todos los tipos de origen de datos. Por ejemplo, el nombre de tabla solamente es compatible con el tipo de orígenes de datos OLE DB.  
   
--   **Resultado** Muestra los resultados de la ejecución de la consulta en tiempo de diseño.  
+-   **Resultado** de Muestra los resultados de la ejecución de la consulta en tiempo de diseño.  
   
 ## <a name="text-based-query-designer-toolbar"></a>Barra de herramientas del diseñador de consultas basado en texto  
  El diseñador de consultas basado en texto proporciona una sola barra de herramientas para todos los tipos de comando. La tabla siguiente contiene una lista con los botones de la barra de herramientas y sus funciones.  
@@ -85,7 +85,7 @@ SELECT Name FROM Person.ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Haga clic en el botón **Ejecutar** ( **!** ). Cuando se le soliciten los parámetros de consulta, use la tabla siguiente para escribir los valores.  
+ Haga clic en el botón **Ejecutar** (**!**). Cuando se le soliciten los parámetros de consulta, use la tabla siguiente para escribir los valores.  
   
 |||  
 |-|-|  
@@ -102,10 +102,10 @@ uspGetWhereUsedProductID
   
  `Person.ContactType`  
   
- Especificar el nombre de tabla Person.ContactType equivale a crear la instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT * FROM Person.ContactType`.  
+ Especificar el nombre de tabla Person.ContactType equivale a crear la instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)]`SELECT * FROM Person.ContactType`.  
   
-## <a name="see-also"></a>Vea también  
- [Interfaz de usuario del Diseñador de consultas relacionales &#40;Generador de informes&#41;](relational-query-designer-user-interface-report-builder.md)   
+## <a name="see-also"></a>Consulte también  
+ [Generador de informes de &#40;de la interfaz de usuario del diseñador de consultas relacionales&#41;](relational-query-designer-user-interface-report-builder.md)   
  [Diseñadores de consultas &#40;Generador de informes&#41;](../query-designers-report-builder.md)  
   
   

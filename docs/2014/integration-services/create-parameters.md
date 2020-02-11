@@ -13,13 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060140"
 ---
-# <a name="create-parameters"></a>Create Parameters
+# <a name="create-parameters"></a>Creación de parámetros
   Puede usar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear parámetros de proyecto y parámetros de paquete. Los procedimientos siguientes proporcionan instrucciones paso a paso para crear parámetros de paquete o proyecto.  
   
 > [!NOTE]  
@@ -29,20 +29,20 @@ ms.locfileid: "66060140"
   
 1.  Abra el paquete en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]y después haga clic en la pestaña **Parámetros** del Diseñador SSIS.  
   
-     ![Pestaña Parámetros del paquete](media/denali-package-parameters.gif "Package Parameters Tab")  
+     ![Pestaña Parámetros de paquete](media/denali-package-parameters.gif "Pestaña Parámetros de paquete")  
   
 2.  Haga clic en el botón **Agregar parámetro** de la barra de herramientas.  
   
-     ![Botón Agregar de la barra de herramientas](media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![Botón Agregar barra de herramientas](media/denali-parameter-add.gif "Agregar botón de la barra de herramientas")  
   
 3.  Escriba valores para las propiedades **Nombre**, **Tipo de datos**, **Valor**, **Con distinción**y **Obligatorio** en la propia lista o en la ventana **Propiedades** . Estas propiedades se describen en la tabla siguiente.  
   
-    |Property|Descripción|  
+    |Propiedad|Descripción|  
     |--------------|-----------------|  
-    |NOMBRE|Nombre del parámetro.|  
+    |Nombre|El nombre del parámetro.|  
     |Tipo de datos|El tipo de datos del parámetro.|  
     |Valor predeterminado|Valor predeterminado para el parámetro asignado en tiempo de diseño. También se conoce como valor predeterminado de diseño.|  
-    |Con distinción|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
+    |Sensible|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
     |Obligatorio|Requiere que un valor, distinto del valor predeterminado de diseño, se especifique antes de que el paquete se ejecute.|  
     |Descripción|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
   
@@ -63,20 +63,20 @@ ms.locfileid: "66060140"
   
 2.  En el Explorador de soluciones, haga clic con el botón secundario en **Project.params** y, a continuación, haga clic en **Abrir** , o haga doble clic en **Project.params** para abrirlo.  
   
-     ![Ventana Parámetros del proyecto](media/denali-project-parameters.gif "Project Parameters Window")  
+     ![Ventana Parámetros del proyecto](media/denali-project-parameters.gif "Ventana Parámetros del proyecto")  
   
 3.  Haga clic en el botón **Agregar parámetro** de la barra de herramientas.  
   
-     ![Botón Agregar de la barra de herramientas](media/denali-parameter-add.gif "Add Toolbar Button")  
+     ![Botón Agregar barra de herramientas](media/denali-parameter-add.gif "Agregar botón de la barra de herramientas")  
   
 4.  Escriba valores para las propiedades **Nombre**, **Tipo de datos**, **Valor**, **Con distinción**y **Obligatorio** .  
   
-    |Property|Descripción|  
+    |Propiedad|Descripción|  
     |--------------|-----------------|  
-    |Name|Nombre del parámetro.|  
+    |Nombre|El nombre del parámetro.|  
     |Tipo de datos|El tipo de datos del parámetro.|  
     |Valor predeterminado|Valor predeterminado para el parámetro asignado en tiempo de diseño. También se conoce como valor predeterminado de diseño.|  
-    |Con distinción|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
+    |Sensible|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
     |Obligatorio|Requiere que un valor, distinto del valor predeterminado de diseño, se especifique antes de que el paquete se ejecute.|  
     |Descripción|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66060140"
     > [!WARNING]  
     >  Puede realizar modificaciones en contexto en la lista o utilizar la ventana **Propiedades** para modificar los valores de las propiedades de parámetro. Puede eliminar un parámetro con el botón de la barra de herramientas **Eliminar (x)** . Con el último botón de la barra de herramientas que es para abrir el cuadro de diálogo **Administrar valores de parámetro** , puede especificar un valor para un parámetro que se use solamente cuando se ejecuta el paquete en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
-## <a name="see-also"></a>Vea también  
- [Servicios de integración &#40;SSIS&#41; parámetros](integration-services-ssis-package-and-project-parameters.md)  
+## <a name="see-also"></a>Consulte también  
+ [Integration Services &#40;los parámetros de&#41; SSIS](integration-services-ssis-package-and-project-parameters.md)  
   
   

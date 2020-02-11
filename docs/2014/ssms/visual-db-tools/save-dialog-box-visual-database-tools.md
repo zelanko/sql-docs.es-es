@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241155"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Guardar (cuadro de diálogo, Visual Database Tools)
@@ -33,7 +33,7 @@ ms.locfileid: "63241155"
  **Guardar archivo de texto**  
  Muestra el cuadro de diálogo **Guardar como** , que permite especificar una ubicación para guardar el archivo de texto que contiene la lista de tablas. Este archivo proporciona una lista de las tablas afectadas por los cambios realizados.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Diseñar tablas &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

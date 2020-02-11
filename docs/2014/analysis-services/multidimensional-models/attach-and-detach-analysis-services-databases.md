@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4447f58baaa5ea88a48c67a9a32fcda77681d8d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077486"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Adjuntar y separar bases de datos de Analysis Services
-  Con frecuencia se producen situaciones en las que un administrador de bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere dejar sin conexión una base de datos durante un tiempo para después volver a ponerla en línea en la misma instancia de servidor o en otra distinta. Estas situaciones suelen responder a necesidades empresariales, como mover la base de datos a otro disco para mejorar el rendimiento, disponer de más espacio para que la base de datos pueda crecer o actualizar un producto. Para todos estos y otros casos, el `Attach` y `Detach` comandos permiten la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba para desconectar la base de datos y ponerla a conectarla con poco esfuerzo.  
+  Con frecuencia se producen situaciones en las que un administrador de bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere dejar sin conexión una base de datos durante un tiempo para después volver a ponerla en línea en la misma instancia de servidor o en otra distinta. Estas situaciones suelen responder a necesidades empresariales, como mover la base de datos a otro disco para mejorar el rendimiento, disponer de más espacio para que la base de datos pueda crecer o actualizar un producto. En todos esos casos y más, los `Attach` comandos `Detach` y permiten al [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA dejar la base de datos sin conexión y volver a ponerla en línea con poco esfuerzo.  
   
 ## <a name="attach-and-detach-commands"></a>Los comandos Attach y Detach  
  El comando `Attach` le permite poner en línea una base de datos que se dejó sin conexión. Puede adjuntar la base de datos a la instancia del servidor original o a otra instancia. Al adjuntar una base de datos, es posible especificar el valor de la propiedad **ReadWriteMode** de la base de datos. El comando `Detach` le permite dejar sin conexión una base de datos del servidor.  
@@ -46,9 +46,9 @@ ms.locfileid: "66077486"
   
 |Separar una base de datos de lectura/escritura|Separar una base de datos de solo lectura|  
 |--------------------------------------|-------------------------------------|  
-|1) El servidor emite una solicitud de bloqueo CommitExclusive para la base de datos<br />2) El servidor espera hasta que todas las transacciones en curso se confirmen o se reviertan<br />3) El servidor genera todos los metadatos que necesita para separar la base de datos<br />4) La base de datos se marca como eliminada<br />5) El servidor confirma la transacción|1) La base de datos se marca como eliminada<br />2) El servidor confirma la transacción<br /><br /> <br /><br /> Nota: No se puede cambiar la contraseña de separación para una base de datos de solo lectura. Se produce un error si se proporciona el parámetro de contraseña para una base de datos adjuntada que ya contiene una contraseña.|  
+|1) El servidor emite una solicitud de bloqueo CommitExclusive para la base de datos<br />2) El servidor espera hasta que todas las transacciones en curso se confirmen o se reviertan<br />3) El servidor genera todos los metadatos que necesita para separar la base de datos<br />4) La base de datos se marca como eliminada<br />5) El servidor confirma la transacción|1) La base de datos se marca como eliminada<br />2) El servidor confirma la transacción<br /><br /> <br /><br /> Nota: No es posible cambiar la contraseña de separación para una base de datos de solo lectura. Se produce un error si se proporciona el parámetro de contraseña para una base de datos adjuntada que ya contiene una contraseña.|  
   
- Los comandos `Attach` y `Detach` se deben ejecutar como operaciones únicas. No se pueden combinar con otras operaciones en la misma transacción. Además, el `Attach` y `Detach` comandos son comandos transaccionales atómicos. Esto significa que la operación se realizará correctamente o producirá un error. No se dejará ninguna base de datos en un estado incompleto.  
+ Los comandos `Attach` y `Detach` se deben ejecutar como operaciones únicas. No se pueden combinar con otras operaciones en la misma transacción. Además, los `Attach` comandos `Detach` y son comandos transaccionales atómicos. Esto significa que la operación se realizará correctamente o producirá un error. No se dejará ninguna base de datos en un estado incompleto.  
   
 > [!IMPORTANT]  
 >  Se necesitan privilegios de administrador de bases de datos o de servidores para ejecutar el comando `Detach`.  
@@ -56,13 +56,13 @@ ms.locfileid: "66077486"
 > [!IMPORTANT]  
 >  Se necesitan privilegios de administrador de servidores para ejecutar el comando `Attach`.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Mover una base de datos de Analysis Services](move-an-analysis-services-database.md)   
- [Modos de la propiedad de base de datos ReadWriteMode](database-readwritemodes.md)   
- [Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Traslado de una base de datos de Analysis Services](move-an-analysis-services-database.md)   
+ [Base de datos Readwritemode](database-readwritemodes.md)   
+ [Cambiar una base de datos de Analysis Services entre los modos ReadOnly y ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [Elemento detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

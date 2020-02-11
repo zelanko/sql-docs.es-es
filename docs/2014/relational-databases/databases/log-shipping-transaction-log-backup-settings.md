@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2e1484107e4ee5e7f7f2a10eaa719b5c96c098e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916897"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Configuración de copias de seguridad de trasvase de registros de transacciones
@@ -46,7 +46,7 @@ ms.locfileid: "62916897"
  Muestra el nombre del trabajo del Agente SQL Server utilizado para crear las copias de seguridad de registros de transacciones para el trasvase de registros. Cuando crea el trabajo, puede escribir en el cuadro para modificar el nombre.  
   
  **Programación**  
- Muestra la programación actual para hacer una copia de seguridad de los registros de transacciones de la base de datos principal. Antes de crear el trabajo de copia de seguridad, puede modificar esta programación si hace clic en el botón **Programar...**. Después de crear el trabajo, puede modificar esta programación si hace clic en el botón **Editar trabajo...**.  
+ Muestra la programación actual para hacer una copia de seguridad de los registros de transacciones de la base de datos principal. Antes de crear el trabajo de copia de seguridad, puede modificar esta programación si hace clic en el botón **Programar...** . Después de crear el trabajo, puede modificar esta programación si hace clic en el botón **Editar trabajo...** .  
   
 ### <a name="backup-job"></a>Trabajo de copia de seguridad  
  **Programar...**  
@@ -70,7 +70,7 @@ ms.locfileid: "62916897"
 |**Comprimir copia de seguridad**|Haga clic para comprimir la copia de seguridad, sin tener en cuenta el valor predeterminado de nivel de servidor.<br /><br /> **\*\* Importante \*\*** De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional que consume el proceso de compresión puede afectar negativamente a las operaciones simultáneas. Por tanto, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el [regulador de recursos](../resource-governor/resource-governor.md)limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.|  
 |**No comprimir copia de seguridad**|Haga clic para crear una copia de seguridad sin comprimir, independientemente del valor predeterminado de nivel de servidor.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar un usuario para crear y administrar trabajos del Agente SQL Server](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

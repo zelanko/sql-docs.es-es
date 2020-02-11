@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_database_mappings (Transact-SQL) | Microsoft Docs
+title: Sys. pdw_database_mappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 46474439474f8a38ba016b16e323b0cb92afe39e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139940"
 ---
-# <a name="syspdwdatabasemappings-transact-sql"></a>sys.pdw_database_mappings (Transact-SQL)
+# <a name="syspdw_database_mappings-transact-sql"></a>Sys. pdw_database_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Se asigna el **database_id**s de bases de datos para el nombre físico utilizado en nodos de proceso y proporciona el **Id. de entidad** del propietario de base de datos en el sistema. Únase a **sys.pdw_database_mappings** a **sys.databases** y **sys.pdw_nodes_pdw_physical_databases**.  
+  Asigna los **database_id**s de las bases de datos al nombre físico que se usa en los nodos de proceso y proporciona el ID. de la **entidad** de seguridad del propietario de la base de datos en el sistema. Combine **Sys. pdw_database_mappings** con **Sys. Databases** y **Sys. pdw_nodes_pdw_physical_databases**.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|physical_name|**nvarchar(36)**|El nombre físico de la base de datos en los nodos de proceso.<br /><br /> **physical_name** y **database_id** forman la clave para esta vista.||  
-|database_id|**int**|El identificador de objeto para la base de datos. Consulte [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **physical_name** y **database_id** forman la clave para esta vista.||  
+|physical_name|**nvarchar (36)**|Nombre físico de la base de datos en los nodos de proceso.<br /><br /> **physical_name** y **database_id** forman la clave de esta vista.||  
+|database_id|**int**|IDENTIFICADOR de objeto de la base de datos. Vea [Sys. databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **physical_name** y **database_id** forman la clave de esta vista.||  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- El ejemplo siguiente une sys.pdw_database_mappings a otras tablas del sistema para mostrar cómo se asignan las bases de datos.  
+ En el ejemplo siguiente se combina sys. pdw_database_mappings con otras tablas del sistema para mostrar cómo se asignan las bases de datos.  
   
 ```  
 SELECT DB.database_id, DB.name, Map.*, Phys.*   
@@ -42,11 +42,11 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS Phys
 ORDER BY DB.database_id, Phys.pdw_node_id;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.pdw_index_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
- [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
- [sys.pdw_nodes_pdw_physical_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Sys. pdw_index_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
+ [Sys. pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
+ [Sys. pdw_nodes_pdw_physical_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
   
   
 

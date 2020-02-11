@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401149"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Conceder permisos de T-SQL para almacenamiento de datos paralelos
@@ -245,8 +245,8 @@ GO
   
 Para crear inicios de sesión de administrador, consulte [roles fijos de servidor](pdw-permissions.md#fixed-server-roles).  
   
-## <a name="see-also"></a>Vea también
-[CREAR INICIO DE SESIÓN](../t-sql/statements/create-login-transact-sql.md)  
+## <a name="see-also"></a>Consulte también
+[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [CREAR USUARIO](../t-sql/statements/create-user-transact-sql.md)  
 [CREAR ROL](../t-sql/statements/create-role-transact-sql.md)  
-[Dataloader](load-overview.md)  
+[Cargar](load-overview.md)  

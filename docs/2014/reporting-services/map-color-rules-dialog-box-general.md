@@ -1,5 +1,5 @@
 ---
-title: Asignar el cuadro de diálogo de reglas de Color, General | Microsoft Docs
+title: Cuadro de diálogo reglas de color de mapa, general | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108319"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Cuadro de diálogo de Reglas de color de mapa, General
@@ -32,7 +32,7 @@ ms.locfileid: "66108319"
  **Visualizar datos mediante la paleta de colores**  
  Seleccione esta opción para visualizar los datos analíticos utilizando los colores de una paleta de colores concreta.  
   
- **Visualizar datos mediante los rangos de colores**  
+ **Visualizar datos mediante el uso de rangos de colores**  
  Seleccione esta opción para visualizar los datos analíticos utilizando una gama de colores para cada elemento de mapa. Por ejemplo, al especificar rojo como color inicial, amarillo como color medio y verde como color final, los valores del rango inferior son rojos, los valores del rango intermedio son amarillos y los valores en el rango superior son verdes.  
   
  **Visualizar datos mediante el uso de colores personalizados**  
@@ -43,7 +43,7 @@ ms.locfileid: "66108319"
   
  Seleccione el campo de datos analíticos que se usará en la lista desplegable. Según el origen de datos espaciales, la lista muestra los campos del origen de datos espaciales y de un conjunto de datos de informe que tiene una relación entre los datos espaciales y los datos analíticos. Para crear este tipo de relación, establezca las opciones de datos en la página Datos analíticos de la capa de mapa seleccionada.  
   
- **Palette**  
+ **Índ**  
  Escriba o seleccione el nombre de la paleta de colores.  
   
  **Color inicial**  
@@ -55,10 +55,10 @@ ms.locfileid: "66108319"
  **Color final**  
  Especifique el color que se usará para los datos en el extremo más alto del rango de datos.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Haga clic en **Agregar** para especificar sus propios colores para la regla de color.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Mapas &#40;Generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
  [Cambiar leyendas de mapa, escala de colores y reglas asociadas &#40;Generador de informes y SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   

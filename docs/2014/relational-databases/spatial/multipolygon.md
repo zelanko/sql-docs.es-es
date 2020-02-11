@@ -13,13 +13,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ccb2689b24914a0a953c1b9f7325cd5aa9c75d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014118"
 ---
-# <a name="multipolygon"></a>MultiPolígono
+# <a name="multipolygon"></a>MultiPolygon
   Una instancia de `MultiPolygon` es una colección de cero o más instancias de `Polygon`.  
   
 ## <a name="polygon-instances"></a>Instancias Polygon  
@@ -38,7 +38,7 @@ ms.locfileid: "66014118"
   
 -   Es una instancia `MultiPolygon` vacía.  
   
--   Todas las instancias que comprenden la instancia `MultiPolygon` son instancias `Polygon` aceptadas. Para obtener más información sobre aceptado `Polygon` instancias, consulte [polígono](../spatial/polygon.md).  
+-   Todas las instancias que comprenden la instancia `MultiPolygon` son instancias `Polygon` aceptadas. Para obtener más información sobre `Polygon` las instancias aceptadas, vea [Polygon](../spatial/polygon.md).  
   
  Los ejemplos siguientes muestran instancias `MultiPolygon` aceptadas.  
   
@@ -59,7 +59,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>Instancias válidas  
  Una instancia `MultiPolygon` es válida si es una instancia `MultiPolygon` vacía o si cumple los siguientes criterios.  
   
-1.  Todas las instancias que comprenden la instancia `MultiPolygon` son instancias `Polygon` válidas. Para válido `Polygon` instancias, consulte [polígono](../spatial/polygon.md).  
+1.  Todas las instancias que comprenden la instancia `MultiPolygon` son instancias `Polygon` válidas. Para las `Polygon` instancias válidas, vea [Polygon](../spatial/polygon.md).  
   
 2.  Ninguna de las instancias `Polygon` que comprenden la instancia `MultiPolygon` se superponen.  
   
@@ -72,7 +72,9 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` es válido porque las dos instancias de `Polygon` se tocan solo en un punto tangente. `@g3` no es válido porque los interiores de las dos instancias de `Polygon` se superponen.  
+ 
+  `@g2` es válido porque las dos instancias de `Polygon` se tocan solo en un punto tangente. 
+  `@g3` no es válido porque los interiores de las dos instancias de `Polygon` se superponen.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente muestra la creación de una instancia de `geometry``MultiPolygon` y devuelve el valor Well-Known Text (WKT) del segundo componente.  
@@ -90,7 +92,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('MULTIPOLYGON EMPTY');  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Polygon](../spatial/polygon.md)   
  [STArea &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
  [STCentroid &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   

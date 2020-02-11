@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876698"
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo de copia de seguridad (página Contenido de los medios)
@@ -31,7 +31,7 @@ ms.locfileid: "62876698"
 ## <a name="options"></a>Opciones  
  Vea la información acerca del medio individual, el conjunto de medios y los conjuntos de copias de seguridad.  
   
- **Multimedia**  
+ **Elementos multimedia**  
  Disco o conjunto de cintas donde se almacena la información de la copia de seguridad.  
   
  **Secuencia del medio**  
@@ -43,7 +43,7 @@ ms.locfileid: "62876698"
  **Conjunto de medios**  
  Un conjunto de medios es una colección ordenada de medios de copia de seguridad en la que se han grabado una o más operaciones de copia de seguridad mediante un número constante de dispositivos pertinentes.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del conjunto de medios, si existe alguno.  
   
  **Descripción**  
@@ -57,9 +57,9 @@ ms.locfileid: "62876698"
   
 |Encabezado|Valores|  
 |------------|------------|  
-|**Name**|Nombre del conjunto de copia de seguridad.|  
-|**Tipo**|El objeto de copia de seguridad: Base de datos, archivo, o  *\<en blanco >* (para registros de transacciones).|  
-|**Componente**|El tipo de copia de seguridad realizada: Completa, diferencial o registro de transacciones.|  
+|**Nombre**|Nombre del conjunto de copia de seguridad.|  
+|**Tipo**|Objeto del que se realizó una copia de seguridad: Base de datos, Archivo o *en blanco>\<* (para registros de transacciones).|  
+|**Componente**|Tipo de copia de seguridad realizada: Completa, Diferencial o Registro de transacciones.|  
 |**Server**|Nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.|  
 |**Base de datos**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  
 |**Posición**|Posición del conjunto de copias de seguridad en el volumen.|  
@@ -88,7 +88,7 @@ ms.locfileid: "62876698"
   
 -   [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](backup-devices-sql-server.md)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  
   

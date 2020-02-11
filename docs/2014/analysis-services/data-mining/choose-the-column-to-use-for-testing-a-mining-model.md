@@ -1,5 +1,5 @@
 ---
-title: Elija la columna que se usarán para probar un modelo de minería de datos | Microsoft Docs
+title: Elegir la columna que se va a utilizar para probar un modelo de minería de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 719e4dc2e934ac430ab4910612265d4b3532ed14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085732"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Elija la columna que se va a utilizar para probar un modelo de minería de datos
@@ -26,13 +26,13 @@ ms.locfileid: "66085732"
   
  En la siguiente lista se describen algunas consideraciones adicionales para elegir el atributo de predicción para utilizarlo en las pruebas:  
   
--   Algunos tipos de modelos de minería de datos pueden predecir varios atributos, como las redes neuronales, lo que pueden explorar las relaciones entre muchos atributos.  
+-   Algunos tipos de modelos de minería de datos pueden predecir varios atributos, como redes neuronal, que pueden explorar las relaciones entre muchos atributos.  
   
--   Otros tipos de minería de datos de modelos, como los modelos de agrupación en clústeres: no necesariamente no tienen un atributo de predicción. Los modelos de clústeres no se pueden probar a menos que tengan un atributo de predicción.  
+-   Otros tipos de modelos de minería de datos, como los modelos de agrupación en clústeres, no tienen necesariamente un atributo de predicción. Los modelos de clústeres no se pueden probar a menos que tengan un atributo de predicción.  
   
 -   Para crear un gráfico de dispersión o medir la exactitud de un modelo de regresión es necesario que elija un atributo de predicción continuo como resultado. En ese caso, no puede especificar un valor de destino. Si va a crear algo distinto de un gráfico de dispersión, la columna de la estructura de minería de datos subyacente también debe tener un tipo de contenido **Discreto** o **Discretizado**.  
   
--   Si elige un atributo discreto como resultado de predicción, puede especificar un valor de destino o puede dejar en blanco el campo **Valor de predicción** . Si incluye un **valor de predicción**, el gráfico medirá solo la eficacia del modelo para predecir el valor de destino. Si no especifica un resultado de destino, se mide la precisión del modelo al predecir los resultados.  
+-   Si elige un atributo discreto como resultado de predicción, puede especificar un valor de destino o puede dejar en blanco el campo **Valor de predicción** . Si incluye un **valor de predicción**, el gráfico medirá solo la eficacia del modelo al predecir el valor de destino. Si no especifica un resultado de destino, se mide la precisión del modelo al predecir los resultados.  
   
 -   Si desea incluir varios modelos y compararlos en un único gráfico de precisión, todos los modelos deben usar la misma columna de predicción.  
   
@@ -54,8 +54,8 @@ ms.locfileid: "66085732"
   
 5.  Si desea determinar la elevación de un modelo, debe seleccionar un valor específico del resultado para la medición, eligiéndolo en la lista **Valor de predicción** .  
   
-## <a name="see-also"></a>Vea también  
- [Elegir y asignar datos de prueba para el modelo](choose-and-map-model-testing-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Elegir y asignar los datos de prueba del modelo](choose-and-map-model-testing-data.md)   
  [Elegir un tipo de gráfico de precisión y establecer las opciones del gráfico](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

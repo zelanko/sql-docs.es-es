@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 639e6b7640f3463bfe100345d044437d619a5546
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63459995"
 ---
 # <a name="query-and-view-designer-tools-visual-database-tools"></a>Herramientas Diseñador de consultas y vistas (Visual Database Tools)
@@ -47,9 +47,9 @@ ms.locfileid: "63459995"
 ## <a name="displaying-and-hiding-panes"></a>Mostrar y ocultar paneles  
  Para ocultar un panel o mostrar un panel que no esté visible, haga clic con el botón derecho en la superficie de diseño, seleccione **Panel**y, a continuación, haga clic en el nombre del panel. Si el Diseñador de consultas y vistas se abre en el modo de Diseñador de consultas, el panel **Resultados** no estará disponible.  
   
-## <a name="see-also"></a>Vea también  
- [Diseñar temas de procedimientos de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [Abra el Diseñador de consultas y vista &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Abra el diseñador de consultas y vistas &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)   
  [Editor SQL &#40;Visual Database Tools&#41;](sql-editor-visual-database-tools.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c254e5c9cefa8a7e65b18fa25cc597ab3afc642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835747"
 ---
 # <a name="manage-a-cdc-service"></a>Administrar un servicio CDC
@@ -42,9 +42,9 @@ ms.locfileid: "62835747"
   
  Haga clic en **Detener todas las instancias** para detener la captura de datos modificados para todas las instancias del servicio.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cómo crear la instancia de base de datos de cambios de SQL Server](how-to-create-the-sql-server-change-database-instance.md)   
  [Cómo administrar un servicio CDC desde la Consola del diseñador CDC](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Use the New Instance Wizard](use-the-new-instance-wizard.md)  
+ [Usar el Asistente para nueva instancia](use-the-new-instance-wizard.md)  
   
   

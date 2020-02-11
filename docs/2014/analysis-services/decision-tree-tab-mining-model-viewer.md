@@ -1,5 +1,5 @@
 ---
-title: Ficha (Visor de modelos de minería de datos) del árbol de decisión | Microsoft Docs
+title: Pestaña árbol de decisión (visor de modelos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082298"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Pestaña Árbol de decisión (Visor de modelos de minería de datos)
   El panel **Árbol de decisión** muestra una representación visual de las reglas de decisión que se crean en un modelo de árbol de decisión. Las reglas de decisión describen las rutas hacia un determinado resultado.  
   
- **Para obtener más información:** [Algoritmo de árboles de decisión de Microsoft](data-mining/microsoft-decision-trees-algorithm.md), [examinar un modelo usando el Visor de árboles de Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **Para obtener más información:** [algoritmo de árboles de decisión de Microsoft](data-mining/microsoft-decision-trees-algorithm.md), [examinar un modelo usando el visor de árboles de Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>Opciones  
- **Actualizar el contenido del Visor**  
+ **Actualizar el contenido del visor**  
  Vuelva a cargar el modelo de minería de datos en el visor.  
   
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos de los de la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Viewer**  
+ **Lector**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado o el Visor de contenido de minería de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] . También puede utilizar visores de complemento si están disponibles.  
   
  **Acercar**  
@@ -52,10 +52,10 @@ ms.locfileid: "66082298"
  **Histogramas**  
  Seleccione el número de estados que pueden aparecer en el histograma para cada nodo. Si el número de estados del modelo es menor que el valor seleccionado, no se muestra ninguna barra adicional.  
   
- **Árbol**  
+ **Palmera**  
  Elija un árbol para mostrarlo en el visor. Si crea un modelo que tiene varios atributos de predicción, el algoritmo creará un árbol independiente para cada atributo de predicción.  
   
- **Información previa**  
+ **Información preliminar**  
  Elija un valor del atributo de predicción para utilizarlo a la hora de representar el color de fondo de cada nodo. Así, en los modelos de ejemplo de AdventureWorks, si establece **Background** en 1 ([Bike Buyer] = Yes), los nodos se sombrean más si tienen una proporción mayor de compradores de bicicletas. Esta opción proporciona una indicación visual adicional sobre el significado de las bifurcaciones y nodos del árbol.  
   
  **Expansión predeterminada**  
@@ -64,9 +64,9 @@ ms.locfileid: "66082298"
  **Mostrar nivel**  
  Mueva la barra deslizante a la derecha o izquierda para ajustar el número de niveles que se muestran en el gráfico de árbol. Para ver todos los nodos del modelo, deslice la barra hasta el extremo derecho.  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visores de modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   
   

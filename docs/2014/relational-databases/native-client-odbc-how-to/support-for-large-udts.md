@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5ccacd7bb6fabf6c7eed0cee02ddb34979f14a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205550"
 ---
 # <a name="support-for-large-udts"></a>Compatibilidad con UDT de gran tamaño
@@ -22,7 +22,7 @@ ms.locfileid: "68205550"
   
  No funcionará con ninguna versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Para obtener más información sobre la compatibilidad con UDT grandes, consulte [Large CLR User-Defined tipos &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Para obtener más información sobre la compatibilidad con UDT grandes, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Ejemplo  
  La primera lista de código es el código fuente de C#. Péguelo en un archivo denominado LargeStringUDT.cs y compílelo en una DLL. Copie LargeStringUDT.dll en el directorio raíz de la unidad C:.  

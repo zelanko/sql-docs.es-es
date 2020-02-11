@@ -14,10 +14,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 83009008745a696919aa5ae5795d60ddfe9ba80b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632888"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novedades de Data Migration Assistant
@@ -31,7 +31,7 @@ La versión v 5.0 del Data Migration Assistant proporciona compatibilidad con:
 - SQL Server 2019 para Windows y SQL Server 2019 para Linux como destinos para la evaluación y la actualización.
 - Guardar y cargar evaluaciones, incluida la compatibilidad para guardar y cargar las evaluaciones creadas en versiones anteriores del Data Migration Assistant.
 - Evaluación de proyectos de SQL Server Integration Services (SSIS) hospedados en paquetes SSISDB y SSIS hospedados en el almacén de paquetes. La Migration Assistant de base de datos detecta características no admitidas, parcialmente admitidas o desusadas y problemas de compatibilidad que se usan en los paquetes de origen y proporciona recomendaciones para ayudarle a solucionar esos problemas.
-- Evaluar consultas SQL desde una aplicación externa, por ejemplo, consultas SQL C# en código fuente. Los usuarios pueden usar el kit de herramientas de migración de acceso a datos para generar un informe JSON completo C# para las consultas SQL usadas en el código fuente y, a continuación, cargar el informe en Data Migration Assistant.
+- Evaluar consultas SQL desde una aplicación externa, por ejemplo, consultas SQL en código fuente de C#. Los usuarios pueden usar el kit de herramientas de migración de acceso a datos para generar un informe JSON completo para las consultas SQL usadas en el código fuente de C# y, a continuación, cargar el informe en Data Migration Assistant.
 
 Además, esta versión de Data Migration Assistant proporciona mejoras y correcciones de errores adicionales, y la herramienta se ha actualizado a .net 4.7.2.
 
@@ -175,15 +175,15 @@ La versión v 2.0 de Data Migration Assistant incluye recomendaciones de caracte
 La versión v 1.0 de Data Migration Assistant es la versión inicial y proporciona:
 
 - Detección de problemas que pueden afectar a una actualización a una versión local de SQL Server. Los hallazgos se describen como problemas de compatibilidad y se clasifican en las siguientes áreas:
-  - Cambios importantes
+  - Últimos cambios
   - Cambios de comportamiento
   - Características en desuso
 - Detección de nuevas características en la plataforma de SQL Server de destino en la que se puede beneficiar la base de datos después de una actualización. Los hallazgos se describen como recomendaciones de características y se clasifican en las siguientes áreas:
   - Rendimiento
   - Seguridad
-  - Almacenamiento
+  - Storage
 - Experiencia de usuario moderna para realizar evaluaciones.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Información general de Data Migration Assistant](../dma/dma-overview.md)

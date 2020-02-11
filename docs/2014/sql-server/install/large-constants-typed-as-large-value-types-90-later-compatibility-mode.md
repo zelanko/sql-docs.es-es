@@ -1,5 +1,5 @@
 ---
-title: Constantes de gran tamaño están tipificadas como tipos de valores grandes en los modos de compatibilidad 90 o posterior | Microsoft Docs
+title: Las constantes grandes se escriben como tipos de valores grandes en los modos de compatibilidad 90 o posterior | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c7aded5577e28d94f42e108e46bb8a9c3cd6020
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094088"
 ---
 # <a name="large-constants-are-typed-as-large-value-types-in-90-or-later-compatibility-modes"></a>Las constantes de gran tamaño están tipificadas como tipos de valor grande en los modos de compatibilidad 90 o superiores
@@ -38,8 +38,8 @@ ms.locfileid: "66094088"
   
  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y en versiones posteriores, las funciones de cadena, como CHARINDEX y PATINDEX, asumen que la cadena que contiene la secuencia de caracteres a buscar tienen menos de 8.000 bytes. Esta es la razón por la cual se produce el error 8152 con CHARINDEX y PATINDEX.  
   
-## <a name="see-also"></a>Vea también  
- [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte también  
+ [Problemas de actualización Motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server el asesor de actualizaciones de 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

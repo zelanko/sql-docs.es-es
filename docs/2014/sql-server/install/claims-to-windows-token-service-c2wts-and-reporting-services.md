@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0ec82b7cca2062e1ed918e300eeb76dad16cbb20
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245620"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services
@@ -37,7 +37,7 @@ ms.locfileid: "75245620"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
   
 > [!NOTE]  
 >  Nota: algunos pasos de configuración pueden cambiar o no funcionar en algunas topologías de granja. Por ejemplo, una instalación de un solo servidor no admite los servicios c2WTS de Windows Identity Foundation, por lo que las notificaciones a los escenarios de delegación de token de Windows no son posibles con esta configuración de granja.  
@@ -98,7 +98,7 @@ ms.locfileid: "75245620"
   
 4.  Iniciar las notificaciones del servicio de token de Windows de SharePoint: inicie las notificaciones del servicio de token de Windows a través de administración central de SharePoint en la página **administrar servicios en el servidor** . El servicio se debe iniciar en el servidor que realizará la acción. Por ejemplo, si tiene un servidor que es un servidor web front-end (WFE) y otro servidor que es un servidor de aplicaciones que tiene la ejecución del servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , solo tiene que iniciar c2WTS en el servidor de aplicaciones. c2WTS no es necesario en el servidor web front-end (WFE).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Información general de notificaciones al servicio de token de Windows (c2WTS) (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
  [Información general sobre la autenticación Kerberos para productos de Microsoft SharePoint 2010 (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)  
   

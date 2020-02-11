@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401466"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Listas de comprobación de la configuración del dispositivo para Analytics Platform System
@@ -24,7 +24,7 @@ Proporciona listas de comprobación para las tareas necesarias para configurar e
   
 ## <a name="BeforeTasks"></a>Antes de empezar  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
   
 1.  El dispositivo debe instalarse en el centro de datos y estar encendido.  
   
@@ -77,7 +77,7 @@ Después de realizar las tareas de **Configuration Manager** , realice la siguie
 |Configuración de adaptadores de red InfiniBand en servidores de copia de seguridad y carga<br /><br />(Opcional)|Para configurar los servidores de copia de seguridad y carga para que se conecten a PDW de SQL Server mediante la red InfiniBand, debe configurar los adaptadores de red para permitir que el DNS del dispositivo resuelva la conexión de InfiniBand con la red InfiniBand activa actualmente.|  
 |Configurar para enviar datos de telemetría a Microsoft<br /><br />(Opcional)|Para configurar Analytics Platform System para que envíe datos de telemetría a Microsoft, debe ejecutar un script de PowerShell en el nodo de control. Para obtener instrucciones específicas, consulte [envío de comentarios de telemetría a Microsoft &#40;PDW de SQL Server&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md).|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Software antivirus &#40;Analytics Platform System&#41;](antivirus-software.md)  
 [Configuración de adaptadores de red InfiniBand &#40;PDW de SQL Server&#41;](configure-infiniband-network-adapters.md)  
   

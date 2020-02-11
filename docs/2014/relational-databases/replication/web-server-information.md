@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5f5c2385b4c58447db008544124ae9048566958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199944"
 ---
 # <a name="web-server-information"></a>Información del servidor web
@@ -29,11 +29,11 @@ ms.locfileid: "63199944"
  **¿Cómo se conectarán los suscriptores al servidor web?**  
  Especifique el tipo de autenticación usado para conectar con el servidor web. Se recomienda usar Autenticación básica para las conexiones con el servidor IIS junto con SSL (Capa de sockets seguros). Si selecciona Autenticación básica, escriba el nombre de inicio de sesión y la contraseña para conectar desde el suscriptor con el servidor IIS.  
   
-## <a name="see-also"></a>Vea también  
- [Crear una suscripción de extracción](create-a-pull-subscription.md)   
- [Ver y modificar las propiedades de una suscripción de extracción](view-and-modify-pull-subscription-properties.md)   
- [Suscriptores que no son de SQL Server](non-sql/non-sql-server-subscribers.md)   
- [Suscribirse a publicaciones](subscribe-to-publications.md)   
+## <a name="see-also"></a>Consulte también  
+ [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)  (Ver y modificar las propiedades de una suscripción de extracción)  
+ [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)   
  [Sincronización web para la replicación de mezcla](web-synchronization-for-merge-replication.md)  
   
   

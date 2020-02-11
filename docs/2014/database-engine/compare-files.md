@@ -15,30 +15,30 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812599"
 ---
 # <a name="compare-files"></a>Comparar archivos
-  Puede comparar archivos para determinar cómo ha progresado un archivo hasta su estado actual. Por ejemplo, si se detecta un defecto en una versión del proyecto de código tras haberse protegido una versión concreta del archivo de origen, podrá comparar la versión actual con la anterior. Esto ayuda a identificar el código que ha ocasionado el defecto.  
+  Puede comparar archivos para determinar cómo ha progresado un archivo hasta su estado actual. Por ejemplo, si se detecta un defecto en una versión del proyecto de código tras haberse protegido una versión concreta del archivo de origen, podrá comparar la versión actual con la anterior.  Esto ayuda a identificar el código que ha ocasionado el defecto.  
   
- Puede utilizar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para comparar una copia local de un proyecto o un archivo con la versión almacenada en el control de código fuente o para comparar dos archivos locales. Además, al usar el **historial** de comandos, puede comparar dos versiones controlados por código fuente.  
+ Puede utilizar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para comparar una copia local de un proyecto o un archivo con la versión almacenada en el control de código fuente o para comparar dos archivos locales. Además, con el comando **History** , puede comparar dos versiones con control de código fuente.  
   
 ### <a name="to-compare-files"></a>Para comparar archivos  
   
 1.  En el Explorador de soluciones, seleccione un proyecto o uno de los archivos del mismo.  
   
-2.  En el **archivo** menú, elija **Control de código fuente**y haga clic en **comparar**.  
+2.  En el menú **archivo** , seleccione **control de código fuente**y haga clic en **comparar**.  
   
-3.  En el **opciones de diferencia** cuadro de diálogo, seleccione las opciones adecuadas y, a continuación, haga clic en **informe**.  
+3.  En el cuadro de diálogo **Opciones de diferencia** , seleccione las opciones adecuadas y, a continuación, haga clic en **Informe**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Establecer y recuperar información de versión](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Ver el historial de archivos](../../2014/database-engine/view-file-history.md)   
- [Ver el historial de proyecto](../../2014/database-engine/view-project-history.md)   
- [Ver el estado de archivo](../../2014/database-engine/view-file-status.md)   
+ [Ver el historial del proyecto](../../2014/database-engine/view-project-history.md)   
+ [Ver el estado del archivo](../../2014/database-engine/view-file-status.md)   
  [Recuperar archivos](../../2014/database-engine/retrieve-files.md)  
   
   

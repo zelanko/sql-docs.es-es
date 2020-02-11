@@ -17,17 +17,17 @@ ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d0cd34b13889ed44e32e29a058ca01d48aea1b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933475"
 ---
-# <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString, ConnectionTimeout y ejemplo de las propiedades de estado (VB)
-Este ejemplo muestra diferentes formas de utilizar el [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad para abrir un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto. También usa el [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) propiedad para establecer un período de tiempo de espera de conexión y el [estado](../../../ado/reference/ado-api/state-property-ado.md) propiedad para comprobar el estado de las conexiones. La función GetState es necesaria ejecutar este procedimiento.  
+# <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>Ejemplo de las propiedades ConnectionString, ConnectionTimeout y State (VB)
+En este ejemplo se muestran distintas formas de usar la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) para abrir un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) . También utiliza la propiedad [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) para establecer un tiempo de espera de conexión y la propiedad [State](../../../ado/reference/ado-api/state-property-ado.md) para comprobar el estado de las conexiones. La función GetState es necesaria para que este procedimiento se ejecute.  
   
 > [!NOTE]
->  Si se conecta a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar **Trusted_Connection = yes** o **Integrated Security = SSPI** en lugar de Id. de usuario y contraseña información de la cadena de conexión.  
+>  Si se va a conectar a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar **Trusted_Connection = Yes** o **Integrated Security = SSPI** en lugar de la información de identificador de usuario y contraseña en la cadena de conexión.  
   
 ```  
 'BeginConnectionStringVB  
@@ -126,8 +126,8 @@ End Function
 'EndConnectionStringVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Propiedad ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
+## <a name="see-also"></a>Consulte también  
+ [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [ConnectionString (propiedad, ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [Propiedad ConnectionTimeout (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
  [Propiedad State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

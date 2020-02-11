@@ -18,13 +18,13 @@ ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085071"
 ---
-# <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
+# <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra en una lista todos los servidores de destino del grupo especificado. Si no se especifica ningún grupo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve información acerca de todos los grupos de servidores de destino.  
@@ -40,20 +40,20 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>Argumento  
-`[ @name = ] 'name'` Es el nombre del grupo de servidores de destino para el que se va a devolver información. *nombre* es **sysname**, su valor predeterminado es null.  
+`[ @name = ] 'name'`Es el nombre del grupo de servidores de destino para el que se va a devolver información. *Name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|Número de identificación del grupo de servidores.|  
-|**name**|**sysname**|Nombre del grupo de servidores|  
+|**Name**|**sysname**|Nombre del grupo de servidores|  
   
 ## <a name="permissions"></a>Permisos  
- Permisos para ejecutar este procedimiento de forma predeterminada el **sysadmin** rol fijo de servidor.  
+ Los permisos para ejecutar este procedimiento tienen como valor predeterminado el rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -68,7 +68,7 @@ EXEC dbo.sp_help_targetservergroup ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server-group"></a>b. Presentar información de un grupo de servidores de destino específico  
+### <a name="b-listing-information-for-a-specific-target-server-group"></a>B. Presentar información de un grupo de servidores de destino específico  
  En este ejemplo se presenta información del grupo de servidores de destino `Servers Maintaining Customer Information`.  
   
 ```  
@@ -80,10 +80,10 @@ EXEC dbo.sp_help_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_targetservergroup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -19,20 +19,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922023"
 ---
-# <a name="manage-the-suspectpages-table-sql-server"></a>Administrar la tabla suspect_pages (SQL Server)
+# <a name="manage-the-suspect_pages-table-sql-server"></a>Administrar la tabla suspect_pages (SQL Server)
   En este tema se describe cómo administrar la tabla **suspect_pages** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] por medio de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La tabla **suspect_pages** sirve para conservar información sobre las páginas sospechosas y es de gran utilidad para decidir si es necesaria una restauración. La tabla [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) reside en la [base de datos msdb](../databases/msdb-database.md).  
   
  Una página se considera "sospechosa" cuando [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] encuentra uno de los errores siguientes al intentar leer una página de datos:  
   
--   Un [error 823](../errors-events/mssqlserver-823-database-engine-error.md) producido por una prueba cíclica de redundancia (CRC) emitido por el sistema operativo, por ejemplo un error de disco (ciertos errores de hardware)  
+-   Un [error 823](../errors-events/mssqlserver-823-database-engine-error.md) producido por una comprobación de redundancia cíclica (CRC) emitido por el sistema operativo, como un error de disco (ciertos errores de hardware)  
   
--   Un [error 824](../errors-events/mssqlserver-824-database-engine-error.md), por ejemplo, una página rasgada (cualquier error lógico)  
+-   Un [error 824](../errors-events/mssqlserver-824-database-engine-error.md), como una página rasgada (cualquier error lógico)  
   
  El identificador de página de cada página sospechosa se registra en la tabla **suspect_pages** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra todas las páginas sospechosas que encuentra durante el procesamiento normal, como en estos casos:  
   
@@ -120,9 +120,9 @@ ms.locfileid: "62922023"
 ####  <a name="Permissions"></a> Permisos  
  Cualquier persona con acceso a **msdb** puede leer los datos de la tabla **suspect_pages** . Cualquier persona con el permiso UPDATE en la tabla suspect_pages puede actualizar sus registros. Los miembros del rol fijo de base de datos **db_owner** de **msdb** o el rol fijo de servidor **sysadmin** pueden insertar, actualizar y eliminar registros.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
-#### <a name="to-manage-the-suspectpages-table"></a>Para administrar la tabla suspect_pages  
+#### <a name="to-manage-the-suspect_pages-table"></a>Para administrar la tabla suspect_pages  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], expándala y, a continuación, expanda **Bases de datos**.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62922023"
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### <a name="to-manage-the-suspectpages-table"></a>Para administrar la tabla suspect_pages  
+#### <a name="to-manage-the-suspect_pages-table"></a>Para administrar la tabla suspect_pages  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -160,13 +160,13 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [DROP DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [Restaurar páginas &#40;SQL Server&#41;](restore-pages-sql-server.md)   
- [suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
+ [suspect_pages &#40;&#41;de Transact-SQL](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
  [MSSQLSERVER_823](../errors-events/mssqlserver-823-database-engine-error.md)   
  [MSSQLSERVER_824](../errors-events/mssqlserver-824-database-engine-error.md)  
   

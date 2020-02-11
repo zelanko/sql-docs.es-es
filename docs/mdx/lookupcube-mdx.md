@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ec18b600c369de872df5f6eadf06ef6c30c88efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68098513"
 ---
 # <a name="lookupcube-mdx"></a>LookupCube (MDX)
@@ -41,17 +41,17 @@ LookupCube(Cube_Name, String_Expression )
  *String_Expression*  
  Expresión de cadena válida que suele ser una expresión MDX (Expresiones multidimensionales) válida de las coordenadas de celdas que devuelven una cadena.  
   
-## <a name="remarks"></a>Comentarios  
- Si se especifica una expresión numérica, la **LookupCube** función evalúa la expresión numérica especificada en el cubo especificado y devuelve el valor numérico resultante.  
+## <a name="remarks"></a>Observaciones  
+ Si se especifica una expresión numérica, la función **LookupCube** evalúa la expresión numérica especificada en el cubo especificado y devuelve el valor numérico resultante.  
   
- Si se especifica una expresión de cadena, el **LookupCube** función evalúa la expresión de cadena especificada en el cubo especificado y devuelve el valor de cadena resultante.  
+ Si se especifica una expresión de cadena, la función **LookupCube** evalúa la expresión de cadena especificada en el cubo especificado y devuelve el valor de cadena resultante.  
   
- El **LookupCube** función funciona con cubos de la misma base de datos como el cubo de origen en el que la consulta de MDX que contiene el **LookupCube** función se está ejecutando.  
+ La función **LookupCube** funciona en cubos dentro de la misma base de datos que el cubo de origen en el que se está ejecutando la consulta MDX que contiene la función **LookupCube** .  
   
 > [!IMPORTANT]  
 >  Debe proporcionar los miembros actuales necesarios en la expresión numérica o de cadena debido a que el contexto de la consulta actual no se mantiene en el cubo que se consulta.  
   
- Los cálculos que usen el **LookupCube** función es probable que experimenten un bajo rendimiento. En lugar de utilizar esta función, considere volver a diseñar la solución para que todos los datos que necesite se encuentren en un cubo.  
+ Cualquier cálculo que utilice la función **LookupCube** es probable que se vea afectado por un bajo rendimiento. En lugar de utilizar esta función, considere volver a diseñar la solución para que todos los datos que necesite se encuentren en un cubo.  
   
 ## <a name="examples"></a>Ejemplos  
  En la consulta siguiente se muestra el uso de LookupCube:  
@@ -64,7 +64,7 @@ LookupCube(Cube_Name, String_Expression )
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

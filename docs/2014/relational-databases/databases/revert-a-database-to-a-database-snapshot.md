@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916739"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Revertir una base de datos a una instantánea de base de datos
@@ -46,7 +46,7 @@ ms.locfileid: "62916739"
   
  Antes de revertir a una base de datos, debe tener en cuenta los siguientes limitaciones:  
   
--   La reversión no se utiliza para la recuperación de medios. . Una instantánea de base de datos es una copia incompleta de los archivos de base de datos, de modo que si se daña la base de datos o la instantánea de base de datos, es probable que no se pueda revertir a partir de una instantánea. Además, aunque sea posible, no es probable que la reversión corrija el problema si se produjesen daños. Por lo tanto, para proteger una base de datos es esencial hacer copias de seguridad con regularidad y probar el plan de restauración. Para obtener más información, consulte [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   La reversión no se utiliza para la recuperación de medios. . Una instantánea de base de datos es una copia incompleta de los archivos de base de datos, de modo que si se daña la base de datos o la instantánea de base de datos, es probable que no se pueda revertir a partir de una instantánea. Además, aunque sea posible, no es probable que la reversión corrija el problema si se produjesen daños. Por lo tanto, para proteger una base de datos es esencial hacer copias de seguridad con regularidad y probar el plan de restauración. Para obtener más información, consulte [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
     > [!NOTE]  
     >  Si tiene que restaurar la base de datos de origen al momento en que creó una instantánea de base de datos, use el modelo de recuperación completa e implemente una directiva de copia de seguridad que le habilite para ello.  
@@ -74,9 +74,9 @@ ms.locfileid: "62916739"
     > [!NOTE]  
     >  Si se ha dañado la base de datos, tendrá que restaurarla a partir de copias de seguridad. Para obtener más información, vea [Restauraciones de base de datos completas &#40;modelo de recuperación simple&#41;](../backup-restore/complete-database-restores-simple-recovery-model.md) o [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](../backup-restore/complete-database-restores-full-recovery-model.md).  
   
--   Identifique una instantánea reciente creada antes del error. Para obtener más información, consulte [Ver una instantánea de base de datos &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md).  
+-   Identifique una instantánea reciente creada antes del error. Para obtener más información, vea [Ver una instantánea de base de datos &#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md).  
   
--   Quite cualquier otra instantánea que exista actualmente en la base de datos. Para obtener más información, consulte [Eliminar una instantánea de base de datos &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md).  
+-   Quite cualquier otra instantánea que exista actualmente en la base de datos. Para obtener más información, vea [Eliminar una instantánea de base de datos &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md).  
   
 ###  <a name="Security"></a> Seguridad  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62916739"
   
      Donde *nombre_base_de_datos* es la base de datos de origen y *nombre_base_de_datos_de_instantánea* equivale al nombre de la instantánea a la que quiere revertir la base de datos. Tenga en cuenta que en esta instrucción debe especificar un nombre de instantánea y no un dispositivo de copia de seguridad.  
   
-     Para obtener más información, consulte [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
+     Para obtener más información, vea [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
     > [!NOTE]  
     >  Durante la operación de reversión, la instantánea y la base de datos de origen no están disponibles. La base de datos de origen y la instantánea están marcadas como "en restauración". Si se produce un error durante la operación de reversión, se intentará finalizar la reversión cuando se vuelva a iniciar la base de datos.  
@@ -122,7 +122,7 @@ ms.locfileid: "62916739"
   
 -   A. [Revertir una instantánea en la base de datos AdventureWorks](#Reverting_AW)  
   
--   b. [Revertir una instantánea en la base de datos Sales](#Reverting_Sales)  
+-   B. [Revertir una instantánea en la base de datos Sales](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Revertir una instantánea en la base de datos AdventureWorks  
  En este ejemplo se considera que solo existe una instantánea en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para ver el ejemplo que crea la instantánea a la que se revierte la base de datos, vea [Crear una instantánea de base de datos &#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md).  
@@ -165,10 +165,10 @@ GO
   
 -   [Eliminar una instantánea de base de datos &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Vea también  
- [Instantáneas de base de datos &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Instantáneas de bases de datos &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [Reflejo e instantáneas de base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
+ [Creación de reflejo e instantáneas de base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   

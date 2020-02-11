@@ -1,5 +1,5 @@
 ---
-title: Información general sobre datos de actualización | Microsoft Docs
+title: Información general sobre la actualización de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942812"
 ---
 # <a name="updating-data-overview"></a>Información general sobre actualización de datos
-Las aplicaciones pueden actualizar datos mediante la ejecución de instrucciones SQL o mediante una llamada a **SQLSetPos** o **SQLBulkOperations**. **ACTUALIZACIÓN**, **eliminar**, y **insertar** instrucciones actuar directamente en el origen de datos y normalmente son compatibles con los controladores. Buscar actualizaciones y las instrucciones delete contienen una especificación de las filas que se va a cambiar. Coloca la actualización y eliminación de instrucciones y **SQLSetPos** actuar en el origen de datos a través de un cursor y apenas se admiten.  
+Las aplicaciones pueden actualizar datos mediante la ejecución de instrucciones SQL o mediante una llamada a **SQLSetPos** o **SQLBulkOperations**. Las instrucciones **Update**, **Delete**e **Insert** actúan directamente en el origen de datos y suelen ser compatibles con los controladores. Las instrucciones Update y DELETE buscadas contienen una especificación de las filas que se van a cambiar. Las instrucciones Update y DELETE posicionadas y **SQLSetPos** actúan en el origen de datos a través de un cursor y se admiten con menos frecuencia.  
   
- Si los cursores pueden detectar los cambios realizados en el conjunto de resultados con los métodos descritos en esta sección depende del tipo de cursor y cómo se implementa. Cursores de solo avance no volver a visitar las filas y, por tanto, no detectó ningún cambio. Para obtener información acerca de si los cursores desplazables pueden detectar los cambios, consulte [los cursores desplazables](../../../odbc/reference/develop-app/scrollable-cursors.md).  
+ El hecho de que los cursores puedan detectar los cambios realizados en el conjunto de resultados con los métodos descritos en esta sección depende del tipo de cursor y de cómo se implemente. Los cursores de solo avance no vuelven a visitar las filas y, por tanto, no detectan ningún cambio. Para obtener información sobre si los cursores desplazables pueden detectar cambios, vea [cursores desplazables](../../../odbc/reference/develop-app/scrollable-cursors.md).  
   
  Esta sección contiene los temas siguientes.  
   

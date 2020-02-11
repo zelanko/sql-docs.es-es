@@ -18,19 +18,19 @@ ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d6f842b96a9b179548688a4c655a566087ba1ebf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108621"
 ---
-# <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
+# <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea una base de datos de medios extraíbles. Genera tres archivos o más (uno para las tablas de catálogo del sistema, otro para el registro de transacciones y uno o más archivos para las tablas de datos) y coloca la base de datos en esos archivos.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Se recomienda que use [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Se recomienda usar [Create Database](../../t-sql/statements/create-database-sql-server-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,27 +55,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'` Es el nombre de la base de datos para crear para su uso en un medio extraíble. *dbname* es **sysname**.  
+`[ @dbname = ] 'dbname'`Es el nombre de la base de datos que se va a crear para su uso en medios extraíbles. *dbname* es de **tipo sysname**.  
   
-`[ @syslogical = ] 'syslogical'` Es el nombre lógico del archivo que contiene las tablas del catálogo del sistema. *syslogical* es **sysname**.  
+`[ @syslogical = ] 'syslogical'`Es el nombre lógico del archivo que contiene las tablas del catálogo del sistema. *syslogic* es **sysname**.  
   
-`[ @sysphysical = ] 'sysphysical'` Es el nombre físico. Se incluye la ruta de acceso completa al archivo que contiene las tablas del catálogo del sistema. *sysphysical* es **nvarchar (260)** .  
+`[ @sysphysical = ] 'sysphysical'`Es el nombre físico. Se incluye la ruta de acceso completa al archivo que contiene las tablas del catálogo del sistema. *sysphysical* es **nvarchar (260)**.  
   
-`[ @syssize = ] syssize` Es el tamaño, en megabytes, del archivo que contiene el sistema de tablas del catálogo. *syssize* es **int**. El mínimo *syssize* es 1.  
+`[ @syssize = ] syssize`Es el tamaño, en megabytes, del archivo que contiene las tablas del catálogo del sistema. *syssize* es de **tipo int**. El valor mínimo de *syssize* es 1.  
   
-`[ @loglogical = ] 'loglogical'` Es el nombre lógico del archivo que contiene el registro de transacciones. *loglogical* es **sysname**.  
+`[ @loglogical = ] 'loglogical'`Es el nombre lógico del archivo que contiene el registro de transacciones. *loglogical* es de **tipo sysname**.  
   
-`[ @logphysical = ] 'logphysical'` Es el nombre físico. Se incluye la ruta de acceso completa al archivo que contiene el registro de transacciones. *logphysical* es **nvarchar (260)** .  
+`[ @logphysical = ] 'logphysical'`Es el nombre físico. Se incluye la ruta de acceso completa al archivo que contiene el registro de transacciones. *logphysical* es **nvarchar (260)**.  
   
-`[ @logsize = ] logsize` Es el tamaño, en megabytes, del archivo que contiene el registro de transacciones. *logsize* es **int**. El mínimo *logsize* es 1.  
+`[ @logsize = ] logsize`Es el tamaño, en megabytes, del archivo que contiene el registro de transacciones. *es de* **tipo int**. El mínimo de *registro* es 1.  
   
-`[ @datalogical1 = ] 'datalogical'` Es el nombre lógico de un archivo que contiene las tablas de datos. *datalogical* es **sysname**.  
+`[ @datalogical1 = ] 'datalogical'`Es el nombre lógico de un archivo que contiene las tablas de datos. *Valor_lógico* es **sysname**.  
   
  Debe ser un número de archivos de datos comprendido entre 1 y 16. Normalmente, se crea más de un archivo de datos cuando se espera que la base de datos tenga un gran tamaño y deba distribuirse en varios discos.  
   
-`[ @dataphysical1 = ] 'dataphysical'` Es el nombre físico. Se incluye la ruta de acceso completa a un archivo que contiene tablas de datos. *dataphysical* es **nvarchar (260)** .  
+`[ @dataphysical1 = ] 'dataphysical'`Es el nombre físico. Se incluye la ruta de acceso completa a un archivo que contiene tablas de datos. *nonfísica* es **nvarchar (260)**.  
   
-`[ @datasize1 = ] 'datasize'` Es el tamaño, en megabytes, de un archivo que contiene tablas de datos. *DataSize* es **int**. El mínimo *datasize* es 1.  
+`[ @datasize1 = ] 'datasize'`Es el tamaño, en megabytes, de un archivo que contiene tablas de datos. *datasize* es de **tipo int**. El tamaño mínimo de los valores de *datasize* es 1.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -83,7 +83,7 @@ sp_create_removable
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Utilice este procedimiento almacenado si desea realizar una copia de la base de datos en un medio extraíble (como un disco compacto) y distribuir la base de datos a otros usuarios.  
   
 ## <a name="permissions"></a>Permisos  
@@ -101,7 +101,7 @@ sp_create_removable
 |Restaurada|Separada|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no establece permisos en archivos de datos y de registro.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no establece permisos de archivos de datos y registro.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea la base de datos `inventory` como una base de datos extraíble.  
@@ -118,14 +118,14 @@ EXEC sp_create_removable 'inventory',
 10;  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_certify_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Desasociar y adjuntar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [sp_certify_removable &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
- [sp_helpfile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [sp_dbremove &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_detach_db &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
+ [sp_helpfile &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
+ [sp_helpfilegroup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

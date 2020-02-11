@@ -16,17 +16,17 @@ ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62fcf860aba5c9f0be80e575428a362a7f3ca588
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100650"
 ---
 # <a name="odbc-functions-not-executed-by-the-cursor-library"></a>Funciones ODBC no ejecutadas por la biblioteca de cursores
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- La biblioteca de cursores no ejecuta las siguientes funciones. Cuando una aplicación llama a una de estas funciones, el Administrador de controladores invoca el controlador, no la biblioteca de cursores.  
+ La biblioteca de cursores no ejecuta las siguientes funciones. Cuando una aplicación llama a una de estas funciones, el administrador de controladores invoca el controlador, no la biblioteca de cursores.  
   
 |||  
 |-|-|  

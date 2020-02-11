@@ -1,5 +1,5 @@
 ---
-title: Requisitos de hardware y Software (ODBC) | Microsoft Docs
+title: Requisitos de hardware y software (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,41 +16,41 @@ ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6c09ddcac1409da08fedeaf946ac7fb9f6ef668e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952440"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>Requisitos de hardware y Software (ODBC)
-En este tema se enumera los requisitos para usar los controladores de base de datos de escritorio de ODBC.  
+En este tema se enumeran los requisitos para usar los controladores de base de datos de escritorio ODBC.  
   
 ## <a name="hardware-requirements"></a>Requisitos de hardware  
- Para usar los controladores de base de datos de escritorio de ODBC, debe tener:  
+ Para usar los controladores de base de datos de escritorio ODBC, debe tener:  
   
--   Un PC compatibles con IBM.  
+-   Un equipo personal compatible con IBM.  
   
 -   Un disco duro con 6 MB de espacio libre en disco.  
   
 -   Al menos 16 MB de memoria de acceso aleatorio (RAM).  
   
 ## <a name="software-requirements"></a>Requisitos de software  
- Para obtener acceso a datos con un controlador ODBC, debe tener:  
+ Para tener acceso a los datos con un controlador ODBC, debe tener:  
   
 -   El controlador ODBC.  
   
--   El Administrador de controladores de ODBC de 32 bits, versión 3.51 o versiones posteriores (Odbc32.dll).  
+-   El administrador de controladores ODBC de 32 bits, versión 3,51 o posterior (odbc32. dll).  
   
--   Microsoft Windows 95 o versiones posteriores, o Windows NT 4.0 o Windows 2000.  
+-   Microsoft Windows 95 o posterior, o Windows NT 4,0 o Windows 2000.  
   
--   Un tamaño de pila de al menos 20 KB para una aplicación mediante el controlador ODBC de Microsoft.  
+-   Un tamaño de pila de al menos 20 KB para una aplicación que usa un controlador ODBC de Microsoft.  
   
- Al utilizar Microsoft Windows NT 4.0 o Windows 2000, el controlador de 32 bits es segura para subprocesos, pero solo mediante el uso de un semáforo global que controla el acceso al controlador. Uso simultáneo del controlador es muy limitada en Windows NT. Todo el acceso a la capa de Jet ISAM será un subproceso único para todas las aplicaciones mediante el motor Microsoft Jet.  
+ Cuando se usa Microsoft Windows NT 4,0 o Windows 2000, el controlador de 32 bits es seguro para subprocesos, pero solo mediante el uso de un semáforo global que controla el acceso al controlador. El uso simultáneo del controlador está muy limitado en Windows NT. Todo el acceso a la capa de ISAM de jet será de un solo subproceso para todas las aplicaciones que usen el motor de Microsoft Jet.  
   
- Cuando se ejecutan varias aplicaciones de 16 bits en Windows en Windows (WOW) en Microsoft Windows NT 4.0, se deben ejecutar las aplicaciones en espacios de memoria distintos. (El mismo espacio de memoria no se puede usar porque ODBC no es compatible con varios entornos en el mismo proceso.) Para ejecutar una aplicación en un espacio de memoria independiente, seleccione el icono de la aplicación en el Administrador de programas, abrir el **archivo** menú y haga clic en **propiedades**y, a continuación, haga clic en **ejecutar memoria independiente Espacio**.  
+ Al ejecutar varias aplicaciones de 16 bits en Windows en Windows (WOW) en Microsoft Windows NT 4,0, las aplicaciones se deben ejecutar en espacios de memoria independientes. (No se puede usar el mismo espacio de memoria porque ODBC no admite varios entornos en el mismo proceso). Para ejecutar una aplicación en un espacio de memoria independiente, seleccione el icono de la aplicación en el administrador de programas, abra el menú **archivo** , haga clic en **propiedades**y, a continuación, haga clic en **ejecutar en un espacio de memoria independiente**.  
   
- No se admite el uso de estos controladores, las aplicaciones de 16 bits en Windows 95.  
+ No se admite el uso de estos controladores por parte de aplicaciones de 16 bits en Windows 95.  
   
-## <a name="driver-specific-hardware-and-software-requirements"></a>Requisitos de Software y Hardware específicos del controlador  
+## <a name="driver-specific-hardware-and-software-requirements"></a>Requisitos de hardware y software específicos del controlador  
   
--   El MicrosoftAccess y dBASEdrivers pueden requerir cambios en los archivos Autoexec.bat y Config.sys.
+-   MicrosoftAccess y dBASEdrivers pueden requerir cambios en los archivos Autoexec. bat o config. sys.

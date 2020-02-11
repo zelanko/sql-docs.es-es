@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049447"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administración y mantenimiento de la instancia de clúster de conmutación por error
@@ -37,7 +37,8 @@ ms.locfileid: "63049447"
  Después de instalar una FCI, puede cambiarla o repararla con el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por ejemplo, puede agregar nodos adicionales a una FCI, ejecutar una FCI como instancia independiente o quitar un nodo de la configuración de una FCI.  
   
 ### <a name="adding-a-node-to-an-existing-failover-cluster-instance"></a>Agregar un nodo a una instancia en clúster de conmutación por error existente  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ofrece la posibilidad de mantener una FCI existente. Si elige esta opción, puede agregar otros nodos a la FCI ejecutando el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo al que desea agregar la FCI. Para obtener más información, vea [Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) y [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ofrece la posibilidad de mantener una FCI existente. Si elige esta opción, puede agregar otros nodos a la FCI ejecutando el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo al que desea agregar la FCI. Para obtener más información, vea [Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) y [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ### <a name="removing-a-node-from-an-existing-failover-cluster-instance"></a>Quitar un nodo de una instancia en clúster de conmutación por error existente  
  Puede quitar un nodo de una FCI ejecutando el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo en el que desea reducir la FCI. Cada nodo de una FCI se considera un par sin dependencias de otros nodos de la FCI, así que puede quitar cualquier nodo. Un nodo dañado no tiene que estar disponible para poder quitarlo y el proceso de eliminación no desinstala los binarios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del nodo no disponible. Los nodos quitados se pueden volver a agregar a una FCI en cualquier momento. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
@@ -50,19 +51,19 @@ ms.locfileid: "63049447"
 > [!IMPORTANT]  
 >  No utilice la misma cuenta para la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la cuenta de servicio de WSFC. Si la contraseña cambia en la cuenta de servicio de WSFC, la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no será satisfactoria.  
   
- En [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], se usan SID de servicio para las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ En [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], se usan SID de servicio para las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, vea [configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ## <a name="administering-a-failover-cluster-instance"></a>Administrar una instancia de clúster de conmutación por error  
   
 |Descripción de la tarea|Vínculo de tema|  
 |----------------------|----------------|  
 |Describe cómo agregar dependencias a un recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Agregar dependencias a un recurso de SQL Server](add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos es un protocolo de autenticación de red diseñado para proporcionar una autenticación firme para aplicaciones cliente/servidor. Kerberos ofrece una base para la interoperabilidad y ayuda a mejorar la seguridad de la autenticación de red de toda una empresa. Se puede usar la autenticación Kerberos con instancias independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o con FCI AlwaysOn.|[Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
+|Kerberos es un protocolo de autenticación de red diseñado para proporcionar una autenticación firme para aplicaciones cliente/servidor. Kerberos ofrece una base para la interoperabilidad y ayuda a mejorar la seguridad de la autenticación de red de toda una empresa. Se puede usar la autenticación Kerberos con instancias independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o con FCI AlwaysOn.|[Registre un nombre de entidad de seguridad de servicio para las conexiones Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Proporciona vínculos a contenido que describe cómo habilitar la autenticación Kerberos||  
-|Describe el procedimiento que se usa para recuperarse de un error de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Recuperarse de un error en una instancia de clúster de conmutación por error](recover-from-failover-cluster-instance-failure.md)|  
+|Describe el procedimiento que se usa para recuperarse de un error de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Recuperación de un error de instancia de clúster de conmutación por error](recover-from-failover-cluster-instance-failure.md)|  
 |Describe el procedimiento que se usa para cambiar el recurso de dirección IP de una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Cambiar la dirección IP de una instancia de clúster de conmutación por error](change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar los valores de la propiedad HealthCheckTimeout](configure-healthchecktimeout-property-settings.md)   
  [Configurar los valores de la propiedad FailureConditionLevel](configure-failureconditionlevel-property-settings.md)   
  [Ver y leer el registro de diagnósticos de la instancia de clúster de conmutación por error](view-and-read-failover-cluster-instance-diagnostics-log.md)  

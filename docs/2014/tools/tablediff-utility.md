@@ -1,5 +1,5 @@
 ---
-title: tablediff, utilidad | Microsoft Docs
+title: Utilidad tablediff | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68185972"
 ---
 # <a name="tablediff-utility"></a>tablediff, utilidad
   La utilidad **tablediff** se usa para comparar los datos de dos tablas para determinar la no convergencia y es especialmente útil para solucionar problemas de no convergencia en una topología de replicación. Esta utilidad se puede usar desde el símbolo del sistema o en un archivo por lotes para realizar las siguientes tareas:  
   
--   Una comparación fila a fila entre una tabla de origen de una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que actúa como publicador de replicación y la tabla de destino de una o más instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que actúan como suscriptores de replicación.  
+-   Una comparación fila a fila entre una tabla de origen en una instancia [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de que actúa como publicador de replicación y la tabla de destino en una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o más instancias de que actúan como suscriptores de replicación.  
   
 -   Realiza una comparación rápida comparando solo el número de filas y el esquema.  
   
@@ -76,10 +76,10 @@ ms.locfileid: "68185972"
  [ **-?** ]  
  Devuelve la lista de parámetros admitidos.  
   
- **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
- Es el nombre del servidor de origen. Especificar _origen\_server\_nombre_ para la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar _origen\_server\_nombre_ **\\** _instancia\_nombre_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *source_server_name*[**\\**_instance_name_]  
+ Es el nombre del servidor de origen. Especifique _el\_nombre\_del servidor de origen_ para la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]instancia predeterminada de. Especifique**\\**_el nombre de instancia\__ del _\_\_servidor de origen_para una instancia con nombre de. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
- **-sourcedatabase** *source_database*  
+ **-source_database de la** **  
  Es el nombre de la base de datos de origen.  
   
  **-sourcetable** *source_table_name*  
@@ -100,13 +100,13 @@ ms.locfileid: "68185972"
  **-sourcelocked**  
  La tabla de origen se bloquea durante la comparación con las sugerencias de tabla TABLOCK y HOLDLOCK.  
   
- **-destinationserver** *destination_server_name*[ **\\** _instancia\_nombre_]  
- Es el nombre del servidor de destino. Especifique *destination_server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar _destino\_server\_nombre_ **\\** _instancia\_nombre_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[**\\**_nombre\_de instancia_]  
+ Es el nombre del servidor de destino. Especifique *destination_server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifique**\\**_el nombre de instancia\__ del _\_\_servidor de destino_para una instancia con nombre de. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  **-destinationdatabase** *subscription_database*  
  Es el nombre de la base de datos de destino.  
   
- **-destinationtable** *destination_table*  
+ **-destination_table de destino** **  
  Es el nombre de la tabla de destino.  
   
  **-destinationschema** *destination_schema_name*  
@@ -125,18 +125,18 @@ ms.locfileid: "68185972"
  La tabla de destino se bloquea durante la comparación con las sugerencias de tabla TABLOCK y HOLDLOCK.  
   
  **-b** *large_object_bytes*  
- Es el número de bytes que se deben comparar en las columnas cuyo tipo de datos es de objetos grandes, lo que incluye los tipos: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` y `varbinary(max)`. *large_object_bytes* toma como valor predeterminado el tamaño de la columna. Los datos que superen *large_object_bytes* no se compararán.  
+ Es el número de bytes que se deben comparar en las columnas cuyo tipo de datos es de objetos grandes, lo que incluye los tipos: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` y `varbinary(max)`. *large_object_bytes* tiene como valor predeterminado el tamaño de la columna. Los datos que superen *large_object_bytes* no se compararán.  
   
- **-bf**  *number_of_statements*  
+ **-number_of_statements de BF****    
  Es el número de instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que se va a escribir en el archivo de script actual [!INCLUDE[tsql](../includes/tsql-md.md)] cuando se usa la opción **-f** . Cuando el número de instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] supera el valor de *number_of_statements*, se crea un nuevo archivo de script [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
  **-c**  
  Compara diferencias de nivel de columna.  
   
- **-dt**  
+ **-DT**  
  Quita la tabla de resultados especificada por *table_name*si la tabla ya existe.  
   
- **-et** *table_name*  
+ **-et** *TABLE_NAME*  
  Especifica el nombre de la tabla de resultados que se desea crear. Si ya existe esta tabla, debe usarse **-DT** o la operación no se realizará correctamente.  
   
  **-f** [ *file_name* ]  
@@ -154,7 +154,7 @@ ms.locfileid: "68185972"
  **-ri**  *retry_interval*  
  Intervalo (en segundos) entre los reintentos.  
   
- **-strict**  
+ **-STRICT**  
  El esquema de origen y de destino se comparan de forma estricta.  
   
  **-t** *connection_timeouts*  
@@ -162,14 +162,14 @@ ms.locfileid: "68185972"
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Correcto|  
 |**1**|Error grave|  
 |**2**|Diferencias entre tablas|  
   
-## <a name="remarks"></a>Comentarios  
- La utilidad **tablediff** no se puede usar con servidores que no son[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+## <a name="remarks"></a>Observaciones  
+ La utilidad **tablediff** no se puede usar con servidores[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que no sean de.  
   
  No se admiten tablas que contengan columnas con el tipo de datos `sql_variant`.  
   
@@ -177,8 +177,8 @@ ms.locfileid: "68185972"
   
 |Tipo de datos de origen|Tipo de datos de destino|  
 |----------------------|---------------------------|  
-|`tinyint`|`smallint`, `int` o `bigint`|  
-|`smallint`|`int` o `bigint`|  
+|`tinyint`|`smallint`, `int`o`bigint`|  
+|`smallint`|`int`de`bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
 |`varchar(max)`|`text`|  
@@ -202,7 +202,7 @@ ms.locfileid: "68185972"
   
 -   `timestamp`  
   
--   **xml**  
+-   **lenguaje**  
   
 -   `text`  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68185972"
   
  Para usar las opciones **-o** o **-f** , debe tener permisos de escritura en la ubicación del directorio de archivos especificada.  
   
-## <a name="see-also"></a>Vea también  
- [Comparar tablas replicadas para buscar diferencias &#40;programación de la replicación&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
+## <a name="see-also"></a>Consulte también  
+ [Comparar tablas replicadas para buscar diferencias &#40;la programación de la replicación&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

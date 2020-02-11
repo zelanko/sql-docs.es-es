@@ -16,10 +16,10 @@ ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8d7252f0335e2fc83c5b8e5e27f5e41535fdc7bc
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68762265"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68762265"
   Cambia las propiedades del Agente de instantáneas para la publicación especificada. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
 > [!IMPORTANT]  
->  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,13 +61,13 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el agente. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
-|**4**|Cada día|  
-|**8**|Programación semanal|  
-|**16**|Programación mensual|  
+|**4**|Diariamente|  
+|**203**|Semanal|  
+|**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
 |**128**|Periódica|  
@@ -75,7 +75,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`Especifica los días en los que se ejecuta el agente. *frequency_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -84,19 +84,19 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**5**|Jueves|  
 |**6**|Viernes|  
 |**7**|Sábado|  
-|**8**|Day|  
-|**9**|Días de la semana|  
-|**10**|Días del fin de semana|  
+|**203**|Día|  
+|**9**|Días laborables|  
+|**7**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
-`[ @frequency_subday = ] frequency_subday`Son las unidades para *freq_subday_interval*. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
+`[ @frequency_subday = ] frequency_subday`Son las unidades de *freq_subday_interval*. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**1**|Una vez|  
-|**2**|Second|  
+|**1**|Una sola vez|  
+|**2**|Segundo|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**203**|Hour|  
 |NULL (predeterminado)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
@@ -120,7 +120,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'`Es el inicio de sesión que se usa al conectarse al publicador. *publisher_login* es de **tipo sysname y su**valor predeterminado es NULL. *publisher_login* debe especificarse cuando *publisher_security_mode* es **0**. Si *publisher_login* es NULL y *publisher_security_mode* es **1**, se usa la cuenta de Windows especificada en *job_login* al conectarse al publicador.  
+`[ @publisher_login = ] 'publisher_login'`Es el inicio de sesión que se usa al conectarse al publicador. *publisher_login* es de **tipo sysname y su**valor predeterminado es NULL. se debe especificar *publisher_login* cuando *publisher_security_mode* es **0**. Si *publisher_login* es NULL y *publisher_security_mode* es **1**, se utilizará la cuenta de Windows especificada en *job_login* al conectarse al publicador.  
   
 `[ @publisher_password = ] 'publisher_password'`Es la contraseña que se usa al conectarse al publicador. *publisher_password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
@@ -137,21 +137,21 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 `[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el publicador al crear un agente de instantáneas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un publicador.  
+>  no se debe usar el *publicador* al crear un agente de instantáneas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_changepublication_snapshot** se utiliza en la replicación de instantáneas, la replicación transaccional y la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_changepublication_snapshot**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
+ [sp_addpublication_snapshot &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

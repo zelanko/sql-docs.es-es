@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c2909eeebde268b52ecaeff5a20a982831e7569
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743521"
 ---
 # <a name="linked-servers-database-engine"></a>Servidores vinculados (motor de base de datos)
@@ -46,10 +46,11 @@ ms.locfileid: "62743521"
   
  Un *proveedor OLE DB* es una biblioteca DLL que administra un origen de datos específico e interactúa con él. Un *origen de datos OLE DB* identifica la base datos específica a la que se puede tener acceso mediante OLE DB. Aunque los orígenes de datos en los que se realizan consultas a través de definiciones de servidores vinculados son bases de datos normales, existen proveedores OLE DB para una amplia variedad de archivos y formatos de archivo. Se trata de archivos de texto, datos de hojas de cálculo y los resultados de búsquedas de contenido de texto completo.  
   
- El proveedor OLE DB de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (PROGID: SQLNCLI11) es el proveedor OLE DB oficial para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ El [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client (ProgID: SQLNCLI11) es el proveedor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]OLE DB oficial para.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] están diseñadas para ser usadas con cualquier proveedor OLE DB que implemente las interfaces OLE DB requeridas. Sin embargo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo se ha probado con el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y algunos otros.  
+>  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] están diseñadas para ser usadas con cualquier proveedor OLE DB que implemente las interfaces OLE DB requeridas. Sin embargo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo se ha probado con el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y algunos otros.  
   
 ## <a name="linked-server-details"></a>Detalles de servidores vinculados  
  En la siguiente ilustración se muestran los conceptos básicos de una configuración con servidores vinculados.  
@@ -78,23 +79,23 @@ ms.locfileid: "62743521"
   
  También puede definir servidores vinculados mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. En el Explorador de objetos, haga clic con el botón derecho en **Objetos de servidor**, seleccione **Nuevo**y, después, **Servidor vinculado**. Puede eliminar una definición de servidor vinculado al hacer clic con el botón derecho en el nombre del servidor vinculado y seleccionar **Eliminar**.  
   
- Cuando ejecute una consulta distribuida en un servidor vinculado, incluya el nombre de cuatro partes completo de una tabla para cada origen de datos en el que desee realizar la consulta. Este nombre de cuatro partes debe tener el formato _linked_server_name.catalog_ **. _`schema`_ .** _object_name_.  
+ Cuando ejecute una consulta distribuida en un servidor vinculado, incluya el nombre de cuatro partes completo de una tabla para cada origen de datos en el que desee realizar la consulta. Este nombre de cuatro partes debe tener el formato _linked_server_name. Catalog_**_`schema`_..** _object_name_.  
   
 > [!NOTE]  
 >  Es posible definir servidores vinculados que señalen al servidor donde se han definido, es decir, que operen como bucle invertido. Los servidores en bucle invertido resultan muy útiles cuando se prueba una aplicación que utiliza consultas distribuidas en una red con un único servidor. Los servidores vinculados en bucle invertido están previstos para la realización de pruebas y no se admiten para muchas operaciones, como las transacciones distribuidas.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Crear servidores vinculados &#40;Motor de base de datos de SQL Server&#41;](create-linked-servers-sql-server-database-engine.md)  
+ [Crear servidores vinculados &#40;SQL Server Motor de base de datos&#41;](create-linked-servers-sql-server-database-engine.md)  
   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)  
   
- [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)  
+ [sp_addlinkedsrvlogin &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)  
   
- [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)  
+ [sp_dropserver &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [sys.servers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)  
+ [Sys. Servers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)  
   
- [sp_linkedservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)  
+ [sp_linkedservers &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Irrelevantes de texto completo (página General) | Microsoft Docs
+title: Nueva lista de palabras irrelevantes de texto completo (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774217"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>Nueva lista de palabras irrelevantes de texto completo (página General)
   Utilice este cuadro de diálogo para crear una lista de palabras irrelevantes de texto completo. Una *lista de palabras irrelevantes* es un conjunto de palabras que se usan habitualmente, denominadas *palabras irrelevantes*, que se omiten de la indización de texto completo para las tablas que utilizan dicha lista. Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../relational-databases/search/full-text-search.md).  
   
- **Usar SQL Server Management Studio para crear una lista de palabras irrelevantes**  
+ **Para utilizar SQL Server Management Studio a fin de crear una lista de palabras irrelevantes**  
   
 -   [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../relational-databases/search/full-text-search.md)  
   
 ## <a name="options"></a>Opciones  
- **Nombre de la lista de palabras irrelevantes de texto completo**  
+ **Nombre de lista de palabras irrelevantes de texto completo**  
  Escriba el nombre de la lista de palabras irrelevantes de texto completo.  
   
  **Propietario**  
@@ -55,7 +55,7 @@ ms.locfileid: "62774217"
   
  Si alguno de los idiomas especificados en las palabras irrelevantes de la lista de palabras irrelevantes de origen no está registrado en la base de datos actual, CREATE FULLTEXT STOPLIST crea correctamente la lista, pero se devuelven advertencias y no se agregan las palabras irrelevantes correspondientes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
  [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)   

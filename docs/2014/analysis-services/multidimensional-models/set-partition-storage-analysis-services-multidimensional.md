@@ -1,5 +1,5 @@
 ---
-title: Establecer el almacenamiento de particiones (Analysis Services - Multidimensional) | Microsoft Docs
+title: Establecer el almacenamiento de particiones (Analysis Services-multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,14 +26,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072989"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Establecer el almacenamiento de particiones (Analysis Services - Multidimensional)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varias configuraciones de almacenamiento estándar para los modos de almacenamiento y las opciones de almacenamiento en caché. Estas configuraciones proporcionan parámetros de uso común para la notificación de actualizaciones, la latencia y la regeneración de datos.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona varias configuraciones de almacenamiento estándar para los modos de almacenamiento y las opciones de almacenamiento en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] caché. Estas configuraciones proporcionan parámetros de uso común para la notificación de actualizaciones, la latencia y la regeneración de datos.  
   
  Puede especificar el almacenamiento de las particiones en la pestaña Particiones del cubo en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]o en la página de propiedades de la partición de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66072989"
   
  Si activa la casilla **Aplicar configuración a dimensiones** , se aplica la misma configuración de almacenamiento a las dimensiones relacionadas con el grupo de medida. Los valores de la dimensión son inicialmente los mismos que los valores de la partición.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Particiones en modelos multidimensionales](partitions-in-multidimensional-models.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982117"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
@@ -29,9 +29,9 @@ ms.locfileid: "73982117"
 
 Captura datos de diagnóstico e información de estado acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para detectar errores potenciales. El procedimiento se ejecuta en modo repetido y envía los resultados periódicamente. Se puede invocar desde una conexión DAC o normal.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores).  
+**Se aplica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (y versiones posteriores).  
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'` indica el intervalo de tiempo en el que el procedimiento almacenado se ejecutará repetidamente para enviar información de estado.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'`Indica el intervalo de tiempo en el que el procedimiento almacenado se ejecutará repetidamente para enviar información de estado.  
   
  *repeat_interval_in_seconds* es de **tipo int** y su valor predeterminado es 0. Los valores válidos de los parámetros son 0 o cualquier valor mayor o igual que 5. El procedimiento almacenado tiene que ejecutarse al menos cinco segundos para devolver los datos completos. El tiempo mínimo que el procedimiento almacenado se ejecuta en el modo repetido es 5 segundos.  
   
@@ -59,11 +59,11 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |Columna|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica la marca de tiempo de creación de la fila. Cada fila de un conjunto de filas único tiene la misma marca de tiempo.|  
-|**component_type**|**sysname**|Indica si la fila contiene información para el componente de nivel de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para un grupo de disponibilidad de Always On:<br /><br /> instancia<br /><br /> Always On: AvailabilityGroup|  
-|**component_name**|**sysname**|Indica el nombre del componente o el nombre del grupo de disponibilidad:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nombre del grupo de disponibilidad >*|  
-|**state**|**int**|Indica el estado de mantenimiento del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**component_type**|**sysname**|Indica si la fila contiene información para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente de nivel de instancia o para un grupo de disponibilidad de Always On:<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
+|**component_name**|**sysname**|Indica el nombre del componente o el nombre del grupo de disponibilidad:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<nombre del grupo de disponibilidad>*|  
+|**State**|**int**|Indica el estado de mantenimiento del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Describe la columna de estado. Las descripciones que corresponden a los valores de la columna de estado son:<br /><br /> 0: desconocido<br /><br /> 1: limpiar<br /><br /> 2: ADVERTENCIA<br /><br /> 3: error|  
-|**data**|**VARCHAR (Max)**|Especifica los datos que son específicos del componente.|  
+|**Data**|**VARCHAR (Max)**|Especifica los datos que son específicos del componente.|  
   
  Estas son las descripciones de los cinco componentes:  
   
@@ -77,9 +77,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **eventos**: recopila datos y superficies a través del procedimiento almacenado en los errores y eventos de interés registrados por el servidor, incluidos los detalles sobre las excepciones de búfer de anillo, eventos de búfer de anillo sobre el agente de memoria, memoria insuficiente, monitor de programador, grupo de búferes, bloqueos por subproceso, seguridad y conectividad. Los eventos mostrarán siempre 0 como estado.  
   
--   **\<nombre del grupo de disponibilidad >** : recopila datos para el grupo de disponibilidad especificado (si component_type = "Always On: AvailabilityGroup").  
+-   **nombre del grupo de disponibilidad>: recopila datos para el grupo de disponibilidad especificado (si component_type = "Always On: AvailabilityGroup"). \< **  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
 Desde la perspectiva de los errores, los componentes del sistema, recursos y procesamiento de consultas se aprovecharán para la detección de errores mientras que los componentes de eventos e io_subsystem se aprovecharán solo con fines de diagnóstico.  
   
 En la tabla siguiente se asignan los componentes a sus estados de mantenimiento asociados.  
@@ -90,7 +90,7 @@ En la tabla siguiente se asignan los componentes a sus estados de mantenimiento 
 |resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
-|eventos||||x|  
+|events||||x|  
   
 La (x) de cada fila representa los estados de mantenimiento válidos para el componente. Por ejemplo, io_subsystem se mostrará como limpio o como advertencia. No mostrará los estados de error.  
  
@@ -240,7 +240,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>Vea también  
- [Directiva de conmutación por error para instancias de clústeres de conmutación por error](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+## <a name="see-also"></a>Consulte también  
+ [Directiva de conmutación por error para instancias de clúster de conmutación por error](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Cálculos (Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cálculos (diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088289"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Cálculos (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -35,7 +35,7 @@ ms.locfileid: "66088289"
   
 ## <a name="panes"></a>Paneles  
  **Barra de herramientas**  
- Use la barra de herramientas de las vistas de formulario y de script para realizar operaciones comunes en esta pestaña. Para más información sobre este panel, vea [Barra de herramientas &#40;pestaña Cálculo, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
+ Use la barra de herramientas de la vista de formulario y la vista de script para realizar operaciones comunes en esta pestaña. Para obtener más información sobre este panel, vea [barra de herramientas &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Organizador de script**  
  Use el panel **Organizador de scripts** de la vista Formulario para mostrar el contenido del script del cubo en un formato ordenado. Para más información sobre este panel, vea [Organizador de script &#40;pestaña Cálculo, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md).  
@@ -46,17 +46,17 @@ ms.locfileid: "66088289"
  **Editor de script**  
  Use el panel **Editor de script** de la vista de script para editar todo el script del cubo y, en la vista Formulario, para editar los comandos contenidos en el script del cubo. Para más información sobre este panel, vea [Editor de script &#40;pestaña Cálculo, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Editor de formulario de miembro calculado**  
+ **Editor de Formulario de miembro calculado**  
  Use el panel **Editor de Formulario de miembro calculado** de la vista Formulario para editar miembros calculados en el script del cubo. Para más información sobre este panel, vea [Editor de Formulario de miembro calculado &#40;pestaña Cálculos, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Editor de formulario de conjunto con nombre**  
+ **Editor de Formulario de conjuntos con nombres**  
  Use el panel **Editor de Formulario de conjuntos con nombres** de la vista Formulario para editar conjuntos con nombre en el script del cubo. Para más información sobre este panel, vea [Editor de Formulario de conjuntos con nombres &#40;pestaña Cálculo, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>Vea también  
- [Objetos de cubo &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
- [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [Aspectos básicos de scripting MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Consulte también  
+ [Objetos de cubo &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Realizan](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Aspectos básicos de scripting de MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Crear conjuntos con nombre](multidimensional-models/create-named-sets.md)  
   
   

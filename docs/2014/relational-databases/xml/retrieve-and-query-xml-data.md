@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241205"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperar y consultar datos XML
@@ -87,22 +87,22 @@ GO
   
   
 ##  <a name="query"></a> Establecer opciones de consulta necesarias  
- Al consultar `xml` columnas o variables con tipo `xml` métodos del tipo de datos, las siguientes opciones deben establecerse como se muestra.  
+ Al consultar las `xml` columnas de tipo o las `xml` variables mediante métodos de tipo de datos, se deben establecer las siguientes opciones como se muestra.  
   
 |Opciones de SET|Valores requeridos|  
 |-----------------|---------------------|  
-|ANSI_NULLS|ON|  
-|ANSI_PADDING|ON|  
-|ANSI_WARNINGS|ON|  
-|ARITHABORT|ON|  
-|CONCAT_NULL_YIELDS_NULL|ON|  
-|NUMERIC_ROUNDABORT|OFF|  
-|QUOTED_IDENTIFIER|ON|  
+|ANSI_NULLS|ACTIVAR|  
+|ANSI_PADDING|ACTIVAR|  
+|ANSI_WARNINGS|ACTIVAR|  
+|ARITHABORT|ACTIVAR|  
+|CONCAT_NULL_YIELDS_NULL|ACTIVAR|  
+|NUMERIC_ROUNDABORT|Apagado|  
+|QUOTED_IDENTIFIER|ACTIVAR|  
   
- Si no se establecen las opciones tal como se muestra, las consultas y modificaciones en `xml` métodos del tipo de datos se producirá un error.  
+ Si no se establecen las opciones como se muestra, las consultas y `xml` modificaciones de los métodos de tipo de datos generarán un error.  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear instancias de datos XML](create-instances-of-xml-data.md)  
   
   

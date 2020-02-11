@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057895"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>Editor de transformación Búsqueda (página Columnas)
@@ -52,11 +52,11 @@ ms.locfileid: "66057895"
  **Alias de salida**  
  Escriba un alias para la salida de cada columna de búsqueda. El valor predeterminado es el nombre de la columna de búsqueda; no obstante, puede elegir un nombre descriptivo exclusivo.  
   
-## <a name="see-also"></a>Vea también  
- [Editor de transformación Búsqueda &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de transformación Búsqueda &#40;página Conexión&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
- [Editor de transformación Búsqueda &#40;página Avanzadas&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
- [Transformación Búsqueda aproximada](data-flow/transformations/fuzzy-lookup-transformation.md)  
+## <a name="see-also"></a>Consulte también  
+ [Editor de transformación búsqueda &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor de transformación búsqueda &#40;página de conexión&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [Editor de transformación búsqueda &#40;página avanzadas&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [Editor de transformación búsqueda &#40;página salida de error&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [Búsqueda aproximada, transformación](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

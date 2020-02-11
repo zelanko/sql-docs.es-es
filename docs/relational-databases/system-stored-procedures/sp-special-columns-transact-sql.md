@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c82970caa25089320a1dc5daf68076f27478081f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032842"
 ---
-# <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
+# <a name="sp_special_columns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve el conjunto óptimo de columnas que identifican de forma única a una fila de la tabla. También devuelve las columnas actualizadas automáticamente cuando una transacción actualiza cualquier valor de la fila.  
@@ -46,46 +46,47 @@ sp_special_columns [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @table_name=] '*table_name*'  
- Es el nombre de la tabla que se utiliza para devolver información de catálogo. *nombre* es **sysname**, no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
+ [ @table_name=] '*TABLE_NAME*'  
+ Es el nombre de la tabla que se utiliza para devolver información de catálogo. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
   
  [ @table_owner=] '*table_owner*'  
- Es el propietario de la tabla de la tabla utilizada para devolver información del catálogo. *propietario* es **sysname**, su valor predeterminado es null. No se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de tabla del DBMS subyacente.  
+ Es el propietario de la tabla que se utiliza para devolver información del catálogo. *Owner* es de **tipo sysname y su**valor predeterminado es NULL. No se admite la coincidencia de patrón de caracteres comodín. Si no se especifica *Owner* , se aplican las reglas predeterminadas de visibilidad de tabla del DBMS subyacente.  
   
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual posee una tabla en la que se especifica el nombre, se devuelven las columnas de esa tabla. Si *propietario* no se especifica y el usuario actual no posee una tabla del elemento especificado *nombre*, este procedimiento busca una tabla del elemento especificado *nombre* que pertenecen a la base de datos propietario. Si la tabla existe, se devuelven sus columnas.  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual posee una tabla en la que se especifica el nombre, se devuelven las columnas de esa tabla. Si no se especifica *Owner* y el usuario actual no posee una tabla con el *nombre*especificado, este procedimiento busca una tabla con el *nombre* especificado que pertenezca al propietario de la base de datos. Si la tabla existe, se devuelven sus columnas.  
   
  [ @qualifier=] '*calificador*'  
- Es el nombre del calificador de tabla. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (*qualifier.owner.name*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+ Es el nombre del calificador de tabla. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas (*Qualifier.Owner.Name*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
  [ @col_type=] '*col_type*'  
- Es el tipo de columna. *Col_type* es **char (** 1 **)** , su valor predeterminado es R. el tipo R devuelve la columna óptima o el conjunto de columnas que, al recuperar valores de la columna o columnas, permite que cualquier fila en la instancia especificada tabla para identificarse de forma exclusiva. Una columna puede ser una pseudocolumna diseñada específicamente para este propósito o bien la columna o columnas de cualquier índice único de la tabla. El tipo V devuelve la columna o columnas de la tabla especificada (en su caso) que el origen de datos actualiza automáticamente cuando una transacción actualiza cualquier valor de la fila.  
+ Es el tipo de columna. *col_type* es **Char (** 1 **)**, con un valor predeterminado de r. el tipo r devuelve la columna óptima o el conjunto de columnas que, al recuperar valores de la columna o columnas, permite que cualquier fila de la tabla especificada se identifique de forma única. Una columna puede ser una pseudocolumna diseñada específicamente para este propósito o bien la columna o columnas de cualquier índice único de la tabla. El tipo V devuelve la columna o columnas de la tabla especificada (en su caso) que el origen de datos actualiza automáticamente cuando una transacción actualiza cualquier valor de la fila.  
   
  [ @scope=] '*ámbito*'  
- Es el ámbito mínimo necesario del ROWID. *ámbito* es **char (** 1 **)** , su valor predeterminado es T. el ámbito C especifica que el ROWID es válido solo cuando se coloca en esa fila. El ámbito T especifica que el ROWID es válido para la transacción.  
+ Es el ámbito mínimo necesario del ROWID. el *ámbito* es **Char (** 1 **)** y su valor predeterminado es T. el ámbito C especifica que el ROWID es válido solo cuando se coloca en esa fila. El ámbito T especifica que el ROWID es válido para la transacción.  
   
- [ @nullable=] '*que acepta valores NULL*'  
- Indica si las columnas especiales pueden o no aceptar un valor NULL. *que acepta valores NULL* es **char (** 1 **)** , su valor predeterminado es U. o especifica columnas especiales que no admiten valores null. U especifica columnas que admiten parcialmente valores NULL.  
+ [ @nullable=] '*Nullable*'  
+ Indica si las columnas especiales pueden o no aceptar un valor NULL. *Nullable* es **Char (** 1 **)** y su valor predeterminado es U. O especifica columnas especiales que no admiten valores NULL. U especifica columnas que admiten parcialmente valores NULL.  
   
  [ @ODBCVer=] '*ODBCVer*'  
- Es la versión de ODBC utilizada. *ODBCVer* es **int (** 4 **)** , con el valor predeterminado es 2. Esto indica ODBC versión 2.0. Para obtener más información acerca de las diferencias entre ODBC versión 2.0 y ODBC versión 3.0, vea la especificación SQLSpecialColumns para ODBC versión 3.0.  
+ Es la versión de ODBC utilizada. *ODBCVer* es de **tipo int (** 4 **)** y su valor predeterminado es 2. Esto indica ODBC versión 2.0. Para obtener más información acerca de las diferencias entre ODBC versión 2.0 y ODBC versión 3.0, vea la especificación SQLSpecialColumns para ODBC versión 3.0.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|SCOPE|**smallint**|Ámbito real del identificador de fila. Puede ser 0, 1 o 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Siempre devuelve 0. Este campo siempre devuelve un valor.<br /><br /> 0 = SQL_SCOPE_CURROW. Se garantiza que el Id. de fila es válido solo mientras esté colocado en esa fila. Una nueva selección posterior mediante el Id. de fila podría no devolver una fila si otra transacción ha actualizado o eliminado la fila.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. Se garantiza que el Id. de fila es válido mientras dura la transacción actual.<br /><br /> 2 = SQL_SCOPE_SESSION. Se garantiza que el identificador de fila sea válido mientras dure la sesión (en los límites de la transacción).|  
-|COLUMN_NAME|**sysname**|Nombre de columna para cada columna de la *tabla*devuelto. Este campo siempre devuelve un valor.|  
+|SCOPE|**smallint**|Ámbito real del identificador de fila. Puede ser 0, 1 o 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]siempre devuelve 0. Este campo siempre devuelve un valor.<br /><br /> 0 = SQL_SCOPE_CURROW. Se garantiza que el Id. de fila es válido solo mientras esté colocado en esa fila. Una nueva selección posterior mediante el Id. de fila podría no devolver una fila si otra transacción ha actualizado o eliminado la fila.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. Se garantiza que el Id. de fila es válido mientras dura la transacción actual.<br /><br /> 2 = SQL_SCOPE_SESSION. Se garantiza que el identificador de fila sea válido mientras dure la sesión (en los límites de la transacción).|  
+|COLUMN_NAME|**sysname**|Nombre de columna de cada columna de la *tabla*devuelta. Este campo siempre devuelve un valor.|  
 |DATA_TYPE|**smallint**|Tipo de datos de ODBC SQL.|  
-|TYPE_NAME|**sysname**|Nombre de tipo de datos dependiente del origen de datos; Por ejemplo, **char**, **varchar**, **dinero**, o **texto**.|  
+|TYPE_NAME|**sysname**|Nombre del tipo de datos dependiente del origen de datos; por ejemplo, **Char**, **VARCHAR**, **Money**o **Text**.|  
 |PRECISION|**Int**|Precisión de la columna en el origen de datos. Este campo siempre devuelve un valor.|  
-|LENGTH|**Int**|Longitud, en bytes, necesario para el tipo de datos en su forma binaria en el origen de datos, por ejemplo, 10 para **char (** 10 **)** , 4 para **entero**y 2 para **smallint** .|  
+|LENGTH|**Inter**|Longitud, en bytes, necesaria para el tipo de datos en su forma binaria en el origen de datos, por ejemplo, 10 para **Char (** 10 **)**, 4 para **Integer**y 2 para **smallint**.|  
 |SCALE|**smallint**|Escala de la columna en el origen de datos. NULL se devuelve para los tipos de datos a los que no se aplica la escala.|  
-|PSEUDO_COLUMN|**smallint**|Indica si la columna es una pseudocolumna. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve 1:<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
+|PSEUDO_COLUMN|**smallint**|Indica si la columna es una pseudocolumna. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve 1:<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_special_columns es equivalente a SQLSpecialColumns en ODBC. Los resultados devueltos se ordenan por medio de SCOPE.  
   
 ## <a name="permissions"></a>Permisos  
@@ -101,8 +102,8 @@ EXEC sp_special_columns @table_name = 'Department'
     ,@table_owner = 'HumanResources';  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados del catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Procedimientos almacenados de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

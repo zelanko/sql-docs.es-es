@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779501"
 ---
 # <a name="hash-indexes"></a>Índices hash
@@ -22,11 +22,12 @@ ms.locfileid: "62779501"
   
  Un índice hash consta de una colección de cubos organizados en una matriz. Una función hash asigna las claves de índice a los cubos correspondientes en el índice hash. La ilustración siguiente muestra las tres claves de índice que se asignan a tres cubos distintos en el índice hash. Con fines meramente ilustrativos, el nombre de función hash es f(x).  
   
- ![Claves de índice asignadas a diferentes cubos. ](../../2014/database-engine/media/hekaton-tables-2.gif "Claves asignadas a diferentes cubos de índice.")  
+ ![Claves de índice asignadas a diferentes cubos.](../../2014/database-engine/media/hekaton-tables-2.gif "Claves de índice asignadas a diferentes cubos.")  
   
  La función hash que se utiliza para los índices hash tiene las siguientes características:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una función hash que se utiliza para todos los índices hash.  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una función hash que se utiliza para todos los índices hash.  
   
 -   La función hash es determinista. La misma clave de índice se asigna siempre al mismo cubo en el índice hash.  
   
@@ -40,13 +41,13 @@ ms.locfileid: "62779501"
   
  La estructura de índice hash en memoria consta de una matriz de punteros de memoria. Cada cubo asigna un desplazamiento en esta matriz. Cada cubo de la matriz señala a la primera fila del cubo de hash. Cada fila del cubo señala a la siguiente fila, por lo que genera una cadena de filas para cada cubo de hash, como se muestra en la ilustración siguiente.  
   
- ![La estructura del índice hash en memoria. ](../../2014/database-engine/media/hekaton-tables-3.gif "La estructura del índice hash en memoria.")  
+ ![Estructura de índice de hash en memoria.](../../2014/database-engine/media/hekaton-tables-3.gif "Estructura de índice de hash en memoria.")  
   
  La ilustración tiene tres cubos con filas. El segundo cubo de la parte superior contiene las tres filas rojas. El cuarto cubo contiene la única fila azul. El cubo inferior contiene las dos filas verdes. Estas podrían ser versiones diferentes de la misma fila.  
   
- Para obtener más información acerca de los índices para tablas optimizadas para memoria, vea [Directrices para usar índices en las tablas con optimización para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ Para obtener más información acerca de los índices para tablas optimizadas para memoria, vea [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md):  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Índices de las tablas con optimización para memoria](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

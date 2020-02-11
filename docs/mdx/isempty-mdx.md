@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8b31b884e0f86bf2aebe4859cd1c7a441669e813
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905990"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
@@ -31,13 +31,13 @@ IsEmpty(Value_Expression)
  *Value_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que normalmente devuelve las coordenadas de celda de un miembro o una tupla.  
   
-## <a name="remarks"></a>Comentarios  
- El **IsEmpty** función devuelve **true** si la expresión evaluada es un valor de celda vacía. En caso contrario, esta función devuelve **false**.  
+## <a name="remarks"></a>Observaciones  
+ La función **IsEmpty** devuelve **true** si la expresión evaluada es un valor de celda vacía. De lo contrario, esta función devuelve **false**.  
   
 > [!NOTE]  
 >  La propiedad predeterminada de un miembro es el valor del miembro.  
   
- El **IsEmpty** función es la única manera confiable de comprobar si una celda vacía porque el valor de celda vacía tiene un significado especial en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ La función **IsEmpty** es la única manera de probar de forma confiable una celda vacía porque el valor de la celda vacía tiene un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]significado especial en.  
   
 > [!IMPORTANT]  
 >  Si la evaluación de la expresión de valor devuelve un error, la función devolverá **false**. Una expresión de valor puede devolver un error, por ejemplo, si una referencia de propiedad hace referencia a una propiedad no válida o inexistente.  
@@ -57,7 +57,7 @@ IsEmpty(Value_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con valores vacíos](../mdx/working-with-empty-values.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 90ecf9d2f9c677351a4c199414be25d753fe5346
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479964"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Crear una jerarquía derivada (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65479964"
 > [!NOTE]  
 >  Si un valor de atributo basado en dominios no existe para un miembro, este no se incluye en la jerarquía derivada. Consulte [Requerir valores de atributo &#40;Master Data Services&#41;](require-attribute-values-master-data-services.md) para requerir un valor de atributo basado en dominio para todos los miembros.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -37,11 +37,11 @@ ms.locfileid: "65479964"
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
   
-2.  En el **vista de modelo** página, en la barra de menús, seleccione **administrar** y haga clic en **jerarquías derivadas**.  
+2.  En la página **vista de modelo** , en la barra de menús, seleccione **administrar** y haga clic en **jerarquías derivadas**.  
   
 3.  En la página **Mantenimiento de jerarquías derivadas** , en la lista **Modelo** , seleccione un modelo.  
   
-4.  Haga clic en **agregar jerarquía derivada**.  
+4.  Haga clic en **Agregar jerarquía derivada**.  
   
 5.  En la página **Agregar jerarquía derivada** , en el cuadro **Nombre de jerarquía derivada** , escriba un nombre para la jerarquía.  
   
@@ -50,15 +50,15 @@ ms.locfileid: "65479964"
   
 6.  Haga clic en **Guardar jerarquía derivada**.  
   
-7.  En el **Editar jerarquía derivada** página, en el **entidades y jerarquías disponibles** panel, haga clic en una entidad o jerarquía y arrástrelo hasta el **niveles actuales** panel.  
+7.  En la página **Editar jerarquía derivada** , en el panel **entidades y jerarquías disponibles** , haga clic en una entidad o jerarquía y arrástrela hasta el panel **niveles actuales** .  
   
 8.  Siga arrastrando entidades o jerarquías hasta que la jerarquía esté completa.  
   
 9. Haga clic en **Atrás**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Jerarquías derivadas &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
  [Jerarquías derivadas con límites explícitos &#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
- [Atributos basados en dominios &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+ [Atributos basados en dominio &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
   

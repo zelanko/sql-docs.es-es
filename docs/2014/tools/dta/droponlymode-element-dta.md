@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659583"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode (DTA, elemento)
@@ -40,13 +40,13 @@ ms.locfileid: "62659583"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Repetición**|Opcional. Se puede utilizar una sola vez por cada elemento `TuningOptions`. No se puede utilizar si se especifican los siguientes elementos en el elemento `TuningOptions`:<br /><br /> [FeatureSet &#40;DTA, elemento&#41;](featureset-element-dta.md)<br /><br /> [Partitioning &#40;DTA, elemento&#41;](partitioning-element-dta.md)<br /><br /> [KeepExisting &#40;DTA, elemento&#41;](keepexisting-element-dta.md) se establece en **ALL**|  
+|**Repetición**|Opcional. Se puede utilizar una sola vez por cada elemento `TuningOptions`. No se puede utilizar si se especifican los siguientes elementos en el elemento `TuningOptions`:<br /><br /> [Elemento FeatureSet &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Elemento Partitioning &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [Elemento KeepExisting &#40;DTA&#41;](keepexisting-element-dta.md) está establecido en **All**|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[TuningOptions &#40;DTA, elemento&#41;](tuningoptions-element-dta.md)|  
+|**Elemento primario**|[Elemento TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  
@@ -60,7 +60,7 @@ ms.locfileid: "62659583"
 </TuningOptions>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

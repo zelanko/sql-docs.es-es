@@ -1,5 +1,5 @@
 ---
-title: Inicialización de casos de prueba (OracleToSQL) | Microsoft Docs
+title: Inicializar casos de prueba (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,31 +11,31 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264373"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>Inicialización de casos de prueba (OracleToSQL)
-En este paso Especifique la información inicial para el nuevo caso de prueba.  
+En este paso, especificará la información inicial del nuevo caso de prueba.  
   
 ## <a name="parameters"></a>Parámetros  
 **Nombre del caso de prueba**  
 Escriba el nombre para identificar el caso de prueba.  
   
 **Fecha de creación**  
-Hoy en día actual de la fecha, se definen automáticamente.  
+Fecha actual de hoy, definida automáticamente.  
   
 **Fecha de última modificación**  
-Rellena automáticamente; no se debe cambiar.  
+Se rellena automáticamente; no debe cambiarse.  
   
 **Descripción del caso de prueba**  
 Escriba cualquier información adicional para identificar el propósito del caso de prueba.  
   
-## <a name="next-step"></a>Paso siguiente  
-[Selección y configuración de objetos de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+## <a name="next-step"></a>siguiente paso  
+[Seleccionar y configurar objetos para probar &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
   
-## <a name="see-also"></a>Vea también  
-[Pruebas con objetos de base de datos migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>Consulte también  
+[Probar objetos de base de datos migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

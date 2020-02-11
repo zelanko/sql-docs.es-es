@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 308281ed30b7f0a56acbe397c0294932afeae121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211754"
 ---
 # <a name="view-the-table-definition"></a>Vea la definición de tabla
@@ -44,13 +44,13 @@ ms.locfileid: "68211754"
 ####  <a name="Permissions"></a> Permisos  
  Solamente puede ver las propiedades de una tabla si es propietario de la tabla o tiene concedidos permisos para esa tabla.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-show-table-properties-in-the-properties-window"></a>Para mostrar las propiedades de la tabla en la ventana Propiedades  
   
 1.  En el Explorador de objetos, seleccione la tabla cuyas propiedades desea mostrar.  
   
-2.  Haga clic con el botón secundario en la tabla y elija **Propiedades** en el menú contextual. Para obtener más información, consulte [Table Properties](table-properties-ssms.md).  
+2.  Haga clic con el botón derecho en la tabla y elija **Propiedades** en el menú contextual. Para obtener más información, consulte [Table Properties](table-properties-ssms.md).  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

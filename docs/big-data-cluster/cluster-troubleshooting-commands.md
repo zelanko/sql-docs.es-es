@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70153631"
 ---
 # <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Supervisión y solución de problemas con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
@@ -114,7 +114,7 @@ kubectl get svc -n mssql-cluster
 
 Los siguientes servicios admiten conexiones externas al clúster de macrodatos:
 
-| ssNoVersion | Descripción |
+| Servicio | Descripción |
 |---|---|
 | **master-svc-external** | Proporciona acceso a la instancia maestra.<br/>(**EXTERNAL-IP,31433** y el usuario de **SA**) |
 | **controller-svc-external** | Admite herramientas y clientes que administran el clúster. |

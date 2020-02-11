@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 804ca2ebe3aa307272645fa5a626ea2212367f87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637968"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>Columnas con el nombre de una prueba de nodo XPath
   Si el nombre de columna es una de las pruebas de nodo XPath, se asignará el contenido tal y como se muestra en la tabla siguiente. Cuando el nombre de la columna es una prueba de nodo XPath, se asigna el contenido al nodo correspondiente. Si el tipo SQL de la columna es `xml`, se devolverá un error.  
   
-|Nombre de la columna|Comportamiento|  
+|Nombre de columna|Comportamiento|  
 |-----------------|--------------|  
 |text()|En el caso de las columnas con el nombre text(), el valor de cadena de la misma se agregará como un nodo de texto.|  
 |comment()|En el caso de las columnas con el nombre comment(), el valor de cadena de la misma se agregará como un comentario XML.|  
@@ -57,7 +57,7 @@ WHERE  E.BusinessEntityID=1
 FOR XML PATH;  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
  `<row EmpID="1">`  
   
@@ -85,7 +85,7 @@ FOR XML PATH;
   
  `</row>`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo PATH con FOR XML](use-path-mode-with-for-xml.md)  
   
   

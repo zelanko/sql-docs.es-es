@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3826607072ad62af90c680572a42f5ffb3ab12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889801"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerar los paquetes disponibles mediante programación
@@ -39,7 +39,7 @@ ms.locfileid: "62889801"
 |Almacén de paquetes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|  
   
- [Volver al principio](#top)  
+ [Volver arriba](#top)  
   
 ##  <a name="listing"></a> Enumerar los paquetes disponibles  
  Para obtener una lista de los paquetes guardados mediante programación, llame a uno de los métodos siguientes:  
@@ -155,7 +155,7 @@ namespace EnumeratePackagesSSIS_CS
 }  
 ```  
   
- [Volver al principio](#top)  
+ [Volver arriba](#top)  
   
 ###  <a name="listing_sql"></a> Ejemplo (SQL Server)  
  Utilice el método <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> para enumerar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacenados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -236,11 +236,11 @@ namespace EnumeratePackagesSql_CS
 }  
 ```  
   
- [Volver al principio](#top)  
+ [Volver arriba](#top)  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administración de paquetes &#40;servicio SSIS&#41;](../service/package-management-ssis-service.md)  
   
   

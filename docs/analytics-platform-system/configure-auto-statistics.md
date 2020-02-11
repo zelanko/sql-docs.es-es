@@ -11,10 +11,10 @@ ms.reviewer: martinle
 ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
 ms.openlocfilehash: 7071c9cb46bde6e2d353293cec9f01451c0b4f67
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401282"
 ---
 # <a name="configure-auto-statistics"></a>Configurar estadísticas automáticas
@@ -55,7 +55,7 @@ ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS_ASYNC ON
  
 AUTO_UPDATE STATISTICS_ASYNC opción solo funciona si AUTO_UPDATE_STATISTICS está activada.  Por lo tanto, las estadísticas no se actualizan cuando AUTO_UPDATE_STATISTICS está desactivada y AUTO_UPDATE_STATISTICS_ASYNC está activada. 
 
-### <a name="error-messages"></a>mensajes de error
+### <a name="error-messages"></a>Mensajes de error
 Podría recibir el mensaje de error "esta opción no es compatible con PDW".  Este error se produce cuando el administrador del sistema no ha habilitado las estadísticas automáticas e intenta establecer cualquiera de las opciones de estadísticas automáticas en ALTER DATABASE. 
 
 ### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones

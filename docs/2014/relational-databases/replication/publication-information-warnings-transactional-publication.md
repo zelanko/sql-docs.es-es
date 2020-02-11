@@ -1,5 +1,5 @@
 ---
-title: Información de publicación, advertencias (publicación transaccional, SQL Server 2005 y versiones posterior) | Microsoft Docs
+title: Información de publicación, advertencias (publicación transaccional, SQL Server 2005 y versiones posteriores) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2ab1c4be29b87e1051daa702ce40905a95e34ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022007"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>Información de publicación, Advertencias (Publicación transaccional, SQL Server 2005 y posteriores)
-  La pestaña **Advertencias** está disponible para los distribuidores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. La pestaña **Advertencias** permite realizar las siguientes tareas para la publicación seleccionada:  
+  La pestaña **advertencias** está disponible para distribuidores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. La pestaña **Advertencias** permite realizar las siguientes tareas para la publicación seleccionada:  
   
 -   Habilitar las advertencias para mostrarlas en el Monitor de replicación.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "63022007"
  Además de mostrar una advertencia en el Monitor de replicación, llegar a un umbral también puede desencadenar una alerta. Para definir alertas, haga clic en **Configurar alertas** y proporcione información en el cuadro de diálogo **Configurar alertas de replicación** .  
   
 ## <a name="options"></a>Opciones  
- **Habilitado**  
+ **Enabled**  
  Seleccione esta opción si desea habilitar una advertencia y especificar un umbral asociado.  
   
- **Advertencia**  
+ **Warning (ADVERTENCIA)**  
  Descripción de la advertencia asociada al umbral.  
   
- **Umbral**  
+ **Mínimo**  
  Permite especificar un valor para el umbral.  
   
  **Configurar alertas**  
@@ -75,11 +75,11 @@ ms.locfileid: "63022007"
  **Guardar cambios**  
  Haga clic para guardar los cambios realizados en las advertencias y los umbrales.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Supervisar el rendimiento con el Monitor de replicación](monitor/monitor-performance-with-replication-monitor.md)   
- [Monitoring Replication](monitoring-replication.md)  (Supervisar la replicación)  
- [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Supervisión de la replicación](monitoring-replication.md)   
+ [Establecer umbrales y advertencias en el Monitor de replicación](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

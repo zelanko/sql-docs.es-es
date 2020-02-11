@@ -11,18 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 686eb039660efb6e3596b9dac88fc0d24deacaee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150529"
 ---
 # <a name="unknown-service-log-on-tab"></a>Servicio desconocido (pestaña Iniciar sesión)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede identificar este servicio.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager no puede identificar este servicio.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recibe información de los servicios del proveedor WMI del equipo que ejecuta el servicio. Se ha producido un error al leer las propiedades del servicio o éstas no están completas. Para solucionar el problema, intente cerrar y volver a abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o compruebe el proveedor WMI del equipo en el que se ejecuta el servicio.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recibe información de los servicios del proveedor WMI del equipo que ejecuta el servicio. Se ha producido un error al leer las propiedades del servicio o éstas no están completas. Para solucionar el problema, intente cerrar y volver a abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o compruebe el proveedor WMI del equipo en el que se ejecuta el servicio.  
   
- El proveedor WMI es un componente de Windows. Para obtener información sobre cómo comprobar los permisos en el proveedor de WMI, vea "Cómo: Configurar WMI para mostrar el estado del servidor en herramientas de SQL Server"en libros en pantalla de SQL Server.  
+ El proveedor WMI es un componente de Windows. Para obtener información sobre cómo comprobar los permisos en el proveedor de WMI, vea "Cómo: Configure WMI para mostrar Estado del Servidor en herramientas SQL Server" en los Libros en pantalla de SQL Server.  
   
  Si cree que está viendo el servicio correcto, utilice la pestaña **Iniciar sesión** del cuadro de diálogo **Propiedades de Servicio desconocido** para especificar la cuenta utilizada por este servicio, así como para iniciar y detener el servicio.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "63150529"
  **Iniciar**  
  Inicie el servicio.  
   
- **Detener**  
+ **Detención**  
  Detenga el servicio.  
   
  **Pausar**  

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 15c570594f84bf8d1d61abac4bc4e4c372f18784
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727607"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Solución de problemas de recolección de datos para Machine Learning
@@ -302,6 +302,6 @@ Dado que existe la posibilidad de que no se puedan excluir todas las carpetas qu
 
 2. Averigüe si se ha creado una regla de firewall para SQL Server. Por motivos de seguridad, en una instalación predeterminada es posible que el cliente de R o de Python remoto no pueda conectarse a la instancia. Para más información, vea [Solucionar problemas de conexión a SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Solución de problemas de Machine Learning en SQL Server](machine-learning-troubleshooting-faq.md)

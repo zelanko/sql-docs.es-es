@@ -12,10 +12,10 @@ ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: fc0135ed4e4956d6bd98fc0b467a5b6d0a25a013
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557910"
 ---
 # <a name="cleanse-data-using-external-knowledge-reference-data---data-quality-services-dqs"></a>Limpiar datos con datos de referencia de conocimiento (externos)-Data Quality Services (DQS)
@@ -48,12 +48,12 @@ ms.locfileid: "75557910"
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
  Debe haber asignado los dominios requeridos de una base de conocimiento de DQS al servicio de datos de referencia apropiado. Además, la base de conocimiento debe contener conocimiento sobre el tipo de datos que desea limpiar. Por ejemplo, si quiere limpiar los datos de origen que contienen direcciones de EE. UU., debe asignar los dominios a un proveedor de servicios de datos de referencia que proporcione datos de alta calidad para esas direcciones. Para más información, vea [Adjuntar un dominio o un dominio compuesto a datos de referencia](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_kb_operator en la base de datos DQS_MAIN para realizar la limpieza de datos.  
   
 ##  <a name="Cleanse"></a>Limpie los datos mediante el conocimiento de los datos de referencia  
@@ -61,7 +61,7 @@ ms.locfileid: "75557910"
   
 1.  Cree un proyecto de calidad de datos y seleccione la actividad **Limpieza** . Consulte [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
   
-2.  En la página **Asignación** , asigne los 4 dominios siguientes a las columnas apropiadas de los datos de origen: **Address Line**, **City**, **State**y **Zip**. Haga clic en **Siguiente**.  
+2.  En la página **Asignación** , asigne los 4 dominios siguientes a las columnas apropiadas de los datos de origen: **Address Line**, **City**, **State**y **Zip**. Haga clic en **Next**.  
   
     > [!NOTE]  
     >  Como ha asignado los cuatro dominios dentro del dominio compuesto **Address Verification** , la limpieza de datos ahora se realizará en el nivel de dominio compuesto, y no en el nivel de dominio individual.  
@@ -78,13 +78,13 @@ ms.locfileid: "75557910"
   
      **Valor original:**  
   
-    |Address Line|City|Estado|Zip|  
+    |Address Line|City|State|Zip|  
     |------------------|----------|-----------|---------|  
     |1 msft way|Redmond||98052|  
   
      **Valores sugeridos:**  
   
-    |Address Line|City|Estado|Zip|  
+    |Address Line|City|State|Zip|  
     |------------------|----------|-----------|---------|  
     |1 Microsoft Way|Redmond|WA|98052|  
     |PO BOX 1|Redmond|WA|98073|  

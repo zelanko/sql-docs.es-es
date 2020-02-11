@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705745"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
@@ -38,9 +38,9 @@ ms.locfileid: "62705745"
 |Etiqueta de la ilustración|Instrucción DDL|Descripción|  
 |------------------------|-------------------|-----------------|  
 |Crear|CREATE EVENT SESSION|El proceso de host crea un objeto de sesión que contiene los metadatos proporcionados por CREATE EVENT SESSION. El proceso de host valida la definición de la sesión, valida el nivel del permiso de usuario y almacena los metadatos en la base de datos maestra. En este punto la sesión no está activa.|  
-|Alter|ALTER EVENT SESSION, STATE=START|El proceso de host inicia la sesión. El proceso de host lee los metadatos almacenados, valida la definición de la sesión, comprueba el nivel del permiso de usuario y crea la sesión. Se cargan los objetos de sesión, como eventos y destinos, y el control de eventos está activo.|  
-|Alter|ALTER EVENT SESSION, STATE=STOP|El proceso de host detiene la sesión activa pero conserva los metadatos.|  
-|Drop|DROP EVENT SESSION|Dependiendo de que la sesión esté activa o no, Drop (DROP SESSION) eliminará los metadatos y cerrará la sesión activa, o eliminará los metadatos de la sesión.|  
+|Modificar|ALTER EVENT SESSION, STATE=START|El proceso de host inicia la sesión. El proceso de host lee los metadatos almacenados, valida la definición de la sesión, comprueba el nivel del permiso de usuario y crea la sesión. Se cargan los objetos de sesión, como eventos y destinos, y el control de eventos está activo.|  
+|Modificar|ALTER EVENT SESSION, STATE=STOP|El proceso de host detiene la sesión activa pero conserva los metadatos.|  
+|Anular|DROP EVENT SESSION|Dependiendo de que la sesión esté activa o no, Drop (DROP SESSION) eliminará los metadatos y cerrará la sesión activa, o eliminará los metadatos de la sesión.|  
   
 > [!NOTE]  
 >  ALTER EVENT SESSION y DROP EVENT SESSION se pueden aplicar a los metadatos, o a una sesión activa y los metadatos.  
@@ -74,7 +74,7 @@ ms.locfileid: "62705745"
   
  La arquitectura de Extended Events constituye un sistema flexible que permite utilizar diversos objetos conjuntamente para resolver problemas concretos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](extended-events.md)  
   
   

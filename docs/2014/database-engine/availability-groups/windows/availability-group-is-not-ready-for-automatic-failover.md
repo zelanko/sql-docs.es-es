@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791869"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>Grupo de disponibilidad no preparado para conmutación automática por error
@@ -29,7 +29,7 @@ ms.locfileid: "62791869"
 |-|-|  
 |**Nombre de directiva**|Preparación para la conmutación automática por error del grupo de disponibilidad|  
 |**Problema**|Grupo de disponibilidad no preparado para conmutación automática por error.|  
-|**Categoría**|**Crítico**|  
+|**Categoría**|**Critical)** (Crítico)|  
 |**Faceta**|grupo de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
@@ -40,7 +40,7 @@ ms.locfileid: "62791869"
 > [!NOTE]  
 >  En esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [El grupo de disponibilidad no está listo para la conmutación automática por error](https://go.microsoft.com/fwlink/p/?LinkId=220851) en TechNet Wiki.  
   
-## <a name="possible-causes"></a>Posibles causas  
+## <a name="possible-causes"></a>Causas posibles  
  Grupo de disponibilidad no preparado para la conmutación automática por error. La réplica principal está configurada para la conmutación automática por error; sin embargo, la réplica secundaria no está lista para la conmutación automática por error. La réplica secundaria configurada para la conmutación automática por error podría no estar disponible o su estado de sincronización de datos no es actualmente SYNCHRONIZED.  
   
 ## <a name="possible-solutions"></a>Soluciones posibles  
@@ -50,8 +50,8 @@ ms.locfileid: "62791869"
   
 -   Use la directiva para comprobar que los datos están en un estado de sincronización y el destino de la conmutación automática por error es SYNCHRONIZED y, a continuación, resuelva el problema en la réplica de disponibilidad.  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+## <a name="see-also"></a>Consulte también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

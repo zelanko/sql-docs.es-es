@@ -18,13 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8156e3d62e8aac027499ad1e267e1f6e14f5ef9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108688"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Almacenar datos cifrados del servidor de informes (Administrador de configuración de SSRS)
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena valores cifrados en la base de datos del servidor de informes y en archivos de configuración. La mayoría de los valores cifrados son credenciales que se utilizan para obtener acceso a orígenes de datos externos que proporcionan datos para informes. En este tema se describen los valores que se cifran, la funcionalidad de cifrado usada en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y otros tipos de datos confidenciales almacenados que debe conocer.  
   
 ## <a name="encrypted-values"></a>Valores cifrados  
@@ -32,7 +33,7 @@ ms.locfileid: "66108688"
   
 -   Información de conexión y credenciales que utiliza un servidor de informes para conectarse a una base de datos del servidor de informes que almacena datos internos del servidor.  
   
-     Estos valores se especifican y cifran durante la instalación o la configuración del servidor de informes. Puede actualizar la información de conexión en cualquier momento utilizando la herramienta de configuración de Reporting Services o la utilidad **rsconfig** . El cifrado de valores de configuración se realiza utilizando la clave de nivel de equipo del equipo local que está disponible para todos los usuarios. La información de conexión cifrada se almacena en el archivo rsreportserver.config (ningún otro archivo de configuración contiene configuración cifrada). Para obtener más información, vea [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+     Estos valores se especifican y cifran durante la instalación o la configuración del servidor de informes. Puede actualizar la información de conexión en cualquier momento utilizando la herramienta de configuración de Reporting Services o la utilidad **rsconfig** . El cifrado de valores de configuración se realiza utilizando la clave de nivel de equipo del equipo local que está disponible para todos los usuarios. La información de conexión cifrada se almacena en el archivo rsreportserver.config (ningún otro archivo de configuración contiene configuración cifrada). Para obtener más información, vea [configurar una conexión de base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 -   Credenciales almacenadas que utiliza un servidor de informes para conectarse a orígenes de datos externos que proporcionan datos a un informe.  
   
@@ -42,14 +43,15 @@ ms.locfileid: "66108688"
   
      Esta cuenta se utiliza cuando se necesita una conexión a un equipo remoto y no hay más credenciales disponibles para realizar la conexión. Esta cuenta se utiliza principalmente para admitir el procesamiento de informes en modo desatendido de los informes que no utilizan credenciales para obtener acceso a un origen de datos. Si crea informes en función de los orígenes de datos que no requieren o utilizan credenciales cuando obtienen acceso a los datos, debe configurar esta cuenta para que el servidor de informes la utilice.  
   
-     Esta cuenta es necesaria en ciertas circunstancias y solo puede crearse mediante la herramienta de configuración de Reporting Services o **rsconfig**. Este valor también se almacena en el archivo rsreportserver.config. Esta cuenta debe crearse manualmente. Para obtener más información sobre esta cuenta y cómo se usa, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Esta cuenta es necesaria en ciertas circunstancias y solo puede crearse mediante la herramienta de configuración de Reporting Services o **rsconfig**. Este valor también se almacena en el archivo rsreportserver.config. Esta cuenta debe crearse manualmente. Para más información sobre esta cuenta y cómo se usa, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 -   Clave simétrica utilizada para el cifrado.  
   
      Este valor se crea durante la instalación o la configuración del servidor y se almacena después como un valor cifrado en la base de datos del servidor de informes. El servicio Servidor de informes de Windows utiliza esta clave para cifrar y descifrar datos que se almacenan en la base de datos del servidor de informes.  
   
 ## <a name="encryption-functionality-in-reporting-services"></a>Funcionalidad de cifrado en Reporting Services  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa funciones de cifrado que forman parte del sistema operativo Windows. Se utilizan tanto el cifrado simétrico como el asimétrico.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa funciones de cifrado que forman parte del sistema operativo Windows. Se utilizan tanto el cifrado simétrico como el asimétrico.  
   
  La información de la base de datos del servidor de informes se cifra mediante una clave simétrica. Hay una clave simétrica única para cada base de datos del servidor de informes. Esta clave simétrica se cifra utilizando la clave pública de un par de claves asimétricas generadas por Windows. La clave privada se mantiene en la cuenta del servicio Servidor de informes de Windows.  
   
@@ -62,9 +64,10 @@ ms.locfileid: "66108688"
  Un servidor de informes almacena otros datos no cifrados, pero que pueden contener información confidencial que desee proteger. En concreto, las instantáneas de historial del informe y de ejecución de informes contienen resultados de consultas que pueden incluir datos destinados a usuarios autorizados. Si utiliza la funcionalidad de instantáneas para informes que contienen datos confidenciales, tenga en cuenta que los usuarios que puedan abrir las tablas en una base de datos del servidor de informes podrán ver partes de un informe almacenado al examinar el contenido de la tabla.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no admite el almacenamiento en caché o el historial de informes para informes que usan parámetros basados en la identidad de seguridad del usuario.  
+>  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no admite el almacenamiento en caché o el historial de informes para informes que usan parámetros basados en la identidad de seguridad del usuario.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

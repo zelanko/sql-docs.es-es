@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20bc4c4e56e3843a9a36cdd1ebdc97b875726cf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914592"
 ---
-# <a name="mssqlserver2575"></a>MSSQLSERVER_2575
+# <a name="mssqlserver_2575"></a>MSSQLSERVER_2575
     
 ## <a name="details"></a>Detalles  
   
 |||  
 |-|-|  
-|Nombre del producto|SQL Server|  
-|Identificador del evento|2575|  
-|Origen del evento|MSSQLSERVER|  
+|Nombre de producto|SQL Server|  
+|Id. de evento|2575|  
+|Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_IAM_PAGE_WAS_NOT_SEEN|  
 |Texto del mensaje|El siguiente puntero de la página IAM (Mapa de asignación de índices) P_ID2 [Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID, Id. de unidad de asignación A_ID (tipo TYPE)] apunta a la página IAM P_ID1, pero no se detectó en el recorrido.|  
@@ -58,7 +58,7 @@ ms.locfileid: "62914592"
 #### <a name="results-of-running-repair-options"></a>Resultados de ejecutar opciones REPAIR  
  DBCC volverá a generar el índice.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
   

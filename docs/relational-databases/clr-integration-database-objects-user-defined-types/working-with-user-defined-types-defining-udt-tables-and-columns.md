@@ -22,10 +22,10 @@ ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8386da85d22f50b45492ecd52588e6d06fe80590
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74901954"
 ---
 # <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>Trabajar con tipos definidos por el usuario: definir columnas y tablas UDT
@@ -49,7 +49,7 @@ CREATE TABLE dbo.Points
   
  Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con tipos definidos por el usuario en SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)     
- [Tipos definidos por el usuario CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     
+ [Tipos definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     

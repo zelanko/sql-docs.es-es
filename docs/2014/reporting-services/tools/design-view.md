@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63ac5bf29ca441a18be4bc5e46448475b56104bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100299"
 ---
 # <a name="design-view"></a>Vista de diseño
@@ -50,7 +50,7 @@ ms.locfileid: "66100299"
 ## <a name="properties-pane"></a>Panel Propiedades  
  Utilice el panel Propiedades para ver las propiedades del elemento de informe seleccionado en la superficie de diseño o el grupo seleccionado en el panel de agrupación. También puede hacer clic con el botón derecho en un elemento de informe o grupo seleccionado y hacer clic después en **Propiedades** para abrir el cuadro de diálogo **Propiedades** correspondiente del elemento de informe o grupo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Encabezados y pies de página &#40;Generador de informes y SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Sugerencias para el diseño de informes &#40;Generador de informes y SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   

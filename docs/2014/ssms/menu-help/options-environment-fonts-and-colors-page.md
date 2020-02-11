@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (Entorno: Página fuentes y colores) | Microsoft Docs'
+title: 'Opciones (entorno: página fuentes y colores) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211253"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>Opciones (Entorno: página Fuentes y colores)
-  El cuadro de diálogo **Opciones[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] le permite establecer una combinación personalizada de fuentes y colores para diversos elementos de la interfaz de usuario de**  [!INCLUDE[msCoName](../../includes/msconame-md.md)]. En el menú **Herramientas**, haga clic en **Opciones**, expanda la carpeta **Entorno** y seleccione **Fuentes y colores**.  
+# <a name="options-environment-fonts-and-colors-page"></a>Opciones (entorno: página Fuentes y colores)
+  El cuadro de diálogo **Opciones** permite establecer una combinación personalizada de fuentes y colores para diversos elementos de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]interfaz de usuario en. En el menú **Herramientas** , haga clic en **Opciones** , expanda la carpeta **Entorno** y seleccione **Fuentes y colores**.  
   
  Los cambios en la combinación de colores no surtirán efecto durante la sesión en la que los realice. Puede evaluar los cambios de color abriendo otra instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y creando las condiciones bajo las cuales espera que se apliquen los cambios.  
   
@@ -29,29 +29,29 @@ ms.locfileid: "68211253"
 |Término|Definición|  
 |----------|----------------|  
 |Editor de texto|Los cambios en la configuración del estilo, tamaño y color de fuente para el Editor de texto afectan a la apariencia del editor de texto predeterminado. Los documentos abiertos en un editor de texto fuera de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no afectarán a esta configuración.|  
-|Impresora|Los cambios en la configuración del estilo, tamaño y color de fuente para la impresora afectan a la apariencia del texto de los documentos impresos.<br /><br /> Sugerencia: Según sea necesario, puede seleccionar una fuente predeterminada para imprimir distinta a la se usa para mostrarlo en el Editor de texto. Esta opción puede ser útil para imprimir código que contenga caracteres de un solo byte o de doble byte.|  
+|Impresora|Los cambios en la configuración del estilo, tamaño y color de fuente para la impresora afectan a la apariencia del texto de los documentos impresos.<br /><br /> Sugerencia: según sea necesario, puede seleccionar una fuente predeterminada diferente para la impresión que la que se usa para la presentación en el editor de texto. Esta opción puede ser útil para imprimir código que contenga caracteres de un solo byte o de doble byte.|  
 |[Todas las ventanas de herramientas de texto **]**|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de las ventanas de herramientas que tienen paneles de resultados en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Por ejemplo, ventana Resultados, ventana TextResults, etc.<br /><br /> Nota: Los cambios en el texto de los elementos [Todas las ventanas de herramientas de texto] no surten efecto durante la sesión en la que se realizan. Puede evaluar dichos cambios abriendo otra instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |Ventana Resultados de la búsqueda|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana FindResults.|  
-|Resultados (ventana)|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana Resultados.|  
+|Ventana de salida|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana Resultados.|  
 |Resultados de la cuadrícula|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto del área **Resultados de la cuadrícula** de la ventana Consultar.|  
-|Plan de ejecución|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto en el plan de ejecución de las consultas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssEW](../../includes/ssew-md.md)] .|  
+|Plan de ejecución|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] plan [!INCLUDE[ssEW](../../includes/ssew-md.md)] de ejecución de las consultas y.|  
 |Resultados del texto|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto del área **Resultados del texto** de la ventana de consulta.|  
 |Diseñadores de Business Intelligence|Los cambios en la configuración del estilo de fuente, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana BusinessIntelligenceDesigners.|  
   
- **Usar predeterminados**  
+ **Usar valores predeterminados**  
  El botón **Usar predeterminados** restablece el valor de los valores de fuente y color predeterminados del elemento de la lista que haya seleccionado en la lista **Mostrar valores para** .  
   
- **Fuente (los tipos en negrita indican fuentes con ancho fijo)**  
+ **Fuente (los tipos en negrita indican fuentes de ancho fijo)**  
  Enumera todas las fuentes instaladas en el sistema. Al abrir por primera vez esta lista desplegable, se selecciona la fuente actual para el elemento seleccionado en la lista **Mostrar valores para** . Las fuentes fijas (que son más fáciles de alinear en un editor) aparecen en negrita.  
   
  **Tamaño**  
  Muestra los tamaños de punto disponibles para la fuente seleccionada. El cambio en el tamaño de la fuente afecta a todas las entradas de **Mostrar los elementos** de una selección de **Mostrar valores para** .  
   
- **Mostrar los elementos**  
+ **Mostrar elementos**  
  Muestra los elementos en los que puede modificar el color de primer plano y de fondo.  
   
 > [!NOTE]  
->  El elemento predeterminado es texto. De esta forma, las propiedades asignadas a Texto serán reemplazadas por las propiedades asignadas a otros elementos de muestra. Por ejemplo, si asigna el color azul a **Texto** y el color verde a Identificador, todos los identificadores aparecerán en verde. En este ejemplo, las propiedades de Identificador reemplazan a las propiedades de Texto.  
+>  El elemento predeterminado es Texto. De esta forma, las propiedades asignadas a Texto serán reemplazadas por las propiedades asignadas a otros elementos de muestra. Por ejemplo, si asigna el color azul a **Texto** y el color verde a Identificador, todos los identificadores aparecerán en verde. En este ejemplo, las propiedades de Identificador reemplazan a las propiedades de Texto.  
   
  Algunos elementos de muestra son los siguientes:  
   
@@ -66,22 +66,22 @@ ms.locfileid: "68211253"
  Muestra el cuadro de diálogo **Color** , en el que se establece un color personalizado para el elemento seleccionado en la lista **Mostrar los elementos** .  
   
 > [!NOTE]  
->  La posibilidad de definir colores personalizados puede estar limitada por la configuración del color de la pantalla del equipo. Por ejemplo, si el equipo está configurado para mostrar 256 colores y selecciona un color personalizado en el cuadro de diálogo **Color[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)],**  elegirá como predeterminado el valor disponible de **Colores básicos** que más se aproxime, y mostrará el color negro en el cuadro de diálogo **Color**.  
+>  La posibilidad de definir colores personalizados puede estar limitada por la configuración del color de la pantalla del equipo. Por ejemplo, si el equipo está configurado para mostrar 256 colores y selecciona un color personalizado en el cuadro de diálogo **Color**, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] elegirá como predeterminado el valor disponible de **Colores básicos** que más se aproxime, y mostrará el color negro en el cuadro de diálogo **Color**.  
   
  **Fondo del elemento**  
  Proporciona una paleta de colores de la que puede elegir un color de fondo para el elemento seleccionado en **Mostrar los elementos**. Puesto que algunos elementos están relacionados, debe mantenerse una combinación de visualización coherente; por ejemplo, al cambiar el color de fondo del texto también cambiará el color de fondo de elementos como Cadena.  
   
- **Personalizado**  
+ **Personalizada**  
  Muestra el cuadro de diálogo **Color** , en el que se establece un color personalizado para el elemento seleccionado en la lista **Mostrar los elementos** .  
   
  **Negrita**  
  Seleccione esta casilla para mostrar el texto de los displayitems seleccionados en negrita. El texto en negrita es más fácil de identificar en un editor.  
   
- **Ejemplo**  
+ **Muestra**  
  Muestra un ejemplo de la combinación de estilo, tamaño y color de fuente para los valores seleccionados en **Mostrar valores para** y **Mostrar los elementos**. Puede utilizar este cuadro de texto para mostrar una vista previa de los resultados a medida que experimente con opciones de formatos diferentes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Codificación de colores en los editores de consultas](../../relational-databases/scripting/color-coding-in-query-editors.md)   
- [Opciones de &#40;Editor de texto: Pestaña Editor y página barra de estado&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
+ [Opciones &#40;editor de texto: pestaña Editor y página barra de estado&#41;](../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md)  
   
   

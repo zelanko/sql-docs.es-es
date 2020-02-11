@@ -11,19 +11,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d44c980c7535b05d462d55e6f2aa1e87bf68c98
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637742"
 ---
 # <a name="in-process-data-access-sample"></a>Ejemplo de acceso a datos en proceso
   El ejemplo `InProcessDataAccess` contiene una serie de funciones simples que muestran diversas características del proveedor de acceso a datos en proceso de CLR de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -52,7 +53,7 @@ ms.locfileid: "73637742"
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
--   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está utilizando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
+-   Si no es administrador de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   
@@ -90,7 +91,7 @@ ms.locfileid: "73637742"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>Código muestra  
+## <a name="sample-code"></a>Código de ejemplo  
  A continuación se muestran las listas de código para este ejemplo.  
   
  C#  
@@ -355,7 +356,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- En el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) se prueba el ejemplo mediante el ejercicio de los procedimientos almacenados y la función que se definen en este ejemplo.  
+ El siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) prueba el ejemplo mediante el ejercicio de los procedimientos almacenados y la función que se definen en este ejemplo.  
   
 ```  
 USE AdventureWorks;  
@@ -410,7 +411,7 @@ IF EXISTS (SELECT * FROM sys.assemblies WHERE name = N'InProcDA') DROP ASSEMBLY 
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenarios de uso y ejemplos para la integración de Common Language Runtime &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

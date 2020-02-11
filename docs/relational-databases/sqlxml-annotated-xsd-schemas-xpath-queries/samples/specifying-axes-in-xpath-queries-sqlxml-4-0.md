@@ -20,10 +20,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8b582b9f31245c13ec2c20e91736f794f19efd53
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252601"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificar ejes en consultas XPath (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "75252601"
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-retrieve-child-elements-of-the-context-node"></a>a. Recuperar elementos secundarios del nodo de contexto  
+### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. Recuperar elementos secundarios del nodo de contexto  
  La consulta XPath siguiente selecciona todos los ** \<elementos secundarios>contacto** del nodo de contexto:  
   
 ```  
@@ -163,7 +163,7 @@ ms.locfileid: "75252601"
   
  Si la consulta XPath se especifica como `Customer/Order/OrderDetail`, de cada nodo que coincida con ** \<el cliente>** la consulta navega a su ** \<orden>** elementos. Y para cada ** \<orden **de coincidencia de nodo>, la consulta agrega los nodos ** \<OrderDetail>** al resultado. Solo se devuelve ** \<OrderDetail>** en el conjunto de resultados.  
   
-### <a name="c-use--to-specify-the-parent-axis"></a>c. Usar . para especificar el eje primario  
+### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar . para especificar el eje primario  
  La consulta siguiente recupera todos los **** ** \<** ** \<elementos de order>** con un elemento de>de cliente primario con un valor de atributo CustomerID de 1. La consulta usa el eje **secundario** en el predicado para buscar el elemento primario del ** \<pedido>** elemento.  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: mensajes de error
+title: Mensajes de error
 description: Los mensajes de error de almacenamiento de datos paralelos (PDW) notifican los errores y problemas detectados por los componentes de PDW y también pueden incluir SQL Server errores que aparecen a través de PDW. Estos mensajes de error utilizan una sintaxis coherente para presentar información. Comprender esta sintaxis le permitirá identificar y corregir los problemas.
 author: mzaman1
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401162"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>Mensajes de error en almacenamiento de datos paralelos
@@ -39,7 +39,7 @@ Estos valores de ejemplo se presentarían al usuario de la siguiente manera:
   
 `ERROR [42000] [Microsoft][ODBC SQL Server 2008 R2 Parallel Data Warehouse driver][QID2380]Only equal assignment can appear in the set list of an UPDATE statement.`  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->

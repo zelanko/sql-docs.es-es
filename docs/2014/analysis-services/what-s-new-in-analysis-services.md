@@ -1,5 +1,5 @@
 ---
-title: '&#39;Novedades de Analysis Services y Business Intelligence | Microsoft Docs'
+title: Novedades de&#39;s en Analysis Services y Business Intelligence | Microsoft Docs
 ms.custom: ''
 ms.date: 06/07/2019
 ms.prod: sql-server-2014
@@ -11,19 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59ce45ff7e02d63c3c5bf27ca209ec911de67dbd
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889338"
 ---
-# <a name="what39s-new-in-sql-server-2014-analysis-services"></a>Novedades&#39;de SQL Server 2014 Analysis Services
-  Con la excepción de la funcionalidad agregada que admite Power View informes en modelos [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] multidimensionales, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no ha cambiado respecto a la versión anterior.  
+# <a name="what39s-new-in-sql-server-2014-analysis-services"></a>Novedades de&#39;s en SQL Server 2014 Analysis Services
+  Con la excepción de la funcionalidad agregada que admite Power View informes en modelos [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] multidimensionales, no ha cambiado respecto a la versión anterior.  
   
  Para obtener información sobre [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] otros productos y tecnologías que son diferentes en esta versión, consulte [novedades de SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   
 ## <a name="updates-to-design-tool-installation"></a>Actualizaciones a la instalación de las herramientas de diseño  
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para Business Intelligence (SSDT-BI), conocido anteriormente como Business Intelligence Development Studio (BIDS), se emplea para crear modelos de Analysis Services, informes de Reporting Services y paquetes de Integration Services. Puede descargar SSDT-BI desde las ubicaciones siguientes:  
+ 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para Business Intelligence (SSDT-BI), conocido anteriormente como Business Intelligence Development Studio (BIDS), se emplea para crear modelos de Analysis Services, informes de Reporting Services y paquetes de Integration Services. Puede descargar SSDT-BI desde las ubicaciones siguientes:  
   
 -   [Descargar SSDT-BI para Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
@@ -39,9 +40,9 @@ ms.locfileid: "68889338"
 ## <a name="features-recently-added-power-view-for-multidimensional-models"></a>Características agregadas recientemente: Power View para modelos multidimensionales  
  La posibilidad de crear informes de Power View en modelos multidimensionales se presentó por primera vez en la Actualización acumulativa 4 de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1. La funcionalidad Power View para modelos multidimensionales se incluye ahora como parte de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
- **Power View informe para un modelo multidimensional**  
+ **Informe de Power View para un modelo multidimensional**  
   
- ![Power View Informe](media/powerviewreport-wn.gif "Power View Informe")  
+ ![Informe de Power View](media/powerviewreport-wn.gif "Informe de Power View")  
   
  Esta funcionalidad ayuda a las organizaciones a maximizar sus inversiones existentes de BI ya que permite usar modelos multidimensionales (también conocidos como cubos OLAP) con las últimas herramientas de generación de informes cliente. En función de los tipos de datos del modelo multidimensional, los usuarios pueden crear fácilmente diversas visualizaciones dinámicas desde tablas y matrices hasta gráficos de burbujas y mapas geográficos. Los modelos multidimensionales también admiten ahora consultas mediante el Lenguaje de expresiones de análisis de datos (DAX).  
   

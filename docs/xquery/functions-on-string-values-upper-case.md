@@ -1,5 +1,5 @@
 ---
-title: Letra mayúscula (función de XQuery) | Microsoft Docs
+title: Función en mayúsculas (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004614"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Funciones usadas en valores de cadena: upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Esta función convierte cada carácter de *$arg* a su equivalente en letra mayúscula. La conversión de grafía binaria de Microsoft Windows para los puntos de código Unicode especifica cómo se convierten los caracteres a letra mayúscula. Esta norma es diferente de la asignación para la norma de punto de código Unicode.  
+  Esta función convierte cada carácter de *$arg* en su equivalente en mayúsculas. La conversión de grafía binaria de Microsoft Windows para los puntos de código Unicode especifica cómo se convierten los caracteres a letra mayúscula. Esta norma es diferente de la asignación para la norma de punto de código Unicode.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,20 +41,20 @@ fn:upper-case($arg as xs:string?) as xs:string
 |Término|Definición|  
 |*$arg*|Valor de cadena que se va a convertir a letra mayúscula.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si el valor de *$arg* está vacío, se devuelve una cadena de longitud cero.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. Cambiar una cadena a letra mayúscula  
- En el ejemplo siguiente se cambia la cadena de entrada ' abcDEF! @4' a letra mayúscula.  
+ En el ejemplo siguiente se cambia la cadena de entrada ' abcDEF! @4' en mayúsculas.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
 SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');  
 ```  
   
-### <a name="b-search-for-a-specific-character-string"></a>b. Buscar una cadena de caracteres concreta  
+### <a name="b-search-for-a-specific-character-string"></a>B. Buscar una cadena de caracteres concreta  
  En este ejemplo se muestra cómo utilizar la función de letra mayúscula para realizar una búsqueda sin distinción entre mayúsculas y minúsculas.  
   
 ```  
@@ -118,7 +118,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

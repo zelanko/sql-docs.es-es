@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0290e656105ebb33a7f73fc043beed64f1c25bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520334"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Extraer datos de modificaciones mediante el origen de CDC
@@ -44,15 +44,15 @@ ms.locfileid: "62520334"
   
 8.  Seleccione el modo de procesamiento que mejor controle las necesidades de procesamiento. Las opciones posibles son:  
   
-    -   **Todos**: devuelve los cambios en el intervalo CDC actual sin los valores de **Antes de actualizar**.  
+    -   **Todos**: devuelve los cambios en el intervalo CDC actual sin los valores de **Antes de actualización** .  
   
-    -   **Todos con los valores antiguos**: devuelve los cambios en el intervalo de procesamiento CDC actual, incluidos los valores antiguos (**Antes de actualizar**). Para cada operación de actualización habrá dos filas: una con los valores anteriores a la actualización y otra con los valores posteriores a la actualización.  
+    -   **Todos con valores antiguos**: devuelve los cambios en el intervalo de procesamiento CDC actual, incluidos los valores antiguos (**Antes de actualización**). Para cada operación de actualización habrá dos filas: una con los valores anteriores a la actualización y otra con los valores posteriores a la actualización.  
   
     -   **Neto**: devuelve una sola fila de cambios por cada fila de origen modificada en el intervalo de procesamiento de CDC actual. Si una fila de origen se actualizó varias veces, se genera el cambio combinado (por ejemplo, se genera insertar+actualizar como una actualización única y se genera actualizar+eliminar como una eliminación única). Al trabajar en el modo de procesamiento de cambios Neto, es posible dividir los cambios en salidas de eliminar, insertar y actualizar y controlarlos todos en paralelo, ya que la fila de origen única aparece en más de un resultado.  
   
-    -   **Neto con máscara de actualización**: este modo es similar al modo neto normal, pero también agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indican las columnas modificadas en la fila de cambio actual.  
+    -   **Neto con máscara de actualización**: este modo es similar al modo Neto normal, pero también agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indica las columnas modificadas en la fila de cambio actual.  
   
-    -   **Neto con combinación**: este modo es similar al modo neto normal, pero con las operaciones de inserción y actualización combinadas en una sola operación de combinación (UPSERT).  
+    -   **Neto con combinación**: este modo es similar al modo Neto normal, pero con las operaciones de inserción y actualización combinadas en una sola operación de combinación (UPSERT).  
   
 9. Seleccione la variable de paquete de la cadena de SSIS que mantenga el estado CDC para el contexto CDC actual. Para obtener más información sobre la variable de estado CDC, vea [Definir una variable de estado](define-a-state-variable.md).  
   
@@ -68,9 +68,9 @@ ms.locfileid: "62520334"
   
 14. Puede hacer clic en **Vista previa** para ver hasta 200 filas de los datos extraídos por el origen de CDC.  
   
-15. Haga clic en **Aceptar**.  
+15. Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de origen de CDC &#40;página Administrador de conexiones&#41;](../cdc-source-editor-connection-manager-page.md)   
  [Editor de origen de CDC &#40;página Columnas&#41;](../cdc-source-editor-columns-page.md)   
  [Editor de origen de CDC &#40;página Salida de error&#41;](../cdc-source-editor-error-output-page.md)  

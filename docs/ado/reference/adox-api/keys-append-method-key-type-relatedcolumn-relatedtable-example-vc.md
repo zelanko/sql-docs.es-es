@@ -1,5 +1,5 @@
 ---
-title: Crear un nuevo ejemplo de clave externo (VC ++) | Microsoft Docs
+title: Crear un nuevo ejemplo de clave externa (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 37fc296ecf520dc6ccc2964315a449bf508a2284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c812f0503b8801e861364a04e5621cb975adb009
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965837"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918069"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Ejemplo de propiedades Type, RelatedColumn, RelatedTable y UpdateRule de clave, método Append de claves (VC++)
-El código siguiente muestra cómo crear una nueva clave externa. Supone que existen dos tablas (clientes y pedidos).  
+En el código siguiente se muestra cómo crear una nueva clave externa. Supone que existen dos tablas (Customers y orders).  
   
 ```  
 // BeginCreateKeyCpp.cpp  
@@ -92,7 +92,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
    ::CoUninitialize();  
 }  

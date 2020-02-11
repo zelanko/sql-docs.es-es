@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05a8d7a7777731ba23cba08c8f8ba48489231d48
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780921"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Generar perfiles de datos de rendimiento del controlador ODBC: registrar las consultas de larga ejecución
@@ -26,17 +26,17 @@ ms.locfileid: "73780921"
   En este ejemplo se muestran las opciones específicas del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar consultas de larga duración. Cuando se ejecuta, este ejemplo crea Odbcqry.log, que contiene una lista de las consultas cuya ejecución supera un intervalo establecido por la aplicación. Este ejemplo no es compatible con IA64. Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Para registrar las consultas de ejecución prolongada mediante el Administrador de ODBC  
   
-1.  En el **Panel de control**, haga doble clic en **herramientas administrativas** y, a continuación, haga doble clic en **orígenes de datos (ODBC)** . (Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema).  
+1.  En el **Panel de control**, haga doble clic en **herramientas administrativas** y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. (Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema).  
   
 2.  Haga clic en la pestaña **DSN de usuario**, **DSN de sistema**o DSN de **archivo** .  
   
 3.  Haga clic en el origen de datos para el que desea registrar las consultas de ejecución prolongada.  
   
-4.  Haga clic en **configurar**.  
+4.  Haga clic en **Configurar**.  
   
 5.  En el Asistente para configurar DSN de Microsoft SQL Server, vaya a la página con **guardar las consultas de ejecución prolongada en el archivo de registro**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "73780921"
 4.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY y SQL_PERF_STOP para detener el registro de consultas de ejecución prolongada.  
   
 ## <a name="example"></a>Ejemplo  
- Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la Página principal de [ejemplos y proyectos](https://go.microsoft.com/fwlink/?LinkID=85384) de la comunidad de Microsoft SQL Server). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si compila y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
+ Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la Página principal de [ejemplos y proyectos](https://go.microsoft.com/fwlink/?LinkID=85384) de la comunidad de Microsoft SQL Server). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
@@ -218,7 +218,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Temas &#40;de procedimientos de generación de perfiles de rendimiento del controlador ODBC ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de generación de perfiles de rendimiento del controlador ODBC &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

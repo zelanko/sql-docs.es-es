@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 567ee5d4c6f57d4b4eb08cbd4ecac7aef999aa55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835421"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-designer"></a>Permisos necesarios de conexión con SQL Server para el Diseñador CDC
@@ -29,12 +29,12 @@ ms.locfileid: "62835421"
 |Ver la lista de servicios e instancias CDC usando la instancia asociada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|`db_datareader` en MSXDBCDC|  
 |Iniciar y detener instancias CDC|`db_datareader` y `db_datawriter` en MSXDBCDC|  
 |Ver el estado de la instancia CDC.|`db_owner` en la base de datos de la instancia CDC|  
-|Crear una nueva base de datos de instancia CDC de Oracle.|`dbcreator` rol fijo de servidor|  
+|Crear una nueva base de datos de instancia CDC de Oracle.|`dbcreator` Rol fijo de servidor|  
 |Crear una nueva instancia CDC de Oracle.|`db_datareader` en MSXDBCDC<br /><br /> `db_owner` en la base de datos CDC creada.|  
 |Obtener scripts de implementación.|`db_datareader` y `db_datawriter` en MSXDBCDC<br /><br /> `db_owner` en la base de datos CDC relacionada|  
 |Cambiar la configuración y agregar o quitar instancias de captura.|`db_datareader` y `db_datawriter` en MSXDBCDC<br /><br /> `db_owner` en la base de datos CDC relacionada|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Obtener acceso a la Consola del diseñador CDC](access-the-cdc-designer-console.md)   
  [Conexión de SQL Server para la creación de instancias](sql-server-connection-for-instance-creation.md)  
   

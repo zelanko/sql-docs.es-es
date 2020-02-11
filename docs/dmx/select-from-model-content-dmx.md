@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892828"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Seleccione del &lt;modelo&gt;. CONTENIDO (DMX)
@@ -42,16 +42,16 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *expresión de condición*  
  Opcional. Condición para restringir los valores que devuelve la lista de columnas.  
   
- *expression*  
+ *Expresiones*  
  Opcional. Expresión que devuelve un valor escalar.  
   
-## <a name="remarks"></a>Comentarios  
- > **Seleccionar del**  _\<modelo_ **.** La instrucción de contenido devuelve contenido específico de cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar una **> seleccionar del \<modelo.** Instrucción de contenido para devolver valores en la columna NODE_RULE del modelo.  
+## <a name="remarks"></a>Observaciones  
+ >**seleccionar del** _ \<modelo _ **. **La instrucción de contenido devuelve contenido específico de cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar una **> seleccionar del \<modelo. **Instrucción de contenido para devolver valores en la columna NODE_RULE del modelo.  
   
  En la tabla siguiente se enumeran las columnas que están incluidas en el contenido del modelo de minería de datos.  
   
 > [!NOTE]  
->  Los algoritmos podrían interpretar las columnas de forma distinta para poder representar el contenido correctamente. Para obtener una descripción del contenido del modelo de minería de datos para cada algoritmo y sugerencias sobre cómo interpretar y consultar el contenido del modelo de minería de datos para cada tipo de modelo, vea [contenido &#40;del modelo de minería de datos Analysis Services-minería&#41;de datos](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
+>  Los algoritmos podrían interpretar las columnas de forma distinta para poder representar el contenido correctamente. Para obtener una descripción del contenido del modelo de minería de datos para cada algoritmo y sugerencias sobre cómo interpretar y consultar el contenido del modelo de minería de datos para cada tipo de modelo, vea [contenido del modelo de minería de datos &#40;Analysis Services-data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 |Columna de conjunto de filas CONTENT|Descripción|  
 |---------------------------|-----------------|  
@@ -91,7 +91,7 @@ WHERE NODE_TYPE = 1
  La consulta de siguiente usa la función **IsDescendant** para devolver los elementos secundarios inmediatos del nodo que se devolvió en la consulta anterior.  
   
 > [!NOTE]  
->  Dado que el valor de NODE_NAME es una cadena, no puede usar una instrucción Sub-SELECT para devolver NODE_ID como argumento a la función **IsDescendant** .  
+>  Dado que el valor de la NODE_NAME es una cadena, no puede usar una instrucción Sub-SELECT para devolver el NODE_ID como argumento a la función **IsDescendant** .  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -116,7 +116,7 @@ FROM [TM_NaiveBayes].CONTENT
 WHERE NODE_TYPE = 26  
 ```  
   
- Resultados del ejemplo:  
+ Resultados de ejemplo:  
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
@@ -134,17 +134,17 @@ FROM TM_NaiveBayes.CONTENT
 WHERE NODE_TYPE = 26  
 ```  
   
- Resultados del ejemplo:  
+ Resultados de ejemplo:  
   
-|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
+|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|  
 |-----------------|-----------------------|------------------------|---------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|  
 |TM_NaiveBayes|Bike Buyer|0|6556|  
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
-## <a name="see-also"></a>Vea también  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Instrucciones de manipulación &#40;de&#41; datos DMX de extensiones de minería de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Consulte también  
+ [SELECCIONE &#40;DMX&#41;](../dmx/select-dmx.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

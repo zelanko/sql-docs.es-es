@@ -11,17 +11,18 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728071"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalación y configuración de Master Data Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  En este artículo se describe cómo instalar [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] en una máquina con Windows Server 2012 R2, configurar la base de datos y el sitio web de MDS e implementar los modelos y datos de ejemplo. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) le permite a su organización administrar una versión de datos de confianza.   
+  En este artículo se describe cómo instalar [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] en una máquina con Windows Server 2012 R2, configurar la base de datos y el sitio web de MDS e implementar los modelos y datos de ejemplo. 
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) le permite a su organización administrar una versión de datos de confianza.   
   
 > [!NOTE] 
 > Puede instalar [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] en un equipo con Windows 10 si usa la edición Developer, que ahora es compatible con [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. 
@@ -29,33 +30,34 @@ ms.locfileid: "73728071"
 
 Para obtener información general sobre cómo organizar los datos en [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte [Introducción a Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md).     
   
- Para obtener información sobre las nuevas características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consulte [What's New in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
+ Para obtener información sobre las nuevas características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consulte [Novedades en Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md).  
  
 Para obtener vínculos a los vídeos y a otros recursos de aprendizaje de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte [Información sobre SQL Server Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Descargar**  
-> -   Para descargar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
+> -   Para descargar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vaya al **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
 > -   ¿Tiene una cuenta de Azure?  Si es así, vaya **[aquí](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** para poner en marcha una máquina virtual con SQL Server ya instalado.  
 > 
 > **¿No puede crear un sitio web de MDS?**
 > >Consulte este artículo de soporte técnico de Microsoft para obtener instrucciones sobre cómo resolver este problema.
-> [No se puede crear un sitio web de MDS mediante una cuenta con pocos privilegios en SQL Server 2016](https://aka.ms/mdssupport) 
+> [No se puede crear un sitio web de MDS a través de una cuenta con pocos privilegios en SQL Server 2016](https://aka.ms/mdssupport) 
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer y Silverlight
 - Al instalar [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] en un equipo con Windows Server 2012, podría tener que configurar la seguridad mejorada de Internet Explorer para permitir el scripting para el sitio de la aplicación web. De lo contrario, la exploración al sitio en el equipo servidor producirá errores.
-- Para trabajar en la aplicación web, Silverlight 5 debe estar instalado en el equipo cliente. Si no tiene la versión necesaria de Silverlight, se le pedirá que la instale cuando navegue a un área de la aplicación web que la necesite. Puede instalar Silverlight 5 **[aquí](https://www.microsoft.com/silverlight/)** .
+- Para trabajar en la aplicación web, Silverlight 5 debe estar instalado en el equipo cliente. Si no tiene la versión necesaria de Silverlight, se le pedirá que la instale cuando navegue a un área de la aplicación web que la necesite. Puede instalar Silverlight 5 **[aquí](https://www.microsoft.com/silverlight/)**.
 
-## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] en una máquina virtual de Azure
-De forma predeterminada, al poner en marcha una máquina virtual de Azure con [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] ya instalado, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] también se instala. 
+## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>
+  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] en una máquina virtual de Azure
+De forma predeterminada, cuando se pone en marcha una máquina virtual [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] de Azure con [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] ya instalado, también se instala. 
 
 El siguiente paso consiste en instalar Internet Information Services (IIS). Vea la sección [Instalación y configuración de IIS](#InstallIIS). 
 
 Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)], encontrará el archivo setup.exe en la ubicación predeterminada, `<drive>`:\SQLServer_13.0_Full.
   
-## <a name="InstallMDS"></a> Instalación de Master Data Services  
+## <a name="InstallMDS"></a>Instalación de Master Data Services  
  Use el asistente para la instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o un símbolo del sistema para instalar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
- **Para instalar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] con Instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en una máquina con Windows Server 2012 R2**  
+ **Para instalar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] el programa de instalación en un equipo con Windows Server 2012 R2**  
   
 1.  Haga doble clic en Setup.exe y siga los pasos del asistente para la instalación.  
   
@@ -67,7 +69,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
 3.  Complete el asistente para la instalación.  
 
-## <a name="InstallIIS"></a> Instalación y configuración de IIS
+## <a name="InstallIIS"></a>Instalación y configuración de IIS
   
 1.  En [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)], haga clic en el icono **Administrador del servidor** de la barra de tareas en el **Escritorio**.  
   
@@ -113,32 +115,32 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
  Para obtener una descripción breve con vínculos a información adicional sobre las tareas previas a la instalación, consulte [Instalar Master Data Services](../master-data-services/install-windows/install-master-data-services.md).  
   
-##  <a name="SetUpWeb"></a> Configurar la base de datos y el sitio web  
- **Configurar la base de datos y el sitio web mediante el [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] de**  
+##  <a name="SetUpWeb"></a>Configurar la base de datos y el sitio web  
+ **Para configurar la base de datos y el sitio web mediante[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
 
  
 > [!WARNING]
 >  Debe [instalar IIS](#InstallIIS) antes de iniciar el Administrador de configuración de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. Si no lo hace, el Administrador de configuración mostrará un error de Internet Information Services y no podrá crear la aplicación web de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].  
 > 
-> **Requisitos del explorador**
+> **Requisito del explorador**
 > >La aplicación web de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] solo funciona en Internet Explorer (IE) 9 o posterior. No se admite ni IE 8 ni versiones anteriores, así como tampoco Microsoft Edge ni Chrome.    
   
-1.  Inicie el [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] y haga clic en **Configuración de base de datos** en el panel izquierdo.  
+1.  Inicie el [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]y haga clic en **Configuración de base de datos** en el panel izquierdo.  
   
 2.  Haga clic en **Crear base de datos**y, después, haga clic en **Siguiente** en el **Asistente para crear bases de datos**.  
   
 3.  En la página **servidor de base de datos** , especifique la instancia de SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] agrega compatibilidad con SQL Server Instancia administrada. Establezca el valor de **SQL Server instancia** en el host de una instancia administrada de Azure SQL Database. Por ejemplo, `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]agrega compatibilidad con Instancia administrada de SQL Server. Establezca el valor de **SQL Server instancia** en el host de una instancia administrada de Azure SQL Database. Por ejemplo, `xxxxxx.xxxxxx.database.windows.net`.
 
 4. Seleccione el **tipo de autenticación** y, a continuación, haga clic en **conexión de prueba** para confirmar que puede conectarse a la base de datos con las credenciales del tipo de autenticación que ha seleccionado. Haga clic en **Next**.
 
-    >Por [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], para conectarse a Azure SQL Database instancia administrada, use uno de los siguientes tipos de autenticación:
+    >Para [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]conectarse a Azure SQL Database instancia administrada, use uno de los siguientes tipos de autenticación:
     >
     >- Autenticación integrada de Azure Active Directory: **usuario actual: Active Directory integrada**
     >- Autenticación SQL Server: **SQL Server cuenta**.
     >
-    >En Azure SQL Database instancia administrada, el usuario debe ser miembro del rol fijo de servidor `sysadmin`.
+    >En Azure SQL Database instancia administrada, el usuario debe ser miembro del rol `sysadmin` fijo de servidor.
 
     > [!NOTE]  
     >  Al seleccionar **Usuario actual: Seguridad integrada** como el tipo de autenticación, el cuadro **Nombre de usuario** es de solo lectura y muestra el nombre de la cuenta de usuario de Windows con la que se ha iniciado sesión en el equipo. Si ejecuta [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] en una máquina virtual de Azure, el cuadro **Nombre de usuario** mostrará el nombre de la máquina virtual y el nombre de usuario de la cuenta de administrador local de la máquina virtual. 
@@ -182,9 +184,9 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
 11. En la sección **Grupo de aplicaciones** , realice una de las siguientes acciones.  
   
-    -   Escriba el mismo nombre de usuario que ha escrito en el paso 5 para la **Cuenta de administrador** de la base de datos, escriba la contraseña y, después, haga clic en **Aceptar**.  
+    -   Escriba el mismo nombre de usuario que ha escrito en el paso 5 para la **Cuenta de administrador**de la base de datos, escriba la contraseña y, después, haga clic en **Aceptar**.  
   
-         **O bien**  
+         **De**  
   
     -   Seleccione otro nombre de usuario, escriba la contraseña y, luego, haga clic en Aceptar.  
   
@@ -194,7 +196,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
      Para obtener más información sobre el cuadro de diálogo **Crear aplicación web**, consulte [Cuadro de diálogo Crear aplicación web &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).  
   
-12. En la página **Configuración web** en el cuadro **Aplicación web** , haga clic en la aplicación que ha creado y, luego, haga clic en **Seleccionar** en la sección  **Asociar aplicación a base de datos** .  
+12. En la página **Configuración web** en el cuadro **Aplicación web**, haga clic en la aplicación que ha creado y, luego, haga clic en **Seleccionar** en la sección **Asociar aplicación a base de datos**.  
   
 13. Haga clic en **Conectar**, seleccione la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que quiera asociar a la aplicación web y, después, haga clic en **Aceptar**.  
   
@@ -203,7 +205,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. Haga clic en **Aplicar**. Aparecerá el cuadro de mensaje **Configuración completada**. Haga clic en **Aceptar** en el cuadro de mensaje para iniciar la aplicación web. La dirección del sitio web es https://*nombre del servidor*/*aplicación web*/. 
+15. Haga clic en **Aplicar**. Aparecerá el cuadro de mensaje **Configuración completada**. Haga clic en **Aceptar** en el cuadro de mensaje para iniciar la aplicación web. La dirección del sitio web es https://*nombre*/del servidor*web aplicación*/. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -212,8 +214,8 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
  También puede usar [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] para especificar otra configuración de las aplicaciones web y servicios asociados a la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Por ejemplo, puede especificar la frecuencia con la que se cargan los datos o con la que se envían correos electrónico de validación. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-##  <a name="deploySample"></a> Implementar modelos y datos de ejemplo  
- Los siguientes tres paquetes de modelo de ejemplo se incluyen con [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].   Estos modelos de ejemplo incluyen datos. **La ubicación predeterminada de los paquetes de modelo de ejemplo es %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
+##  <a name="deploySample"></a>Implementar modelos y datos de ejemplo  
+ Los siguientes tres paquetes de modelo de ejemplo se incluyen con  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].   Estos modelos de ejemplo incluyen datos. **La ubicación predeterminada de los paquetes de modelo de ejemplo es%programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
   
 -   chartofaccounts_en.pkg  
   
@@ -252,26 +254,26 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
     > Para obtener más información sobre los metadatos de los modelos de ejemplo, consulte el archivo Léame disponible en esta ubicación: "c:\Archivos de programa\Microsoft SQL Server\140\Master Data Services\Configuration".
     >
    
-     **Para implementar el modelo de ejemplo chartofaccounts_en.pkg**  
+     **Para implementar el modelo de ejemplo chartofaccounts_en. pkg**  
   
     ```  
     MDSModelDeploy deploynew -package chartofaccounts_en.pkg -model ChartofAccounts -service MDS1  
     ```  
   
-     **Para implementar el modelo de ejemplo customer_en.pkg**  
+     **Para implementar el modelo de ejemplo customer_en. pkg**  
   
     ```  
     MDSModelDeploy deploynew -package customer_en.pkg -model Customer -service MDS1  
     ```  
   
-     **Para implementar el modelo de ejemplo product_en.pkg**  
+     **Para implementar el modelo de ejemplo product_en. pkg**  
   
     ```  
     MDSModelDeploy deploynew -package product_en.pkg -model Product -service MDS1  
   
     ```  
   
-     Al implementar correctamente un modelo, se muestra el mensaje **MDSModelDeploy finalizó correctamente**.  
+     Al implementar correctamente un modelo, se muestra el mensaje **MDSModelDeploy finalizó correctamente** .  
   
      En la siguiente imagen se muestra el comando para implementar el modelo de ejemplo product_en.pkg.  
   
@@ -281,21 +283,21 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
     1.  Vaya al sitio web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que ha configurado. Consulte la sección [Configurar la base de datos y el sitio web](#SetUpWeb) .  
   
-         La dirección del sitio web es https://*nombre del servidor*/*aplicación web*/.  
+         La dirección del sitio web es https://*nombre*/del servidor*web aplicación*/.  
   
     2.  Seleccione un modelo del cuadro de lista **Modelo** y haga clic en **Explorador**.  
   
          ![Sitio web de MDS, Página principal.](../master-data-services/media/mds-mdswebsite-homepage-selectsamplemodel.png "Sitio web de MDS, Página principal.")  
   
-## <a name="next-step"></a>Paso siguiente  
+## <a name="next-step"></a>siguiente paso  
  Cree un nuevo modelo y entidades para los datos. Consulte [Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md) y [Crear una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
  Para obtener información general sobre cómo usar un modelo y entidades para crear una estructura para los datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], consulte [Introducción a Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
     
-## <a name="see-also"></a>Vea también  
- [Base de datos de Master Data Services](../master-data-services/master-data-services-database.md)   
- [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)   
- [Página Configuración de base de datos &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [Novedades en Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
+## <a name="see-also"></a>Consulte también  
+ [Master Data Services base de datos](../master-data-services/master-data-services-database.md)   
+ [Master Data Manager aplicación Web](../master-data-services/master-data-manager-web-application.md)   
+ [Página configuración de base de datos &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
+ [Novedades de Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
   
   

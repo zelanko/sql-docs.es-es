@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1940405c6bde86364024e10694f9aaf1da24b06d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768621"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Crear una transformación asincrónica con el componente de script
@@ -39,7 +39,7 @@ ms.locfileid: "62768621"
  Para seleccionar el lenguaje de script que usará el componente de script, establezca la propiedad **ScriptLanguage** en la página **Script** del cuadro de diálogo **Editor de transformación Script**.  
   
 > [!NOTE]  
->  Para establecer el lenguaje de scripting predeterminado para el componente de script, utilice la opción **Lenguaje de scripting** en la página **General** del cuadro de diálogo **Opciones**. Para obtener más información, vea[página General](../general-page-of-integration-services-designers-options.md).  
+>  Para establecer el lenguaje de scripting predeterminado para el componente de script, utilice la opción **Lenguaje de scripting** en la página **General** del cuadro de diálogo **Opciones**. Para obtener más información, vea [General Page](../general-page-of-integration-services-designers-options.md).  
   
  Un componente de transformación de flujo de datos tiene una entrada y admite una o varias salidas. La configuración de la entrada y las salidas del componente es uno de los pasos que debe completar en el modo de diseño de metadatos, mediante el **Editor de transformación Script**, antes de escribir un script personalizado.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62768621"
 ### <a name="adding-variables"></a>Agregar variables  
  Si hay variables existentes cuyos valores quiere usar en el script, puede agregarlas en los campos de propiedades ReadOnlyVariables y ReadWriteVariables de la página **Script** del **Editor de transformación Script**.  
   
- Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. También puede seleccionar varias variables, haga clic en el botón de puntos suspensivos ( **...** ) situado junto a la `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades y, a continuación, seleccionar las variables en el **seleccionar variables** cuadro de diálogo.  
+ Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. También puede seleccionar varias variables haciendo clic en el botón de puntos suspensivos (**...**) situado `ReadOnlyVariables` junto `ReadWriteVariables` a los campos de propiedades y y, a continuación, seleccionando las variables en el cuadro de diálogo **seleccionar variables** .  
   
  Para obtener información general sobre la forma de usar variables con el componente de script, vea [Using Variables in the Script Component](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md) (Uso de variables con el componente de script).  
   
@@ -82,11 +82,11 @@ ms.locfileid: "62768621"
  Para obtener información importante aplicable a todos los tipos de componentes creados mediante el componente de script, vea [Coding and Debugging the Script Component](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md) (Programación y depuración del componente de script).  
   
 ### <a name="understanding-the-auto-generated-code"></a>Descripción del código generado automáticamente  
- Al abrir el IDE de VSTA después de crear y configurar un componente de transformación, el texto editable `ScriptMain` clase aparece en el editor de código con código auxiliar para el ProcessInputRow y los métodos de CreateNewOutputRows. En la clase ScriptMain escribirá el código personalizado; ProcessInputRow es el método más importante de un componente de transformación. El método `CreateNewOutputRows` se utiliza con más frecuencia en un componente de origen, que es la forma en que una transformación asincrónica en los dos componentes mencionados debe crear sus propias filas de salida.  
+ Al abrir el IDE de VSTA después de crear y configurar un componente de transformación, `ScriptMain` la clase modificable aparece en el editor de código con códigos auxiliares para los métodos ProcessInputRow y CreateNewOutputRows. En la clase ScriptMain escribirá el código personalizado; ProcessInputRow es el método más importante de un componente de transformación. El método `CreateNewOutputRows` se utiliza con más frecuencia en un componente de origen, que es la forma en que una transformación asincrónica en los dos componentes mencionados debe crear sus propias filas de salida.  
   
- Si abre la VSTA **Explorador de proyectos** ventana, puede ver que el componente de Script también ha generado de solo lectura `BufferWrapper` y `ComponentWrapper` elementos de proyecto. La clase ScriptMain se hereda de la clase UserComponent en el `ComponentWrapper` elemento de proyecto.  
+ Si abre la ventana **Explorador de proyectos** de VSTA, puede ver que el componente de script también ha generado elementos de `BufferWrapper` proyecto `ComponentWrapper` y de solo lectura. La clase ScriptMain hereda de la clase UserComponent en el `ComponentWrapper` elemento de proyecto.  
   
- En tiempo de ejecución, el motor de flujo de datos llama al método PrimeOutput la `UserComponent` clase, lo que invalida el <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> método de la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> clase primaria. A su vez, el método PrimeOutput llama al método CreateNewOutputRows.  
+ En tiempo de ejecución, el motor de flujo de datos llama al método `UserComponent` PrimeOutput de la clase, que invalida <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> el método de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> la clase primaria. A su vez, el método PrimeOutput llama al método CreateNewOutputRows.  
   
  A continuación, el motor de flujo de datos invoca el método ProcessInput de la clase UserComponent, lo que invalida el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> de la clase primaria <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A su vez, el método ProcessInput usa un bucle para recorrer las filas del búfer de entrada y llama al método ProcessInputRow una vez por cada fila.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62768621"
   
  En una transformación asincrónica, puede usar el método AddRow para agregar filas a la salida, según corresponda, desde los métodos ProcessInputRow o ProcessInput. No es necesario utilizar el método CreateNewOutputRows. Si escribe una sola fila de resultados (como resultados de agregación) para una salida determinada, puede crear la fila de salida de antemano con el método CreateNewOutputRows y rellenar sus valores más adelante, después de procesar todas las filas de entrada. Sin embargo, no resulta útil crear varias filas en el método CreateNewOutputRows, ya que el componente de script solamente permite usar la fila actual en una entrada o salida. El método CreateNewOutputRows es más importante en un componente de origen donde no hay filas de entrada que procesar.  
   
- Puede que también desee invalidar el propio método ProcessInput para poder realizar un procesamiento adicional preliminar o final, antes o después de usar un bucle para recorrer el búfer de entrada y llamar a ProcessInputRow para cada fila. Por ejemplo, uno de los ejemplos de código en este tema invalida ProcessInput para contar el número de direcciones de una ciudad concreta como ProcessInputRow recorre en bucle las filas`.` en el ejemplo se escribe el valor de resumen en la segunda salida después de han sido todas las filas puede procesar. El ejemplo completa la salida de ProcessInput porque los búferes de salida ya no están disponibles al llamar a PostExecute.  
+ Puede que también desee invalidar el propio método ProcessInput para poder realizar un procesamiento adicional preliminar o final, antes o después de usar un bucle para recorrer el búfer de entrada y llamar a ProcessInputRow para cada fila. Por ejemplo, uno de los ejemplos de código de este tema invalida ProcessInput para contar el número de direcciones de una ciudad concreta como ProcessInputRow bucles a través de`.` filas. en el ejemplo se escribe el valor de resumen en la segunda salida una vez procesadas todas las filas. El ejemplo completa la salida de ProcessInput porque los búferes de salida ya no están disponibles al llamar a PostExecute.  
   
  En función de sus requisitos, puede que también desee escribir script en los métodos PreExecute y PostExecute, disponibles en la clase ScriptMain, para realizar un procesamiento preliminar o final.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "62768621"
  En este ejemplo se muestra el código personalizado que se requiere en la clase ScriptMain para crear un componente de transformación asincrónica.  
   
 > [!NOTE]  
->  En estos ejemplos se usa la tabla **Person.Address** de la base de datos de ejemplo **AdventureWorks** y se pasan la primera y la cuarta columna, las columnas **intAddressID** y **nvarchar(30)City**, a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
+>  En estos ejemplos se usa la tabla **Person. Address** de la base de datos de ejemplo **AdventureWorks** y se pasan la primera y la cuarta columna, las columnas **intAddressID** y **nvarchar (30) City** , a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino de esta sección. Se documentan requisitos previos y suposiciones adicionales para cada ejemplo.  
   
  En este ejemplo se muestra un componente de transformación asincrónica con dos salidas. Esta transformación pasa las columnas **AddressID** y **City** a una salida, al mismo tiempo que cuenta el número de direcciones situadas en una ciudad concreta (Redmond, Washington, EE. UU.) y, a continuación, genera el valor resultante en una segunda salida.  
   
@@ -229,9 +229,9 @@ public class ScriptMain:
   
 ```  
   
-![Icono de Integration Services (pequeño)](../media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Understanding Synchronous and Asynchronous Transformations](../understanding-synchronous-and-asynchronous-transformations.md)  (Descripción de las transformaciones sincrónicas y asincrónicas)  
  [Crear una transformación sincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
  [Desarrollar un componente de transformación personalizado con salidas asincrónicas](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  

@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a66d054f3952c1491b88df77f8999e87af65447
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241973"
 ---
 # <a name="print-code-and-results"></a>Imprimir código y resultados
   Al imprimir una consulta o un archivo, los elementos en color se imprimen en color siempre que la impresora sea compatible con la impresión en color y ésta se haya habilitado en la configuración de la impresora.  
   
- No obstante, la fuente y el color del texto en el editor, y el modo que en que el texto se imprime en la impresora pueden variar. En el menú **Herramientas**, seleccione **Opciones**. En **Entorno**, haga clic en **Fuentes y colores**y seleccione las fuentes y los colores de los elementos que se mostrarán en el editor y las fuentes y los colores que resultarán al imprimir. Puesto que estos valores pueden variar, el resultado puede ser distinto al que aparece en el editor.  
+ No obstante, la fuente y el color del texto en el editor, y el modo que en que el texto se imprime en la impresora pueden variar. En el menú **Herramientas** , seleccione **Opciones**. En **Entorno**, haga clic en **Fuentes y colores**y seleccione las fuentes y los colores de los elementos que se mostrarán en el editor y las fuentes y los colores que resultarán al imprimir. Puesto que estos valores pueden variar, el resultado puede ser distinto al que aparece en el editor.  
   
  Si tiene habilitados los números de línea en el editor, estos no se imprimirán a menos que se seleccione **Incluir números de línea** en el cuadro de diálogo **Imprimir** del menú **Archivo** .  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Cambiar el color, el tamaño y el estilo de la fuente](change-font-color-size-and-style.md)  
   
   

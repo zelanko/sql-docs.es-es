@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243268"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Iniciar la utilidad sqlcmd
@@ -34,7 +34,7 @@ ms.locfileid: "75243268"
   
 2.  En el símbolo del sistema, escriba `sqlcmd`.  
   
-3.  Presione Entrar.  
+3.  Presione ENTRAR.  
   
      Ahora tiene una conexión de confianza con la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se está ejecutando en el equipo.  
   
@@ -46,14 +46,14 @@ ms.locfileid: "75243268"
   
 1.  Abra una ventana del símbolo del sistema y `sqlcmd -S`escriba *myServer\instanceName*. Reemplace *myServer\instanceName* por el nombre del equipo y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que quiera conectarse.  
   
-2.  Presione Entrar.  
+2.  Presione ENTRAR.  
   
      El `sqlcmd` símbolo del sistema (1>) indica que está conectado a la instancia especificada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.  
   
     > [!NOTE]  
     >  Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] escritas están almacenadas en un búfer. Se ejecutan como un lote cuando se encuentra el comando GO.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Ejecutar archivos de scripts Transact-SQL mediante sqlcmd](sqlcmd-run-transact-sql-script-files.md)  
   
   

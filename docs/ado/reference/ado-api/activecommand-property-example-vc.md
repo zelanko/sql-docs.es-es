@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de la propiedad ActiveCommand (VC ++) | Microsoft Docs
+title: Ejemplo de la propiedad ActiveCommand (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8d189646cc421eb05d9f49d2da08dfe39d9cb34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921632"
 ---
 # <a name="activecommand-property-example-vc"></a>Ejemplo de la propiedad ActiveCommand (VC ++)
-Este ejemplo se muestra el [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propiedad.  
+En este ejemplo se muestra la propiedad [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) .  
   
- Una subrutina se le asigna un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) cuyo **ActiveCommand** propiedad se utiliza para mostrar el texto del comando y los parámetros que creó el **Recordset**.  
+ A una subrutina se le asigna un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) cuya propiedad **ActiveCommand** se usa para mostrar el texto del comando y el parámetro que creó el **conjunto de registros**.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -212,7 +212,7 @@ void PrintComError(_com_error &e) {
 Ringer  
 ```  
   
-## <a name="sample-output"></a>Salida del ejemplo  
+## <a name="sample-output"></a>Salida de muestra  
   
 ```  
 Command text = 'SELECT * FROM authors WHERE au_lname = ?'  
@@ -220,6 +220,6 @@ Parameter = 'Ringer'
 Name = 'Anne  Ringer'  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Propiedad ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

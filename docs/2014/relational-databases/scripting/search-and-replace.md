@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 631b6864529e903516857f68ea421365c144afef
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243298"
 ---
 # <a name="search-and-replace"></a>Buscar y reemplazar
@@ -40,19 +40,19 @@ ms.locfileid: "75243298"
   
  A la hora de buscar y reemplazar texto, es necesario tener en cuenta lo siguiente:  
   
--   Las opciones establecidas en el cuadro de diálogo **Buscar y reemplazar** afectan a todas las búsquedas. Estas opciones incluyen **Coincidir mayúsculas y minúsculas**, **Solo palabras completas**, **Buscar hacia atrás**, **Buscar en texto oculto**, **Usar Caracteres comodín**, **Usar Expresiones regulares**, **Buscar en Todos los documentos abiertos** y **Buscar en Proyecto actual**. Todas las opciones no están disponibles en todas las versiones del cuadro de diálogo **Buscar y reemplazar** .  
+-   Las opciones establecidas en el cuadro de diálogo **Buscar y reemplazar** afectan a todas las búsquedas. Estas opciones incluyen **Coincidir mayúsculas y minúsculas**, **Solo palabras completas**, **Buscar hacia atrás**, **Buscar en texto oculto**, **Usar Caracteres comodín**, **Usar Expresiones regulares**, **Buscar en Todos los documentos abiertos**y **Buscar en Proyecto actual**. Todas las opciones no están disponibles en todas las versiones del cuadro de diálogo **Buscar y reemplazar** .  
   
--   **Deshacer** solo está disponible para los documentos que se dejan abiertos después de una operación de reemplazo.  
+-   **Deshacer** solo está disponible para aquellos documentos que se dejan abiertos tras una operación de reemplazo.  
   
--   **Deshacer** para una operación **reemplazar todo** que abarca más de un archivo se considera una única acción masiva en todos los archivos afectados. Es decir, no es posible deshacer el cambio en algunos archivos y no en otros.  
+-   **Deshacer** para una operación **Reemplazar todo** que abarca más de un archivo se considera una acción única masiva en todos los archivos afectados. Es decir, no es posible deshacer el cambio en algunos archivos y no en otros.  
   
  Normalmente no es posible buscar elementos mediante vistas gráficas.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Buscar en un documento activo de forma incremental](search-an-active-document-incrementally.md)   
  [Buscar documentos de forma interactiva](search-documents-interactively.md)   
  [Buscar en documentos mediante las listas de resultados](search-documents-using-results-lists.md)   
  [Buscar texto con caracteres comodín](search-text-with-wildcards.md)   
- [Buscar texto con expresiones regulares](search-text-with-regular-expressions.md)  
+ [Buscar texto mediante expresiones regulares](search-text-with-regular-expressions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Funcionamiento de los comandos con parámetros | Microsoft Docs
+title: Operación de comandos parametrizados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,18 +14,18 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924734"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funcionamiento de los comandos con parámetros
-Si está trabajando con un elemento secundario grande **Recordset**, especialmente en comparación con el tamaño del elemento primario **Recordset**, pero la necesidad de tener acceso a solo unos pocos capítulos secundarios, le resultará más eficaz usar un comando con parámetros.  
+Si está trabajando con un **conjunto de registros**secundario grande, especialmente en comparación con el tamaño del **conjunto de registros**primario, pero solo necesita tener acceso a algunos capítulos secundarios, es posible que le resulte más eficaz usar un comando con parámetros.  
   
- Un *comando sin parámetros* recupera los todo primario y secundario **conjuntos de registros**, anexa una columna de capítulo con el elemento primario y, a continuación, asigna una referencia al capítulo secundario relacionado para cada fila principal .  
+ Un *comando sin parámetros* recupera los **conjuntos de registros**primarios y secundarios completos, anexa una columna Chapter al elemento primario y, a continuación, asigna una referencia al capítulo secundario relacionado para cada fila primaria.  
   
- Un *comando con parámetros* recupera el elemento primario todo **Recordset**, pero sólo recupera el **Recordset** cuando se tiene acceso a la columna de capítulo. Esta diferencia en la estrategia de recuperación puede aportar beneficios de rendimiento significativas.  
+ Un *comando con parámetros* recupera el **conjunto de registros**primario completo, pero solo recupera el capítulo **conjunto de registros** cuando se tiene acceso a la columna de capítulo. Esta diferencia en la estrategia de recuperación puede producir ventajas de rendimiento significativas.  
   
  Por ejemplo, puede especificar lo siguiente:  
   
@@ -35,26 +35,26 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- Las tablas primaria y secundaria tienen un nombre de columna en común, *cust_id*. El *comando secundario* tiene un "?" marcador de posición, al que hace referencia la cláusula RELATE (es decir, "... PARÁMETRO 0").  
+ Las tablas primaria y secundaria tienen un nombre de columna en común *cust_id*. El *comando secundario* tiene un marcador de posición "?", al que hace referencia la cláusula Relate (es decir, "... PARÁMETRO 0 ").  
   
 > [!NOTE]
->  La cláusula del parámetro pertenece exclusivamente a la sintaxis del comando shape. No está asociado con cualquier ADO [parámetro](../../../ado/reference/ado-api/parameter-object.md) objeto o la [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección.  
+>  La cláusula PARAMETER solo pertenece a la sintaxis del comando Shape. No está asociado al objeto de [parámetro](../../../ado/reference/ado-api/parameter-object.md) de ADO o a la colección de [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) .  
   
- Cuando se ejecuta el comando parametrizado shape, ocurre lo siguiente:  
+ Cuando se ejecuta el comando de forma con parámetros, ocurre lo siguiente:  
   
-1.  El *comando primario* se ejecuta y devuelve un elemento primario **Recordset** desde la tabla Customers.  
+1.  El *comando primario* se ejecuta y devuelve un conjunto de **registros** primario de la tabla customers.  
   
-2.  Una columna de capítulo se anexa al elemento primario **Recordset**.  
+2.  Una columna de capítulo se anexa al conjunto de **registros**primario.  
   
-3.  Cuando se tiene acceso a la columna de capítulo de una fila principal, el *comando secundario* se ejecuta utilizando el valor del cliente como el valor del parámetro.  
+3.  Cuando se tiene acceso a la columna Chapter de una fila primaria, el *comando secundario* se ejecuta utilizando el valor de customer. cust_id como valor del parámetro.  
   
-4.  Todas las filas del conjunto de filas del proveedor de datos creado en el paso 3 se usan para rellenar el elemento secundario **Recordset**. En este ejemplo, que es todas las filas de la tabla Orders en la que cust_id es igual al valor de cliente. De forma predeterminada, el elemento secundario **Recordset**s se almacenarán en el cliente hasta que todas las referencias al elemento primario **Recordset** se liberan. Para cambiar este comportamiento, establezca el **Recordset** [propiedad dinámica](../../../ado/reference/ado-api/ado-dynamic-property-index.md) **filas secundarias de caché** a **False**.  
+4.  Todas las filas del conjunto de filas del proveedor de datos creadas en el paso 3 se utilizan para rellenar el **conjunto de registros**secundario. En este ejemplo, todas las filas de la tabla Orders en las que el cust_id es igual al valor de Customer. cust_id. De forma predeterminada, los **conjuntos de registros**secundarios se almacenarán en la memoria caché del cliente hasta que se liberen todas las referencias al **conjunto de registros** primario. Para cambiar este comportamiento, establezca las **filas secundarias** de la caché de [propiedades dinámicas](../../../ado/reference/ado-api/ado-dynamic-property-index.md) de **conjunto de registros** en **false**.  
   
-5.  Una referencia a las filas secundarias recuperadas (es decir, el capítulo del elemento secundario **Recordset**) se coloca en la columna de capítulo de la fila actual del elemento primario **Recordset**.  
+5.  Una referencia a las filas secundarias recuperadas (es decir, el capítulo del **conjunto de registros**secundario) se coloca en la columna Chapter de la fila actual del **conjunto de registros**primario.  
   
-6.  Los pasos 3 a 5 se repiten cuando se tiene acceso a la columna de capítulo de otra fila.  
+6.  Los pasos 3-5 se repiten cuando se tiene acceso a la columna Chapter de otra fila.  
   
- El **filas secundarias de caché** se establece la propiedad dinámica **True** de forma predeterminada. El comportamiento de almacenamiento en caché varía en función de los valores de parámetro de la consulta. En una consulta con un solo parámetro, el elemento secundario **Recordset** para un determinado parámetro de valor se almacenará en caché entre solicitudes para un elemento secundario con ese valor. El siguiente código muestra esto:  
+ De forma predeterminada, la propiedad dinámica **Cache Child Rows** está establecida en **true** . El comportamiento del almacenamiento en caché varía en función de los valores de los parámetros de la consulta. En una consulta con un único parámetro, el **conjunto de registros** secundario para un valor de parámetro determinado se almacenará en la memoria caché entre las solicitudes de un elemento secundario con ese valor. El código siguiente muestra este proceso:  
   
 ```  
 SCmd = "SHAPE {select * from customer} " & _  
@@ -67,12 +67,12 @@ Rst1.MoveNext      ' Next cust_id passed to Param 0, & new rs fetched
 Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.  
 ```  
   
- En una consulta con dos o más parámetros, se usa un elemento secundario en caché solo si todos los valores de parámetro coincide con los valores almacenados en caché.  
+ En una consulta con dos o más parámetros, se usa un elemento secundario almacenado en caché solo si todos los valores de parámetro coinciden con los valores almacenados en caché.  
   
-## <a name="parameterized-commands-and-complex-parent-child-relations"></a>Los comandos con parámetros y las relaciones secundarias de complejos primario  
- Además de utilizar comandos parametrizados para mejorar el rendimiento de una jerarquía de tipos de combinación, los comandos con parámetros pueden utilizarse para admitir relaciones más complejas de elementos primarios y secundarios. Por ejemplo, considere la posibilidad de una base de datos Little League con dos tablas: uno que consta de los equipos (team_id, nombre_equipo) y otra de juegos (date, home_team, visiting_team).  
+## <a name="parameterized-commands-and-complex-parent-child-relations"></a>Comandos con parámetros y relaciones de elementos primarios y secundarios complejos  
+ Además de usar comandos con parámetros para mejorar el rendimiento de una jerarquía de tipos de combinación de igualdad, los comandos con parámetros se pueden usar para admitir relaciones de elementos primarios y secundarios más complejos. Por ejemplo, considere una pequeña base de datos de liga con dos tablas: una que consta de los equipos (team_id, team_name) y la otra de juegos (Date, home_team, visiting_team).  
   
- Con una jerarquía sin parámetros, hay ninguna manera se relacionan las tablas de los equipos y los juegos de manera que el elemento secundario **Recordset** para cada equipo que contiene su programación completa. Puede crear los capítulos que contienen la programación de inicio o la programación de la carretera, pero no ambos. Esto es porque la cláusula RELATE le limita a las relaciones de elementos primarios y secundarios del formulario (pc1 = cc1) AND (pc2 = pc2). Por lo tanto, si el comando incluye "RELATE team_id TO home_team, team_id TO visiting_team", se obtendría sólo juegos donde estaba desempeñando un equipo propio. Lo que quiere es "(team_id=home_team) o (team_id = visiting_team)", pero el proveedor de formas no admite la cláusula OR.  
+ Mediante una jerarquía sin parámetros, no hay forma de relacionar las tablas Teams y Games de tal forma que el conjunto de **registros** secundario de cada equipo contenga su programación completa. Puede crear capítulos que contengan la programación de inicio o la programación de carretera, pero no ambos. Esto se debe a que la cláusula Relate le limita a las relaciones de elementos primarios y secundarios del formulario (PC1 = CC1) y (PC2 = PC2). Por lo tanto, si el comando incluía "RELACIONAr team_id con home_team, team_id a visiting_team", obtendría solo los juegos en los que un equipo se reproducira por sí mismo. Lo que desea es "(team_id = home_team) o (team_id = visiting_team)", pero el proveedor de la forma no admite la cláusula o.  
   
  Para obtener el resultado deseado, puede usar un comando con parámetros. Por ejemplo:  
   
@@ -83,12 +83,12 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
                team_id TO PARAMETER 1)   
 ```  
   
- En este ejemplo aprovecha la mayor flexibilidad de la cláusula WHERE de SQL para obtener el resultado que necesita.  
+ En este ejemplo se aprovecha la mayor flexibilidad de la cláusula WHERE de SQL para obtener el resultado que necesita.  
   
 > [!NOTE]
->  Al utilizar cláusulas WHERE, parámetros no pueden usar los tipos de datos SQL para text, ntext e image o producirá un error que contiene la siguiente descripción: `Invalid operator for data type`.  
+>  Al utilizar las cláusulas WHERE, los parámetros no pueden usar los tipos de datos de SQL para Text, ntext e Image, o bien se producirá un `Invalid operator for data type`error que contiene la siguiente descripción:.  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de la forma de datos](../../../ado/guide/data/data-shaping-example.md)   
- [Gramática formal de forma](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de forma de datos](../../../ado/guide/data/data-shaping-example.md)   
+ [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)

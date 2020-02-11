@@ -17,10 +17,10 @@ ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253510"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Evaluar la preparación de una SQL Server la migración de datos a Azure SQL Database mediante el Data Migration Assistant
@@ -72,11 +72,11 @@ El proyecto de Azure Migrate se usa para almacenar los metadatos de detección, 
    > [!NOTE]
    > Al crear un proyecto, debe agregar al menos una herramienta de evaluación o de migración.
 
-8. En la pestaña **Seleccionar herramienta de evaluación** , **Azure Migrate: evaluación de base de datos** aparece como la herramienta de evaluación que se va a agregar. Si actualmente no necesita una herramienta de evaluación, active la casilla **omitir la adición de una herramienta de evaluación ahora** . Seleccione **Siguiente**.
+8. En la pestaña **Seleccionar herramienta de evaluación** , **Azure Migrate: evaluación de base de datos** aparece como la herramienta de evaluación que se va a agregar. Si actualmente no necesita una herramienta de evaluación, active la casilla **omitir la adición de una herramienta de evaluación ahora** . Seleccione **Next** (Siguiente).
 
     ![Azure Migrate: ficha seleccionar herramienta de evaluación](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-assessment-tool.png)
 
-9. En la pestaña **Seleccionar herramienta de migración** , **Azure Migrate: la migración de bases de datos** aparece como la herramienta de migración que se va a agregar. Si actualmente no necesita una herramienta de migración, seleccione la **herramienta para omitir la adición de una migración por ahora**. Seleccione **Siguiente**.
+9. En la pestaña **Seleccionar herramienta de migración** , **Azure Migrate: la migración de bases de datos** aparece como la herramienta de migración que se va a agregar. Si actualmente no necesita una herramienta de migración, seleccione la **herramienta para omitir la adición de una migración por ahora**. Seleccione **Next** (Siguiente).
 
     ![Azure Migrate: ficha seleccionar herramienta de migración](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-migration-tool.png)
 
@@ -116,7 +116,7 @@ Después de crear correctamente un proyecto de migración, en **herramientas de 
 
    ![Azure Migrate Data Migration Assistant pantalla de opciones de evaluación](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-options-screen.png)
 
-2. Seleccione **Siguiente**.
+2. Seleccione **Next** (Siguiente).
 
 ### <a name="add-databases-to-assess"></a>Agregar bases de datos para evaluar
 
@@ -179,7 +179,7 @@ Después de crear correctamente un proyecto de migración, en **herramientas de 
 
    ![Azure Migrate-revisar los bloqueadores de migración](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: opciones de configuración](../dma/dma-configurationsettings.md)

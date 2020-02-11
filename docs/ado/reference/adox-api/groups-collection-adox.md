@@ -1,5 +1,5 @@
 ---
-title: Grupos de colección (ADOX) | Microsoft Docs
+title: Colección de grupos (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,39 +18,39 @@ ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966183"
 ---
 # <a name="groups-collection-adox"></a>Colección de grupos (ADOX)
-Todos los contiene almacenan [grupo](../../../ado/reference/adox-api/group-object-adox.md) objetos de un catálogo o el usuario.  
+Contiene todos los objetos de [Grupo](../../../ado/reference/adox-api/group-object-adox.md) almacenados de un catálogo o usuario.  
   
-## <a name="remarks"></a>Comentarios  
- El **grupos** colección de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) todas las cuentas de grupo del catálogo representa. El **grupos** colección para un [usuario](../../../ado/reference/adox-api/user-object-adox.md) representa sólo el grupo al que pertenece el usuario.  
+## <a name="remarks"></a>Observaciones  
+ La colección de **grupos** de un [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) representa todas las cuentas de grupo del catálogo. La colección de **grupos** para un [usuario](../../../ado/reference/adox-api/user-object-adox.md) representa solo el grupo al que pertenece el usuario.  
   
- El [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) método para un **grupos** colección es único para ADOX. Puede:  
+ El método [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) de una colección **Groups** es único para ADOX. Puede:  
   
--   Agregar un nuevo grupo de seguridad a la colección con el **Append** método.  
+-   Agregue un nuevo grupo de seguridad a la colección con el método **Append** .  
   
- Las propiedades y métodos restantes son estándar para colecciones de ADO. Puede:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
   
--   Obtener acceso a un grupo de la colección con el [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad.  
+-   Obtener acceso a un grupo de la colección con la propiedad [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
--   Devuelve el número de grupos incluidos en la colección con el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad.  
+-   Devuelve el número de grupos incluidos en la colección con la propiedad [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
--   Quitar un grupo de la colección con el [eliminar](../../../ado/reference/adox-api/delete-method-adox-collections.md) método.  
+-   Quite un grupo de la colección con el método [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
   
--   Actualizar los objetos de la colección para reflejar el esquema de base de datos actual con el [actualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método.  
+-   Actualice los objetos de la colección para que reflejen el esquema de la base de datos actual con el método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
   
 > [!NOTE]
->  Antes de anexar una **grupo** de objeto para el **grupos** colección de un **usuario** objeto, un **grupo** objeto con el mismo [ Nombre](../../../ado/reference/adox-api/name-property-adox.md) ya debe existir en lo que se debe anexar el **grupos** colección de la **catálogo**.  
+>  Antes de anexar un objeto de **Grupo** a la colección **Groups** de un objeto **User** , el objeto **Group** con el mismo [nombre](../../../ado/reference/adox-api/name-property-adox.md) que el que se va a anexar ya debe existir en la colección **Groups** del **Catálogo**.  
   
  Esta sección contiene el siguiente tema.  
   
 -   [Eventos, métodos y propiedades de la colección de grupos](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

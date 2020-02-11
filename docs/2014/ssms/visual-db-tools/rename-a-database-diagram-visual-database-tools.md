@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f177f8b2c399be020817ccc4228c58f11976512
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228357"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>Cambiar el nombre de un diagrama de base de datos (Visual Database Tools)
@@ -39,7 +39,7 @@ ms.locfileid: "63228357"
   
      El diagrama de base de datos aparece en el Explorador de objetos con el nuevo nombre.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

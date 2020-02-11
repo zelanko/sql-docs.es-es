@@ -2,23 +2,36 @@
 title: Novedades de SSMA para Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: f196932ee9a37c9a814ad619b604520093b6098d
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: d78f7c213c6e745ecd99ff31d078f1383b4792e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834284"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516595"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novedades de SSMA para Oracle (OracleToSQL)
 
 En este artículo se enumeran los cambios SQL Server Migration Assistant (SSMA) para Oracle en cada versión.
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+Además de un conjunto de correcciones diseñado para mejorar la facilidad de uso y el rendimiento, la versión v 8.6 de SSMA para Oracle se ha mejorado agregando una configuración que permite a los usuarios omitir las propiedades extendidas de SSMA en el código convertido.
+
+Para aprovechar este valor, en SSMA para Oracle, vaya a **herramientas** > **configuración** > del proyecto**conversión****General** > y, a continuación, en **varios**, actualice el valor de la opción **omitir propiedades extendidas** a **sí**.
+
+![Omitir la configuración de propiedades extendidas](../oracle/media/ssma-omit-extended-properties.png)
+
+Además, SSMA para Oracle ofrece ahora un análisis mejorado de la cláusula XMLTABLE.
+
+> [!IMPORTANT]
+> Con SSMA v 8.5 y versiones posteriores, .net 4.7.2 es un requisito previo de instalación. Si necesita instalar esta versión, puede descargar el archivo en tiempo de ejecución desde [aquí](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 
@@ -209,7 +222,7 @@ La versión v 7.1 de SSMA para Oracle contiene los siguientes cambios:
 
 * SQL Server 2017 en Windows y Linux CTP1 es ahora una plataforma de destino admitida para la migración. Esta característica se encuentra en Technical Preview y permite el movimiento de datos y esquemas a los servidores SQL Server de destino.
 * SSMA admite ahora las actualizaciones automáticas para descargar la versión más reciente de SSMA en cuanto esté disponible.
-* Los binarios instalables de SSMA se entregan ahora a través de los archivos de paquete de Windows Installer (. msi).
+* Los binarios instalables de SSMA se entregan ahora a través de Windows Installer archivos de paquete (. msi).
 
 ## <a name="may-2016"></a>Mayo de 2016
 

@@ -10,10 +10,10 @@ ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: bbffbbda18da28be0623c31f4608f5b25f21d2ea
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258450"
 ---
 # <a name="managing-a-composite-domain"></a>Administrar un dominio compuesto
@@ -35,7 +35,7 @@ ms.locfileid: "75258450"
 |Cuando se asignan datos complejos a un dominio compuesto, dichos datos se pueden analizar basándose tanto en el conocimiento como en un delimitador. DQS intentará primero utilizar su conocimiento sobre los dominios individuales para determinar la pertenencia de las partes de la cadena compleja a dichos dominios.|[Crear un dominio compuesto](../data-quality-services/create-a-composite-domain.md)|  
 |Adjuntar un servicio de datos de referencia, como un servicio que administre los datos de direcciones, a un dominio compuesto.|[Adjuntar un dominio o un dominio compuesto a datos de referencia](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |Crear una regla entre dominios cuando el valor de un dominio individual de un dominio compuesto afecta al valor de otro.|[Crear una regla entre dominios](../data-quality-services/create-a-cross-domain-rule.md)|  
-|Identificar combinaciones de valores para que DQS pueda informar sobre su frecuencia.|[Usar relaciones de valor en un dominio compuesto](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
+|Identificar combinaciones de valores para que DQS pueda informar sobre su frecuencia.|[Utilizar relaciones de valor en un dominio compuesto](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

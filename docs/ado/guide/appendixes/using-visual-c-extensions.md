@@ -1,5 +1,5 @@
 ---
-title: Uso de extensiones de Visual C++ | Microsoft Docs
+title: Usar extensiones de Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,134 +16,134 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926451"
 ---
 # <a name="visual-c-extensions"></a>Extensiones de Visual C++
-## <a name="the-iadorecordbinding-interface"></a>La interfaz IADORecordBinding
- Las extensiones de Microsoft Visual C++ para ADO asocian o enlazan los campos de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto a las variables de C o C++. Cada vez que la fila actual de límite **Recordset** cambia todos los campos enlazados en el **Recordset** se copian a las variables de C o C++. Si es necesario, los datos copiados se convierten al tipo de datos declarado de la variable de C o C++.
+## <a name="the-iadorecordbinding-interface"></a>La Interfaz IADORecordBinding
+ Las extensiones de Microsoft Visual C++ para ADO asocian o enlazan campos de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) a variables de C/C++. Siempre que cambia la fila actual del **conjunto de registros** enlazado, todos los campos enlazados del **conjunto de registros** se copian en las variables de C/C++. Si es necesario, los datos copiados se convierten al tipo de datos declarado de la variable de C/C++.
 
- El **BindToRecordset** método de la **IADORecordBinding** interfaz enlaza los campos a las variables de C o C++. El **AddNew** método agrega una nueva fila al límite **Recordset**. El **actualización** método rellena los campos en las nuevas filas de la **Recordset**, o actualiza los campos en las filas existentes, con el valor de las variables de C o C++.
+ El método **BindToRecordset** de la interfaz **IADORecordBinding** enlaza los campos a las variables de C/C++. El método **AddNew** agrega una nueva fila al conjunto de **registros**enlazado. El método **Update** rellena los campos de las nuevas filas del **conjunto de registros**o actualiza los campos de las filas existentes, con el valor de las variables de C/C++.
 
- El **IADORecordBinding** interfaz se implementa mediante el **Recordset** objeto. No codifica usted mismo la implementación.
+ El objeto **Recordset** implementa la interfaz **IADORecordBinding** . No codifique la implementación usted mismo.
 
 ## <a name="binding-entries"></a>Entradas de enlace
- Las extensiones de Visual C++ para ADO asignan los campos de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto a las variables de C o C++. La definición de una asignación entre un campo y una variable se denomina un *enlace entrada*. Las macros proporcionan entradas de enlace de datos numéricos, de longitud fija y de longitud variable. Las entradas de enlace y las variables de C o C++ se declaran en una clase derivada de la clase de extensiones de Visual C++, **CADORecordBinding**. El **CADORecordBinding** clase definen internamente las macros de entrada de enlace.
+ Las extensiones de Visual C++ para los campos de asignación de ADO de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) a variables de C/C++. La definición de una asignación entre un campo y una variable se denomina *entrada de enlace*. Las macros proporcionan entradas de enlace para datos numéricos, de longitud fija y de longitud variable. Las entradas de enlace y las variables de C/C++ se declaran en una clase derivada de la clase Visual C++ Extensions, **CADORecordBinding**. Las macros de entrada de enlace definen internamente la clase **CADORecordBinding** .
 
- ADO asigna internamente los parámetros de estas macros para OLE DB **DBBINDING** estructurar y crea OLE DB **descriptor de acceso** objeto para administrar el movimiento y la conversión de datos entre los campos y variables. OLE DB define los datos como que consta de tres partes: Un *búfer* donde se almacenan los datos; un *estado* que indica si un campo se almacenó correctamente en el búfer o cómo debe restaurarse la variable en el campo; y el *longitud* de los datos. (Consulte [obtener y establecer los datos (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)en referencia del programador de OLE DB, para obtener más información.)
+ ADO asigna internamente los parámetros de estas macros a una estructura OLE DB **DBBINDING** y crea un objeto de **descriptor de acceso** OLE DB para administrar el movimiento y la conversión de datos entre los campos y las variables. OLE DB define los datos que se componen de tres partes: un *búfer* donde se almacenan los datos; un *Estado* que indica si un campo se ha almacenado correctamente en el búfer o cómo se debe restaurar la variable en el campo; y la *longitud* de los datos. (Vea [obtener y establecer datos (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)en la referencia del programador de OLE DB para obtener más información).
 
 ## <a name="header-file"></a>Archivo de encabezado
- En la aplicación para poder usar las extensiones de Visual C++ para ADO, incluya el siguiente archivo:
+ Incluya el siguiente archivo en la aplicación para poder usar las extensiones de Visual C++ para ADO:
 
 ```cpp
 #include <icrsint.h>
 ```
 
-## <a name="binding-recordset-fields"></a>Enlace de campos de conjunto de registros
+## <a name="binding-recordset-fields"></a>Enlazar campos de conjunto de registros
 
-#### <a name="to-bind-recordset-fields-to-cc-variables"></a>Enlazar campos de conjunto de registros a las Variables de C o C++
+#### <a name="to-bind-recordset-fields-to-cc-variables"></a>Para enlazar campos de conjunto de registros a variables de C/C++
 
-1.  Crear una clase derivada de la **CADORecordBinding** clase.
+1.  Cree una clase derivada de la clase **CADORecordBinding** .
 
-2.  Especificar entradas de enlace y las variables de C o C++ correspondientes en la clase derivada. Las entradas de enlace entre los corchetes **BEGIN ADO Binding** y **end ADO Binding** macros. No termine las macros con comas o punto y coma. Cada macro especifica automáticamente los delimitadores apropiados.
+2.  Especifique las entradas de enlace y las variables de C/C++ correspondientes en la clase derivada. Corchete las entradas de enlace entre las macros **BEGIN_ADO_BINDING** y **END_ADO_BINDING** . No finalice las macros con comas o punto y coma. Cada macro especifica automáticamente los delimitadores correspondientes.
 
-     Especifique una entrada de enlace para cada campo que debe asignarse a una variable de C o C++. Utilice un miembro apropiado desde el **ADO Fixed Length Entry**, **ADO NUMERIC ENTRY**, o **ADO variable Length Entry** familia de macros.
+     Especifique una entrada de enlace para cada campo que se va a asignar a una variable de C/C++. Use un miembro adecuado de la familia de macros **ADO_FIXED_LENGTH_ENTRY**, **ADO_NUMERIC_ENTRY**o **ADO_VARIABLE_LENGTH_ENTRY** .
 
-3.  En la aplicación, cree una instancia de la clase derivada de **CADORecordBinding**. Obtener el **IADORecordBinding** interfaz desde el **Recordset**. A continuación, llame a la **BindToRecordset** método para enlazar el **Recordset** campos a las variables de C o C++.
+3.  En la aplicación, cree una instancia de la clase derivada de **CADORecordBinding**. Obtiene la interfaz **IADORecordBinding** del **conjunto de registros**. A continuación, llame al método **BindToRecordset** para enlazar los campos de **conjunto de registros** a las variables de C/C++.
 
- Para obtener más información, consulte el [ejemplo de extensiones de Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md).
+ Para obtener más información, vea el [ejemplo de extensiones de Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md).
 
 ## <a name="interface-methods"></a>Métodos de interfaz
- El **IADORecordBinding** interfaz tiene tres métodos: **BindToRecordset**, **AddNew**, y **actualización**. El único argumento de cada método es un puntero a una instancia de la clase derivada de **CADORecordBinding**. Por lo tanto, el **AddNew** y **actualización** métodos no pueden especificar cualquiera de los parámetros de los homónimos de ADO.
+ La interfaz **IADORecordBinding** tiene tres métodos: **BindToRecordset**, **AddNew**y **Update**. El único argumento de cada método es un puntero a una instancia de la clase derivada de **CADORecordBinding**. Por lo tanto, los métodos **AddNew** y **Update** no pueden especificar ninguno de los parámetros de su método ADO namesakes.
 
 ## <a name="syntax"></a>Sintaxis
- El **BindToRecordset** método asocia el **Recordset** campos con variables de C o C++.
+ El método **BindToRecordset** asocia los campos de **conjunto de registros** con variables de C/C++.
 
 ```cpp
 BindToRecordset(CADORecordBinding *binding)
 ```
 
- El **AddNew** método invoca su homónimo, ADO [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método para agregar una nueva fila a la **Recordset**.
+ El método **AddNew** invoca su homónimo, el método [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) de ADO, para agregar una nueva fila al **conjunto de registros**.
 
 ```cpp
 AddNew(CADORecordBinding *binding)
 ```
 
- El **actualizar** método invoca su homónimo, ADO [actualizar](../../../ado/reference/ado-api/update-method.md) método para actualizar la **Recordset**.
+ El método **Update** invoca su homónimo, el método [Update](../../../ado/reference/ado-api/update-method.md) de ADO, para actualizar el **conjunto de registros**.
 
 ```cpp
 Update(CADORecordBinding *binding)
 ```
 
 ## <a name="binding-entry-macros"></a>Macros de entrada de enlace
- Macros de entrada de enlace definen la asociación de un **Recordset** campo y una variable. Una macro inicial y final delimita el conjunto de entradas de enlace.
+ Las macros de entrada de enlace definen la Asociación de un campo de **conjunto de registros** y una variable. Una macro de inicio y finalización delimita el conjunto de entradas de enlace.
 
- Familias de macros se proporcionan para los datos de longitud fija, como **adDate** o **adBoolean**; numérico datos, como **excepto adVarNumeric**, **son también tipos**, o **longitud fija**; y datos de longitud variable, como **cada**, **parámetros** o **adVarBinary**. Todos los tipos numéricos, excepto para **adVarNumeric**, son también tipos de longitud fija. Cada familia tiene diferentes conjuntos de parámetros para que se puede excluir la información de enlace que no es de interés.
+ Se proporcionan familias de macros para los datos de longitud fija, como **adDate** o **adBoolean**; datos numéricos, como **adTinyInt**, **adInteger**o **adDouble**; y datos de longitud variable, como **adChar**, **advarchar** o **adVarBinary**. Todos los tipos numéricos, excepto para **adVarNumeric**, también son tipos de longitud fija. Cada familia tiene diferentes conjuntos de parámetros para que pueda excluir la información de enlace que no es de interés.
 
- Para obtener más información, consulte [Apéndice A: Tipos de datos](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), de referencia del programador OLE DB.
+ Para obtener más información, vea el [Apéndice A: tipos de datos](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6)de la referencia del programador de OLE DB.
 
-### <a name="begin-binding-entries"></a>Empezar a entradas de enlace
- **BEGIN ADO Binding**(*clase*)
+### <a name="begin-binding-entries"></a>Iniciar entradas de enlace
+ **BEGIN_ADO_BINDING**(*clase*)
 
 ### <a name="fixed-length-data"></a>Datos de longitud fija
- **ADO Fixed Length Entry**(*Ordinal, tipo de datos, búfer, estado, modificar*)
+ **ADO_FIXED_LENGTH_ENTRY**(*ordinal, DataType, buffer, status, Modify*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, el tipo de datos, el búfer, modificar*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*ordinal, DataType, buffer, Modify*)
 
 ### <a name="numeric-data"></a>Datos numéricos
- **ADO NUMERIC ENTRY**(*Ordinal, tipo de datos, búfer, precisión, escala, estado, modificar*)
+ **ADO_NUMERIC_ENTRY**(*ordinal, DataType, buffer, Precision, Scale, status, Modify*)
 
- **ADO_NUMERIC_ENTRY2**(*Ordinal, el tipo de datos, el búfer, precisión, escala, modificar*)
+ **ADO_NUMERIC_ENTRY2**(*ordinal, DataType, buffer, Precision, Scale, Modify*)
 
 ### <a name="variable-length-data"></a>Datos de longitud variable
- **ADO variable Length Entry**(*Ordinal, tipo de datos, búfer, tamaño, estado, longitud, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY**(*ordinal, DataType, buffer, size, status, length, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, tipo de datos, búfer, tamaño, estado, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*ordinal, DataType, buffer, size, status, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, tipo de datos, búfer, tamaño, longitud, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*ordinal, DataType, buffer, size, length, Modify*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, tipo de datos, búfer, el tamaño, modificar*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*ordinal, DataType, buffer, size, Modify*)
 
-### <a name="end-binding-entries"></a>Final de entradas de enlace
+### <a name="end-binding-entries"></a>Finalizar entradas de enlace
  **END_ADO_BINDING**()
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*Clase*|Clase en que se definen las entradas de enlace y las variables de C o C++.|
-|*Ordinal*|Número ordinal, a partir de 1, de la **Recordset** campo correspondiente a la variable de C o C++.|
-|*DataType*|Tipo de datos de ADO equivalente de la variable de C o C++ (vea [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obtener una lista de tipos de datos válidos). El valor de la **Recordset** campo se convertirá en este tipo de datos si es necesario.|
-|*búfer*|Nombre de la variable de C o C++ donde el **Recordset** se almacenará el campo.|
-|*Tamaño*|Tamaño máximo en bytes de *búfer*. Si *búfer* contendrá una cadena de longitud variable, deje espacio para un cero de terminación.|
-|*Estado*|Nombre de una variable que indicará si el contenido de *búfer* son válidos y si la conversión del campo para *DataType* fue correcta.<br /><br /> Los dos valores más importantes de esta variable son **adFldOK**, lo que significa que la conversión fue correcta; y **adFldNull**, lo que significa que el valor del campo sería una variante de tipo VT_NULL y no solamente vacío.<br /><br /> Los valores posibles de *estado* aparecen en la tabla siguiente, "Valores de Status".|
-|*Modificar*|Marca booleana; Si es TRUE, indica a ADO tiene permitido actualizar correspondiente **Recordset** campo con el valor contenido en *búfer*.<br /><br /> Establezca el valor booleano *modificar* parámetro en TRUE para permitir que ADO actualizar el campo enlazado y FALSE si desea examinar el campo, pero no cambiarla.|
+|*Clase*|Clase en la que se definen las entradas de enlace y las variables de C/C++.|
+|*Ordinal*|Número ordinal, contando desde uno, del campo de **conjunto de registros** correspondiente a la variable de C/C++.|
+|*DataType*|Tipo de datos ADO equivalente de la variable C/C++ (vea [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obtener una lista de tipos de datos válidos). Si es necesario, el valor del campo de **conjunto de registros** se convertirá en este tipo de datos.|
+|*Buffer*|Nombre de la variable de C/C++ en la que se almacenará el campo de **conjunto de registros** .|
+|*Tamaño*|Tamaño máximo en bytes del *búfer*. Si el *búfer* va a contener una cadena de longitud variable, deje espacio para un cero final.|
+|*Estado*|Nombre de una variable que indica si el contenido del *búfer* es válido y si la conversión del campo en *DataType* era correcta.<br /><br /> Los dos valores más importantes para esta variable son **adFldOK**, lo que significa que la conversión se realizó correctamente; y **adFldNull**, lo que significa que el valor del campo sería una variante de tipo VT_NULL y no solo está vacía.<br /><br /> Los valores posibles para *status* se muestran en la tabla siguiente, "status Values".|
+|*Modificar*|Marca booleana; Si es TRUE, indica que ADO puede actualizar el campo de **conjunto de registros** correspondiente con el valor contenido en el *búfer*.<br /><br /> Establezca el parámetro booleano *Modify* en true para permitir que ADO actualice el campo enlazado y false si desea examinar el campo pero no cambiarlo.|
 |*Precisión*|Número de dígitos que se pueden representar en una variable numérica.|
 |*Escala*|Número de posiciones decimales en una variable numérica.|
-|*Longitud*|Nombre de una variable de cuatro bytes que contendrá la longitud real de los datos de *búfer*.|
+|*Length*|Nombre de una variable de cuatro bytes que contendrá la longitud real de los datos en el *búfer*.|
 
 ## <a name="status-values"></a>Valores de estado
- El valor de la *estado* variable indica si un campo se copió correctamente en una variable.
+ El valor de la variable de *Estado* indica si un campo se copió correctamente en una variable.
 
- Al establecer los datos, *estado* puede establecerse en **adFldNull** para indicar el **Recordset** campo debe establecerse en null.
+ Al establecer los datos, el *Estado* puede establecerse en **adFldNull** para indicar que el campo de **conjunto de registros** debe establecerse en NULL.
 
-|Constante|Valor|Descripción|
+|Constante|Value|Descripción|
 |--------------|-----------|-----------------|
-|**adFldOK**|0|Se devolvió un valor de campo distinto de null.|
-|**adFldBadAccessor**|1|Enlace no era válido.|
-|**adFldCantConvertValue**|2|Valor puede no se pudo convertir por motivos distintos a un error de coincidencia de signos, desbordamiento de datos.|
-|**adFldNull**|3|Al obtener un campo, indica que se devolvió un valor null.<br /><br /> Al establecer un campo, indica que el campo debe establecerse en **NULL** cuando no se puede codificar el campo **NULL** por sí mismo (por ejemplo, una matriz de caracteres o un número entero).|
-|**adFldTruncated**|4|Se truncaron los datos de longitud variable o dígitos numéricos.|
-|**adFldSignMismatch**|5|El valor tiene signo y el tipo de datos de la variable es sin signo.|
-|**adFldDataOverFlow**|6|Valor es mayor que se pueden almacenar en el tipo de datos.|
-|**adFldCantCreate**|7|Tipo de columna desconocido y el campo ya está abierta.|
-|**adFldUnavailable**|8|Valor del campo no se pudo determinar por ejemplo, en un campo nuevo y sin asignar con ningún valor predeterminado.|
+|**adFldOK**|0|Se devolvió un valor de campo que no es NULL.|
+|**adFldBadAccessor**|1|El enlace no era válido.|
+|**adFldCantConvertValue**|2|No se pudo convertir el valor por motivos distintos a un error de coincidencia de signos o desbordamiento de datos.|
+|**adFldNull**|3|Al obtener un campo, indica que se devolvió un valor null.<br /><br /> Al establecer un campo, indica que el campo debe establecerse en **null** cuando el campo no puede codificar **null** (por ejemplo, una matriz de caracteres o un entero).|
+|**adFldTruncated**|4|Los datos de longitud variable o los dígitos numéricos se truncaron.|
+|**adFldSignMismatch**|5|El valor es signed y el tipo de datos de variable es sin signo.|
+|**adFldDataOverFlow**|6|El valor es mayor que el que se puede almacenar en el tipo de datos de la variable.|
+|**adFldCantCreate**|7|El tipo de columna y el campo desconocidos ya están abiertos.|
+|**adFldUnavailable**|8|No se pudo determinar el valor del campo, por ejemplo, en un nuevo campo sin asignar sin ningún valor predeterminado.|
 |**adFldPermissionDenied**|9|Al actualizar, no tiene permiso para escribir datos.|
 |**adFldIntegrityViolation**|10|Al actualizar, el valor de campo infringiría la integridad de la columna.|
-|**adFldSchemaViolation**|11|Al actualizar, el valor del campo infringiría el esquema de columna.|
+|**adFldSchemaViolation**|11|Al actualizar, el valor de campo infringiría el esquema de columna.|
 |**adFldBadStatus**|12|Al actualizar, parámetro de estado no válido.|
-|**adFldDefault**|13|Al actualizar, se utilizó un valor predeterminado.|
+|**adFldDefault**|13|Al actualizar, se utiliza un valor predeterminado.|
 
-## <a name="see-also"></a>Vea también
- [Ejemplo de extensiones de Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md) [encabezado de extensiones de Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+## <a name="see-also"></a>Consulte también
+ [Ejemplo de Visual C++ extensions](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual C++ encabezado Extensions](../../../ado/guide/appendixes/visual-c-extensions-header.md)

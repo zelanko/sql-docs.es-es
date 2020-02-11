@@ -16,31 +16,31 @@ ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61afd5c9932f58c49e54b4aff8b053d0a25a6e3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130018"
 ---
 # <a name="display-size"></a>Tamaño de presentación
-El tamaño de presentación de una columna es el número máximo de caracteres necesario para mostrar datos en formato de caracteres. En la tabla siguiente se define el tamaño de presentación para cada tipo de datos SQL de ODBC.  
+El tamaño de presentación de una columna es el número máximo de caracteres necesarios para mostrar los datos en forma de carácter. En la tabla siguiente se define el tamaño de presentación de cada tipo de datos SQL de ODBC.  
   
-|Identificador de tipo SQL|Tamaño de presentación|  
+|Identificador de tipo de SQL|Tamaño de presentación|  
 |-------------------------|------------------|  
-|Todos los tipos de caracteres [a]|Máximo (tipos de variable) o el definido (para tipos fijos) número de caracteres necesarios para mostrar los datos en formato de caracteres.|  
-|SQL_DECIMAL SQL_NUMERIC|La precisión de la columna más 2 (un inicio de sesión, *precisión* dígitos y un separador decimal). Por ejemplo, el tamaño de presentación de una columna definida como NUMERIC(10,3) es 12.|  
+|Todos los tipos de caracteres [a]|El número de caracteres definido (para tipos fijos) o máximo (para tipos de variables) que se necesitan para mostrar los datos en formato de caracteres.|  
+|SQL_DECIMAL SQL_NUMERIC|La precisión de la columna más 2 (un signo, dígitos de *precisión* y un separador decimal). Por ejemplo, el tamaño de presentación de una columna definida como numérica (10, 3) es 12.|  
 |SQL_BIT|1 (1 dígito).|  
-|SQL_TINYINT|4 si ha iniciado (un inicio de sesión y 3 dígitos) o 3 Si no tiene signo (3 dígitos).|  
-|SQL_SMALLINT|6 Si ha iniciado (un inicio de sesión y 5 dígitos) o 5 si no tiene signo (5 dígitos).|  
-|SQL_INTEGER|11 Si ha iniciado (un inicio de sesión y 10 dígitos) o 10 si no tiene signo (10 dígitos).|  
-|SQL_BIGINT|20 (un inicio de sesión y 19 dígitos si ha iniciado o 20 dígitos si no tiene signo).|  
-|SQL_REAL|14 (un inicio de sesión, 7 dígitos, un separador decimal, la letra *E*, un inicio de sesión y 2 dígitos).|  
-|SQL_FLOAT SQL_DOUBLE|24 (un signo, 15 dígitos, un separador decimal, la letra *E*, un inicio de sesión y 3 dígitos).|  
-|Todos los tipos binarios [a]|Define o máximo (tipos de variable) el tiempo de longitud de la columna 2. (Cada byte binario está representado por un número hexadecimal de 2 dígitos).|  
-|SQL_TYPE_DATE|10 (una fecha en el formato *aaaa-mm-dd*).|  
-|SQL_TYPE_TIME|8 (una hora en el formato *hh: mm:* )<br /><br /> O bien<br /><br /> 9 + *s* (una hora en el formato *hh: mm:* [.fff...], donde *s* es la precisión de fracciones de segundo).|  
-|SQL_TYPE_TIMESTAMP|19 (para una marca de tiempo en el *aaaa-mm-dd hh: mm:* formato)<br /><br /> O bien<br /><br /> 20 + *s* (para una marca de tiempo en el *aaaa-mm-dd hh: mm:* formato [.fff...], donde *s* es la precisión de fracciones de segundo).|  
-|Todos los tipos de datos interval|Consulte [longitud de tipo de datos de intervalo](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
-|SQL_GUID|36 (el número de caracteres en el *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* formato|  
+|SQL_TINYINT|4 Si está firmado (un signo y 3 dígitos) o 3 si no tiene signo (3 dígitos).|  
+|SQL_SMALLINT|6 Si está firmado (un signo y 5 dígitos) o 5 si no tiene signo (5 dígitos).|  
+|SQL_INTEGER|11 si está firmado (un signo y 10 dígitos) o 10 si es sin signo (10 dígitos).|  
+|SQL_BIGINT|20 (un signo y 19 dígitos si están firmados o 20 dígitos si no se han firmado).|  
+|SQL_REAL|14 (un signo, 7 dígitos, un separador decimal, la letra *E*, un signo y 2 dígitos).|  
+|SQL_FLOAT SQL_DOUBLE|24 (un signo, 15 dígitos, un separador decimal, la letra *E*, un signo y 3 dígitos).|  
+|Todos los tipos binarios [a]|La longitud definida o máxima (para tipos de variable) de la columna veces el valor 2. (Cada byte binario se representa con un número hexadecimal de 2 dígitos).|  
+|SQL_TYPE_DATE|10 (una fecha con el formato *AAAA-MM-DD*).|  
+|SQL_TYPE_TIME|8 (una hora con el formato *HH: mm: SS*)<br /><br /> O bien<br /><br /> 9 + *s* (una hora con el formato *HH: mm: SS*[. FFF...], donde *s* es la precisión de las fracciones de segundo).|  
+|SQL_TYPE_TIMESTAMP|19 (para una marca de tiempo en el formato *AAAA-MM-DD HH: mm: SS* )<br /><br /> O bien<br /><br /> 20 + *s* (para una marca de tiempo en el formato *AAAA-MM-DD HH: mm: SS*[. FFF...], donde *s* es la precisión de las fracciones de segundo).|  
+|Todos los tipos de datos de intervalo|Vea [longitud del tipo de datos de intervalo](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
+|SQL_GUID|36 (número de caracteres en el formato *aaaaaaaa-bbbb-CCCC-dddd-eeeeeeeeeeee*|  
   
- [a] si el controlador no puede determinar la longitud de columna o parámetro de tipos de variables, devolverá SQL_NO_TOTAL.
+ [a] si el controlador no puede determinar la longitud de la columna o el parámetro de los tipos de variable, devuelve SQL_NO_TOTAL.

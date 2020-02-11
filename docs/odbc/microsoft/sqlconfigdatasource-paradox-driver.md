@@ -14,33 +14,33 @@ ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33cc778d921b90a460dab6bda352fd7627d2cf7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054070"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (controlador de Paradox)
 > [!NOTE]  
->  En este tema se proporciona información específica del controlador de Paradox. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  En este tema se proporciona información específica del controlador de Paradox. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- El **SQLConfigDataSource** función que se usa para agregar, modificar o eliminar un origen de datos usa dinámicamente las siguientes palabras clave.  
+ La función **SQLConfigDataSource** que se utiliza para agregar, modificar o eliminar un origen de datos utiliza de forma dinámica las siguientes palabras clave.  
   
 |Palabra clave|Descripción|  
 |-------------|-----------------|  
-|COLLATINGSEQUENCE|La secuencia en la que se ordenan los campos.<br /><br /> Cuando se usa el controlador de Paradox, la secuencia puede ser ASCII (valor predeterminado), internacional, sueco / finlandés o noruego danés.<br /><br /> Esto establece la misma opción como **secuencia de intercalación** en el cuadro de diálogo programa de instalación.|  
-|DBQ|El nombre del archivo de base de datos.<br /><br /> Esto establece la misma opción como **base de datos** en el cuadro de diálogo programa de instalación.|  
-|VALOR DE ESTA OPCIÓN|La especificación de ruta de acceso al directorio.|  
-|DESCRIPTION|Una descripción de los datos del origen de datos.<br /><br /> Esto establece la misma opción como **descripción** en el cuadro de diálogo programa de instalación.|  
-|DRIVER|La especificación de ruta de acceso a la DLL del controlador.|  
-|DRIVERID|Un identificador entero para el controlador.<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (paradox 4.x)<br /><br /> 538 (paradox 5.x)|  
-|EXCLUSIVO|Determina si la base de datos se abrirá en modo exclusivo (obtengan acceso a solo un usuario a la vez) o modo (obtengan acceso a más de un usuario a la vez) compartido. Puede ser true (modo exclusivo) o false (modo compartido).<br /><br /> Esto establece la misma opción como **exclusivo** en el cuadro de diálogo programa de instalación.|  
-|FIL|Archivo tipo Paradox 3.x, Paradox 4.x o Paradox 5.x|  
-|TIPO DE ARCHIVO|Tipo de archivo para el controlador de texto (texto).|  
-|PAGETIMEOUT|Especifica el período de tiempo, en décimas de segundo, que permanece una página (si no usa) en el búfer antes de eliminarse. El valor predeterminado es 600 décimas de segundo (60 segundos). Tenga en cuenta que esta opción se aplica a todos los orígenes de datos que usan el controlador ODBC.<br /><br /> Esto establece la misma opción como **Page Timeout** en el cuadro de diálogo programa de instalación.|  
-|PARADOXNETPATH|La ruta de acceso completa del directorio que contiene una base de datos de bloqueo de Paradox, ya que contiene el archivo PDOXUSRS.net (en 4 Paradox. *x*) o Paradox.NET (en Paradox 5. *x*). Si el directorio no contiene uno de estos archivos, el controlador de Paradox creará uno. Para obtener información acerca de estos archivos, consulte la documentación de Paradox.<br /><br /> Antes de que se puede seleccionar un directorio de red, debe especificarse un nombre de usuario Paradox.<br /><br /> Esto establece la misma opción como **Seleccionar directorio de red** en el cuadro de diálogo programa de instalación.|  
-|PARADOXNETSTYLE|Para el controlador de Paradox, la red acceder a estilo que se usará al obtener acceso a datos de Paradox: "3.x" para Paradox 3. *x* o "4.x" para Paradox 4. *x* o 5. *x*. Puede establecerse en "3.x" o "4.x" si la versión 4 de Paradox. *x* o 5. *x*; si la versión 3 de Paradox. *x*, el estilo debe ser "3.x".<br /><br /> Esto establece la misma opción como **estilo neto** en el cuadro de diálogo programa de instalación.|  
-|PARADOXUSERNAME|Para el controlador de Paradox, el nombre de usuario Paradox.<br /><br /> Esto establece la misma opción como **nombre de usuario** en el cuadro de diálogo programa de instalación.|  
-|PWD|La contraseña.<br /><br /> Esto es una palabra clave opcional y nunca se escribirán en el archivo por el controlador. Se utiliza en una llamada a **SQLDriverConnect** frente a los archivos protegidos por contraseña de Paradox. La contraseña utilizada será válida siempre que se abre una tabla. Si no se pasa ninguna contraseña en la cadena de conexión, no se establece ninguna contraseña para esa tabla. Si las tablas tienen contraseñas diferentes, más de uno no se puede abrir en la misma sesión, ni pueden combinarse las tablas.|  
-|READONLY|TRUE para que el archivo de solo lectura. FALSE para que el archivo no sea de sólo lectura.<br /><br /> Esto establece la misma opción como **de sólo lectura** en el cuadro de diálogo programa de instalación.|  
-|SUBPROCESOS|El número de subprocesos en segundo plano para el motor para usar. Este valor es 3 y no se puede cambiar.<br /><br /> Esto establece la misma opción como **subprocesos** en el cuadro de diálogo programa de instalación.|
+|COLLATINGSEQUENCE|Secuencia en la que se ordenan los campos.<br /><br /> Cuando se usa el controlador de Paradox, la secuencia puede ser ASCII (valor predeterminado), internacional, Sueco-Finés o noruego-danés.<br /><br /> Esto establece la misma opción que la **secuencia de intercalación** en el cuadro de diálogo de instalación.|  
+|DBQ|Nombre del archivo de base de datos.<br /><br /> Esto establece la misma opción que la **base de datos** en el cuadro de diálogo de configuración.|  
+|DEFAULTDIR|Especificación de la ruta de acceso al directorio.|  
+|Description|Descripción de los datos del origen de datos.<br /><br /> Esto establece la misma opción que la **Descripción** en el cuadro de diálogo de configuración.|  
+|DRIVER|Especificación de la ruta de acceso al archivo DLL del controlador.|  
+|DRIVERID|IDENTIFICADOR entero para el controlador.<br /><br /> 26 (Paradox 3. x)<br /><br /> 282 (Paradox 4. x)<br /><br /> 538 (Paradox 5. x)|  
+|ÚNICO|Determina si la base de datos se abrirá en modo exclusivo (a la que accede solo un usuario a la vez) o el modo compartido (al que tiene acceso más de un usuario a la vez). Puede ser true (modo exclusivo) o false (modo compartido).<br /><br /> Esto establece la misma opción que **exclusiva** en el cuadro de diálogo de instalación.|  
+|FIL|Tipo de archivo Paradox 3. x, Paradox 4. x o Paradox 5. x|  
+|FILETYPE|Tipo de archivo del controlador de texto (texto).|  
+|PAGETIMEOUT|Especifica el período de tiempo, en décimas de segundo, que una página (si no se usa) permanece en el búfer antes de quitarse. El valor predeterminado es 600 décimas de segundo (60 segundos). Tenga en cuenta que esta opción se aplica a todos los orígenes de datos que utilizan el controlador ODBC.<br /><br /> Esto establece la misma opción que el **tiempo de espera de página** en el cuadro de diálogo de instalación.|  
+|PARADOXNETPATH|La ruta de acceso completa del directorio que contiene una base de datos de bloqueo de Paradox, ya que contiene el archivo PDOXUSRS.net (en Paradox 4.* x*) o el archivo Paradox.net (en Paradox 5.* x*). Si el directorio no contiene uno de estos archivos, el controlador de Paradox crea uno. Para obtener información acerca de estos archivos, vea la documentación de Paradox.<br /><br /> Antes de que se pueda seleccionar un directorio de red, debe especificarse un nombre de usuario de Paradox.<br /><br /> Esto establece la misma opción que **seleccionar directorio de red** en el cuadro de diálogo de instalación.|  
+|PARADOXNETSTYLE|Para el controlador de Paradox, el estilo de acceso a la red que se va a usar al obtener acceso a los datos de Paradox: "3. x" para Paradox 3. *x* o "4. x" para Paradox 4. *x* o 5. *x*. Se puede establecer en "3. x" o "4. x" si la versión es Paradox 4. *x* o 5. *x*; Si la versión es Paradox 3. *x*, el estilo debe ser "3. x".<br /><br /> Esto establece la misma opción que el **estilo net** en el cuadro de diálogo de instalación.|  
+|PARADOXUSERNAME|Para el controlador de Paradox, el nombre de usuario de Paradox.<br /><br /> Esto establece la misma opción que el **nombre de usuario** en el cuadro de diálogo de instalación.|  
+|PWD|La contraseña.<br /><br /> Esta es una palabra clave opcional y el controlador nunca lo escribirá en el archivo. Se utiliza en una llamada a **SQLDriverConnect** contra archivos de Paradox protegidos con contraseña. La contraseña utilizada será válida cada vez que se abra una tabla. Si no se pasa ninguna contraseña en la cadena de conexión, no se establece ninguna contraseña para esa tabla. Si las tablas tienen contraseñas diferentes, no se puede abrir más de una en la misma sesión, ni se pueden combinar las tablas.|  
+|READONLY|TRUE para hacer que el archivo sea de solo lectura; FALSE para que el archivo no sea de solo lectura.<br /><br /> Esto establece la misma opción que **solo lectura** en el cuadro de diálogo de instalación.|  
+|THREADPOOL|Número de subprocesos en segundo plano que va a usar el motor. Este valor es 3 y no se puede cambiar.<br /><br /> Esto establece la misma opción que los **subprocesos** en el cuadro de diálogo de instalación.|

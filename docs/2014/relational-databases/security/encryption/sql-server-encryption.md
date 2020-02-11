@@ -15,10 +15,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f2aa6c25f8e8741308ff8f8b5df93cb2af67ad91
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957101"
 ---
 # <a name="sql-server-encryption"></a>Cifrado de SQL Server
@@ -39,14 +39,14 @@ ms.locfileid: "74957101"
  [Cifrado de datos transparente &#40;TDE&#41;](transparent-data-encryption.md)  
  Información general sobre cómo cifrar datos de forma transparente.  
   
- [SQL Server y claves de cifrado de base de datos &#40;Motor de base de datos&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
+ [SQL Server y claves de cifrado de base de datos &#40;motor de base de datos&#41;](sql-server-and-database-encryption-keys-database-engine.md)  
  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], las claves de cifrado incluyen una combinación de claves públicas, privadas y simétricas que se utilizan para proteger la información confidencial. En esta sección se explica cómo implementar y administrar las claves de cifrado.  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Protección de SQL Server](../securing-sql-server.md)  
+ [Proteger SQL Server](../securing-sql-server.md)  
  Información general sobre el modo de proteger la plataforma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y cómo trabajar con los usuarios y los objetos protegibles.  
   
- [Funciones criptográficas &#40;Transact-SQL&#41;](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
+ [Funciones de cifrado &#40;Transact-SQL&#41;](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
  Información sobre el modo de implementar las funciones criptográficas.  
   
  [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql)  
@@ -58,16 +58,16 @@ ms.locfileid: "74957101"
  [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
  Información sobre cómo utilizar una clave asimétrica para cifrar datos.  
   
- [ENCRYPTBYCERT, &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbycert-transact-sql)  
+ [ENCRYPTBYCERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbycert-transact-sql)  
  Información sobre cómo utilizar un certificado para cifrar datos.  
   
 ## <a name="external-resources"></a>Recursos externos  
  [10 pasos para SQL Server la seguridad 2005](https://www.itprotoday.com/sql-server/10-steps-sql-server-2005-security)  
  Información actual sobre la seguridad en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Véase también  
- [Sys. key_encryptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
- [SQL Server y claves de cifrado de base de datos &#40;Motor de base de datos&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
- [Copia de seguridad y restauración de claves de cifrado de Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+## <a name="see-also"></a>Consulte también  
+ [sys.key_encryptions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
+ [SQL Server y claves de cifrado de base de datos &#40;motor de base de datos&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

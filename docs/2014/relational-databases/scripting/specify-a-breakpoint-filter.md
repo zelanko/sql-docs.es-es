@@ -13,23 +13,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9759134504c7b55f5008783a2e6c3bd9ebf1755
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243218"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Especificar un filtro del punto de interrupción
   Un filtro del punto de interrupción limita el punto de interrupción de manera que solo actúe en los equipos, procesos del sistema operativo y subprocesos especificados. Los filtros del punto de interrupción suelen utilizarse al depurar aplicaciones en paralelo.  
   
-##  <a name="BKMK_ActionConsiderations"></a>Consideraciones de filtro  
+##  <a name="BKMK_ActionConsiderations"></a> Consideraciones de filtrado  
  Los filtros del punto de interrupción no suelen utilizarse con el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] porque los scripts y los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] no son aplicaciones en paralelo.  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>Para especificar un filtro del punto de interrupción  
   
 1.  En la ventana del editor, haga clic con el botón derecho en el glifo de punto de interrupción y, después, haga clic en **Filtrar** en el menú contextual.  
   
-     O bien:  
+     O bien  
   
      En la ventana **Puntos de interrupción** , haga clic con el botón derecho en el glifo de punto de interrupción y, después, haga clic en **Filtrar** en el menú contextual.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "75243218"
   
 3.  Haga clic en **Aceptar** para implementar los cambios o en **Cancelar** para salir sin aplicar los cambios.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Especificar una condición de punto de interrupción](specify-a-breakpoint-condition.md)   
  [Especificar un número de llamadas](specify-a-hit-count.md)   
- [Especificar una acción de punto de interrupción](specify-a-breakpoint-action.md)  
+ [Especificar una acción del punto de interrupción](specify-a-breakpoint-action.md)  

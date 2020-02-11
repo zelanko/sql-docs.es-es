@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d41aab8066b4ce1ee4e45fa9c363e60479868a5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243037"
 ---
 # <a name="quickwatch-dialog-box"></a>Cuadro de diálogo Inspección rápida
@@ -45,40 +45,40 @@ ms.locfileid: "75243037"
   
 2.  Haga clic en **Actualizar**.  
   
- **Para agregar la expresión de inspección rápida a un ventana Inspección**  
+ **Para agregar una expresión de Inspección rápida a la ventana Inspección**  
   
 -   Haga clic en **Agregar inspección**.  
   
- **Para cambiar el valor de la expresión Inspección rápida**  
+ **Para cambiar el valor de una expresión de Inspección rápida**  
   
 -   Haga clic con el botón derecho en la expresión y, después, seleccione **Editar valor**.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Opciones  
  **Lista de expresiones**  
  Muestra la expresión seleccionada actualmente. La lista desplegable contiene un conjunto de expresiones que puede seleccionar para mostrarse. Las expresiones de la lista son las que están disponibles en el ámbito del marco de pila que está seleccionado actualmente en la ventana **Pila de llamadas** . Para mostrar una expresión diferente, escríbala o selecciónela en la lista. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] admite las expresiones siguientes: variables, parámetros y funciones de sistema cuyos nombres comienzan por @@.  
   
- **Cuadrícula de valores**  
+ **Cuadrícula Valor**  
  Muestra las propiedades de la expresión que se está inspeccionando.  
   
- **Name**  
+ **Nombre**  
  Expresión [!INCLUDE[tsql](../../includes/tsql-md.md)] que se va a observar.  
   
- **Value**  
+ **Valor**  
  Muestra el valor que está asignado actualmente a la expresión. Se muestra un espacio en blanco cuando la expresión no tiene ningún valor en este momento.  
   
  Si la longitud de una expresión es mayor que el ancho de la columna **Valor** , una información sobre herramientas muestra el valor completo al mover el puntero sobre la celda **Valor** para esa expresión.  
   
  Un icono de lupa en una celda **Valor** indica que el visualizador del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] está disponible. En la lista, puede especificar **Visualizador de texto**, **Visualizador XML**o **Visualizador HTML**. Para iniciar un visualizador del depurador, haga clic en el icono de lupa. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] abre un cuadro de diálogo que muestra los datos en un formato adecuado al tipo de datos.  
   
- **Automáticamente**  
+ **Tipo**  
  Muestra el tipo de datos de la expresión.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Depurador de Transact-SQL](transact-sql-debugger.md)   
- [Información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
- [Ventana Inspección](transact-sql-debugger-watch-window.md)   
- [Ventana variables locales](transact-sql-debugger-locals-window.md)   
- [Ventana pila de llamadas](transact-sql-debugger-call-stack-window.md)   
- [Expresiones &#40;&#41;de Transact-SQL](/sql/t-sql/language-elements/expressions-transact-sql)  
+ [Ver información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
+ [Ventana de inspección](transact-sql-debugger-watch-window.md)   
+ [Ventana de locales](transact-sql-debugger-locals-window.md)   
+ [Ventana de pila de llamadas](transact-sql-debugger-call-stack-window.md)   
+ [Expresiones &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/expressions-transact-sql)  
   
   

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 999fd3f6caca13ecd768a9560915c53c732af27c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258533"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831546"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar un seguimiento en Asistente para experimentación con bases de datos
 
@@ -133,7 +133,7 @@ Si ve un error al ejecutar una captura de seguimiento, confirme lo siguiente:
 
 - El nombre del equipo que ejecuta SQL Server es válido. Para confirmar, intente conectarse al equipo que ejecuta SQL Server mediante SQL Server Management Studio (SSMS).
 - La configuración del firewall no bloquea las conexiones con el equipo que ejecuta SQL Server.
-- El usuario tiene los permisos que se enumeran en las [preguntas más frecuentes sobre la reproducción](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)de publicaciones de blog.
+- El usuario tiene los permisos que se enumeran en las [preguntas más frecuentes sobre la reproducción](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
 - El nombre de seguimiento no sigue la Convención estándar de sustitución\_incremental (Capture 1). En su lugar, pruebe nombres de seguimiento\_como Capture 1A o Capture1.
 
 A continuación se muestran algunos posibles errores que podrían aparecer y soluciones para resolverlos:
@@ -147,6 +147,6 @@ A continuación se muestran algunos posibles errores que podrían aparecer y sol
 
 Si ve algún otro error con la etiqueta *código de error de SQL*, consulte [motor de base de datos errores](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) para obtener descripciones detalladas.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - Para obtener información sobre cómo configurar las herramientas de Distributed Replay en SQL Server antes de reproducir un seguimiento capturado, consulte [configuración de Distributed Replay para Asistente para experimentación con bases de datos](database-experimentation-assistant-configure-replay.md).

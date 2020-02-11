@@ -18,13 +18,13 @@ ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 20eab8076d88941080898a21cb0d82cc1c667359
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995489"
 ---
-# <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
+# <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Vuelve a sincronizar todos los trabajos multiservidor del servidor de destino especificado.  
@@ -40,7 +40,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server_name = ] 'server'` El nombre del servidor para volver a sincronizar. *server* es de tipo **sysname**y no tiene ningún valor predeterminado. Si **todas** se especifica, se vuelven a sincronizar todos los servidores de destino.  
+`[ @server_name = ] 'server'`Nombre del servidor que se va a volver a sincronizar. *Server* es de **tipo sysname**y no tiene ningún valor predeterminado. Si se especifica **All** , se vuelven a sincronizar todos los servidores de destino.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -48,8 +48,8 @@ sp_resync_targetserver
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Informa del resultado de **sp_post_msx_operation** acciones.  
   
-## <a name="remarks"></a>Comentarios  
- **sp_resync_targetserver** elimina el conjunto actual de instrucciones para el servidor de destino y expone un nuevo conjunto para el servidor de destino descargar. El nuevo conjunto está compuesto de la instrucción que va a eliminar todos los trabajos multiservidor, seguida de una inserción por cada trabajo que haya actualmente en el servidor de destino.  
+## <a name="remarks"></a>Observaciones  
+ **sp_resync_targetserver** elimina el conjunto actual de instrucciones para el servidor de destino y envía un nuevo conjunto para que lo descargue el servidor de destino. El nuevo conjunto está compuesto de la instrucción que va a eliminar todos los trabajos multiservidor, seguida de una inserción por cada trabajo que haya actualmente en el servidor de destino.  
   
 ## <a name="permissions"></a>Permisos  
  Los permisos de ejecución para este procedimiento corresponden de forma predeterminada a los miembros del rol fijo de servidor **sysadmin** .  
@@ -66,9 +66,9 @@ EXEC dbo.sp_resync_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_help_downloadlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
- [sp_post_msx_operation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_help_downloadlist &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
+ [sp_post_msx_operation &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

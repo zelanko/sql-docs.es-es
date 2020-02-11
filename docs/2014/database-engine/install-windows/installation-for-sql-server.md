@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228412"
 ---
 # <a name="installation-for-sql-server-2014"></a>Instalación de SQL Server 2014
@@ -55,7 +55,7 @@ ms.locfileid: "75228412"
 ## <a name="in-this-section"></a>En esta sección  
  Independientemente de si utiliza el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el símbolo del sistema para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el programa de instalación incluirá los siguientes pasos:  
   
- [Planeación de una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  
+ [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)  
  Describe cómo preparar el equipo para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Requisitos de hardware y software  
@@ -64,16 +64,16 @@ ms.locfileid: "75228412"
   
 -   Consideraciones relativas a la seguridad  
   
- [Instalación de SQL Server 2014](install-sql-server.md)  
+ [Instalar SQL Server 2014](install-sql-server.md)  
  Describe las opciones de instalación para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Actualización a SQL Server 2014](upgrade-sql-server.md)  
+ [Actualizar a SQL Server 2014](upgrade-sql-server.md)  
  Describe las opciones para actualizar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Desinstalar SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)  
  Describe los procedimientos para desinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
- [SQL Server instalación de clúster de conmutación por error](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
+ [Instalación de clúster de conmutación por error de SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  Esta sección de la documentación del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica cómo instalar y configurar el clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  [Instalar las características de SQL Server 2014 BI](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
@@ -90,7 +90,7 @@ ms.locfileid: "75228412"
  [Instalación de los ejemplos y las bases de datos de ejemplo de SQL Server](https://sqlserversamples.codeplex.com/)  
  Describe cómo instalar y configurar ejemplos y bases de datos de ejemplo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Novedades de SQL Server instalación](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
  [Requisitos de hardware y software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

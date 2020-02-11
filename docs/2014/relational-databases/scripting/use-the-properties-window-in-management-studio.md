@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ddcb099e81ef99ff3a2f0d0cf7bbf23adc0bc16b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242972"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Utilizar la ventana Propiedades en Management Studio
@@ -50,7 +50,7 @@ ms.locfileid: "75242972"
   
 4.  En la pestaña **Plan de ejecución** del Editor de consultas de SQL, haga clic en los iconos de los operadores para ver información sobre éstos en la ventana Propiedades.  
   
-## <a name="see-also"></a>Véase también  
- [&#40;Management Studio de la ventana Propiedades&#41;](../../ssms/properties-window-management-studio.md)  
+## <a name="see-also"></a>Consulte también  
+ [Ventana Propiedades &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
   
   

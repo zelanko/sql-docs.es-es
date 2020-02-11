@@ -33,10 +33,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b846628a77f6e11f864679d51fd62fc783fb2c7b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258291"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT: GROUP BY (Transact-SQL)
@@ -46,7 +46,7 @@ Cláusula de la instrucción SELECT que divide el resultado de la consulta en gr
   
 ## <a name="syntax"></a>Sintaxis  
 
- ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ```  
 -- Syntax for SQL Server and Azure SQL Database   
@@ -354,7 +354,7 @@ La cláusula GROUP BY admite todas las características GROUP BY incluidas en el
 |Característica|SQL Server Integration Services|Nivel de compatibilidad 100 o superior con SQL Server|SQL Server 2008 o posterior con el nivel de compatibilidad 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Agregados DISTINCT|No se admite en WITH CUBE ni en WITH ROLLUP.|Se admite en WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE o ROLLUP.|Igual que el nivel de compatibilidad 100.|  
-|Función definida por el usuario con un nombre CUBE o ROLLUP en la cláusula GROUP BY|Se admite la función definida por el usuario **dbo.cube(**_arg1_**,**_...argN_**)** o **dbo.rollup(**_arg1_**,**..._argN_**)** en la cláusula GROUP BY.<br /><br /> Por ejemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|No se admite la función definida por el usuario **dbo.cube (**_arg1_**,**...argN **)** o **dbo.rollup(** arg1 **,**_...argN_**)** en la cláusula GROUP BY.<br /><br /> Por ejemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Se devuelve un mensaje de error que indica lo siguiente: "Sintaxis incorrecta cerca de la palabra clave "cube"&#124;"rollup"."<br /><br /> Para evitar este problema, reemplace `dbo.cube` por `[dbo].[cube]` o `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> Se admite el siguiente ejemplo: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Se admite la función definida por el usuario **dbo.cube (**_arg1_**,**_...argN_) o **dbo.rollup(**_arg1_**,**_...argN_**)** en la cláusula GROUP BY.<br /><br /> Por ejemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Función definida por el usuario con un nombre CUBE o ROLLUP en la cláusula GROUP BY|Se admite la función definida por el usuario **dbo.cube(** _arg1_ **,** _...argN_ **)** o **dbo.rollup(** _arg1_ **,** ..._argN_ **)** en la cláusula GROUP BY.<br /><br /> Por ejemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|No se admite la función definida por el usuario **dbo.cube (** _arg1_ **,** ...argN **)** o **dbo.rollup(** arg1 **,** _...argN_ **)** en la cláusula GROUP BY.<br /><br /> Por ejemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Se devuelve un mensaje de error que indica lo siguiente: "Sintaxis incorrecta cerca de la palabra clave "cube"&#124;"rollup"."<br /><br /> Para evitar este problema, reemplace `dbo.cube` por `[dbo].[cube]` o `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> Se admite el siguiente ejemplo: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Se admite la función definida por el usuario **dbo.cube (** _arg1_ **,** _...argN_) o **dbo.rollup(** _arg1_ **,** _...argN_ **)** en la cláusula GROUP BY.<br /><br /> Por ejemplo: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|No compatible|Compatible|Compatible|  
 |CUBE|No compatible|Compatible|No compatible|  
 |ROLLUP|No compatible|Compatible|No compatible|  

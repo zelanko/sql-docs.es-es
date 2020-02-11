@@ -13,27 +13,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4403e542125918bb5fd738077ebdcc6182201a12
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242049"
 ---
 # <a name="manage-bookmarks"></a>Administrar marcadores
-  Mientras trabaja en un editor de código, la ventana **marcadores** permite crear vínculos a líneas específicas de código dentro del documento. Puede abrir esta ventana desde el menú **Ver** .  
+  Cuando trabaja en un editor de código, la ventana **Marcadores** permite crear vínculos a líneas específicas de código en el documento. Puede abrir esta ventana desde el menú **Ver** .  
   
  Para crear y navegar a través de los marcadores, haga clic en los botones que se ubican en la barra de herramientas del **Editor de texto** y en la parte superior de la ventana **Marcadores** . Puede agregar y quitar marcadores, activarlos o deshabilitarlos, y organizarlos en carpetas. También están disponibles algunos comandos desde el menú contextual de la ventana **Marcadores** . Para agregar o quitar un marcador, coloque el punto de inserción en la línea deseada del editor y haga clic en **Cambiar a un marcador de la línea actual**. Para activar un marcador, active su casilla en la ventana **Marcadores** ; para deshabilitarlo (pero no quitarlo), desactive la casilla.  
   
 ## <a name="text-editor-toolbar"></a>Barra de herramientas del Editor de texto  
  Cuando un documento se abre en el editor, se habilitan los siguientes botones en la barra de herramientas del **Editor de texto** . Para mostrar la barra de herramientas del Editor de texto cuando se encuentra en el **Editor de consultas** , seleccione **Barras de herramientas** en el menú **Ver**y luego haga clic en **Editor de texto**.  
   
- **Alternar un marcador en la línea actual**  
+ **Cambiar a un marcador de la línea actual**  
  Agrega o elimina un marcador en la línea seleccionada del documento en el editor activo. No modifica la línea de código marcada.  
   
- **Desplace el símbolo de intercalación al marcador anterior**  
+ **Mover el carácter de intercalación al marcador anterior**  
  Selecciona el marcador anterior que se encuentra habilitado en la ventana **Marcadores** . Cuando se llega al primer marcador, se desplazará hasta el último. Cuado sea necesario, abra el archivo donde se encuentre el marcador seleccionado en el editor. Desplace el documento hasta la línea marcada y coloque allí el punto de inserción.  
   
- **Desplace el carácter de intercalación al siguiente marcador**  
+ **Mover el carácter de intercalación al siguiente marcador**  
  Selecciona el marcador siguiente que se encuentra habilitado en la ventana **Marcadores** . Cuando se llega al último marcador, se desplazará hasta el primero. Cuado sea necesario, abra el archivo donde se encuentre el marcador seleccionado en el editor. Desplace el documento hasta la línea marcada y coloque allí el punto de inserción.  
   
  **Borrar todos los marcadores del documento actual**  
@@ -45,7 +45,7 @@ ms.locfileid: "75242049"
 ## <a name="bookmarks-window"></a>Ventana Marcadores  
  Para organizar los marcadores, cree carpetas de marcadores en la ventana **Marcadores** . Arrastre y coloque los marcadores en las carpetas. Los siguientes botones están disponibles en la parte superior de la ventana **Marcadores** .  
   
- **Alternar un marcador en la línea actual.**  
+ **Cambiar a un marcador de la línea actual.**  
  Agrega o elimina un marcador en la línea seleccionada del documento en el editor activo. No modifica la línea de código marcada.  
   
  **Nueva carpeta**  
@@ -54,19 +54,19 @@ ms.locfileid: "75242049"
 > [!TIP]  
 >  En una extenso archivo de código, resulta útil organizar los marcadores en carpetas relacionadas con las tareas. Al seleccionar una carpeta se habilitan los botones **Marcador anterior en carpeta** y **Marcador siguiente en carpeta** .  
   
- **Desplace el símbolo de intercalación al marcador anterior**  
+ **Mover el carácter de intercalación al marcador anterior**  
  Selecciona el marcador anterior que se encuentra habilitado en la ventana **Marcadores** . Cuando se llega al primer marcador, se desplazará hasta el último. Cuado sea necesario, abra el archivo donde se encuentre el marcador seleccionado en el editor. Desplace el documento hasta la línea marcada y coloque allí el punto de inserción.  
   
- **Desplace el carácter de intercalación al siguiente marcador**  
+ **Mover el carácter de intercalación al siguiente marcador**  
  Selecciona el marcador siguiente que se encuentra habilitado en la ventana **Marcadores** . Cuando se llega al último marcador, se desplazará hasta el primero. Cuado sea necesario, abra el archivo donde se encuentre el marcador seleccionado en el editor. Desplace el documento hasta la línea marcada y coloque allí el punto de inserción.  
   
- **Desplace el carácter de intercalación al marcador anterior de la carpeta actual**  
+ **Mover el carácter de intercalación al marcador anterior de la carpeta actual**  
  Selecciona el marcador anterior que se encuentra habilitado en la misma carpeta de la ventana **Marcadores** . Cuando se llega al primer marcador, se desplazará hasta el último de esa carpeta. Cuado sea necesario, abra el archivo donde se encuentre el marcador seleccionado en el editor. Desplace el documento hasta la línea marcada y coloque allí el punto de inserción.  
   
- **Desplace el carácter de intercalación al siguiente marcador de la carpeta actual**  
+ **Mover el carácter de intercalación al siguiente marcador de la carpeta actual**  
  Selecciona el siguiente marcador que se encuentra habilitado en la misma carpeta de la ventana **Marcadores** . Cuando se llega al último marcador, se desplazará hasta el primero de esa carpeta. Cuado sea necesario, abra el archivo donde se encuentre el marcador seleccionado en el editor. Desplace el documento hasta la línea marcada y coloque allí el punto de inserción.  
   
- **Deshabilitar/habilitar todos los marcadores**  
+ **Deshabilitar/Habilitar todos los marcadores**  
  Activa o desactiva las casillas de todos los marcadores de la ventana **Marcadores** . No elimina los marcadores ni modifica las líneas de código marcadas.  
   
  **Eliminar**  
@@ -84,11 +84,11 @@ ms.locfileid: "75242049"
  **Cambiar el nombre**  
  Permite asignar un nuevo nombre para mostrar a una carpeta de marcadores.  
   
- **Deshabilitar/habilitar marcador**  
+ **Deshabilitar/Habilitar marcador**  
  Activa o desactiva la casilla del marcador seleccionado de la ventana **Marcadores** . No elimina el marcador ni modifica la línea de código marcada.  
   
- **Deshabilitar/habilitar todos los marcadores**  
+ **Deshabilitar/Habilitar todos los marcadores**  
  Activa o desactiva las casillas de todos los marcadores de la ventana **Marcadores** . No elimina los marcadores ni modifica las líneas de código marcadas.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

@@ -15,10 +15,10 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557920"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>Adjuntar un dominio o un dominio compuesto a datos de referencia: Data Quality Services (DQS)
@@ -39,10 +39,10 @@ ms.locfileid: "75557920"
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
  Es necesario configurar [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para utilizar los servicios de datos de referencia. Vea [Configurar DQS para usar datos de referencia](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
 #### <a name="permissions"></a>Permisos  
  Debe disponer del rol dqs_kb_editor en la base de datos DQS_MAIN para asignar dominios a datos de referencia.  
@@ -57,7 +57,7 @@ ms.locfileid: "75557920"
   
 4.  En la pantalla **Administración de dominios** , haga clic en el icono **Crear un dominio** para crear un dominio. Cree los cuatro dominios siguientes: **Address line**, **City**, **State**y **Zip**.  
   
-5.  Haga clic en el icono **Crear un dominio compuesto** para crear un dominio compuesto. En el cuadro de diálogo **Crear un dominio compuesto** , escriba **Address Verification** en el cuadro **Nombre de dominio compuesto** e incluya en el dominio compuesto todos los dominios creados en el paso 3. Haga clic en **Aceptar**.  
+5.  Haga clic en el icono **Crear un dominio compuesto** para crear un dominio compuesto. En el cuadro de diálogo **Crear un dominio compuesto** , escriba **Address Verification** en el cuadro **Nombre de dominio compuesto** e incluya en el dominio compuesto todos los dominios creados en el paso 3. Haga clic en **OK**.  
   
 6.  En el panel **Dominio** del lado izquierdo, seleccione el dominio compuesto haciendo clic en **Address Verification**y, a continuación, haga clic en la pestaña **Datos de referencia** situada en el lado derecho.  
   
@@ -91,8 +91,8 @@ ms.locfileid: "75557920"
 ##  <a name="FollowUp"></a>Seguimiento: después de asignar un dominio a datos de referencia  
  Cree un proyecto de calidad de datos y ejecute la actividad de limpieza en los datos de origen que incluyan direcciones de EE. UU., comparándolos con la base de conocimiento creada en este tema. Vea [Limpiar datos mediante el conocimiento de datos de referencia &#40;externo&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Data Services de referencia en DQS](../data-quality-services/reference-data-services-in-dqs.md)   
- [Limpieza de datos](../data-quality-services/data-cleansing.md)  
+ [Data Cleansing](../data-quality-services/data-cleansing.md)  
   
   

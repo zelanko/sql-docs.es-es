@@ -28,10 +28,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3526595d169f5283f849017f1fabec24f33d553c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255991"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Actualizar datos con diagramas de actualización XML (SQLXML 4.0)
@@ -93,7 +93,7 @@ ms.locfileid: "75255991"
   
 -   La mayoría de los ejemplos utilizan la base de datos de ejemplo AdventureWorks. Todas las actualizaciones se aplican a las tablas de esta base de datos. Puede restaurar la base de datos AdventureWorks.  
   
-### <a name="a-updating-a-record"></a>a. Actualizar un registro  
+### <a name="a-updating-a-record"></a>A. Actualizar un registro  
  El siguiente diagrama de actualización actualiza el apellido del empleado a Fuller en la tabla Person.Contact de la base de datos AdventureWorks. El diagrama de actualización no especifica ningún esquema de asignación, por lo que utilizará la asignación predeterminada.  
   
 ```  
@@ -157,7 +157,7 @@ ms.locfileid: "75255991"
   
      Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="c-specifying-multiple-before-and-after-blocks"></a>c. Especificar varias \<antes de> y \<después de> bloques  
+### <a name="c-specifying-multiple-before-and-after-blocks"></a>C. Especificar varias \<antes de> y \<después de> bloques  
  Para evitar ambigüedades, puede escribir diagrama en el ejemplo B mediante el uso de multiple ** \<antes>** y ** \<después de>** pares de bloques. Especificar ** \<antes de>** y ** \<después de>** pares es una manera de especificar varias actualizaciones con un mínimo de confusión. Además, si cada uno de los ** \<bloques Before>** y ** \<After>** especifica como máximo un elemento, no es necesario usar el atributo **atributo updg: ID** .  
   
 > [!NOTE]  
@@ -556,7 +556,7 @@ ms.locfileid: "75255991"
   
  Para obtener más ejemplos de diagramas que usan esquemas de asignación, vea [especificar un esquema de asignación anotado en un diagrama &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Consideraciones de seguridad de diagrama &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

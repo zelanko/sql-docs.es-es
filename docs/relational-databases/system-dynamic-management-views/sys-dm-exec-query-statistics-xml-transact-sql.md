@@ -17,10 +17,10 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 35f9cdfcc40d417a6aed19a3abe0e590061b2eb7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75256015"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>Sys. dm_exec_query_statistics_xml (Transact-SQL)
@@ -38,21 +38,21 @@ sys.dm_exec_query_statistics_xml(session_id)
 *session_id*  
  Es el identificador de sesión que ejecuta el lote que se va a buscar. *session_id* es **smallint**. *session_id* se pueden obtener de los siguientes objetos de administración dinámica:  
   
--   [Sys. dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
--   [Sys. dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
+-   [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   
--   [Sys. dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
+-   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
 
 ## <a name="table-returned"></a>Tabla devuelta
 
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|Id. de la sesión. No acepta valores NULL.|
-|request_id|**Inter**|Id. de la solicitud. No acepta valores NULL.|
+|request_id|**int**|Id. de la solicitud. No acepta valores NULL.|
 |sql_handle|**varbinary (64)**|Es un token que identifica de forma única el lote o el procedimiento almacenado del que forma parte la consulta. Acepta valores NULL.|
 |plan_handle|**varbinary (64)**|Es un token que identifica de forma única un plan de ejecución de consulta para un lote que se está ejecutando actualmente. Acepta valores NULL.|
-|query_plan|**Xml**|Contiene la representación del plan de presentación en tiempo de ejecución del plan de ejecución de consultas especificado con *plan_handle* que contienen estadísticas parciales. El plan de presentación está en formato XML. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario. Acepta valores NULL.|
+|query_plan|**lenguaje**|Contiene la representación del plan de presentación en tiempo de ejecución del plan de ejecución de consultas especificado con *plan_handle* que contienen estadísticas parciales. El plan de presentación está en formato XML. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario. Acepta valores NULL.|
 
 ## <a name="remarks"></a>Observaciones
 Esta función del sistema está disponible a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] partir de SP1. Consulte KB [3190871](https://support.microsoft.com/help/3190871)
@@ -70,7 +70,7 @@ Debido a una limitación en el número de niveles anidados permitidos en el tipo
 
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>a. Examinar el plan de consulta activo y las estadísticas de ejecución de un lote en ejecución  
+### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Examinar el plan de consulta activo y las estadísticas de ejecución de un lote en ejecución  
  En el ejemplo siguiente se consulta **Sys. dm_exec_requests** para encontrar la consulta interesante y `session_id` copiar su desde la salida.  
   
 ```sql  
@@ -95,7 +95,7 @@ CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);
 GO  
 ```   
   
-## <a name="see-also"></a>Véase también
+## <a name="see-also"></a>Consulte también
   [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

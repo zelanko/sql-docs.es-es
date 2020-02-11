@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c666d02449190ca6a88ac43c96ab7aee9676be4d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242645"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQLXML no se instala en SQL Server
@@ -27,9 +27,9 @@ ms.locfileid: "75242645"
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>Comportamiento de SQLXML 4.0 SP1 con nuevos tipos de datos que usan el proveedor OLE DB de SQLOLEDB y SQL Server Native Client  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]se introdujeron los siguientes tipos de datos, que los desarrolladores que usan SQLXML pueden querer usar:  
   
--   **Posteriormente**  
+-   **Date**  
   
--   **Tiempo**  
+-   **Time**  
   
 -   **DateTime2**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75242645"
   
  Al usar SQLXML 4,0 SP1 con SQLOLEDB o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], estos tipos aparecen como cadenas para un desarrollador. SQLXML 4,0 SP1 habilitará estos cuatro nuevos tipos de datos como tipos escalares integrados cuando se usan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el proveedor de OLE DB de cliente nativo 11,0 o posterior. Hasta que descargue SQLXML 4.0 SP1, la asignación de estos tipos a tipos que no sean de cadena puede producir el truncamiento de algunos datos. Por ejemplo, la asignación de **DateTime2** a **xsd: Date** hará que los datos se trunquen a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] la precisión de **DateTime** de 3,33 milisegundos.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos de programación en SQLXML 4.0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
   
   

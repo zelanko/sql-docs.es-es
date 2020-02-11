@@ -14,20 +14,20 @@ ms.assetid: a2449dbb-1b6c-4b49-81b9-ebdddd4442fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf79d3ef813e87e785cea588cfc1d6e3eed44ee4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064991"
 ---
 # <a name="sqlallocstmt-mapping"></a>Asignación de SQLAllocStmt
-Cuando una aplicación llama **SQLAllocStmt** a través de un ODBC *3.x* controlador, la llamada a:  
+Cuando una aplicación llama a **SQLAllocStmt** a través de un controlador ODBC *3. x* , la llamada a:  
   
 ```  
 SQLAllocStmt(hdbc, phstmt)  
 ```  
   
- se asigna a **SQLAllocHandle** por el Administrador de controladores en el controlador como sigue:  
+ lo asigna el **Administrador de controladores** en el controlador de la manera siguiente:  
   
 ```  
 SQLAllocHandle(SQL_HANDLE_STMT, InputHandle, OutputHandlePtr)  

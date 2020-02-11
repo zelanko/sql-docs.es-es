@@ -28,10 +28,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a1c2ec82a539eb509950580ddea0b8164167bb1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257451"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación predeterminada de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
@@ -41,7 +41,7 @@ ms.locfileid: "75257451"
 ## <a name="examples"></a>Ejemplos  
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-default-mapping"></a>a. Especificar la asignación predeterminada  
+### <a name="a-specifying-default-mapping"></a>A. Especificar la asignación predeterminada  
  En este ejemplo, no hay ninguna anotación especificada en el esquema XSD. El ** \<elemento person. contact>** es de tipo complejo y, por lo tanto, se asigna de forma predeterminada a la tabla person. contact de la base de datos AdventureWorks. Todos los atributos (ContactID, FirstName, LastName) del elemento ** \<person. contact>** son de tipo simple y se asignan de forma predeterminada a columnas con los mismos nombres en la tabla person. contact.  
   
 ```  
@@ -146,7 +146,7 @@ ms.locfileid: "75257451"
 </ROOT>  
 ```  
   
-### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>c. Asignar un elemento XML a una columna de tipo de datos XML  
+### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Asignar un elemento XML a una columna de tipo de datos XML  
  En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El ** \<elemento Production. ProductModel>** es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. El atributo **ProductModelID** es de tipo simple y, por lo tanto, se asigna a las columnas con los mismos nombres. La única diferencia entre este y los ejemplos anteriores es que las ** \<instrucciones>** elemento se asignan a una columna que utiliza el tipo de datos **XML** mediante el tipo **xsd: anyType** .  
   
 ```  
@@ -205,9 +205,9 @@ ctions">
 </ROOT>  
 ```  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Consideraciones sobre la seguridad del esquema anotado &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [&#40;de datos XML SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
+ [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Compatibilidad con tipos de datos xml en SQLXML 4.0](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   
   

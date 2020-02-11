@@ -1,5 +1,5 @@
 ---
-title: NumericScale y Precision propiedades (VB) | Microsoft Docs
+title: Ejemplo de las propiedades NumericScale y Precision (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bf9fc4f0e96a714c8d00d2ffa9e36dea73e55fe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932053"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>Ejemplo de las propiedades NumericScale y Precision (VB)
-Este ejemplo se usa el [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) y [precisión](../../../ado/reference/ado-api/precision-property-ado.md) propiedades para mostrar la escala numérica y la precisión de los campos de la ***descuentos*** tabla de la  ***Pubs*** base de datos.  
+En este ejemplo se usan las propiedades [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) y [Precision](../../../ado/reference/ado-api/precision-property-ado.md) para mostrar la escala numérica y la precisión de los campos en la tabla de ***descuentos*** de la base de datos ***pubs*** .  
   
 ```  
 'BeginNumericScaleVB  
@@ -73,8 +73,8 @@ End Sub
 'EndNumericScaleVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
+## <a name="see-also"></a>Consulte también  
+ [Field (objeto)](../../../ado/reference/ado-api/field-object.md)   
  [NumericScale (propiedad, ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Objeto de parámetro](../../../ado/reference/ado-api/parameter-object.md)   
+ [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)   
  [Propiedad Precision (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

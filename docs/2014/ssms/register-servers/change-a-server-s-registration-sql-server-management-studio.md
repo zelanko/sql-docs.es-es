@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 05161b2c9e3266b57841ff4268f4dc64ede90434
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244648"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>Cambiar el registro de un servidor (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "75244648"
   
 2.  En el cuadro de diálogo **Editar propiedades de registro de servidor** , modifique el servidor, la información de inicio de sesión o las propiedades de conexión y, a continuación, haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Registrar servidores](register-servers.md)  
   
   

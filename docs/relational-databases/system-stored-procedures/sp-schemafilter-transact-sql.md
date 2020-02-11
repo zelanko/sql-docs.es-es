@@ -16,10 +16,10 @@ ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73633014"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "73633014"
 
   Modifica y muestra la información del esquema que se excluye al incluir tablas de Oracle aptas para su publicación.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,11 +39,11 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` es el nombre del publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)]. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'`Es el nombre del publicador que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no es de. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @schema = ] 'schema'` es el nombre del esquema. *Schema* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @schema = ] 'schema'`Es el nombre del esquema. *Schema* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @operation = ] 'operation'` es la acción que se realizará en este esquema. la *operación* es **nvarchar (4)** y puede tener uno de los valores siguientes.  
+`[ @operation = ] 'operation'`Es la acción que se va a realizar en este esquema. la *operación* es **nvarchar (4)** y puede tener uno de los valores siguientes.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -53,20 +53,20 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**equivale**|**sysname**|Es el nombre del esquema no apto para su publicación.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_schemafilter** solo se debe usar para publicadores heterogéneos.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** en el distribuidor pueden ejecutar **sp_schemafilter**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

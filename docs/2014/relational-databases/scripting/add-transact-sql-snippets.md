@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244818"
 ---
 # <a name="add-transact-sql-snippets"></a>Agregar fragmentos de código de Transact-SQL
@@ -46,7 +46,7 @@ ms.locfileid: "75244818"
   
 2.  Seleccione el menú **Herramientas** y haga clic en **Administrador de fragmentos de código**.  
   
-3.  Haga clic en el botón **Importar**.  
+3.  Haga clic en el botón **Import** (Importar).  
   
 4.  Navegue a la carpeta que contiene el fragmento de código, haga clic en el archivo .snippet y haga clic en el botón **Abrir** .  
   
@@ -106,11 +106,11 @@ ms.locfileid: "75244818"
   
 3.  Seleccione el menú **Herramientas** y haga clic en **Administrador de fragmentos de código**.  
   
-4.  Haga clic en el botón **Importar**.  
+4.  Haga clic en el botón **Import** (Importar).  
   
 5.  Navegue a la carpeta que contiene el archivo TryCatch.snippet, haga clic en el citado archivo y haga clic en el botón **Abrir** . No debe haber un fragmento de código TryCatch en la carpeta **Mis fragmentos de código** .  
   
-## <a name="see-also"></a>Véase también  
- [Insertar fragmentos de código de Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
+## <a name="see-also"></a>Consulte también  
+ [Insertar fragmentos de código de Transact-SQL para rodear](insert-surround-with-transact-sql-snippets.md)  
   
   

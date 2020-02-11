@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2fef7b88514357deb6cf0a009d12272cc3cf79a2
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74401399"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761909"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configuración de Windows Server Update Services (WSUS) en Analytics Platform System
 Estas instrucciones le guiarán por los pasos necesarios para usar el Asistente para configuración de Windows Server Update Services (WSUS) para configurar WSUS para el sistema de plataforma de análisis. Debe configurar WSUS para poder aplicar actualizaciones de software al dispositivo. WSUS ya está instalado en la máquina virtual de VMM del dispositivo.  
@@ -83,7 +83,7 @@ Para configurar WSUS, debe:
   
     #### <a name="to-update-by-using-microsoft-update"></a>Para actualizar mediante Microsoft Update  
   
-    1.  Si decide sincronizar con Microsoft Update, no es necesario realizar ningún cambio en la página **elegir servidor que precede** en la cadena. Haga clic en **Siguiente**.  
+    1.  Si decide sincronizar con Microsoft Update, no es necesario realizar ningún cambio en la página **elegir servidor que precede** en la cadena. Haga clic en **Next**.  
   
         ![WSUS - Sincronizar servidor que precede en la cadena](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -138,11 +138,14 @@ Para configurar WSUS, debe:
 8.  Elija productos.  
   
     > [!NOTE]  
-    > Si usa un servidor que precede en la cadena, es posible que no pueda elegir productos. Si esta opción no está disponible, omita este paso.  
+    > Si usa un servidor que precede en la cadena, es posible que no pueda elegir productos. Si esta opción no está disponible, omita este paso.
+
+    > [!WARNING]  
+    > Excluya las actualizaciones de SQL Server 2016.
   
     Anula la selección de todas las actualizaciones seleccionadas.  
   
-    Seleccione **Windows Server 2012 R2**y **System Center 2012 R2-Virtual Machine Manager**y, a continuación, haga clic en **siguiente**.  
+    Seleccione **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**y **System Center 2012 R2-Virtual Machine Manager**y, a continuación, haga clic en **siguiente**.  
   
 9. Elija clasificaciones.  
   
@@ -167,7 +170,7 @@ Para configurar WSUS, debe:
   
 12. Finish. (Finalizar)  
   
-    Haga clic en **Finalizar**.  
+    Haga clic en **Finalizar**  
   
 ## <a name="bkmk_WSUSGroup"></a>Agrupar los servidores de la aplicación en WSUS  
 Después de configurar WSUS para el sistema de plataforma de análisis, el siguiente paso es agrupar los servidores de la aplicación. Al agregar todos los servidores de dispositivo a un grupo, WSUS podrá aplicar actualizaciones de software a todos los servidores del dispositivo.  

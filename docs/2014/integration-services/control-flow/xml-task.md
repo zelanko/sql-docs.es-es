@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232727"
 ---
 # <a name="xml-task"></a>Tarea XML
@@ -58,7 +58,7 @@ ms.locfileid: "75232727"
 |Diferencias|Compara dos documentos XML. Usando el documento XML de origen como documento base, la operación de comparación lo compara con otro documento XML, detecta sus diferencias y escribe las diferencias en un documento DiffGram XML. Esta operación incluye propiedades para personalizar la comparación.|  
 |Merge|Combina dos documentos XML. Usando el documento XML de origen como documento base, la operación de combinación agrega el contenido de un segundo documento en el documento base. La operación puede especificar una ubicación de combinación dentro del documento base.|  
 |Revisión|Aplica el resultado de la operación de comparación, denominada documento DiffGram, en un documento XML para crear un nuevo documento principal que incluye contenido del documento DiffGram.|  
-|Validar|Valida el documento XML según una definición de tipo de documento (DTD) o un esquema de definición de esquema XML (XSD).|  
+|Validación|Valida el documento XML según una definición de tipo de documento (DTD) o un esquema de definición de esquema XML (XSD).|  
 |XPath|Realiza consultas y evaluaciones XPath.|  
 |XSLT|Realiza transformaciones XSL en documentos XML.|  
   
@@ -70,7 +70,7 @@ ms.locfileid: "75232727"
 |Opción|Descripción|  
 |------------|-----------------|  
 |**IgnoreComments**|Valor que especifica si se comparan los nodos de comentarios.|  
-|**IgnoreNamespaces**|Valor que especifica si se comparan el identificador uniforme de recursos (URI) de espacio de nombres de un elemento y sus nombres de atributos. Si esta opción se establece en `true`, dos elementos que tienen el mismo nombre local pero un espacio de nombres diferente se consideran idénticos.|  
+|**IgnoreNameSpaces**|Valor que especifica si se comparan el identificador uniforme de recursos (URI) de espacio de nombres de un elemento y sus nombres de atributos. Si esta opción se establece en `true`, dos elementos que tienen el mismo nombre local pero un espacio de nombres diferente se consideran idénticos.|  
 |**IgnorePrefixes**|Valor que especifica si se comparan los prefijos de nombres de elementos y atributos. Si esta opción se establece en `true,` dos elementos que tienen el mismo nombre local pero un URI y un prefijo de espacio de nombres diferentes se consideran idénticos.|  
 |**IgnoreXMLDeclaration**|Un valor que especifica si se comparan las declaraciones XML.|  
 |**IgnoreOrderOfChildElements**|Valor que especifica si se compara el orden de los elementos secundarios. Si esta opción se establece en `true`, los elementos secundarios que solo difieren en su posición en una lista de elementos del mismo nivel se consideran idénticos.|  
@@ -110,7 +110,7 @@ ms.locfileid: "75232727"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>Mensajes de registro personalizados disponibles en la tarea XML  
  La siguiente tabla contiene las entradas del registro personalizadas para la tarea XML. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
-|Entrada de registro|Descripción|  
+|Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |`XMLOperation`|Proporciona información sobre la operación que la tarea realiza.|  
   
@@ -123,11 +123,11 @@ ms.locfileid: "75232727"
   
 -   [Validar XML con la tarea XML](xml-task.md)  
   
--   [Página expresiones](../expressions/expressions-page.md)  
+-   [Página Expresiones](../expressions/expressions-page.md)  
   
  Para obtener más información sobre cómo establecer propiedades en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en el tema siguiente:  
   
--   [Establecer las propiedades de una tarea o un contenedor](../set-the-properties-of-a-task-or-container.md)  
+-   [Establecer las propiedades de tareas o contenedores](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-xml-task"></a>Configuración mediante programación de la tarea XML  
  Para obtener más información sobre cómo establecer estas propiedades mediante programación, haga clic en el tema siguiente:  
@@ -135,7 +135,7 @@ ms.locfileid: "75232727"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Establecer las propiedades de una tarea o un contenedor](../set-the-properties-of-a-task-or-container.md)  
+ [Establecer las propiedades de tareas o contenedores](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   

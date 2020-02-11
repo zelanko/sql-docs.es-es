@@ -14,10 +14,10 @@ ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 6edcf577b7783662a02efc3531ac02c2535ef078
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245420"
 ---
 # <a name="manage-dqs-log-files"></a>Administrar archivos de registro de DQS
@@ -48,7 +48,7 @@ ms.locfileid: "75245420"
   
 -   Clase y método  
   
--   Mensaje  
+-   Message  
   
  Junto con estos elementos, el archivo de registro también muestra información sobre la versión de la aplicación, el nombre del equipo, el nombre del usuario y el sistema operativo.  
   
@@ -68,14 +68,14 @@ ms.locfileid: "75245420"
 ##  <a name="DQSCleansing"></a>Archivo de registro del componente de limpieza de DQS  
  El archivo de registro de [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] , DQSSSISLog.log, incluye registros de las actividades realizadas mediante [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. El archivo de registro del componente [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] está disponible en %APPDATA%\SSDQS\Log. El archivo de registro de [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)] contiene un conjunto de información similar al del archivo de registro del servidor, pero para [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
   
-##  <a name="RT"></a>Tareas relacionadas  
+##  <a name="RT"></a> Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Describe cómo configurar los valores de gravedad del registro para los archivos de registro de DQS mediante [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Configurar los niveles de gravedad para los archivos de registro de DQS](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
+|Describe cómo configurar los valores de gravedad del registro para los archivos de registro de DQS mediante [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Configurar los niveles de gravedad de los archivos de registro de DQS](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
 |Describe cómo realizar manualmente la configuración avanzada para los archivos de registro de DQS.|[Configurar las opciones avanzadas de los archivos de registro de DQS](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
   
-## <a name="see-also"></a>Véase también  
- [Administración de DQS](../data-quality-services/dqs-administration.md)  
+## <a name="see-also"></a>Consulte también  
+ [dqs, administración](../data-quality-services/dqs-administration.md)  
   
   

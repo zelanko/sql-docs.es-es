@@ -1,5 +1,5 @@
 ---
-title: Sys.server_audit_specification_details (Transact-SQL) | Microsoft Docs
+title: Sys. server_audit_specification_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,36 +20,36 @@ ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 43f5a4ca7dbad88fe98734576fd23368cc280fa2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125020"
 ---
-# <a name="sysserverauditspecificationdetails-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
+# <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene información sobre los detalles de especificación de auditoría del servidor (acciones) en una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia de servidor. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Para obtener una lista de todos los audit_action_id y sus nombres, consulta [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
+  Contiene información sobre los detalles de especificación de auditoría del servidor (acciones) en una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia de servidor. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Para obtener una lista de todos los audit_action_id y sus nombres, consulte [Sys. dm_audit_actions &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |server_specification_id|**int**|Identificador de la especificación de auditoría de servidor|  
 |audit_action_id|**int**|Identificador de la acción de auditoría|  
 |audit_action_name|**sysname**|Nombre del grupo o nombre de la acción de auditoría|  
-|class|**tinyint**|Reservado|  
-|class_desc|**nvarchar(60)**|Reservado|  
-|major_id|**int**|Reservado|  
-|minor_id|**int**|Reservado|  
-|audited_principal_id|**int**|Reservado|  
-|audited_result|**nvarchar(60)**|Resultado auditado:<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
+|clase|**tinyint**|Reserved|  
+|class_desc|**nvarchar (60)**|Reserved|  
+|major_id|**int**|Reserved|  
+|minor_id|**int**|Reserved|  
+|audited_principal_id|**int**|Reserved|  
+|audited_result|**nvarchar (60)**|Resultado auditado:<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
 |is_group|**bit**|Indica si el objeto auditado es un grupo:<br /><br /> 0 - no es un grupo<br /><br /> 1 - es un grupo|  
   
 ## <a name="permissions"></a>Permisos  
- Las entidades de seguridad con el **ALTER ANY SERVER AUDIT** o **VIEW ANY DEFINITION** permisos tienen acceso a esta vista de catálogo. Además, no se debe denegar la entidad de seguridad **VIEW ANY DEFINITION** permiso.  
+ Las entidades de seguridad con el permiso **ALTER any Server Audit** o **View any Definition** tienen acceso a esta vista de catálogo. Además, no se debe denegar el permiso **View any Definition** a la entidad de seguridad.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   

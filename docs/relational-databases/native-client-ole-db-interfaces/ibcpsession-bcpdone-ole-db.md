@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eac36b2aaaa5cd3b28d5476c760bab3152c460f2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73789613"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
@@ -35,8 +35,8 @@ ms.locfileid: "73789613"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Remarks  
- No se puede llamar a ninguna otra operación en la interfaz [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) después de llamar al método **BCPDone** . La única posibilidad es llamar al método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) para iniciar una nueva operación de copia masiva. Esto es similar a llamar al método [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
+## <a name="remarks"></a>Observaciones  
+ No se puede llamar a ninguna otra operación en la interfaz [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) después de llamar al método **BCPDone**. La única posibilidad es llamar al método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) para iniciar una nueva operación de copia masiva. Esto es similar a llamar al método [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  S_OK  
@@ -64,7 +64,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Podría utilizar BCP para volver a agregar estos datos a la tabla con el comando siguiente:  
   
- **bcp master..fltest in outfile.dat -n -T -S** *server*  
+ **maestro BCP.. fltest en OUTFILE. dat-n-T-S** *Server*  
   
  Tendrá que especificar sqlncli11.lib al compilar este ejemplo.  
   
@@ -463,8 +463,8 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [ &#40;OLE DB&#41; IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+## <a name="see-also"></a>Consulte también  
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Realizar operaciones de copia masiva](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

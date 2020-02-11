@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41d215d4d6e288b74e69e0ea8266c442a0726220
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243073"
 ---
 # <a name="transact-sql-debugger-information"></a>Ver información del depurador de Transact-SQL
@@ -44,7 +44,7 @@ ms.locfileid: "75243073"
   
  La ventana **Variables locales** muestra información sobre las variables locales del ámbito actual del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El conjunto de expresiones que se muestran en **esta ventana** cambia a medida que el depurador se ejecuta en las distintas partes del código.  
   
- Las expresiones de **QuickWatch** y las cuatro ventanas de **Inspección** no se limitan únicamente a enumerar identificador de una variable. Puede especificar una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúa como un valor único, por ejemplo,  agregar un número a una variable, o una instrucción SELECT que se evalúa como un valor único. Algunos ejemplos son:   
+ Las expresiones de **QuickWatch** y las cuatro ventanas de **Inspección** no se limitan únicamente a enumerar identificador de una variable. Puede especificar una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúa como un valor único, por ejemplo,  agregar un número a una variable, o una instrucción SELECT que se evalúa como un valor único. Algunos ejemplos son:  
   
 -   El nombre de una variable, como @IntegerCounter.  
   
@@ -95,14 +95,14 @@ ms.locfileid: "75243073"
   
  En el modo de depuración, las pestañas **Resultados** y **Mensajes** continúan estando activas en el Editor de consultas. La pestaña **Resultados** continúa mostrando los conjuntos de resultados de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan durante una sesión de depuración. La pestaña **Mensajes** continúa mostrando los mensajes del sistema, como *xx* filas afectadas y el resultado de las instrucciones PRINT y RAISERROR.  
   
-## <a name="see-also"></a>Véase también  
- [Ventana variables locales](transact-sql-debugger-locals-window.md)   
- [Ventana Inspección](transact-sql-debugger-watch-window.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ventana de locales](transact-sql-debugger-locals-window.md)   
+ [Ventana de inspección](transact-sql-debugger-watch-window.md)   
  [Cuadro de diálogo Inspección rápida](transact-sql-debugger-quickwatch-dialog-box.md)   
- [Ventana puntos de interrupción](transact-sql-debugger-breakpoints-window.md)   
- [Ventana pila de llamadas](transact-sql-debugger-call-stack-window.md)   
- [Ventana subprocesos](transact-sql-debugger-threads-window.md)   
- [Ventana de salida](transact-sql-debugger-output-window.md)   
+ [Ventana de puntos de interrupción](transact-sql-debugger-breakpoints-window.md)   
+ [Ventana de pila de llamadas](transact-sql-debugger-call-stack-window.md)   
+ [Ventana de subprocesos](transact-sql-debugger-threads-window.md)   
+ [Resultados (ventana)](transact-sql-debugger-output-window.md)   
  [Depurador de Transact-SQL](transact-sql-debugger.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232469"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Paso 2: agregar y configurar el contenedor de bucles Foreach
@@ -43,7 +43,7 @@ ms.locfileid: "75232469"
   
 3.  Haga clic con el botón derecho en el **Contenedor de bucles Foreach** que acaba de agregar y seleccione **Editar**.  
   
-4.  En el cuadro de diálogo **Editor de bucles foreach** , en la página **General** , en `Foreach File in Folder` **nombre**, escriba. Haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **Editor de bucles foreach** , en la página **General** , en `Foreach File in Folder` **nombre**, escriba. Haga clic en **OK**.  
   
 5.  Haga clic con el botón secundario en el contenedor de bucles foreach, haga clic en **propiedades**y `LocaleID` , en el ventana Propiedades, compruebe que la propiedad está establecida en **Inglés (Estados Unidos)**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75232469"
     > [!IMPORTANT]  
     >  Los nombres de variables distinguen entre mayúsculas y minúsculas.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 5.  Haga clic de nuevo en **Aceptar** para salir del cuadro de diálogo **Editor de bucles Foreach** .  
   
@@ -89,9 +89,9 @@ ms.locfileid: "75232469"
 -   Arrastre la tarea de flujo de datos **Extract Sample Currency Data** al contenedor de bucles `Foreach File in Folder`foreach cuyo nombre ha cambiado.  
   
 ## <a name="next-lesson-task"></a>Tarea de la siguiente lección  
- [Paso 3: modificar el administrador de conexiones de archivos planos](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [Paso 3: Modificar el Administrador de conexiones de archivos planos](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Configurar un contenedor de bucles foreach](control-flow/foreach-loop-container.md)   
  [Usar variables en paquetes](use-variables-in-packages.md)  
   

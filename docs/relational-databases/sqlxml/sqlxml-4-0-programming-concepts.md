@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff9785d18d46e9aaca26c768d1069c32d3d2e8b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242617"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Conceptos de programación en SQLXML 4.0
@@ -54,7 +54,7 @@ ms.locfileid: "75242617"
  [Utilizar consultas XPath en SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  Describe cómo usar un subconjunto del lenguaje XPath para consultar las vistas XML creadas por un esquema XSD anotado y proporciona ejemplos.  
   
- [Usar diagramas para modificar datos en SQLXML 4,0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [Utilizar los diagramas de actualización para modificar datos en SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Proporciona información sobre los diagramas de actualización, que modifican los datos de una base de datos trabajando con las vistas XML proporcionadas por los esquemas XSD (o XDR) anotados.  
   
  [Realizar la carga masiva de datos XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
@@ -75,7 +75,7 @@ ms.locfileid: "75242617"
  [Instrucciones y limitaciones de SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0.md)  
  Enumera los problemas que se deben recordar al trabajar con SQLXML 4.0.  
   
-## <a name="see-also"></a>Véase también  
- [&#40;de datos XML SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
+## <a name="see-also"></a>Consulte también  
+ [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86cff99688dda7a953a7da1d4104865beed5a98b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253167"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>Informes en modo local frente al modo local en el Visor de informes (Reporting Services en modo de SharePoint)
@@ -84,6 +84,6 @@ ms.locfileid: "75253167"
 ## <a name="connected-mode"></a>Modo conectado  
  Para obtener la información más reciente sobre el uso de la extensión de ADS con el modo conectado de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea el artículo sobre cómo el [informe de Servicios de Access en el sitio de SharePoint muestra un error en la extensión de datos "ADS"](https://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

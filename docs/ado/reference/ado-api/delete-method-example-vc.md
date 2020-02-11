@@ -1,5 +1,5 @@
 ---
-title: Ejemplo del método (VC ++) Delete | Microsoft Docs
+title: Ejemplo del método Delete (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af20890a9c75ee815145b78f1c10de377b861436
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933104"
 ---
 # <a name="delete-method-example-vc"></a>Ejemplo del método Delete (VC ++)
-Este ejemplo se usa el [eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md) método para quitar un registro especificado de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+En este ejemplo se usa el método [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) para quitar un registro especificado de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -271,7 +271,7 @@ void PrintComError(_com_error &e) {
 TC4203  
 ```  
   
-## <a name="sample-output"></a>Salida del ejemplo  
+## <a name="sample-output"></a>Salida de muestra  
   
 ```  
 Before delete there are 7 titles with 20 percent royalty :  
@@ -293,6 +293,6 @@ MC2222
 BU7832  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Eliminar método (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
+## <a name="see-also"></a>Consulte también  
+ [Delete (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

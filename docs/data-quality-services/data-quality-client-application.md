@@ -10,10 +10,10 @@ ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4a789386fbbef91590ec025787e47c7655753a3b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251733"
 ---
 # <a name="data-quality-client-application"></a>Aplicación cliente de calidad de datos
@@ -38,11 +38,11 @@ ms.locfileid: "75251733"
 |Descripción del contenido|Tema|  
 |-------------------------|-----------|  
 |Describe cómo usar la base de conocimiento y dominios de DQS.|[Bases de conocimiento y dominios de DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|Describe cómo limpiar datos en DQS.|[Limpieza de datos](../data-quality-services/data-cleansing.md)|  
+|Describe cómo limpiar datos en DQS.|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
 |Describe cómo buscar coincidencias en DQS.|[Coincidencia de datos](../data-quality-services/data-matching.md)|  
-|Describe cómo administrar DQS.|[Administración de DQS](../data-quality-services/dqs-administration.md)|  
+|Describe cómo administrar DQS.|[dqs, administración](../data-quality-services/dqs-administration.md)|  
   
-## <a name="see-also"></a>Véase también  
- [Data Quality Client pantalla principal](../data-quality-services/data-quality-client-home-screen.md)  
+## <a name="see-also"></a>Consulte también  
+ [Página de inicio del cliente de calidad de datos](../data-quality-services/data-quality-client-home-screen.md)  
   
   

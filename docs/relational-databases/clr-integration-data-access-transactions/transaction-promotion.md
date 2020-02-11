@@ -15,10 +15,10 @@ ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d75bbf1c4d468a0d6c3872a220566d667b059a5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937498"
 ---
 # <a name="transaction-promotion"></a>Promoción de transacciones
@@ -29,11 +29,12 @@ ms.locfileid: "67937498"
  La propiedad **ConnectionString** de un objeto **SqlConnection** admite la palabra clave **Enlist** , que indica si **System.Data.SqlClient** detecta los contextos transaccionales y da de alta automáticamente la conexión en una transacción distribuida. Si esta palabra clave está establecida en true (el valor predeterminado), la conexión se da de alta automáticamente en el contexto de transacción actual del subproceso de apertura. Si esta palabra clave está establecida en false, la conexión SqlClient no interactúa con una transacción distribuida. Si no se especifica **Enlist** en la cadena de conexión, la conexión se da de alta automáticamente en una transacción distribuida si se detecta una en el momento en que se abre la conexión.  
   
 ## <a name="distributed-transactions"></a>Transacciones distribuidas  
- Las transacciones distribuidas consumen normalmente recursos del sistema significativos. [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTC (Coordinador de transacciones distribuidas) administra tales transacciones e integra todos los administradores de recursos a los que se obtiene acceso en estas transacciones. La promoción de transacciones, por otro lado, es una forma especial de una transacción **System.Transactions** que delega eficazmente el trabajo a una transacción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simple. **System.Transactions**, **System.Data.SqlClient**y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coordinan el trabajo relacionado con la administración de la transacción, promoviéndola a una transacción distribuida completa, según sea necesario.  
+ Las transacciones distribuidas consumen normalmente recursos del sistema significativos. 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTC (Coordinador de transacciones distribuidas) administra tales transacciones e integra todos los administradores de recursos a los que se obtiene acceso en estas transacciones. La promoción de transacciones, por otro lado, es una forma especial de una transacción **System.Transactions** que delega eficazmente el trabajo a una transacción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simple. **System. Transactions**, **System. Data. SqlClient**y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coordinan el trabajo implicado en el control de la transacción, para lo que se promueve a una transacción distribuida completa según sea necesario.  
   
- La ventaja de utilizar la promoción de transacciones es que cuando se abre una conexión con una transacción **TransactionScope** activa y no hay abierta ninguna otra conexión, se confirma la transacción como una transacción ligera, en lugar de incurrir en la sobrecarga adicional de una transacción completa distribuida. Para obtener más información acerca de **TransactionScope**, consulte [System.Transactions utilizando](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md).  
+ La ventaja de utilizar la promoción de transacciones es que cuando se abre una conexión con una transacción **TransactionScope** activa y no hay abierta ninguna otra conexión, se confirma la transacción como una transacción ligera, en lugar de incurrir en la sobrecarga adicional de una transacción completa distribuida. Para obtener más información sobre **TransactionScope**, vea [usar System. Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Integración CLR y transacciones](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

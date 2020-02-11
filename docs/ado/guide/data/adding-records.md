@@ -1,5 +1,5 @@
 ---
-title: Adición de registros | Microsoft Docs
+title: Agregando registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,22 +16,22 @@ ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f4ec0934fbf75de18f460abae84b8117e99f452
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926264"
 ---
 # <a name="adding-records-to-a-recordset"></a>Agregar registros a un conjunto de registros
-Use la **AddNew** método para crear e inicializar un nuevo registro en una existente **Recordset**. Puede usar el **admite** método con un **CursorOptionEnum** valor **adAddNew** para comprobar si puede agregar registros a la actual **delconjuntoderegistros** objeto.
+Use el método **AddNew** para crear e inicializar un nuevo registro en un **conjunto de registros**existente. Puede usar el método **Supports** con un valor **CursorOptionEnum** de **adAddNew** para comprobar si puede agregar registros al objeto de **conjunto de registros** actual.
 
- Después de llamar a la **AddNew** método, el nuevo registro se convierte en el registro actual y sigue siendo el actual después de llamar a la **actualización** método. Si el **Recordset** objeto no admite marcadores, es posible que no pueda acceder al registro de nuevo cuando se mueva a otro registro. Por lo tanto, dependiendo del tipo de cursor, es posible que deba llamar a la **Requery** método para que sea accesible el nuevo registro.
+ Después de llamar al método **AddNew** , el nuevo registro se convierte en el registro actual y permanece actual después de llamar al método **Update** . Si el objeto de **conjunto de registros** no admite marcadores, es posible que no pueda obtener acceso al nuevo registro una vez que se haya movido a otro registro. Por lo tanto, dependiendo del tipo de cursor, puede que tenga que llamar al método **Requery** para que el nuevo registro sea accesible.
 
- Si se llama a **AddNew** mientras modifica el registro actual o agregar un nuevo registro, se llama ADO el **actualización** método para guardarlos cambios y, a continuación, crea el nuevo registro.
+ Si llama a **AddNew** mientras edita el registro actual o al agregar un nuevo registro, ADO llama al método **Update** para guardar los cambios y, a continuación, crea el nuevo registro.
 
  Esta sección contiene los temas siguientes.
 
--   [Agregar registros mediante AddNew (método)](../../../ado/guide/data/adding-records-using-addnew.md)
+-   [Agregar registros mediante AddNew](../../../ado/guide/data/adding-records-using-addnew.md)
 
 -   [Agregar varios campos y valores](../../../ado/guide/data/adding-multiple-fields.md)
 

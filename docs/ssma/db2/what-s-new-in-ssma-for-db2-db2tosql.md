@@ -2,23 +2,40 @@
 title: Novedades de SSMA para DB2 (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 75fbcbef02dc19dac47d96431118b75df262b685
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: 9b4fc1f9d0ce1128306f27a5f7bf6658377528cd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834302"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516575"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Novedades de SSMA para DB2 (DB2ToSQL)
 
 En este artículo se enumeran los cambios de SQL Server Migration Assistant (SSMA) para DB2 en cada versión.
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+Además de un conjunto de correcciones diseñado para mejorar la facilidad de uso y el rendimiento, la versión v 8.6 de SSMA para DB2 se ha mejorado agregando una configuración que permite a los usuarios omitir las propiedades extendidas de SSMA en el código convertido.
+
+Para aprovechar este valor, en SSMA para DB2, vaya a **herramientas** > **configuración** > del proyecto**conversión****General** > y, a continuación, en **varios**, actualice el valor de la opción **omitir propiedades extendidas** a **sí**.
+
+![Omitir la configuración de propiedades extendidas](../db2/media/ssma-omit-extended-properties.png)
+
+Además, SSMA para DB2 ahora proporciona:
+
+-   Corrección para la conversión de funciones que usan valores de argumento predeterminados
+-   Se ha mejorado el análisis de funciones en la cláusula PARAMETER.
+- La capacidad de convertir la instrucción LEAVE.
+
+> [!IMPORTANT]
+> Con SSMA v 8.5 y versiones posteriores, .net 4.7.2 es un requisito previo de instalación. Si necesita instalar esta versión, puede descargar el archivo en tiempo de ejecución desde [aquí](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 
@@ -168,7 +185,7 @@ La versión v 7.1 de SSMA para DB2 contiene los siguientes cambios:
 
 * SQL Server 2017 en Windows y Linux CTP1 es ahora una plataforma de destino admitida para la migración. Esta característica se encuentra en Technical Preview y permite el movimiento de datos y esquemas a los servidores SQL Server de destino.
 * Compatibilidad con las actualizaciones automáticas para descargar la versión más reciente de SSMA en cuanto esté disponible.
-* Los binarios instalables de SSMA se entregan ahora a través de los archivos de paquete de Windows Installer (. msi).
+* Los binarios instalables de SSMA se entregan ahora a través de Windows Installer archivos de paquete (. msi).
 
 ## <a name="may-2016"></a>Mayo de 2016
 

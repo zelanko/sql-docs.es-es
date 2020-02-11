@@ -17,10 +17,10 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d351db8ca696263f294f5a52f364d42ac48bad24
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75320782"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75320782"
 
   Devuelve el conjunto de métricas de umbral para una publicación supervisada. Este procedimiento almacenado, que se utiliza para supervisar la replicación, se ejecuta en el distribuidor en la base de datos de distribución.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,19 +53,19 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Publicación transaccional.|  
-|**dimensional**|Publicación de instantáneas.|  
-|**dos**|Publicación de combinación.|  
+|**1**|Publicación de instantáneas.|  
+|**2**|Publicación de combinación.|  
 |NULL (predeterminado)|La replicación intenta determinar el tipo de publicación.|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**metric_id**|**Inter**|Id. de la métrica del rendimiento de la replicación, que puede tener uno de los siguientes valores.<br /><br /> **1expiration** : supervisa la expiración inminente de las suscripciones a las publicaciones transaccionales.<br /><br /> **2latency** : supervisa el rendimiento de las suscripciones a las publicaciones transaccionales.<br /><br /> **4mergeexpiration** : supervisa la expiración inminente de suscripciones a publicaciones de combinación.<br /><br /> **5mergeslowrunduration** : supervisa la duración de las sincronizaciones de mezcla en conexiones de bajo ancho de banda (acceso telefónico).<br /><br /> **6mergefastrunduration** : supervisa la duración de las sincronizaciones de mezcla en conexiones de gran ancho de banda (LAN).<br /><br /> **7mergefastrunspeed** : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de gran ancho de banda (LAN).<br /><br /> **8mergeslowrunspeed** : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de bajo ancho de banda (acceso telefónico).|  
+|**metric_id**|**int**|Id. de la métrica del rendimiento de la replicación, que puede tener uno de los siguientes valores.<br /><br /> **1expiration** : supervisa la expiración inminente de las suscripciones a las publicaciones transaccionales.<br /><br /> **2latency** : supervisa el rendimiento de las suscripciones a las publicaciones transaccionales.<br /><br /> **4mergeexpiration** : supervisa la expiración inminente de suscripciones a publicaciones de combinación.<br /><br /> **5mergeslowrunduration** : supervisa la duración de las sincronizaciones de mezcla en conexiones de bajo ancho de banda (acceso telefónico).<br /><br /> **6mergefastrunduration** : supervisa la duración de las sincronizaciones de mezcla en conexiones de gran ancho de banda (LAN).<br /><br /> **7mergefastrunspeed** : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de gran ancho de banda (LAN).<br /><br /> **8mergeslowrunspeed** : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de bajo ancho de banda (acceso telefónico).|  
 |**Titulo**|**sysname**|Nombre de la métrica de rendimiento de la replicación.|  
-|**valor**|**Inter**|El valor de umbral de la métrica de rendimiento.|  
-|**shouldalert**|**poco**|Indica si se debe generar una alerta cuando la métrica supera el umbral definido para esta publicación. un valor de **1** indica que debe generarse una alerta.|  
-|**IsEnabled**|**poco**|Es si la supervisión está habilitada para esta métrica de rendimiento de replicación para esta publicación. un valor de **1** indica que está habilitada la supervisión.|  
+|**valor**|**int**|El valor de umbral de la métrica de rendimiento.|  
+|**shouldalert**|**bit**|Indica si se debe generar una alerta cuando la métrica supera el umbral definido para esta publicación. un valor de **1** indica que debe generarse una alerta.|  
+|**IsEnabled**|**bit**|Es si la supervisión está habilitada para esta métrica de rendimiento de replicación para esta publicación. un valor de **1** indica que está habilitada la supervisión.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -76,7 +76,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de base de datos **db_owner** o **replmonitor** en la base de datos de distribución pueden ejecutar **sp_replmonitorhelppublicationthresholds**.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la replicación mediante programación](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

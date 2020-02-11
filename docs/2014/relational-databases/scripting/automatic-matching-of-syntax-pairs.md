@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244801"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Coincidencia automática de pares en la sintaxis
@@ -36,9 +36,9 @@ ms.locfileid: "75244801"
 |Delimitador de apertura|Delimitador de cierre|  
 |--------------------|-----------------------|  
 |**(**|**)**|  
-|**INICIA**|**EXTREMO**|  
-|**INICIAR PRUEBA**|**END TRY**|  
-|**INICIAR DETECCIÓN**|**FINALIZAR CAPTURA**|  
+|**BEGIN**|**END**|  
+|**BEGIN TRY**|**END TRY**|  
+|**BEGIN CATCH**|**END CATCH**|  
   
  La coincidencia automática de delimitadores no reconoce los delimitadores de los identificadores entre corchetes ([ObjectName]) ni los de los identificadores entre comillas ("ObjectName"). La coincidencia de pares no hace coincidir los delimitadores de comillas simples para los literales de cadena ('cadena') porque la codificación en colores ya proporciona una indicación visual de si se ha delimitado la cadena.  
   

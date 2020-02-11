@@ -33,10 +33,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246709"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modelo de objetos de carga masiva XML de SQL Server (SQLXML 4.0)
@@ -44,7 +44,7 @@ ms.locfileid: "75246709"
   El modelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de objetos de carga masiva de XML de Microsoft consta del objeto SQLXMLBulkLoad. Este objeto admite los métodos y propiedades siguientes.  
   
 ## <a name="methods"></a>Métodos  
- Ejecución  
+ Execute  
  Realiza cargas masivas de los datos utilizando los archivos de esquema y de datos (o flujo) proporcionados como parámetros.  
   
 ## <a name="properties"></a>Propiedades  

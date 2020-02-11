@@ -13,47 +13,47 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e3cce22873b00e47c5d03d18cbcd58c29399afc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243105"
 ---
 # <a name="breakpoints-window"></a>Ventana de puntos de interrupción
   La ventana **Puntos de interrupción** muestra todos los puntos de interrupción que se establecen en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] actual. Para administrar los puntos de interrupción, utilice la barra de herramientas de la ventana **Puntos de interrupción** . Los puntos de interrupción son las ubicaciones del código en las que la ejecución se pausa en modo de depuración para que se puedan ver los datos de depuración.  
   
 ## <a name="task-list"></a>Lista de tareas  
- **Para tener acceso a la ventana puntos de interrupción**  
+ **Para tener acceso a la ventana Puntos de interrupción**  
   
 -   En el menú **Depurar** , haga clic en **Ventanas**y, a continuación, haga clic en **Puntos de interrupción**.  
   
 ## <a name="breakpoints-window-columns"></a>Columnas de la ventana Puntos de interrupción  
  De forma predeterminada, la ventana **Puntos de interrupción** muestra las columnas siguientes.  
   
- **Name**  
+ **Nombre**  
  Muestra el nombre del punto de interrupción. El depurador proporciona los nombres para los puntos de interrupción. Este nombre incluye el de la ventana Editor de consultas del motor de base de datos que contiene el punto de interrupción y el número de línea del Editor de consultas en el que está establecido.  
   
- **Cumple**  
- Muestra **(sin condición)**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer las condiciones de punto de interrupción.  
+ **Condition**  
+ Muestra **(sin condición)** . El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer las condiciones de punto de interrupción.  
   
  **Número de llamadas**  
  Muestra**interrumpir siempre**.  
   
  Puede agregar y quitar las columnas siguientes seleccionándolos en la lista **Columnas** .  
   
- **Filtro**  
- Muestra **(ninguno)**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer los filtros de punto de interrupción.  
+ **Filter**  
+ Muestra **(ninguno)** . El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer los filtros de punto de interrupción.  
   
- **Al golpear**  
+ **Al visitar**  
  Muestra **Interrumpir**.  
   
- **Módulo**  
+ **Lenguaje**  
  Muestra **Transact-SQL** para [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Funcionalidad**  
+ **Function**  
  Muestra el número de la línea en la que se establece el punto de interrupción.  
   
- **Filesystem**  
+ **Archivo**  
  Muestra el nombre del archivo de código fuente que contiene el punto de interrupción y el número de la línea en la que se establece.  
   
  **Dirección**  
@@ -77,11 +77,11 @@ ms.locfileid: "75243105"
  **Habilitar todos los puntos de interrupción**  
  Habilita todos los puntos de interrupción para que detengan la ejecución del código. Cuando todos los puntos de interrupción están habilitados, este botón se convierte en **Deshabilitar todos los puntos de interrupción**.  
   
- **Ir al código fuente**  
+ **Ir a código fuente**  
  Coloca el cursor en la línea del Editor de consultas que contiene el punto de interrupción seleccionado.  
   
  **Columnas**  
  Muestra todas las columnas que se pueden mostrar en la ventana **Puntos de interrupción** . Una casilla indica las columnas que se muestran. Para agregar o quitar una columna en la ventana **Puntos de interrupción** , seleccione la columna en la lista.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Depurador de Transact-SQL](transact-sql-debugger.md)  

@@ -18,33 +18,33 @@ ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4470b6b5d1b30f5698bf588a04066c50bb4c7197
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130451"
 ---
-# <a name="sysdbmaintplanhistory-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
+# <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Esta tabla se almacena en el **msdb** base de datos.  
+  Esta tabla se almacena en la base de datos **msdb** .  
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**sequence_id**|**int**|Secuencia del historial llevada a cabo según los planes de mantenimiento de bases de datos.|  
 |**plan_id**|**uniqueidentifier**|Id. del plan de mantenimiento de bases de datos.|  
 |**plan_name**|**sysname**|Nombre del plan de mantenimiento de bases de datos.|  
 |**database_name**|**sysname**|Nombre de la base de datos asociada al plan de mantenimiento de bases de datos.|  
 |**server_name**|**sysname**|Nombre del sistema.|  
-|**Actividad**|**nvarchar(128)**|Actividad llevada a cabo por el plan de mantenimiento de bases de datos (por ejemplo, el registro de transacciones de copia de seguridad).|  
+|**proceso**|**nvarchar(128)**|Actividad llevada a cabo por el plan de mantenimiento de bases de datos (por ejemplo, el registro de transacciones de copia de seguridad).|  
 |**succeeded**|**bit**|**0** = correcto **1** = error|  
 |**end_time**|**datetime**|Hora en que finalizó la acción.|  
-|**duration**|**int**|Tiempo necesario para finalizar la acción del plan de mantenimiento de bases de datos.|  
+|**Duration**|**int**|Tiempo necesario para finalizar la acción del plan de mantenimiento de bases de datos.|  
 |**start_time**|**datetime**|Hora en que comenzó la acción.|  
 |**error_number**|**int**|Número de error generado.|  
-|**message**|**nvarchar(512)**|Mensaje generado por **sqlmaint**.|  
+|**Mensaje**|**nvarchar(512)**|Mensaje generado por **SQLMAINT**.|  
   
   

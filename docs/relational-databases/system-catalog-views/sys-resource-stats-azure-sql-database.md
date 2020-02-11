@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246910"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
@@ -37,23 +37,23 @@ ms.locfileid: "75246910"
   
 |Columnas|Tipo de datos|Descripción|  
 |----------------------------|---------------|-----------------|  
-|start_time|**DateTime**|Hora UTC que indica el inicio del intervalo de informes de cinco minutos.|  
-|end_time|**DateTime**|Hora UTC que indica el final del intervalo de informes de cinco minutos.|  
+|start_time|**datetime**|Hora UTC que indica el inicio del intervalo de informes de cinco minutos.|  
+|end_time|**datetime**|Hora UTC que indica el final del intervalo de informes de cinco minutos.|  
 |database_name|**nvarchar(128)**|Nombre de la base de datos del usuario.|  
 |sku|**nvarchar(128)**|Nivel de servicio de la base de datos. Los posibles valores son los siguientes:<br /><br /> Básica<br /><br /> Estándar<br /><br /> Premium<br /><br />Uso general<br /><br />Crítico para la empresa|  
-|storage_in_megabytes|**flot**|Tamaño de almacenamiento máximo en megabytes para el período de tiempo, incluidos los datos de base de datos, los índices, los procedimientos almacenados y los metadatos.|  
+|storage_in_megabytes|**float**|Tamaño de almacenamiento máximo en megabytes para el período de tiempo, incluidos los datos de base de datos, los índices, los procedimientos almacenados y los metadatos.|  
 |avg_cpu_percent|**decimal (5, 2)**|Uso de proceso promedio como porcentaje del límite del nivel de servicio.|  
 |avg_data_io_percent|**decimal (5, 2)**|Uso de E/S promedio como porcentaje según el límite del nivel de servicio. Para las bases de datos de hiperescala, consulte [e/s de datos en estadísticas de uso de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
 |avg_log_write_percent|**decimal (5, 2)**|Uso de recursos de escritura promedio como porcentaje del límite del nivel de servicio.|  
 |max_worker_percent|**decimal (5, 2)**|Número máximo de trabajos simultáneos (solicitudes) en porcentaje según el límite del nivel de servicio de la base de datos.<br /><br /> El máximo se calcula actualmente para el intervalo de cinco minutos basado en las muestras de 15 segundos de los recuentos de trabajo simultáneos.|  
 |max_session_percent|**decimal (5, 2)**|Número máximo de sesiones simultáneas en porcentaje según el límite del nivel de servicio de la base de datos.<br /><br /> El valor máximo se calcula actualmente para el intervalo de cinco minutos basado en las muestras de 15 segundos de los recuentos de sesiones simultáneas.|  
-|dtu_limit|**Inter**|Valor actual máximo de DTU de base de datos para esta base de datos durante este intervalo. |
+|dtu_limit|**int**|Valor actual máximo de DTU de base de datos para esta base de datos durante este intervalo. |
 |xtp_storage_percent|**decimal (5, 2)**|Uso del almacenamiento para OLTP en memoria en porcentaje del límite del nivel de servicio (al final del intervalo de informes). Esto incluye la memoria usada para el almacenamiento de los siguientes objetos OLTP en memoria: tablas, índices y variables de tabla con optimización para memoria. También incluye la memoria usada para procesar las operaciones de ALTER TABLE.<br /><br /> Devuelve 0 si no se utiliza OLTP en memoria en la base de datos.|
 |avg_login_rate_percent|**decimal (5, 2)**|Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|
 |avg_instance_cpu_percent|**decimal (5, 2)**|Uso promedio de la CPU de la base de datos como porcentaje del proceso de base de datos de SQL.|
 |avg_instance_memory_percent|**decimal (5, 2)**|Promedio de uso de memoria de base de datos como porcentaje del proceso de base de datos de SQL.|
 |cpu_limit|**decimal (5, 2)**|Número de núcleos virtuales para esta base de datos durante este intervalo. En el caso de las bases de datos que usan el modelo basado en DTU, esta columna es NULL.|
-|allocated_storage_in_megabytes|**flot**|La cantidad de espacio de archivo con formato en MB disponible para almacenar los datos de la base de datos. El espacio de archivo con formato también se conoce como espacio de datos asignado.  Para obtener más información, vea [Administración del espacio de archivo en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|
+|allocated_storage_in_megabytes|**float**|La cantidad de espacio de archivo con formato en MB disponible para almacenar los datos de la base de datos. El espacio de archivo con formato también se conoce como espacio de datos asignado.  Para obtener más información, vea [Administración del espacio de archivo en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|
   
 > [!TIP]  
 >  Para más información sobre estos límites y los niveles de servicio, consulte los temas sobre los [niveles de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  
@@ -83,7 +83,7 @@ GROUP BY database_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Niveles de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Límites y capacidades de nivel de servicio](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

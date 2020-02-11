@@ -24,21 +24,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195624"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
-  OPENXML, palabra clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] , proporciona un conjunto de filas en documentos XML en memoria que es similar a una tabla o una vista. OPENXML permite el acceso a los datos XML a pesar de ser un conjunto de filas relacional. Para ello, proporciona una vista de conjunto de filas de la representación interna de un documento XML. Los registros del conjunto de filas pueden almacenarse en tablas de base de datos.  
+  OPENXML, palabra clave de [!INCLUDE[tsql](../../includes/tsql-md.md)], proporciona un conjunto de filas en documentos XML en memoria que es similar a una tabla o una vista. OPENXML permite el acceso a los datos XML a pesar de ser un conjunto de filas relacional. Para ello, proporciona una vista de conjunto de filas de la representación interna de un documento XML. Los registros del conjunto de filas pueden almacenarse en tablas de base de datos.  
   
- OPENXML puede utilizarse en instrucciones SELECT y SELECT INTO donde puedan aparecer como origen proveedores de conjuntos de filas, una vista u OPENROWSET. Para obtener más información sobre la sintaxis de OPENXML, vea [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql).  
+ OPENXML puede utilizarse en instrucciones SELECT y SELECT INTO donde puedan aparecer como origen proveedores de conjuntos de filas, una vista u OPENROWSET. Para obtener información sobre la sintaxis de OPENXML, vea [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql).  
   
  Para escribir consultas en un documento XML mediante OPENXML, primero debe llamar a `sp_xml_preparedocument`. que analiza el documento XML y devuelve un identificador para el documento analizado que está listo para su uso. El documento analizado es una representación en árbol del modelo de objetos de documento (DOM) de los distintos nodos del documento XML. Este identificador de documento se pasa a OPENXML. A continuación, OPENXML proporciona una vista de conjunto de filas del documento, basándose en los parámetros que ha recibido.  
   
 > [!NOTE]  
->  `sp_xml_preparedocument` usa una versión actualizada de SQL del analizador MSXML, Msxmlsql.dll. Esta versión del analizador de MSXML se diseñó para admitir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y seguir siendo compatible con versiones anteriores con MSXML versión 2.6.  
+>  `sp_xml_preparedocument`usa una versión actualizada de SQL del analizador de MSXML, Msxmlsql. dll. Esta versión del analizador de MSXML se diseñó para admitir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y seguir siendo compatible con versiones anteriores con MSXML versión 2.6.  
   
  La representación interna de un documento XML se debe quitar de la memoria mediante una llamada al procedimiento almacenado del sistema **sp_xml_removedocument** para liberar la memoria.  
   
@@ -54,7 +54,8 @@ ms.locfileid: "68195624"
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo muestra el uso de `OPENXML` en las instrucciones `INSERT` y `SELECT` . El documento de ejemplo XML contiene los elementos `<Customers>` y `<Orders>` .  
   
- En primer lugar, el procedimiento almacenado `sp_xml_preparedocument` analiza el documento XML. Este documento analizado es una representación en árbol de varios nodos (elementos, atributos, texto y comentarios) en el documento XML. `OPENXML` a continuación, hace referencia a este documento XML analizado y proporciona una vista de conjunto de filas de todo o partes de este documento XML. De esta forma, una instrucción `INSERT` puede insertar datos de dicho conjunto de filas en una tabla de la base de datos mediante `OPENXML` . Se pueden utilizar varias llamadas `OPENXML` para proporcionar una vista del conjunto de filas de diferentes partes del documento XML y procesarlas; por ejemplo, insertándolas en tablas diferentes. Este proceso también se conoce como "descomponer XML en tablas".  
+ En primer lugar, el procedimiento almacenado `sp_xml_preparedocument` analiza el documento XML. Este documento analizado es una representación en árbol de varios nodos (elementos, atributos, texto y comentarios) en el documento XML. 
+  `OPENXML` a continuación, hace referencia a este documento XML analizado y proporciona una vista de conjunto de filas de todo o partes de este documento XML. De esta forma, una instrucción `INSERT` puede insertar datos de dicho conjunto de filas en una tabla de la base de datos mediante `OPENXML` . Se pueden utilizar varias llamadas `OPENXML` para proporcionar una vista del conjunto de filas de diferentes partes del documento XML y procesarlas; por ejemplo, insertándolas en tablas diferentes. Este proceso también se conoce como "descomponer XML en tablas".  
   
  En el siguiente ejemplo, un documento XML se descompone de forma que los elementos `<Customers>` se almacenen en la tabla `Customers` y los elementos `<Orders>` en la tabla `Orders` , por medio de dos instrucciones `INSERT` . El ejemplo también muestra una instrucción `SELECT` con `OPENXML` que recupera `CustomerID` y `OrderDate` del documento XML. El último paso del proceso consiste en llamar a `sp_xml_removedocument`. Esto se lleva a cabo para liberar la memoria asignada a la representación interna en árbol XML que se creó durante la fase de análisis.  
   
@@ -110,7 +111,7 @@ EXEC sp_xml_removedocument @docHandle;
 -   La asignación entre las columnas del conjunto de filas y los nodos XML  
   
 ### <a name="xml-document-handle-idoc"></a>Identificador del documento XML (idoc)  
- El identificador del documento devuelto por la `sp_xml_preparedocument` procedimiento almacenado.  
+ El `sp_xml_preparedocument` procedimiento almacenado devuelve el identificador del documento.  
   
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>Expresión XPath que identifica los nodos que se van a procesar (rowpattern)  
  La expresión XPath especificada como *rowpattern* identifica un conjunto de nodos del documento XML. Cada nodo identificado por *rowpattern* se corresponde con una única fila del conjunto de filas generado por OPENXML.  
@@ -137,17 +138,17 @@ EXEC sp_xml_removedocument @docHandle;
   
  En la tabla siguiente se describe la estructura de la tabla irregular.  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**id**|**bigint**|Es el id. único del nodo del documento.<br /><br /> El elemento raíz tiene un valor de identificador de 0. Los valores de identificador negativos están reservados.|  
-|**parentid**|**bigint**|Identifica el elemento primario del nodo. El elemento primario identificado por este Id. no es necesariamente el elemento primario. Sin embargo, esto depende del valor de NodeType del nodo cuyo elemento primario identifique este identificador Por ejemplo, si se trata de un nodo de texto, su elemento primario puede ser un nodo de atributo.<br /><br /> Si el nodo está en el nivel superior del documento XML, su **ParentID** es NULL.|  
-|**node type**|**int**|Identifica el tipo de nodo y es un entero que se corresponde con la numeración del tipo de nodo del modelo de objetos de documento (DOM) XML.<br /><br /> A continuación se ofrecen los valores que pueden aparecer en esta columna para indicar el tipo de nodo:<br /><br /> **1** = nodo de elemento<br /><br /> **2** = nodo de atributo<br /><br /> **3** = nodo de texto<br /><br /> **4** = nodo de sección CDATA<br /><br /> **5** = nodo de referencia de entidad<br /><br /> **6** = nodo de entidad<br /><br /> **7** = nodo de instrucción de procesamiento<br /><br /> **8** = nodo de comentario<br /><br /> **9** = nodo de documento<br /><br /> **10** = nodo de tipo de documento<br /><br /> **11** = nodo de fragmento de documento<br /><br /> **12** = nodo de notación<br /><br /> Para obtener más información, vea el tema donde se explica la propiedad nodeType en el SDK de Microsoft XML (MSXML).|  
-|**localname**|**nvarchar(max)**|Proporciona el nombre local del elemento o atributo. Es NULL si el objeto DOM no tiene nombre.|  
-|**prefijo**|**nvarchar(max)**|Es el prefijo del espacio del nombre del nodo.|  
-|**namespaceuri**|**nvarchar(max)**|Es el URI del espacio de nombres del nodo. Si el valor es NULL, no hay ningún espacio de nombres.|  
-|**datatype**|**nvarchar(max)**|Es el tipo de datos real de la fila del elemento o atributo; en caso contrario, es NULL. El tipo de datos se infiere a partir de las DTD insertadas o del esquema insertado.|  
-|**prev**|**bigint**|Es el id. XML del anterior elemento del mismo nivel. Es NULL si no existe ningún elemento previo directo del mismo nivel.|  
-|**texto**|**ntext**|Contiene el valor del atributo o el contenido del elemento en formato de texto. Es NULL si la entrada de la tabla irregular no necesita ningún valor.|  
+|**sesión**|**BIGINT**|Es el id. único del nodo del documento.<br /><br /> El elemento raíz tiene un valor de identificador de 0. Los valores de identificador negativos están reservados.|  
+|**parentId**|**BIGINT**|Identifica el elemento primario del nodo. El elemento primario identificado por este Id. no es necesariamente el elemento primario. Sin embargo, esto depende del valor de NodeType del nodo cuyo elemento primario identifique este identificador Por ejemplo, si se trata de un nodo de texto, su elemento primario puede ser un nodo de atributo.<br /><br /> Si el nodo está en el nivel superior del documento XML, su **ParentID** es NULL.|  
+|**tipo de nodo**|**int**|Identifica el tipo de nodo y es un entero que se corresponde con la numeración del tipo de nodo del modelo de objetos de documento (DOM) XML.<br /><br /> A continuación se ofrecen los valores que pueden aparecer en esta columna para indicar el tipo de nodo:<br /><br /> **1** = nodo de elemento<br /><br /> **2** = nodo de atributo<br /><br /> **3** = nodo de texto<br /><br /> **4** = nodo de sección CDATA<br /><br /> **5** = nodo de referencia de entidad<br /><br /> **6** = nodo de entidad<br /><br /> **7** = nodo de instrucción de procesamiento<br /><br /> **8** = nodo de comentario<br /><br /> **9** = nodo de documento<br /><br /> **10** = nodo de tipo de documento<br /><br /> **11** = nodo de fragmento de documento<br /><br /> **12** = nodo de notación<br /><br /> Para obtener más información, vea el tema donde se explica la propiedad nodeType en el SDK de Microsoft XML (MSXML).|  
+|**localName**|**nvarchar(max)**|Proporciona el nombre local del elemento o atributo. Es NULL si el objeto DOM no tiene nombre.|  
+|**ceder**|**nvarchar(max)**|Es el prefijo del espacio del nombre del nodo.|  
+|**NamespaceURI**|**nvarchar(max)**|Es el URI del espacio de nombres del nodo. Si el valor es NULL, no hay ningún espacio de nombres.|  
+|**tipo**|**nvarchar(max)**|Es el tipo de datos real de la fila del elemento o atributo; en caso contrario, es NULL. El tipo de datos se infiere a partir de las DTD insertadas o del esquema insertado.|  
+|**anterior**|**BIGINT**|Es el id. XML del anterior elemento del mismo nivel. Es NULL si no existe ningún elemento previo directo del mismo nivel.|  
+|**negrita**|**ntext**|Contiene el valor del atributo o el contenido del elemento en formato de texto. Es NULL si la entrada de la tabla irregular no necesita ningún valor.|  
   
 #### <a name="using-the-with-clause-to-specify-an-existing-table"></a>Utilizar la cláusula WITH para especificar una tabla existente  
  Se puede utilizar la cláusula WITH para especificar el nombre de una tabla existente. Para ello, solo es necesario especificar un nombre de tabla existente cuyo esquema pueda ser utilizado por OPENXML para generar el conjunto de filas.  
@@ -170,9 +171,9 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Mediante el uso del parámetro *ColPattern*  
   
-     *ColPattern*, una expresión XPath, se especifica como parte de *SchemaDeclaration* en la cláusula WITH. La asignación especificada en *ColPattern* sobrescribe la asignación que especifica el parámetro *flags* .  
+     *ColPattern*, una expresión XPath, se especifica como parte de *SchemaDeclaration* en la cláusula with. La asignación especificada en *ColPattern* sobrescribe la asignación que especifica el parámetro *flags* .  
   
-     *ColPattern* puede usarse para especificar el tipo de asignación, como centrada en atributos o centrada en elementos, que sobrescribe o mejora la asignación predeterminada indicada en *flags*.  
+     *ColPattern* se puede usar para especificar el tipo de asignación, como centrado en atributos o en elementos, que sobrescribe o mejora la asignación predeterminada indicada por las *marcas*.  
   
      *ColPattern* se especifica en las siguientes circunstancias:  
   
@@ -196,9 +197,9 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Si varios subelementos tienen el mismo nombre, se devuelve el primer nodo.  
   
-## <a name="see-also"></a>Vea también  
- [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
- [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [sp_xml_preparedocument &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
+ [sp_xml_removedocument &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
  [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [Datos XML &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6554cbcc79fdfc22c552821d518571873b2d826a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244812"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>Asociar extensiones de archivo a un editor de código
@@ -52,7 +52,7 @@ ms.locfileid: "75244812"
   
 4.  En el cuadro **Editor** , haga clic en el editor de código que desea utilizar para abrir este tipo de archivo, haga clic en **Agregar**y, a continuación, en **Aceptar**.  
   
-## <a name="see-also"></a>Véase también  
- [Utilidad SSMS](../../ssms/ssms-utility.md)  
+## <a name="see-also"></a>Consulte también  
+ [Ssms (Utilidad)](../../ssms/ssms-utility.md)  
   
   

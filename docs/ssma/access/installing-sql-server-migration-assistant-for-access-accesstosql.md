@@ -23,16 +23,16 @@ ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 80fc19b17ac1c01f0c57d828a3bc4821050f761d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257891"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Instalación de SQL Server Migration Assistant para Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para el acceso se instala mediante un asistente basado en Windows Installer. En este tema se proporciona información sobre los requisitos previos de instalación, un vínculo a la versión más reciente de SSMA e instrucciones para instalar, conceder licencias, desinstalar y actualizar SSMA.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
 Antes de instalar SSMA, asegúrese de que el sistema cumple los requisitos siguientes:  
   
 -   Windows 7 o una versión posterior, o Windows Server 2008 o una versión posterior.  
@@ -87,7 +87,7 @@ Si desea actualizar a una versión posterior de SSMA para el acceso, primero deb
   
 Si abre un proyecto creado en una versión anterior de SSMA para Access, SSMA le pregunta si desea convertir el proyecto a la versión más reciente. Haga clic en **sí** para trabajar con el proyecto en la versión más reciente de SSMA.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Preparación de bases de datos de Access para migración](preparing-access-databases-for-migration-accesstosql.md)  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Vincular aplicaciones de Access a SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  

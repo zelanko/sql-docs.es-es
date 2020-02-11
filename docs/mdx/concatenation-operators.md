@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7298f80a7d3f61b5b00692be8fbc480429487454
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892458"
 ---
 # <a name="concatenation-operators"></a>Operadores de concatenación
@@ -34,8 +34,8 @@ FROM [Adventure Works]
 ## <a name="language-considerations"></a>Consideraciones de idioma  
  Cuando las cadenas que se utilizan en la concatenación tienen la misma intercalación, la cadena resultante tiene la misma intercalación que las entradas. Cuando las cadenas usadas en una concatenación tienen distintas intercalaciones, las reglas de prioridad de intercalación determinan la intercalación de la cadena concatenada resultante. Para más información, vea [Idiomas e intercalaciones &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
   
-## <a name="see-also"></a>Vea también  
- [MDX de referencia &#40;de operadores MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+## <a name="see-also"></a>Consulte también  
+ [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [Operadores &#40;sintaxis MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

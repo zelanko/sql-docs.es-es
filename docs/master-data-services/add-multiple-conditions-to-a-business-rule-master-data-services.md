@@ -13,10 +13,10 @@ ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728797"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Agregar varias condiciones a una regla de negocios (Master Data Services)
@@ -43,7 +43,7 @@ ms.locfileid: "73728797"
   
 2.  En la barra de menús, seleccione **Administrar** y haga clic en **Reglas de negocios**.  
   
-3.  En la página **Reglas de negocios/** , en la lista desplegable **Modelo** , seleccione un modelo.  
+3.  En la página **reglas de negocios/** , en la lista desplegable **modelo** , seleccione un modelo.  
   
 4.  En la lista desplegable **Entidad** , seleccione una entidad.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73728797"
   
 12. Complete todos los campos obligatorios.  
   
-13. Haga clic en **Guardar**. Se agregará una fila nueva a la cuadrícula **Si** .  
+13. Haga clic en **Save**(Guardar). Se agregará una fila nueva a la cuadrícula **Si** .  
   
 14. Opcionalmente, para agregar más condiciones, complete los pasos 8 al 13.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "73728797"
     > [!TIP]  
     >  Puede seleccionar varias condiciones y haga clic con el botón derecho para agruparlas en un operador lógico o para desagrupar las condiciones dentro de un operador lógico específico.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Cambiar el nombre de una regla de negocios &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Configurar reglas de negocios para enviar notificaciones &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  

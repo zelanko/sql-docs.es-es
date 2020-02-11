@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957269"
 ---
 # <a name="back-up-a-database-master-key"></a>Hacer copias de seguridad de una clave maestra de una base de datos
@@ -28,21 +28,21 @@ ms.locfileid: "74957269"
   
      [Limitaciones y restricciones](#Restrictions)  
   
-     [Bursátil](#Security)  
+     [Seguridad](#Security)  
   
 -   [Para realizar una copia de seguridad de una clave maestra de base de datos mediante Transact-SQL](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a>Limitaciones y restricciones  
+###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Es necesario abrir la clave maestra y, por tanto, descifrarla antes de realizar una copia de seguridad de la misma. Si está cifrada con la clave maestra de servicio, no es necesario abrir explícitamente la clave maestra. Pero si la clave maestra solo está cifrada con una contraseña, debe abrirse explícitamente.  
   
 -   Se recomienda realizar una copia de seguridad de la clave maestra inmediatamente después de crearla y guardarla en un lugar seguro y alejado de las instalaciones.  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Necesita el permiso CONTROL en la base de datos.  
   
 ##  <a name="Procedure"></a>Usar SQL Server Management Studio con Transact-SQL  
@@ -59,7 +59,7 @@ ms.locfileid: "74957269"
   
 5.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-6.  En la barra Estándar , haga clic en **Nueva consulta**.  
+6.  En la barra de Estándar, haga clic en **Nueva consulta**.  
   
 7.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   

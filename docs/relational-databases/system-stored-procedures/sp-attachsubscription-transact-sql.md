@@ -16,13 +16,13 @@ ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2e059b78a886735ce53b86de77effa43b03136df
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768968"
 ---
-# <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
+# <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Adjunta una base de datos de suscripciones existente a cualquier suscriptor. Este procedimiento almacenado se ejecuta en el nuevo suscriptor de la base de datos maestra.  
@@ -74,9 +74,9 @@ sp_attachsubscription [ @dbname = ] 'dbname'
   
 `[ @distributor_security_mode = ] distributor_security_mode`Es el modo de seguridad que se va a utilizar al conectarse a un distribuidor durante la sincronización. *distributor_security_mode* es de **tipo int**y su valor predeterminado es **0**. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. **1** especifica la autenticación de Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'`Es el inicio de sesión del distribuidor que se va a utilizar al conectarse a un distribuidor durante la sincronización. se requiere *distributor_login* si *distributor_security_mode* está establecido en **0**. *distributor_login* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @distributor_login = ] 'distributor_login'`Es el inicio de sesión del distribuidor que se va a utilizar al conectarse a un distribuidor durante la sincronización. *distributor_login* es necesario si *distributor_security_mode* está establecido en **0**. *distributor_login* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @distributor_password = ] 'distributor_password'`Es la contraseña del distribuidor. se requiere *distributor_password* si *distributor_security_mode* está establecido en **0**. *distributor_password* es de **tipo sysname y su**valor predeterminado es NULL. El valor de *distributor_password* debe ser inferior a 120 caracteres Unicode.  
+`[ @distributor_password = ] 'distributor_password'`Es la contraseña del distribuidor. *distributor_password* es necesario si *distributor_security_mode* está establecido en **0**. *distributor_password* es de **tipo sysname y su**valor predeterminado es NULL. El valor de *distributor_password* debe ser inferior a 120 caracteres Unicode.  
   
 > [!IMPORTANT]  
 >  No utilice una contraseña en blanco. Utilice una contraseña segura. Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
@@ -105,7 +105,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_attachsubscription** se utiliza en la replicación de instantáneas, la replicación transaccional y la replicación de mezcla.  
   
  No se puede adjuntar una suscripción a la publicación si el período de retención de la publicación ha expirado. Si se especifica una suscripción con un período de retención transcurrido, se produce un error cuando se adjunta la suscripción o cuando se sincroniza por primera vez. Se omiten las publicaciones con un período de retención **0** (nunca expiran).  
@@ -113,7 +113,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_attachsubscription**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

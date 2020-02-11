@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481154"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Realizar copias de seguridad de bases de datos de DQS y restaurarlas
@@ -38,7 +38,7 @@ ms.locfileid: "65481154"
   
 -   Debe disponer del rol dqs_administrator en la base de datos DQS_MAIN para terminar las actividades o detener los procesos en ejecución en DQS.  
   
-##  <a name="BackupRestore"></a> Copia de seguridad y restauración de bases de datos de DQS  
+##  <a name="BackupRestore"></a>Copia de seguridad y restauración de bases de datos de DQS  
   
 1.  Inicie Microsoft SQL Server Management Studio y conéctese a la instancia adecuada de SQL Server.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "65481154"
   
 6.  Desconéctese de la instancia actual de SQL Server y conéctese a la instancia de SQL Server donde desea restaurar estas bases de datos.  
   
-7.  Restaure la base de datos DQS_MAIN. Para que obtener instrucciones paso a paso restaurar una base de datos de SQL Server, consulte [restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
+7.  Restaure la base de datos DQS_MAIN. Para obtener instrucciones paso a paso para restaurar una base de datos de SQL Server, consulte [restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md).  
   
 8.  Restaure la base de datos DQS_PROJECTS.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65481154"
   
 10. En el Explorador de objetos, haga clic con el botón secundario en el servidor y, a continuación, haga clic en **Nueva consulta**.  
   
-11. En la ventana Editor de consultas, copie las instrucciones SQL siguientes y reemplace *\<CONTRASEÑA>* por la contraseña proporcionada durante la instalación de DQS para la clave maestra de base de datos:  
+11. En la ventana Editor de consultas, copie las instrucciones SQL siguientes y reemplace * \<>de contraseña* por la contraseña que proporcionó durante la instalación de DQS para la clave maestra de base de datos:  
   
     ```  
     USE [DQS_MAIN]  
@@ -70,9 +70,9 @@ ms.locfileid: "65481154"
   
     ```  
   
-12. Presione F5 para ejecutar las instrucciones. Vea el panel **Resultados** para comprobar que las instrucciones se han ejecutado correctamente.  
+12. Presione F5 para ejecutar las instrucciones. Compruebe el panel de **resultados** para comprobar que las instrucciones se han ejecutado correctamente.  
   
-## <a name="see-also"></a>Vea también  
- [Administrar bases de datos de DQS](../../2014/data-quality-services/manage-dqs-databases.md)  
+## <a name="see-also"></a>Consulte también  
+ [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

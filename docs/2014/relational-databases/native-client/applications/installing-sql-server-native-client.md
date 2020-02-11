@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f832c4b55c8a039de440b08e6d2ed3350175e2a6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231811"
 ---
 # <a name="installing-sql-server-native-client"></a>Instalar SQL Server Native Client
@@ -62,7 +62,7 @@ ms.locfileid: "75231811"
   
  El valor pasado a APPGUID es su código de producto específico. Se debe crear un código de producto al usar Microsoft Installer para empaquetar su programa de instalación de la aplicación.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Compilar aplicaciones con SQL Server Native Client](installing-sql-server-native-client.md)   
  [Temas de procedimientos de instalación](../../../sql-server/install/installation-how-to-topics.md)  
   

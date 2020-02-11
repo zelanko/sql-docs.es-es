@@ -1,5 +1,5 @@
 ---
-title: Examinar los datos | Microsoft Docs
+title: Examinar datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925355"
 ---
 # <a name="examining-data"></a>Examinar los datos
-El [obtención de datos](../../../ado/guide/data/getting-data.md) sección explica cómo recuperar datos de un origen de datos como uno o más **Recordset** objetos. En esta sección se tratará **Recordset** con más detalle, incluido cómo navegar por la **Recordset** y ver sus datos.  
+En la sección [obtención de datos](../../../ado/guide/data/getting-data.md) se explica cómo recuperar datos de un origen de datos como uno o varios objetos de **conjunto de registros** . En esta sección se describe el **conjunto de registros** con más detalle, incluido cómo navegar por el **conjunto de registros** y ver sus datos.  
   
- **Conjunto de registros** admite varios [propiedades y métodos](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) para navegar y examinar los datos contenidos en. Estas características dependen del proveedor. Algunos proveedores podrían no admitir algunas propiedades o métodos.  
+ **Recordset** admite varias [propiedades y métodos](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md) para navegar por los datos contenidos en ellos y examinarlos. Estas características dependen del proveedor. Es posible que algunos proveedores no admitan algunas propiedades o métodos.  
   
  Esta sección contiene los temas siguientes.  
   

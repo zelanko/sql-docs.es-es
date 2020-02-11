@@ -1,5 +1,5 @@
 ---
-title: El motor de base de datos procedimientos almacenados (Transact-SQL) | Microsoft Docs
+title: Motor de base de datos procedimientos almacenados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/02/2015
 ms.prod: sql
@@ -17,15 +17,16 @@ ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 40548043b601d2a2309d9d5180f1200228f11bb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942410"
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>Procedimientos almacenados del motor de base de datos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes procedimientos almacenados del sistema que se utilizan para realizar el mantenimiento general de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |||  
@@ -47,7 +48,7 @@ ms.locfileid: "67942410"
 |[sp_certify_removable](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)|[sp_indexoption](../../relational-databases/system-stored-procedures/sp-indexoption-transact-sql.md)|  
 |[sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)|[sp_invalidate_textptr](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)|  
 |[sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)|[sp_lock](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)|  
-|[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)|[Sys.sp_merge_xtp_checkpoint_files](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)|  
+|[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)|[sys.sp_merge_xtp_checkpoint_files](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)|  
 |[sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)|[sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)|  
 |[sp_create_plan_guide](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)|[sp_prepare](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)|  
 |[sp_create_plan_guide_from_handle](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)|[sp_prepexec](../../relational-databases/system-stored-procedures/sp-prepexec-transact-sql.md)|  
@@ -80,7 +81,7 @@ ms.locfileid: "67942410"
 |[sp_getapplock](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)|[sys.sp_xtp_checkpoint_force_garbage_collection](../../relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md)|  
 |[sp_getbindtoken](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)|[sys.sp_xtp_unbind_db_resource_pool](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

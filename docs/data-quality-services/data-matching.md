@@ -10,10 +10,10 @@ ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4a34828900a90d3c01814c77a76d78e7b657d6f6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251756"
 ---
 # <a name="data-matching"></a>Coincidencia de datos
@@ -76,6 +76,6 @@ ms.locfileid: "75251756"
 |||  
 |-|-|  
 |Crear y probar reglas de coincidencia en una directiva de coincidencia|[Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md)|  
-|Ejecutar la búsqueda de coincidencias en un proyecto de calidad de datos|[Ejecutar un proyecto de búsqueda de coincidencias](../data-quality-services/run-a-matching-project.md)|  
+|Ejecutar la búsqueda de coincidencias en un proyecto de calidad de datos|[Ejecutar un proyecto de coincidencia](../data-quality-services/run-a-matching-project.md)|  
   
   

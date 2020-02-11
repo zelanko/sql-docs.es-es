@@ -14,10 +14,10 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251783"
 ---
 # <a name="create-a-matching-policy"></a>Crear una directiva de coincidencia
@@ -28,14 +28,14 @@ ms.locfileid: "75251783"
   
  La creación de directivas de coincidencia se realiza en tres etapas: un proceso de asignación en el que se identifica el origen de datos y se asignan dominios a las columnas, un proceso de directiva de coincidencia en el que se pueden crear una o varias reglas de coincidencia y probar cada regla de coincidencia por separado, y un proceso de resultados de búsqueda de coincidencias en el que se ejecutan todas las reglas de coincidencia juntas y, si se está satisfecho con ellas, se agrega la directiva a la base de conocimiento. Cada uno de estos procesos se realiza en una página distinta del asistente para la actividad Directiva de coincidencia, lo que le permite desplazarse de una página a otra, volver a ejecutar el proceso y cerrar un proceso de directiva de coincidencia específico y volver a la misma fase del proceso. Después de comprobar todas las reglas juntas, si lo desea puede volver a la página **Directiva de coincidencia** , modificar una de las reglas, probarla de nuevo por separado y, a continuación, volver a la página **Resultados de búsqueda de coincidencias** para volver a ejecutar todas las reglas juntas. DQS proporciona estadísticas sobre los datos de origen, las reglas de coincidencia y los resultados de búsqueda de coincidencias que permiten tomar decisiones fundadas sobre la directiva de coincidencia para poder mejorarla.  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
  Si los datos de origen están en un archivo de Excel, es necesario tener instalado Microsoft Excel en el equipo de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . De lo contrario, no podrá seleccionar dicho archivo en la fase de asignación. Los archivos creados por Microsoft Excel pueden tener la extensión .xlsx, .xls o .csv. Si se utiliza la versión de 64 bits de Excel, solo se admitirán los archivos de Excel 2003 (.xls); los archivos de Excel 2007 o 2010 (.xlsx) no son compatibles. Si utiliza la versión de 64 bits de Excel 2007 o 2010, guarde el archivo como un archivo .xls o .csv, o instale una versión de 32 bits de Excel en su lugar.  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear una directiva de coincidencia.  
   
 ##  <a name="MatchingRules"></a>Cómo establecer parámetros de regla de coincidencia  

@@ -1,5 +1,5 @@
 ---
-title: Control de transacciones (ADO) | Microsoft Docs
+title: Controlar transacciones (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a8a13ee7637c0cb16e33e626a218e28242dabf4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925774"
 ---
 # <a name="controlling-transactions-ado"></a>Control de transacciones (ADO)
-ADO admite procesamiento de transacciones en una conexión con la Ayuda de la **BeginTrans**, **CommitTrans**, y **RollbackTrans** métodos en un  **Conexión** objeto. La idea general de la implementación de procesamiento de transacciones en ADO se ilustra en el siguiente fragmento de código simple.  
+ADO admite el procesamiento de transacciones en una conexión con la ayuda de los métodos **BeginTrans**, **CommitTrans**y **RollbackTrans** en un objeto de **conexión** . La idea general de la implementación del procesamiento de transacciones en ADO se ilustra en el siguiente fragmento de código simple.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -77,6 +77,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- Aquí se usa el procesamiento de transacciones para garantizar que los dos registros se actualizan como una unidad de operación y que los nombres de dos productos son intercambian o no cambian en absoluto.  
+ Aquí, el procesamiento de transacciones se usa para garantizar que los dos registros se actualicen como una unidad de operación y que los dos nombres de producto se intercambien o no se modifiquen en absoluto.  
   
- Para ver explicaciones detalladas de procesamiento de transacciones [actualizar y conservar datos](../../../ado/guide/data/updating-and-persisting-data.md).
+ Para obtener información detallada sobre el procesamiento de transacciones [, vea actualizar y conservar datos](../../../ado/guide/data/updating-and-persisting-data.md).

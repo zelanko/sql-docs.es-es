@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225387"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Escenarios de globalización para Analysis Services Multidimensional
@@ -76,7 +76,7 @@ ms.locfileid: "75225387"
 |[Conversiones de moneda &#40;Analysis Services&#41;](currency-conversions-analysis-services.md)|Defina una conversión de divisa con el Asistente de Business Intelligence.|  
 |[Sugerencias de globalización y prácticas recomendadas &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|Revisa varios procedimientos de diseño y codificación que pueden ayudarle a evitar problemas relacionados con los datos en diversos idiomas.|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Internacionalización para aplicaciones Windows](/windows/desktop/Intl/international-support)   
  [Documentación de globalización de Microsoft](/globalization/)   
  [Escribir aplicaciones de la tienda Windows con diseño adaptable basado en la configuración regional](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   

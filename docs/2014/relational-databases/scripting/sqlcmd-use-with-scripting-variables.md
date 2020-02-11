@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243167"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Usar sqlcmd con variables de script
@@ -116,7 +116,7 @@ ms.locfileid: "75243167"
 |SQLCMDCOLSEP|-s|L/E|" "|  
 |SQLCMDCOLWIDTH|-w|L/E|"0"|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
-|SQLCMDERRORLEVEL|-m|L/E|"0"|  
+|SQLCMDERRORLEVEL|-M|L/E|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|L/E|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|L/E|"0" = ilimitado|  
 |SQLCMDEDITOR||L/E|"edit.com"|  
@@ -130,7 +130,7 @@ ms.locfileid: "75243167"
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-the-setvar-command-in-a-script"></a>a. Usar el comando setvar en un script  
+### <a name="a-using-the-setvar-command-in-a-script"></a>A. Usar el comando setvar en un script  
  Muchas opciones de **sqlcmd** pueden controlarse en un script mediante el comando **setvar** . En el siguiente ejemplo, se crea el script `test.sql` ; en él, la variable `SQLCMDLOGINTIMEOUT` está establecida en `60` segundos y otra variable de scripting, `server`, está establecida en `testserver`. El siguiente código está en `test.sql`.  
   
  `:setvar SQLCMDLOGINTIMEOUT 60`  
@@ -166,7 +166,7 @@ ms.locfileid: "75243167"
   
  `1>`  
   
-### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>c. Usar variables de entorno del símbolo del sistema en sqlcmd  
+### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>C. Usar variables de entorno del símbolo del sistema en sqlcmd  
  En el ejemplo siguiente, se establecen cuatro variables de entorno `are` , a las que luego se llama desde `sqlcmd`.  
   
  `C:\>SET tablename=Person.Person`  
@@ -341,7 +341,7 @@ ms.locfileid: "75243167"
   
  `>2 GO`  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Usar la utilidad SQLCMD](sqlcmd-use-the-utility.md)   
  [Sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)   
  [Referencia de la utilidad de símbolo del sistema &#40;Motor de base de datos&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  

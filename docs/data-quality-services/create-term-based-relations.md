@@ -12,10 +12,10 @@ ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: a982279e06a1968cf80335cd16dd9eb74e458c3e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251778"
 ---
 # <a name="create-term-based-relations"></a>Crear relaciones basadas en términos
@@ -52,14 +52,14 @@ ms.locfileid: "75251778"
   
  Si importa el conocimiento de calidad de los datos recopilados durante el proces ode limpieza en un dominio, valor que cambie un TBR se importará como valor correcto.  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a>Requisitos previos  
+###  <a name="Prerequisites"></a> Requisitos previos  
  Para crear relaciones basadas en términos, debe tener un dominio abierto en la actividad Administración de dominios.  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear relaciones basadas en términos.  
   
 ##  <a name="Create"></a>Crear relaciones basadas en términos  

@@ -1,23 +1,24 @@
 ---
-title: 'Tutorial: Creación y ejecución de una prueba unitaria de SQL Server | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Crear y ejecutar una prueba unitaria de SQL Server
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8ed1dbfa5ffcb61200f7838753dc1681f8c6509
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141207"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242697"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Tutorial: Crear y ejecutar una prueba unitaria de SQL Server
+
 En este tutorial, se crea una prueba unitaria de SQL Server que comprueba el comportamiento de varios procedimientos almacenados. Las pruebas unitarias de SQL Server se crean para ayudar a identificar los defectos del código que podrían producir un comportamiento incorrecto de la aplicación. Las pruebas unitarias de SQL Server y las pruebas de aplicación se pueden ejecutar como parte de un conjunto de pruebas automatizado.  
   
 En este tutorial, realizará las tareas siguientes:  
@@ -292,7 +293,7 @@ De forma predeterminada, al presionar F5 se implementa (o publica) la base de da
   
     Podría generar también datos de prueba como parte de las pruebas unitarias de SQL Server. En este tutorial, puede omitir este paso porque las pruebas van a crear sus propios datos.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
     Se compilará el proyecto de prueba y aparecerá el Diseñador de pruebas unitarias de SQL Server. A continuación, actualizará la lógica de prueba en el script Transact\-SQL de las pruebas unitarias.  
   
@@ -563,7 +564,7 @@ Las pruebas suponen que la base de datos se inicia en un estado limpio. Creará 
   
     Se ejecuta el cuerpo de Transact\-SQL de la prueba unitaria y el esquema resultante aparece en el cuadro de diálogo. Dado que el código anterior a la prueba no se ejecutó, no se devuelve ningún dato. Ya que solo se está comprobando el esquema y no los datos, esto es correcto.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
     El esquema esperado se almacena con la condición de prueba.  
   
@@ -690,7 +691,7 @@ Las pruebas suponen que la base de datos se inicia en un estado limpio. Creará 
   
     Se ejecuta el Transact\-SQL especificado y se calcula una suma de comprobación para los datos devueltos.  
   
-18. Haga clic en **Aceptar**.  
+18. Haga clic en **OK**.  
   
     La suma de comprobación calculada se almacena con la condición de prueba. La suma de comprobación esperada aparece en la columna Valor de la condición de prueba Suma de comprobación de datos.  
   
@@ -718,10 +719,10 @@ Las pruebas suponen que la base de datos se inicia en un estado limpio. Creará 
   
 5.  Repita el paso 3 para las pruebas Sales_uspPlaceNewOrderTest, Sales_uspFillOrderTest y Sales_uspShowOrderDetailsTest. Los resultados deberían ser los siguientes:  
   
-    |Prueba|Resultado esperado|  
+    |Prueba|Resultado previsto|  
     |--------|-------------------|  
-    |Sales_uspPlaceNewOrderTest|Superada|  
-    |Sales_uspShowOrderDetailsTest|Superada|  
+    |Sales_uspPlaceNewOrderTest|Pass (pasado)|  
+    |Sales_uspShowOrderDetailsTest|Pass (pasado)|  
     |Sales_uspFillOrderTest|Se produce el siguiente error: “Error en la condición ScalarValueCondition (scalarValueCondition2): ResultSet 1 Fila 1 Columna 1: los valores no coinciden, real ‘-100’, esperado ‘100’”. Este error aparece porque la definición del procedimiento almacenado contiene un error menor.|  
   
     A continuación, se corregirá el error y volverá a ejecutar la prueba.  
@@ -981,7 +982,7 @@ Para crear y comprobar una prueba negativa, debe realizar las siguientes tareas:
   
     La prueba se supera, lo que significa que se produjo un error en el procedimiento cuando se suponía que se debía producir.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
 En un proyecto típico, se definirían pruebas unitarias adicionales para comprobar que todos los objetos de base de datos críticos funcionan correctamente. Una vez completado el conjunto de pruebas, se protegerían las pruebas en el control de versiones para compartirlas con el equipo.  
   
 Después de establecer una línea base, puede crear y modificar los objetos de base de datos y crear pruebas asociadas para comprobar si un cambio interrumpirá el comportamiento esperado.  

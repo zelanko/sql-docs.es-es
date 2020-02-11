@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a049491513b826b2b050081b40cb5319ca74160f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243212"
 ---
 # <a name="specify-a-hit-count"></a>Especificar un número de llamadas
@@ -45,7 +45,7 @@ ms.locfileid: "75243212"
   
 1.  En la ventana del editor, haga clic con el botón derecho en el glifo de punto de interrupción y, luego, haga clic en **Número de llamadas** del menú contextual.  
   
-     O bien:  
+     O bien  
   
      En la ventana **Puntos de interrupción** , haga clic con el botón derecho en el glifo de punto de interrupción y, luego, haga clic en **Número de llamadas** del menú contextual.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75243212"
   
 1.  En la ventana del editor, haga clic con el botón derecho en el glifo de punto de interrupción y, luego, haga clic en **Número de llamadas** del menú contextual.  
   
-     O bien:  
+     O bien  
   
      En la ventana **Puntos de interrupción** , haga clic con el botón derecho en el glifo de punto de interrupción y, luego, haga clic en **Número de llamadas** del menú contextual.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75243212"
   
 4.  Haga clic en **Aceptar** o en **Cancelar** para salir del cuadro de diálogo.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Especificar una condición de punto de interrupción](specify-a-breakpoint-condition.md)  
   
   

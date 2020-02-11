@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 58611edabcfeaeb9a97de3da6c7305fb169c14ae
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252563"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Especificar funciones de conversión explícita en consultas XPath (SQLXML 4.0)
@@ -29,7 +29,7 @@ ms.locfileid: "75252563"
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-use-the-number-explicit-conversion-function"></a>a. Usar la función de conversión explícita number()  
+### <a name="a-use-the-number-explicit-conversion-function"></a>A. Usar la función de conversión explícita number()  
  La función **Number ()** convierte un argumento en un número.  
   
  Suponiendo que el valor de **ContactID** no es numérico, la siguiente consulta convierte **ContactID** en un número y lo compara con el valor 4. A continuación, la consulta devuelve todos los **** ** \<** elementos secundarios del elemento>empleado del nodo de contexto con el atributo ContactID que tiene un valor numérico de 4:  

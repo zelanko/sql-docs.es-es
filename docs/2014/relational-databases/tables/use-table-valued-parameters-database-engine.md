@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211760"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Usar parámetros con valores de tabla (motor de base de datos)
@@ -66,20 +66,21 @@ ms.locfileid: "68211760"
 ##  <a name="Restrictions"></a> Restricciones  
  Los parámetros con valores de tabla tienen las restricciones siguientes:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mantiene estadísticas en las columnas de parámetros con valores de tabla.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mantiene estadísticas en las columnas de parámetros con valores de tabla.  
   
 -   Los parámetros con valores de tabla se deben pasar como parámetros READONLY de entrada a rutinas [!INCLUDE[tsql](../../includes/tsql-md.md)] . No se pueden realizar operaciones de DML como UPDATE, DELETE o INSERT en un parámetro con valores de tabla en el cuerpo de una rutina.  
   
 -   No se puede utilizar un parámetro con valores de tabla como destino de una instrucción SELECT INTO o INSERT EXEC. Un parámetro con valores de tabla puede estar en la cláusula FROM de SELECT INTO o en el procedimiento almacenado o la cadena INSERT EXEC.  
   
-##  <a name="BulkInsert"></a> Parámetros con valores de tabla frente a operaciones BULK INSERT  
+##  <a name="BulkInsert"></a>Parámetros con valores de tabla frente a operaciones de BULK INSERT  
  El uso de parámetros con valores de tabla es comparable a otras formas de uso de variables basadas en conjuntos; sin embargo, el uso de parámetros con valores de tabla puede ser con frecuencia más rápido para grandes conjuntos de datos. Si se comparan con operaciones masivas que tienen un costo de inicio mayor que los parámetros con valores de tabla, el comportamiento de los parámetros con valores de tabla es excelente cuando se insertan menos de 1.000 filas.  
   
  Los parámetros con valores de tabla que se vuelven a utilizar se benefician del almacenamiento en caché de tablas temporales. Este almacenamiento en memoria caché de tablas proporciona una escalabilidad mejor que en el caso de operaciones BULK INSERT equivalentes. Si se usan pequeñas operaciones de inserción de filas, se puede conseguir una ligera mejora del rendimiento utilizando listas de parámetros o instrucciones por lotes en lugar de operaciones BULK INSERT o parámetros con valores de tabla. Sin embargo, estos métodos son menos apropiados para programar, y el rendimiento disminuye rápidamente cuando aumentan las filas.  
   
  Los parámetros con valores de tabla se comportan tan bien o mejor que una implementación de matriz de parámetros equivalente.  
   
-##  <a name="Example"></a> Ejemplo  
+##  <a name="Example"></a>Ejemplo  
  En el ejemplo siguiente se utiliza [!INCLUDE[tsql](../../includes/tsql-md.md)] y se muestra la forma de crear un tipo de parámetro con valores de tabla, declarar una variable para hacer referencia a ella, rellenar la lista de parámetros y, a continuación, pasar los valores a un procedimiento almacenado.  
   
 ```  
@@ -119,12 +120,12 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
- [sys.types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
- [sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
- [sys.parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
+ [Sys. Types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
+ [Sys. Parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
+ [Sys. parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   

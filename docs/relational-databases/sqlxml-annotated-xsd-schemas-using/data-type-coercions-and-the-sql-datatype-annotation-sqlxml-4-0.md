@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257474"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversiones de tipos de datos y la anotación sql: DataType (SQLXML 4,0)
@@ -44,10 +44,10 @@ ms.locfileid: "75257474"
 |-------------------|---------------------------|  
 |Boolean|CONVERT(bit, COLUMN)|  
 |Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
-|decimal|CONVERT(money, COLUMN)|  
+|Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Tiempo|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Todos los demás|Ninguna conversión adicional|  
   
 > [!NOTE]  
@@ -58,31 +58,31 @@ ms.locfileid: "75257474"
   
 |Tipos de datos de SQL Server|Tipo de datos XSD|  
 |--------------------------|-------------------|  
-|**bigint**|**tal**|  
-|**binario**|**base64Binary**|  
-|**poco**|**booleano**|  
-|**Juegos**|**String@**|  
-|**DateTime**|**dateTime**|  
-|**decimal**|**decimal**|  
-|**flot**|**hace**|  
+|**BIGINT**|**tal**|  
+|**binary**|**base64Binary**|  
+|**bit**|**boolean**|  
+|**char**|**String@**|  
+|**datetime**|**dateTime**|  
+|**Decimal**|**Decimal**|  
+|**float**|**double**|  
 |**impresión**|**base64Binary**|  
-|**Inter**|**Inter**|  
-|**money**|**decimal**|  
+|**int**|**int**|  
+|**money**|**Decimal**|  
 |**nchar**|**String@**|  
 |**ntext**|**String@**|  
 |**nvarchar**|**String@**|  
-|**alfanumérico**|**decimal**|  
-|**impuestos**|**flot**|  
+|**alfanumérico**|**Decimal**|  
+|**impuestos**|**float**|  
 |**smalldatetime**|**dateTime**|  
 |**smallint**|**short**|  
-|**smallmoney**|**decimal**|  
+|**SMALLMONEY**|**Decimal**|  
 |**sql_variant**|**String@**|  
 |**sysname**|**String@**|  
 |**negrita**|**String@**|  
 |**timestamp**|**dateTime**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
-|**VARCHAR**|**String@**|  
+|**varchar**|**String@**|  
 |**uniqueidentifier**|**String@**|  
   
 ## <a name="sqldatatype-annotation"></a>Anotación sql:datatype  
@@ -99,7 +99,7 @@ ms.locfileid: "75257474"
 ## <a name="examples"></a>Ejemplos  
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-xsdtype"></a>a. Especificar xsd:type  
+### <a name="a-specifying-xsdtype"></a>A. Especificar xsd:type  
  Este ejemplo muestra cómo un tipo de **fecha** XSD que se especifica mediante el atributo **xsd: Type** en el esquema afecta al documento XML resultante. El esquema proporciona una vista XML de la tabla Sales.SalesOrderHeader de la base de datos AdventureWorks.  
   
 ```  

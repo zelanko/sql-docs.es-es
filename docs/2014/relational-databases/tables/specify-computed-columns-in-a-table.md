@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211806"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Especificar columnas calculadas en una tabla
@@ -49,7 +49,7 @@ ms.locfileid: "68211806"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 ###  <a name="NewColumn"></a> Para agregar una nueva columna calculada  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68211806"
     > [!IMPORTANT]  
     >  Cuando una fórmula combina dos expresiones de tipos de datos distintos, las reglas de prioridad de tipo de datos especifican que el tipo de datos con la prioridad menor se convierta al tipo de datos con la prioridad mayor. Si la conversión no es una conversión implícita admitida, se devuelve el error "`Error validating the formula for column column_name.`". Use la función CAST o CONVERT para resolver el conflicto de tipos de datos. Por ejemplo, si una columna de tipo `nvarchar` se combina con una columna de tipo `int`, el tipo entero debe convertirse a `nvarchar` como se muestra en esta fórmula `('Prod'+CONVERT(nvarchar(23),ProductID))`. Para obtener más información, vea [CAST y CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
-5.  Indique si los datos se van a conservar; para ello, elija **Sí** o **No** en el menú desplegable de la propiedad secundaria **Es persistente**.  
+5.  Indique si los datos se van a conservar; para ello, elija **Sí** o **No** en el menú desplegable de la propiedad secundaria **Es persistente** .  
   
 6.  En el menú **Archivo** , haga clic en **Guardar**_table name_.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68211806"
   
 1.  En el **Explorador de objetos**, haga clic con el botón derecho en la tabla que contenga la columna que quiera cambiar y expanda la carpeta **Columnas** .  
   
-2.  Haga clic con el botón derecho en la columna para la que quiera especificar una fórmula de columna calculada y haga clic en **Eliminar**. Haga clic en **Aceptar**.  
+2.  Haga clic con el botón derecho en la columna para la que quiera especificar una fórmula de columna calculada y haga clic en **Eliminar**. Haga clic en **OK**.  
   
 3.  Agregue una nueva columna y especifique la fórmula de columna calculada siguiendo el procedimiento anterior para agregar una nueva columna calculada.  
   

@@ -18,10 +18,10 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4215cda5bfc82f0c6d195f336a1099309ab18154
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255643"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurar los niveles de gravedad de los archivos de registro de DQS
@@ -42,11 +42,11 @@ ms.locfileid: "75255643"
   
  Cuando se configuran niveles de gravedad para las actividades y módulos de DQS, lo que se hace en realidad es filtrar la información que quedará registrada en el archivo de registro de DQS para la actividad o el módulo de DQS correspondiente. Por ejemplo, si establece el nivel de gravedad de una actividad de DQS en **Warn**, solo se registrarán los mensajes de advertencia y los de los niveles de gravedad superiores (Error y Fatal) que estén asociados a la actividad de DQS.  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Para configurar niveles de gravedad, debe disponer del rol dqs_administrator en la base de datos DQS_MAIN.  
   
 ##  <a name="ConfigureActivity"></a>Configurar niveles de gravedad en el nivel de actividad  
@@ -90,7 +90,7 @@ ms.locfileid: "75255643"
   
 5.  Haga clic en **Cerrar**.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Configurar las opciones avanzadas de los archivos de registro de DQS](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   

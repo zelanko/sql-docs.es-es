@@ -16,32 +16,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 42b25dfe8f0a39c577e38c6d1ef21c7f3315a89d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231784"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Compatibilidad con Nombre de la entidad de seguridad del servicio (SPN) en conexiones cliente
   A partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], se ha ampliado la compatibilidad con los nombres de entidad de seguridad de servicio (SPN) para habilitar la autenticación mutua en todos los protocolos. En versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los SPN solo se admitían en Kerberos sobre TCP, cuando el SPN predeterminado para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se registraba en Active Directory.  
   
- El protocolo de autenticación usa los SPN para determinar la cuenta en la que se ejecuta una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si se conoce la cuenta de la instancia, la autenticación Kerberos puede usarse para proporcionar una autenticación mutua del cliente y el servidor. Si no se conoce la cuenta de la instancia, se usa la autenticación NTLM, que solo proporciona autenticación del cliente por parte del servidor. Actualmente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client realiza la búsqueda de autenticación derivando el SPN de las propiedades de conexión de red y nombre de instancia. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]las instancias intentarán registrar los SPN en el inicio, o bien se pueden registrar manualmente. No obstante, se producirá un error en el registro si no hay suficientes derechos de acceso para la cuenta que intenta registrar los SPN.  
+ El protocolo de autenticación usa los SPN para determinar la cuenta en la que se ejecuta una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si se conoce la cuenta de la instancia, la autenticación Kerberos puede usarse para proporcionar una autenticación mutua del cliente y el servidor. Si no se conoce la cuenta de la instancia, se usa la autenticación NTLM, que solo proporciona autenticación del cliente por parte del servidor. Actualmente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client realiza la búsqueda de autenticación derivando el SPN de las propiedades de conexión de red y nombre de instancia. Las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentarán registrar los SPN al inicio, o bien pueden registrarse manualmente. No obstante, se producirá un error en el registro si no hay suficientes derechos de acceso para la cuenta que intenta registrar los SPN.  
   
- Las cuentas de dominio y equipo se registran automáticamente en Active Directory. Estas cuentas pueden usarse como SPN, o bien los administradores pueden definir sus propios SPN. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hace que la autenticación segura sea más fácil de administrar y más confiable, ya que permite a los clientes especificar directamente el SPN que va a usarse.  
+ Las cuentas de dominio y equipo se registran automáticamente en Active Directory. Estas cuentas pueden usarse como SPN, o bien los administradores pueden definir sus propios SPN. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hace que la autenticación segura sea más fácil de administrar y más confiable, ya que permite a los clientes especificar directamente el SPN que va a usarse.  
   
 > [!NOTE]  
 >  Un SPN especificado por una aplicación cliente solamente se utiliza cuando se establece una conexión con la seguridad integrada de Windows.  
   
 > [!TIP]  
->  Kerberos Configuration Manager para es una herramienta de diagnóstico que ayuda a solucionar problemas de conectividad [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Kerberos relacionados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** con. Para obtener más información, vea [Administrador de configuración de Microsoft Kerberos para SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Administrador de configuración de Kerberos para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** es una herramienta de diagnóstico que sirve para solucionar problemas de conectividad de Kerberos relacionados con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Administrador de configuración de Microsoft Kerberos para SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 > [!TIP]  
->  Kerberos Configuration Manager para es una herramienta de diagnóstico que ayuda a solucionar problemas de conectividad [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Kerberos relacionados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** con. Para obtener más información, vea [Administrador de configuración de Microsoft Kerberos para SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Administrador de configuración de Kerberos para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** es una herramienta de diagnóstico que sirve para solucionar problemas de conectividad de Kerberos relacionados con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Administrador de configuración de Microsoft Kerberos para SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
  Para obtener más información acerca de Kerberos, vea los siguientes artículos:  
   
--   [Suplemento Técnico de Kerberos para Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Complemento técnico de Kerberos para Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
@@ -95,23 +94,23 @@ ms.locfileid: "75231784"
   
 |Sintaxis|Descripción|  
 |------------|-----------------|  
-|MSSQLSvc/*fqdn*|SPN predeterminado generado por el proveedor para una instancia predeterminada cuando se usa un protocolo distinto de TCP.<br /><br /> *FQDN* es un nombre de dominio completo.|  
-|MSSQLSvc/*FQDN*:*Puerto*|SPN predeterminado generado por el proveedor cuando se usa TCP.<br /><br /> *Port* es un número de puerto TCP.|  
-|MSSQLSvc/*FQDN*:*nombreDeInstancia*|SPN predeterminado generado por el proveedor para una instancia con nombre cuando se usa un protocolo distinto de TCP.<br /><br /> *InstanceName* es un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nombre de instancia.|  
+|MSSQLSvc/*fqdn*|SPN predeterminado generado por el proveedor para una instancia predeterminada cuando se usa un protocolo distinto de TCP.<br /><br /> *fqdn* es un nombre de dominio completo.|  
+|MSSQLSvc/*fqdn*:*port*|SPN predeterminado generado por el proveedor cuando se usa TCP.<br /><br /> *puerto* en un número de puerto TCP.|  
+|MSSQLSvc/*fqdn*:*InstanceName*|SPN predeterminado generado por el proveedor para una instancia con nombre cuando se usa un protocolo distinto de TCP.<br /><br /> *InstanceName* es un nombre de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|SPN que se asigna a las cuentas de equipo integradas que Windows registra automáticamente.|  
-|**@*Dominio* nombre de usuario|Especificación directa de una cuenta de dominio.<br /><br /> *Username* es un nombre de cuenta de usuario de Windows.<br /><br /> *Dominio* es un nombre de dominio de Windows o un nombre de dominio completo.|  
-|**$@*Dominio* MachineName|Especificación directa de una cuenta de equipo.<br /><br /> (Si el servidor al que se está conectando se ejecuta en las cuentas de sistema local o servicio de red, `ServerSPN` para obtener la autenticación Kerberos, puede tener el formato de*dominio* *MachineName*$@).|  
+|*Username*@*Domain*|Especificación directa de una cuenta de dominio.<br /><br /> *Username* es un nombre de cuenta de usuario de Windows.<br /><br /> *Domain* es un nombre de dominio de Windows o nombre de dominio completo.|  
+|*MachineName*$@*Domain*|Especificación directa de una cuenta de equipo.<br /><br /> (Si el servidor al que se está conectando se ejecuta en las cuentas de sistema local o servicio de red, `ServerSPN` para obtener la autenticación Kerberos, puede tener el formato de*dominio* *MachineName*$@).|  
 |*KDCKey*/*MachineName*|SPN especificado por el usuario.<br /><br /> *KDCKey* es una cadena alfanumérica que se ajusta a las reglas de una clave KDC.|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>Sintaxis de ODBC y OLE DB compatible con los SPN  
  Para obtener información específica de la sintaxis, vea los siguientes temas:  
   
--   [Nombres de entidad de seguridad de servicio &#40;SPN&#41; en conexiones de cliente &#40;ODBC&#41;](../odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Nombres de entidad de seguridad de servicio &#40;SPNs&#41; en conexiones cliente &#40;ODBC&#41;](../odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Nombres de entidad de seguridad de servicio &#40;SPN&#41; en las conexiones de cliente &#40;OLE DB&#41;](../ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Nombres de entidad de seguridad de servicio &#40;SPN&#41; en conexiones de cliente &#40;OLE DB&#41;](../ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
  Para obtener información sobre las aplicaciones de ejemplo que muestran esta característica, vea [Ejemplos de programación de datos de SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
-## <a name="see-also"></a>Véase también  
- [SQL Server Native Client características](sql-server-native-client-features.md)  
+## <a name="see-also"></a>Consulte también  
+ [Características de SQL Server Native Client](sql-server-native-client-features.md)  
   

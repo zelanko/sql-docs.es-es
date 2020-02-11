@@ -10,10 +10,10 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 6d3c4f15dcb62e36918c81baa5f2bd40c38b7c6a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244136"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servicios de datos de referencia en DQS
@@ -71,7 +71,7 @@ ms.locfileid: "75244136"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Describe cómo configurar DQS para utilizar los servicios de datos de referencia de Marketplace o de proveedores directos de datos de terceros en línea.|[Configurar DQS para usar datos de referencia](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
+|Describe cómo configurar DQS para utilizar los servicios de datos de referencia de Marketplace o de proveedores directos de datos de terceros en línea.|[Configurar DQS para utilizar datos de referencia](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |Describe cómo asignar un dominio o un dominio compuesto de una base de conocimiento a un servicio de datos de referencia.|[Adjuntar un dominio o un dominio compuesto a datos de referencia](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |Describe cómo limpiar los datos mediante el servicio de datos de referencia.|[Limpiar datos con datos de referencia &#40;información de&#41; externa](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   

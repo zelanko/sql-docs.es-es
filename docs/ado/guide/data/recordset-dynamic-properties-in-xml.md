@@ -1,5 +1,5 @@
 ---
-title: Propiedades del conjunto de registros dinámicos en XML | Microsoft Docs
+title: Propiedades dinámicas del conjunto de registros en XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,16 +13,16 @@ ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a058a2d0c5a808f29807744c6ba01f658bebc120
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924445"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>Propiedades del conjunto de registros dinámicos en XML
-Actualmente, las siguientes propiedades específicas del proveedor de conjunto de registros (desde el motor de Cursor de cliente) se conservan en el formato XML:  
+Las siguientes propiedades específicas del proveedor de conjuntos de registros (del motor de cursor de cliente) se guardan actualmente en el formato XML:  
   
--   Resincronización de la actualización  
+-   Actualizar resincronización  
   
 -   Tabla única  
   
@@ -30,7 +30,7 @@ Actualmente, las siguientes propiedades específicas del proveedor de conjunto d
   
 -   Catálogo único  
   
--   Resincronizar comando  
+-   Comando Resync  
   
 -   IRowsetChange  
   
@@ -42,11 +42,11 @@ Actualmente, las siguientes propiedades específicas del proveedor de conjunto d
   
 -   UpdateCriteria  
   
--   Cambiar la forma de nombre  
+-   Nombre de la reformación  
   
 -   AutoRecalc  
   
- Estas propiedades se guardan en la sección de esquema como atributos de la definición de elemento para el conjunto de registros que se hace persistente. Estos atributos se definen en el espacio de nombres del esquema de conjunto de filas y debe tener el prefijo "rs:".  
+ Estas propiedades se guardan en la sección Schema como atributos de la definición de elemento para el conjunto de registros que se va a conservar. Estos atributos se definen en el espacio de nombres del esquema del conjunto de filas y deben tener el prefijo "RS:".  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

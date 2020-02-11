@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 04b21c85454fc992aac7e2d18b580d440171e93c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244633"
 ---
 # <a name="change-the-name-of-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>Cambiar el nombre de un servidor registrado o un grupo de servidores registrados (SQL Server Management Studio)
   En este tema se describe cómo cambiar el nombre de un servidor o un grupo de servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Este nombre se puede cambiar en cualquier momento. El hecho de cambiar el nombre de un servidor en Servidores registrados solo cambia el nombre que se visualiza. Para conectarse a otro servidor, debe editar las propiedades de conexión del servidor registrado.  
   
-##  <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-change-the-name-of-a-server"></a>Para cambiar el nombre de un servidor  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75244633"
   
 2.  En el cuadro **Nombre del grupo de servidores** , escriba el nuevo nombre del grupo de servidores y, a continuación, haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Véase también  
- [Cambiar el &#40;de registro de un servidor SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md)
+## <a name="see-also"></a>Consulte también  
+ [Cambiar el registro de un servidor &#40;SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md)
   
   

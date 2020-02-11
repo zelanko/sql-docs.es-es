@@ -16,32 +16,32 @@ ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5d8ed2818b466d16591be8b70478221d7ac84df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063369"
 ---
 # <a name="sql-92-compliance"></a>Cumplimiento de normas de SQL-92
-Los controladores de base de datos ODBC Desktop y el motor subyacente de Microsoft Jet no son compatibles con SQL-92. Admiten muchas características que se han definido en SQL-92. Algunas características admitidas en el controlador no se admiten en SQL-92. Para obtener más información, consulte el *Guía del programador del motor de base de datos Jet de Microsoft*. Los siguientes son las principales diferencias entre los dos:  
+Los controladores de base de datos de escritorio ODBC y el motor de Microsoft Jet subyacente no son compatibles con SQL-92. Admiten muchas características que se han definido en SQL-92. Algunas características admitidas en el controlador no se admiten en SQL-92. Para obtener más información, vea la *Guía del programador de Microsoft Jet motor de base de datos*. Las siguientes son las principales diferencias entre los dos:  
   
--   La usan los controladores de base de datos de escritorio SQL admite expresiones más eficaces que los especificados por SQL-92.  
+-   El SQL que usan los controladores de base de datos de escritorio admite expresiones más eficaces que las especificadas por SQL-92.  
   
--   Se aplican reglas diferentes con el predicado BETWEEN.  
+-   Se aplican reglas diferentes al predicado BETWEEN.  
   
--   El SQL utilizado por los controladores de base de datos de escritorio y ANSI SQL es compatible con palabras clave diferentes.  
+-   El SQL que usan los controladores de base de datos de escritorio y ANSI SQL admite diferentes palabras clave.  
   
- SQL de Microsoft Jet no admite las siguientes características de SQL-92:  
+ Las siguientes características de SQL-92 no son compatibles con Microsoft Jet SQL:  
   
--   Instrucciones de seguridad, como GRANT y bloqueo.  
+-   Instrucciones de seguridad, como GRANT y LOCK.  
   
--   DISTINCT con referencias de función de agregado.  
+-   DISTINCt con referencias a funciones de agregado.  
   
- Las siguientes características son mejoras en el SQL que usan los controladores de base de datos de escritorio que no se especifican mediante SQL-92:  
+ Las siguientes características son mejoras en el SQL que usan los controladores de base de datos de escritorio que no se especifican en SQL-92:  
   
--   La instrucción de transformación que proporciona compatibilidad con consultas de referencias cruzadas.  
+-   La instrucción TRANSFORM que proporciona compatibilidad con las consultas de referencias cruzadas.  
   
--   Otras funciones de agregado (**StDev** y **VarP**).  
+-   Funciones de agregado adicionales (**stdev** y **VarP**).  
   
 > [!NOTE]  
->  ¿Los controladores de base de datos de escritorio admiten la sintaxis de ANSI estándar para % (porcentaje) y _ (carácter de subrayado), no * (asterisco) y? (signo de interrogación).
+>  Los controladores de base de datos de escritorio admiten la sintaxis ANSI estándar para% (porcentaje) y _ (carácter de subrayado), no * (asterisco) y? (signo de interrogación).

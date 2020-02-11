@@ -18,10 +18,10 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165911"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74165911"
 
   Compila la instrucción de cursor o lote en un plan de ejecución, pero no crea el cursor. sp_cursorexecute puede utilizar después la instrucción compilada. Este procedimiento, junto con sp_cursorexecute, tiene la misma función que sp_cursoropen, pero se divide en dos fases. sp_cursorprepare se invoca especificando el identificador 3 en un paquete de flujo TDS.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,23 +52,23 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  Use una cadena **ntext** como valor de entrada cuando *stmt* tiene parámetros y el valor de PARAMETERIZED_STMT *scrollopt* es on.  
   
- *stmt*  
+ *instrucción*  
  Define el conjunto de resultados del cursor. El parámetro *stmt* es obligatorio y llama a para un valor de entrada **ntext**, **nchar** o **nvarchar** .  
   
 > [!NOTE]  
 >  Las reglas para especificar el valor de *stmt* son las mismas que para Sp_cursoropen, con la excepción de que el tipo de datos de la cadena *stmt* debe ser **ntext**.  
   
- *options*  
+ *Opciones*  
  Parámetro opcional que devuelve una descripción de las columnas del conjunto de resultados del cursor. *Options* requiere el siguiente valor de entrada **int** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Opción de desplazamiento. *scrollopt* es un parámetro opcional que requiere uno de los siguientes valores de entrada **int** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  Opción de control de simultaneidad. *ccopt* es un parámetro opcional que requiere uno de los siguientes valores de entrada **int** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (conocido anteriormente como LOCKCC)|  
@@ -104,15 +104,15 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Al igual que con *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede asignar un valor diferente al solicitado.  
+ Al igual ** que con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollpt, puede asignar un valor diferente al solicitado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  El parámetro de estado de RPC es uno de los siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|0|Success|  
-|0x0001|Failure|  
+|0|Correcto|  
+|0x0001|Error|  
 |1FF6|No pudo devolver los metadatos.<br /><br /> Nota: la razón de esto es que la instrucción no produce un conjunto de resultados; por ejemplo, es una instrucción INSERT o DDL.|  
   
 ## <a name="examples"></a>Ejemplos  
@@ -144,12 +144,12 @@ exec sp_cursorclose @p2
  
  Cuando *stmt* tiene parámetros y el valor de PARAMETERIZED_STMT *scrollopt* es on, el formato de la cadena es el siguiente:  
   
- { *\<nombre de la variable local > * *\<tipo de datos >* } [ ,... *n* ]  
+ { * \<nombre de variable local> *\<* tipo de datos>* } [ ,... *n* ]  
   
-## <a name="see-also"></a>Vea también  
- [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorunprepare &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_cursorexecute &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursoropen &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorunprepare &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

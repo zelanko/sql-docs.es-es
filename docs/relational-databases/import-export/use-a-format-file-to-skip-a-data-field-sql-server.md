@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056317"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Uso de un archivo de formato para omitir un campo de datos (SQL Server)
@@ -69,7 +69,7 @@ Para realizar una importación masiva de datos de `myTestSkipField.bcp` en la ta
 Se trata del método más sencillo para crear el archivo de formato mediante la [utilidad bcp](../../tools/bcp-utility.md).  En primer lugar, cree un archivo de formato base a partir de la tabla existente.  En segundo lugar, modifique el archivo de formato base para reflejar el archivo de datos real.
   
 ### <a name="nonxml_format_file"></a>Creación de un archivo de formato no XML 
-Revise [Archivos de formato no XML [SQL Server]](../../relational-databases/import-export/non-xml-format-files-sql-server.md) para información detallada. El siguiente comando hará uso de la [utilidad bcp](../../tools/bcp-utility.md) para generar un archivo de formato no XML, `myTestSkipField.fmt`, basado en el esquema de `myTestSkipField`.  Además, el calificador `c` se usa para especificar los datos de caracteres, `t,` se usa para especificar una coma como terminador de campo y `T` se usa para especificar una conexión de confianza que usa seguridad integrada.  En el símbolo del sistema, escriba el siguiente comando:
+Revise [Archivos de formato no XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) para obtener información detallada. El siguiente comando hará uso de la [utilidad BCP](../../tools/bcp-utility.md) para generar un archivo de formato no XML, `myTestSkipField.fmt`, basado en el esquema de `myTestSkipField`.  Además, el calificador `c` se usa para especificar los datos de caracteres, `t,` se usa para especificar una coma como terminador de campo y `T` se usa para especificar una conexión de confianza que usa seguridad integrada.  En el símbolo del sistema, escriba el siguiente comando:
 
 ```
 bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt -t, -T
@@ -83,7 +83,7 @@ Consulte [Estructura de los archivos de formato no XML](../../relational-databas
 3) Modifique el orden de la columna del servidor de `2` a `0` en la segunda fila del archivo de formato. 
 
 Compare los cambios realizados:  
-**Antes del**
+**Antes**
 ```
 13.0
 3
@@ -123,7 +123,7 @@ Consulte [Sintaxis de esquema para archivos de formato XML](../../relational-dat
 3) Aumente el valor de "COLUMN SOURCE" en 1 para `FirstName`y `LastName` para reflejar la asignación revisada.
 
 Compare los cambios realizados:  
-**Antes del**
+**Antes**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -252,7 +252,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
   
 ## <a name="see-also"></a>Consulte también  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Usar un archivo de formato para omitir una columna de tabla &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   

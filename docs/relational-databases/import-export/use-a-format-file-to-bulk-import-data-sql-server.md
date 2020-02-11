@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e81bf59912499310fc95afd29758d5be5f691118
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056366"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Uso de un archivo de formato para la importación en bloque de datos (SQL Server)
@@ -36,9 +36,9 @@ En este tema se describe cómo usar un archivo de formato en operaciones de impo
   * SQLCHAR o SQLVARYCHAR (los datos se envían a la página de códigos del cliente o a la página de códigos implícita por la intercalación).
   * SQLNCHAR o SQLNVARCHAR (los datos se envían como Unicode).
   * SQLBINARY o SQLVARYBIN (los datos se envían sin realizar ninguna conversión).
-* Azure SQL Database y Almacenamiento de datos SQL de Azure solo admiten [bcp](../../tools/bcp-utility.md).  Para obtener información adicional, consulte:
-  * [Cargar datos en Almacenamiento de datos SQL de Azure](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
-  * [Cargar datos de SQL Server en Almacenamiento de datos SQL de Azure (archivos sin formato)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
+* Azure SQL Database y Almacenamiento de datos SQL de Azure solo admiten [bcp](../../tools/bcp-utility.md).  Para información adicional, consulte:
+  * [Carga de datos en Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
+  * [Carga de datos de SQL Server en Azure SQL Data Warehouse (archivos planos)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
   * [Migración de los datos](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
 
 ## Condiciones de prueba de ejemplo<a name="etc"></a>  
@@ -259,7 +259,7 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
  [Usar un archivo de formato para omitir un campo de datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
  [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

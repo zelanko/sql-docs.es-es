@@ -1,5 +1,5 @@
 ---
-title: Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft | Microsoft Docs
+title: Examinar un modelo usando el visor de árbol de contenido genérico de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb080721ccb3e5b5aef190eda3d1088df09762c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086067"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft
@@ -48,8 +48,8 @@ SELECT * FROM [<mining model name>].CONTENT
   
  Para obtener más información, vea [Consultas de minería de datos](data-mining-queries.md).  
   
-## <a name="see-also"></a>Vea también  
- [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Consulte también  
+ [Visor de árbol de contenido genérico de Microsoft &#40;minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

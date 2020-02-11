@@ -1,5 +1,5 @@
 ---
-title: Las bases de datos de modelo tabular (SSAS Tabular) | Microsoft Docs
+title: Bases de datos de modelo tabular (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066422"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Bases de datos de modelo tabular (SSAS tabular)
@@ -24,20 +24,20 @@ ms.locfileid: "66066422"
  Las bases de datos de modelo tabular son más fáciles de generar que las bases de datos multidimensionales, especialmente si tiene un fondo de base de datos relacional. De lo contrario, las tareas administrativas son similares, si no idénticas, a la administración de base de datos de una base de datos multidimensional. Se aplican las mismas herramientas y enfoques.  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Soluciones de modelos tabulares &#40;SSAS tabular&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Soluciones de modelos tabulares &#40;&#41;tabular de SSAS](../tabular-model-solutions-ssas-tabular.md)  
   
  [Acceso a datos de modelos tabulares](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Procesar base de datos, tabla o partición](process-database-table-or-partition-analysis-services.md)  
   
- [Roles de modelos tabulares &#40;SSAS tabular&#41;](tabular-model-roles-ssas-tabular.md)  
+ [Roles de modelo tabular &#40;&#41;tabular de SSAS](tabular-model-roles-ssas-tabular.md)  
   
  [Particiones de modelos tabulares &#40;SSAS tabular&#41;](tabular-model-partitions-ssas-tabular.md)  
   
  [Configurar el acceso In-Memory o DirectQuery para una base de datos modelo tabular](enable-directquery-mode-in-ssms.md)  
   
- [Conectar a una base de datos de modelo tabular &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [Conectarse a una base de datos de modelo tabular &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
  [Restaurar desde PowerPivot](restore-from-power-pivot.md)  
   

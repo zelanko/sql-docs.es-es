@@ -1,5 +1,5 @@
 ---
-title: Detalles de traducción (pestaña traducciones, Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Detalles de traducción (pestaña traducciones, diseñador de dimensiones) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065851"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Detalles de la traducción (pestaña Traducciones, Diseñador de dimensiones) (Analysis Services – Datos multidimensionales)
   Use el panel de **Detalles de la traducción** de la pestaña **Traducciones** del Diseñador de dimensiones para definir y administrar traducciones para la dimensión seleccionada actualmente.  
   
- **Para mostrar el panel de detalles de las traducciones**  
+ **Para mostrar el panel Detalles de la traducción**  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, a continuación, abra la dimensión que desea.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66065851"
   
      Propiedades `Caption` y `AttributeAllMember`  
   
--   Attribute  
+-   Atributo  
   
      Propiedades `Caption`, `AttributeHierarchyDisplayFolder` y `NamingTemplate`.  
   
@@ -52,12 +52,12 @@ ms.locfileid: "66065851"
   
 -   Nivel  
   
-     Propiedad `Caption`  
+     `Caption`propiedad  
   
- **\<Language>**  
- Escriba o seleccione el valor de la propiedad del objeto de la dimensión en el idioma seleccionado. Si hace clic en el botón de puntos suspensivos ( **…** ), se abrirán otros cuadros de diálogo, según la propiedad que edite:  
+ **\<>de idioma**  
+ Escriba o seleccione el valor de la propiedad del objeto de la dimensión en el idioma seleccionado. Si hace clic en el botón de puntos suspensivos (**…**), se abrirán otros cuadros de diálogo, según la propiedad que edite:  
   
--   Propiedad `NamingTemplate`  
+-   `NamingTemplate`propiedad  
   
      Muestra el [Cuadro de diálogo Plantilla de asignación de nombres de nivel &#40;Analysis Services - Datos multidimensionales&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66065851"
 > [!NOTE]  
 >  Esta opción solo se habilita si hizo clic con el botón secundario en una celda para eliminar la columna de traducción de un atributo.  
   
- **Editar columna de leyenda**  
+ **Editar columna de título**  
  Seleccione esta opción para mostrar el cuadro de diálogo **Traducción de datos de atributos** y modificar una columna de leyendas existente al modificar un atributo en la cuadrícula **Detalles de traducción** .  
   
 > [!NOTE]  
@@ -98,7 +98,7 @@ ms.locfileid: "66065851"
  **Mostrar todos los atributos**  
  Seleccione esta opción para alternar la visualización de todos los atributos definidos para la dimensión seleccionada. Entre ellos se incluyen los atributos en los que se han deshabilitado las jerarquías de atributo.  
   
-## <a name="see-also"></a>Vea también  
- [Traducciones &#40;Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Traducciones &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

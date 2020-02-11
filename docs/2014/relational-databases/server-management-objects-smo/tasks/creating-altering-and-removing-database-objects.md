@@ -1,5 +1,5 @@
 ---
-title: Trabajar con objetos de base de datos | Documentos de Microsoft
+title: Trabajar con objetos de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5bf11ece3797f9bbc580339846efb685876b2d0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188618"
 ---
 # <a name="working-with-database-objects"></a>Trabajar con objetos de bases de datos
@@ -41,7 +41,7 @@ ms.locfileid: "63188618"
   
  La instrucción `Drop` se utiliza para quitar un objeto y todos los objetos secundarios codependientes que hicieron falta para crear el objeto inicialmente.  
   
-## <a name="see-also"></a>Vea también  
- [Modelo de objetos de SMO](../smo-object-model.md)  
+## <a name="see-also"></a>Consulte también  
+ [Modelo de objetos SMO](../smo-object-model.md)  
   
   

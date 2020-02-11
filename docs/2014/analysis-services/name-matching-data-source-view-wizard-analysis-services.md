@@ -1,5 +1,5 @@
 ---
-title: El nombre coincidente (Data Source View Wizard) (Analysis Services) | Microsoft Docs
+title: Coincidencia de nombres (Asistente para vistas del origen de datos) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072395"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Coincidencia de nombres (Asistente para vistas del origen de datos) (Analysis Services)
@@ -32,10 +32,10 @@ ms.locfileid: "66072395"
  **Coincidencias de claves externas**  
  Seleccione el criterio que desea utilizar para crear relaciones lógicas entre tablas y vistas en el origen de datos. Se ignorarán los caracteres que no sean alfanuméricos en las cadenas que desea hacer coincidir. Por ejemplo, se harán coincidir "Customer ID", "Customer_ID" y "CustomerID". Seleccione una de las opciones de la siguiente tabla para crear relaciones conforme a las condiciones especificadas.  
   
-|Select|Para crear|  
+|Seleccionar|Para crear|  
 |------------|---------------|  
-|**Mismo nombre que el de la clave principal**|Una relación lógica con todas las tablas con un nombre de columna que coincida con el nombre de la columna de clave principal de la tabla seleccionada.|  
-|**Mismo nombre que el nombre de tabla de destino**|Una relación lógica con todas las tablas con un nombre de columna que coincida con el nombre de la tabla seleccionada.|  
+|**Mismo nombre que la clave principal**|Una relación lógica con todas las tablas con un nombre de columna que coincida con el nombre de la columna de clave principal de la tabla seleccionada.|  
+|**Mismo nombre que el nombre de la tabla de destino**|Una relación lógica con todas las tablas con un nombre de columna que coincida con el nombre de la tabla seleccionada.|  
 |**Nombre de la tabla de destino + nombre de la clave principal**|Una relación lógica con todas las tablas en las que el nombre de columna coincide con el nombre de la tabla seleccionada concatenada con el nombre de la columna de clave principal para la tabla seleccionada, por ese orden. Se ignorarán los caracteres que no sean alfanuméricos en la concatenación (por ejemplo, se harán coincidir "Product ID", "Product_ID" y "ProductID").|  
   
  **Descripción y muestra**  

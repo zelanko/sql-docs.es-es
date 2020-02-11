@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar particiones de modelos tabulares (SSAS Tabular) | Microsoft Docs
+title: Crear y administrar particiones de modelos tabulares (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72c5b69aee10d8ac1342b3f037d76ab6ef5fc36c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067397"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Crear y administrar particiones de modelos tabulares (SSAS tabular)
@@ -22,7 +22,7 @@ ms.locfileid: "66067397"
   
  En este tema se incluyen las tareas siguientes:  
   
--   [Para crear una partición](#bkmk_create_new)  
+-   [Para crear una nueva partición](#bkmk_create_new)  
   
 -   [Para copiar una partición](#bkmk_copy)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66067397"
 ## <a name="tasks"></a>Tareas  
  Para crear y administrar particiones en una base de datos de modelos tabulares implementada, usará el cuadro de diálogo **Particiones** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para ver el cuadro de diálogo **Particiones** , en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en una tabla y, después, haga clic en **Particiones**.  
   
-###  <a name="bkmk_create_new"></a> Para crear una partición  
+###  <a name="bkmk_create_new"></a>Para crear una nueva partición  
   
 1.  En el cuadro de diálogo **Particiones** , haga clic en el botón **Nuevo** .  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66067397"
   
 4.  Para validar la instrucción, haga clic en **Comprobar sintaxis**.  
   
-###  <a name="bkmk_copy"></a> Para copiar una partición  
+###  <a name="bkmk_copy"></a>Para copiar una partición  
   
 1.  En el cuadro de diálogo **Particiones** , en la lista **Particiones** , seleccione la partición que desea copiar y, a continuación, haga clic en el botón **Copiar** .  
   
@@ -51,18 +51,18 @@ ms.locfileid: "66067397"
   
 3.  En **Instrucción SQL**, edite la instrucción de consulta SQL.  
   
-###  <a name="bkmk_merge"></a> Para combinar dos o más particiones  
+###  <a name="bkmk_merge"></a>Para combinar dos o más particiones  
   
 -   En el cuadro de diálogo **Particiones** , en la lista **Particiones** , use Ctrl+clic para seleccionar las particiones que quiere combinar y, después, haga clic en el botón **Combinar** .  
   
 > [!IMPORTANT]  
 >  Al combinar las particiones no se actualizan los metadatos de la partición. Los administradores deben modificar la instrucción SQL para la partición resultante a fin de asegurarse de que las operaciones de procesamiento procesan todos los datos de la partición combinada.  
   
-###  <a name="bkmk_delete"></a> Para eliminar una partición  
+###  <a name="bkmk_delete"></a>Para eliminar una partición  
   
 -   En el cuadro de diálogo **Particiones** , en la lista **Particiones** , seleccione la partición que desea eliminar y, a continuación, haga clic en el botón **Eliminar** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Particiones de modelos tabulares &#40;SSAS tabular&#41;](partitions-ssas-tabular.md)   
  [Procesar particiones de modelos tabulares &#40;SSAS tabular&#41;](process-tabular-model-partitions-ssas-tabular.md)  
   

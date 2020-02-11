@@ -1,5 +1,5 @@
 ---
-title: Mover la base de datos de un Analysis Services | Microsoft Docs
+title: Traslado de una base de datos Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073598"
 ---
 # <a name="move-an-analysis-services-database"></a>Mover una base de datos de Analysis Services
@@ -43,7 +43,7 @@ ms.locfileid: "66073598"
   
 1.  Localice la base de datos que desea mover en el panel izquierdo o derecho de SSMS.  
   
-2.  Haga doble clic en la base de datos y seleccione **separar...**  
+2.  Haga clic con el botón derecho en la base de datos y seleccione **desasociar..** .  
   
 3.  Asigne una contraseña a la base de datos que se va separar y, a continuación, haga clic en **Aceptar** para ejecutar el comando Detach.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "66073598"
   
 5.  Localice la carpeta **Bases de datos** en el panel izquierdo o derecho de SSMS.  
   
-6.  Haga doble clic en el **bases de datos** carpeta y seleccione **adjuntar...**  
+6.  Haga clic con el botón derecho en la carpeta **bases** de **datos y seleccione adjuntar..** .  
   
-7.  En el cuadro de texto **Carpeta** , escriba la nueva ubicación de la carpeta de la base de datos. Como alternativa, puede usar el botón Examinar ( **...** ) para buscar la carpeta de base de datos.  
+7.  En el cuadro de texto **Carpeta** , escriba la nueva ubicación de la carpeta de la base de datos. Como alternativa, puede usar el botón Examinar (**...**) para buscar la carpeta de la base de datos.  
   
-8.  Seleccione el `ReadWrite` modo para la base de datos.  
+8.  Seleccione el `ReadWrite` modo de la base de datos.  
   
 9. Escriba la contraseña que se usó en el paso 3 y haga clic en **Aceptar** para ejecutar el comando Attach.  
   
@@ -139,14 +139,14 @@ ms.locfileid: "66073598"
   
 2.  Ejecute el comando XMLA.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Adjuntar y separar bases de datos de Analysis Services](attach-and-detach-analysis-services-databases.md)   
- [Ubicación de almacenamiento de las bases de datos](database-storage-location.md)   
- [Modos de la propiedad de base de datos ReadWriteMode](database-readwritemodes.md)   
+ [Ubicación de almacenamiento de base de datos](database-storage-location.md)   
+ [Base de datos Readwritemode](database-readwritemodes.md)   
  [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
- [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Elemento detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [Elemento ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
  [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   

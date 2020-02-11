@@ -1,5 +1,5 @@
 ---
-title: Elemento de la columna de índice (DTA) | Microsoft Docs
+title: Column (DTA, elemento de index) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149851"
 ---
 # <a name="column-element-for-index-dta"></a>Column (DTA, elemento de Index)
@@ -55,13 +55,13 @@ ms.locfileid: "63149851"
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Index &#40;DTA, elemento&#41;](index-element-dta.md)|  
+|**Elemento primario**|[Elemento index &#40;DTA&#41;](index-element-dta.md)|  
 |**Elementos secundarios**|[Elemento Name de Column &#40;DTA&#41;](name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

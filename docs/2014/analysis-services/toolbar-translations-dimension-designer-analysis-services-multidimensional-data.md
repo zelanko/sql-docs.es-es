@@ -1,5 +1,5 @@
 ---
-title: Barra de herramientas (pestaña traducciones, Diseñador de dimensiones) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Barra de herramientas (pestaña traducciones, diseñador de dimensiones) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066000"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Traducciones, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
@@ -24,7 +24,7 @@ ms.locfileid: "66066000"
  **Agregar Business Intelligence**  
  Muestra el **Asistente de Business Intelligence** para agregar características de Business Intelligence.  
   
- **Procesar**  
+ **Proceso**  
  Muestra el cuadro de diálogo **Proceso** para procesar el objeto.  
   
  **Nueva traducción**  
@@ -42,13 +42,13 @@ ms.locfileid: "66066000"
 > [!NOTE]  
 >  Solo se habilitará esta opción si se ha seleccionado una celda para la columna traducción de un atributo en la cuadrícula **Detalles de traducción** .  
   
- **Editar columna de leyenda**  
+ **Editar columna de leyendas**  
  Haga clic en esta opción para mostrar el cuadro de diálogo **Traducción de datos de atributos** y editar una columna de leyendas existente durante la edición de un atributo en la cuadrícula **Detalles de traducción** .  
   
 > [!NOTE]  
 >  La opción solo se habilita si se ha seleccionado una celda de una columna traducción que contiene una columna de leyenda de un atributo en la cuadrícula **Detalles de traducción** .  
   
- **Eliminar columna de leyenda**  
+ **Eliminar columna de leyendas**  
  Haga clic en esta opción para eliminar la columna de leyendas del atributo seleccionado en la cuadrícula **Detalles de traducción** .  
   
 > [!NOTE]  
@@ -57,8 +57,8 @@ ms.locfileid: "66066000"
  **Mostrar todos los atributos**  
  Haga clic para mostrar todos los atributos definidos para la dimensión seleccionada, incluidos los atributos para los que se han deshabilitado las jerarquías de atributos.  
   
-## <a name="see-also"></a>Vea también  
- [Traducciones &#40;Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
- [Detalles de traducción &#40;pestaña traducciones, Diseñador de dimensiones&#41; &#40;Analysis Services - datos multidimensionales&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Traducciones &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Detalles de traducción &#40;pestaña traducciones, diseñador de dimensiones&#41; &#40;Analysis Services-datos multidimensionales&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

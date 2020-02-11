@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232405"
 ---
 # <a name="use-nested-for-xml-queries"></a>Usar consultas FOR XML anidadas
-  El `xml` tipo de datos y el [directiva TYPE en consultas FOR XML](type-directive-in-for-xml-queries.md) permiten que el XML devuelto por las consultas FOR XML para procesarse en el servidor, así como en el cliente.  
+  El `xml` tipo de datos y la [Directiva Type en las consultas for XML](type-directive-in-for-xml-queries.md) permiten que el XML devuelto por las consultas for XML se procese en el servidor y en el cliente.  
   
 ## <a name="processing-with-xml-type-variables"></a>Procesar con variables de tipo xml  
  Puede asignar el resultado de la consulta FOR XML a una variable de tipo `xml`, o utilizar XQuery para consultar el resultado y asignarlo a una variable de tipo `xml` para seguir procesándolo.  
@@ -57,7 +57,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
   
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <myRoot>  
@@ -76,7 +76,7 @@ SELECT  (SELECT ProductModelID, Name
   
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <row ProductModelID="122" Name="All-Purpose Bike Stand" />  

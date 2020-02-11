@@ -1,5 +1,5 @@
 ---
-title: Examinar el cuadro de diálogo de vista de origen de datos (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Cuadro de diálogo examinar vista del origen de datos (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49a98b2710cf1af3a936ba7fa7fe244bb7675bd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064460"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Examinar vista del origen de datos (Analysis Services - Datos multidimensionales)
@@ -31,7 +31,7 @@ ms.locfileid: "66064460"
  **Zoom**  
  Seleccione la relación de zoom necesaria para cambiar el tamaño de los objetos en la superficie del diagrama.  
   
- **Cerrar**  
+ **Cercanos**  
  Haga clic en para cerrar el cuadro de diálogo .  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184279"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Crear relaciones entre tablas en un diagrama (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63184279"
   
 3.  Aparecen dos cuadros de diálogo: **Relación de clave externa** y **Tablas y columnas**, esta última en primer plano.  
   
-4.  **Nombre de la relación** incluye un nombre proporcionado por el sistema con el formato FK_*tablalocal*_*tablaexterna*. Se puede modificar este valor.  
+4.  El nombre de la **relación** tiene un nombre proporcionado por el sistema con el formato FK_*con*_*tablaExterna*. Se puede modificar este valor.  
   
 5.  Compruebe que **Tabla de clave principal** especifica la tabla correcta.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63184279"
   
 7.  Elija **Aceptar**.  
   
-     Aparecerá el cuadro de diálogo **Relación de clave externa** . **Relación seleccionada** muestra la relación que haya creado.  
+     Aparecerá el cuadro de diálogo **Relación de clave externa** . **Relación seleccionada** muestra la relación que ha creado.  
   
 8.  Cambie las propiedades de la relación en la cuadrícula.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "63184279"
   
      El Diseñador de bases de datos muestra una relación entre las columnas que haya elegido.  
   
-## <a name="see-also"></a>Vea también  
- [Las tablas y columnas, cuadro de diálogo &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Restricciones UNIQUE y restricciones Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
+## <a name="see-also"></a>Consulte también  
+ [Cuadro de diálogo tablas y columnas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Restricciones UNIQUE y restricciones check](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [Trabajar con tablas en diagramas de base de datos &#40;Visual Database Tools&#41;](work-with-tables-in-database-diagram-visual-database-tools.md)  
   
   

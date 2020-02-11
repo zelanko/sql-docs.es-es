@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2565e4cc8aa9bddb83af5e8e9077987ebd27663f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195064"
 ---
 # <a name="local-language-versions-in-sql-server"></a>Versiones en idioma local en SQL Server
@@ -82,8 +82,8 @@ ms.locfileid: "63195064"
   
 4.  Haga clic en **Aplicar** para confirmar el cambio y en **Aceptar** para cerrar la ventana.  
   
-## <a name="see-also"></a>Vea también  
- [Requisitos de hardware y Software para instalar SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+## <a name="see-also"></a>Consulte también  
+ [Requisitos de hardware y software para la instalación de SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [Instalar SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
   
   

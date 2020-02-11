@@ -1,5 +1,5 @@
 ---
-title: Conjunto de propiedades avanzadas (SSAS) | Microsoft Docs
+title: Establecer propiedades avanzadas (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068832"
 ---
 # <a name="set-advanced-properties-ssas"></a>Establecer propiedades avanzadas (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar valores de propiedades adicionales para una conexión con un origen de datos. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **proveedores**  
+ **Presta**  
  Seleccione el proveedor que se va a usar para la conexión con el origen de datos. Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado.  
   
  **Cadena de conexión**  

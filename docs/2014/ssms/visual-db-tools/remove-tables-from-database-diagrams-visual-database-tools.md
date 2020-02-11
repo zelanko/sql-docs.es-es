@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 776d5fae1aa295f15238397b439cca1015ebe99c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63180729"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Quitar tablas de diagramas de base de datos (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63180729"
   
 2.  Haga clic con el botón derecho en la tabla y elija **Quitar tabla del diagrama** en el menú contextual.  
   
-     -o bien-  
+     O bien  
   
      Presione la tecla ESC.  
   
@@ -38,8 +38,8 @@ ms.locfileid: "63180729"
   
  La tabla se quita del diagrama pero continúa existiendo en la base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Eliminar tablas &#40;motor de base de datos&#41;](../../relational-databases/tables/delete-tables-database-engine.md)  
+ [Eliminar tablas &#40;Motor de base de datos&#41;](../../relational-databases/tables/delete-tables-database-engine.md)  
   
   

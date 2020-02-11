@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200323"
 ---
 # <a name="use-a-statement-odbc"></a>Usar una instrucción (ODBC)
@@ -35,11 +35,11 @@ ms.locfileid: "63200323"
   
 5.  Ejecute directamente una instrucción utilizando SQLExecDirect.  
   
-     \- o -  
+     \- O bien  
   
      Si se ha preparado la instrucción, ejecútela varias veces utilizando [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400).  
   
-     \- o -  
+     \- O bien  
   
      Llame a una función de catálogo, que devuelve los resultados.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "63200323"
   
      Capture una fila cada vez del conjunto de resultados de una instrucción.  
   
-     \- o -  
+     \- O bien  
   
      Capture varias filas cada vez del conjunto de resultados mediante un cursor de bloque.  
   
-     \- o -  
+     \- O bien  
   
      Llame a [SQLRowCount](../../native-client-odbc-api/sqlrowcount.md) para determinar el número de filas afectado por una instrucción INSERT, UPDATE o DELETE.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63200323"
   
 8.  Llame a [SQLFreeHandle](../../native-client-odbc-api/sqlfreehandle.md) con un *HandleType* de SQL_HANDLE_STMT para liberar el identificador de instrucción.  
   
-## <a name="see-also"></a>Vea también  
- [Ejecutar consultas de temas de procedimientos &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Temas de procedimientos de ejecución de consultas &#40;ODBC&#41;](executing-queries-how-to-topics-odbc.md)  
   
   

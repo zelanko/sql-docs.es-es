@@ -1,5 +1,5 @@
 ---
-title: Compartir las fuentes de datos mediante una biblioteca de fuentes de datos (PowerPivot para SharePoint) | Microsoft Docs
+title: Compartir fuentes de distribución de datos mediante una biblioteca de fuentes de distribución de datos (PowerPivot para SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00ecb4487119251f1b86c2daf29b7481966f09f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071150"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>Compartir las fuentes de distribución de datos mediante una biblioteca de fuentes de distribución de datos (PowerPivot para SharePoint)
-  Una fuente de distribución de datos es un flujo de datos XML que se genera a partir de un servicio o aplicación que expone los datos en el formato en línea de Atom. Se usa cada vez más para transportar los datos entre las aplicaciones y a los visores del lado cliente. En una implementación de PowerPivot para SharePoint, las fuentes de datos se usan para rellenar un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] origen de datos con datos de una aplicación compatible con Atom o un servicio.  
+  Una fuente de distribución de datos es un flujo de datos XML que se genera a partir de un servicio o aplicación que expone los datos en el formato en línea de Atom. Se usa cada vez más para transportar los datos entre las aplicaciones y a los visores del lado cliente. En una implementación de PowerPivot para SharePoint, las fuentes de distribución de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se utilizan para rellenar un origen de datos con datos de una aplicación o servicio que tiene en cuenta Atom.  
   
  Si ya utiliza una combinación de aplicaciones que pueden usar Atom, puede que nunca necesite saber cómo se generan y usan las fuentes porque la transferencia de datos se realiza sin problemas entre las aplicaciones. Sin embargo, las organizaciones que utilizan soluciones personalizadas para publicar fuentes Atom a menudo necesitan una manera de hacer que las fuentes estén disponibles para los trabajadores de la información. Una forma de conseguirlo es crear y compartir archivos de documento de servicio de datos (.atomsvc) que proporcionan las conexiones a los orígenes en línea que producen las fuentes. Una biblioteca de propósito especial, denominada biblioteca de fuentes de distribución de datos, permite crear y compartir los documentos de servicio de datos en una aplicación web de SharePoint.  
   
@@ -34,21 +34,21 @@ ms.locfileid: "66071150"
   
  [Modificar un documento de servicio de datos](#modifydsdoc)  
   
- [Paso siguiente: Utilizar un documento de servicio de datos](#usedsdoc)  
+ [Paso siguiente: usar un documento de servicio de datos](#usedsdoc)  
   
 > [!NOTE]  
 >  Aunque las fuentes de distribución de datos se usan para agregar datos web a un origen de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se cree en [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], cualquier aplicación cliente que pueda leer una fuente Atom puede procesar un documento de servicio de datos.  
   
 ##  <a name="prereq"></a> Requisitos previos  
- Debe tener una implementación de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot para SharePoint que agrega [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] proceso de consulta a una granja de SharePoint. La compatibilidad con las fuentes de distribución de datos se implementa a través del paquete de soluciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+ Debe tener una implementación de PowerPivot para SharePoint [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] que agregue [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] el procesamiento de consultas a una granja de servidores de SharePoint. La compatibilidad con las fuentes de distribución de datos se implementa a través del paquete de soluciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
- Debe tener una biblioteca de SharePoint que admita el tipo de contenido de documento de servicio de datos. Para este fin se recomienda la biblioteca de fuentes de distribución de datos predeterminada, pero puede agregar manualmente el tipo de contenido a cualquier biblioteca. Para obtener más información, consulte [crear o personalizar una biblioteca de fuentes de distribución de datos &#40;PowerPivot para SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
+ Debe tener una biblioteca de SharePoint que admita el tipo de contenido de documento de servicio de datos. Para este fin se recomienda la biblioteca de fuentes de distribución de datos predeterminada, pero puede agregar manualmente el tipo de contenido a cualquier biblioteca. Para obtener más información, vea [crear o personalizar una biblioteca de fuentes de distribución de datos &#40;PowerPivot para SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
   
  Debe tener un servicio de datos o un origen de datos en línea que proporcione datos tabulares XML en el formato Atom 1.0.  
   
  Para crear o administrar un documento de servicio de datos en una biblioteca de SharePoint, debe tener los permisos de contribución en un sitio de SharePoint.  
   
-##  <a name="createdsdoc"></a> Crear un documento de servicio de datos  
+##  <a name="createdsdoc"></a>Crear un documento de servicio de datos  
  Un documento de servicio de datos es una solicitud pendiente para transmitir en secuencias los datos tras la solicitud de un origen de datos en línea o una aplicación que proporcione los datos en un formato de fuente. Al crear un documento de servicio de datos, se especifica un puntero a uno o varios servicios de datos direccionables con direcciones URL que proporcionan los datos tabulares XML en el formato sindicado de Atom.  
   
  En un único documento se pueden especificar varias fuentes de distribución de datos. Esto es útil si desea recuperar un conjunto de cargas de datos del mismo servicio, o incluso de servicios diferentes, en una única operación de importación.  
@@ -81,9 +81,9 @@ ms.locfileid: "66071150"
   
 6.  Guarde el documento. El documento de servicio de datos se almacena como archivo físico (.atomsvc) en una biblioteca de contenido que se configura para este tipo de contenido.  
   
- Para utilizar el documento de servicio de datos, puede abrir un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] y elegir la opción **Desde fuente de distribución de datos** en el Asistente para importar datos. Cuando se pida, un usuario especificará la dirección URL de SharePoint correspondiente al documento de servicio de datos para iniciar una operación de importación de datos. Para obtener más información, consulte [fuentes de datos de uso &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
+ Para utilizar el documento de servicio de datos, puede abrir un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] y elegir la opción **Desde fuente de distribución de datos** en el Asistente para importar datos. Cuando se pida, un usuario especificará la dirección URL de SharePoint correspondiente al documento de servicio de datos para iniciar una operación de importación de datos. Para obtener más información, vea [usar fuentes de datos &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
-##  <a name="securedsdoc"></a> Proteger un documento de servicio de datos  
+##  <a name="securedsdoc"></a>Proteger un documento de servicio de datos  
  En un documento de servicio de datos se heredan los permisos de la biblioteca que lo contiene. Los permisos que establezca en el elemento determinarán si un usuario puede abrir, modificar o eliminar el documento de servicio de datos.  
   
  Para utilizar un documento de servicio de datos como una importación de fuentes de distribución de datos en la aplicación cliente de PowerPivot, un usuario solo necesita permisos para ver el documento. Estos permisos son suficientes para resolver la dirección URL en el asistente para la importación.  
@@ -99,20 +99,21 @@ ms.locfileid: "66071150"
 |En una granja de servidores de SharePoint, actualice los datos como una tarea programada, sin que se requiera la entrada de datos proporcionados por el usuario.|No aplicable. El servicio PowerPivot utiliza la información de la conexión HTTP incrustada para conectarse directamente a los servicios de datos y aplicaciones que proporcionan la fuente. El servicio PowerPivot no utiliza el documento de servicio de datos.|  
 |Eliminar un documento de servicio de datos en una biblioteca|Permisos de contribución en la biblioteca.|  
   
-##  <a name="modifydsdoc"></a> Modificar un documento de servicio de datos  
+##  <a name="modifydsdoc"></a>Modificar un documento de servicio de datos  
  Puede agregar, modificar o quitar entradas individuales de tablas de direcciones URL en un documento de servicio de datos. Después de guardar los cambios, los usuarios que seleccionan el documento de servicio en una nueva operación de importación obtendrán las fuentes de los datos que especificó.  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que utilizaban una versión anterior del documento no se verán afectados por los cambios que realice. Esto se debe a que un documento de servicio de datos solo se lee una vez durante la operación de importación inicial. Durante la importación, la dirección URL del servicio y los nombres de tabla se copian y almacenan internamente en el libro. A continuación, estos valores internos se utilizan en las operaciones de actualización subsiguientes para actualizar los datos.  
+ 
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que utilizaban una versión anterior del documento no se verán afectados por los cambios que realice. Esto se debe a que un documento de servicio de datos solo se lee una vez durante la operación de importación inicial. Durante la importación, la dirección URL del servicio y los nombres de tabla se copian y almacenan internamente en el libro. A continuación, estos valores internos se utilizan en las operaciones de actualización subsiguientes para actualizar los datos.  
   
  Dado que no hay ningún vínculo persistente entre un documento de servicio de datos en un sitio de SharePoint y el libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que contiene la fuente importada, modificar cualquier parte de un documento de servicio de datos no tiene ningún efecto en los libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] existentes.  
   
 > [!IMPORTANT]  
->  Aunque el documento de servicio de datos se lee solo una vez, para obtener las fuentes más recientes se puede tener acceso a los servicios de datos que proporcionan los datos reales a intervalos regulares. Para obtener más información acerca de cómo actualizar los datos, vea [PowerPivot Data Refresh](power-pivot-data-refresh.md).  
+>  Aunque el documento de servicio de datos se lee solo una vez, para obtener las fuentes más recientes se puede tener acceso a los servicios de datos que proporcionan los datos reales a intervalos regulares. Para obtener más información sobre cómo actualizar los datos, vea [actualización de datos PowerPivot](power-pivot-data-refresh.md).  
   
-##  <a name="usedsdoc"></a> Paso siguiente: Utilizar un documento de servicio de datos  
- Para utilizar un documento de servicio de datos que creó en una biblioteca de SharePoint, se utiliza el **de fuentes de datos** opción en un origen de datos de PowerPivot de importación. Para obtener instrucciones, consulte [fuentes de datos de uso &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
+##  <a name="usedsdoc"></a>Paso siguiente: usar un documento de servicio de datos  
+ Para utilizar un documento de servicio de datos creado en una biblioteca de SharePoint, use la opción **de importación de fuentes de datos** en un origen de datos PowerPivot. Para obtener instrucciones, vea [usar fuentes de datos &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Fuentes de distribución de datos de PowerPivot](power-pivot-data-feeds.md)  
   
   

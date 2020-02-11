@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184411"
 ---
 # <a name="sequence-numbers"></a>Números de secuencia
@@ -126,7 +126,7 @@ GO
   
  `3        Brake   1`  
   
-### <a name="b-calling-next-value-for-before-inserting-a-row"></a>b. Llamar a NEXT VALUE FOR antes de insertar una fila  
+### <a name="b-calling-next-value-for-before-inserting-a-row"></a>B. Llamar a NEXT VALUE FOR antes de insertar una fila  
  Utilizando la tabla `Orders` creada en el ejemplo A, el siguiente ejemplo declara una variable denominada `@nextID`y, a continuación, utiliza la función NEXT VALUE FOR para establecer la variable como el siguiente número de secuencia disponible. Se supone que la aplicación realiza cierto procesamiento del pedido, como, por ejemplo, proporcionar al cliente el número de `OrderID` de su pedido potencial y, a continuación, valida el pedido. Con independencia de cuánto tiempo pueda llevar este procesamiento y de cuántos pedidos se agreguen durante el proceso, el número original se conserva para que lo utilice esta conexión. Finalmente, la instrucción `INSERT` agrega el pedido a la tabla `Orders` .  
   
 ```  

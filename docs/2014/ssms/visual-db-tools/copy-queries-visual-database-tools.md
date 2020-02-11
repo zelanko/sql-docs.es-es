@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ef120e0142b3ccabb03fe8750b02713601d7fd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224481"
 ---
 # <a name="copy-queries-visual-database-tools"></a>Copiar consultas (Visual Database Tools)
@@ -37,9 +37,9 @@ ms.locfileid: "63224481"
   
 6.  Haga clic con el botón derecho y, en el menú contextual, haga clic en **Pegar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cambiar el nombre de las consultas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Borrar los resultados de consulta &#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   
+ [Borrar los resultados de una consulta &#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   
  [Guardar consultas &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
  [Realizar operaciones básicas con consultas (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   

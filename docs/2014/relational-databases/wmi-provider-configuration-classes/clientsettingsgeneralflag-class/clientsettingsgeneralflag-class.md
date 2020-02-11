@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0a9b52652ec3e684c75a790f41899db2c117b62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63243156"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>Clase ClientSettingsGeneralFlag
-  El [clase ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) representa la configuración de marca generales en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente.  
+  La [clase ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) representa la configuración de marca general en una instancia [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de cliente.  
   
- El [clase ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) puede usarse para hacer lo siguiente:  
+ La [clase ClientSettingsGeneralFlag](clientsettingsgeneralflag-class.md) se puede usar para hacer lo siguiente:  
   
 -   Ver el nombre de la marca.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63243156"
   
 -   Ver y modificar el valor de la marca.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

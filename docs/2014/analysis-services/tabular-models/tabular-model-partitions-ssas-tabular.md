@@ -1,5 +1,5 @@
 ---
-title: Particiones de modelos tabulares (SSAS Tabular) | Microsoft Docs
+title: Particiones de modelos tabulares (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066385"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>Particiones de modelos tabulares (SSAS tabular)
@@ -24,7 +24,7 @@ ms.locfileid: "66066385"
   
  Secciones de este tema:  
   
--   [Ventajas](#bkmk_benefits)  
+-   [Privilegios](#bkmk_benefits)  
   
 -   [Permisos](#bkmk_permissions)  
   
@@ -35,9 +35,9 @@ ms.locfileid: "66066385"
 ##  <a name="bkmk_benefits"></a> Ventajas  
  Un diseño de modelos eficientes usa particiones para eliminar el procesamiento innecesario y la subsiguiente carga del procesador en los servidores de Analysis Services, asegurándose al mismo tiempo de que los datos se procesan y actualizan con la frecuencia suficiente para reflejar los datos más recientes de los orígenes de datos.  
   
- Por ejemplo, un modelo tabular puede tener una tabla de ventas que incluya los datos de ventas del año fiscal 2011 actual y de cada uno de los años fiscales anteriores. Tabla de ventas del modelo tiene las tres particiones siguientes:  
+ Por ejemplo, un modelo tabular puede tener una tabla de ventas que incluya los datos de ventas del año fiscal 2011 actual y de cada uno de los años fiscales anteriores. La tabla sales del modelo tiene las tres particiones siguientes:  
   
-|Partición|Datos de|  
+|Partition|Datos de|  
 |---------------|---------------|  
 |Sales2011|Año fiscal actual|  
 |Sales2010-2001|Años fiscales 2001, 2002, 2003, 2004, 2005, 2006. 2007, 2008, 2009, 2010|  
@@ -47,9 +47,9 @@ ms.locfileid: "66066385"
   
  No es necesario procesar los datos de la partición Sales2010-2001 cada noche; sin embargo, dado que los datos de ventas correspondientes a los diez años fiscales anteriores pueden cambiar ocasionalmente debido a devoluciones de productos y otros ajustes, sigue siendo necesario procesarlos periódicamente, aunque en este caso se hará mensualmente. Los datos de la partición SalesOld nunca cambian, por lo que se procesarán anualmente.  
   
- Al especificar el año fiscal 2012, se agrega una nueva partición Sales2012 a la tabla de ventas. A continuación, la partición Sales2011 se podrá mezclar con la partición Sales2010-2001, cambiando su nombre por el de Sales2011-2002. Los datos correspondientes al año fiscal 2001 se eliminarán de la nueva partición Sales2011-2002 y pasarán a la partición SalesOld. Por último, se procesarán todas las particiones para reflejar los cambios.  
+ Al entrar en el año fiscal 2012, se agrega una nueva partición Sales2012 a la tabla sales del modo. A continuación, la partición Sales2011 se podrá mezclar con la partición Sales2010-2001, cambiando su nombre por el de Sales2011-2002. Los datos correspondientes al año fiscal 2001 se eliminarán de la nueva partición Sales2011-2002 y pasarán a la partición SalesOld. Por último, se procesarán todas las particiones para reflejar los cambios.  
   
- Cómo implementar una estrategia de partición para los modelos tabulares de su organización en gran medida será depende de sus necesidades de procesamiento de datos de modelo determinado y los recursos disponibles.  
+ La forma de implementar una estrategia de partición para los modelos tabulares de la organización dependerá en gran medida de las necesidades de procesamiento de datos del modelo y los recursos disponibles.  
   
 ##  <a name="bkmk_permissions"></a> Permisos  
  Para crear, administrar y procesar particiones en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], es necesario disponer de los permisos adecuados de Analysis Services definidos en un rol de seguridad. Cada rol de seguridad tiene uno de los siguientes permisos:  
@@ -57,12 +57,12 @@ ms.locfileid: "66066385"
 |Permiso|Acciones|  
 |----------------|-------------|  
 |Administrador|Leer, procesar, crear, copiar, mezclar, eliminar|  
-|Process|Leer, procesar|  
+|Proceso|Leer, procesar|  
 |Solo lectura|Lectura|  
   
  Para más información sobre cómo crear roles durante la creación de modelos con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vea [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md). Para más información sobre cómo administrar miembros de roles para roles de modelos tabulares implementados con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vea [Roles de modelos tabulares &#40;SSAS tabular&#41;](tabular-model-roles-ssas-tabular.md).  
   
-##  <a name="bkmk_process_partitions"></a> Procesar particiones  
+##  <a name="bkmk_process_partitions"></a>Procesar particiones  
  Las particiones se pueden procesar (actualizar) de forma independiente de las demás particiones con el cuadro de diálogo **Particiones** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o con un script. Existen las opciones siguientes de procesamiento:  
   
 |Modo|Descripción|  

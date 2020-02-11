@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61f0f7c62c6c3f245a87e7e8ce37153f08226a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070780"
 ---
 # <a name="prediction-query-builder-data-mining"></a>Generador de consultas de predicción (Minería de datos)
@@ -24,7 +24,7 @@ ms.locfileid: "66070780"
   
 -   [Tutorial básico de minería de datos](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [Crear y consultar modelos de minería de datos con DMX: Tutoriales &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [Crear y consultar modelos de minería de datos con DMX: Tutoriales &#40;Analysis Services de minería de datos&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [Consultas de minería de datos](data-mining/data-mining-queries.md)  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66070780"
   
  La vista **Predicción de modelo de minería de datos** incluye las herramientas y los cuadros de diálogo siguientes:  
   
--   [Panel de diseño &#40;vista predicción de modelo de minería de datos&#41;](design-pane-mining-model-prediction-view.md)  
+-   [Panel de diseño &#40;vista de predicción de modelo de minería de datos&#41;](design-pane-mining-model-prediction-view.md)  
   
--   [Panel de consulta &#40;vista predicción de modelo de minería de datos&#41;](query-pane-mining-model-prediction-view.md)  
+-   [Panel de consulta &#40;vista de predicción de modelo de minería de datos&#41;](query-pane-mining-model-prediction-view.md)  
   
--   [Como resultado de panel &#40;vista predicción de modelo de minería de datos&#41;](result-pane-mining-model-prediction-view.md)  
+-   [Panel de resultados &#40;vista de predicción de modelo de minería de datos&#41;](result-pane-mining-model-prediction-view.md)  
   
--   [Seleccione el cuadro de diálogo de modelo de minería de datos &#40;vista predicción de modelo de minería de datos&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
+-   [Cuadro de diálogo Seleccionar modelo de minería de datos &#40;vista predicción de modelo de minería de datos&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
   
--   [Guardar los datos de cuadro de diálogo resultado de consulta de minería de datos &#40;vista predicción de modelo de minería de datos&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
+-   [Cuadro de diálogo Guardar resultado de consulta de minería de datos &#40;vista predicción de modelo de minería de datos&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
   
   

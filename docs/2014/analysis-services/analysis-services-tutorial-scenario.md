@@ -1,5 +1,5 @@
 ---
-title: Escenario del Tutorial de Analysis Services | Microsoft Docs
+title: Escenario de Analysis Services tutorial | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062439"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Escenario de Tutorial de Analysis Services
-  Este tutorial se basa en [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], una compañía ficticia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una multinacional dedicada a la fabricación y distribución de bicicletas de metal y de metal compuesto en mercados de Norteamérica, Europa y Asia. Las oficinas centrales de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] se encuentran en Bothell, Washington, donde la compañía tiene 500 trabajadores. Además, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiene contratados a varios equipos de ventas regionales en toda su base de mercado.  
+  Este tutorial se basa en [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], una compañía ficticia. 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una multinacional dedicada a la fabricación y distribución de bicicletas de metal y de metal compuesto en mercados de Norteamérica, Europa y Asia. Las oficinas centrales de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] se encuentran en Bothell, Washington, donde la compañía tiene 500 trabajadores. Además, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiene contratados a varios equipos de ventas regionales en toda su base de mercado.  
   
  En los últimos años, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] compró una pequeña planta de fabricación, Importadores Neptuno, situada en México. Importadores Neptuno fabrica varios subcomponentes muy importantes para la línea de productos de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Estos subcomponentes se envían a la sede de Bothell para el ensamblado final del producto. En el año 2005, Importadores Neptuno pasó a ser el único fabricante y distribuidor del grupo de productos de bicicletas de paseo.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "66062439"
 -   Es difícil auditar la información. Actualmente, el departamento de finanzas usa la base de datos **AdventureWorksDW2012** solo como origen de datos en la que pueden realizarse consultas masivas. Luego descargan los datos en hojas de cálculo individuales e invierten mucho tiempo en preparar los datos y manipular dichas hojas de cálculo. Por consiguiente, el proceso de preparación, auditoría y administración de los informes financieros de la compañía es complejo.  
   
 ## <a name="the-solution"></a>Solución  
- Recientemente, el equipo del almacenamiento de datos ha realizado una revisión del diseño del sistema de análisis actual. La revisión ha incluido un análisis de las lagunas que presentan los problemas actuales y las demandas futuras. Este equipo ha determinado que la base de datos **AdventureWorksDW2012** es una base de datos dimensional bien diseñada con dimensiones compatibles y claves suplentes. Las dimensiones compatibles permiten utilizar una dimensión en varios puestos de datos, como una dimensión de tiempo o una dimensión de producto. Las claves suplentes son claves artificiales que vinculan tablas de dimensiones y de hechos y se utilizan para garantizar la unicidad y mejorar el rendimiento. Además, el equipo de almacenamiento de datos ha determinado que actualmente no existen problemas significativos con la carga y la administración de las tablas base de la base de datos **AdventureWorksDW2012** . Por tanto, el equipo ha decidido usar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para poder hacer lo siguiente:  
+ Recientemente, el equipo del almacenamiento de datos ha realizado una revisión del diseño del sistema de análisis actual. La revisión ha incluido un análisis de las lagunas que presentan los problemas actuales y las demandas futuras. Este equipo ha determinado que la base de datos **AdventureWorksDW2012** es una base de datos dimensional bien diseñada con dimensiones compatibles y claves suplentes. Las dimensiones compatibles permiten utilizar una dimensión en varios puestos de datos, como una dimensión de tiempo o una dimensión de producto. Las claves suplentes son claves artificiales que vinculan tablas de dimensiones y de hechos y se utilizan para garantizar la unicidad y mejorar el rendimiento. Además, el equipo de almacenamiento de datos ha determinado que actualmente no existen problemas significativos con la carga y la administración de las tablas base de la base de datos **AdventureWorksDW2012** . Por tanto, el equipo ha decidido [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usar para realizar lo siguiente:  
   
 -   Proporcionar el acceso a datos unificados a través de una capa de metadatos común para la creación de informes y el análisis analítico.  
   
@@ -60,9 +61,9 @@ ms.locfileid: "66062439"
   
 -   Presentar una versión traducida a los usuarios de la compañía que se encuentran fuera de Estados Unidos.  
   
- Las lecciones del tutorial de Analysis Services proporcionan instrucciones para crear una base de datos de cubo que satisfaga todos estos objetivos. Para empezar, vaya a la primera lección: [Lección 1: Cree un nuevo proyecto de modelo Tabular](lesson-1-create-a-new-tabular-model-project.md).  
+ Las lecciones del tutorial de Analysis Services proporcionan instrucciones para crear una base de datos de cubo que satisfaga todos estos objetivos. Para empezar, vaya a la primera lección: [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md).  
   
-## <a name="see-also"></a>Vea también  
- [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+## <a name="see-also"></a>Consulte también  
+ [Modelo multidimensional &#40;tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

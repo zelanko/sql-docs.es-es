@@ -1,5 +1,5 @@
 ---
-title: Correlacionar un seguimiento con datos de registro de rendimiento de Windows (SQL Server Profiler) | Microsoft Docs
+title: Correlacionar un seguimiento con los datos del registro de rendimiento de Windows (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065049"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Establecer correlaciones de un seguimiento con datos del registro de rendimiento de Windows (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] puede establecer corelaciones de contadoes del Monito de sistema de Microsoft Windows con eventos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . El Monitor del sistema de Windows registra la actividad del sistema para contadores específicos en registros de rendimiento.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]puede poner en correlación los contadores del monitor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sistema [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de Microsoft Windows con eventos o. El Monitor del sistema de Windows registra la actividad del sistema para contadores específicos en registros de rendimiento.  
   
 > [!NOTE]  
 >  Para obtener más información acerca de compartir registros entre diferentes versiones de Windows, vea el procedimiento al final de este tema.  
@@ -33,7 +33,7 @@ ms.locfileid: "66065049"
   
 3.  En el cuadro de diálogo **Abrir** , seleccione un archivo que contenga un registro de rendimiento. Los datos del registro de rendimiento deben haber sido capturados durante el mismo período de tiempo en que se capturaron los datos de seguimiento.  
   
-4.  En el cuadro de diálogo **Límite de contadores de rendimiento** , active las casillas que corresponden a los objetos y contadores del Monitor del sistema que desea mostrar junto con el seguimiento. Haga clic en **Aceptar.**  
+4.  En el cuadro de diálogo **Límite de contadores de rendimiento** , active las casillas que corresponden a los objetos y contadores del Monitor del sistema que desea mostrar junto con el seguimiento. Haga clic en **Aceptar**.  
   
 5.  Seleccione un evento en la ventana de eventos de seguimiento o navegue por varias filas adyacentes en la ventana de eventos de seguimiento utilizando las teclas de flecha. La barra vertical roja de la ventana **Datos del Monitor de sistema** indica los datos del registro de rendimiento correlacionados con el evento de seguimiento seleccionado.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66065049"
   
 11. Haga clic en **Aceptar** para crear el registro de rendimiento.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Iniciar SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   

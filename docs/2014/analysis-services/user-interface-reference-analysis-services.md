@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065541"
 ---
 # <a name="user-interface-reference-analysis-services"></a>Referencia de la interfaz de usuario (Analysis Services)
-  En esta sección se incluyen temas de Ayuda de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Estos temas también están disponibles desde la interfaz de usuario, al presionar F1 o al hacer clic en **Ayuda** en las páginas del asistente, en los diseñadores y en los cuadros de diálogo.  
+  En esta sección se incluyen temas [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de ayuda de. Estos temas también están disponibles desde la interfaz de usuario, al presionar F1 o al hacer clic en **Ayuda** en las páginas del asistente, en los diseñadores y en los cuadros de diálogo.  
   
 ## <a name="topic-list"></a>Lista de temas  
   
-|Section|Contiene|  
+|Sección|Contiene|  
 |-------------|--------------|  
-|[Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)|Temas de Ayuda para los asistentes de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (multidimensional).|  
+|[Analysis Services asistentes &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)|Temas de Ayuda para los asistentes de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (multidimensional).|  
 |[Cuadros de diálogo y diseñadores de minería de datos](data-mining-designers-and-dialog-boxes.md)|Temas de Ayuda para los asistentes de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (minería de datos)|  
-|[Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)|Temas de Ayuda para los diseñadores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y los cuadros de diálogo de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. (multidimensional)|  
-|[Diseñadores y cuadros de diálogo de Analysis Services &#40;Tabular&#41;](analysis-services-designers-and-dialog-boxes-tabular.md)|Temas de Ayuda para los diseñadores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y los cuadros de diálogo de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y de creación de modelos tabulares de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
+|[Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)|Temas de Ayuda para los diseñadores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y los cuadros de diálogo de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. (multidimensional)|  
+|[Diseñadores y cuadros de diálogo de Analysis Services &#40;tabular&#41;](analysis-services-designers-and-dialog-boxes-tabular.md)|Temas de Ayuda para los diseñadores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y los cuadros de diálogo de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y de creación de modelos tabulares de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
 |[Cuadros de diálogo y diseñadores de minería de datos](data-mining-designers-and-dialog-boxes.md)|Temas de Ayuda para los diseñadores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y los cuadros de diálogo de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. (minería de datos)|  
   
   

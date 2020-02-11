@@ -1,5 +1,5 @@
 ---
-title: Editor de destinos de ADO NET (página salida de Error) | Microsoft Docs
+title: Editor de destinos de ADO NET (página salida de error) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061770"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>Editor de destinos de ADO NET (página Salida de error)
@@ -42,7 +42,7 @@ ms.locfileid: "66061770"
  **Error**  
  Permite especificar qué debe ocurrir cuando se produce un error: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Temas relacionados:** [Control de errores en los datos](data-flow/error-handling-in-data.md)  
+ **Temas relacionados:** [control de errores en los datos](data-flow/error-handling-in-data.md)  
   
  **Truncamiento**  
  No se usa.  
@@ -56,8 +56,8 @@ ms.locfileid: "66061770"
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de destinos de ADO NET &#40;página Administrador de conexiones&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Editor de destinos de ADO NET &#40;página Asignaciones&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [Editor de destinos de ADO NET &#40;página asignaciones&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105848"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a las etiquetas de los ejes de un gráfico (Generador de informes y SSRS)
@@ -60,8 +60,8 @@ ms.locfileid: "66105848"
   
 |Tipo de campo de categorías|Descripción|Ejemplo|  
 |-------------------------|-----------------|-------------|  
-|Numérico|Las categorías se muestran por orden numérico a lo largo del eje X.|Un informe de ventas por número de identificación de empleado muestra los números de identificación de los empleados a lo largo del eje X.|  
-|Fecha y hora|Las categorías se muestran por orden cronológico a lo largo del eje X.|Un informe de ventas por meses muestra las fechas con formato a lo largo del eje X.|  
+|Numeric|Las categorías se muestran por orden numérico a lo largo del eje X.|Un informe de ventas por número de identificación de empleado muestra los números de identificación de los empleados a lo largo del eje X.|  
+|Fecha/hora|Las categorías se muestran por orden cronológico a lo largo del eje X.|Un informe de ventas por meses muestra las fechas con formato a lo largo del eje X.|  
 |Cadenas|Las categorías se muestran en el orden en que aparecen por primera vez en el origen de datos a lo largo del eje X.|Un informe de ventas por regiones muestra los nombres de las regiones a lo largo del eje X.|  
   
  Todos los tipos de gráficos de dos ejes están diseñados para suprimir algunas etiquetas de los ejes cuando hay más categorías de las que caben, con objeto de obtener una imagen más limpia en el gráfico y evitar colisiones en las etiquetas.  
@@ -77,7 +77,7 @@ ms.locfileid: "66105848"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Ejemplo de cómo calcula el gráfico las etiquetas de los ejes  
  La tabla que se muestra a continuación contiene datos de ventas de ejemplo que se van a representar en un gráfico de columnas. El campo Nombre se agrega al área Grupos de categorías y el campo Cantidad se agrega al área Valores.  
   
-|NOMBRE|Cantidad|  
+|Nombre|Cantidad|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  
@@ -125,7 +125,7 @@ ms.locfileid: "66105848"
   
  [Especificar una escala logarítmica &#40;Generador de informes y SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  

@@ -20,18 +20,18 @@ ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d58fe69e487b4f61384f9bd146b17c6d9ada9ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061471"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>Función SQLGetPrivateProfileString
 **Conformidad**  
- Versión de introducción: ODBC 2.0  
+ Versión introducida: ODBC 2,0  
   
  **Resumen**  
- **SQLGetPrivateProfileString** Obtiene una lista de nombres de valores o datos que corresponde a un valor de la información del sistema.  
+ **SQLGetPrivateProfileString** obtiene una lista de los nombres de los valores o datos correspondientes a un valor de la información del sistema.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,41 +48,41 @@ int SQLGetPrivateProfileString(
   
 ## <a name="arguments"></a>Argumentos  
  *lpszSection*  
- [Entrada] Apunta a una cadena terminada en null que especifica la sección que contiene el nombre de clave. Si este argumento es NULL, la función copia todos los nombres de sección en el archivo en el búfer proporcionado.  
+ Entradas Apunta a una cadena terminada en null que especifica la sección que contiene el nombre de clave. Si este argumento es NULL, la función copia todos los nombres de sección del archivo en el búfer proporcionado.  
   
  *lpszEntry*  
- [Entrada] Apunta a la cadena terminada en null que contiene el nombre de clave cuya cadena asociado se van a recuperar. Si este argumento es NULL, todas las claves de nombres en la sección especificada por el *lpszSection* argumento se copian en el búfer especificado por el *RetBuffer* argumento.  
+ Entradas Apunta a la cadena terminada en null que contiene el nombre de clave cuya cadena asociada se va a recuperar. Si este argumento es NULL, todos los nombres de clave de la sección especificada por el argumento *lpszSection* se copian en el búfer especificado por el argumento *RetBuffer* .  
   
  *lpszDefault*  
- [Entrada] Apunta a una cadena terminada en null que especifica el valor predeterminado de la clave especificada si la clave no se encuentra en el archivo de inicialización. Este argumento no puede ser NULL.  
+ Entradas Apunta a una cadena terminada en null que especifica el valor predeterminado para la clave determinada si la clave no se encuentra en el archivo de inicialización. Este argumento no puede ser NULL.  
   
  *RetBuffer*  
- [Salida] Apunta al búfer que recibe la cadena recuperada.  
+ Genere Apunta al búfer que recibe la cadena recuperada.  
   
  *cbRetBuffer*  
- [Entrada] Especifica el tamaño, en caracteres, del búfer señalado por el *RetBuffer* argumento.  
+ Entradas Especifica el tamaño, en caracteres, del búfer al que apunta el argumento *RetBuffer* .  
   
  *lpszFilename*  
- [Entrada] Apunta a una cadena terminada en null que se asigna nombre al archivo de inicialización. Si este argumento no contiene una ruta de acceso completa al archivo, se busca en el directorio predeterminado.  
+ Entradas Apunta a una cadena terminada en null que nombra el archivo de inicialización. Si este argumento no contiene una ruta de acceso completa al archivo, se busca en el directorio predeterminado.  
   
 ## <a name="returns"></a>Devuelve  
  **SQLGetPrivateProfileString** devuelve un valor entero que indica el número de caracteres leídos.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando una llamada a **SQLGetPrivateProfileString** produce un error, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se enumeran los  *\*pfErrorCode* valores que pueden devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando se produce un error en una llamada a **SQLGetPrivateProfileString** , se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Error del instalador general|Se produjo un error para que se ha producido ningún error de instalación concreto.|  
-|ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El programa de instalación no pudo realizar la función debido a la falta de memoria.|  
+|ODBC_ERROR_GENERAL_ERR|Error general del instalador|Se produjo un error en el que no había ningún error específico del instalador.|  
+|ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El instalador no pudo realizar la función debido a una falta de memoria.|  
   
 ## <a name="comments"></a>Comentarios  
- **SQLGetPrivateProfileString** se proporciona como una manera sencilla para controladores de puerto y las DLL de instalación de controladores de Microsoft® Windows® para Microsoft Windows o Windows 2000. Las llamadas a **GetPrivateProfileString** que recuperar una cadena de perfil del archivo Odbc.ini debe reemplazarse por las llamadas a **SQLGetPrivateProfileString**. **SQLGetPrivateProfileString** llama a las funciones de la API de Win32® para recuperar los nombres de valores o datos que corresponde a un valor de la subclave Odbc.ini la información del sistema solicitados.  
+ **SQLGetPrivateProfileString** se proporciona como una forma sencilla de portar controladores y dll de instalación de controladores de Microsoft® Windows® a Microsoft windows NT®/Windows 2000. Las llamadas a **GetPrivateProfileString** que recuperan una cadena de perfil del archivo ODBC. ini deben reemplazarse por llamadas a **SQLGetPrivateProfileString**. **SQLGetPrivateProfileString** llama a las funciones de la API de® Win32 para recuperar los nombres solicitados de los valores o datos correspondientes a un valor de la subclave ODBC. ini de la información del sistema.  
   
- El modo de configuración (como lo establece **SQLSetConfigMode**) indica que la entrada del archivo Odbc.ini enumerar valores DSN es en la información del sistema. Si el DSN es un DSN de usuario (el modo de configuración es USERDSN_ONLY), la función lee la entrada del archivo Odbc.ini en HKEY_CURRENT_USER. Si el DSN es un DSN de sistema (SYSTEMDSN_ONLY), la función lee la entrada del archivo Odbc.ini en HKEY_LOCAL_MACHINE. Si el modo de configuración es BOTHDSN, se ha intentado HKEY_CURRENT_USER y, si se produce un error, se usa HKEY_LOCAL_MACHINE.  
+ El modo de configuración (establecido por **SQLSetConfigMode**) indica dónde se encuentra la entrada de ODBC. ini que enumera los valores de DSN en la información del sistema. Si el DSN es un DSN de usuario (el modo de configuración es USERDSN_ONLY), la función Lee de la entrada ODBC. ini en HKEY_CURRENT_USER. Si el DSN es un DSN del sistema (SYSTEMDSN_ONLY), la función Lee de la entrada ODBC. ini en HKEY_LOCAL_MACHINE. Si el modo de configuración es BOTHDSN, se intenta HKEY_CURRENT_USER y, si se produce un error, se usa HKEY_LOCAL_MACHINE.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   
-|Para obtener información acerca de|Vea|  
+|Para información acerca de|Vea|  
 |---------------------------|---------|  
 |Escribir un valor en la información del sistema|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|

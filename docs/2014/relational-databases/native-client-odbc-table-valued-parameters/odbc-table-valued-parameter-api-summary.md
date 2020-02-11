@@ -1,5 +1,5 @@
 ---
-title: Resumen de la API de ODBC parámetro con valores de tabla | Microsoft Docs
+title: Resumen de la API de parámetros con valores de tabla de ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c4606fcc4bad9355753b11557a0a4be7706688a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199867"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>Resumen de la API de parámetros con valores de tabla de ODBC
@@ -59,7 +59,7 @@ ms.locfileid: "63199867"
   
 -   [SQLTables](../native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Parámetros con valores de tabla &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
   
   

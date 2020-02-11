@@ -1,5 +1,5 @@
 ---
-title: Iniciar el Asistente de Business Intelligence en el Diseñador de dimensiones | Microsoft Docs
+title: Iniciar el Asistente de Business Intelligence en el diseñador de dimensiones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f09e8b4e31d9826d0988b293e2236676125fc7d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076045"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>Iniciar el Asistente de Business Intelligence en el Diseñador de dimensiones
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede crear operadores de resúmenes personalizados y fórmulas de miembro personalizado, y configurar las dimensiones para la reescritura mediante el Asistente de Business Intelligence o el Diseñador de dimensiones. Puede iniciar el Asistente de Business Intelligence desde el Explorador de soluciones o desde el Diseñador de cubos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Se puede obtener acceso al Diseñador de dimensiones desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], se crean operadores de resúmenes personalizados y fórmulas de miembro personalizado, y se configuran las dimensiones para la reescritura mediante el Asistente de Business Intelligence o el diseñador de dimensiones. Puede iniciar el Asistente de Business Intelligence desde el Explorador de soluciones o desde el Diseñador de cubos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Se puede obtener acceso al Diseñador de dimensiones desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>Para iniciar el Asistente de Business Intelligence  
   

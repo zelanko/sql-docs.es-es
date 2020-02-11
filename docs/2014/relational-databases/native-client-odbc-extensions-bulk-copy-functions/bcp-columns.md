@@ -19,14 +19,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225527"
 ---
-# <a name="bcpcolumns"></a>bcp_columns
-  Establece el número total de columnas del archivo de usuario para su uso con una copia masiva a o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](bcp-setbulkmode.md) puede usarse en lugar de bcp_columns y [bcp_colfmt](bcp-colfmt.md).  
+# <a name="bcp_columns"></a>bcp_columns
+  Establece el número total de columnas del archivo de usuario para su uso con una copia masiva a o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](bcp-setbulkmode.md) se puede utilizar en lugar de bcp_columns y [bcp_colfmt](bcp-colfmt.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,19 +47,19 @@ nColumns
  Es el identificador de la conexión ODBC habilitada para la copia masiva.  
   
  *nColumns*  
- Es el número total de columnas en el archivo de usuario. Incluso si se está preparando para la copia masiva de datos desde el archivo de usuario para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tabla y no piense copiar todas las columnas del archivo de usuario, todavía debe establecer *nColumns* al número total de columnas del archivo de usuario.  
+ Es el número total de columnas en el archivo de usuario. Incluso si está preparando la copia masiva de datos del archivo de usuario en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla y no pretende copiar todas las columnas del archivo de usuario, debe establecer *nColumns* en el número total de columnas de archivo de usuario.  
   
 ## <a name="returns"></a>Devuelve  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Comentarios  
- Esta función se puede llamar solo después [bcp_init](bcp-init.md) ha sido llamado con un nombre de archivo válido.  
+## <a name="remarks"></a>Observaciones  
+ Solo se puede llamar a esta función después de que se haya llamado a [bcp_init](bcp-init.md) con un nombre de archivo válido.  
   
- Solo debe llamar a esta función si piensa utilizar un formato de archivo de usuario que difiere del valor predeterminado. Para obtener más información sobre una descripción del formato predeterminado del archivo de usuario, consulte **bcp_init**.  
+ Solo debe llamar a esta función si piensa utilizar un formato de archivo de usuario que difiere del valor predeterminado. Para obtener más información sobre una descripción del formato de archivo de usuario predeterminado, vea **bcp_init**.  
   
- Después de llamar a `bcp_columns`, debe llamar a [bcp_colfmt](bcp-colfmt.md)para cada columna del archivo de usuario para definir completamente un formato de archivo personalizado.  
+ Después de `bcp_columns`llamar a, debe llamar a [bcp_colfmt](bcp-colfmt.md)por cada columna del archivo de usuario para definir completamente un formato de archivo personalizado.  
   
-## <a name="see-also"></a>Vea también  
- [Funciones de copia masiva](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Consulte también  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

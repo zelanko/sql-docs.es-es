@@ -17,10 +17,10 @@ ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fa5834c14bfb1fafe3123c28a60359d64d059dfc
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71342520"
 ---
 # <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>Sys. dm_os_enumerate_fixed_drives (Transact-SQL)
@@ -29,20 +29,20 @@ ms.locfileid: "71342520"
 
 Introducido en SQL Server 2019.
 
-Enumera los volúmenes montados en Letras de unidad como `C:\`.
+Enumera los volúmenes montados en Letras de `C:\`unidad como.
 
-|Nombre de columna|Tipo de datos|Descripción|
+|Nombre de la columna|Tipo de datos|Descripción|
 |-----------------|---------------|-----------------|  
-|`fixed_drive_path`|`nvarchar(512)`|Ruta de acceso al volumen, como `C:\`.|  
-|`drive_type`|`int`|Código para el tipo de unidad. Vea [`GetDriveTypeW` función](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
-|`drive_type_desc`|`nvarchar(512)`|Descripción del tipo de unidad. Vea [`GetDriveTypeW` función](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
+|`fixed_drive_path`|`nvarchar(512)`|Ruta de acceso al volumen, `C:\`como.|  
+|`drive_type`|`int`|Código para el tipo de unidad. Vea [ `GetDriveTypeW` función](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
+|`drive_type_desc`|`nvarchar(512)`|Descripción del tipo de unidad. Vea [ `GetDriveTypeW` función](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
 |`free_space_in_bytes`|`bigint`|Espacio libre en disco en bytes.|
 
 ## <a name="permissions"></a>Permisos
 
-El usuario debe tener `VIEW SERVER STATE` permiso en el servidor.
+El usuario debe tener `VIEW SERVER STATE` el permiso en el servidor.
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Funciones &#40;y vistas de administración dinámica relacionadas con e/s TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Funciones y vistas de administración dinámica relacionadas con e/s &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  

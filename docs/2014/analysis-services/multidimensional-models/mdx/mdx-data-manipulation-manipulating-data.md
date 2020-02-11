@@ -15,22 +15,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29e569ec781d0015017d3009746c3299f0865c80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074360"
 ---
 # <a name="manipulating-data-mdx"></a>Manipular datos (MDX)
 
-Las expresiones multidimensionales (MDX) pueden utilizarse para manipular los datos de diversas maneras. El artículo enumeran en la portada de este artículo algunos de los conceptos más avanzados de manipulación de datos en el lenguaje MDX.
+Las expresiones multidimensionales (MDX) pueden utilizarse para manipular los datos de diversas maneras. En el artículo que se muestra en este artículo se tratan algunos de los conceptos más avanzados sobre la manipulación de datos en el lenguaje MDX.
 
 ## <a name="in-this-section"></a>En esta sección
 
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Usar DRILLTHROUGH para recuperar datos de origen &#40;MDX&#41;](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|Trata el uso de la instrucción [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) de MDX para recuperar los conjuntos de filas de los datos de origen aplicables a una celda en un origen de datos multidimensional.|  
-|[Trabajar con la función RollupChildren &#40;MDX&#41;](mdx-data-manipulation-rollupchildren-function.md)|Describe el impacto de MDX [RollupChildren](/sql/mdx/rollupchildren-mdx)
+|[Trabajar con la función RollupChildren &#40;MDX&#41;](mdx-data-manipulation-rollupchildren-function.md)|Describe el impacto de la [RollupChildren](/sql/mdx/rollupchildren-mdx) de MDX
 |[Descripción de orden de paso y orden de resolución &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|Proporciona información detallada sobre los conceptos del orden de resolución y cómo esta característica puede afectar a las expresiones, instrucciones y scripts MDX.|  
 
 <!-- ??
@@ -43,6 +43,6 @@ Also, I had to add its leading '|' character, for consistency to aid bulk automa
 GeneMi , 2019/01/19
 -->
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
-[Aspectos básicos de consulta MDX (Analysis Services)](mdx-query-fundamentals-analysis-services.md)
+[Aspectos básicos de las consultas MDX (Analysis Services)](mdx-query-fundamentals-analysis-services.md)

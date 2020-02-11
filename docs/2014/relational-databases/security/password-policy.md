@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187969"
 ---
 # <a name="password-policy"></a>Directiva de contraseñas
@@ -75,7 +75,7 @@ ms.locfileid: "63187969"
   
     -   El historial de contraseñas se inicializa con el valor del hash de contraseña actual.  
   
-    -   **Duración de bloqueo de cuenta**, **Umbral de bloqueo de cuenta**y **Restablecer recuento de bloqueos de cuentas tras** también están habilitadas.  
+    -   **Duración del bloqueo de cuenta**, **umbral de bloqueo de cuenta**y **restablecer contador de bloqueo de cuenta después** de también están habilitados.  
   
 -   Cuando el valor de CHECK_POLICY se cambia a OFF, ocurre lo siguiente:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63187969"
   
  [Crear un inicio de sesión](authentication-access/create-a-login.md)  
   
- [Crear un usuario de base de datos](authentication-access/create-a-database-user.md)  
+ [Creación de un usuario de base de datos](authentication-access/create-a-database-user.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [Contraseñas seguras](strong-passwords.md)  

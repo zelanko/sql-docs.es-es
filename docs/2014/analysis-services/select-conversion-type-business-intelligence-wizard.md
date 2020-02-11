@@ -1,5 +1,5 @@
 ---
-title: Seleccione el tipo de conversión (Asistente de Business Intelligence) | Microsoft Docs
+title: Seleccionar el tipo de conversión (Asistente de Business Intelligence) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab618eaa2d8d54b08e3d01fa238d19451084eff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069618"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Seleccionar el tipo de conversión (Asistente de Business Intelligence)
@@ -47,9 +47,9 @@ ms.locfileid: "66069618"
   
  Por ejemplo, la moneda dinámica puede definirse como dólares norteamericanos (USD) y la tabla de hechos puede almacenar las transacciones en USD. Al seleccionar esta opción se convierten estas transacciones de la moneda dinámica en las monedas del informe especificadas. El resultado es que las transacciones se pueden almacenar en la moneda dinámica y verse en la moneda dinámica especificada o en cualquiera de las monedas del informe especificadas en la página **Especificar monedas del informe** .  
   
-## <a name="see-also"></a>Vea también  
- [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md)   
- [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Asistente de Business Intelligence (ayuda F1)](business-intelligence-wizard-f1-help.md)   
+ [Diseñador de cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Diseñador de dimensiones &#40;Analysis Services de datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

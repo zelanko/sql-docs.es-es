@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076340"
 ---
 # <a name="create-a-report-data-source"></a>Crear un origen de datos de informe
@@ -39,10 +39,10 @@ ms.locfileid: "66076340"
   
 1.  Haga clic en la pestaña **Documentos** de la cinta de bibliotecas.  
   
-2.  Haga clic en **Nuevo documento** > **Origen de datos de informe**.  
+2.  Haga clic en **nuevo documento** > **origen de datos de informe**.  
   
     > [!NOTE]  
-    >  Si no ve el elemento **Origen de datos de informe** en el menú, significa que no se ha habilitado el tipo de contenido del origen de datos de informe para esta biblioteca. Para obtener más información, consulte [Agregar informe Server tipos de contenido en una biblioteca &#40;Reporting Services en modo integrado de SharePoint&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+    >  Si no ve el elemento **Origen de datos de informe** en el menú, significa que no se ha habilitado el tipo de contenido del origen de datos de informe para esta biblioteca. Para obtener más información, vea [agregar tipos de contenido del servidor de informes a una biblioteca &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 3.  En la página **Propiedades del origen de datos** , en **Nombre**, escriba un nombre para el archivo de conexión .rsds.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66076340"
   
      (Opcional) Los cubos pueden tener perspectivas que proporcionan a los usuarios unas vistas especiales en las que únicamente están visibles ciertas dimensiones y/o grupos de medidas en el cliente. Para especificar una perspectiva, escriba el nombre de esta como un valor de la propiedad Cube: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (Opcional) Los cubos pueden tener traducciones de datos y metadatos especificados para varios idiomas dentro del modelo. Para ver las traducciones (datos y metadatos), deberá agregar la propiedad "Identificador de configuración regional" a la cadena de conexión: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
+     (Opcional) Los cubos pueden tener traducciones de datos y metadatos especificados para varios idiomas dentro del modelo. Para ver las traducciones (datos y metadatos), necesita agregar la propiedad "identificador regional" a la cadena de conexión:`Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  En **Credenciales**, especifique el modo en que el servidor de informes debe obtener las credenciales para obtener acceso al origen de datos externo.  
   

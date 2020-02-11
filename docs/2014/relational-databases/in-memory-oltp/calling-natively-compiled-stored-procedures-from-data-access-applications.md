@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156834"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos
@@ -36,7 +36,7 @@ ms.locfileid: "63156834"
   
  Las siguientes recomendaciones se aplican a las llamadas a procedimientos almacenados compilados de forma nativa con el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- La forma más eficaz de llamar a un procedimiento almacenado es emitir una llamada RPC directa con `SQLExecDirect` y cláusulas ODBC CALL. No utilice el [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instrucción. Si un procedimiento almacenado se llama más de una vez, la ejecución preparada es más eficaz.  
+ La forma más eficaz de llamar a un procedimiento almacenado es emitir una llamada RPC directa con `SQLExecDirect` y cláusulas ODBC CALL. No utilice la [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` instrucción. Si un procedimiento almacenado se llama más de una vez, la ejecución preparada es más eficaz.  
   
  La forma más eficaz de llamar a un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] más de una vez es a través de llamadas a procedimientos RPC preparadas. Las llamadas a RPC preparadas se realizan como se indica a continuación con el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  
   
@@ -48,7 +48,8 @@ ms.locfileid: "63156834"
   
 -   Ejecute varias veces el procedimiento almacenado con `SQLExecute`.  
   
- El fragmento de código siguiente muestra la ejecución preparada de un procedimiento almacenado para agregar elementos de línea a un pedido. `SQLPrepare` se llama solo una sola vez y `SQLExecute` se llama varias veces, una vez para cada ejecución del procedimiento.  
+ El fragmento de código siguiente muestra la ejecución preparada de un procedimiento almacenado para agregar elementos de línea a un pedido. 
+  `SQLPrepare` se llama solo una sola vez y `SQLExecute` se llama varias veces, una vez para cada ejecución del procedimiento.  
   
 ```  
 // Bind parameters  
@@ -392,7 +393,7 @@ int _tmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
   
   

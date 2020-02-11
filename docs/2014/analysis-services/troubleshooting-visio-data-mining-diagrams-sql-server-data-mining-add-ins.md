@@ -1,5 +1,5 @@
 ---
-title: Solución de problemas de diagramas de minería de datos de Visio (datos de SQL Server a los complementos de minería de datos) | Microsoft Docs
+title: Solucionar problemas de diagramas de minería de datos de Visio (complementos de minería de datos de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 067d3c3a324922a8c8ef19239771c8a8c2305541
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065719"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>Solucionar problemas relacionados con los diagramas de minería de datos de Visio (Complementos de minería de datos de SQL Server)
@@ -32,9 +32,9 @@ ms.locfileid: "66065719"
 ## <a name="common-issues"></a>Problemas comunes  
  No se puede conectar con el modelo  
   No se muestra ningún contenido  
-  No se puede ver los detalles  
+  No se pueden ver los detalles  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver modelos de minería de datos en Visio &#40;complementos de minería de datos&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)   
  [Ver modelos de minería de datos en Visio &#40;complementos de minería de datos&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   

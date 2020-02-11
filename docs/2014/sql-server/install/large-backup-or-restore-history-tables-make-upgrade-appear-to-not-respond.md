@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4d994eb6d345ab98e6cd51a44c7c90a74bafd3a
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874601"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>Las tablas de historial de restauración o copia de seguridad de gran tamaño hacen que la actualización aparentemente no responda
@@ -51,8 +51,8 @@ ms.locfileid: "70874601"
 > [!NOTE]  
 >  Puede actualizar una base de datos cuyas tablas de historial de restauración y copia de seguridad tengan más de 10.000 filas. Sin embargo, puede parecer que la actualización se detiene mientras se modifican esas tablas de gran tamaño. Cuanto mayor sea el tamaño de las tablas, más tiempo necesitará el programa de instalación para completar el proceso.  
   
-## <a name="see-also"></a>Vea también  
- [Motor de base de datos problemas de actualización](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor &#91;de actualizaciones de SQL Server 2014 nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Consulte también  
+ [Problemas de actualización Motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server el asesor de actualizaciones de 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

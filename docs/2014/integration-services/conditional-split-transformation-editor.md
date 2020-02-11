@@ -1,5 +1,5 @@
 ---
-title: Editor de transformación División condicional | Microsoft Docs
+title: Editor de transformación división condicional | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060885"
 ---
 # <a name="conditional-split-transformation-editor"></a>División condicional, editor de transformación
@@ -36,12 +36,12 @@ ms.locfileid: "66060885"
  **Nombre de salida**  
  Escriba un nombre de salida. El valor predeterminado es una lista numerada de casos, pero puede elegir cualquier nombre descriptivo único.  
   
- **Condición**  
+ **Cumple**  
  Escriba una expresión o genere una arrastrándola de la lista de columnas, variables, funciones y operadores disponibles.  
   
  Puede especificar el valor de esta propiedad con una expresión de propiedad.  
   
- **Temas relacionados:**  [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Temas relacionados:**  [Integration Services &#40;expresiones de&#41; ssis](expressions/integration-services-ssis-expressions.md), [operadores &#40;&#41;de expresión de SSIS ](expressions/operators-ssis-expression.md)y [funciones &#40;expresión de SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Nombre de salida predeterminado**  
  Escriba un nombre para la salida predeterminada o utilice el nombre predeterminado.  
@@ -49,7 +49,7 @@ ms.locfileid: "66060885"
  **Configurar la salida de errores**  
  Especifique cómo quiere controlar los errores mediante el cuadro de diálogo [Configurar la salida de errores](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Dividir un conjunto de datos usando la transformación División condicional](data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   

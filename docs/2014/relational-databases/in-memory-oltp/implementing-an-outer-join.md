@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158172"
 ---
 # <a name="implementing-an-outer-join"></a>Implementar una combinación externa
@@ -22,7 +22,7 @@ ms.locfileid: "63158172"
   
  Los ejemplos usan una variable de tabla para simular un cursor en la parte izquierda de la combinación y una variable de tabla para crear un único conjunto de resultados, que solo es adecuado cuando se procesa un número limitado de filas, ya que ello implica crear una copia adicional de las filas de datos.  
   
- Una variable (@outer) de tipo t1_type se utiliza para recorrer en iteración las filas desde t1, con un tiempo bucle para simular un cursor. La variable @result de tipo t1t2_join_type, a continuación, se utiliza para construir el conjunto de resultados.  
+ Se utiliza una@outervariable () de tipo t1_type para recorrer en iteración las filas de T1, utilizando un bucle while para simular un cursor. A continuación @result , se usa la variable de tipo t1t2_join_type para construir el conjunto de resultados.  
   
  Debe probar el rendimiento de esta solución alternativa para asegurarse de que funciona de la manera esperada en la aplicación.  
   
@@ -112,8 +112,8 @@ GO
 exec dbo.usp_left_join  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Problemas de migración para los procedimientos almacenados compilados de forma nativa](migration-issues-for-natively-compiled-stored-procedures.md)   
- [Construcciones Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+ [Construcciones de Transact-SQL no admitidas en In-Memory OLTP.](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

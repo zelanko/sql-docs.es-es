@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188213"
 ---
 # <a name="manage-events"></a>Administrar eventos
@@ -46,7 +46,7 @@ ms.locfileid: "63188213"
   
 -   **Único punto de error**. Si el servidor de administración de alertas se deja sin conexión, no se emite ninguna alerta para los eventos del grupo de servidores administrado.  
   
--   **Sobrecarga del servidor**. La administración de alertas de los eventos reenviados provoca un aumento de la carga de procesamiento en el servidor de administración de alertas.  
+-   **Carga del servidor**. La administración de alertas de los eventos reenviados provoca un aumento de la carga de procesamiento en el servidor de administración de alertas.  
   
 ## <a name="guidelines-for-using-an-alerts-management-server"></a>Directrices de uso de un servidor de administración de alertas  
  Al configurar un servidor de administración de alertas, siga las siguientes directrices:  
@@ -87,7 +87,7 @@ ms.locfileid: "63188213"
 > [!NOTE]  
 >  Dado que un trabajo puede activar un evento, tenga cuidado de no crear un bucle recursivo de trabajos y alertas.  
   
-## <a name="see-also"></a>Vea también  
- [sys.sysmessages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
+## <a name="see-also"></a>Consulte también  
+ [Sys. sysmessages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

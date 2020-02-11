@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1982d7941fd42eeac8a2d6eaa0bb78260c24317
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184263"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>Derivar una plantilla a partir de un archivo o tabla de seguimiento (SQL Server Profiler)
@@ -25,16 +25,16 @@ ms.locfileid: "63184263"
   
 ### <a name="to-derive-a-template-from-a-trace-file-or-trace-table"></a>Para derivar una plantilla de un archivo de seguimiento o de una tabla de seguimiento  
   
-1.  Abra el archivo o tabla de seguimiento que servirá de base para la plantilla. Para obtener más información, vea [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) o [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
+1.  Abra el archivo o tabla de seguimiento que servirá de base para la plantilla. Para obtener más información, vea [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) o el Asistente para la optimización del [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
   
 2.  En el menú **Archivo** , seleccione **Guardar como**y, a continuación, haga clic en **Plantilla de seguimiento**.  
   
-3.  Escriba un nombre o seleccione un nombre de la lista. Haga clic en **Aceptar**.  
+3.  Escriba un nombre o seleccione un nombre de la lista. Haga clic en **OK**.  
   
 > [!NOTE]  
 >  Si selecciona un archivo de plantilla existente, se le preguntará si desea sobrescribir el archivo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [Modificar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [Derivar una plantilla a partir de un seguimiento en ejecución &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   

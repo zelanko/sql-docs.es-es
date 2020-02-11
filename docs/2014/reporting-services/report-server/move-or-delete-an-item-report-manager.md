@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103725"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Mover o eliminar un elemento (Administrador de informes)
@@ -33,15 +33,15 @@ ms.locfileid: "66103725"
 |![Icono de informe](../media/hlp-16doc.gif "Icono de informe")|Informe|  
 |![Icono de informe vinculado](../media/hlp-16linked.gif "Icono de informe vinculado")|Informe vinculado|  
 |![Icono de carpeta](../media/hlp-16folder.gif "Icono de carpeta")|Carpeta|  
-|![Icono de recurso genérico](../media/hlp-16file.gif "Icono de recurso genérico")|Recurso genérico|  
+|![icono de recurso genérico](../media/hlp-16file.gif "Icono de recurso genérico")|Recurso genérico|  
 |![Icono de origen de datos compartido](../media/hlp-16datasource.png "Icono de origen de datos compartido")|Origen de datos compartido|  
 ||Conjunto de datos compartidos|  
   
- No todos los elementos se pueden mover. Por ejemplo, los elementos asociados a un informe, tales como las suscripciones o el historial del informe, no pueden moverse. Estos elementos se mueven con los informes asociados. Asimismo, tampoco pueden moverse elementos como las programaciones compartidas que existen fuera de la jerarquía de carpetas. No pueden moverse elementos para los que no se tienen los permisos adecuados. Permiso para mover un elemento se muestra cuando se seleccionan las siguientes tareas en la asignación de roles para el elemento en cuestión: "Administrar informes," "Administrar modelos", "Administran carpetas" y "Administración orígenes de datos".  
+ No todos los elementos se pueden mover. Por ejemplo, los elementos asociados a un informe, tales como las suscripciones o el historial del informe, no pueden moverse. Estos elementos se mueven con los informes asociados. Asimismo, tampoco pueden moverse elementos como las programaciones compartidas que existen fuera de la jerarquía de carpetas. No pueden moverse elementos para los que no se tienen los permisos adecuados. Este permiso se concede mediante la selección de las siguientes tareas durante la asignación de roles del elemento en cuestión: "Administrar informes", "Administrar modelos", "Administrar carpetas" y "Administrar orígenes de datos".  
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>Para mover un elemento de la página Contenido  
   
-1.  Iniciar [Administrador de informes &#40;modo nativo de SSRS&#41;]... / informe manager ssrs native mode.md).  
+1.  Iniciar [Administrador de informes &#40;modo nativo de SSRS&#41;].. /report-manager-ssrs-native-mode.md).  
   
 2.  En el Administrador de informes, navegue a la página **Contenido** y localice el elemento que desee mover.  
   
@@ -57,12 +57,12 @@ ms.locfileid: "66103725"
   
  O bien puede navegar hasta el objeto que desea mover, hacer clic en **Propiedades**y, a continuación, en **Mover** al principio de la página.  
   
-## <a name="delete-an-item"></a>Eliminar un elemento  
- Antes de eliminar un elemento, piense si lo utilizan otros elementos. Por ejemplo, si elimina un origen de datos compartido, ya no se ejecutarán los informes y los modelos que usan dicho origen de datos. Si elimina un informe, también se eliminarán las suscripciones y el historial de informes asociado a dicho informe. Para buscar elementos dependientes para un elemento, consulte [página elementos dependientes &#40;el Administrador de informes&#41;]... / dependiente de elementos de página de informe manager.md).  
+## <a name="delete-an-item"></a>Eliminación de un elemento  
+ Antes de eliminar un elemento, piense si lo utilizan otros elementos. Por ejemplo, si elimina un origen de datos compartido, ya no se ejecutarán los informes y los modelos que usan dicho origen de datos. Si elimina un informe, también se eliminarán las suscripciones y el historial de informes asociado a dicho informe. Para buscar elementos dependientes de un elemento, vea [Página de elementos dependientes &#40;Administrador de informes&#41;].. /dependent-items-page-report-manager.md).  
   
 #### <a name="to-delete-a-report-or-item"></a>Para eliminar un informe o un elemento  
   
-1.  Iniciar [Administrador de informes &#40;modo nativo de SSRS&#41;]... / informe manager ssrs native mode.md).  
+1.  Iniciar [Administrador de informes &#40;modo nativo de SSRS&#41;].. /report-manager-ssrs-native-mode.md).  
   
 2.  En el Administrador de informes, navegue a la página **Contenido** y localice el elemento que desee eliminar.  
   
@@ -72,8 +72,8 @@ ms.locfileid: "66103725"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Vea también  
- [El contenido de página &#40;el Administrador de informes&#41;]... / manager.md-contenido-página de informe)   
+## <a name="see-also"></a>Consulte también  
+ [Página de contenido &#40;Administrador de informes&#41;].. /contents-page-report-manager.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

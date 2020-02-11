@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fbd293c156f373de0cdad53b4419633ded15af8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164136"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementar una clase Connection para una extensión de procesamiento de datos
@@ -31,13 +31,14 @@ ms.locfileid: "63164136"
  Las propiedades de la conexión deseada se representan como una cadena de conexión. Se recomienda encarecidamente que las extensiones de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs.md)] admitan la propiedad <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> mediante el conocido sistema de par de nombre y valor definido por OLE DB.  
   
 > [!NOTE]  
->  Para obtener objetos **Connection**, a menudo se necesitan muchos recursos, de modo que puede ser conveniente que considere agrupar las conexiones u otras técnicas para mitigar esto.  
+>  Los objetos de **conexión** suelen consumir muchos recursos, por lo que es posible que desee considerar la posibilidad de agrupar las conexiones u otras técnicas para mitigar esto.  
   
- <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> hereda de <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Debe implementar la interfaz <xref:Microsoft.ReportingServices.Interfaces.IExtension> como parte de la implementación de la clase de conexión. La interfaz <xref:Microsoft.ReportingServices.Interfaces.IExtension> permite a una clase implementar un nombre de extensión localizado y procesar la información de configuración específica de la extensión que se almacena en el archivo de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
+ 
+  <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> hereda de <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Debe implementar la interfaz <xref:Microsoft.ReportingServices.Interfaces.IExtension> como parte de la implementación de la clase de conexión. La interfaz <xref:Microsoft.ReportingServices.Interfaces.IExtension> permite a una clase implementar un nombre de extensión localizado y procesar la información de configuración específica de la extensión que se almacena en el archivo de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
  El objeto **Connection** contiene la propiedad <xref:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName%2A> a través de su implementación de <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Se recomienda encarecidamente que las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] admitan la propiedad <xref:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName%2A>, de forma que los usuarios encuentren un nombre traducido y conocido para la extensión en una interfaz de usuario, como el Administrador de informes.  
   
- <xref:Microsoft.ReportingServices.Interfaces.IExtension> también permite que el objeto **Connection** recupere y procese los datos de configuración personalizados que se almacenan en el archivo RSReportServer.config. Para obtener más información acerca de cómo procesar los datos de configuración personalizados, vea el método <xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A>.  
+ <xref:Microsoft.ReportingServices.Interfaces.IExtension>también permite que el objeto de **conexión** recupere y procese los datos de configuración personalizados que se almacenan en el archivo Rsreportserver. config. Para obtener más información acerca de cómo procesar los datos de configuración personalizados, vea el método <xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A>.  
   
  La clase que implementa <xref:Microsoft.ReportingServices.Interfaces.IExtension> no se descarga de la memoria cuando se descarga el resto de las clases de extensión de procesamiento de datos. Por ello, puede utilizar la clase **Extension** con el fin de almacenar información de estado a través de las conexiones o almacenar datos que pueden estar almacenados en la memoria caché. La clase **Extension** permanece en la memoria siempre que se ejecuta el servidor de informes.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "63164136"
 >   
 >  Para obtener una muestra de la implementación de la clase **Connection**, vea [Muestras de productos de SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Extensiones de Reporting Services](../reporting-services-extensions.md)   
  [Implementar una extensión de procesamiento de datos](implementing-a-data-processing-extension.md)   
  [Biblioteca de extensiones de Reporting Services](../reporting-services-extension-library.md)  

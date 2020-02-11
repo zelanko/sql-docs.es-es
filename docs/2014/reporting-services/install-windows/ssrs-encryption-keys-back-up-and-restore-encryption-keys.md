@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72400601ebb6b9a01b4db09ea9799b64e9c5e1c9
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796395"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services
   Una parte importante de la configuración del servidor de informes es la creación de una copia de seguridad de la clave simétrica utilizada para cifrar información confidencial. La copia de seguridad de la clave se necesita para varias operaciones rutinarias y, además, permite volver a utilizar una base de datos del servidor de informes existente en una nueva instalación.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo de SharePoint  
   
  Es necesario restaurar la copia de seguridad de la clave de cifrado cuando se produce alguno de los siguientes eventos:  
   
@@ -46,14 +46,14 @@ ms.locfileid: "72796395"
 ## <a name="backing-up-the-encryption-keys"></a>Realizar copias de seguridad de claves de cifrado  
  La copia de seguridad de la clave simétrica es un proceso que escribe la clave en el archivo que se especifique y después la codifica mediante la contraseña que se proporcione. La clave simétrica no puede almacenarse nunca en un estado no cifrado, por lo que debe proporcionar una contraseña para cifrarla cuando la guarde en disco. Una vez creado el archivo, debe almacenarlo en una ubicación segura **y recordar la contraseña** que se usa para desbloquearlo. Para hacer copia de seguridad de la clave simétrica, puede usar las siguientes herramientas:  
   
- **Modo nativo** : el Administrador de configuración de Reporting Services o la utilidad **rskeymgmt** .  
+ **Modo nativo:** Administrador de configuración de Reporting Services o la utilidad **rskeymgmt** .  
   
- **Modo de SharePoint** : páginas de Administración central de SharePoint o PowerShell.  
+ **Modo de SharePoint:** Páginas de administración central de SharePoint o PowerShell.  
   
-####  <a name="bkmk_backup_sharepoint"></a> Hacer copia de seguridad de servidores de informes en modo de SharePoint  
+####  <a name="bkmk_backup_sharepoint"></a>Copias de seguridad de servidores de informes en modo de SharePoint  
  Para los servidores de informes en modo de SharePoint puede usar comandos de PowerShell o usar las páginas de administración para la aplicación de servicios de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea la sección "Administración de claves" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../manage-a-reporting-services-sharepoint-service-application.md).  
   
-####  <a name="bkmk_backup_configuration_manager"></a> Hacer copia de seguridad de las claves de cifrado - Administrador de configuración de Reporting Services (modo nativo)  
+####  <a name="bkmk_backup_configuration_manager"></a>Copia de seguridad de claves de cifrado: Administrador de configuración de Reporting Services (modo nativo)  
   
 1.  Inicie el Administrador de configuración de Reporting Services y, a continuación, conéctese a la instancia del servidor de informes que desea configurar.  
   
@@ -61,11 +61,12 @@ ms.locfileid: "72796395"
   
 3.  Escriba una contraseña segura.  
   
-4.  Especifique un archivo para incluir la clave almacenada. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] anexa una extensión de archivo .snk al archivo. Considere la posibilidad de almacenar el archivo en un disco diferente del servidor de informes.  
+4.  Especifique un archivo para incluir la clave almacenada. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] anexa una extensión de archivo .snk al archivo. Considere la posibilidad de almacenar el archivo en un disco diferente del servidor de informes.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_backup_rskeymgmt"></a> Realizar copias de seguridad de las claves de cifrado: rskeymgmt (modo nativo)  
+####  <a name="bkmk_backup_rskeymgmt"></a>Copia de seguridad de claves de cifrado-rskeymgmt (modo nativo)  
   
 1.  Ejecute **rskeymgmt.exe** localmente en el equipo que hospeda el servidor de informes. Debe utilizar el argumento de extracción `-e` para copiar la clave, proporcionar un nombre de archivo y especificar una contraseña. El siguiente ejemplo ilustra los argumentos que debe especificar:  
   
@@ -86,11 +87,11 @@ ms.locfileid: "72796395"
   
  Para restaurar la clave de cifrado, debe tener una copia de la clave de cifrado en el archivo. También debe conocer la contraseña que desbloquea la copia almacenada. Si conoce la clave y la contraseña, puede ejecutar la herramienta de configuración de Reporting Services o la utilidad **rskeymgmt** para restaurar la clave. La clave simétrica debe ser la misma que bloquea y desbloquea los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si restaura una copia que no es válida, el servidor de informes no puede obtener acceso a los datos cifrados almacenados actualmente en la base de datos del servidor de informes. Si esto sucede, es posible que deba eliminar todos los valores cifrados cuando no pueda restaurar una clave válida. Si por algún motivo no puede restaurar la clave de cifrado (por ejemplo, si no tiene una copia de seguridad), debe eliminar la clave existente y el contenido cifrado. Para más información, vea [Claves de cifrado de SSRS: eliminar y volver a crear las claves de cifrado](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Para obtener más información sobre la creación de claves simétrica, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-initialize-a-report-server.md).  
   
-####  <a name="bkmk_restore_configuration_manager"></a> Restaurar las claves de cifrado - Administrador de configuración de Reporting Services (modo nativo)  
+####  <a name="bkmk_restore_configuration_manager"></a>Restaurar claves de cifrado: Administrador de configuración de Reporting Services (modo nativo)  
   
 1.  Inicie el Administrador de configuración de Reporting Services y, a continuación, conéctese a la instancia del servidor de informes que desea configurar.  
   
-2.  En la página Claves de cifrado, haga clic en **Restaurar**.  
+2.  En la página claves de cifrado, haga clic en **restaurar**.  
   
 3.  Seleccione el archivo .snk que contiene la copia de seguridad.  
   
@@ -98,7 +99,7 @@ ms.locfileid: "72796395"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-####  <a name="bkmk_restore_rskeymgmt"></a> Restaurar las claves de cifrado: rskeymgmt (modo nativo)  
+####  <a name="bkmk_restore_rskeymgmt"></a>Restaurar claves de cifrado-rskeymgmt (modo nativo)  
   
 1.  Ejecute **rskeymgmt.exe** localmente en el equipo que hospeda el servidor de informes. Utilice el argumento `-a` para restaurar las claves. Debe proporcionar un nombre de archivo completo y especificar una contraseña. El siguiente ejemplo ilustra los argumentos que debe especificar:  
   
@@ -106,5 +107,5 @@ ms.locfileid: "72796395"
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  
     ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  

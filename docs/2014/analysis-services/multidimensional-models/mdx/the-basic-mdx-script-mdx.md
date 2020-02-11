@@ -1,5 +1,5 @@
 ---
-title: El Script MDX básico (MDX) | Microsoft Docs
+title: Script MDX básico (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073810"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Script MDX básico (MDX)
-  Un script MDX (Expresiones multidimensionales) define el proceso de cálculo de un cubo en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Hay dos tipos de scripts MDX:  
+  Un script de expresiones multidimensionales (MDX) define el proceso de cálculo de un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]cubo en. Hay dos tipos de scripts MDX:  
   
- **Script MDX predeterminado**  
+ **El script MDX predeterminado**  
  Al crear un cubo, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crea un script MDX predeterminado para el cubo. Este script define un paso de cálculo para todo el cubo.  
   
  **Script MDX definido por el usuario**  
@@ -36,7 +36,8 @@ ms.locfileid: "66073810"
   
  El script MDX predeterminado también incluye los comandos que crean conjuntos con nombre, asignaciones y miembros calculados creados en el Diseñador de cubos:  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] agrega directamente comandos de script al script MDX predeterminado.  
+-   
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] agrega directamente comandos de script al script MDX predeterminado.  
   
 -   Para cada conjunto con nombre del cubo existe una instrucción CREATE SET correspondiente en el script MDX predeterminado.  
   
@@ -52,18 +53,18 @@ ms.locfileid: "66073810"
  Todas las instrucciones de scripting MDX  
  En los scripts MDX, las instrucciones de scripting MDX controlan el contexto y el ámbito de los cálculos y administran el comportamiento de otras instrucciones del script MDX. Esta categoría incluye las siguientes instrucciones:  
   
--   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
+-   [Actualice](/sql/mdx/mdx-scripting-calculate)  
   
--   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
+-   [INMOVILICE](/sql/mdx/mdx-scripting-freeze)  
   
--   [SCOPE](/sql/mdx/mdx-scripting-scope)  
+-   [ID](/sql/mdx/mdx-scripting-scope)  
   
  Para más información sobre las instrucciones para scripting de MDX, vea [Instrucciones para scripting de MDX &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx).  
   
- [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
+ [CREAR MIEMBRO](/sql/mdx/mdx-data-definition-create-member)  
  La instrucción CREATE MEMBER crea miembros calculados. Para más información sobre cómo crear miembros calculados, vea [Generar miembros calculados en MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
- [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
+ [CREAR CONJUNTO](/sql/mdx/mdx-data-definition-create-set)  
  La instrucción CREATE SET crea conjuntos con nombre. Para más información sobre cómo crear conjuntos con nombre, vea [Crear conjuntos con nombre en MDX &#40;MDX&#41;](mdx-named-sets-building-named-sets.md).  
   
  Instrucciones condicionales  
@@ -89,8 +90,8 @@ ms.locfileid: "66073810"
 <Natural hierarchy member> ::= <Natural hierarchy>.<identifier>[.<identifier>...]  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del lenguaje MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Aspectos básicos de scripting MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [Aspectos básicos de scripting de MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

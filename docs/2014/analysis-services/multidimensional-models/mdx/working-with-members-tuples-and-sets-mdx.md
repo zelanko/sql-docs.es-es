@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a8532b20ae5b71a9ef2353893272c628b9a80b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073678"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Trabajar con miembros, tuplas y conjuntos (MDX)
@@ -76,10 +76,10 @@ ON COLUMNS
 FROM [Adventure Works]  
 ```  
   
- Para obtener más información sobre las funciones de tupla, vea [MDX Function Reference &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
+ Para obtener más información sobre las funciones de tupla, vea [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="set-functions"></a>Funciones de conjunto  
- MDX proporciona varias funciones que devuelven conjuntos. Escribir tuplas explícitamente y encerrarlas entre llaves no es la única manera de recuperar un conjunto. Para obtener más información sobre la función de miembros para devolver un conjunto, vea [Key Concepts in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md). Hay muchas más funciones de conjunto.  
+ MDX proporciona varias funciones que devuelven conjuntos. Escribir tuplas explícitamente y encerrarlas entre llaves no es la única manera de recuperar un conjunto. Para obtener más información sobre la función de miembros para devolver un conjunto, vea [Conceptos clave de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md). Hay muchas más funciones de conjunto.  
   
  El operador dos puntos (:) permite utilizar el orden natural de los miembros para crear un conjunto. Por ejemplo, el conjunto que se muestra en el siguiente ejemplo incluye tuplas del primer al cuarto trimestre del año 2002.  
   
@@ -105,16 +105,16 @@ FROM [Adventure Works]
   
  El operador dos puntos es una función inclusiva. Los miembros ubicados a ambos lados del operador dos puntos se incluyen en el conjunto resultante.  
   
- Para obtener más información sobre las funciones de conjuntos, vea [MDX Function Reference &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
+ Para obtener más información sobre las funciones de conjuntos, vea [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="array-functions"></a>Funciones de matriz  
- Una función de matriz actúa sobre un conjunto y devuelve una matriz. Para obtener más información sobre las funciones de matriz, vea [MDX Function Reference &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
+ Una función de matriz actúa sobre un conjunto y devuelve una matriz. Para obtener más información sobre las funciones de matriz, vea [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="hierarchy-functions"></a>Funciones de jerarquía  
- Una función de jerarquía devuelve una jerarquía al actuar sobre un miembro, un nivel, una jerarquía o una cadena. Para obtener más información sobre las funciones de jerarquía, vea [MDX Function Reference &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
+ Una función de jerarquía devuelve una jerarquía al actuar sobre un miembro, un nivel, una jerarquía o una cadena. Para obtener más información sobre las funciones de jerarquía, vea [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="level-functions"></a>Funciones de nivel  
- Una función de nivel devuelve un nivel al actuar sobre un miembro, un nivel o una cadena. Para obtener más información sobre las funciones de nivel, vea [MDX Function Reference &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
+ Una función de nivel devuelve un nivel al actuar sobre un miembro, un nivel o una cadena. Para obtener más información sobre las funciones de nivel, vea [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="logical-functions"></a>Funciones lógicas  
  Una función lógica actúa sobre una expresión MDX para devolver información acerca de las tuplas, miembros o conjuntos de la expresión. Por ejemplo, la función [IsEmpty &#40;MDX&#41;](/sql/mdx/isempty-mdx) evalúa si una expresión ha devuelto un valor de celda vacía. Para obtener más información sobre las funciones lógicas, vea [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
@@ -125,8 +125,8 @@ FROM [Adventure Works]
 ## <a name="string-functions"></a>Funciones de cadena  
  Una función de cadena actúa sobre una expresión MDX para devolver una cadena. Por ejemplo, la función [UniqueName &#40;MDX&#41;](/sql/mdx/uniquename-mdx) devuelve un valor de cadena que contiene el nombre único de una dimensión, jerarquía, nivel o miembro. Para obtener más información sobre las funciones de cadena, vea [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
-## <a name="see-also"></a>Vea también  
- [Conceptos clave de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Conceptos clave de &#40;MDX Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   

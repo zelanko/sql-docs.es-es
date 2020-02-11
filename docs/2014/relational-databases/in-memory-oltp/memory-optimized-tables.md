@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158753"
 ---
 # <a name="memory-optimized-tables"></a>Tablas con optimización para memoria
@@ -34,7 +34,7 @@ ms.locfileid: "63158753"
   
      Directrices para la actualización de tablas optimizadas para memoria (incluye el cambio de columnas de tabla, índices y bucket_count).  
   
--   [Descripción de las transacciones en tablas optimizadas para memoria](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
+-   [Descripción de las transacciones en tablas con optimización para memoria](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
      En esta sección se proporcionan varios temas relacionados con la realización de transacciones en tablas optimizadas para memoria, incluidos los niveles de aislamiento de las transacciones y las transacciones entre contenedores.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63158753"
   
      Proporciona información general del procesamiento de consultas tanto para las tablas optimizadas para memoria como para los procedimientos almacenados compilados de forma nativa.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

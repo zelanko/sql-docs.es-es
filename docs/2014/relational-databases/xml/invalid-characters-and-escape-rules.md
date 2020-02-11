@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aafacefa7a5bab5f8bc828f48384a79e17a13b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241198"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Reglas de escape y caracteres no válidos
@@ -65,7 +65,7 @@ ms.locfileid: "63241198"
   
      Tenga en cuenta que el uso de WITH XMLNAMESPACES es la forma recomendada de agregar espacios de nombres XML.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  
   
   

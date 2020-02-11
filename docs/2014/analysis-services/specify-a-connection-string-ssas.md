@@ -1,5 +1,5 @@
 ---
-title: Especifique una cadena de conexión (SSAS) | Microsoft Docs
+title: Especificar una cadena de conexión (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de31c9c5aae35b07cee0574730e12e51726921e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068552"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Especificar una cadena de conexión (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar una cadena de conexión para conectar con un origen de datos OLE DB u ODBC. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
   
- Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado. Para más información sobre los orígenes de datos y los proveedores admitidos, vea [Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
+ Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado. Para más información sobre los proveedores y los orígenes de datos admitidos, vea [Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Nombre descriptivo para esta conexión**  
@@ -31,7 +31,7 @@ ms.locfileid: "66068552"
  **Cadena de conexión**  
  Escriba la cadena de conexión que desea utilizar para conectarse al origen de datos OLE DB o ODBC.  
   
- **Compilar**  
+ **Build**  
  Especifique las propiedades de una cadena de conexión con el cuadro de diálogo **Propiedades de vínculo de datos** . Para obtener más información, vea la Ayuda de Vínculos a datos de Microsoft, que está disponible en ese cuadro de diálogo.  
   
  **Probar conexión**  

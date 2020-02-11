@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064849"
 ---
 # <a name="event-pairing-target"></a>Destino de emparejamiento de eventos
@@ -38,12 +38,12 @@ ms.locfileid: "66064849"
 |end_matching_columns|Una lista ordenada y delimitada por comas de nombres de columna.|Las columnas en las que realizar la asociación.|  
 |begin_matching_actions|Una lista de acciones ordenada y delimitada por comas.|Las acciones en las que se debe realizar la asociación.|  
 |end_matching_actions|Una lista de acciones ordenada y delimitada por comas.|Las acciones en las que se debe realizar la asociación.|  
-|respond_to_memory_pressure|Los valores pueden ser los siguientes:<br /><br /> 0 = No responder.<br /><br /> 1 = Dejar de agregar nuevos elementos huérfanos a la lista en caso de que exista presión de memoria.|La respuesta del destino a los eventos de memoria. Si se estable en 1 y la memoria del servidor es insuficiente, se quitará la información no emparejada.|  
+|respond_to_memory_pressure|Uno de los valores siguientes:<br /><br /> 0 = No responder.<br /><br /> 1 = Dejar de agregar nuevos elementos huérfanos a la lista en caso de que exista presión de memoria.|La respuesta del destino a los eventos de memoria. Si se estable en 1 y la memoria del servidor es insuficiente, se quitará la información no emparejada.|  
 |max_orphans||Especifica el número total de eventos no emparejados que se recopilarán en el destino. Una vez alcanzado el límite, los eventos no emparejados se quitan con un orden FIFO (primero en entrar, primero en salir). Valor predeterminado = 10,000.|  
   
  Todos los datos asociados a un evento se capturan y almacenan para futuros emparejamientos. Además, se recopilan los datos agregados por las acciones. Los datos de eventos recopilados se almacenan en la memoria y, por lo tanto, tienen un límite finito. Este límite depende de la actividad y capacidad del sistema. En lugar de tomar la cantidad de memoria máxima que se va a utilizar como un parámetro, la memoria utilizada dependerá de los recursos disponibles del sistema. Cuando no hay recursos, se quitarán los eventos no emparejados que se han conservado. Si un evento no se ha emparejado y se quita, el evento asociado aparecerá como un evento no emparejado.  
   
- El destino de emparejamiento serializa los eventos no emparejados a un formato XML. Este formato no sigue ningún esquema. El formato solo contiene dos tipos de elementos. El  **\<desemparejados >** elemento es la raíz, seguida de uno. **\<evento >** (elemento) para cada evento no emparejado que actualmente se está realizando un seguimiento. El  **\<evento >** elemento contiene un atributo que contiene el nombre del evento no emparejado.  
+ El destino de emparejamiento serializa los eventos no emparejados a un formato XML. Este formato no sigue ningún esquema. El formato solo contiene dos tipos de elementos. El elemento de ** \<>no emparejado** es la raíz, seguido de uno. evento>elemento para cada evento no emparejado que se está realizando actualmente. ** \<** El elemento de ** \<>de eventos** contiene un atributo que contiene el nombre del evento no emparejado.  
   
 ## <a name="adding-the-target-to-a-session"></a>Agregar el destino a una sesión  
  Para agregar el destino de búsqueda del par a una sesión de eventos extendidos, debe incluir la siguiente instrucción al crear o modificar una sesión de eventos:  
@@ -89,7 +89,7 @@ WHERE xe.name = 'session_name'
 </unpaired>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Destinos de SQL Server Extended Events](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   

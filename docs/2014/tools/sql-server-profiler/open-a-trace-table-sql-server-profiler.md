@@ -1,5 +1,5 @@
 ---
-title: Abra una tabla de seguimiento (SQL Server Profiler) | Microsoft Docs
+title: Abrir una tabla de seguimiento (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 66329c13eff3d8691e44c5b0ca07171cb9493bc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240562"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>Abrir una tabla de seguimiento (SQL Server Profiler)
@@ -30,9 +30,9 @@ ms.locfileid: "63240562"
   
 3.  En el cuadro de diálogo **Tabla de origen** , seleccione la base de datos que contiene la tabla de seguimiento guardada de la lista **Base de datos** .  
   
-4.  En la lista **Tabla** , seleccione el nombre de la tabla. Haga clic en **Aceptar**.  
+4.  En la lista **Tabla** , seleccione el nombre de la tabla. Haga clic en **OK**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ver y analizar seguimientos con SQL Server Profiler](view-and-analyze-traces-with-sql-server-profiler.md)   
  [Guardar seguimientos y plantillas de seguimiento](save-traces-and-trace-templates.md)   
  [SQL Server Profiler](sql-server-profiler.md)  

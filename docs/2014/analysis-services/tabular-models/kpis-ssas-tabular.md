@@ -1,5 +1,5 @@
 ---
-title: KPI (SSAS Tabular) | Microsoft Docs
+title: KPI (SSAS tabular) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067002"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI (SSAS tabular)
-  Un *KPI* (indicador clave de rendimiento) de un modelo tabular se usa para medir el rendimiento de un valor, definido por una medida *base*, con respecto a un valor de *destino*, que también se define con una medida o un valor absoluto. Este tema proporciona a los creadores de modelos tabulares una descripción básica de los KPI en un modelo tabular.  
+  Un *KPI* (indicador clave de rendimiento) de un modelo tabular se usa para medir el rendimiento de un valor, definido por una medida *base* , con respecto a un valor de *destino* , que también se define con una medida o un valor absoluto. Este tema proporciona a los creadores de modelos tabulares una descripción básica de los KPI en un modelo tabular.  
   
  Secciones de este tema:  
   
--   [Ventajas](#bkmk_benefits)  
+-   [Privilegios](#bkmk_benefits)  
   
 -   [Ejemplo](#bkmk_example)  
   
@@ -44,10 +44,10 @@ ms.locfileid: "66067002"
  **Umbrales de estado**  
  Un umbral de estado se define mediante el intervalo entre un umbral inferior y uno superior o mediante un valor fijo. El umbral de estado muestra un gráfico que ayuda a los usuarios a determinar fácilmente el estado del valor base en comparación con el valor de destino.  
   
-##  <a name="bkmk_example"></a> Ejemplo  
- La directora de ventas de Adventure Works desea crear una tabla dinámica que pueda usar para ver rápidamente si los empleados de ventas están cumpliendo o no sus cuotas de ventas durante un periodo determinado (un año). Para cada empleado de ventas, desea que la tabla dinámica para mostrar una presentación gráfica simple que muestra el estado de cada empleado de ventas es si o no a continuación, en o por encima de su cuota de ventas, el importe de cuota de ventas en dólares y el importe de ventas real en dólares. Desea poder segmentar los datos por año.  
+##  <a name="bkmk_example"></a>Ejemplo  
+ La directora de ventas de Adventure Works desea crear una tabla dinámica que pueda usar para ver rápidamente si los empleados de ventas están cumpliendo o no sus cuotas de ventas durante un periodo determinado (un año). Para cada empleado de ventas, desea que la tabla dinámica muestre el importe de ventas real en dólares, el importe de la cuota de ventas en dólares y un gráfico sencillo que muestre el estado de si cada empleado de ventas está por debajo o por encima de su cuota de ventas. Desea poder segmentar los datos por año.  
   
- Para ello, la directora de ventas se da de alta la Ayuda del programador de soluciones de BI de su organización para agregar un KPI de ventas al modelo Tabular AdventureWorks. La directora de ventas usará [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] para conectarse al modelo tabular de Adventure Works como origen de datos y crear una tabla dinámica con campos (medidas y KPI) y segmentaciones de datos para analizar si el personal de ventas cumple sus cuotas.  
+ Para ello, el director de ventas da de alta la ayuda del desarrollador de soluciones de BI de su organización a agregar un KPI de ventas al modelo tabular AdventureWorks. La directora de ventas usará [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] para conectarse al modelo tabular de Adventure Works como origen de datos y crear una tabla dinámica con campos (medidas y KPI) y segmentaciones de datos para analizar si el personal de ventas cumple sus cuotas.  
   
  En el modelo, se crea una medida en la columna SalesAmount de la tabla FactResellerSales, que indica el importe de ventas real en dólares para cada empleado de ventas. Esta medida definirá el valor base del KPI.  
   
@@ -70,11 +70,11 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  Ahora que se han creado medidas que sirven como valor base y como valor de destino del KPI, se extiende la medida Sales a un nuevo KPI Sales. En el KPI Sales, la medida de destino SalesAmountQuota se define como el valor de destino. El umbral de estado se define como un rango por porcentaje, cuyo destino es el 100%, lo que significa que las ventas reales definidas por la medida Sales cumplen la cuota definida en la medida de destino SalesAmoutnQuota. Los porcentajes Mínimo y Máximo se definen en la barra de estado y se selecciona un tipo de gráfico.  
   
- La directora de ventas ahora puede crear una tabla dinámica agregando valor Base del KPI, valor de destino y estado para el campo de valores. La columna Employees se agrega al campo RowLabel y la columna CalendarYear se agrega como segmentación de datos.  
+ Ahora, el director de ventas puede crear una tabla dinámica agregando el valor base, el valor de destino y el estado del KPI al campo valores. La columna Employees se agrega al campo RowLabel y la columna CalendarYear se agrega como segmentación de datos.  
   
  Ahora, la directora de ventas puede segmentar por año el importe de ventas real, la cuota de ventas y el estado de cada empleado de ventas. Puede analizar las tendencias de ventas a lo largo de los años para determinar si necesita ajustar o no la cuota de ventas para un empleado.  
   
-##  <a name="bkmk_create"></a> Crear y editar KPI  
+##  <a name="bkmk_create"></a>Crear y editar KPI  
  Para crear KPI, en el diseñador de modelos, usará el cuadro de diálogo Indicador clave de rendimiento. Puesto que los KPI deben asociarse a una medida, para crear un KPI se extiende una medida que se evalúa como un valor base; a continuación, se crea una medida que se evalúa como un valor de destino o especificando un valor absoluto. Después de definir la medida base (valor) y el valor de destino, podrá definir los parámetros del umbral de estado entre el valor base y el valor de destino. El estado se muestra en un formato gráfico mediante iconos, barras, gráficos o colores seleccionables. El valor base y el valor de destino, junto con el estado se pueden agregar a un informe o una tabla dinámica como valores que se pueden segmentar con respecto a otros campos de datos.  
   
  Para ver el cuadro de diálogo Indicador clave de rendimiento, en la cuadrícula de medida de la tabla, haga clic con el botón secundario en la medida que servirá como valor base y, a continuación, haga clic en **Crear KPI**. Después de extender una medida a un KPI como valor base, aparecerá un icono junto al nombre de la medida en la cuadrícula de medidas que identifica la medida como asociada a un KPI.  
@@ -83,10 +83,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Crear y administrar KPI &#40;SSAS tabular&#41;](kpis-ssas-tabular.md)|Describe cómo crear un KPI con una medida base, una medida de destino y umbrales de estado.|  
+|[Crear y administrar KPI &#40;&#41;tabular de SSAS](kpis-ssas-tabular.md)|Describe cómo crear un KPI con una medida base, una medida de destino y umbrales de estado.|  
   
-## <a name="see-also"></a>Vea también  
- [Medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md)   
+## <a name="see-also"></a>Consulte también  
+ [Medidas &#40;&#41;tabular de SSAS](measures-ssas-tabular.md)   
  [Perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md)  
   
   

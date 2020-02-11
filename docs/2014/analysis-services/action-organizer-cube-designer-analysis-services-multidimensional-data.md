@@ -1,5 +1,5 @@
 ---
-title: Organizador de acciones (pestaña acciones, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Organizador de acciones (pestaña acciones, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d48f3d23ce9e8c3eca83396d9413d82717fa3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062933"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Organizador de acciones (pestaña Acciones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Utilice el panel **Organizador de acciones** de la pestaña **Acciones** del Diseñador de cubos para obtener acceso a las acciones contenidas en el cubo especificado.  
   
 ## <a name="options"></a>Opciones  
- **Lista**  
+ **List**  
  Muestra el nombre de la acción.  
   
  Seleccione una acción para mostrar el **Editor de Formulario de acción estándar**, una acción de obtención de detalles para mostrar el **Editor de Formulario de acción de obtención de detalles**o una acción de informe para mostrar el **Editor de Formulario de acción de informe**.  

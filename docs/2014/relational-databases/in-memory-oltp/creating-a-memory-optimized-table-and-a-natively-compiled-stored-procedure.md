@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157975"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Crear una tabla con optimización para memoria y un procedimiento almacenado compilado de forma nativa
@@ -26,7 +26,7 @@ ms.locfileid: "63157975"
   
 -   Cree tablas e índices optimizados para memoria. Para obtener más información, vea [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql).  
   
--   Con [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado, cargue datos en la tabla optimizada para memoria y actualice las estadísticas antes de crear los procedimientos almacenados compilados de forma nativa. Para más información, consulte [Statistics for Memory-Optimized Tables](memory-optimized-tables.md).  
+-   Con [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado, cargue datos en la tabla optimizada para memoria y actualice las estadísticas antes de crear los procedimientos almacenados compilados de forma nativa. Para obtener más información, vea [Estadísticas para las tablas con optimización para memoria](memory-optimized-tables.md).  
   
 -   Cree procedimientos almacenados compilados de forma nativa para tener acceso a los datos de las tablas optimizadas para memoria. Para obtener más información, vea [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
@@ -232,8 +232,8 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplos de código OLTP en memoria](in-memory-oltp-code-samples.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplos de código de OLTP en memoria](in-memory-oltp-code-samples.md)   
  [Migrar columnas calculadas](migrating-computed-columns.md)   
  [Implementar IDENTITY en una tabla con optimización para memoria](implementing-identity-in-a-memory-optimized-table.md)  
   

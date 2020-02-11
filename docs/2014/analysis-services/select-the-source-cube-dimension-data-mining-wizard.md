@@ -1,5 +1,5 @@
 ---
-title: Seleccione la dimensión de cubo de origen (Asistente para minería de datos) | Microsoft Docs
+title: Seleccionar la dimensión de cubo de origen (Asistente para minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069232"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Seleccionar la dimensión de cubo de origen (Asistente para minería de datos)
@@ -38,8 +38,8 @@ ms.locfileid: "66069232"
   
  Si la dimensión que elige no contiene todos los atributos relacionados que necesita para crear el modelo de minería de datos, es posible que deba modificarla. Para más información, vea [Definir dimensiones de base de datos](multidimensional-models/define-database-dimensions.md).  
   
-## <a name="see-also"></a>Vea también  
- [Asistente para la Ayuda de F1 de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Consulte también  
+ [Asistente para minería de datos (ayuda F1) &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Crear la estructura de minería de datos &#40;Asistente para minería de datos&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
  [Seleccione la clave de caso &#40;Asistente para minería de datos&#41;](select-the-case-key-data-mining-wizard.md)  
   

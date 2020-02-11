@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07934e74138f17317eb0258e2b3ad0fa6d26254a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106321"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>Agregar efectos 3D a un gráfico (Generador de informes y SSRS)
@@ -31,13 +31,13 @@ ms.locfileid: "66106321"
   
 3.  (Opcional) En **Opciones 3D**, puede establecer diversas propiedades relacionadas con opciones de ángulos y escenas 3D. Para obtener más información sobre estas propiedades, vea [Aplicar 3D, bisel y otros efectos a un gráfico &#40;Generador de informes y SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md).  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 ### <a name="to-apply-3d-effects-to-a-funnel-chart"></a>Para aplicar efectos 3D a un gráfico de embudo  
   
 1.  Haga clic con el botón derecho en cualquier parte dentro del área del gráfico y seleccione **Efectos 3D**. Aparecerá el cuadro de diálogo **Propiedades del área de gráfico** .  
   
-2.  En **Opciones 3D**, seleccione la opción **Habilitar 3D** . Haga clic en **Aceptar**.  
+2.  En **Opciones 3D**, seleccione la opción **Habilitar 3D** . Haga clic en **OK**.  
   
 3.  (Opcional) Para personalizar el aspecto visual del gráfico de embudo, puede ir al panel Propiedades y cambiar propiedades específicas para ese tipo de gráfico.  
   
@@ -55,23 +55,23 @@ ms.locfileid: "66106321"
   
 1.  Haga clic con el botón secundario en cualquier parte dentro del área del gráfico y seleccione Efectos 3D. Aparecerá el cuadro de diálogo **Propiedades del área de gráfico** .  
   
-2.  En **Opciones 3D**, seleccione la opción **Habilitar 3D** . Haga clic en **Aceptar**.  
+2.  En **Opciones 3D**, seleccione la opción **Habilitar 3D** . Haga clic en **OK**.  
   
 3.  (Opcional) En **Giro**, escriba un valor entero que represente el giro horizontal del gráfico circular.  
   
 4.  (Opcional) En **Inclinación**, escriba un valor entero que represente el giro de inclinación vertical del gráfico circular.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 ### <a name="to-apply-3d-effects-to-a-bar-or-column-chart"></a>Para aplicar efectos 3D a un gráfico de barras o de columnas  
   
 1.  Haga clic con el botón derecho en cualquier parte dentro del área del gráfico y seleccione **Efectos 3D**. Aparecerá el cuadro de diálogo **Propiedades del área de gráfico** .  
   
-2.  Seleccione la opción **Habilitar 3D** . Haga clic en **Aceptar**.  
+2.  Seleccione la opción **Habilitar 3D** . Haga clic en **OK**.  
   
 3.  (Opcional) Seleccione la opción **Habilitar agrupación en clústeres** . Si el gráfico contiene varias series de gráficos de barras o de columnas, esta opción mostrará las series agrupadas en clústeres. De forma predeterminada, cuando hay varias series de barras o de columnas se muestran unas al lado de otras.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 5.  (Opcional) Para agregar efectos de cilindro a un gráfico de barras o de columnas, siga estos pasos:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66106321"
   
     4.  Para la propiedad **DrawingStyle** , especifique el valor **Cylinder** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicar 3D, bisel y otros efectos a un gráfico &#40;Generador de informes y SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)  

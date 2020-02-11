@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076556"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Crear un cubo usando una vista del origen de datos
@@ -51,7 +51,7 @@ ms.locfileid: "66076556"
 > [!NOTE]  
 >  En la pestaña **Diagrama** puede ampliar o maximizar la ventana del asistente para ver el esquema.  
   
- Si hay un tabla de dimensiones de tiempo en la vista del origen de datos, selecciónela en la lista **Tabla de dimensiones de tiempo** . Si no hay ninguna, deje  **\<None >** seleccionado. Este es el elemento predeterminado en la lista. Cuando se selecciona una tabla como la tabla de dimensiones de tiempo, también se la selecciona como tabla de dimensiones en las pestañas **Tablas** y **Diagrama** .  
+ Si hay un tabla de dimensiones de tiempo en la vista del origen de datos, selecciónela en la lista **Tabla de dimensiones de tiempo** . Si no hay ninguno, deje ** \<ninguno>** seleccionado. Este es el elemento predeterminado en la lista. Cuando se selecciona una tabla como la tabla de dimensiones de tiempo, también se la selecciona como tabla de dimensiones en las pestañas **Tablas** y **Diagrama** .  
   
 ## <a name="defining-time-periods"></a>Definir períodos de tiempo  
  Si especificó una tabla de dimensiones de tiempo al seleccionar tipos de tabla, use la página **Definir períodos de tiempo** del asistente para especificar las columnas de la tabla que se corresponden con períodos estándar. Busque los períodos estándar en **Nombre de la propiedad de tiempo**. Para cada fila que tenga una columna correspondiente en la tabla de dimensiones de tiempo, elija la columna correcta en **Columnas de la tabla de tiempos**. El asistente usa las asociaciones especificadas para crear atributos y sugerir jerarquías de tiempo que tengan sentido para los datos. Estas asociaciones también establecen la propiedad **Tipo** para los atributos correspondientes de la nueva dimensión de tiempo. El asistente crea entonces una dimensión de tiempo basada en una tabla de dimensiones de tiempo.  
@@ -61,7 +61,7 @@ ms.locfileid: "66076556"
 ## <a name="selecting-dimensions"></a>Seleccionar dimensiones  
  Use la página **Seleccionar dimensiones** del asistente para agregar dimensiones existentes al cubo. Esta página solo aparece si ya hay dimensiones compartidas que corresponden a tablas de dimensiones del cubo nuevo.  
   
- Para agregar dimensiones existentes, selecciónelas en la lista **Dimensiones compartidas** y haga clic en el botón de flecha derecha ( **>** ) para moverlas a la lista **Dimensiones del cubo** . Para mover todas las dimensiones de la lista, haga clic en el botón de flecha doble ( **>>** ).  
+ Para agregar dimensiones existentes, selecciónelas en la lista **Dimensiones compartidas** y haga clic en el botón de flecha derecha (**>**) para moverlas a la lista **Dimensiones del cubo** . Haga clic en el botón de**>>** flecha doble () para desplace todas las dimensiones de la lista.  
   
  Si una dimensión existente no aparece en la lista y cree que debería hacerlo, puede hacer clic en **Atrás** y cambiar la configuración del tipo de tabla para una o varias tablas. Asimismo, una dimensión existente debe estar relacionada con al menos una de las tablas de hechos del cubo que aparecen en la lista **Dimensiones compartidas** .  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66076556"
   
  Para quitar cualquier objeto del árbol del cubo, desactive la casilla situada junto a él. Si se desactiva la casilla situada junto a un objeto, también se quitan todos los objetos que aparecen debajo de él. Las dependencias entre objetos se aplican, por lo que, si quita un atributo, los niveles de jerarquía que dependen de este también se quitan. Por ejemplo, si se desactiva una casilla situada junto a una jerarquía, se desactivarán las casillas situadas junto a todos los niveles de la jerarquía y se quitarán los niveles, así como las jerarquías. El atributo clave de una dimensión no se puede quitar.  
   
- Se puede cambiar el nombre de cualquier dimensión, atributo, jerarquía o nivel de ya sea haciendo clic en el nombre o haciendo clic con el nombre y, a continuación, en el menú contextual haciendo clic en **cambiar el nombre de \<objeto >** , donde  **\< objeto >** es **dimensión**, **atributo**, o **nivel**.  
+ Para cambiar el nombre de cualquier dimensión, atributo, jerarquía o nivel, haga clic en el nombre o haga clic con el botón secundario en el nombre y, a continuación, en el menú contextual, haga clic en cambiar **nombre \<de objeto>**, donde ** \<objeto>** es **dimensión**, **atributo**o **nivel**.  
   
  No hay necesariamente una relación uno a uno entre el número de tablas de dimensiones definidas en la página **Identificar tablas de hechos y de dimensiones** del asistente y el número de dimensiones incluidas en esta página del asistente. Dependiendo de las relaciones entre las tablas de la vista del origen de datos, el asistente puede usar dos o más tablas para generar una dimensión (por ejemplo, tal y como requiere un esquema de copo de nieve).  
   

@@ -1,5 +1,5 @@
 ---
-title: Atributo de la pestaña de características (Visor de modelos de minería de datos) | Microsoft Docs
+title: Pestaña características del atributo (visor de modelos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66063049"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>Pestaña Características del atributo (Visor de modelos de minería de datos)
   Utilice el panel **Características del atributo** para explorar las relaciones entre los resultados y los atributos de entrada en un modelo Bayes Naïve. Puede elegir el valor del atributo de destino y, a continuación, ver una lista de los atributos de entrada que tienen el efecto más fuerte sobre los resultados.  
   
- **Para obtener más información:** [Algoritmo Bayes Naive de Microsoft](data-mining/microsoft-naive-bayes-algorithm.md), [examinar un modelo usando el Visor Bayes Naive de Microsoft](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Para obtener más información:** [algoritmo Bayes Naive de Microsoft](data-mining/microsoft-naive-bayes-algorithm.md), [examinar un modelo usando el visor Bayes Naive de Microsoft](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Opciones  
- **Actualizar el contenido del Visor**  
+ **Actualizar el contenido del visor**  
  Vuelva a cargar el modelo de minería de datos en el visor.  
   
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos que se desea ver de los modelos de la estructura de minería de datos actual. El modelo de minería de datos se abrirá automáticamente en el visor personalizado más adecuado para el tipo de modelo elegido.  
   
- **Viewer**  
+ **Lector**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Para cada modelo, tiene la opción de un visor personalizado o el Visor de contenido de minería de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] . Los visores de complemento también aparecen en esta lista si están disponibles.  
   
  **Atributo**  
@@ -40,18 +40,18 @@ ms.locfileid: "66063049"
  **Valor**  
  Elija un estado para el atributo de predicción establecido en **Atributo**. Dado que los modelos Bayes Naïve no admiten variables continuas, todos los atributos de destino tienen resultados discretos o de datos discretos. El atributo Missing siempre se agrega automáticamente a la lista.  
   
- **Las características de \<estado de predicción >**  
+ **Características del \<estado de predicción>**  
  El gráfico contiene las siguientes columnas, que describen cómo los estados de los atributos de entrada están relacionados con el estado de atributo de predicción seleccionado.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Variable**|Enumera los atributos de entrada del modelo de minería de datos.|  
 |**Valores**|Enumera cada estado del atributo de entrada en **Variable**.|  
 |**Probabilidad**|La barra representa la probabilidad de que el atributo y el valor de dicha fila estén asociados con el estado seleccionado del atributo de predicción. Sitúe el mouse sobre la barra para ver la probabilidad como un porcentaje.|  
   
-## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Consulte también  
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Visores de modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Conceder acceso personalizado a datos de dimensión (Analysis Services) | Microsoft Docs
+title: Conceder acceso personalizado a los datos de la dimensión (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,16 +24,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075058"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Conceder acceso personalizado a datos de dimensión (Analysis Services)
   Después de permitir el acceso de lectura a un cubo, puede establecer permisos adicionales que permitan o denieguen explícitamente el acceso a miembros de la dimensión (incluidas las medidas que contiene la Dimensión de Medidas que contengan todas las medidas utilizadas en un cubo). Por ejemplo, si hay varias categorías de distribuidores, conviene establecer permisos para excluir datos de un tipo de negocio específico. La ilustración siguiente representa el antes y el después a la denegación de acceso al tipo de negocio Warehouse en la dimensión Reseller.  
   
- ![Las tablas dinámicas con y sin un miembro de dimensión](../media/ssas-permsdimdenied.png "tablas dinámicas con y sin un miembro de dimensión")  
+ ![Tablas dinámicas con y sin un miembro de dimensión](../media/ssas-permsdimdenied.png "Tablas dinámicas con y sin un miembro de dimensión")  
   
  De forma predeterminada, si puede leer datos de un cubo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , automáticamente cuenta con permisos de lectura en todas las medidas y miembros de dimensión asociados a ese cubo. Mientras que es posible que este comportamiento sea suficiente para múltiples escenarios, en ocasiones los requisitos de seguridad requieren una estrategia de autorización más segmentada, con diferentes niveles de acceso para los distintos usuarios, en la misma dimensión.  
   
@@ -41,12 +41,12 @@ ms.locfileid: "66075058"
   
  La seguridad básica de las dimensiones es más sencilla; basta con seleccionar los atributos de dimensión y las jerarquías de atributo que quiera incluir o excluir del rol. La seguridad avanzada resulta más compleja y requiere conocimientos expertos en la generación de scripts MDX. Ambos enfoques se describen a continuación.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  No todas las medidas o miembros de dimensión se pueden usar en escenarios de acceso personalizados. Si hay un rol que restringe el acceso a una medida o miembro predeterminado o a medidas que forman parte de expresiones de medida, se producirá un error en la conexión.  
   
- **Busque obstrucciones en la seguridad de dimensiones: medidas predeterminadas, miembros predeterminados y medidas usadas en expresiones de medida**  
+ **Compruebe si hay obstrucciones en la seguridad de dimensiones: medidas predeterminadas, miembros predeterminados y medidas usadas en expresiones de medida**  
   
-1.  En SQL Server Management Studio, haga clic con el botón derecho en un cubo y seleccione **Incluir cubo como** | **ALTER para** | **Nueva ventana del Editor de consultas**.  
+1.  En SQL Server Management Studio, haga clic con el botón secundario en un cubo y seleccione **incluir cubo como** | **modificar en** | **nueva ventana del editor de consultas**.  
   
 2.  Busque `DefaultMeasure`. Debería encontrar una para el cubo y una para cada perspectiva. Al definir la seguridad de dimensiones, evite restringir el acceso a las medidas predeterminadas.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "66075058"
   
 ## <a name="basic-dimension-security"></a>Seguridad básica de dimensiones  
   
-1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Roles** para la base de datos correspondiente en el Explorador de objetos y, después, haga clic en un rol de base de datos (o cree un rol de base de datos).  
+1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Roles** para la base de datos correspondiente en Explorador de objetos y, después, haga clic en un rol de base de datos (o cree un nuevo rol de base de datos).  
   
-     El rol ya debe disponer de acceso de lectura al cubo. Vea [Grant cube or model permissions &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) si necesita ayuda con este paso.  
+     El rol ya debe disponer de acceso de lectura al cubo. Vea [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) si necesita ayuda con este paso.  
   
-2.  En **Datos de dimensiones** | **Básico**, seleccione la dimensión para la que vaya a establecer permisos.  
+2.  En **datos** | de dimensiones**básico**, seleccione la dimensión para la que va a establecer los permisos.  
   
 3.  Elija la jerarquía de atributos. No estarán disponibles todos los atributos. Solamente los atributos con **AttributeHierarchyEnabled** aparecen en la lista **Jerarquía de atributos** .  
   
@@ -68,15 +68,15 @@ ms.locfileid: "66075058"
   
      También puede **Anular la selección de todos los miembros** para revocar el acceso global y, después, elegir los miembros a los que se permitirá el acceso. En futuras operaciones de procesamiento, los nuevos miembros no estarán visibles hasta que edite manualmente la seguridad de los datos de las dimensiones para permitir el acceso a los mismos.  
   
-5.  Si lo desea, haga clic en **avanzadas** para habilitar `Visual Totals` para esta jerarquía de atributo. Esta opción vuelve a calcular las agregaciones en función de los miembros disponibles en el rol.  
+5.  Opcionalmente, haga **** clic en avanzadas `Visual Totals` para habilitar para esta jerarquía de atributo. Esta opción vuelve a calcular las agregaciones en función de los miembros disponibles en el rol.  
   
     > [!NOTE]  
-    >  Cuando se aplican permisos que eliminan miembros de una dimensión, los totales agregados no se recalculan de forma automática. Supongamos que el `All` miembro de una jerarquía de atributo devuelve un recuento de 200 antes de que se aplican los permisos. Después de aplicar los permisos que deniegan el acceso a algunos miembros, `All` todavía devuelve 200, aunque los valores de miembro visibles para el usuario son muchos menos. Para evitar confundir a los consumidores del cubo, puede configurar el `All` miembro sean la agregación de esos miembros para que los miembros del rol, en lugar de la suma de todos los miembros de la jerarquía de atributo. Para invocar este comportamiento, puede habilitar `Visual Totals` en el **avanzadas** tabulación al configurar la seguridad de dimensión. Una vez que lo haya habilitado, el agregado se calcula en tiempo de consulta en lugar de recuperarse a partir de agregados previamente calculados. Esto puede tener una repercusión apreciable en el rendimiento de la consulta, por tanto, úselo únicamente cuando sea necesario.  
+    >  Cuando se aplican permisos que eliminan miembros de una dimensión, los totales agregados no se recalculan de forma automática. Suponga que `All` el miembro de una jerarquía de atributo devuelve un recuento de 200 antes de que se apliquen los permisos. Después de aplicar los permisos que deniegan el `All` acceso a algunos miembros, sigue devolverá 200, aunque los valores de miembro visibles para el usuario son mucho menores. Para evitar confundir a los consumidores del cubo, puede configurar el `All` miembro como agregado de solo los miembros a los que pertenece el rol, en lugar del agregado de todos los miembros de la jerarquía de atributos. Para invocar este comportamiento, puede habilitar `Visual Totals` en la pestaña **Opciones avanzadas** al configurar la seguridad de la dimensión. Una vez que lo haya habilitado, el agregado se calcula en tiempo de consulta en lugar de recuperarse a partir de agregados previamente calculados. Esto puede tener una repercusión apreciable en el rendimiento de la consulta, por tanto, úselo únicamente cuando sea necesario.  
   
 ## <a name="hiding-measures"></a>Ocultar medidas  
- En [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md), se explicó que para ocultar totalmente todos los aspectos visuales de una medida, y no solamente los datos de la celda, se requieren permisos para los miembros de la dimensión. En esta sección, se describe cómo denegar el acceso a los metadatos del objeto de una medida.  
+ En [Otorgar acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md), se explicó que para ocultar totalmente todos los aspectos visuales de una medida, y no solamente los datos de la celda, se requieren permisos para los miembros de la dimensión. En esta sección, se describe cómo denegar el acceso a los metadatos del objeto de una medida.  
   
-1.  En **Datos de dimensiones** | **Básico**, desplácese en dirección descendente por la lista de dimensiones hasta llegar a las dimensiones de los cubos y seleccione **Dimensión de medidas**.  
+1.  En **datos** | de dimensiones**básico**, desplácese hacia abajo en la lista de dimensiones hasta llegar a las dimensiones del cubo y, a continuación, seleccione **dimensión de medidas**.  
   
 2.  En la lista de medidas, desactive la casilla para las medidas que no deben aparecer para los usuarios que se conecten a través de este rol.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66075058"
 >  Consulte los requisitos previos para saber cómo identificar medidas que pueden romper la seguridad del rol.  
   
 ## <a name="advanced-dimension-security"></a>Seguridad de dimensión avanzada  
- Si tiene conocimientos expertos de MDX, otro método consiste en escribir expresiones MDX que establezcan criterios según los cuales se permita o deniegue el acceso a los miembros. Haga clic en **Crear rol** | **Datos de dimensión** | **Avanzadas** para proporcionar el script.  
+ Si tiene conocimientos expertos de MDX, otro método consiste en escribir expresiones MDX que establezcan criterios según los cuales se permita o deniegue el acceso a los miembros. Haga clic en **crear rol** | **datos** | de dimensión**avanzada** para proporcionar el script.  
   
  Puede usar el Generador MDX para escribir instrucciones MDX. Vea [Generador MDX &#40;Analysis Services - Datos multidimensionales&#41;](../mdx-builder-analysis-services-multidimensional-data.md) para obtener más información. La pestaña **Avanzada** presenta las siguientes opciones:  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66075058"
  Si se crea un elemento AllowedSet, tendrá un efecto dominó cuando el atributo participe en una jerarquía de varios niveles. Por ejemplo, un caso en el que el rol permite el acceso al estado de Washington (una situación en la que el rol otorga permisos a la división comercial de Washington de una empresa). Para las personas que se conecten a través de este rol, las consultas que incluyan antecesores (Estados Unidos) o descendentes (Seattle y Redmond) solamente verán miembros en una cadena que incluye el estado de Washington. Dado que no se han permitido de forma explícita otros estados, el efecto será el mismo que si se hubieran denegado.  
   
 > [!NOTE]  
->  Si define un conjunto vacío ({}) de los miembros de atributo, ningún miembro del atributo estará visible para el rol de base de datos. La ausencia de un conjunto permitido no se interpreta como un conjunto vacío.  
+>  Si define un conjunto vacío ({}) de miembros de atributo, ningún miembro del atributo estará visible para el rol de la base de datos. La ausencia de un conjunto permitido no se interpreta como un conjunto vacío.  
   
  **Conjunto de miembros denegado**  
  La propiedad DeniedSet puede dar como resultado ningún miembro, todos los miembros (predeterminado) o algunos miembros del atributo. Cuando el conjunto que se ha denegado contiene únicamente un conjunto específico de miembros de atributo, el rol de base datos deniega el acceso solo a los miembros específicos, así como a los descendentes si el atributo es una jerarquía de múltiples niveles. Sigamos con el ejemplo de la división comercial en el estado de Washington. Si Washington se coloca en DeniedSet, las personas que se conecten a través de este rol verán el resto de estados salvo Washington y sus atributos descendentes.  
@@ -116,19 +116,19 @@ ms.locfileid: "66075058"
  **Habilitar total visual**  
  La propiedad VisualTotals indica si los valores de celdas agregados que se muestran se calculan en función de todos los valores de celda o únicamente en función de los valores de celda que están visibles para el rol de base de datos.  
   
- De forma predeterminada, la propiedad VisualTotals está deshabilitada (establecida en `False`). Esta configuración predeterminada maximiza el rendimiento porque [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede calcular rápidamente el total de todos los valores de celda, en vez de tener que dedicar tiempo a seleccionar qué valores de celda calcular.  
+ De forma predeterminada, la propiedad VisualTotals está deshabilitada `False`(establecida en). Esta configuración predeterminada maximiza el rendimiento porque [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede calcular rápidamente el total de todos los valores de celda, en vez de tener que dedicar tiempo a seleccionar qué valores de celda calcular.  
   
  Pero si la propiedad VisualTotals está deshabilitada, se podría producir un problema de seguridad si un usuario puede usar los valores de celdas agregados para deducir los valores para miembros de atributos a los que el rol de base de datos del usuario no tiene acceso. Por ejemplo, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza los valores para tres miembros del atributo a fin de calcular un valor de celdas agregado. El rol de base de datos puede ver dos de estos tres miembros de atributo. Usando el valor de celdas agregado, un miembro de este rol de base de datos podría deducir el valor para el tercer miembro del atributo.  
   
- Establecer la propiedad VisualTotals en `True` puede eliminar este riesgo. Si habilita la propiedad VisualTotals, un rol de base de datos solamente puede ver totales agregados para los miembros de dimensión para los que tiene permiso el rol.  
+ El establecimiento de la `True` propiedad VisualTotals en puede eliminar este riesgo. Si habilita la propiedad VisualTotals, un rol de base de datos solamente puede ver totales agregados para los miembros de dimensión para los que tiene permiso el rol.  
   
- **Comprobación**  
+ **Casilla**  
  Haga clic en esta opción para probar la sintaxis MDX que se define en esta página.  
   
-## <a name="see-also"></a>Vea también  
- [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Otorgar acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
- [Otorgar permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Otorgar permisos para un objeto de origen de datos &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Conceder permisos de cubo o de modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Conceder acceso personalizado a los datos de celda &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
+ [Conceder permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Conceder permisos para un objeto de origen de datos &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

@@ -36,26 +36,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 882b5fc60020423e19f68fda40273b7c944bd4f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068874"
 ---
 # <a name="network-properties"></a>Propiedades de red
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor descritas en las siguientes tablas. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Se aplica a:** Modo de servidor multidimensional y Tabular  
+ **Se aplica a:** Modo de servidor multidimensional y tabular  
   
 ## <a name="general"></a>General  
  `ListenOnlyOnLocalConnections`  
  Una propiedad booleana que identifica si se va a escuchar solo en conexiones locales, por ejemplo localhost.  
   
-## <a name="listener"></a>Escucha  
+## <a name="listener"></a>Agente de escucha  
  `IPV4Support`  
  Una propiedad de entero de 32 bits con signo que define la compatibilidad con el protocolo IPv4. Esta propiedad tiene uno de los valores descritos en la tabla siguiente:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*0*|IPv4 deshabilitado; los clientes no pueden conectarse.|  
 |*1*|(Predeterminado) IPv4 es obligatorio; el servidor no se iniciará si no puede escuchar a IPv4.|  
@@ -64,7 +65,7 @@ ms.locfileid: "66068874"
  `IPV6Support`  
  Una propiedad de entero de 32 bits con signo que define la compatibilidad con el protocolo IPv6. Esta propiedad tiene uno de los valores descritos en la tabla siguiente:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*0*|IPv6 deshabilitado; los clientes no pueden conectarse.|  
 |*1*|(Predeterminado) IPv6 es obligatorio; el servidor no se iniciará si no puede escuchar a IPv6.|  
@@ -82,7 +83,7 @@ ms.locfileid: "66068874"
  `ServerSendTimeout`  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="requests"></a>Solicitudes  
+## <a name="requests"></a>Requests  
  `EnableBinaryXML`  
  Una propiedad booleana que especifica si el servidor reconoce el formato XML binario de las solicitudes.  
   
@@ -142,7 +143,7 @@ ms.locfileid: "66068874"
  `SocketOptions\ SendBufferSize`  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

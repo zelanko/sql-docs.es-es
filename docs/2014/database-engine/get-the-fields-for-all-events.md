@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0838367ad699c1278bb6ec42f28161ba76c6fd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064786"
 ---
 # <a name="get-the-fields-for-all-events"></a>Obtener los campos de todos los eventos
@@ -37,7 +37,7 @@ ms.locfileid: "66064786"
   
  Puede utilizar la información anterior al configurar sesiones de evento que utilizan el destino de creación de depósitos. Para más información, consulte [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md).  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Introducción  
  Antes de crear una sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events, resulta útil obtener información sobre los campos asociados a los eventos.  
   
 ## <a name="to-get-the-fields-for-all-events-using-query-editor"></a>Para obtener los campos de todos los eventos mediante el Editor de consultas  
@@ -55,8 +55,8 @@ ms.locfileid: "66064786"
     order by package_name, event_name  
     ```  
   
-## <a name="see-also"></a>Vea también  
- [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [Sys. dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
  [sys.dm_xe_packages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)  
   
   

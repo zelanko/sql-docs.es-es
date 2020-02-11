@@ -1,5 +1,5 @@
 ---
-title: Barra de herramientas (pestaña explorador, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Barra de herramientas (pestaña explorador, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe356d15c0602f33ec9c59ee463a69783686899b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066146"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Explorador, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -28,7 +28,7 @@ ms.locfileid: "66066146"
 |**Importar**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos.|  
 |![Cambiar a la vista de la consulta MDX](media/rsqdicon-commandtypemdx.gif "Cambiar a la vista de la consulta MDX")|Cambia al tipo de comando MDX.|  
 |![Actualizar datos de resultados](media/rsqdicon-refresh.gif "Actualizar datos de resultados")|Actualiza los metadatos desde el origen de datos.|  
-|![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Muestra el cuadro de diálogo **Generador de miembros calculados** .|  
+|![Agregar miembro calculado](media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado")|Muestra el cuadro de diálogo **Generador de miembros calculados** .|  
 |![Alternar para mostrar celdas vacías](media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías")|Muestra y oculta las celdas vacías del panel Datos. Esto equivale a utilizar la cláusula NON EMPTY en MDX.|  
 |![Ejecutar la consulta automáticamente](media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")|Ejecuta automáticamente la consulta y muestra el resultado cada vez que se realiza un cambio. Los resultados se mostrarán en el panel Datos.|  
 |![Botón Mostrar agregaciones](media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones")|Muestra agregaciones en el panel Datos.|  
@@ -43,28 +43,28 @@ ms.locfileid: "66066146"
   
 -   **Editar como texto**  
   
--   **Agregar miembro calculado** (![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Agregar miembro calculado** (![Agregar miembro calculado](media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado"))  
   
--   **Mostrar celdas vacías** (![Alternar para mostrar celdas vacías](media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))  
+-   **Mostrar celdas vacías** (![alternar para mostrar celdas vacías](media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))  
   
--   **Ejecución automática** (![Ejecutar la consulta automáticamente](media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente"))  
+-   **Ejecución** automática (![ejecución automática de la consulta](media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente"))  
   
--   **Mostrar agregaciones** (![Botón Mostrar agregaciones](media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones"))  
+-   **Mostrar agregaciones** (![botón Mostrar agregaciones](media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones"))  
   
 ## <a name="options"></a>Opciones  
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**Procesar**|Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo. Para obtener más información sobre el cuadro de diálogo **Proceso**, vea [Cuadro de diálogo Proceso &#40;Analysis Services - Datos multidimensionales&#41;](process-dialog-box-analysis-services-multidimensional-data.md).|  
-|**Cambiar usuario**|Haga clic para mostrar el cuadro de diálogo **Contexto de seguridad** y cambiar el usuario y el rol usados en la pestaña **Explorador** . Para obtener más información sobre el cuadro de diálogo **Contexto de seguridad**, vea [Cuadro de diálogo Contexto de seguridad &#40;Analysis Services - Datos multidimensionales&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md).|  
-|**Reconnect**|Haga clic para volver a conectar la pestaña **Cálculos** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene el cubo si se desconecta la sesión de la pestaña **Explorador** por pérdida de conexión o exceso de tiempo de espera.|  
+|**Proceso**|Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo. Para obtener más información sobre el cuadro de diálogo **Proceso**, vea [Cuadro de diálogo Proceso &#40;Analysis Services - Datos multidimensionales&#41;](process-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Cambiar usuario**|Haga clic para mostrar el cuadro de diálogo **contexto de seguridad** y cambiar el usuario y el rol usados en la pestaña **Explorador** . Para obtener más información sobre el cuadro de diálogo **contexto de seguridad** , vea [cuadro de diálogo contexto de seguridad &#40;Analysis Services-&#41;de datos multidimensionales ](security-context-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Volver a conectar**|Haga clic para volver a conectar la pestaña **Cálculos** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene el cubo si se desconecta la sesión de la pestaña **Explorador** por pérdida de conexión o exceso de tiempo de espera.|  
 |**Actualizar**|Haga clic para actualizar los paneles **Metadatos** e **Informes** .|  
-|**Orden ascendente**|Haga clic para ordenar los elementos del mismo nivel de la fila seleccionada en el panel **Informe** en orden ascendente para el idioma especificado en **Idioma**.<br /><br /> **Nota** Solo se habilitará esta opción si se selecciona una celda en el panel **Informes**.|  
-|**Orden descendente**|Haga clic para ordenar los elementos del mismo nivel de la fila seleccionada en el panel **Informe** en orden descendente para el idioma especificado en **Idioma**.<br /><br /> Nota: Esta opción está habilitada sólo si una celda de la **informes** panel está seleccionado.|  
+|**Orden ascendente**|Haga clic para ordenar los elementos del mismo nivel de la fila seleccionada en el panel **Informe** en orden ascendente para el idioma especificado en **Idioma**.<br /><br /> **Nota:** Esta opción solo se habilita si se selecciona una celda en el panel **informes** .|  
+|**Orden descendente**|Haga clic para ordenar los elementos del mismo nivel de la fila seleccionada en el panel **Informe** en orden descendente para el idioma especificado en **Idioma**.<br /><br /> Nota: Solo se habilitará esta opción si se selecciona una celda en el panel **Informes** .|  
 |**Autofiltro**|Haga clic para filtrar automáticamente los resultados en el panel **Resultado** .|  
-|**Mostrar sólo superior o inferior**|Seleccione un valor o porcentaje para mostrar solamente el número o porcentaje máximo o mínimo de celdas en el panel **Informe** según la medida seleccionada.<br /><br /> Para obtener más información sobre esta opción, vea [TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx), [TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx), [BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx) y [BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx).|  
+|**Mostrar solamente superior o inferior**|Seleccione un valor o porcentaje para mostrar solamente el número o porcentaje máximo o mínimo de celdas en el panel **Informe** según la medida seleccionada.<br /><br /> Para obtener más información sobre esta opción, vea [TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx), [TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx), [BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx) y [BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx).|  
 |**Subtotal**|Haga clic para mostrar los subtotales.|  
-|**Los totales de todos los elementos**|Haga clic para mostrar los totales de todos los miembros en el panel **Informe** .|  
+|**Totales de todos los elementos**|Haga clic para mostrar los totales de todos los miembros en el panel **Informe** .|  
 |**Mostrar celdas vacías**|Haga clic para mostrar las celdas vacías en el panel **Informe** .|  
 |**Borrar resultados**|Haga clic para borrar los resultados del panel **Informe** .|  
 |**Comandos y opciones**|Haga clic para mostrar el cuadro de diálogo **Comandos y opciones** y editar las propiedades avanzadas para el control PivotTable de Microsoft Office 11.0 en el panel **Informe** . Para obtener más información acerca del cuadro de diálogo **Comandos y opciones** , vea la documentación de Microsoft Office.|  

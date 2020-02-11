@@ -1,5 +1,5 @@
 ---
-title: Barra de herramientas (pestaña perspectivas, Diseñador de cubos) (Analysis Services - datos multidimensionales) | Microsoft Docs
+title: Barra de herramientas (pestaña perspectivas, diseñador de cubos) (Analysis Services-datos multidimensionales) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8498f30b11a9b379d9cad0e98d7a5269fc60752a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065990"
 ---
 # <a name="toolbar-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Perspectivas, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -25,8 +25,8 @@ ms.locfileid: "66065990"
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Agregar Business Intelligence**|Haga clic en esta opción para mostrar el **Asistente de Business Intelligence** y agregar características de Business Intelligence al cubo.|  
-|**Procesar**|Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo.|  
+|**Proceso**|Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo.|  
 |**Nueva perspectiva**|Haga clic para crear una nueva perspectiva en el cubo seleccionado.|  
-|**Eliminar perspectiva**|Haga clic para mostrar el cuadro de diálogo **Eliminar objetos** y eliminar la perspectiva seleccionada.<br /><br /> Nota: Esta opción está habilitada sólo si se ha seleccionado una perspectiva en el **detalles de la perspectiva** panel.|  
+|**Eliminar perspectiva**|Haga clic en esta opción para mostrar el cuadro de diálogo **eliminar objetos** y eliminar la perspectiva seleccionada.<br /><br /> Nota: Esta opción solo se habilita si se ha seleccionado una perspectiva en el panel **Detalles de la perspectiva** .|  
   
   

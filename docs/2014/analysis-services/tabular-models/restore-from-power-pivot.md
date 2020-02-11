@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066636"
 ---
 # <a name="restore-from-powerpivot"></a>Restaurar desde PowerPivot
   Puede utilizar la característica Restaurar desde PowerPivot en SQL Server Management Studio para crear una nueva base de datos de modelos tabulares en una instancia de Analysis Services (ejecutándose en modo tabular), o para llevar a cabo la restauración en una base de datos existente desde un libro PowerPivot (.xlsx).  
   
 > [!NOTE]  
->  La plantilla de proyecto Importar desde PowerPivot de SQL Server Data Tools proporciona una funcionalidad similar. Para obtener más información, consulte [importar desde PowerPivot &#40;Tabular de SSAS&#41;](import-from-power-pivot-ssas-tabular.md).  
+>  La plantilla de proyecto Importar desde PowerPivot de SQL Server Data Tools proporciona una funcionalidad similar. Para obtener más información, vea [Importar desde PowerPivot &#40;&#41;tabular de SSAS ](import-from-power-pivot-ssas-tabular.md).  
   
  Al utilizar la característica Restaurar desde PowerPivot, tenga en cuenta lo siguiente:  
   
 -   Para utilizar la restauración desde PowerPivot, es necesario haber iniciado sesión como miembro del rol de administrador del servidor en la instancia de Analysis Services.  
   
--   La cuenta de servicio de la instancia de Analysis Services debe tener permisos de lectura en el archivo de libro desde el que se realiza la restauración.  
+-   La cuenta de servicio de la instancia de Analysis Services debe tener permisos de lectura en el archivo de libro desde el que va a restaurar.  
   
 -   De forma predeterminada, cuando se restaura una base de datos desde PowerPivot, la propiedad Información de suplantación de origen de datos de la base de datos de modelos tabulares se establece en Predeterminado, que especifica la cuenta de servicio de la instancia de Analysis Services. Se recomienda cambiar las credenciales de suplantación a una cuenta de usuario de Windows en Propiedades de la base de datos. Para más información, vea [Suplantación &#40;SSAS tabular&#41;](impersonation-ssas-tabular.md).  
   
@@ -39,16 +39,16 @@ ms.locfileid: "66066636"
   
 1.  En SSMS, en la instancia de Active Directory en la que se va a realizar la restauración, haga clic con el botón secundario en **Bases de datos**y, a continuación, en **Restaurar desde PowerPivot**.  
   
-2.  En el cuadro de diálogo **Restaurar desde PowerPivot** , en **Restaurar origen**, en **Archivo de copia de seguridad**, haga clic en **Examinar**y, a continuación, seleccione el archivo .abf o .xslx desde el que desea realizar la restauración.  
+2.  En el cuadro de diálogo **Restaurar desde PowerPivot**, en **Origen de restauración**, en **Archivo de copia de seguridad**, haga clic en **Examinar** y seleccione un archivo.abf o.xslx desde el que va a realizar la restauración.  
   
-3.  En **Restaurar destino**, en **Restaurar base de datos**, escriba un nombre para la nueva base de datos o para la ya existente. Si no especifica ningún nombre, se usa el nombre del libro.  
+3.  En **Restaurar destino**, en **Restaurar base de datos**, escriba un nombre para una base de datos nueva o para una base de datos existente. Si no especifica ningún nombre, se usa el nombre del libro.  
   
-4.  En **Ubicación de almacenamiento**, haga clic en **Examinar**y seleccione una ubicación para almacenar la base de datos.  
+4.  En **Ubicación de almacenamiento**, haga clic en **Examinar** y seleccione una ubicación para almacenar la base de datos.  
   
-5.  En **Opciones**, deje seleccionada la opción **Incluir información de seguridad** . Al restaurar desde un libro PowerPivot, este valor no se aplica.  
+5.  En **Opciones**, deje activada **Incluir información de seguridad** . Al restaurar desde un libro PowerPivot, este valor no se aplica.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Bases de datos de modelo tabular &#40;SSAS tabular&#41;](tabular-model-databases-ssas-tabular.md)   
- [Importar desde PowerPivot &#40;Tabular de SSAS&#41;](import-from-power-pivot-ssas-tabular.md)  
+ [Importar desde PowerPivot &#40;SSAS tabular&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

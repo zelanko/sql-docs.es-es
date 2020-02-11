@@ -1,5 +1,5 @@
 ---
-title: Establecer las opciones de agregaciones (Asistente para optimización basada en uso) | Microsoft Docs
+title: Establecer opciones de agregación (Asistente para optimización basada en el uso) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8703ec6f199290185829a15a0079cd9b04e42fbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068762"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>Establecer las opciones de agregaciones (Asistente para optimización basada en el uso)
@@ -35,14 +35,14 @@ ms.locfileid: "66068762"
  **Iniciar**  
  Empieza el proceso de diseño de agregaciones.  
   
- **Detener**  
+ **Detención**  
  Finaliza el proceso de diseño de agregaciones.  
   
- **Restablecer**  
+ **Reset**  
  Restablece todas las opciones de agregaciones de esta página a sus valores predeterminados.  
   
-## <a name="see-also"></a>Vea también  
- [Ayuda de F1 del Asistente para optimización basada en uso](usage-based-optimization-wizard-f1-help.md)   
- [Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Consulte también  
+ [Asistente para optimización basada en el uso (ayuda F1)](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services asistentes &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

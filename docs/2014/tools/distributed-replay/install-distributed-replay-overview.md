@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 037e3c9c61b2c6648ec1194a766256d5e6cae5cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149343"
 ---
 # <a name="install-distributed-replay"></a>Instalar Distributed Replay
@@ -24,7 +24,7 @@ ms.locfileid: "63149343"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Instalar Distributed Replay &#40;el programa de instalación&#41;](../../sql-server/install/install-distributed-replay-setup.md)|Tema de procedimientos para una instalación típica de Distributed Replay utilizando el Asistente para instalación.|  
+|[Instale Distributed Replay &#40;instalación&#41;](../../sql-server/install/install-distributed-replay-setup.md)|Tema de procedimientos para una instalación típica de Distributed Replay utilizando el Asistente para instalación.|  
 |[Instalar Distributed Replay desde el símbolo del sistema](install-distributed-replay-overview.md)|Tema de procedimientos que proporciona los parámetros de la instalación y la sintaxis de ejemplo para ejecutar una instalación desatendida.|  
 |[Instalar Distributed Replay utilizando un archivo de configuración](../../sql-server/install/install-distributed-replay-using-a-configuration-file.md)|Tema de procedimientos que proporciona los parámetros de instalación y la sintaxis de ejemplo para ejecutar Distributed Replay mediante un archivo de configuración.|  
 |[Completar los pasos posteriores a la instalación](complete-the-post-installation-steps.md)|Tema de procedimientos para completar una instalación de Distributed Replay.|  

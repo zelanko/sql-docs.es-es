@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072886"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services
@@ -38,24 +38,24 @@ ms.locfileid: "66072886"
   
 1.  Localice la base de datos en el panel izquierdo o derecho de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  Haga clic en la base de datos y seleccione **propiedades**. Busque la carpeta de la base de datos y anote su ubicación. Una ubicación de almacenamiento de la base de datos vacía indica que la carpeta de la base de datos está ubicada en la carpeta de datos del servidor.  
+2.  Haga clic con el botón secundario en la base de datos y seleccione **propiedades**. Busque la carpeta de la base de datos y anote su ubicación. Una ubicación de almacenamiento de la base de datos vacía indica que la carpeta de la base de datos está ubicada en la carpeta de datos del servidor.  
   
     > [!IMPORTANT]  
     >  En cuanto se separa la base de datos, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ya no puede ayudarle a obtener su ubicación.  
   
-3.  Haga clic en la base de datos y seleccione **separar...**  
+3.  Haga clic con el botón derecho en la base de datos y seleccione **desasociar..** .  
   
 4.  Asigne una contraseña a la base de datos que se va separar y, a continuación, haga clic en **Aceptar** para ejecutar el comando Detach.  
   
-5.  Busque el **bases de datos** carpeta en el panel izquierdo o derecho de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+5.  Busque la carpeta **bases de datos** en el panel izquierdo o derecho de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-6.  Haga clic en el **bases de datos** carpeta y seleccione **adjuntar...**  
+6.  Haga clic con el botón secundario en la carpeta **bases** de datos y seleccione **adjuntar..** .  
   
-7.  En el cuadro de texto **Carpeta** , escriba la ubicación original de la carpeta de la base de datos. Como alternativa, puede usar el botón Examinar ( **...** ) para buscar la carpeta de base de datos.  
+7.  En el cuadro de texto **Carpeta** , escriba la ubicación original de la carpeta de la base de datos. Como alternativa, puede usar el botón Examinar (**...**) para buscar la carpeta de la base de datos.  
   
 8.  Seleccione el modo de lectura/escritura para la base de datos.  
   
-9. Escriba la contraseña que utilizó en el paso 3 y haga clic en **Aceptar** para ejecutar el comando attach.  
+9. Escriba la contraseña que se usó en el paso 3 y haga clic en **Aceptar** para ejecutar el comando adjuntar.  
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>Para cambiar el modo de lectura/escritura de una base de datos mediante programación a través de AMO  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66072886"
   
 1.  Localice la base de datos en el panel izquierdo o derecho de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-2.  Haga clic en la base de datos y seleccione **propiedades**. Busque la carpeta de la base de datos y anote su ubicación. Una ubicación de almacenamiento de la base de datos vacía indica que la carpeta de la base de datos está ubicada en la carpeta de datos del servidor.  
+2.  Haga clic con el botón secundario en la base de datos y seleccione **propiedades**. Busque la carpeta de la base de datos y anote su ubicación. Una ubicación de almacenamiento de la base de datos vacía indica que la carpeta de la base de datos está ubicada en la carpeta de datos del servidor.  
   
     > [!IMPORTANT]  
     >  En cuanto se separa la base de datos, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ya no puede ayudarle a obtener su ubicación.  
@@ -166,14 +166,14 @@ ms.locfileid: "66072886"
   
 2.  Ejecute el comando XMLA.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Adjuntar y separar bases de datos de Analysis Services](attach-and-detach-analysis-services-databases.md)   
- [Ubicación de almacenamiento de las bases de datos](database-storage-location.md)   
- [Modos de la propiedad de base de datos ReadWriteMode](database-readwritemodes.md)   
+ [Ubicación de almacenamiento de base de datos](database-storage-location.md)   
+ [Base de datos Readwritemode](database-readwritemodes.md)   
  [Elemento Attach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
- [Elemento Detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [Elemento detach](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  [Elemento ReadWriteMode](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
  [Elemento DbStorageLocation](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   

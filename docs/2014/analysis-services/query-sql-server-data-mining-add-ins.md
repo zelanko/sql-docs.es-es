@@ -1,5 +1,5 @@
 ---
-title: Consulta (datos de SQL Server a los complementos de minería de datos) | Microsoft Docs
+title: Consulta (SQL Server complementos de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dcddeb64b14301f08a7dc723ef89737102f257ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070481"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Consulta (Complementos de minería de datos de SQL Server)
-  ![Botón de consulta de modelo, cinta de opciones minería de datos](media/dmc-query.gif "botón modelo de consultas, cinta de opciones minería de datos")  
+  ![Botón Modelo de consultas, cinta de opciones Minería de datos](media/dmc-query.gif "Botón Modelo de consultas, cinta de opciones Minería de datos")  
   
  El Asistente para **Consulta** le permite interactuar con modelos de minería de datos existentes con el fin de realizar predicciones a partir de los datos de una tabla de Excel, un rango de Excel u otro origen de datos. El proceso de aplicar nuevos datos a un modelo existente para predecir tendencias se denomina *consulta de predicción*.  
   
@@ -45,13 +45,13 @@ ms.locfileid: "66070481"
   
 4.  Por último, el asistente le ofrece también la posibilidad de elegir una o varias predicciones, y especificar un destino donde guardar los resultados.  
   
- En cualquier momento puede hacer clic en **Avanzadas** para cambiar al **Editor de consultas avanzadas de minería de datos**, que le permitirá controlar mejor cada parte de la instrucción DMX. Para obtener más información sobre cómo usar las herramientas de edición de consultas avanzadas, vea [avanzada Editor de consultas de minería de datos](advanced-data-mining-query-editor.md).  
+ En cualquier momento puede hacer clic en **Avanzadas** para cambiar al **Editor de consultas avanzadas de minería de datos**, que le permitirá controlar mejor cada parte de la instrucción DMX. Para obtener más información acerca de cómo usar las herramientas avanzadas de edición de consultas, vea [Editor de consultas avanzadas de minería de datos](advanced-data-mining-query-editor.md).  
   
 ### <a name="requirements"></a>Requisitos  
- Para utilizar el **Asistente para consultade minería de datos** , debe estar conectado a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Además, el servidor debe contener como mínimo un modelo de minería de datos de un tipo adecuado. Si no hay disponible ningún modelo de minería de datos, puede crear uno con los asistentes que ofrece el Cliente de minería de datos para Excel. Para obtener información sobre cómo crear un nuevo modo de minería de datos mediante un asistente, vea [crear un modelo de minería de datos](creating-a-data-mining-model.md).  
+ Para utilizar el **Asistente para consultade minería de datos** , debe estar conectado a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Además, el servidor debe contener como mínimo un modelo de minería de datos de un tipo adecuado. Si no hay disponible ningún modelo de minería de datos, puede crear uno con los asistentes que ofrece el Cliente de minería de datos para Excel. Para obtener información acerca de cómo crear un nuevo modo de minería de datos mediante un asistente, vea [crear un modelo de minería de datos](creating-a-data-mining-model.md).  
   
-## <a name="see-also"></a>Vea también  
- [Implementar y ampliar modelos de minería de datos &#40;datos complementos de minería de datos para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
- [Cliente de minería de datos para Excel &#40;complementos de minería de datos de SQL Server&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+## <a name="see-also"></a>Consulte también  
+ [Implementar y escalar modelos de minería de datos &#40;complementos de minería de datos para Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
+ [Cliente de minería de datos para Excel &#40;SQL Server complementos de minería de datos&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
   

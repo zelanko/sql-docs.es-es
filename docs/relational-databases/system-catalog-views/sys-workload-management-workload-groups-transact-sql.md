@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 76b5b09a07189db127c970e75dac2894fdbea1ae
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73633449"
 ---
 # <a name="sysworkload_management_workload_groups-transact-sql"></a>Sys. workload_management_workload_groups (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73633449"
 
  Devuelve los detalles de los grupos de cargas de trabajo.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|
 |group_id|**int**|Id. único del grupo de cargas de trabajo. No admite valores NULL.||
 |name|**sysname**|Nombre del grupo de cargas de trabajo Debe ser único para la instancia de.  No admite valores NULL.||
@@ -36,7 +36,7 @@ ms.locfileid: "73633449"
 |request_min_resource_grant_percent|**decimal (5, 2)**|Especifica la cantidad mínima de recursos asignados a una solicitud. El intervalo permitido para el valor es de 0,75 a 100.||
 |request_max_resource_grant_percent |**decimal (5, 2)**|Especifica la cantidad máxima de recursos asignados a una solicitud.||
 |query_execution_timeout_sec|**int**|La cantidad de tiempo de ejecución, en segundos, permitida antes de que se cancele la consulta.  Las consultas no se pueden cancelar una vez que han alcanzado la fase de devolución de la ejecución.  query_execution_timeout_sec no incluye el tiempo invertido en la cola.|
-|query_wait_timeout_sec|**int**|NIVEL||
+|query_wait_timeout_sec|**int**|INTERNAL||
 |create_time|**datetime**|Hora en que se creó el grupo de cargas de trabajo. No admite valores NULL.||
 modify_time|**datetime**|Hora en que se modificó por última vez el grupo de cargas de trabajo. No admite valores NULL.||
 |&nbsp;||||

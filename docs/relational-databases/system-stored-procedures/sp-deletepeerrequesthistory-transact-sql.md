@@ -16,16 +16,16 @@ ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1af3aad1f66f3de7dd2fce44990718980018d3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68111942"
 ---
-# <a name="spdeletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
+# <a name="sp_deletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Elimina el historial de una solicitud de estado de publicación, que incluye el historial de solicitudes ([MSpeer_request &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mspeer-request-transact-sql.md)), así como el historial de respuestas ([MSpeer_response &#40; Transact-SQL&#41;](../../relational-databases/system-tables/mspeer-response-transact-sql.md)). Este procedimiento almacenado se ejecuta en la base de datos de publicación en un publicador que participa en una topología de replicación punto a punto. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+  Elimina el historial relacionado con una solicitud de estado de publicación, que incluye el historial de solicitudes ([MSpeer_request &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/mspeer-request-transact-sql.md)), así como el historial de respuestas ([MSpeer_response &#40;transact-SQL&#41;](../../relational-databases/system-tables/mspeer-response-transact-sql.md)). Este procedimiento almacenado se ejecuta en la base de datos de publicación en un publicador que participa en una topología de replicación punto a punto. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,26 +39,26 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Nombre de la publicación para el que se realizó la solicitud de estado. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Nombre de la publicación para la que se realizó la solicitud de estado. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @request_id = ] request_id` Especifica una solicitud de estado individual para que se eliminarán todas las respuestas a esta solicitud. *request_id* es **int**, su valor predeterminado es null.  
+`[ @request_id = ] request_id`Especifica una solicitud de estado individual para que se eliminen todas las respuestas a esta solicitud. *request_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @cutoff_date = ] cutoff_date` Especifica una fecha límite, antes de que se eliminan todos los registros de repuestas. *cutoff_date* es **datetime**, su valor predeterminado es null.  
+`[ @cutoff_date = ] cutoff_date`Especifica una fecha límite, antes de la cual se eliminan todos los registros de respuesta anteriores. *cutoff_date* es de **tipo DateTime**y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_deletepeerrequesthistory** se utiliza en una topología de replicación transaccional punto a punto. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
+## <a name="remarks"></a>Observaciones  
+ **sp_deletepeerrequesthistory** se usa en una topología de replicación transaccional punto a punto. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
- Al ejecutar **sp_deletepeerrequesthistory**, ya sea *request_id* o *cutoff_date* debe especificarse.  
+ Al ejecutar **sp_deletepeerrequesthistory**, se debe especificar *request_id* o *cutoff_date* .  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_deletepeerrequesthistory**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_deletepeerrequesthistory**.  
   
-## <a name="see-also"></a>Vea también  
- [sp_helppeerrequests &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)   
- [sp_helppeerresponses &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)   
- [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [sp_helppeerrequests &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)   
+ [sp_helppeerresponses &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)   
+ [sp_requestpeerresponse &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)  
   
   

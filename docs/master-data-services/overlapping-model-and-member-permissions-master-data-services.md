@@ -15,10 +15,10 @@ ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e12489cc490c5b8ee9f363e329da9a057fac8f3f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728981"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Superponer permisos de modelo y de miembro (Master Data Services)
@@ -29,9 +29,9 @@ ms.locfileid: "73728981"
   
  Si un miembro tiene permiso distinto al de su objeto del modelo correspondiente, se aplicarán las reglas siguientes:  
   
--   **Denegar** invalida al resto de permisos.  
+-   **Deny** invalida todos los demás permisos.  
   
--   El permiso de**administrador** en el nivel de modelo sobrescribe todos los demás permisos y se cambia por el permiso de acceso Todo (CRUD) en los subniveles.  
+-   El permiso de **Administrador** en el nivel de modelo invalida todos los demás permisos y se cambia a todos los permisos de acceso (CRUD) en los subniveles.  
   
 -   El permiso de acceso efectivo forma intersección con los permisos de los miembros y atributos.  
   
@@ -74,8 +74,8 @@ ms.locfileid: "73728981"
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Cómo se determinan los permisos &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Superponer permisos de usuario y de grupo &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+ [Los permisos de usuario y de grupo superpuestos &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

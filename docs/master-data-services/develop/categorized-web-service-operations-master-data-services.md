@@ -11,10 +11,10 @@ ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728293"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Operaciones de servicio web clasificadas (Master Data Services)
@@ -140,7 +140,7 @@ ms.locfileid: "73728293"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>Operaciones de exportación de datos  
- Estas operaciones se utilizan para exportar datos a través del uso de vistas de suscripción. Para obtener más información, consulte [Overview: Exporting Data &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
+ Estas operaciones se utilizan para exportar datos a través del uso de vistas de suscripción. Para obtener más información, consulte [Información general: exportar datos &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
   
 ||  
 |-|  

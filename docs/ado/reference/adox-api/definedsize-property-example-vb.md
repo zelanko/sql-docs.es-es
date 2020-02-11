@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de propiedad DefinedSize (VB) | Microsoft Docs
+title: Ejemplo de la propiedad DefinedSize (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d188ba801112a94d1ac09c6e1bae7fbbe5bccfee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966456"
 ---
 # <a name="definedsize-property-example-vb"></a>Ejemplo de propiedad DefinedSize (VB)
-Este ejemplo se muestra el [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propiedad de un [columna](../../../ado/reference/adox-api/column-object-adox.md). El código vuelva a definir el tamaño de la columna Name de la **empleados** tabla de la *Northwind* base de datos. A continuación, el cambio en los valores de la FirstName [campo](../../../ado/reference/ado-api/field-object.md) de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) según la **empleados** se muestra la tabla. Tenga en cuenta que, de forma predeterminada, los campos FirstName se rellenan con espacios cuando haya redefinido la **DefinedSize** propiedad.  
+En este ejemplo se muestra la propiedad [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) de una [columna](../../../ado/reference/adox-api/column-object-adox.md). El código redefinirá el tamaño de la columna FirstName de la tabla **Employees** de la base de datos *Northwind* . A continuación, se muestra el cambio en los valores del [campo](../../../ado/reference/ado-api/field-object.md) FirstName de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) basado en la tabla **Employees** . Tenga en cuenta que, de forma predeterminada, el campo FirstName se rellena con espacios después de volver a definir la propiedad **DefinedSize** .  
   
 ```  
 ' BeginDefinedSizeVB  
@@ -149,6 +149,6 @@ End Sub
 ' EndDefinedSizeVB  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+## <a name="see-also"></a>Consulte también  
+ [Objeto column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize (propiedad, ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

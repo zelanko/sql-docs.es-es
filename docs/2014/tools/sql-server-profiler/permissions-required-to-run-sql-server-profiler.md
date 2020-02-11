@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bed2868b74087cd0e4c119ada7e29f0c5db73ce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240519"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Permisos necesarios para ejecutar SQL Server Profiler
@@ -32,7 +32,8 @@ ms.locfileid: "63240519"
 ## <a name="permissions-used-to-replay-traces"></a>Permisos utilizados para reproducir seguimientos  
  La reproducción de seguimientos también requiere que el usuario que reproduce el seguimiento disponga del permiso ALTER TRACE.  
   
- Sin embargo, durante la reproducción, [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] utiliza el comando EXECUTE AS si se encuentra un evento Audit Login en el seguimiento que se está reproduciendo. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] utiliza el comando EXECUTE AS para suplantar al usuario asociado al evento de inicio de sesión.  
+ Sin embargo, durante la reproducción, [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] utiliza el comando EXECUTE AS si se encuentra un evento Audit Login en el seguimiento que se está reproduciendo. 
+  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] utiliza el comando EXECUTE AS para suplantar al usuario asociado al evento de inicio de sesión.  
   
  Si el [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] encuentra un evento de inicio de sesión en un seguimiento que se está reproduciendo, se realizan las siguientes comprobaciones de permisos:  
   
@@ -40,9 +41,11 @@ ms.locfileid: "63240519"
   
 2.  Se encuentra un evento de inicio de sesión para el usuario 2 en la seguimiento reproducida.  
   
-3.  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] utiliza el comando EXECUTE AS para suplantar al usuario 2.  
+3.  
+  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] utiliza el comando EXECUTE AS para suplantar al usuario 2.  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta autenticar al usuario 2 y, en función del resultado, tiene lugar una de las siguientes acciones:  
+4.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta autenticar al usuario 2 y, en función del resultado, tiene lugar una de las siguientes acciones:  
   
     1.  Si el usuario 2 no se puede autenticar, el [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] devuelve un error y continúa reproduciendo la seguimiento como usuario 1.  
   
@@ -62,9 +65,9 @@ ms.locfileid: "63240519"
   
  En el siguiente diagrama se muestra el proceso de comprobación de permisos al reproducir seguimientos:  
   
- ![Permisos de seguimiento de reproducción de SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "permisos de seguimiento de reproducción de SQL Server Profiler")  
+ ![Permisos de reproducción de seguimiento de SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "Permisos de reproducción de seguimiento de SQL Server Profiler")  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de SQL Server Profiler &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   
  [Reproducir seguimientos](replay-traces.md)   
  [Crear un seguimiento &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   

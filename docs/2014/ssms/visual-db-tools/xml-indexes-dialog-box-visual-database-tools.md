@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228346"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Índices XML (cuadro de diálogo, Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63228346"
  **Índice XML seleccionado**  
  Enumera los índices XML existentes. Selecciónelo para mostrar sus propiedades en la cuadrícula que aparece a la derecha. Si la lista está vacía, no se ha definido ninguna para la tabla.  
   
- **Agregar**  
+ **Add (Agregar)**  
  Crea un nuevo índice XML.  
   
  **Eliminar**  
@@ -53,8 +53,8 @@ ms.locfileid: "63228346"
  **Categoría Identidad**  
  Expandido, muestra los campos de propiedades **Nombre** y **Descripción** .  
   
- **Name**  
- Muestra el nombre del índice XML. Cuando se crea un nuevo índice o una nueva clave, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Este nombre se puede cambiar en cualquier momento.  
+ **Nombre**  
+ Muestra el nombre del índice XML. Cuando se crea un nuevo índice o una nueva clave, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Puede cambiar el nombre en cualquier momento.  
   
  **Descripción**  
  Describe el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y después en el botón de puntos suspensivos ( **...** ) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
@@ -87,7 +87,7 @@ ms.locfileid: "63228346"
  **Bloqueos de fila permitidos**  
  Especifique si se permite el bloqueo de filas en este índice. Permitir o denegar el bloqueo de fila afecta al rendimiento de la base de datos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear índices XML](../../relational-databases/xml/create-xml-indexes.md)  
   
   

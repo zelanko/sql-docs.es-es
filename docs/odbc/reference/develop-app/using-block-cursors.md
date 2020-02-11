@@ -15,16 +15,16 @@ ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135538"
 ---
 # <a name="using-block-cursors"></a>Usar cursores de bloque
-Compatibilidad con cursores de bloque se integra en ODBC 3. *x*. **SQLFetch** puede usarse solo para las recuperaciones de varias filas cuando se llama en ODBC 3. *x*; si un ODBC 2. *x* aplicación llama a **SQLFetch**, abrirá un cursor sola fila y de solo avance. Cuando un ODBC 3. *x* aplicación llama a **SQLFetch** en un ODBC 2. *x* controlador, devuelve una sola fila a menos que el controlador admite **SQLExtendedFetch**. Para obtener más información, consulte [cursores de bloque, cursores desplazables y compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) en Apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores.  
+La compatibilidad con los cursores de bloque está integrada en ODBC 3. *x*. **SQLFetch** solo se puede usar para las capturas de varias filas cuando se llama en ODBC 3. *x*; Si ODBC 2. la aplicación *x* llama a **SQLFetch**, solo abrirá un cursor de una sola fila y de solo avance. Cuando se trata de un ODBC 3. la aplicación *x* llama a **SQLFetch** en ODBC 2. *x* , devuelve una sola fila a menos que el controlador admita **SQLExtendedFetch**. Para obtener más información, vea [cursores de bloque, cursores desplazables y compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) en el Apéndice G: instrucciones de controlador para la compatibilidad con versiones anteriores.  
   
- Para utilizar cursores de bloque, la aplicación establece el tamaño del conjunto de filas, enlaza los búferes de conjunto de filas (como se describe en la sección anterior), opcionalmente, Establece los atributos de instrucción SQL_ATTR_ROWS_FETCHED_PTR y SQL_ATTR_ROW_STATUS_PTR y llamadas **SQLFetch**  o **SQLFetchScroll** para capturar un bloque de filas. La aplicación puede cambiar el tamaño del conjunto de filas y enlazar nuevos búferes de conjunto de filas (mediante una llamada a **SQLBindCol** o especificando un desplazamiento de bind) incluso después de que las filas se han capturado.  
+ Para usar cursores de bloque, la aplicación establece el tamaño del conjunto de filas, enlaza los búferes del conjunto de filas (como se describe en la sección anterior), establece opcionalmente los atributos de instrucción SQL_ATTR_ROWS_FETCHED_PTR y SQL_ATTR_ROW_STATUS_PTR, y llama a **SQLFetch** o **SQLFetchScroll** para capturar un bloque de filas. La aplicación puede cambiar el tamaño del conjunto de filas y enlazar nuevos búferes de conjunto de filas (llamando a **SQLBindCol** o especificando un desplazamiento de enlace) incluso después de que se hayan capturado las filas.  
   
  Esta sección contiene los temas siguientes.  
   
@@ -32,4 +32,4 @@ Compatibilidad con cursores de bloque se integra en ODBC 3. *x*. **SQLFetch** pu
   
 -   [Número de filas recuperadas y estado](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)  
   
--   [SQLGetData y cursores de bloque; curso de bloque](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)
+-   [SQLGetData y cursores de bloque; bloquear curso](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)

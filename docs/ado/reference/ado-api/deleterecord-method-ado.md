@@ -1,5 +1,5 @@
 ---
-title: DeleteRecord (método, ADO) | Microsoft Docs
+title: DeleteRecord (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,10 +17,10 @@ ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919082"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord (método, ADO)
@@ -35,23 +35,23 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>Parámetros  
  *Origen*  
- Opcional. Un **cadena** valor que contiene una dirección URL que identifica la entidad (por ejemplo, el archivo o directorio) va a eliminar. Si *origen* se omite o se especifica una cadena vacía, la entidad representada por el actual [registro](../../../ado/reference/ado-api/record-object-ado.md) se elimina. Si el registro es una colección ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **es adCollectionRecord**, por ejemplo, un directorio) también se eliminarán todos los elementos secundarios (por ejemplo, subdirectorios).  
+ Opcional. Valor de **cadena** que contiene una dirección URL que identifica la entidad (por ejemplo, el archivo o el directorio) que se va a eliminar. Si se omite *source* o especifica una cadena vacía, se elimina la entidad representada por el [registro](../../../ado/reference/ado-api/record-object-ado.md) actual. Si el registro es un registro de colección ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **adCollectionRecord**, como un directorio), todos los elementos secundarios (por ejemplo, subdirectorios) también se eliminarán.  
   
- *Async*  
- Opcional. Un **booleano** valor que, cuando **True**, especifica que la operación de eliminación es asincrónico.  
+ *Copystreamtostream*  
+ Opcional. Valor **booleano** que, cuando es **true**, especifica que la operación de eliminación es asincrónica.  
   
-## <a name="remarks"></a>Comentarios  
- Operaciones en el objeto representado por este **registro** puede producir un error cuando este método finalice. Después de llamar a **DeleteRecord**, **registro** debe estar cerrado porque el comportamiento de la **registro** pueden llegar a ser impredecible dependiendo de cuándo se actualiza el proveedor de la **Registro** con el origen de datos.  
+## <a name="remarks"></a>Observaciones  
+ Se puede producir un error en las operaciones en el objeto representado por este **registro** una vez que se completa este método. Después de llamar a **DeleteRecord**, el **registro** debe cerrarse porque el comportamiento del **registro** puede ser impredecible dependiendo de Cuándo el proveedor actualice el **registro** con el origen de datos.  
   
- Si este **registro** se obtuvo de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), a continuación, los resultados de esta operación no se reflejarán inmediatamente en el **conjunto de registros**. Actualizar el **Recordset** al cerrar y volver a abrirlo, o mediante la ejecución de la **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md) método, el [actualización](../../../ado/reference/ado-api/update-method.md) método, o el [Resync](../../../ado/reference/ado-api/resync-method.md) método.  
+ Si este **registro** se obtuvo de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md), los resultados de esta operación no se reflejarán inmediatamente en el **conjunto de registros**. Actualice el **conjunto de registros** . para ello, cierre y vuelva a abrirlo, o bien ejecute el método de [reconsulta](../../../ado/reference/ado-api/requery-method.md) del **conjunto de registros** , el método [Update](../../../ado/reference/ado-api/update-method.md) o el método [Resync](../../../ado/reference/ado-api/resync-method.md) .  
   
 > [!NOTE]
->  Las direcciones URL con el esquema http, se invocarán automáticamente el [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [absoluto y las direcciones URL relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Las direcciones URL que usan el esquema http invocarán automáticamente el [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [direcciones URL absolutas y relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>Vea también  
- [El método Delete (colección Fields de ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
+## <a name="see-also"></a>Consulte también  
+ [Método Delete (colección Fields de ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)   
  [Método Delete (colección de parámetros de ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Delete (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)

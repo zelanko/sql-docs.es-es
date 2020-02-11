@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244534"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure
@@ -54,7 +54,7 @@ ms.locfileid: "75244534"
   
  **Usar otras identidades**  
   
--   [Credenciales &#40;Motor de base de datos&#41;](authentication-access/credentials-database-engine.md)  
+-   [Credenciales &#40;motor de base de datos&#41;](authentication-access/credentials-database-engine.md)  
   
 -   [Ejecutar como otro inicio de sesión](/sql/t-sql/statements/execute-as-transact-sql)  
   
@@ -90,11 +90,11 @@ ms.locfileid: "75244534"
  ![Icono pequeño de carpeta de archivos](../../integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **autorización: ¿Qué puede hacer?**  
  **Conceder, revocar y denegar permisos**  
   
--   [Jerarquía de permisos &#40;Motor de base de datos&#41;](permissions-hierarchy-database-engine.md)  
+-   [Jerarquía de permisos &#40;motor de base de datos&#41;](permissions-hierarchy-database-engine.md)  
   
--   [Los](permissions-database-engine.md)  
+-   [Permisos](permissions-database-engine.md)  
   
--   [Proteger](securables.md)  
+-   [Elementos protegibles](securables.md)  
   
  **Seguridad por roles**  
   
@@ -108,14 +108,14 @@ ms.locfileid: "75244534"
   
 -   [Seguridad de nivel de fila](https://msdn.microsoft.com/library/azure/dn765131.aspx)  
   
--   [Enmascaramiento dinámico de datos](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+-   [Enmascaramiento de datos dinámicos](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
 -   [Objetos firmados](/sql/t-sql/statements/add-signature-transact-sql)  
   
  ![Icono pequeño de carpeta de archivos](../../integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **seguridad de conexión: restringir y proteger**  
  **Protección de Firewall**  
   
--   [Configurar un firewall de Windows para el acceso a Motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+-   [Configuración de Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
 -   [Azure SQL Database la configuración del firewall](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "75244534"
  ![Icono pequeño de carpeta de archivos](../../integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **Auditoría: acceso de grabación**  
  **Auditoría automatizada**  
   
--   [Motor de base de datos de &#40;de auditoría de SQL Server&#41;](auditing/sql-server-audit-database-engine.md)  
+-   [SQL Server Audit &#40;motor de base de datos&#41;](auditing/sql-server-audit-database-engine.md)  
   
 -   [Auditoría de SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)  
   
@@ -147,14 +147,14 @@ ms.locfileid: "75244534"
   
 -   [Centro de confianza de Microsoft Azure: cumplimiento por característica](https://azure.microsoft.com/support/trust-center/services/)  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Protección de SQL Server](securing-sql-server.md)   
- [Entidades de seguridad &#40;Motor de base de datos&#41;](authentication-access/principals-database-engine.md)   
+ [Entidades de seguridad &#40;motor de base de datos&#41;](authentication-access/principals-database-engine.md)   
  [SQL Server certificados y claves asimétricas](sql-server-certificates-and-asymmetric-keys.md)   
  [Cifrado de SQL Server](encryption/sql-server-encryption.md)   
- [Configuración de área expuesta](surface-area-configuration.md)   
+ [Configuración de Área expuesta](surface-area-configuration.md)   
  [Contraseñas seguras](strong-passwords.md)   
  [Propiedad de base de datos TRUSTWORTHY](trustworthy-database-property.md)   
- [Motor de base de datos características y tareas](../../database-engine/database-engine-features-and-tasks.md)  
+ [Características y tareas del motor de base de datos](../../database-engine/database-engine-features-and-tasks.md)  
   
   

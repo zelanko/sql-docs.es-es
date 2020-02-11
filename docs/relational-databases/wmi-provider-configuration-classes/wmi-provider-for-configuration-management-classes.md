@@ -18,10 +18,10 @@ ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 60430a5bbc2d0309748a2099e9e9bd4f322f8264
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73658932"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Proveedor WMI para las clases de administración de configuración
@@ -54,7 +54,7 @@ ms.locfileid: "73658932"
   
  [Clase SInstance](../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)  
   
- [Clase SqlErrorLogEvent](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
+ [SqlErrorLogEvent, clase](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
   
  [Clase SqlErrorLogFile](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)  
   

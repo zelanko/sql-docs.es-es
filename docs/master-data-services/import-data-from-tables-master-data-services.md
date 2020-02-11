@@ -11,10 +11,10 @@ ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729245"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importar datos de tablas (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73729245"
   
 -   El modelo no debe tener un estado de **Confirmado**.  
   
- **Para agregar, actualizar y eliminar datos en la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
+ **Para agregar, actualizar y eliminar datos en la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos**  
   
 1.  Prepare los miembros para importarlos en la tabla de almacenamiento provisional apropiada de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] y proporcione valores para los campos obligatorios. Para obtener más información sobre las tablas de almacenamiento provisional, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
@@ -63,9 +63,9 @@ ms.locfileid: "73729245"
   
     -   Use el área funcional de **Administración de integraciones** de Administración de datos maestros.  
   
-         En la página **Lotes de almacenamiento provisional** , seleccione el modelo al que va a agregar datos en la lista desplegable y, después, haga clic en **Iniciar lotes**. El estado del procesamiento por lotes se indica en el campo **Estado** . Para obtener más información sobre los estados, consulte [Estados de importación &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md).  
+         En la página **Lotes de almacenamiento provisional**, seleccione el modelo al que va a agregar datos en la lista desplegable y, a continuación, haga clic en **Iniciar lotes**. El estado del procesamiento por lotes se indica en el campo **Estado** . Para obtener más información sobre los estados, consulte [Estados de importación &#40;Master Data Services&#41;](../master-data-services/import-statuses-master-data-services.md).  
   
-         ![Página lotes de almacenamiento provisional en Master Data Manager](../master-data-services/media/mds-stagingbatchespage.png "Página Lotes de almacenamiento provisional en Master Data Manager")  
+         ![Página Lotes de almacenamiento provisional en Master Data Manager](../master-data-services/media/mds-stagingbatchespage.png "Página Lotes de almacenamiento provisional en Master Data Manager")  
   
          El proceso de almacenamiento provisional se inicia a intervalos definidos por el valor **Intervalo de lote de almacenamiento provisional** de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   

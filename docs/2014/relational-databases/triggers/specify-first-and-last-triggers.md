@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a851a19a7f00afd055bb2ee8f00eaf4621a1e98f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524141"
 ---
 # <a name="specify-first-and-last-triggers"></a>Especificar el primer y el último desencadenador
@@ -32,7 +32,7 @@ ms.locfileid: "62524141"
 |------------|-----------------|  
 |**Primero**|Especifica que el desencadenador DML es el primer desencadenador AFTER que se activa para una acción desencadenadora.|  
 |**Último**|Especifica que el desencadenador DML es el último desencadenador AFTER que se activa para una acción desencadenadora.|  
-|**Ninguno**|Especifica que no hay ningún orden determinado para la activación del desencadenador DML. Se utiliza principalmente para restablecer un desencadenador que era el primero o el último.|  
+|**None**|Especifica que no hay ningún orden determinado para la activación del desencadenador DML. Se utiliza principalmente para restablecer un desencadenador que era el primero o el último.|  
   
  En el siguiente ejemplo se muestra el uso de **sp_settriggerorder**:  
   
@@ -55,7 +55,7 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  La replicación genera automáticamente un primer desencadenador para cualquier tabla incluida en una suscripción de actualización inmediata o en cola. La replicación requiere que su desencadenador sea el primero. Generará un error si se intenta incluir una tabla con un primer desencadenador en una suscripción de actualización inmediata o en cola. Si intenta convertir un desencadenador en el primero después de haber incluido una tabla en una suscripción, **sp_settriggerorder** devolverá un error. Tanto si usa ALTER en el desencadenador de replicación como si usa **sp_settriggerorder** para convertir el desencadenador de replicación en un desencadenador último o sin orden definido, la suscripción no funcionará correctamente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectpropertyex-transact-sql)   
  [sp_settriggerorder &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql)  
   

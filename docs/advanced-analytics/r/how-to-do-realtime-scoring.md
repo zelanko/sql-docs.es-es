@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7822cd56a52e47493fe175c293dbfe491a9524af
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727438"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Cómo generar previsiones y predicciones mediante modelos de aprendizaje automático en SQL Server
@@ -97,7 +97,7 @@ Serializar un modelo a un formato binario es útil, pero no es necesario si va a
 
 ## <a name="scoring-in-related-products"></a>Puntuación en productos relacionados
 
-Si usa el [servidor independiente](r-server-standalone.md) o [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), tiene otras opciones para generar predicciones rápidamente aparte de los procedimientos almacenados y las funciones de T-SQL. Tanto el servidor independiente como Machine Learning Server admiten el concepto de un *servicio web* para la implementación del código. Puede agrupar un modelo previamente entrenado en R o Python como servicio web, al que se llama en tiempo de ejecución para evaluar nuevas entradas de datos. Para más información, vea estos artículos:
+Si usa el [servidor independiente](r-server-standalone.md) o [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), tiene otras opciones para generar predicciones rápidamente aparte de los procedimientos almacenados y las funciones de T-SQL. Tanto el servidor independiente como Machine Learning Server admiten el concepto de un *servicio web* para la implementación del código. Puede agrupar un modelo previamente entrenado en R o Python como servicio web, al que se llama en tiempo de ejecución para evaluar nuevas entradas de datos. Para obtener más información, consulte estos artículos:
 
 + [¿Qué son los servicios web en Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [¿Qué es la operacionalización?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
@@ -106,7 +106,7 @@ Si usa el [servidor independiente](r-server-standalone.md) o [Microsoft Machine 
 + [Paquete mrsdeploy para R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 + [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)  
 + [rxRealTimeScoring](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxrealtimescoring)

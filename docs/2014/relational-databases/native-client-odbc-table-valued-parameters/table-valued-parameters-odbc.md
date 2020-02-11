@@ -1,5 +1,5 @@
 ---
-title: Parámetros con valores de tabla (ODBC) | Documentos de Microsoft
+title: Parámetros con valores de tabla (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31ed60f10f12bbc11037a64caa50802360b919de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467305"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parámetros con valores de tabla (ODBC)
   La compatibilidad con ODBC para parámetros con valores de tabla permite a una aplicación cliente enviar datos parametrizados al servidor más eficazmente, enviando varias filas al servidor con una llamada.  
   
- Para obtener información acerca de los parámetros con valores de tabla en el servidor, consulte [usar parámetros &#40;motor de base de datos&#41;](../tables/use-table-valued-parameters-database-engine.md).  
+ Para obtener información sobre los parámetros con valores de tabla en el servidor, vea [usar parámetros con valores de tabla &#40;Motor de base de datos&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
  En ODBC, hay dos formas de enviar parámetros con valores de tabla al servidor:  
   
--   Todos los datos de parámetro con valores de tabla pueden estar en memoria en el momento en que se llama a SQLExecDirect o SQLExecute. Estos datos se almacenan en matrices si hay varias filas en el valor de tabla.  
+-   Todos los datos de parámetros con valores de tabla pueden estar en memoria en el momento en que se llama a SQLExecDirect o SQLExecute. Estos datos se almacenan en matrices si hay varias filas en el valor de tabla.  
   
 -   Una aplicación puede especificar datos en ejecución para un parámetro con valores de tabla cuando se llama a SQLExecDirect o SQLExecute. En este caso, las filas de datos para el valor de tabla se pueden proporcionar en lotes o de uno en uno para reducir los requerimientos de memoria.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62467305"
  Describe cómo una aplicación puede obtener metadatos para una llamada a procedimiento preparada.  
   
  [Metadatos de parámetros con valores de tabla adicionales](additional-table-valued-parameter-metadata.md)  
- Describe cómo utilizar SQLColumns, SQLProcedureColumns y SQLTables para recuperar metadatos para un parámetro con valores de tabla.  
+ Describe cómo usar SQLProcedureColumns, SQLTables y SQLColumns para recuperar los metadatos de un parámetro con valores de tabla.  
   
  [Conversión de datos de parámetros con valores de tabla y otros errores y advertencias](table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Describe cómo procesar los errores en valores de columna de parámetro con valores de tabla.  
@@ -77,7 +77,7 @@ ms.locfileid: "62467305"
  [Ejemplos de programación de parámetros con valores de tabla ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
  Describe cómo realizar tareas comunes.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [Parámetros con valores de tabla &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md)  
   

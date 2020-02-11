@@ -11,10 +11,10 @@ ms.assetid: dc23d80e-9778-44a8-a54e-e81c2ab6e96a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 9b2421d38401b3d0ff6b1e33a7b07bd86a1ab22e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728879"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Área funcional de Administración de versiones (Master Data Manager)
@@ -32,25 +32,25 @@ ms.locfileid: "73728879"
   
  [Cambiar un nombre de versión &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)  
   
- [Copiar una versión &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
+ [Copie una versión &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
  [Eliminar una versión &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)  
   
 ## <a name="version-flags"></a>Marcas de versión  
- [Crear una marca de versión &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+ [Cree una marca de versión &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
  [Asignar una marca a una versión &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
- [Cambiar el nombre de marca de una versión &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
+ [Cambiar el nombre de una marca de versión &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   
 ## <a name="validation"></a>Validación  
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
  [Validar una versión con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
- [Invertir una transacción &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+ [Invertir un Master Data Services de &#40;de transacciones&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)  
   
   

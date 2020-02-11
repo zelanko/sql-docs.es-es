@@ -1,5 +1,5 @@
 ---
-title: Crear un modelo
+title: Creación de un modelo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728482"
 ---
 # <a name="create-a-model-master-data-services"></a>Crear un modelo (Master Data Services)
@@ -55,31 +55,31 @@ ms.locfileid: "73728482"
   
  Por cada modelo creado, se agrega una fila con ocho columnas a la cuadrícula. Las ocho columnas son:  
   
--   **Estado**: el estado del modelo. Al hacer clic en el botón **Guardar modelo** , se muestra la imagen de ![actualización](../master-data-services/media/mds-model-status-updating.png "Actualización") , que indica que el modelo se está actualizando. Si hay errores al crear o editar un modelo, se muestra la imagen de ![error](../master-data-services/media/mds-model-status-error.png "Error") . De lo contrario, el estado es Correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
+-   **Estado**: el estado del modelo. Al hacer clic en el botón **Guardar modelo** , se muestra la imagen de ![actualización](../master-data-services/media/mds-model-status-updating.png "Actualizando") , que indica que el modelo se está actualizando. Si hay errores al crear o editar un modelo, se muestra la imagen de ![error](../master-data-services/media/mds-model-status-error.png "Error") . De lo contrario, el estado es Correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
   
--   **Nombre**: el nombre del modelo.  
+-   **Name**: el nombre del modelo.  
   
 -   **Descripción**: la descripción del modelo.  
   
 -   **Días de retención del registro**: el número de días que se conserva el registro para el modelo.  
   
--   **Creado por**: el nombre del usuario que creó el modelo.  
+-   **Creado por**: nombre del usuario que creó el modelo.  
   
--   **Fecha y hora de creación**: la fecha y hora de creación del modelo.  
+-   **Fecha y hora de creación**: fecha y hora en que se creó el modelo.  
   
--   **Actualizado por**: el nombre del último usuario que actualizó el modelo.  
+-   **Actualizado por**: nombre del usuario que actualizó por última vez el modelo.  
   
--   **Fecha y hora de actualización**: la fecha y hora de la última actualización del modelo.  
+-   **Fecha y hora actualizadas**: fecha y hora en que se actualizó por última vez el modelo.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
   
--   [Crear una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
+-   [Cree una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Modelos &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Eliminar un modelo &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [Editar modelo &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
+ [Editar Master Data Services de &#40;del modelo&#41;](../master-data-services/edit-model-master-data-services.md)   
  [Transacciones &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

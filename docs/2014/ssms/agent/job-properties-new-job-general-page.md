@@ -1,5 +1,5 @@
 ---
-title: Propiedades de trabajo nuevo trabajo (página General) | Microsoft Docs
+title: Propiedades del trabajo y nuevo trabajo (página general) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211388"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>Propiedades del trabajo y Nuevo trabajo (página General)
-  Use esta página para ver y modifica las propiedades generales de un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Utilice esta página para ver y modificar las propiedades generales de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **Nombre**  
  Cambie el nombre del trabajo.  
   
  **Propietario**  
@@ -41,22 +41,22 @@ ms.locfileid: "68211388"
  **Enabled**  
  Habilita el trabajo. Si el trabajo no está habilitado, no se ejecuta como respuesta a una programación o una alerta; sin embargo, puede iniciarlo con el procedimiento almacenado **sp_start_job** .  
   
- **Source**  
+ **Origen**  
  Muestra el servidor maestro del trabajo. Solo está disponible en la página **Job PropertiesGeneral** .  
   
  **Creado**  
  Muestra la fecha y la hora de creación del trabajo. Solo está disponible en la página **Job PropertiesGeneral** .  
   
- **Modificado por última vez**  
+ **Última modificación**  
  Muestra la fecha y la hora de la última modificación del trabajo. Solo está disponible en la página **Job PropertiesGeneral** .  
   
- **Ejecutado por última vez**  
+ **Última ejecución**  
  Muestra la fecha y la hora del inicio de la última ejecución del trabajo. Solo está disponible en la página **Job PropertiesGeneral** .  
   
- **Ver historial de trabajos**  
+ **Ver el historial de trabajos**  
  Muestra el historial de trabajos. Solo está disponible en la página **Job PropertiesGeneral** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Implementar trabajos](implement-jobs.md)   
  [Categorías de trabajo: Administrar categorías de trabajo](job-categories-manage-job-categories.md)  
   

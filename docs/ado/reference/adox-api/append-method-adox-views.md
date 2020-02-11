@@ -17,14 +17,14 @@ ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967154"
 ---
 # <a name="append-method-adox-views"></a>Append (método) (vistas ADOX)
-Crea un nuevo [vista](../../../ado/reference/adox-api/view-object-adox.md) objeto y lo anexa a la [vistas](../../../ado/reference/adox-api/views-collection-adox.md) colección.  
+Crea un nuevo objeto de [vista](../../../ado/reference/adox-api/view-object-adox.md) y lo anexa a la colección de [vistas](../../../ado/reference/adox-api/views-collection-adox.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,25 +34,25 @@ Views.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Name*  
- Un **cadena** valor que especifica el nombre de la vista para crear.  
+ *Nombre*  
+ Valor de **cadena** que especifica el nombre de la vista que se va a crear.  
   
- *Command*  
- ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que representa la vista para crear.  
+ *Comando*  
+ Objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) ADO que representa la vista que se va a crear.  
   
-## <a name="remarks"></a>Comentarios  
- Crea una nueva vista del origen de datos con el nombre y los atributos especificados en el **comando** objeto.  
+## <a name="remarks"></a>Observaciones  
+ Crea una nueva vista en el origen de datos con el nombre y los atributos especificados en el objeto de **comando** .  
   
- Si el texto del comando que especifica el usuario representa un procedimiento en lugar de una vista, el comportamiento depende del proveedor. **Anexar** se producirá un error si el proveedor no admite comandos persistentes.  
+ Si el texto del comando que especifica el usuario representa un procedimiento en lugar de una vista, el comportamiento depende del proveedor. Se producirá un error en **Append** si el proveedor no admite comandos persistentes.  
   
 > [!NOTE]
->  Cuando se usa el proveedor OLE DB para Microsoft Jet, la **vistas** colección **Append** método le permitirá especificar una **procedimiento** en lugar de un **vista**  en el *comando* parámetro. El **procedimiento** se agregará al origen de datos y se agregará a la **vistas** colección. Después de la **Append**, si la **procedimientos** y **vistas** se actualizan las colecciones, el **procedimiento** dejará de estar en el **Vistas** colección y aparecerá en el **procedimientos** colección.  
+>  Al usar el proveedor de OLE DB para Microsoft Jet, el método **Append** de la colección **views** le permitirá especificar un **procedimiento** en lugar de una **vista** en el parámetro de *comando* . El **procedimiento** se agregará al origen de datos y se agregará a la colección **views** . Después del **método Append**, si se actualizan las colecciones **Procedures** y **views** , el **procedimiento** ya no estará en la colección **views** y aparecerá en la colección **Procedures** .  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Colección de vistas (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de ejemplo de método Append (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo del método Append de vistas (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Append (método) (columnas ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append (método) (grupos ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append (método) (índices ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   

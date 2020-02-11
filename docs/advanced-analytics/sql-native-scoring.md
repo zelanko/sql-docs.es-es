@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727287"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Puntuación nativa mediante la función PREDICT de T-SQL
@@ -40,7 +40,7 @@ PREDICT está disponible en todas las ediciones del motor de base de datos de SQ
 
 + El modelo se debe entrenar de antemano con uno de los algoritmos **rx** admitidos que se enumeran más abajo.
 
-+ Serialice el modelo usando [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) con R y [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) con Python. Estas funciones de serialización se han optimizado para admitir la puntuación rápida.
++ Serialice el modelo mediante [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) para R y [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) para Python. Estas funciones de serialización se han optimizado para admitir la puntuación rápida.
 
 <a name="bkmk_native_supported_algos"></a> 
 
@@ -144,7 +144,7 @@ SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
 
-### <a name="step-2-run-predict-on-the-model"></a>Paso 2. Ejecutar PREDICT en el modelo
+### <a name="step-2-run-predict-on-the-model"></a>Paso 2. Ejecutar PREDICT en el modelo
 
 La siguiente instrucción PREDICT sencilla obtiene una clasificación del modelo de árbol de decisión mediante la función de **puntuación nativa**. Predice las especies de iris a partir de los atributos proporcionados y de la longitud y el ancho de pétalo.
 

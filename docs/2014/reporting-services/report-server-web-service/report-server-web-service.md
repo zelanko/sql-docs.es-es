@@ -19,18 +19,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b577fd9a78dbb5f12af79e190709065931ec463a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520575"
 ---
 # <a name="report-server-web-service"></a>servicio web del servidor de informes
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona acceso a la funcionalidad completa del servidor de informes a través del servicio web del servidor de informes. El servicio web del servidor de informes es un servicio web XML con una API SOAP. Utiliza SOAP sobre HTTP y actúa como interfaz de comunicaciones entre los programas clientes y el servidor de informes. El servicio web proporciona dos extremos, uno para la ejecución y otro para la administración de informes, con métodos que exponen la funcionalidad del servidor de informes y le permiten crear herramientas personalizadas para cualquier parte del ciclo de vida del informe.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona acceso a la funcionalidad completa del servidor de informes a través del servicio Web del servidor de informes. El servicio web del servidor de informes es un servicio web XML con una API SOAP. Utiliza SOAP sobre HTTP y actúa como interfaz de comunicaciones entre los programas clientes y el servidor de informes. El servicio web proporciona dos extremos, uno para la ejecución y otro para la administración de informes, con métodos que exponen la funcionalidad del servidor de informes y le permiten crear herramientas personalizadas para cualquier parte del ciclo de vida del informe.  
   
- Hay tres modos principales para desarrollar aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] basadas en el servicio web. Puede hacer lo siguiente:  
+ Hay tres modos principales para desarrollar aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] basadas en el servicio web. Puede:  
   
--   Desarrollar aplicaciones con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK. Para más información sobre cómo usar [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para generar las aplicaciones del servicio web, vea [Creación de aplicaciones con el servicio Web y .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+-   Desarrolle aplicaciones [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] con y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] el SDK de. Para más información sobre cómo usar [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para generar las aplicaciones del servicio web, vea [Creación de aplicaciones con el servicio Web y .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 -   Desarrollar aplicaciones con la utilidad **rs** (RS.exe), el entorno de script de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Con los scripts de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] puede ejecutar cualquiera de las operaciones del servicio web del servidor de informes. Para más información sobre cómo crear scripts en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Script con la utilidad rs.exe y el servicio web](../tools/script-with-the-rs-exe-utility-and-the-web-service.md).  
   
@@ -53,7 +53,7 @@ Opciones de desarrollo de servicio web disponibles en Reporting Services
  [Creación de aplicaciones con el servicio web y .NET Framework](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
  Contiene información sobre cómo desarrollar aplicaciones y servicios web que llaman a la API SOAP de Reporting Services.  
   
- [Script con la utilidad rs.exe y el servicio web](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
+ [Script con la utilidad rs.exe y el servicio Web](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
  Proporciona información general del entorno de scripting de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  [Referencia técnica &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)  
@@ -62,17 +62,18 @@ Opciones de desarrollo de servicio web disponibles en Reporting Services
 ## <a name="user-requirements-for-web-service-development"></a>Requisitos del usuario para el desarrollo de servicios web  
  Para desarrollar aplicaciones con el servicio web del servidor de informes, necesita:  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 o posteriores instalados en un equipo con una conexión a Internet a y acceso al servidor de informes.  
+-   
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 o posteriores instalados en un equipo con una conexión a Internet a y acceso al servidor de informes.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o el SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instalados en un equipo si quiere desarrollar e implementar aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK de instalado en un equipo si desea desarrollar e implementar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicaciones de mediante el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
--   Descripción detallada de las características y capacidades de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Una comprensión detallada de las características y capacidades de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 -   Conocimientos sólidos de SOAP y [!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)].  
   
--   Experiencia en desarrollo con un lenguaje compatible con [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], si piensa usar [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] como plataforma de desarrollo.  
+-   Experiencia de desarrollo en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]un lenguaje [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] compatible con, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]o, si piensa usar [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] como plataforma de desarrollo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Servicio web del servidor de informes](../report-server-web-service/report-server-web-service.md)  
   
   

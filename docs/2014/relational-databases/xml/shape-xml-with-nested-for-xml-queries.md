@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0a5fded413944c304dfe02675b3577b699adfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231232"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>Dar forma a XML con consultas FOR XML anidadas
@@ -88,7 +88,7 @@ FOR XML AUTO, TYPE
   
  En el ejemplo anterior se utiliza el método `query()` del tipo de datos `xml` para consultar el XML devuelto por la consulta FOR XML interna y construir el resultado esperado.  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <Production.Product ProductID="520">  
@@ -97,7 +97,7 @@ FOR XML AUTO, TYPE
 </Production.Product>  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Usar consultas FOR XML anidadas](use-nested-for-xml-queries.md)  
   
   

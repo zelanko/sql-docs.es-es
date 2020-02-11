@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: df04cd5bcb216a716312783aff3b78d03ea01ac1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480142"
 ---
 # <a name="add-a-group-master-data-services"></a>Agregar un grupo (Master Data Services)
   Agregue un grupo a la lista **Grupos** en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] a fin de comenzar el proceso para asignar el permiso a la aplicación web. Para que un usuario del grupo pueda tener acceso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], debe conceder el permiso de grupo a una o más áreas funcionales, y objetos de modelo.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional **Permisos de usuario y de grupo** .  
@@ -40,16 +40,16 @@ ms.locfileid: "65480142"
   
 5.  Si lo desea, haga clic en **Comprobar nombres**.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
     > [!NOTE]  
     >  Cuando el usuario obtiene acceso por primera vez a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], su nombre se agrega a la lista de usuarios de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  
   
 ## <a name="next-steps"></a>Pasos siguientes  
   
--   [Asignar permisos del área funcional &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [Asignar permisos de área funcional &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Master Data Services de &#40;de seguridad&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

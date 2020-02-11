@@ -18,13 +18,13 @@ ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c268c356e41c957349f452d2f83fc4b807042d9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990498"
 ---
-# <a name="spaddtargetservergroup-transact-sql"></a>sp_add_targetservergroup (Transact-SQL)
+# <a name="sp_add_targetservergroup-transact-sql"></a>sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Agrega el grupo de servidores especificado.  
@@ -39,7 +39,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` El nombre del grupo de servidores para crear. *nombre* es **sysname**, no tiene ningún valor predeterminado. *nombre* no puede contener comas.  
+`[ @name = ] 'name'`Nombre del grupo de servidores que se va a crear. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado. *el nombre* no puede contener comas.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -47,11 +47,11 @@ sp_add_targetservergroup [ @name = ] 'name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- Los grupos de servidores de destino proporcionan una forma sencilla para asignar un trabajo a un grupo de servidores. Para obtener más información, consulte [sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md).  
+## <a name="remarks"></a>Observaciones  
+ Los grupos de servidores de destino proporcionan una forma sencilla para asignar un trabajo a un grupo de servidores. Para obtener más información, vea [sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea el grupo de servidores de destino denominado `Servers Processing Customer Orders`.  
@@ -65,11 +65,11 @@ EXEC dbo.sp_add_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_help_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_apply_job_to_targets &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_help_targetservergroup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

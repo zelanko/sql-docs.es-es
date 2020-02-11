@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721813"
 ---
 # <a name="replication-programming-concepts"></a>Conceptos de la programación de replicación
@@ -81,9 +81,9 @@ ms.locfileid: "62721813"
   
  Los siguientes temas proporcionan información sobre la seguridad:  
   
--   [Seguridad de replicación de SQL Server](../security/view-and-modify-replication-security-settings.md)  
+-   [Seguridad de Replicación de SQL Server](../security/view-and-modify-replication-security-settings.md)  
   
--   [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+-   [Centro de seguridad para el Motor de base de datos de SQL Server y Azure SQL Database](../../security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
 ## <a name="choosing-a-development-environment"></a>Elegir un entorno de desarrollo  
  Al desarrollar una aplicación de replicación, hay que considerar tres entornos de desarrollo básicos. Cada uno tiene acceso a las mismas funcionalidades de replicación con algunas excepciones. Las aplicaciones de replicación se pueden desarrollar en cada uno de los entornos siguientes.  
@@ -105,11 +105,11 @@ ms.locfileid: "62721813"
   
 |Interfaz|Entorno|Usos|  
 |---------------|-----------------|----------|  
-|[Replication Management Objects Concepts](replication-management-objects-concepts.md) (Conceptos de Replication Management Objects)|Código administrado|Administración, supervisión y sincronización.|  
+|[Replication Management Objects Concepts (Conceptos de Replication Management Objects)](replication-management-objects-concepts.md)|Código administrado|Administración, supervisión y sincronización.|  
 |<xref:Microsoft.SqlServer.Replication>|Código administrado|Sincronización.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Código administrado|Creación de controladores de lógica de negocios para integrar la lógica personalizada con el proceso de sincronización de mezcla.|  
 |[Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)|Scripting|Administración y supervisión.|  
-|[Replication Agent Executables Concepts](replication-agent-executables-concepts.md)|Scripting|Sincronización.|  
+|[Conceptos de los ejecutables del Agente de replicación](replication-agent-executables-concepts.md)|Scripting|Sincronización.|  
   
 ## <a name="example"></a>Ejemplo  
  En [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)], tienen que publicarse los datos de 200 representantes de ventas de todo el mundo. Los representantes de ventas viajan a menudo y necesitan utilizar equipos portátiles o asistentes digitales personales (PDA) para cambiar los datos de los clientes y agregar los pedidos nuevos. A continuación, los cambios tendrán que sincronizarse con el publicador cuando el representante de ventas conecte el portátil a la red.  
@@ -120,7 +120,7 @@ ms.locfileid: "62721813"
   
 2.  Además del acceso a datos típico requerido para una aplicación de ventas, esta aplicación debería permitir que un vendedor sincronizara la suscripción de extracción a petición haciendo clic en un botón. Puesto que un representante de ventas instalará y ejecutará la aplicación, también necesita poder configurar una suscripción y aplicar la instantánea inicial en el cliente. Opcionalmente, la aplicación utilizará la infraestructura que proporciona Windows para detectar la conectividad inalámbrica y sincronizar automáticamente la suscripción cuando se descubra una conexión.  
   
-3.  Siga todas las instrucciones de seguridad para la replicación, incluido el uso de la autenticación de Windows y una red privada virtual (VPN) al conectarse al publicador. Si está implementando la sincronización web, utilice una conexión de capa de sockets seguros (SSL). Para obtener más información, vea [Configure Web Synchronization](../configure-web-synchronization.md) (Configurar la sincronización web).  
+3.  Siga todas las instrucciones de seguridad para la replicación, incluido el uso de la autenticación de Windows y una red privada virtual (VPN) al conectarse al publicador. Si está implementando la sincronización web, utilice una conexión de capa de sockets seguros (SSL). Para más información, consulte [Configure Web Synchronization](../configure-web-synchronization.md).  
   
 4.  Para aprovechar las características de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], la aplicación se desarrolla utilizando un lenguaje de código administrado.  
   

@@ -18,10 +18,10 @@ ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 502fde4cb50dda4588ee71486d938070101e80f2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660433"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>Clase ServerNetworkProtocolIPAddress
@@ -30,7 +30,7 @@ ms.locfileid: "73660433"
   
  Con la [clase ServerNetworkProtocolIPAddress](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) se pueden realizar las siguientes tareas:  
   
--   Comprobar el nombre de la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Compruebe el nombre de la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Comprobar el nombre de dirección IP y el nombre del protocolo.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73660433"
   
 -   Habilitar y deshabilitar la dirección IP.  
   
-## <a name="see-also"></a>Vea también  
- [Configuración de protocolos de red de servidor y bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Consulte también  
+ [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

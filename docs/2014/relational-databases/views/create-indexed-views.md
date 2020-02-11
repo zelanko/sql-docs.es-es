@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196428"
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
@@ -42,10 +42,10 @@ ms.locfileid: "68196428"
   
 5.  Cree el índice clúster único en la vista.  
   
-###  <a name="Restrictions"></a> Opciones SET requeridas para vistas indizadas  
- La evaluación de la misma expresión puede producir resultados diferentes en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuando hay diferentes opciones SET activas cuando se ejecuta la consulta. Por ejemplo, después de establecer la opción SET CONCAT_NULL_YIELDS_NULL en ON, la expresión **'** abc **'** + NULL devuelve el valor NULL, aunque al establecer CONCAT_NULL_YIEDS_NULL en OFF, la misma expresión genera **'** abc **'** .  
+###  <a name="Restrictions"></a>Opciones SET requeridas para vistas indizadas  
+ La evaluación de la misma expresión puede producir resultados diferentes en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuando hay diferentes opciones SET activas cuando se ejecuta la consulta. Por ejemplo, después de establecer la opción SET CONCAT_NULL_YIELDS_NULL en ON, la expresión **'** abc **'** + NULL devuelve el valor NULL, aunque al establecer CONCAT_NULL_YIEDS_NULL en OFF, la misma expresión genera **'** abc **'**.  
   
- Para asegurar el correcto mantenimiento de las vistas y la generación de resultados coherentes, las vistas indizadas requieren valores fijos para varias opciones SET. Se deben establecer las opciones SET de la tabla siguiente para los valores mostrados en la **RequiredValue** columna cada vez que se producen las condiciones siguientes:  
+ Para asegurar el correcto mantenimiento de las vistas y la generación de resultados coherentes, las vistas indizadas requieren valores fijos para varias opciones SET. Las opciones SET de la tabla siguiente deben establecerse en los valores que se muestran en la columna **RequiredValue** siempre que se den las siguientes condiciones:  
   
 -   Se crean la vista y los índices siguientes en la vista.  
   
@@ -55,15 +55,15 @@ ms.locfileid: "68196428"
   
 -   El optimizador de consultas utiliza la vista indizada para producir el plan de consulta.  
   
-    |Opciones SET|Valor requerido|Valor de servidor predeterminado|Default<br /><br /> Valor de OLE DB y ODBC|Valor predeterminado<br /><br /> predeterminado|  
+    |Opciones de Set|Valor requerido|Valor de servidor predeterminado|Valor predeterminado<br /><br /> Valor de OLE DB y ODBC|Valor predeterminado<br /><br /> predeterminado|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
-    |ANSI_NULLS|ON|ON|ON|OFF|  
-    |ANSI_PADDING|ON|ON|ON|OFF|  
-    |ANSI_WARNINGS*|ON|ON|ON|OFF|  
-    |ARITHABORT|ON|ON|OFF|OFF|  
-    |CONCAT_NULL_YIELDS_NULL|ON|ON|ON|OFF|  
-    |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|  
-    |QUOTED_IDENTIFIER|ON|ON|ON|OFF|  
+    |ANSI_NULLS|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|  
+    |ANSI_PADDING|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|  
+    |ANSI_WARNINGS*|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|  
+    |ARITHABORT|ACTIVAR|ACTIVAR|Apagado|Apagado|  
+    |CONCAT_NULL_YIELDS_NULL|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|  
+    |NUMERIC_ROUNDABORT|Apagado|Apagado|Apagado|Apagado|  
+    |QUOTED_IDENTIFIER|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|  
   
      *Setting ANSI_WARNINGS to ON implicitly sets ARITHABORT to ON.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "68196428"
   
 -   Cuando crea el índice, la opción IGNORE_DUP_KEY debe establecerse en OFF (configuración predeterminada).  
   
--   En la definición de vista, se debe hacer referencia a las tablas mediante nombres de dos partes, _esquema_ **.** _nombretabla_ .  
+-   Se debe hacer referencia a las tablas mediante nombres de dos partes, _esquema_**.** _TableName_ en la definición de la vista.  
   
 -   Las funciones definidas por el usuario a las que se hace referencia en la vista se deben crear con la opción WITH SCHEMABINDING.  
   
--   Para hacer referencia a las funciones definidas por el usuario a las que se hace referencia en la vista, se deben usar nombres de dos partes, _esquema_ **.** _función_.  
+-   A las funciones definidas por el usuario a las que se hace referencia en la vista se debe hacer referencia mediante nombres de dos partes, _esquema_**.** _función_.  
   
 -   La propiedad de acceso a datos de una función definida por el usuario debe ser NO SQL y la propiedad de acceso externo debe ser NO.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68196428"
   
 -   Los métodos y las funciones CLR de tipos definidos por el usuario CLR utilizados en la definición de la vista deben establecer las propiedades según se indica en la tabla siguiente.  
   
-    |Property|Nota|  
+    |Propiedad|Nota|  
     |--------------|----------|  
     |DETERMINISTIC = TRUE|Debe declararse de forma explícita como un atributo del método de Microsoft .NET Framework.|  
     |PRECISE = TRUE|Debe declararse de forma explícita como un atributo del método de .NET Framework.|  
@@ -116,15 +116,15 @@ ms.locfileid: "68196428"
     |COUNT|Funciones ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET y OPENXML)|Combinaciones externas (LEFT, RIGHT o FULL)|  
     |Tabla derivada (definida mediante una instrucción SELECT en la cláusula FROM)|Autocombinaciones|Especificar columnas mediante SELECT \* o SELECT *nombre_tabla*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP o AVG|Expresión de tabla común (CTE)|  
-    |`float`\*, `text`, `ntext`, `image`, `XML`, o `filestream` columnas|Subconsulta|Cláusula OVER, que incluye funciones de categoría o de agregado|  
+    |`float`\*columnas `text`, `ntext`, `image`, `XML`, o `filestream`|Subconsulta|Cláusula OVER, que incluye funciones de categoría o de agregado|  
     |Predicados de texto completo (CONTAIN, FREETEXT)|Función SUM que hace referencia a una expresión que acepta valores NULL|ORDER BY|  
-    |Función de agregado definida por el usuario CLR|ARRIBA|Operadores CUBE, ROLLUP o GROUPING SETS|  
+    |Función de agregado definida por el usuario CLR|TOP|Operadores CUBE, ROLLUP o GROUPING SETS|  
     |MIN, MAX|Operadores UNION, EXCEPT o INTERSECT|TABLESAMPLE|  
     |Variables de tabla|OUTER APPLY o CROSS APPLY|PIVOT, UNPIVOT|  
     |Conjuntos de columnas dispersas|Funciones insertadas o con valores de tabla de múltiples instrucciones|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*La vista indizada puede contener `float` columnas; sin embargo, estas columnas no pueden incluirse en la clave de índice agrupado.  
+     \*La vista indizada puede `float` contener columnas; sin embargo, estas columnas no se pueden incluir en la clave de índice clúster.  
   
 -   Si GROUP BY está presente, la definición de VIEW debe contener COUNT_BIG(*) y no debe contener HAVING. Estas restricciones GROUP BY solo se pueden aplicar a la definición de vista indizada. Una consulta puede utilizar una vista indizada en su plan de ejecución aun cuando no satisfaga estas restricciones GROUP BY.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68196428"
   
  La conversión implícita de los datos de caracteres no Unicode entre intercalaciones también se considera no determinista.  
   
-###  <a name="Considerations"></a> Consideraciones  
+###  <a name="Considerations"></a>Temas  
  La configuración de la opción **large_value_types_out_of_row** de las columnas de una vista indexada se hereda de la configuración de la columna correspondiente de la tabla base. Este valor se establece mediante [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). La configuración predeterminada de las columnas formadas a partir de expresiones es 0. Esto significa que los tipos de valores grandes se almacenan de forma consecutiva.  
   
  En una tabla con particiones se pueden crear vistas indizadas, en las que a su vez se pueden crear particiones.  
@@ -210,14 +210,14 @@ ms.locfileid: "68196428"
   
  Para obtener más información, vea [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
  [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
- [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
- [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
+ [ESTABLECER CONCAT_NULL_YIELDS_NULL &#40;&#41;de Transact-SQL](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
+ [ESTABLECER NUMERIC_ROUNDABORT &#40;&#41;de Transact-SQL](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
   

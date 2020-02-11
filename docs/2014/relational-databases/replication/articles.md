@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4765c6b9ef6dce7511a2ffe120d60efe8b6d235
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721997"
 ---
 # <a name="articles"></a>Artículos
@@ -58,7 +58,7 @@ ms.locfileid: "62721997"
  **Propiedades del artículo**  
  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en una de las siguientes opciones:  
   
--   Haga clic en **Establecer propiedades del artículo de \<tipoDeObjeto> resaltado** para iniciar el cuadro de diálogo **Propiedades del artículo: \<nombreDeObjeto>** . Los cambios de propiedad realizados en este cuadro de diálogo solo se aplican al objeto que está resaltado en el panel de objetos de la página **Artículos**.  
+-   Haga clic en **Establecer propiedades del artículo de \<tipoDeObjeto>** resaltado para iniciar el cuadro de diálogo **Propiedades del artículo: \<tipoDeObjeto>** ; los cambios de propiedad realizados en este cuadro de diálogo solo se aplican al objeto que está resaltado en el panel de objetos de la página **Artículos**.  
   
 -   Haga clic en **Establecer propiedades de todos los artículos de \<tipoDeObjeto>** , para iniciar el cuadro de diálogo **Propiedades de todos los artículos de \<tipoDeObjeto>** . Los cambios de propiedad realizados en este cuadro de diálogo se aplican a todos los objetos de ese tipo en el panel de objetos de la página **Artículos**, incluidos los que todavía no se hayan seleccionado para la publicación.  
   
@@ -66,14 +66,14 @@ ms.locfileid: "62721997"
     >  Los cambios de propiedades realizados en el cuadro de diálogo **Propiedades de todos los artículos de \<tipoDeObjeto>** reemplazan los que se hicieran anteriormente en el cuadro de diálogo **Propiedades del artículo: \<tipoDeObjeto>** . Por ejemplo, si desea establecer varios valores predeterminados para todos los artículos de un tipo de objeto, pero solamente desea establecer algunas propiedades para objetos individuales, establezca primero los valores predeterminados para todos los artículos. A continuación, establezca las propiedades de los objetos individuales.  
   
  **La tabla resaltada es de solo descarga**  
- Solo replicación de mezcla. Solo para[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Seleccione esta opción para especificar qué cambios no desea permitir en el suscriptor si usa una suscripción de cliente. Los artículos de solo descarga no se pueden actualizar en el suscriptor, y por ello los metadatos de seguimiento no se envían a los suscriptores. Esto puede reducir la capacidad de almacenamiento en los suscriptores y aumentar el rendimiento, sobre todo si la conexión de red es lenta. Esta opción se corresponde con un valor de **Solo descargar en suscriptor y prohibir cambios del suscriptor** para la opción **Dirección de la sincronización** en el cuadro de diálogo **Propiedades del artículo** . Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+ Solo replicación de mezcla. Solo para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Seleccione esta opción para especificar qué cambios no desea permitir en el suscriptor si usa una suscripción de cliente. Los artículos de solo descarga no se pueden actualizar en el suscriptor, y por ello los metadatos de seguimiento no se envían a los suscriptores. Esto puede reducir la capacidad de almacenamiento en los suscriptores y aumentar el rendimiento, sobre todo si la conexión de red es lenta. Esta opción se corresponde con un valor de **Solo descargar en suscriptor y prohibir cambios del suscriptor** para la opción **Dirección de la sincronización** en el cuadro de diálogo **Propiedades del artículo** . Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
  **Mostrar solamente los objetos seleccionados en la lista**  
  Active esta casilla para mostrar solamente aquellos artículos seleccionados en el panel de objetos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Publicar datos y objetos de base de datos](publish/publish-data-and-database-objects.md)   
- [Crear una publicación](publish/create-a-publication.md)   
+ [Create a Publication](publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](publish/view-and-modify-publication-properties.md)  
   
   

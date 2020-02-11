@@ -17,10 +17,10 @@ ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1acbe114258b0a7a5bee71656a0b6878f09fefc3
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73657333"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Conceptos del proveedor WMI para eventos de servidor
@@ -37,10 +37,10 @@ ms.locfileid: "73657333"
  [Usar WQL con el proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
  Explica la sintaxis de WQL (WMI Query Language) y cómo utilizarla al programar con el proveedor.  
   
- [Ejemplo: crear una alerta del Agente SQL Server con el proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [Ejemplo: crear una alerta del Agente SQL Server utilizando el proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  Proporciona un ejemplo de cómo se utiliza el proveedor WMI para devolver información de los eventos de seguimiento en la que basarse para crear una alerta del Agente SQL Server.  
   
- [Ejemplo: usar el proveedor de eventos WMI con el .NET Framework](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  
+ [Ejemplo: utilizar el proveedor de eventos WMI con .NET Framework](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  Proporciona un ejemplo de cómo utilizar el proveedor WMI para devolver los datos de eventos en una aplicación C#.  
   
  [Proveedor WMI de clases y propiedades de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)  

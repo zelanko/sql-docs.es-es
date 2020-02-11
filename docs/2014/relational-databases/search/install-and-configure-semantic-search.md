@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637916"
 ---
 # <a name="install-and-configure-semantic-search"></a>Instalar y configurar la búsqueda semántica
@@ -61,7 +61,7 @@ GO
   
     -   Busque el paquete de Windows installer denominado **SemanticLanguageDatabase.msi** en el disco de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Busque la versión de 32 o 64 bits del paquete del instalador según el sistema de destino. El nombre de la carpeta contenedora identifica la versión de 32 o 64 bits del archivo. El nombre de archivo es el mismo para ambas versiones.  
   
-    -   Descargar el paquete del instalador de [Microsoft?? ¿¿SQL Server?? 2014 Estadísticas de lenguaje semántico](https://go.microsoft.com/fwlink/?LinkID=296743) página del centro de descarga de [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
+    -   Descargar el paquete del instalador de [Microsoft?? ¿¿SQL Server?? 2014 Estadísticas de lenguaje semántico](https://go.microsoft.com/fwlink/?LinkID=296743) página del centro [!INCLUDE[msCoName](../../../includes/msconame-md.md)] de descarga.  
   
 2.  Ejecute el paquete de Windows Installer **SemanticLanguageDatabase.msi** para extraer la base de datos y el archivo de registro.  
   

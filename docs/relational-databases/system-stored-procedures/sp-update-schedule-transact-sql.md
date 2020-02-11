@@ -18,13 +18,13 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 51e21d189a9302c2dc7b74a013846460e9cb7bc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946642"
 ---
-# <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
+# <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cambia la configuración de una programación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,79 +55,79 @@ sp_update_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @schedule_id = ] schedule_id` El identificador de programación que se va a modificar. *schedule_id* es **int**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* debe especificarse.  
+`[ @schedule_id = ] schedule_id`Identificador de la programación que se va a modificar. *schedule_id* es de **tipo int**y no tiene ningún valor predeterminado. Se debe especificar *schedule_id* o *schedule_name* .  
   
-`[ @name = ] 'schedule_name'` El nombre de la programación para modificar. *schedule_name*es **sysname**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* debe especificarse.  
+`[ @name = ] 'schedule_name'`Nombre de la programación que se va a modificar. *schedule_name*es de **tipo sysname**y no tiene ningún valor predeterminado. Se debe especificar *schedule_id* o *schedule_name* .  
   
-`[ @new_name = ] new_name` El nuevo nombre para la programación. *new_name* es **sysname**, su valor predeterminado es null. Cuando *new_name* es NULL, el nombre de la programación se ha modificado.  
+`[ @new_name = ] new_name`El nuevo nombre de la programación. *new_name* es de **tipo sysname y su**valor predeterminado es NULL. Cuando *new_name* es null, el nombre de la programación no cambia.  
   
-`[ @enabled = ] enabled` Indica el estado actual de la programación. *habilitado*es **tinyint**, su valor predeterminado es **1** (habilitado). Si **0**, la programación no está habilitada. Si la programación no está habilitada, no se ejecuta ningún trabajo en esta programación.  
+`[ @enabled = ] enabled`Indica el estado actual de la programación. *Enabled*es de **tinyint**y su valor predeterminado es **1** (habilitado). Si es **0**, la programación no está habilitada. Si la programación no está habilitada, no se ejecuta ningún trabajo en esta programación.  
   
-`[ @freq_type = ] freq_type` Un valor que indica cuándo un trabajo se ejecutará. *freq_type*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
+`[ @freq_type = ] freq_type`Valor que indica cuándo se va a ejecutar un trabajo. *freq_type*es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**1**|Una vez|  
-|**4**|Cada día|  
-|**8**|Programación semanal|  
-|**16**|Programación mensual|  
-|**32**|Mensualmente, relativo a *freq_interval*|  
+|**1**|Una sola vez|  
+|**4**|Diariamente|  
+|**203**|Semanal|  
+|**dieciséi**|Mensual|  
+|**32**|Mensualmente, con respecto al *intervalo de frecuencia*|  
 |**64**|Se ejecuta cuando se inicia el servicio SQLServerAgent|  
-|**128**|Cuando el equipo esté inactivo|  
+|**128**|Ejecutar cuando el equipo esté inactivo|  
   
-`[ @freq_interval = ] freq_interval` Los días que se ejecuta un trabajo. *freq_interval* es **int**, su valor predeterminado es **0**y depende del valor de *freq_type*.  
+`[ @freq_interval = ] freq_interval`Los días en los que se ejecuta un trabajo. *freq_interval* es de **tipo int**, su valor predeterminado es **0**y depende del valor de *freq_type*.  
   
 |Valor de *freq_type*|Efecto en *freq_interval*|  
 |---------------------------|--------------------------------|  
-|**1** (una vez)|*freq_interval* no se utiliza.|  
+|**1** (una vez)|*freq_interval* no se usa.|  
 |**4** (diariamente)|Cada *freq_interval* días.|  
-|**8** (semanalmente)|*freq_interval* es uno o varios de los siguientes (combinados con un **OR** operador lógico):<br /><br /> **1** = el domingo<br /><br /> **2** = el lunes<br /><br /> **4** = el martes<br /><br /> **8** = el miércoles<br /><br /> **16** = el jueves<br /><br /> **32** = el viernes<br /><br /> **64** = el sábado|  
-|**16** (mensual)|En el *freq_interval* día del mes.|  
-|**32** (relativo mensual)|*freq_interval* es uno de los siguientes:<br /><br /> **1** = el domingo<br /><br /> **2** = el lunes<br /><br /> **3** = el martes<br /><br /> **4** = el miércoles<br /><br /> **5** = el jueves<br /><br /> **6** = el viernes<br /><br /> **7** = el sábado<br /><br /> **8** = día<br /><br /> **9** = día de la semana<br /><br /> **10** = día del fin de semana|  
-|**64** (cuando se inicia el servicio SQLServerAgent)|*freq_interval* no se utiliza.|  
-|**128**|*freq_interval* no se utiliza.|  
+|**8** (semanalmente)|*freq_interval* es uno o más de los siguientes (combinados con un operador lógico **or** ):<br /><br /> **1** = Domingo<br /><br /> **2** = lunes<br /><br /> **4** = martes<br /><br /> **8** = miércoles<br /><br /> **16** = jueves<br /><br /> **32** = viernes<br /><br /> **64** = sábado|  
+|**16** (mensualmente)|En el *freq_interval* día del mes.|  
+|**32** (relativo mensual)|*freq_interval* es uno de los siguientes:<br /><br /> **1** = Domingo<br /><br /> **2** = lunes<br /><br /> **3** = martes<br /><br /> **4** = miércoles<br /><br /> **5** = jueves<br /><br /> **6** = viernes<br /><br /> **7** = sábado<br /><br /> **8** = día<br /><br /> **9** = día de la semana<br /><br /> **10** = día del fin de semana|  
+|**64** (cuando se inicia el servicio SQLServerAgent)|*freq_interval* no se usa.|  
+|**128**|*freq_interval* no se usa.|  
   
-`[ @freq_subday_type = ] freq_subday_type` Especifica las unidades de *freq_subday_interval **.* *freq_subday_type*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
+`[ @freq_subday_type = ] freq_subday_type`Especifica las unidades de *freq_subday_interval * *.* *freq_subday_type*es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Valor|Descripción (unidad)|  
+|Value|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**0x1**|A la hora especificada|  
 |**0x2**|Segundos|  
 |**0x4**|Minutos|  
 |**0x8**|Horas|  
   
-`[ @freq_subday_interval = ] freq_subday_interval` El número de *freq_subday_type* períodos que transcurren entre cada ejecución de un trabajo. *freq_subday_interval*es **int**, su valor predeterminado es **0**.  
+`[ @freq_subday_interval = ] freq_subday_interval`Número de períodos de *freq_subday_type* que se van a producir entre cada ejecución de un trabajo. *freq_subday_interval*es de **tipo int**y su valor predeterminado es **0**.  
   
-`[ @freq_relative_interval = ] freq_relative_interval` Aparición de un trabajo de *freq_interval* en cada mes, si *freq_interval* es **32** (relativo mensual). *freq_relative_interval*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
+`[ @freq_relative_interval = ] freq_relative_interval`La repetición de un trabajo de *freq_interval* en cada mes, si *freq_interval* es **32** (relativo mensual). *freq_relative_interval*es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Valor|Descripción (unidad)|  
+|Value|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**1**|Primero|  
-|**2**|Second|  
+|**2**|Segundo|  
 |**4**|Tercero|  
-|**8**|Cuarto|  
-|**16**|Último|  
+|**203**|Cuarto|  
+|**dieciséi**|Último|  
   
-`[ @freq_recurrence_factor = ] freq_recurrence_factor` El número de semanas o meses entre la ejecución de un trabajo programada. *freq_recurrence_factor* solo se usa si *freq_type* es **8**, **16**, o **32**. *freq_recurrence_factor*es **int**, su valor predeterminado es **0**.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor`Número de semanas o meses entre la ejecución programada de un trabajo. *freq_recurrence_factor* solo se utiliza si *freq_type* es **8**, **16**o **32**. *freq_recurrence_factor*es de **tipo int**y su valor predeterminado es **0**.  
   
-`[ @active_start_date = ] active_start_date` La fecha en que puede comenzar la ejecución de un trabajo. *active_start_date*es **int**, su valor predeterminado es NULL, lo que indica la fecha de hoy. La fecha tiene el formato AAAAMMDD. Si *active_start_date* no es NULL, la fecha debe ser mayor o igual a 19900101.  
+`[ @active_start_date = ] active_start_date`Fecha en la que puede comenzar la ejecución de un trabajo. *active_start_date*es de **tipo int**y su valor predeterminado es null, lo que indica la fecha de hoy. La fecha tiene el formato AAAAMMDD. Si *active_start_date* no es null, la fecha debe ser mayor o igual que 19900101.  
   
- Una vez creada la programación, revise la fecha de inicio y confirme que es correcta. Para obtener más información, vea la sección "Programar fechas de inicio" en [crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
+ Una vez creada la programación, revise la fecha de inicio y confirme que es correcta. Para obtener más información, vea la sección sobre la programación de la fecha de inicio en [crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
-`[ @active_end_date = ] active_end_date` La fecha en que puede detenerse la ejecución de un trabajo. *active_end_date*es **int**, su valor predeterminado es **99991231**, lo que indica el 31 de diciembre de 9999. Tiene el formato AAAAMMDD.  
+`[ @active_end_date = ] active_end_date`Fecha en la que se puede detener la ejecución de un trabajo. *active_end_date*es de **tipo int**y su valor predeterminado es **99991231**, que indica el 31 de diciembre de 9999. Tiene el formato AAAAMMDD.  
   
-`[ @active_start_time = ] active_start_time` La hora de un día entre *active_start_date* y *active_end_date* para comenzar la ejecución de un trabajo. *active_start_time*es **int**, su valor predeterminado es 000000, lo que indica 12:00:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
+`[ @active_start_time = ] active_start_time`Hora de un día entre *active_start_date* y *active_end_date* para iniciar la ejecución de un trabajo. *active_start_time*es de **tipo int**y su valor predeterminado es 000000, lo que indica 12:00:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
-`[ @active_end_time = ] active_end_time` La hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución de un trabajo. *active_end_time*es **int**, su valor predeterminado es **235959**, lo que indica 11:59:59 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
+`[ @active_end_time = ] active_end_time`La hora de un día entre *active_start_date* y *active_end_date* a la finalización de la ejecución de un trabajo. *active_end_time*es de **tipo int**y su valor predeterminado es **235959**, que indica 11:59:59 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
-`[ @owner_login_name = ] 'owner_login_name']` El nombre de la entidad de seguridad de servidor que posee la programación. *owner_login_name* es **sysname**, su valor predeterminado es NULL, lo que indica que la programación pertenece al creador.  
+`[ @owner_login_name = ] 'owner_login_name']`El nombre de la entidad de seguridad del servidor que posee la programación. *owner_login_name* es de **tipo sysname**y su valor predeterminado es null, lo que indica que la programación es propiedad del creador.  
   
-`[ @automatic_post = ] automatic_post` Reservado.  
+`[ @automatic_post = ] automatic_post`Sector.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Todos los trabajos que utilizan la programación emplean de inmediato la nueva configuración. No obstante, el cambio de la programación no detiene la ejecución en curso de los trabajos.  
   
 ## <a name="permissions"></a>Permisos  
@@ -141,7 +141,7 @@ sp_update_schedule
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo los miembros del **sysadmin** puede modificar una programación que pertenece a otro usuario.  
+ Solo los miembros de **sysadmin** pueden modificar una programación propiedad de otro usuario.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se cambia el estado de habilitación de la programación `NightlyJobs` a `0` y se establece el propietario en `terrid`.  
@@ -157,15 +157,15 @@ EXEC dbo.sp_update_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [Programar un trabajo](../../ssms/agent/schedule-a-job.md)   
  [Crear una programación](../../ssms/agent/create-a-schedule.md)   
- [Procedimientos almacenados del Agente SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_add_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_help_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+ [Agente SQL Server procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_add_jobschedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_help_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

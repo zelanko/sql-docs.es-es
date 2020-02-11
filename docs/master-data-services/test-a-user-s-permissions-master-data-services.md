@@ -1,5 +1,5 @@
 ---
-title: Probar los permisos&#39;de un usuario
+title: Probar los permisos de usuario&#39;s
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2890487c4bbdf23ca4f1d7fa13aa15764f8029d8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728875"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>Probar los permisos de un usuario (Master Data Services)
@@ -33,7 +33,7 @@ ms.locfileid: "73728875"
   
 4.  La próxima vez que abra la ventana explorador, se le solicitará un nombre de usuario y una contraseña.  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+## <a name="see-also"></a>Consulte también  
+ [Master Data Services de &#40;de seguridad&#41;](../master-data-services/security-master-data-services.md)  
   
   

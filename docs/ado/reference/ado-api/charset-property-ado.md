@@ -1,5 +1,5 @@
 ---
-title: Juego de caracteres (propiedad, ADO) | Microsoft Docs
+title: Propiedad charset (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,26 +16,26 @@ ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d65a5330ea83b955629cd9de9684ecc47906ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920082"
 ---
 # <a name="charset-property-ado"></a>Propiedad de conjunto de caracteres (ADO)
-Indica el juego de caracteres al que el contenido de un texto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) debe convertirse para el almacenamiento en búfer interno de la **Stream** objeto.  
+Indica el juego de caracteres en el que se debe traducir el contenido de una [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) de texto para el almacenamiento en el búfer interno del objeto de **secuencia** .  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un **cadena** establece el valor que especifica el carácter en la que el contenido de la **Stream** se va a traducir. El valor predeterminado es **Unicode**. Los valores permitidos son cadenas típicas pasadas a través de la interfaz como nombres de conjunto de caracteres de Internet (por ejemplo, "iso-8859-1", "Windows-1252" etc.). Para obtener una lista de los nombres de conjunto de caracteres que se conocen por un sistema, vea las subclaves de HKEY_CLASSES_ROOT\MIME\Database\Charset en el registro de Windows.  
+ Establece o devuelve un valor de **cadena** que especifica el juego de caracteres al que se traducirá el contenido de la **secuencia** . El valor predeterminado es **Unicode**. Los valores permitidos son cadenas típicas que se pasan a través de la interfaz como nombres de juegos de caracteres de Internet (por ejemplo, "ISO-8859-1", "Windows-1252", etc.). Para obtener una lista de los nombres de los juegos de caracteres que conoce un sistema, vea las subclaves de HKEY_CLASSES_ROOT \MIME\Database\Charset en el registro de Windows.  
   
-## <a name="remarks"></a>Comentarios  
- En el texto **Stream** de objetos, datos de texto se almacenan en el juego de caracteres especificado por el **Charset** propiedad. El valor predeterminado es Unicode. El **Charset** propiedad se utiliza para convertir datos en el **Stream** o estará disponible fuera de la **Stream**. Por ejemplo, si la **Stream** contiene datos de ISO-8859-1 y que los datos se copian en una cadena BSTR, el **Stream** objeto convertirá los datos a Unicode. Lo contrario también es cierto.  
+## <a name="remarks"></a>Observaciones  
+ En un objeto de **flujo** de texto, los datos de texto se almacenan en el juego de caracteres especificado por la propiedad **CharSet** . El valor predeterminado es Unicode. La propiedad **CharSet** se usa para convertir los datos que entran en la **secuencia** o salen de la **secuencia**. Por ejemplo, si la **secuencia** contiene datos ISO-8859-1 y esos datos se copian en un BSTR, el objeto de **secuencia** convertirá los datos a Unicode. Lo mismo sucede al contrario.  
   
- Para que uno abierto **Stream**, actual [posición](../../../ado/reference/ado-api/position-property-ado.md) debe estar al principio de la **Stream** (0) para poder establecer **Charset**.  
+ En el caso de una **secuencia**abierta, la [posición](../../../ado/reference/ado-api/position-property-ado.md) actual debe estar al principio de la **secuencia** (0) para poder establecer **CharSet**.  
   
- **Juego de caracteres** solo se usa con texto **Stream** objetos ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeText**). Esta propiedad se omite si **tipo** es **adTypeBinary**.  
+ **CharSet** solo se utiliza con objetos de **flujo** de texto (el[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeText**). Esta propiedad se omite si el **tipo** es **adTypeBinary**.  
   
- Para obtener un ejemplo de código, vea [paso 4: Rellenar el cuadro de texto detalles](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
+ Para obtener un ejemplo de código, vea [Step 4: rellenar el cuadro de texto details](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

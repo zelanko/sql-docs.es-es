@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06bfc2148f7a367fa02d94109e9b5b8a250fd1f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198980"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Ver y modificar las propiedades de una suscripción de extracción
@@ -38,12 +38,12 @@ ms.locfileid: "68198980"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Vea las propiedades de las suscripciones de extracción del publicador o el suscriptor en el cuadro de diálogo **Propiedades de suscripción - \<Publicador>: \<BaseDeDatosDePublicación>** , que está disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el suscriptor se pueden ver más propiedades y éstas se pueden modificar. También se pueden ver propiedades del publicador en la pestaña **Todas las suscripciones** , que está disponible en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md).  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Vea las propiedades de las suscripciones de extracción del publicador o el suscriptor en el cuadro de diálogo **Propiedades de suscripción: \<Publicador>: \<baseDeDatosDePublicación>** , disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el suscriptor se pueden ver más propiedades y éstas se pueden modificar. También se pueden ver propiedades del publicador en la pestaña **Todas las suscripciones** , que está disponible en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>Para ver las propiedades de las suscripciones de extracción en el publicador en Management Studio  
   
-1.  Conéctese al publicador en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]y, a continuación, expanda el nodo del servidor.  
+1.  Conéctese al publicador en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]y luego expanda el nodo del servidor.  
   
 2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .  
   
@@ -76,23 +76,23 @@ ms.locfileid: "68198980"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para ver las propiedades de una suscripción de extracción a una publicación transaccional o de instantáneas  
   
-1.  En el suscriptor, ejecute [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql). Especifique **@publisher** , **@publisher_db** y **@publication** . Esto devuelve información sobre la suscripción que está almacenada en tablas del sistema en el Suscriptor.  
+1.  En el suscriptor, ejecute [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql). Especifique **@publisher**, **@publisher_db**y **@publication**. Esto devuelve información sobre la suscripción que está almacenada en tablas del sistema en el Suscriptor.  
   
-2.  En el Suscriptor, ejecute [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql). Especifique **@publisher** , **@publisher_db** , **@publication** y uno de los valores siguientes para **@publication_type** :  
+2.  En el Suscriptor, ejecute [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql). Especifique **@publisher**, **@publisher_db**, **@publication**y uno de los siguientes valores para **@publication_type**:  
   
     -   **0** : la suscripción pertenece a una publicación transaccional.  
   
     -   **1** : la suscripción pertenece a una publicación de instantáneas.  
   
-3.  En el Publicador, ejecute [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Especifique **@publication** y **@subscriber** .  
+3.  En el Publicador, ejecute [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Especifique **@publication** y **@subscriber**.  
   
-4.  En el Publicador, ejecute [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), especificando **@subscriber** . Presenta información acerca del suscriptor.  
+4.  En el publicador, ejecute [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), especificando **@subscriber**. Presenta información acerca del suscriptor.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para modificar las propiedades de una suscripción de extracción a una publicación transaccional o de instantáneas  
   
-1.  En el suscriptor, ejecute [sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql), especificando **@publisher** , **@publisher_db** , **@publication** , un valor de **0** (transaccional) o **1** (instantánea) para **@publication_type** , la propiedad de suscripción que se está cambiando como **@property** y el nuevo valor como **@value** .  
+1.  En el suscriptor, ejecute [sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql), especificando **@publisher**, **@publisher_db**, **@publication**, un valor de **0** (transaccional) o **1** (instantánea) para **@publication_type**, la propiedad de suscripción que se está cambiando como **@property**y el nuevo valor como. **@value**  
   
-2.  (Opcional) En el suscriptor de la base de datos de suscripciones, ejecute [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql). Especifique el identificador del trabajo del Agente de distribución para **@jobid** y las siguientes propiedades del paquete de los Servicios de transformación de datos (DTS):  
+2.  (Opcional) En el suscriptor de la base de datos de suscripciones, ejecute [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql). Especifique el identificador del trabajo de Agente de distribución para **@jobid**y las siguientes propiedades del paquete de servicios de transformación de datos (DTS):  
   
     -   **@dts_package_name**  
   
@@ -107,17 +107,17 @@ ms.locfileid: "68198980"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>Para ver o las propiedades de una suscripción de extracción a una publicación de combinación  
   
-1.  En el suscriptor, ejecute [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql). Especifique **@publisher** , **@publisher_db** y **@publication** .  
+1.  En el suscriptor, ejecute [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql). Especifique **@publisher**, **@publisher_db**y **@publication**.  
   
-2.  En el Suscriptor, ejecute [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql). Especifique **@publisher** , **@publisher_db** , **@publication** y un valor de 2 para **@publication_type** .  
+2.  En el Suscriptor, ejecute [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql). Especifique **@publisher**, **@publisher_db**, **@publication**y un valor de 2 para **@publication_type**.  
   
-3.  En el Publicador, ejecute [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) para mostrar información de la suscripción. Para devolver información sobre una suscripción concreta, debe especificar **@publication** , **@subscriber** y un valor de **pull** para **@subscription_type** .  
+3.  En el Publicador, ejecute [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) para mostrar información de la suscripción. Para devolver información sobre una suscripción concreta, debe **@publication**especificar, **@subscriber**y un valor de **pull** para. **@subscription_type**  
   
-4.  En el Publicador, ejecute [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), especificando **@subscriber** . Presenta información acerca del suscriptor.  
+4.  En el publicador, ejecute [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), especificando **@subscriber**. Presenta información acerca del suscriptor.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>Para cambiar las propiedades de una suscripción de extracción a una publicación de combinación  
   
-1.  En el suscriptor, ejecute [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql). Especifique **@publication** , **@publisher** , **@publisher_db** , la propiedad de suscripción que se está cambiando como **@property** y el nuevo valor como **@value** .  
+1.  En el suscriptor, ejecute [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql). Especifique **@publication**, **@publisher**, **@publisher_db**, la propiedad de suscripción que se **@property**está cambiando como y el nuevo **@value**valor como.  
   
 ##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Las clases RMO que usa para ver o modificar las propiedades de suscripción de extracción dependen del tipo de publicación a la que se suscribe la suscripción de extracción.  
@@ -126,7 +126,7 @@ ms.locfileid: "68198980"
   
 1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>y <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> .  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68198980"
   
 1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
-2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePullSubscription> .  
+2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
   
 3.  Establezca las propiedades <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>y <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> .  
   
@@ -158,8 +158,8 @@ ms.locfileid: "68198980"
   
 8.  Cierre todas las conexiones.  
   
-## <a name="see-also"></a>Vea también  
- [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Suscribirse a publicaciones](subscribe-to-publications.md)  
   

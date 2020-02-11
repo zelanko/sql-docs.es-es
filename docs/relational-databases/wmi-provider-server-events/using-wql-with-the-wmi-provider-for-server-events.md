@@ -17,10 +17,10 @@ ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57f7e07de49b2591e9ab0ef74603d674543282e9
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660487"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Usar WQL con el proveedor WMI para eventos de servidor
@@ -81,9 +81,9 @@ WHERE where_condition
  *where_condition*  
  Es un predicado de consulta de la cláusula WHERE formado por nombres de *event_property* y operadores lógicos y de comparación. El *where_condition* determina el ámbito en el que se registra la notificación de eventos correspondiente en la base de datos de destino. También puede actuar como un filtro para tener como destino un esquema o un objeto determinado desde el que consultar *event_type.* Para obtener más información, vea la sección Comentarios más adelante en este tema.  
   
- Solo el operando `=` se puede usar junto con **DatabaseName**, **SchemaName**y **objectname**. Otras expresiones no se pueden utilizar con estas propiedades de evento.  
+ Solo se `=` puede usar el operando junto con **DatabaseName**, **SchemaName**y **objectname**. Otras expresiones no se pueden utilizar con estas propiedades de evento.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
  La *where_condition* de la sintaxis del proveedor WMI para eventos de servidor determina lo siguiente:  
   
 -   El ámbito por el que el proveedor intenta recuperar el *event_type*especificado: el nivel de servidor, el nivel de base de datos o el nivel de objeto (el único objeto actualmente admitido es la cola). Finalmente, este ámbito determina el tipo de notificación de eventos creado en la base de datos de destino. Este proceso efectuó una llamada al registro de notificación de eventos.  
@@ -92,7 +92,7 @@ WHERE where_condition
   
  El proveedor WMI de eventos de servidor usa un algoritmo ascendente de tipo "el primero que sea válido" para generar un ámbito lo más restringido posible para la EVENT NOTIFICATION subyacente. El algoritmo intenta minimizar la actividad interna en el tráfico del servidor y de la red entre la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el proceso de host de WMI. El proveedor examina el *event_type* especificado en la cláusula FROM y las condiciones de la cláusula WHERE e intenta registrar la notificación de eventos subyacente con el ámbito más restringido posible. Si el proveedor no se puede registrar en el ámbito más restringido, intenta registrarse en ámbitos superiores consecutivamente hasta que el registro resulta satisfactorio finalmente. Si llega al ámbito superior en el nivel de servidor y se produce un error, devuelve un error al consumidor.  
   
- Por ejemplo, si se especifica DatabaseName = **'** AdventureWorks **'** en la cláusula WHERE, el proveedor intenta registrar una notificación de eventos en la base de datos de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Si la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existe y el cliente que realiza la llamada tiene los permisos necesarios para crear una notificación de eventos en [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], el registro es satisfactorio. De lo contrario, se intenta registrar la notificación de eventos en el nivel de servidor. El registro es satisfactorio si el cliente de WMI tiene los permisos necesarios. Sin embargo, en esta situación, los eventos no se devuelven al cliente hasta que no se haya creado la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ Por ejemplo, si se especifica DatabaseName =**'** AdventureWorks **'** en la cláusula WHERE, el proveedor intenta registrar una notificación de eventos en la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos. Si la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existe y el cliente que realiza la llamada tiene los permisos necesarios para crear una notificación de eventos en [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], el registro es satisfactorio. De lo contrario, se intenta registrar la notificación de eventos en el nivel de servidor. El registro es satisfactorio si el cliente de WMI tiene los permisos necesarios. Sin embargo, en esta situación, los eventos no se devuelven al cliente hasta que no se haya creado la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
  El *where_condition* también puede actuar como filtro para limitar además la consulta a una base de datos, un esquema o un objeto específicos. Por ejemplo, considere la siguiente consulta WQL:  
   
@@ -106,7 +106,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  Si se especifica una expresión compuesta como `DatabaseName='AW1'` OR `DatabaseName='AW2'`, se intenta registrar una notificación de eventos única en el ámbito de servidor en lugar de dos notificaciones de eventos independientes. El registro es satisfactorio si el cliente que realiza la llamada tiene permisos.  
   
- Si todos los `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` se especifican en la cláusula `WHERE`, se intenta registrar la notificación de eventos directamente en el objeto `Z` en el `X`de esquemas. El registro es satisfactorio si el cliente que realiza la llamada tiene permisos. Tenga en cuenta que, actualmente, los eventos de nivel de objeto solo se admiten en las colas y solo en el *event_type*de QUEUE_ACTIVATION.  
+ Si `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` se especifican todos en `WHERE` la cláusula, se intenta registrar la notificación de eventos directamente en el objeto `Z` en el `X`esquema. El registro es satisfactorio si el cliente que realiza la llamada tiene permisos. Tenga en cuenta que, actualmente, los eventos de nivel de objeto solo se admiten en las colas y solo en el *event_type*de QUEUE_ACTIVATION.  
   
  Observe que no todos los eventos se pueden consultar en cualquier ámbito determinado. Por ejemplo, una consulta WQL en un evento de seguimiento como Lock_Deadlock o un grupo de eventos de seguimiento como TRC_LOCKS, solo se puede registrar en el nivel de servidor. De forma similar, el evento CREATE_ENDPOINT y el grupo de eventos DDL_ENDPOINT_EVENTS también se pueden registrar solo en el nivel de servidor. Para obtener más información acerca del ámbito adecuado para registrar eventos, consulte [diseño de notificaciones de eventos](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). Un intento de registrar una consulta WQL cuyo *event_type* solo se puede registrar en el nivel de servidor siempre se realiza en el nivel de servidor. El registro es satisfactorio si el cliente de WMI tiene permisos. De lo contrario, se devuelve un error al cliente. En algunos casos, sin embargo, puede utilizar todavía la cláusula WHERE como filtro para los eventos en el nivel de servidor basados en las propiedades que corresponden al evento. Por ejemplo, muchos eventos de seguimiento tienen una propiedad **DatabaseName** que se puede usar en la cláusula WHERE como filtro.  
   
@@ -123,7 +123,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 SELECT * FROM SERVER_MEMORY_CHANGE  
 ```  
   
-### <a name="b-querying-for-events-at-the-database-scope"></a>b. Consultar eventos en el ámbito de base de datos  
+### <a name="b-querying-for-events-at-the-database-scope"></a>B. Consultar eventos en el ámbito de base de datos  
  La consulta WQL siguiente recupera propiedades de evento concretas de los eventos que se produzcan en la base de datos `AdventureWorks` y existan bajo el grupo de eventos `DDL_DATABASE_LEVEL_EVENTS`.  
   
 ```  
@@ -140,8 +140,8 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
     AND ObjectType='Table' AND ObjectName = 'SalesOrderDetail'  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos del proveedor WMI para eventos de servidor](https://technet.microsoft.com/library/ms180560.aspx)   
- [Notificaciones de eventos (Motor de base de datos)](https://technet.microsoft.com/library/ms182602.aspx)  
+ [Notificaciones de eventos (motor de base de datos)](https://technet.microsoft.com/library/ms182602.aspx)  
   
   

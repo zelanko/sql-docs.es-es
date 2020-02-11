@@ -11,10 +11,10 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 95c29509d9b08390a21598c94cdb64ccdd92cf36
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728031"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Características y tareas de Master Data Services
@@ -31,7 +31,7 @@ ms.locfileid: "73728031"
   
 -   [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
--   [Atributos basados en dominios &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Atributos basados en dominio &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [Grupos de atributos &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)  
   
@@ -53,15 +53,15 @@ ms.locfileid: "73728031"
   
 -   [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
--   [Validación &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
+-   [Master Data Services de &#40;de validación&#41;](../master-data-services/validation-master-data-services.md)  
   
 -   [Versiones &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
 -   [Notificaciones &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [Seguridad &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+-   [Master Data Services de &#40;de seguridad&#41;](../master-data-services/security-master-data-services.md)  
   
-## <a name="move-data"></a>Mover datos  
+## <a name="move-data"></a>Traslado de datos  
   
 -   [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

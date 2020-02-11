@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 98ef57702b01a3f32babd6b0ac9b64fb3c22e9ea
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727658"
 ---
 # <a name="r-language-extension-in-sql-server"></a>Extensión del lenguaje R en SQL Server
@@ -25,7 +25,7 @@ La integración de R está disponible en [SQL Server R Services](../r/sql-serve
 
 ## <a name="r-components"></a>Componentes de R
 
-SQL Server incluye los paquetes de código abierto y de propietario. Las bibliotecas de R base se instalan a través de la distribución de R de código abierto de Microsoft: Microsoft R Open (MRO). Los usuarios actuales de R deben poder portar su código de R y ejecutarlo como un proceso externo en SQL Server con pocas modificaciones o ninguna. MRO se instala independientemente de las herramientas de SQL y se ejecuta fuera de los procesos principales del motor, en el marco de extensibilidad. Durante la instalación, debe dar su consentimiento a los términos de la licencia de código abierto. Cuando lo haga, podrá ejecutar paquetes de R estándar sin necesidad de realizar ninguna modificación más, tal y como sucede con cualquier otra distribución de código abierto de R. 
+SQL Server incluye paquetes tanto de código abierto como de propietario. Las bibliotecas de R base se instalan a través de la distribución de R de código abierto de Microsoft: Microsoft R Open (MRO). Los usuarios actuales de R deben poder portar su código de R y ejecutarlo como un proceso externo en SQL Server con pocas modificaciones o ninguna. MRO se instala independientemente de las herramientas de SQL y se ejecuta fuera de los procesos principales del motor, en el marco de extensibilidad. Durante la instalación, debe dar su consentimiento a los términos de la licencia de código abierto. Cuando lo haga, podrá ejecutar paquetes de R estándar sin necesidad de realizar ninguna modificación más, tal y como sucede con cualquier otra distribución de código abierto de R. 
 
 SQL Server no modifica los ejecutables base de R, pero se debe usar la versión de R que instala el programa de instalación, ya que esa versión es en la que se compilan y prueban los paquetes de propietario. Para obtener más información sobre las diferencias entre MRO y una distribución base de R que podría obtener de CRAN, vea [Interoperabilidad con el lenguaje R y los productos y características de Microsoft R](https://docs.microsoft.com/r-server/what-is-r-server-interoperability).
 
@@ -35,8 +35,8 @@ Los paquetes de R que agrega Microsoft para cargas de trabajo paralelas y distri
 
 | Biblioteca | Descripción |
 |---------|-------------|
-| [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | Admite objetos de origen de datos y exploración, manipulación, transformación y visualización de datos. Admite la creación de contextos de proceso remotos, así como varios modelos de aprendizaje automático escalables, como **rxLinMod**. Estas API se han optimizado para analizar los conjuntos de datos que son demasiado grandes para caber en la memoria, así como para realizar cálculos que se distribuyen a través de varios núcleos o procesadores. El paquete RevoScaleR también admite el formato de archivo XDF, lo que permite mover y almacenar más rápidamente los datos empleados en los análisis. El formato XDF usa el almacenamiento en columnas, es portátil y se puede usar para cargar y manipular datos procedentes de distintos orígenes, como texto, SPSS o una conexión ODBC. |
-| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | Contiene algoritmos de aprendizaje automático que se han optimizado para la velocidad y precisión, así como las transformaciones en línea para trabajar con texto e imágenes. Para obtener más información, vea [MicrosoftML en SQL Server](../r/ref-r-microsoftml.md). | 
+| [**RevoScaleR**](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | Admite objetos de origen de datos y la exploración, manipulación, transformación y visualización de datos. Admite la creación de contextos de proceso remotos, así como varios modelos de aprendizaje automático escalables, como **rxLinMod**. Estas API se han optimizado para analizar los conjuntos de datos que son demasiado grandes para caber en la memoria, así como para realizar cálculos que se distribuyen a través de varios núcleos o procesadores. El paquete RevoScaleR también admite el formato de archivo XDF, lo que permite mover y almacenar más rápidamente los datos empleados en los análisis. El formato XDF usa el almacenamiento en columnas, es portátil y se puede usar para cargar y manipular datos procedentes de distintos orígenes, como texto, SPSS o una conexión ODBC. |
+| [**MicrosoftML**](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package) | Contiene algoritmos de Machine Learning que se han optimizado para ser más rápidos y precisos, así como transformaciones en línea para trabajar con texto e imágenes. Para obtener más información, vea [MicrosoftML en SQL Server](../r/ref-r-microsoftml.md). | 
 
 ## <a name="using-r-in-sql-server"></a>Uso de R en SQL Server
 
@@ -59,7 +59,7 @@ El código de R que se ejecuta desde "dentro" de SQL Server se ejecuta mediante
 ![rsql_indb780-01](../r/media/script_in-db-r.png)
 
 1. Mediante el parámetro _@language='R'_ pasado al procedimiento almacenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), se indica una solicitud para el tiempo de ejecución de R. SQL Server envía esta solicitud al servicio Launchpad.
-En Linux, SQL usa un servicio **Launchpad** a fin de comunicarse con un proceso de Launchpad independiente para cada usuario. Consulte el [Diagrama de la arquitectura de extensibilidad](extensibility-framework.md#architecture-diagram) para obtener más información.
+En Linux, SQL usa un servicio **Launchpad** a fin de comunicarse con un proceso de Launchpad independiente para cada usuario. Vea el [Diagrama de la arquitectura de extensibilidad](extensibility-framework.md#architecture-diagram) para más información.
 2. El servicio Launchpad inicia el selector adecuado, en este caso, RLauncher.
 3. RLauncher inicia el proceso externo de R.
 4. BxlServer coordina con el entorno de ejecución de R la administración de los intercambios de datos con SQL Server y el almacenamiento de los resultados del trabajo.
@@ -83,7 +83,7 @@ Al conectarse desde un cliente de ciencia de datos remoto que admite Microsoft 
 8. SQL Satellite administra la comunicación con SQL Server y la limpieza de los objetos de trabajo relacionados.
 9. SQL Server devuelve los resultados al cliente.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 + [Marco de extensibilidad en SQL Server](extensibility-framework.md)
 + [Extensiones de Python y aprendizaje automático en SQL Server](extension-python.md)

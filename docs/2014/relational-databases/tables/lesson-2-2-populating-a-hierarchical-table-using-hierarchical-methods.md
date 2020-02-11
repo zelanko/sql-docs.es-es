@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110056"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Rellenar una tabla jerárquica usando métodos jerárquicos
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] tiene 8 empleados que trabajan en el departamento de marketing. La jerarquía de empleados ofrece el siguiente aspecto:  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]tiene 8 empleados que trabajan en el Departamento de marketing. La jerarquía de empleados ofrece el siguiente aspecto:  
   
  **David**, **EmployeeID** 6, es el jefe de marketing. Tres especialistas en marketing notifican a **David**:  
   
@@ -64,7 +64,8 @@ ms.locfileid: "66110056"
   
 ### <a name="to-insert-a-subordinate-employee"></a>Para insertar a un empleado subordinado  
   
-1.  **Sariya** notifica a **David**. Para insertar **Sariya** nodo, debe crear un adecuado **OrgNode** valor de tipo de datos `hierarchyid`. El código siguiente crea una variable de tipo de datos de `hierarchyid` y lo rellena con el valor raíz OrgNode de la tabla. Después, usa esa variable con el método [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) para insertar una fila que es un nodo subordinado. `GetDescendant` toma dos argumentos. Revise las opciones siguientes de los valores de argumento:  
+1.  **Sariya** informa a **David**. Para insertar el nodo **de Sariya** , debe crear un valor **OrgNode** adecuado del tipo `hierarchyid`de datos. El código siguiente crea una variable de tipo de datos de `hierarchyid` y lo rellena con el valor raíz OrgNode de la tabla. Después, usa esa variable con el método [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) para insertar una fila que es un nodo subordinado. 
+  `GetDescendant` toma dos argumentos. Revise las opciones siguientes de los valores de argumento:  
   
     -   Si el elemento primario es NULL, `GetDescendant` devolverá NULL.  
   

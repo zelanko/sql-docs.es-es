@@ -1,5 +1,5 @@
 ---
-title: 'Lección 6: Definir cálculos | Microsoft Docs'
+title: 'Lección 6: definir cálculos | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530842"
 ---
-# <a name="lesson-6-defining-calculations"></a>Lección 6: Definición de cálculos
+# <a name="lesson-6-defining-calculations"></a>Lección 6: Definir cálculos
   En esta lección, aprenderá a definir cálculos, que son scripts o expresiones de Expresiones multidimensionales (MDX). Los cálculos le permiten definir miembros calculados, conjuntos con nombre y ejecutar otros comandos de script para ampliar las capacidades de un cubo de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Por ejemplo, puede ejecutar un comando de script para definir un subcubo y, a continuación, asignar un cálculo a las celdas del subcubo.  
   
  Al definir un nuevo cálculo en el Diseñador de cubos, el cálculo se agrega al panel **Organizador de script** de la pestaña **Cálculos** del Diseñador de cubos, y los campos del tipo de cálculo en cuestión aparecen en un formulario de cálculos en el panel de las **expresiones de cálculo** . Los cálculos se ejecutan en el orden en el que aparecen en el panel **Organizador de script** . Para reorganizar los cálculos, haga clic con el botón derecho en un cálculo determinado y seleccione **Subir** o **Bajar**, o haga clic en un cálculo determinado y use los iconos **Subir** o **Bajar** en la barra de herramientas de la pestaña **Cálculos** .  
@@ -41,7 +41,7 @@ ms.locfileid: "69530842"
  Para obtener más información, consulte [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)y [Cálculos en modelos multidimensionales](multidimensional-models/calculations-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que tienen que ver con este tutorial.  
+>  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que acompañan a este tutorial.  
   
  Esta lección contiene las siguientes tareas:  
   
@@ -52,11 +52,11 @@ ms.locfileid: "69530842"
  En esta tarea, aprenderá a definir conjuntos con nombre.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 7: Definición de KPI clave &#40;de indicadores de rendimiento&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Lección 7: definir indicadores clave de rendimiento &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Escenario de Analysis Services tutorial](analysis-services-tutorial-scenario.md)   
- [Tutorial de Adventure Works &#40;para el modelado multidimensional&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Modelo multidimensional &#40;tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Crear conjuntos con nombre](multidimensional-models/create-named-sets.md)   
  [Crear miembros calculados](multidimensional-models/create-calculated-members.md)  
   

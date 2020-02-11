@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4381047ad4373a2a5b03dc9ba1c96274b37621f2
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530848"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ocultar y deshabilitar jerarquías de atributo
@@ -49,27 +49,27 @@ ms.locfileid: "69530848"
   
 2.  Compruebe que las jerarquías de atributo siguientes aparecen en la lista **Jerarquía** :  
   
-    -   **Base Rate**  
+    -   **Velocidad base**  
   
-    -   **Fecha de nacimiento**  
+    -   **Birth Date**  
   
-    -   **Id. de inicio de sesión**  
+    -   **IDENTIFICADOR de inicio de sesión**  
   
-    -   **Número de seguridad social del director**  
+    -   **SSN del administrador**  
   
-    -   **SSN**  
+    -   **S.S.**  
   
 3.  Vaya a la pestaña **Estructura de dimensión** y seleccione los atributos siguientes en el panel **Atributos** . Para seleccionar varias medidas, haga clic en cada una de ellas mientras mantiene presionada la tecla CTRL:  
   
-    -   **Base Rate**  
+    -   **Velocidad base**  
   
-    -   **Fecha de nacimiento**  
+    -   **Birth Date**  
   
-    -   **Id. de inicio de sesión**  
+    -   **IDENTIFICADOR de inicio de sesión**  
   
-    -   **Número de seguridad social del director**  
+    -   **SSN del administrador**  
   
-    -   **SSN**  
+    -   **S.S.**  
   
 4.  En la ventana Propiedades, establezca el valor de la propiedad **AttributeHierarchyEnabled** en **False** para los atributos seleccionados.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "69530848"
   
      En la imagen siguiente se muestra la propiedad **AttributeHierarchyEnabled** establecida en False para los atributos seleccionados.  
   
-     ![Propiedad AttributeHierarchyEnabled establecida en false](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Propiedad AttributeHierarchyEnabled establecida en false")  
+     ![Propiedad AttributeHierarchyEnabled establecida en False](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Propiedad AttributeHierarchyEnabled establecida en False")  
   
 5.  En el menú **Compilar** , haga clic en **Tutorial de Implementar Analysis Services**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69530848"
   
      En la imagen siguiente se muestra la propiedad **AttributeHierarchyVisible** establecida en False.  
   
-     ![Propiedad AttributeHierarchyVisible establecida en false](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "Propiedad AttributeHierarchyVisible establecida en false")  
+     ![Propiedad AttributeHierarchyVisible establecida en False](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "Propiedad AttributeHierarchyVisible establecida en False")  
   
 5.  Arrastre el atributo **Postal Code** del panel **Atributos** a la jerarquía de usuario **Customer Geography** en el panel **Jerarquías y niveles** que se encuentra justo en el nivel **City** .  
   

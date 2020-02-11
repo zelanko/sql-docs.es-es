@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de información del distribuidor de replicación de SQL Server | Microsoft Docs
+title: Cuadro de diálogo Replicación de SQL Server ' información del distribuidor ' | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721360"
 ---
-# <a name="distributor-information-dialog-box"></a>Cuadro de diálogo de información de distribuidor 
-Este tema proporciona información sobre la **distribuidor** cuadro de diálogo 
+# <a name="distributor-information-dialog-box"></a>Información del distribuidor (cuadro de diálogo) 
+En este tema se proporciona información sobre el cuadro de diálogo **distribuidor** 
 
 ## <a name="publications"></a>Publicaciones
 
@@ -59,12 +59,12 @@ Este tema proporciona información sobre la **distribuidor** cuadro de diálogo
  Estado del agente. En la lista siguiente se muestran los valores de estado posibles:  
   
 -   Error    
--   Reintentar    
+-   Reintento    
 -   En ejecución    
 -   No está en ejecución    
 -   No se ha iniciado nunca  
   
- **publicador**  
+ **Publicador**  
  La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del publicador.  
   
  **Publicación**  
@@ -79,7 +79,7 @@ Este tema proporciona información sobre la **distribuidor** cuadro de diálogo
  **Última hora de inicio**  
  Última hora en que se inició el agente.  
   
- **Duración**  
+ **Duration**  
  Intervalo de tiempo que se ejecutó el agente. Este tiempo representa el tiempo transcurrido si el agente se está ejecutando actualmente o el tiempo total de ejecución si ya finalizó la ejecución.  
   
  **Última acción**  
@@ -88,7 +88,7 @@ Este tema proporciona información sobre la **distribuidor** cuadro de diálogo
  **Tasa de entrega**  
  La tasa, en comandos por segundo, a la que se confirman los comandos de inicialización en la base de datos de distribución durante la última ejecución del agente.  
   
- **Latencia**  
+ **Latency**  
  El tiempo, en segundos, que ha transcurrido entre el último cambio confirmado en la base de datos de publicación y el comando correspondiente que se confirma en la base de datos de distribución.  
   
  **#Trans**  
@@ -97,7 +97,7 @@ Este tema proporciona información sobre la **distribuidor** cuadro de diálogo
  **#Cmds**  
  El número de comandos confirmados en la base de datos de distribución durante la última ejecución del agente. Un comando es lo mismo que un cambio en los datos, como una actualización.  
   
- **Promedio de número de comandos**  
+ **Avg. #Cmds**  
  El promedio de comandos por transacción durante la última ejecución del agente.  
   
 ### <a name="merge-agent"></a>Agente de mezcla  
@@ -105,12 +105,12 @@ Este tema proporciona información sobre la **distribuidor** cuadro de diálogo
  Estado del agente. En la lista siguiente se muestran los valores de estado posibles:  
   
 -   Error    
--   Reintentar    
+-   Reintento    
 -   En ejecución    
 -   No está en ejecución    
 -   No se ha iniciado nunca  
   
- **publicador**  
+ **Publicador**  
  La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del publicador.  
   
  **Publicación**  
@@ -125,7 +125,7 @@ Este tema proporciona información sobre la **distribuidor** cuadro de diálogo
  **Última hora de inicio**  
  Última hora en que se inició el agente.  
   
- **Duración**  
+ **Duration**  
  Intervalo de tiempo que se ejecutó el agente. Este tiempo representa el tiempo transcurrido si el agente se está ejecutando actualmente o el tiempo total de ejecución si ya finalizó la ejecución.  
   
  **Última acción**  
@@ -159,7 +159,7 @@ Este tema proporciona información sobre la **distribuidor** cuadro de diálogo
  Número de conflictos producidos en el suscriptor durante el proceso de mezcla.  
   
  
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
  [Supervisar la replicación](monitoring-replication.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - cuadro de diálogo Buscar | Microsoft Docs
+title: 'SQL Server Profiler: cuadro de diálogo Buscar | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81ed454290a5ca62093fe9bdb619179106ca9985
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088855"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>Buscar (cuadro de diálogo de SQL Server Profiler)
@@ -31,9 +31,9 @@ ms.locfileid: "66088855"
  Escriba el texto que desea buscar. La búsqueda mostrará cualquier cadena que contenga la cadena especificada. Por ejemplo, la búsqueda de "Completed" devolverá "SQL:BatchCompleted". No se admiten caracteres comodín (*, ?, etc.).  
   
  **Buscar en columna**  
- Haga clic en la columna de datos en la que quiere realizar la búsqueda o haga clic en **\<Todas las columnas>** para realizar la búsqueda en todas las columnas de datos del seguimiento.  
+ Haga clic en una columna de datos para realizar la búsqueda o haga clic en ** \<todas las columnas>** para buscar en todas las columnas de datos del seguimiento.  
   
- **Coincidir mayúsculas y minúsculas**  
+ **Coincidencia mayúscula**  
  Busca texto en el que se usen las mismas mayúsculas y minúsculas que en el cuadro **Buscar** . Desactive esta casilla para buscar ejemplos del seguimiento que tengan caracteres tanto en mayúscula como en minúscula.  
   
  **Solo palabras completas**  
@@ -43,10 +43,10 @@ ms.locfileid: "66088855"
  Busca el ejemplo siguiente de los caracteres del cuadro **Buscar** .  
   
  **Buscar anterior**  
- Realiza una búsqueda hacia atrás en el seguimiento, para buscar el ejemplo anterior de los caracteres del cuadro **Buscar** .  
+ Realiza una búsqueda hacia atrás en el seguimiento, para buscar el ejemplo anterior de los caracteres del cuadro **Buscar**.  
   
-## <a name="see-also"></a>Vea también  
- [Buscar un valor o una columna de datos durante una traza &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
+## <a name="see-also"></a>Consulte también  
+ [Buscar un valor o una columna de datos durante el seguimiento de &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
  [Crear un seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   

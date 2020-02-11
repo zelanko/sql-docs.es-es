@@ -18,19 +18,19 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997474"
 ---
-# <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
+# <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve un informe con información acerca de los permisos de usuario para un objeto o los permisos de una instrucción en la base de datos actual.  
   
 > [!IMPORTANT]  
->  **sp_helprotect** no devuelve información acerca de los elementos protegibles que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Use [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) y [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) en su lugar.  
+>  **sp_helprotect** no devuelve información acerca de los elementos protegibles que [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]se introdujeron en. Use [Sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) y [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) en su lugar.  
   
  No muestra los permisos que se asignan siempre a los roles fijos de servidor o a los roles fijos de base de datos. No incluye los inicios de sesión o los usuarios que reciben los permisos en función de su pertenencia a un rol.  
   
@@ -47,32 +47,32 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'object_statement'` Es el nombre del objeto en la base de datos actual o una instrucción, que tiene los permisos para informes. *object_statement* es **nvarchar(776)** , su valor predeterminado es NULL, que devuelve todos los permisos de objetos e instrucciones. Si el valor es un objeto (tabla, vista, procedimiento almacenado o procedimiento almacenado extendido), tiene que ser un objeto válido de la base de datos actual. El nombre del objeto puede incluir un calificador de propietario en el formulario _propietario_ **.** _objeto_.  
+`[ @name = ] 'object_statement'`Es el nombre del objeto en la base de datos actual, o una instrucción, que tiene los permisos para notificar. *object_statement* es de tipo **nvarchar (776)** y su valor predeterminado es null, que devuelve todos los permisos de objeto y de instrucción. Si el valor es un objeto (tabla, vista, procedimiento almacenado o procedimiento almacenado extendido), tiene que ser un objeto válido de la base de datos actual. El nombre del objeto puede incluir un calificador de propietario en el formulario _Owner_**.** _objeto_.  
   
  Si *object_statement* es una instrucción, puede ser una instrucción CREATE.  
   
-`[ @username = ] 'security_account'` Es el nombre de la entidad de seguridad para el que se devuelven permisos. *security_account* es **sysname**, su valor predeterminado es null, que devuelve todas las entidades de la base de datos actual. *security_account* debe existir en la base de datos actual.  
+`[ @username = ] 'security_account'`Es el nombre de la entidad de seguridad para la que se devuelven los permisos. *security_account* es de **tipo sysname y su**valor predeterminado es null, que devuelve todas las entidades de seguridad en la base de datos actual. *security_account* debe existir en la base de datos actual.  
   
-`[ @grantorname = ] 'grantor'` Es el nombre de la entidad de seguridad que los permisos concedidos. *otorgante de permisos* es **sysname**, su valor predeterminado es NULL, que devuelve toda la información de permisos concedidos por la entidad de seguridad de la base de datos.  
+`[ @grantorname = ] 'grantor'`Es el nombre de la entidad de seguridad que concedió permisos. el *otorgante* es de **tipo sysname y su**valor predeterminado es null, que devuelve toda la información de los permisos concedidos por cualquier entidad de seguridad en la base de datos.  
   
-`[ @permissionarea = ] 'type'` Es una cadena de caracteres que indica si se muestran los permisos de objeto (cadena de caracteres **o**), los permisos de instrucción (cadena de caracteres **s**), o ambos (**os**). *tipo* es **varchar (10)** , su valor predeterminado es **os**. *tipo* puede ser cualquier combinación de **o** y **s**, con o sin comas o espacios en blanco entre **o** y **s**.  
+`[ @permissionarea = ] 'type'`Es una cadena de caracteres que indica si se van a mostrar los permisos de objeto **(cadena de**caracteres **o**), los permisos de instrucción (cadena de caracteres) o ambos (**so**). *Type* es de tipo **VARCHAR (10)** y su valor predeterminado es **os**. el *tipo* puede ser cualquier combinación **de o** y **s**, con o sin comas o espacios entre **o** y **s**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Propietario**|**sysname**|Nombre del propietario del objeto.|  
-|**Objeto**|**sysname**|Nombre del objeto.|  
-|**Receptor de permisos**|**sysname**|Nombre de la entidad de seguridad en la que se conceden los permisos.|  
+|**Object**|**sysname**|Nombre del objeto.|  
+|**Receptores**|**sysname**|Nombre de la entidad de seguridad en la que se conceden los permisos.|  
 |**Otorgante de permisos**|**sysname**|Nombre de la entidad de seguridad que ha concedido los permisos al receptor de permisos especificado.|  
-|**ProtectType**|**nvarchar(10)**|Nombre del tipo de protección:<br /><br /> GRANT REVOKE|  
-|**Acción**|**nvarchar(60)**|Nombre del permiso. Las instrucciones válidas de permisos dependen del tipo de objeto.|  
+|**ProtectType**|**nvarchar(10**|Nombre del tipo de protección:<br /><br /> GRANT REVOKE|  
+|**Acción**|**nvarchar (60)**|Nombre del permiso. Las instrucciones válidas de permisos dependen del tipo de objeto.|  
 |**Columna**|**sysname**|Tipo de permiso:<br /><br /> All = Permiso sobre todas las columnas actuales del objeto.<br /><br /> New = Permiso sobre las nuevas columnas del objeto que se pueden cambiar (mediante la instrucción ALTER) posteriormente.<br /><br /> All+New = Combinación de Todas y Nuevas.<br /><br /> Devuelve un punto si el tipo de permiso no se aplica a las columnas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Todos los parámetros del siguiente procedimiento son opcionales. Si se ejecuta sin parámetros, `sp_helprotect` presenta todos los permisos que se han concedido o denegado en la base de datos actual.  
   
  Si se especifican algunos parámetros, pero no todos, se tienen que utilizar parámetros con nombre para identificar el parámetro concreto o `NULL` como marcador de posición. Por ejemplo, para presentar todos los permisos del propietario de la base de datos del otorgante de permisos (`dbo`), ejecute:  
@@ -81,7 +81,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 EXEC sp_helprotect NULL, NULL, dbo;  
 ```  
   
- o bien  
+ Or  
   
 ```  
 EXEC sp_helprotect @grantorname = 'dbo';  
@@ -103,7 +103,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 EXEC sp_helprotect 'titles';  
 ```  
   
-### <a name="b-listing-the-permissions-for-a-user"></a>b. Presentar los permisos de un usuario  
+### <a name="b-listing-the-permissions-for-a-user"></a>B. Presentar los permisos de un usuario  
  En el siguiente ejemplo se presentan todos los permisos que el usuario `Judy` tiene en la base de datos actual.  
   
 ```  
@@ -131,9 +131,9 @@ EXEC sp_helprotect NULL, NULL, NULL, 's';
 EXEC sp_helprotect @name = 'CREATE TABLE';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
+ [Denegar &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

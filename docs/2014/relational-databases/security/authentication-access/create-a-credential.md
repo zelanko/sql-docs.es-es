@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012005"
 ---
 # <a name="create-a-credential"></a>Create a Credential
@@ -55,7 +55,7 @@ ms.locfileid: "63012005"
 ####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER ANY CREDENTIAL para crear o modificar una credencial y el permiso ALTER ANY LOGIN para asignar un inicio de sesión a una credencial.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-credential"></a>Para crear una credencial  
   
@@ -77,7 +77,7 @@ ms.locfileid: "63012005"
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-###  <a name="Credential"></a> Para crear una credencial  
+###  <a name="Credential"></a>Para crear una credencial  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

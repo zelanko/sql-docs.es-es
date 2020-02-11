@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055970"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantenimiento de valores de identidad al importar datos en bloque (SQL Server)
@@ -35,7 +35,7 @@ Si el archivo de datos no contiene valores para la columna de identificadores de
 ## Mantener valores de identidad <a name="keep_identity"></a>  
 Para impedir que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigne valores de identidad al importar de forma masiva filas de datos en una tabla, utilice el calificador de comando adecuado para mantener la identidad.  Al especificar un calificador para mantener la identidad, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza los valores de identidad del archivo de datos.  Estos calificadores son:
 
-|Comando|Calificador para mantener la identidad|Tipo de calificador|  
+|Get-Help|Calificador para mantener la identidad|Tipo de calificador|  
 |-------------|------------------------------|--------------------|  
 |BCP|-E|Switch|  
 |BULK INSERT|KEEPIDENTITY|Argumento|  

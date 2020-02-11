@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3308899190aa63ebb9be93c4c9af15d5e0f94600
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830399"
 ---
 # <a name="send-mail-task"></a>Enviar correo, tarea
@@ -56,7 +56,7 @@ ms.locfileid: "62830399"
  La tarea usa el administrador de conexiones SMTP para conectar con un servidor de correo. Para más información, consulte [SMTP Connection Manager](../connection-manager/smtp-connection-manager.md).  
   
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>Mensajes de registro personalizados disponibles en la tarea Enviar correo  
- La siguiente tabla contiene las entradas del registro personalizadas para la tarea Enviar correo. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene las entradas del registro personalizadas para la tarea Enviar correo. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -69,9 +69,9 @@ ms.locfileid: "62830399"
   
  Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea Enviar correo &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea enviar correo &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea Enviar correo &#40;página Correo&#41;](../send-mail-task-editor-mail-page.md)  
+-   [Editor de la tarea enviar correo &#40;página correo&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62830399"
   
 -   Artículo técnico [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Enviar un mensaje de correo electrónico con una notificación de entrega en C#) en shareourideas.com  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](integration-services-tasks.md)   
  [Flujo de control](control-flow.md)  
   

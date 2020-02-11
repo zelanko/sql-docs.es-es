@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f31a95815c3a6c365d179a350846ec6f9a8bb795
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098606"
 ---
-# <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Método BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
+# <a name="backupencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Método BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Realiza una copia de seguridad de la clave de cifrado de la instancia del servidor de informes especificada. La clave de cifrado se almacena cifrada con una contraseña.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -46,13 +46,13 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  *Contraseña*  
  Cadena utilizada para cifrar la clave de cifrado antes de devolverse.  
   
- *KeyFile[]*  
+ *KeyFile []*  
  [out] Matriz que contiene la clave de cifrado cifrada.  
   
- *Longitud*  
+ *Length*  
  [out] Longitud de la matriz devuelta por el método.  
   
- *HRESULT*  
+ *VALOR*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
  *ExtendedErrors[]*  
@@ -62,9 +62,9 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  
   
   

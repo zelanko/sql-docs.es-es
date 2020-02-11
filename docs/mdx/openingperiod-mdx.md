@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 07f94c3ed850af10120b1de7d95941bc5c90e826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088219"
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod (MDX)
@@ -34,17 +34,17 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
  *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta función se ha diseñado básicamente para su uso con la dimensión Time, aunque también se puede utilizar con cualquier dimensión.  
   
--   Si se especifica una expresión de nivel, el **OpeningPeriod** función usa la jerarquía que contiene el nivel especificado y devuelve el primer nodo relacionado entre los descendientes del miembro predeterminado en el nivel especificado.  
+-   Si se especifica una expresión de nivel, la función **OpeningPeriod** usa la jerarquía que contiene el nivel especificado y devuelve el primer elemento del mismo nivel entre los descendientes del miembro predeterminado en el nivel especificado.  
   
--   Si se especifican una expresión de nivel y una expresión de miembro, el **OpeningPeriod** función devuelve el primer nodo relacionado entre los descendientes del miembro especificado en el nivel especificado dentro de la jerarquía que contiene el texto especificado nivel.  
+-   Si se especifican una expresión de nivel y una expresión de miembro, la función **OpeningPeriod** devuelve el primer elemento del mismo nivel entre los descendientes del miembro especificado en el nivel especificado dentro de la jerarquía que contiene el nivel especificado.  
   
--   Si se especifica ni una expresión de nivel ni una expresión de miembro, el **OpeningPeriod** función usa el nivel predeterminado y un miembro de la dimensión con un tipo de tiempo.  
+-   Si no se especifican una expresión de nivel ni una expresión de miembro, la función **OpeningPeriod** utiliza el nivel predeterminado y el miembro de la dimensión con un tipo de tiempo.  
   
 > [!NOTE]  
->  El [ClosingPeriod](../mdx/closingperiod-mdx.md) función es similar a la **OpeningPeriod** funcione, salvo que el **ClosingPeriod** función devuelve el último elemento relacionado en lugar del primero elemento del mismo nivel.  
+>  La función [ClosingPeriod](../mdx/closingperiod-mdx.md) es similar a la función **OpeningPeriod** , salvo que la función **ClosingPeriod** devuelve el último miembro del mismo nivel en lugar del primero.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve el valor de la medida predeterminada para el miembro FY2002 de la dimensión Date (que posee un tipo Time). Se devuelve este miembro debido a que el nivel Fiscal Year es el primer descendiente del nivel [All], la jerarquía Fiscal es la predeterminada debido a que es la primera jerarquía definida por el usuario de la colección de jerarquías, y el miembro FY 2002 es el primer miembro del mismo nivel de esta jerarquía en este nivel.  
@@ -79,9 +79,9 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
+## <a name="see-also"></a>Consulte también  
+ [&#40;MDX&#41;](../mdx/topcount-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [FirstSibling &#40;MDX&#41;](../mdx/firstsibling-mdx.md)  
+ [&#41;FirstSibling &#40;MDX](../mdx/firstsibling-mdx.md)  
   
   

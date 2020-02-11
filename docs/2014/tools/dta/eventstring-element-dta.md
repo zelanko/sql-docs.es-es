@@ -1,5 +1,5 @@
 ---
-title: El elemento EventString (DTA) | Microsoft Docs
+title: EventString (DTA, elemento) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211116"
 ---
 # <a name="eventstring-element-dta"></a>EventString (DTA, elemento)
@@ -45,7 +45,7 @@ ms.locfileid: "68211116"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|**Tipo y longitud de los datos**|`string`, longitud es ilimitada.|  
+|**Tipo y longitud de los datos**|`string`, la longitud es ilimitada.|  
 |**Valor predeterminado**|Ninguno.|  
 |**Repetición**|Una obligatoria si no se especifica ningún otro tipo de carga de trabajo. Es necesario especificar un elemento secundario `EventString`, `File` o `Database` para el elemento primario `Workload`, aunque solo se puede utilizar un tipo. Por ejemplo, si se especifica una carga de trabajo con el elemento `EventString`, no se puede especificar una carga de trabajo con el elemento `File` en el mismo archivo de entrada XML.|  
   
@@ -53,13 +53,13 @@ ms.locfileid: "68211116"
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Workload &#40;DTA, elemento&#41;](workload-element-dta.md)|  
+|**Elemento primario**|[Elemento Workload &#40;DTA&#41;](workload-element-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con carga de trabajo insertada &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

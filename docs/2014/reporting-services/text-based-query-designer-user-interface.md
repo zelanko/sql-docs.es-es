@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ceec7e4a58b98763f7a3215d29087eb948ec0b41
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891330"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas basado en texto
@@ -30,7 +30,7 @@ ms.locfileid: "68891330"
   
 -   **Consulta** de Muestra el texto de la consulta, el nombre de la tabla o el nombre del procedimiento almacenado.  
   
--   **Resultado** Muestra los resultados de la ejecución de la consulta en tiempo de diseño.  
+-   **Resultado** de Muestra los resultados de la ejecución de la consulta en tiempo de diseño.  
   
 ## <a name="text-based-query-designer-toolbar"></a>Barra de herramientas del diseñador de consultas basado en texto  
  El diseñador de consultas basado en texto proporciona una sola barra de herramientas para todos los tipos de comando. La tabla siguiente contiene una lista con los botones de la barra de herramientas y sus funciones.  
@@ -55,7 +55,7 @@ ms.locfileid: "68891330"
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
 #### <a name="example"></a>Ejemplo  
- La siguiente consulta devuelve la lista de apellidos de la tabla `Contact` de la base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
+ La siguiente consulta devuelve la lista de apellidos de la tabla [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de la base de datos `Contact`.  
   
 ```  
 SELECT LastName FROM Person.Person;  
@@ -73,7 +73,7 @@ EXEC uspGetEmployeeManagers 1;
  Si selecciona **Tipo de comando StoredProcedure**, el diseñador de consultas basado en texto presenta dos paneles: el panel Consulta y el panel Resultado. Escriba el nombre del procedimiento almacenado en el panel Consulta y haga clic en **Ejecutar** en la barra de herramientas. Se abrirá el cuadro de diálogo Definir parámetros de consulta. Escriba los valores de los parámetros para el procedimiento almacenado. Se crea un parámetro de informe para cada parámetro de procedimiento almacenado.  
   
 #### <a name="example"></a>Ejemplo  
- La consulta siguiente llama al procedimiento almacenado `uspGetEmployeeManagers` de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]. Debe especificar un valor para el parámetro de número de identificación de empleado al ejecutar la consulta.  
+ La consulta siguiente llama al procedimiento almacenado [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de `uspGetEmployeeManagers`. Debe especificar un valor para el parámetro de número de identificación de empleado al ejecutar la consulta.  
   
 ```  
 uspGetEmployeeManagers;  
@@ -89,13 +89,13 @@ uspGetEmployeeManagers;
   
  Al escribir el nombre de la tabla sales. Customer, es equivalente a crear la [!INCLUDE[tsql](../includes/tsql-md.md)] instrucción. `SELECT * FROM Sales.Customer;`  
   
-## <a name="see-also"></a>Vea también  
- [Herramientas de diseño de consultas en &#40;diseñador de informes SQL Server Data Tools SSRS&#41;](report-data/query-design-tools-ssrs.md)   
+## <a name="see-also"></a>Consulte también  
+ [Herramientas de diseño de consultas en Diseñador de informes SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Tipo de conexión de SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
+ [Tipo de conexión SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
  [Tipo de conexión OLE DB &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
- [Tipo &#40;de conexión ODBC SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
+ [Tipo de conexión ODBC &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Archivo de configuración RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)  
+ [archivo de configuración RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400726"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configuración de polybase para acceder a datos externos en Azure BLOB Storage
@@ -23,7 +23,7 @@ En el artículo se explica cómo usar polybase en una instancia de SQL Server pa
 > [!NOTE]
 > APS actualmente solo admite Azure BLOB Storage estándar de uso general (LRS) con redundancia local (LRS).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
  - Almacenamiento de blobs de Azure en su suscripción.
  - Un contenedor creado en el almacenamiento de blobs de Azure.

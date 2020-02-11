@@ -13,109 +13,109 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 638c16de8312456410c14e38fa632085e504913e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266153"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Conversión de esquemas de Oracle (OracleToSQL)
-Después de haberse conectado a Oracle, conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y establecer el proyecto y las opciones de asignación de datos, puede convertir los objetos de base de datos de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de base de datos.  
+Después de conectarse a Oracle, conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y establecer las opciones de asignación de datos y de proyecto, puede convertir objetos de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos de Oracle en objetos de base de datos.  
   
-## <a name="the-conversion-process"></a>El proceso de conversión  
-Convertir objetos de base de datos toma las definiciones de objeto de Oracle, convierte a similar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos y, a continuación, se carga esta información en los metadatos SSMA. No se carga la información en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, puede ver los objetos y sus propiedades mediante el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos.  
+## <a name="the-conversion-process"></a>Proceso de conversión  
+La conversión de objetos de base de datos toma las definiciones de objetos de Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , las convierte en objetos similares y, a continuación, carga esta información en los metadatos de SSMA. No carga la información en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, puede ver los objetos y sus propiedades mediante el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explorador de metadatos.  
   
-Durante la conversión, SSMA imprime mensajes de salida en el panel salida y mensajes de error en el panel de lista de errores. Use la información de salida y error para determinar si tiene que modificar las bases de datos de Oracle o el proceso de conversión para obtener los resultados de la conversión deseada.  
+Durante la conversión, SSMA imprime los mensajes de salida en el panel de salida y los mensajes de error en el panel de Lista de errores. Utilice la información de salida y de error para determinar si tiene que modificar las bases de datos de Oracle o el proceso de conversión para obtener los resultados de la conversión deseada.  
   
-## <a name="setting-conversion-options"></a>Establecer las opciones de conversión  
-Antes de convertir los objetos, revise las opciones de conversión de proyecto en el **configuración del proyecto** cuadro de diálogo. Mediante este cuadro de diálogo, puede establecer cómo SSMA convierte las funciones y variables globales. Para obtener más información, consulte [configuración del proyecto &#40;conversión&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
+## <a name="setting-conversion-options"></a>Establecer opciones de conversión  
+Antes de convertir objetos, revise las opciones de conversión de proyectos en el cuadro de diálogo **configuración del proyecto** . Mediante este cuadro de diálogo, puede establecer cómo SSMA convierte las funciones y las variables globales. Para obtener más información, vea [configuración del proyecto &#40;conversión&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
   
 ## <a name="conversion-results"></a>Resultados de la conversión  
-La siguiente tabla muestra qué objetos de Oracle se convierten y resultante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos:  
+En la tabla siguiente se muestran los objetos de Oracle convertidos y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los objetos resultantes:  
   
 |||  
 |-|-|  
-|Objetos de Oracle|Objetos de SQL Server resultantes|  
-|Funciones|Si la función se puede convertir directamente en [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA crea una función.<br /><br />En algunos casos, la función debe convertirse a un procedimiento almacenado. En este caso, SSMA crea un procedimiento almacenado o una función que llama al procedimiento almacenado.|  
-|Procedimientos|Si el procedimiento se puede convertir directamente en [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA crea un procedimiento almacenado.<br /><br />En algunos casos, un procedimiento almacenado debe llamarse en una transacción autónoma. En este caso, SSMA crea dos procedimientos almacenados: uno que implementa el procedimiento y otro que se usa para llamar a la que implementa el procedimiento almacenado.|  
-|.|SSMA crea un conjunto de procedimientos almacenados y funciones que están unificadas por nombres de objetos similares.|  
-|Secuencias|SSMA crea los objetos de secuencia (SQL Server 2012 o SQL Server 2014) o emula las secuencias de Oracle.|  
-|Tablas con los objetos dependientes, como índices y desencadenadores|SSMA crea las tablas con los objetos dependientes.|  
-|Ver con los objetos dependientes, como los desencadenadores|SSMA crea vistas con los objetos dependientes.|  
-|Vistas materializadas|**SSMA crea vistas indizadas en SQL server con algunas excepciones. Se producirá un error en la conversión si la vista materializada incluye una o varias de las siguientes construcciones:**<br /><br />Función definida por el usuario<br /><br />Campo no determinista de función o expresión SELECT, donde o cláusulas GROUP BY<br /><br />Uso de Float de columna en SELECT *, donde o cláusulas GROUP BY (caso especial de problema anterior)<br /><br />Tipo de datos personalizado (incluido anidadas tablas)<br /><br />COUNT (distinct &lt;campo&gt;)<br /><br />FETCH<br /><br />Combinaciones externas (LEFT, RIGHT o FULL)<br /><br />Subconsulta, otra vista<br /><br />OTRA VEZ, RANK, CLIENTE POTENCIAL, INICIE SESIÓN<br /><br />MIN, MAX<br /><br />UNION, EL SIGNO MENOS, FORMAN UNA INTERSECCIÓN<br /><br />HAVING|  
-|Desencadenador|**SSMA crea desencadenadores en función de las reglas siguientes:**<br /><br />ANTES de que los desencadenadores se convierten en los desencadenadores INSTEAD OF.<br /><br />Los desencadenadores AFTER se convierten en los desencadenadores AFTER.<br /><br />Los desencadenadores INSTEAD OF se convierten en los desencadenadores INSTEAD OF. Varios desencadenadores INSTEAD OF definidos en la misma operación se combinan en un desencadenador.<br /><br />Los desencadenadores de nivel de fila se emulan con cursores.<br /><br />Los desencadenadores en cascada se convierten en varios desencadenadores individuales.|  
-|Sinónimos|**Sinónimos se crean para los tipos de objeto siguientes:**<br /><br />Las tablas y objetos<br /><br />Vistas y objetos<br /><br />Procedimientos almacenados<br /><br />Funciones<br /><br />**Sinónimos de los objetos siguientes están resueltas y reemplazados por referencias a objetos directos:**<br /><br />Secuencias<br /><br />.<br /><br />Objetos de esquema de clase de Java<br /><br />Tipos de objeto definido por el usuario<br /><br />Sinónimos de otro sinónimo no pueden migrarse y se marcará como errores.<br /><br />Sinónimos no se crean para las vistas de Materialized.|  
-|Tipos definidos por el usuario|**SSMA no proporciona soporte técnico para la conversión de tipos definidos por el usuario. Tipos definidos por el usuario, incluyendo su uso en programas de PL/SQL se marcan con errores de conversión especial guiados por las reglas siguientes:**<br /><br />Columna de tabla de un tipo definido por el usuario se convierte a varchar (8000).<br /><br />Tipo definido por el argumento de usuario a un procedimiento almacenado o función se convierte a varchar (8000).<br /><br />Variable de tipo definido por el usuario en el bloque de PL/SQL se convierte a varchar (8000).<br /><br />Tabla de objetos se convierte en una tabla estándar.<br /><br />Vista del objeto se convierte en una vista estándar.|  
+|Objetos de Oracle|Objetos SQL Server resultantes|  
+|Functions|Si la función se puede convertir directamente en [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA crea una función.<br /><br />En algunos casos, la función se debe convertir en un procedimiento almacenado. En este caso, SSMA crea un procedimiento almacenado y una función que llama al procedimiento almacenado.|  
+|Procedimientos|Si el procedimiento se puede convertir directamente en [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA crea un procedimiento almacenado.<br /><br />En algunos casos, se debe llamar a un procedimiento almacenado en una transacción autónoma. En este caso, SSMA crea dos procedimientos almacenados: uno que implementa el procedimiento y otro que se utiliza para llamar al procedimiento almacenado de implementación.|  
+|Paquetes|SSMA crea un conjunto de procedimientos almacenados y funciones que se unifican mediante nombres de objeto similares.|  
+|Secuencias|SSMA crea objetos de secuencia (SQL Server 2012 o SQL Server 2014) o emula secuencias de Oracle.|  
+|Tablas con objetos dependientes como índices y desencadenadores|SSMA crea tablas con objetos dependientes.|  
+|Ver con objetos dependientes, como desencadenadores|SSMA crea vistas con objetos dependientes.|  
+|Vistas materializadas|**SSMA crea vistas indizadas en SQL Server con algunas excepciones. Se producirá un error en la conversión si la vista materializada incluye una o varias de las construcciones siguientes:**<br /><br />Función definida por el usuario<br /><br />Campo/función/expresión no determinista en las cláusulas SELECT, WHERE o GROUP BY<br /><br />Uso de la columna Float en las cláusulas SELECT *, WHERE o GROUP BY (caso especial del problema anterior)<br /><br />Tipo de datos personalizado (incl. tablas anidadas)<br /><br />COUNT (campo &lt;&gt;distinto)<br /><br />FETCH<br /><br />Combinaciones externas (LEFT, RIGHT o FULL)<br /><br />Subconsulta, otra vista<br /><br />SOBRE, RANGO, CLIENTE POTENCIAL, REGISTRO<br /><br />MIN, MAX<br /><br />UNION, MENOS, INTERSECT<br /><br />HAVING|  
+|Desencadenador|**SSMA crea desencadenadores basados en las siguientes reglas:**<br /><br />ANTES de que los desencadenadores se conviertan en desencadenadores INSTEAD OF.<br /><br />Los desencadenadores AFTER se convierten en desencadenadores AFTER.<br /><br />Los desencadenadores INSTEAD OF se convierten en desencadenadores INSTEAD OF. Varios desencadenadores INSTEAD OF definidos en la misma operación se combinan en un solo desencadenador.<br /><br />Los desencadenadores de nivel de fila se emulan mediante cursores.<br /><br />Los desencadenadores en cascada se convierten en varios desencadenadores individuales.|  
+|Sinónimos|**Los sinónimos se crean para los siguientes tipos de objeto:**<br /><br />Tablas y tablas de objetos<br /><br />Vistas y vistas de objetos<br /><br />Procedimientos almacenados<br /><br />Functions<br /><br />**Los sinónimos de los siguientes objetos se resuelven y se reemplazan por referencias de objeto directas:**<br /><br />Secuencias<br /><br />Paquetes<br /><br />Objetos de esquema de clase Java<br /><br />Tipos de objetos definidos por el usuario<br /><br />Los sinónimos de otro sinónimo no se pueden migrar y se marcarán como errores.<br /><br />No se crean sinónimos para vistas materializadas.|  
+|Tipos definidos por el usuario|**SSMA no proporciona compatibilidad para la conversión de tipos definidos por el usuario. Los tipos definidos por el usuario, incluido su uso en programas PL/SQL, se marcan con errores de conversión especiales guiados por las siguientes reglas:**<br /><br />La columna de tabla de un tipo definido por el usuario se convierte en VARCHAR (8000).<br /><br />El argumento del tipo definido por el usuario para un procedimiento almacenado o una función se convierte en VARCHAR (8000).<br /><br />La variable de tipo definido por el usuario en el bloque PL/SQL se convierte en VARCHAR (8000).<br /><br />La tabla de objetos se convierte en una tabla estándar.<br /><br />La vista de objetos se convierte en una vista estándar.|  
   
-## <a name="converting-oracle-database-objects"></a>Convertir objetos de base de datos de Oracle  
-Para convertir los objetos de base de datos de Oracle, seleccione primero los objetos que desea convertir y, a continuación, tener SSMA para realizar la conversión. Para ver los mensajes de salida durante la conversión, en el **vista** menú, seleccione **salida**.  
+## <a name="converting-oracle-database-objects"></a>Convertir objetos Oracle Database  
+Para convertir objetos de base de datos de Oracle, primero debe seleccionar los objetos que desea convertir y, a continuación, usar SSMA para realizar la conversión. Para ver los mensajes de salida durante la conversión, en el menú **Ver** , seleccione **salida**.  
   
-**Para convertir los objetos de Oracle en la sintaxis de SQL Server**  
+**Para convertir objetos de Oracle en SQL Server sintaxis**  
   
-1.  En el Explorador de metadatos de Oracle, expanda el servidor de Oracle y, a continuación, expanda **esquemas**.  
+1.  En el explorador de metadatos de Oracle, expanda el servidor de Oracle y, a continuación, expanda **esquemas**.  
   
-2.  Seleccione los objetos que desea convertir:  
+2.  Seleccionar los objetos que se van a convertir:  
   
-    -   Para convertir todos los esquemas, seleccione la casilla de verificación junto a **esquemas**.  
+    -   Para convertir todos los esquemas, active la casilla situada junto a **esquemas**.  
   
-    -   Para convertir u omitir una base de datos, seleccione la casilla de verificación junto al nombre del esquema.  
+    -   Para convertir u omitir una base de datos, active la casilla situada junto al nombre del esquema.  
   
-    -   Para convertir u omitir una categoría de objetos, expanda un esquema y, a continuación, active o desactive la casilla de verificación junto a la categoría.  
+    -   Para convertir u omitir una categoría de objetos, expanda un esquema y, a continuación, Active o desactive la casilla situada junto a la categoría.  
   
-    -   Para convertir u omitir los objetos individuales, expanda la carpeta de categoría y, a continuación, active o desactive la casilla de verificación situada junto al objeto.  
+    -   Para convertir u omitir objetos individuales, expanda la carpeta categoría y, a continuación, Active o desactive la casilla situada junto al objeto.  
   
-3.  Para convertir todos los objetos seleccionados, haga clic en **esquemas** y seleccione **convertir esquema**.  
+3.  Para convertir todos los objetos seleccionados, haga clic con el botón derecho en **esquemas** y seleccione **convertir esquema**.  
   
-    También puede convertir los objetos individuales o categorías de objetos haciendo clic en el objeto o su carpeta principal y, a continuación, seleccione **convertir esquema**.  
+    También puede convertir objetos individuales o categorías de objetos; para ello, haga clic con el botón secundario en el objeto o en su carpeta primaria y, a continuación, seleccione **convertir esquema**.  
   
-## <a name="viewing-conversion-problems"></a>Ver los problemas de conversión  
-No se pueden convertir algunos objetos de Oracle. Puede determinar las tasas de éxito de conversión viendo el informe de resumen de conversión.  
+## <a name="viewing-conversion-problems"></a>Ver problemas de conversión  
+Es posible que algunos objetos de Oracle no se conviertan. Puede determinar las tasas de éxito de la conversión viendo el informe de conversión de resumen.  
   
-**Para ver un informe de resumen**  
+**Para ver un informe de Resumen**  
   
-1.  En el Explorador de metadatos de Oracle, seleccione **esquemas**.  
+1.  En el explorador de metadatos de Oracle, seleccione **esquemas**.  
   
-2.  En el panel derecho, seleccione el **informe** ficha.  
+2.  En el panel derecho, seleccione la pestaña **Informe** .  
   
-    Este informe muestra el informe de resumen de evaluación para todos los objetos de base de datos que se han evaluado o convertir. También puede ver un informe de resumen de los objetos individuales:  
+    Este informe muestra el informe de evaluación de resumen para todos los objetos de base de datos que se han evaluado o convertido. También puede ver un informe de resumen para objetos individuales:  
   
-    -   Para ver el informe para un esquema individual, seleccione el esquema en el Explorador de metadatos de Oracle.  
+    -   Para ver el informe de un esquema individual, seleccione el esquema en el explorador de metadatos de Oracle.  
   
-    -   Para ver el informe para un objeto individual, seleccione el objeto en el Explorador de metadatos de Oracle. Los objetos que tienen problemas de conversión tienen un icono rojo de error.  
+    -   Para ver el informe de un objeto individual, seleccione el objeto en el explorador de metadatos de Oracle. Los objetos que tienen problemas de conversión tienen un icono de error rojo.  
   
-Para los objetos que no se pudo conversión, puede ver la sintaxis que produjo el error de conversión.  
+En el caso de los objetos que no se pudieron convertir, puede ver la sintaxis que produjo el error de conversión.  
   
 **Para ver los problemas de conversión individuales**  
   
-1.  En el Explorador de metadatos de Oracle, expanda **esquemas**.  
+1.  En el explorador de metadatos de Oracle, expanda **esquemas**.  
   
-2.  Expanda el esquema que se muestra un icono rojo de error.  
+2.  Expanda el esquema que muestra un icono de error rojo.  
   
-3.  En el esquema, expanda una carpeta que tiene un icono rojo de error.  
+3.  En el esquema, expanda una carpeta que tenga un icono de error rojo.  
   
-4.  Seleccione el objeto que tiene un icono rojo de error.  
+4.  Seleccione el objeto que tiene un icono de error rojo.  
   
-5.  En el panel derecho, haga clic en el **informe** ficha.  
+5.  En el panel derecho, haga clic en la pestaña **Informe** .  
   
-6.  En la parte superior de la **informe** ficha es una lista desplegable. Si la lista muestra **estadísticas**, cambie la selección a **origen**.  
+6.  En la parte superior de la pestaña **Informe** está una lista desplegable. Si la lista muestra **estadísticas**, cambie la selección a **origen**.  
   
-    SSMA mostrará el código fuente y varios botones inmediatamente encima del código.  
+    SSMA mostrará el código fuente y varios botones justo encima del código.  
   
-7.  Haga clic en el **siguiente problema** botón. Se trata de un icono de error rojo con una flecha que señala a la derecha.  
+7.  Haga clic en el botón **siguiente problema** . Se trata de un icono de error rojo con una flecha que apunta a la derecha.  
   
-    SSMA resaltará el primer código problemático de origen que encuentra en el objeto actual.  
+    SSMA resaltará el primer código fuente problemático que encuentre en el objeto actual.  
   
-Para cada elemento que no se pudo convertir, tendrá que determinar qué desea hacer con ese objeto:  
+Para cada elemento que no se pueda convertir, debe determinar qué desea hacer con ese objeto:  
   
--   Puede modificar el código fuente para procedimientos en el **SQL** ficha.  
+-   Puede modificar el código fuente de los procedimientos en la pestaña **SQL** .  
   
--   Puede modificar el objeto en la base de datos de Oracle para quitar o revisar código problemático. Para cargar el código actualizado en SSMA, tendrá que actualizar los metadatos. Para obtener más información, consulte [conectarse a Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
+-   Puede modificar el objeto en la base de datos de Oracle para quitar o revisar el código problemático. Para cargar el código actualizado en SSMA, tendrá que actualizar los metadatos. Para obtener más información, vea [conectarse a Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
   
--   El objeto se puede excluir de la migración. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos y el Explorador de metadatos de Oracle, desactive la casilla de verificación situada junto al elemento antes de cargar los objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y migrar datos de Oracle.  
+-   Puede excluir el objeto de la migración. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el explorador de metadatos y en el explorador de metadatos de Oracle, desactive la casilla situada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] junto al elemento antes de cargar los objetos en y migrar datos de Oracle.  
   
-## <a name="next-step"></a>Paso siguiente  
-El siguiente paso del proceso de migración es [cargar los objetos convertidos en SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md).  
+## <a name="next-step"></a>siguiente paso  
+El siguiente paso del proceso de migración consiste en [cargar los objetos convertidos en SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
-## <a name="see-also"></a>Vea también  
-[Bases de datos de migración de Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>Consulte también  
+[Migrar bases de datos de Oracle a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

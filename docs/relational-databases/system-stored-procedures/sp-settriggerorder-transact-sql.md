@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982230"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "73982230"
 
   Especifica los desencadenadores AFTER que se activan en primer o último lugar. Los desencadenadores AFTER que se activan entre el primero y el último se ejecutan en un orden indefinido.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,34 +43,34 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` es el nombre del desencadenador y el esquema al que pertenece, si procede, cuyo orden se va a establecer o cambiar. [_triggerschema_ **.** ] *triggername* es de **tipo sysname**. Si el nombre no corresponde a un desencadenador o si corresponde a un desencadenador INSTEAD OF, el procedimiento devolverá un error. no se puede especificar *triggerschema* para los desencadenadores DDL o Logon.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'`Es el nombre del desencadenador y el esquema al que pertenece, si procede, cuyo orden se va a establecer o cambiar. [_triggerschema_**.**] *triggername* es de **tipo sysname**. Si el nombre no corresponde a un desencadenador o si corresponde a un desencadenador INSTEAD OF, el procedimiento devolverá un error. no se puede especificar *triggerschema* para los desencadenadores DDL o Logon.  
   
-`[ @order = ] 'value'` es el valor del nuevo orden del desencadenador. el *valor* es **VARCHAR (10)** y puede ser cualquiera de los valores siguientes.  
+`[ @order = ] 'value'`Es el valor del nuevo orden del desencadenador. el *valor* es **VARCHAR (10)** y puede ser cualquiera de los valores siguientes.  
   
 > [!IMPORTANT]  
 >  Los desencadenadores **primero** y **último** deben ser dos desencadenadores diferentes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Primero**|El desencadenador se activa primero.|  
-|**Último**|El desencadenador se activa el último.|  
+|**Lugar**|El desencadenador se activa primero.|  
+|**Guardado**|El desencadenador se activa el último.|  
 |**None**|El desencadenador se activa sin un orden definido.|  
   
-`[ @stmttype = ] 'statement_type'` especifica la instrucción SQL que activa el desencadenador. *statement_type* es **VARCHAR (50)** y puede ser INSERT, Update, Delete, Logon o cualquier evento de instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] enumerado en [eventos DDL](../../relational-databases/triggers/ddl-events.md). Los grupos de eventos no se pueden especificar.  
+`[ @stmttype = ] 'statement_type'`Especifica la instrucción SQL que activa el desencadenador. *statement_type* es **VARCHAR (50)** y puede ser INSERT, Update, Delete, Logon o cualquier [!INCLUDE[tsql](../../includes/tsql-md.md)] evento de instrucción enumerado en [eventos DDL](../../relational-databases/triggers/ddl-events.md). Los grupos de eventos no se pueden especificar.  
   
- Un desencadenador se puede designar como **primer** o **último** desencadenador para un tipo de instrucción solo después de que ese desencadenador se haya definido como desencadenador para ese tipo de instrucción. Por ejemplo, el desencadenador **TR1** se puede designar **primero** para INSERT en la tabla **T1** si **TR1** se define como un desencadenador INSERT. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] devuelve un error si **TR1**, que se ha definido solo como desencadenador INSERT, se establece como un desencadenador **First**o **Last**para una instrucción UPDATE. Para obtener más información, vea la sección Comentarios.  
+ Un desencadenador se puede designar como **primer** o **último** desencadenador para un tipo de instrucción solo después de que ese desencadenador se haya definido como desencadenador para ese tipo de instrucción. Por ejemplo, el desencadenador **TR1** se puede designar **primero** para INSERT en la tabla **T1** si **TR1** se define como un desencadenador INSERT. Devuelve un error si **TR1**, que se ha definido solo como desencadenador de inserción, se establece como **primer**o último desencadenador para una instrucción UPDATE. **** [!INCLUDE[ssDE](../../includes/ssde-md.md)] Para obtener más información, vea la sección Comentarios.  
   
- **\@espacio de nombres =** { **' Database '**  |  **' Server '** | ACEPTA  
- Cuando *triggername* es un desencadenador DDL, **\@espacio de nombres** especifica si *triggername* se creó con ámbito de base de datos o ámbito de servidor. Si *triggername* es un desencadenador Logon, se debe especificar Server. Para obtener más información sobre el ámbito del desencadenador DDL, vea [desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md). Si no se especifica, o si se especifica NULL, *triggername* es un desencadenador DML.  
+ espacio de nombres = { **' base de datos** | '**' servidor '** | ** \@** ACEPTA  
+ Cuando *triggername* es un desencadenador DDL ** \@** , el espacio de nombres especifica si *triggername* se creó con ámbito de base de datos o ámbito de servidor. Si *triggername* es un desencadenador Logon, se debe especificar Server. Para obtener más información sobre el ámbito del desencadenador DDL, vea [desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md). Si no se especifica, o si se especifica NULL, *triggername* es un desencadenador DML.  
   
 ||  
 |-|  
-|SERVER se aplica a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.|  
+|SERVER se aplica a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : y versiones posteriores.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) y 1 (error)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="dml-triggers"></a>Desencadenadores DML  
  Solo puede haber un **primero** y un **último** desencadenador para cada instrucción en una sola tabla.  
@@ -117,7 +117,7 @@ GO
 sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stmttype = 'UPDATE';  
 ```  
   
-### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>b. Configurar el orden de activación de un desencadenador DDL  
+### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>B. Configurar el orden de activación de un desencadenador DDL  
  El siguiente ejemplo especifica que `ddlDatabaseTriggerLog` sea el primer desencadenador que se active después de que se produzca un evento `ALTER_TABLE` en la tabla [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
@@ -126,9 +126,9 @@ GO
 sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmttype = 'ALTER_TABLE', @namespace = 'DATABASE';  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Motor de base de datos procedimientos &#40;almacenados de Transact-&#41; SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   

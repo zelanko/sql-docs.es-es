@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399932"
 ---
 # <a name="transparent-data-encryption"></a>Cifrado de datos transparente
-Puede tomar varias precauciones para ayudar a proteger la base de datos, como diseñar un sistema seguro, cifrar los recursos confidenciales e instalar un firewall alrededor de los servidores de base de datos. Sin embargo, para un escenario en el que se roban los medios físicos (como unidades o cintas de copia de seguridad), un usuario malintencionado solo puede restaurar o adjuntar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y proteger las claves que se usan para cifrar los datos con un certificado. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  
+Puede tomar varias precauciones para ayudar a proteger la base de datos, como diseñar un sistema seguro, cifrar los recursos confidenciales e instalar un firewall alrededor de los servidores de base de datos. Sin embargo, para un escenario en el que se roban los medios físicos (como unidades o cintas de copia de seguridad), un usuario malintencionado solo puede restaurar o adjuntar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  
   
-El *cifrado de datos transparente* (TDE) realiza el cifrado y descifrado de e/s en tiempo real de los archivos de registro de transacciones y de datos y los archivos de registro de PDW especiales. El cifrado usa una clave de cifrado de base de datos (DEK), que se almacena en el registro de arranque de la base de datos de disponibilidad durante la recuperación. DEK es una clave simétrica protegida mediante un certificado almacenado en la base de datos maestra del PDW de SQL Server. TDE protege los datos en reposo, es decir, los archivos de datos y de registro. Proporciona la capacidad de cumplir muchas leyes, normativas y directrices establecidas en diversos sectores. Esta característica permite a los desarrolladores de software cifrar los datos mediante algoritmos de cifrado AES y 3DES sin cambiar las aplicaciones existentes.  
+El *cifrado de datos transparente* (TDE) realiza el cifrado y descifrado de e/s en tiempo real de los archivos de registro de transacciones y de datos y los archivos de registro de PDW especiales. El cifrado usa una clave de cifrado de base de datos (DEK), que se almacena en el registro de arranque de la base de datos de disponibilidad durante la recuperación. DEK es una clave simétrica protegida mediante un certificado almacenado en la base de datos maestra del PDW de SQL Server. TDE protege los datos "en reposo", es decir, los archivos de datos y de registro. Ofrece la posibilidad de cumplir muchas leyes, normativas y directrices establecidas en diversos sectores. Esta característica permite a los desarrolladores de software cifrar los datos mediante algoritmos de cifrado AES y 3DES sin cambiar las aplicaciones existentes.  
   
 > [!IMPORTANT]  
 > TDE no proporciona cifrado para los datos que viajan entre el cliente y el PDW. Para obtener más información sobre cómo cifrar los datos entre el cliente y PDW de SQL Server, consulte [aprovisionamiento de un certificado](provision-certificate.md).  
@@ -120,7 +120,7 @@ En la tabla siguiente se proporcionan vínculos y explicaciones de los comandos 
   
 |Comando o función|Propósito|  
 |-----------------------|-----------|  
-|[CREAR CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Crea una clave que se utiliza para cifrar una base de datos.|  
+|[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Crea una clave que se utiliza para cifrar una base de datos.|  
 |[MODIFICAR LA CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Cambia la clave que se utiliza para cifrar una base de datos.|  
 |[QUITAR CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Quita la clave que se utilizó para cifrar una base de datos.|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Explica la opción **ALTER DATABASE** que se utiliza para habilitar TDE.|  
@@ -130,9 +130,9 @@ En la tabla siguiente se muestran las vistas de catálogo y las vistas de admini
   
 |Vista de catálogo o vista de administración dinámica|Propósito|  
 |-------------------------------------------|-----------|  
-|[Sys. Databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Vista de catálogo que muestra información sobre las bases de datos.|  
-|[Sys. Certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Vista de catálogo que muestra los certificados de una base de datos.|  
-|[Sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|Vista de administración dinámica que proporciona información para cada nodo, sobre las claves de cifrado utilizadas en una base de datos y el estado de cifrado de una base de datos.|  
+|[sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Vista de catálogo que muestra información sobre las bases de datos.|  
+|[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Vista de catálogo que muestra los certificados de una base de datos.|  
+|[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|Vista de administración dinámica que proporciona información para cada nodo, sobre las claves de cifrado utilizadas en una base de datos y el estado de cifrado de una base de datos.|  
   
 ## <a name="permissions"></a>Permisos  
 Cada una de las características y comandos de TDE tiene sus propios requisitos de permisos, que se describen en las tablas mostradas anteriormente.  
@@ -277,14 +277,14 @@ Los vínculos siguientes contienen información general acerca de cómo SQL Serv
 -   [SQL Server y claves de cifrado de base de datos](../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[CREAR CLAVE MAESTRA](../t-sql/statements/create-master-key-transact-sql.md)  
-[CREAR CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
-[CERTIFICADO DE COPIA DE SEGURIDAD](../t-sql/statements/backup-certificate-transact-sql.md)  
+[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
+[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-[Sys. Certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
-[Sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
+[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
+[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
   

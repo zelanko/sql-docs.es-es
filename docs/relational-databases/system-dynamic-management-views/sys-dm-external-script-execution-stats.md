@@ -1,5 +1,5 @@
 ---
-title: Sys. DM _ _external_script_execution_stats | Microsoft Docs
+title: Sys. dm_external_script_execution_stats | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2019
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 314318f2292a8d929a5d0eeaf68f01910f6de45f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68476287"
 ---
-# <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
+# <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Devuelve una fila por cada tipo de solicitud de script externo. Las solicitudes de script externo se agrupan según el lenguaje compatible del script externo. Se genera una fila para cada función registrada de script externo. Las funciones de script externo arbitrarias no se registran a menos que las envíe un proceso principal, como `rxExec`.
@@ -35,7 +35,7 @@ Devuelve una fila por cada tipo de solicitud de script externo. Las solicitudes 
 > [!NOTE]  
 > Esta vista de administración dinámica (DMV) solo está disponible si ha instalado y habilitado la característica que admite la ejecución de scripts externos. Para obtener más información, consulte [r Services en SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) y [Machine Learning Services (R, Python) en SQL Server 2017 y versiones posteriores](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |language|**nvarchar**|Nombre del lenguaje de script externo registrado. Cada script externo debe especificar el lenguaje en la solicitud de script para iniciar el iniciador asociado. |  
 |counter_name|**nvarchar**|Nombre de una función de script externo seleccionada. No admite valores NULL.|  
@@ -48,7 +48,7 @@ Devuelve una fila por cada tipo de solicitud de script externo. Las solicitudes 
 > [!NOTE]  
 >  Los usuarios que ejecuten scripts externos deben tener el permiso adicional EXECUTE ANY EXTERNAL SCRIPT, sin embargo, los administradores pueden usar esta DMV sin este permiso. 
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   Esta DMV se proporciona para la telemetría interna, a fin de supervisar el uso general de la nueva característica de ejecución de scripts externos que se proporciona en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. El servicio de telemetría comienza cuando LaunchPad comienza e incrementa un contador basado en disco cada vez que se llama una función registrada de script externo.
 
 Por lo general, los contadores de rendimiento solo son válidos siempre que el proceso que los genera esté activo. Por lo tanto, una consulta en una DMV no puede mostrar datos detallados para servicios que ya no están en ejecución. Por ejemplo, si un iniciador ejecuta un script externo y aún lo completa muy rápidamente, es posible que una DMV convencional no muestre ningún dato.
@@ -58,7 +58,7 @@ Por lo tanto, los contadores a los que esta DMV hace seguimiento siguen en ejecu
    
   
 ### <a name="counter-values"></a>Valores de contador
-En SQL Server 2016 el único lenguaje externo compatible es R y administra [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]las solicitudes de script externo. En SQL Server 2017, R y Python son lenguajes externos compatibles y administra [!INCLUDE[rsql_productname_md](../../includes/rsql-productnamenew-md.md)]las solicitudes de script externo.
+En SQL Server 2016 el único lenguaje externo compatible es R y administra las solicitudes de script externo [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]. En SQL Server 2017, R y Python son lenguajes externos compatibles y administra las solicitudes de script externo [!INCLUDE[rsql_productname_md](../../includes/rsql-productnamenew-md.md)].
 
 Para R, esta DMV realiza un seguimiento del número de llamadas de R que se realizan en una instancia. Por ejemplo, si se llama a `rxLinMod` y se ejecuta de manera simultánea, el contador aumenta en 1.
  
@@ -95,10 +95,10 @@ WHERE language = 'Python';
 ```  
 
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md) 
-[sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
+ [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Sys. dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   
 

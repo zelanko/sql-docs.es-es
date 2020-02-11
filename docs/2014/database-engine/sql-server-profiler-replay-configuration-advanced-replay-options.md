@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler - configuración de reproducción (Opciones avanzadas de reproducción) | Microsoft Docs
+title: Configuración de SQL Server Profiler-reproducción (opciones avanzadas de reproducción) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0bf91032c1514037c754fd489ac266cf68063fa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089732"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>SQL Server Profiler (Configuración de reproducción/página Opciones avanzadas de reproducción)
@@ -54,10 +54,10 @@ ms.locfileid: "66089732"
  **Habilitar monitor de procesos bloqueados de SQL Server**  
  Habilita un proceso que busca procesos bloqueados o de bloqueo.  
   
- **Intervalo de espera del monitor de procesos bloqueados (seg.)**  
+ **Intervalo de espera del monitor de procesos bloqueados (s)**  
  Configura la frecuencia con que el monitor de procesos bloqueados busca procesos bloqueados o de bloqueo.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reproducir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproducir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Reproducir seguimientos](../tools/sql-server-profiler/replay-traces.md)  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061257"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, clase de eventos
@@ -48,18 +48,18 @@ ms.locfileid: "63061257"
 |ObjectName|`nvarchar`|Nombre del objeto identificado por ObjectID.|34|Sí|  
 |ObjectType|`int`|Valor que representa el tipo de objeto implicado en el evento. Para más información, consulte [ObjectType Trace Event Column](objecttype-trace-event-column.md).|28|Sí|  
 |Offset|`int`|Desplazamiento inicial de la instrucción en el procedimiento almacenado o proceso por lotes que causó la recompilación.|61|Sí|  
-|IdSolicitud|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|`nvarchar`|Nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que se realiza un seguimiento.|26|No|  
+|RequestID|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
+|nombreDeServidor|`nvarchar`|Nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Id. de proceso de servidor de la conexión.|12|Sí|  
-|SqlHandle|`varbinary`|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a sys.dm_exec_sql_text para recuperar el texto SQL asociado.|63|Sin|  
+|SqlHandle|`varbinary`|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a sys.dm_exec_sql_text para recuperar el texto SQL asociado.|63|No|  
 |StartTime|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |TextData|`ntext`|Texto de la instrucción Transact-SQL que se ha recompilado.|1|Sí|  
 |TransactionID|`bigint`|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|`bigint`|Token que describe la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Vea también  
- [SP:Recompile (clase de eventos)](sp-recompile-event-class.md)   
+## <a name="see-also"></a>Consulte también  
+ [SP: Recompile (clase de eventos)](sp-recompile-event-class.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

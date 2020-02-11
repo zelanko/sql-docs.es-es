@@ -16,10 +16,10 @@ ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 53ade765b0f6b6710a12da06ae0b7470b55d9400
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73658940"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Obtener acceso al proveedor WMI para la administración de configuración mediante WQL
@@ -36,8 +36,8 @@ ms.locfileid: "73658940"
   
 3.  En el primer campo de texto, escriba el espacio de nombres del proveedor WMI de Administración de equipos: raíz\Microsoft\SqlServer\ComputerManagement11. Haga clic en **Conectar**.  
   
-4.  Haga clic en **consulta**. Escriba una consulta que devuelva los servicios actuales que se ejecutan en el equipo local: **seleccione \* de SqlService.** Haga clic en **Aplicar**.  
+4.  Haga clic en **Consulta**. Escriba una consulta que devuelva los servicios actuales que se ejecutan en el equipo local: **SELECT \* from SqlService.** Haga clic en **Aplicar**.  
   
-5.  Refine la consulta agregando **Where ServiceName = "MSSQLSERVER"** .  
+5.  Refine la consulta agregando **Where ServiceName = "MSSQLSERVER"**.  
   
   

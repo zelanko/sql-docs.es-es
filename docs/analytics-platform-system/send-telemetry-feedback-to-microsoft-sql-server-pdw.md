@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400359"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Enviar comentarios de telemetría a Microsoft for Analytics Platform System
@@ -42,7 +42,7 @@ Para proporcionar la máxima protección de privacidad, APS se suministra sin ha
     > [!NOTE]  
     > Para importar, debe usar dos puntos en el comando.  
   
-    **Ejemplo**  
+    **Ejemplo**:  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -92,7 +92,7 @@ Al deshabilitar la telemetría, se detendrán todas las operaciones que comunica
     > [!NOTE]  
     > Para importar, debe usar dos puntos en el comando.  
   
-    **Ejemplo**  
+    **Ejemplo**:  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ Al deshabilitar la telemetría, se detendrán todas las operaciones que comunica
   
 4.  Invoque `Disable-RemoteMonitoring` el comando sin parámetros. Este comando dejará de enviar comentarios. (Esto no afectará a la supervisión local). Sin embargo, el comando no deshabilitará el reenviador de DNS ni deshabilitar la conectividad a Internet. Esto debe realizarse manualmente después de deshabilitar correctamente los comentarios.  
   
-    **Ejemplo**  
+    **Ejemplo**:  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  
@@ -111,7 +111,7 @@ Si ve algún error o información que le lleve a creer que el comando no se ha r
 No hay ningún daño en ejecutar el `Disable-RemoteMonitoring` comando varias veces.  
   
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información, consulte:
+Para más información, consulte:
 - [Supervise el dispositivo mediante la consola de administración &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 - [Supervise el dispositivo mediante las vistas del sistema &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
 - [Supervise el dispositivo mediante System Center Operations Manager &#40;de sistema de plataforma de análisis&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

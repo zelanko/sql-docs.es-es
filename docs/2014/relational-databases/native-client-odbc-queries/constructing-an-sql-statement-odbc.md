@@ -1,5 +1,5 @@
 ---
-title: Construir una instrucción SQL (ODBC) | Documentos de Microsoft
+title: Construir una instrucción SQL (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa955f31d26c87b39585ddead6bc5899a9e00679
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206782"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>Crear una instrucción SQL (ODBC)
@@ -32,7 +32,7 @@ ms.locfileid: "68206782"
   
      Instrucciones SQL creadas en tiempo de ejecución que permiten al usuario personalizar la instrucción utilizando cláusulas comunes, como SELECT, WHERE y ORDER BY. Entre este tipo de instrucciones se incluyen las consultas ad hoc escritas por usuarios.  
   
- La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador de cliente ODBC analiza las instrucciones de SQL para la sintaxis ODBC e ISO no admitidas directamente la [!INCLUDE[ssDE](../../includes/ssde-md.md)], que transforma el controlador [!INCLUDE[tsql](../../includes/tsql-md.md)]. El resto de la sintaxis SQL se pasa a [!INCLUDE[ssDE](../../includes/ssde-md.md)] sin modificar, donde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determinará si se trata de código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido. Este enfoque ofrece dos ventajas:  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de cliente analiza las instrucciones SQL solo para la [!INCLUDE[ssDE](../../includes/ssde-md.md)]sintaxis de ODBC e ISO no admitida directamente por, que el controlador transforma [!INCLUDE[tsql](../../includes/tsql-md.md)]en. El resto de la sintaxis SQL se pasa a [!INCLUDE[ssDE](../../includes/ssde-md.md)] sin modificar, donde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determinará si se trata de código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido. Este enfoque ofrece dos ventajas:  
   
 -   Reducción de la sobrecarga  
   
@@ -40,11 +40,11 @@ ms.locfileid: "68206782"
   
 -   Flexibilidad  
   
-     Los programadores pueden personalizar la portabilidad de sus aplicaciones. Para mejorar la portabilidad en distintas bases de datos, utilice principalmente la sintaxis ODBC e ISO. Para utilizar mejoras específicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use la sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] adecuada. La [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC Native Client es compatible con la completa [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxis para aplicaciones basadas en ODBC pueden aprovechar todas las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Los programadores pueden personalizar la portabilidad de sus aplicaciones. Para mejorar la portabilidad en distintas bases de datos, utilice principalmente la sintaxis ODBC e ISO. Para utilizar mejoras específicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use la sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] adecuada. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxis completa, por lo que las aplicaciones basadas en ODBC pueden aprovechar todas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]las características de.  
   
  La lista de columnas de una instrucción SELECT solo debe incluir las columnas necesarias para realizar la tarea actual. Esto no solo hace que se reduzca la cantidad de datos enviados a través de la red, sino que también reduce el efecto de los cambios de la base de datos en la aplicación. Si una aplicación no hace referencia a una columna de una tabla, cualquier cambio que se realice en dicha columna no afectará a la aplicación.  
   
-## <a name="see-also"></a>Vea también  
- [Ejecución de consultas &#40;ODBC&#41;](executing-queries-odbc.md)  
+## <a name="see-also"></a>Consulte también  
+ [Ejecutar consultas &#40;&#41;ODBC](executing-queries-odbc.md)  
   
   

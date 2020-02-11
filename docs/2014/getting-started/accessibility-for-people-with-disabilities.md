@@ -22,10 +22,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683596"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Accesibilidad para personas con discapacidades
@@ -112,7 +112,7 @@ ms.locfileid: "74683596"
   
  Hay disponible un boletín electrónico mensual gratuito para ayudarle a mantenerse al día en temas de accesibilidad de los productos de [!INCLUDE[msCoName](../includes/msconame-md.md)] . Para obtener más información, vea el [sitio web de accesibilidad de Microsoft](https://go.microsoft.com/fwlink/?LinkID=8287).  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Introducción a la documentación del producto para SQL Server](../2014-toc/index.yml)   
  [Obtener ayuda sobre SQL Server](getting-sql-server-assistance.md)  
   

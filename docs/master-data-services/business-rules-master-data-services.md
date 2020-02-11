@@ -14,10 +14,10 @@ ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1c66914b4b661ea3485ae0354c267e7682f5a6a2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728688"
 ---
 # <a name="business-rules-master-data-services"></a>Reglas de negocios (Master Data Services)
@@ -71,7 +71,7 @@ ms.locfileid: "73728688"
 ## <a name="system-settings"></a>Configuración del sistema  
  Hay dos valores de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] que afectan a las reglas de negocios. Puede ajustar estos valores en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o directamente en la tabla Configuración del sistema. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
@@ -79,8 +79,8 @@ ms.locfileid: "73728688"
 |Agregar varias condiciones a una regla de negocios.|[Agregar varias condiciones a una regla de negocios &#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)|  
 |Crear una regla de negocios para exigir que los atributos tengan valores.|[Requerir valores de atributo &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md)|  
 |Crear una regla de negocios para realizar una acción según los cambios de los valores de atributos.|[Iniciar acciones según los cambios de valores de atributos &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
-|Crear una regla de negocio para establecer el script definido por el usuario como una condición|[Extensión de reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
-|Crear una regla de negocio para establecer un script definido por el usuario como una acción|[Extensión de reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Crear una regla de negocio para establecer el script definido por el usuario como una condición|[Master Data Services de extensión de reglas de negocios &#40;&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
+|Crear una regla de negocio para establecer un script definido por el usuario como una acción|[Master Data Services de extensión de reglas de negocios &#40;&#41;](../master-data-services/business-rules-extension-master-data-services.md)|  
 |Cambiar el nombre de una regla de negocios existente.|[Cambiar el nombre de una regla de negocios &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)|  
 |Configurar [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para enviar notificaciones cuando se aplican las reglas de negocios.|[Configurar reglas de negocios para enviar notificaciones &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)|  
 |Aplicar reglas de negocios a determinados miembros.|[Validar miembros específicos con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
@@ -89,12 +89,12 @@ ms.locfileid: "73728688"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Introducción a Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Información general de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Versiones &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
--   [Validación &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
+-   [Master Data Services de &#40;de validación&#41;](../master-data-services/validation-master-data-services.md)  
   
--   [Seguimiento de cambios &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
+-   [Change Tracking &#40;Master Data Services&#41;](../master-data-services/change-tracking-master-data-services.md)  
   
   

@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637830"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Instalar la versión independiente del Generador de informes (Generador de informes)
-  Puede instalar Generador de informes del Feature Pack de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=53613) o en una ubicación como una carpeta pública en la que se haya descargado el ReportBuilder3_x86. msi, el paquete de Windows Installer para generador de informes.  
+  Puede instalar Generador de informes desde el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack en el centro de descarga de [Microsoft](https://www.microsoft.com/download/details.aspx?id=53613) o en una ubicación como una carpeta pública en la que se haya descargado el paquete de Windows Installer ReportBuilder3_x86. msi para generador de informes.  
   
  También puede realizar una instalación de línea de comandos del Generador de informes y especificar argumentos para personalizar la instalación. Además de los parámetros estándar intrínsecos de MSI, puede usar los parámetros personalizados que proporciona el Generador de informes: RBINSTALLDIR y REPORTSERVERURL. RBINSTALLDIR especifica la carpeta de instalación raíz para el Generador de informes. REPORTSERVERURL especifica el servidor de informes predeterminado que usa el Generador de informes para guardar los informes en el servidor.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73637830"
     -   Haga clic en **examinar** para ver la ubicación predeterminada de generador de informes y actualizarla.  
   
         > [!NOTE]  
-        >  La carpeta de instalación predeterminada para Generador de informes es \<unidad > archivos de Programa\microsoft SQL Server.  
+        >  La carpeta de instalación predeterminada para Generador de informes \<es unidad>archivos de programa\Microsoft SQL Server.  
   
     -   Haga clic en **costo del disco** para obtener información sobre el espacio en disco que consume generador de informes.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "73637830"
     -   Haga clic en **examinar** para ver la ubicación predeterminada de generador de informes y actualizarla.  
   
         > [!NOTE]  
-        >  La carpeta de instalación predeterminada para Generador de informes es \<unidad > archivos de Programa\microsoft SQL Server.  
+        >  La carpeta de instalación predeterminada para Generador de informes \<es unidad>archivos de programa\Microsoft SQL Server.  
   
     -   Haga clic en **costo del disco** para obtener información sobre el espacio en disco que consume generador de informes.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "73637830"
   
 5.  En el menú **Inicio** , haga clic en **Ejecutar**.  
   
-6.  En el cuadro de texto abrir, escriba `cmd.`  
+6.  En el cuadro de texto Abrir, escriba `cmd.`  
   
 7.  En la ventana del Símbolo del sistema, navegue hasta la carpeta en la que guardó ReportBuilder3_x86.msi.  
   
@@ -129,8 +129,8 @@ ms.locfileid: "73637830"
   
 9. Para ejecutar el comando, presione ENTRAR.  
   
-## <a name="see-also"></a>Vea también  
- [Instalar, desinstalar y generador de informes soporte técnico](../install-uninstall-and-report-builder-support.md)   
- [Desinstale la versión independiente de Generador de informes &#40;generador de informes&#41;](install-report-builder.md)  
+## <a name="see-also"></a>Consulte también  
+ [Instalación, desinstalación y compatibilidad Generador de informes](../install-uninstall-and-report-builder-support.md)   
+ [Desinstale la versión independiente de Generador de informes &#40;Generador de informes&#41;](install-report-builder.md)  
   
   

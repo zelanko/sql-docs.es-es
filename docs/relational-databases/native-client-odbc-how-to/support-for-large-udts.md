@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d8621aac563f9211f7d4ee0c9ebd8f557e33bea
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780484"
 ---
 # <a name="support-for-large-udts"></a>Compatibilidad con UDT de gran tamaño
@@ -25,20 +25,20 @@ ms.locfileid: "73780484"
   
  No funcionará con ninguna versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Para obtener más información sobre la compatibilidad con UDT grandes, vea [tipos &#40;definidos por el usuario&#41;de CLR grandes ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Para obtener más información sobre la compatibilidad con UDT grandes, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="example"></a>Ejemplo  
  La primera lista de código es el código fuente de C#. Péguelo en un archivo denominado LargeStringUDT.cs y compílelo en una DLL. Copie LargeStringUDT.dll en el directorio raíz de la unidad C:.  
   
- La segunda lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea el ensamblado en la base de datos maestra.  
+ La segunda lista [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () crea el ensamblado en la base de datos maestra.  
   
  Compile la segunda lista de código (C++) con odbc32.lib y user32.lib. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
- Si compila y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
+ Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
- La cuarta lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) elimina el ensamblado de la base de datos maestra.  
+ La cuarta lista [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () elimina el ensamblado de la base de datos maestra.  
   
 ```  
 // LargeStringUDT.cs  

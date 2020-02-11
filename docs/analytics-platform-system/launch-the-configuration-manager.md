@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401053"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Inicio del Configuration Manager en Analytics Platform System
@@ -21,7 +21,7 @@ En este tema se proporcionan instrucciones para iniciar el **Configuration Manag
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-### <a name="prerequisites"></a>Requisitos previos  
+### <a name="prerequisites"></a>Prerequisites  
 Solo el administrador de dominio de la aplicación puede ejecutar el**Configuration Manager** de sistema de la plataforma de análisis. Para ejecutar esta herramienta, necesita la contraseña del administrador de dominio del dispositivo. Para crear administradores de APS adicionales, consulte [crear un administrador de dominio aps &#40;aps&#41;](create-an-aps-domain-administrator-aps.md).  
   
 ## <a name="Accessing"></a>Iniciar la herramienta de Configuration Manager  
@@ -47,6 +47,6 @@ Para cerrar y salir de **Configuration Manager**, haga clic en **salir** en la e
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Supervise el dispositivo mediante la consola de administración &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_waits (Transact-SQL) | Microsoft Docs
+title: Sys. dm_pdw_waits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,32 +13,32 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 476b2f251bd41480962eb9925af6e3619507e791
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088765"
 ---
-# <a name="sysdmpdwwaits-transact-sql"></a>sys.dm_pdw_waits (Transact-SQL)
+# <a name="sysdm_pdw_waits-transact-sql"></a>Sys. dm_pdw_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contiene información sobre todos los Estados durante la ejecución de una solicitud de espera o espera de consulta, incluidos los bloqueos, en las colas de transmisión y así sucesivamente.  
+  Contiene información sobre todos los Estados de espera encontrados durante la ejecución de una solicitud o consulta, incluidos los bloqueos, esperas en las colas de transmisión, etc.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|wait_id|**bigint**|Identificador numérico único asociado con el estado de espera.<br /><br /> Clave para esta vista.|Único en todas las esperas en el sistema.|  
-|session_id|**nvarchar(32)**|Identificador de la sesión en el que se ha producido el estado de espera.|Consulte session_id en [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|wait_id|**BIGINT**|Identificador numérico único asociado al estado de espera.<br /><br /> Clave para esta vista.|Único en todas las esperas en el sistema.|  
+|session_id|**nvarchar (32)**|IDENTIFICADOR de la sesión en la que se ha producido el estado de espera.|Vea session_id en [Sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
 |type|**nvarchar(255)**|Tipo de espera que esta entrada representa.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_type|**nvarchar(255)**|Tipo de objeto que se ve afectado por la espera.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|object_name|**nvarchar(386)**|Nombre o GUID del objeto especificado que se vio afectado por la espera.||  
-|request_id|**nvarchar(32)**|Identificador de la solicitud en el que se ha producido el estado de espera.|Vea request_id en [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|object_name|**nvarchar (386)**|Nombre o GUID del objeto especificado que se ha visto afectado por la espera.||  
+|request_id|**nvarchar (32)**|IDENTIFICADOR de la solicitud en la que se produjo el estado de espera.|Vea request_id en [Sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |request_time|**datetime**|Hora a la que se solicitó el estado de espera.||  
-|acquire_time|**datetime**|Hora a la que se adquirió el bloqueo o recurso.||  
+|acquire_time|**datetime**|Hora a la que se adquirió el bloqueo o el recurso.||  
 |state|**nvarchar(50)**|Estado del estado de espera.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|prioridad|**int**|Prioridad del elemento de espera.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|priority|**int**|Prioridad del elemento de espera.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de almacenamiento de datos en paralelo y SQL Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [sys.dm_pdw_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [Sys. dm_pdw_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-wait-stats-transact-sql.md)  
   
   

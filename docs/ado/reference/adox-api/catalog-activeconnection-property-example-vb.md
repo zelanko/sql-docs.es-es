@@ -1,5 +1,5 @@
 ---
-title: Ejemplo (VB) de propiedad ActiveConnection de catálogo | Microsoft Docs
+title: Ejemplo de propiedad ActiveConnection de catálogo (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c6d30aeeb650525873669ccd175155c7e69cd0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967116"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Ejemplo de propiedad ActiveConnection de catálogo (VB)
-Establecer el [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propiedad en una conexión válida, abra "abre" el catálogo. Desde un catálogo abierto, puede tener acceso a los objetos de esquema dentro de dicho catálogo.  
+Si se establece la propiedad [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) en una conexión válida abierta, "abre" el catálogo. En un catálogo abierto, puede tener acceso a los objetos de esquema que contiene el catálogo.  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -59,13 +59,13 @@ End Sub
 ' EndOpenConnectionVB  
 ```  
   
- Establecer el **ActiveConnection** propiedad en una cadena de conexión válida también "abre" el catálogo.  
+ Al establecer la propiedad **ActiveConnection** en una cadena de conexión válida, también se "abre" el catálogo.  
   
 ```  
 Attribute VB_Name = "Catalog"  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [ActiveConnection (propiedad, ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   

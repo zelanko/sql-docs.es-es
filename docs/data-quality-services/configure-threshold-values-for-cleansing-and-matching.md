@@ -1,6 +1,6 @@
 ---
 title: Configurar los valores de umbral para la limpieza y la búsqueda de coincidencias
-description: Obtenga información acerca de cómo configurar los valores de umbral que se utilizarán durante la limpieza asistida por PC y las actividades de búsqueda de coincidencias en SQL Server Data Quality Services (DQS).
+description: Obtenga información acerca de cómo configurar los valores de umbral que se utilizarán durante las actividades de limpieza y búsqueda de coincidencias Asistidas por PC en SQL Server Data Quality Services (DQS).
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4fcbc8e4e6d6a9c1df07d8e1b1aa68c08c162817
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: a0bcf7bc1cdf28aae4fc281f14f8edeec9f6c47d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75557897"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76916308"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching---data-quality-services-dqs"></a>Configurar los valores de umbral para la limpieza y la búsqueda de coincidencias: Data Quality Services (DQS)
 
@@ -30,11 +30,11 @@ ms.locfileid: "75557897"
 
   En este tema se describe cómo configurar los valores de umbral que se utilizarán durante las actividades de limpieza y búsqueda de coincidencias asistidas por PC en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
-##  <a name="BeforeYouBegin"></a>Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a>Bursátil  
+###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a>Los  
+####  <a name="Permissions"></a> Permisos  
  Para configurar estos valores de umbral, debe disponer del rol dqs_administrator en la base de datos DQS_MAIN.  
   
 ##  <a name="Configure"></a>Configuración de los valores de umbral  

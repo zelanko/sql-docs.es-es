@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f1c553835cc0380082821dd49f53f69e767baacb
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73771472"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos de origen de datos persistentes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  El proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite objetos de origen de datos persistentes con la interfaz **IPersistFile** .  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite objetos de origen de datos persistentes con la interfaz **IPersistFile** .  
   
 ## <a name="examples"></a>Ejemplos  
- **A. conservar la inicialización del origen de datos:**  
+ **A. Guardar la inicialización del origen de datos:**  
   
  En este ejemplo se muestra una función que guarda propiedades de inicialización de origen de datos que definen un servidor, una base de datos y el uso del Modo de autenticación de Windows para la conexión. El nombre del servidor y el nombre de la base de datos se reciben en los parámetros *pLocation* y *pDatasource* de la función.  
   
@@ -140,7 +140,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. usar la inicialización de origen de datos persistente:**  
+ **B. Usar la inicialización de origen de datos guardada:**  
   
  En este ejemplo se utiliza un objeto de origen de datos guardado con propiedades de inicialización adicionales que proporcionan un inicio de sesión y una contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -230,7 +230,7 @@ HRESULT InitFromPersistedDS
   
  Se puede llamar al método **IPersistFile::Save** antes o después de llamar a **IDBInitialize::Initialize**. Si se llama al método después de un retorno correcto de **IDBInitialize::Initialize**, se asegura de que se guarde una especificación de origen de datos válida.  
   
-## <a name="see-also"></a>Vea también  
- [Objetos &#40;de origen de datos OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>Consulte también  
+ [Objetos de origen de datos &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

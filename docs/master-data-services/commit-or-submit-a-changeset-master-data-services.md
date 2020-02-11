@@ -11,10 +11,10 @@ ms.assetid: d323bbac-c8d4-4d2f-a7d2-a597e8b53e2d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4f45d9ced6b22ec2b0cf7007eee4549e595ec697
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728575"
 ---
 # <a name="commit-or-submit-a-changeset-master-data-services"></a>Confirmación o envío de un conjunto de cambios (Master Data Services)
@@ -34,7 +34,7 @@ ms.locfileid: "73728575"
 ## <a name="to-commit-a-local-changeset"></a>Para confirmar un conjunto de cambios local  
  La opción de confirmación solo está disponible para los conjuntos de cambios locales en entidades en las que el administrador de la entidad no ha habilitado la necesidad de aprobación.  
   
-1.  En la página principal de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , seleccione el modelo y la versión y luego haga clic en **Explorador**.  
+1.  En la [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Página principal, seleccione el modelo y la versión y, a continuación, haga clic en **Explorador**.  
   
 2.  Haga clic en una entidad en el menú **Entidades** .  
   
@@ -45,20 +45,20 @@ ms.locfileid: "73728575"
 ## <a name="to-submit-a-changeset"></a>Para enviar un conjunto de cambios  
  La opción de envío solo está disponible para los conjuntos de cambios en entidades en las que el administrador de la entidad no ha habilitado la necesidad de aprobación.  
   
-1.  En la página principal de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , seleccione el modelo y la versión y luego haga clic en **Explorador**.  
+1.  En la [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Página principal, seleccione el modelo y la versión y, a continuación, haga clic en **Explorador**.  
   
 2.  Haga clic en una entidad en el menú **Entidades** .  
   
 3.  En el panel derecho, seleccione **Conjuntos de cambios** y haga doble clic en el conjunto de cambios que quiera enviar.  
   
-4.  Haga clic en **Enviar**.  
+4.  Haz clic en **Enviar**.  
   
-## <a name="next-steps"></a>Next Steps  
- [Aprobación o rechazo de un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
+## <a name="next-steps"></a>Pasos siguientes  
+ [Aprobar o rechazar un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
-## <a name="see-also"></a>Vea también  
- [Creación de un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
+## <a name="see-also"></a>Consulte también  
+ [Crear un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
  [Aplicar y actualizar un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
- [Aprobación o rechazo de un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
+ [Aprobar o rechazar un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016875"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
@@ -41,27 +41,27 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  Expresión numérica válida que especifica el número de paso de cálculo.  
   
  ABSOLUTE  
- Un valor de marca de acceso que especifica que el *Pass_Value* parámetro contiene el índice de base cero del pase de cálculo. ABSOLUTE es el valor de marca de acceso predeterminado si no se especifica un valor de marca de acceso.  
+ Un valor de marca de acceso que especifica que el parámetro *Pass_Value* contiene el índice de base cero del paso de cálculo. ABSOLUTE es el valor de marca de acceso predeterminado si no se especifica un valor de marca de acceso.  
   
  RELATIVE  
- Un valor de marca de acceso que especifica que el *Pass_Value* parámetro contiene un desplazamiento relativo desde el paso de cálculo del cálculo desencadenador. Si el desplazamiento se resuelve en un índice de paso de cálculo menor que 0, se utiliza el paso de cálculo 0 y no se producen errores.  
+ Un valor de marca de acceso que especifica que el parámetro *Pass_Value* contiene un desplazamiento relativo desde el paso de cálculo del cálculo desencadenador. Si el desplazamiento se resuelve en un índice de paso de cálculo menor que 0, se utiliza el paso de cálculo 0 y no se producen errores.  
   
  ALL  
  Cuando se establece esta marca, todos los valores son NULL, excepto los cargados por el motor de almacenamiento. Cuando no se establece, los valores se agregan sin aplicar cálculos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si se proporciona una expresión numérica, la función devuelve un valor numérico mediante la evaluación de la expresión numérica MDX especificada en el paso de cálculo y, de manera opcional, modificada por una marca de acceso y un modificador de marca de acceso.  
   
- Si se proporciona una expresión de cadena, la función devuelve un valor de cadena mediante la evaluación de la expresión de cadena MDX especificada en el paso de cálculo y modificado opcionalmente mediante una marca de acceso y un modificador de marca de acceso *.*  
+ Si se proporciona una expresión de cadena, la función devuelve un valor de cadena evaluando la expresión de cadena MDX especificada en el paso de cálculo especificado y modificada opcionalmente mediante una marca de acceso y un modificador de marca de acceso *.*  
   
- Con la resolución automática de recursividad de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], esta función tiene muy poco uso práctico.  
+ Con la resolución automática de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]recursividad en, esta función tiene poco uso práctico.  
   
 > [!NOTE]  
->  Solo los administradores pueden usar el **CalculationPassValue** función dentro de un script MDX. Se produce un error si un script de MDX que contiene esta función se ejecuta en el contexto de un rol que no tiene privilegios de administrador.  
+>  Solo los administradores pueden usar la función **CalculationPassValue** en un script MDX. Se produce un error si un script de MDX que contiene esta función se ejecuta en el contexto de un rol que no tiene privilegios de administrador.  
   
-## <a name="see-also"></a>Vea también  
- [CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   
- [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
+## <a name="see-also"></a>Consulte también  
+ [&#41;CalculationCurrentPass &#40;MDX](../mdx/calculationcurrentpass-mdx.md)   
+ [IIf &#40;&#41;MDX](../mdx/iif-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

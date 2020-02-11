@@ -18,13 +18,13 @@ ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a0549d247078634feadced301570e00746d5ba7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68032721"
 ---
-# <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
+# <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Indica al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que detenga la ejecución de un trabajo.  
@@ -44,16 +44,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_name = ] 'job_name'` El nombre del trabajo para detener. *job_name* es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'`Nombre del trabajo que se va a detener. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @job_id = ] job_id` El número de identificación del trabajo para detener. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id`Número de identificación del trabajo que se va a detener. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @originating_server = ] 'master_server'` El nombre del servidor maestro. Si se especifica, se detienen todos los trabajos multiservidor. *master_server* es **nvarchar (128)** , su valor predeterminado es null. Especifique este parámetro únicamente cuando se llama **sp_stop_job** en un servidor de destino.  
+`[ @originating_server = ] 'master_server'`Nombre del servidor maestro. Si se especifica, se detienen todos los trabajos multiservidor. *master_server* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Especifique este parámetro solo cuando llame a **sp_stop_job** en un servidor de destino.  
   
 > [!NOTE]  
 >  Solo se puede especificar uno de los tres primeros parámetros.  
   
-`[ @server_name = ] 'target_server'` El nombre del servidor de destino específico en el que se va a detener un trabajo multiservidor. *target_server* es **nvarchar (128)** , su valor predeterminado es null. Especifique este parámetro únicamente cuando se llama **sp_stop_job** en un servidor maestro para un trabajo multiservidor.  
+`[ @server_name = ] 'target_server'`Nombre del servidor de destino específico en el que se va a detener un trabajo multiservidor. *target_server* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Especifique este parámetro solo cuando llame a **sp_stop_job** en un servidor maestro para un trabajo multiservidor.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -61,10 +61,10 @@ sp_stop_job
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
- **sp_stop_job** envía una señal de detención para la base de datos. Algunos procesos se pueden detener inmediatamente y algunos deben alcanzar un punto estable (o punto de entrada a la ruta de acceso del código) antes de que puede detener. Algunas instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de ejecución prolongada, como BACKUP, RESTORE y algunos comandos DBCC, pueden tardar mucho tiempo en finalizar. Cuando se estén ejecutando, puede tardar unos minutos antes de que se cancela el trabajo. Si se detiene un trabajo, se registrará una entrada de trabajo cancelado en el historial de trabajos.  
+## <a name="remarks"></a>Observaciones  
+ **sp_stop_job** envía una señal de detención a la base de datos. Algunos procesos se pueden detener inmediatamente y otros deben llegar a un punto estable (o un punto de entrada a la ruta de acceso del código) antes de que se puedan detener. Algunas instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de ejecución prolongada, como BACKUP, RESTORE y algunos comandos DBCC, pueden tardar mucho tiempo en finalizar. Cuando se están ejecutando, puede tardar un tiempo antes de que se cancele el trabajo. Si se detiene un trabajo, se registrará una entrada de trabajo cancelado en el historial de trabajos.  
   
- Si un trabajo se está ejecutando actualmente un paso de tipo **CmdExec** o **PowerShell**, el proceso en ejecución (por ejemplo, MyProgram.exe) está obligado a finalizar prematuramente. La finalización prematura puede provocar un comportamiento imprevisible como, por ejemplo, que los archivos que el proceso utiliza se mantengan abiertos. Por lo tanto, **sp_stop_job** debe usarse solo en circunstancias muy especiales si el trabajo contiene pasos de tipo **CmdExec** o **PowerShell**.  
+ Si un trabajo está ejecutando un paso de tipo **CmdExec** o **PowerShell**, se forzará la finalización prematura del proceso que se está ejecutando (por ejemplo, de programa. exe). La finalización prematura puede provocar un comportamiento imprevisible como, por ejemplo, que los archivos que el proceso utiliza se mantengan abiertos. Por consiguiente, **sp_stop_job** debe usarse solo en circunstancias extremas Si el trabajo contiene pasos de tipo **CmdExec** o **PowerShell**.  
   
 ## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
@@ -77,7 +77,7 @@ sp_stop_job
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Los miembros de **SQLAgentUserRole** y **SQLAgentReaderRole** sólo se puede detener los trabajos que les pertenecen. Los miembros de **SQLAgentOperatorRole** puede detener todos los trabajos locales, los que pertenecen a otros usuarios incluidos. Los miembros de **sysadmin** pueden detener todos los trabajos locales y multiservidor.  
+ Los miembros de **SQLAgentUserRole** y **SQLAgentReaderRole** solo pueden detener los trabajos que les pertenecen. Los miembros de **SQLAgentOperatorRole** pueden detener todos los trabajos locales, incluidos los que pertenecen a otros usuarios. Los miembros de **sysadmin** pueden detener todos los trabajos locales y multiservidor.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se detiene un trabajo denominado `Weekly Sales Data Backup`.  
@@ -91,11 +91,11 @@ EXEC dbo.sp_stop_job
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_delete_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_start_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
+ [sp_update_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

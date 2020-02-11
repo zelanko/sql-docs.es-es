@@ -1,5 +1,5 @@
 ---
-title: Id. de función (XQuery) | Microsoft Docs
+title: Función ID (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 21bf98ac97c9a695b7b9576412d43c832011322d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004662"
 ---
 # <a name="functions-on-sequences---id"></a>Funciones usadas en secuencias: id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve la secuencia de nodos de elemento con valores xs: ID que coinciden con los valores de uno o varios de los valores xs: IDREF proporcionados en *$arg*.  
+  Devuelve la secuencia de nodos de elemento con valores XS: ID que coinciden con los valores de uno o varios de los valores XS: IDREF proporcionados en *$arg*.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,26 +38,26 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Uno o varios valores xs:IDREF.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El resultado de la función es una secuencia de elementos de la instancia XML, en el orden del documento, que tiene un valor xs:ID equivalente a uno o varios de los valores xs:IDREF de la lista de posibles valores xs:IDREF.  
   
  Si el valor xs:IDREF no coincide con ningún elemento, la función devolverá la secuencia vacía.  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** escriba columnas en el [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas **** en varias columnas de tipo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML de la base de datos.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Recuperar elementos en función del valor del atributo IDREF  
- En el ejemplo siguiente se utiliza fn: Id. para recuperar el <`employee`> elementos, en función del atributo IDREF manager. En este ejemplo, el atributo manager es de tipo IDREF y el atributo eid es de tipo ID.  
+ En el ejemplo siguiente se usa FN: ID para recuperar `employee` el <> elementos, en función del atributo de administrador idref. En este ejemplo, el atributo manager es de tipo IDREF y el atributo eid es de tipo ID.  
   
- Para un valor de atributo administrador específico, el **ID** función busca el <`employee`> elemento cuyo valor del atributo de tipo ID coincide con el valor IDREF de entrada. En otras palabras, para un empleado concreto, el **ID** función devuelve employee manager.  
+ Para un valor de atributo de administrador específico, la función **ID ()** busca `employee` el elemento <> cuyo valor de atributo de tipo ID coincide con el valor idref de entrada. En otras palabras, para un empleado concreto, la función **ID ()** devuelve Employee Manager.  
   
  A continuación se expone lo que ocurre en el ejemplo:  
   
 -   Se crea una colección de esquemas XML.  
   
--   Un tipo **xml** variable se crea mediante el uso de la colección de esquemas XML.  
+-   Una variable **XML** con tipo se crea mediante la colección de esquemas XML.  
   
--   La consulta recupera el elemento que tiene un valor de atributo de identificador al que hace referencia el **manager** atributo IDREF de la <`employee`> elemento.  
+-   La consulta recupera el elemento que tiene un valor de atributo ID al que hace referencia el atributo idref **Manager** del elemento `employee` <>.  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -97,10 +97,10 @@ Go
   
  La consulta devuelve "Dave" como valor. Esto indica que Dave es el superior (manager) de Joe.  
   
-### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>b. Recuperar elementos en función del valor del atributo IDREFS OrderList  
- En el ejemplo siguiente, el atributo OrderList de la <`Customer`> elemento es un atributo de tipo IDREFS. Enumera los Id. de orden del cliente en cuestión. Para cada identificador de pedido, hay una <`Order`> elemento secundario bajo el <`Customer`> que proporciona el valor de orden.  
+### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. Recuperar elementos en función del valor del atributo IDREFS OrderList  
+ En el ejemplo siguiente, el atributo OrderList del elemento> `Customer` <es un atributo de tipo IDREFS. Enumera los Id. de orden del cliente en cuestión. Para cada ID. de pedido, hay un `Order` <elemento secundario> en el `Customer` <> proporcionar el valor de orden.  
   
- La expresión de consulta, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera el primer valor de la lista IDRES para el primer cliente. Este valor, a continuación, se pasa a la **ID** función. La función, a continuación, busca el <`Order`> elemento cuyo valor de atributo OrderID coincide con la entrada a la **ID** función.  
+ La expresión de consulta, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera el primer valor de la lista IDRES para el primer cliente. A continuación, este valor se pasa a la función **ID ()** . A continuación, la función busca `Order` el elemento> de <cuyo valor de atributo OrderID coincide con la entrada a la función **ID ()** .  
   
 ```  
 drop xml schema collection SC  
@@ -176,11 +176,11 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se admite la versión de dos argumentos de **ID**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]no admite la versión de dos argumentos de **ID ()**.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requiere que el tipo de argumento de **ID** para ser un subtipo de xs: IDREF *.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]requiere que el tipo de argumento de **ID ()** sea un subtipo de XS: idref *.  
   
-## <a name="see-also"></a>Vea también  
- [Funciones usadas en secuencias](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
+## <a name="see-also"></a>Consulte también  
+ [Funciones utilizadas en secuencias](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   

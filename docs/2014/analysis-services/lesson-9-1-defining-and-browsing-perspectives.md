@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493773"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definir y examinar perspectivas
@@ -33,7 +33,7 @@ ms.locfileid: "69493773"
   
      Todos los objetos y sus tipos de objeto aparecen en el panel **Perspectivas** , como se muestra en la siguiente imagen.  
   
-     ![Panel perspectivas del diseñador de cubos](../../2014/tutorials/media/l9-perspectives-1.gif "Panel perspectivas del diseñador de cubos")  
+     ![Panel Perspectivas del Diseñador de cubos](../../2014/tutorials/media/l9-perspectives-1.gif "Panel Perspectivas del Diseñador de cubos")  
   
 2.  En la barra de herramientas de la pestaña **Perspectivas** , haga clic en el botón **Nueva perspectiva** .  
   
@@ -54,35 +54,35 @@ ms.locfileid: "69493773"
   
     -   `Reseller Sales`Grupo de medida  
   
-    -   Grupo de medida**Sales Quotas**  
+    -   Grupo de medida **sales Quotas**  
   
-    -   Grupo de medida**Sales Quotas 1**  
+    -   Grupo de medida **sales Quotas 1**  
   
-    -   Dimensión de cubo**Reseller**  
+    -   Dimensión de cubo **reseller**  
   
-    -   Dimensión de cubo**Reseller Geography**  
+    -   Dimensión de cubo **reseller Geography**  
   
-    -   Dimensión del cubo**Sales Territory**  
+    -   Dimensión de cubo de **territorio de ventas**  
   
-    -   Dimensión de cubo**Employee**  
+    -   Dimensión de cubo **Employee**  
   
-    -   Dimensión de cubo**Promotion**  
+    -   Dimensión de cubo de **promoción**  
   
-    -   **Reseller Revenue**  
+    -   **Ingresos del reseller** ÉSTE  
   
-    -   Conjunto con nombre**Large Resellers**  
+    -   Conjunto con nombre **Large Resellers**  
   
-    -   Miembro calculado**Total Sales Amount**  
+    -   Miembro calculado **total sales amount**  
   
-    -   Miembro calculado**Total Product Cost**  
+    -   Miembro calculado **total Product cost**  
   
-    -   Miembro calculado**Reseller GPM**  
+    -   Miembro calculado **reseller GPM**  
   
-    -   Miembro calculado**Total GPM**  
+    -   Miembro calculado **total GPM**  
   
-    -   Miembro calculado**Reseller Sales Ratio to All Products**  
+    -   Miembro calculado **reseller sales ratio to All Products**  
   
-    -   Miembro calculado**Total Sales Ratio to All Products**  
+    -   Miembro calculado **total sales ratio to All Products**  
   
      Estos objetos no tienen relación con Internet Sales.  
   
@@ -103,27 +103,27 @@ ms.locfileid: "69493773"
   
     -   `Internet Sales`Grupo de medida  
   
-    -   Grupo de medida**Internet Sales Reason**  
+    -   Grupo de medida **Internet sales Reason**  
   
-    -   Dimensión de cubo**Customer**  
+    -   Dimensión de cubo **Customer**  
   
-    -   Dimensión de cubo**Internet Sales Order Details**  
+    -   Dimensión de cubo **Internet sales Order Details**  
   
-    -   Dimensión de cubo**Sales Reason**  
+    -   Dimensión de cubo **sales Reason**  
   
-    -   Acción de obtención de detalles**Internet Sales Details Drillthrough Action**  
+    -   Acción de obtención de **detalles de Internet sales details DRILLTHROUGH**  
   
-    -   Miembro calculado**Total Sales Amount**  
+    -   Miembro calculado **total sales amount**  
   
-    -   Miembro calculado**Total Product Cost**  
+    -   Miembro calculado **total Product cost**  
   
-    -   Miembro calculado**Internet GPM**  
+    -   Miembro calculado de **Internet GPM**  
   
-    -   Miembro calculado**Total GPM**  
+    -   Miembro calculado **total GPM**  
   
-    -   Miembro calculado**Internet Sales Ratio to All Products**  
+    -   Miembro calculado **Internet sales ratio to All Products**  
   
-    -   Miembro calculado**Total Sales Ratio to All Products**  
+    -   Miembro calculado **total sales ratio to All Products**  
   
      Estos objetos no tienen relación con Resellers Sales.  
   
@@ -142,23 +142,23 @@ ms.locfileid: "69493773"
   
     -   `Reseller Sales`Grupo de medida  
   
-    -   Grupo de medida**Internet Sales Reason**  
+    -   Grupo de medida **Internet sales Reason**  
   
-    -   Grupo de medida**Sales Quotas**  
+    -   Grupo de medida **sales Quotas**  
   
-    -   Grupo de medida**Sales Quotas1**  
+    -   Grupo de medida **sales Quotas1**  
   
-    -   Dimensión de cubo**Internet Sales Order Details**  
+    -   Dimensión de cubo **Internet sales Order Details**  
   
-    -   Dimensión de cubo**Sales Reason**  
+    -   Dimensión de cubo **sales Reason**  
   
-    -   Acción de obtención de detalles**Internet Sales Details Drillthrough Action**  
+    -   Acción de obtención de **detalles de Internet sales details DRILLTHROUGH**  
   
 4.  Active la casilla de los siguientes objetos:  
   
-    -   Medida**Internet Sales Count**  
+    -   Medida **Internet sales Count**  
   
-    -   Medida**Reseller Sales Count**  
+    -   Medida **reseller sales Count**  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>Examinar el cubo a través de cada perspectiva  
   
@@ -170,11 +170,11 @@ ms.locfileid: "69493773"
   
 4.  Analizar en Excel le pedirá que elija qué perspectiva desea usar al examinar el modelo en Excel, como se muestra en la ilustración siguiente.  
   
-     ![Objetos para la perspectiva venta por Internet](../../2014/tutorials/media/l9-perspectives-3.gif "Objetos para la perspectiva venta por Internet")  
+     ![Objetos de la perspectiva Internet Sales](../../2014/tutorials/media/l9-perspectives-3.gif "Objetos de la perspectiva Internet Sales")  
   
 5.  Como alternativa, puede iniciar Excel en el menú Inicio de Windows, definir una conexión a la base de datos Tutorial de Analysis Services en localhost y elegir una perspectiva en el Asistente para la conexión de datos, como se muestra en la ilustración siguiente.  
   
-     ![Asistente para la conexión de datos en Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Asistente para la conexión de datos en Excel")  
+     ![Asistente para la conexión de datos de Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Asistente para la conexión de datos de Excel")  
   
 6.  Seleccione `Internet Sales` en la lista **perspectiva** y, a continuación, revise las medidas y las dimensiones en el panel Metadatos.  
   
@@ -188,12 +188,12 @@ ms.locfileid: "69493773"
   
      Observe que en cada uno de estos grupos de medida, solo aparece una única medida, tal como se muestra en la siguiente imagen.  
   
-     ![Medidas Internet sales y reseller sales](../../2014/tutorials/media/l9-perspectives-4.gif "Medidas Internet sales y reseller sales")  
+     ![Medidas Internet Sales y Reseller Sales](../../2014/tutorials/media/l9-perspectives-4.gif "Medidas Internet Sales y Reseller Sales")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Definir y examinar traducciones](lesson-9-2-defining-and-browsing-translations.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Distintas](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [Perspectivas de modelos multidimensionales](multidimensional-models/perspectives-in-multidimensional-models.md)  
   

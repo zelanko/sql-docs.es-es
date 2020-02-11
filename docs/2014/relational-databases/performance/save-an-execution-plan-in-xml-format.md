@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150861"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Guardar un plan de ejecución en formato XML
@@ -63,11 +63,11 @@ ms.locfileid: "63150861"
     SET SHOWPLAN_XML OFF;  
     ```  
   
-4.  En el panel **Resultados** , haga clic con el botón derecho en el **Plan de presentación XML de Microsoft SQL Server** que contiene el plan de consulta y, después, haga clic en **Guardar resultados como**.  
+4.  En el panel **Resultados**, haga clic con el botón derecho en el **Plan de presentación XML de Microsoft SQL Server** que contiene el plan de consulta y, después, haga clic en **Guardar resultados como**.  
   
-5.  En el cuadro de diálogo **Guardar** **resultados** \<de la cuadrícula o texto>, en el cuadro **Guardar como tipo**, haga clic en **Todos los archivos (\*.\*)** .  
+5.  En el cuadro de diálogo **Guardar** \<resultados**** de la cuadrícula o texto>, en el cuadro **Guardar como tipo**, haga clic en **Todos los archivos (\*.\*)**.  
   
-6.  En el cuadro **Nombre de archivo**, proporcione un nombre con el formato \<nombre **>.sqlplan** y haga clic en **Guardar**.  
+6.  En el **cuadro Nombre de archivo** , proporcione un nombre, en \<el nombre de formato **>. sqlplan**y, a continuación, haga clic en **Guardar**.  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Para guardar un plan de ejecución mediante las opciones de SQL Server Management Studio  
   
@@ -77,9 +77,9 @@ ms.locfileid: "63150861"
   
      Como alternativa, también puede elegir **Guardar plan de ejecución como** en el menú **Archivo** .  
   
-3.  En el cuadro de diálogo **Guardar como**, asegúrese de que **Guardar como tipo** está establecido en **Archivos de plan de ejecución (\*.sqlplan)** .  
+3.  En el cuadro de diálogo **Guardar como**, asegúrese de que **Guardar como tipo** está establecido en **Archivos de plan de ejecución (\*.sqlplan)**.  
   
-4.  En el cuadro **Nombre de archivo**, proporcione un nombre con el formato \<nombre **>.sqlplan** y haga clic en **Guardar**.  
+4.  En el **cuadro Nombre de archivo** , proporcione un nombre, en \<el nombre de formato **>. sqlplan**y, a continuación, haga clic en **Guardar**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Para abrir un plan de consulta XML guardado en SQL Server Management Studio  
   
@@ -91,8 +91,8 @@ ms.locfileid: "63150861"
   
      Como alternativa, en el Explorador de Windows, haga doble clic en un archivo con la extensión **.sqlplan**. El plan se abre en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
- [SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
+ [SET STATISTICs XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
   

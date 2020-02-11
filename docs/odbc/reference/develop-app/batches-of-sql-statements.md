@@ -15,16 +15,16 @@ ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f7264b17c13d6b66bf1be24da81e96a4ca3e8a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122830"
 ---
 # <a name="batches-of-sql-statements"></a>Lotes de instrucciones SQL
-Un lote de instrucciones SQL es un grupo de dos o más instrucciones SQL o una única instrucción SQL que tiene el mismo efecto que un grupo de dos o más instrucciones SQL. En algunas implementaciones, se ejecuta la instrucción del lote completo para que los resultados estén disponibles. Esto suele ser más eficaz que enviar las instrucciones por separado, porque a menudo se puede reducir el tráfico de red y el origen de datos a veces puede optimizar la ejecución de un lote de instrucciones SQL. En otras implementaciones, una llamada a **SQLMoreResults** desencadena la ejecución de la siguiente instrucción del lote. ODBC admite los siguientes tipos de lotes:  
+Un lote de instrucciones SQL es un grupo de dos o más instrucciones SQL o una única instrucción SQL que tiene el mismo efecto que un grupo de dos o más instrucciones SQL. En algunas implementaciones, se ejecuta toda la instrucción por lotes antes de que haya resultados disponibles. Esto suele ser más eficaz que el envío de instrucciones por separado, ya que el tráfico de red a menudo se puede reducir y el origen de datos a veces puede optimizar la ejecución de un lote de instrucciones SQL. En otras implementaciones, al llamar a **SQLMoreResults** se desencadena la ejecución de la siguiente instrucción en el lote. ODBC admite los siguientes tipos de lotes:  
   
--   **Lotes explícitos** una *explícito de lotes* es dos o más instrucciones SQL separadas por punto y coma (;). Por ejemplo, el siguiente lote de instrucciones SQL abre un nuevo pedido de ventas. Para ello, insertar filas en las tablas Orders y líneas. Tenga en cuenta que no hay ningún punto y coma después de la última instrucción.  
+-   **Lotes explícitos** Un *lote explícito* es dos o más instrucciones SQL separadas por punto y coma (;). Por ejemplo, el siguiente lote de instrucciones SQL abre un nuevo pedido de ventas. Esto requiere Insertar filas en las tablas Orders y Lines. Tenga en cuenta que no hay ningún punto y coma después de la última instrucción.  
   
     ```  
     INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -39,7 +39,7 @@ Un lote de instrucciones SQL es un grupo de dos o más instrucciones SQL o una �
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **Procedimientos** si un procedimiento contiene más de una instrucción SQL, y se considera un lote de instrucciones SQL. Por ejemplo, la siguiente instrucción específica de SQL Server crea un procedimiento que devuelve un conjunto que contiene información sobre un cliente y un listado de todos los pedidos de venta abiertos para que el cliente de conjunto de resultados de resultados:  
+-   **Procedimientos** de Si un procedimiento contiene más de una instrucción SQL, se considera que es un lote de instrucciones SQL. Por ejemplo, la siguiente instrucción específica de SQL Server crea un procedimiento que devuelve un conjunto de resultados que contiene información sobre un cliente y un conjunto de resultados que enumera todos los pedidos de venta abiertos para ese cliente:  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  
@@ -48,18 +48,18 @@ Un lote de instrucciones SQL es un grupo de dos o más instrucciones SQL o una �
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     El **CREATE PROCEDURE** propia instrucción no es un lote de instrucciones SQL. Sin embargo, el procedimiento que crea es un lote de instrucciones SQL. Punto y coma no separar los dos **seleccione** instrucciones porque el **CREATE PROCEDURE** instrucción es específica de SQL Server y SQL Server no requiere el punto y coma para separar varias instrucciones en un  **CREATE PROCEDURE** instrucción.  
+     La instrucción **Create procedure** en sí no es un lote de instrucciones SQL. Sin embargo, el procedimiento que crea es un lote de instrucciones SQL. Sin puntos y comas separan las dos instrucciones **Select** porque la instrucción **Create procedure** es específica de SQL Server y SQL Server no requiere puntos y comas para separar varias instrucciones en una instrucción **Create procedure** .  
   
--   **Matrices de parámetros** matrices de parámetros se pueden usar con una instrucción SQL con parámetros como una forma eficaz para realizar operaciones masivas. Por ejemplo, se pueden usar matrices de parámetros con los siguientes **insertar** instrucción para insertar varias filas en la tabla de líneas al ejecutar una única instrucción SQL:  
+-   **Matrices de parámetros** Las matrices de parámetros se pueden usar con una instrucción SQL con parámetros como una forma eficaz de realizar operaciones masivas. Por ejemplo, se pueden usar matrices de parámetros con la siguiente instrucción **Insert** para insertar varias filas en la tabla Lines mientras se ejecuta una sola instrucción SQL:  
   
     ```  
     INSERT INTO Lines (OrderID, Line, PartID, Quantity)  
        VALUES (?, ?, ?, ?)  
     ```  
   
-     Si un origen de datos no es compatible con matrices de parámetros, el controlador puede emular al ejecutar la instrucción SQL una vez para cada conjunto de parámetros. Para obtener más información, consulte [parámetros de la instrucción](../../../odbc/reference/develop-app/statement-parameters.md) y [matrices de valores de parámetro](../../../odbc/reference/develop-app/arrays-of-parameter-values.md), más adelante en esta sección.  
+     Si un origen de datos no admite matrices de parámetros, el controlador puede emularlas ejecutando la instrucción SQL una vez para cada conjunto de parámetros. Para obtener más información, vea [parámetros de instrucciones](../../../odbc/reference/develop-app/statement-parameters.md) y [matrices de valores de parámetro](../../../odbc/reference/develop-app/arrays-of-parameter-values.md), más adelante en esta sección.  
   
- No se pueden mezclar los distintos tipos de lotes de una manera interoperable. Es decir, cómo una aplicación determina el resultado de ejecutar un lote explícito que incluye el procedimiento llama, un lote explícito que usa matrices de parámetros, y una llamada a procedimiento que usa matrices de parámetros es específica del controlador.  
+ Los distintos tipos de lotes no se pueden combinar de forma interoperable. Es decir, la forma en que una aplicación determina el resultado de ejecutar un lote explícito que incluye llamadas a procedimientos, un lote explícito que usa matrices de parámetros y una llamada a procedimiento que utiliza matrices de parámetros es específica del controlador.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_trace_geteventinfo (Transact-SQL) | Microsoft Docs
+title: Sys. fn_trace_geteventinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 62296eb8d1ef53969e33f3807bd81f47025a4893
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059279"
 ---
-# <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
+# <a name="sysfn_trace_geteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información acerca de un evento para el que se va a realizar un seguimiento.  
@@ -46,17 +46,17 @@ fn_trace_geteventinfo ( trace_id )
   
 ## <a name="arguments"></a>Argumentos  
  *trace_id*  
- Es el identificador de seguimiento. *trace_id* es **int**, no tiene ningún valor predeterminado.  
+ Es el identificador de seguimiento. *trace_id* es de **tipo int**y no tiene ningún valor predeterminado.  
   
 ## <a name="tables-returned"></a>Tablas devueltas  
   
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**EventID**|**int**|Id. del evento del que se hace el seguimiento.|  
 |**columnid**|**int**|Números de identificación de todas las columnas recopiladas para cada evento.|  
   
-## <a name="remarks"></a>Comentarios  
- Cuando se pasa el identificador de un seguimiento específico, **fn_trace_geteventinfo** devuelve información acerca del seguimiento. Si se pasa un Id. no válido, esta función devuelve un conjunto de filas vacío.  
+## <a name="remarks"></a>Observaciones  
+ Cuando se pasa el identificador de un seguimiento específico, **fn_trace_geteventinfo** devuelve información sobre ese seguimiento. Si se pasa un Id. no válido, esta función devuelve un conjunto de filas vacío.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER TRACE en el servidor.  
@@ -70,15 +70,15 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [Crear un seguimiento &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [Sys.fn_trace_gettable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)   
+ [Sys. fn_trace_gettable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)   
  [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)  
   
   

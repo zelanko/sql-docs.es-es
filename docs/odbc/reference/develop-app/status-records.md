@@ -15,14 +15,14 @@ ms.assetid: 4a987f69-158f-4cc4-a31b-2b7dd8dcbb87
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6ed360c39b87efe851bcbbb5c60762288ea1719
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68114281"
 ---
 # <a name="status-records"></a>Registros de estado
-Los campos de los registros de estado contienen información sobre errores específicos o las advertencias devueltos por el Administrador de controladores, controlador u origen de datos, incluidos SQLSTATE, el número de error nativo, mensaje de diagnóstico, número de columna y el número de fila. Registros de estado se pueden crear solo si la función devuelve SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA o SQL_STILL_EXECUTING. Para obtener una lista completa de los campos de los registros de estado, consulte el [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descripción de la función.  
+Los campos de los registros de estado contienen información sobre errores o advertencias específicos devueltos por el administrador de controladores, el controlador o el origen de datos, incluido SQLSTATE, el número de error nativo, el mensaje de diagnóstico, el número de columna y el número de fila. Los registros de estado solo se pueden crear si la función devuelve SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA o SQL_STILL_EXECUTING. Para obtener una lista completa de los campos de los registros de estado, consulte la descripción de la función [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) .  
   
  Esta sección contiene los temas siguientes.  
   

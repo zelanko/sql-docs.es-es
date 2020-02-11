@@ -14,15 +14,15 @@ ms.assetid: cd0ff767-9254-413b-bd1a-bed26c6774f5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23823e53e516324832c79706e6171b48a9c5297c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071857"
 ---
 # <a name="drop-index-statement"></a>Instrucción DROP INDEX
-Cuando se usa el controlador de Paradox, dBASE o Microsoft Access, la sintaxis de la instrucción DROP INDEX es "DROP INDEX a b en" donde "a" es el nombre del índice y "b" es el nombre de la tabla (DROP INDEX no *nombre del índice*).  
+Cuando se utiliza el controlador de Microsoft Access, dBASE o Paradox, la sintaxis de la instrucción DROP INDEX es "DROP INDEX a en b", donde "a" es el nombre del índice y "b" es el nombre de la tabla (no DROP INDEX *nombre de índice*).  
   
  Cuando se usa el controlador de Paradox, la instrucción DROP INDEX elimina los archivos de índice secundario de Paradox.  
   
- La instrucción DROP INDEX no se admite para los controladores de Microsoft Excel o texto.
+ La instrucción DROP INDEX no es compatible con los controladores de texto o de Microsoft Excel.

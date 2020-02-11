@@ -1,5 +1,5 @@
 ---
-title: Conectarse a SQL Server (SybaseToSQL) | Microsoft Docs
+title: Conexión a SQL Server (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,46 +10,46 @@ ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ed3ab8f05b9f809df99508163d07cb3e1bededa7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083401"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>Conectarse a SQL Server (SybaseToSQL)
-Use la **conectar con SQL Server** cuadro de diálogo para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea migrar a. Para tener acceso a la **conectar con SQL Server** cuadro de diálogo el **archivo** menú, haga clic en **conectar con SQL Server**.  
+Utilice el cuadro de diálogo **conectar con SQL Server** para conectarse a la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de a la que desea migrar. Para tener acceso al cuadro de diálogo **conectar con SQL Server** , en el menú **archivo** , haga clic en **conectar a SQL Server**.  
   
 ## <a name="options"></a>Opciones  
 **Nombre del servidor**  
-Escriba o seleccione la instancia de SQL Server para conectarse a. De forma predeterminada, se muestra la instancia que se haya conectado más recientemente.  
+Escriba o seleccione la instancia de SQL Server a la que se va a conectar. De forma predeterminada, se muestra la instancia de a la que se conectó más recientemente.  
   
--   Si se conecta a la instancia predeterminada en el equipo local, puede escribir cualquiera **localhost** o un punto ( **.** ).  
+-   Si se está conectando a la instancia predeterminada en el equipo local, puede especificar **localhost** o un punto (**.**).  
   
--   Si se conecta a la instancia predeterminada en otro equipo, escriba el nombre del equipo.  
+-   Si se va a conectar a la instancia predeterminada en otro equipo, escriba el nombre del equipo.  
   
--   Si se conecta a una instancia con nombre en otro equipo, escriba el nombre del equipo, una barra diagonal inversa y el nombre de instancia, como *MyServer*\\*MyInstance*.  
+-   Si se va a conectar a una instancia con nombre en otro equipo, escriba el nombre del equipo, una barra diagonal inversa y el nombre de la instancia, *por ejemplo*\\, mi*instancia*.  
   
-**Puerto del servidor**  
-Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está configurado para aceptar las conexiones en el valor predeterminado (1433) de puerto, escriba el número de puerto. En caso contrario, deje este valor en blanco.  
+**Puerto de servidor**  
+Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está configurada para aceptar conexiones en el puerto predeterminado (1433), escriba el número de puerto. De lo contrario, deje este valor en blanco.  
   
 **Base de datos**  
-Especifique la base de datos para migrar objetos y datos. Esta opción no está disponible al volver a conectarse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Especifique la base de datos a la que se van a migrar objetos y datos. Esta opción no está disponible cuando se vuelve a conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a.  
   
 **Autenticación**  
-Seleccione el método de autenticación que se usa para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para usar la cuenta de Windows actual, seleccione autenticación de Windows. Para especificar un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión y contraseña, seleccione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.  
+Seleccione el método de autenticación que se utiliza para conectarse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a. Para usar la cuenta de Windows actual, seleccione autenticación de Windows. Para especificar un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión y una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contraseña, seleccione autenticación.  
   
-**Nombre de usuario.**  
-Si usas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, escriba el inicio de sesión para esa instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si usas la autenticación de Windows, esta opción no está disponible.  
+**Nombre de usuario**  
+Si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación de, escriba el inicio de sesión de para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]esa instancia de. Si usa la autenticación de Windows, esta opción no está disponible.  
   
 **Contraseña**  
-Si usas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, escriba la contraseña para el inicio de sesión en esa instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si usas la autenticación de Windows, esta opción no está disponible.  
+Si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación de, escriba la contraseña para el inicio de sesión de en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]esa instancia de. Si usa la autenticación de Windows, esta opción no está disponible.  
   
 **Cifrar conexión**  
-Si desea conectarse de forma segura a SQL Server, asegúrese de usar de conexión Encrypt activando el **cifrar conexión** casilla de verificación.  
+Si desea conectarse de forma segura a SQL Server, haga uso de cifrar conexión activando la casilla **cifrar conexión** .  
   
-**TrustServerCertificate**  
-Si desea usar esta opción, seleccione el **confiar en certificado de servidor** casilla de verificación.  
+**Confiar en certificado de servidor**  
+Si desea usar esta opción, active la casilla **confiar en certificado de servidor** .  
   
 > [!NOTE]  
-> Para habilitar **confiar en certificado de servidor**, "Cifrar" debe establecerse en **True**.  
+> Para habilitar el **certificado de servidor de confianza**, "Encrypt" debe establecerse en **true**.  
   

@@ -13,10 +13,10 @@ ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b70622ea038b61883ce7a5307a558a5667139fb1
-ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74491962"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF. EJECUTABLE
@@ -41,7 +41,7 @@ ODBCCONF [switches] action
 ## <a name="remarks"></a>Observaciones  
  Están disponibles los siguientes modificadores:  
   
-|Modificador|Descripción|  
+|Switch|Descripción|  
 |------------|-----------------|  
 |/A {*Action*}|Especifique una acción.<br /><br /> /A es opcional si solo se especifica una acción.|  
 |/?|Muestra el uso de ODBCCONF. Ejecutable.|  
@@ -65,5 +65,5 @@ ODBCCONF [switches] action
 |*Dll* de REGSVR|Registra un archivo DLL.<br /><br /> Equivalente a regsvr32. exe.<br /><br /> Por ejemplo:<br /><br /> /A {REGSVR c:\my.dll}|  
 |SETFILEDSNDIR|Cuando HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBC. El archivo INI\ODBC DSN\DefaultDSNDir no existe, la acción SETFILEDSNDIR lo creará y le asignará el valor en HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir, anexado con orígenes \ODBC\Data.<br /><br /> Valor en HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBC. INI\ODBC File DSN\DefaultDSNDir especifica la ubicación predeterminada que usa el administrador de orígenes de datos ODBC al crear un origen de datos basado en archivos.<br /><br /> Por ejemplo:<br /><br /> /A {SETFILEDSNDIR}|  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [Microsoft Open Database Connectivity (ODBC)](../odbc/microsoft-open-database-connectivity-odbc.md)

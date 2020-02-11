@@ -18,13 +18,13 @@ ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d1c93bb6fecea955e139688b1a8f4f2c1dccc75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066823"
 ---
-# <a name="sphelplogshippingprimarysecondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
+# <a name="sp_help_log_shipping_primary_secondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este procedimiento almacenado devuelve información sobre todas las bases de datos secundarias de una base de datos principal dada.  
@@ -40,33 +40,33 @@ sp_help_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @primary_database = ] 'primary_database'` Es el nombre de la base de datos en el servidor principal. *primary_database* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @primary_database = ] 'primary_database'`Es el nombre de la base de datos del servidor principal. *primary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
-|**secondary_server**|El nombre de la instancia secundaria de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración de trasvase de registros.|  
+|**secondary_server**|Nombre de la instancia secundaria de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración del trasvase de registros.|  
 |**secondary_database**|Nombre de la base de datos secundaria en la configuración del trasvase de registros.|  
   
-## <a name="remarks"></a>Comentarios  
- **sp_help_log_shipping_primary_secondary** se debe ejecutar desde la **maestro** base de datos en el servidor principal.  
+## <a name="remarks"></a>Observaciones  
+ **sp_help_log_shipping_primary_secondary** se debe ejecutar desde la base de datos **maestra** del servidor principal.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
- En este ejemplo se muestra cómo utilizar **sp_help_log_shipping_primary_secondary** para recuperar una lista de la base de datos secundaria bases de datos asociación con la base de datos principal [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ En este ejemplo se muestra el uso de **sp_help_log_shipping_primary_secondary** para recuperar una lista de bases de datos secundarias asociadas [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]a la base de datos principal.  
   
 ```  
 EXECUTE master.dbo.sp_help_log_shipping_primary_secondary @primary_database=N'AdventureWorks';  
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95d40cc0a6da642fe92f46a86308da348d5cc040
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087298"
 ---
 # <a name="connect-to-a-microsoft-access-database-ssas"></a>Conectarse a una base de datos de Microsoft Access (SSAS)
@@ -34,10 +34,10 @@ ms.locfileid: "66087298"
  **Nombre de la base de datos**  
  Especifique la ruta de acceso completa para un archivo de base de datos de Microsoft Access.  
   
- **Examinar**  
+ **Browse**  
  Navegue a una ubicación donde haya un archivo de base de datos de Microsoft Access.  
   
- **Nombre de usuario.**  
+ **Nombre de usuario**  
  Especifique un nombre de usuario para la conexión con la base de datos.  
   
  **Contraseña**  
@@ -47,7 +47,7 @@ ms.locfileid: "66087298"
  Especifique si la contraseña que ha escrito en el cuadro **Contraseña** está almacenada.  
   
  **Avanzadas**  
- Establezca las propiedades de conexión adicionales con el cuadro de diálogo **Establecer propiedades avanzadas** .  
+ Establezca las propiedades de conexión adicionales mediante el cuadro de diálogo **establecer propiedades avanzadas** .  
   
  **Probar conexión**  
  Intente establecer una conexión con el origen de datos usando la configuración actual. Se muestra un mensaje que indica si la conexión es correcta.  

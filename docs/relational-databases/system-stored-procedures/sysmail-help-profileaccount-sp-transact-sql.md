@@ -18,13 +18,13 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044488"
 ---
-# <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
+# <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra las cuentas asociadas con uno o varios perfiles del Correo electrónico de base de datos.  
@@ -43,13 +43,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id` Es el identificador de perfil del perfil a la lista. *profile_id* es **int**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* debe especificarse.  
+`[ @profile_id = ] profile_id`Es el identificador del perfil que se va a enumerar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Es el nombre del perfil del perfil a la lista. *nombre_perfil* es **sysname**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* debe especificarse.  
+`[ @profile_name = ] 'profile_name'`Es el nombre del perfil que se va a enumerar. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
-`[ @account_id = ] account_id` Es el identificador de cuenta a la lista. *account_id* es **int**, su valor predeterminado es null. Cuando *account_id* y *account_name* son NULL, se enumeran todas las cuentas en el perfil.  
+`[ @account_id = ] account_id`Es el identificador de la cuenta que se va a mostrar. *ACCOUNT_ID* es de **tipo int**y su valor predeterminado es NULL. Cuando *ACCOUNT_ID* y *ACCOUNT_NAME* son ambos null, enumera todas las cuentas del perfil.  
   
-`[ @account_name = ] 'account_name'` Es el nombre de la cuenta a la lista. *account_name* es **sysname**, su valor predeterminado es null. Cuando *account_id* y *account_name* son NULL, se enumeran todas las cuentas en el perfil.  
+`[ @account_name = ] 'account_name'`Es el nombre de la cuenta que se va a mostrar. *account_name* es de **tipo sysname y su**valor predeterminado es NULL. Cuando *ACCOUNT_ID* y *ACCOUNT_NAME* son ambos null, enumera todas las cuentas del perfil.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -59,20 +59,20 @@ sysmail_help_profileaccount_sp
   
 ||||  
 |-|-|-|  
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |**profile_id**|**int**|Id. de perfil del perfil.|  
-|**profile_name**|**sysname**|El nombre del perfil.|  
+|**profile_name**|**sysname**|Nombre del perfil.|  
 |**account_id**|**int**|Id. de cuenta de la cuenta.|  
 |**account_name**|**sysname**|El nombre de la cuenta.|  
 |**sequence_number**|**int**|Número de secuencia de la cuenta en el perfil.|  
   
-## <a name="remarks"></a>Comentarios  
- Cuando no hay ninguna *profile_id* o *profile_name* se especifica, este procedimiento almacenado devuelve información para todos los perfiles de la instancia.  
+## <a name="remarks"></a>Observaciones  
+ Cuando no se especifica ningún *profile_id* o *profile_name* , este procedimiento almacenado devuelve información para cada perfil de la instancia.  
   
- El procedimiento almacenado **sysmail_help_profileaccount_sp** está en el **msdb** de base de datos y que pertenece el **dbo** esquema. El procedimiento debe ejecutarse con un nombre de tres partes si la base de datos actual no es **msdb**.  
+ El procedimiento almacenado **sysmail_help_profileaccount_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
 ## <a name="permissions"></a>Permisos  
- Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+ Los permisos de ejecución para este procedimiento tienen como valor predeterminado los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  **A. Mostrar las cuentas de un perfil específico por nombre**  
@@ -93,7 +93,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 131         AdventureWorks Administrator 198         Admin-BackupServer   2  
 ```  
   
- **B. Mostrar las cuentas de un identificador específico del perfil por perfil**  
+ **B. Mostrar las cuentas de un perfil específico por Id. de perfil**  
   
  En el ejemplo siguiente se indica cómo mostrar la información del perfil `AdventureWorks Administrator` especificando el Id. del perfil.  
   
@@ -129,10 +129,10 @@ profile_id  profile_name                 account_id  account_name         sequen
 106         AdventureWorks Operator      210         Operator-MainServer  1  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
- [Crear una cuenta de correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Objetos de configuración de correo electrónico de base de datos](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Procedimientos almacenados de correo electrónico de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Creación de una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Correo electrónico de base de datos objetos de configuración](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

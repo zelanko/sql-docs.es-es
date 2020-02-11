@@ -1,5 +1,5 @@
 ---
-title: Reglas para conversiones | Microsoft Docs
+title: Reglas para las conversiones | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,89 +16,89 @@ ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ca64355a80ce8892f0ea0494e165d934d8d7a88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057090"
 ---
 # <a name="rules-for-conversions"></a>Reglas para conversiones
-Las reglas en esta sección se aplican las conversiones que involucran literales numéricos. Para los fines de estas reglas, se definen los términos siguientes:  
+Las reglas de esta sección se aplican a las conversiones que implican literales numéricos. Para los fines de estas reglas, se definen los siguientes términos:  
   
--   *Asignación de Store:* Al enviar datos a una columna de tabla en una base de datos. Esto sucede durante las llamadas a **SQLExecute**, **SQLExecDirect**, y **SQLSetPos**. Durante la asignación de la tienda, "target" hace referencia a una columna de base de datos y "origen" hace referencia a los datos en búferes de la aplicación.  
+-   *Asignación de almacenamiento:* Al enviar datos a una columna de tabla en una base de datos. Esto sucede durante las llamadas a **SQLExecute**, **SQLExecDirect**y **SQLSetPos**. Durante la asignación del almacén, "destino" hace referencia a una columna de base de datos y "origen" hace referencia a los datos de los búferes de la aplicación.  
   
--   *Asignación de recuperación:* Al recuperar datos de la base de datos en búferes de la aplicación. Esto sucede durante las llamadas a **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, y **SQLSetPos**. Durante la asignación de recuperación, "target" se refiere a los búferes de la aplicación y "origen" hace referencia a la columna de base de datos.  
+-   *Asignación de recuperación:* Al recuperar datos de la base de datos en búferes de la aplicación. Esto sucede durante las llamadas a **SQLFetch**, **SQLGetData**, **SQLFetchScroll**y **SQLSetPos**. Durante la asignación de recuperación, "destino" hace referencia a los búferes de la aplicación y "origen" hace referencia a la columna de la base de datos.  
   
--   *CS:* El valor en el origen del carácter.  
+-   *CS:* Valor del origen del carácter.  
   
--   *NT:* El valor en el destino numérico.  
+-   *NT:* Valor del destino numérico.  
   
--   *NS:* El valor en el origen numérico.  
+-   *NS:* Valor del origen numérico.  
   
--   *CT:* El valor en el destino de caracteres.  
+-   *CT:* Valor del destino del carácter.  
   
--   Precisión de un literal numérico exacto: el número de dígitos que lo contiene.  
+-   Precisión de un literal numérico exacto: el número de dígitos que contiene.  
   
--   La escala de un literal numérico exacto: el número de dígitos a la derecha del período expresa o implícita.  
+-   La escala de un literal numérico exacto: el número de dígitos a la derecha del período expresado o implícito.  
   
--   La precisión de un literal numérico aproximado: la precisión de la mantisa.  
+-   La precisión de un literal numérico aproximado: la precisión de su mantisa.  
   
-## <a name="character-source-to-numeric-target"></a>Carácter de origen a destino numérico  
- A continuación figuran las reglas de conversión de un origen de caracteres (CS) a un destino numérico (NT):  
+## <a name="character-source-to-numeric-target"></a>Origen de caracteres al destino numérico  
+ A continuación se muestran las reglas para convertir de un origen de caracteres (CS) a un destino numérico (NT):  
   
-1.  Reemplace el valor obtenido al quitar los espacios iniciales o finales en CS CS. Si no es válido el CS *literales numéricos*, se devuelve SQLSTATE 22018 (valor de carácter no válido para especificación cast).  
+1.  Reemplace CS por el valor obtenido quitando los espacios iniciales o finales en CS. Si CS no es un *literal numérico*válido, se devuelve SQLSTATE 22018 (valor de carácter no válido para la especificación de conversión).  
   
-2.  Reemplace el valor obtenido mediante la eliminación de ceros delante del separador decimal, finales ceros después del separador decimal, o ambos CS.  
+2.  Reemplace CS por el valor obtenido quitando los ceros a la izquierda antes del separador decimal, los ceros a la derecha después del separador decimal o ambos.  
   
-3.  Convertir CS en NT. Si la conversión produce una pérdida de dígitos significativos, se devuelve SQLSTATE 22003 (valor numérico fuera del intervalo). Si la conversión tiene como resultado la pérdida de dígitos no significativos, SQLSTATE 01S07 (truncamiento fraccionario) se devuelve.  
+3.  Convierta CS a NT. Si la conversión produce una pérdida de dígitos significativos, se devuelve SQLSTATE 22003 (valor numérico fuera del intervalo). Si la conversión produce la pérdida de dígitos no significativos, se devuelve SQLSTATE 01S07 (truncamiento fraccionario).  
   
-## <a name="numeric-source-to-character-target"></a>Origen numérico a caracteres de destino  
- A continuación figuran las reglas de conversión de un origen numérico (NS) a un destino de caracteres (CT):  
+## <a name="numeric-source-to-character-target"></a>Origen numérico para el destino de carácter  
+ A continuación se muestran las reglas para convertir de un origen numérico (NS) a un destino de carácter (CT):  
   
-1.  Se denominará LT la longitud en caracteres de CT. Para la asignación de recuperación, LT es igual que la longitud del búfer en caracteres, menos el número de bytes en el carácter de terminación null para este juego de caracteres.  
+1.  Deje que LT sea la longitud en caracteres de CT. Para la asignación de recuperación, LT es igual a la longitud del búfer en caracteres menos el número de bytes en el carácter de terminación null para este juego de caracteres.  
   
-2.  Casos:  
+2.  Veces  
   
-    -   Si NS es un tipo numérico exacto, a continuación, dejar que es igual a la cadena más corta de caracteres que se ajusta a la definición de *literal numérico exacto* tal que la escala de YP es igual que la escala de NS, y el valor de YP interpretado es el valor absoluto de NS.  
+    -   Si NS es un tipo numérico exacto, deje que es sea igual a la cadena de caracteres más corta que se ajusta a la definición de *literal numérico exacto* de modo que la escala de es sea la misma que la escala de NS, y el valor interpretado de es es el valor absoluto de NS.  
   
-    -   Si NS es un tipo numérico aproximado, a continuación, se denominará YP una cadena de caracteres como sigue:  
+    -   Si NS es un tipo numérico aproximado, deje que es sea una cadena de caracteres como se indica a continuación:  
   
          Caso:  
   
-         Si es igual a 0 NS, YP es 0.  
+         Si NS es igual a 0, es es 0.  
   
-         Se denominará YSN la cadena más corta de caracteres que se ajusta a la definición exacta-*literales numéricos* y cuyo valor interpretado es el valor absoluto de NS. Si la longitud de YSN es menor que (*precisión* + 1) del tipo de datos de NS, a continuación, dejar que YP igual YSN.  
+         Permita que YSN sea la cadena de caracteres más corta que se ajusta a la definición de Exact-*Numeric-literal* y cuyo valor interpretado es el valor absoluto de NS. Si la longitud de YSN es menor que (*precisión* + 1) del tipo de datos NS, deje que es sea igual a YSN.  
   
-         En caso contrario, YP es la cadena más corta de caracteres que se ajusta a la definición de *literal numérico aproximado* cuyo valor interpretado es el valor absoluto de NS y cuyo *mantisa* consta de un solo *dígitos* que es no '0', seguido por un *período* y un *entero sin signo*.  
+         De lo contrario, es es la cadena de caracteres más corta que se ajusta a la definición del *literal numérico aproximado* cuyo valor interpretado es el valor absoluto de NS y cuya *mantisa* se compone de un único *dígito* que no es ' 0 ', seguido de un *punto* y un *entero sin signo*.  
   
 3.  Caso:  
   
-    -   Si NS es menor que 0, a continuación, se denominará Y el resultado de:  
+    -   Si NS es menor que 0, deje Y como resultado de:  
   
-         '-' &#124; &#124; YP  
+         '-'  &#124;&#124; ES  
   
-         donde '&#124;&#124;' es el operador de concatenación de cadenas.  
+         donde ' &#124;&#124; ' es el operador de concatenación de cadenas.  
   
-         En caso contrario, deje que Y es igual a YP.  
+         En caso contrario, deje que Y sea igual a es.  
   
-4.  Permita que LY sea la longitud en caracteres de Y.  
+4.  Deje que sea la longitud en caracteres de Y.  
   
 5.  Caso:  
   
-    -   Si LY es igual a LT, CT esté establecido en Y.  
+    -   Si LY es igual a LT, CT se establece en Y.  
   
-    -   Si LY es menor que LT, a continuación, CT se establece en Y extendido a la derecha por el número adecuado de espacios.  
+    -   Si LY es menor que LT, CT se establece en Y Extended a la derecha el número de espacios adecuado.  
   
-         En caso contrario (LY > LT), copie los primeros caracteres LT de Y CT.  
+         En caso contrario (LY > LT), copie los primeros caracteres LT of Y en CT.  
   
          Caso:  
   
-         Si se trata de una asignación de la tienda, devolverá el error SQLSTATE 22001 (datos de cadena, truncados a la derecha).  
+         Si se trata de una asignación de almacén, devuelva el error SQLSTATE 22001 (datos de cadena, truncados a la derecha).  
   
-         Si se trata de una asignación de recuperación, devolver la advertencia SQLSTATE 01004 (datos de cadena, truncados a la derecha). Cuando la copia da como resultado la pérdida de dígitos fraccionarios (excepto los ceros finales), está definido por el controlador si se produce uno de los siguientes:  
+         Si se trata de una asignación de recuperación, devuelva la advertencia SQLSTATE 01004 (datos de cadena, truncados a la derecha). Cuando la copia da como resultado la pérdida de dígitos fraccionarios (que no sean ceros finales), está definido por el controlador si se produce uno de los siguientes casos:  
   
-         (1) el controlador trunca la cadena en Y a escala adecuada (que puede ser cero también) y escribe el resultado en CT.  
+         (1) el controlador trunca la cadena en Y a una escala adecuada (que también puede ser cero) y escribe el resultado en CT.  
   
-         (2) el controlador redondea la cadena en Y a escala adecuada (que puede ser cero también) y escribe el resultado en CT.  
+         (2) el controlador redondea la cadena en Y a una escala adecuada (que también puede ser cero) y escribe el resultado en CT.  
   
-         (3) el controlador ni trunca ni se redondea, pero sólo los primeros caracteres LT de Y copia en CT.
+         (3) el controlador no se trunca ni se redondea, sino que solo copia los primeros caracteres LT de Y en CT.

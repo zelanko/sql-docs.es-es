@@ -1,5 +1,5 @@
 ---
-title: Configuración (cargar objetos del sistema) del proyecto (DB2ToSQL) | Microsoft Docs
+title: Configuración del proyecto (cargar objetos del sistema) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,39 +10,39 @@ ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5c12a2ddb97c6d599e5adfc57277e0a5f64288e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060194"
 ---
-# <a name="project-settingsloading-system-objects-db2tosql"></a>Configuración (cargar objetos del sistema) del proyecto (DB2ToSQL)
-La página cargar objetos del sistema de la **configuración del proyecto** cuadro de diálogo le permite especificar qué objetos del sistema DB2 SSMA convierte y se carga en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="project-settingsloading-system-objects-db2tosql"></a>Configuración del proyecto (cargar objetos del sistema) (DB2ToSQL)
+La página cargando objetos del sistema del cuadro de diálogo **configuración del proyecto** le permite especificar qué objetos del sistema DB2 SSMA convierte y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]carga en.  
   
-Está disponible en el panel de objetos del sistema al cargar el **configuración del proyecto** y **configuración de proyecto predeterminada** cuadros de diálogo:  
+El panel cargando objetos del sistema está disponible en los cuadros de diálogo Configuración del **proyecto** y **configuración predeterminada del proyecto** :  
   
--   Para especificar la configuración para todos los proyectos SSMA, en el **herramientas** menú, seleccione **la configuración predeterminada del proyecto**, seleccione el tipo de proyecto de migración para el que la configuración es necesaria para ver o cambiar de **Versión de destino de migración** desplegable clic **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **cargar objetos del sistema**.  
+-   Para especificar la configuración de todos los proyectos de SSMA, en el menú **herramientas** , seleccione **configuración predeterminada del proyecto**, seleccione tipo de proyecto de migración para el que se deben ver o cambiar las opciones de configuración en la lista desplegable de la **versión de destino** de la migración, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **cargar objetos del sistema**.  
   
--   Para especificar la configuración para el proyecto actual, en el **herramientas** menú, seleccione **configuración del proyecto**, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **Al cargar los objetos del sistema**.  
+-   Para especificar la configuración del proyecto actual, en el menú **herramientas** , seleccione **configuración del proyecto**, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, haga clic en **cargar objetos del sistema**.  
   
 ## <a name="default-settings"></a>Configuración predeterminada  
-Convertir los objetos del sistema consume recursos del sistema y lleva tiempo. Para mejorar el rendimiento, SSMA selecciona sólo los objetos del sistema utilizadas con frecuencia, como se muestra en la lista siguiente:  
+La conversión de objetos del sistema consume recursos del sistema y lleva tiempo. Para mejorar el rendimiento, SSMA selecciona solo los objetos del sistema que se usan con más frecuencia, como se muestra en la lista siguiente:  
   
--   SYS. DBMS_OUTPUT  
+-   Sist. DBMS_OUTPUT  
   
--   SYS.DBMS_PIPE  
+-   Sist. DBMS_PIPE  
   
--   SYS. DBMS_UTILITY  
+-   Sist. DBMS_UTILITY  
   
--   SYS. ESTÁNDAR  
+-   Sist. NORMAL  
   
--   SYS.UTL_FILE  
+-   Sist. UTL_FILE  
   
--   SYS.DBMS_LOB  
+-   Sist. DBMS_LOB  
   
--   SYS.DBMS_SQL  
+-   Sist. DBMS_SQL  
   
--   SYS. DBMS_SESSION  
+-   Sist. DBMS_SESSION  
   
-Si los objetos de DB2 que hacen referencia a objetos del sistema adicionales, debe seleccionar esos objetos. Si no selecciona los objetos del sistema que hacen referencia los objetos de base de datos de DB2, SSMA va a notificar errores de conversión. Si recibe errores de conversión que se debe a que faltan los objetos del sistema, seleccione los objetos que faltan en este cuadro de diálogo. A continuación, puede repetir la conversión según sea necesario.  
+Si los objetos DB2 hacen referencia a objetos del sistema adicionales, debe seleccionar esos objetos. Si no selecciona los objetos del sistema a los que hacen referencia los objetos de base de datos de DB2, SSMA notificará los errores de conversión. Si recibe errores de conversión causados por objetos del sistema que faltan, seleccione los objetos que faltan en este cuadro de diálogo. Después, puede repetir la conversión según sea necesario.  
   

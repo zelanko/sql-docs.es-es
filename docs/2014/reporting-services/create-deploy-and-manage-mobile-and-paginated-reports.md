@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a4d9983da355c244e5d26873f92b4c43159a0e1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74685435"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "74685435"
  Para obtener información sobre otros componentes, herramientas y recursos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vea los [Libros en pantalla de SQL Server](../2014-toc/index.yml).  
   
  **Examinar contenido por área**  
- ![Icono de carpeta](media/hlp-16folder.gif "Ficono anterior ") [Reporting Services servidor de informes](../../2014/reporting-services/reporting-services-report-server.md)  
+ ![Icono de carpeta](media/hlp-16folder.gif "Icono de carpeta") [Reporting Services servidor de informes](../../2014/reporting-services/reporting-services-report-server.md)  
   
  ![Icono de carpeta](media/hlp-16folder.gif "Icono de carpeta") [Reporting Services informes &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74685435"
   
  ![Icono de carpeta](media/hlp-16folder.gif "Icono de carpeta") [&#40;de referencia de características Reporting Services&#41;](feature-reference-reporting-services.md)  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server centro de recursos](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

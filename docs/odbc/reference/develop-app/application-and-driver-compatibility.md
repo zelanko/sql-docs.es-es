@@ -16,14 +16,14 @@ ms.assetid: 23ed7f5e-e945-4c36-9dbc-e0f93b6d23c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e31d9f93423db572d2759857b11d3f79af56583b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077077"
 ---
 # <a name="application-and-driver-compatibility"></a>Compatibilidad de controladores y aplicaciones
-Controlador y las aplicaciones ODBC se dividen en varias categorías además de su versión. Algunas de estas aplicaciones no son compatibles con algunos controladores; en otros casos, el tipo de la aplicación o el controlador puede tener una incidencia en los problemas de compatibilidad con versiones anteriores entre ellos.  
+Las aplicaciones y el controlador ODBC se dividen en varias categorías, además de en su versión. Algunas de estas aplicaciones no son compatibles con algunos controladores; en otros casos, el tipo de la aplicación o el controlador puede tener un inconveniente de los problemas de compatibilidad con versiones anteriores.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -1,5 +1,5 @@
 ---
-title: Instrucción UPDATE CUBE (MDX) | Microsoft Docs
+title: UPDATE CUBE (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f52dd59b67b42ad430df9bb1e9d00dce7ad6d697
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003530"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Manipulación de datos de MDX: UPDATE CUBE
 
 
-  La instrucción UPDATE CUBE se emplea para reescribir datos en cualquier celda de un cubo que se agrega a su primario mediante la agregación SUM. Para obtener más información y un ejemplo, vea "Descripción de las asignaciones" en esta entrada de blog: [Compilar una aplicación de reescritura con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
+  La instrucción UPDATE CUBE se emplea para reescribir datos en cualquier celda de un cubo que se agrega a su primario mediante la agregación SUM. Para obtener más información y un ejemplo, vea "Descripción de las asignaciones" en esta entrada de blog: [compilar una aplicación de reescritura con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,19 +47,19 @@ UPDATE [ CUBE ] Cube_Name
  Expresión MDX válida que devuelve una tupla.  
   
  *New_Value*  
- Una expresión numérica válida.  
+ Expresión numérica válida.  
   
  *Weight_Expression*  
  Expresión numérica MDX (Expresiones multidimensionales) válida que devuelve un valor decimal entre 0 y 1.  
   
-## <a name="remarks"></a>Comentarios  
- Puede actualizar el valor de una celda hoja o de una celda no hoja especificada de un cubo, asignando opcionalmente el valor de una celda no hoja especificada a través de las celdas hoja dependientes. La celda especificada por la expresión de tupla puede ser cualquier celda válida del espacio multidimensional (es decir, la celda no tiene que ser una celda hoja). Sin embargo, debe agregarse la celda con el [suma](../mdx/sum-mdx.md) función de agregado y no puede contener un miembro calculado en la tupla que se usa para identificar la celda.  
+## <a name="remarks"></a>Observaciones  
+ Puede actualizar el valor de una celda hoja o de una celda no hoja especificada de un cubo, asignando opcionalmente el valor de una celda no hoja especificada a través de las celdas hoja dependientes. La celda especificada por la expresión de tupla puede ser cualquier celda válida del espacio multidimensional (es decir, la celda no tiene que ser una celda hoja). Sin embargo, la celda se debe agregar con la función [SUM](../mdx/sum-mdx.md) Aggregate y no debe incluir un miembro calculado en la tupla que se usa para identificar la celda.  
   
- Puede resultar útil pensar en el **UPDATE CUBE** instrucción como una subrutina que generará automáticamente una serie de operaciones de reescritura de celda individual a las celdas hoja y no hoja que se acumularán en la suma especificada.  
+ Puede ser útil pensar en la instrucción **Update Cube** como una subrutina que generará automáticamente una serie de operaciones de reescritura de celda individuales en celdas hoja y no hoja que se acumularán en una suma especificada.  
   
  La siguiente es una descripción de los métodos de asignación.  
   
- **USE_EQUAL_ALLOCATION:** Cada celda hoja que contribuye a la celda actualizada se asignará un valor igual basado en la siguiente expresión.  
+ **USE_EQUAL_ALLOCATION:** A cada celda hoja que contribuye a la celda actualizada se le asignará un valor igual basado en la siguiente expresión.  
   
 ```  
 <leaf cell value> =   
@@ -74,7 +74,7 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:** Cada celda hoja que contribuye a la celda actualizada se asignará un valor igual a la que se basa en la siguiente expresión.  
+ **USE_WEIGHTED_ALLOCATION:** A cada celda hoja que contribuye a la celda actualizada se le asignará un valor igual que se basa en la expresión siguiente.  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  
@@ -87,7 +87,7 @@ Count(leaf cells contained in <tuple>)
 (<New Value> - <existing value>)  * Weight_Expression  
 ```  
   
- Si no se especifica una expresión de peso, el **UPDATE CUBE** instrucción usa implícitamente la expresión siguiente.  
+ Si no se especifica una expresión de peso, la instrucción **Update Cube** usa implícitamente la siguiente expresión.  
   
 ```  
 Weight_Expression = <leaf cell value> / <existing value>  
@@ -98,7 +98,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!CAUTION]  
 >  La aplicación cliente debe considerar la asignación de todas las dimensiones de forma simultánea para evitar posibles resultados inesperados, incluidos los valores de resumen incorrectos o los datos incoherentes.  
   
- Cada **UPDATE CUBE** asignación debe considerarse atómicas para fines transaccionales. Eso significa que si alguna de las operaciones de asignación no tiene éxito por alguna razón, como un error en una fórmula o una infracción de seguridad, se producirá un error de toda la operación UPDATE CUBE. Antes de procesar los cálculos de las operaciones de asignación individuales, se toma una instantánea de los datos para garantizar que los cálculos resultantes sean correctos.  
+ Cada asignación de **cubo de actualización** debe considerarse atómica para fines transaccionales. Eso significa que si alguna de las operaciones de asignación no tiene éxito por alguna razón, como un error en una fórmula o una infracción de seguridad, se producirá un error de toda la operación UPDATE CUBE. Antes de procesar los cálculos de las operaciones de asignación individuales, se toma una instantánea de los datos para garantizar que los cálculos resultantes sean correctos.  
   
 > [!CAUTION]  
 >  Cuando se utiliza en una medida que contiene enteros, el método USE_WEIGHTED_ALLOCATION puede devolver resultados imprecisos causados por cambios en el redondeo incremental.  
@@ -106,8 +106,8 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!IMPORTANT]  
 >  Si las celdas actualizadas no se superponen, se puede utilizar la propiedad de la cadena de conexión **Update Isolation Level** para mejorar el rendimiento de UPDATE CUBE.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [Instrucciones de manipulación de datos MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Instrucciones de manipulación de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

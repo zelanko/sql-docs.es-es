@@ -1,5 +1,5 @@
 ---
-title: Invalidar líderes y precisión en segundos para los tipos de datos Interval | Microsoft Docs
+title: Invalidar la precisión de los segundos y el inicial para los tipos de datos de intervalo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13adfb16b772acc5fac30cf3d10c6199f16f479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100626"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Reemplazar predeterminado inicial y la precisión de segundos para los tipos de datos Interval
-Cuando se establece el campo SQL_DESC_TYPE de una descartar a un tipo C de intervalo o datetime, llamando **SQLBindCol** o **SQLSetDescField**, el campo SQL_DESC_PRECISION (que contiene el intervalo (segundos) precisión) se establece en los valores predeterminados siguientes:  
+Cuando el campo de SQL_DESC_TYPE de una ARD se establece en un tipo de fecha y hora o de intervalo, al llamar a **SQLBindCol** o **SQLSetDescField**, el campo de SQL_DESC_PRECISION (que contiene la precisión de los segundos de intervalo) se establece en los valores predeterminados siguientes:  
   
--   6 para todos los tipos de datos de intervalo con un segundo componente y marca de tiempo.  
+-   6 para la marca de tiempo y todos los tipos de datos de intervalo con un segundo componente.  
   
--   0 para todos los demás tipos de datos.  
+-   0 para el resto de tipos de datos.  
   
- Para todos los tipos de datos de intervalo, el campo descriptor SQL_DESC_DATETIME_INTERVAL_PRECISION, que contiene la precisión del campo intervalo inicial, se establece en un valor predeterminado de 2.  
+ En todos los tipos de datos de intervalo, el campo descriptor de SQL_DESC_DATETIME_INTERVAL_PRECISION, que contiene la precisión del campo inicial del intervalo, se establece en un valor predeterminado de 2.  
   
- Cuando se establece el campo SQL_DESC_TYPE en un APD a un tipo C de intervalo o datetime, llamando **SQLBindParameter** o **SQLSetDescField**, el SQL_DESC_PRECISION y SQL_DESC_DATETIME_INTERVAL_ Campos de precisión en el APD se establecen los valores predeterminados indicados anteriormente. Esto es cierto para los parámetros de entrada pero no para los parámetros de entrada y salida o de salida.  
+ Cuando el campo de SQL_DESC_TYPE de una APD se establece en un tipo de fecha y hora o de intervalo, llamando a **SQLBindParameter** o **SQLSetDescField**, los campos SQL_DESC_PRECISION y SQL_DESC_DATETIME_INTERVAL_PRECISION de la APD se establecen en el valor predeterminado especificado anteriormente. Esto es válido para los parámetros de entrada, pero no para los parámetros de entrada/salida ni de salida.  
   
- Una llamada a **SQLSetDescRec** establece el intervalo de precisión del principio en el valor predeterminado, pero establece la precisión de segundos de intervalo (en el campo SQL_DESC_PRECISION) en el valor de su *precisión* argumento.  
+ Una llamada a **SQLSetDescRec** establece la precisión inicial del intervalo en el valor predeterminado, pero establece la precisión de los segundos del intervalo (en el campo SQL_DESC_PRECISION) en el valor de su argumento de *precisión* .  
   
- Si anteriormente cualquiera de los valores predeterminados dada no es aceptable para una aplicación, la aplicación debe establecer el campo SQL_DESC_PRECISION o SQL_DESC_DATETIME_INTERVAL_PRECISION mediante una llamada a **SQLSetDescField**.  
+ Si alguno de los valores predeterminados proporcionados previamente no es aceptable para una aplicación, la aplicación debe establecer el SQL_DESC_PRECISION o SQL_DESC_DATETIME_INTERVAL_PRECISION campo mediante una llamada a **SQLSetDescField**.  
   
- Si la aplicación llama a **SQLGetData** para devolver datos en una hora o un intervalo de tipo C, se utilizan la precisión líderes de intervalo predeterminado y la precisión de segundos del intervalo. Si cualquier valor predeterminado no es aceptable, la aplicación debe llamar a **SQLSetDescField** para establecer el campo descriptor, o **SQLSetDescRec** establecer SQL_DESC_PRECISION. La llamada a **SQLGetData** debe tener un *TargetType* de SQL_ARD_TYPE para usar los valores en los campos de descriptor.  
+ Si la aplicación llama a **SQLGetData** para devolver datos a un tipo DateTime o Interval C, se usan la precisión inicial del intervalo predeterminado y la precisión de los segundos del intervalo. Si alguno de los valores predeterminados no es aceptable, la aplicación debe llamar a **SQLSetDescField** para establecer cualquier campo de descriptor o **SQLSetDescRec** para establecer SQL_DESC_PRECISION. La llamada a **SQLGetData** debe tener un *TargetType* de SQL_ARD_TYPE para usar los valores de los campos de descriptor.  
   
- Cuando **SQLPutData** se denomina el intervalo de líderes de precisión y el intervalo de segundos precisión se leen desde los campos del registro de descriptor que corresponden al parámetro de datos en ejecución o columna, que son campos APD para las llamadas para **SQLExecute** o **SQLExecDirect**, o los campos de Descartar para las llamadas a **SQLBulkOperations** o **SQLSetPos**.
+ Cuando se llama a **SQLPutData** , la precisión inicial del intervalo y la precisión de los segundos del intervalo se leen de los campos del registro del descriptor que corresponden al parámetro o la columna de datos en ejecución, que son campos de APD para las llamadas a los campos **SQLExecute** o **SQLExecDirect**, o ARD para las llamadas a **SQLBulkOperations** o **SQLSetPos**.

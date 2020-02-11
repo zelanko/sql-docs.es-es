@@ -14,10 +14,10 @@ ms.author: genemi
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 36ba34985cde2f88606a13a4f07f6afb7af5dc7a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095364"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadatos: fecha y hora y conjuntos de filas de esquema
@@ -30,12 +30,12 @@ ms.locfileid: "74095364"
   
 |Tipo de columna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|Desactivar|0|  
-|time|DBTYPE_DBTIME2|Establezca|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Desactivar|0|  
-|Fecha y hora|DBTYPE_DBTIMESTAMP|Desactivar|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|Establezca|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Establezca|0..7|  
+|date|DBTYPE_DBDATE|Borrar|0|  
+|time|DBTYPE_DBTIME2|Set|0..7|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Borrar|0|  
+|datetime|DBTYPE_DBTIMESTAMP|Borrar|3|  
+|datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
   
  En COLUMN_FLAGS, DBCOLUMNFLAGS_ISFIXEDLENGTH es siempre TRUE para los tipos de fecha y hora, y las marcas siguientes son siempre FALSE:  
   
@@ -67,21 +67,21 @@ ms.locfileid: "74095364"
 ## <a name="provider_types-rowset"></a>Conjunto de filas PROVIDER_TYPES  
  Para los tipos de fecha y hora se devuelven las siguientes filas:  
   
-|Tipo -><br /><br /> Columna|date|time|smalldatetime|Fecha y hora|datetime2|datetimeoffset|  
+|Tipo -><br /><br /> Columna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|Fecha y hora|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|“|“|“|“|“|“|  
-|LITERAL_SUFFIX|“|“|“|“|“|“|  
-|CREATE_PARAMS|NULL|escala|NULL|NULL|escala|escala|  
+|LITERAL_PREFIX|'|'|'|'|'|'|  
+|LITERAL_SUFFIX|'|'|'|'|'|'|  
+|CREATE_PARAMS|NULL|scale|NULL|NULL|scale|scale|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|DB_SEARCHABLE|  
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|Fecha y hora|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  
@@ -93,7 +93,7 @@ ms.locfileid: "74095364"
   
  OLE DB solamente define MINIMUM_SCALE y MAXIMUM_SCALE para tipos numéricos y decimales, de modo que el uso que hace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client de estas columnas para time, datetime2 y datetimeoffset no es estándar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Metadatos &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

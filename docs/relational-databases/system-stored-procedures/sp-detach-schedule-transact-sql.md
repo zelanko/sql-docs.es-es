@@ -18,13 +18,13 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: aed989cc09922b7b480a7dd7b3ca6820d6b77ab2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936742"
 ---
-# <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
+# <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita una asociación entre una programación y un trabajo.  
@@ -42,21 +42,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id` El número de identificación del trabajo del trabajo para quitar la programación de. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id`Número de identificación del trabajo del que se va a quitar la programación. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` El nombre del trabajo para quitar la programación de. *job_name* es **sysname**, su valor predeterminado es null.  
-  
-> [!NOTE]  
->  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
-  
-`[ @schedule_id = ] schedule_id` El número de identificación de la programación para quitar del trabajo. *schedule_id* es **int**, su valor predeterminado es null.  
-  
-`[ @schedule_name = ] 'schedule_name'` El nombre de programación que se va a quitar del trabajo. *schedule_name* es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'`Nombre del trabajo del que se va a quitar la programación. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  Cualquier *schedule_id* o *schedule_name* debe especificarse, pero no se pueden especificar ambos.  
+>  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` Especifica si se deben eliminar las programaciones de trabajo no utilizadas. *delete_unused_schedule* es **bit**, su valor predeterminado es **0**, lo que significa que todas las programaciones se mantendrán, aunque ningún trabajo haga referencia a ellos. Si establece en **1**, las programaciones de trabajo no utilizadas se eliminan si ningún trabajo haga referencia a ellos.  
+`[ @schedule_id = ] schedule_id`El número de identificación de la programación que se va a quitar del trabajo. *schedule_id* es de **tipo int**y su valor predeterminado es NULL.  
+  
+`[ @schedule_name = ] 'schedule_name'`Nombre de la programación que se va a quitar del trabajo. *schedule_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+  
+> [!NOTE]  
+>  Se debe especificar *schedule_id* o *schedule_name* , pero no se pueden especificar ambos.  
+  
+`[ @delete_unused_schedule = ] delete_unused_schedule`Especifica si se deben eliminar las programaciones de trabajos no utilizadas. *delete_unused_schedule* es de **bit**y su valor predeterminado es **0**, lo que significa que se conservarán todas las programaciones, incluso si no hay ningún trabajo que haga referencia a ellas. Si se establece en **1**, las programaciones de trabajos sin usar se eliminan si no hay ningún trabajo que haga referencia a ellas.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -77,7 +77,8 @@ sp_detach_schedule
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza una comprobación para determinar si el usuario es propietario de la programación. Solo los miembros de la **sysadmin** rol fijo de servidor puede separar programaciones de trabajos que pertenecen a otro usuario.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza una comprobación para determinar si el usuario es propietario de la programación. Solo los miembros del rol fijo de servidor **sysadmin** pueden separar las programaciones de los trabajos que pertenecen a otro usuario.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se quita una asociación entre una programación `'NightlyJobs'` y un trabajo `'BackupDatabase'`.  
@@ -92,9 +93,9 @@ EXEC dbo.sp_detach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [sp_add_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

@@ -14,23 +14,23 @@ ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f24a305c2f22ef4cfacbbe4bcbcf498eab648f1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064474"
 ---
 # <a name="sqlerror-mapping"></a>Asignación de SQLError
-Cuando una aplicación llama **SQLError** a través de un ODBC *3.x* controlador, la llamada a  
+Cuando una aplicación llama a **SQLError** a través de un controlador ODBC *3. x* , la llamada a  
   
 ```  
 SQLError(henv, hdbc, hstmt, szSqlState, pfNativeError, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)   
 ```  
   
- se asigna a  
+ está asignado a  
   
 ```  
 SQLGetDiagRec(HandleType, Handle, RecNumber, szSqlstate, pfNativeErrorPtr, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)  
 ```  
   
- con el *HandleType* argumento establecido en el valor SQL_HANDLE_ENV, SQL_HANDLE_DBC o SQL_HANDLE_STMT, según corresponda y el *controlar* argumento establecido en el valor de *henv*, *hdbc*, o *hstmt*, según corresponda. El *RecNumber* argumento viene determinada por el Administrador de controladores.
+ con el argumento *HandleType* establecido en el valor SQL_HANDLE_ENV, SQL_HANDLE_DBC o SQL_HANDLE_STMT, según corresponda, y el argumento *Handle* establecido en el valor de *HENV*, *hdbc*o *hstmt*, según corresponda. El argumento *RecNumber* viene determinado por el administrador de controladores.

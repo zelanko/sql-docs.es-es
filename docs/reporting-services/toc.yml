@@ -15,13 +15,19 @@
     - name: Backward Compatibility
       href: ../reporting-services/reporting-services-backward-compatibility.md
       items:
-        - name: Características en desuso
+        - name: Características en desuso en 2019
+          href: ../reporting-services/deprecated-features-sql-server-2019-reporting-services-ssrs.md
+        - name: Características en desuso en 2017
+          href: ../reporting-services/deprecated-features-sql-server-2017-reporting-services-ssrs.md
+        - name: Características en desuso en 2016
           href: ../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md
-        - name: Funcionalidad no incluida en SSRS en SQL Server 2016
+        - name: Funcionalidad suspendida en 2019
+          href: ../reporting-services/discontinued-functionality-sql-server-reporting-services-2019.md
+        - name: Funcionalidad suspendida en 2016
           href: ../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
-        - name: Principales cambios en SSRS en SQL Server 2016
+        - name: Cambios importantes en 2016
           href: ../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
-        - name: Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2016
+        - name: Cambios de comportamiento en 2016
           href: ../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: Tutoriales
   items:
@@ -32,84 +38,84 @@
         - name: Crear un informe de tabla básico (Tutorial de SSRS)
           href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
           items:
-            - name: 'Lección 1: Creación de un proyecto de servidor de informes'
+            - name: 'Lección 1: Crear un proyecto de servidor de informes'
               href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
-            - name: 'Lección 2: Especificación de información de conexión'
+            - name: 'Lección 2: Especificar información de conexión'
               href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-            - name: 'Lección 3: Definición de un conjunto de datos para el informe de tabla'
+            - name: 'Lección 3: Definir un conjunto de datos para el informe de tabla'
               href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-            - name: 'Lección 4: Incorporación de una tabla al informe'
+            - name: 'Lección 4: Agregar una tabla al informe'
               href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-            - name: 'Lección 5: Aplicación de formato a un informe'
+            - name: 'Lesson 5: Formatting a Report'
               href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-            - name: 'Lección 6: Adición de grupos y totales'
+            - name: 'Lesson 6: Adding Grouping and Totals'
               href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
         - name: Crear una suscripción controlada por datos (Tutorial de SSRS)
           href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
           items:
-            - name: 'Lección 1: Creación de una base de datos de suscriptor de ejemplo'
+            - name: 'Lección 1: Crear una base de datos de suscriptor de ejemplo'
               href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-            - name: 'Lección 2: Modificación de las propiedades del origen de datos de informe'
+            - name: 'Lesson 2: Modifying the Report Data Source Properties'
               href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-            - name: 'Lección 3: Definir una suscripción controlada por datos'
+            - name: 'Lesson 3: Defining a Data-Driven Subscription'
               href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
         - name: Crear un informe detallado (RDLC) con parámetros mediante ReportViewer (Tutorial de SSRS)
           href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
           items:
-            - name: 'Lección 1: Creación de un sitio web'
+            - name: 'Lección 1: Crear un sitio Web nuevo'
               href: ../reporting-services/lesson-1-create-a-new-web-site.md
-            - name: 'Lección 2: Definición de una conexión de datos y una tabla de datos para el informe primario'
+            - name: 'Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario'
               href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
-            - name: 'Lección 3: Diseño del informe primario usando el Asistente para informes'
+            - name: 'Lección 3: Diseñar el informe primario usando el Asistente para informes'
               href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
-            - name: 'Lección 4: Definición de una conexión de datos y una tabla de datos para el informe secundario'
+            - name: 'Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario'
               href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
-            - name: 'Lección 5: Diseño del informe secundario usando el Asistente para informes'
+            - name: 'Lección 5: Diseñar el informe secundario usando el Asistente para informes'
               href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
-            - name: 'Lección 6: Adición de un control ReportViewer a la aplicación'
+            - name: 'Lección 6: agregar un control ReportViewer a la aplicación'
               href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
-            - name: 'Lección 7: Incorporación de una acción de obtención de detalles en el informe primario'
+            - name: 'Lección 7: Agregar una acción de obtención de detalles en el informe primario'
               href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
-            - name: 'Lección 8: Creación de un filtro de datos'
+            - name: 'Lección 8: Crear un filtro de datos'
               href: ../reporting-services/lesson-8-create-a-data-filter.md
-            - name: 'Lección 9: Generación y ejecución de la aplicación'
+            - name: 'Lesson 9: Build and Run the Application'
               href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: Tutoriales del Generador de informes
       href: ../reporting-services/report-builder-tutorials.md
       items:
-        - name: 'Tutorial: Creación de un informe de gráfico rápido sin conexión'
+        - name: 'Tutorial: Crear un informe de gráfico rápido sin conexión'
           href: ../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
         - name: Requisitos previos para los tutoriales
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
         - name: Maneras alternativas de obtener una conexión de datos (Generador de informes)
           href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: 'Tutorial: Creación de un informe de tabla básico'
+        - name: 'Tutorial: Crear un informe de tabla básico'
           href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
-        - name: 'Tutorial: Creación de un informe de matriz'
+        - name: 'Tutorial: Crear un informe de matriz'
           href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
-        - name: 'Tutorial: Creación de un informe de forma libre'
+        - name: 'Tutorial: Crear un informe de forma libre'
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: 'Tutorial: Aplicación de formato a un texto (Generador de informes)'
+        - name: 'Tutorial: Dar formato a texto (Generador de informes)'
           href: ../reporting-services/tutorial-format-text-report-builder.md
-        - name: 'Tutorial: Incorporación de un gráfico de columnas a un informe (Generador de informes)'
+        - name: 'Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)'
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
-        - name: 'Tutorial: Incorporación de un gráfico circular a un informe (Generador de informes)'
+        - name: 'Tutorial: Agregar un gráfico circular a un informe (Generador de informes)'
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: 'Tutorial: Incorporación de un gráfico de barras a un informe (Generador de informes)'
+        - name: 'Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)'
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
-        - name: 'Tutorial: Adición de un minigráfico a un informe (Generador de informes)'
+        - name: 'Tutorial: Agregar un minigráfico a un informe (Generador de informes)'
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: 'Tutorial: Incorporación de un KPI a un informe'
+        - name: 'Tutorial: Agregar un KPI a un informe'
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: 'Tutorial: Informe de asignaciones'
+        - name: 'Tutorial: informe de asignaciones'
           href: ../reporting-services/tutorial-map-report-report-builder.md
-        - name: 'Tutorial: Adición de un parámetro al informe (Generador de informes)'
+        - name: 'Tutorial: Agregar un parámetro a un informe (Generador de informes)'
           href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
-        - name: 'Tutorial: Creación de informes principales y de obtención de detalles'
+        - name: 'Tutorial: Crear informes principales y de obtención de detalles'
           href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
         - name: 'Tutorial: Introducción a las expresiones'
           href: ../reporting-services/tutorial-introducing-expressions.md
-- name: Planeamiento
+- name: Planificación
   items:
     - name: Elección de herramientas de BI para análisis e informes
       href: ../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
@@ -442,7 +448,7 @@
           href: ../reporting-services/report-builder/previewing-reports-in-report-builder.md
     - name: Vista de diseño de conjunto de datos compartido
       href: ../reporting-services/report-builder/shared-dataset-design-view-report-builder.md
-    - name: Métodos abreviados de teclado
+    - name: Métodos abreviados de teclado.
       href: ../reporting-services/report-builder/keyboard-shortcuts-report-builder.md
     - name: Guardar informes
       href: ../reporting-services/report-builder/saving-reports-report-builder.md
@@ -698,7 +704,7 @@
           href: ../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
         - name: Agregar ubicaciones personalizadas a un mapa
           href: ../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md
-        - name: 'Solucionar problemas de informes: informes de mapa'
+        - name: 'Solucionar problemas de los informes: informes de mapa'
           href: ../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md
     - name: 'Imágenes, cuadros de texto rectángulos y líneas'
       href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
@@ -1014,15 +1020,19 @@
       href: ../reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md
 - name: Datos de informe en SSRS
   items:
-    - name: Información general sobre datos de informe en SSRS
+    - name: Introducción a los datos de los informes
       href: ../reporting-services/report-data/report-data-ssrs.md
-    - name: Orígenes de datos admitidos por Reporting Services
+    - name: Orígenes de datos compatibles
       href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
-    - name: 'Conexiones de datos, orígenes de datos y cadenas de conexión (Generador de informes y SSRS)'
+    - name: Crear cadenas de conexión
       href: ../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
     - name: Agregar y comprobar una conexión de datos
       href: ../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md
-    - name: 'Crear, modificar y eliminar orígenes de datos compartidos'
+    - name: Especificación de la información de credenciales y conexión
+      href: ../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md
+    - name: Comparación de orígenes de datos compartidos e incrustados
+      href: ../reporting-services/report-data/compare-shared-embedded-data-sources-report-builder-ssrs.md
+    - name: Creación y modificación de orígenes de datos compartidos
       href: ../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md
     - name: Creación y modificación de orígenes de datos incrustados
       href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md
@@ -1894,7 +1904,7 @@
       href: ../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md
     - name: Elementos de informe personalizados
       href: ../reporting-services/custom-report-items/custom-report-items.md
-    - name: 'Procedimientos: Implementación de un elemento de informe personalizado'
+    - name: Cómo implementar un elemento de informe personalizado
       href: ../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md
     - name: Acceso a los ensamblados personalizados a través de expresiones
       href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
@@ -1902,7 +1912,7 @@
       href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
     - name: Implementar un ensamblado personalizado
       href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
-    - name: 'Procedimientos: Depuración de ensamblados personalizados'
+    - name: Cómo depurar ensamblados personalizados
       href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
     - name: Inicializar objetos de ensamblados personalizados
       href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md

@@ -1,5 +1,5 @@
 ---
-title: Procesar resultados | Documentos de Microsoft
+title: Procesando resultados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9fdc66899f7d863cbfb3ae04ad0796614717a734
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209661"
 ---
 # <a name="processing-results"></a>Procesar los resultados (ODBC)
@@ -41,8 +41,8 @@ ms.locfileid: "63209661"
   
  Una vez especificadas las estructuras DBBINDING, se crea un descriptor de acceso (**IAccessor::CreateAccessor**). Un descriptor de acceso es una colección de enlaces que se usa para obtener o establecer los datos en el búfer del consumidor.  
   
-## <a name="see-also"></a>Vea también  
- [Creación de una aplicación de proveedor SQL Server Native Client OLE DB](creating-a-sql-server-native-client-ole-db-provider-application.md)   
+## <a name="see-also"></a>Consulte también  
+ [Creación de una aplicación de proveedor de OLE DB de SQL Server Native Client](creating-a-sql-server-native-client-ole-db-provider-application.md)   
  [Temas de procedimientos de OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

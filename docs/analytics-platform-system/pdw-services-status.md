@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2789c8b74420a56a32d08a0339d4ee6d3cc112d1
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400854"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Estado de los servicios de almacenamiento de datos paralelos de Analytics Platform System
@@ -32,6 +32,6 @@ No es necesario hacer clic en **aplicar** al iniciar y detener los servicios del
 > [!NOTE]  
 > Detener la región PDW también detiene el agente PDW (sqldwagent) en los nodos. El agente de PDW requiere que el nodo de control de PDW informe de la supervisión de estado.  
   
-## <a name="see-also"></a>Véase también  
+## <a name="see-also"></a>Consulte también  
 [Encienda o desactive el dispositivo APS &#40;Analytics Platform System&#41;](power-the-aps-appliance-on-or-off.md)  
   

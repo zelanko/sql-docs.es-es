@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_cdc_get_max_lsn (Transact-SQL) | Microsoft Docs
+title: Sys. fn_cdc_get_max_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c51a69eb3604b937b9bf2aaf9a09aa383f2c1490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046451"
 ---
-# <a name="sysfncdcgetmaxlsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
+# <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve el número de secuencia máximo del registro (LSN) de la columna start_lsn de la [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) tabla del sistema. Puede utilizar esta función para devolver el extremo alto de la escala de tiempo de captura de los datos del cambio para cualquier instancia de captura.  
+  Devuelve el número de secuencia de registro máximo (LSN) de la start_lsn columna de la tabla del sistema [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Puede utilizar esta función para devolver el extremo alto de la escala de tiempo de captura de los datos del cambio para cualquier instancia de captura.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,11 +41,11 @@ ms.locfileid: "68046451"
 sys.fn_cdc_get_max_lsn ()  
 ```  
   
-## <a name="return-types"></a>Tipos devueltos  
- **binary(10)**  
+## <a name="return-types"></a>Tipos de valor devuelto  
+ **binario (10)**  
   
-## <a name="remarks"></a>Comentarios  
- Esta función devuelve el LSN máximo en la columna start_lsn de la [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) tabla. Por tanto, es el último LSN procesado por el proceso de captura cuando los cambios se propagan a las tablas de cambios de base de datos. Actúa como extremo superior para todas las escalas de tiempo asociadas con las instancias de captura definidas para la base de datos.  
+## <a name="remarks"></a>Observaciones  
+ Esta función devuelve el LSN máximo en la start_lsn columna de la tabla [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Por tanto, es el último LSN procesado por el proceso de captura cuando los cambios se propagan a las tablas de cambios de base de datos. Actúa como extremo superior para todas las escalas de tiempo asociadas con las instancias de captura definidas para la base de datos.  
   
  La función se utiliza normalmente para obtener un extremo final superior adecuado para un intervalo de consulta.  
   
@@ -63,7 +63,7 @@ GO
 SELECT sys.fn_cdc_get_max_lsn()AS max_lsn;  
 ```  
   
-### <a name="b-setting-the-high-endpoint-of-a-query-range"></a>b. Establecer el extremo alto de un rango de la consulta  
+### <a name="b-setting-the-high-endpoint-of-a-query-range"></a>B. Establecer el extremo alto de un rango de la consulta  
  El ejemplo siguiente utiliza el LSN máximo devuelto por `sys.fn_cdc_get_max_lsn` para establecer el extremo alto para un intervalo de consultas para la instancia de captura `HumanResources_Employee`.  
   
 ```  
@@ -76,8 +76,8 @@ SELECT * FROM cdc.fn_cdc_get_all_changes_HumanResources_Employee(@from_lsn, @to_
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sys.fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [Sys. fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
  [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   

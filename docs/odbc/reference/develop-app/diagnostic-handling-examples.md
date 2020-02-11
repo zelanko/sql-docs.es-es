@@ -15,14 +15,14 @@ ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13c713da543883ac4a5c4aaa0aad0631ae47be30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039950"
 ---
 # <a name="diagnostic-handling-examples"></a>Ejemplos de control de diagnóstico
-Los ejemplos siguientes muestran cómo los distintos componentes en una conexión ODBC pueden generar mensajes de diagnóstico y cómo los distintos controladores podrían devolver diagnósticos a la aplicación con **SQLGetDiagRec**.  
+En los siguientes ejemplos se muestra cómo varios componentes de una conexión ODBC pueden generar mensajes de diagnóstico y cómo varios controladores pueden devolver diagnósticos a la aplicación con **SQLGetDiagRec**.  
   
 -   [Ejemplo de diagnóstico de controlador basados en archivos](../../../odbc/reference/develop-app/file-based-driver-diagnostic-example.md)  
   

@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4560ecbecd5db2e0f93e6910239fde27d54c028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036870"
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
 
 
-  Devuelve la desviación estándar de población de una expresión numérica evaluada sobre un conjunto mediante la fórmula de población sesgada (al dividir por *n*).  
+  Devuelve la desviación estándar de población de una expresión numérica evaluada sobre un conjunto mediante la fórmula de población sesgada (dividiendo por *n*).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,8 +34,8 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Comentarios  
- El **StdevP** función usa la población sesgada fórmulas, mientras el [Stdev](../mdx/stdev-mdx.md) función utiliza la fórmula de población no sesgada.  
+## <a name="remarks"></a>Observaciones  
+ La función **StdevP** utiliza la fórmula de llenado sesgada, mientras que la función [stdev](../mdx/stdev-mdx.md) utiliza la fórmula de población no sesgada.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve la desviación estándar para Internet Order Quantity evaluada en los primeros tres meses del año 2003 mediante la fórmula de población sesgada.  
@@ -51,7 +51,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

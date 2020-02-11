@@ -1,5 +1,5 @@
 ---
-title: Implementación de controladores de escritorio de la base de datos | Microsoft Docs
+title: Implementar controladores de base de datos de escritorio | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb4f4c2b1e9658e1e0199ec6d856ef21db80cf07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952350"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementación de controladores de escritorio de la base de datos
-Instrucciones y notas técnicas sobre cómo implementar y configurar los controladores de base de datos de escritorio de Microsoft ODBC pueden encontrarse en la Ayuda en pantalla de administrador de orígenes de datos ODBC. Este archivo puede obtenerse durante las rutinas de instalación de controlador desde la [Administrador de orígenes de datos ODBC de Microsoft](../../odbc/admin/odbc-data-source-administrator.md).  
+Las instrucciones y notas técnicas sobre cómo implementar y configurar los controladores de base de datos de escritorio de Microsoft ODBC pueden encontrarse en la ayuda en pantalla del administrador de orígenes de datos ODBC. Se puede tener acceso a este archivo durante las rutinas de instalación del controlador desde el [Administrador de orígenes de datos ODBC de Microsoft](../../odbc/admin/odbc-data-source-administrator.md).  
   
  Esta sección contiene los temas siguientes.  
   
@@ -32,7 +32,7 @@ Instrucciones y notas técnicas sobre cómo implementar y configurar los control
   
 -   [Requisitos de hardware y software](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
--   [Descriptores con controladores de escritorio de la base de datos](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
+-   [Descriptores con controladores de base de datos de escritorio](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   
 -   [Diagnóstico de controladores de escritorio de la base de datos](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
   

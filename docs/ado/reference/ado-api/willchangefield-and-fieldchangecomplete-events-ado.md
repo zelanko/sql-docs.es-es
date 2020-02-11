@@ -20,14 +20,14 @@ ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945883"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>Eventos WillChangeField y FieldChangeComplete (ADO)
-El **WillChangeField** se llama al evento antes de que una operación pendiente cambie el valor de uno o varios [campo](../../../ado/reference/ado-api/field-object.md) objetos en el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). El **FieldChangeComplete** se llama al evento posterior al valor de uno o varios **campo** objetos ha cambiado.  
+Se llama al evento **WillChangeField** antes de que una operación pendiente cambie el valor de uno o más objetos de [campo](../../../ado/reference/ado-api/field-object.md) en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Se llama al evento **FieldChangeComplete** una vez cambiado el valor de uno o más objetos **Field** .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,31 +39,31 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parámetros  
  *cFields*  
- Un **largo** que indica el número de **campo** objetos *campos*.  
+ Un **valor de tipo Long** que indica el número de objetos de **campo** en *los campos*.  
   
  *Fields*  
- Para **WillChangeField**, *campos* parámetro es una matriz de **variantes** que contiene **campo** objetos con los valores originales. Para **FieldChangeComplete**, *campos* parámetro es una matriz de **variantes** que contiene **campo** objetos con los valores cambiados .  
+ En el caso de **WillChangeField**, el parámetro *Fields* es una matriz de **variantes** que contiene objetos de **campo** con los valores originales. En **FieldChangeComplete**, el parámetro *Fields* es una matriz de **variantes** que contiene objetos de **campo** con los valores modificados.  
   
  *pError*  
- Un [Error](../../../ado/reference/ado-api/error-object.md) objeto. Describe el error producido si el valor de *adStatus* es **adStatusErrorsOccurred**; en caso contrario, no se establece.  
+ Un objeto de [error](../../../ado/reference/ado-api/error-object.md) . Describe el error que se produjo si el valor de *adStatus* es **adStatusErrorsOccurred**; de lo contrario, no se establece.  
   
- *adStatus*  
- Un [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor de estado.  
+ *Statu*  
+ Valor de estado de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) .  
   
- Cuando **WillChangeField** es llama, este parámetro se establece en **adStatusOK** si la operación que provocó el evento se realizó correctamente. Se establece en **adStatusCantDeny** si este evento no puede solicitar la cancelación de la operación pendiente.  
+ Cuando se llama a **WillChangeField** , este parámetro se establece en **adStatusOK** si la operación que causó el evento se realizó correctamente. Se establece en **adStatusCantDeny** si este evento no puede solicitar la cancelación de la operación pendiente.  
   
- Cuando **FieldChangeComplete** es llama, este parámetro se establece en **adStatusOK** si la operación que provocó el evento se realizó correctamente, o para **adStatusErrorsOccurred** si Error en la operación.  
+ Cuando se llama a **FieldChangeComplete** , este parámetro se establece en **adStatusOK** si la operación que causó el evento se realizó correctamente, o en **adStatusErrorsOccurred** si se produjo un error en la operación.  
   
- Antes de **WillChangeField** devuelve, establezca este parámetro en **adStatusCancel** para solicitar la cancelación de la operación pendiente.  
+ Antes de que se devuelva **WillChangeField** , establezca este parámetro en **adStatusCancel** para solicitar la cancelación de la operación pendiente.  
   
- Antes de **FieldChangeComplete** devuelve, establezca este parámetro en **adStatusUnwantedEvent** para evitar notificaciones posteriores.  
+ Antes de que **FieldChangeComplete** vuelva, establezca este parámetro en **adStatusUnwantedEvent** para evitar notificaciones posteriores.  
   
  *pRecordset*  
- Un **Recordset** objeto. El **Recordset** para que se produjo este evento.  
+ Objeto de **conjunto de registros** . **Conjunto de registros** para el que se produjo este evento.  
   
-## <a name="remarks"></a>Comentarios  
- Un **WillChangeField** o **FieldChangeComplete** evento puede producirse cuando se establece la [valor](../../../ado/reference/ado-api/value-property-ado.md) propiedad y una llamada a la [actualización](../../../ado/reference/ado-api/update-method.md) (método) con los parámetros de matriz de campo y el valor.  
+## <a name="remarks"></a>Observaciones  
+ Puede producirse un evento **WillChangeField** o **FieldChangeComplete** al establecer la propiedad [Value](../../../ado/reference/ado-api/value-property-ado.md) y llamar al método [Update](../../../ado/reference/ado-api/update-method.md) con parámetros de matriz de valores y campos.  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de modelo de eventos de ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de modelo de eventos de ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Conexión ADO y los eventos de conjunto de registros](../../../ado/guide/data/ado-event-handler-summary.md)

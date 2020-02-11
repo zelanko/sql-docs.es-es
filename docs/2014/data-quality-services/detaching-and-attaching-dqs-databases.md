@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aca595e33a831e472f06a349e12920aced6dd71f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480697"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Separar y adjuntar bases de datos de DQS
@@ -41,8 +41,8 @@ ms.locfileid: "65480697"
   
 -   Debe disponer del rol dqs_administrator en la base de datos DQS_MAIN para terminar las actividades o detener los procesos en ejecución en DQS.  
   
-##  <a name="Detach"></a> Separar bases de datos de DQS  
- Cuando se separa una base de datos de DQS mediante SQL Server Management Studio, los archivos separados permanecen en el equipo, y se pueden volver a adjuntar a la misma instancia de SQL Server o mover a otro servidor y adjuntarlos allí. Los archivos de base de datos de DQS suelen estar disponibles en la siguiente ubicación en el equipo de Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL12. *< Nombre_instancia >* \MSSQL\DATA.  
+##  <a name="Detach"></a>Desasociar bases de datos de DQS  
+ Cuando se separa una base de datos de DQS mediante SQL Server Management Studio, los archivos separados permanecen en el equipo, y se pueden volver a adjuntar a la misma instancia de SQL Server o mover a otro servidor y adjuntarlos allí. Normalmente, los archivos de base de datos de DQS están disponibles en la siguiente ubicación en el equipo de Data Quality Services: C:\Archivos de Programa\microsoft SQL Server\MSSQL12. *<Instance_Name>* \MSSQL\DATA.  
   
 1.  Inicie Microsoft SQL Server Management Studio y conéctese a la instancia adecuada de SQL Server.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65480697"
   
  También puede separar bases de datos de DQS mediante instrucciones Transact-SQL; para ello, utilice el procedimiento almacenado sp_detach_db. Para obtener más información sobre cómo separar bases de datos mediante instrucciones Transact-SQL, vea [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) en [Detach a Database](../relational-databases/databases/detach-a-database.md).  
   
-##  <a name="Attach"></a> Adjuntar bases de datos de DQS  
+##  <a name="Attach"></a>Adjuntar bases de datos de DQS  
  Utilice las instrucciones siguientes para adjuntar una base de datos de DQS a la misma instancia de SQL Server (de la que se separó) o a una instancia de SQL Server diferente donde se ha instalado [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
   
 1.  Inicie Microsoft SQL Server Management Studio y conéctese a la instancia adecuada de SQL Server.  
@@ -99,7 +99,7 @@ ms.locfileid: "65480697"
   
  También se pueden adjuntar bases de datos de DQS utilizando las instrucciones Transact-SQL. Para obtener más información sobre cómo adjuntar bases de datos mediante instrucciones Transact-SQL, vea [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) en [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
-## <a name="see-also"></a>Vea también  
- [Administrar bases de datos de DQS](../../2014/data-quality-services/manage-dqs-databases.md)  
+## <a name="see-also"></a>Consulte también  
+ [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

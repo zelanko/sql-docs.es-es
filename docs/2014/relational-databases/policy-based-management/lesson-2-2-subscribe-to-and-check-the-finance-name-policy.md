@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090701"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Suscribirse a, y comprobar, la directiva Finance Name
@@ -22,9 +22,9 @@ ms.locfileid: "66090701"
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>Para suscribirse a la categoría de directivas Finance  
   
-1.  En el Explorador de objetos, expanda **bases de datos**, haga clic en `Finance`, apunte a **directivas**y, a continuación, haga clic en **categorías**.  
+1.  En Explorador de objetos, expanda **bases de datos**, haga clic `Finance`con el botón secundario, seleccione **directivas**y, a continuación, haga clic en **categorías**.  
   
-2.  Seleccione el **suscrito** casilla de verificación de la `Finance` categoría.  
+2.  Active la casilla **suscrito** para la `Finance` categoría.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -62,17 +62,18 @@ ms.locfileid: "66090701"
   
 2.  En el cuadro de diálogo **Administrar categorías de directiva** , busque la categoría Finance y seleccione la casilla **Suscripciones de base de datos de mandatos** para la categoría Finance.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Ahora la categoría Finance se aplica a todas las bases de datos, pero la condición que ha creado restringe la directiva Finance Name a la base de datos Finance. De esta forma, se muestra cómo se pueden utilizar combinaciones complejas de condiciones para destinar las directivas de modo que se apliquen correctamente en muchos servidores.  
+3.  
+  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Ahora la categoría Finance se aplica a todas las bases de datos, pero la condición que ha creado restringe la directiva Finance Name a la base de datos Finance. De esta forma, se muestra cómo se pueden utilizar combinaciones complejas de condiciones para destinar las directivas de modo que se apliquen correctamente en muchos servidores.  
   
 ## <a name="summary"></a>Resumen  
  En este tutorial se ha demostrado cómo crear condiciones de la administración basada en directivas, directivas y grupos de directivas, y cómo aplicar los filtros y comprobar la compatibilidad de los destinos de la administración basada en directivas.  
   
-## <a name="next"></a>Siguiente  
+## <a name="next"></a>Pasos siguientes  
  Este tutorial ha finalizado. Para volver al inicio, haga clic en [Tutorial: Administrar servidores mediante administración basada en directivas](tutorial-administering-servers-by-using-policy-based-management.md).  
   
- Para obtener una lista de tutoriales, vea [tutoriales para SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
+ Para obtener una lista de tutoriales, consulte los [tutoriales de SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)  
   
   

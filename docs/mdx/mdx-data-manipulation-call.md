@@ -1,5 +1,5 @@
 ---
-title: Instrucción de llamada (MDX) | Microsoft Docs
+title: CALL (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: de74590ac4c43a9141c0ab2092babf41ffd23ba5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106301"
 ---
 # <a name="mdx-data-manipulation---call"></a>Manipulación de datos de MDX: CALL
@@ -41,16 +41,16 @@ CALL SP_Name
  *Cube_Expression*  
  Expresión de cubo de cadena válida que proporciona el nombre del cubo.  
   
-## <a name="remarks"></a>Comentarios  
- El **llamar** instrucción ejecuta un procedimiento almacenado registrado especificado, incluyendo opcionalmente uno o más argumentos para el procedimiento almacenado especificado. El **llamar** instrucción es para uso exclusivo con procedimientos almacenados que devuelven valores nulos. Esta instrucción no puede combinarse con otras funciones u operadores en una misma expresión MDX. Los procedimientos almacenados registrados que devuelven valores pueden llamarse directamente en expresiones de MDX y combinarse con otras funciones y operadores de MDX.  
+## <a name="remarks"></a>Observaciones  
+ La instrucción **Call** ejecuta un procedimiento almacenado registrado especificado, incluyendo opcionalmente uno o más argumentos para el procedimiento almacenado especificado. La instrucción **Call** solo se usa con procedimientos almacenados que devuelven valores void. Esta instrucción no puede combinarse con otras funciones u operadores en una misma expresión MDX. Los procedimientos almacenados registrados que devuelven valores pueden llamarse directamente en expresiones de MDX y combinarse con otras funciones y operadores de MDX.  
   
  Si no se especifica un cubo, la instrucción ejecuta el procedimiento almacenado en el cubo actual.  
   
 > [!NOTE]  
->  Si el procedimiento almacenado no está registrado en el cliente, el **llamar** instrucción intenta llamar al procedimiento almacenado desde una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+>  Si el procedimiento almacenado no está registrado en el cliente, la instrucción **Call** intenta llamar al procedimiento almacenado desde una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-## <a name="see-also"></a>Vea también  
- [Instrucciones de manipulación de datos MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Using Stored Procedures &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md) (Usar procedimientos almacenados [MDX])  
+## <a name="see-also"></a>Consulte también  
+ [Instrucciones de manipulación de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Usar procedimientos almacenados &#40;&#41;MDX](../mdx/using-stored-procedures-mdx.md)  
   
   

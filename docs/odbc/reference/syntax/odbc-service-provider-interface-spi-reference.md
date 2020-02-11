@@ -1,5 +1,5 @@
 ---
-title: Referencia de interfaz (SPI) del proveedor de servicio ODBC | Microsoft Docs
+title: Referencia de la interfaz del proveedor de servicios ODBC (SPI) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,18 +11,18 @@ ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88053620fa413c50a8faff4cc47cbbe1457249f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073834"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>Referencia de la interfaz del proveedor de servicios (SPI) de ODBC
-Tradicionalmente, ODBC define una interfaz de programación de aplicaciones (API). Las funciones de la API pueden llamarse mediante aplicaciones y se deben implementar en el Administrador de controladores y el controlador.  
+Tradicionalmente, ODBC definía una interfaz de programación de aplicaciones (API). Las aplicaciones pueden llamar a las funciones de la API y deben implementarse dentro del administrador de controladores y del controlador.  
   
- Con la adición de la característica de agrupación de conexiones dependientes del controlador, ODBC presenta la interfaz de proveedor de servicios (SPI). Las funciones en el SPI se usan para la comunicación entre el Administrador de controladores y el controlador. Funciones SPI se implementan mediante el controlador; el Administrador de controladores no exponen funciones SPI para las aplicaciones. Las aplicaciones no deben llamar directamente a estas funciones.  
+ Con la adición de la característica de agrupación de conexiones compatible con controladores, ODBC introduce la interfaz del proveedor de servicios (SPI). Las funciones del SPI se usan para la comunicación entre el administrador de controladores y el controlador. El controlador implementa las funciones SPI; el administrador de controladores no expone las funciones SPI a las aplicaciones. Las aplicaciones no deben llamar a estas funciones directamente.  
   
- Incluir sqlspi.h para el desarrollo de controladores ODBC.  
+ Incluya sqlspi. h para el desarrollo del controlador ODBC.  
   
  Esta sección contiene los temas siguientes  
   
@@ -40,7 +40,7 @@ Tradicionalmente, ODBC define una interfaz de programación de aplicaciones (API
   
 -   [SQLSetDriverConnectInfo](../../../odbc/reference/syntax/installation-and-configuration-wwi-oltp.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
+ [Desarrollar el reconocimiento del grupo de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [Agrupación de conexiones de administrador de controladores](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)

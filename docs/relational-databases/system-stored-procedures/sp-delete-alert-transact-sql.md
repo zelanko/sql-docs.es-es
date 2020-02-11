@@ -18,13 +18,13 @@ ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 609151e71e0ee59f8a428a7c9f193124e047818c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120068"
 ---
-# <a name="spdeletealert-transact-sql"></a>sp_delete_alert (Transact-SQL)
+# <a name="sp_delete_alert-transact-sql"></a>sp_delete_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita una alerta.  
@@ -39,7 +39,7 @@ sp_delete_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` El nombre de la alerta. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'`El nombre de la alerta. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -47,11 +47,11 @@ sp_delete_alert [ @name = ] 'name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si se quita una alerta, también se quitan las notificaciones asociadas con ella.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se quita una alerta denominada `Test Alert`.  
@@ -65,9 +65,9 @@ EXEC dbo.sp_delete_alert
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
+ [sp_help_alert &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

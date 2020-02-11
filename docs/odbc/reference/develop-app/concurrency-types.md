@@ -17,19 +17,19 @@ ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63d7c7dce51fe4f514232cfd0d5ae2e5abeb5b70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083180"
 ---
 # <a name="concurrency-types"></a>Tipos de simultaneidad
-Para solucionar el problema de simultaneidad reducida en los cursores, ODBC expone cuatro tipos diferentes de simultaneidad de cursor:  
+Para solucionar el problema de la simultaneidad reducida en cursores de, ODBC expone cuatro tipos diferentes de simultaneidad de cursores:  
   
--   **Solo lectura** el cursor puede leer los datos, pero no se puede actualizar o eliminar datos. Este es el tipo de simultaneidad predeterminado. Aunque el DBMS podría bloquear filas para exigir los niveles de aislamiento Serializable y lectura repetible, pueden usar bloqueos de lectura en lugar de bloqueos de escritura. Esto da como resultado una mayor simultaneidad porque otras transacciones al menos pueden leer los datos.  
+-   **Solo lectura** El cursor puede leer datos, pero no puede actualizar o eliminar datos. Este es el tipo de simultaneidad predeterminado. Aunque el DBMS podría bloquear filas para aplicar los niveles de aislamiento REPEATABLE Read y serializable, puede usar bloqueos de lectura en lugar de bloqueos de escritura. Esto da como resultado una mayor simultaneidad porque otras transacciones pueden leer los datos al menos.  
   
--   **Bloqueo** el cursor utiliza el nivel más bajo de bloqueo es necesario para asegurarse de que puede actualizar o eliminar filas del conjunto de resultados. Esto suele generar niveles de simultaneidad muy bajo, especialmente en los niveles de aislamiento de transacción Repeatable Read y Serializable.  
+-   **Bloqueo** de El cursor utiliza el nivel de bloqueo más bajo necesario para asegurarse de que puede actualizar o eliminar filas en el conjunto de resultados. Esto suele dar como resultado niveles de simultaneidad muy bajos, especialmente en los niveles de aislamiento de transacción REPEATABLE Read y serializable.  
   
--   **Simultaneidad optimista con versiones de fila y la simultaneidad optimista con valores** el cursor utiliza simultaneidad optimista: Actualiza o elimina las filas únicamente si no han cambiado desde que se leyeron por última vez. Para detectar los cambios, compara las versiones de filas o valores. No hay ninguna garantía de que el cursor podrá actualizar o eliminar una fila, pero la simultaneidad es mucho mayor que cuando se utiliza el bloqueo. Para obtener más información, vea la sección siguiente, [simultaneidad optimista](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
+-   **Simultaneidad optimista con versiones de fila y simultaneidad optimista usando valores** El cursor usa simultaneidad optimista: actualiza o elimina filas solo si no han cambiado desde que se leyeron por última vez. Para detectar los cambios, compara las versiones de fila o los valores. No hay ninguna garantía de que el cursor pueda actualizar o eliminar una fila, pero la simultaneidad es mucho mayor que cuando se usa el bloqueo. Para obtener más información, vea la siguiente sección, [simultaneidad optimista](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
   
- Una aplicación que especifica qué tipo de simultaneidad desea que el cursor va a utilizar con el atributo de instrucción SQL_ATTR_CONCURRENCY. Para determinar qué tipos se admiten, llama a **SQLGetInfo** con la opción SQL_SCROLL_CONCURRENCY.
+ Una aplicación especifica qué tipo de simultaneidad desea que use el cursor con el atributo de instrucción SQL_ATTR_CONCURRENCY. Para determinar qué tipos se admiten, llama a **SQLGetInfo** con la opción SQL_SCROLL_CONCURRENCY.

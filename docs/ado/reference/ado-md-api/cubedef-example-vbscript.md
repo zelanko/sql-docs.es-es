@@ -15,14 +15,14 @@ ms.assetid: 4d72a912-ef53-4989-9fca-214937574116
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d17bd016470e7b6f6f6b5452ed049168b977e10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938660"
 ---
 # <a name="cubedef-example-vbscript"></a>Ejemplo de CubeDef (VBScript)
-Este ejemplo muestra los metadatos del cubo en una página web.  
+En este ejemplo se muestran metadatos de cubo en una página web.  
   
 ```  
 <%@ Language=VBScript %>  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479246"
 ---
 # <a name="replicate-identity-columns"></a>Replicar columnas de identidad
@@ -44,7 +44,7 @@ ms.locfileid: "74479246"
   
 -   Manual. Se utiliza para replicación de instantáneas y transaccional sin actualizaciones en el suscriptor, replicación transaccional punto a punto o en los casos en los que la aplicación deba controlar los intervalos de identidad mediante programación. Si especifica la administración manual, debe asegurarse de que los intervalos se asignan al publicador y a cada suscriptor y que los nuevos intervalos se asignan si se utilizan los intervalos iniciales. La replicación establece la opción NOT FOR REPLICATION en la columna de identidad en el suscriptor.  
   
--   Ninguna. Esta opción solo se recomienda para lograr la compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y solo está disponible desde la interfaz de procedimientos almacenados de publicaciones transaccionales.  
+-   Ninguno. Esta opción solo se recomienda para lograr la compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y solo está disponible desde la interfaz de procedimientos almacenados de publicaciones transaccionales.  
   
  Para especificar una opción de administración del intervalo de identidad, vea [Administrar columnas de identidad](manage-identity-columns.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "74479246"
 |`smallint`|De -2^15 (-32.768) a 2^15-1 (32.767)|  
 |`int`|De -2^31 (-2.147.483.648) a 2^31-1 (2.147.483.647)|  
 |`bigint`|De -2^63 (-9.223.372.036.854.775.808) a 2^63-1 (9.223.372.036.854.775.807)|  
-|`decimal`etc`numeric`|De -10^38+1 a 10^38-1|  
+|`decimal` y `numeric`|De -10^38+1 a 10^38-1|  
   
 > [!NOTE]  
 >  Para crear un número que se incremente automáticamente y que se pueda usar en varias tablas, o que se pueda llamar desde las aplicaciones sin hacer referencia a ninguna tabla, vea [Números de secuencia](../../sequence-numbers/sequence-numbers.md).  
@@ -122,10 +122,10 @@ ms.locfileid: "74479246"
     > [!NOTE]  
     >  Si el valor de la columna de identidad está establecido para que se reduzca y no para que se incremente, registre el valor más bajo encontrado y regenere con ese valor.  
   
-## <a name="see-also"></a>Véase también  
- [Copia de seguridad &#40;&#41;de Transact-SQL](/sql/t-sql/statements/backup-transact-sql)   
- [DBCC CHECKIDENT &#40;&#41;de Transact-SQL](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
- [IDENT_CURRENT &#40;&#41;de Transact-SQL](/sql/t-sql/functions/ident-current-transact-sql)   
+## <a name="see-also"></a>Consulte también  
+ [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
+ [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
+ [IDENT_CURRENT &#40;Transact-SQL&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
  [IDENTITY &#40;propiedad&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
  [sp_adjustpublisheridentityrange &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
   

@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_db_config (Transact-SQL) | Microsoft Docs
+title: managed_backup. fn_backup_db_config (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067777"
 ---
-# <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
+# <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup. fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Devuelve 0, 1 o más filas con la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Devuelve una fila para la base de datos especificada o la información de todas las bases de datos configuradas con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] de la instancia.  
@@ -44,13 +44,13 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
   
 ##  <a name="Arguments"></a> Argumentos  
  @db_name  
- El nombre de la base de datos. El @db_name parámetro es **SYSNAME**. Si una cadena vacía o un valor NULL se pasan a este parámetro, se devuelve la información sobre todas las bases de datos de la instancia de SQL Server.  
+ El nombre de la base de datos. El @db_name parámetro es de **tipo SYSNAME**. Si una cadena vacía o un valor NULL se pasan a este parámetro, se devuelve la información sobre todas las bases de datos de la instancia de SQL Server.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|db_name|SYSNAME|Nombre de base de datos.|  
+|db_name|SYSNAME|nombre de base de datos.|  
 |db_guid|UNIQUEIDENTIFIER|Identificador que identifica la base de datos de forma única.|  
 |is_availability_database|BIT|Si la base de datos participa en un grupo de disponibilidad. El valor 1 indica que la base de datos es una base de datos de disponibilidad y el valor 0, que no lo es.|  
 |is_dropped|BIT|El valor 1 indica que se trata de una base de datos quitada.|  
@@ -59,16 +59,16 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
 |is_managed_backup_enabled|INT|Indica si [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitada actualmente para esta base de datos. El valor 1 indica que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitada y el valor 0 indica que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está deshabilitada para esta base de datos.|  
 |storage_url|NVARCHAR (1024)|Dirección URL de la cuenta de almacenamiento.|  
 |Encryption_algorithm|NCHAR (20)|Devuelve el algoritmo de cifrado actual que usar cuando se cifra la copia de seguridad.|  
-|Encryptor_type|NCHAR(15)|Devuelve la configuración del sistema de cifrado: certificado o clave asimétrica.|  
+|Encryptor_type|NCHAR(15)|Devuelve el valor del sistema de cifrado: certificado o clave asimétrica.|  
 |Encryptor_name|NCHAR(long_max_de_cert/nombre_clave_asim)|Nombre del certificado o de la clave asimétrica.|  
   
 ## <a name="security"></a>Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Debe pertenecer a la **db_backupoperator** rol de base de datos con **ALTER ANY CREDENTIAL** permisos. El usuario no debe denegarse **VIEW ANY DEFINITION** permisos.  
+ Requiere la pertenencia al rol de base de datos **db_backupoperator** con permisos **ALTER any Credential** . No se debe denegar el permiso **View any Definition** a los usuarios.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente devuelve el [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuración para 'TestDB'  
+ En el ejemplo siguiente se [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] devuelve la configuración para ' TestDB '  
   
  Para cada fragmento de código, seleccione 'tsql' en el campo de atributo language.  
   

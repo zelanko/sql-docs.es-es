@@ -13,20 +13,20 @@ ms.assetid: 4f7baa1d-37ef-4051-ae13-7dc38033af16
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b47c611e8a1f403b190c4e73b3d2c327079976f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009815"
 ---
 # <a name="sqlcancel-visual-foxpro-odbc-driver"></a>SQLCancel (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: Completo  
+ Compatibilidad: completa  
   
- Conformidad de la API de ODBC: Nivel básico  
+ Conformidad con la API de ODBC: nivel básico  
   
- Cancela el procesamiento en un identificador de instrucción, *hstmt*.  
+ Cancela el procesamiento de un identificador de instrucción, *hstmt*.  
   
- Para obtener más información, consulte [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) en el *referencia del programador de ODBC*.
+ Para obtener más información, vea [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) en la *Referencia del programador de ODBC*.
